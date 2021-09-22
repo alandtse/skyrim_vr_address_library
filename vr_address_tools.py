@@ -439,7 +439,7 @@ def in_file_replace(results: List[str]) -> bool:
 
 def write_csv(
     file_prefix: str = "version",
-    version: str = "1.4.15.0",
+    version: str = "1-4-15-0",
     min_confidence=CONFIDENCE["MANUAL"],
     generate_database=False,
     release_version="0.0.0",
@@ -448,7 +448,7 @@ def write_csv(
 
     Args:
         file_prefix (str, optional): Filename prefix to output. Defaults to "version".
-        version (str, optional): Version suffix. Defaults to "1.4.15.0".
+        version (str, optional): Version suffix. Defaults to "1-4-15-0".
         min_confidence (int, optional): Minimum confidence to output. Defaults to CONFIDENCE["MANUAL"] == 2.
         generate_database (bool, optional): Whether to generate a database file (used for GitHub editing) instead of an importable address.csv. Defaults to False.
         release_version (str, optional): CSV version. Defaults to "0.0.0".
