@@ -14,7 +14,7 @@ Tools for converting a Skyrim SSE skse mod to Skyrim VR.
 
 ## Description
 
-This repo consists of two main components: 
+This repo consists of two main components:
 1. Python files for analyzing c++ code.
 2. CSV files that include various data.
 
@@ -22,7 +22,7 @@ This repo consists of two main components:
 
 #### vr_address_tools.py
 
-This is a python tool that uses the various csv files to analyze c++ code. It is intended to analyze code built using [commonlibsse](https://github.com/Ryan-rsm-McKenzie/CommonLibSSE) for readiness to compile against commonlibvr.
+This is a python tool that uses the various csv files to analyze c++ code. It is intended to analyze code built using [commonlibsse](https://github.com/Ryan-rsm-McKenzie/CommonLibSSE) for readiness to compile against [commonlibvr](https://github.com/alandtse/CommonLibVR/tree/vr). This currently requires a commonlibvr that can read csv files.
 
 ##### Setting up
 1. Pull git repo.
@@ -38,7 +38,7 @@ poetry install
 
 ##### analyze
 
-Analyze code to determine if uses of rel::id have been defined in `database.csv`. This allows the mod to be compiled with the rel::id's without further changes. 
+Analyze code to determine if uses of rel::id have been defined in `database.csv`. This allows the mod to be compiled with rel::id's without further changes. Rel::ids using offsets may require further code changes if the VR function has changed.
 
 Output will be a tab separated with warnings and potential SSE or VR addresses to check:
 ```shell
@@ -62,12 +62,10 @@ In this example, even if 41659 exists in database.csv, the offset to 0x526 may n
 
 ##### generate
 
-Generate a database.csv or release csv. This is intended to scan an existing project that defines both rel::id and rel::offset files with the same namespace. For example, exit-9b's [commonsse vr branch](https://github.com/Exit-9B/CommonLibSSE/tree/vr) was used to generate the initial database.csv file.
+Generate a [database.csv](#databasecsv) or [release csv](#release-csvs). `Database.csv` can be edited manually or generated. Release csvs should be generated using the tool.
 
-### CSV Files
-
-#### database.csv 
-A csv for generating release csv files for loading in CommonLibVR to replace [addresslib][addresslib]. This intended to be a database to identify addresslib ids that represent SkyrimSSE addresses and convert to appropriate VR address. This can be manually edited and is intended to be a community resource. The database.csv can be converted to a release csv using vr_address_tools.py.
+###### Generate Release csv:
+This will take the database.csv and convert it to a release csv.
 
 ```shell
 ./vr_address_tools.py . generate -rv 1.1.25
@@ -75,6 +73,20 @@ Finished scanning 0 files. rel_ids: 0 offsets: 0 results: 0
 Filtered 749049 to 3884 using min_confidence 2
 Wrote 3884 rows into version-1.4.15.0.csv with release version 1.1.25
 ```
+
+###### Generate Database.csv
+This is intended to scan an existing project that defines both rel::id and rel::offset files with the same namespace. For example, exit-9b's [commonsse vr branch](https://github.com/Exit-9B/CommonLibSSE/tree/vr) was used to generate the initial database.csv file.
+
+```shell
+./vr_address_tools.py . generate -d
+Finished scanning 0 files. rel_ids: 0 offsets: 0 results: 0
+Filtered 749049 to 3884 using min_confidence 2
+Wrote 3888 rows into database.csv with release version 0.0.0
+```
+### CSV Files
+
+#### database.csv
+A csv for generating release csv files for loading in CommonLibVR to replace [addresslib][addresslib]. This intended to be a database to identify addresslib ids that represent SkyrimSSE addresses and convert to appropriate VR address. This can be manually edited and is intended to be a community resource. The database.csv can be converted to a release csv using [vr_address_tools.py generate](#generate).
 
 |id|sse|vr|status|name|
 |---|--|--|--|----|
@@ -93,7 +105,7 @@ Wrote 3884 rows into version-1.4.15.0.csv with release version 1.1.25
 #### Release CSVs
 A non-standard csv installed by end users in the `data/skse/plugins/` directory. This follows the addresslib naming of `version-{skyrim version}.csv`. The first row of data is the csv header, second row is meta data, and third row and beyond is the actual data:
 
-| id | offset | 
+| id | offset |
 |-----|--------|
 | total entries | version |
 | 10878 | 01077c0 |
@@ -102,6 +114,8 @@ A non-standard csv installed by end users in the `data/skse/plugins/` directory.
 * total entries - The number of entries to reserve space for. **WARNING**: CTDs may occur if the **total entries** is less than the actual number of entries since it is allocating space for a memory map.
 * version - The release version which is a [semantic version](https://semver.org/).
 
+#### Analysis CSVs
+These are CSVs intended to aid in analysis.
 ##### offsets-1.5.97.0.csv
 
 A dump of addresslib for SkyrimSSE 1.5.97.0. This should be considered canonical for the id -> sse mapping.
@@ -131,6 +145,27 @@ A mapping file generated by meth321 using IDADiffCalculator, the script used to 
 |0x141992C10|0x141A33D38|
 * sse - SSE Address with base (e.g., 0x1400f7210)
 * vr - VR Address with base (e.g., 0x1401077c0)
+
+## Building a Skyrim VR mod
+
+### Setup CommonLibVR
+1. Download [CommonLibVR with csv support](https://github.com/alandtse/CommonLibVR/tree/vr).
+2. Set environment variable for `CommonLibVRPath` to CommonLibVR location.
+3. Set environment variable for `SkyrimVRPath` to SkyrimVR path
+4. Build CommonLibVR. `cmake -B buildVR -S . -DBUILD_SKYRIMVR=ON` to confirm it builds.
+
+### Modify mod
+1. Use vr_address_tools to [analyze](#analyze) source tree.
+2. For any missing rel::ids `WARNING: VR Address undefined.`, modify [database.csv](database.csv) with proper address. Consider upstreaming once verified.
+3. For any rel::ids with offsets `WARNING: Offset detected; offset may need to be manually updated for VR`, modify offsets if VR function is different using `#ifndef SKYRIMVR` as appropriate.
+4. [Generate](#generate) release csv file.
+5. Copy release csv to SkyrimVR directory: `data/SKSE/Plugins`.
+6. Use `#ifndef SKYRIMVR` to identify SSE or VR only sections. For example, the SKSE version check is a common area.
+7. Modify cmakelists.txt. See [example](https://github.com/alandtse/Disable-Fast-Travel/commit/a42ec3fcb1bcb559b0cb965f5419a4e7cd9aec4d#diff-1e7de1ae2d059d21e1dd75d5812d5a34b0222cef273b7c3a2af62eb747f9d20a)
+
+### Build mod
+1. `cmake . -B build -DBUILD_SKYRIMVR=On`
+2. Open build/modname.sln. Build release and copy to SkyrimVR.
 
 <!---->
 
