@@ -445,6 +445,8 @@ id,sse,vr,status,name
 514287,0x141ec0a80,0x141f85108,3,RE::Offset::Calendar::Singleton
 514315,0x141ec3b78,0x141f889d8,3,RE::Offset::SkyrimVM::Singleton
 514316,0x141ec3b80,0x141f889e0,2,RE::Offset::BGSStoryTeller::Singleton
+514349,0x141ec3cb3,0x141ec3cb3,2,RE::Offset::FormFactory::FormFactoriesInitialized
+514355,0x141ec3ce0,0x141f88b40,2,RE::Offset::FormFactory::FormFactories
 514417,0x141ec4338,0x141f891a0,3,RE::NiRTTI_BGSDecalNode
 514462,0x141ec44b0,0x141f89358,3,RE::NiRTTI_BSAnimGroupSequence
 514494,0x142ec4838,0x142f896d8,3,RE::Offset::ActorEquipManager::Singleton
