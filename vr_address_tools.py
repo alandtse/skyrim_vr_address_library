@@ -591,7 +591,7 @@ def main():
     debug = args.get("debug")
     if debug:
         print(args)
-    exclude = []
+    exclude = ["extern"]
     scan_results = {}
     # Load files from location of python script
     if (
