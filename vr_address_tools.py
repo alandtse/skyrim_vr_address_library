@@ -14,7 +14,9 @@ HEADER_TYPES = (".h", ".hpp", ".hxx")
 SOURCE_TYPES = (".c", ".cpp", ".cxx")
 ALL_TYPES = HEADER_TYPES + SOURCE_TYPES
 PATTERN = r"rel::id\([^)]+\)"
-PATTERN_GROUPS = r"rel::id.*(?:\(|{)\s*(?:([0-9]+)[^)}]*(0x[0-9a-f]*)|([0-9]*))\s*(?:\)|})"
+PATTERN_GROUPS = (
+    r"rel::id.*(?:\(|{)\s*(?:([0-9]+)[^)}]*(0x[0-9a-f]*)|([0-9]*))\s*(?:\)|})"
+)
 RELID_PATTERN = r"(\w+){ REL::ID\(([0-9]+)\),*\s*([a-fx0-9])*\s+};"
 OFFSET_PATTERN = r"(\w+){ REL::Offset\(([a-fx0-9]+)\)\s+};"
 OFFSET_RELID_PATTERN = r"(?:static|inline) constexpr REL::ID\s+(\w+)\s*\(\s*[^(]+\s*\(\s*([0-9]+)\s*\)\s*\)\s*;"
@@ -202,9 +204,7 @@ def scan_code(
                                     results.append(
                                         {
                                             "i": i,
-                                            "directory": dirpath[
-                                                len(a_directory) + 1 :
-                                            ],
+                                            "directory": dirpath[len(a_directory) :],
                                             "filename": filename,
                                             "matches": matches,
                                         }
@@ -591,7 +591,7 @@ def main():
     debug = args.get("debug")
     if debug:
         print(args)
-    exclude = ["extern"]
+    exclude = ["build", "extern"]
     scan_results = {}
     # Load files from location of python script
     if (
