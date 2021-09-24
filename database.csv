@@ -69,6 +69,7 @@ id,sse,vr,status,name
 36537,0x1405e7e40,0x1405f0560,3,RE::Offset::Actor::GetHostileToActor
 36690,0x1405f9e30,0x1406025a0,3,RE::Offset::Actor::HasPerk
 36748,0x1405fc9a0,0x140605190,3,RE::Offset::Actor::RequestDetectionLevel
+36877,0x1406057c0,0x14060dfd0,3,RE::Offset::Actor::IsOnFlyingMount
 36901,0x140607680,0x140610000,3,RE::Offset::Actor::SwitchRace
 37771,0x14062f560,0x140638430,3,RE::Offset::Actor::AddSpell
 37772,0x14062f720,0x1406385f0,3,RE::Offset::Actor::RemoveSpell
@@ -84,6 +85,7 @@ id,sse,vr,status,name
 39175,0x140692cd0,0x14069c2d0,3,RE::Offset::PlayerCharacter::GetArmorValue
 39179,0x140693050,0x14069c650,3,RE::Offset::PlayerCharacter::GetDamage
 39181,0x140693110,0x14069c710,3,RE::Offset::Actor::DoReset3D
+39372,0x14069d6e0,0x1406bde50,2,RE::Offset::Actor::CanFastTravel
 39384,0x14069fe60,0x1406c0640,3,RE::Offset::PlayerCharacter::PlayPickupEvent
 39471,0x1406a9f90,0x1406cbce0,2,RE::Offset::PlayerCharacter::ActivatePickRef
 39475,0x1406aa260,0x1406cc000,3,RE::Offset::PlayerCharacter::StartGrabObject
@@ -102,6 +104,8 @@ id,sse,vr,status,name
 51900,0x1408d5130,0x140902c50,3,RE::Offset::UIBlurManager::DecrementBlurCount
 52050,0x1408da3d0,0x140908170,3,RE::Offset::DebugNotification
 52054,0x1408da860,0x14090b1d0,3,RE::Offset::PlaySound
+52208,0x1408e3d70,0x140915f50,2,RE::Offset::MapMenu::MarkerClick
+52226,0x1408e6ea0,0x140919520,3,RE::Offset::MapMenu::MapClick
 53144,0x1409252c0,0x14095fd10,3,RE::Offset::SkyrimVM::QueuePostRenderCall
 56227,0x1409ae5c0,0x1409e90e0,3,RE::Offset::TESObjectREFR::MoveTo
 56606,0x1409c6730,0x140a01280,3,RE::Offset::hkReferencedObject::AddReference
