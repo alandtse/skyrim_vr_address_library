@@ -14,7 +14,7 @@ HEADER_TYPES = (".h", ".hpp", ".hxx")
 SOURCE_TYPES = (".c", ".cpp", ".cxx")
 ALL_TYPES = HEADER_TYPES + SOURCE_TYPES
 PATTERN = r"rel::id\([^)]+\)"
-PATTERN_GROUPS = r"(rel::id\((?:(?:([0-9]+)*)\)(?:, ([0-9a-fx]*))?))"
+PATTERN_GROUPS = r"rel::id.*(?:\(|{)\s*(?:([0-9]+)[^)}]*(0x[0-9a-f]*)|([0-9]*))\s*(?:\)|})"
 RELID_PATTERN = r"(\w+){ REL::ID\(([0-9]+)\),*\s*([a-fx0-9])*\s+};"
 OFFSET_PATTERN = r"(\w+){ REL::Offset\(([a-fx0-9]+)\)\s+};"
 OFFSET_RELID_PATTERN = r"(?:static|inline) constexpr REL::ID\s+(\w+)\s*\(\s*[^(]+\s*\(\s*([0-9]+)\s*\)\s*\)\s*;"
@@ -363,10 +363,14 @@ def match_results(
         vr_addr = ""
         warning = ""
         for match in matches:
-            id = int(match[1])
-            try:
-                offset = match[2]
-            except ValueError:
+            if match[0]:
+                id = int(match[0])
+                try:
+                    offset = match[1]
+                except ValueError:
+                    offset = 0
+            else:
+                id = int(match[2])
                 offset = 0
             if (
                 id_vr.get(id)
@@ -386,7 +390,7 @@ def match_results(
             if offset and not conversion:
                 conversion = f"UNKNOWN SSE_{sse_addr}{f'+{offset}={add_hex_strings(sse_addr, offset)}' if offset else ''}"
             new_results.append(
-                f"{directory}/{filename}:{i+1}\t{match[0]}\tSSE: {sse_addr}\t{conversion}\t{vr_addr}\t{warning}"
+                f"{directory}/{filename}:{i+1}\tID: {id}\tSSE: {sse_addr}\t{conversion}\t{vr_addr}\t{warning}"
             )
     return new_results
 
