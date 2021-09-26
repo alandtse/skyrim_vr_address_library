@@ -201,12 +201,18 @@ def scan_code(
                                     flags=re.IGNORECASE | re.MULTILINE,
                                 )
                                 if matches:
-                                    results.append(
-                                        {
-                                            "i": i,
-                                            "directory": dirpath[len(a_directory) :],
-                                            "filename": filename,
-                                            "matches": matches,
+                                    for match in matches:
+                                        if any(match):
+                                            results.append(
+                                                {
+                                                    "i": i,
+                                                    "directory": dirpath[
+                                                        len(a_directory) :
+                                                    ],
+                                                    "filename": filename,
+                                                    "matches": match,
+                                                }
+                                            )
                                         }
                                     )
                         except UnicodeDecodeError as ex:
@@ -357,41 +363,40 @@ def match_results(
         i = result["i"]
         directory = result["directory"]
         filename = result["filename"]
-        matches = result["matches"]
+        match = result["matches"]
         offset = 0
         conversion = ""
         vr_addr = ""
         warning = ""
-        for match in matches:
-            if match[0]:
-                id = int(match[0])
-                try:
-                    offset = match[1]
-                except ValueError:
-                    offset = 0
-            else:
-                id = int(match[2])
-                offset = 0
-            if (
-                id_vr.get(id)
-                and int(id_vr_status.get(id, {}).get("status", 0)) >= min_confidence
-            ):
-                vr_addr = id_vr[id]
-                conversion = f"REL::Offset(0x{vr_addr[4:]})"
-                if offset:
-                    warning = f"WARNING: Offset detected; offset may need to be manually updated for VR"
-            if not vr_addr:
-                warning += f"WARNING: VR Address undefined."
+        if match[0]:
+            id = int(match[0])
             try:
-                sse_addr = id_sse[id]
-            except KeyError:
-                conversion = "UNKNOWN"
-                sse_addr = ""
-            if offset and not conversion:
-                conversion = f"UNKNOWN SSE_{sse_addr}{f'+{offset}={add_hex_strings(sse_addr, offset)}' if offset else ''}"
-            new_results.append(
-                f"{directory}/{filename}:{i+1}\tID: {id}\tSSE: {sse_addr}\t{conversion}\t{vr_addr}\t{warning}"
-            )
+                offset = match[1]
+            except ValueError:
+                offset = 0
+        else:
+            id = int(match[2])
+            offset = 0
+        if (
+            id_vr.get(id)
+            and int(id_vr_status.get(id, {}).get("status", 0)) >= min_confidence
+        ):
+            vr_addr = id_vr[id]
+            conversion = f"REL::Offset(0x{vr_addr[4:]})"
+            if offset:
+                warning = f"WARNING: Offset detected; offset may need to be manually updated for VR"
+        if not vr_addr:
+            warning += f"WARNING: VR Address undefined."
+        try:
+            sse_addr = id_sse[id]
+        except KeyError:
+            conversion = "UNKNOWN"
+            sse_addr = ""
+        if offset and not conversion:
+            conversion = f"UNKNOWN SSE_{sse_addr}{f'+{offset}={add_hex_strings(sse_addr, offset)}' if offset else ''}"
+        new_results.append(
+            f"{directory}/{filename}:{i+1}\tID: {id}\tSSE: {sse_addr}\t{conversion}\t{vr_addr}\t{warning}"
+        )
     return new_results
 
 
