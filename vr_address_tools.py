@@ -92,7 +92,11 @@ def load_database(
                 vr = add_hex_strings(row["vr"])
                 id_sse[id] = sse
                 id_vr[id] = vr
-                id_vr_status[id] = {"status": row["status"]}
+                id_vr_status[id] = {
+                    "sse": sse,
+                    "name": row["name"],
+                    "status": row["status"],
+                }
                 loaded += 1
     except FileNotFoundError:
         print(f"database.csv not found")
@@ -544,7 +548,8 @@ def write_csv(
                         entry = id_vr_status.get(id)
                         sse_addr = entry.get("sse", "")
                         status = entry["status"]
-                        if entry.get("func"):
+                        name = entry.get("name")
+                        if not name and entry.get("func"):
                             name = (
                                 f'{entry["func"]["namespace"]}{entry["func"]["name"]}'
                             )
