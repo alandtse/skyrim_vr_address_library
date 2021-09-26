@@ -23,6 +23,7 @@ OFFSET_RELID_PATTERN = r"(?:static|inline) constexpr REL::ID\s+(\w+)\s*\(\s*[^(]
 OFFSET_OFFSET_PATTERN = (
     r"(?:inline|constexpr) REL::Offset\s+(\w+)\s*\(\s*([a-fx0-9]+)\s*\)\s*;"
 )
+IFNDEF_PATTERN = r"([\w():]*)\s*{\s*#ifndef SKYRIMVR\s*([^{]*){\s*rel::id\(([0-9]*)\)\s}.*\s*#else\s*\2{.*(?:rel::offset)*(0x[0-9a-f]*)"
 REPLACEMENT = """
 #ifndef SKYRIMVR
 	{}  // SSE {}
@@ -191,6 +192,7 @@ def scan_code(
         for filename in filenames:
             if filename not in a_exclude and filename.endswith(ALL_TYPES):
                 count += 1
+                found_ifndef = False
                 if not filename.lower().startswith("offset"):
                     with open(f"{dirpath}/{filename}") as f:
                         try:
@@ -213,8 +215,44 @@ def scan_code(
                                                     "matches": match,
                                                 }
                                             )
-                                        }
+                                if line.lower().startswith("#ifndef skyrimvr"):
+                                    found_ifndef = True
+                            if found_ifndef:
+                                f.seek(0)
+                                if debug:
+                                    print(
+                                        f"Searching for ifndef id offset definitions in {dirpath}/{filename}"
                                     )
+                                ifndef_matches = re.findall(
+                                    IFNDEF_PATTERN,
+                                    f.read(),
+                                    flags=re.IGNORECASE | re.MULTILINE,
+                                )
+                                if ifndef_matches:
+                                    for match in ifndef_matches:
+                                        name = (
+                                            match[0]
+                                            if not match[0].endswith("()")
+                                            else match[0][:-2]
+                                        )
+                                        id = match[2]
+                                        offset = match[3]
+                                        func = {
+                                            "namespace": f"{filename}::",
+                                            "name": name,
+                                        }
+                                        defined_rel_ids[f"{filename}::{name}"] = {
+                                            "id": id,
+                                            "func": func,
+                                        }
+                                        defined_vr_offsets[f"{filename}::{name}"] = {
+                                            "id": offset,
+                                            "func": func,
+                                        }
+                                        if debug:
+                                            print(
+                                                f"Found ifndef {filename}::{name} with id: {id} offset: {offset}"
+                                            )
                         except UnicodeDecodeError as ex:
                             print(f"Unable to read {dirpath}/{filename}: ", ex)
                 else:
