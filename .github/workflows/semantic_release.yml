@@ -27,10 +27,10 @@ jobs:
         run: |
           git config --global user.name "semantic-release"
           git config --global user.email "semantic-release@GitHub"
-      # - name: Python Semantic Release
-      #   uses: relekang/python-semantic-release@master
-      #   with:
-      #     github_token: ${{ secrets.GH_TOKEN }}
+      - name: Python Semantic Release
+        uses: relekang/python-semantic-release@master
+        with:
+          github_token: ${{ secrets.GH_TOKEN }}
       - name: Set release variable
         run: |
           echo "release_version=`git describe --abbrev=0`" >> $GITHUB_ENV
@@ -38,10 +38,10 @@ jobs:
         run: |
           poetry install
           mkdir -p release/SKSE/Plugins
-          poetry run ./vr_address_tools.py release/SKSE/Plugins/ generate -rv ${{env.release_version}}   
+          poetry run ./vr_address_tools.py release/SKSE/Plugins/ generate -rv ${{ env.release_version }}   
       - uses: edgarrc/action-7z@v1
         with:
-          args: 7z a -t7z -mx=9 vr_addresslib-${{env.release_version}}.7z ./release/SKSE
+          args: 7z a -t7z -mx=9 vr_addresslib-${{ env.release_version }}.7z ./release/SKSE
       - name: Sleep
         # add delay so upload does not kill the release notes from semantic-release
         run: |
@@ -50,7 +50,7 @@ jobs:
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GH_TOKEN }}
-          file: vr_addresslib-${{env.release_version}}.7z
-          asset_name: vr_addresslib-${{env.release_version}}.7z
+          file: vr_addresslib-${{ env.release_version }}.7z
+          asset_name: vr_addresslib-${{ env.release_version }}.7z
           tag: ${{ env.release_version }}
           overwrite: true
