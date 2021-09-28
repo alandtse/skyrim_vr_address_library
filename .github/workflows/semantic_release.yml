@@ -1,0 +1,56 @@
+name: semantic_release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GH_TOKEN }}
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install poetry
+      - name: Setup Git
+        run: |
+          git config --global user.name "semantic-release"
+          git config --global user.email "semantic-release@GitHub"
+      # - name: Python Semantic Release
+      #   uses: relekang/python-semantic-release@master
+      #   with:
+      #     github_token: ${{ secrets.GH_TOKEN }}
+      - name: Set release variable
+        run: |
+          echo "release_version=`git describe --abbrev=0`" >> $GITHUB_ENV
+      - name: Generate release csv          
+        run: |
+          poetry install
+          mkdir -p release/SKSE/Plugins
+          poetry run ./vr_address_tools.py release/SKSE/Plugins/ generate -rv ${{env.release_version}}   
+      - uses: edgarrc/action-7z@v1
+        with:
+          args: 7z a -t7z -mx=9 vr_addresslib-${{env.release_version}}.7z ./release/SKSE
+      - name: Sleep
+        # add delay so upload does not kill the release notes from semantic-release
+        run: |
+          sleep 5
+      - name: Upload zip to release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GH_TOKEN }}
+          file: vr_addresslib-${{env.release_version}}.7z
+          asset_name: vr_addresslib-${{env.release_version}}.7z
+          tag: ${{ env.release_version }}
+          overwrite: true
