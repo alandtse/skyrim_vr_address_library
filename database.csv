@@ -20,6 +20,7 @@ id,sse,vr,status,name
 13923,0x14017e4b0,0x14018e210,3,RE::Offset::TESFile::Duplicate
 14189,0x140189e30,0x140199b60,3,RE::Offset::TESObjectREFR::PlayAnimation
 14399,0x140190480,0x1401a01b0,3,RE::Offset::TESDescription::GetDescription
+14509,0x1401957e0,0x1401a5510,2,RE::TESForm::AddCompileIndex
 15491,0x1401c60a0,0x1401d6200,3,RE::Offset::BipedAnim::Dtor
 15494,0x1401c61a0,0x1401d6530,3,RE::Offset::BipedAnim::RemoveAllParts
 15757,0x1401d66e0,0x1401e7280,3,RE::Offset::InventoryEntryData::GetValue
@@ -446,7 +447,11 @@ id,sse,vr,status,name
 514315,0x141ec3b78,0x141f889d8,3,RE::Offset::SkyrimVM::Singleton
 514316,0x141ec3b80,0x141f889e0,2,RE::Offset::BGSStoryTeller::Singleton
 514349,0x141ec3cb3,0x141ec3cb3,2,RE::Offset::FormFactory::FormFactoriesInitialized
+514351,0x141ec3cb8,0x141f88b18,2,RE::TESForm::allForms
+514352,0x141ec3cc0,0x141f88b20,2,RE::TESForm::allFormsByEditorID
 514355,0x141ec3ce0,0x141f88b40,2,RE::Offset::FormFactory::FormFactories
+514360,0x141ec4150,0x141f88fb0,2,RE::TESForm::allFormsMapLock
+514361,0x141ec4158,0x141f88fb8,2,RE::TESForm::allFormsEditorIDMapLock
 514417,0x141ec4338,0x141f891a0,3,RE::NiRTTI_BGSDecalNode
 514462,0x141ec44b0,0x141f89358,3,RE::NiRTTI_BSAnimGroupSequence
 514494,0x142ec4838,0x142f896d8,3,RE::Offset::ActorEquipManager::Singleton
@@ -491,10 +496,13 @@ id,sse,vr,status,name
 517014,0x142f26ef8,0x142feb9f0,3,RE::Offset::PlayerCharacter::Singleton
 517045,0x142f27150,0x142febc50,3,RE::Offset::BGSFootstepManager::Singleton
 517222,0x142f38950,0x142ffd750,3,RE::NiRTTI_SceneGraph
+517228,0x142f38978,0x142ffd778,3,TaskQueueInterface.cpp::TaskQueueInterface::GetSingleton
 517601,0x142f3a680,0x142fff478,3,RE::NiRTTI_BSDoorHavokController
 517602,0x142f3a690,0x142fff488,3,RE::NiRTTI_BSPlayerDistanceCheckController
 517603,0x142f3a6a0,0x142fff498,3,RE::NiRTTI_BSSimpleScaleController
 519394,0x142f4c31c,0x1430115fc,2,RE::Offset::Console::SelectedRef
+519396,0x142f4c328,0x143011720,3,ContainerMenu.cpp::ContainerMenu::GetContainerMode
+519421,0x142f4c3f0,0x1430117e8,3,ContainerMenu.cpp::ContainerMenu::GetTargetRefHandle
 523673,0x142f6ba48,0x1430c3b18,3,RE::Offset::INIPrefSettingCollection::Singleton
 523759,0x142f77208,0x1430cf888,2,RE::Offset::NiMemManager::Singleton
 523891,0x143012388,0x14316ab08,3,RE::NiRTTI_NiObject
