@@ -388,16 +388,17 @@ def analyze_code_offsets(defined_rel_ids: dict, defined_vr_offsets: dict):
 
 
 def match_results(
-    results: List[dict], min_confidence=CONFIDENCE["SUGGESTED"]
+    results: List[dict], min_confidence=CONFIDENCE["SUGGESTED"], database=False
 ) -> List[dict]:
     """Match result ids to known vr addresses that meet min_confidence.
 
     Args:
         results (List[dict]): A list of results from scan_code
-        mind_confidence (int, optional): Minimum confidence level to match. Defaults to SUGGESTED == 1
+        min_confidence (int, optional): Minimum confidence level to match. Defaults to SUGGESTED == 1
+        database (bool, optional): Whether to output in a database.csv format for manual editing. Defaults to False
 
     Returns:
-        List[dict]: [description]
+        List[dict]: Sorted list of results. Default is a tab-separated file for linting.
     """
     global id_vr_status
     new_results = []
@@ -436,10 +437,18 @@ def match_results(
             sse_addr = ""
         if offset and not conversion:
             conversion = f"UNKNOWN SSE_{sse_addr}{f'+{offset}={add_hex_strings(sse_addr, offset)}' if offset else ''}"
-        new_results.append(
-            f"{directory}/{filename}:{i+1}\tID: {id}\tSSE: {sse_addr}\t{conversion}\t{vr_addr}\t{warning}"
-        )
-    return new_results
+        if database and not vr_addr:
+            suggested_vr = id_vr.get(id, "")
+            new_results.append(
+                f"{id},{sse_addr},{suggested_vr},1,{directory}/{filename}:{i+1}"
+            )
+        elif not database:
+            new_results.append(
+                f"{directory}/{filename}:{i+1}\tID: {id}\tSSE: {sse_addr}\t{conversion}\t{vr_addr}\t{warning}"
+            )
+    if database:
+        return sorted(new_results,key=lambda line: int(line.split(",")[0]))
+    return sorted(new_results)
 
 
 def in_file_replace(results: List[str]) -> bool:
@@ -591,13 +600,19 @@ def main():
         help="Analyze code to determine manually identified ids and vr offsets. Will also check against bin-diffed address databases.",
     )
     parser_analyze.add_argument(
+        "-m",
         "--min",
         nargs="?",
         const="minimum",
         action="store",
-        help="Sets the minimum confidence for the csv. Defaults to 2.",
+        help="Sets the minimum confidence needed for an ID match. Defaults to 2.",
     )
-
+    parser_analyze.add_argument(
+        "-d",
+        "--database",
+        action="store_true",
+        help="Output failed ID matches in database.csv format; used for manual editing.",
+    )
     parser_replace = subparsers.add_parser(
         "replace",
         help="Replace files automatically inline with bin-diffed discovered addresses within an #ifndef SKYRIMVR. Unknown addresses will be prefaced SSE_ and need to be manually fixed. This should be used for quick address testing only because it is preferred to make fixes in a new VR csv.",
@@ -684,8 +699,7 @@ def main():
             sub_args["release_version"] = args.get("release_version")
         write_csv(**sub_args)
     elif analyze and scan_results.get("results"):
-        results = match_results(scan_results["results"], min_confidence=minimum)
-        results.sort()
+        results = match_results(scan_results["results"], min_confidence=minimum, database=args.get("database"))
         if replace:
             in_file_replace(results)
         else:
