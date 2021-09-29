@@ -32,6 +32,8 @@ id,sse,vr,status,name
 15807,0x1401d9080,0x1401e9c20,3,RE::Offset::TESObjectREFR::GetStealValue
 15812,0x1401d9200,0x1401e9da0,3,RE::Offset::InventoryChanges::Ctor
 15813,0x1401d92f0,0x1401e9e90,3,RE::Offset::InventoryChanges::Dtor
+15858,0x1401e5390,0x1401f5f50,2,papyrus_extender::fave_util::item::favorite
+15859,0x1401e58f0,0x1401f64b0,2,papyrus_extender::fave_util::item::unfavorite
 15907,0x1401ecc60,0x1401fd7d0,3,RE::Offset::InventoryChanges::SetUniqueID
 15908,0x1401ecd30,0x1401fd8a0,2,RE::Offset::InventoryChanges::GetNextUniqueID
 15909,0x1401ece20,0x1401fd990,3,RE::Offset::InventoryChanges::TransferItemUID
@@ -54,6 +56,7 @@ id,sse,vr,status,name
 24481,0x140370910,0x1403802b0,3,RE::Offset::TESQuest::EnsureQuestStarted
 24486,0x140370e90,0x140380830,3,RE::Offset::TESQuest::ResetQuest
 25466,0x1403a4dd0,0x1403b4940,3,RE::Offset::TESHavokUtilities::FindCollidableRef
+25684,0x1403b1c80,0x1403c1a20,2,papyrus_extender::events::game::weatherevent::target_0x416
 26259,0x1403d2a60,0x1403e23d0,3,RE::Offset::BSFaceGenManager::PrepareHeadPartForShaders
 26616,0x1403e5250,0x1403f4da0,3,RE::Offset::ActorValueOwner::GetClampedActorValue
 31410,0x1404c8880,0x1404d8a40,3,RE::Offset::BGSWaterSystemManager::CreateBulletWaterDisplacement
@@ -62,6 +65,7 @@ id,sse,vr,status,name
 32290,0x1404f5c80,0x140505f60,3,RE::Offset::TESCamera::SetState
 33286,0x14053e380,0x140541100,3,RE::Offset::ActiveEffect::Dispel
 33733,0x1405530d0,0x140557380,3,RE::Offset::MagicTarget::HasMagicEffect
+33742,0x140553750,0x1405579c0,2,papyrus_extender::events::game::magictargetapply_0x1e8
 33828,0x140556f20,0x14055ccb0,3,RE::Offset::Actor::DispelWornItemEnchantments
 34413,0x14056c9d0,0x140572fd0,3,RE::Offset::DialogueItem::Ctor
 34818,0x140586de0,0x14058e310,3,RE::Offset::BGSSaveLoadManager::Save
@@ -77,11 +81,14 @@ id,sse,vr,status,name
 36748,0x1405fc9a0,0x140605190,3,RE::Offset::Actor::RequestDetectionLevel
 36877,0x1406057c0,0x14060dfd0,3,RE::Offset::Actor::IsOnFlyingMount
 36901,0x140607680,0x140610000,3,RE::Offset::Actor::SwitchRace
+37633,0x140626400,0x14062f270,2,papyrus_extender::events::game::weaponhit::actor::target_0x16a
+37674,0x140629090,0x140631f60,2,papyrus_extender::events::game::weaponhit::static::target_0x6C7
 37771,0x14062f560,0x140638430,3,RE::Offset::Actor::AddSpell
 37772,0x14062f720,0x1406385f0,3,RE::Offset::Actor::RemoveSpell
 37802,0x140631360,0x14063a230,3,RE::Offset::Actor::UpdateArmorAbility
 37803,0x1406313d0,0x14063a2a0,3,RE::Offset::Actor::UpdateWeaponAbility
 37808,0x140631c80,0x14063ab50,3,RE::Offset::Actor::InterruptCast
+37832,0x140633090,0x14063bf60,2,papyrus_extender::events::game::magichit::sendhitevent_0x1c3
 37938,0x140637a80,0x140640a90,3,RE::Offset::ActorEquipManager::EquipObject
 37939,0x140637bc0,0x140640bd0,2,RE::Offset::ActorEquipManager::EquipSpell
 37941,0x140637ca0,0x140640cb0,2,RE::Offset::ActorEquipManager::EquipShout
@@ -99,6 +106,8 @@ id,sse,vr,status,name
 39614,0x1406b5450,0x1406d8730,3,RE::Offset::PlayerCharacter::GetNumTints
 40560,0x1406e6740,0x14070d630,3,RE::Offset::PlayerCharacter::PlayerSkills::AdvanceLevel
 41257,0x140704970,0x14072b900,3,RE::Offset::PlayerControls::Ctor
+41659,0x140719990,0x140744330,2,papyrus_extender::detection::calculatedetection_0x526
+43022,0x1407531c0,0x14077e4e0,2,papyrus_extender::events::game::weaponhit::projectile::target_0x38d
 49908,0x14084d630,0x140877db0,3,RE::Offset::PlayerCamera::UpdateThirdPerson
 50099,0x140856a50,0x140880e10,3,RE::Offset::ItemList::Update
 50164,0x14085bb30,0x1408864d0,3,RE::Offset::Console::SetSelectedRef
@@ -106,6 +115,8 @@ id,sse,vr,status,name
 50257,0x140862160,0x14088d4e0,3,RE::Offset::ChestsLooted::GetEventSource
 50258,0x140862250,0x14088d5d0,3,RE::Offset::ItemsPickpocketed::GetEventSource
 50515,0x1408708a0,0x14089be30,3,RE::Offset::ItemCrafted::GetEventSource
+51121,0x140899c40,0x1408c7cd0,2,papyrus_extender::fave_util::magic::favorite
+51122,0x140899ca0,0x1408c7d30,2,papyrus_extender::fave_util::magic::unfavorite
 51422,0x1408ab5c0,0x1408d8420,3,RE::Offset::MessageBoxData::QueueMessage
 51899,0x1408d50f0,0x140902c10,3,RE::Offset::UIBlurManager::IncrementBlurCount
 51900,0x1408d5130,0x140902c50,3,RE::Offset::UIBlurManager::DecrementBlurCount
