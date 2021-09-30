@@ -440,14 +440,14 @@ def match_results(
         if database and not vr_addr:
             suggested_vr = id_vr.get(id, "")
             new_results.append(
-                f"{id},{sse_addr},{suggested_vr},1,{directory}/{filename}:{i+1}"
+                f"{id},{sse_addr},{suggested_vr},1,{directory[1:] if directory.startswith('/') or directory.startswith(chr(92)) else directory}/{filename}:{i+1}"
             )
         elif not database:
             new_results.append(
                 f"{directory}/{filename}:{i+1}\tID: {id}\tSSE: {sse_addr}\t{conversion}\t{vr_addr}\t{warning}"
             )
     if database:
-        return sorted(new_results,key=lambda line: int(line.split(",")[0]))
+        return sorted(new_results, key=lambda line: int(line.split(",")[0]))
     return sorted(new_results)
 
 
@@ -699,7 +699,11 @@ def main():
             sub_args["release_version"] = args.get("release_version")
         write_csv(**sub_args)
     elif analyze and scan_results.get("results"):
-        results = match_results(scan_results["results"], min_confidence=minimum, database=args.get("database"))
+        results = match_results(
+            scan_results["results"],
+            min_confidence=minimum,
+            database=args.get("database"),
+        )
         if replace:
             in_file_replace(results)
         else:
