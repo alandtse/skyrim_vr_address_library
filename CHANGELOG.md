@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.6.1 (2021-10-01)
+### Fix
+* Remove 15873 InventoryChanges::GetArmorInSlot ([`3019284`](https://github.com/alandtse/vr_address_tools/commit/30192840916b94ec2db50a56142589c8206efcf2))
+
 ## v0.6.0 (2021-09-30)
 ### Feature
 * Add remaining rel::id in commonlibvr ([`fb349a0`](https://github.com/alandtse/vr_address_tools/commit/fb349a06e63c8c5f80af453d25b0bb24e7dfedb2))
