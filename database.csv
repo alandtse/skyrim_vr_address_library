@@ -51,7 +51,6 @@ id,sse,vr,status,name
 15829,0x1401e08b0,0x1401f1470,3,RE::InventoryChanges::InitScripts
 15858,0x1401e5390,0x1401f5f50,2,papyrus_extender::fave_util::item::favorite
 15859,0x1401e58f0,0x1401f64b0,2,papyrus_extender::fave_util::item::unfavorite
-15873,0x1401e7570,0x1401f8130,2,RE::InventoryChanges::GetArmorInSlot?
 15889,0x1401e9d90,0x1401fa900,3,RE::InventoryChanges::InitLeveledItems
 15890,0x1401ea020,0x1401fab90,3,RE::InventoryChanges::InitFromContainerExtra
 15907,0x1401ecc60,0x1401fd7d0,3,RE::Offset::InventoryChanges::SetUniqueID
