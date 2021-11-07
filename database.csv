@@ -36,6 +36,9 @@ id,sse,vr,status,name
 14704,0x14019d510,0x1401ad250,3,RE::TESHarvestedEvent::GetEventSource
 15491,0x1401c60a0,0x1401d6200,3,RE::Offset::BipedAnim::Dtor
 15494,0x1401c61a0,0x1401d6530,3,RE::Offset::BipedAnim::RemoveAllParts
+15495,0x1401c6270,0x1401d6600,3,FEC::UpdateCollision::RemoveNodeFromScene
+15501,0x1401c6f90,0x1401d7450,3,FEC::ProcessObject::attachArmorAddon
+15535,0x1401cafb0,0x1401db9e0,3,FEC::ProcessGeometry::processAttachedGeometry
 15547,0x1401cc7c0,0x1401dd210,3,RE::NiAVObject::ClearDecals
 15576,0x1401cdd40,0x1401de820,2,RE::Offset::BSDismemberSkinInstance::UpdateDismemberPartion
 15757,0x1401d66e0,0x1401e7280,3,RE::Offset::InventoryEntryData::GetValue
@@ -82,6 +85,7 @@ id,sse,vr,status,name
 24012,0x140355940,0x140365200,3,RE::TESFaction::SetFactionFightReaction
 24206,0x140360480,0x14036fd80,3,RE::Offset::TESNPC::SetSkinFromTint
 24207,0x1403606d0,0x14036ffd0,3,RE::Offset::TESNPC::UpdateNeck
+24236,0x140364ff0,0x140374950,3,FEC::processArmorAttach::PerformNPCDismember
 24246,0x140365bf0,0x140375550,3,RE::Offset::TESNPC::ChangeHeadPart
 24274,0x140368a20,0x140378380,3,RE::Offset::TESNPC::HasOverlays
 24275,0x140368b30,0x140378490,3,RE::Offset::TESNPC::GetBaseOverlays
@@ -91,6 +95,7 @@ id,sse,vr,status,name
 24537,0x140378760,0x140388110,3,RE::TESQuest::CreateRefHandleByAliasID
 24985,0x14038d990,0x14039d1c0,3,RE::TESTopicInfo::ResponseData::PopulateResponseText
 25466,0x1403a4dd0,0x1403b4940,3,RE::Offset::TESHavokUtilities::FindCollidableRef
+25638,0x1403aebd0,0x1403be8d0,3,splashes_of_skyrim::RainManager::ToggleWaterRipples
 25684,0x1403b1c80,0x1403c1a20,2,papyrus_extender::events::game::weatherevent::target_0x416
 25822,0x1403bcf40,0x1403ccd90,3,RE::AIForumulas::ComputePickpocketSuccess
 25858,0x1403be980,0x1403ce200,3,RE::ActorValueOwner::GetArmorRatingSkillMultiplier
@@ -111,6 +116,7 @@ id,sse,vr,status,name
 33733,0x1405530d0,0x140557380,3,RE::Offset::MagicTarget::HasMagicEffect
 33742,0x140553750,0x1405579c0,2,papyrus_extender::events::game::magictargetapply_0x1e8
 33828,0x140556f20,0x14055ccb0,3,RE::Offset::Actor::DispelWornItemEnchantments
+34132,0x140560e40,0x1405670b0,3,ENBLightForEffectShaders::ShaderReferenceEffect::Add:AddAddonModel::thunk_0x8C2
 34413,0x14056c9d0,0x140572fd0,3,RE::Offset::DialogueItem::Ctor
 34818,0x140586de0,0x14058e310,3,RE::Offset::BGSSaveLoadManager::Save
 34819,0x140587350,0x14058e920,3,RE::Offset::BGSSaveLoadManager::Load
@@ -120,6 +126,7 @@ id,sse,vr,status,name
 36252,0x1405d1190,0x1405d9770,3,RE::Offset::Actor::IsRunning
 36286,0x1405d2520,0x1405daae0,3,RE::Offset::Actor::GetGhost
 36344,0x1405d62e0,0x1405de910,3,RE::Offset::Actor::GetLevel
+36357,0x1405d6fb0,0x1405df5e0,3,FEC::UpdateAVs
 36407,0x1405db310,0x1405e3990,3,RE::Offset::Actor::EvaluatePackage
 36427,0x1405dd770,0x1405e5dc0,3,RE::Offset::Actor::StealAlarm
 36537,0x1405e7e40,0x1405f0560,3,RE::Offset::Actor::GetHostileToActor
@@ -179,6 +186,8 @@ id,sse,vr,status,name
 40560,0x1406e6740,0x14070d630,3,RE::Offset::PlayerCharacter::PlayerSkills::AdvanceLevel
 41257,0x140704970,0x14072b900,3,RE::Offset::PlayerControls::Ctor
 41659,0x140719990,0x140744330,2,papyrus_extender::detection::calculatedetection_0x526
+42638,0x1407369b0,0x1407614b0,3,splashes_of_skyrim::ProjectileManager::ProcessInWater::create_splash
+42696,0x14073c410,0x140766fb0,3,splashes_of_skyrim::ExplosionManager::UpdateSound
 42832,0x140742850,0x14076d400,3,RE::HitData::Populate
 43022,0x1407531c0,0x14077e4e0,2,papyrus_extender::events::game::weaponhit::projectile::target_0x38d
 49908,0x14084d630,0x140877db0,3,RE::Offset::PlayerCamera::UpdateThirdPerson
