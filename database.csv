@@ -123,6 +123,7 @@ id,sse,vr,status,name
 35199,0x14059b140,0x1405a2800,1,RE::Offset::MemoryManager::RegisterMemoryManager
 35413,0x1405a6640,0x1405add00,3,RE::Calendar::GetTimeDateString
 35978,0x1405c5220,0x1405cd7c0,3,RE::TaskQueueInterface::QueueBulletWaterDisplacementTask
+35987,0x1405c58c0,0x1405cde60,2,RE::TaskQueueInterface::QueueRemoveSpellTask
 36252,0x1405d1190,0x1405d9770,3,RE::Offset::Actor::IsRunning
 36286,0x1405d2520,0x1405daae0,3,RE::Offset::Actor::GetGhost
 36344,0x1405d62e0,0x1405de910,3,RE::Offset::Actor::GetLevel
@@ -654,6 +655,7 @@ id,sse,vr,status,name
 517014,0x142f26ef8,0x142feb9f0,3,RE::Offset::PlayerCharacter::Singleton
 517045,0x142f27150,0x142febc50,3,RE::Offset::BGSFootstepManager::Singleton
 517051,0x142f27180,0x142febc80,3,RE::Inventory3DManager::GetSingleton?
+517052,0x142f27188,0x142fea720,3,RE::UIRenderManager::singleton
 517222,0x142f38950,0x142ffd750,3,RE::NiRTTI_SceneGraph
 517228,0x142f38978,0x142ffd778,3,TaskQueueInterface.cpp::TaskQueueInterface::GetSingleton
 517372,0x142f39650,0x142ffe470,3,RE::ResponseDictionary::GetSingleton?
