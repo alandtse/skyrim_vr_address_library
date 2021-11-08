@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.7.0 (2021-11-07)
+### Feature
+* Add po3 mods ([`13b2e77`](https://github.com/alandtse/vr_address_tools/commit/13b2e77bf8ca0a02f07a3e1994e8e72069054cfb))
+
 ## v0.6.1 (2021-10-01)
 ### Fix
 * Remove 15873 InventoryChanges::GetArmorInSlot ([`3019284`](https://github.com/alandtse/vr_address_tools/commit/30192840916b94ec2db50a56142589c8206efcf2))
