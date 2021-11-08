@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.8.0 (2021-11-08)
+### Feature
+* Add latest from po3/dev ([`e4c01ff`](https://github.com/alandtse/vr_address_tools/commit/e4c01ff8297117a94e12116881653f0fd6a8c774))
+
 ## v0.7.0 (2021-11-07)
 ### Feature
 * Add po3 mods ([`13b2e77`](https://github.com/alandtse/vr_address_tools/commit/13b2e77bf8ca0a02f07a3e1994e8e72069054cfb))
