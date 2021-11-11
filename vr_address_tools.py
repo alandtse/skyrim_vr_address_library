@@ -108,9 +108,15 @@ def load_database(
                 id = int(row["id"])
                 sse = add_hex_strings(row["sse"])
                 vr = add_hex_strings(row["vr"])
-                id_sse[id] = sse
-                id_vr[id] = vr
-                loaded += 1
+                if id_vr_status.get(id):
+                    if debug:
+                        print(
+                            f"Database Load Warning: {id} already loaded skipping load from {addresslib}"
+                        )
+                else:
+                    id_sse[id] = sse
+                    id_vr[id] = vr
+                    loaded += 1
     except FileNotFoundError:
         print(f"{addresslib} not found")
 
