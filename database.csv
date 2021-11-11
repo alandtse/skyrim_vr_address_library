@@ -202,6 +202,10 @@ id,sse,vr,status,name
 50884,0x140887970,0x1408b4ea0,3,RE::Inventory3DManager::UpdateItem3D
 50885,0x1408879a0,0x1408b4ed0,3,RE::Inventory3DManager::UpdateMagic3D?
 50886,0x140887d10,0x1408b5240,3,RE::Inventory3DManager::Clear3D
+51081,0x140896ac0,0x1408c4770,3,LockVariations::Model::RequestModel
+51094,0x1408987d0,0x1408c6500,3,LockVariations::Sound::update_pick_angle
+51096,0x140898cd0,0x1408c69f0,3,LockVariations::Sound::update_lock_angle
+51098,0x140898ff0,0x1408c6dd0,3,LockVariations::Sound::rotate_lock
 51121,0x140899c40,0x1408c7cd0,2,papyrus_extender::fave_util::magic::favorite
 51122,0x140899ca0,0x1408c7d30,2,papyrus_extender::fave_util::magic::unfavorite
 51422,0x1408ab5c0,0x1408d8420,3,RE::Offset::MessageBoxData::QueueMessage
