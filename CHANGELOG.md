@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.9.0 (2021-11-11)
+### Feature
+* Add LockVariations ([`662e646`](https://github.com/alandtse/vr_address_tools/commit/662e6460e047854eaf0b942081d7ba4d4d2a8cd6))
+
 ## v0.8.0 (2021-11-08)
 ### Feature
 * Add latest from po3/dev ([`e4c01ff`](https://github.com/alandtse/vr_address_tools/commit/e4c01ff8297117a94e12116881653f0fd6a8c774))
