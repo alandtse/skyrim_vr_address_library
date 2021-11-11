@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.9.1 (2021-11-11)
+### Fix
+* Avoid overwriting results from database.csv ([`fb15874`](https://github.com/alandtse/vr_address_tools/commit/fb15874ef19ac446d0ac90e25fd6a4ded7aa09e1))
+
 ## v0.9.0 (2021-11-11)
 ### Feature
 * Add LockVariations ([`662e646`](https://github.com/alandtse/vr_address_tools/commit/662e6460e047854eaf0b942081d7ba4d4d2a8cd6))
