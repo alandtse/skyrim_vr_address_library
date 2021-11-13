@@ -115,6 +115,7 @@ id,sse,vr,status,name
 33721,0x1405528e0,0x140556cb0,3,RE::MagicTarget::DispelEffect?
 33733,0x1405530d0,0x140557380,3,RE::Offset::MagicTarget::HasMagicEffect
 33742,0x140553750,0x1405579c0,2,papyrus_extender::events::game::magictargetapply_0x1e8
+33756,0x140554500,0x140558580,3,RE::MagicTarget::ForEachActiveEffect
 33828,0x140556f20,0x14055ccb0,3,RE::Offset::Actor::DispelWornItemEnchantments
 34132,0x140560e40,0x1405670b0,3,ENBLightForEffectShaders::ShaderReferenceEffect::Add:AddAddonModel::thunk_0x8C2
 34413,0x14056c9d0,0x140572fd0,3,RE::Offset::DialogueItem::Ctor
@@ -353,6 +354,16 @@ id,sse,vr,status,name
 241857,0x14159fcd0,0x141616e60,3,RE::Offset::TESNPC::Vtbl
 256647,0x14162f2a0,0x1416a57a0,3,RE::Offset::ThirdPersonState::Vtbl
 260538,0x141655640,0x1416ce888,3,RE::Offset::Actor::Vtbl
+261397,0x14165da40,0x1416d6de0,3,RE::Offset::Character::Vtbl
+261398,0x14165e398,0x1416d7748,3,RE::Offset::Character::Vtbl
+261399,0x14165e3b0,0x1416d7760,3,RE::Offset::Character::Vtbl
+261400,0x14165e3c8,0x1416d7778,3,RE::Offset::Character::Vtbl
+261401,0x14165e468,0x1416d7818,3,RE::Offset::Character::Vtbl
+261402,0x14165e4d0,0x1416d7880,3,RE::Offset::Character::Vtbl
+261403,0x14165e520,0x1416d78d0,3,RE::Offset::Character::Vtbl
+261404,0x14165e5d8,0x1416d7988,3,RE::Offset::Character::Vtbl
+261405,0x14165e5f0,0x1416d79a0,3,RE::Offset::Character::Vtbl
+261406,0x14165e608,0x1416d79b8,3,RE::Offset::Character::Vtbl
 261916,0x1416635e0,0x1416e2230,3,RE::Offset::PlayerCharacter::Vtbl
 263052,0x14166f140,0x1416f2070,3,RE::Offset::LookHandler::Vtbl
 263056,0x14166f1a8,0x1416f21c8,3,RE::Offset::MovementHandler::Vtbl
