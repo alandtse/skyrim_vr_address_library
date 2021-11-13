@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.10.0 (2021-11-13)
+### Feature
+* Add ids for FEC ([`c03ac96`](https://github.com/alandtse/vr_address_tools/commit/c03ac966da1a789c55dafb39532343baf7d67223))
+
 ## v0.9.1 (2021-11-11)
 ### Fix
 * Avoid overwriting results from database.csv ([`fb15874`](https://github.com/alandtse/vr_address_tools/commit/fb15874ef19ac446d0ac90e25fd6a4ded7aa09e1))
