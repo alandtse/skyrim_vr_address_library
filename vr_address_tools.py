@@ -152,7 +152,12 @@ def load_database(
     for id, sse_addr in id_sse.items():
         ids += 1
         ida_addr = add_hex_strings(sse_vr.get(sse_addr))
-        if id_vr.get(id) and ida_addr and id_vr.get(id) != ida_addr:
+        if id_vr_status.get(id):
+                    if debug:
+                        print(
+                            f"Database Load Warning: {id} loaded by databse.csv; skipping IDA check"
+                        )
+        elif id_vr.get(id) and ida_addr and id_vr.get(id) != ida_addr:
             if ida_override:
                 if debug:
                     print(
