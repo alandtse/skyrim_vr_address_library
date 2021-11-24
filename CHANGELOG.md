@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.11.0 (2021-11-24)
+### Feature
+* Add more ids for CommonLib, FEC, and SPID ([`313b280`](https://github.com/alandtse/vr_address_tools/commit/313b28044c3696d25843cc03e48709b8575546e9))
+
 ## v0.10.0 (2021-11-13)
 ### Feature
 * Add ids for FEC ([`c03ac96`](https://github.com/alandtse/vr_address_tools/commit/c03ac966da1a789c55dafb39532343baf7d67223))
