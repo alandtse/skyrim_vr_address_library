@@ -176,6 +176,7 @@ id,sse,vr,status,name
 39372,0x14069d6e0,0x1406bde50,2,RE::Offset::Actor::CanFastTravel
 39384,0x14069fe60,0x1406c0640,3,RE::Offset::PlayerCharacter::PlayPickupEvent
 39413,0x1406a2540,0x1406c30b0,3,RE::PlayerCharacter::AddSkillExperience
+39425,0x1406a2fc0,0x1406c38a0,3,papyrus_extender::papyrus::detail::get_god_mode_impl
 39471,0x1406a9f90,0x1406cbce0,2,RE::Offset::PlayerCharacter::ActivatePickRef
 39475,0x1406aa260,0x1406cc000,3,RE::Offset::PlayerCharacter::StartGrabObject
 39568,0x1406b2530,0x1406d58a0,3,RE::PlayerCharacter::AttemptPickpocket
@@ -217,6 +218,7 @@ id,sse,vr,status,name
 52208,0x1408e3d70,0x140915f50,2,RE::Offset::MapMenu::MarkerClick
 52226,0x1408e6ea0,0x140919520,3,RE::Offset::MapMenu::PlaceMarker
 53144,0x1409252c0,0x14095fd10,3,RE::Offset::SkyrimVM::QueuePostRenderCall
+55945,0x1409a4050,0x1409deb70,3,SPID:Distribute::DeathItemManager::Detail::Add_item
 56227,0x1409ae5c0,0x1409e90e0,3,RE::Offset::TESObjectREFR::MoveTo
 56606,0x1409c6730,0x140a01280,3,RE::Offset::hkReferencedObject::AddReference
 56607,0x1409c67f0,0x140a01340,3,RE::Offset::hkReferencedObject::RemoveReference
@@ -352,6 +354,7 @@ id,sse,vr,status,name
 234000,0x1415576f0,0x1415cf2c0,3,RE::Offset::TESObjectACTI::Vtbl
 234148,0x141559930,0x1415d1500,3,RE::Offset::TESObjectCONT::Vtbl
 241857,0x14159fcd0,0x141616e60,3,RE::Offset::TESNPC::Vtbl
+254404,0x141619298,0x1416900d8,3,RE::Offset::BSLightingShaderMaterial::Vtbl
 256647,0x14162f2a0,0x1416a57a0,3,RE::Offset::ThirdPersonState::Vtbl
 260538,0x141655640,0x1416ce888,3,RE::Offset::Actor::Vtbl
 261397,0x14165da40,0x1416d6de0,3,RE::Offset::Character::Vtbl
@@ -8316,3 +8319,9 @@ id,sse,vr,status,name
 692140,0x141ebd1a0,0x141f815c0,3,RE::RTTI_type_info
 692141,0x141ebd1c0,0x141f81860,3,RE::RTTI_BSSocket
 692142,0x141ebd1e0,0x141f81880,3,RE::RTTI_BSSocketServer
+5370397616,0x14019c3b0,0x1401ac0e0,3,RE::BSShaderProperty::InvalidateMaterial
+5370677424,0x1401e08b0,0x1401f1470,3,RE::InventoryChanges::GenerateLeveledListChanges
+5370704656,0x1401e7310,0x1401f7ed0,3,RE::InventoryChanges::GetItemCount
+5374512336,0x140588cd0,0x140590320,3,RE::BGSSaveLoadManager::PopulateSaveList
+5375528368,0x140680db0,0x14068A230,3,RE::Offset::AIProcess::SetActorRefraction
+5388393136,0x1412c5ab0,0x141303ea0,3,RE::BSLightingShaderProperty::InvalidateTextures
