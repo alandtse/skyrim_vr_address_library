@@ -175,6 +175,7 @@ id,sse,vr,status,name
 39365,0x14069c2a0,0x1406bc6c0,3,RE::PlayerCharacter::CenterOnCell_Impl
 39372,0x14069d6e0,0x1406bde50,2,RE::Offset::Actor::CanFastTravel
 39384,0x14069fe60,0x1406c0640,3,RE::Offset::PlayerCharacter::PlayPickupEvent
+39401,0x1406a1820,0x1406c2160,3,splashes_of_skyrim::RainManager::ToggleWaterRipples
 39413,0x1406a2540,0x1406c30b0,3,RE::PlayerCharacter::AddSkillExperience
 39425,0x1406a2fc0,0x1406c38a0,3,papyrus_extender::papyrus::detail::get_god_mode_impl
 39471,0x1406a9f90,0x1406cbce0,2,RE::Offset::PlayerCharacter::ActivatePickRef
