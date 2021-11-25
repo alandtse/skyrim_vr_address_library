@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.12.0 (2021-11-25)
+### Feature
+* Add new address for splashes of skyrim ([`e44e4c2`](https://github.com/alandtse/vr_address_tools/commit/e44e4c21c467bcaccfc46b6ddd9886e48e6466b0))
+
 ## v0.11.0 (2021-11-24)
 ### Feature
 * Add more ids for CommonLib, FEC, and SPID ([`313b280`](https://github.com/alandtse/vr_address_tools/commit/313b28044c3696d25843cc03e48709b8575546e9))
