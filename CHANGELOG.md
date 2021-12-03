@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.13.0 (2021-12-03)
+### Feature
+* Add vtable parsing ([`e7b5a8c`](https://github.com/alandtse/vr_address_tools/commit/e7b5a8c68a34f7745645f26b56a1acdd46e49461))
+
 ## v0.12.0 (2021-11-25)
 ### Feature
 * Add new address for splashes of skyrim ([`e44e4c2`](https://github.com/alandtse/vr_address_tools/commit/e44e4c21c467bcaccfc46b6ddd9886e48e6466b0))
