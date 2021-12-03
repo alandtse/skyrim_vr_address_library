@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.13.1 (2021-12-03)
+### Fix
+* Add remaining array of vtable entries ([`f5ac2c4`](https://github.com/alandtse/vr_address_tools/commit/f5ac2c4aa008518da6dded7658f3cd716342cad3))
+
 ## v0.13.0 (2021-12-03)
 ### Feature
 * Add vtable parsing ([`e7b5a8c`](https://github.com/alandtse/vr_address_tools/commit/e7b5a8c68a34f7745645f26b56a1acdd46e49461))
