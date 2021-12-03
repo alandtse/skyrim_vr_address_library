@@ -20,6 +20,7 @@ PATTERN_GROUPS = (
 RELID_PATTERN = r"(\w+){ REL::ID\(([0-9]+)\),*\s*([a-fx0-9])*\s+};"
 OFFSET_PATTERN = r"(\w+){ REL::Offset\(([a-fx0-9]+)\)\s+};"
 OFFSET_RELID_PATTERN = r"(?:static|inline) constexpr REL::ID\s+(\w+)\s*\(\s*[^(]+\s*\(\s*([0-9]+)\s*\)\s*\)\s*;"
+OFFSET_VTABLE_RELID_PATTERN = r"(?:(?P<name>\w+){\s*|(?:\\g<name>{ *\\g<relid> , )*)(?P<relid>rel::id\((?:([0-9]+)[^)]*(0x[0-9a-f]*)|([0-9]+))\)*)+"
 OFFSET_OFFSET_PATTERN = (
     r"(?:inline|constexpr) REL::Offset\s+(\w+)\s*\(\s*([a-fx0-9]+)\s*\)\s*;"
 )
@@ -274,36 +275,57 @@ def scan_code(
                     # looking at offsets
                     if debug:
                         print("parsing offsets file: ", f"{dirpath}/{filename}")
-                    header = CppHeaderParser.CppHeader(f"{dirpath}/{filename}")
-                    for func in header.functions:
-                        if func.get("returns") == "constexpr REL::ID":
-                            name = func.get("name")
-                            namespace = func.get("namespace")
-                            search = re.search(
-                                OFFSET_RELID_PATTERN, func.get("debug"), re.I
-                            )
-                            if search and search.groups():
-                                id = search.groups()[1]
-                                if debug:
-                                    print("Found rel::id", name, id)
-                                defined_rel_ids[f"{namespace}{name}"] = {
-                                    "id": id,
-                                    "func": func,
-                                }
-                        elif func.get("returns") == "constexpr REL::Offset":
-                            name = func.get("name")
-                            namespace = func.get("namespace")
-                            search = re.search(
-                                OFFSET_OFFSET_PATTERN, func.get("debug"), re.I
-                            )
-                            if search and search.groups():
-                                id = search.groups()[1]
-                                if debug:
-                                    print("Found rel::offset", name, id)
-                                defined_vr_offsets[f"{namespace}{name}"] = {
-                                    "id": id,
-                                    "func": func,
-                                }
+                    if filename.lower() == "Offsets_VTABLE.h".lower():
+                        with open(f"{dirpath}/{filename}") as f:
+                            try:
+                                for i, line in enumerate(f):
+                                    namespace = "RE::"
+                                    search = re.search(
+                                                OFFSET_VTABLE_RELID_PATTERN, line, re.I
+                                            )
+                                    if search and search.groups():
+                                        if search.groups()[0]:
+                                            name = search.groups()[0]                                        
+                                        id = search.groups()[4]
+                                        if debug:
+                                            print("Found rel::id", name, id)
+                                        defined_rel_ids[f"{namespace}{name}"] = {
+                                            "id": str(id),
+                                            "name": name,
+                                        }                                    
+                            except UnicodeDecodeError as ex:
+                                print(f"Unable to read {dirpath}/{filename}: ", ex)
+                    else:
+                        header = CppHeaderParser.CppHeader(f"{dirpath}/{filename}")
+                        for func in header.functions:
+                            if func.get("returns") == "constexpr REL::ID":
+                                name = func.get("name")
+                                namespace = func.get("namespace")
+                                search = re.search(
+                                    OFFSET_RELID_PATTERN, func.get("debug"), re.I
+                                )
+                                if search and search.groups():
+                                    id = search.groups()[1]
+                                    if debug:
+                                        print("Found rel::id", name, id)
+                                    defined_rel_ids[f"{namespace}{name}"] = {
+                                        "id": id,
+                                        "func": func,
+                                    }
+                            elif func.get("returns") == "constexpr REL::Offset":
+                                name = func.get("name")
+                                namespace = func.get("namespace")
+                                search = re.search(
+                                    OFFSET_OFFSET_PATTERN, func.get("debug"), re.I
+                                )
+                                if search and search.groups():
+                                    id = search.groups()[1]
+                                    if debug:
+                                        print("Found rel::offset", name, id)
+                                    defined_vr_offsets[f"{namespace}{name}"] = {
+                                        "id": id,
+                                        "func": func,
+                                    }
     print(
         f"Finished scanning {count:n} files. rel_ids: {len(defined_rel_ids)} offsets: {len(defined_vr_offsets)} results: {len(results)}"
     )
