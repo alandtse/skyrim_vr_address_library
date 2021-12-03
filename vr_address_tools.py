@@ -280,18 +280,19 @@ def scan_code(
                             try:
                                 for i, line in enumerate(f):
                                     namespace = "RE::"
-                                    search = re.search(
+                                    search = re.finditer(
                                                 OFFSET_VTABLE_RELID_PATTERN, line, re.I
                                             )
-                                    if search and search.groups():
-                                        if search.groups()[0]:
-                                            name = search.groups()[0]                                        
-                                        id = search.groups()[4]
+                                    for count, item in enumerate(search):
+                                        if item.group() and item.group(1):
+                                            name = item.group(1)                                       
+                                        id = item.group(5)
+                                        full_name = f"{name}_{count}"
                                         if debug:
-                                            print("Found rel::id", name, id)
-                                        defined_rel_ids[f"{namespace}{name}"] = {
+                                            print("Found rel::id", full_name, id)
+                                        defined_rel_ids[f"{namespace}{full_name}"] = {
                                             "id": str(id),
-                                            "name": name,
+                                            "name": full_name,
                                         }                                    
                             except UnicodeDecodeError as ex:
                                 print(f"Unable to read {dirpath}/{filename}: ", ex)
