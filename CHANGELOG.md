@@ -2,6 +2,13 @@
 
 <!--next-version-placeholder-->
 
+## v0.14.0 (2021-12-04)
+### Feature
+* Add po3 mods ([`b68b414`](https://github.com/alandtse/vr_address_tools/commit/b68b414d08e268715e1f4134cce6986ee0ec62b5))
+
+### Fix
+* Accept vtable suggestions ([`85cd874`](https://github.com/alandtse/vr_address_tools/commit/85cd87458ef4779927515770d21d4dfba28503a7))
+
 ## v0.13.1 (2021-12-03)
 ### Fix
 * Add remaining array of vtable entries ([`f5ac2c4`](https://github.com/alandtse/vr_address_tools/commit/f5ac2c4aa008518da6dded7658f3cd716342cad3))
