@@ -19,6 +19,7 @@ sseid,aeid,confidence,name
 37674,38628,2,PapyrusExtender::Static::SendHitEvent
 37832,38786,2,PapyrusExtender::SendHitEvent
 39425,40501,2,PapyrusExtender::get_god_mode_impl
+41292,42338,2,DialogueMovementEnabler::unlockCamera
 41659,42742,2,PapyrusExtender::CalculateDetection
 42638,43806,2,SplashesofSkyrim::Splash::kCone
 43022,44213,2,PapyrusExtender::Projectile::SendHitEvent
@@ -33,8 +34,11 @@ sseid,aeid,confidence,name
 52374,53270,2,QuickLootRE::
 52400,53299,2,QuickLootRE::
 55945,56489,2,SPID::add_item
+56476,56833,2,DialogueMovementEnabler::isinMenuMode
 67234,68534,2,QuickLootRE::
 67240,68540,2,QuickLootRE::
 234000,189485,2,QuickLootRE::TESObjectACTI
 234148,189633,2,QuickLootRE::TESObjectCONT
 241857,195816,2,QuickLootRE::TESNPC
+268589,215255,2,DialogueMovementEnabler::DialogueMenuEx
+269528,215773,2,DialogueMovementEnabler::MenuControlsEx
