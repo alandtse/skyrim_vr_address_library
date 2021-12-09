@@ -2,6 +2,13 @@
 
 <!--next-version-placeholder-->
 
+## v0.16.0 (2021-12-09)
+### Feature
+* Add support for dialoguemovementenabler ([`5de6061`](https://github.com/alandtse/vr_address_tools/commit/5de60617d2f157ef60eccfc9b745740eed58b665))
+
+### Fix
+* Fix description ([`ad0abb7`](https://github.com/alandtse/vr_address_tools/commit/ad0abb70c6fe9ae88e0f3e3464bf9b78b822982f))
+
 ## v0.15.0 (2021-12-05)
 ### Feature
 * Add essentialfavorites ([`2c677a9`](https://github.com/alandtse/vr_address_tools/commit/2c677a90e388e497ed1f55c4d1a41bd51e1b275c))
