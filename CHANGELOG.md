@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.15.0 (2021-12-05)
+### Feature
+* Add essentialfavorites ([`2c677a9`](https://github.com/alandtse/vr_address_tools/commit/2c677a90e388e497ed1f55c4d1a41bd51e1b275c))
+
 ## v0.14.0 (2021-12-04)
 ### Feature
 * Add po3 mods ([`b68b414`](https://github.com/alandtse/vr_address_tools/commit/b68b414d08e268715e1f4134cce6986ee0ec62b5))
