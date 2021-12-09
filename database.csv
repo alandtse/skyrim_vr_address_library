@@ -268,6 +268,7 @@ id,sse,vr,status,name
 55352,0x140988450,0x1409c35d0,2,po3tweaks::GameTimers::SetGlobal
 55945,0x1409a4050,0x1409deb70,3,SPID:Distribute::DeathItemManager::Detail::Add_item
 56227,0x1409ae5c0,0x1409e90e0,3,RE::Offset::TESObjectREFR::MoveTo
+56476,0x1409b8750,0x1409f32a0,2,DialogueMovementEnabler::isInMenuMode
 56606,0x1409c6730,0x140a01280,3,RE::Offset::hkReferencedObject::AddReference
 56607,0x1409c67f0,0x140a01340,3,RE::Offset::hkReferencedObject::RemoveReference
 60551,0x140a7b000,0x140ab5a00,3,RE::hkpWorld::CastRay
