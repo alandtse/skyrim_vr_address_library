@@ -264,7 +264,7 @@ id,sse,vr,status,name
 52054,0x1408da860,0x14090b1d0,3,RE::Offset::PlaySound
 52208,0x1408e3d70,0x140915f50,2,RE::Offset::MapMenu::MarkerClick
 52226,0x1408e6ea0,0x140919520,3,RE::Offset::MapMenu::PlaceMarker
-53144,0x1409252c0,0x14095fd10,3,RE::Offset::SkyrimVM::
+53144,0x1409252c0,0x14095fd10,3,RE::Offset::SkyrimVM::QueuePostRenderCall
 55352,0x140988450,0x1409c35d0,2,po3tweaks::GameTimers::SetGlobal
 55945,0x1409a4050,0x1409deb70,3,SPID:Distribute::DeathItemManager::Detail::Add_item
 56227,0x1409ae5c0,0x1409e90e0,3,RE::Offset::TESObjectREFR::MoveTo
