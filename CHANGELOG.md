@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.17.0 (2021-12-13)
+### Feature
+* Add rememberlockpick angle offsets ([`6dcc78b`](https://github.com/alandtse/vr_address_tools/commit/6dcc78b688b78d5b6367b5cc93549f881d45c46c))
+
 ## v0.16.0 (2021-12-09)
 ### Feature
 * Add support for dialoguemovementenabler ([`5de6061`](https://github.com/alandtse/vr_address_tools/commit/5de60617d2f157ef60eccfc9b745740eed58b665))
