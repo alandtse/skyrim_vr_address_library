@@ -25,6 +25,7 @@ sseid,aeid,confidence,name
 43022,44213,2,PapyrusExtender::Projectile::SendHitEvent
 44036,45432,2,EnhancedReanimation::CombatMagicCasterReanimate::CheckShouldEquip
 51081,51960,2,LockVariations::RequestModel
+51093,51975,3,RememberLockpickAngle::LockpickBreakAddr
 51094,51976,2,LockVariations::update_pick_angle
 51096,51978,2,LockVariations::update_lock_angle
 51098,51980,2,LockVariations::rotate_lock

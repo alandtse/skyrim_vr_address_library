@@ -251,6 +251,7 @@ id,sse,vr,status,name
 50886,0x140887d10,0x1408b5240,3,RE::Inventory3DManager::Clear3D
 50978,0x14088e280,0x1408bba50,3,EssentialFavorites::Dropped::IsQuestObject
 51081,0x140896ac0,0x1408c4770,3,LockVariations::Model::RequestModel
+51093,0x1408983e0,0x1408c6080,3,RememberLockpickAngle::LockpickBreakAddr
 51094,0x1408987d0,0x1408c6500,3,LockVariations::Sound::update_pick_angle
 51096,0x140898cd0,0x1408c69f0,3,LockVariations::Sound::update_lock_angle
 51098,0x140898ff0,0x1408c6dd0,3,LockVariations::Sound::rotate_lock
