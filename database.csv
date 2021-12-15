@@ -155,6 +155,7 @@ id,sse,vr,status,name
 36407,0x1405db310,0x1405e3990,3,RE::Offset::Actor::EvaluatePackage
 36427,0x1405dd770,0x1405e5dc0,3,RE::Offset::Actor::StealAlarm
 36523,0x1405e6b50,0x1405ef270,3,EssentialFavorites::Disarm::IsQuestObject
+36532,0x1405e7500,0x1405efc20,3,RE::Offset::Actor::CanAttackActor
 36541,0x1405e8700,0x1405f0e20,3,po3tweaks::VoiceModulation::SetObjectToFollow
 36537,0x1405e7e40,0x1405f0560,3,RE::Offset::Actor::GetHostileToActor
 36631,0x1405f2530,0x1405fac70,3,RE::Actor::Decapitate
@@ -265,7 +266,10 @@ id,sse,vr,status,name
 52054,0x1408da860,0x14090b1d0,3,RE::Offset::PlaySound
 52208,0x1408e3d70,0x140915f50,2,RE::Offset::MapMenu::MarkerClick
 52226,0x1408e6ea0,0x140919520,3,RE::Offset::MapMenu::PlaceMarker
+52374,0x1408ef500,0x140924430,3,QuickLoot::
+52400,0x1408f03c0,0x1409254b0,3,QuickLoot::
 53144,0x1409252c0,0x14095fd10,3,RE::Offset::SkyrimVM::QueuePostRenderCall
+53209,0x14092b8e0,0x140965fe0,3,RE::Offset::SkyrimVM::DumpStacks
 55352,0x140988450,0x1409c35d0,2,po3tweaks::GameTimers::SetGlobal
 55945,0x1409a4050,0x1409deb70,3,SPID:Distribute::DeathItemManager::Detail::Add_item
 56227,0x1409ae5c0,0x1409e90e0,3,RE::Offset::TESObjectREFR::MoveTo
@@ -300,6 +304,8 @@ id,sse,vr,status,name
 66982,0x140c07590,0x140c42410,3,RE::Offset::BSReadWriteLock::UnlockForRead
 66983,0x140c075a0,0x140c42420,3,RE::Offset::BSReadWriteLock::UnlockForWrite
 67151,0x140c0d7b0,0x140c485e0,3,RE::BSThreadEvent::InitSDM
+67234,0x140c10dc0,0x140c4d710,3,QuickLoot::
+67240,0x140c11430,0x140c4dd80,3,QuickLoot::
 67819,0x140c28bf0,0x140c6db20,3,RE::Offset::BSFixedString::Ctor8
 67834,0x140c29510,0x140c6e440,3,RE::Offset::BSFixedString::Ctor16
 67847,0x140c29e80,0x140c6edb0,3,RE::Offset::BSStringPool::Release8
