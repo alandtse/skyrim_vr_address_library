@@ -142,6 +142,7 @@ id,sse,vr,status,name
 34819,0x140587350,0x14058e920,3,RE::Offset::BGSSaveLoadManager::Load
 35199,0x14059b140,0x1405a2800,1,RE::Offset::MemoryManager::RegisterMemoryManager
 35413,0x1405a6640,0x1405add00,3,RE::Calendar::GetTimeDateString
+35548,0x1405ae010,0x1405b5880,3,ScaleformTranslationpp::BSScaleformMovieLoaderEx::Ctor
 35882,0x1405c0610,0x1405c8b30,3,po3tweaks::ScreenshotToConsole::DebugNotification
 35978,0x1405c5220,0x1405cd7c0,3,RE::TaskQueueInterface::QueueBulletWaterDisplacementTask
 35987,0x1405c58c0,0x1405cde60,2,RE::TaskQueueInterface::QueueRemoveSpellTask
@@ -240,6 +241,7 @@ id,sse,vr,status,name
 50126,0x140858c70,0x140882f80,3,po3tweaks::CantTakeBook::Button::ButtonShowTakeButton
 50164,0x14085bb30,0x1408864d0,3,RE::Offset::Console::SetSelectedRef
 50180,0x14085c2c0,0x140886df0,3,RE::Offset::ConsoleLog::VPrint
+50212,0x14085ebc0,0x140889b50,3,WhoseQuestIsItAnyway::StoreHook
 50257,0x140862160,0x14088d4e0,3,RE::Offset::ChestsLooted::GetEventSource
 50258,0x140862250,0x14088d5d0,3,RE::Offset::ItemsPickpocketed::GetEventSource
 50453,0x14086cdc0,0x140898350,3,EssentialFavorites::Alchemy::IsQuestObject
