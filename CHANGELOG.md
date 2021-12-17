@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.18.0 (2021-12-15)
+### Feature
+* Add Actor::CanAttackActor ([`002d591`](https://github.com/alandtse/vr_address_tools/commit/002d591dcb28238aedae15091f79c94ddb2b4ec4))
+
 ## v0.17.0 (2021-12-13)
 ### Feature
 * Add rememberlockpick angle offsets ([`6dcc78b`](https://github.com/alandtse/vr_address_tools/commit/6dcc78b688b78d5b6367b5cc93549f881d45c46c))
