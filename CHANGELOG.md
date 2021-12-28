@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.20.0 (2021-12-28)
+### Feature
+* Add yesimsure and latest po3 commonlib ([`bc272ff`](https://github.com/alandtse/vr_address_tools/commit/bc272ffef3b06bdfbe51ef83901bd2deae4c5a3a))
+
 ## v0.19.0 (2021-12-17)
 ### Feature
 * Add support for whosequest and scaleform ([`5e1a637`](https://github.com/alandtse/vr_address_tools/commit/5e1a637157e52e207533a290987c3bfeb1a4bfad))
