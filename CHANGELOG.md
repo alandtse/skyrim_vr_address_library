@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.19.0 (2021-12-17)
+### Feature
+* Add support for whosequest and scaleform ([`5e1a637`](https://github.com/alandtse/vr_address_tools/commit/5e1a637157e52e207533a290987c3bfeb1a4bfad))
+
 ## v0.18.0 (2021-12-15)
 ### Feature
 * Add Actor::CanAttackActor ([`002d591`](https://github.com/alandtse/vr_address_tools/commit/002d591dcb28238aedae15091f79c94ddb2b4ec4))
