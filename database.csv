@@ -15,6 +15,8 @@ id,sse,vr,status,name
 12272,0x1401349d0,0x140145380,3,RE::ExtraLock::REFR_LOCK::GetLockLevel
 12626,0x14013c740,0x14014d130,3,RE::ExtraTextDisplayData::GetDisplayName
 13177,0x140155090,0x140165ae0,3,RE::TES::Getcell
+13202,0x140156b60,0x1401675b0,3,RE::TES::GetLandTexture
+13203,0x140156cd0,0x140167720,3,RE::TES::GetLandMaterialType
 13212,0x140157360,0x140167db0,3,RE::TES::GetWaterHeight
 13224,0x140158350,0x140168e00,3,po3tweaks::ToggleCollisionFix::ToggleCollision
 13530,0x1401652d0,0x140175a10,3,RE::Offset::UIMessageQueue::AddMessage
@@ -74,6 +76,7 @@ id,sse,vr,status,name
 19201,0x14028b940,0x14029d070,3,RE::TESObjectREFR::HasQuestObject
 19277,0x14028e3c0,0x14029faf0,3,RE::TESObjectREFR::GetWeightInContainer
 19323,0x1402945e0,0x1402a5cf0,3,RE::Offset::TESObjectREFR::FindReferenceFor3D
+19326,0x140294730,0x1402a5e30,3,RE::Offset::TESObjectREFR::GetTransform
 19338,0x140295060,0x1402a6760,3,RE::Actor::IsLimbGone
 19354,0x1402961f0,0x1402a78f0,3,RE::Offset::TESObjectREFR::GetDisplayFullName
 19400,0x14029a330,0x1402aba40,3,RE::TESObjectREFR::IsCrimeToActivate
@@ -85,6 +88,7 @@ id,sse,vr,status,name
 19857,0x1402a8cc0,0x1402ba430,3,RE::TESObjectREFR::InitChildActivates
 20095,0x1402b63b0,0x1402c7b20,3,RE::TESWorldSpace::GetSkyCell
 20470,0x1402c53d0,0x1402d6b40,3,RE::Offset::BGSListForm::AddForm
+20529,0x1402c73f0,0x1402d8b60,3,RE::Offset::BGSMaterialType::GetMaterialType
 21086,0x1402da220,0x1402eb730,3,po3tweaks::GetEquippedFix::GetEquipped
 21211,0x1402deab0,0x1402effc0,3,po3tweaks::IsFurnitureAnimeTypeFix::IsFurnitureAnimType
 21416,0x1402e75f0,0x1402f8af0,3,RE::Offset::Script::CompileAndRun
@@ -212,6 +216,7 @@ id,sse,vr,status,name
 39384,0x14069fe60,0x1406c0640,3,RE::Offset::PlayerCharacter::PlayPickupEvent
 39401,0x1406a1820,0x1406c2160,3,splashes_of_skyrim::RainManager::ToggleWaterRipples
 39406,0x1406a1cc0,0x1406c2730,3,po3tweaks::NoPoisonPrompt::PoisonPrompt
+39407,0x1406a1e30,0x1406c28a0,3,YesImSure::NoPoisonPrompt::PoisonPromptLeftHand
 39410,0x1406a20b0,0x1406c2c00,3,po3tweaks::GameTimers::detail::UpdateTimers
 39413,0x1406a2540,0x1406c30b0,3,RE::PlayerCharacter::AddSkillExperience
 39425,0x1406a2fc0,0x1406c38a0,3,papyrus_extender::papyrus::detail::get_god_mode_impl
@@ -244,8 +249,18 @@ id,sse,vr,status,name
 50212,0x14085ebc0,0x140889b50,3,WhoseQuestIsItAnyway::StoreHook
 50257,0x140862160,0x14088d4e0,3,RE::Offset::ChestsLooted::GetEventSource
 50258,0x140862250,0x14088d5d0,3,RE::Offset::ItemsPickpocketed::GetEventSource
+50440,0x14086b200,0x1408967a0,3,YesImSure::EnchantmentLearned
+50447,0x14086b810,0x140896db0,3,YesImSure::alchemyMenu
+50450,0x14086c640,0x140897bd0,3,YesImSure::EnchantmentLearned
+50451,0x14086ca10,0x140897fa0,3,YesImSure::smithingMenu
+50452,0x14086cc10,0x1408981a0,3,YesImSure::constructibleObjectMenu
 50453,0x14086cdc0,0x140898350,3,EssentialFavorites::Alchemy::IsQuestObject
 50454,0x14086d0a0,0x140898630,3,EssentialFavorites::Enchanting::IsQuestObject
+50459,0x14086d830,0x140898dc0,3,YesImSure::EnchantmentLearned
+50476,0x14086e2c0,0x140899850,3,YesImSure::constructibleObjectMenu
+50477,0x14086e490,0x140899a20,3,YesImSure::smithingMenu
+50485,0x14086ebb0,0x14089a140,3,YesImSure::alchemyMenu
+50487,0x14086ee80,0x14089a410,3,YesImSure::enchantmentLearned
 50515,0x1408708a0,0x14089be30,3,RE::Offset::ItemCrafted::GetEventSource
 50688,0x14087ba70,0x1408a77e0,3,EssentialFavorites::Gifting::IsQuestObject
 50882,0x140887750,0x1408b4c90,3,RE::Inventory3DManager::Render
