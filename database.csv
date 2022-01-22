@@ -67,6 +67,7 @@ id,sse,vr,status,name
 15980,0x1401ef330,0x1401ffe10,3,RE::Offset::Inventory::GetEventSource
 16084,0x1401f5390,0x140205ef0,3,RE::Offset::LocalMapCamera::Ctor
 16089,0x1401f5750,0x1402062b0,3,RE::Offset::LocalMapCamera::SetNorthRotation
+16175,0x1401fa6c0,0x14020c010,3,RE::ScreenSplatter::Clear
 17470,0x14022a8c0,0x14023bc10,3,RE::BooksRead::GetEventSource
 17521,0x14022cb50,0x14023dea0,3,po3tweaks::AIFadeOut::GetFadeState
 17522,0x14022d1d0,0x14023e530,2,po3tweaks::LoadDoorPrompt
@@ -79,6 +80,7 @@ id,sse,vr,status,name
 19326,0x140294730,0x1402a5e30,3,RE::Offset::TESObjectREFR::GetTransform
 19338,0x140295060,0x1402a6760,3,RE::Actor::IsLimbGone
 19354,0x1402961f0,0x1402a78f0,3,RE::Offset::TESObjectREFR::GetDisplayFullName
+19385,0x1402994f0,0x1402aabf0,3,RE::TESObjectREFR::GetCurrentLocation
 19400,0x14029a330,0x1402aba40,3,RE::TESObjectREFR::IsCrimeToActivate
 19446,0x14029cb80,0x1402ae290,3,RE::TESObjectREFR::InstantiateHitShader
 19666,0x1402a2070,0x1402b37e0,3,RE::ScriptEventSourceHolder::SendActivateEvent
@@ -7831,6 +7833,7 @@ id,sse,vr,status,name
 514478,0x141ec47c0,0x141f89660,3,RE::BSPointerHandleManager::GetHandleEntries
 514494,0x142ec4838,0x142f896d8,3,RE::Offset::ActorEquipManager::Singleton
 514508,0x142ec5500,0x142f8a3d0,3,RE::NiRTTI_BSSplatterExtraData
+514512,0x142ec5540,0x142f8a410,2,RE::ScreenSplatter::Singleton
 514622,0x142ec58b0,0x142f8a780,3,RE::Offset::GameSettingCollection::Singleton
 514633,0x142ec5968,0x142f8a838,3,RE::NiRTTI_BGSAddonNodeSoundHandleExtra
 514642,0x142ec59b8,0x142f8a888,3,RE::Offset::PlayerCamera::Singleton
