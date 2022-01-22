@@ -2,6 +2,14 @@
 
 <!--next-version-placeholder-->
 
+## v0.21.0 (2022-01-22)
+### Feature
+* Add papyrusextender ([`c3a729f`](https://github.com/alandtse/vr_address_tools/commit/c3a729ff0699e40e4033f80b0e4487b4f7c7fe53))
+* Add IDs from po3 commonlib ([`91650a3`](https://github.com/alandtse/vr_address_tools/commit/91650a3497dc48a521637ad1ae3de15084e26136))
+
+### Fix
+* Fix bad push ([`5ec7dcd`](https://github.com/alandtse/vr_address_tools/commit/5ec7dcdb7f4ad60bfd72ed23211183499e52b814))
+
 ## v0.20.0 (2021-12-27)
 ### Feature
 * Add yesimsure and latest po3 commonlib ([`bc272ff`](https://github.com/alandtse/vr_address_tools/commit/bc272ffef3b06bdfbe51ef83901bd2deae4c5a3a))
