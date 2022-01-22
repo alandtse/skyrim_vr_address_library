@@ -14,6 +14,8 @@ id,sse,vr,status,name
 12204,0x1401329d0,0x140143180,3,RE::Offset::LookupReferenceByHandle
 12272,0x1401349d0,0x140145380,3,RE::ExtraLock::REFR_LOCK::GetLockLevel
 12626,0x14013c740,0x14014d130,3,RE::ExtraTextDisplayData::GetDisplayName
+13171,0x140153f80,0x1401649d0,3,WashThatBloodOff::Rain::Manager::Load_Interior
+13172,0x1401545f0,0x140165040,3,WashThatBloodOff::Rain::Manager::Leave_Interior
 13177,0x140155090,0x140165ae0,3,RE::TES::Getcell
 13202,0x140156b60,0x1401675b0,3,RE::TES::GetLandTexture
 13203,0x140156cd0,0x140167720,3,RE::TES::GetLandMaterialType
@@ -168,6 +170,8 @@ id,sse,vr,status,name
 36537,0x1405e7e40,0x1405f0560,3,RE::Offset::Actor::GetHostileToActor
 36631,0x1405f2530,0x1405fac70,3,RE::Actor::Decapitate
 36678,0x1405f8430,0x140600ba0,3,RE::Actor::AddToFaction
+36682,0x1405f87f0,0x140600f60,3,RE::Actor::CreateBlood
+36683,0x1405f9a20,0x140602190,3,WashThatBloodOff::Decal::Weapon::CreateBloodOnWeapon
 36690,0x1405f9e30,0x1406025a0,3,RE::Offset::Actor::HasPerk
 36720,0x1405fb450,0x140603c40,3,po3tweaks::IsFurnitureAnimeTypeFix::GetEquippedFurnitureType
 36723,0x1405fb640,0x140603e30,3,RE::Actor::KillImmediate
