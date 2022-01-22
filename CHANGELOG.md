@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.22.0 (2022-01-22)
+### Feature
+* Add support for Wash That Blood Off 2 ([`1ede586`](https://github.com/alandtse/vr_address_tools/commit/1ede586a4c3a77dad18468b86a1826763f47c695))
+
 ## v0.21.0 (2022-01-22)
 ### Feature
 * Add papyrusextender ([`c3a729f`](https://github.com/alandtse/vr_address_tools/commit/c3a729ff0699e40e4033f80b0e4487b4f7c7fe53))
