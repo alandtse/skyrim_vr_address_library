@@ -1,5 +1,6 @@
 id,sse,vr,status,name
 10878,0x1400f7210,0x1401077c0,3,RE::Offset::BGSDefaultObjectManager::GetSingleton
+10974,0x1400f9ca0,0x14010a250,3,RE::INISettingCollection::Unk_07
 10979,0x1400f9e90,0x14010a440,3,RE::Offset::BSString::Set_CStr
 11045,0x1400fcfe0,0x14010d590,3,RE::Offset::MemoryManager::GetSingleton
 11183,0x1401007f0,0x140110da0,3,RE::MagicItem::IsValid
@@ -14,6 +15,10 @@ id,sse,vr,status,name
 12204,0x1401329d0,0x140143180,3,RE::Offset::LookupReferenceByHandle
 12272,0x1401349d0,0x140145380,3,RE::ExtraLock::REFR_LOCK::GetLockLevel
 12626,0x14013c740,0x14014d130,3,RE::ExtraTextDisplayData::GetDisplayName
+13054,0x14014dc60,0x14015e690,3,RE::INISettingCollection::InsertSetting
+13113,0x14014f700,0x140160130,3,RE::INISettingCollection::Unk_09
+13119,0x14014fb40,0x140160570,3,RE::INISettingCollection::RemoveSetting
+13135,0x140150a00,0x140161430,3,RE::INISettingCollection::Unk_08
 13171,0x140153f80,0x1401649d0,3,WashThatBloodOff::Rain::Manager::Load_Interior
 13172,0x1401545f0,0x140165040,3,WashThatBloodOff::Rain::Manager::Leave_Interior
 13177,0x140155090,0x140165ae0,3,RE::TES::Getcell
@@ -39,6 +44,7 @@ id,sse,vr,status,name
 14399,0x140190480,0x1401a01b0,3,RE::Offset::TESDescription::GetDescription
 14509,0x1401957e0,0x1401a5510,2,RE::TESForm::AddCompileIndex
 14704,0x14019d510,0x1401ad250,3,RE::TESHarvestedEvent::GetEventSource
+15118,0x1401b13f0,0x1401c1400,3,RE::BGSDecalManager::RemoveItem
 15491,0x1401c60a0,0x1401d6200,3,RE::Offset::BipedAnim::Dtor
 15494,0x1401c61a0,0x1401d6530,3,RE::Offset::BipedAnim::RemoveAllParts
 15495,0x1401c6270,0x1401d6600,3,FEC::UpdateCollision::RemoveNodeFromScene
@@ -100,6 +106,7 @@ id,sse,vr,status,name
 22339,0x140310e60,0x140322370,3,po3tweaks::NoCheatMode::GodMode
 22340,0x140310ec0,0x140322370,3,po3tweaks::NoCheatMode::ImmortalMode
 22843,0x140326460,0x140335ca0,3,RE::Offset::MessageDataFactoryManager::GetSingleton
+22845,0x140326510,0x140335d50,3,RE::INISettingCollection::ReadFromFile
 22350,0x140311250,0x140322760,3,powerof3tweaks::ToggleCollisionFix::ToggleCollision
 23073,0x14032ece0,0x14033e5a0,3,RE::ApplyPerkEntries
 23626,0x140345f50,0x140355810,3,powerof3tweaks::FactionStealing::GetFavorCost
@@ -133,6 +140,9 @@ id,sse,vr,status,name
 31410,0x1404c8880,0x1404d8a40,3,RE::Offset::TESWaterSystem::AddRipple
 31717,0x1404d7f80,0x1404e8120,3,RE::Offset::BGSStoryTeller::BeginStartUpQuest
 31718,0x1404d80a0,0x1404e8240,3,RE::Offset::BGSStoryTeller::BeginShutDownQuest
+31812,0x1404dda20,0x1404edb90,3,AnimationMotionRevoluation::MotionDataContainer::ProcessTranslationData
+31813,0x1404ddc90,0x1404ede00,3,AnimationMotionRevoluation::MotionDataContainer::ProcessRotationData
+31949,0x1404e6360,0x1404f64d0,3,AnimationMotionRevoluation::Character::unk_4E6360
 32290,0x1404f5c80,0x140505f60,3,RE::Offset::TESCamera::SetState
 33286,0x14053e380,0x140541100,3,RE::Offset::ActiveEffect::Dispel
 33610,0x14054bc60,0x14054fe70,2,po3tweaks::AttachLightCrash::AttachLightHitEffectVisitor
@@ -149,6 +159,7 @@ id,sse,vr,status,name
 34818,0x140586de0,0x14058e310,3,RE::Offset::BGSSaveLoadManager::Save
 34819,0x140587350,0x14058e920,3,RE::Offset::BGSSaveLoadManager::Load
 35199,0x14059b140,0x1405a2800,1,RE::Offset::MemoryManager::RegisterMemoryManager
+35320,0x1405a2c60,0x1405aa320,3,RE::BGSImpactManager::PlayImpactEffect
 35413,0x1405a6640,0x1405add00,3,RE::Calendar::GetTimeDateString
 35548,0x1405ae010,0x1405b5880,3,ScaleformTranslationpp::BSScaleformMovieLoaderEx::Ctor
 35882,0x1405c0610,0x1405c8b30,3,po3tweaks::ScreenshotToConsole::DebugNotification
@@ -301,6 +312,8 @@ id,sse,vr,status,name
 56476,0x1409b8750,0x1409f32a0,2,DialogueMovementEnabler::isInMenuMode
 56606,0x1409c6730,0x140a01280,3,RE::Offset::hkReferencedObject::AddReference
 56607,0x1409c67f0,0x140a01340,3,RE::Offset::hkReferencedObject::RemoveReference
+58602,0x140a0bb80,0x140a466d0,3,AnimationMotionRevoluation::hkbClipGenerator::Activate
+58604,0x140a0c610,0x140a47160,3,AnimationMotionRevoluation::hkbClipGenerator::Deactivate
 60551,0x140a7b000,0x140ab5a00,3,RE::hkpWorld::CastRay
 66355,0x140bed530,0x140c283e0,3,RE::Offset::BSSoundHandle::Play
 66356,0x140bed570,0x140c28420,3,RE::Offset::BSSoundHandle::Play3d
@@ -354,11 +367,16 @@ id,sse,vr,status,name
 69442,0x140c6d280,0x140cb3410,3,RE::NiTimeController::SetTarget
 69447,0x140c6d5e0,0x140cb3770,3,RE::NiTimeController::ComputeScaledTime
 69449,0x140c6d810,0x140cb39a0,3,RE::NiTimeController::ProcessClone
+69459,0x140c6da50,0x140cb3be0,3,AnimationMotionRevoluation::MotionDataContainer::InterpolateRotation
 69636,0x140c76060,0x140cbc490,3,RE::Offset::BSResourceNiBinaryStream::Ctor
 69638,0x140c76340,0x140cbc770,3,RE::Offset::BSResourceNiBinaryStream::Dtor
 69640,0x140c76490,0x140cbc8c0,3,RE::Offset::BSResourceNiBinaryStream::Seek
 69643,0x140c76580,0x140cbc9b0,3,RE::Offset::BSResourceNiBinaryStream::SetEndianSwap
 69804,0x140c7eb60,0x140cc5250,3,RE::Offset::NiSkinInstance::Ctor
+74236,0x140d38120,0x140d805b0,3,RE::INISettingCollection::WriteSetting
+74237,0x140d38310,0x14053c550,3,RE::INISettingCollection::ReadSetting
+74239,0x140d38710,0x140d80bb0,3,RE::INISettingCollection::OpenHandle
+74240,0x140d38720,0x140d80bc0,3,RE::INISettingCollection::CloseHandle
 76033,0x140da81e0,0x140dfd160,3,RE::Offset::NiAVObject::SetMotionType
 76170,0x140dae3d0,0x140e03350,3,RE::Offset::NiAVObject::SetCollisionLayer
 76171,0x140dae3f0,0x140e03370,3,RE::NiAVObject::UpdateRigidBodySettings
