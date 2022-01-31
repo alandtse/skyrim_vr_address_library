@@ -19,6 +19,7 @@ id,sse,vr,status,name
 13113,0x14014f700,0x140160130,3,RE::INISettingCollection::Unk_09
 13119,0x14014fb40,0x140160570,3,RE::INISettingCollection::RemoveSetting
 13135,0x140150a00,0x140161430,3,RE::INISettingCollection::Unk_08
+13159,0x1401535d0,0x140164020,3,RE::Offset::TES::PurgeBufferedCells
 13171,0x140153f80,0x1401649d0,3,WashThatBloodOff::Rain::Manager::Load_Interior
 13172,0x1401545f0,0x140165040,3,WashThatBloodOff::Rain::Manager::Leave_Interior
 13177,0x140155090,0x140165ae0,3,RE::TES::Getcell
@@ -372,6 +373,7 @@ id,sse,vr,status,name
 69638,0x140c76340,0x140cbc770,3,RE::Offset::BSResourceNiBinaryStream::Dtor
 69640,0x140c76490,0x140cbc8c0,3,RE::Offset::BSResourceNiBinaryStream::Seek
 69643,0x140c76580,0x140cbc9b0,3,RE::Offset::BSResourceNiBinaryStream::SetEndianSwap
+69681,0x140c77ed0,0x140cbe300,3,RE::Offset::NiBillboardNode::RotateToCamera
 69804,0x140c7eb60,0x140cc5250,3,RE::Offset::NiSkinInstance::Ctor
 74236,0x140d38120,0x140d805b0,3,RE::INISettingCollection::WriteSetting
 74237,0x140d38310,0x14053c550,3,RE::INISettingCollection::ReadSetting
