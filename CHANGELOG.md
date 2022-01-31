@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.23.0 (2022-01-24)
+### Feature
+* Add AnimationMotionRevolution and po3Tweaks ([`88203ec`](https://github.com/alandtse/vr_address_tools/commit/88203ecf1945fb8b86e38d981d7f07b7c3ac81f2))
+
 ## v0.22.0 (2022-01-22)
 ### Feature
 * Add support for Wash That Blood Off 2 ([`1ede586`](https://github.com/alandtse/vr_address_tools/commit/1ede586a4c3a77dad18468b86a1826763f47c695))
