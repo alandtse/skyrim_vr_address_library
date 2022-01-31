@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.24.0 (2022-01-31)
+### Feature
+* Add latest po3 commonlib/dev addresses ([`2a82091`](https://github.com/alandtse/vr_address_tools/commit/2a82091aaa8c5f6fe68678fb20eb7af6fecb61fb))
+
 ## v0.23.0 (2022-01-24)
 ### Feature
 * Add AnimationMotionRevolution and po3Tweaks ([`88203ec`](https://github.com/alandtse/vr_address_tools/commit/88203ecf1945fb8b86e38d981d7f07b7c3ac81f2))
