@@ -7,6 +7,7 @@ id,sse,vr,status,name
 11213,0x140101a30,0x140111fe0,3,RE::Offset::MagicItem::CalculateCost
 11216,0x140101cc0,0x140112270,3,RE::Offset::MagicItem::GetCostliestEffectItem
 11308,0x140104ad0,0x1401150c0,3,RE::Offset::FixedStrings::GetSingleton
+11474,0x14010e960,0x14011ef40,3,RE::BSExtraDataList::SetSoul
 11483,0x14010f5c0,0x14011fba0,3,RE::Offset::ExtraDataList::SetInventoryChanges
 11633,0x1401172f0,0x1401278d0,3,RE::RE:ExtradataList::setLinkedRef
 11903,0x140125d80,0x140136360,3,RE::Offset::ExtraDataList::SetExtraFlags
@@ -190,6 +191,7 @@ id,sse,vr,status,name
 36748,0x1405fc9a0,0x140605190,3,RE::Offset::Actor::RequestDetectionLevel
 36801,0x140600400,0x140608c10,3,RE::Actor::StopMoving
 36877,0x1406057c0,0x14060dfd0,3,RE::Offset::Actor::IsOnFlyingMount
+36889,0x140606850,0x14060f1d0,3,RE::Actor::IsActorNPC
 36901,0x140607680,0x140610000,3,RE::Offset::Actor::SwitchRace
 36973,0x14060b620,0x140614210,3,RE::GameEventHandler::FallLongDistance::CalcDoDamage::process_movefinish_event
 37390,0x14061c880,0x140625470,3,RE::ActorKill::GetEventSource
@@ -211,7 +213,9 @@ id,sse,vr,status,name
 37820,0x1406322f0,0x14063b1c0,3,RE::Actor::RemoveSelectedSpell
 37828,0x140632d10,0x14063bbe0,3,RE::Actor::HasSpell
 37832,0x140633090,0x14063bf60,2,papyrus_extender::events::game::magichit::sendhitevent_0x1c3
+37861,0x140634830,0x14063d700,1,RE::Actor::GetSoulLevelValue
 37862,0x1406348a0,0x14063d770,3,RE::Actor::GetSoulSize
+37863,0x140634900,0x14063d7d0,3,RE::Actor::TrapSoul
 37916,0x140636c40,0x14063fc50,3,RE::SoulsTrapped::GetEventSource
 37917,0x140636d30,0x14063fd40,3,RE::SpellsLearned::GetEventSource
 37938,0x140637a80,0x140640a90,3,RE::Offset::ActorEquipManager::EquipObject
@@ -288,6 +292,7 @@ id,sse,vr,status,name
 50885,0x1408879a0,0x1408b4ed0,3,RE::Inventory3DManager::UpdateMagic3D?
 50886,0x140887d10,0x1408b5240,3,RE::Inventory3DManager::Clear3D
 50978,0x14088e280,0x1408bba50,3,EssentialFavorites::Dropped::IsQuestObject
+50980,0x14088e890,0x1408bc060,3,InventoryMenu::GetItemChargedEventSource
 51081,0x140896ac0,0x1408c4770,3,LockVariations::Model::RequestModel
 51093,0x1408983e0,0x1408c6080,3,RememberLockpickAngle::LockpickBreakAddr
 51094,0x1408987d0,0x1408c6500,3,LockVariations::Sound::update_pick_angle
@@ -299,6 +304,7 @@ id,sse,vr,status,name
 51422,0x1408ab5c0,0x1408d8420,3,RE::Offset::MessageBoxData::QueueMessage
 51899,0x1408d50f0,0x140902c10,3,RE::Offset::UIBlurManager::IncrementBlurCount
 51900,0x1408d5130,0x140902c50,3,RE::Offset::UIBlurManager::DecrementBlurCount
+51911,0x1408d5710,0x140903370,3,YASTM::ChargeItem::UpdateInventory
 52050,0x1408da3d0,0x140908170,3,RE::Offset::DebugNotification
 52054,0x1408da860,0x14090b1d0,3,RE::Offset::PlaySound
 52208,0x1408e3d70,0x140915f50,2,RE::Offset::MapMenu::MarkerClick
@@ -307,6 +313,7 @@ id,sse,vr,status,name
 52400,0x1408f03c0,0x1409254b0,3,QuickLoot::
 53144,0x1409252c0,0x14095fd10,3,RE::Offset::SkyrimVM::QueuePostRenderCall
 53209,0x14092b8e0,0x140965fe0,3,RE::Offset::SkyrimVM::DumpStacks
+53948,0x14094d850,0x140987ab0,3,papyrus::Actor::TrapSoul
 55352,0x140988450,0x1409c35d0,2,po3tweaks::GameTimers::SetGlobal
 55945,0x1409a4050,0x1409deb70,3,SPID:Distribute::DeathItemManager::Detail::Add_item
 56227,0x1409ae5c0,0x1409e90e0,3,RE::Offset::TESObjectREFR::MoveTo
