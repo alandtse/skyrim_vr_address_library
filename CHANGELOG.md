@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.25.0 (2022-02-03)
+### Feature
+* Add addresses for YASTM. ([#6](https://github.com/alandtse/vr_address_tools/issues/6)) ([`da0e7cb`](https://github.com/alandtse/vr_address_tools/commit/da0e7cb247fc558f8aeb0822a8cf1865d64ce6cd))
+
 ## v0.24.0 (2022-01-31)
 ### Feature
 * Add latest po3 commonlib/dev addresses ([`2a82091`](https://github.com/alandtse/vr_address_tools/commit/2a82091aaa8c5f6fe68678fb20eb7af6fecb61fb))
