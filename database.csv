@@ -16,6 +16,7 @@ id,sse,vr,status,name
 12204,0x1401329d0,0x140143180,3,RE::Offset::LookupReferenceByHandle
 12272,0x1401349d0,0x140145380,3,RE::ExtraLock::REFR_LOCK::GetLockLevel
 12626,0x14013c740,0x14014d130,3,RE::ExtraTextDisplayData::GetDisplayName
+12910,0x140147bb0,0x1401585e0,3,SeasonsofSkyrim::FormSwap::model_loader_queue_ref
 13054,0x14014dc60,0x14015e690,3,RE::INISettingCollection::InsertSetting
 13113,0x14014f700,0x140160130,3,RE::INISettingCollection::Unk_09
 13119,0x14014fb40,0x140160570,3,RE::INISettingCollection::RemoveSetting
@@ -81,6 +82,10 @@ id,sse,vr,status,name
 17470,0x14022a8c0,0x14023bc10,3,RE::BooksRead::GetEventSource
 17521,0x14022cb50,0x14023dea0,3,po3tweaks::AIFadeOut::GetFadeState
 17522,0x14022d1d0,0x14023e530,2,po3tweaks::LoadDoorPrompt
+18368,0x14025b350,0x14026c790,3,SeasonsofSkyrim::TESObjectLAND::create_land_geometry
+18414,0x14025e6e0,0x14026fb90,3,SeasonsofSkyrim::TESObjectLAND::GetGrassList
+18418,0x14025e9c0,0x14026fe70,3,SeasonsofSkyrim::TESObjectLAND::GetHavokMaterialType
+18543,0x140265990,0x140276f60,3,RE::TESObjectCELL::GetWaterHeight
 18474,0x140262290,0x140273830,3,RE::TESObjectCELL::GetLocation
 18536,0x1402654c0,0x140276a90,3,RE::TESObjectCELL::GetbhkWorld
 18642,0x14026b160,0x14027c730,3,po3tweaks::QueuedRefCrash::SetFadeNode
@@ -139,6 +144,15 @@ id,sse,vr,status,name
 29090,0x1404454c0,0x140455010,3,RE::TESConditionItem::IsTrue
 29219,0x14044bbf0,0x14045b740,3,RE::TESObjectCELL::PlaceParticleEffect
 29303,0x140452550,0x140462500,3,RE::NiAVObject::ClearWeaponBlood
+31140,0x1404b8580,0x1404c8660,3,SeasonsofSkyrim::LODSwap::Terrain::BuildMeshFileName
+31141,0x1404b85c0,0x1404c86a0,3,SeasonsofSkyrim::LODSwap::Terrain::BuildDiffuseTextureFileName
+31142,0x1404b8600,0x1404c86e0,3,SeasonsofSkyrim::LODSwap::Terrain::BuildNormalTextureFileName
+31147,0x1404b8740,0x1404c8820,3,SeasonsofSkyrim::LODSwap::Object::BuildMeshFileName
+31148,0x1404b8780,0x1404c8860,3,SeasonsofSkyrim::LODSwap::Object::BuildDiffuseTextureAtlasFileName
+31149,0x1404b87b0,0x1404c8890,3,SeasonsofSkyrim::LODSwap::Object::BuildNormalTextureAtlasFileName
+31150,0x1404b87e0,0x1404c88c0,3,SeasonsofSkyrim::LODSwap::Tree::BuildMeshFileName
+31151,0x1404b8820,0x1404c8900,3,SeasonsofSkyrim::LODSwap::Tree::BuildTextureFileName
+31152,0x1404b8850,0x1404c8930,3,SeasonsofSkyrim::LODSwap::Tree::BuildTypeListFileName
 31410,0x1404c8880,0x1404d8a40,3,RE::Offset::TESWaterSystem::AddRipple
 31717,0x1404d7f80,0x1404e8120,3,RE::Offset::BGSStoryTeller::BeginStartUpQuest
 31718,0x1404d80a0,0x1404e8240,3,RE::Offset::BGSStoryTeller::BeginShutDownQuest
