@@ -9,6 +9,7 @@ id,sse,vr,status,name
 11308,0x140104ad0,0x1401150c0,3,RE::Offset::FixedStrings::GetSingleton
 11474,0x14010e960,0x14011ef40,3,RE::BSExtraDataList::SetSoul
 11483,0x14010f5c0,0x14011fba0,3,RE::Offset::ExtraDataList::SetInventoryChanges
+11530,0x140112700,0x140122ce0,3,RE::Offset::BSExtraDataListSetHeadingTargetRefHandle_140112700
 11633,0x1401172f0,0x1401278d0,3,RE::RE:ExtradataList::setLinkedRef
 11903,0x140125d80,0x140136360,3,RE::Offset::ExtraDataList::SetExtraFlags
 12176,0x140131990,0x140142140,3,RE::Offset::ExtraDataList::Add
@@ -136,6 +137,7 @@ id,sse,vr,status,name
 25684,0x1403b1c80,0x1403c1a20,2,papyrus_extender::events::game::weatherevent::target_0x416
 25822,0x1403bcf40,0x1403ccd90,3,RE::AIForumulas::ComputePickpocketSuccess
 25858,0x1403be980,0x1403ce200,3,RE::ActorValueOwner::GetArmorRatingSkillMultiplier
+25933,0x1403c1740,0x1403d0fc0,3,TrueHUD::GetSoulType
 25977,0x1403c38e0,0x1403d3160,3,RE::BSFaceGenAnimationData::Reset
 25980,0x1403c3f00,0x1403d3780,3,RE::BSFaceGenAnimationData::SetExpressionOverride
 26259,0x1403d2a60,0x1403e23d0,3,RE::Offset::BSFaceGenManager::PrepareHeadPartForShaders
@@ -159,6 +161,11 @@ id,sse,vr,status,name
 31812,0x1404dda20,0x1404edb90,3,AnimationMotionRevoluation::MotionDataContainer::ProcessTranslationData
 31813,0x1404ddc90,0x1404ede00,3,AnimationMotionRevoluation::MotionDataContainer::ProcessRotationData
 31949,0x1404e6360,0x1404f64d0,3,AnimationMotionRevoluation::Character::unk_4E6360
+32141,0x1404f06e0,0x140500950,3,RE::Offset::IAnimationGraphManagerHolder::SetBool_1404F06E0
+32142,0x1404f0700,0x140500970,3,RE::Offset::IAnimationGraphManagerHolder::SetGraphVariableInt_1404F0700
+32143,0x1404f0720,0x140500990,3,RE::Offset::IAnimationGraphManagerHolder::SetAnimationVariableFloat_1404F0720
+32144,0x1404f0740,0x140502b00,3,RE::Offset::IAnimationGraphManagerHolder::SetNiPoint3_1404F0740
+32192,0x1404f2620,0x140502890,3,Re::Offset::IAnimationGraphManagerHolder::GetGraphVariableNiPoint3
 32290,0x1404f5c80,0x140505f60,3,RE::Offset::TESCamera::SetState
 33286,0x14053e380,0x140541100,3,RE::Offset::ActiveEffect::Dispel
 33610,0x14054bc60,0x14054fe70,2,po3tweaks::AttachLightCrash::AttachLightHitEffectVisitor
@@ -182,11 +189,15 @@ id,sse,vr,status,name
 35978,0x1405c5220,0x1405cd7c0,3,RE::TaskQueueInterface::QueueBulletWaterDisplacementTask
 35987,0x1405c58c0,0x1405cde60,2,RE::TaskQueueInterface::QueueRemoveSpellTask
 36198,0x1405ce240,0x1405d6840,3,po3tweaks::Spell::ReapplyOnDeath::Load3d
+36602,0x1405edd50,0x1405f6460,3,RE::Offset::Actor::SetRotationX
 36604,0x1405edef0,0x1405f6600,3,RE::Offset::Actor::SetLifeState
+36248,0x1405d0fc0,0x1405d95a0,3,RE::Offset::Actor::SetRotationZ
 36252,0x1405d1190,0x1405d9770,3,RE::Offset::Actor::IsRunning
+36259,0x1405d1620,0x1405d9c00,3,RE::Offset::Actor::IsInMidair
 36286,0x1405d2520,0x1405daae0,3,RE::Offset::Actor::GetGhost
 36344,0x1405d62e0,0x1405de910,3,RE::Offset::Actor::GetLevel
 36346,0x1405d6490,0x1405deac0,3,RE::GameEventHandler::FallLongDistance::CalcDoDamage
+36457,0x1405e18b0,0x1405e9f30,3,RE::Offset::Actor::IsOverEncumbered
 36357,0x1405d6fb0,0x1405df5e0,3,FEC::UpdateAVs
 36359,0x1405d8170,0x1405e07a0,3,po3tweaks::ToggleCollisionFix::ApplyMovementDelta
 36407,0x1405db310,0x1405e3990,3,RE::Offset::Actor::EvaluatePackage
@@ -207,7 +218,9 @@ id,sse,vr,status,name
 36877,0x1406057c0,0x14060dfd0,3,RE::Offset::Actor::IsOnFlyingMount
 36889,0x140606850,0x14060f1d0,3,RE::Actor::IsActorNPC
 36901,0x140607680,0x140610000,3,RE::Offset::Actor::SwitchRace
+36927,0x140608af0,0x140611680,3,RE::Offset::Actor::IsBlocking
 36973,0x14060b620,0x140614210,3,RE::GameEventHandler::FallLongDistance::CalcDoDamage::process_movefinish_event
+36994,0x14060e820,0x1406173e0,3,TrueHUD::FlashHUDStaminaMountHook
 37390,0x14061c880,0x140625470,3,RE::ActorKill::GetEventSource
 37392,0x14061ca60,0x140625650,3,RE::DisarmedEvent::GetEventSource
 37524,0x140621350,0x14062a100,3,RE::Actor::GetActorValueModifier
@@ -217,6 +230,7 @@ id,sse,vr,status,name
 37672,0x1406285a0,0x140631470,3,SimpleOffenceSuppression::IgnoreFriendlyFire::GetFactionRank
 37726,0x14062d050,0x140635f20,3,RE::CriticalHit::GetEventSource
 37752,0x14062e390,0x140637260,3,RE::Offset::Actor::StopInteractingQuick
+37757,0x14062ebc0,0x140637a90,3,RE::Offset::Actor::GetMount
 37771,0x14062f560,0x140638430,3,RE::Offset::Actor::AddSpell
 37772,0x14062f720,0x1406385f0,3,RE::Offset::Actor::RemoveSpell
 37802,0x140631360,0x14063a230,3,RE::Offset::Actor::UpdateArmorAbility
@@ -224,6 +238,7 @@ id,sse,vr,status,name
 37804,0x1406314f0,0x14063a3c0,3,po3tweaks::Spells::ReapplyAdded::GetAliasInstanceArray
 37805,0x1406316b0,0x14063a580,3,po3tweaks::Spells::DispelAdded::GetAliasInstanceArray
 37808,0x140631c80,0x14063ab50,3,RE::Offset::Actor::InterruptCast
+37810,0x140631d70,0x14063ac40,3,RE::Offset::Actor::IsCasting
 37820,0x1406322f0,0x14063b1c0,3,RE::Actor::RemoveSelectedSpell
 37828,0x140632d10,0x14063bbe0,3,RE::Actor::HasSpell
 37832,0x140633090,0x14063bf60,2,papyrus_extender::events::game::magichit::sendhitevent_0x1c3
@@ -237,9 +252,12 @@ id,sse,vr,status,name
 37941,0x140637ca0,0x140640cb0,2,RE::Offset::ActorEquipManager::EquipShout
 37945,0x140638190,0x1406411a0,3,RE::Offset::ActorEquipManager::UnequipObject
 38079,0x14063f810,0x1406488a0,3,RE::TaskQueueInterface::ShouldUseTaskQueue
+38483,0x1406598d0,0x140662c10,3,RE::Offset::AIProcess::GetHeadtrackTarget
 38404,0x140650df0,0x14065a140,3,RE::Offset::AIProcess::Update3DModel
 38495,0x140659c00,0x140662f40,3,RE::Offset::AIProcess::ClearMuzzleFlashes
 38568,0x14065c880,0x140665bd0,3,RE::Offset::AIProcess::SetBaseScale
+38760,0x1406797d0,0x140682c50,3,RE::Offset::HighProcessData::SetHeadtrackTarget
+38850,0x14067d120,0x1406865a0,3,RE::ActorProcess::SetHeadTrackTarget_14067D120
 39175,0x140692cd0,0x14069c2d0,3,RE::Offset::PlayerCharacter::GetArmorValue
 39179,0x140693050,0x14069c650,3,RE::Offset::PlayerCharacter::GetDamage
 39181,0x140693110,0x14069c710,3,RE::Offset::Actor::DoReset3D
@@ -301,6 +319,8 @@ id,sse,vr,status,name
 50487,0x14086ee80,0x14089a410,3,YesImSure::enchantmentLearned
 50515,0x1408708a0,0x14089be30,3,RE::Offset::ItemCrafted::GetEventSource
 50688,0x14087ba70,0x1408a77e0,3,EssentialFavorites::Gifting::IsQuestObject
+50747,0x14087fff0,0x1408ad8c0,3,TrueHUD::SetHUDMode?
+50771,0x140881cc0,0x1408af5c0,3,TrueHUD::HUDChargeMeter::Update_140881CC0
 50882,0x140887750,0x1408b4c90,3,RE::Inventory3DManager::Render
 50884,0x140887970,0x1408b4ea0,3,RE::Inventory3DManager::UpdateItem3D
 50885,0x1408879a0,0x1408b4ed0,3,RE::Inventory3DManager::UpdateMagic3D?
@@ -318,6 +338,7 @@ id,sse,vr,status,name
 51422,0x1408ab5c0,0x1408d8420,3,RE::Offset::MessageBoxData::QueueMessage
 51899,0x1408d50f0,0x140902c10,3,RE::Offset::UIBlurManager::IncrementBlurCount
 51900,0x1408d5130,0x140902c50,3,RE::Offset::UIBlurManager::DecrementBlurCount
+51907,0x1408d53d0,0x140902f20,3,TrueHUD::FlashHudMenuMeter_1408D53D0
 51911,0x1408d5710,0x140903370,3,YASTM::ChargeItem::UpdateInventory
 52050,0x1408da3d0,0x140908170,3,RE::Offset::DebugNotification
 52054,0x1408da860,0x14090b1d0,3,RE::Offset::PlaySound
@@ -325,6 +346,7 @@ id,sse,vr,status,name
 52226,0x1408e6ea0,0x140919520,3,RE::Offset::MapMenu::PlaceMarker
 52374,0x1408ef500,0x140924430,3,QuickLoot::
 52400,0x1408f03c0,0x1409254b0,3,QuickLoot::
+53029,0x14091c620,0x140956da0,3,RE::Offset::Actor::HasLOS
 53144,0x1409252c0,0x14095fd10,3,RE::Offset::SkyrimVM::QueuePostRenderCall
 53209,0x14092b8e0,0x140965fe0,3,RE::Offset::SkyrimVM::DumpStacks
 53948,0x14094d850,0x140987ab0,3,papyrus::Actor::TrapSoul
@@ -769,6 +791,7 @@ id,sse,vr,status,name
 230556,0x141535bf8,0x1415acf98,3,VTABLE_SettingT_INIPrefSettingCollection__0
 230557,0x141535c10,0x1415acfb0,3,VTABLE_BSTempNodeManager_0
 230682,0x141536b28,0x1415adf70,3,VTABLE_BSAutoQueuedResourceCollection_TESModelDB__TESQueuedHandles__0
+230692,0x141536ba0,0x1415adfe4,3,Offset::bhkWorld::GetWorldScaleInverse::f69_ReverseHavokWorldMult_141536BA0
 230851,0x141538348,0x1415af6c0,3,VTABLE_NiTArray_TESObjectCELL_NiTMallocInterface_TESObjectCELL___0
 230852,0x141538358,0x1415af6d0,3,VTABLE_NiTPrimitiveArray_TESObjectCELL__0
 230853,0x141538368,0x1415af6e0,3,VTABLE_NiTArray_BGSAddonNode_NiTMallocInterface_BGSAddonNode___0
@@ -866,6 +889,7 @@ id,sse,vr,status,name
 231770,0x14153f3f8,0x1415b6650,3,VTABLE_BGSMultiTechniqueAttach_0
 231876,0x141540478,0x1415b7720,3,VTABLE_hkpRayHitCollector_0
 231877,0x141540490,0x1415b7738,3,VTABLE_hkpAllRayHitTempCollector_0
+231896,0x14154064c,0x1415b78f4,3,RE::Offset::bhkWorld::GetWorldScale::gHavokWorldScale_14154064C
 231907,0x1415407c8,0x1415b7a70,3,VTABLE_BGSDecalNode_0
 231937,0x141540e40,0x1415b80f0,3,VTABLE_QueuedPromoteReferencesTask_0
 232007,0x141541aa0,0x1415b8d50,3,VTABLE_NiAlphaProperty_0
@@ -7637,6 +7661,8 @@ id,sse,vr,status,name
 306518,0x141870fb8,0x1419132e0,3,VTABLE_BSSocket_0
 306519,0x141870fe0,0x141913308,3,VTABLE_BSSocketServer_0
 501401,0x141db4b98,0x141e71c08,3,po3tweaks::EffectShaderZbuffer
+510025,0x141df3ed8,0x141eb2ed8,3,TrueHUD::g_fShoutMeterEndDuration
+510579,0x141df58f8,0x141eb5360,3,TrueHUD::g_fHUDOpacity
 501789,0x141db8910,0x141e75a00,2,RE::Offset::SCRIPT_FUNCTION::FirstScriptCommand
 501797,0x141dc6f60,0x141e83fb0,2,RE::Offset::SCRIPT_FUNCTION::FirstConsoleCommand
 509271,0x141df0858,0x141ead84d,2,po3tweaks::GameTimers::detail::sleeping
@@ -7929,6 +7955,7 @@ id,sse,vr,status,name
 517052,0x142f27188,0x142fea720,3,RE::UIRenderManager::singleton
 517222,0x142f38950,0x142ffd750,3,RE::NiRTTI_SceneGraph
 517228,0x142f38978,0x142ffd778,3,TaskQueueInterface.cpp::TaskQueueInterface::GetSingleton
+517032,0x142f26f80,0x142feba80,3,TrueHUD::g_fNear
 517372,0x142f39650,0x142ffe470,3,RE::ResponseDictionary::GetSingleton?
 517601,0x142f3a680,0x142fff478,3,RE::NiRTTI_BSDoorHavokController
 517602,0x142f3a690,0x142fff488,3,RE::NiRTTI_BSPlayerDistanceCheckController
@@ -7941,8 +7968,12 @@ id,sse,vr,status,name
 519396,0x142f4c328,0x143011720,3,ContainerMenu.cpp::ContainerMenu::GetContainerMode
 519421,0x142f4c3f0,0x1430117e8,3,ContainerMenu.cpp::ContainerMenu::GetTargetRefHandle
 519570,0x142f4c8f0,0x143011ce8,3,RE::GiftMenu::GetTargetRefHandle?
+519579,0x142f4c910,0x143011d40,3,TrueHUD::g_worldToCamMatrix
+519618,0x142f4ded0,0x1430133a8,3,TrueHUD::g_viewPort
 519716,0x142f4e240,0x143013728,3,RE::LockpickingMenu::GetTargetReference?
-523662,0x142f6b950,0x1430c3a10,3,RE::GetDurationOfApplicationRunTime?
+523660,0x142f6b948,0x1430c3a08,3,TrueHUD::gSecondsSinceLastFrame_WorldTime_142F6B948
+523661,0x142f6b94c,0x1430c3a0c,3,TrueHUD::gSecondsSinceLastFrame_RealTime_142F6B94C
+523662,0x142f6b950,0x1430c3a10,3,RE::gDurationOfApplicationRunTimeMS_142F6B950
 523673,0x142f6ba48,0x1430c3b18,3,RE::Offset::INIPrefSettingCollection::Singleton
 523759,0x142f77208,0x1430cf888,3,RE::Offset::NiMemManager::Singleton
 523891,0x143012388,0x14316ab08,3,RE::NiRTTI_NiObject
