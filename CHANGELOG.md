@@ -2,6 +2,11 @@
 
 <!--next-version-placeholder-->
 
+## v0.26.0 (2022-02-14)
+### Feature
+* Add truehud ([`e102bf7`](https://github.com/alandtse/vr_address_tools/commit/e102bf7605869814be7321a89af1c4cb7603e2e9))
+* Add seasons of skyrim ([`de872db`](https://github.com/alandtse/vr_address_tools/commit/de872dbce85b3c95e0aac8a2e39cf9d981f99d95))
+
 ## v0.25.0 (2022-02-03)
 ### Feature
 * Add addresses for YASTM. ([#6](https://github.com/alandtse/vr_address_tools/issues/6)) ([`da0e7cb`](https://github.com/alandtse/vr_address_tools/commit/da0e7cb247fc558f8aeb0822a8cf1865d64ce6cd))
