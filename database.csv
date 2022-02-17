@@ -328,8 +328,8 @@ id,sse,vr,status,name
 50978,0x14088e280,0x1408bba50,3,EssentialFavorites::Dropped::IsQuestObject
 50980,0x14088e890,0x1408bc060,3,InventoryMenu::GetItemChargedEventSource
 51081,0x140896ac0,0x1408c4770,3,LockVariations::Model::RequestModel
-51084,0x1408971a0,0x1408C4E40,3,LockPickMenuXPProgress::LockPickMenuSkillLevel
-51088,0x140897e10,0x1408C5AB0,3,LockPickSkills
+51084,0x1408971a0,0x1408C4E40,1,LockPickMenuXPProgress::LockPickMenuSkillLevel
+51088,0x140897e10,0x1408C5AB0,1,LockPickSkills
 51093,0x1408983e0,0x1408c6080,3,RememberLockpickAngle::LockpickBreakAddr
 51094,0x1408987d0,0x1408c6500,3,LockVariations::Sound::update_pick_angle
 51096,0x140898cd0,0x1408c69f0,3,LockVariations::Sound::update_lock_angle
