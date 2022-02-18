@@ -49,6 +49,9 @@ id,sse,vr,status,name
 14509,0x1401957e0,0x1401a5510,2,RE::TESForm::AddCompileIndex
 14704,0x14019d510,0x1401ad250,3,RE::TESHarvestedEvent::GetEventSource
 15118,0x1401b13f0,0x1401c1400,3,RE::BGSDecalManager::RemoveItem
+15204,0x1401b4b20,0x1401c4b30,3,SeasonsofSkyrim::LandscapeSwap::LoadGrassType::add_cell_grass
+15205,0x1401b5750,0x1401c5760,3,SeasonsofSkyrim::LandscapeSwap::LoadGrassType::add_cell_grass_from_buffer
+15206,0x1401b6010,0x1401c6020,3,SeasonsofSkyrim::LandscapeSwap::LoadGrassType::add_cell_grass_from_file
 15491,0x1401c60a0,0x1401d6200,3,RE::Offset::BipedAnim::Dtor
 15494,0x1401c61a0,0x1401d6530,3,RE::Offset::BipedAnim::RemoveAllParts
 15495,0x1401c6270,0x1401d6600,3,FEC::UpdateCollision::RemoveNodeFromScene
