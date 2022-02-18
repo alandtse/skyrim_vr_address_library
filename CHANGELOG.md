@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.27.0 (2022-02-18)
+### Feature
+* Add addresses for Hand to Hand - An Adamant Addon ([#7](https://github.com/alandtse/vr_address_tools/issues/7)) ([`5bddae5`](https://github.com/alandtse/vr_address_tools/commit/5bddae546a3ca851ee46a7e36b9e8df25e0142a7))
+
 ## v0.26.0 (2022-02-14)
 ### Feature
 * Add truehud ([`e102bf7`](https://github.com/alandtse/vr_address_tools/commit/e102bf7605869814be7321a89af1c4cb7603e2e9))
