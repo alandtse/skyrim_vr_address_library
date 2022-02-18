@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.28.0 (2022-02-18)
+### Feature
+* Add seasonsofskyrim 1.4 ([`21db6b8`](https://github.com/alandtse/vr_address_tools/commit/21db6b83f426fc4a8386e204b3a7139d2ddb647f))
+
 ## v0.27.0 (2022-02-18)
 ### Feature
 * Add addresses for Hand to Hand - An Adamant Addon ([#7](https://github.com/alandtse/vr_address_tools/issues/7)) ([`5bddae5`](https://github.com/alandtse/vr_address_tools/commit/5bddae546a3ca851ee46a7e36b9e8df25e0142a7))
