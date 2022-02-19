@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.29.0 (2022-02-19)
+### Feature
+* Add enhanced invisibility ([`39172a8`](https://github.com/alandtse/vr_address_tools/commit/39172a82430b2983b48da0b45cceb7f814262045))
+
 ## v0.28.0 (2022-02-18)
 ### Feature
 * Add seasonsofskyrim 1.4 ([`21db6b8`](https://github.com/alandtse/vr_address_tools/commit/21db6b83f426fc4a8386e204b3a7139d2ddb647f))
