@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.30.0 (2022-04-18)
+### Feature
+* Add latest commonlib, po3 addresses ([`02026b1`](https://github.com/alandtse/vr_address_tools/commit/02026b1d0b307e0d410731b5af3fdcc52d5d906e))
+
 ## v0.29.0 (2022-02-19)
 ### Feature
 * Add enhanced invisibility ([`39172a8`](https://github.com/alandtse/vr_address_tools/commit/39172a82430b2983b48da0b45cceb7f814262045))
