@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.31.0 (2022-04-26)
+### Feature
+* Add offsets for CommonLibSSE NG/po3 forks and Fully Dynamic Game Engine. ([#9](https://github.com/alandtse/vr_address_tools/issues/9)) ([`c3cc83a`](https://github.com/alandtse/vr_address_tools/commit/c3cc83a07dc9a364429203113c232cf4cfd4bebb))
+
 ## v0.30.0 (2022-04-18)
 ### Feature
 * Add latest commonlib, po3 addresses ([`02026b1`](https://github.com/alandtse/vr_address_tools/commit/02026b1d0b307e0d410731b5af3fdcc52d5d906e))
