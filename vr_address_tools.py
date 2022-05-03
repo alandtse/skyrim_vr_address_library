@@ -49,6 +49,7 @@ CONFIDENCE = {
     "SUGGESTED": 1,  # At least one automated database matched
     "MANUAL": 2,  # One person has confirmed a match
     "VERIFIED": 3,  # Manual + Suggested
+    "PERFECT": 4,  # Bit by bit match
 }
 
 
