@@ -15,9 +15,12 @@ SOURCE_TYPES = (".c", ".cpp", ".cxx")
 ALL_TYPES = HEADER_TYPES + SOURCE_TYPES
 PATTERN = r"rel::id\([^)]+\)"
 PATTERN_GROUPS = (
-    r"rel::id.*(?:\(|{)\s*(?:([0-9]+)[^)}]*(0x[0-9a-f]*)|([0-9]*))\s*(?:\)|})"
+    r"rel::id.*(?:\(|{)\s*(?:(?P<id_with_offset>[0-9]+)[^)}]*(?P<sse_offset>0x[0-9a-f]*)|(?P<id>[0-9]*))\s*(?:\)|})"
 )
+# old rel:id pattern rel::id(514167)
 RELID_PATTERN = r"(\w+){ REL::ID\(([0-9]+)\),*\s*([a-fx0-9])*\s+};"
+# po3 latest pattern RELOCATION_ID(SSE, AE) and REL_ID(SSE, AE, VR)
+RELOCATION_ID_PATTERN = r"(?P<prefix>\w+){ REL(?:OCATION)?_ID\((?P<sse>[0-9]+),+\s*(?P<ae>[0-9]*)\)(?:,\s*OFFSET(?:_3)?\((?P<sse_offset>0x[a-f0-9]+)(?P<ae_offset>,\s*0x[a-f0-9]+)?(?P<vr_offset>,\s*0x[a-f0-9]+)?\))?\s*};"
 OFFSET_PATTERN = r"(\w+){ REL::Offset\(([a-fx0-9]+)\)\s+};"
 OFFSET_RELID_PATTERN = r"(?:static|inline) constexpr REL::ID\s+(\w+)\s*\(\s*[^(]+\s*\(\s*([0-9]+)\s*\)\s*\)\s*;"
 OFFSET_VTABLE_RELID_PATTERN = r"(?:(?P<name>\w+){\s*|(?:\\g<name>{ *\\g<relid> , )*)(?P<relid>rel::id\((?:([0-9]+)[^)]*(0x[0-9a-f]*)|([0-9]+))\)*)+"
@@ -25,6 +28,8 @@ OFFSET_OFFSET_PATTERN = (
     r"(?:inline|constexpr) REL::Offset\s+(\w+)\s*\(\s*([a-fx0-9]+)\s*\)\s*;"
 )
 IFNDEF_PATTERN = r"([\w():]*)\s*{\s*#ifndef SKYRIMVR\s*([^{]*){\s*rel::id\(([0-9]*)\)\s}.*\s*#else\s*\2{.*(?:rel::offset)*(0x[0-9a-f]*)"
+RELID_MATCH_ARRAY = [PATTERN_GROUPS, RELOCATION_ID_PATTERN]
+
 REPLACEMENT = """
 #ifndef SKYRIMVR
 	{}  // SSE {}
@@ -213,26 +218,23 @@ def scan_code(
                     with open(f"{dirpath}/{filename}") as f:
                         try:
                             for i, line in enumerate(f):
-                                matches = re.findall(
-                                    PATTERN_GROUPS,
-                                    line,
-                                    flags=re.IGNORECASE | re.MULTILINE,
-                                )
-                                if matches:
-                                    for match in matches:
-                                        if any(match):
-                                            results.append(
-                                                {
-                                                    "i": i,
-                                                    "directory": dirpath[
-                                                        len(a_directory) :
-                                                    ],
-                                                    "filename": filename,
-                                                    "matches": match,
-                                                }
-                                            )
-                                if line.lower().startswith("#ifndef skyrimvr"):
-                                    found_ifndef = True
+                                for regex_pattern in RELID_MATCH_ARRAY:
+                                    matches = [m.groupdict() for m in re.compile(regex_pattern, flags=re.IGNORECASE | re.MULTILINE,).finditer(line)]
+                                    if matches:
+                                        for match in matches:
+                                            if any(match):
+                                                results.append(
+                                                    {
+                                                        "i": i,
+                                                        "directory": dirpath[
+                                                            len(a_directory) :
+                                                        ],
+                                                        "filename": filename,
+                                                        "matches": match,
+                                                    }
+                                                )
+                                    if line.lower().startswith("#ifndef skyrimvr"):
+                                        found_ifndef = True
                             if found_ifndef:
                                 f.seek(0)
                                 if debug:
@@ -445,15 +447,17 @@ def match_results(
         conversion = ""
         vr_addr = ""
         warning = ""
-        if match[0]:
-            id = int(match[0])
-            try:
-                offset = match[1]
-            except ValueError:
-                offset = 0
-        else:
-            id = int(match[2])
+        if match.get("id_with_offset"):
+            id = int(match.get("id_with_offsetd"))
+            offset = match.get("offset", 0)
+        elif (match.get("sse")):
+            id = int(match.get("sse"))
+            offset = int(match.get("sse_offset",0)) if match.get("sse_offset") else 0
+        elif match.get("id"):
+            id = int(match.get("id"))
             offset = 0
+        else:
+            continue
         if (
             id_vr.get(id)
             and int(id_vr_status.get(id, {}).get("status", 0)) >= min_confidence
@@ -544,7 +548,7 @@ def write_csv(
         file_prefix (str, optional): Filename prefix to output. Defaults to "version".
         version (str, optional): Version suffix. Defaults to "1-4-15-0".
         min_confidence (int, optional): Minimum confidence to output. Defaults to CONFIDENCE["MANUAL"] == 2.
-        generate_database (bool, optional): Whether to generate a database file (used for GitHub editing) instead of an importable address.csv. Defaults to False.
+        generate_database (bool, optional): Whether to generate a database file (used for GitHub editing) instead of an Skyrim importable address.csv. Defaults to False.
         release_version (str, optional): CSV version. Defaults to "0.0.0".
     Returns:
         bool: Whether successful.
