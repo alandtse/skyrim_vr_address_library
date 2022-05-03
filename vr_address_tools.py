@@ -40,6 +40,8 @@ REPLACEMENT = """
 id_sse = {}
 id_vr = {}
 sse_vr = {}
+sse_ae = {}
+ae_name = {}
 id_vr_status = {}
 debug = False
 args = {}
@@ -73,6 +75,8 @@ def load_database(
     offsets="offsets-1.5.97.0.csv",
     ida_compare="sse_vr.csv",
     ida_override=True,
+    se_ae="se_ae.csv",
+    ae_names="AddressLibraryDatabase/skyrimae.rename"
 ) -> int:
     """Load databases.
 
@@ -81,6 +85,8 @@ def load_database(
         offsets (str, optional): Name of csv with ID, SSE Address (e.g., 2,10d0). SSE Address is an offset that needs to be added to a base and is dumped from Address Library. Defaults to "offsets-1.5.97.0.csv".
         ida_compare (str, optional): Name of IDADiffCalculator csv with SSE Address, VR Address (e.g., 0x141992C10,0x141A33D38). Defaults to "sse_vr.csv".
         ida_override (bool, optional): Whether IDADiffCalculator will override offsets.
+        se_ae (str, optional): Name of sse to ae ID mapping csv (e.g., sseid,aeid,confidence,name). Defaults to "se_ae.csv".
+        ae_names (str, optional): Name of ae ID to name mapping (e.g., 11 MonitorAPO::Func9_*). Defaults to "AddressLibraryDatabase/skyrimae.rename".
     Returns:
         int: Number of successfully loaded csv files. 0 means none were loaded.
     """
@@ -152,6 +158,38 @@ def load_database(
                 loaded += 1
     except FileNotFoundError:
         print(f"{ida_compare} not found")
+
+    try:
+        with open(os.path.join(path, se_ae), mode="r") as infile:
+            reader = csv.DictReader(infile)
+            #sseid,aeid,confidence,name
+            for row in reader:
+                sseid = int(row["sseid"])
+                aeid = int(row["aeid"])
+                confidence = int(row["confidence"])
+                name = row["name"]
+                sse_ae[sseid] = aeid
+                ae_name[aeid] = name
+    except FileNotFoundError:
+        print(f"{se_ae} not found")
+
+    try:
+        with open(os.path.join(path, ae_names), mode="r") as infile:
+            reader = csv.reader(infile, delimiter=' ')
+            #11 MonitorAPO::Func9_*
+            for row in reader:
+                if len(row) < 2:
+                    continue
+                aeid = int(row[0])
+                name = row[1]
+                if aeid and name and not ae_name.get(aeid):
+                    # print(
+                    #     f"Adding name ae {aeid} {ae_name.get(aeid)} with {name}"
+                    # )
+                    ae_name[aeid] = name
+    except FileNotFoundError:
+        print(f"{ae_names} not found")
+
     if debug:
         print("Combining databases")
     conflicts = 0
@@ -224,6 +262,9 @@ def scan_code(
                                     if matches:
                                         for match in matches:
                                             if any(match):
+                                                if match.get("sse") and match.get("ae"):
+                                                    # update AE match database based on found items
+                                                    sse_ae[int(match["sse"])] = int(match.get("ae"))
                                                 results.append(
                                                     {
                                                         "i": i,
@@ -478,8 +519,12 @@ def match_results(
             conversion = f"UNKNOWN SSE_{sse_addr}{f'+{offset}={add_hex_strings(sse_addr, offset)}' if offset else ''}"
         if database and not vr_addr:
             suggested_vr = id_vr.get(id, "")
+            if ae_name.get(sse_ae.get(id)):
+                description = ae_name.get(sse_ae.get(id))
+            else:
+                description = f"{directory[1:] if directory.startswith('/') or directory.startswith(chr(92)) else directory}/{filename}:{i+1}"
             new_results.append(
-                f"{id},{sse_addr},{suggested_vr},1,{directory[1:] if directory.startswith('/') or directory.startswith(chr(92)) else directory}/{filename}:{i+1}"
+                f"{id},{sse_addr},{suggested_vr},1,{description}"
             )
         elif not database:
             new_results.append(
@@ -597,10 +642,14 @@ def write_csv(
                         sse_addr = entry.get("sse", "")
                         status = entry["status"]
                         name = entry.get("name")
+                        # add cpp parser names from offsets file
                         if not name and entry.get("func"):
                             name = (
                                 f'{entry["func"]["namespace"]}{entry["func"]["name"]}'
                             )
+                        # only add unknown names from ae_name
+                        if not name and sse_ae.get(id) and ae_name.get(sse_ae.get(id)):
+                            name = ae_name.get(sse_ae.get(id))
                     writer.writerow((id, sse_addr, address, status, name))
             print(
                 f"Wrote {rows} rows into {outputfile} with release version {release_version}"
@@ -610,6 +659,45 @@ def write_csv(
         print(f"Error writing to {outputfile}: {ex}")
         return False
 
+def write_ae_map(
+) -> bool:
+    """Generate sse ae csv file.
+    Returns:
+        bool: Whether successful.
+    """
+    global id_vr_status
+    global ae_name
+    global sse_ae
+    outputfile = (
+        "se_ae.csv"
+    )
+    output = {}
+    try:
+        with open(outputfile, "w", newline="") as f:
+            writer = csv.writer(f)
+            rows = len(sse_ae)
+            writer.writerow(("sseid", "aeid", "confidence", "name"))
+            for id, ae in sorted(sse_ae.items()):
+                name = ""
+                if id_vr_status.get(id):
+                    entry = id_vr_status.get(id)
+                    name = entry.get("name")
+                    # add cpp parser names from offsets file
+                    if not name and entry.get("func"):
+                        name = (
+                            f'{entry["func"]["namespace"]}{entry["func"]["name"]}'
+                        )
+                    # only add unknown names from ae_name
+                if not name and sse_ae.get(id) and ae_name.get(sse_ae.get(id)):
+                    name = ae_name.get(sse_ae.get(id))
+                writer.writerow((id, ae, 3, name))
+        print(
+            f"Wrote {rows} rows into {outputfile}"
+        )
+        return True
+    except OSError as ex:
+        print(f"Error writing to {outputfile}: {ex}")
+        return False
 
 def main():
     global debug
@@ -681,6 +769,12 @@ def main():
         help="Generate database.csv.",
     )
     parser_generate.add_argument(
+        "-m",
+        "--map",
+        action="store_true",
+        help="Generate se_ae.csv mapping of se to ae addresses.",
+    )
+    parser_generate.add_argument(
         "-rv",
         "--release_version",
         nargs="?",
@@ -736,7 +830,10 @@ def main():
             sub_args["file_prefix"] = generate
         if args.get("release_version"):
             sub_args["release_version"] = args.get("release_version")
-        write_csv(**sub_args)
+        if args.get("map"):
+            write_ae_map()
+        else:
+            write_csv(**sub_args)
     elif analyze and scan_results.get("results"):
         results = match_results(
             scan_results["results"],
