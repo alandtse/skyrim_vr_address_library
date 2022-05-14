@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.32.0 (2022-05-14)
+### Feature
+* Add commonlib, magicsneakattacks, firehurts ([`1c95cb4`](https://github.com/alandtse/vr_address_tools/commit/1c95cb4f17687f777cbfbc8ce50ce924537d32c3))
+
 ## v0.31.0 (2022-04-26)
 ### Feature
 * Add offsets for CommonLibSSE NG/po3 forks and Fully Dynamic Game Engine. ([#9](https://github.com/alandtse/vr_address_tools/issues/9)) ([`c3cc83a`](https://github.com/alandtse/vr_address_tools/commit/c3cc83a07dc9a364429203113c232cf4cfd4bebb))
