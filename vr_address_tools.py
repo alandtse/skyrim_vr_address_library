@@ -485,19 +485,19 @@ def match_results(
         directory = result["directory"]
         filename = result["filename"]
         match = result["matches"]
-        offset = 0
+        offset:str = "0"
         conversion = ""
         vr_addr = ""
         warning = ""
         if match.get("id_with_offset"):
             id = int(match.get("id_with_offsetd"))
-            offset = match.get("offset", 0)
+            offset = match.get("offset", "0")
         elif (match.get("sse")):
             id = int(match.get("sse"))
-            offset = int(match.get("sse_offset",0),16) if match.get("sse_offset") else 0
+            offset = match.get("sse_offset","0") if match.get("sse_offset") else "0"
         elif match.get("id"):
             id = int(match.get("id"))
-            offset = 0
+            offset = "0"
         else:
             continue
         if (
