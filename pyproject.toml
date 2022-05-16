@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "vr_address_tools"
-version = "0.31.0"
+version = "0.32.0"
 description = "Tools for converting a Skyrim SSE skse mod to Skyrim VR"
 authors = ["Alan D. Tse <alandtse@gmail.com>"]
 license = "MIT"
