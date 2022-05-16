@@ -88,6 +88,7 @@ id,sse,vr,status,name
 15907,0x1401ecc60,0x1401fd7d0,3,RE::Offset::InventoryChanges::SetUniqueID
 15908,0x1401ecd30,0x1401fd8a0,2,RE::Offset::InventoryChanges::GetNextUniqueID
 15909,0x1401ece20,0x1401fd990,3,RE::Offset::InventoryChanges::TransferItemUID
+15916,0x1401ed550,0x1401fe070,4,RE::TESActionData::Ctor
 15967,0x1401ee670,0x1401ff150,3,RE::BSPointerHandleManagerInterface::GetHandle
 15980,0x1401ef330,0x1401ffe10,3,RE::Offset::Inventory::GetEventSource
 16084,0x1401f5390,0x140205ef0,3,RE::Offset::LocalMapCamera::Ctor
@@ -97,6 +98,9 @@ id,sse,vr,status,name
 17521,0x14022cb50,0x14023dea0,3,po3tweaks::AIFadeOut::GetFadeState
 17522,0x14022d1d0,0x14023e530,2,po3tweaks::LoadDoorPrompt
 17693,0x140235240,0x1402465b0,3,RE::TESObjectWEAP::Fire_140235240
+18185,0x14024c860,0x14025df50,4,RE::ImageSpaceModifierInstanceForm::Trigger
+18188,0x14024ccd0,0x14025e3c0,4,RE::TESImageSpaceModifier::Stop*
+18192,0x14024d210,0x14025e900,4,RE::TESImageSpaceModifier::RemoveCrossfade_*
 18368,0x14025b350,0x14026c790,3,SeasonsofSkyrim::TESObjectLAND::create_land_geometry
 18414,0x14025e6e0,0x14026fb90,3,SeasonsofSkyrim::TESObjectLAND::GetGrassList
 18418,0x14025e9c0,0x14026fe70,3,SeasonsofSkyrim::TESObjectLAND::GetHavokMaterialType
@@ -207,7 +211,7 @@ id,sse,vr,status,name
 34413,0x14056c9d0,0x140572fd0,3,RE::Offset::DialogueItem::Ctor
 34818,0x140586de0,0x14058e310,3,RE::Offset::BGSSaveLoadManager::Save
 34819,0x140587350,0x14058e920,3,RE::Offset::BGSSaveLoadManager::Load
-35199,0x14059b140,0x1405a2800,1,RE::Offset::MemoryManager::RegisterMemoryManager
+35199,0x14059b140,0x1405a2800,4,RE::Offset::MemoryManager::RegisterMemoryManager
 35317,0x1405a2930,0x1405a9ff0,3,RE::Offset::BGSImpactManager::PlayImpactSound
 35320,0x1405a2c60,0x1405aa320,4,RE::Offset::BGSImpactManager::PlayImpactEffect
 35413,0x1405a6640,0x1405add00,3,RE::Calendar::GetTimeDateString
@@ -233,10 +237,12 @@ id,sse,vr,status,name
 36407,0x1405db310,0x1405e3990,3,RE::Offset::Actor::EvaluatePackage
 36427,0x1405dd770,0x1405e5dc0,3,RE::Offset::Actor::StealAlarm
 36456,0x1405e1860,0x1405e9ee0,3,RE::Actor::GetTotalCarryWeight_1405E1860
+36492,0x1405e33b0,0x1405eba50,4,RE::Actor::IsInRagdollState
 36523,0x1405e6b50,0x1405ef270,3,EssentialFavorites::Disarm::IsQuestObject
 36532,0x1405e7500,0x1405efc20,3,RE::Offset::Actor::CanAttackActor
 36537,0x1405e7e40,0x1405f0560,3,RE::Offset::Actor::GetHostileToActor
 36541,0x1405e8700,0x1405f0e20,3,po3tweaks::VoiceModulation::SetObjectToFollow
+36559,0x1405ebd90,0x1405f44a0,4,RE::Actor::GetCollisionFilterInfo
 36631,0x1405f2530,0x1405fac70,3,RE::Actor::Decapitate
 36678,0x1405f8430,0x140600ba0,3,RE::Actor::AddToFaction
 36682,0x1405f87f0,0x140600f60,3,RE::Actor::CreateBlood
@@ -324,6 +330,7 @@ id,sse,vr,status,name
 39425,0x1406a2fc0,0x1406c38a0,3,papyrus_extender::papyrus::detail::get_god_mode_impl
 39471,0x1406a9f90,0x1406cbce0,2,RE::Offset::PlayerCharacter::ActivatePickRef
 39475,0x1406aa260,0x1406cc000,3,RE::Offset::PlayerCharacter::StartGrabObject
+39507,0x1406ae310,0x1406d0b90,4,RE::PlayerCharacter::SetAIDriven
 39568,0x1406b2530,0x1406d58a0,3,RE::PlayerCharacter::AttemptPickpocket
 39577,0x1406b34e0,0x1406d6850,4,RE::PlayerCharacter::WeaponSwingCallBack_1406B34E0
 39584,0x1406b3a50,0x1406d6dc0,3,po3tweaks::FactionStealing::CanTake
@@ -350,6 +357,8 @@ id,sse,vr,status,name
 43030,0x140754820,0x14077fbd0,3,po3tweaks::ProjectileRange::UpdateCombatThreat
 43103,0x140759360,0x1407846b0,3,RE::VATS::SetMagicTimeSlowdown
 43571,0x140772a60,0x14079ddb0,3,po3tweaks::CombatDialogue::SayCombatDialogue
+43952,0x140781f00,0x1407ad250,4,RE::CombatMagicCaster::StaticCheckTargetValid
+43956,0x140782330,0x1407ad680,4,RE::CombatMagicCaster::CheckTargetValid
 44036,0x140785f80,0x1407b12d0,3,enhanced_reanimation::CombatMagicCasterReanimate::CheckShouldEquip
 49311,0x14083c870,0x140867b70,3,RE::CombatApproachTargetSpeedController::sub_14083C870
 49711,0x140844d00,0x14086ffb0,3,RE::Character::sub_140844D00
@@ -369,7 +378,7 @@ id,sse,vr,status,name
 50122,0x1408582e0,0x140882580,3,papyrus_extender::event::booksread::bookmenu
 50126,0x140858c70,0x140882f80,3,po3tweaks::CantTakeBook::Button::ButtonShowTakeButton
 50164,0x14085bb30,0x1408864d0,3,RE::Offset::Console::SetSelectedRef
-50180,0x14085c2c0,0x140886df0,3,RE::Offset::ConsoleLog::VPrint
+50180,0x14085c2c0,0x140886df0,4,RE::Offset::ConsoleLog::VPrint
 50212,0x14085ebc0,0x140889b50,3,WhoseQuestIsItAnyway::StoreHook
 50257,0x140862160,0x14088d4e0,3,RE::Offset::ChestsLooted::GetEventSource
 50258,0x140862250,0x14088d5d0,3,RE::Offset::ItemsPickpocketed::GetEventSource
@@ -455,6 +464,7 @@ id,sse,vr,status,name
 66366,0x140bed800,0x140c286b0,3,RE::BSSoundHandle::SetFrequency
 66370,0x140bed920,0x140c287d0,4,RE::Offset::BSSoundHandle::SetPosition
 66375,0x140bedb10,0x140c289c0,4,RE::Offset::BSSoundHandle::SetObjectToFollow
+66385,0x140bede30,0x140c28ce0,4,RE::BSSoundHandle::FadeOutAndRelease
 66391,0x140bee580,0x140c29430,4,RE::Offset::BSAudioManager::GetSingleton
 66401,0x140beee70,0x140c29d20,4,RE::Offset::BSAudioManager::PlaySoundInt
 66403,0x140bef020,0x140c29ed0,3,RE::BSAudioManager::BuildSoundDataFromEditorID
@@ -7990,7 +8000,7 @@ id,sse,vr,status,name
 514290,0x141ec0a98,0x141f85120,3,RE::Offset::TESWaterSystem::GetSingleton
 514292,0x141ec0aa8,0x141f85130,3,RE::BGSGrassManager::GetSingleton
 514315,0x141ec3b78,0x141f889d8,3,RE::Offset::SkyrimVM::Singleton
-514316,0x141ec3b80,0x141f889e0,3,RE::Offset::BGSStoryTeller::Singleton
+514316,0x141ec3b80,0x141f889e0,4,RE::Offset::BGSStoryTeller::Singleton
 514349,0x141ec3cb3,0x141ec3cb3,2,RE::Offset::FormFactory::FormFactoriesInitialized
 514351,0x141ec3cb8,0x141f88b18,2,RE::TESForm::allForms
 514352,0x141ec3cc0,0x141f88b20,2,RE::TESForm::allFormsByEditorID
@@ -8008,14 +8018,14 @@ id,sse,vr,status,name
 514622,0x142ec58b0,0x142f8a780,3,RE::Offset::GameSettingCollection::Singleton
 514633,0x142ec5968,0x142f8a838,3,RE::NiRTTI_BGSAddonNodeSoundHandleExtra
 514642,0x142ec59b8,0x142f8a888,3,RE::Offset::PlayerCamera::Singleton
-514705,0x142ec5bd0,0x142f8aaa0,3,RE::Offset::ControlMap::Singleton
+514705,0x142ec5bd0,0x142f8aaa0,4,RE::Offset::ControlMap::Singleton
 514706,0x142ec5bd8,0x142f8aaa8,3,RE::Offset::PlayerControls::Singleton
 514725,0x142ec5c60,0x142f8ab30,3,RE::VATS::GetSingleton
 514738,0x142ec5ce0,0x142f8abb0,3,RE::BSMusicManager::GetSingleton
 514923,0x142eff868,0x142fc4758,3,RE::ActorState::UnarmedWeap
 514959,0x142eff988,0x142fc4878,3,RE::MenuTopicManager::GetSingleton
 514966,0x142eff9c0,0x142fc48b0,3,RE::NiRTTI_REFRSyncController
-515064,0x142f000f0,0x142fc4fe0,3,RE::Offset::ConsoleLog::Singleton
+515064,0x142f000f0,0x142fc4fe0,4,RE::Offset::ConsoleLog::Singleton
 515123,0x142f003f0,0x142fc52e0,3,RE::Offset::BGSImpactManager::Singleton
 515124,0x142f003f8,0x142fc52e8,2,RE::Offset::MenuControls::Singleton
 515427,0x142f01118,0x142fc6008,3,RE::NiRTTI_bhkCartTether
@@ -8076,7 +8086,7 @@ id,sse,vr,status,name
 523661,0x142f6b94c,0x1430c3a0c,3,TrueHUD::gSecondsSinceLastFrame_RealTime_142F6B94C
 523662,0x142f6b950,0x1430c3a10,3,RE::gDurationOfApplicationRunTimeMS_142F6B950
 523673,0x142f6ba48,0x1430c3b18,3,RE::Offset::INIPrefSettingCollection::Singleton
-523759,0x142f77208,0x1430cf888,3,RE::Offset::NiMemManager::Singleton
+523759,0x142f77208,0x1430cf888,4,RE::Offset::NiMemManager::Singleton
 523891,0x143012388,0x14316ab08,3,RE::NiRTTI_NiObject
 523895,0x1430123c0,0x14316ab40,3,RE::NiRTTI_NiAVObject
 523900,0x1430123e0,0x14316ab78,3,RE::NiRTTI_NiNode
@@ -8461,7 +8471,7 @@ id,sse,vr,status,name
 528534,0x143496398,0x1436f1eb8,3,RE::NiRTTI_BSParabolicCullingProcess
 528536,0x1434963b8,0x1436f1ec8,3,RE::NiRTTI_BSLODMultiIndexTriShape
 528538,0x1434963d0,0x1436f1ee0,3,RE::NiRTTI_BSSubIndexLandTriShape
-528600,0x143497408,0x1436f2f58,3,RE::Offset::TlsIndex
+528600,0x143497408,0x1436f2f58,4,RE::Offset::TlsIndex
 542544,0x141520ab0,0x141597e00,3,VTABLE_NiTStringMap_Setting__0
 542598,0x141522c28,0x141599f78,3,VTABLE_MagicItem__PreloadableVisitor_0
 542605,0x141523058,0x14159a3a8,3,VTABLE_MagicItemFindFunctor_0
