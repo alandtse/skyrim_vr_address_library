@@ -14,9 +14,7 @@ HEADER_TYPES = (".h", ".hpp", ".hxx")
 SOURCE_TYPES = (".c", ".cpp", ".cxx")
 ALL_TYPES = HEADER_TYPES + SOURCE_TYPES
 PATTERN = r"rel::id\([^)]+\)"
-PATTERN_GROUPS = (
-    r"rel::id.*(?:\(|{)\s*(?:(?P<id_with_offset>[0-9]+)[^)}]*(?P<sse_offset>0x[0-9a-f]*)|(?P<id>[0-9]*))\s*(?:\)|})"
-)
+PATTERN_GROUPS = r"rel::id.*(?:\(|{)\s*(?:(?P<id_with_offset>[0-9]+)[^)}]*(?P<sse_offset>0x[0-9a-f]*)|(?P<id>[0-9]*))\s*(?:\)|})"
 # old rel:id pattern rel::id(514167)
 RELID_PATTERN = r"(\w+){ REL::ID\(([0-9]+)\),*\s*([a-fx0-9])*\s+};"
 # po3 latest pattern RELOCATION_ID(SSE, AE) and REL_ID(SSE, AE, VR)
@@ -76,7 +74,7 @@ def load_database(
     ida_compare="sse_vr.csv",
     ida_override=True,
     se_ae="se_ae.csv",
-    ae_names="AddressLibraryDatabase/skyrimae.rename"
+    ae_names="AddressLibraryDatabase/skyrimae.rename",
 ) -> int:
     """Load databases.
 
@@ -162,7 +160,7 @@ def load_database(
     try:
         with open(os.path.join(path, se_ae), mode="r") as infile:
             reader = csv.DictReader(infile)
-            #sseid,aeid,confidence,name
+            # sseid,aeid,confidence,name
             for row in reader:
                 sseid = int(row["sseid"])
                 aeid = int(row["aeid"])
@@ -175,8 +173,8 @@ def load_database(
 
     try:
         with open(os.path.join(path, ae_names), mode="r") as infile:
-            reader = csv.reader(infile, delimiter=' ')
-            #11 MonitorAPO::Func9_*
+            reader = csv.reader(infile, delimiter=" ")
+            # 11 MonitorAPO::Func9_*
             for row in reader:
                 if len(row) < 2:
                     continue
@@ -198,10 +196,10 @@ def load_database(
         ids += 1
         ida_addr = add_hex_strings(sse_vr.get(sse_addr))
         if id_vr_status.get(id):
-                    if debug:
-                        print(
-                            f"Database Load Warning: {id} loaded by databse.csv; skipping IDA check"
-                        )
+            if debug:
+                print(
+                    f"Database Load Warning: {id} loaded by databse.csv; skipping IDA check"
+                )
         elif id_vr.get(id) and ida_addr and id_vr.get(id) != ida_addr:
             if ida_override:
                 if debug:
@@ -485,7 +483,7 @@ def match_results(
         directory = result["directory"]
         filename = result["filename"]
         match = result["matches"]
-        offset:str = "0"
+        offset: str = "0"
         conversion = ""
         vr_addr = ""
         warning = ""
@@ -523,9 +521,7 @@ def match_results(
                 description = ae_name.get(sse_ae.get(id))
             else:
                 description = f"{directory[1:] if directory.startswith('/') or directory.startswith(chr(92)) else directory}/{filename}:{i+1}"
-            new_results.append(
-                f"{id},{sse_addr},{suggested_vr},1,{description}"
-            )
+            new_results.append(f"{id},{sse_addr},{suggested_vr},1,{description}")
         elif not database:
             new_results.append(
                 f"{directory}/{filename}:{i+1}\tID: {id}\tSSE: {sse_addr}\t{conversion}\t{vr_addr}\t{warning}"
@@ -659,8 +655,8 @@ def write_csv(
         print(f"Error writing to {outputfile}: {ex}")
         return False
 
-def write_ae_map(
-) -> bool:
+
+def write_ae_map() -> bool:
     """Generate sse ae csv file.
     Returns:
         bool: Whether successful.
@@ -668,9 +664,7 @@ def write_ae_map(
     global id_vr_status
     global ae_name
     global sse_ae
-    outputfile = (
-        "se_ae.csv"
-    )
+    outputfile = "se_ae.csv"
     output = {}
     try:
         with open(outputfile, "w", newline="") as f:
@@ -684,20 +678,17 @@ def write_ae_map(
                     name = entry.get("name")
                     # add cpp parser names from offsets file
                     if not name and entry.get("func"):
-                        name = (
-                            f'{entry["func"]["namespace"]}{entry["func"]["name"]}'
-                        )
+                        name = f'{entry["func"]["namespace"]}{entry["func"]["name"]}'
                     # only add unknown names from ae_name
                 if not name and sse_ae.get(id) and ae_name.get(sse_ae.get(id)):
                     name = ae_name.get(sse_ae.get(id))
                 writer.writerow((id, ae, 3, name))
-        print(
-            f"Wrote {rows} rows into {outputfile}"
-        )
+        print(f"Wrote {rows} rows into {outputfile}")
         return True
     except OSError as ex:
         print(f"Error writing to {outputfile}: {ex}")
         return False
+
 
 def main():
     global debug
