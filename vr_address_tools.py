@@ -14,13 +14,19 @@ HEADER_TYPES = (".h", ".hpp", ".hxx")
 SOURCE_TYPES = (".c", ".cpp", ".cxx")
 ALL_TYPES = HEADER_TYPES + SOURCE_TYPES
 PATTERN = r"rel::id\([^)]+\)"
-PATTERN_GROUPS = (
-    r"rel::id.*(?:\(|{)\s*(?:(?P<id_with_offset>[0-9]+)[^)}]*(?P<sse_offset>0x[0-9a-f]*)|(?P<id>[0-9]*))\s*(?:\)|})"
-)
+PATTERN_GROUPS = r"rel::id.*(?:\(|{)\s*(?:(?P<id_with_offset>[0-9]+)[^)}]*(?P<sse_offset>0x[0-9a-f]*)|(?P<id>[0-9]*))\s*(?:\)|})"
 # old rel:id pattern rel::id(514167)
 RELID_PATTERN = r"(\w+){ REL::ID\(([0-9]+)\),*\s*([a-fx0-9])*\s+};"
 # po3 latest pattern RELOCATION_ID(SSE, AE) and REL_ID(SSE, AE, VR)
 RELOCATION_ID_PATTERN = r"(?P<prefix>\w+){ REL(?:OCATION)?_ID\((?P<sse>[0-9]+),+\s*(?P<ae>[0-9]*)\)(?:,\s*OFFSET(?:_3)?\((?P<sse_offset>0x[a-f0-9]+)(?P<ae_offset>,\s*0x[a-f0-9]+)?(?P<vr_offset>,\s*0x[a-f0-9]+)?\))?\s*};"
+# commonlibsse-ng patterns constexpr REL::VariantID NiRTTI_BGSAddonNodeSoundHandleExtra(514633, 400793, 0x2f8a838);
+VARIANT_ID_PATTERN = r"REL::VariantID\s+(?P<prefix>\w+)\((?P<sse>[0-9]+),+\s*(?P<ae>[0-9]*),+\s*0x(?P<vr_offset>[a-f0-9]*)\);"
+## These are regexes for parsing offset files that typically can help define relationships (older commonlibvr); po3 and ng now allow for definition through macro use
+# commonlibsse-ng patterns
+# namespace BSSoundHandle
+# 	{
+# 		constexpr auto IsValid = RELOCATION_ID(66360, 67621);
+OFFSET_PATTERN_RELOCATION_ID = r"constexpr auto (?P<name>\w*)\s*=\s*REL(?:OCATION)?_ID\((?P<sse>[0-9]+),+\s*(?P<ae>[0-9]*)\)"
 OFFSET_PATTERN = r"(\w+){ REL::Offset\(([a-fx0-9]+)\)\s+};"
 OFFSET_RELID_PATTERN = r"(?:static|inline) constexpr REL::ID\s+(\w+)\s*\(\s*[^(]+\s*\(\s*([0-9]+)\s*\)\s*\)\s*;"
 OFFSET_VTABLE_RELID_PATTERN = r"(?:(?P<name>\w+){\s*|(?:\\g<name>{ *\\g<relid> , )*)(?P<relid>rel::id\((?:([0-9]+)[^)]*(0x[0-9a-f]*)|([0-9]+))\)*)+"
@@ -76,7 +82,7 @@ def load_database(
     ida_compare="sse_vr.csv",
     ida_override=True,
     se_ae="se_ae.csv",
-    ae_names="AddressLibraryDatabase/skyrimae.rename"
+    ae_names="AddressLibraryDatabase/skyrimae.rename",
 ) -> int:
     """Load databases.
 
@@ -162,7 +168,7 @@ def load_database(
     try:
         with open(os.path.join(path, se_ae), mode="r") as infile:
             reader = csv.DictReader(infile)
-            #sseid,aeid,confidence,name
+            # sseid,aeid,confidence,name
             for row in reader:
                 sseid = int(row["sseid"])
                 aeid = int(row["aeid"])
@@ -175,8 +181,8 @@ def load_database(
 
     try:
         with open(os.path.join(path, ae_names), mode="r") as infile:
-            reader = csv.reader(infile, delimiter=' ')
-            #11 MonitorAPO::Func9_*
+            reader = csv.reader(infile, delimiter=" ")
+            # 11 MonitorAPO::Func9_*
             for row in reader:
                 if len(row) < 2:
                     continue
@@ -198,10 +204,10 @@ def load_database(
         ids += 1
         ida_addr = add_hex_strings(sse_vr.get(sse_addr))
         if id_vr_status.get(id):
-                    if debug:
-                        print(
-                            f"Database Load Warning: {id} loaded by databse.csv; skipping IDA check"
-                        )
+            if debug:
+                print(
+                    f"Database Load Warning: {id} loaded by databse.csv; skipping IDA check"
+                )
         elif id_vr.get(id) and ida_addr and id_vr.get(id) != ida_addr:
             if ida_override:
                 if debug:
@@ -240,7 +246,7 @@ def scan_code(
     results = []
     defined_rel_ids = {}
     defined_vr_offsets = {}
-    count = 0
+    file_count = 0
     for dirpath, dirnames, filenames in os.walk(a_directory):
         rem = []
         for dirname in dirnames:
@@ -251,134 +257,181 @@ def scan_code(
 
         for filename in filenames:
             if filename not in a_exclude and filename.endswith(ALL_TYPES):
-                count += 1
-                found_ifndef = False
+                file_count += 1
                 if not filename.lower().startswith("offset"):
-                    with open(f"{dirpath}/{filename}") as f:
-                        try:
-                            for i, line in enumerate(f):
-                                for regex_pattern in RELID_MATCH_ARRAY:
-                                    matches = [m.groupdict() for m in re.compile(regex_pattern, flags=re.IGNORECASE | re.MULTILINE,).finditer(line)]
-                                    if matches:
-                                        for match in matches:
-                                            if any(match):
-                                                if match.get("sse") and match.get("ae"):
-                                                    # update AE match database based on found items
-                                                    sse_ae[int(match["sse"])] = int(match.get("ae"))
-                                                results.append(
-                                                    {
-                                                        "i": i,
-                                                        "directory": dirpath[
-                                                            len(a_directory) :
-                                                        ],
-                                                        "filename": filename,
-                                                        "matches": match,
-                                                    }
-                                                )
-                                    if line.lower().startswith("#ifndef skyrimvr"):
-                                        found_ifndef = True
-                            if found_ifndef:
-                                f.seek(0)
-                                if debug:
-                                    print(
-                                        f"Searching for ifndef id offset definitions in {dirpath}/{filename}"
-                                    )
-                                ifndef_matches = re.findall(
-                                    IFNDEF_PATTERN,
-                                    f.read(),
-                                    flags=re.IGNORECASE | re.MULTILINE,
-                                )
-                                if ifndef_matches:
-                                    for match in ifndef_matches:
-                                        name = (
-                                            match[0]
-                                            if not match[0].endswith("()")
-                                            else match[0][:-2]
-                                        )
-                                        id = match[2]
-                                        offset = match[3]
-                                        func = {
-                                            "namespace": f"{filename}::",
-                                            "name": name,
-                                        }
-                                        defined_rel_ids[f"{filename}::{name}"] = {
-                                            "id": id,
-                                            "func": func,
-                                        }
-                                        defined_vr_offsets[f"{filename}::{name}"] = {
-                                            "id": offset,
-                                            "func": func,
-                                        }
-                                        if debug:
-                                            print(
-                                                f"Found ifndef {filename}::{name} with id: {id} offset: {offset}"
-                                            )
-                        except UnicodeDecodeError as ex:
-                            print(f"Unable to read {dirpath}/{filename}: ", ex)
+                    # offset files historically (particualrly in commonlib) were treated special because they were a source of truth for matched addresses
+                    # however, newer libraries (po3/ng) use macros that already have info
+                    search_for_ids(
+                        a_directory,
+                        results,
+                        defined_rel_ids,
+                        defined_vr_offsets,
+                        dirpath,
+                        filename,
+                    )
                 else:
-                    # looking at offsets
-                    if debug:
-                        print("parsing offsets file: ", f"{dirpath}/{filename}")
-                    if filename.lower() == "Offsets_VTABLE.h".lower():
-                        with open(f"{dirpath}/{filename}") as f:
-                            try:
-                                for i, line in enumerate(f):
-                                    namespace = "RE::"
-                                    search = re.finditer(
-                                                OFFSET_VTABLE_RELID_PATTERN, line, re.I
-                                            )
-                                    for count, item in enumerate(search):
-                                        if item.group() and item.group(1):
-                                            name = item.group(1)
-                                        id = item.group(5)
-                                        full_name = f"{name}_{count}"
-                                        if debug:
-                                            print("Found rel::id", full_name, id)
-                                        defined_rel_ids[f"{namespace}{full_name}"] = {
-                                            "id": str(id),
-                                            "name": full_name,
-                                        }
-                            except UnicodeDecodeError as ex:
-                                print(f"Unable to read {dirpath}/{filename}: ", ex)
-                    else:
-                        header = CppHeaderParser.CppHeader(f"{dirpath}/{filename}")
-                        for func in header.functions:
-                            if func.get("returns") == "constexpr REL::ID":
-                                name = func.get("name")
-                                namespace = func.get("namespace")
-                                search = re.search(
-                                    OFFSET_RELID_PATTERN, func.get("debug"), re.I
-                                )
-                                if search and search.groups():
-                                    id = search.groups()[1]
-                                    if debug:
-                                        print("Found rel::id", name, id)
-                                    defined_rel_ids[f"{namespace}{name}"] = {
-                                        "id": id,
-                                        "func": func,
-                                    }
-                            elif func.get("returns") == "constexpr REL::Offset":
-                                name = func.get("name")
-                                namespace = func.get("namespace")
-                                search = re.search(
-                                    OFFSET_OFFSET_PATTERN, func.get("debug"), re.I
-                                )
-                                if search and search.groups():
-                                    id = search.groups()[1]
-                                    if debug:
-                                        print("Found rel::offset", name, id)
-                                    defined_vr_offsets[f"{namespace}{name}"] = {
-                                        "id": id,
-                                        "func": func,
-                                    }
+                    parse_offsets(
+                        defined_rel_ids, defined_vr_offsets, dirpath, filename
+                    )
     print(
-        f"Finished scanning {count:n} files. rel_ids: {len(defined_rel_ids)} offsets: {len(defined_vr_offsets)} results: {len(results)}"
+        f"Finished scanning {file_count:n} files. rel_ids: {len(defined_rel_ids)} offsets: {len(defined_vr_offsets)} results: {len(results)}"
     )
     return {
         "defined_rel_ids": defined_rel_ids,
         "defined_vr_offsets": defined_vr_offsets,
         "results": results,
     }
+
+
+def search_for_ids(
+    a_directory, results, defined_rel_ids, defined_vr_offsets, dirpath, filename
+):
+    """Search for SSE IDs that may need a VR counterpart defined.
+
+    Args:
+        a_directory (str): Root directory
+        results (Dict[str]): Dict of defined_rel_ids, defined_vr_offsets, results
+        defined_rel_ids (dict): dictionary of found rel_ids from offsets with key symbol name; primarily used when two different files may have sse and vr info to match.
+        defined_vr_offsets (dict): dictionary of found vr offsets with key symbol name
+        dirpath (str): directory path
+        filename (str): filename
+    """
+    found_ifndef = False
+    with open(f"{dirpath}/{filename}") as f:
+        try:
+            for i, line in enumerate(f):
+                for regex_pattern in RELID_MATCH_ARRAY:
+                    matches = [
+                        m.groupdict()
+                        for m in re.compile(
+                            regex_pattern,
+                            flags=re.IGNORECASE | re.MULTILINE,
+                        ).finditer(line)
+                    ]
+                    if matches:
+                        for match in matches:
+                            if any(match):
+                                if match.get("sse") and match.get("ae"):
+                                    # update AE match database based on found items
+                                    sse_ae[int(match["sse"])] = int(match.get("ae"))
+                                results.append(
+                                    {
+                                        "i": i,
+                                        "directory": dirpath[len(a_directory) :],
+                                        "filename": filename,
+                                        "matches": match,
+                                    }
+                                )
+                    if line.lower().startswith("#ifndef skyrimvr"):
+                        found_ifndef = True
+            if found_ifndef:
+                f.seek(0)
+                if debug:
+                    print(
+                        f"Searching for ifndef id offset definitions in {dirpath}/{filename}"
+                    )
+                ifndef_matches = re.findall(
+                    IFNDEF_PATTERN,
+                    f.read(),
+                    flags=re.IGNORECASE | re.MULTILINE,
+                )
+                if ifndef_matches:
+                    for match in ifndef_matches:
+                        name = (
+                            match[0] if not match[0].endswith("()") else match[0][:-2]
+                        )
+                        id = match[2]
+                        offset = match[3]
+                        func = {
+                            "namespace": f"{filename}::",
+                            "name": name,
+                        }
+                        defined_rel_ids[f"{filename}::{name}"] = {
+                            "id": id,
+                            "func": func,
+                        }
+                        defined_vr_offsets[f"{filename}::{name}"] = {
+                            "id": offset,
+                            "func": func,
+                        }
+                        if debug:
+                            print(
+                                f"Found ifndef {filename}::{name} with id: {id} offset: {offset}"
+                            )
+        except UnicodeDecodeError as ex:
+            print(f"Unable to read {dirpath}/{filename}: ", ex)
+
+
+def parse_offsets(defined_rel_ids, defined_vr_offsets, dirpath, filename):
+    """Parse offset files to define items
+
+    Args:
+        defined_rel_ids (dict): dictionary of found rel_ids from offsets with key symbol name
+        defined_vr_offsets (dict): dictionary of found vr offsets with key symbol name
+        dirpath (str): directory path
+        filename (str): filename
+    """
+    # looking at offsets
+    if debug:
+        print("parsing offsets file: ", f"{dirpath}/{filename}")
+        # if filename.lower() == map(lambda x: x.lower(), ["Offsets_VTABLE.h"]):
+        #     regex_parse(defined_rel_ids, dirpath, filename)
+        # else:
+        cpp_header_parse(defined_rel_ids, defined_vr_offsets, dirpath, filename)
+
+
+def regex_parse(defined_rel_ids, dirpath, filename):
+    with open(f"{dirpath}/{filename}") as f:
+        try:
+            for i, line in enumerate(f):
+                namespace = "RE::"
+                search = re.finditer(OFFSET_VTABLE_RELID_PATTERN, line, re.I)
+                for item_count, item in enumerate(search):
+                    if item.group() and item.group(1):
+                        name = item.group(1)
+                    id = item.group(5)
+                    full_name = f"{name}_{item_count}"
+                    if debug:
+                        print("Found rel::id", full_name, id)
+                    defined_rel_ids[f"{namespace}{full_name}"] = {
+                        "id": str(id),
+                        "name": full_name,
+                    }
+        except UnicodeDecodeError as ex:
+            print(f"Unable to read {dirpath}/{filename}: ", ex)
+
+
+def cpp_header_parse(defined_rel_ids, defined_vr_offsets, dirpath, filename):
+    try:
+        header = CppHeaderParser.CppHeader(f"{dirpath}/{filename}")
+    except CppHeaderParser.CppHeaderParser.CppParseError as ex:
+        print(f"Unable to cppheaderparse {dirpath}/{filename}: ", ex)
+        return
+    for func in header.functions:
+        if func.get("returns") == "constexpr REL::ID":
+            name = func.get("name")
+            namespace = func.get("namespace")
+            search = re.search(OFFSET_RELID_PATTERN, func.get("debug"), re.I)
+            if search and search.groups():
+                id = search.groups()[1]
+                if debug:
+                    print("Found rel::id", name, id)
+                defined_rel_ids[f"{namespace}{name}"] = {
+                    "id": id,
+                    "func": func,
+                }
+        elif func.get("returns") == "constexpr REL::Offset":
+            name = func.get("name")
+            namespace = func.get("namespace")
+            search = re.search(OFFSET_OFFSET_PATTERN, func.get("debug"), re.I)
+            if search and search.groups():
+                id = search.groups()[1]
+                if debug:
+                    print("Found rel::offset", name, id)
+                defined_vr_offsets[f"{namespace}{name}"] = {
+                    "id": id,
+                    "func": func,
+                }
 
 
 def analyze_code_offsets(defined_rel_ids: dict, defined_vr_offsets: dict):
@@ -485,19 +538,19 @@ def match_results(
         directory = result["directory"]
         filename = result["filename"]
         match = result["matches"]
-        offset:str = "0"
+        offset: int = 0
         conversion = ""
         vr_addr = ""
         warning = ""
         if match.get("id_with_offset"):
             id = int(match.get("id_with_offsetd"))
-            offset = match.get("offset", "0")
-        elif (match.get("sse")):
+            offset = match.get("offset", 0)
+        elif match.get("sse"):
             id = int(match.get("sse"))
-            offset = match.get("sse_offset","0") if match.get("sse_offset") else "0"
+            offset = int(match.get("sse_offset", 0)) if match.get("sse_offset") else 0
         elif match.get("id"):
             id = int(match.get("id"))
-            offset = "0"
+            offset = 0
         else:
             continue
         if (
@@ -506,7 +559,11 @@ def match_results(
         ):
             vr_addr = id_vr[id]
             conversion = f"REL::Offset(0x{vr_addr[4:]})"
-            if offset:
+            if (
+                offset
+                and int(id_vr_status.get(id, {}).get("status", 0))
+                < CONFIDENCE["PERFECT"]
+            ):
                 warning = f"WARNING: Offset detected; offset may need to be manually updated for VR"
         if not vr_addr:
             warning += f"WARNING: VR Address undefined."
@@ -523,9 +580,7 @@ def match_results(
                 description = ae_name.get(sse_ae.get(id))
             else:
                 description = f"{directory[1:] if directory.startswith('/') or directory.startswith(chr(92)) else directory}/{filename}:{i+1}"
-            new_results.append(
-                f"{id},{sse_addr},{suggested_vr},1,{description}"
-            )
+            new_results.append(f"{id},{sse_addr},{suggested_vr},1,{description}")
         elif not database:
             new_results.append(
                 f"{directory}/{filename}:{i+1}\tID: {id}\tSSE: {sse_addr}\t{conversion}\t{vr_addr}\t{warning}"
@@ -659,8 +714,8 @@ def write_csv(
         print(f"Error writing to {outputfile}: {ex}")
         return False
 
-def write_ae_map(
-) -> bool:
+
+def write_ae_map() -> bool:
     """Generate sse ae csv file.
     Returns:
         bool: Whether successful.
@@ -668,9 +723,7 @@ def write_ae_map(
     global id_vr_status
     global ae_name
     global sse_ae
-    outputfile = (
-        "se_ae.csv"
-    )
+    outputfile = "se_ae.csv"
     output = {}
     try:
         with open(outputfile, "w", newline="") as f:
@@ -684,20 +737,17 @@ def write_ae_map(
                     name = entry.get("name")
                     # add cpp parser names from offsets file
                     if not name and entry.get("func"):
-                        name = (
-                            f'{entry["func"]["namespace"]}{entry["func"]["name"]}'
-                        )
+                        name = f'{entry["func"]["namespace"]}{entry["func"]["name"]}'
                     # only add unknown names from ae_name
                 if not name and sse_ae.get(id) and ae_name.get(sse_ae.get(id)):
                     name = ae_name.get(sse_ae.get(id))
                 writer.writerow((id, ae, 3, name))
-        print(
-            f"Wrote {rows} rows into {outputfile}"
-        )
+        print(f"Wrote {rows} rows into {outputfile}")
         return True
     except OSError as ex:
         print(f"Error writing to {outputfile}: {ex}")
         return False
+
 
 def main():
     global debug
