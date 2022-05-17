@@ -7,10 +7,10 @@ license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.8"
-robotpy-cppheaderparser = "^5.0.15"
+robotpy-cppheaderparser = ">=5.0.15"
 
 [tool.poetry.dev-dependencies]
-black = "^21.9b0"
+black = ">=21.9b0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
