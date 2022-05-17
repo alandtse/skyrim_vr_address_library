@@ -329,7 +329,7 @@ def scan_code(
                                             )
                                     for count, item in enumerate(search):
                                         if item.group() and item.group(1):
-                                            name = item.group(1)                                       
+                                            name = item.group(1)
                                         id = item.group(5)
                                         full_name = f"{name}_{count}"
                                         if debug:
@@ -337,7 +337,7 @@ def scan_code(
                                         defined_rel_ids[f"{namespace}{full_name}"] = {
                                             "id": str(id),
                                             "name": full_name,
-                                        }                                    
+                                        }
                             except UnicodeDecodeError as ex:
                                 print(f"Unable to read {dirpath}/{filename}: ", ex)
                     else:
@@ -485,19 +485,19 @@ def match_results(
         directory = result["directory"]
         filename = result["filename"]
         match = result["matches"]
-        offset = 0
+        offset:str = "0"
         conversion = ""
         vr_addr = ""
         warning = ""
         if match.get("id_with_offset"):
             id = int(match.get("id_with_offsetd"))
-            offset = match.get("offset", 0)
+            offset = match.get("offset", "0")
         elif (match.get("sse")):
             id = int(match.get("sse"))
-            offset = int(match.get("sse_offset",0)) if match.get("sse_offset") else 0
+            offset = match.get("sse_offset","0") if match.get("sse_offset") else "0"
         elif match.get("id"):
             id = int(match.get("id"))
-            offset = 0
+            offset = "0"
         else:
             continue
         if (
