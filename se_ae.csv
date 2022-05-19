@@ -45,13 +45,18 @@ sseid,aeid,confidence,name
 15873,16113,3,InventoryChanges::GetEquippedArmorInSlot_*
 15889,16129,3,RE::InventoryChanges::InitLeveledItems
 15890,16130,3,RE::InventoryChanges::InitFromContainerExtra
+15916,41558,3,RE::TESActionData::Ctor
 15967,16212,3,RE::BSPointerHandleManagerInterface::GetHandle
 16175,16407,3,RE::ScreenSplatter::Clear
 17470,17865,3,RE::BooksRead::GetEventSource
+18185,18570,3,RE::ImageSpaceModifierInstanceForm::Trigger
+18188,18573,3,RE::TESImageSpaceModifier::Stop*
+18192,18577,3,RE::TESImageSpaceModifier::RemoveCrossfade_*
 18474,18905,3,RE::TESObjectCELL::GetLocation
 18536,18995,3,RE::TESObjectCELL::GetbhkWorld
 18543,19002,3,RE::TESObjectCELL::GetWaterHeight
 19201,19627,3,RE::TESObjectREFR::HasQuestObject
+19238,19664,3,RE::TESObjectREFR::GetScale_14028CC60
 19277,19703,3,RE::TESObjectREFR::GetWeightInContainer
 19326,19753,3,RE::TESObjectREFR::GetTransform
 19338,19765,3,RE::Actor::IsLimbGone
@@ -73,6 +78,7 @@ sseid,aeid,confidence,name
 24537,25066,3,RE::TESQuest::CreateRefHandleByAliasID
 24985,25491,3,RE::TESTopicInfo::ResponseData::PopulateResponseText
 25482,26022,3,RE::NiAVObject::GetCollisionObject
+25684,26231,3,papyrus_extender::events::game::weatherevent::target_0x416
 25822,26379,3,RE::AIForumulas::ComputePickpocketSuccess
 25977,26586,3,RE::BSFaceGenAnimationData::Reset
 25980,26594,3,RE::BSFaceGenAnimationData::SetExpressionOverride
@@ -108,7 +114,9 @@ sseid,aeid,confidence,name
 36407,37401,3,RE::Actor::EvaluatePackage
 36427,37422,3,RE::Actor::StealAlarm
 36457,37453,3,RE::Actor::IsOverEncumbered
+36492,37491,3,RE::Actor::IsInRagdollState
 36532,37532,3,RE::Actor::CanAttackActor
+36559,37560,3,RE::Actor::GetCollisionFilterInfo
 36602,37610,3,RE::Actor::SetRotationX
 36604,37612,3,RE::Actor::SetLifeState
 36631,37639,3,RE::Actor::Decapitate
@@ -116,6 +124,7 @@ sseid,aeid,confidence,name
 36723,37735,3,RE::Actor::KillImmediate
 36801,37817,3,RE::Actor::StopMoving
 36927,37952,3,RE::Actor::IsBlocking
+36973,37998,3,RE::GameEventHandler::FallLongDistance::CalcDoDamage::process_movefinish_event
 37390,38338,3,RE::ActorKill::GetEventSource
 37392,38340,3,RE::DisarmedEvent::GetEventSource
 37524,38469,3,RE::Actor::GetActorValueModifier
@@ -146,6 +155,7 @@ sseid,aeid,confidence,name
 39248,40320,3,RE::SkillIncrease::GetEventSource
 39365,40437,3,RE::PlayerCharacter::CenterOnCell_Impl
 39425,40501,3,papyrus_extender::papyrus::detail::get_god_mode_impl
+39507,40586,3,RE::PlayerCharacter::SetAIDriven
 39568,40654,3,RE::PlayerCharacter::AttemptPickpocket
 40056,41067,3,RE::LocationDiscovery::GetEventSource
 40060,41071,3,RE::ShoutAttack::GetEventSource
@@ -162,7 +172,12 @@ sseid,aeid,confidence,name
 49858,50790,3,RE::PlayerCamera::ForceFirstPerson
 49863,50796,3,RE::PlayerCamera::ForceThirdPerson
 49876,50809,3,RE::PlayerCamera::ToggleFreeCameraMode
+50122,51053,3,papyrus_extender::event::booksread::bookmenu
 50257,51182,3,RE::ChestsLooted::GetEventSource
+50449,51354,3,papyrus_extender::event::alchemy_craft
+50450,51355,3,YesImSure::EnchantmentLearned
+50476,51369,3,YesImSure::constructibleObjectMenu
+50477,51370,3,YesImSure::smithingMenu
 50882,51755,3,RE::Inventory3DManager::Render
 50884,51757,3,RE::Inventory3DManager::UpdateItem3D
 50885,51758,3,RE::Inventory3DManager::UpdateMagic3D?
@@ -193,6 +208,7 @@ sseid,aeid,confidence,name
 63609,62708,3,RE::BShkbAnimationGraph::SetGraphVariableBool
 66365,67626,3,RE::BSSoundHandle::SetVolume
 66366,67627,3,RE::BSSoundHandle::SetFrequency
+66385,67646,3,RE::BSSoundHandle::FadeOutAndRelease
 66403,67665,3,RE::BSAudioManager::BuildSoundDataFromEditorID
 66841,68088,3,RE::MemoryManager::GetThreadScrapHeap
 66859,68115,3,RE::MemoryManager::Allocate
