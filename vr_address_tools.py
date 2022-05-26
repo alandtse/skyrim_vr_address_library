@@ -687,7 +687,7 @@ def write_csv(
                     and int(id_vr_status.get(elem[0]).get("status", 0))
                     >= min_confidence
                 )
-                or (min_confidence == 0 and elem[0] not in id_vr_status),
+                or (min_confidence == CONFIDENCE["UNKNOWN"] and elem[0] not in id_vr_status),
                 id_vr.items(),
             )
         )
