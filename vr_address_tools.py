@@ -83,6 +83,7 @@ def load_database(
     ida_override=True,
     se_ae="se_ae.csv",
     ae_names="AddressLibraryDatabase/skyrimae.rename",
+    se_ae_offsets="se_ae_offsets.csv",
 ) -> int:
     """Load databases.
 
@@ -93,6 +94,7 @@ def load_database(
         ida_override (bool, optional): Whether IDADiffCalculator will override offsets.
         se_ae (str, optional): Name of sse to ae ID mapping csv (e.g., sseid,aeid,confidence,name). Defaults to "se_ae.csv".
         ae_names (str, optional): Name of ae ID to name mapping (e.g., 11 MonitorAPO::Func9_*). Defaults to "AddressLibraryDatabase/skyrimae.rename".
+        se_ae_offsets (str, optional): Name of merged sse/ae id/address map. Based off meh's mapping offsets, https://www.nexusmods.com/skyrimspecialedition/mods/32444?tab=files, and AddressLibraryDatabase comments. Created using merge.py. Defaults to "se_ae_offsets.csv".
     Returns:
         int: Number of successfully loaded csv files. 0 means none were loaded.
     """
@@ -196,6 +198,23 @@ def load_database(
     except FileNotFoundError:
         print(f"{ae_names} not found")
 
+    try:
+        with open(os.path.join(path, se_ae_offsets), mode="r") as infile:
+            reader = csv.DictReader(infile, delimiter=",")
+            # sseid,sse_addr,ae_addr,aeid,comments
+            for row in reader:
+                sseid = int(row["sseid"])
+                aeid = int(float(row["aeid"])) if row["aeid"] else 0
+                name = row["comments"]
+                if sseid and aeid:
+                    sse_ae[sseid] = aeid
+                if aeid and name and not ae_name.get(aeid):
+                    # print(
+                    #     f"Adding name ae {aeid} {ae_name.get(aeid)} with {name}"
+                    # )
+                    ae_name[aeid] = name
+    except FileNotFoundError:
+        print(f"{se_ae_offsets} not found")
     if debug:
         print("Combining databases")
     conflicts = 0
@@ -732,16 +751,18 @@ def write_ae_map() -> bool:
             writer.writerow(("sseid", "aeid", "confidence", "name"))
             for id, ae in sorted(sse_ae.items()):
                 name = ""
+                confidence = CONFIDENCE["SUGGESTED"]
                 if id_vr_status.get(id):
                     entry = id_vr_status.get(id)
                     name = entry.get("name")
+                    confidence = CONFIDENCE["VERIFIED"]
                     # add cpp parser names from offsets file
                     if not name and entry.get("func"):
                         name = f'{entry["func"]["namespace"]}{entry["func"]["name"]}'
                     # only add unknown names from ae_name
                 if not name and sse_ae.get(id) and ae_name.get(sse_ae.get(id)):
                     name = ae_name.get(sse_ae.get(id))
-                writer.writerow((id, ae, 3, name))
+                writer.writerow((id, ae, confidence, name))
         print(f"Wrote {rows} rows into {outputfile}")
         return True
     except OSError as ex:
