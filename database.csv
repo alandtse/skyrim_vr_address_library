@@ -276,7 +276,7 @@ id,sse,vr,status,name
 37726,0x14062d050,0x140635f20,3,RE::CriticalHit::GetEventSource
 37752,0x14062e390,0x140637260,3,RE::Actor::StopInteractingQuick
 37757,0x14062ebc0,0x140637a90,3,RE::Actor::GetMount
-37758,0x14062ecd0,0x140637ba0,3,RE::Actor::GetRider
+37758,0x14062ecd0,0x140637ba0,4,RE::Actor::GetRider
 37771,0x14062f560,0x140638430,3,RE::Actor::AddSpell
 37772,0x14062f720,0x1406385f0,3,RE::Actor::RemoveSpell
 37802,0x140631360,0x14063a230,3,RE::Actor::UpdateArmorAbility
@@ -284,7 +284,7 @@ id,sse,vr,status,name
 37804,0x1406314f0,0x14063a3c0,3,po3tweaks::Spells::ReapplyAdded::GetAliasInstanceArray
 37805,0x1406316b0,0x14063a580,3,po3tweaks::Spells::DispelAdded::GetAliasInstanceArray
 37808,0x140631c80,0x14063ab50,3,RE::Actor::InterruptCast
-37810,0x140631d70,0x14063ac40,3,RE::Actor::IsCasting
+37810,0x140631d70,0x14063ac40,4,RE::Actor::IsCasting
 37820,0x1406322f0,0x14063b1c0,3,RE::Actor::RemoveSelectedSpell
 37828,0x140632d10,0x14063bbe0,3,RE::Actor::HasSpell
 37832,0x140633090,0x14063bf60,4,RE::MagicTarget::Func1_140633090
@@ -525,6 +525,7 @@ id,sse,vr,status,name
 76170,0x140dae3d0,0x140e03350,3,RE::NiAVObject::SetCollisionLayer
 76171,0x140dae3f0,0x140e03370,3,RE::NiAVObject::UpdateRigidBodySettings
 76271,0x140db4d20,0x140e09ca0,3,RE::NiAVObject::SetRigidConstraints
+76799,0x140ddca80,0x140e30f40,4,RE::bhkShape::GetMaterialID
 80059,0x140ec30f0,0x140f1fbc0,3,RE::UIMessageQueue::ProcessCommands
 80061,0x140ec31d0,0x140f1fca0,3,RE::UIMessageQueue::CreateUIMessageData
 80077,0x140ec3d50,0x140f20820,3,po3tweaks::SitToWait::ProcessMenu
