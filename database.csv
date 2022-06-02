@@ -26,7 +26,7 @@ id,sse,vr,status,name
 13119,0x14014fb40,0x140160570,3,RE::INISettingCollection::RemoveSetting
 13135,0x140150a00,0x140161430,3,RE::INISettingCollection::Unk_08
 13159,0x1401535d0,0x140164020,3,RE::TES::PurgeBufferedCells
-13171,0x140153f80,0x1401649d0,3,WashThatBloodOff::Rain::Manager::Load_Interior
+13171,0x140153f80,0x1401649d0,4,WashThatBloodOff::Rain::Manager::Load_Interior
 13172,0x1401545f0,0x140165040,3,WashThatBloodOff::Rain::Manager::Leave_Interior
 13177,0x140155090,0x140165ae0,3,RE::TES::Getcell
 13202,0x140156b60,0x1401675b0,3,RE::TES::GetLandTexture
@@ -100,9 +100,9 @@ id,sse,vr,status,name
 18185,0x14024c860,0x14025df50,4,RE::ImageSpaceModifierInstanceForm::Trigger
 18188,0x14024ccd0,0x14025e3c0,4,RE::TESImageSpaceModifier::Stop*
 18192,0x14024d210,0x14025e900,4,RE::TESImageSpaceModifier::RemoveCrossfade_*
-18368,0x14025b350,0x14026c790,3,SeasonsofSkyrim::TESObjectLAND::create_land_geometry
-18414,0x14025e6e0,0x14026fb90,3,SeasonsofSkyrim::TESObjectLAND::GetGrassList
-18418,0x14025e9c0,0x14026fe70,3,SeasonsofSkyrim::TESObjectLAND::GetHavokMaterialType
+18368,0x14025b350,0x14026c790,4,SeasonsofSkyrim::TESObjectLAND::create_land_geometry
+18414,0x14025e6e0,0x14026fb90,4,SeasonsofSkyrim::TESObjectLAND::GetGrassList
+18418,0x14025e9c0,0x14026fe70,4,SeasonsofSkyrim::TESObjectLAND::GetHavokMaterialType
 18474,0x140262290,0x140273830,3,RE::TESObjectCELL::GetLocation
 18536,0x1402654c0,0x140276a90,3,RE::TESObjectCELL::GetbhkWorld
 18543,0x140265990,0x140276f60,3,RE::TESObjectCELL::GetWaterHeight
@@ -7987,7 +7987,7 @@ id,sse,vr,status,name
 514064,0x141eace70,0x141f746e0,1,RE::RTTI_BSPlatform__BSAsyncRequest_std__function_void___cdecl_BSPlatform__BNetResult_unsigned___int64_BSTArray_BSStringT_char_4294967295_DynamicMemoryManagementPol__BSTArrayHeapAllocator__const_____ptr64____
 514075,0x141eaeb70,0x141f76490,1,RE::RTTI_std___Binder_std___Unforced_void____cdecl_BSPlatform__BSBNetAccountManager_____BSPlatform__BNetResult_unsigned___int64_BSTArray_BSPlatform__BSLegalDocument_BSTArrayHeapAllocator__const_____ptr64_BSPlatform__BNetResult_____ptr64_BSTArray_BSPlatform__BSLegalDocument_BSTArrayHeapAllocator______ptr64____ptr64_BSPlatform__BSBNetAccountManager_____ptr64_const_std___Ph_1__const_____ptr64_std___Ph_2__const_____ptr64_std___Ph_3__const_____ptr64_BSPlatform__BNetResult_____ptr64_BSTArray_BSPlatform__BSLegalDocument_BSTArrayHeapAllocator______ptr64_
 514077,0x141eaecc0,0x141f765a0,1,RE::RTTI_std___Binder_std___Unforced_void____cdecl_BSPlatform__BSBNetAccountManager_____BSPlatform__BNetResult_unsigned___int64_BSPlatform__BNetResult_____ptr64____ptr64_BSPlatform__BSBNetAccountManager_____ptr64_const_std___Ph_1__const_____ptr64_std___Ph_2__const_____ptr64_BSPlatform__BNetResult_____ptr64_
-514139,0x141ebe418,0x141f82ac8,3,RE::ActorValueList::GetSingleton
+514139,0x141ebe418,0x141f82ac8,4,RE::ActorValueList::GetSingleton
 514141,0x141ebe428,0x141f82ad8,3,RE::TESDataHandler::Singleton
 514167,0x141ebead0,0x141f831b0,3,RE::ProcessLists::GetSingleton
 514178,0x141ebeb20,0x141f83200,3,RE::UI::Singleton
