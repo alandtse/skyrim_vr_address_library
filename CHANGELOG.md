@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.34.0 (2022-06-02)
+### Feature
+* Add latest commonlib ([`1ba2259`](https://github.com/alandtse/vr_address_tools/commit/1ba2259cbac975e8c30cb65e22c960a0f55b6ff0))
+
 ## v0.33.0 (2022-05-16)
 ### Feature
 * Add latest commonlib edits ([`a4e5c2c`](https://github.com/alandtse/vr_address_tools/commit/a4e5c2c9c423dffbd6fb860b29328fe5aa3afb97))
