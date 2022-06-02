@@ -2002,6 +2002,8 @@ sseid,aeid,confidence,name
 13161,13306,1,TES::sub_*
 13164,13309,1,
 13165,13310,1,
+13171,13316,3,WashThatBloodOff::Rain::Manager::Load_Interior
+13172,13317,3,WashThatBloodOff::Rain::Manager::Leave_Interior
 13177,13322,3,RE::TES::Getcell
 13178,13323,1,TES::sub_*
 13179,13324,1,
@@ -2725,6 +2727,7 @@ sseid,aeid,confidence,name
 18347,18766,1,TESObjectLAND::sub_*
 18348,18767,1,TESObjectLAND::sub_*
 18349,18768,1,TESObjectLAND::sub_*
+18368,18791,3,SeasonsofSkyrim::TESObjectLAND::create_land_geometry
 18451,18882,1,TESObjectCELL::sub_*
 18453,18884,1,TESObjectCELL::CreateGroupData_*
 18455,18886,1,TESObjectCELL::sub_*
