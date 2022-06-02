@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.34.1 (2022-06-02)
+### Fix
+* Update confidence ([`28a0e8e`](https://github.com/alandtse/vr_address_tools/commit/28a0e8e5cf1e8960daadcc9c325d39083db83192))
+
 ## v0.34.0 (2022-06-02)
 ### Feature
 * Add latest commonlib ([`1ba2259`](https://github.com/alandtse/vr_address_tools/commit/1ba2259cbac975e8c30cb65e22c960a0f55b6ff0))
