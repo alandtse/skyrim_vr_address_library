@@ -566,7 +566,10 @@ def match_results(
             offset = match.get("offset", 0)
         elif match.get("sse"):
             id = int(match.get("sse"))
-            offset = int(match.get("sse_offset", 0)) if match.get("sse_offset") else 0
+            try:
+                offset = int(match.get("sse_offset", 0)) if match.get("sse_offset") else 0
+            except ValueError: # it's a hex string e.g., 0x2e6
+                offset = int(match.get("sse_offset", 0), 16) if match.get("sse_offset") else 0
         elif match.get("id"):
             id = int(match.get("id"))
             offset = 0
