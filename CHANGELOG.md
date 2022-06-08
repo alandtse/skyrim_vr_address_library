@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.35.0 (2022-06-08)
+### Feature
+* Add support for MaxsuStaggerDirectionFix-ng ([`c74353e`](https://github.com/alandtse/vr_address_tools/commit/c74353efb7753f7523dc5b8bdb2c3d5716eb846b))
+
 ## v0.34.1 (2022-06-02)
 ### Fix
 * Update confidence ([`28a0e8e`](https://github.com/alandtse/vr_address_tools/commit/28a0e8e5cf1e8960daadcc9c325d39083db83192))
