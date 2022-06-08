@@ -193,6 +193,7 @@ id,sse,vr,status,name
 32142,0x1404f0700,0x140500970,3,RE::IAnimationGraphManagerHolder::SetGraphVariableInt_1404F0700
 32143,0x1404f0720,0x140500990,3,RE::IAnimationGraphManagerHolder::SetGraphVariableFloat_1404F0720
 32144,0x1404f0740,0x140502b00,3,RE::IAnimationGraphManagerHolder::SetGraphVariableNiPoint3_1404F0740
+32184,0x1404f1e60,0x1405020d0,4,RE::BSAnimationGraphManager::sub_1404F1E60
 32192,0x1404f2620,0x140502890,3,RE::IAnimationGraphManagerHolder::GetGraphVariableNiPoint3
 32290,0x1404f5c80,0x140505f60,3,RE::TESCamera::SetState
 33286,0x14053e380,0x140541100,3,RE::ActiveEffect::Dispel
