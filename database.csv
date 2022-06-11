@@ -234,6 +234,7 @@ id,sse,vr,status,name
 36427,0x1405dd770,0x1405e5dc0,3,RE::Actor::StealAlarm
 36456,0x1405e1860,0x1405e9ee0,3,RE::Actor::GetTotalCarryWeight_1405E1860
 36457,0x1405e18b0,0x1405e9f30,3,RE::Actor::IsOverEncumbered
+36472,0x1405e20c0,0x1405ea760,4,Character::MoveToPackageLocation_1405E20C0
 36492,0x1405e33b0,0x1405eba50,4,RE::Actor::IsInRagdollState
 36523,0x1405e6b50,0x1405ef270,3,EssentialFavorites::Disarm::IsQuestObject
 36532,0x1405e7500,0x1405efc20,3,RE::Actor::CanAttackActor
