@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.36.0 (2022-06-11)
+### Feature
+* Add NPC AI Process Position Fix - NG ([`39a14b9`](https://github.com/alandtse/vr_address_tools/commit/39a14b9c884f4307a4f8250f40ca9f3e66e95eae))
+
 ## v0.35.0 (2022-06-08)
 ### Feature
 * Add support for MaxsuStaggerDirectionFix-ng ([`c74353e`](https://github.com/alandtse/vr_address_tools/commit/c74353efb7753f7523dc5b8bdb2c3d5716eb846b))
