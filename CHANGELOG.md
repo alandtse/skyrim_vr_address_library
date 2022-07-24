@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.37.0 (2022-07-24)
+### Feature
+* Add po3 commonlibsse ([`7a97cd9`](https://github.com/alandtse/vr_address_tools/commit/7a97cd99dc90bdb6efc77e541ac5b6cf7098e0fa))
+
 ## v0.36.0 (2022-06-11)
 ### Feature
 * Add NPC AI Process Position Fix - NG ([`39a14b9`](https://github.com/alandtse/vr_address_tools/commit/39a14b9c884f4307a4f8250f40ca9f3e66e95eae))
