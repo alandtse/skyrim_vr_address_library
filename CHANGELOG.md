@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.38.0 (2022-08-11)
+### Feature
+* Add SplashesofStorms and update clib ([`038ecda`](https://github.com/alandtse/vr_address_tools/commit/038ecda150e488ab6d4f5060a1a1e84e396aae1e))
+
 ## v0.37.0 (2022-07-24)
 ### Feature
 * Add po3 commonlibsse ([`7a97cd9`](https://github.com/alandtse/vr_address_tools/commit/7a97cd99dc90bdb6efc77e541ac5b6cf7098e0fa))
