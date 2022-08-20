@@ -2,6 +2,11 @@
 
 <!--next-version-placeholder-->
 
+## v0.39.0 (2022-08-20)
+### Feature
+* Add latest commonlib po3 ([`f52fe20`](https://github.com/alandtse/vr_address_tools/commit/f52fe209f1d0d9545aab32c44df91afdc0847190))
+* Add shadowboost and shader tools ([`d2e3456`](https://github.com/alandtse/vr_address_tools/commit/d2e3456bc52bcc29bd68d313be6275703e00066d))
+
 ## v0.38.0 (2022-08-11)
 ### Feature
 * Add SplashesofStorms and update clib ([`038ecda`](https://github.com/alandtse/vr_address_tools/commit/038ecda150e488ab6d4f5060a1a1e84e396aae1e))
