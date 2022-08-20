@@ -73,6 +73,10 @@ def add_hex_strings(input1: str, input2: str = "0") -> str:
     """
     if input1 is None:
         return ""
+    if isinstance(input1, int):
+        input1 = str(input1)
+    if isinstance(input2, int):
+        input2 = str(input2)
     return hex(int(input1, 16) + int(input2, 16))
 
 
