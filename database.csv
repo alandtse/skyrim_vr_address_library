@@ -115,6 +115,7 @@ id,sse,vr,status,name
 19201,0x14028b940,0x14029d070,3,RE::TESObjectREFR::HasQuestObject
 19220,0x14028c440,0x14029db70,3,RE::TESObjectREFR::HasEffectKeyword?
 19238,0x14028cc60,0x14029e390,4,RE::TESObjectREFR::GetScale_14028CC60
+19275,0x14028e360,0x14029fa90,4,RE::PlayerCharacter::GetItemCount
 19277,0x14028e3c0,0x14029faf0,3,RE::TESObjectREFR::GetWeightInContainer
 19323,0x1402945e0,0x1402a5cf0,3,RE::TESObjectREFR::FindReferenceFor3D
 19326,0x140294730,0x1402a5e30,3,RE::TESObjectREFR::GetTransform
@@ -244,6 +245,7 @@ id,sse,vr,status,name
 36392,0x1405da840,0x1405e2ec0,3,RE::Actor::CalculateCurrentVendorFaction
 36407,0x1405db310,0x1405e3990,3,RE::Actor::EvaluatePackage
 36427,0x1405dd770,0x1405e5dc0,3,RE::Actor::StealAlarm
+36432,0x1405df630,0x1405e7c80,4,RE::Actor::TrespassAlarm
 36456,0x1405e1860,0x1405e9ee0,3,RE::Actor::GetTotalCarryWeight_1405E1860
 36457,0x1405e18b0,0x1405e9f30,3,RE::Actor::IsOverEncumbered
 36472,0x1405e20c0,0x1405ea760,4,Character::MoveToPackageLocation_1405E20C0
@@ -319,6 +321,7 @@ id,sse,vr,status,name
 38047,0x14063cfb0,0x140646020,3,StaminaNPC::apply_deny_player_attack_or_bash
 38079,0x14063f810,0x1406488a0,3,RE::TaskQueueInterface::ShouldUseTaskQueue
 38290,0x14064b140,0x140654490,4,RE::ActorProcess::PlayIdle
+38311,0x14064cdf0,0x140656140,4,RE::AIProcess::SetActorsDetectionEvent
 38404,0x140650df0,0x14065a140,3,RE::AIProcess::Update3DModel
 38483,0x1406598d0,0x140662c10,3,RE::AIProcess::GetHeadtrackTarget
 38495,0x140659c00,0x140662f40,3,RE::AIProcess::ClearMuzzleFlashes
@@ -348,6 +351,7 @@ id,sse,vr,status,name
 39475,0x1406aa260,0x1406cc000,3,RE::PlayerCharacter::StartGrabObject
 39507,0x1406ae310,0x1406d0b90,4,RE::PlayerCharacter::SetAIDriven
 39568,0x1406b2530,0x1406d58a0,3,RE::PlayerCharacter::AttemptPickpocket
+39574,0x1406b3110,0x1406d6480,4,RE::PlayerCharacter::SetEscaping
 39577,0x1406b34e0,0x1406d6850,4,RE::PlayerCharacter::WeaponSwingCallBack_1406B34E0
 39584,0x1406b3a50,0x1406d6dc0,3,po3tweaks::FactionStealing::CanTake
 39612,0x1406b52a0,0x1406d8580,3,RE::PlayerCharacter::GetTintMask
@@ -356,6 +360,7 @@ id,sse,vr,status,name
 40060,0x1406c8120,0x1406ee740,3,RE::ShoutAttack::GetEventSource
 40317,0x1406d71c0,0x1406fe060,4,po3tweaks::ToggleAI
 40330,0x1406d9490,0x140700330,3,RE::ProcessLists::StopCombatAndAlarmOnActor
+40394,0x1406de9a0,0x140705850,4,RE::ProcessLists::RequestHighestDetectionLevelAgainstActor
 40396,0x1406dec50,0x140705b00,3,RE::ProcessLists::ClearCachedFactionFightReactions
 40560,0x1406e6740,0x14070d630,3,RE::PlayerCharacter::PlayerSkills::AdvanceLevel
 41257,0x140704970,0x14072b900,3,RE::PlayerControls::Ctor
