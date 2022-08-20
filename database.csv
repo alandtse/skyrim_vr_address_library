@@ -541,6 +541,7 @@ id,sse,vr,status,name
 74237,0x140d38310,0x14053c550,3,RE::INISettingCollection::ReadSetting
 74239,0x140d38710,0x140d80bb0,3,RE::INISettingCollection::OpenHandle
 74240,0x140d38720,0x140d80bc0,3,RE::INISettingCollection::CloseHandle
+75461,0x140d6a2b0,0x140dbbdd0,3,shadowboost::TimeManager_SleepCheck
 75507,0x140d6dbc0,0x140dbf9b0,3,RE::RendererData::CreateRenderTexture
 76033,0x140da81e0,0x140dfd160,3,RE::NiAVObject::SetMotionType
 76170,0x140dae3d0,0x140e03350,3,RE::NiAVObject::SetCollisionLayer
@@ -589,6 +590,7 @@ id,sse,vr,status,name
 98295,0x141270710,0x1412908a0,3,RE::SaveFileHandleReaderWriter::SaveHandle
 98893,0x141291c30,0x1412ca540,3,RE::BSShaderProperty::SetFlags
 98897,0x141291d40,0x1412ca650,3,RE::BSShaderProperty::SetMaterial
+98978,0x141295ad0,0x1412ce720,3,UpdateShadowDistanceAndInteriorFlag
 99868,0x1412c5ca0,0x141304090,3,RE::NiAVObject::SetRefraction
 99886,0x1412c9320,0x141307710,3,RE::BSShaderTextureSet::ctor
 100004,0x1412ced50,0x14130dc60,3,RE::BSLightingShaderMaterial::Ctor
@@ -605,6 +607,7 @@ id,sse,vr,status,name
 100110,0x1412d3360,0x141312270,3,RE::BSLightingShaderMaterialLODLandscape::Ctor
 100118,0x1412d38f0,0x141312800,3,RE::BSLightingShaderMaterialSnow::Ctor
 100125,0x1412d3ad0,0x1413129e0,3,RE::BSLightingShaderMaterialMultiLayerParallax::Ctor
+101339,0x14131f810,0x1413656b0,4,RE::BSShader::LoadShaders_14131F810
 101884,0x14133f0c0,0x14137c200,3,RE::BSWin32SaveDataSystemUtility::GetSingleton
 102238,0x14134bdb0,0x14138baba,3,RE::_CRT::RTDynamicCast
 228344,0x14151f2b0,0x141596600,3,VTABLE_BaseFormComponent_0
@@ -7786,6 +7789,9 @@ id,sse,vr,status,name
 306493,0x1418707b0,0x1419102d0,3,VTABLE_type_info_0
 306518,0x141870fb8,0x1419132e0,3,VTABLE_BSSocket_0
 306519,0x141870fe0,0x141913308,3,VTABLE_BSSocketServer_0
+500931,0x141db1bf0,0x141e6ec20,4,"fLODFadeOutMultActors:LOD"
+500933,0x141db1c08,0x141e6ec38,4,"fLODFadeOutMultItems:LOD"
+500935,0x141db1c20,0x141e6ec50,3,"fLODFadeOutMultObjects:LOD"
 501401,0x141db4b98,0x141e71c08,3,po3tweaks::EffectShaderZbuffer
 501789,0x141db8910,0x141e75a00,2,RE::SCRIPT_FUNCTION::FirstScriptCommand
 501797,0x141dc6f60,0x141e83fb0,2,RE::SCRIPT_FUNCTION::FirstConsoleCommand
@@ -7799,6 +7805,8 @@ id,sse,vr,status,name
 512511,0x141e09be8,0x141ecfb10,3,RE::BSScaleformManager::CollectDisplayInfo::fSafeZoneYWide
 512513,0x141e09c00,0x141ecfb28,3,RE::BSScaleformManager::CollectDisplayInfo::fSafeZoneX
 512515,0x141e09c18,0x141ecfb40,3,RE::BSScaleformManager::CollectDisplayInfo::fSafeZoneY
+513222,0x141e0df14,0x1434230c4,4,shadowoost::gIsInterior
+513793,0x141e10978,0x141ed6530,4,"fShadowDistance:Display"
 513847,0x141e10de0,0x141ed6cd0,3,RE::RTTI_BaseFormComponent
 513848,0x141e10e30,0x141ed6d20,3,RE::RTTI_TESForm
 513849,0x141e10e50,0x141ed6d40,3,RE::RTTI_SpellItem
@@ -8366,6 +8374,7 @@ id,sse,vr,status,name
 524719,0x143025ea8,0x14317e730,3,RE::NiRTTI_BSNonUniformScaleExtraData
 524721,0x143025ec0,0x14317e760,3,RE::NiRTTI_BSNiNode
 524722,0x143025ed0,0x14317e770,3,RE::NiRTTI_BSInstanceTriShape
+524729,0x143025f08,0x14317e798,4,RE::g_ID3D11Device
 524907,0x143028490,0x143181700,3,RE::BSRenderManager::GetSingleton
 524998,0x14302c890,0x143186c10,3,RE::BSGraphics::State::GetSingleton?
 525039,0x14302cc68,0x143186dd8,3,RE::NiRTTI_bhkWorldObject
