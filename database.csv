@@ -162,6 +162,8 @@ id,sse,vr,status,name
 24985,0x14038d990,0x14039d1c0,3,RE::TESTopicInfo::ResponseData::PopulateResponseText
 25466,0x1403a4dd0,0x1403b4940,3,RE::TESHavokUtilities::FindCollidableRef
 25482,0x1403a6140,0x1403b5cb0,3,RE::NiAVObject::GetCollisionObject
+25620,0x1403ad1f0,0x1403bcec0,4,RE::Sky::Moon_UpdatePhase
+25626,0x1403adf90,0x1403bdc60,4,RE::Sky::Moon::Update_*
 25638,0x1403aebd0,0x1403be8d0,4,splashes_of_skyrim::RainManager::ToggleWaterRipples
 25679,0x1403b0f30,0x1403c0ca0,4,RE::Sky::SetMode_1403B0F30
 25682,0x1403b1670,0x1403c1410,4,RE::Sky::Update_1403B1670
