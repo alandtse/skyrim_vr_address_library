@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.41.0 (2022-08-24)
+### Feature
+* Add payloadinterpreter ([`810311e`](https://github.com/alandtse/vr_address_tools/commit/810311ec05628547e01794b203c0d0a5fb13ae90))
+
 ## v0.40.0 (2022-08-20)
 ### Feature
 * Add SensiblyOrbitingSatellites ([`7339160`](https://github.com/alandtse/vr_address_tools/commit/73391604de8b85e548154d5b76b946e133720baf))
