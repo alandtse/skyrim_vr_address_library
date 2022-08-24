@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.40.0 (2022-08-20)
+### Feature
+* Add SensiblyOrbitingSatellites ([`7339160`](https://github.com/alandtse/vr_address_tools/commit/73391604de8b85e548154d5b76b946e133720baf))
+
 ## v0.39.0 (2022-08-20)
 ### Feature
 * Add latest commonlib po3 ([`f52fe20`](https://github.com/alandtse/vr_address_tools/commit/f52fe209f1d0d9545aab32c44df91afdc0847190))
