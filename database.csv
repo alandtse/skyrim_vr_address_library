@@ -552,6 +552,7 @@ id,sse,vr,status,name
 74240,0x140d38720,0x140d80bc0,3,RE::INISettingCollection::CloseHandle
 75461,0x140d6a2b0,0x140dbbdd0,3,shadowboost::TimeManager_SleepCheck
 75507,0x140d6dbc0,0x140dbf9b0,3,RE::RendererData::CreateRenderTexture
+75595,0x140d72810,0x140dc5530,4,skyrim-nvidia-reflex::CalledDuringRenderStartup
 76033,0x140da81e0,0x140dfd160,3,RE::NiAVObject::SetMotionType
 76170,0x140dae3d0,0x140e03350,3,RE::NiAVObject::SetCollisionLayer
 76171,0x140dae3f0,0x140e03370,3,RE::NiAVObject::UpdateRigidBodySettings
