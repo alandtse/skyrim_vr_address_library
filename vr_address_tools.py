@@ -18,7 +18,8 @@ PATTERN_GROUPS = r"rel::id.*(?:\(|{)\s*(?:(?P<id_with_offset>[0-9]+)[^)}]*(?P<ss
 # old rel:id pattern rel::id(514167)
 RELID_PATTERN = r"(\w+){ REL::ID\(([0-9]+)\),*\s*([a-fx0-9])*\s+};"
 # po3 latest pattern RELOCATION_ID(SSE, AE) and REL_ID(SSE, AE, VR)
-RELOCATION_ID_PATTERN = r"(?P<prefix>\w+){ REL(?:OCATION)?_ID\((?P<sse>[0-9]+),+\s*(?P<ae>[0-9]*)\)(?:,\s*OFFSET(?:_3)?\((?P<sse_offset>0x[a-f0-9]+)(?P<ae_offset>,\s*0x[a-f0-9]+)?(?P<vr_offset>,\s*0x[a-f0-9]+)?\))?\s*};"
+# also	stl::write_thunk_call<MainLoop_Update>(REL::RelocationID(35551, 36550).address() + REL::Relocate(0x11F, 0x11F));
+RELOCATION_ID_PATTERN = r"(?P<prefix>[\w_]+)?(?:[{>(]* ?)?(?:rel::)?REL(?:OCATION)?_?ID\((?P<sse>[0-9]+),+\s*(?P<ae>[0-9]*)\)(?:,\s*OFFSET(?:_3)?\((?P<sse_offset>0x[a-f0-9]+)(?P<ae_offset>,\s*0x[a-f0-9]+)?(?P<vr_offset>,\s*0x[a-f0-9]+)?\))?(?:\s*};)?"
 # commonlibsse-ng patterns constexpr REL::VariantID NiRTTI_BGSAddonNodeSoundHandleExtra(514633, 400793, 0x2f8a838);
 VARIANT_ID_PATTERN = r"REL::VariantID\s+(?P<prefix>\w+)\((?P<sse>[0-9]+),+\s*(?P<ae>[0-9]*),+\s*0x(?P<vr_offset>[a-f0-9]*)\);"
 ## These are regexes for parsing offset files that typically can help define relationships (older commonlibvr); po3 and ng now allow for definition through macro use
