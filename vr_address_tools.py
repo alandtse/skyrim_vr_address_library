@@ -14,7 +14,7 @@ HEADER_TYPES = (".h", ".hpp", ".hxx")
 SOURCE_TYPES = (".c", ".cpp", ".cxx")
 ALL_TYPES = HEADER_TYPES + SOURCE_TYPES
 PATTERN = r"rel::id\([^)]+\)"
-PATTERN_GROUPS = r"rel::id.*(?:\(|{)\s*(?:(?P<id_with_offset>[0-9]+)[^)}]*(?P<sse_offset>0x[0-9a-f]*)|(?P<id>[0-9]*))\s*(?:\)|})"
+PATTERN_GROUPS = r"rel::id(?:\s*(?P<name>\w*))(?:\(|{)\s*(?:(?P<id_with_offset>[0-9]+)[^)}]*(?P<sse_offset>0x[0-9a-f]*)|(?P<id>[0-9]*))\s*(?:\)|})"
 # old rel:id pattern rel::id(514167)
 RELID_PATTERN = r"(\w+){ REL::ID\(([0-9]+)\),*\s*([a-fx0-9])*\s+};"
 # po3 latest pattern RELOCATION_ID(SSE, AE) and REL_ID(SSE, AE, VR)
@@ -607,6 +607,8 @@ def match_results(
                 description = ae_name.get(sse_ae.get(id))
             else:
                 description = f"{directory[1:] if directory.startswith('/') or directory.startswith(chr(92)) else directory}/{filename}:{i+1}"
+            if match.get("name"):
+                description = f"{match.get('name')} {description}"
             new_results.append(f"{id},{sse_addr},{suggested_vr},1,{description}")
         elif not database:
             new_results.append(
