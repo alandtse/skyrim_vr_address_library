@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.43.0 (2022-09-03)
+### Feature
+* Add Main::OnIdle_1405B2FF0 for shadow-boost ([`93e2f1e`](https://github.com/alandtse/vr_address_tools/commit/93e2f1e6a4d6beec3a3690a43c279937a8e8fe99))
+
 ## v0.42.0 (2022-09-02)
 ### Feature
 * Add skyrim-nvidia-reflex addresses ([`d93c030`](https://github.com/alandtse/vr_address_tools/commit/d93c030d7ad53cd86558957ab680651287a17b0c))
