@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.44.0 (2022-09-06)
+### Feature
+* Add latest po3 commonlibsse ([`5d657a9`](https://github.com/alandtse/vr_address_tools/commit/5d657a9724d0bacdb0b97272828d3faad700825f))
+
 ## v0.43.0 (2022-09-03)
 ### Feature
 * Add Main::OnIdle_1405B2FF0 for shadow-boost ([`93e2f1e`](https://github.com/alandtse/vr_address_tools/commit/93e2f1e6a4d6beec3a3690a43c279937a8e8fe99))
