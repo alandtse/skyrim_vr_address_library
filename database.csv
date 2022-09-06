@@ -40,7 +40,10 @@ id,sse,vr,status,name
 13625,0x14016c210,0x14017cc30,3,RE::TESDataHandler::CreateReferenceAtLocation
 13657,0x1401713d0,0x140181b80,3,RE::TESDataHandler::LoadScripts
 13789,0x140177790,0x1401876a0,3,RE::Sky::GetSingleton
+13855,0x14017a700,0x14018a5b0,4,RE::TESFile::OpenTES(NiFile::OpenMode a_accessMode, bool a_lock)
+13857,0x14017ad40,0x14018abf0,4,RE::TESFile::CloseTES(bool a_force)
 13889,0x14017cc90,0x14018caa0,3,FDGE::Skyrim::SkipGrup
+13894,0x14017d110,0x14018cf20,3,RE::TESFile::SeekNextForm(bool a_skipIgnored)
 13897,0x14017d4c0,0x14018d2a0,3,RE::TESFile::GetFormType
 13898,0x14017d550,0x14018d330,3,RE::TESFile::Seek
 13902,0x14017d910,0x14018d6f0,3,RE::TESFile::GetCurrentSubRecordType
@@ -53,8 +56,10 @@ id,sse,vr,status,name
 14180,0x140189750,0x140199480,3,RE::BGSOpenCloseForm::SetCloseState
 14189,0x140189e30,0x140199b60,3,RE::TESObjectREFR::PlayAnimation
 14190,0x140189fc0,0x140199cf0,3,RE::ScriptEventSourceHolder::SendOpenCloseEvent
+14262,0x14018c750,0x14019c480,4,RE::TESActorBaseData::GetLevel_14018C750
 14399,0x140190480,0x1401a01b0,3,RE::TESDescription::GetDescription
 14509,0x1401957e0,0x1401a5510,2,RE::TESForm::AddCompileIndex
+14579,0x140197a30,0x1401a7760,4,RE::TESLeveledList::CalculateCurrentFormList_*
 14704,0x14019d510,0x1401ad250,3,RE::TESHarvestedEvent::GetEventSource
 14809,0x1401a1730,0x1401b1470,3,RE::TESForm::GetWeight
 15118,0x1401b13f0,0x1401c1400,3,RE::BGSDecalManager::RemoveItem
@@ -127,6 +132,7 @@ id,sse,vr,status,name
 19446,0x14029cb80,0x1402ae290,3,RE::TESObjectREFR::InstantiateHitShader
 19666,0x1402a2070,0x1402b37e0,3,RE::ScriptEventSourceHolder::SendActivateEvent
 19789,0x1402a6670,0x1402b7de0,3,RE::TESObjectREFR::GetOwner
+19800,0x1402a6d80,0x1402b84f0,4,RE::TESObjectREFR::GetCalcLevel
 19805,0x1402a6ee0,0x1402b8650,3,RE::TESObjectREFR::IsAnOwner
 19818,0x1402a74c0,0x1402b8c30,3,RE::TESObjectREFR::GetLock
 19857,0x1402a8cc0,0x1402ba430,3,RE::TESObjectREFR::InitChildActivates
@@ -136,6 +142,7 @@ id,sse,vr,status,name
 21086,0x1402da220,0x1402eb730,3,po3tweaks::GetEquippedFix::GetEquipped
 21211,0x1402deab0,0x1402effc0,3,po3tweaks::IsFurnitureAnimeTypeFix::IsFurnitureAnimType
 21416,0x1402e75f0,0x1402f8af0,3,RE::Script::CompileAndRun
+21425,0x1402e8400,0x1402f9900,4,RE::Script::ParseParameters
 22289,0x14030f9a0,0x140320eb0,3,RE::TESObjectREFR::InstantiateHitArt
 22317,0x140310720,0x140321c30,3,RE::BGSStoryEventManager::GetSingleton
 22339,0x140310e60,0x140322370,3,po3tweaks::NoCheatMode::GodMode
@@ -253,6 +260,7 @@ id,sse,vr,status,name
 36456,0x1405e1860,0x1405e9ee0,3,RE::Actor::GetTotalCarryWeight_1405E1860
 36457,0x1405e18b0,0x1405e9f30,3,RE::Actor::IsOverEncumbered
 36472,0x1405e20c0,0x1405ea760,4,Character::MoveToPackageLocation_1405E20C0
+36475,0x1405e27f0,0x1405eae90,4,RE::Actor::EndInterruptPackage_*
 36492,0x1405e33b0,0x1405eba50,4,RE::Actor::IsInRagdollState
 36523,0x1405e6b50,0x1405ef270,3,EssentialFavorites::Disarm::IsQuestObject
 36532,0x1405e7500,0x1405efc20,3,RE::Actor::CanAttackActor
@@ -330,6 +338,7 @@ id,sse,vr,status,name
 38483,0x1406598d0,0x140662c10,3,RE::AIProcess::GetHeadtrackTarget
 38495,0x140659c00,0x140662f40,3,RE::AIProcess::ClearMuzzleFlashes
 38568,0x14065c880,0x140665bd0,3,RE::AIProcess::SetBaseScale
+38726,0x1406777c0,0x140680c40,4,RE::HighProcessData::ClearHeadtrackTarget
 38760,0x1406797d0,0x140682c50,3,RE::HighProcessData::SetHeadtrackTarget
 38850,0x14067d120,0x1406865a0,3,RE::ActorProcess::SetHeadTrackTarget_14067D120
 38858,0x14067d4a0,0x140686920,4,RE::ActorProcess::PushActorAway_14067D4A0
@@ -7803,6 +7812,7 @@ id,sse,vr,status,name
 500931,0x141db1bf0,0x141e6ec20,4,"fLODFadeOutMultActors:LOD"
 500933,0x141db1c08,0x141e6ec38,4,"fLODFadeOutMultItems:LOD"
 500935,0x141db1c20,0x141e6ec50,3,"fLODFadeOutMultObjects:LOD"
+501008,0x141db21e0,0x141e6f110,4,formEnumString
 501401,0x141db4b98,0x141e71c08,3,po3tweaks::EffectShaderZbuffer
 501789,0x141db8910,0x141e75a00,2,RE::SCRIPT_FUNCTION::FirstScriptCommand
 501797,0x141dc6f60,0x141e83fb0,2,RE::SCRIPT_FUNCTION::FirstConsoleCommand
@@ -8032,6 +8042,7 @@ id,sse,vr,status,name
 514141,0x141ebe428,0x141f82ad8,3,RE::TESDataHandler::Singleton
 514167,0x141ebead0,0x141f831b0,3,RE::ProcessLists::GetSingleton
 514178,0x141ebeb20,0x141f83200,3,RE::UI::Singleton
+514179,0x141ebeb28,0x141f83208,4,RE::AnimationObjects::GetSingleton
 514182,0x141ebeb40,0x141f83220,2,RE::BSFaceGenManager::GetSingleton
 514184,0x141ebeb50,0x141f83240,3,po3tweaks::ToggleCollisionFix::GetCollisionState
 514285,0x141ec0a70,0x141f850f8,3,RE::UIMessageQueue::Singleton
