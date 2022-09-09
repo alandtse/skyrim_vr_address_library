@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.45.0 (2022-09-09)
+### Feature
+* Add mergemapper papyrus hook ([`7813bbe`](https://github.com/alandtse/vr_address_tools/commit/7813bbec56a493040790f49d5deb61304ffed072))
+
 ## v0.44.0 (2022-09-06)
 ### Feature
 * Add latest po3 commonlibsse ([`5d657a9`](https://github.com/alandtse/vr_address_tools/commit/5d657a9724d0bacdb0b97272828d3faad700825f))
