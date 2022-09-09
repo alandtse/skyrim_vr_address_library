@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.46.0 (2022-09-09)
+### Feature
+* Add AnimObjectSwapper ([`96dddf0`](https://github.com/alandtse/vr_address_tools/commit/96dddf03002ab3e9c6f4abe0738f9aaa20a55b30))
+
 ## v0.45.0 (2022-09-09)
 ### Feature
 * Add mergemapper papyrus hook ([`7813bbe`](https://github.com/alandtse/vr_address_tools/commit/7813bbec56a493040790f49d5deb61304ffed072))
