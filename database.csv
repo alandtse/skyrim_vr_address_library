@@ -234,6 +234,7 @@ id,sse,vr,status,name
 35199,0x14059b140,0x1405a2800,4,RE::MemoryManager::RegisterMemoryManager
 35317,0x1405a2930,0x1405a9ff0,3,RE::BGSImpactManager::PlayImpactSound
 35320,0x1405a2c60,0x1405aa320,4,RE::BGSImpactManager::PlayImpactEffect
+35408,0x1405a64f0,0x1405adbb0,4,RE::Calendar::GetGameDaysPassed
 35413,0x1405a6640,0x1405add00,3,RE::Calendar::GetTimeDateString
 35548,0x1405ae010,0x1405b5880,3,main
 35551,0x1405af3d0,0x1405b6d70,4,MainLoop_1405AF3D0
@@ -353,6 +354,7 @@ id,sse,vr,status,name
 39365,0x14069c2a0,0x1406bc6c0,3,RE::PlayerCharacter::CenterOnCell_Impl
 39371,0x14069d2c0,0x1406bd770,3,po3tweaks::SitToWait::CanSleepWait
 39372,0x14069d6e0,0x1406bde50,2,RE::Actor::CanFastTravel
+39373,0x14069d9a0,0x1406be070,3,RE::Actor::sub_14069D9A0
 39384,0x14069fe60,0x1406c0640,3,RE::PlayerCharacter::PlayPickupEvent
 39401,0x1406a1820,0x1406c2160,3,splashes_of_skyrim::RainManager::ToggleWaterRipples
 39406,0x1406a1cc0,0x1406c2730,3,po3tweaks::NoPoisonPrompt::PoisonPrompt
