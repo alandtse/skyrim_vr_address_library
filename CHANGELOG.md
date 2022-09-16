@@ -2,6 +2,11 @@
 
 <!--next-version-placeholder-->
 
+## v0.47.0 (2022-09-16)
+### Feature
+* Add latest po3 commonlib ([`1854c23`](https://github.com/alandtse/vr_address_tools/commit/1854c23d50afd662ade1dda68cfafce9d0a4a541))
+* Add support for fasttravel events for PE ([`a039e98`](https://github.com/alandtse/vr_address_tools/commit/a039e981156ba016a19e42272bd11b27fb3a6f30))
+
 ## v0.46.0 (2022-09-09)
 ### Feature
 * Add AnimObjectSwapper ([`96dddf0`](https://github.com/alandtse/vr_address_tools/commit/96dddf03002ab3e9c6f4abe0738f9aaa20a55b30))
