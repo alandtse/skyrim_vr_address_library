@@ -183,6 +183,9 @@ id,sse,vr,status,name
 25868,0x1403bf020,0x1403ce8a0,3,RE::ActorValueOwner::Get_bow_power
 25915,0x1403c0fd0,0x1403d0850,4,LimbInjuries::smth_smithed
 25933,0x1403c1740,0x1403d0fc0,3,TrueHUD::GetSoulType
+25694,0x1403b49a0,0x1403c47c0,4,RE::Sky::SetWeather
+25695,0x1403b4a20,0x1403c4840,4,RE::Sky::ResetWeather
+25696,0x1403b4aa0,0x1403c48c0,4,RE::Sky::ForceWeather
 25977,0x1403c38e0,0x1403d3160,3,RE::BSFaceGenAnimationData::Reset
 25980,0x1403c3f00,0x1403d3780,3,RE::BSFaceGenAnimationData::SetExpressionOverride
 26009,0x1403c66a0,0x1403d5f20,4,RE::random
@@ -391,7 +394,7 @@ id,sse,vr,status,name
 42833,0x140742c00,0x14076d800,4,RE::HitData::init_hitdata_proj_ID
 42842,0x140743510,0x14076e110,3,RE::HitData::sub_*
 42856,0x140746d60,0x140771ca0,3,EnhancedInvisibility::MissileProjectile::sub_140746D60
-42928,0x14074b170,0x140776440,3,StaminaNPC::apply_deny_bow_Player
+42928,0x14074b170,0x140776440,3,RE::Projectile::Launch
 43022,0x1407531c0,0x14077e4e0,2,papyrus_extender::events::game::weaponhit::projectile::target_0x38d
 43030,0x140754820,0x14077fbd0,3,po3tweaks::ProjectileRange::UpdateCombatThreat
 43103,0x140759360,0x1407846b0,3,RE::VATS::SetMagicTimeSlowdown
@@ -8054,6 +8057,7 @@ id,sse,vr,status,name
 514287,0x141ec0a80,0x141f85108,3,RE::Calendar::Singleton
 514290,0x141ec0a98,0x141f85120,3,RE::TESWaterSystem::GetSingleton
 514292,0x141ec0aa8,0x141f85130,3,RE::BGSGrassManager::GetSingleton
+514313,0x141ec3b68,0x141f889c8,4,RE::Projectile::Manager::GetSingleton
 514315,0x141ec3b78,0x141f889d8,3,RE::SkyrimVM::Singleton
 514316,0x141ec3b80,0x141f889e0,4,RE::BGSStoryTeller::Singleton
 514349,0x141ec3cb3,0x141ec3cb3,2,RE::FormFactory::FormFactoriesInitialized
