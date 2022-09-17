@@ -102,6 +102,7 @@ id,sse,vr,status,name
 16084,0x1401f5390,0x140205ef0,3,RE::LocalMapCamera::Ctor
 16089,0x1401f5750,0x1402062b0,3,RE::LocalMapCamera::SetNorthRotation
 16175,0x1401fa6c0,0x14020c010,3,RE::ScreenSplatter::Clear
+17034,0x14021a4b0,0x14022bdb0,3,TESFurniture::Activate_*
 17439,0x140229ef0,0x14023b240,4,TESObjectBOOK::Read
 17470,0x14022a8c0,0x14023bc10,3,RE::BooksRead::GetEventSource
 17521,0x14022cb50,0x14023dea0,3,po3tweaks::AIFadeOut::GetFadeState
@@ -205,6 +206,7 @@ id,sse,vr,status,name
 31150,0x1404b87e0,0x1404c88c0,3,SeasonsofSkyrim::LODSwap::Tree::BuildMeshFileName
 31151,0x1404b8820,0x1404c8900,3,SeasonsofSkyrim::LODSwap::Tree::BuildTextureFileName
 31152,0x1404b8850,0x1404c8930,3,SeasonsofSkyrim::LODSwap::Tree::BuildTypeListFileName
+31409,0x1404c8810,0x1404d89d0,4,RE::TESWaterSystem::UpdateUnderWaterVariables
 31410,0x1404c8880,0x1404d8a40,3,RE::TESWaterSystem::AddRipple
 31717,0x1404d7f80,0x1404e8120,3,RE::BGSStoryTeller::BeginStartUpQuest
 31718,0x1404d80a0,0x1404e8240,3,RE::BGSStoryTeller::BeginShutDownQuest
@@ -273,6 +275,7 @@ id,sse,vr,status,name
 36559,0x1405ebd90,0x1405f44a0,4,RE::Actor::GetCollisionFilterInfo
 36602,0x1405edd50,0x1405f6460,3,RE::Actor::SetRotationX
 36604,0x1405edef0,0x1405f6600,3,RE::Actor::SetLifeState
+36621,0x1405f1530,0x1405f9c40,4,RE::Actor::Func156_*
 36631,0x1405f2530,0x1405fac70,3,RE::Actor::Decapitate
 36678,0x1405f8430,0x140600ba0,3,RE::Actor::AddToFaction
 36682,0x1405f87f0,0x140600f60,3,RE::Actor::CreateBlood
