@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.48.0 (2022-09-17)
+### Feature
+* Add po3 tweaks 1.7.0 ([`1e0a90e`](https://github.com/alandtse/vr_address_tools/commit/1e0a90ee1307f14621d51de0966c03497d95f2ab))
+
 ## v0.47.0 (2022-09-16)
 ### Feature
 * Add latest po3 commonlib ([`1854c23`](https://github.com/alandtse/vr_address_tools/commit/1854c23d50afd662ade1dda68cfafce9d0a4a541))
