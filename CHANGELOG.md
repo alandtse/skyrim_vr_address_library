@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.49.0 (2022-09-21)
+### Feature
+* Add detached lightning ([`36d37e3`](https://github.com/alandtse/vr_address_tools/commit/36d37e3d6fb05ba68428984d8b30e3830acc5f9e))
+
 ## v0.48.0 (2022-09-17)
 ### Feature
 * Add po3 tweaks 1.7.0 ([`1e0a90e`](https://github.com/alandtse/vr_address_tools/commit/1e0a90ee1307f14621d51de0966c03497d95f2ab))
