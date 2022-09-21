@@ -4,9 +4,11 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   deploy:
+    if: github.repository == 'alandtse/vr_address_tools'
     runs-on: ubuntu-latest
 
     steps:
@@ -19,14 +21,43 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.9
+      #----------------------------------------------
+      #  -----  install & configure poetry  -----
+      #----------------------------------------------
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+        with:
+          virtualenvs-create: true
+          virtualenvs-in-project: true
+          installer-parallel: true
+      #----------------------------------------------
+      #       load cached venv if cache exists
+      #----------------------------------------------
+      - name: Load cached venv
+        id: cached-poetry-dependencies
+        uses: actions/cache@v2
+        with:
+          path: .venv
+          key: venv-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-${{ hashFiles('**/poetry.lock') }}
+      #----------------------------------------------
+      # install dependencies if cache does not exist
+      #----------------------------------------------
       - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install poetry
+        if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+        run: poetry install --no-interaction --no-root
+      #----------------------------------------------
+      # install your root project, if required
+      #----------------------------------------------
+      - name: Install library
+        run: poetry install --no-interaction
       - name: Setup Git
         run: |
           git config --global user.name "semantic-release"
           git config --global user.email "semantic-release@GitHub"
+      - name: Set old version variable and changelog
+        run: |
+          echo "old_version=`git describe --abbrev=0`" >> $GITHUB_ENV
+          echo "changelog=`semantic-release changelog`" >> $GITHUB_ENV
       - name: Python Semantic Release
         uses: relekang/python-semantic-release@master
         with:
@@ -36,10 +67,10 @@ jobs:
           echo "release_version=`git describe --abbrev=0`" >> $GITHUB_ENV
       - name: Generate release csv          
         run: |
-          poetry install
           mkdir -p release/SKSE/Plugins
           poetry run ./vr_address_tools.py release/SKSE/Plugins/ generate -rv ${{ env.release_version }}   
-      - uses: edgarrc/action-7z@v1
+      - name: Create .7z         
+        uses: edgarrc/action-7z@v1
         with:
           args: 7z a -t7z -mx=9 vr_addresslib-${{ env.release_version }}.7z ./release/SKSE
       - name: Sleep
@@ -54,3 +85,28 @@ jobs:
           asset_name: vr_addresslib-${{ env.release_version }}.7z
           tag: ${{ env.release_version }}
           overwrite: true
+      - name: Setup Dotnet
+        if: ${{ env.old_version }} != ${{ env.release_version }}
+        uses: actions/setup-dotnet@v2
+        with:
+          dotnet-version: '6.0.x'
+          include-prerelease: true
+      - name: Download NexusUploader
+        if: ${{ env.old_version }} != ${{ env.release_version }}
+        run: dotnet tool install -g NexusUploader
+      - name: Upload files to Nexus
+      # https://github.com/agc93/nexus-uploader
+        if: ${{ env.old_version }} != ${{ env.release_version }}
+        env:
+          UNEX_COOKIES: ${{ secrets.UNEX_COOKIES }}
+          UNEX_APIKEY: ${{ secrets.UNEX_APIKEY }}
+          UNEX_FILEDESCRIPTION: https://github.com/alandtse/vr_address_tools/compare/${{ env.old_version }}...${{ env.release_version }}
+          UNEX_MODID: 58101
+          UNEX_GAME: skyrimspecialedition
+          UNEX_FILENAME: VR Address Library
+          file: vr_addresslib-${{ env.release_version }}.7z
+          version: ${{ env.release_version }}
+          changelog: ${{ env.changelog }}
+        run: |
+          unex upload $UNEX_MODID $file -v $version
+          unex changelog $version "$changelog"
