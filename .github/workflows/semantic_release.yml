@@ -68,12 +68,12 @@ jobs:
         run: |
           echo "release_version=`git describe --abbrev=0`" >> $GITHUB_ENV
           echo $release_version
-      - name: Generate release csv          
+      - name: Generate release csv
         if: ${{ env.old_version != env.release_version }}
         run: |
           mkdir -p release/SKSE/Plugins
-          poetry run ./vr_address_tools.py release/SKSE/Plugins/ generate -rv ${{ env.release_version }}   
-      - name: Create .7z         
+          poetry run ./vr_address_tools.py release/SKSE/Plugins/ generate -rv ${{ env.release_version }}
+      - name: Create .7z
         if: ${{ env.old_version != env.release_version }}
         uses: edgarrc/action-7z@v1
         with:
@@ -111,6 +111,7 @@ jobs:
           UNEX_MODID: 58101
           UNEX_GAME: skyrimspecialedition
           UNEX_FILENAME: VR Address Library
+          UNEX_PREVIOUSFILE: "auto"
           file: vr_addresslib-${{ env.release_version }}.7z
           version: ${{ env.release_version }}
           changelog: ${{ env.changelog }}
