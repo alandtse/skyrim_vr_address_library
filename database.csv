@@ -371,6 +371,7 @@ id,sse,vr,status,name
 39471,0x1406a9f90,0x1406cbce0,2,RE::PlayerCharacter::ActivatePickRef
 39475,0x1406aa260,0x1406cc000,3,RE::PlayerCharacter::StartGrabObject
 39507,0x1406ae310,0x1406d0b90,4,RE::PlayerCharacter::SetAIDriven
+39535,0x1406b0570,0x1406d3770,3,RE::PlayerCharacter::OnUpdateCrosshairText
 39568,0x1406b2530,0x1406d58a0,3,RE::PlayerCharacter::AttemptPickpocket
 39574,0x1406b3110,0x1406d6480,4,RE::PlayerCharacter::SetEscaping
 39577,0x1406b34e0,0x1406d6850,4,RE::PlayerCharacter::WeaponSwingCallBack_1406B34E0
