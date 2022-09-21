@@ -58,6 +58,8 @@ jobs:
         run: |
           echo "old_version=`git describe --abbrev=0`" >> $GITHUB_ENV
           echo "changelog=`poetry run semantic-release changelog`" >> $GITHUB_ENV
+          echo $old_version
+          echo $changelog
       - name: Python Semantic Release
         uses: relekang/python-semantic-release@master
         with:
@@ -65,6 +67,7 @@ jobs:
       - name: Set release variable
         run: |
           echo "release_version=`git describe --abbrev=0`" >> $GITHUB_ENV
+          echo $release_version
       - name: Generate release csv          
         if: ${{ env.old_version != env.release_version }}
         run: |
