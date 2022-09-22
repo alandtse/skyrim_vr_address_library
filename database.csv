@@ -243,6 +243,7 @@ id,sse,vr,status,name
 35413,0x1405a6640,0x1405add00,3,RE::Calendar::GetTimeDateString
 35548,0x1405ae010,0x1405b5880,3,main
 35551,0x1405af3d0,0x1405b6d70,4,MainLoop_1405AF3D0
+35556,0x1405b1020,0x1405b8a20,3,Main::sub_*
 35565,0x1405b2ff0,0x1405bab10,3,Main::OnIdle_1405B2FF0
 35882,0x1405c0610,0x1405c8b30,3,po3tweaks::ScreenshotToConsole::DebugNotification
 35978,0x1405c5220,0x1405cd7c0,3,RE::TaskQueueInterface::QueueBulletWaterDisplacementTask
