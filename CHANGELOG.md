@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.51.0 (2022-09-22)
+### Feature
+* Add skyrim-drs ([`14b5805`](https://github.com/alandtse/vr_address_tools/commit/14b5805b0a70f50ccdb9b58ae13c00340dec8639))
+
 ## v0.50.0 (2022-09-21)
 ### Feature
 * Add PlayerCharacter::OnUpdateCrosshairText ([`1a89ec6`](https://github.com/alandtse/vr_address_tools/commit/1a89ec685a8b9ff7b39f25548fd3aec714e2c28c))
