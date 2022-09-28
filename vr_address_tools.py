@@ -89,6 +89,7 @@ def load_database(
     se_ae="se_ae.csv",
     ae_names="AddressLibraryDatabase/skyrimae.rename",
     se_ae_offsets="se_ae_offsets.csv",
+    skyrim=True
 ) -> int:
     """Load databases.
 
@@ -100,6 +101,7 @@ def load_database(
         se_ae (str, optional): Name of sse to ae ID mapping csv (e.g., sseid,aeid,confidence,name). Defaults to "se_ae.csv".
         ae_names (str, optional): Name of ae ID to name mapping (e.g., 11 MonitorAPO::Func9_*). Defaults to "AddressLibraryDatabase/skyrimae.rename".
         se_ae_offsets (str, optional): Name of merged sse/ae id/address map. Based off meh's mapping offsets, https://www.nexusmods.com/skyrimspecialedition/mods/32444?tab=files, and AddressLibraryDatabase comments. Created using merge.py. Defaults to "se_ae_offsets.csv".
+        skyrim (bool,optional): Whether analyzing skyrim or fallout4. Defaults to True
     Returns:
         int: Number of successfully loaded csv files. 0 means none were loaded.
     """
@@ -109,12 +111,13 @@ def load_database(
     global id_vr_status
     global debug
     path = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
+    database = "database.csv" if skyrim else "fo4_database.csv"
     try:
-        with open(os.path.join(path, "database.csv"), mode="r") as infile:
+        with open(os.path.join(path, database), mode="r") as infile:
             reader = csv.DictReader(infile, restval="")
             for row in reader:
                 id = int(row["id"])
-                sse = add_hex_strings(row["sse"])
+                sse = add_hex_strings(row["sse" if skyrim else "fo4"])  
                 vr = add_hex_strings(row["vr"])
                 id_sse[id] = sse
                 id_vr[id] = vr
@@ -127,31 +130,32 @@ def load_database(
     except FileNotFoundError:
         print(f"database.csv not found")
 
-    try:
-        with open(os.path.join(path, addresslib), mode="r") as infile:
-            reader = csv.DictReader(infile)
-            for row in reader:
-                id = int(row["id"])
-                sse = add_hex_strings(row["sse"])
-                vr = add_hex_strings(row["vr"])
-                if id_vr_status.get(id):
-                    if debug:
-                        print(
-                            f"Database Load Warning: {id} already loaded skipping load from {addresslib}"
-                        )
-                else:
-                    id_sse[id] = sse
-                    id_vr[id] = vr
-                    loaded += 1
-    except FileNotFoundError:
-        print(f"{addresslib} not found")
+    if skyrim:
+        try:
+            with open(os.path.join(path, addresslib), mode="r") as infile:
+                reader = csv.DictReader(infile)
+                for row in reader:
+                    id = int(row["id"])
+                    sse = add_hex_strings(row["sse"])
+                    vr = add_hex_strings(row["vr"])
+                    if id_vr_status.get(id):
+                        if debug:
+                            print(
+                                f"Database Load Warning: {id} already loaded skipping load from {addresslib}"
+                            )
+                    else:
+                        id_sse[id] = sse
+                        id_vr[id] = vr
+                        loaded += 1
+        except FileNotFoundError:
+            print(f"{addresslib} not found")
 
     try:
         with open(os.path.join(path, offsets), mode="r") as infile:
             reader = csv.DictReader(infile)
             for row in reader:
                 id = int(row["id"])
-                sse = add_hex_strings(f"0x{row['sse']}", SKYRIM_BASE)
+                sse = add_hex_strings(f"0x{row['sse' if skyrim else 'fo4_addr']}", SKYRIM_BASE)
                 if id_sse.get(id) and id_sse.get(id) != sse:
                     print(
                         f"Database Load Warning: {id} mismatch {sse}	{id_sse.get(id)}"
@@ -165,61 +169,66 @@ def load_database(
         with open(os.path.join(path, ida_compare), mode="r") as infile:
             reader = csv.DictReader(infile)
             for row in reader:
-                sse = add_hex_strings(row["sse"])
-                vr = add_hex_strings(row["vr"])
+                if skyrim:
+                    sse = add_hex_strings(row["sse"])
+                    vr = add_hex_strings(row["vr"])
+                else:
+                    sse = add_hex_strings(row["fo4_addr"], SKYRIM_BASE)
+                    vr = add_hex_strings(row["vr_addr"], SKYRIM_BASE)
                 sse_vr[sse] = vr
                 loaded += 1
     except FileNotFoundError:
         print(f"{ida_compare} not found")
+    if skyrim:
 
-    try:
-        with open(os.path.join(path, se_ae), mode="r") as infile:
-            reader = csv.DictReader(infile)
-            # sseid,aeid,confidence,name
-            for row in reader:
-                sseid = int(row["sseid"])
-                aeid = int(row["aeid"])
-                confidence = int(row["confidence"])
-                name = row["name"]
-                sse_ae[sseid] = aeid
-                ae_name[aeid] = name
-    except FileNotFoundError:
-        print(f"{se_ae} not found")
-
-    try:
-        with open(os.path.join(path, ae_names), mode="r") as infile:
-            reader = csv.reader(infile, delimiter=" ")
-            # 11 MonitorAPO::Func9_*
-            for row in reader:
-                if len(row) < 2:
-                    continue
-                aeid = int(row[0])
-                name = row[1]
-                if aeid and name and not ae_name.get(aeid):
-                    # print(
-                    #     f"Adding name ae {aeid} {ae_name.get(aeid)} with {name}"
-                    # )
-                    ae_name[aeid] = name
-    except FileNotFoundError:
-        print(f"{ae_names} not found")
-
-    try:
-        with open(os.path.join(path, se_ae_offsets), mode="r") as infile:
-            reader = csv.DictReader(infile, delimiter=",")
-            # sseid,sse_addr,ae_addr,aeid,comments
-            for row in reader:
-                sseid = int(row["sseid"])
-                aeid = int(float(row["aeid"])) if row["aeid"] else 0
-                name = row["comments"]
-                if sseid and aeid:
+        try:
+            with open(os.path.join(path, se_ae), mode="r") as infile:
+                reader = csv.DictReader(infile)
+                # sseid,aeid,confidence,name
+                for row in reader:
+                    sseid = int(row["sseid"])
+                    aeid = int(row["aeid"])
+                    confidence = int(row["confidence"])
+                    name = row["name"]
                     sse_ae[sseid] = aeid
-                if aeid and name and not ae_name.get(aeid):
-                    # print(
-                    #     f"Adding name ae {aeid} {ae_name.get(aeid)} with {name}"
-                    # )
                     ae_name[aeid] = name
-    except FileNotFoundError:
-        print(f"{se_ae_offsets} not found")
+        except FileNotFoundError:
+            print(f"{se_ae} not found")
+
+        try:
+            with open(os.path.join(path, ae_names), mode="r") as infile:
+                reader = csv.reader(infile, delimiter=" ")
+                # 11 MonitorAPO::Func9_*
+                for row in reader:
+                    if len(row) < 2:
+                        continue
+                    aeid = int(row[0])
+                    name = row[1]
+                    if aeid and name and not ae_name.get(aeid):
+                        # print(
+                        #     f"Adding name ae {aeid} {ae_name.get(aeid)} with {name}"
+                        # )
+                        ae_name[aeid] = name
+        except FileNotFoundError:
+            print(f"{ae_names} not found")
+
+        try:
+            with open(os.path.join(path, se_ae_offsets), mode="r") as infile:
+                reader = csv.DictReader(infile, delimiter=",")
+                # sseid,sse_addr,ae_addr,aeid,comments
+                for row in reader:
+                    sseid = int(row["sseid"])
+                    aeid = int(float(row["aeid"])) if row["aeid"] else 0
+                    name = row["comments"]
+                    if sseid and aeid:
+                        sse_ae[sseid] = aeid
+                    if aeid and name and not ae_name.get(aeid):
+                        # print(
+                        #     f"Adding name ae {aeid} {ae_name.get(aeid)} with {name}"
+                        # )
+                        ae_name[aeid] = name
+        except FileNotFoundError:
+            print(f"{se_ae_offsets} not found")
     if debug:
         print("Combining databases")
     conflicts = 0
@@ -801,6 +810,12 @@ def main():
         action="store_true",
         help="Print debug messages.",
     )
+    parser.add_argument(
+        "-f",
+        "--fallout",
+        action="store_true",
+        help="Analyze Fallout4 instead of Skyrim.",
+    )
     subparsers = parser.add_subparsers(dest="subparser")
 
     parser_analyze = subparsers.add_parser(
@@ -866,6 +881,7 @@ def main():
 
     args = vars(parser.parse_args())
     debug = args.get("debug")
+    fallout = args.get("fallout", False)
     if debug:
         print(args)
     exclude = ["build", "extern"]
@@ -874,6 +890,9 @@ def main():
     if (
         load_database(
             ida_override=True,
+            skyrim=not fallout,
+            offsets="offsets-1.5.97.0.csv" if not fallout else "version-1-10-163-0.csv",
+            ida_compare="sse_vr.csv" if not fallout else "fo4_vr.csv"
         )
         == 0
     ):
