@@ -25,7 +25,7 @@ def merge_skyrim():
 
 def merge_fo4():
     # read address id fo4 offsets
-    df1 = pd.read_table("version-1-10-163-0.csv", sep=",")
+    df1 = pd.read_table("offsets-1-10-163-0.csv", sep=",")
     # read ghidra version tracking csv
     df2 = pd.read_table('fo4.csv', sep=',', quoting=csv.QUOTE_ALL)
     df1['fo4_addr'] = df1['fo4_addr'].apply(lambda x: int(x, 16) + BASE)

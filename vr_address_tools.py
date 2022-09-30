@@ -117,7 +117,7 @@ def load_database(
             reader = csv.DictReader(infile, restval="")
             for row in reader:
                 id = int(row["id"])
-                sse = add_hex_strings(row["sse" if skyrim else "fo4"])  
+                sse = add_hex_strings(row["sse" if skyrim else "fo4"])
                 vr = add_hex_strings(row["vr"])
                 id_sse[id] = sse
                 id_vr[id] = vr
@@ -891,7 +891,7 @@ def main():
         load_database(
             ida_override=True,
             skyrim=not fallout,
-            offsets="offsets-1.5.97.0.csv" if not fallout else "version-1-10-163-0.csv",
+            offsets="offsets-1.5.97.0.csv" if not fallout else "offsets-1-10-163-0.csv",
             ida_compare="sse_vr.csv" if not fallout else "fo4_vr.csv"
         )
         == 0
