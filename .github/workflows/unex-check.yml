@@ -1,4 +1,4 @@
-name: "Check unex credentials"
+name: "Check Nexus credentials"
 on:
   schedule:
     - cron: '0 0 * * *'
@@ -8,7 +8,6 @@ jobs:
   deploy:
     if: github.repository == 'alandtse/vr_address_tools'
     runs-on: ubuntu-latest
-
     steps:
       - name: Setup Dotnet
         uses: actions/setup-dotnet@v2
@@ -17,11 +16,18 @@ jobs:
           include-prerelease: false
       - name: Download NexusUploader
         run: dotnet tool install -g NexusUploader
-      - name: Check UNEX
+      - name: Check Nexus Cookies
       # https://github.com/agc93/nexus-uploader
         env:
           UNEX_COOKIES: ${{ secrets.UNEX_COOKIES }}
           UNEX_APIKEY: ${{ secrets.UNEX_APIKEY }}
         run: |
           unex check --cookie
+      - name: Check Nexus API Key
+      # https://github.com/agc93/nexus-uploader
+      # https://www.nexusmods.com/users/myaccount?tab=api%20access
+        env:
+          UNEX_COOKIES: ${{ secrets.UNEX_COOKIES }}
+          UNEX_APIKEY: ${{ secrets.UNEX_APIKEY }}
+        run: |
           unex check --key
