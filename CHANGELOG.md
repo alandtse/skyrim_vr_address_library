@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.52.0 (2022-10-02)
+### Feature
+* Add RE::SkyrimVM::RelayEvent ([#12](https://github.com/alandtse/vr_address_tools/issues/12)) ([`ccc2efe`](https://github.com/alandtse/vr_address_tools/commit/ccc2efed5403c28a3c5b0331472f042ad02a0b4b))
+
 ## v0.51.0 (2022-09-22)
 ### Feature
 * Add skyrim-drs ([`14b5805`](https://github.com/alandtse/vr_address_tools/commit/14b5805b0a70f50ccdb9b58ae13c00340dec8639))

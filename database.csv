@@ -485,6 +485,7 @@ id,sse,vr,status,name
 53029,0x14091c620,0x140956da0,3,RE::Actor::HasLOS
 53144,0x1409252c0,0x14095fd10,3,RE::SkyrimVM::QueuePostRenderCall
 53209,0x14092b8e0,0x140965fe0,3,RE::SkyrimVM::DumpStacks
+53221,0x14092d130,0x140967780,4,RE::SkyrimVM::RelayEvent
 53948,0x14094d850,0x140987ab0,3,papyrus::Actor::TrapSoul
 54832,0x140972e10,0x1409acca0,3,papyrus__Game::GetFormFromFile_140972E10
 54836,0x1409731b0,0x1409ad050,3,papyrus__Game::getplayer_1409731B0
