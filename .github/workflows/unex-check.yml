@@ -23,5 +23,5 @@ jobs:
           UNEX_COOKIES: ${{ secrets.UNEX_COOKIES }}
           UNEX_APIKEY: ${{ secrets.UNEX_APIKEY }}
         run: |
-          unex check --coookie
+          unex check --cookie
           unex check --key
