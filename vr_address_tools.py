@@ -29,13 +29,24 @@ VARIANT_ID_PATTERN = r"REL::VariantID\s+(?P<prefix>\w+)\((?P<sse>[0-9]+),+\s*(?P
 # 		constexpr auto IsValid = RELOCATION_ID(66360, 67621);
 OFFSET_PATTERN_RELOCATION_ID = r"constexpr auto (?P<name>\w*)\s*=\s*REL(?:OCATION)?_ID\((?P<sse>[0-9]+),+\s*(?P<ae>[0-9]*)\)"
 OFFSET_PATTERN = r"(\w+){ REL::Offset\(([a-fx0-9]+)\)\s+};"
-OFFSET_RELID_PATTERN = r"(?:static|inline) constexpr REL::ID\s+(\w+)\s*\(\s*[^(]+\s*\(\s*([0-9]+)\s*\)\s*\)\s*;"
+OFFSET_RELID_PATTERN = r"(?:inline|constexpr) REL::ID\s+(\w+)\s*(?:\(|\{)\s*([a-fx0-9]+)"
 OFFSET_VTABLE_RELID_PATTERN = r"(?:(?P<name>\w+){\s*|(?:\\g<name>{ *\\g<relid> , )*)(?P<relid>rel::id\((?:([0-9]+)[^)]*(0x[0-9a-f]*)|([0-9]+))\)*)+"
+OFFSET_VTABLE_OFFSET_PATTERN = r"(?:(?P<name>\w+){\s*|(?:\\g<name>{ *\\g<reloffset> , )*)(?P<reloffset>rel::offset\((?:([a-fx0-9]+)[^)]*)\)*)+"
 OFFSET_OFFSET_PATTERN = (
-    r"(?:inline|constexpr) REL::Offset\s+(\w+)\s*\(\s*([a-fx0-9]+)\s*\)\s*;"
+    r"(?:inline|constexpr) REL::Offset\s+(\w+)\s*(?:\(|\{)\s*([a-fx0-9]+)"
 )
 IFNDEF_PATTERN = r"([\w():]*)\s*{\s*#ifndef SKYRIMVR\s*([^{]*){\s*rel::id\(([0-9]*)\)\s}.*\s*#else\s*\2{.*(?:rel::offset)*(0x[0-9a-f]*)"
 RELID_MATCH_ARRAY = [PATTERN_GROUPS, RELOCATION_ID_PATTERN]
+REL_ID_VTABLE = "rel::id vtable"
+REL_OFFSET_VTABLE = "rel::offset vtable"
+REL_ID = "rel::id"
+REL_OFFSET = "rel::offset"
+REGEX_PARSE_DICT = {
+    REL_ID_VTABLE: OFFSET_VTABLE_RELID_PATTERN,
+    REL_OFFSET_VTABLE: OFFSET_VTABLE_OFFSET_PATTERN,
+    REL_ID: OFFSET_RELID_PATTERN,
+    REL_OFFSET: OFFSET_OFFSET_PATTERN,
+}
 
 REPLACEMENT = """
 #ifndef SKYRIMVR
@@ -89,7 +100,7 @@ def load_database(
     se_ae="se_ae.csv",
     ae_names="AddressLibraryDatabase/skyrimae.rename",
     se_ae_offsets="se_ae_offsets.csv",
-    skyrim=True
+    skyrim=True,
 ) -> int:
     """Load databases.
 
@@ -155,7 +166,9 @@ def load_database(
             reader = csv.DictReader(infile)
             for row in reader:
                 id = int(row["id"])
-                sse = add_hex_strings(f"0x{row['sse' if skyrim else 'fo4_addr']}", SKYRIM_BASE)
+                sse = add_hex_strings(
+                    f"0x{row['sse' if skyrim else 'fo4_addr']}", SKYRIM_BASE
+                )
                 if id_sse.get(id) and id_sse.get(id) != sse:
                     print(
                         f"Database Load Warning: {id} mismatch {sse}	{id_sse.get(id)}"
@@ -239,7 +252,7 @@ def load_database(
         if id_vr_status.get(id):
             if debug:
                 print(
-                    f"Database Load Warning: {id} loaded by databse.csv; skipping IDA check"
+                    f"Database Load Warning: {id} loaded by {database}; skipping IDA check"
                 )
         elif id_vr.get(id) and ida_addr and id_vr.get(id) != ida_addr:
             if ida_override:
@@ -411,37 +424,57 @@ def parse_offsets(defined_rel_ids, defined_vr_offsets, dirpath, filename):
         #     regex_parse(defined_rel_ids, dirpath, filename)
         # else:
         cpp_header_parse(defined_rel_ids, defined_vr_offsets, dirpath, filename)
+        regex_parse(defined_rel_ids, defined_vr_offsets, dirpath, filename)
 
 
-def regex_parse(defined_rel_ids, dirpath, filename):
+def regex_parse(defined_rel_ids, defined_vr_offsets, dirpath, filename):
     with open(f"{dirpath}/{filename}") as f:
         try:
             for i, line in enumerate(f):
-                namespace = "RE::"
-                search = re.finditer(OFFSET_VTABLE_RELID_PATTERN, line, re.I)
-                for item_count, item in enumerate(search):
-                    if item.group() and item.group(1):
-                        name = item.group(1)
-                    id = item.group(5)
-                    full_name = f"{name}_{item_count}"
-                    if debug:
-                        print("Found rel::id", full_name, id)
-                    defined_rel_ids[f"{namespace}{full_name}"] = {
-                        "id": str(id),
-                        "name": full_name,
-                    }
+                for type_key, regex in REGEX_PARSE_DICT.items():
+                    namespace = "RE::"
+                    search = re.finditer(regex, line, re.I)
+                    for item_count, item in enumerate(search):
+                        if item.group() and item.group(1):
+                            name = item.group(1)
+                        try:
+                            id = item.group(5)
+                        except IndexError:
+                            try:
+                                id = item.group(3)
+                            except IndexError:
+                                id = item.group(2)
+                        if "vtable" in type_key:
+                            full_name = f"{name}_{item_count}"
+                        else:
+                            full_name = name
+                        if debug:
+                            print("Found", type_key, full_name, id)
+                        if type_key in [REL_ID_VTABLE, REL_ID]:
+                            defined_rel_ids[f"{namespace}{full_name}"] = {
+                                "id": str(id),
+                                "name": full_name,
+                            }
+                        elif type_key in [REL_OFFSET_VTABLE, REL_OFFSET]:
+                            defined_vr_offsets[f"{namespace}{full_name}"] = {
+                                "id": str(id),
+                                "name": full_name,
+                            }
+
         except UnicodeDecodeError as ex:
             print(f"Unable to read {dirpath}/{filename}: ", ex)
 
 
-def cpp_header_parse(defined_rel_ids, defined_vr_offsets, dirpath, filename):
+def cpp_header_parse(defined_rel_ids, defined_vr_offsets, dirpath, filename) -> bool:
+    result = False
     try:
-        header = CppHeaderParser.CppHeader(f"{dirpath}/{filename}")
+        header = CppHeaderParser.CppHeader(f"{dirpath}\\{filename}")
     except CppHeaderParser.CppHeaderParser.CppParseError as ex:
-        print(f"Unable to cppheaderparse {dirpath}/{filename}: ", ex)
-        return
+        print(f"Unable to cppheaderparse {dirpath}\\{filename}: ", ex)
+        return result
     for func in header.functions:
         if func.get("returns") == "constexpr REL::ID":
+            result = True
             name = func.get("name")
             namespace = func.get("namespace")
             search = re.search(OFFSET_RELID_PATTERN, func.get("debug"), re.I)
@@ -454,6 +487,7 @@ def cpp_header_parse(defined_rel_ids, defined_vr_offsets, dirpath, filename):
                     "func": func,
                 }
         elif func.get("returns") == "constexpr REL::Offset":
+            result = True
             name = func.get("name")
             namespace = func.get("namespace")
             search = re.search(OFFSET_OFFSET_PATTERN, func.get("debug"), re.I)
@@ -465,6 +499,7 @@ def cpp_header_parse(defined_rel_ids, defined_vr_offsets, dirpath, filename):
                     "id": id,
                     "func": func,
                 }
+    return result
 
 
 def analyze_code_offsets(defined_rel_ids: dict, defined_vr_offsets: dict):
@@ -492,18 +527,27 @@ def analyze_code_offsets(defined_rel_ids: dict, defined_vr_offsets: dict):
                 if defined_rel_ids.get(k):
                     id = int(defined_rel_ids[k].get("id"))
                     defined_rel_ids[k]["sse"] = sse_addr = add_hex_strings(id_sse[id])
-                    bakou_vr_addr = add_hex_strings(id_vr[id])
+                    bakou_vr_addr = add_hex_strings(id_vr[id]) if id_vr.get(id) else 0
                     code_vr_addr = add_hex_strings(v.get("id"), SKYRIM_BASE)
-                    if sse_vr.get(sse_addr) and sse_vr[sse_addr] != bakou_vr_addr:
+                    if sse_vr.get(sse_addr) and bakou_vr_addr and sse_vr[sse_addr] != bakou_vr_addr:
                         if debug:
                             print(
-                                f"WARNING:{k} IDA {sse_vr[sse_addr]} and bakou {bakou_vr_addr} conversions do not match",
+                                f"WARNING: {k} IDA {sse_vr[sse_addr]} and bakou {bakou_vr_addr} conversions do not match",
                             )
-                    if code_vr_addr == bakou_vr_addr:
+                    if bakou_vr_addr and code_vr_addr == bakou_vr_addr:
                         defined_rel_ids[k]["status"] = CONFIDENCE["VERIFIED"]
                         if debug:
                             print(f"MATCHED: {k} ID: {id} matches database")
                         id_vr_status[id] = defined_rel_ids[k]
+                        verified += 1
+                    elif not bakou_vr_addr and code_vr_addr:
+                        if debug:
+                            print(
+                                f"Using defined offset address: {id} {k} defined: {code_vr_addr}",
+                            )
+                        defined_rel_ids[k]["status"] = CONFIDENCE["MANUAL"]
+                        id_vr_status[id] = defined_rel_ids[k]
+                        id_vr_status[id]["vr"] = code_vr_addr
                         verified += 1
                     else:
                         if debug:
@@ -575,32 +619,46 @@ def match_results(
         conversion = ""
         vr_addr = ""
         warning = ""
+        updateDatabase = False
+        suggested_vr = ""
         if match.get("id_with_offset"):
             id = int(match.get("id_with_offsetd"))
             offset = match.get("offset", 0)
         elif match.get("sse"):
             id = int(match.get("sse"))
             try:
-                offset = int(match.get("sse_offset", 0)) if match.get("sse_offset") else 0
-            except ValueError: # it's a hex string e.g., 0x2e6
-                offset = int(match.get("sse_offset", 0), 16) if match.get("sse_offset") else 0
+                offset = (
+                    int(match.get("sse_offset", 0)) if match.get("sse_offset") else 0
+                )
+            except ValueError:  # it's a hex string e.g., 0x2e6
+                offset = (
+                    int(match.get("sse_offset", 0), 16)
+                    if match.get("sse_offset")
+                    else 0
+                )
         elif match.get("id"):
             id = int(match.get("id"))
             offset = 0
         else:
             continue
+        if id_vr.get(id) is None:
+            updateDatabase = True
+        status = int(id_vr_status.get(id, {}).get("status", 0))
         if (
             id_vr.get(id)
-            and int(id_vr_status.get(id, {}).get("status", 0)) >= min_confidence
+            and status >= min_confidence
         ):
             vr_addr = id_vr[id]
             conversion = f"REL::Offset(0x{vr_addr[4:]})"
+            suggested_vr = vr_addr
             if (
                 offset
                 and int(id_vr_status.get(id, {}).get("status", 0))
                 < CONFIDENCE["PERFECT"]
             ):
                 warning = f"WARNING: Offset detected; offset may need to be manually updated for VR"
+        elif (id_vr_status.get(id, {}).get("vr") and status >= min_confidence):
+            suggested_vr = id_vr_status[id]["vr"]
         if not vr_addr:
             warning += f"WARNING: VR Address undefined."
         try:
@@ -610,18 +668,18 @@ def match_results(
             sse_addr = ""
         if offset and not conversion:
             conversion = f"UNKNOWN SSE_{sse_addr}{f'+{offset}={add_hex_strings(sse_addr, offset)}' if offset else ''}"
-        if database and not vr_addr:
-            suggested_vr = id_vr.get(id, "")
+        if database and updateDatabase:
+            status = 1 if status == 0 else status
             if ae_name.get(sse_ae.get(id)):
                 description = ae_name.get(sse_ae.get(id))
             else:
                 description = f"{directory[1:] if directory.startswith('/') or directory.startswith(chr(92)) else directory}/{filename}:{i+1}"
             if match.get("name"):
                 description = f"{match.get('name')} {description}"
-            new_results.append(f"{id},{sse_addr},{suggested_vr},1,{description}")
+            new_results.append(f"{id},{sse_addr},{suggested_vr},{status},{description}")
         elif not database:
             new_results.append(
-                f"{directory}/{filename}:{i+1}\tID: {id}\tSSE: {sse_addr}\t{conversion}\t{vr_addr}\t{warning}"
+                f"{directory}/{filename}:{i+1}\tID: {id}\tFLAT: {sse_addr}\t{conversion}\t{vr_addr}\t{warning}"
             )
     if database:
         return sorted(new_results, key=lambda line: int(line.split(",")[0]))
@@ -680,6 +738,7 @@ def write_csv(
     min_confidence=CONFIDENCE["MANUAL"],
     generate_database=False,
     release_version="0.0.0",
+    skyrim=True
 ) -> bool:
     """Generate csv file.
 
@@ -694,7 +753,7 @@ def write_csv(
     """
     global id_vr_status
     outputfile = (
-        f"{file_prefix}-{version}.csv" if not generate_database else f"database.csv"
+        f"{file_prefix}-{version}.csv" if not generate_database else f"database.csv" if skyrim else "fo4_database.csv"
     )
     output = {}
     if min_confidence is not None and isinstance(min_confidence, int):
@@ -706,7 +765,10 @@ def write_csv(
                     and int(id_vr_status.get(elem[0]).get("status", 0))
                     >= min_confidence
                 )
-                or (min_confidence == CONFIDENCE["UNKNOWN"] and elem[0] not in id_vr_status),
+                or (
+                    min_confidence == CONFIDENCE["UNKNOWN"]
+                    and elem[0] not in id_vr_status
+                ),
                 id_vr.items(),
             )
         )
@@ -725,7 +787,12 @@ def write_csv(
                 for id, address in sorted(output.items()):
                     writer.writerow((id, address[4:]))
             else:
-                writer.writerow(("id", "sse", "vr", "status", "name"))
+                writer.writerow(("id", "sse" if skyrim else "fo4", "vr", "status", "name"))
+                for key,value in id_vr_status.items():
+                    # add defined offsets items
+                    if "vr" in value:
+                        output[key] = value["vr"].lower()
+                rows = len(output)
                 for id, address in sorted(output.items()):
                     sse_addr = ""
                     status = ""
@@ -892,7 +959,7 @@ def main():
             ida_override=True,
             skyrim=not fallout,
             offsets="offsets-1.5.97.0.csv" if not fallout else "offsets-1-10-163-0.csv",
-            ida_compare="sse_vr.csv" if not fallout else "fo4_vr.csv"
+            ida_compare="sse_vr.csv" if not fallout else "fo4_vr.csv",
         )
         == 0
     ):
@@ -924,6 +991,8 @@ def main():
     analyze_code_offsets(defined_rel_ids, defined_vr_offsets)
     if generate:
         sub_args = {"min_confidence": minimum}
+        if (fallout):
+            sub_args["skyrim"] = False
         if args.get("database"):
             sub_args["generate_database"] = True
         if generate and not isinstance(generate, bool):
