@@ -275,7 +275,7 @@ id,sse,vr,status,name
 36541,0x1405e8700,0x1405f0e20,3,po3tweaks::VoiceModulation::SetObjectToFollow
 36559,0x1405ebd90,0x1405f44a0,4,RE::Actor::GetCollisionFilterInfo
 36602,0x1405edd50,0x1405f6460,3,RE::Actor::SetRotationX
-36604,0x1405edef0,0x1405f6600,3,RE::Actor::SetLifeState
+36604,0x1405edef0,0x1405f6600,4,RE::Actor::SetLifeState
 36621,0x1405f1530,0x1405f9c40,4,RE::Actor::Func156_*
 36631,0x1405f2530,0x1405fac70,3,RE::Actor::Decapitate
 36678,0x1405f8430,0x140600ba0,3,RE::Actor::AddToFaction
@@ -475,8 +475,8 @@ id,sse,vr,status,name
 52208,0x1408e3d70,0x140915f50,2,RE::MapMenu::MarkerClick
 52226,0x1408e6ea0,0x140919520,3,RE::MapMenu::PlaceMarker
 52236,0x1408e7c80,0x14091a4e0,3,anonymous_namespace__FastTravelConfirmCallback::Run_1408E7C80
-52374,0x1408ef500,0x140924430,3,QuickLoot::
-52400,0x1408f03c0,0x1409254b0,3,QuickLoot::
+52374,0x1408ef500,0x140924430,4,QuickLoot::
+52400,0x1408f03c0,0x1409254b0,4,QuickLoot::
 52652,0x140902560,0x14093cce0,3,RE::SkyrimScript::HandlePolicy::HandleIsType
 52653,0x140902770,0x14093cef0,3,RE::SkyrimScript::HandlePolicy::IsHandleObjectAvailable
 52655,0x140902860,0x14093cfe0,3,RE::SkyrimScript::HandlePolicy::GetHandleForObject
@@ -537,8 +537,8 @@ id,sse,vr,status,name
 66983,0x140c075a0,0x140c42420,3,RE::BSReadWriteLock::UnlockForWrite
 66989,0x140c07900,0x140c42780,4,RE::UpdateGlobalTimeMultiplier_140C07900
 67151,0x140c0d7b0,0x140c485e0,3,RE::BSThreadEvent::InitSDM
-67234,0x140c10dc0,0x140c4d710,3,QuickLoot::
-67240,0x140c11430,0x140c4dd80,3,QuickLoot::
+67234,0x140c10dc0,0x140c4d710,4,QuickLoot::
+67240,0x140c11430,0x140c4dd80,4,QuickLoot::
 67819,0x140c28bf0,0x140c6db20,3,RE::BSFixedString::Ctor8
 67834,0x140c29510,0x140c6e440,3,RE::BSFixedString::Ctor16
 67847,0x140c29e80,0x140c6edb0,3,RE::BSStringPool::Release8
