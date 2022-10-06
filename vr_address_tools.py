@@ -56,6 +56,7 @@ REPLACEMENT = """
 #endif
 """
 id_sse = {}
+id_name = {} # id to name database
 id_vr = {}
 sse_vr = {}
 sse_ae = {}
@@ -455,6 +456,7 @@ def regex_parse(defined_rel_ids, defined_vr_offsets, dirpath, filename):
                                 "id": str(id),
                                 "name": full_name,
                             }
+                            id_name[id] = name
                         elif type_key in [REL_OFFSET_VTABLE, REL_OFFSET]:
                             defined_vr_offsets[f"{namespace}{full_name}"] = {
                                 "id": str(id),
@@ -676,6 +678,8 @@ def match_results(
                 description = f"{directory[1:] if directory.startswith('/') or directory.startswith(chr(92)) else directory}/{filename}:{i+1}"
             if match.get("name"):
                 description = f"{match.get('name')} {description}"
+            elif id_name.get("name"):
+                description = f"{id_name.get('name')} {description}"
             new_results.append(f"{id},{sse_addr},{suggested_vr},{status},{description}")
         elif not database:
             new_results.append(
