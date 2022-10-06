@@ -752,6 +752,7 @@ def write_csv(
         bool: Whether successful.
     """
     global id_vr_status
+    version = version if skyrim and version == "1-4-15-0" else "1-2-72-0"
     outputfile = (
         f"{file_prefix}-{version}.csv" if not generate_database else f"database.csv" if skyrim else "fo4_database.csv"
     )
