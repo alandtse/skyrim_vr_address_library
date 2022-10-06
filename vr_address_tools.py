@@ -956,7 +956,7 @@ def main():
     fallout = args.get("fallout", False)
     if debug:
         print(args)
-    exclude = ["build", "extern"]
+    exclude = ["build", "buildvr", "extern", "external"]
     scan_results = {}
     # Load files from location of python script
     if (
