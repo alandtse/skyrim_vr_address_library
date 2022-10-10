@@ -620,6 +620,7 @@ id,sse,vr,status,name
 97742,0x1412444c0,0x14129a210,3,RE::BSScript::Stack::Dtor
 97746,0x1412449d0,0x14129a720,3,RE::BSScript::Stack::GetStackFrameVariable
 97923,0x1412507f0,0x14129dd90,3,RE::BSScript::NF_util::NativeFunctionBase::Call
+98130,0x141261CB0,0x141281790,3,BSScript::Internal::VirtualMachine::AttemptFunctionCall
 98160,0x141266030,0x141285b00,3,RE::SaveFileHandleReaderWriter::LoadHandle
 98295,0x141270710,0x1412908a0,3,RE::SaveFileHandleReaderWriter::SaveHandle
 98893,0x141291c30,0x1412ca540,3,RE::BSShaderProperty::SetFlags
