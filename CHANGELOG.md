@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.53.0 (2022-10-10)
+### Feature
+* Add VirtualMachine::AttemptFunctionCall ([#13](https://github.com/alandtse/vr_address_tools/issues/13)) ([`346164b`](https://github.com/alandtse/vr_address_tools/commit/346164bb28c5e18d1f546665e0b9dcc908465712))
+
 ## v0.52.0 (2022-10-02)
 ### Feature
 * Add RE::SkyrimVM::RelayEvent ([#12](https://github.com/alandtse/vr_address_tools/issues/12)) ([`ccc2efe`](https://github.com/alandtse/vr_address_tools/commit/ccc2efed5403c28a3c5b0331472f042ad02a0b4b))
