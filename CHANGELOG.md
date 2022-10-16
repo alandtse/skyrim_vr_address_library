@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.54.0 (2022-10-16)
+### Feature
+* Add papyrus__Debug::SendAnimationEvent ([#14](https://github.com/alandtse/vr_address_tools/issues/14)) ([`7805656`](https://github.com/alandtse/vr_address_tools/commit/7805656e75e141eb0e6f25eec941930de1bbab47))
+
 ## v0.53.0 (2022-10-10)
 ### Feature
 * Add VirtualMachine::AttemptFunctionCall ([#13](https://github.com/alandtse/vr_address_tools/issues/13)) ([`346164b`](https://github.com/alandtse/vr_address_tools/commit/346164bb28c5e18d1f546665e0b9dcc908465712))
