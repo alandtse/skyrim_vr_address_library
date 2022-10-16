@@ -487,6 +487,7 @@ id,sse,vr,status,name
 53209,0x14092b8e0,0x140965fe0,3,RE::SkyrimVM::DumpStacks
 53221,0x14092d130,0x140967780,4,RE::SkyrimVM::RelayEvent
 53948,0x14094d850,0x140987ab0,3,papyrus::Actor::TrapSoul
+54741,0x14096DE60,0x1409A7F40,4,papyrus__Debug::SendAnimationEvent
 54832,0x140972e10,0x1409acca0,3,papyrus__Game::GetFormFromFile_140972E10
 54836,0x1409731b0,0x1409ad050,3,papyrus__Game::getplayer_1409731B0
 55141,0x140980190,0x1409baf10,3,FDGE::BSScript::InitializeScriptTypes
