@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.55.1 (2022-10-18)
+### Fix
+* Remove GetWarmthRating ([`0626814`](https://github.com/alandtse/vr_address_tools/commit/0626814bde08df5f45532c4dc561c612a08b29d5))
+
 ## v0.55.0 (2022-10-18)
 ### Feature
 * Update commonlib ([`7eeddf0`](https://github.com/alandtse/vr_address_tools/commit/7eeddf0b6d252218c04642f37b9132ed1f2028db))
