@@ -180,7 +180,6 @@ id,sse,vr,status,name
 25695,0x1403b4a20,0x1403c4840,4,RE::Sky::ResetWeather
 25696,0x1403b4aa0,0x1403c48c0,4,RE::Sky::ForceWeather
 25822,0x1403bcf40,0x1403ccd90,3,RE::AIForumulas::ComputePickpocketSuccess
-25834,0x1403bd5f0,0x0,4,Actor::GetWarmthRating_1403BD5F0
 25851,0x1403be440,0x1403cdcc0,3,RE::ActorValueOwner::Get_weapon_speed
 25858,0x1403be980,0x1403ce200,4,RE::ActorValueOwner::GetArmorRatingSkillMultiplier
 25863,0x1403bec90,0x1403ce510,3,RE::ActorValueOwner::Get_attack_cost_1403BEC90
