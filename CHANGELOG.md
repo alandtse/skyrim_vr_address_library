@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.55.0 (2022-10-18)
+### Feature
+* Update commonlib ([`7eeddf0`](https://github.com/alandtse/vr_address_tools/commit/7eeddf0b6d252218c04642f37b9132ed1f2028db))
+
 ## v0.54.0 (2022-10-16)
 ### Feature
 * Add papyrus__Debug::SendAnimationEvent ([#14](https://github.com/alandtse/vr_address_tools/issues/14)) ([`7805656`](https://github.com/alandtse/vr_address_tools/commit/7805656e75e141eb0e6f25eec941930de1bbab47))
