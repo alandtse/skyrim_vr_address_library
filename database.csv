@@ -485,6 +485,7 @@ id,sse,vr,status,name
 52655,0x140902860,0x14093cfe0,3,RE::SkyrimScript::HandlePolicy::GetHandleForObject
 52659,0x140902b00,0x14093d280,3,RE::SkyrimScript::HandlePolicy::GetObjectForHandle
 52662,0x1409032c0,0x14093da40,3,RE::SkyrimScript::HandlePolicy::ConvertHandleToString
+52933,0x140915790,0x14094FF10,3,YesImSure::
 53029,0x14091c620,0x140956da0,3,RE::Actor::HasLOS
 53144,0x1409252c0,0x14095fd10,3,RE::SkyrimVM::QueuePostRenderCall
 53209,0x14092b8e0,0x140965fe0,3,RE::SkyrimVM::DumpStacks
