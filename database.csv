@@ -301,6 +301,7 @@ id,sse,vr,status,name
 37510,0x140620690,0x140629440,3,RE::Actor::sub_140620690
 37513,0x140620900,0x1406296b0,3,RE::Actor::RestoreActorValue_140620900
 37516,0x140620cc0,0x140629a70,3,RE::Character::Update_RegenDelay__140620CC0
+37522,0x1406210f0,0x140629ea0,4,ActorValueOwner::ModActorValue
 37523,0x140621120,0x140629ed0,3,StaminaNPC::damageav
 37524,0x140621350,0x14062a100,4,RE::Actor::GetActorValueModifier
 37571,0x140623610,0x14062c3c0,3,RE::DragonSoulsGained::GetEventSource()
@@ -485,6 +486,7 @@ id,sse,vr,status,name
 52655,0x140902860,0x14093cfe0,3,RE::SkyrimScript::HandlePolicy::GetHandleForObject
 52659,0x140902b00,0x14093d280,3,RE::SkyrimScript::HandlePolicy::GetObjectForHandle
 52662,0x1409032c0,0x14093da40,3,RE::SkyrimScript::HandlePolicy::ConvertHandleToString
+52933,0x140915790,0x14094FF10,3,YesImSure::
 53029,0x14091c620,0x140956da0,3,RE::Actor::HasLOS
 53144,0x1409252c0,0x14095fd10,3,RE::SkyrimVM::QueuePostRenderCall
 53209,0x14092b8e0,0x140965fe0,3,RE::SkyrimVM::DumpStacks
