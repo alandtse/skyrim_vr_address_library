@@ -54,10 +54,17 @@ jobs:
         run: |
           git config --global user.name "semantic-release"
           git config --global user.email "semantic-release@GitHub"
-      - name: Set old version variable and changelog
+      - name: Set old version variable
         run: |
           echo "old_version=`git describe --abbrev=0`" >> $GITHUB_ENV
+      - name: Set changelog variable
+        run: |
           echo "changelog=`poetry run semantic-release changelog`" >> $GITHUB_ENV
+      - name: Print variables
+        env:
+          version: ${{ env.release_version }}
+          changelog: ${{ env.changelog }}
+        run: |
           echo $old_version
           echo $changelog
       - name: Python Semantic Release

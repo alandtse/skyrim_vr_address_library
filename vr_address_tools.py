@@ -790,7 +790,8 @@ def write_csv(
                 writer.writerow(("id", "offset"))
                 writer.writerow((rows, release_version))
                 for id, address in sorted(output.items()):
-                    writer.writerow((id, address[4:]))
+                    if (address[4:]):
+                        writer.writerow((id, address[4:]))
             else:
                 writer.writerow(("id", "sse" if skyrim else "fo4", "vr", "status", "name"))
                 for key,value in id_vr_status.items():
