@@ -179,6 +179,7 @@ id,sse,vr,status,name
 25694,0x1403b49a0,0x1403c47c0,4,RE::Sky::SetWeather
 25695,0x1403b4a20,0x1403c4840,4,RE::Sky::ResetWeather
 25696,0x1403b4aa0,0x1403c48c0,4,RE::Sky::ForceWeather
+25703,0x1403b55e0,0x1403c5400,4,void Sky::UpdateLightingTransition_1403B55E0 (Sky * param_1)
 25822,0x1403bcf40,0x1403ccd90,3,RE::AIForumulas::ComputePickpocketSuccess
 25851,0x1403be440,0x1403cdcc0,3,RE::ActorValueOwner::Get_weapon_speed
 25858,0x1403be980,0x1403ce200,4,RE::ActorValueOwner::GetArmorRatingSkillMultiplier
