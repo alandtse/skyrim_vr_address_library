@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.57.0 (2022-10-23)
+### Feature
+* Add Sky::UpdateLightingTransition ([`a677898`](https://github.com/alandtse/vr_address_tools/commit/a6778982cca03d7c95cde969fb8e4be2e7553a3f))
+
 ## v0.56.0 (2022-10-22)
 ### Feature
 * Add YesImSure and ActorValueOwner::ModActorValue ([#15](https://github.com/alandtse/vr_address_tools/issues/15)) ([`15f371b`](https://github.com/alandtse/vr_address_tools/commit/15f371b93e64bcb56f95b53860482ff918ad95a8))
