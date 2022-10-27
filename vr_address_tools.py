@@ -463,8 +463,8 @@ def parse_offsets(defined_rel_ids, defined_vr_offsets, dirpath, filename):
         # if filename.lower() == map(lambda x: x.lower(), ["Offsets_VTABLE.h"]):
         #     regex_parse(defined_rel_ids, dirpath, filename)
         # else:
-        cpp_header_parse(defined_rel_ids, defined_vr_offsets, dirpath, filename)
-        regex_parse(defined_rel_ids, defined_vr_offsets, dirpath, filename)
+    cpp_header_parse(defined_rel_ids, defined_vr_offsets, dirpath, filename)
+    regex_parse(defined_rel_ids, defined_vr_offsets, dirpath, filename)
 
 
 def regex_parse(defined_rel_ids, defined_vr_offsets, dirpath, filename):
