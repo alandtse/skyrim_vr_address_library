@@ -10,6 +10,7 @@ python = "^3.8"
 robotpy-cppheaderparser = ">=5.0.15"
 pandas = "^1.4.2"
 python-semantic-release = ">=7.32.1"
+pcpp = "^1.30"
 
 [tool.poetry.dev-dependencies]
 black = ">=21.9b0"

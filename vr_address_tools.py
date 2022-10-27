@@ -2,8 +2,11 @@
 import argparse
 import csv
 import fileinput
+import io
+import mmap
 import os
 import re
+import pcpp
 import CppHeaderParser
 from typing import List
 import locale
@@ -73,6 +76,40 @@ CONFIDENCE = {
     "PERFECT": 4,  # Bit by bit match
 }
 
+class preParser(pcpp.Preprocessor):
+
+    def get_output(self) -> str:
+        """Return this objects current tokens as a string."""
+        with io.StringIO() as buffer:
+            self.write(buffer)
+            for name in self.known_defines:
+                buffer.write(f"#define {name} ...\n")
+            return buffer.getvalue()
+
+    def on_include_not_found(self, is_malformed: bool, is_system_include: bool, curdir: str, includepath: str) -> None:
+        """Pass through bad includes."""
+        raise pcpp.OutputDirective(pcpp.Action.IgnoreAndPassThrough)
+
+
+def preProcessData(data:str, defines=None) -> str:
+    """Use pcpp to preprocess string.
+
+    Args:
+        data (str): Input data string
+        defines (dict, optional): Dict of defines. Defaults to None.
+
+    Returns:
+        str: string after processing
+    """
+
+    defines = defines or {}
+    global cpp
+    for key, value in defines:
+        cpp.define(f"{key}={value}")
+    cpp.parse(data)
+    with io.StringIO() as buffer:
+        cpp.write(buffer)
+        return buffer.getvalue()
 
 def add_hex_strings(input1: str, input2: str = "0") -> str:
     """Return sum of two hex strings.
@@ -344,9 +381,11 @@ def search_for_ids(
         filename (str): filename
     """
     found_ifndef = False
-    with open(f"{dirpath}/{filename}") as f:
+    with open(f"{dirpath}/{filename}", "r+") as f:
         try:
-            for i, line in enumerate(f):
+            data = mmap.mmap(f.fileno(), 0).read().decode("utf-8")
+            f = preProcessData(data)
+            for i, line in enumerate(f.splitlines()):
                 for regex_pattern in RELID_MATCH_ARRAY:
                     matches = [
                         m.groupdict()
@@ -429,9 +468,11 @@ def parse_offsets(defined_rel_ids, defined_vr_offsets, dirpath, filename):
 
 
 def regex_parse(defined_rel_ids, defined_vr_offsets, dirpath, filename):
-    with open(f"{dirpath}/{filename}") as f:
+    with open(f"{dirpath}/{filename}", "r+") as f:
         try:
-            for i, line in enumerate(f):
+            data = mmap.mmap(f.fileno(), 0).read().decode("utf-8")
+            f = preProcessData(data)
+            for i, line in enumerate(f.splitlines()):
                 for type_key, regex in REGEX_PARSE_DICT.items():
                     namespace = "RE::"
                     search = re.finditer(regex, line, re.I)
@@ -470,9 +511,11 @@ def regex_parse(defined_rel_ids, defined_vr_offsets, dirpath, filename):
 def cpp_header_parse(defined_rel_ids, defined_vr_offsets, dirpath, filename) -> bool:
     result = False
     try:
-        header = CppHeaderParser.CppHeader(f"{dirpath}\\{filename}")
+        with open(f"{dirpath}/{filename}", "r+") as f:
+            data = mmap.mmap(f.fileno(), 0).read().decode("utf-8")
+            header = CppHeaderParser.CppHeader(data, argType="string")
     except CppHeaderParser.CppHeaderParser.CppParseError as ex:
-        print(f"Unable to cppheaderparse {dirpath}\\{filename}: ", ex)
+        print(f"Unable to cppheaderparse {dirpath}/{filename}: ", ex)
         return result
     for func in header.functions:
         if func.get("returns") == "constexpr REL::ID":
@@ -865,6 +908,7 @@ def write_ae_map() -> bool:
 def main():
     global debug
     global args
+    global cpp
     parser = argparse.ArgumentParser(
         description="Find uses of REL::ID in cpp files. By default, performs a lint to display a list of files besides Offsets*.h which are using REL::ID and should be converted for VR. Unknown addresses will be prefaced SSE_."
     )
@@ -959,6 +1003,7 @@ def main():
         print(args)
     exclude = ["build", "buildvr", "extern", "external"]
     scan_results = {}
+    cpp = preParser() # init preprocessor
     # Load files from location of python script
     if (
         load_database(
