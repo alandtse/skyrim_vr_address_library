@@ -899,7 +899,7 @@ async def write_csv(
                 await writer.writerow((rows, release_version))
                 for id, address in sorted(output.items()):
                     if address[4:]:
-                        writer.writerow((id, address[4:]))
+                        await writer.writerow((id, address[4:]))
             else:
                 await writer.writerow(
                     ("id", "sse" if skyrim else "fo4", "vr", "status", "name")
