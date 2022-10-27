@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.58.0 (2022-10-27)
+### Feature
+* Add NiCamera::BoundInFrustum ([`32b2ddc`](https://github.com/alandtse/vr_address_tools/commit/32b2ddc456ede3e328ed263ce5b965da9864565e))
+
 ## v0.57.0 (2022-10-23)
 ### Feature
 * Add Sky::UpdateLightingTransition ([`a677898`](https://github.com/alandtse/vr_address_tools/commit/a6778982cca03d7c95cde969fb8e4be2e7553a3f))
