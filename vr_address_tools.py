@@ -32,7 +32,9 @@ VARIANT_ID_PATTERN = r"REL::VariantID\s+(?P<prefix>\w+)\((?P<sse>[0-9]+),+\s*(?P
 # 		constexpr auto IsValid = RELOCATION_ID(66360, 67621);
 OFFSET_PATTERN_RELOCATION_ID = r"constexpr auto (?P<name>\w*)\s*=\s*REL(?:OCATION)?_ID\((?P<sse>[0-9]+),+\s*(?P<ae>[0-9]*)\)"
 OFFSET_PATTERN = r"(\w+){ REL::Offset\(([a-fx0-9]+)\)\s+};"
-OFFSET_RELID_PATTERN = r"(?:inline|constexpr) REL::ID\s+(\w+)\s*(?:\(|\{)\s*([a-fx0-9]+)"
+OFFSET_RELID_PATTERN = (
+    r"(?:inline|constexpr) REL::ID\s+(\w+)\s*(?:\(|\{)\s*([a-fx0-9]+)"
+)
 OFFSET_VTABLE_RELID_PATTERN = r"(?:(?P<name>\w+){\s*|(?:\\g<name>{ *\\g<relid> , )*)(?P<relid>rel::id\((?:([0-9]+)[^)]*(0x[0-9a-f]*)|([0-9]+))\)*)+"
 OFFSET_VTABLE_OFFSET_PATTERN = r"(?:(?P<name>\w+){\s*|(?:\\g<name>{ *\\g<reloffset> , )*)(?P<reloffset>rel::offset\((?:([a-fx0-9]+)[^)]*)\)*)+"
 OFFSET_OFFSET_PATTERN = (
@@ -61,7 +63,7 @@ REPLACEMENT = """
 #endif
 """
 id_sse = {}
-id_name = {} # id to name database
+id_name = {}  # id to name database
 id_vr = {}
 sse_vr = {}
 sse_ae = {}
@@ -78,8 +80,8 @@ CONFIDENCE = {
     "PERFECT": 4,  # Bit by bit match
 }
 
-class preParser(pcpp.Preprocessor):
 
+class preParser(pcpp.Preprocessor):
     def get_output(self) -> str:
         """Return this objects current tokens as a string."""
         with io.StringIO() as buffer:
@@ -88,12 +90,14 @@ class preParser(pcpp.Preprocessor):
                 buffer.write(f"#define {name} ...\n")
             return buffer.getvalue()
 
-    def on_include_not_found(self, is_malformed: bool, is_system_include: bool, curdir: str, includepath: str) -> None:
+    def on_include_not_found(
+        self, is_malformed: bool, is_system_include: bool, curdir: str, includepath: str
+    ) -> None:
         """Pass through bad includes."""
         raise pcpp.OutputDirective(pcpp.Action.IgnoreAndPassThrough)
 
 
-def preProcessData(data:str, defines=None) -> str:
+def preProcessData(data: str, defines=None) -> str:
     """Use pcpp to preprocess string.
 
     Args:
@@ -112,6 +116,7 @@ def preProcessData(data:str, defines=None) -> str:
     with io.StringIO() as buffer:
         cpp.write(buffer)
         return buffer.getvalue()
+
 
 def add_hex_strings(input1: str, input2: str = "0") -> str:
     """Return sum of two hex strings.
@@ -620,7 +625,11 @@ def analyze_code_offsets(defined_rel_ids: dict, defined_vr_offsets: dict):
                     defined_rel_ids[k]["sse"] = sse_addr = add_hex_strings(id_sse[id])
                     bakou_vr_addr = add_hex_strings(id_vr[id]) if id_vr.get(id) else 0
                     code_vr_addr = add_hex_strings(v.get("id"), SKYRIM_BASE)
-                    if sse_vr.get(sse_addr) and bakou_vr_addr and sse_vr[sse_addr] != bakou_vr_addr:
+                    if (
+                        sse_vr.get(sse_addr)
+                        and bakou_vr_addr
+                        and sse_vr[sse_addr] != bakou_vr_addr
+                    ):
                         if debug:
                             print(
                                 f"WARNING: {k} IDA {sse_vr[sse_addr]} and bakou {bakou_vr_addr} conversions do not match",
@@ -735,10 +744,7 @@ def match_results(
         if id_vr.get(id) is None:
             updateDatabase = True
         status = int(id_vr_status.get(id, {}).get("status", 0))
-        if (
-            id_vr.get(id)
-            and status >= min_confidence
-        ):
+        if id_vr.get(id) and status >= min_confidence:
             vr_addr = id_vr[id]
             conversion = f"REL::Offset(0x{vr_addr[4:]})"
             suggested_vr = vr_addr
@@ -748,7 +754,7 @@ def match_results(
                 < CONFIDENCE["PERFECT"]
             ):
                 warning = f"WARNING: Offset detected; offset may need to be manually updated for VR"
-        elif (id_vr_status.get(id, {}).get("vr") and status >= min_confidence):
+        elif id_vr_status.get(id, {}).get("vr") and status >= min_confidence:
             suggested_vr = id_vr_status[id]["vr"]
         if not vr_addr:
             warning += f"WARNING: VR Address undefined."
@@ -831,7 +837,7 @@ def write_csv(
     min_confidence=CONFIDENCE["MANUAL"],
     generate_database=False,
     release_version="0.0.0",
-    skyrim=True
+    skyrim=True,
 ) -> bool:
     """Generate csv file.
 
@@ -848,7 +854,11 @@ def write_csv(
     global id_name
     version = version if skyrim and version == "1-4-15-0" else "1-2-72-0"
     outputfile = (
-        f"{file_prefix}-{version}.csv" if not generate_database else f"database.csv" if skyrim else "fo4_database.csv"
+        f"{file_prefix}-{version}.csv"
+        if not generate_database
+        else f"database.csv"
+        if skyrim
+        else "fo4_database.csv"
     )
     output = {}
     if min_confidence is not None and isinstance(min_confidence, int):
@@ -880,11 +890,13 @@ def write_csv(
                 writer.writerow(("id", "offset"))
                 writer.writerow((rows, release_version))
                 for id, address in sorted(output.items()):
-                    if (address[4:]):
+                    if address[4:]:
                         writer.writerow((id, address[4:]))
             else:
-                writer.writerow(("id", "sse" if skyrim else "fo4", "vr", "status", "name"))
-                for key,value in id_vr_status.items():
+                writer.writerow(
+                    ("id", "sse" if skyrim else "fo4", "vr", "status", "name")
+                )
+                for key, value in id_vr_status.items():
                     # add defined offsets items
                     if "vr" in value:
                         output[key] = value["vr"].lower()
@@ -1055,7 +1067,7 @@ def main():
         print(args)
     exclude = ["build", "buildvr", "extern", "external"]
     scan_results = {}
-    cpp = preParser() # init preprocessor
+    cpp = preParser()  # init preprocessor
     # Load files from location of python script
     if (
         load_database(
@@ -1094,7 +1106,7 @@ def main():
     analyze_code_offsets(defined_rel_ids, defined_vr_offsets)
     if generate:
         sub_args = {"min_confidence": minimum}
-        if (fallout):
+        if fallout:
             sub_args["skyrim"] = False
         if args.get("database"):
             sub_args["generate_database"] = True
