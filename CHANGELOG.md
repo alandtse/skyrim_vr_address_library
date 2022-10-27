@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.59.1 (2022-10-27)
+### Fix
+* Fix writing of 0 size release ([`a458267`](https://github.com/alandtse/vr_address_tools/commit/a458267928a4699afe9d10b8401cddbff0743c9e))
+
 ## v0.59.0 (2022-10-27)
 ### Feature
 * Update splashesofstorms ([`06b637a`](https://github.com/alandtse/vr_address_tools/commit/06b637a94c563b270f764b5f922814b074357af3))
