@@ -50,6 +50,8 @@ REGEX_PARSE_DICT = {
     REL_ID: OFFSET_RELID_PATTERN,
     REL_OFFSET: OFFSET_OFFSET_PATTERN,
 }
+FUNCTION_REGEX = r"(?:class (?P<class_decl>\w+)[&\w\s;:<>{=[\]*]*?)?(?P<return_type>[\w<>:*]+)\s+(?:\w+::)?(?P<func_name>[\w]+)\s*\((?P<args>[^)]*),?\s*\)[\w\s]*{(?:[\w\s=]*decltype\(&(?P<class>\w+)::(?P=func_name)+\))?[&\w\s;:<>{=*]*REL(?:[\w:]*ID)\((?:(?P<id>\d*)|(?P<sseid>\d*),\s*(?P<aeid>\d*))\) };"
+ARGS_REGEX = r"(?P<arg_pair>(?:const )?(?P<arg_type>[\w*&:_]+)\s+(?P<arg>[\w_]*)),?"
 
 REPLACEMENT = """
 #ifndef SKYRIMVR
@@ -342,6 +344,7 @@ def scan_code(
         for filename in filenames:
             if filename not in a_exclude and filename.endswith(ALL_TYPES):
                 file_count += 1
+                find_known_names(defined_rel_ids, defined_vr_offsets, dirpath, filename)
                 if not filename.lower().startswith("offset"):
                     # offset files historically (particualrly in commonlib) were treated special because they were a source of truth for matched addresses
                     # however, newer libraries (po3/ng) use macros that already have info
@@ -448,6 +451,49 @@ def search_for_ids(
             print(f"Unable to read {dirpath}/{filename}: ", ex)
 
 
+def find_known_names(defined_rel_ids, defined_vr_offsets, dirpath, filename):
+    global id_name
+    global ae_name
+    with open(f"{dirpath}/{filename}", "r+") as f:
+        try:
+            data = mmap.mmap(f.fileno(), 0).read().decode("utf-8")
+            search = re.finditer(FUNCTION_REGEX, preProcessData(data), re.I)
+            namespace = ""
+            for m in search:
+                result = m.groupdict()
+                return_type = result.get("return_type")
+                funcName = result.get("func_name")
+                if result.get("class_decl") and namespace != result.get("class_decl"):
+                    namespace = result.get("class_decl")
+                if result.get("class") and namespace != result.get("class"):
+                    className = (
+                        f"{namespace}::{result.get('class')}"
+                        if namespace
+                        else result.get("class")
+                    )
+                elif result.get("class"):
+                    className = result.get("class")
+                else:
+                    className = ""
+                fullName = f"{className}::{funcName}" if className else funcName
+                args = " ".join(result.get("args").split())
+                if result.get("id"):
+                    id = int(result.get("id"))
+                elif result.get("sseid"):
+                    id = int(result.get("sseid"))
+                if id:
+                    id_name[id] = f"{return_type} {fullName}({args})"
+                    if debug:
+                        print(f"Found ID {id}: {id_name[id]}")
+                if result.get("aeid"):
+                    aeid = int(result.get("aeid"))
+                    ae_name[aeid] = f"{return_type} {fullName}({args})"
+                    if debug:
+                        print(f"Found AE_ID {aeid}: {ae_name[aeid]}")
+        except UnicodeDecodeError as ex:
+            print(f"Unable to read {dirpath}/{filename}: ", ex)
+
+
 def parse_offsets(defined_rel_ids, defined_vr_offsets, dirpath, filename):
     """Parse offset files to define items
 
@@ -497,7 +543,7 @@ def regex_parse(defined_rel_ids, defined_vr_offsets, dirpath, filename):
                                 "id": str(id),
                                 "name": full_name,
                             }
-                            id_name[id] = name
+                            id_name[id] = full_name
                         elif type_key in [REL_OFFSET_VTABLE, REL_OFFSET]:
                             defined_vr_offsets[f"{namespace}{full_name}"] = {
                                 "id": str(id),
@@ -719,10 +765,10 @@ def match_results(
                 description = ae_name.get(sse_ae.get(id))
             else:
                 description = f"{directory[1:] if directory.startswith('/') or directory.startswith(chr(92)) else directory}/{filename}:{i+1}"
-            if match.get("name"):
+            if id_name.get(id):
+                description = f"{id_name.get(id)} {description}"
+            elif match.get("name"):
                 description = f"{match.get('name')} {description}"
-            elif id_name.get("name"):
-                description = f"{id_name.get('name')} {description}"
             new_results.append(f"{id},{sse_addr},{suggested_vr},{status},{description}")
         elif not database:
             new_results.append(
@@ -799,6 +845,7 @@ def write_csv(
         bool: Whether successful.
     """
     global id_vr_status
+    global id_name
     version = version if skyrim and version == "1-4-15-0" else "1-2-72-0"
     outputfile = (
         f"{file_prefix}-{version}.csv" if not generate_database else f"database.csv" if skyrim else "fo4_database.csv"
@@ -850,7 +897,12 @@ def write_csv(
                         entry = id_vr_status.get(id)
                         sse_addr = entry.get("sse", "")
                         status = entry["status"]
-                        name = entry.get("name")
+                        # use entry name unless we have an id_name mapping
+                        name = (
+                            entry.get("name")
+                            if not id_name.get(id)
+                            else id_name.get(id)
+                        )
                         # add cpp parser names from offsets file
                         if not name and entry.get("func"):
                             name = (
