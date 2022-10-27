@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.59.0 (2022-10-27)
+### Feature
+* Update splashesofstorms ([`06b637a`](https://github.com/alandtse/vr_address_tools/commit/06b637a94c563b270f764b5f922814b074357af3))
+
 ## v0.58.0 (2022-10-27)
 ### Feature
 * Add NiCamera::BoundInFrustum ([`32b2ddc`](https://github.com/alandtse/vr_address_tools/commit/32b2ddc456ede3e328ed263ce5b965da9864565e))
