@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
+import aiofiles
+import aiocsv
 import argparse
+import asyncio
 import csv
 import fileinput
 import io
@@ -97,7 +100,7 @@ class preParser(pcpp.Preprocessor):
         raise pcpp.OutputDirective(pcpp.Action.IgnoreAndPassThrough)
 
 
-def preProcessData(data: str, defines=None) -> str:
+async def preProcessData(data: str, defines=None) -> str:
     """Use pcpp to preprocess string.
 
     Args:
@@ -137,7 +140,7 @@ def add_hex_strings(input1: str, input2: str = "0") -> str:
     return hex(int(input1, 16) + int(input2, 16))
 
 
-def load_database(
+async def load_database(
     addresslib="addrlib.csv",
     offsets="offsets-1.5.97.0.csv",
     ida_compare="sse_vr.csv",
@@ -169,9 +172,9 @@ def load_database(
     path = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
     database = "database.csv" if skyrim else "fo4_database.csv"
     try:
-        with open(os.path.join(path, database), mode="r") as infile:
-            reader = csv.DictReader(infile, restval="")
-            for row in reader:
+        async with aiofiles.open(os.path.join(path, database), mode="r") as infile:
+            reader = aiocsv.AsyncDictReader(infile, restval="")
+            async for row in reader:
                 id = int(row["id"])
                 sse = add_hex_strings(row["sse" if skyrim else "fo4"])
                 vr = add_hex_strings(row["vr"])
@@ -188,9 +191,9 @@ def load_database(
 
     if skyrim:
         try:
-            with open(os.path.join(path, addresslib), mode="r") as infile:
-                reader = csv.DictReader(infile)
-                for row in reader:
+            async with aiofiles.open(os.path.join(path, addresslib), mode="r") as infile:
+                reader = aiocsv.AsyncDictReader(infile)
+                async for row in reader:
                     id = int(row["id"])
                     sse = add_hex_strings(row["sse"])
                     vr = add_hex_strings(row["vr"])
@@ -207,9 +210,9 @@ def load_database(
             print(f"{addresslib} not found")
 
     try:
-        with open(os.path.join(path, offsets), mode="r") as infile:
-            reader = csv.DictReader(infile)
-            for row in reader:
+        async with aiofiles.open(os.path.join(path, offsets), mode="r") as infile:
+            reader = aiocsv.AsyncDictReader(infile)
+            async for row in reader:
                 id = int(row["id"])
                 sse = add_hex_strings(
                     f"0x{row['sse' if skyrim else 'fo4_addr']}", SKYRIM_BASE
@@ -224,9 +227,9 @@ def load_database(
     except FileNotFoundError:
         print(f"{offsets} not found")
     try:
-        with open(os.path.join(path, ida_compare), mode="r") as infile:
-            reader = csv.DictReader(infile)
-            for row in reader:
+        async with aiofiles.open(os.path.join(path, ida_compare), mode="r") as infile:
+            reader = aiocsv.AsyncDictReader(infile)
+            async for row in reader:
                 if skyrim:
                     sse = add_hex_strings(row["sse"])
                     vr = add_hex_strings(row["vr"])
@@ -240,10 +243,10 @@ def load_database(
     if skyrim:
 
         try:
-            with open(os.path.join(path, se_ae), mode="r") as infile:
-                reader = csv.DictReader(infile)
+            async with aiofiles.open(os.path.join(path, se_ae), mode="r") as infile:
+                reader = aiocsv.AsyncDictReader(infile)
                 # sseid,aeid,confidence,name
-                for row in reader:
+                async for row in reader:
                     sseid = int(row["sseid"])
                     aeid = int(row["aeid"])
                     confidence = int(row["confidence"])
@@ -254,10 +257,10 @@ def load_database(
             print(f"{se_ae} not found")
 
         try:
-            with open(os.path.join(path, ae_names), mode="r") as infile:
-                reader = csv.reader(infile, delimiter=" ")
+            async with aiofiles.open(os.path.join(path, ae_names), mode="r") as infile:
+                reader = aiocsv.AsyncReader(infile, delimiter=" ")
                 # 11 MonitorAPO::Func9_*
-                for row in reader:
+                async for row in reader:
                     if len(row) < 2:
                         continue
                     aeid = int(row[0])
@@ -271,10 +274,10 @@ def load_database(
             print(f"{ae_names} not found")
 
         try:
-            with open(os.path.join(path, se_ae_offsets), mode="r") as infile:
-                reader = csv.DictReader(infile, delimiter=",")
+            async with aiofiles.open(os.path.join(path, se_ae_offsets), mode="r") as infile:
+                reader = aiocsv.AsyncDictReader(infile, delimiter=",")
                 # sseid,sse_addr,ae_addr,aeid,comments
-                for row in reader:
+                async for row in reader:
                     sseid = int(row["sseid"])
                     aeid = int(float(row["aeid"])) if row["aeid"] else 0
                     name = row["comments"]
@@ -320,7 +323,7 @@ def load_database(
     return loaded
 
 
-def scan_code(
+async def scan_code(
     a_directory: str,
     a_exclude: List[str],
 ) -> dict:
@@ -349,22 +352,7 @@ def scan_code(
         for filename in filenames:
             if filename not in a_exclude and filename.endswith(ALL_TYPES):
                 file_count += 1
-                find_known_names(defined_rel_ids, defined_vr_offsets, dirpath, filename)
-                if not filename.lower().startswith("offset"):
-                    # offset files historically (particualrly in commonlib) were treated special because they were a source of truth for matched addresses
-                    # however, newer libraries (po3/ng) use macros that already have info
-                    search_for_ids(
-                        a_directory,
-                        results,
-                        defined_rel_ids,
-                        defined_vr_offsets,
-                        dirpath,
-                        filename,
-                    )
-                else:
-                    parse_offsets(
-                        defined_rel_ids, defined_vr_offsets, dirpath, filename
-                    )
+                await scan_file(a_directory, results, defined_rel_ids, defined_vr_offsets, dirpath, filename)
     print(
         f"Finished scanning {file_count:n} files. rel_ids: {len(defined_rel_ids)} offsets: {len(defined_vr_offsets)} results: {len(results)}"
     )
@@ -374,8 +362,26 @@ def scan_code(
         "results": results,
     }
 
+async def scan_file(a_directory, results, defined_rel_ids, defined_vr_offsets, dirpath, filename):
+    await find_known_names(defined_rel_ids, defined_vr_offsets, dirpath, filename)
+    if not filename.lower().startswith("offset"):
+                    # offset files historically (particualrly in commonlib) were treated special because they were a source of truth for matched addresses
+                    # however, newer libraries (po3/ng) use macros that already have info
+        await search_for_ids(
+                        a_directory,
+                        results,
+                        defined_rel_ids,
+                        defined_vr_offsets,
+                        dirpath,
+                        filename,
+                    )
+    else:
+        await parse_offsets(
+                        defined_rel_ids, defined_vr_offsets, dirpath, filename
+                    )
 
-def search_for_ids(
+
+async def search_for_ids(
     a_directory, results, defined_rel_ids, defined_vr_offsets, dirpath, filename
 ):
     """Search for SSE IDs that may need a VR counterpart defined.
@@ -389,10 +395,10 @@ def search_for_ids(
         filename (str): filename
     """
     found_ifndef = False
-    with open(f"{dirpath}/{filename}", "r+") as f:
+    async with aiofiles.open(f"{dirpath}/{filename}", "r+") as f:
         try:
             data = mmap.mmap(f.fileno(), 0).read().decode("utf-8")
-            f = preProcessData(data)
+            f = await preProcessData(data)
             for i, line in enumerate(f.splitlines()):
                 for regex_pattern in RELID_MATCH_ARRAY:
                     matches = [
@@ -456,13 +462,13 @@ def search_for_ids(
             print(f"Unable to read {dirpath}/{filename}: ", ex)
 
 
-def find_known_names(defined_rel_ids, defined_vr_offsets, dirpath, filename):
+async def find_known_names(defined_rel_ids, defined_vr_offsets, dirpath, filename):
     global id_name
     global ae_name
-    with open(f"{dirpath}/{filename}", "r+") as f:
+    async with aiofiles.open(f"{dirpath}/{filename}", "r+") as f:
         try:
             data = mmap.mmap(f.fileno(), 0).read().decode("utf-8")
-            search = re.finditer(FUNCTION_REGEX, preProcessData(data), re.I)
+            search = re.finditer(FUNCTION_REGEX, await preProcessData(data), re.I)
             namespace = ""
             for m in search:
                 result = m.groupdict()
@@ -499,7 +505,7 @@ def find_known_names(defined_rel_ids, defined_vr_offsets, dirpath, filename):
             print(f"Unable to read {dirpath}/{filename}: ", ex)
 
 
-def parse_offsets(defined_rel_ids, defined_vr_offsets, dirpath, filename):
+async def parse_offsets(defined_rel_ids, defined_vr_offsets, dirpath, filename):
     """Parse offset files to define items
 
     Args:
@@ -514,15 +520,15 @@ def parse_offsets(defined_rel_ids, defined_vr_offsets, dirpath, filename):
         # if filename.lower() == map(lambda x: x.lower(), ["Offsets_VTABLE.h"]):
         #     regex_parse(defined_rel_ids, dirpath, filename)
         # else:
-    cpp_header_parse(defined_rel_ids, defined_vr_offsets, dirpath, filename)
-    regex_parse(defined_rel_ids, defined_vr_offsets, dirpath, filename)
+    await cpp_header_parse(defined_rel_ids, defined_vr_offsets, dirpath, filename)
+    await regex_parse(defined_rel_ids, defined_vr_offsets, dirpath, filename)
 
 
-def regex_parse(defined_rel_ids, defined_vr_offsets, dirpath, filename):
-    with open(f"{dirpath}/{filename}", "r+") as f:
+async def regex_parse(defined_rel_ids, defined_vr_offsets, dirpath, filename):
+    async with aiofiles.open(f"{dirpath}/{filename}", "r+") as f:
         try:
             data = mmap.mmap(f.fileno(), 0).read().decode("utf-8")
-            f = preProcessData(data)
+            f = await preProcessData(data)
             for i, line in enumerate(f.splitlines()):
                 for type_key, regex in REGEX_PARSE_DICT.items():
                     namespace = "RE::"
@@ -559,10 +565,10 @@ def regex_parse(defined_rel_ids, defined_vr_offsets, dirpath, filename):
             print(f"Unable to read {dirpath}/{filename}: ", ex)
 
 
-def cpp_header_parse(defined_rel_ids, defined_vr_offsets, dirpath, filename) -> bool:
+async def cpp_header_parse(defined_rel_ids, defined_vr_offsets, dirpath, filename) -> bool:
     result = False
     try:
-        with open(f"{dirpath}/{filename}", "r+") as f:
+        async with aiofiles.open(f"{dirpath}/{filename}", "r+") as f:
             data = mmap.mmap(f.fileno(), 0).read().decode("utf-8")
             header = CppHeaderParser.CppHeader(data, argType="string")
     except CppHeaderParser.CppHeaderParser.CppParseError as ex:
@@ -833,7 +839,7 @@ def in_file_replace(results: List[str]) -> bool:
     return True
 
 
-def write_csv(
+async def write_csv(
     file_prefix: str = "version",
     version: str = "1-4-15-0",
     min_confidence=CONFIDENCE["MANUAL"],
@@ -885,17 +891,17 @@ def write_csv(
     else:
         output = id_vr
     try:
-        with open(outputfile, "w", newline="") as f:
-            writer = csv.writer(f)
+        async with aiofiles.open(outputfile, "w", newline="") as f:
+            writer = aiocsv.AsyncWriter(f)
             rows = len(output)
             if not generate_database:
-                writer.writerow(("id", "offset"))
-                writer.writerow((rows, release_version))
+                await writer.writerow(("id", "offset"))
+                await writer.writerow((rows, release_version))
                 for id, address in sorted(output.items()):
                     if address[4:]:
                         writer.writerow((id, address[4:]))
             else:
-                writer.writerow(
+                await writer.writerow(
                     ("id", "sse" if skyrim else "fo4", "vr", "status", "name")
                 )
                 for key, value in id_vr_status.items():
@@ -925,7 +931,7 @@ def write_csv(
                         # only add unknown names from ae_name
                         if not name and sse_ae.get(id) and ae_name.get(sse_ae.get(id)):
                             name = ae_name.get(sse_ae.get(id))
-                    writer.writerow((id, sse_addr, address, status, name))
+                    await writer.writerow((id, sse_addr, address, status, name))
             print(
                 f"Wrote {rows} rows into {outputfile} with release version {release_version}"
             )
@@ -935,7 +941,7 @@ def write_csv(
         return False
 
 
-def write_ae_map() -> bool:
+async def write_ae_map() -> bool:
     """Generate sse ae csv file.
     Returns:
         bool: Whether successful.
@@ -946,10 +952,10 @@ def write_ae_map() -> bool:
     outputfile = "se_ae.csv"
     output = {}
     try:
-        with open(outputfile, "w", newline="") as f:
-            writer = csv.writer(f)
+        async with aiofiles.open(outputfile, "w", newline="") as f:
+            writer = aiocsv.AsyncWriter(f)
             rows = len(sse_ae)
-            writer.writerow(("sseid", "aeid", "confidence", "name"))
+            await writer.writerow(("sseid", "aeid", "confidence", "name"))
             for id, ae in sorted(sse_ae.items()):
                 name = ""
                 confidence = CONFIDENCE["SUGGESTED"]
@@ -963,7 +969,7 @@ def write_ae_map() -> bool:
                     # only add unknown names from ae_name
                 if not name and sse_ae.get(id) and ae_name.get(sse_ae.get(id)):
                     name = ae_name.get(sse_ae.get(id))
-                writer.writerow((id, ae, confidence, name))
+                await writer.writerow((id, ae, confidence, name))
         print(f"Wrote {rows} rows into {outputfile}")
         return True
     except OSError as ex:
@@ -971,7 +977,7 @@ def write_ae_map() -> bool:
         return False
 
 
-def main():
+async def main():
     global debug
     global args
     global cpp
@@ -1072,7 +1078,7 @@ def main():
     cpp = preParser()  # init preprocessor
     # Load files from location of python script
     if (
-        load_database(
+        await load_database(
             ida_override=True,
             skyrim=not fallout,
             offsets="offsets-1.5.97.0.csv" if not fallout else "offsets-1-10-163-0.csv",
@@ -1089,7 +1095,7 @@ def main():
         else:
             root = os.path.split(os.path.dirname(os.path.realpath(__file__)))[0]
             os.chdir(root)
-        scan_results = scan_code(
+        scan_results = await scan_code(
             root,
             exclude,
         )
@@ -1117,9 +1123,9 @@ def main():
         if args.get("release_version"):
             sub_args["release_version"] = args.get("release_version")
         if args.get("map"):
-            write_ae_map()
+            await write_ae_map()
         else:
-            write_csv(**sub_args)
+            await write_csv(**sub_args)
     elif analyze and scan_results.get("results"):
         results = match_results(
             scan_results["results"],
@@ -1135,4 +1141,5 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(main())
+

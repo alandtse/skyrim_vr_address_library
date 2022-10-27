@@ -1,4 +1,20 @@
 [[package]]
+name = "aiocsv"
+version = "1.2.3"
+description = "Asynchronous CSV reading/writing"
+category = "main"
+optional = false
+python-versions = ">=3.6, <4"
+
+[[package]]
+name = "aiofiles"
+version = "22.1.0"
+description = "File support for asyncio."
+category = "main"
+optional = false
+python-versions = ">=3.7,<4.0"
+
+[[package]]
 name = "black"
 version = "22.10.0"
 description = "The uncompromising code formatter."
@@ -650,9 +666,11 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "flake8 
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "f0ccd5a810a947999c6c861e7483f271b322f2ac8a5359e905038e333097e4a6"
+content-hash = "492a6583102ca8de952c2b1cdb09cbf2c4e6df7edd2eb9488202865b826739d3"
 
 [metadata.files]
+aiocsv = []
+aiofiles = []
 black = []
 bleach = []
 certifi = []
