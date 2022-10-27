@@ -667,6 +667,8 @@ def analyze_code_offsets(defined_rel_ids: dict, defined_vr_offsets: dict):
         # use databases to suggest addresses for rel::id items
         for k, v in defined_rel_ids.items():
             id = int(v.get("id"))
+            if id in id_vr_status:
+                continue
             if id in id_sse:
                 sse_addr = add_hex_strings(id_sse[id])
                 v["sse"] = sse_addr
