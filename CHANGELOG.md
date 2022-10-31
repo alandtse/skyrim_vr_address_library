@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.60.0 (2022-10-31)
+### Feature
+* Add VampiresCastNoShadows ([`313c491`](https://github.com/alandtse/vr_address_tools/commit/313c4912726cd712e73de720d840e933431d19b5))
+
 ## v0.59.1 (2022-10-27)
 ### Fix
 * Fix writing of 0 size release ([`a458267`](https://github.com/alandtse/vr_address_tools/commit/a458267928a4699afe9d10b8401cddbff0743c9e))
