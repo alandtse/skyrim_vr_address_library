@@ -72,6 +72,7 @@ id,sse,vr,status,name
 15501,0x1401c6f90,0x1401d7450,3,FEC::ProcessObject::attachArmorAddon
 15535,0x1401cafb0,0x1401db9e0,3,FEC::ProcessGeometry::processAttachedGeometry
 15547,0x1401cc7c0,0x1401dd210,3,void NiAVObject::RemoveDecals()
+15569,0x1401cd350,0x1401ddde0,3,RE::NiNode::AttachWeapon
 15576,0x1401cdd40,0x1401de820,2,"void BSDismemberSkinInstance::UpdateDismemberPartion(std::uint16_t a_slot, bool a_enable)"
 15671,0x1401d24c0,0x1401e2f80,4,"bool NiCamera::BoundInFrustum(const NiBound& a_bound, NiCamera* a_camera)"
 15672,0x1401d2630,0x1401e30f0,3,RE::PointInFrustum
@@ -160,6 +161,7 @@ id,sse,vr,status,name
 24207,0x1403606d0,0x14036ffd0,3,RE::TESNPC::UpdateNeck
 24211,0x140360c10,0x140370510,2,enhanced_reanimation::TESNPC::Activate
 24212,0x140361640,0x140370f60,3,enhanced_reanimation::TESNPC::GetActivateText
+24228,0x140363f20,0x140373880,4,RE::TESNPC::UpdateHead
 24236,0x140364ff0,0x140374950,3,FEC::processArmorAttach::PerformNPCDismember
 24246,0x140365bf0,0x140375550,3,RE::TESNPC::ChangeHeadPart
 24274,0x140368a20,0x140378380,3,RE::TESNPC::HasOverlays
