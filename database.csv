@@ -146,6 +146,8 @@ id,sse,vr,status,name
 21211,0x1402deab0,0x1402effc0,3,po3tweaks::IsFurnitureAnimeTypeFix::IsFurnitureAnimType
 21416,0x1402e75f0,0x1402f8af0,3,RE::Script::CompileAndRun
 21425,0x1402e8400,0x1402f9900,4,RE::Script::ParseParameters
+21435,0x1402e9c50,0x1402FB150,4,RE::Script::SetProcessScripts
+21436,0x1402e9c60,0x1402FB160,4,RE::Script::GetProcessScripts
 22289,0x14030f9a0,0x140320eb0,3,"ModelReferenceEffect* TESObjectREFR::InstantiateHitArt(BGSArtObject* a_art, float a_dur, TESObjectREFR* a_facingRef, bool a_faceTarget, bool a_attachToCamera, NiAVObject* a_attachNode, bool a_interfaceEffect)"
 22317,0x140310720,0x140321c30,3,BGSStoryEventManager* BGSRegisteredStoryEvent::BGSStoryEventManager::GetSingleton()
 22339,0x140310e60,0x140322370,3,po3tweaks::NoCheatMode::GodMode
@@ -484,6 +486,7 @@ id,sse,vr,status,name
 52208,0x1408e3d70,0x140915f50,2,RE::MapMenu::MarkerClick
 52226,0x1408e6ea0,0x140919520,3,void MapMenu::PlaceMarker()
 52236,0x1408e7c80,0x14091a4e0,3,anonymous_namespace__FastTravelConfirmCallback::Run_1408E7C80
+52368,0x1408EE900,0x140923570,4,QuitToMainMenuCallback
 52374,0x1408ef500,0x140924430,4,QuickLoot::
 52400,0x1408f03c0,0x1409254b0,4,QuickLoot::
 52652,0x140902560,0x14093cce0,3,RE::SkyrimScript::HandlePolicy::HandleIsType
@@ -491,6 +494,8 @@ id,sse,vr,status,name
 52655,0x140902860,0x14093cfe0,3,RE::SkyrimScript::HandlePolicy::GetHandleForObject
 52659,0x140902b00,0x14093d280,3,RE::SkyrimScript::HandlePolicy::GetObjectForHandle
 52662,0x1409032c0,0x14093da40,3,RE::SkyrimScript::HandlePolicy::ConvertHandleToString
+52730,0x140906fe0,0x140941760,3,SkyrimScript__ObjectBindPolicy::
+52767,0x140909f30,0x1409446B0,3,PapyrusTweaks::
 52933,0x140915790,0x14094ff10,3,YesImSure::
 53029,0x14091c620,0x140956da0,3,"bool Actor::HasLineOfSight(TESObjectREFR* a_ref, bool& a_arg2)"
 53144,0x1409252c0,0x14095fd10,3,RE::SkyrimVM::QueuePostRenderCall
@@ -630,10 +635,13 @@ id,sse,vr,status,name
 97469,0x141234410,0x14126c8c0,3,std::uint32_t Object::DecRef()
 97742,0x1412444c0,0x14129a210,3,void Stack::Dtor()
 97746,0x1412449d0,0x14129a720,3,RE::BSScript::Stack::GetStackFrameVariable
+97831,0x141249f60,0x1412A5380,3,RE::BSScript::CompiledScriptLoader::GetClass
 97923,0x1412507f0,0x14129dd90,3,RE::BSScript::NF_util::NativeFunctionBase::Call
 98130,0x141261cb0,0x141281790,3,BSScript::Internal::VirtualMachine::AttemptFunctionCall
+98134,0x141262EE0,0x1412829B0,3,BSScript::Internal::VirtualMachine::ProcessMessageQueue
 98160,0x141266030,0x141285b00,3,RE::SaveFileHandleReaderWriter::LoadHandle
 98295,0x141270710,0x1412908a0,3,RE::SaveFileHandleReaderWriter::SaveHandle
+98520,0x141278110,0x1412B1380,3,BSScript::Internal::CodeTasklet::VMProcess
 98893,0x141291c30,0x1412ca540,3,"void BSShaderProperty::SetFlags(EShaderPropertyFlag8 a_flag, bool a_set)"
 98897,0x141291d40,0x1412ca650,3,"void BSShaderProperty::SetMaterial(BSShaderMaterial* a_material, bool a_unk1)"
 98978,0x141295ad0,0x1412ce720,3,UpdateShadowDistanceAndInteriorFlag
