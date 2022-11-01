@@ -6,7 +6,7 @@ on:
 
 jobs:
   deploy:
-    if: github.repository == 'alandtse/vr_address_tools'
+    if: github.repository == 'alandtse/skyrim_vr_address_library'
     runs-on: ubuntu-latest
     steps:
       - name: Setup Dotnet

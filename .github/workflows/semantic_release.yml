@@ -8,7 +8,7 @@ on:
 
 jobs:
   deploy:
-    if: github.repository == 'alandtse/vr_address_tools'
+    if: github.repository == 'alandtse/skyrim_vr_address_library'
     runs-on: ubuntu-latest
 
     steps:
@@ -79,7 +79,7 @@ jobs:
         if: ${{ env.old_version != env.release_version }}
         run: |
           mkdir -p release/SKSE/Plugins
-          poetry run ./vr_address_tools.py release/SKSE/Plugins/ generate -rv ${{ env.release_version }}
+          poetry run ./skyrim_vr_address_library.py release/SKSE/Plugins/ generate -rv ${{ env.release_version }}
       - name: Create .7z
         if: ${{ env.old_version != env.release_version }}
         uses: edgarrc/action-7z@v1
@@ -114,7 +114,7 @@ jobs:
         env:
           UNEX_COOKIES: ${{ secrets.UNEX_COOKIES }}
           UNEX_APIKEY: ${{ secrets.UNEX_APIKEY }}
-          UNEX_FILEDESCRIPTION: https://github.com/alandtse/vr_address_tools/compare/${{ env.old_version }}...${{ env.release_version }}
+          UNEX_FILEDESCRIPTION: https://github.com/alandtse/skyrim_vr_address_library/compare/${{ env.old_version }}...${{ env.release_version }}
           UNEX_MODID: 58101
           UNEX_GAME: skyrimspecialedition
           UNEX_FILENAME: VR Address Library
