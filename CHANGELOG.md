@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.61.0 (2022-11-01)
+### Feature
+* Add addresses for papyrus tweaks mod ([#16](https://github.com/alandtse/vr_address_tools/issues/16)) ([`fd0732b`](https://github.com/alandtse/vr_address_tools/commit/fd0732b1ed93ea3e617128bcd2795d6ceff14dcd))
+
 ## v0.60.0 (2022-10-31)
 ### Feature
 * Add VampiresCastNoShadows ([`313c491`](https://github.com/alandtse/vr_address_tools/commit/313c4912726cd712e73de720d840e933431d19b5))
