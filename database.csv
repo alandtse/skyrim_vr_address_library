@@ -499,6 +499,8 @@ id,sse,vr,status,name
 52933,0x140915790,0x14094ff10,3,YesImSure::
 53029,0x14091c620,0x140956da0,3,"bool Actor::HasLineOfSight(TESObjectREFR* a_ref, bool& a_arg2)"
 53144,0x1409252c0,0x14095fd10,3,RE::SkyrimVM::QueuePostRenderCall
+53195,0x14092A9C0,0x140965410,3,"SkyrimVM::HandleEvent(BSScript::StatsEvent* stats)"
+53205,0x14092b6c0,0x140965D80,2,PapyrusTweaks::
 53209,0x14092b8e0,0x140965fe0,3,RE::SkyrimVM::DumpStacks
 53221,0x14092d130,0x140967780,4,"void SkyrimVM::RelayEvent(VMHandle a_handle, BSFixedString* a_event, BSScript::IFunctionArguments* a_args, SkyrimVM::ISendEventFilter* a_optionalFilter)"
 53948,0x14094d850,0x140987ab0,3,papyrus::Actor::TrapSoul
@@ -642,6 +644,7 @@ id,sse,vr,status,name
 98160,0x141266030,0x141285b00,3,RE::SaveFileHandleReaderWriter::LoadHandle
 98295,0x141270710,0x1412908a0,3,RE::SaveFileHandleReaderWriter::SaveHandle
 98520,0x141278110,0x1412B1380,3,BSScript::Internal::CodeTasklet::VMProcess
+98548,0x14127c1b0,0x1412B5420,3,BSScript::Internal::CodeTasklet::HandleCall
 98893,0x141291c30,0x1412ca540,3,"void BSShaderProperty::SetFlags(EShaderPropertyFlag8 a_flag, bool a_set)"
 98897,0x141291d40,0x1412ca650,3,"void BSShaderProperty::SetMaterial(BSShaderMaterial* a_material, bool a_unk1)"
 98978,0x141295ad0,0x1412ce720,3,UpdateShadowDistanceAndInteriorFlag
