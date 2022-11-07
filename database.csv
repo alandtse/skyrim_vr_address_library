@@ -309,7 +309,7 @@ id,sse,vr,status,name
 37513,0x140620900,0x1406296b0,3,RE::Actor::RestoreActorValue_140620900
 37516,0x140620cc0,0x140629a70,3,RE::Character::Update_RegenDelay__140620CC0
 37522,0x1406210f0,0x140629ea0,4,ActorValueOwner::ModActorValue
-37523,0x140621120,0x140629ed0,3,StaminaNPC::damageav
+37523,0x140621120,0x140629ed0,3,"Actor::ApplyActorValueModifier_140621120(Actor *a1, int32 a_actorValueModifier, int32 a_actorValue, float a_avDelta, Actor *a_attacker)"
 37524,0x140621350,0x14062a100,4,"float Actor::GetActorValueModifier(ACTOR_VALUE_MODIFIER a_modifier, ActorValue a_value)"
 37571,0x140623610,0x14062c3c0,3,BSTEventSource<DragonSoulsGained::Event>* DragonSoulsGained::GetEventSource()
 37586,0x140623e60,0x14062cc10,3,RE::Character::sub_140623E60
