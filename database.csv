@@ -498,6 +498,8 @@ id,sse,vr,status,name
 52767,0x140909f30,0x1409446b0,3,PapyrusTweaks::
 52933,0x140915790,0x14094ff10,3,YesImSure::
 53029,0x14091c620,0x140956da0,3,"bool Actor::HasLineOfSight(TESObjectREFR* a_ref, bool& a_arg2)"
+53115,0x140921f10,0x14095C670,2,"SkyrimVM::ProcessRegisteredUpdates(SkyrimVM* a_vm, float a_budget)"
+53116,0x140922a90,0x14095D1F0,4,"SkyrimVM::ProcessTasklets(SkyrimVM* a_vm, float a_budget)"
 53144,0x1409252c0,0x14095fd10,3,RE::SkyrimVM::QueuePostRenderCall
 53195,0x14092a9c0,0x140965410,3,SkyrimVM::HandleEvent(BSScript::StatsEvent* stats)
 53205,0x14092b6c0,0x140965d80,2,PapyrusTweaks::
@@ -1877,6 +1879,7 @@ id,sse,vr,status,name
 241878,0x1415a03e0,0x141617570,3,VTABLE_ConcreteObjectFormFactory_TESNPC_43_13_0__0
 241890,0x1415a0598,0x141617728,3,VTABLE___InitWornVisitor_0
 241892,0x1415a05d0,0x141617760,3,VTABLE___ShouldRunDefaultWornVisitor_0
+241932,0x1415a08d0,0x141617A58,4,SinkOrSwim::isSwimmingVariable
 242059,0x1415a1c98,0x141618e20,3,VTABLE_TESQuest_0
 242060,0x1415a1e98,0x141619020,3,VTABLE_TESQuest_1
 242063,0x1415a1ef0,0x141619078,3,VTABLE_ConcreteFormFactory_TESQuest_77__0
