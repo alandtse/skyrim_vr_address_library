@@ -417,7 +417,7 @@ id,sse,vr,status,name
 43571,0x140772a60,0x14079ddb0,3,po3tweaks::CombatDialogue::SayCombatDialogue
 43952,0x140781f00,0x1407ad250,4,RE::CombatMagicCaster::StaticCheckTargetValid
 43956,0x140782330,0x1407ad680,4,RE::CombatMagicCaster::CheckTargetValid
-44036,0x140785f80,0x1407b12d0,3,enhanced_reanimation::CombatMagicCasterReanimate::CheckShouldEquip
+44036,0x140785f80,0x1407b12d0,4,enhanced_reanimation::CombatMagicCasterReanimate::CheckShouldEquip
 49311,0x14083c870,0x140867b70,3,RE::CombatApproachTargetSpeedController::sub_14083C870
 49711,0x140844d00,0x14086ffb0,3,RE::Character::sub_140844D00
 49747,0x140845a10,0x140870cc0,3,StaminaNPC::apply_another_get_chance
