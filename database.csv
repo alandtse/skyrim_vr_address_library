@@ -396,6 +396,7 @@ id,sse,vr,status,name
 40394,0x1406de9a0,0x140705850,4,"std::int16_t ProcessLists::RequestHighestDetectionLevelAgainstActor(Actor* a_actor, std::uint32_t& a_LOSCount)"
 40396,0x1406dec50,0x140705b00,3,void ProcessLists::ClearCachedFactionFightReactions()
 40560,0x1406e6740,0x14070d630,3,RE::PlayerCharacter::PlayerSkills::AdvanceLevel
+40575,0x1406e7320,0x14070e210,4,RE::ProcessLists::HandlePlayerLevelUpdate(ProcessLists *param_1)
 41257,0x140704970,0x14072b900,3,RE::PlayerControls::Ctor
 41271,0x140705530,0x14072c380,3,RE::PlayerControls__sub_140705530
 41349,0x1407090a0,0x1407310b0,3,RE::JumpHandler::ProcessButton_1407090A0
