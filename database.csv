@@ -648,6 +648,8 @@ id,sse,vr,status,name
 97923,0x1412507f0,0x14129dd90,3,RE::BSScript::NF_util::NativeFunctionBase::Call
 98130,0x141261cb0,0x141281790,3,BSScript::Internal::VirtualMachine::AttemptFunctionCall
 98134,0x141262ee0,0x1412829b0,3,BSScript::Internal::VirtualMachine::ProcessMessageQueue
+98146,0x1412641f0,0x141283cc0,4,"int * CreateStack_1412641F0 (longlong param_1, undefined4 param_2, undefined8 param_3, undefined8 param_4)"
+98149,0x1412646f0,0x1412841c0,4,"void BSScript__Internal__VirtualMachine::CleanUpStack_1412646F0(longlong param_1,longlong param_2)"
 98160,0x141266030,0x141285b00,3,RE::SaveFileHandleReaderWriter::LoadHandle
 98295,0x141270710,0x1412908a0,3,RE::SaveFileHandleReaderWriter::SaveHandle
 98520,0x141278110,0x1412b1380,3,BSScript::Internal::CodeTasklet::VMProcess
