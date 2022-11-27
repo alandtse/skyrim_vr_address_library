@@ -657,6 +657,7 @@ id,sse,vr,status,name
 98893,0x141291c30,0x1412ca540,3,"void BSShaderProperty::SetFlags(EShaderPropertyFlag8 a_flag, bool a_set)"
 98897,0x141291d40,0x1412ca650,3,"void BSShaderProperty::SetMaterial(BSShaderMaterial* a_material, bool a_unk1)"
 98978,0x141295ad0,0x1412ce720,3,UpdateShadowDistanceAndInteriorFlag
+98986,0x141295c30,0x1412ce8a0,4,"void BSShaderManager_GetTexture (char * a_source, bool a_background, NiPointer_NiSourceTexture_ * a_texture, bool unk1, bool unk2, bool unk3)"
 99868,0x1412c5ca0,0x141304090,3,RE::NiAVObject::SetRefraction
 99886,0x1412c9320,0x141307710,3,BSShaderTextureSet* BSShaderTextureSet::Ctor()
 100004,0x1412ced50,0x14130dc60,3,BSLightingShaderMaterial* BSLightingShaderMaterial::Ctor()
