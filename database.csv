@@ -350,6 +350,7 @@ id,sse,vr,status,name
 37945,0x140638190,0x1406411a0,3,RE::ActorEquipManager::UnequipObject
 38047,0x14063cfb0,0x140646020,3,StaminaNPC::apply_deny_player_attack_or_bash
 38079,0x14063f810,0x1406488a0,3,bool TaskQueueInterface::ShouldUseTaskQueue()
+38118,0x140640600,0x140649910,2,PapyrusTweaks::Job_VM_Update
 38290,0x14064b140,0x140654490,4,RE::ActorProcess::PlayIdle
 38311,0x14064cdf0,0x140656140,4,"void AIProcess::SetActorsDetectionEvent(Actor* a_actor, const NiPoint3& a_location, std::int32_t a_soundLevel, TESObjectREFR* a_ref)"
 38404,0x140650df0,0x14065a140,3,RE::AIProcess::Update3DModel
@@ -504,6 +505,7 @@ id,sse,vr,status,name
 53144,0x1409252c0,0x14095fd10,3,RE::SkyrimVM::QueuePostRenderCall
 53195,0x14092a9c0,0x140965410,3,SkyrimVM::HandleEvent(BSScript::StatsEvent* stats)
 53205,0x14092b6c0,0x140965d80,2,PapyrusTweaks::
+53207,0x14092b800,0x140965F00,3,"SkyrimVM::LoadGame(SkyrimVM* this, LoadStorageWrapper* a_wrapper)"
 53209,0x14092b8e0,0x140965fe0,3,RE::SkyrimVM::DumpStacks
 53221,0x14092d130,0x140967780,4,"void SkyrimVM::RelayEvent(VMHandle a_handle, BSFixedString* a_event, BSScript::IFunctionArguments* a_args, SkyrimVM::ISendEventFilter* a_optionalFilter)"
 53948,0x14094d850,0x140987ab0,3,papyrus::Actor::TrapSoul
