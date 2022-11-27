@@ -597,6 +597,7 @@ id,sse,vr,status,name
 74240,0x140d38720,0x140d80bc0,3,RE::INISettingCollection::CloseHandle
 75460,0x140d6a0c0,0x140dbbb80,3,Skyrim-Upscaler::BSGraphics_Renderer_Begin_UpdateJitter
 75461,0x140d6a2b0,0x140dbbdd0,3,shadowboost::TimeManager_SleepCheck
+75477,0x140d6bfe0,0x140dbdd00,3,Skyrim-Upscaler
 75507,0x140d6dbc0,0x140dbf9b0,3,"NiTexture::RendererData* BSRenderManager::CreateRenderTexture(std::uint32_t a_width, std::uint32_t a_height)"
 75595,0x140d72810,0x140dc5530,4,skyrim-nvidia-reflex::CalledDuringRenderStartup
 75709,0x140d7cfb0,0x140dd1160,3,void BSGraphics_Renderer_Begin_UpdateJitter_140d7cfb0(BSGraphics::State* a_state)
@@ -636,6 +637,7 @@ id,sse,vr,status,name
 80620,0x140edbfa0,0x140f38ca0,3,RE::GFxLoader::CreateMovie
 82462,0x140f48270,0x140fa4f70,3,bool GSysAllocPaged::InitHeapEngine(const void* a_heapDesc)
 82464,0x140f48360,0x140fa5060,3,void GSysAllocPaged::ShutdownHeapEngine()
+87907,0x1410a2370,0x1410fefa0,4,Skyrim-upscaler
 88499,0x1410c3d40,0x141120aa0,3,RE::ActorState::Sub_1410C3D40
 97379,0x14122dad0,0x141265f80,3,RE::BSScript::ObjectBindPolicy::BindObject
 97462,0x141233670,0x14126bb20,3,void Object::Dtor()
@@ -674,6 +676,7 @@ id,sse,vr,status,name
 100110,0x1412d3360,0x141312270,3,BSLightingShaderMaterialLODLandscape* BSLightingShaderMaterialLODLandscape::Ctor()
 100118,0x1412d38f0,0x141312800,3,BSLightingShaderMaterialSnow* BSLightingShaderMaterialSnow::Ctor()
 100125,0x1412d3ad0,0x1413129e0,3,BSLightingShaderMaterialMultiLayerParallax* BSLightingShaderMaterialMultiLayerParallax::Ctor()
+100847,0x141307160,0x141348390,3,Skyrim-Upscaler
 101339,0x14131f810,0x1413656b0,4,RE::BSShader::LoadShaders_14131F810
 101884,0x14133f0c0,0x14137c200,3,RE::BSWin32SaveDataSystemUtility::GetSingleton
 102238,0x14134bdb0,0x14138baba,3,RE::_CRT::RTDynamicCast
