@@ -350,6 +350,7 @@ id,sse,vr,status,name
 37945,0x140638190,0x1406411a0,3,RE::ActorEquipManager::UnequipObject
 38047,0x14063cfb0,0x140646020,3,StaminaNPC::apply_deny_player_attack_or_bash
 38079,0x14063f810,0x1406488a0,3,bool TaskQueueInterface::ShouldUseTaskQueue()
+38118,0x140640600,0x140649910,2,PapyrusTweaks::Job_VM_Update
 38290,0x14064b140,0x140654490,4,RE::ActorProcess::PlayIdle
 38311,0x14064cdf0,0x140656140,4,"void AIProcess::SetActorsDetectionEvent(Actor* a_actor, const NiPoint3& a_location, std::int32_t a_soundLevel, TESObjectREFR* a_ref)"
 38404,0x140650df0,0x14065a140,3,RE::AIProcess::Update3DModel
