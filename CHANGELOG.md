@@ -1,3 +1,10 @@
+# [0.67.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.66.0...v0.67.0) (2022-12-01)
+
+
+### Features
+
+* Add Experience VR addresses ([#20](https://github.com/alandtse/skyrim_vr_address_library/issues/20)) ([6aa5b33](https://github.com/alandtse/skyrim_vr_address_library/commit/6aa5b330c0b82af8ef9ed7fe9d397f9226a46a79))
+
 # Changelog
 
 <!--next-version-placeholder-->
