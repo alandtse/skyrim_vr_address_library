@@ -1,9 +1,9 @@
 name: semantic_release
 
 on:
-  # push:
-  #   branches:
-  #     - main
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
@@ -12,15 +12,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - name: Get VR Address Tools
+        run: git clone https://github.com/alandtse/vr_address_tools.git .
+      - name: Checkout 
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
-          token: ${{ secrets.GH_TOKEN }}
-      - name: Set up Python 3.9
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.9
+          path: "skyrim_vr_address_library"
       #----------------------------------------------
       #  -----  install & configure poetry  -----
       #----------------------------------------------
@@ -50,78 +48,62 @@ jobs:
       #----------------------------------------------
       - name: Install library
         run: poetry install --no-interaction
-      - name: Setup Git
-        run: |
-          git config --global user.name "semantic-release"
-          git config --global user.email "semantic-release@GitHub"
-      - name: Set old version variable
-        run: |
-          echo "old_version=`git describe --abbrev=0`" >> $GITHUB_ENV
-      - name: Set changelog variable
-        run: |
-          echo "changelog=`poetry run semantic-release changelog`" >> $GITHUB_ENV
-      - name: Print variables
-        env:
-          version: ${{ env.release_version }}
-          changelog: ${{ env.changelog }}
-        run: |
-          echo $old_version
-          echo $changelog
-      - name: Python Semantic Release
-        uses: relekang/python-semantic-release@master
+      - name: Semantic Release
+        uses: cycjimmy/semantic-release-action@v3
         with:
-          github_token: ${{ secrets.GH_TOKEN }}
-      - name: Set release variable
-        run: |
-          echo "release_version=`git describe --abbrev=0`" >> $GITHUB_ENV
-          echo $release_version
+          # You can specify specifying version range for the extra plugins if you prefer.
+          extra_plugins: |
+            @semantic-release/changelog@3.0.0
+            @semantic-release/git
+          working_directory: ./skyrim_vr_address_library
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Generate release csv
-        if: ${{ env.old_version != env.release_version }}
+        if: steps.semantic.outputs.new_release_published == 'true'
         run: |
           mkdir -p release/SKSE/Plugins
-          poetry run ./skyrim_vr_address_library.py release/SKSE/Plugins/ generate -rv ${{ env.release_version }}
+          poetry run ./vr_address_tools.py release/SKSE/Plugins/ generate -rv ${{ steps.semantic.outputs.new_release_version }}
       - name: Create .7z
-        if: ${{ env.old_version != env.release_version }}
+        if: steps.semantic.outputs.new_release_published == 'true'
         uses: edgarrc/action-7z@v1
         with:
-          args: 7z a -t7z -mx=9 vr_addresslib-${{ env.release_version }}.7z ./release/SKSE
+          args: 7z a -t7z -mx=9 vr_addresslib-${{ steps.semantic.outputs.new_release_version }}.7z ./release/SKSE
       - name: Sleep
         # add delay so upload does not kill the release notes from semantic-release
-        if: ${{ env.old_version != env.release_version }}
+        if: steps.semantic.outputs.new_release_published == 'true'
         run: |
           sleep 5
       - name: Upload zip to release
-        if: ${{ env.old_version != env.release_version }}
+        if: steps.semantic.outputs.new_release_published == 'true'
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GH_TOKEN }}
-          file: vr_addresslib-${{ env.release_version }}.7z
-          asset_name: vr_addresslib-${{ env.release_version }}.7z
-          tag: ${{ env.release_version }}
+          file: vr_addresslib-${{ steps.semantic.outputs.new_release_version }}.7z
+          asset_name: vr_addresslib-${{ steps.semantic.outputs.new_release_version }}.7z
+          tag: ${{ steps.semantic.outputs.new_release_git_tag }}
           overwrite: true
       - name: Setup Dotnet
-        if: ${{ env.old_version != env.release_version }}
-        uses: actions/setup-dotnet@v2
+        if: steps.semantic.outputs.new_release_published == 'true'
+        uses: actions/setup-dotnet@v3
         with:
           dotnet-version: '3.1.x'
-          include-prerelease: false
       - name: Download NexusUploader
-        if: ${{ env.old_version != env.release_version }}
+        if: steps.semantic.outputs.new_release_published == 'true'
         run: dotnet tool install -g NexusUploader
       - name: Upload files to Nexus
       # https://github.com/agc93/nexus-uploader
-        if: ${{ env.old_version != env.release_version }}
+        if: steps.semantic.outputs.new_release_published == 'true'
         env:
           UNEX_COOKIES: ${{ secrets.UNEX_COOKIES }}
           UNEX_APIKEY: ${{ secrets.UNEX_APIKEY }}
-          UNEX_FILEDESCRIPTION: https://github.com/alandtse/skyrim_vr_address_library/compare/${{ env.old_version }}...${{ env.release_version }}
+          UNEX_FILEDESCRIPTION: https://github.com/alandtse/skyrim_vr_address_library/compare/v${{ steps.semantic.outputs.last_release_git_tag }}...v${{ steps.semantic.outputs.new_release_git_tag }}
           UNEX_MODID: 58101
           UNEX_GAME: skyrimspecialedition
           UNEX_FILENAME: VR Address Library
           UNEX_PREVIOUSFILE: "auto"
-          file: vr_addresslib-${{ env.release_version }}.7z
-          version: ${{ env.release_version }}
-          changelog: ${{ env.changelog }}
+          file: vr_addresslib-${{ steps.semantic.outputs.new_release_version }}.7z
+          version: ${{ steps.semantic.outputs.new_release_version }}
+          changelog: ${{ steps.semantic.outputs.new_release_notes }}
         run: |
           unex upload $UNEX_MODID $file -v $version
           unex changelog $version "$changelog"
