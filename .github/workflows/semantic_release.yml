@@ -50,6 +50,7 @@ jobs:
         run: poetry install --no-interaction
       - name: Semantic Release
         uses: cycjimmy/semantic-release-action@v3
+        id: semantic   # Need an `id` for output variables
         with:
           # You can specify specifying version range for the extra plugins if you prefer.
           extra_plugins: |
