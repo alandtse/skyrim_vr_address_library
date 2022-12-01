@@ -179,7 +179,7 @@ id,sse,vr,status,name
 24486,0x140370e90,0x140380830,3,RE::TESQuest::ResetQuest
 24526,0x140375af0,0x1403854A0,3,BGSLocation::TryToClear
 24537,0x140378760,0x140388110,3,RE::TESQuest::CreateRefHandleByAliasID
-24647,0x14037e190,0x14038D9F0,3,Experience::
+24647,0x14037f050,0x14038D9F0,3,Experience::
 24719,0x140380be0,0x140390450,3,StoryEvents::QuestStatus
 24985,0x14038d990,0x14039d1c0,3,RE::TESTopicInfo::ResponseData::PopulateResponseText
 25466,0x1403a4dd0,0x1403b4940,3,RE::TESHavokUtilities::FindCollidableRef
