@@ -53,7 +53,7 @@ jobs:
         with:
           # You can specify specifying version range for the extra plugins if you prefer.
           extra_plugins: |
-            @semantic-release/changelog@3.0.0
+            @semantic-release/changelog
             @semantic-release/git
           working_directory: ./skyrim_vr_address_library
         env:
