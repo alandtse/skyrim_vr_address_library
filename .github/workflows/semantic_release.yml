@@ -78,7 +78,6 @@ jobs:
         if: steps.semantic.outputs.new_release_published == 'true'
         uses: svenstaro/upload-release-action@v2
         with:
-          repo_token: ${{ secrets.GH_TOKEN }}
           file: vr_addresslib-${{ steps.semantic.outputs.new_release_version }}.7z
           asset_name: vr_addresslib-${{ steps.semantic.outputs.new_release_version }}.7z
           tag: ${{ steps.semantic.outputs.new_release_git_tag }}
