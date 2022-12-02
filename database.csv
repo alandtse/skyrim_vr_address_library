@@ -384,7 +384,7 @@ id,sse,vr,status,name
 39247,0x140695020,0x14069e620,3,BSTEventSource<LevelIncrease::Event>* LevelIncrease::GetEventSource()
 39248,0x140695110,0x14069e710,3,BSTEventSource<SkillIncrease::Event>* SkillIncrease::GetEventSource()
 39340,0x140699040,0x1406A26A0,2,PlayerCharacter::Ctor
-39346,0x14069ABF0,0x1408ED870,1,PlayerCharacter::
+39346,0x14069ABF0,0x1408ED870,2,PlayerCharacter::
 39365,0x14069c2a0,0x1406bc6c0,3,"bool PlayerCharacter::CenterOnCell_Impl(const char* a_cellName, RE::TESObjectCELL* a_cell)"
 39371,0x14069d2c0,0x1406bd770,3,po3tweaks::SitToWait::CanSleepWait
 39372,0x14069d6e0,0x1406bde50,2,RE::Actor::CanFastTravel
@@ -505,8 +505,8 @@ id,sse,vr,status,name
 51400,0x1408aa140,0x1408d68f0,2,po3tweaks::SitToWait::HandleWaitRequest
 51420,0x1408ab180,0x1408d7fe0,4,RE::MessageBoxData::CreateMessage
 51422,0x1408ab5c0,0x1408d8420,3,void MessageBoxData::QueueMessage()
-51638,0x1408bf360,0x1408EC3E0,1,StatsMenu::ProcessMessage
-51652,0x1408c20c0,0x1408EEDB0,1,StatsMenu::UpdateSkillList
+51638,0x1408bf360,0x1408EC3E0,2,StatsMenu::ProcessMessage
+51652,0x1408c20c0,0x1408EEDB0,2,StatsMenu::UpdateSkillList
 51755,0x1408ccff0,0x1408fa0a0,4,SubtitleManager::KillSubtitles
 51788,0x1408ce590,0x1408FB660,2,TrainingMenu::ProcessMessage
 51790,0x1408ce6f0,0x1408FB7C0,4,TrainingMenu::TrainCallback::Accept
