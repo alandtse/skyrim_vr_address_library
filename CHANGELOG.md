@@ -1,3 +1,10 @@
+## [0.67.1](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.67.0...v0.67.1) (2022-12-02)
+
+
+### Bug Fixes
+
+* update Experience Addresses confidence ([#21](https://github.com/alandtse/skyrim_vr_address_library/issues/21)) ([192d99a](https://github.com/alandtse/skyrim_vr_address_library/commit/192d99ad5032566fe81cf78b04d7603d489d09ce))
+
 # [0.67.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.66.0...v0.67.0) (2022-12-01)
 
 
