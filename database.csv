@@ -511,6 +511,7 @@ id,sse,vr,status,name
 51788,0x1408ce590,0x1408FB660,2,TrainingMenu::ProcessMessage
 51790,0x1408ce6f0,0x1408FB7C0,4,TrainingMenu::TrainCallback::Accept
 51793,0x1408ce8e0,0x1408FB9C0,3,TrainingMenu::Train
+51795,0x1408CEDF0,0x1408FBED0,3,TrainingMenu::SetSkillXpPercent
 51843,0x1408d11f0,0x1408FE370,3,TweenMenu::
 51899,0x1408d50f0,0x140902c10,3,RE::UIBlurManager::IncrementBlurCount
 51900,0x1408d5130,0x140902c50,3,RE::UIBlurManager::DecrementBlurCount
