@@ -1,3 +1,10 @@
+# [0.68.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.67.1...v0.68.0) (2022-12-08)
+
+
+### Features
+
+* Add TrainingMenu::SetSkillXpPercent for Experience ([#25](https://github.com/alandtse/skyrim_vr_address_library/issues/25)) ([0a83cf2](https://github.com/alandtse/skyrim_vr_address_library/commit/0a83cf2ee06727d0f79b4e8c97319b418e3e2d85))
+
 ## [0.67.1](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.67.0...v0.67.1) (2022-12-02)
 
 
