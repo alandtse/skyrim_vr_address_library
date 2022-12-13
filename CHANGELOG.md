@@ -1,3 +1,10 @@
+# [0.69.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.68.0...v0.69.0) (2022-12-13)
+
+
+### Features
+
+* add Sky::UpdateWind_1403B3410 ([e11a6f8](https://github.com/alandtse/skyrim_vr_address_library/commit/e11a6f832b9d4409af068936d5334095a37fdd4a))
+
 # [0.68.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.67.1...v0.68.0) (2022-12-08)
 
 
