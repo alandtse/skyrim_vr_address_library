@@ -97,7 +97,7 @@ jobs:
         env:
           UNEX_COOKIES: ${{ secrets.UNEX_COOKIES }}
           UNEX_APIKEY: ${{ secrets.UNEX_APIKEY }}
-          UNEX_FILEDESCRIPTION: https://github.com/alandtse/skyrim_vr_address_library/compare/v${{ steps.semantic.outputs.last_release_git_tag }}...v${{ steps.semantic.outputs.new_release_git_tag }}
+          UNEX_FILEDESCRIPTION: https://github.com/alandtse/skyrim_vr_address_library/compare/${{ steps.semantic.outputs.last_release_git_tag }}...${{ steps.semantic.outputs.new_release_git_tag }}
           UNEX_MODID: 58101
           UNEX_GAME: skyrimspecialedition
           UNEX_FILENAME: VR Address Library
