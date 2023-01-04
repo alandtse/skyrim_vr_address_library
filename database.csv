@@ -560,6 +560,7 @@ id,sse,vr,status,name
 60502,0x140a77780,0x140ab2180,3,hkpPhantom* hkpWorld::AddPhantom(hkpPhantom* a_phantom)
 60504,0x140a77d80,0x140ab2780,3,void hkpWorld::RemovePhantom(hkpPhantom* a_phantom)
 60551,0x140a7b000,0x140ab5a00,3,"void hkpWorld::CastRay(const hkpWorldRayCastInput& a_input, hkpWorldRayCastOutput& a_output)"
+62640,0x140aedd10,0x140b28870,4,"BShkbAnimationGraph::sub_140AEDD10 (ulonglong param_1, undefined8 param_2, char param_3)"
 62694,0x140af5fd0,0x140b30db0,3,"bool BShkbAnimationGraph::GetGraphVariableInt(const BSFixedString& a_variableName, int& a_out)"
 62695,0x140af6090,0x140b30e70,3,"bool BShkbAnimationGraph::GetGraphVariableFloat(const BSFixedString& a_variableName, float& a_out)"
 62696,0x140af6150,0x140b30f30,3,"bool BShkbAnimationGraph::GetGraphVariableBool(const BSFixedString& a_variableName, bool& a_out)"
