@@ -1,3 +1,10 @@
+# [0.70.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.69.0...v0.70.0) (2023-01-04)
+
+
+### Features
+
+* add BehaviorDataInjector ([077e7a1](https://github.com/alandtse/skyrim_vr_address_library/commit/077e7a1cb51fa5eb28963e7014af53064b18d03f))
+
 # [0.69.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.68.0...v0.69.0) (2022-12-13)
 
 
