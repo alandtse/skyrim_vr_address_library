@@ -1,3 +1,10 @@
+# [0.72.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.71.0...v0.72.0) (2023-01-12)
+
+
+### Features
+
+* add AnimationQueueFix ([3b68144](https://github.com/alandtse/skyrim_vr_address_library/commit/3b68144fd9987fdac781571071773ce5ecc207c0))
+
 # [0.71.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.70.0...v0.71.0) (2023-01-12)
 
 
