@@ -545,7 +545,7 @@ id,sse,vr,status,name
 53209,0x14092b8e0,0x140965fe0,3,RE::SkyrimVM::DumpStacks
 53221,0x14092d130,0x140967780,4,"void SkyrimVM::RelayEvent(VMHandle a_handle, BSFixedString* a_event, BSScript::IFunctionArguments* a_args, SkyrimVM::ISendEventFilter* a_optionalFilter)"
 53948,0x14094d850,0x140987ab0,3,papyrus::Actor::TrapSoul
-53960,0x14094df30,0x140988190,2,"papyrus__Actor::Bind(BSScript::Internal::VirtualMachine** a_vm)"
+53960,0x14094df30,0x140988190,2,papyrus__Actor::Bind(BSScript::Internal::VirtualMachine** a_vm)
 54741,0x14096de60,0x1409a7f40,4,papyrus__Debug::SendAnimationEvent
 54832,0x140972e10,0x1409acca0,3,papyrus__Game::GetFormFromFile_140972E10
 54836,0x1409731b0,0x1409ad050,3,papyrus__Game::getplayer_1409731B0
@@ -561,10 +561,12 @@ id,sse,vr,status,name
 60502,0x140a77780,0x140ab2180,3,hkpPhantom* hkpWorld::AddPhantom(hkpPhantom* a_phantom)
 60504,0x140a77d80,0x140ab2780,3,void hkpWorld::RemovePhantom(hkpPhantom* a_phantom)
 60551,0x140a7b000,0x140ab5a00,3,"void hkpWorld::CastRay(const hkpWorldRayCastInput& a_input, hkpWorldRayCastOutput& a_output)"
+62584,0x140ae9a70,0x140b245d0,4,"BSResource__EntryDB_BShkbHkxDB__DBTraits_::Func3_140AE9A70 (longlong param_1, undefined8 param_2)"
 62640,0x140aedd10,0x140b28870,4,"BShkbAnimationGraph::sub_140AEDD10 (ulonglong param_1, undefined8 param_2, char param_3)"
 62694,0x140af5fd0,0x140b30db0,3,"bool BShkbAnimationGraph::GetGraphVariableInt(const BSFixedString& a_variableName, int& a_out)"
 62695,0x140af6090,0x140b30e70,3,"bool BShkbAnimationGraph::GetGraphVariableFloat(const BSFixedString& a_variableName, float& a_out)"
 62696,0x140af6150,0x140b30f30,3,"bool BShkbAnimationGraph::GetGraphVariableBool(const BSFixedString& a_variableName, bool& a_out)"
+63080,0x140b0acd0,0x140b45ab0,4,void AnimationFileManagerSingleton::UpdateQueue_140B0ACD0 (AnimationFileManagerSingleton * param_1)
 63607,0x140b258b0,0x140b60690,3,"bool BShkbAnimationGraph::SetGraphVariableInt(const BSFixedString& a_variableName, const int a_in)"
 63608,0x140b25990,0x140b60770,3,"bool BShkbAnimationGraph::SetGraphVariableFloat(const BSFixedString& a_variableName, const float a_in)"
 63609,0x140b25c70,0x140b60a50,3,"bool BShkbAnimationGraph::SetGraphVariableBool(const BSFixedString& a_variableName, const bool a_in)"
@@ -8229,6 +8231,7 @@ id,sse,vr,status,name
 519579,0x142f4c910,0x143011d40,4,TrueHUD::g_worldToCamMatrix
 519618,0x142f4ded0,0x1430133a8,4,TrueHUD::g_viewPort
 519716,0x142f4e240,0x143013728,3,TESObjectREFR* GetTargetReference()
+520994,0x142f51ec0,0x1430a9f50,4,g_animationFileManager**
 523660,0x142f6b948,0x1430c3a08,3,float GetSecondsSinceLastFrame()
 523661,0x142f6b94c,0x1430c3a0c,3,TrueHUD::gSecondsSinceLastFrame_RealTime_142F6B94C
 523662,0x142f6b950,0x1430c3a10,3,float GetDurationOfApplicationRunTime()
