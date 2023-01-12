@@ -545,6 +545,7 @@ id,sse,vr,status,name
 53209,0x14092b8e0,0x140965fe0,3,RE::SkyrimVM::DumpStacks
 53221,0x14092d130,0x140967780,4,"void SkyrimVM::RelayEvent(VMHandle a_handle, BSFixedString* a_event, BSScript::IFunctionArguments* a_args, SkyrimVM::ISendEventFilter* a_optionalFilter)"
 53948,0x14094d850,0x140987ab0,3,papyrus::Actor::TrapSoul
+53960,0x14094df30,0x140988190,2,"papyrus__Actor::Bind(BSScript::Internal::VirtualMachine** a_vm)"
 54741,0x14096de60,0x1409a7f40,4,papyrus__Debug::SendAnimationEvent
 54832,0x140972e10,0x1409acca0,3,papyrus__Game::GetFormFromFile_140972E10
 54836,0x1409731b0,0x1409ad050,3,papyrus__Game::getplayer_1409731B0
