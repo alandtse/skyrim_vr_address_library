@@ -1,3 +1,10 @@
+# [0.71.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.70.0...v0.71.0) (2023-01-12)
+
+
+### Features
+
+* Add Actor::BindScripts for Papyrus Tweaks NG ([#30](https://github.com/alandtse/skyrim_vr_address_library/issues/30)) ([8bb2c6b](https://github.com/alandtse/skyrim_vr_address_library/commit/8bb2c6b3170631713cf8a7abb55583dc0afe78d3))
+
 # [0.70.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.69.0...v0.70.0) (2023-01-04)
 
 
