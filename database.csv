@@ -112,8 +112,8 @@ id,sse,vr,status,name
 17521,0x14022cb50,0x14023dea0,3,po3tweaks::AIFadeOut::GetFadeState
 17522,0x14022d1d0,0x14023e530,2,po3tweaks::LoadDoorPrompt
 17693,0x140235240,0x1402465b0,3,RE::TESObjectWEAP::Fire_140235240
-17965,0x140243380,0x140254A50,3,BGSLocation::ClearedCheck
-18046,0x1402463a0,0x140257A70,3,StoryEvents::LocationCleared
+17965,0x140243380,0x140254a50,3,BGSLocation::ClearedCheck
+18046,0x1402463a0,0x140257a70,3,BSTEventSource<LocationCleared::Event>* LocationCleared::GetEventSource()
 18185,0x14024c860,0x14025df50,4,"ImageSpaceModifierInstanceForm* ImageSpaceModifierInstanceForm::Trigger(TESImageSpaceModifier* a_imod, float a_strength, NiAVObject* a_target)"
 18188,0x14024ccd0,0x14025e3c0,4,void ImageSpaceModifierInstanceForm::Stop(TESImageSpaceModifier* a_imod)
 18192,0x14024d210,0x14025e900,4,void ImageSpaceModifierInstanceForm::StopCrossFade(float a_seconds)
@@ -161,8 +161,8 @@ id,sse,vr,status,name
 22843,0x140326460,0x140335ca0,3,RE::MessageDataFactoryManager::GetSingleton
 22845,0x140326510,0x140335d50,3,RE::INISettingCollection::ReadFromFile
 23073,0x14032ece0,0x14033e5a0,3,RE::ApplyPerkEntries
-23429,0x14033a820,0x14034A0E0,2,BGSQuestObjective::FillQuestInstanceData
-23486,0x14033cdc0,0x14034C680,2,StoryEvents::ObjectiveState
+23429,0x14033a820,0x14034a0e0,2,BGSQuestObjective::FillQuestInstanceData
+23486,0x14033cdc0,0x14034c680,2,BSTEventSource<ObjectiveState::Event>* ObjectiveState::GetEventSource()
 23626,0x140345f50,0x140355810,3,powerof3tweaks::FactionStealing::GetFavorCost
 23632,0x140346470,0x140355d30,3,"BGSRelationship* BGSRelationship::GetRelationship(TESNPC* a_npc1, TESNPC* a_npc2)"
 24012,0x140355940,0x140365200,3,"void TESFaction::SetFactionFightReaction(TESFaction* a_faction, FIGHT_REACTION a_fightReaction)"
@@ -176,13 +176,13 @@ id,sse,vr,status,name
 24274,0x140368a20,0x140378380,3,RE::TESNPC::HasOverlays
 24275,0x140368b30,0x140378490,3,RE::TESNPC::GetBaseOverlays
 24276,0x140368bc0,0x140378520,3,RE::TESNPC::GetNumBaseOverlays
-24472,0x140370290,0x14037FC30,3,TESQuest::CompleteQuest
+24472,0x140370290,0x14037fc30,3,TESQuest::CompleteQuest
 24481,0x140370910,0x1403802b0,3,RE::TESQuest::EnsureQuestStarted
 24486,0x140370e90,0x140380830,3,RE::TESQuest::ResetQuest
-24526,0x140375af0,0x1403854A0,3,BGSLocation::TryToClear
+24526,0x140375af0,0x1403854a0,3,BGSLocation::TryToClear
 24537,0x140378760,0x140388110,3,RE::TESQuest::CreateRefHandleByAliasID
-24647,0x14037f050,0x14038D9F0,3,Experience::
-24719,0x140380be0,0x140390450,3,StoryEvents::QuestStatus
+24647,0x14037f050,0x14038d9f0,3,Experience::
+24719,0x140380be0,0x140390450,3,BSTEventSource<QuestStatus::Event>* QuestStatus::GetEventSource()
 24985,0x14038d990,0x14039d1c0,3,RE::TESTopicInfo::ResponseData::PopulateResponseText
 25466,0x1403a4dd0,0x1403b4940,3,RE::TESHavokUtilities::FindCollidableRef
 25482,0x1403a6140,0x1403b5cb0,3,bhkCollisionObject* NiAVObject::GetCollisionObject()
@@ -265,9 +265,9 @@ id,sse,vr,status,name
 35551,0x1405af3d0,0x1405b6d70,4,MainLoop_1405AF3D0
 35556,0x1405b1020,0x1405b8a20,3,Main::sub_*
 35565,0x1405b2ff0,0x1405bab10,3,Main::OnIdle_1405B2FF0
-35593,0x1405b5490,0x1405BD0F0,2,Main::sub_*
+35593,0x1405b5490,0x1405bd0f0,2,Main::sub_*
 35601,0x1405b6060,0x1405bdcf0,4,NiCamera* Main::WorldRootCamera()
-35620,0x1405b6dc0,0x1405BEE40,3,Main::sub_*
+35620,0x1405b6dc0,0x1405bee40,3,Main::sub_*
 35882,0x1405c0610,0x1405c8b30,3,po3tweaks::ScreenshotToConsole::DebugNotification
 35978,0x1405c5220,0x1405cd7c0,3,"void TaskQueueInterface::QueueAddRipple(float a_scale, const NiPoint3& a_pos)"
 35987,0x1405c58c0,0x1405cde60,2,"void TaskQueueInterface::QueueRemoveSpell(ActorHandle& a_actorHandle, SpellItem* a_spellItem)"
@@ -279,7 +279,7 @@ id,sse,vr,status,name
 36271,0x1405d1f80,0x1405da540,4,RE::Actor::Jump_1405D1F80
 36286,0x1405d2520,0x1405daae0,3,RE::Actor::GetGhost
 36287,0x1405d25e0,0x1405daba0,4,RE::Actor::SetGhost
-36331,0x1405D5290,0x1405DD850,2,Actor::Resurrect
+36331,0x1405d5290,0x1405dd850,2,Actor::Resurrect
 36344,0x1405d62e0,0x1405de910,3,RE::Actor::GetLevel
 36346,0x1405d6490,0x1405deac0,3,RE::GameEventHandler::FallLongDistance::CalcDoDamage
 36357,0x1405d6fb0,0x1405df5e0,3,FEC::UpdateAVs
@@ -312,7 +312,7 @@ id,sse,vr,status,name
 36755,0x1405fd5b0,0x140605e00,4,RE::Actor::GetEyePos
 36801,0x140600400,0x140608c10,3,void Actor::StopMoving(float a_delta)
 36802,0x140600590,0x140608da0,4,RE::Actor::StopMovement
-36872,0x140603B30,0x14060C340,2,Actor::Kill
+36872,0x140603b30,0x14060c340,2,Actor::Kill
 36877,0x1406057c0,0x14060dfd0,3,RE::Actor::IsOnFlyingMount
 36889,0x140606850,0x14060f1d0,3,RE::Actor::IsActorNPC
 36901,0x140607680,0x140610000,3,RE::Actor::SwitchRace
@@ -352,7 +352,7 @@ id,sse,vr,status,name
 37808,0x140631c80,0x14063ab50,3,void Actor::InterruptCast(bool a_restoreMagicka)
 37810,0x140631d70,0x14063ac40,4,bool Actor::IsCasting(MagicItem* a_spell)
 37820,0x1406322f0,0x14063b1c0,3,void Actor::DeselectSpell(SpellItem* a_spell)
-37827,0x140632b60,0x14063ba30,4,"void Actor::VisitSpells_140632B60 (PlayerCharacter * param_1, ForEachSpellVisitor& a_visitor)"
+37827,0x140632b60,0x14063ba30,4,void Actor::VisitSpells(ForEachSpellVisitor& a_visitor)
 37828,0x140632d10,0x14063bbe0,3,bool Actor::HasSpell(SpellItem* a_spell)
 37832,0x140633090,0x14063bf60,4,RE::MagicTarget::Func1_140633090
 37861,0x140634830,0x14063d700,1,RE::Actor::GetSoulLevelValue
@@ -384,11 +384,11 @@ id,sse,vr,status,name
 39217,0x140694400,0x14069da00,3,RE::ArmorRatingVisitor::VisitArmor
 39221,0x1406944a0,0x14069daa0,3,RE::ArmorRatingVisitor::HaveNotVisitedArmor
 39223,0x140694500,0x14069db00,3,RE::BSContainer::ForEachResult ArmorRatingVisitorBase::Visit(InventoryEntryData* a_entryData)
-39231,0x140694710,0x14069DD10,3,PlayerSkills::Ctor
+39231,0x140694710,0x14069dd10,3,PlayerSkills::Ctor
 39247,0x140695020,0x14069e620,3,BSTEventSource<LevelIncrease::Event>* LevelIncrease::GetEventSource()
 39248,0x140695110,0x14069e710,3,BSTEventSource<SkillIncrease::Event>* SkillIncrease::GetEventSource()
-39340,0x140699040,0x1406A26A0,2,PlayerCharacter::Ctor
-39346,0x14069ABF0,0x1408ED870,2,PlayerCharacter::
+39340,0x140699040,0x1406a26a0,2,PlayerCharacter::Ctor
+39346,0x14069abf0,0x1408ed870,2,PlayerCharacter::
 39365,0x14069c2a0,0x1406bc6c0,3,"bool PlayerCharacter::CenterOnCell_Impl(const char* a_cellName, RE::TESObjectCELL* a_cell)"
 39371,0x14069d2c0,0x1406bd770,3,po3tweaks::SitToWait::CanSleepWait
 39372,0x14069d6e0,0x1406bde50,2,RE::Actor::CanFastTravel
@@ -399,7 +399,7 @@ id,sse,vr,status,name
 39407,0x1406a1e30,0x1406c28a0,3,YesImSure::NoPoisonPrompt::PoisonPromptLeftHand
 39410,0x1406a20b0,0x1406c2c00,3,po3tweaks::GameTimers::detail::UpdateTimers
 39413,0x1406a2540,0x1406c30b0,3,RE::PlayerCharacter::AddSkillExperience
-39415,0x1406A25A0,0x1406C3110,3,PlayerCharacter::InitActorValues
+39415,0x1406a25a0,0x1406c3110,3,PlayerCharacter::InitActorValues
 39425,0x1406a2fc0,0x1406c38a0,3,papyrus_extender::papyrus::detail::get_god_mode_impl
 39471,0x1406a9f90,0x1406cbce0,2,RE::PlayerCharacter::ActivatePickRef
 39475,0x1406aa260,0x1406cc000,3,RE::PlayerCharacter::StartGrabObject
@@ -411,23 +411,23 @@ id,sse,vr,status,name
 39584,0x1406b3a50,0x1406d6dc0,3,po3tweaks::FactionStealing::CanTake
 39612,0x1406b52a0,0x1406d8580,3,RE::PlayerCharacter::GetTintMask
 39614,0x1406b5450,0x1406d8730,3,RE::PlayerCharacter::GetNumTints
-39663,0x1406B8340,0x1406DB930,2,PlayerCharacter::DiscoveryCheck
+39663,0x1406b8340,0x1406db930,2,PlayerCharacter::DiscoveryCheck
 40056,0x1406c7d60,0x1406ee380,3,BSTEventSource<LocationDiscovery::Event>* LocationDiscovery::GetEventSource()
 40060,0x1406c8120,0x1406ee740,3,BSTEventSource<ShoutAttack::Event>* ShoutAttack::GetEventSource()
 40317,0x1406d71c0,0x1406fe060,4,po3tweaks::ToggleAI
-40327,0x1406d9380,0x140700220,4,float ProcessLists::GetSystemTimeClock (void)
+40327,0x1406d9380,0x140700220,4,float ProcessLists::GetSystemTimeClock()
 40330,0x1406d9490,0x140700330,3,"void ProcessLists::StopCombatAndAlarmOnActor(Actor* a_actor, bool a_notAlarm)"
 40394,0x1406de9a0,0x140705850,4,"std::int16_t ProcessLists::RequestHighestDetectionLevelAgainstActor(Actor* a_actor, std::uint32_t& a_LOSCount)"
 40396,0x1406dec50,0x140705b00,3,void ProcessLists::ClearCachedFactionFightReactions()
-40552,0x1406E6130,0x14070D020,3,PlayerSkills::GetSkillData
-40553,0x1406E6180,0x14070D070,3,PlayerSkills::GetLevelData
-40554,0x1406e61d0,0x14070D0C0,3,PlayerSkills::ModSkillPoints
-40555,0x1406e64d0,0x14070D3C0,3,PlayerSkills::ModSkillLevels
-40556,0x1406e65c0,0x14070D4B0,2,PlayerSkills::SetLevel
-40558,0x1406e6670,0x14070D560,4,PlayerSkills::CanLevelUp
+40552,0x1406e6130,0x14070d020,3,PlayerSkills::GetSkillData
+40553,0x1406e6180,0x14070d070,3,PlayerSkills::GetLevelData
+40554,0x1406e61d0,0x14070d0c0,3,PlayerSkills::ModSkillPoints
+40555,0x1406e64d0,0x14070d3c0,3,PlayerSkills::ModSkillLevels
+40556,0x1406e65c0,0x14070d4b0,2,PlayerSkills::SetLevel
+40558,0x1406e6670,0x14070d560,4,PlayerSkills::CanLevelUp
 40560,0x1406e6740,0x14070d630,3,RE::PlayerCharacter::PlayerSkills::AdvanceLevel
-40565,0x1406E69A0,0x14070D890,3,PlayerSkills::InitSkills
-40566,0x1406e6ad0,0x14070D9C0,3,PlayerSkills::EvaluateSkillData
+40565,0x1406e69a0,0x14070d890,3,PlayerSkills::InitSkills
+40566,0x1406e6ad0,0x14070d9c0,3,PlayerSkills::EvaluateSkillData
 40575,0x1406e7320,0x14070e210,4,RE::ProcessLists::HandlePlayerLevelUpdate(ProcessLists *param_1)
 41257,0x140704970,0x14072b900,3,RE::PlayerControls::Ctor
 41271,0x140705530,0x14072c380,3,RE::PlayerControls__sub_140705530
@@ -489,7 +489,7 @@ id,sse,vr,status,name
 50515,0x1408708a0,0x14089be30,3,RE::ItemCrafted::GetEventSource
 50688,0x14087ba70,0x1408a77e0,3,EssentialFavorites::Gifting::IsQuestObject
 50747,0x14087fff0,0x1408ad8c0,3,TrueHUD::SetHUDMode?
-50757,0x1408808d0,0x1408AE1E0,3,HUDNotifications::Update
+50757,0x1408808d0,0x1408ae1e0,3,HUDNotifications::Update
 50771,0x140881cc0,0x1408af5c0,3,TrueHUD::HUDChargeMeter::Update_140881CC0
 50882,0x140887750,0x1408b4c90,3,std::uint32_t Inventory3DManager::Render()
 50884,0x140887970,0x1408b4ea0,3,void Inventory3DManager::UpdateItem3D(InventoryEntryData* a_objDesc)
@@ -497,7 +497,7 @@ id,sse,vr,status,name
 50886,0x140887d10,0x1408b5240,3,void Inventory3DManager::Clear3D()
 50978,0x14088e280,0x1408bba50,3,EssentialFavorites::Dropped::IsQuestObject
 50980,0x14088e890,0x1408bc060,3,InventoryMenu::GetItemChargedEventSource
-51037,0x140893f80,0x1408C19F0,3,ConfirmLevelUpAttributeCallback::Run
+51037,0x140893f80,0x1408c19f0,3,ConfirmLevelUpAttributeCallback::Run
 51081,0x140896ac0,0x1408c4770,3,LockVariations::Model::RequestModel
 51084,0x1408971a0,0x1408c4e40,3,handtohand::LockpickingMenu::LockPickMenuSkillLevel
 51088,0x140897e10,0x1408c5ab0,3,handtohand::LockpickingMenu::LockPickSkills
@@ -510,14 +510,14 @@ id,sse,vr,status,name
 51400,0x1408aa140,0x1408d68f0,2,po3tweaks::SitToWait::HandleWaitRequest
 51420,0x1408ab180,0x1408d7fe0,4,RE::MessageBoxData::CreateMessage
 51422,0x1408ab5c0,0x1408d8420,3,void MessageBoxData::QueueMessage()
-51638,0x1408bf360,0x1408EC3E0,2,StatsMenu::ProcessMessage
-51652,0x1408c20c0,0x1408EEDB0,2,StatsMenu::UpdateSkillList
+51638,0x1408bf360,0x1408ec3e0,2,StatsMenu::ProcessMessage
+51652,0x1408c20c0,0x1408eedb0,2,StatsMenu::UpdateSkillList
 51755,0x1408ccff0,0x1408fa0a0,4,SubtitleManager::KillSubtitles
-51788,0x1408ce590,0x1408FB660,2,TrainingMenu::ProcessMessage
-51790,0x1408ce6f0,0x1408FB7C0,4,TrainingMenu::TrainCallback::Accept
-51793,0x1408ce8e0,0x1408FB9C0,3,TrainingMenu::Train
-51795,0x1408CEDF0,0x1408FBED0,3,TrainingMenu::SetSkillXpPercent
-51843,0x1408d11f0,0x1408FE370,3,TweenMenu::
+51788,0x1408ce590,0x1408fb660,2,TrainingMenu::ProcessMessage
+51790,0x1408ce6f0,0x1408fb7c0,4,TrainingMenu::TrainCallback::Accept
+51793,0x1408ce8e0,0x1408fb9c0,3,TrainingMenu::Train
+51795,0x1408cedf0,0x1408fbed0,3,TrainingMenu::SetSkillXpPercent
+51843,0x1408d11f0,0x1408fe370,3,TweenMenu::
 51899,0x1408d50f0,0x140902c10,3,RE::UIBlurManager::IncrementBlurCount
 51900,0x1408d5130,0x140902c50,3,RE::UIBlurManager::DecrementBlurCount
 51907,0x1408d53d0,0x140902f20,3,TrueHUD::FlashHudMenuMeter_1408D53D0
@@ -540,12 +540,12 @@ id,sse,vr,status,name
 52767,0x140909f30,0x1409446b0,3,PapyrusTweaks::
 52933,0x140915790,0x14094ff10,3,YesImSure::
 53029,0x14091c620,0x140956da0,3,"bool Actor::HasLineOfSight(TESObjectREFR* a_ref, bool& a_arg2)"
-53115,0x140921f10,0x14095C670,2,"SkyrimVM::ProcessRegisteredUpdates(SkyrimVM* a_vm, float a_budget)"
-53116,0x140922a90,0x14095D1F0,4,"SkyrimVM::ProcessTasklets(SkyrimVM* a_vm, float a_budget)"
+53115,0x140921f10,0x14095c670,2,"SkyrimVM::ProcessRegisteredUpdates(SkyrimVM* a_vm, float a_budget)"
+53116,0x140922a90,0x14095d1f0,4,"SkyrimVM::ProcessTasklets(SkyrimVM* a_vm, float a_budget)"
 53144,0x1409252c0,0x14095fd10,3,RE::SkyrimVM::QueuePostRenderCall
 53195,0x14092a9c0,0x140965410,3,SkyrimVM::HandleEvent(BSScript::StatsEvent* stats)
 53205,0x14092b6c0,0x140965d80,2,PapyrusTweaks::
-53207,0x14092b800,0x140965F00,3,"SkyrimVM::LoadGame(SkyrimVM* this, LoadStorageWrapper* a_wrapper)"
+53207,0x14092b800,0x140965f00,3,"SkyrimVM::LoadGame(SkyrimVM* this, LoadStorageWrapper* a_wrapper)"
 53209,0x14092b8e0,0x140965fe0,3,RE::SkyrimVM::DumpStacks
 53221,0x14092d130,0x140967780,4,"void SkyrimVM::RelayEvent(VMHandle a_handle, BSFixedString* a_event, BSScript::IFunctionArguments* a_args, SkyrimVM::ISendEventFilter* a_optionalFilter)"
 53948,0x14094d850,0x140987ab0,3,papyrus::Actor::TrapSoul
@@ -1936,7 +1936,7 @@ id,sse,vr,status,name
 241878,0x1415a03e0,0x141617570,3,VTABLE_ConcreteObjectFormFactory_TESNPC_43_13_0__0
 241890,0x1415a0598,0x141617728,3,VTABLE___InitWornVisitor_0
 241892,0x1415a05d0,0x141617760,3,VTABLE___ShouldRunDefaultWornVisitor_0
-241932,0x1415a08d0,0x141617A58,4,SinkOrSwim::isSwimmingVariable
+241932,0x1415a08d0,0x141617a58,4,SinkOrSwim::isSwimmingVariable
 242059,0x1415a1c98,0x141618e20,3,VTABLE_TESQuest_0
 242060,0x1415a1e98,0x141619020,3,VTABLE_TESQuest_1
 242063,0x1415a1ef0,0x141619078,3,VTABLE_ConcreteFormFactory_TESQuest_77__0
@@ -8238,7 +8238,7 @@ id,sse,vr,status,name
 520994,0x142f51ec0,0x1430a9f50,4,g_animationFileManager**
 523660,0x142f6b948,0x1430c3a08,3,float GetSecondsSinceLastFrame()
 523661,0x142f6b94c,0x1430c3a0c,3,TrueHUD::gSecondsSinceLastFrame_RealTime_142F6B94C
-523662,0x142f6b950,0x1430c3a10,3,float GetDurationOfApplicationRunTime()
+523662,0x142f6b950,0x1430c3a10,3,std::uint32_t GetDurationOfApplicationRunTime()
 523673,0x142f6ba48,0x1430c3b18,3,RE::INIPrefSettingCollection::Singleton
 523759,0x142f77208,0x1430cf888,4,NiMemManager* GetSingleton()
 523891,0x143012388,0x14316ab08,3,RE::NiRTTI_NiObject
@@ -8500,7 +8500,7 @@ id,sse,vr,status,name
 524722,0x143025ed0,0x14317e770,3,RE::NiRTTI_BSInstanceTriShape
 524729,0x143025f08,0x14317e798,4,RE::g_ID3D11Device
 524907,0x143028490,0x143181700,3,BSRenderManager* GetSingleton()
-524970,0x14302bb20,0x143185600,4,RE::BSGraphics::RenderTargetManager
+524970,0x14302bb20,0x143185600,4,RenderTargetManager* GetSingleton()
 524998,0x14302c890,0x143186c10,3,State* GetSingleton()
 525039,0x14302cc68,0x143186dd8,3,RE::NiRTTI_bhkWorldObject
 525051,0x14302cca8,0x143186e18,3,RE::NiRTTI_bhkWorld
