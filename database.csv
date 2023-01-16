@@ -90,6 +90,8 @@ id,sse,vr,status,name
 15812,0x1401d9200,0x1401e9da0,3,InventoryChanges* InventoryChanges::Ctor(TESObjectREFR* a_ref)
 15813,0x1401d92f0,0x1401e9e90,3,void InventoryChanges::Dtor()
 15829,0x1401e08b0,0x1401f1470,3,void InventoryChanges::InitScripts()
+15855,0x1401e5190,0x1401f5d50,4,void InventoryChanges::VisitInventory(IItemChangeVisitor& visitor)
+15856,0x1401e51d0,0x1401f5d90,4,void InventoryChanges::VisitWornItems(IItemChangeVisitor& visitor)
 15858,0x1401e5390,0x1401f5f50,2,papyrus_extender::fave_util::item::favorite
 15859,0x1401e58f0,0x1401f64b0,2,papyrus_extender::fave_util::item::unfavorite
 15868,0x1401e7310,0x1401f7ed0,3,RE::InventoryChanges::GetItemCount
@@ -350,6 +352,7 @@ id,sse,vr,status,name
 37808,0x140631c80,0x14063ab50,3,void Actor::InterruptCast(bool a_restoreMagicka)
 37810,0x140631d70,0x14063ac40,4,bool Actor::IsCasting(MagicItem* a_spell)
 37820,0x1406322f0,0x14063b1c0,3,void Actor::DeselectSpell(SpellItem* a_spell)
+37827,0x140632b60,0x14063ba30,4,"void Actor::VisitSpells_140632B60 (PlayerCharacter * param_1, ForEachSpellVisitor& a_visitor)"
 37828,0x140632d10,0x14063bbe0,3,bool Actor::HasSpell(SpellItem* a_spell)
 37832,0x140633090,0x14063bf60,4,RE::MagicTarget::Func1_140633090
 37861,0x140634830,0x14063d700,1,RE::Actor::GetSoulLevelValue
@@ -380,7 +383,7 @@ id,sse,vr,status,name
 39181,0x140693110,0x14069c710,3,RE::Actor::DoReset3D
 39217,0x140694400,0x14069da00,3,RE::ArmorRatingVisitor::VisitArmor
 39221,0x1406944a0,0x14069daa0,3,RE::ArmorRatingVisitor::HaveNotVisitedArmor
-39223,0x140694500,0x14069db00,3,RE::ArmorRatingVisitorBase::Visit
+39223,0x140694500,0x14069db00,3,RE::BSContainer::ForEachResult ArmorRatingVisitorBase::Visit(InventoryEntryData* a_entryData)
 39231,0x140694710,0x14069DD10,3,PlayerSkills::Ctor
 39247,0x140695020,0x14069e620,3,BSTEventSource<LevelIncrease::Event>* LevelIncrease::GetEventSource()
 39248,0x140695110,0x14069e710,3,BSTEventSource<SkillIncrease::Event>* SkillIncrease::GetEventSource()
@@ -412,6 +415,7 @@ id,sse,vr,status,name
 40056,0x1406c7d60,0x1406ee380,3,BSTEventSource<LocationDiscovery::Event>* LocationDiscovery::GetEventSource()
 40060,0x1406c8120,0x1406ee740,3,BSTEventSource<ShoutAttack::Event>* ShoutAttack::GetEventSource()
 40317,0x1406d71c0,0x1406fe060,4,po3tweaks::ToggleAI
+40327,0x1406d9380,0x140700220,4,float ProcessLists::GetSystemTimeClock (void)
 40330,0x1406d9490,0x140700330,3,"void ProcessLists::StopCombatAndAlarmOnActor(Actor* a_actor, bool a_notAlarm)"
 40394,0x1406de9a0,0x140705850,4,"std::int16_t ProcessLists::RequestHighestDetectionLevelAgainstActor(Actor* a_actor, std::uint32_t& a_LOSCount)"
 40396,0x1406dec50,0x140705b00,3,void ProcessLists::ClearCachedFactionFightReactions()
@@ -8496,6 +8500,7 @@ id,sse,vr,status,name
 524722,0x143025ed0,0x14317e770,3,RE::NiRTTI_BSInstanceTriShape
 524729,0x143025f08,0x14317e798,4,RE::g_ID3D11Device
 524907,0x143028490,0x143181700,3,BSRenderManager* GetSingleton()
+524970,0x14302bb20,0x143185600,4,RE::BSGraphics::RenderTargetManager
 524998,0x14302c890,0x143186c10,3,State* GetSingleton()
 525039,0x14302cc68,0x143186dd8,3,RE::NiRTTI_bhkWorldObject
 525051,0x14302cca8,0x143186e18,3,RE::NiRTTI_bhkWorld
