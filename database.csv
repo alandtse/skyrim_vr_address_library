@@ -7913,6 +7913,9 @@ id,sse,vr,status,name
 501401,0x141db4b98,0x141e71c08,3,po3tweaks::EffectShaderZbuffer
 501789,0x141db8910,0x141e75a00,2,RE::SCRIPT_FUNCTION::FirstScriptCommand
 501797,0x141dc6f60,0x141e83fb0,2,RE::SCRIPT_FUNCTION::FirstConsoleCommand
+508313,0x141decb18,0x141ea9c98,4,fBlockLevel0Distance:TerrainManager
+508315,0x141decb30,0x141ea9cb0,4,fBlockLevel1Distance:TerrainManager
+508319,0x141decb60,0x141ea9ce0,4,fTreeLoadDistance:TerrainManager
 508412,0x141ded188,0x141eaa184,4,BGSAddToPlayerInventoryEvent:GetIndex
 508778,0x141deebf0,0x141eabd50,4,RE::lpClassName_141DEEBF0
 509271,0x141df0858,0x141ead84d,2,po3tweaks::GameTimers::detail::sleeping
