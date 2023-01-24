@@ -1,3 +1,10 @@
+# [0.75.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.74.0...v0.75.0) (2023-01-24)
+
+
+### Features
+
+* Add UnlinkedTypes addresses for CLIB ([#31](https://github.com/alandtse/skyrim_vr_address_library/issues/31)) ([4418e49](https://github.com/alandtse/skyrim_vr_address_library/commit/4418e498c401c43348b8358348f25f41a1f09e4a))
+
 # [0.74.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.73.0...v0.74.0) (2023-01-19)
 
 
