@@ -92,8 +92,8 @@ id,sse,vr,status,name
 15829,0x1401e08b0,0x1401f1470,3,void InventoryChanges::InitScripts()
 15855,0x1401e5190,0x1401f5d50,4,void InventoryChanges::VisitInventory(IItemChangeVisitor& visitor)
 15856,0x1401e51d0,0x1401f5d90,4,void InventoryChanges::VisitWornItems(IItemChangeVisitor& visitor)
-15858,0x1401e5390,0x1401f5f50,2,papyrus_extender::fave_util::item::favorite
-15859,0x1401e58f0,0x1401f64b0,2,papyrus_extender::fave_util::item::unfavorite
+15858,0x1401e5390,0x1401f5f50,4,"void InventoryChanges::SetFavorite(InventoryEntryData* a_entry, ExtraDataList* a_itemList)"
+15859,0x1401e58f0,0x1401f64b0,4,"void InventoryChanges::RemoveFavorite(InventoryEntryData* a_entry, ExtraDataList* a_itemList)"
 15868,0x1401e7310,0x1401f7ed0,3,RE::InventoryChanges::GetItemCount
 15889,0x1401e9d90,0x1401fa900,3,void InventoryChanges::InitLeveledItems()
 15890,0x1401ea020,0x1401fab90,3,void InventoryChanges::InitFromContainerExtra()
@@ -505,8 +505,8 @@ id,sse,vr,status,name
 51094,0x1408987d0,0x1408c6500,3,LockVariations::Sound::update_pick_angle
 51096,0x140898cd0,0x1408c69f0,3,LockVariations::Sound::update_lock_angle
 51098,0x140898ff0,0x1408c6dd0,3,LockVariations::Sound::rotate_lock
-51121,0x140899c40,0x1408c7cd0,2,papyrus_extender::fave_util::magic::favorite
-51122,0x140899ca0,0x1408c7d30,2,papyrus_extender::fave_util::magic::unfavorite
+51121,0x140899c40,0x1408c7cd0,4,void MagicFavorites::SetFavorite(TESForm* a_form)
+51122,0x140899ca0,0x1408c7d30,4,void MagicFavorites::RemoveFavorite(TESForm* a_form)
 51400,0x1408aa140,0x1408d68f0,2,po3tweaks::SitToWait::HandleWaitRequest
 51420,0x1408ab180,0x1408d7fe0,4,RE::MessageBoxData::CreateMessage
 51422,0x1408ab5c0,0x1408d8420,3,void MessageBoxData::QueueMessage()
