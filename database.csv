@@ -540,6 +540,7 @@ id,sse,vr,status,name
 52767,0x140909f30,0x1409446b0,3,PapyrusTweaks::
 52933,0x140915790,0x14094ff10,3,YesImSure::
 53029,0x14091c620,0x140956da0,3,"bool Actor::HasLineOfSight(TESObjectREFR* a_ref, bool& a_arg2)"
+53108,0x1409204a0,0x14095ABA0,3,SkyrimVM::SkyrimVM
 53115,0x140921f10,0x14095c670,2,"SkyrimVM::ProcessRegisteredUpdates(SkyrimVM* a_vm, float a_budget)"
 53116,0x140922a90,0x14095d1f0,4,"SkyrimVM::ProcessTasklets(SkyrimVM* a_vm, float a_budget)"
 53144,0x1409252c0,0x14095fd10,3,RE::SkyrimVM::QueuePostRenderCall
@@ -703,6 +704,8 @@ id,sse,vr,status,name
 98520,0x141278110,0x1412b1380,3,BSScript::Internal::CodeTasklet::VMProcess
 98548,0x14127c1b0,0x1412b5420,3,BSScript::Internal::CodeTasklet::HandleCall
 98654,0x141284ae0,0x1412C5B30,3,BSScript::UnlinkedTypes::Object::dtor
+98721,0x141288890,0x1412BA8B0,3,BSScript::LinkerProcessor::ConvertVariables
+98722,0x1412896e0,0x1412BB700,3,BSScript::LinkerProcessor::ConvertProperties
 98759,0x14128cce0,0x1412BEE20,3,BSScript::UnlinkedTypes::Object::ctor
 98893,0x141291c30,0x1412ca540,3,"void BSShaderProperty::SetFlags(EShaderPropertyFlag8 a_flag, bool a_set)"
 98897,0x141291d40,0x1412ca650,3,"void BSShaderProperty::SetMaterial(BSShaderMaterial* a_material, bool a_unk1)"
