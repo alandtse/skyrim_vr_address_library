@@ -1,3 +1,11 @@
+# [0.76.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.75.0...v0.76.0) (2023-01-25)
+
+
+### Features
+
+* Add addresses for Papyrus Tweaks NG 4.0 ([#32](https://github.com/alandtse/skyrim_vr_address_library/issues/32)) ([52032c3](https://github.com/alandtse/skyrim_vr_address_library/commit/52032c39891dba0fef24497f408b07a040b771f1))
+* add hkstringptr ([d9386ad](https://github.com/alandtse/skyrim_vr_address_library/commit/d9386ada9f98ce361cf30773472fab4451d36d07))
+
 # [0.75.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.74.0...v0.75.0) (2023-01-24)
 
 
