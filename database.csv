@@ -257,6 +257,7 @@ id,sse,vr,status,name
 34819,0x140587350,0x14058e920,3,RE::BGSSaveLoadManager::Load
 34856,0x140588f90,0x1405905e0,4,bool BGSSaveLoadManager::LoadMostRecentSaveGame()
 35199,0x14059b140,0x1405a2800,4,void MemoryManager::RegisterMemoryManager()
+35203,0x14059b9a0,0x1405a3060,4,uint32_t ScrapHeap_GetMaxSize_14059b9a0(void)
 35317,0x1405a2930,0x1405a9ff0,3,bool BGSImpactManager::PlayImpactDataSounds(ImpactSoundData& a_impactSoundData)
 35320,0x1405a2c60,0x1405aa320,4,"bool BGSImpactManager::PlayImpactEffect(TESObjectREFR* a_ref, BGSImpactDataSet* a_impactEffect, const BSFixedString& a_nodeName, NiPoint3& a_pickDirection, float a_pickLength, bool a_applyNodeRotation, bool a_useNodeLocalRotation)"
 35408,0x1405a64f0,0x1405adbb0,4,RE::Calendar::GetGameDaysPassed
@@ -731,6 +732,8 @@ id,sse,vr,status,name
 100847,0x141307160,0x141348390,3,Skyrim-Upscaler
 101339,0x14131f810,0x1413656b0,4,RE::BSShader::LoadShaders_14131F810
 101884,0x14133f0c0,0x14137c200,3,RE::BSWin32SaveDataSystemUtility::GetSingleton
+101962,0x141340ff0,0x14137e180,4,"longlong **BSWin32SaveDataSystemUtility::Ctor_141340FF0(longlong param_1,longlong **param_2,char *param_3,int param_4)"
+101985,0x1413420c0,0x14137f330,4,"ulonglong anonymous_namespace__Win32FileType::CopyToBuffer_1413420C0(longlong param_1,undefined8 param_2,uint param_3)"
 102238,0x14134bdb0,0x14138baba,3,RE::_CRT::RTDynamicCast
 228344,0x14151f2b0,0x141596600,3,VTABLE_BaseFormComponent_0
 228345,0x14151f2d8,0x141596628,3,VTABLE_IFormFactory_0
