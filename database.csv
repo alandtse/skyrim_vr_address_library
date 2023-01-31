@@ -39,6 +39,7 @@ id,sse,vr,status,name
 13594,0x140167220,0x140177940,3,FDGE::Skyrim::LoadWorldData
 13625,0x14016c210,0x14017cc30,3,"ObjectRefHandle TESDataHandler::CreateReferenceAtLocation(TESBoundObject* a_base, const NiPoint3& a_location, const NiPoint3& a_rotation, TESObjectCELL* a_targetCell, TESWorldSpace* a_selfWorldSpace, TESObjectREFR* a_alreadyCreatedRef, BGSPrimitive* a_primitive, const ObjectRefHandle& a_linkedRoomRefHandle, bool a_forcePersist, bool a_arg11)"
 13657,0x1401713d0,0x140181b80,3,RE::TESDataHandler::LoadScripts
+13671,0x1401726a0,0x140182df0,4,void DataHandler::sub_1401726A0 (TESNPC * param_1)
 13789,0x140177790,0x1401876a0,3,RE::Sky::GetSingleton
 13855,0x14017a700,0x14018a5b0,4,"bool TESFile::OpenTES(NiFile::OpenMode a_accessMode, bool a_lock)"
 13857,0x14017ad40,0x14018abf0,4,bool TESFile::CloseTES(bool a_force)
