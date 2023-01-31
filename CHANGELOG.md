@@ -1,3 +1,12 @@
+# [0.77.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.76.0...v0.77.0) (2023-01-31)
+
+
+### Features
+
+* add datahandler function ([4bd2576](https://github.com/alandtse/skyrim_vr_address_library/commit/4bd2576e70667e9b2c3582f18a884740827a7a60))
+* add RTTI_BSScript____VMTypeResolveFunctor ([e433b9b](https://github.com/alandtse/skyrim_vr_address_library/commit/e433b9b2ee7309f2ec74f0234d56002f01b68d28))
+* add savegame functions for enginefixes ([bb3ec7f](https://github.com/alandtse/skyrim_vr_address_library/commit/bb3ec7fdb0ede6494dca397721eafdea47c06abf))
+
 # [0.76.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.75.0...v0.76.0) (2023-01-25)
 
 
