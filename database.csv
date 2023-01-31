@@ -16563,7 +16563,7 @@ id,sse,vr,status,name
 691836,0x141eb8ac0,0x141f7ccc0,3,RE::RTTI_BSScript__IVirtualMachine
 691837,0x141eb8af0,0x141f7ccf0,3,RE::RTTI_BSScript__IVMDebugInterface
 691838,0x141eb8b30,0x141f7d1c0,3,RE::RTTI_BSScript__UnlinkedTypes__Function__ConvertTypeFunctor
-691839,0x141eb8b80,0x141f7d210,1,RE::RTTI_BSScript____VMTypeResolveFunctor
+691839,0x141eb8b80,0x141f7d210,4,RE::RTTI_BSScript____VMTypeResolveFunctor
 691840,0x141eb8bd0,0x141f7d260,3,RE::RTTI_BSScript__ByteCode__PackedInstructionStream__InstructionFunctor
 691841,0x141eb8c28,0x141f7d2b8,3,RE::RTTI_BSScript__IMemoryPagePolicy
 691842,0x141eb8c60,0x141f7d2f0,3,RE::RTTI_BSScript__SimpleAllocMemoryPagePolicy
