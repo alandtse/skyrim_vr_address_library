@@ -395,7 +395,7 @@ id,sse,vr,status,name
 39371,0x14069d2c0,0x1406bd770,3,po3tweaks::SitToWait::CanSleepWait
 39372,0x14069d6e0,0x1406bde50,2,RE::Actor::CanFastTravel
 39373,0x14069d9a0,0x1406be070,3,RE::Actor::sub_14069D9A0
-39384,0x14069fe60,0x1406c0640,3,RE::PlayerCharacter::PlayPickupEvent
+39384,0x14069fe60,0x1406c0640,3,"void PlayerCharacter::AddPlayerAddItemEvent(TESObject* a_object, TESForm* a_owner, TESObjectREFR* a_container, AQUIRE_TYPE a_type)"
 39401,0x1406a1820,0x1406c2160,3,splashes_of_skyrim::RainManager::ToggleWaterRipples
 39406,0x1406a1cc0,0x1406c2730,3,po3tweaks::NoPoisonPrompt::PoisonPrompt
 39407,0x1406a1e30,0x1406c28a0,3,YesImSure::NoPoisonPrompt::PoisonPromptLeftHand
