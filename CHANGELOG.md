@@ -1,3 +1,10 @@
+# [0.78.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.77.0...v0.78.0) (2023-02-10)
+
+
+### Features
+
+* sync with latest po3 commonlib ([1fc6d9c](https://github.com/alandtse/skyrim_vr_address_library/commit/1fc6d9ca78da7ed12e8e556e4bf8a282da4d2618))
+
 # [0.77.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.76.0...v0.77.0) (2023-01-31)
 
 
