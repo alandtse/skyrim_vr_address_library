@@ -75,6 +75,7 @@ id,sse,vr,status,name
 15547,0x1401cc7c0,0x1401dd210,3,void NiAVObject::RemoveDecals()
 15569,0x1401cd350,0x1401ddde0,3,RE::NiNode::AttachWeapon
 15576,0x1401cdd40,0x1401de820,2,"void BSDismemberSkinInstance::UpdateDismemberPartion(std::uint16_t a_slot, bool a_enable)"
+15644,0x1401d1530,0x1401e1ff0,4,NiAVObject * TESHavokUtilities::FindCollidableObject_1401d1530 (hkpCollidable * a_linkedCollidable)
 15671,0x1401d24c0,0x1401e2f80,4,"bool NiCamera::BoundInFrustum(const NiBound& a_bound, NiCamera* a_camera)"
 15672,0x1401d2630,0x1401e30f0,3,RE::PointInFrustum
 15752,0x1401d64e0,0x1401e7080,4,RE::ExtraContainerChanges__get_max_something
@@ -112,6 +113,7 @@ id,sse,vr,status,name
 17470,0x14022a8c0,0x14023bc10,3,BSTEventSource<BooksRead::Event>* BooksRead::GetEventSource()
 17521,0x14022cb50,0x14023dea0,3,po3tweaks::AIFadeOut::GetFadeState
 17522,0x14022d1d0,0x14023e530,2,po3tweaks::LoadDoorPrompt
+17539,0x14022e8d0,0x14023fc40,4,"void TESObjectDOOR::LinkRandomTeleportDoors (TESObjectREFR * a_door, TESObjectREFR * a_linkedDoor)"
 17693,0x140235240,0x1402465b0,3,RE::TESObjectWEAP::Fire_140235240
 17965,0x140243380,0x140254a50,3,BGSLocation::ClearedCheck
 18046,0x1402463a0,0x140257a70,3,BSTEventSource<LocationCleared::Event>* LocationCleared::GetEventSource()
@@ -185,7 +187,8 @@ id,sse,vr,status,name
 24647,0x14037f050,0x14038d9f0,3,Experience::
 24719,0x140380be0,0x140390450,3,BSTEventSource<QuestStatus::Event>* QuestStatus::GetEventSource()
 24985,0x14038d990,0x14039d1c0,3,RE::TESTopicInfo::ResponseData::PopulateResponseText
-25466,0x1403a4dd0,0x1403b4940,3,RE::TESHavokUtilities::FindCollidableRef
+25466,0x1403a4dd0,0x1403b4940,3,TESObjectREFR* TESHavokUtilities::FindCollidableRef(const hkpCollidable& a_linkedCollidable)
+25478,0x1403a59d0,0x1403b5540,4,"float TESHavokUtilities::GetDamageForImpact_1403a59d0 (float a_mass, float a_speed)"
 25482,0x1403a6140,0x1403b5cb0,3,bhkCollisionObject* NiAVObject::GetCollisionObject()
 25620,0x1403ad1f0,0x1403bcec0,4,RE::Sky::Moon_UpdatePhase
 25626,0x1403adf90,0x1403bdc60,4,RE::Sky::Moon::Update_*
@@ -228,6 +231,7 @@ id,sse,vr,status,name
 31152,0x1404b8850,0x1404c8930,3,SeasonsofSkyrim::LODSwap::Tree::BuildTypeListFileName
 31409,0x1404c8810,0x1404d89d0,4,RE::TESWaterSystem::UpdateUnderWaterVariables
 31410,0x1404c8880,0x1404d8a40,3,"void BSTriShape::TESWaterSystem::AddRipple(const NiPoint3& a_pos, float a_scale)"
+31576,0x1404d06c0,0x1404e0860,4,"uint32_t BGSStoryEventManager::AddEvent_Impl1404d06c0(longlong a_this,uint32_t a_index,void *a_event)"
 31717,0x1404d7f80,0x1404e8120,3,RE::BGSStoryTeller::BeginStartUpQuest
 31718,0x1404d80a0,0x1404e8240,3,RE::BGSStoryTeller::BeginShutDownQuest
 31812,0x1404dda20,0x1404edb90,3,AnimationMotionRevoluation::MotionDataContainer::ProcessTranslationData
@@ -321,6 +325,7 @@ id,sse,vr,status,name
 36927,0x140608af0,0x140611680,3,bool Actor::IsBlocking()
 36973,0x14060b620,0x140614210,3,RE::GameEventHandler::FallLongDistance::CalcDoDamage::process_movefinish_event
 36994,0x14060e820,0x1406173e0,3,TrueHUD::FlashHUDStaminaMountHook
+37016,0x14060f0c0,0x140617cd0,4,float Actor::CalcEquippedWeight_14060F0C0 (Actor * a_this)
 37390,0x14061c880,0x140625470,3,BSTEventSource<ActorKill::Event>* ActorKill::GetEventSource()
 37392,0x14061ca60,0x140625650,3,BSTEventSource<DisarmedEvent::Event>* DisarmedEvent::GetEventSource()
 37510,0x140620690,0x140629440,3,RE::Actor::sub_140620690
@@ -520,6 +525,9 @@ id,sse,vr,status,name
 51793,0x1408ce8e0,0x1408fb9c0,3,TrainingMenu::Train
 51795,0x1408cedf0,0x1408fbed0,3,TrainingMenu::SetSkillXpPercent
 51843,0x1408d11f0,0x1408fe370,3,TweenMenu::
+51867,0x1408d38e0,0x140901370,4,"void UI3DSceneManager::SetCameraPosition_1408d38e0 (longlong a_this, NiPoint3 * a_pos)"
+51869,0x1408d3990,0x140901420,4,"void UI3DSceneManager::SetCameraRotate_1408d3990 (longlong a_this, NiMatrix33 * a_rotate)"
+51870,0x1408d39e0,0x140901470,3,"void UI3DSceneManager::SetCameraFOV_1408d39e0 (longlong a_this, float a_fov)"
 51899,0x1408d50f0,0x140902c10,3,RE::UIBlurManager::IncrementBlurCount
 51900,0x1408d5130,0x140902c50,3,RE::UIBlurManager::DecrementBlurCount
 51907,0x1408d53d0,0x140902f20,3,TrueHUD::FlashHudMenuMeter_1408D53D0
@@ -8158,6 +8166,7 @@ id,sse,vr,status,name
 514182,0x141ebeb40,0x141f83220,2,BSFaceGenManager* GetSingleton()
 514184,0x141ebeb50,0x141f83240,3,po3tweaks::ToggleCollisionFix::GetCollisionState
 514283,0x141ec0a60,0x141f850e8,2,SubtitleManager* GetSingleton()
+514284,0x141ec0a68,0x141f850f0,4,static FOCollisionListener* GetSingleton()
 514285,0x141ec0a70,0x141f850f8,3,RE::UIMessageQueue::Singleton
 514286,0x141ec0a78,0x141f85100,3,RE::InterfaceStrings::Singleton
 514287,0x141ec0a80,0x141f85108,3,RE::Calendar::Singleton
@@ -8248,6 +8257,7 @@ id,sse,vr,status,name
 519579,0x142f4c910,0x143011d40,4,TrueHUD::g_worldToCamMatrix
 519618,0x142f4ded0,0x1430133a8,4,TrueHUD::g_viewPort
 519716,0x142f4e240,0x143013728,3,TESObjectREFR* GetTargetReference()
+519827,0x142f4e6b8,0x143013ae8,4,static MistMenu* GetSingleton()
 520994,0x142f51ec0,0x1430a9f50,4,g_animationFileManager**
 523660,0x142f6b948,0x1430c3a08,3,float GetSecondsSinceLastFrame()
 523661,0x142f6b94c,0x1430c3a0c,3,TrueHUD::gSecondsSinceLastFrame_RealTime_142F6B94C
