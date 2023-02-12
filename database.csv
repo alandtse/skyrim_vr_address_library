@@ -505,6 +505,7 @@ id,sse,vr,status,name
 50886,0x140887d10,0x1408b5240,3,void Inventory3DManager::Clear3D()
 50978,0x14088e280,0x1408bba50,3,EssentialFavorites::Dropped::IsQuestObject
 50980,0x14088e890,0x1408bc060,3,InventoryMenu::GetItemChargedEventSource
+50991,0x14088fa00,0x1408BD650,3,Recipes::
 51037,0x140893f80,0x1408c19f0,3,ConfirmLevelUpAttributeCallback::Run
 51081,0x140896ac0,0x1408c4770,3,LockVariations::Model::RequestModel
 51084,0x1408971a0,0x1408c4e40,3,handtohand::LockpickingMenu::LockPickMenuSkillLevel
