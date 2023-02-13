@@ -1,3 +1,10 @@
+# [0.79.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.78.0...v0.79.0) (2023-02-13)
+
+
+### Features
+
+* Add Settings Of Skyrim and Recipes([#34](https://github.com/alandtse/skyrim_vr_address_library/issues/34)) ([8f5eac5](https://github.com/alandtse/skyrim_vr_address_library/commit/8f5eac5267373d4183396a8e2502ea013a9c9181))
+
 # [0.78.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.77.0...v0.78.0) (2023-02-10)
 
 
