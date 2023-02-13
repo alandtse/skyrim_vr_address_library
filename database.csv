@@ -274,6 +274,7 @@ id,sse,vr,status,name
 35593,0x1405b5490,0x1405bd0f0,2,Main::sub_*
 35601,0x1405b6060,0x1405bdcf0,4,NiCamera* Main::WorldRootCamera()
 35620,0x1405b6dc0,0x1405bee40,3,Main::sub_*
+35642,0x1405b8f00,0x1405c0f70,3,SettingsOfSkyrim::
 35882,0x1405c0610,0x1405c8b30,3,po3tweaks::ScreenshotToConsole::DebugNotification
 35978,0x1405c5220,0x1405cd7c0,3,"void TaskQueueInterface::QueueAddRipple(float a_scale, const NiPoint3& a_pos)"
 35987,0x1405c58c0,0x1405cde60,2,"void TaskQueueInterface::QueueRemoveSpell(ActorHandle& a_actorHandle, SpellItem* a_spellItem)"
@@ -504,6 +505,7 @@ id,sse,vr,status,name
 50886,0x140887d10,0x1408b5240,3,void Inventory3DManager::Clear3D()
 50978,0x14088e280,0x1408bba50,3,EssentialFavorites::Dropped::IsQuestObject
 50980,0x14088e890,0x1408bc060,3,InventoryMenu::GetItemChargedEventSource
+50991,0x14088fa00,0x1408BD650,3,Recipes::
 51037,0x140893f80,0x1408c19f0,3,ConfirmLevelUpAttributeCallback::Run
 51081,0x140896ac0,0x1408c4770,3,LockVariations::Model::RequestModel
 51084,0x1408971a0,0x1408c4e40,3,handtohand::LockpickingMenu::LockPickMenuSkillLevel
