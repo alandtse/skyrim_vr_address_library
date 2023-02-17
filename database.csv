@@ -324,6 +324,7 @@ id,sse,vr,status,name
 36889,0x140606850,0x14060f1d0,3,RE::Actor::IsActorNPC
 36901,0x140607680,0x140610000,3,RE::Actor::SwitchRace
 36927,0x140608af0,0x140611680,3,bool Actor::IsBlocking()
+36943,0x140609000,0x140611bc0,4,"void Actor::UpdateAwakeSound_140609000 (Actor * a_this, NiAVObject * a_obj3D)"
 36973,0x14060b620,0x140614210,3,RE::GameEventHandler::FallLongDistance::CalcDoDamage::process_movefinish_event
 36994,0x14060e820,0x1406173e0,3,TrueHUD::FlashHUDStaminaMountHook
 37016,0x14060f0c0,0x140617cd0,4,float Actor::CalcEquippedWeight_14060F0C0 (Actor * a_this)
@@ -591,11 +592,13 @@ id,sse,vr,status,name
 66355,0x140bed530,0x140c283e0,4,RE::BSSoundHandle::Play
 66356,0x140bed570,0x140c28420,3,RE::BSSoundHandle::Play3d
 66358,0x140bed600,0x140c284b0,3,RE::BSSoundHandle::Stop
+66359,0x140bed640,0x140c284f0,4,bool BSSoundHandle::IsPlaying_140bed640 (BSSoundHandle * a_this)
 66360,0x140bed690,0x140c28540,3,RE::BSSoundHandle::IsValid
 66365,0x140bed7b0,0x140c28660,3,bool BSSoundHandle::SetVolume(float a_volume)
 66366,0x140bed800,0x140c286b0,3,bool BSSoundHandle::SetFrequency(float a_frequency)
 66370,0x140bed920,0x140c287d0,4,RE::BSSoundHandle::SetPosition
 66375,0x140bedb10,0x140c289c0,4,RE::BSSoundHandle::SetObjectToFollow
+66384,0x140bedde0,0x140c28c90,4,"bool BSSoundHandle::FadeInPlay (BSSoundHandle * a_this, uint16_t a_fadeTimeMS)"
 66385,0x140bede30,0x140c28ce0,4,bool BSSoundHandle::FadeOutAndRelease(std::uint16_t a_fadeTimeMS)
 66391,0x140bee580,0x140c29430,4,RE::BSAudioManager::GetSingleton
 66401,0x140beee70,0x140c29d20,4,RE::BSAudioManager::PlaySoundInt
@@ -740,6 +743,7 @@ id,sse,vr,status,name
 100110,0x1412d3360,0x141312270,3,BSLightingShaderMaterialLODLandscape* BSLightingShaderMaterialLODLandscape::Ctor()
 100118,0x1412d38f0,0x141312800,3,BSLightingShaderMaterialSnow* BSLightingShaderMaterialSnow::Ctor()
 100125,0x1412d3ad0,0x1413129e0,3,BSLightingShaderMaterialMultiLayerParallax* BSLightingShaderMaterialMultiLayerParallax::Ctor()
+100717,0x1412fdcc0,0x1413401e0,4,"BSShader * BSShader::sub_1412FDCC0 (BSShader * param_1, undefined8 param_2, undefined8 param_3, undefined4 param_4, undefined1 param_5, undefined8 param_6)"
 100847,0x141307160,0x141348390,3,Skyrim-Upscaler
 101339,0x14131f810,0x1413656b0,4,RE::BSShader::LoadShaders_14131F810
 101884,0x14133f0c0,0x14137c200,3,RE::BSWin32SaveDataSystemUtility::GetSingleton
