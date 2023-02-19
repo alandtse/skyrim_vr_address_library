@@ -1,3 +1,10 @@
+# [0.81.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.80.0...v0.81.0) (2023-02-19)
+
+
+### Features
+
+* add requests from doodles ([88f9903](https://github.com/alandtse/skyrim_vr_address_library/commit/88f990375acd4f9abe8a15cd72bec58713860662))
+
 # [0.80.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.79.0...v0.80.0) (2023-02-17)
 
 
