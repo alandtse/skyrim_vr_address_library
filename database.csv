@@ -571,6 +571,7 @@ id,sse,vr,status,name
 54836,0x1409731b0,0x1409ad050,3,papyrus__Game::getplayer_1409731B0
 55141,0x140980190,0x1409baf10,3,FDGE::BSScript::InitializeScriptTypes
 55352,0x140988450,0x1409c35d0,2,po3tweaks::GameTimers::SetGlobal
+55672,0x1409951f0,0x1409CFD10,3,papyrus__ObjectReference::PlaceAtMe
 55945,0x1409a4050,0x1409deb70,3,SPID:Distribute::DeathItemManager::Detail::Add_item
 56227,0x1409ae5c0,0x1409e90e0,3,RE::TESObjectREFR::MoveTo
 56476,0x1409b8750,0x1409f32a0,2,DialogueMovementEnabler::isInMenuMode
