@@ -1,3 +1,10 @@
+# [0.82.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.81.0...v0.82.0) (2023-02-25)
+
+
+### Features
+
+* Add PlaceAtMe for Undaunted Port ([#35](https://github.com/alandtse/skyrim_vr_address_library/issues/35)) ([47e8c4c](https://github.com/alandtse/skyrim_vr_address_library/commit/47e8c4caf83df01af7c53cd6bf71fdd35fcea666))
+
 # [0.81.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.80.0...v0.81.0) (2023-02-19)
 
 
