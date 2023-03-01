@@ -5,7 +5,8 @@ id,sse,vr,status,name
 10974,0x1400f9ca0,0x14010a250,3,RE::INISettingCollection::Unk_07
 10979,0x1400f9e90,0x14010a440,3,RE::BSString::Set_CStr
 11045,0x1400fcfe0,0x14010d590,3,MemoryManager* MemoryManager::GetSingleton()
-11183,0x1401007f0,0x140110da0,3,bool MagicItem::IsValid()
+11183,0x1401007f0,0x140110da0,3,bool MagicItem::IsPermanent()
+11194,0x140100df0,0x1401113a0,4,EffectSetting* MagicItem::GetAVEffectSetting()
 11213,0x140101a30,0x140111fe0,3,RE::MagicItem::CalculateCost
 11216,0x140101cc0,0x140112270,3,RE::MagicItem::GetCostliestEffectItem
 11308,0x140104ad0,0x1401150c0,3,FixedStrings* FixedStrings::GetSingleton()
@@ -114,6 +115,7 @@ id,sse,vr,status,name
 17521,0x14022cb50,0x14023dea0,3,po3tweaks::AIFadeOut::GetFadeState
 17522,0x14022d1d0,0x14023e530,2,po3tweaks::LoadDoorPrompt
 17539,0x14022e8d0,0x14023fc40,4,"void TESObjectDOOR::LinkRandomTeleportDoors (TESObjectREFR * a_door, TESObjectREFR * a_linkedDoor)"
+17689,0x140235070,0x1402463e0,4,"NiAVObject * TESObjectWEAP::GetFireNode (TESObjectWEAP * a_this, NiAVObject * a_root)"
 17693,0x140235240,0x1402465b0,3,RE::TESObjectWEAP::Fire_140235240
 17965,0x140243380,0x140254a50,3,BGSLocation::ClearedCheck
 18046,0x1402463a0,0x140257a70,3,BSTEventSource<LocationCleared::Event>* LocationCleared::GetEventSource()
@@ -130,6 +132,8 @@ id,sse,vr,status,name
 19201,0x14028b940,0x14029d070,3,bool TESObjectREFR::HasQuestObject()
 19220,0x14028c440,0x14029db70,3,RE::TESObjectREFR::HasEffectKeyword?
 19238,0x14028cc60,0x14029e390,4,float TESObjectREFR::GetScale()
+19244,0x14028d0b0,0x14029e7e0,4,bool TESObjectREFR::CanBeMoved_14028D0B0 (TESObjectREFR * param_1)
+19265,0x14028dcf0,0x14029f420,4,"bool Actor::HasOutfitItems (Actor * a_this, BGSOutfit * a_outfit)"
 19275,0x14028e360,0x14029fa90,4,std::int32_t PlayerCharacter::GetItemCount(TESBoundObject* a_object)
 19277,0x14028e3c0,0x14029faf0,3,float TESObjectREFR::GetWeightInContainer()
 19323,0x1402945e0,0x1402a5cf0,3,RE::TESObjectREFR::FindReferenceFor3D
@@ -358,7 +362,7 @@ id,sse,vr,status,name
 37772,0x14062f720,0x1406385f0,3,bool Actor::RemoveSpell(SpellItem* a_spell)
 37802,0x140631360,0x14063a230,3,RE::Actor::UpdateArmorAbility
 37803,0x1406313d0,0x14063a2a0,3,RE::Actor::UpdateWeaponAbility
-37804,0x1406314f0,0x14063a3c0,3,po3tweaks::Spells::ReapplyAdded::GetAliasInstanceArray
+37804,0x1406314f0,0x14063a3c0,4,"void Actor::CastPermanentMagic_1406314F0 (Actor * a_this, bool a_wornItemEnchantments, bool a_baseSpells, bool a_raceSpells, bool a_everyActorAbility)"
 37805,0x1406316b0,0x14063a580,3,po3tweaks::Spells::DispelAdded::GetAliasInstanceArray
 37808,0x140631c80,0x14063ab50,3,void Actor::InterruptCast(bool a_restoreMagicka)
 37810,0x140631d70,0x14063ac40,4,bool Actor::IsCasting(MagicItem* a_spell)
@@ -8169,6 +8173,7 @@ id,sse,vr,status,name
 514077,0x141eaecc0,0x141f765a0,1,RE::RTTI_std___Binder_std___Unforced_void____cdecl_BSPlatform__BSBNetAccountManager_____BSPlatform__BNetResult_unsigned___int64_BSPlatform__BNetResult_____ptr64____ptr64_BSPlatform__BSBNetAccountManager_____ptr64_const_std___Ph_1__const_____ptr64_std___Ph_2__const_____ptr64_BSPlatform__BNetResult_____ptr64_
 514139,0x141ebe418,0x141f82ac8,4,ActorValueList* GetSingleton()
 514141,0x141ebe428,0x141f82ad8,3,RE::TESDataHandler::Singleton
+514157,0x141ebea88,0x141f83168,2,GlobalStateCounter
 514167,0x141ebead0,0x141f831b0,3,ProcessLists* GetSingleton()
 514178,0x141ebeb20,0x141f83200,3,RE::UI::Singleton
 514179,0x141ebeb28,0x141f83208,4,AnimationObjects* GetSingleton()
@@ -9902,7 +9907,7 @@ id,sse,vr,status,name
 684845,0x141e14c80,0x141edac00,1,RE::RTTI_BSTEventSink_BSResource__ClearArchiveRegistryEvent_
 684846,0x141e14cd0,0x141edac50,3,RE::RTTI_BGSLoadFormBuffer
 684847,0x141e14cf8,0x141edac78,3,RE::RTTI_BGSLoadGameBuffer
-684848,0x141e14d20,0x141edaca0,1,RE::RTTI_BGSLoadFormData
+684848,0x141e14d20,0x141edaca0,3,RE::RTTI_BGSLoadFormData
 684849,0x141e14da8,0x141edad28,3,RE::RTTI_BGSStoryManagerTreeForm
 684850,0x141e14dd8,0x141edad58,1,RE::RTTI_NiTPrimitiveArray_BGSAddonNode_____ptr64_
 684851,0x141e14e18,0x141edad98,1,RE::RTTI_NiTPrimitiveArray_TESObjectCELL_____ptr64_
