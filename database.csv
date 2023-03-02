@@ -9,6 +9,9 @@ id,sse,vr,status,name
 11194,0x140100df0,0x1401113a0,4,EffectSetting* MagicItem::GetAVEffectSetting()
 11213,0x140101a30,0x140111fe0,3,RE::MagicItem::CalculateCost
 11216,0x140101cc0,0x140112270,3,RE::MagicItem::GetCostliestEffectItem
+11218,0x140101e30,0x1401123e0,3,uint32_t MagicItem::GetLongestDuration_140101e30 (MagicItem * param_1)
+11219,0x140101ed0,0x140112480,3,int32_t MagicItem::GetLargestArea_140101ED0 (MagicItem * param_1)
+11222,0x140102030,0x1401125e0,4,"void MagicItem::Traverse (MagicItem * a_this, MagicItemTraversalFunctor * a_visitor)"
 11308,0x140104ad0,0x1401150c0,3,FixedStrings* FixedStrings::GetSingleton()
 11474,0x14010e960,0x14011ef40,3,RE::BSExtraDataList::SetSoul
 11483,0x14010f5c0,0x14011fba0,3,RE::ExtraDataList::SetInventoryChanges
@@ -250,16 +253,18 @@ id,sse,vr,status,name
 32192,0x1404f2620,0x140502890,3,"bool IAnimationGraphManagerHolder::GetGraphVariableNiPoint3(const BSFixedString& a_variableName, NiPoint3& a_out)"
 32275,0x1404f5420,0x140505690,4,RE::ShakeCamera_1404f5420
 32290,0x1404f5c80,0x140505f60,3,RE::TESCamera::SetState
+33282,0x14053e120,0x140540ea0,4,float ActiveEffect::GetMagnitude_14053E120 (ActiveEffect * a_this)
 33286,0x14053e380,0x140541100,3,void ActiveEffect::Dispel(bool a_force)
 33610,0x14054bc60,0x14054fe70,2,po3tweaks::AttachLightCrash::AttachLightHitEffectVisitor
 33684,0x140551a90,0x140555ca0,3,po3tweaks::Spell::detail::SpellApplyStruct
 33721,0x1405528e0,0x140556cb0,3,"bool MagicTarget::DispelEffect(MagicItem* a_spell, BSPointerHandle<Actor>& a_caster, ActiveEffect* a_effect)"
 33733,0x1405530d0,0x140557380,3,RE::MagicTarget::HasMagicEffect
 33742,0x140553750,0x1405579c0,2,papyrus_extender::events::game::magictargetapply_0x1e8
-33756,0x140554500,0x140558580,3,RE::MagicTarget::ForEachActiveEffect
+33756,0x140554500,0x140558580,3,void MagicTarget::VisitEffects(ForEachActiveEffectVisitor& visitor)
 33763,0x140554700,0x140558740,3,RE::MagicTarget::sub_14055470
 33825,0x140556ce0,0x14055ca70,3,enhanced_reanimation::Actor::CanBeReanimated
 33828,0x140556f20,0x14055ccb0,3,RE::Actor::DispelWornItemEnchantments
+33834,0x140557120,0x14055ceb0,4,BSContainer::ForEachResult MagicItemDataCollector::operator()(Effect* a_effect)
 33956,0x14055b750,0x140561990,2,enhanced_reanimation::Reanimate::Start
 34132,0x140560e40,0x1405670b0,3,ENBLightForEffectShaders::ShaderReferenceEffect::Add:AddAddonModel::thunk_0x8C2
 34413,0x14056c9d0,0x140572fd0,3,"DialogueItem* DialogueItem::Ctor(TESQuest* a_quest, TESTopic* a_topic, TESTopicInfo* a_topicInfo, Actor* a_speaker)"
@@ -534,6 +539,7 @@ id,sse,vr,status,name
 51793,0x1408ce8e0,0x1408fb9c0,3,TrainingMenu::Train
 51795,0x1408cedf0,0x1408fbed0,3,TrainingMenu::SetSkillXpPercent
 51843,0x1408d11f0,0x1408fe370,3,TweenMenu::
+51859,0x1408d33b0,0x1406f4b40,1,"void UI3DSceneManager::AttachChild(NiAVObject* a_obj, INTERFACE_LIGHT_SCHEME a_scheme) UNCONFIRMED"
 51867,0x1408d38e0,0x140901370,4,"void UI3DSceneManager::SetCameraPosition_1408d38e0 (longlong a_this, NiPoint3 * a_pos)"
 51869,0x1408d3990,0x140901420,4,"void UI3DSceneManager::SetCameraRotate_1408d3990 (longlong a_this, NiMatrix33 * a_rotate)"
 51870,0x1408d39e0,0x140901470,3,"void UI3DSceneManager::SetCameraFOV_1408d39e0 (longlong a_this, float a_fov)"
@@ -636,6 +642,7 @@ id,sse,vr,status,name
 67848,0x140c29ff0,0x140c6ef20,3,void Entry::release16(const wchar_t*& a_entry)
 67855,0x140c2a4d0,0x140c6f400,3,RE::BucketTable::GetSingleton
 68663,0x140c4b990,0x140c90a40,3,RE::LooseFileStream::Ctor
+68835,0x140c52750,0x140c97810,4,NiObject* NiObject::clone_140C52750(NiObject *a_this)
 68838,0x140c52900,0x140c979c0,3,void NiObject::ProcessClone(NiCloningProcess& a_cloning)
 68839,0x140c529a0,0x140c97a60,3,void NiObject::CreateDeepCopy(NiPointer<NiObject>& a_object)
 68900,0x140c56b50,0x140c9bc10,3,RE::NiAVObject::Update
@@ -651,6 +658,7 @@ id,sse,vr,status,name
 69440,0x140c6d230,0x140cb33c0,3,void NiTimeController::Start(float a_time)
 69441,0x140c6d250,0x140cb33e0,3,void NiTimeController::Stop()
 69442,0x140c6d280,0x140cb3410,3,void NiTimeController::SetTarget(NiObjectNET* a_target)
+69444,0x140c6d3f0,0x140cb3580,4,void NiTimeController::StartAnimations(NiObjectNET* a_target)
 69447,0x140c6d5e0,0x140cb3770,3,float NiTimeController::ComputeScaledTime(float a_time)
 69449,0x140c6d810,0x140cb39a0,3,void NiTimeController::ProcessClone(NiCloningProcess& a_cloning)
 69459,0x140c6da50,0x140cb3be0,3,AnimationMotionRevoluation::MotionDataContainer::InterpolateRotation
@@ -661,6 +669,9 @@ id,sse,vr,status,name
 69643,0x140c76580,0x140cbc9b0,3,RE::BSResourceNiBinaryStream::SetEndianSwap
 69681,0x140c77ed0,0x140cbe300,3,RE::NiBillboardNode::RotateToCamera
 69804,0x140c7eb60,0x140cc5250,3,RE::NiSkinInstance::Ctor
+70860,0x140cc6090,0x140d0cbe0,4,"void NiControllerSequence::SetPhase(float a_phase, bool a_arg2)"
+70882,0x140cc7cb0,0x140d0e800,4,"bool NiControllerSequence::Activate(std::uint8_t a_interpIndex, bool a_maxOffset, float a_seqWeight, float a_easeInTime, NiControllerSequence* a_partnerSequence, bool a_transition)"
+74040,0x140d2f220,0x140d775e0,4,"BSResource::ErrorCode BSModelDB::Demand(const char* a_modelPath, NiPointer<NiNode>& a_modelOut, const DBTraits::ArgsType& a_args)"
 74236,0x140d38120,0x140d805b0,3,RE::INISettingCollection::WriteSetting
 74237,0x140d38310,0x14053c550,3,RE::INISettingCollection::ReadSetting
 74239,0x140d38710,0x140d80bb0,3,RE::INISettingCollection::OpenHandle
@@ -9918,7 +9929,7 @@ id,sse,vr,status,name
 684856,0x141e14f50,0x141edaed0,1,RE::RTTI_NiTMapBase_NiTPointerAllocator_unsigned___int64__unsigned_int_TESFile_____ptr64_
 684857,0x141e14fa0,0x141edaf20,3,RE::RTTI_BSModelDB__BSModelProcessor
 684858,0x141e14fe0,0x141edaf60,1,RE::RTTI_BSTSingletonExplicit_BSModelDB__BSModelProcessor_
-684859,0x141e15030,0x141edafb0,1,RE::RTTI_TESModelDB____TESProcessor
+684859,0x141e15030,0x141edafb0,4,RE::RTTI_TESModelDB____TESProcessor
 684860,0x141e15140,0x141edb0c0,1,RE::RTTI_NiTMap_BSPointerHandle_TESObjectREFR_BSUntypedPointerHandle_20_6____unsigned_int_
 684861,0x141e151b0,0x141edb130,1,RE::RTTI_NiTMapBase_DFALL_NiTMapItem_BSPointerHandle_TESObjectREFR_BSUntypedPointerHandle_20_6____unsigned_int____BSPointerHandle_TESObjectREFR_BSUntypedPointerHandle_20_6____unsigned_int_
 684862,0x141e15308,0x141edb288,3,RE::RTTI_PerkRankVisitor
@@ -15672,7 +15683,7 @@ id,sse,vr,status,name
 690662,0x141e9d950,0x141f64fe0,1,RE::RTTI_BSResource__EntryDBBase_BSResource__EntryDBTraits_BSModelDB__DBTraits_BSResource__EntryDB_BSModelDB__DBTraits_____
 690663,0x141e9d9e0,0x141f65070,1,RE::RTTI_BSResource__EntryDBTraits_BSModelDB__DBTraits_BSResource__EntryDB_BSModelDB__DBTraits___
 690664,0x141e9da60,0x141f650f0,1,RE::RTTI_BSResource__Directory_unsigned_int_BSResource__Directory_BSResource__FileID_BSResource__Entry_NiPointer_NiNode__BSResource__EntryDBTraits_BSModelDB__DBTraits_BSResource__EntryDB_BSModelDB__DBTraits_____CArgs_____
-690665,0x141e9db48,0x141f651d8,1,RE::RTTI_BSModelDB__DBTraits
+690665,0x141e9db48,0x141f651d8,4,RE::RTTI_BSModelDB__DBTraits
 690666,0x141e9db80,0x141f65210,1,RE::RTTI_BSTSingletonSDM_BSResource__EntryDB_BSModelDB__DBTraits__BSTSingletonSDMOpStaticBuffer_
 690667,0x141e9dc00,0x141f65290,1,RE::RTTI_BSTSingletonSDMBase_BSTSDMTraits_BSResource__EntryDB_BSModelDB__DBTraits__BSTSingletonSDMOpStaticBuffer_BSResource__EntryDB_BSModelDB__DBTraits_______
 690668,0x141e9dcc0,0x141f65350,1,RE::RTTI_BSTSDMTraits_BSResource__EntryDB_BSModelDB__DBTraits__BSTSingletonSDMOpStaticBuffer_BSResource__EntryDB_BSModelDB__DBTraits_____
