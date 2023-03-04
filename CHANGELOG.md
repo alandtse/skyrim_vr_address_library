@@ -1,3 +1,10 @@
+# [0.85.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.84.0...v0.85.0) (2023-03-04)
+
+
+### Features
+
+* add saveunbaker ([9014b15](https://github.com/alandtse/skyrim_vr_address_library/commit/9014b151ca28f3dae5db5bb20761622d2a63d3f1))
+
 # [0.84.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.83.0...v0.84.0) (2023-03-02)
 
 
