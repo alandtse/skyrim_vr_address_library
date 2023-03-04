@@ -268,6 +268,7 @@ id,sse,vr,status,name
 33956,0x14055b750,0x140561990,2,enhanced_reanimation::Reanimate::Start
 34132,0x140560e40,0x1405670b0,3,ENBLightForEffectShaders::ShaderReferenceEffect::Add:AddAddonModel::thunk_0x8C2
 34413,0x14056c9d0,0x140572fd0,3,"DialogueItem* DialogueItem::Ctor(TESQuest* a_quest, TESTopic* a_topic, TESTopicInfo* a_topicInfo, Actor* a_speaker)"
+34808,0x140585a70,0x14058cfa0,4,"ulonglong BGSLoadGameBuffer::sub_140585A70(BGSLoadGameBuffer *param_1,PlayerCharacter *param_2,undefined *param_3,char *param_4)"
 34818,0x140586de0,0x14058e310,3,RE::BGSSaveLoadManager::Save
 34819,0x140587350,0x14058e920,3,RE::BGSSaveLoadManager::Load
 34856,0x140588f90,0x1405905e0,4,bool BGSSaveLoadManager::LoadMostRecentSaveGame()
@@ -319,6 +320,7 @@ id,sse,vr,status,name
 36604,0x1405edef0,0x1405f6600,4,void Actor::SetLifeState(ACTOR_LIFE_STATE a_lifeState)
 36621,0x1405f1530,0x1405f9c40,4,RE::Actor::Func156_*
 36631,0x1405f2530,0x1405fac70,3,bool Actor::Decapitate()
+36642,0x1405f4150,0x1405fc880,4,"void ReadFromSaveGame_1405F4150 (Actor * a_this, undefined8 param_2)"
 36678,0x1405f8430,0x140600ba0,3,"void Actor::AddToFaction(TESFaction* a_faction, std::int8_t a_rank)"
 36682,0x1405f87f0,0x140600f60,3,RE::Actor::CreateBlood
 36683,0x1405f9a20,0x140602190,3,WashThatBloodOff::Decal::Weapon::CreateBloodOnWeapon
