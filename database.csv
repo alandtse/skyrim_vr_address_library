@@ -13,6 +13,7 @@ id,sse,vr,status,name
 11219,0x140101ed0,0x140112480,3,int32_t MagicItem::GetLargestArea_140101ED0 (MagicItem * param_1)
 11222,0x140102030,0x1401125e0,4,"void MagicItem::Traverse (MagicItem * a_this, MagicItemTraversalFunctor * a_visitor)"
 11308,0x140104ad0,0x1401150c0,3,FixedStrings* FixedStrings::GetSingleton()
+11471,0x14010e570,0x14011eb50,4,"void SetCount_14010E570 (BSExtraDataList * param_1, ushort a_count)"
 11474,0x14010e960,0x14011ef40,3,RE::BSExtraDataList::SetSoul
 11483,0x14010f5c0,0x14011fba0,3,RE::ExtraDataList::SetInventoryChanges
 11530,0x140112700,0x140122ce0,3,void ExtraDataList::SetHeadingTargetRefHandle(ObjectRefHandle& a_handle)
@@ -88,6 +89,7 @@ id,sse,vr,status,name
 15779,0x1401d7330,0x1401e7ed0,4,RE::GetArmorFinalRating
 15782,0x1401d7590,0x1401e8130,3,"bool InventoryEntryData::IsOwnedBy_Impl(Actor* a_testOwner, TESForm* a_itemOwner, bool a_defaultTo)"
 15786,0x1401d7e40,0x1401e89e0,4,"void InventoryEntryData::PoisonObject(AlchemyItem* a_alchItem, std::uint32_t a_count)"
+15788,0x1401d7f10,0x1401e8ab0,4,EnchantmentItem * GetEnchantment_1401D7F10 (ExtraContainerChanges__ItemEntry * param_1)
 15800,0x1401d8d10,0x1401e98b0,3,RE::TESObjectREFR::InitInventoryIfRequired
 15802,0x1401d8e40,0x1401e99e0,3,InventoryChanges* TESObjectREFR::MakeInventoryChanges()
 15806,0x1401d9040,0x1401e9be0,3,std::uint32_t InventoryChanges::GetWornMask()
@@ -266,6 +268,7 @@ id,sse,vr,status,name
 33828,0x140556f20,0x14055ccb0,3,RE::Actor::DispelWornItemEnchantments
 33834,0x140557120,0x14055ceb0,4,BSContainer::ForEachResult MagicItemDataCollector::operator()(Effect* a_effect)
 33956,0x14055b750,0x140561990,2,enhanced_reanimation::Reanimate::Start
+33961,0x14055bc80,0x140561ec0,4,"void Start_14055BC80 (ActiveEffectReferenceEffectController * param_1, ReferenceEffect * * a_effectOut)"
 34132,0x140560e40,0x1405670b0,3,ENBLightForEffectShaders::ShaderReferenceEffect::Add:AddAddonModel::thunk_0x8C2
 34413,0x14056c9d0,0x140572fd0,3,"DialogueItem* DialogueItem::Ctor(TESQuest* a_quest, TESTopic* a_topic, TESTopicInfo* a_topicInfo, Actor* a_speaker)"
 34808,0x140585a70,0x14058cfa0,4,"ulonglong BGSLoadGameBuffer::sub_140585A70(BGSLoadGameBuffer *param_1,PlayerCharacter *param_2,undefined *param_3,char *param_4)"
@@ -274,6 +277,8 @@ id,sse,vr,status,name
 34856,0x140588f90,0x1405905e0,4,bool BGSSaveLoadManager::LoadMostRecentSaveGame()
 35199,0x14059b140,0x1405a2800,4,void MemoryManager::RegisterMemoryManager()
 35203,0x14059b9a0,0x1405a3060,4,uint32_t ScrapHeap_GetMaxSize_14059b9a0(void)
+35263,0x14059f0f0,0x1405a67b0,4,EnchantmentItem* BGSCreatedObjectManager::AddWeaponEnchantment(BSTArray<Effect>& a_effects)
+35264,0x14059f190,0x1405a6850,4,EnchantmentItem* BGSCreatedObjectManager::AddArmorEnchantment(BSTArray<Effect>& a_effects)
 35317,0x1405a2930,0x1405a9ff0,3,bool BGSImpactManager::PlayImpactDataSounds(ImpactSoundData& a_impactSoundData)
 35320,0x1405a2c60,0x1405aa320,4,"bool BGSImpactManager::PlayImpactEffect(TESObjectREFR* a_ref, BGSImpactDataSet* a_impactEffect, const BSFixedString& a_nodeName, NiPoint3& a_pickDirection, float a_pickLength, bool a_applyNodeRotation, bool a_useNodeLocalRotation)"
 35408,0x1405a64f0,0x1405adbb0,4,RE::Calendar::GetGameDaysPassed
@@ -287,6 +292,7 @@ id,sse,vr,status,name
 35620,0x1405b6dc0,0x1405bee40,3,Main::sub_*
 35642,0x1405b8f00,0x1405c0f70,3,SettingsOfSkyrim::
 35882,0x1405c0610,0x1405c8b30,3,po3tweaks::ScreenshotToConsole::DebugNotification
+35922,0x1405c2670,0x1405cab50,4,"void TaskQueueInterface::QueueNodeAttach_1405c2670 (undefined * a_this, NiAVObject * a_obj, NiNode * a_root, bool a_arg3, bool a_arg4)"
 35978,0x1405c5220,0x1405cd7c0,3,"void TaskQueueInterface::QueueAddRipple(float a_scale, const NiPoint3& a_pos)"
 35987,0x1405c58c0,0x1405cde60,2,"void TaskQueueInterface::QueueRemoveSpell(ActorHandle& a_actorHandle, SpellItem* a_spellItem)"
 35991,0x1405c5bf0,0x1405ce190,4,"void TaskQueueInterface::QueueForceWeather(TESWeather* a_weather, bool a_forceOverride)"
@@ -509,6 +515,8 @@ id,sse,vr,status,name
 50485,0x14086ebb0,0x14089a140,3,YesImSure::alchemyMenu
 50487,0x14086ee80,0x14089a410,3,YesImSure::enchantmentLearned
 50515,0x1408708a0,0x14089be30,3,RE::ItemCrafted::GetEventSource
+50530,0x1408720d0,0x14089d5c0,4,"void EnchantConstructMenu::RenameItem_Impl(InventoryEntryData* a_entryData, ExtraDataList* a_extraList, const char* a_name)"
+50567,0x140874540,0x14089fc10,4,void EnchantConstructMenu::UpdateInterface_140874540 (undefined8 param_1)
 50688,0x14087ba70,0x1408a77e0,3,EssentialFavorites::Gifting::IsQuestObject
 50747,0x14087fff0,0x1408ad8c0,3,TrueHUD::SetHUDMode?
 50757,0x1408808d0,0x1408ae1e0,3,HUDNotifications::Update
@@ -533,6 +541,7 @@ id,sse,vr,status,name
 51400,0x1408aa140,0x1408d68f0,2,po3tweaks::SitToWait::HandleWaitRequest
 51420,0x1408ab180,0x1408d7fe0,4,RE::MessageBoxData::CreateMessage
 51422,0x1408ab5c0,0x1408d8420,3,void MessageBoxData::QueueMessage()
+51540,0x1408ba590,0x1408e7d70,4,"void ChangeName_1408BA590 (RaceSexMenu * param_1, char * param_2)"
 51638,0x1408bf360,0x1408ec3e0,2,StatsMenu::ProcessMessage
 51652,0x1408c20c0,0x1408eedb0,2,StatsMenu::UpdateSkillList
 51755,0x1408ccff0,0x1408fa0a0,4,SubtitleManager::KillSubtitles
@@ -640,6 +649,7 @@ id,sse,vr,status,name
 67240,0x140c11430,0x140c4dd80,4,QuickLoot::
 67819,0x140c28bf0,0x140c6db20,3,BSFixedString* BSFixedString::ctor8(const char* a_data)
 67834,0x140c29510,0x140c6e440,3,BSFixedString* BSFixedString::ctor16(const wchar_t* a_data)
+67844,0x140c29900,0x140c6e830,4,"void BSScaleformTranslator::GetCachedString_140c29900 (wchar_t * * a_pOut, wchar_t * a_bufIn, uint32_t a_unused)"
 67847,0x140c29e80,0x140c6edb0,3,void Entry::release8(const char*& a_entry)
 67848,0x140c29ff0,0x140c6ef20,3,void Entry::release16(const wchar_t*& a_entry)
 67855,0x140c2a4d0,0x140c6f400,3,RE::BucketTable::GetSingleton
@@ -698,7 +708,9 @@ id,sse,vr,status,name
 80197,0x140ec83a0,0x140f24ef0,3,RE::GFxValue::ObjectInterface::AttachMovie
 80207,0x140ec9490,0x140f25fe0,3,RE::GFxValue::ObjectInterface::DeleteMember
 80214,0x140ec9bd0,0x140f26720,3,RE::GFxValue::ObjectInterface::GetArraySize
+80215,0x140ec9be0,0x140f26730,4,"bool GFxValue::ObjectInterface::GetCxform(void* a_data, GRenderer::Cxform* a_cx) const"
 80216,0x140ec9c20,0x140f26770,3,RE::GFxValue::ObjectInterface::GetDisplayInfo
+80217,0x140ec9eb0,0x140f26a00,4,"bool GFxValue::ObjectInterface::GetDisplayMatrix(void* a_data, GMatrix2D* a_mat) const"
 80218,0x140ec9f30,0x140f26a80,3,RE::GFxValue::ObjectInterface::GetElement
 80222,0x140eca150,0x140f26ca0,3,RE::GFxValue::ObjectInterface::GetMember
 80230,0x140eca570,0x140f270c0,3,RE::GFxValue::ObjectInterface::GotoAndPlay
@@ -709,12 +721,16 @@ id,sse,vr,status,name
 80248,0x140ecb300,0x140f27e50,3,RE::GFxValue::ObjectInterface::PushBack
 80252,0x140ecb6c0,0x140f28210,3,RE::GFxValue::ObjectInterface::RemoveElements
 80261,0x140ecbd20,0x140f28870,3,RE::GFxValue::ObjectInterface::SetArraySize
+80262,0x140ecbd50,0x140f288a0,4,"bool GFxValue::ObjectInterface::SetCxform(void* a_data, const GRenderer::Cxform& a_cx)"
 80263,0x140ecbdb0,0x140f28900,3,RE::GFxValue::ObjectInterface::SetDisplayInfo
+80264,0x140ecc7e0,0x140f29330,4,"bool GFxValue::ObjectInterface::SetDisplayMatrix(void* a_data, const GMatrix2D& a_mat)"
 80265,0x140ecc960,0x140f294b0,3,RE::GFxValue::ObjectInterface::SetElement
 80268,0x140eccba0,0x140f296f0,3,RE::GFxValue::ObjectInterface::SetMember
 80270,0x140ecccf0,0x140f29840,3,RE::GFxValue::ObjectInterface::SetText
+80279,0x140ecd630,0x140f2a180,4,"void GFxValue::ObjectInterface::VisitMembers(void* a_data, ObjVisitor* a_visitor, bool a_isDObj)"
 80300,0x140ece0d0,0x140f2adc0,3,ScaleformTranslationpp::BSScaleformMovieLoaderEx::Ctor
 80302,0x140ece790,0x140f2b480,3,"bool BSScaleformManager::LoadMovie(IMenu* a_menu, GPtr<GFxMovieView>& a_viewOut, const char* a_fileName, ScaleModeType a_mode, float a_backGroundAlpha)"
+80307,0x140ecee30,0x140f2bb20,4,bool BSScaleformManager::IsValidName(const char* a_name)
 80446,0x140ed3a50,0x140f2da40,3,GString* GString::ctor(const char* a_str)
 80547,0x140ed80b0,0x140f30f20,3,RE::GFxMovieView::InvokeNoReturn
 80620,0x140edbfa0,0x140f38ca0,3,RE::GFxLoader::CreateMovie
@@ -6764,6 +6780,7 @@ id,sse,vr,status,name
 291434,0x1417bae38,0x14186b3d8,3,VTABLE_FxDelegate_0
 291435,0x1417bae50,0x14186b3f0,3,VTABLE_AddCallbackVisitor_0
 291436,0x1417bae68,0x14186b408,3,VTABLE_RemoveCallbackVisitor_0
+291613,0x1417bc9c0,0x14186cf60,4,RE::GASDoAction::Vtbl
 291962,0x1417c03e8,0x141870988,3,VTABLE_BSScaleformImageLoader_0
 292005,0x1417c0c10,0x1418711b0,3,VTABLE_BSScaleformMovieLoadTask_0
 294133,0x1417f2170,0x1418a2730,3,VTABLE_MoviePlayer_0
@@ -8188,6 +8205,7 @@ id,sse,vr,status,name
 514141,0x141ebe428,0x141f82ad8,3,RE::TESDataHandler::Singleton
 514157,0x141ebea88,0x141f83168,2,GlobalStateCounter
 514167,0x141ebead0,0x141f831b0,3,ProcessLists* GetSingleton()
+514172,0x141ebeae8,0x141f831c8,4,BGSCreatedObjectManager::GetSingleton()
 514178,0x141ebeb20,0x141f83200,3,RE::UI::Singleton
 514179,0x141ebeb28,0x141f83208,4,AnimationObjects* GetSingleton()
 514182,0x141ebeb40,0x141f83220,2,BSFaceGenManager* GetSingleton()
@@ -8291,6 +8309,7 @@ id,sse,vr,status,name
 523662,0x142f6b950,0x1430c3a10,3,std::uint32_t GetDurationOfApplicationRunTime()
 523673,0x142f6ba48,0x1430c3b18,3,RE::INIPrefSettingCollection::Singleton
 523759,0x142f77208,0x1430cf888,4,NiMemManager* GetSingleton()
+523887,0x143012370,0x14316aaf0,4,gNiPoint3_Zero_143012370
 523891,0x143012388,0x14316ab08,3,RE::NiRTTI_NiObject
 523895,0x1430123c0,0x14316ab40,3,RE::NiRTTI_NiAVObject
 523900,0x1430123e0,0x14316ab78,3,RE::NiRTTI_NiNode
