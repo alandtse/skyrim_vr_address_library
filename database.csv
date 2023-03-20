@@ -479,8 +479,16 @@ id,sse,vr,status,name
 43952,0x140781f00,0x1407ad250,4,RE::CombatMagicCaster::StaticCheckTargetValid
 43956,0x140782330,0x1407ad680,4,RE::CombatMagicCaster::CheckTargetValid
 44036,0x140785f80,0x1407b12d0,4,enhanced_reanimation::CombatMagicCasterReanimate::CheckShouldEquip
+46641,0x1407d4a80,0x1407ffdd0,4,"NodeArray* WrapToRandomNode_1407d4a80 (NodeArray& a_array, const char* a_name, RE::TreeCtors_extradata* a_extradata, RE::CombatBehaviorTreeNode* a_node)"
+46712,0x1407d73d0,0x140802720,4,CombatPathingRevolution::src/Fallback_Hook.h:16
+46713,0x1407d7740,0x140802a90,4,CombatPathingRevolution::src/Fallback_Hook.h:77
+46720,0x1407d8200,0x140803550,4,CombatPathingRevolution::src/Circling_Hook.h:167
+46724,0x1407d8c90,0x140803fe0,4,CombatPathingRevolution::src/Backoff_Hook.h:19
+46731,0x1407d97d0,0x140804b20,4,CombatPathingRevolution::src/Backoff_Hook.h:55
 49311,0x14083c870,0x140867b70,3,RE::CombatApproachTargetSpeedController::sub_14083C870
 49711,0x140844d00,0x14086ffb0,3,RE::Character::sub_140844D00
+49720,0x140845070,0x140870320,4,float Character::GetCircleChanceMult_140845070(Character *param_1)
+49721,0x1408450a0,0x140870350,4,CombatPathingRevolution::src/Circling_Hook.h:61
 49747,0x140845a10,0x140870cc0,3,StaminaNPC::apply_another_get_chance
 49749,0x140845c00,0x140870eb0,3,StaminaNPC::apply_get_CombatSpecialAttackChance
 49750,0x140845c30,0x1408705f0,3,StaminaNPC::apply_get_CombatBlockAttackChance
