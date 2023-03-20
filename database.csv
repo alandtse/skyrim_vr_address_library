@@ -771,6 +771,7 @@ id,sse,vr,status,name
 98897,0x141291d40,0x1412ca650,3,"void BSShaderProperty::SetMaterial(BSShaderMaterial* a_material, bool a_unk1)"
 98978,0x141295ad0,0x1412ce720,3,UpdateShadowDistanceAndInteriorFlag
 98986,0x141295c30,0x1412ce8a0,4,"void BSShaderManager::GetTexture(const char* a_path, bool a_demand, NiPointer<NiTexture>& a_textureOut, bool a_isHeightMap)"
+98997,0x1412966a0,0x1412cf410,2,BSGraphics::BSShaderAccumulator* BSGraphics::BSShaderAccumulator::GetCurrentAccumulator()
 99868,0x1412c5ca0,0x141304090,3,RE::NiAVObject::SetRefraction
 99886,0x1412c9320,0x141307710,3,BSShaderTextureSet* BSShaderTextureSet::Ctor()
 100004,0x1412ced50,0x14130dc60,3,BSLightingShaderMaterial* BSLightingShaderMaterial::Ctor()
@@ -790,6 +791,8 @@ id,sse,vr,status,name
 100717,0x1412fdcc0,0x1413401e0,4,"BSShader * BSShader::sub_1412FDCC0 (BSShader * param_1, undefined8 param_2, undefined8 param_3, undefined4 param_4, undefined1 param_5, undefined8 param_6)"
 100847,0x141307160,0x141348390,3,Skyrim-Upscaler
 101339,0x14131f810,0x1413656b0,4,RE::BSShader::LoadShaders_14131F810
+101341,0x14131fbd0,0x141365a70,4,"bool BSShader::BeginTechnique_14131FBD0 (BSShader * shader, int vertexDescriptor, int pixelDescriptor, bool skipPIxelShader)"
+101631,0x14132ead0,0x141371a00,3,"void GetLightingShaderDefines(uint32_t descriptor, D3D_SHADER_MACRO* defines)"
 101884,0x14133f0c0,0x14137c200,3,RE::BSWin32SaveDataSystemUtility::GetSingleton
 101962,0x141340ff0,0x14137e180,4,"longlong **BSWin32SaveDataSystemUtility::Ctor_141340FF0(longlong param_1,longlong **param_2,char *param_3,int param_4)"
 101985,0x1413420c0,0x14137f330,4,"ulonglong anonymous_namespace__Win32FileType::CopyToBuffer_1413420C0(longlong param_1,undefined8 param_2,uint param_3)"
@@ -7996,6 +7999,7 @@ id,sse,vr,status,name
 512511,0x141e09be8,0x141ecfb10,3,RE::BSScaleformManager::CollectDisplayInfo::fSafeZoneYWide
 512513,0x141e09c00,0x141ecfb28,3,RE::BSScaleformManager::CollectDisplayInfo::fSafeZoneX
 512515,0x141e09c18,0x141ecfb40,3,RE::BSScaleformManager::CollectDisplayInfo::fSafeZoneY
+513211,0x141e0ded0,0x143423080,4,gShadowSceneNodeArray_*
 513222,0x141e0df14,0x1434230c4,4,shadowoost::gIsInterior
 513786,0x141e10750,0x141ed6650,4,Skyrim-Upscaler::GetVerticalFOVRad
 513793,0x141e10978,0x141ed6530,4,fShadowDistance:Display
@@ -8576,7 +8580,16 @@ id,sse,vr,status,name
 524721,0x143025ec0,0x14317e760,3,RE::NiRTTI_BSNiNode
 524722,0x143025ed0,0x14317e770,3,RE::NiRTTI_BSInstanceTriShape
 524729,0x143025f08,0x14317e798,4,RE::g_ID3D11Device
+524755,0x143027a30,0x143180690,4,VertexShader_perTechniqueBuffersArray
+524757,0x143027ad0,0x143180730,4,VertexShader_perMaterialBuffersArray
+524759,0x143027b20,0x143180780,4,VertexShader_perGeometryBuffersArray
+524761,0x143027c00,0x1431808d0,4,PixelShader_perTechniqueBuffersArray
+524763,0x143027ca0,0x143180970,4,PixelShader_perMaterialBuffersArray
+524765,0x143027d40,0x143180a10,4,PixelShader_perGeometryBuffersArray
+524773,0x143027eb0,0x143180db0,4,g_RendererShadowState
 524907,0x143028490,0x143181700,3,BSRenderManager* GetSingleton()
+524965,0x14302afd0,0x1431849b0,4,VertexShader_bufferData
+524967,0x14302b510,0x143184ef0,4,PixelShader_bufferData
 524970,0x14302bb20,0x143185600,4,RenderTargetManager* GetSingleton()
 524998,0x14302c890,0x143186c10,3,State* GetSingleton()
 525039,0x14302cc68,0x143186dd8,3,RE::NiRTTI_bhkWorldObject
@@ -8672,7 +8685,7 @@ id,sse,vr,status,name
 527634,0x1431d0dc0,0x143422f68,3,RE::NiRTTI_BSShaderProperty
 527635,0x1431d0dd0,0x143422f78,3,RE::NiRTTI_BSLeafAnimNode
 527636,0x1431d0de0,0x143422f88,3,RE::NiRTTI_BSTreeNode
-527731,0x1431d11a0,0x1434234c0,4,Skyrim-Upscaler::UnkOuterStruct::GetTAA
+527731,0x1431d11a0,0x1434234c0,4,TESImagespaceManager* GetSingleton()
 527735,0x1431d1200,0x143423520,3,RE::NiRTTI_ShadowSceneNode
 527752,0x1431d1af8,0x143423e20,3,RE::NiRTTI_BSLightingShaderProperty
 527760,0x1431d1b30,0x143423e58,3,RE::NiRTTI_BSGrassShaderProperty
