@@ -1,3 +1,11 @@
+# [0.87.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.86.0...v0.87.0) (2023-03-20)
+
+
+### Features
+
+* add combatpathingrevolution ([4ba1f81](https://github.com/alandtse/skyrim_vr_address_library/commit/4ba1f817589f05dccebbf86077f6d837e107521c))
+* add community shaders ([3284ce3](https://github.com/alandtse/skyrim_vr_address_library/commit/3284ce328f77824835af5f652142f878ffa6214e))
+
 # [0.86.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.85.0...v0.86.0) (2023-03-10)
 
 
