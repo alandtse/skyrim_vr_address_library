@@ -1,3 +1,17 @@
+# [0.88.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.87.0...v0.88.0) (2023-03-26)
+
+
+### Bug Fixes
+
+* add missing combat pathing revolution ids ([1084b00](https://github.com/alandtse/skyrim_vr_address_library/commit/1084b00821fd5017239b843f58b4138737112bd6))
+
+
+### Features
+
+* add scar ([e16f45d](https://github.com/alandtse/skyrim_vr_address_library/commit/e16f45d9480610d3b8d8a23bee40927055659362))
+* add whoswho ([c80bd16](https://github.com/alandtse/skyrim_vr_address_library/commit/c80bd168a30509ea94144828ff09ea4a3129fe04))
+* sync with latest commonlib po3 ([086947a](https://github.com/alandtse/skyrim_vr_address_library/commit/086947adb5845086cc2adb3e4f9f049f1b2fcd34))
+
 # [0.87.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.86.0...v0.87.0) (2023-03-20)
 
 
