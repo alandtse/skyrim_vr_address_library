@@ -111,10 +111,12 @@ id,sse,vr,status,name
 15916,0x1401ed550,0x1401fe070,4,TESActionData* TESActionData::Ctor()
 15967,0x1401ee670,0x1401ff150,3,RE::BSPointerHandleManagerInterface::GetHandle
 15980,0x1401ef330,0x1401ffe10,3,RE::Inventory::GetEventSource
+15991,0x1401efec0,0x1402009a0,4,bool GetWornMaskVisitor::Visit(InventoryEntryData* a_entryData)
 16084,0x1401f5390,0x140205ef0,3,RE::LocalMapCamera::Ctor
 16089,0x1401f5750,0x1402062b0,3,RE::LocalMapCamera::SetNorthRotation
 16175,0x1401fa6c0,0x14020c010,3,void NiCamera::ScreenSplatter::Clear()
 17034,0x14021a4b0,0x14022bdb0,3,TESFurniture::Activate_*
+17361,0x140227070,0x1402383a0,4,"void TESObjectARMA::InitWornArmorAddon(TESObjectARMO* a_armor, BSTSmartPointer<BipedAnim>* a_biped, SEX a_sex)"
 17439,0x140229ef0,0x14023b240,4,bool TESObjectBOOK::Read(TESObjectREFR* a_reader)
 17470,0x14022a8c0,0x14023bc10,3,BSTEventSource<BooksRead::Event>* BooksRead::GetEventSource()
 17521,0x14022cb50,0x14023dea0,3,po3tweaks::AIFadeOut::GetFadeState
@@ -132,15 +134,19 @@ id,sse,vr,status,name
 18418,0x14025e9c0,0x14026fe70,4,SeasonsofSkyrim::TESObjectLAND::GetHavokMaterialType
 18474,0x140262290,0x140273830,3,BGSLocation* TESObjectCELL::GetLocation()
 18536,0x1402654c0,0x140276a90,3,bhkWorld* TESObjectCELL::GetbhkWorld()
+18540,0x1402657a0,0x140276d70,4,TESRegionList* TESObjectCELL::GetRegionList(bool a_createIfMissing)
 18543,0x140265990,0x140276f60,3,"bool TESObjectCELL::GetWaterHeight(const NiPoint3& a_pos, float& a_waterHeight)"
 18642,0x14026b160,0x14027c730,3,po3tweaks::QueuedRefCrash::SetFadeNode
 19201,0x14028b940,0x14029d070,3,bool TESObjectREFR::HasQuestObject()
 19220,0x14028c440,0x14029db70,3,RE::TESObjectREFR::HasEffectKeyword?
 19238,0x14028cc60,0x14029e390,4,float TESObjectREFR::GetScale()
 19244,0x14028d0b0,0x14029e7e0,4,bool TESObjectREFR::CanBeMoved_14028D0B0 (TESObjectREFR * param_1)
+19264,0x14028dbd0,0x14029f300,4,void Actor::RemoveOutfitItems(BGSOutfit* a_outfit)
 19265,0x14028dcf0,0x14029f420,4,"bool Actor::HasOutfitItems (Actor * a_this, BGSOutfit * a_outfit)"
+19266,0x14028dda0,0x14029f4d0,4,"void Actor::AddWornOutfit(BGSOutfit* a_outfit, bool a_forceUpdate)"
 19275,0x14028e360,0x14029fa90,4,std::int32_t PlayerCharacter::GetItemCount(TESBoundObject* a_object)
 19277,0x14028e3c0,0x14029faf0,3,float TESObjectREFR::GetWeightInContainer()
+19316,0x1402943b0,0x1402a5ac0,4,bool Actor::Update3D()
 19323,0x1402945e0,0x1402a5cf0,3,RE::TESObjectREFR::FindReferenceFor3D
 19326,0x140294730,0x1402a5e30,3,void TESObjectREFR::GetTransform(NiTransform& a_transform)
 19338,0x140295060,0x1402a6760,3,bool Actor::IsLimbGone(std::uint32_t a_limb)
@@ -171,6 +177,7 @@ id,sse,vr,status,name
 22339,0x140310e60,0x140322370,3,po3tweaks::NoCheatMode::GodMode
 22340,0x140310ec0,0x140322370,3,po3tweaks::NoCheatMode::ImmortalMode
 22350,0x140311250,0x140322760,3,powerof3tweaks::ToggleCollisionFix::ToggleCollision
+22790,0x140324e90,0x1402af140,4,BGSStoryEventManager* BGSStoryEvent::BGSStoryEventManager::GetSingleton() include\RE\B/BGSStoryEventManager.h:20
 22843,0x140326460,0x140335ca0,3,RE::MessageDataFactoryManager::GetSingleton
 22845,0x140326510,0x140335d50,3,RE::INISettingCollection::ReadFromFile
 23073,0x14032ece0,0x14033e5a0,3,RE::ApplyPerkEntries
@@ -184,6 +191,7 @@ id,sse,vr,status,name
 24211,0x140360c10,0x140370510,2,enhanced_reanimation::TESNPC::Activate
 24212,0x140361640,0x140370f60,3,enhanced_reanimation::TESNPC::GetActivateText
 24228,0x140363f20,0x140373880,4,RE::TESNPC::UpdateHead
+24232,0x140364350,0x140373cb0,4,"void TESObjectARMO::InitWornArmor(Actor* a_actor, BSTSmartPointer<BipedAnim>* a_biped)"
 24236,0x140364ff0,0x140374950,3,FEC::processArmorAttach::PerformNPCDismember
 24246,0x140365bf0,0x140375550,3,RE::TESNPC::ChangeHeadPart
 24274,0x140368a20,0x140378380,3,RE::TESNPC::HasOverlays
@@ -198,6 +206,8 @@ id,sse,vr,status,name
 24719,0x140380be0,0x140390450,3,BSTEventSource<QuestStatus::Event>* QuestStatus::GetEventSource()
 24985,0x14038d990,0x14039d1c0,3,RE::TESTopicInfo::ResponseData::PopulateResponseText
 25466,0x1403a4dd0,0x1403b4940,3,TESObjectREFR* TESHavokUtilities::FindCollidableRef(const hkpCollidable& a_linkedCollidable)
+25467,0x1403a4e50,0x1403b49c0,4,"float ScaleGameplayImpulseForce_1403a4e50 (float a_inputForce, bhkRigidBody * a_body, bool a_factorMass)"
+25468,0x1403a4f70,0x1403b4ae0,4,"void AddExplosionImpulse_1403a4f70 (NiAVObject * a_obj3D, hkVector4 * a_pos, float a_force, HitData * a_hitData)"
 25478,0x1403a59d0,0x1403b5540,4,"float TESHavokUtilities::GetDamageForImpact_1403a59d0 (float a_mass, float a_speed)"
 25482,0x1403a6140,0x1403b5cb0,3,bhkCollisionObject* NiAVObject::GetCollisionObject()
 25620,0x1403ad1f0,0x1403bcec0,4,RE::Sky::Moon_UpdatePhase
@@ -288,14 +298,17 @@ id,sse,vr,status,name
 35556,0x1405b1020,0x1405b8a20,3,Main::sub_*
 35565,0x1405b2ff0,0x1405bab10,3,Main::OnIdle_1405B2FF0
 35593,0x1405b5490,0x1405bd0f0,2,Main::sub_*
+35598,0x1405b5ef0,0x1405bdb80,4,void Main::SetActive(bool a_active)
 35601,0x1405b6060,0x1405bdcf0,4,NiCamera* Main::WorldRootCamera()
 35620,0x1405b6dc0,0x1405bee40,3,Main::sub_*
 35642,0x1405b8f00,0x1405c0f70,3,SettingsOfSkyrim::
 35882,0x1405c0610,0x1405c8b30,3,po3tweaks::ScreenshotToConsole::DebugNotification
 35922,0x1405c2670,0x1405cab50,4,"void TaskQueueInterface::QueueNodeAttach_1405c2670 (undefined * a_this, NiAVObject * a_obj, NiNode * a_root, bool a_arg3, bool a_arg4)"
+35934,0x1405c3010,0x1405cb5b0,4,"void TaskQueueInterface::QueueUpdateDestructibleObject(TESObjectREFR* a_refr, float a_damage, bool a_arg3, TESObjectREFR* a_cause)"
 35978,0x1405c5220,0x1405cd7c0,3,"void TaskQueueInterface::QueueAddRipple(float a_scale, const NiPoint3& a_pos)"
 35987,0x1405c58c0,0x1405cde60,2,"void TaskQueueInterface::QueueRemoveSpell(ActorHandle& a_actorHandle, SpellItem* a_spellItem)"
 35991,0x1405c5bf0,0x1405ce190,4,"void TaskQueueInterface::QueueForceWeather(TESWeather* a_weather, bool a_forceOverride)"
+36010,0x1405c69b0,0x1405cef50,4,"void TaskQueueInterface::QueueActorDisarm(ActorHandle& a_target, ActorHandle& a_caster)"
 36198,0x1405ce240,0x1405d6840,4,po3tweaks::Spell::ReapplyOnDeath::Load3d
 36248,0x1405d0fc0,0x1405d95a0,3,void Actor::SetRotationZ(float a_angle)
 36252,0x1405d1190,0x1405d9770,3,RE::Actor::IsRunning
@@ -312,6 +325,7 @@ id,sse,vr,status,name
 36407,0x1405db310,0x1405e3990,3,"void Actor::EvaluatePackage(bool a_immediate, bool a_resetAI)"
 36427,0x1405dd770,0x1405e5dc0,3,"void Actor::StealAlarm(TESObjectREFR* a_ref, TESForm* a_object, std::int32_t a_num, std::int32_t a_total, TESForm* a_owner, bool a_allowWarning)"
 36432,0x1405df630,0x1405e7c80,4,"void Actor::TrespassAlarm(TESObjectREFR* a_ref, TESForm* a_ownership, std::int32_t a_crime)"
+36444,0x1405e11c0,0x1405e9810,4,float Actor::GetBoundRadius() float Actor::GetBoundRadius()
 36456,0x1405e1860,0x1405e9ee0,3,RE::Actor::GetTotalCarryWeight_1405E1860
 36457,0x1405e18b0,0x1405e9f30,3,bool Actor::IsOverEncumbered()
 36472,0x1405e20c0,0x1405ea760,4,Character::MoveToPackageLocation_1405E20C0
@@ -335,6 +349,7 @@ id,sse,vr,status,name
 36720,0x1405fb450,0x140603c40,3,po3tweaks::IsFurnitureAnimeTypeFix::GetEquippedFurnitureType
 36723,0x1405fb640,0x140603e30,3,void Actor::KillImmediate()
 36748,0x1405fc9a0,0x140605190,3,RE::Actor::RequestDetectionLevel
+36752,0x1405fccb0,0x1406054a0,3,"std::int32_t Actor::RequestLOS(Actor* a_target, float a_viewCone)"
 36755,0x1405fd5b0,0x140605e00,4,RE::Actor::GetEyePos
 36801,0x140600400,0x140608c10,3,void Actor::StopMoving(float a_delta)
 36802,0x140600590,0x140608da0,4,RE::Actor::StopMovement
@@ -431,6 +446,7 @@ id,sse,vr,status,name
 39425,0x1406a2fc0,0x1406c38a0,3,papyrus_extender::papyrus::detail::get_god_mode_impl
 39471,0x1406a9f90,0x1406cbce0,2,RE::PlayerCharacter::ActivatePickRef
 39475,0x1406aa260,0x1406cc000,3,RE::PlayerCharacter::StartGrabObject
+39480,0x1406acaf0,0x1406cf050,3,void PlayerCharacter::DestroyMouseSprings() src\RE\P/PlayerCharacter.cpp:54
 39507,0x1406ae310,0x1406d0b90,4,void PlayerCharacter::SetAIDriven(bool a_enable)
 39535,0x1406b0570,0x1406d3770,3,RE::PlayerCharacter::OnUpdateCrosshairText
 39568,0x1406b2530,0x1406d58a0,3,"bool PlayerCharacter::AttemptPickpocket(TESObjectREFR* a_containerRef, InventoryEntryData* a_entry, std::int32_t a_number, bool a_fromContainer)"
@@ -447,6 +463,7 @@ id,sse,vr,status,name
 40330,0x1406d9490,0x140700330,3,"void ProcessLists::StopCombatAndAlarmOnActor(Actor* a_actor, bool a_notAlarm)"
 40394,0x1406de9a0,0x140705850,4,"std::int16_t ProcessLists::RequestHighestDetectionLevelAgainstActor(Actor* a_actor, std::uint32_t& a_LOSCount)"
 40396,0x1406dec50,0x140705b00,3,void ProcessLists::ClearCachedFactionFightReactions()
+40456,0x1406e3020,0x140709e50,4,"void PlayerCharacter::AddPlayerAddItemEvent(TESObject* a_object, TESForm* a_owner, TESObjectREFR* a_container, AQUIRE_TYPE a_type) src\RE\P/PlayerCharacter.cpp:32"
 40552,0x1406e6130,0x14070d020,3,PlayerSkills::GetSkillData
 40553,0x1406e6180,0x14070d070,3,PlayerSkills::GetLevelData
 40554,0x1406e61d0,0x14070d0c0,3,PlayerSkills::ModSkillPoints
@@ -679,8 +696,25 @@ id,sse,vr,status,name
 66983,0x140c075a0,0x140c42420,3,RE::BSReadWriteLock::UnlockForWrite
 66989,0x140c07900,0x140c42780,4,RE::UpdateGlobalTimeMultiplier_140C07900
 67151,0x140c0d7b0,0x140c485e0,3,void BSThreadEvent::InitSDM()
+67224,0x140c10b30,0x140c4ba30,4,void Rumble::DisableRumble()
 67234,0x140c10dc0,0x140c4d710,4,QuickLoot::
 67240,0x140c11430,0x140c4dd80,4,QuickLoot::
+67315,0x140c150b0,0x140c519e0,3,void BSInputDeviceManager::PollInputDevices_140c108 (float a_secsSinceLastFrame)
+67373,0x140c165e0,0x140c533a0,4,DirectInput8::IDirectInputDevice8A* BSDirectInputManager::CreateDeviceWithGUID(WinAPI::GUID* a_guid)
+67374,0x140c16620,0x140c533e0,4,void BSDirectInputManager::ReleaseDevice(DirectInput8::IDirectInputDevice8A* a_device)
+67375,0x140c16650,0x140c53410,4,"void BSDirectInputManager::GetDeviceState(DirectInput8::IDirectInputDevice8A* a_device, std::uint32_t a_size, void* a_outData)"
+67376,0x140c166d0,0x140c53490,4,"void BSDirectInputManager::GetDeviceData(DirectInput8::IDirectInputDevice8A* a_device, std::uint32_t* a_dataSize, DirectInput8::DIDEVICEOBJECTDATA** a_outData)"
+67382,0x140c16900,0x140c5a810,3,"void BSInputEventQueue::EnqueueButtonEvent(INPUT_DEVICE device, std::uint32_t buttonId, float value, float heldDownSecs)"
+67383,0x140c169b0,0x140c5a8c0,3,void BSInputEventQueue::EnqueueCharEvent(std::uint32_t keycode)
+67384,0x140c16a10,0x140c5a930,3,"void BSInputEventQueue::EnqueueMouseMoveEvent(std::int32_t deltaX, std::int32_t deltaY)"
+67385,0x140c16ab0,0x140c5a9e0,3,"void BSInputEventQueue::EnqueueThumbstickEvent(std::uint32_t thumbstickId, float x, float y)"
+67386,0x140c16b60,0x140c5aaa0,4,"void BSInputEventQueue::EnqueueDeviceConnectEvent(INPUT_DEVICE device, bool connected)"
+67387,0x140c16bd0,0x140c5ab10,4,"void BSInputEventQueue::EnqueueKinectEvent(BSFixedString* userEvent, BSFixedString* heard)"
+67388,0x140c16c80,0x140c5af00,4,void BSInputEventQueue::Reset()
+67431,0x140c18800,0x140c5cff0,2,BSIInputDevice* BSInputDeviceFactory::CreateInputDevice(INPUT_DEVICE a_deviceType) src\RE\B/BSInputDeviceFactory.cpp:10
+67438,0x140c18c30,0x140c5d290,4,bool BSInputDevice::LoadControlsDefinitionFile(const char* a_fileName) src\RE\B/BSInputDevice.cpp:38
+67441,0x140c190f0,0x140c5d750,4,"void BSInputDevice::SetButtonState(std::uint32_t a_buttonId, float a_timeSinceLastPoll, bool a_buttonWasPressed, bool a_buttonIsPressed)"
+67457,0x140c199f0,0x140c5e2a0,4,void BSPCGamepadDeviceHandler::InitializeDelegate()
 67819,0x140c28bf0,0x140c6db20,3,BSFixedString* BSFixedString::ctor8(const char* a_data)
 67834,0x140c29510,0x140c6e440,3,BSFixedString* BSFixedString::ctor16(const wchar_t* a_data)
 67844,0x140c29900,0x140c6e830,4,"void BSScaleformTranslator::GetCachedString_140c29900 (wchar_t * * a_pOut, wchar_t * a_bufIn, uint32_t a_unused)"
@@ -717,11 +751,13 @@ id,sse,vr,status,name
 69804,0x140c7eb60,0x140cc5250,3,RE::NiSkinInstance::Ctor
 70860,0x140cc6090,0x140d0cbe0,4,"void NiControllerSequence::SetPhase(float a_phase, bool a_arg2)"
 70882,0x140cc7cb0,0x140d0e800,4,"bool NiControllerSequence::Activate(std::uint8_t a_interpIndex, bool a_maxOffset, float a_seqWeight, float a_easeInTime, NiControllerSequence* a_partnerSequence, bool a_transition)"
+72799,0x140d03330,0x140d49ec0,4,void NiParticleSystem::AddModifier(NiPSysModifier* a_modifier)
 74040,0x140d2f220,0x140d775e0,4,"BSResource::ErrorCode BSModelDB::Demand(const char* a_modelPath, NiPointer<NiNode>& a_modelOut, const DBTraits::ArgsType& a_args)"
 74236,0x140d38120,0x140d805b0,3,RE::INISettingCollection::WriteSetting
 74237,0x140d38310,0x14053c550,3,RE::INISettingCollection::ReadSetting
 74239,0x140d38710,0x140d80bb0,3,RE::INISettingCollection::OpenHandle
 74240,0x140d38720,0x140d80bc0,3,RE::INISettingCollection::CloseHandle
+74377,0x140d3d3d0,0x140d86360,4,BSWindModifier* BSWindModifier::Ctor()
 75460,0x140d6a0c0,0x140dbbb80,3,Skyrim-Upscaler::BSGraphics_Renderer_Begin_UpdateJitter
 75461,0x140d6a2b0,0x140dbbdd0,3,shadowboost::TimeManager_SleepCheck
 75477,0x140d6bfe0,0x140dbdd00,3,Skyrim-Upscaler
@@ -732,6 +768,10 @@ id,sse,vr,status,name
 76033,0x140da81e0,0x140dfd160,3,RE::NiAVObject::SetMotionType
 76170,0x140dae3d0,0x140e03350,3,void NiAVObject::SetCollisionLayer(COL_LAYER a_collisionLayer)
 76171,0x140dae3f0,0x140e03370,3,"void NiAVObject::SetCollisionLayerAndGroup(COL_LAYER a_collisionLayer, std::uint32_t a_group)"
+76259,0x140db36f0,0x140e08670,4,void bhkRigidBody::SetLinearVelocity(const hkVector4& a_newVel)
+76260,0x140db37c0,0x140e08740,4,void bhkRigidBody::SetAngularVelocity(const hkVector4& a_newVel)
+76261,0x140db3890,0x140e08810,4,void bhkRigidBody::SetLinearImpulse(const hkVector4& a_impulse) src\RE\B/bhkRigidBody.cpp:22
+76262,0x140db3930,0x140e088b0,4,void bhkRigidBody::SetAngularImpulse(const hkVector4& a_impulse) src\RE\B/bhkRigidBody.cpp:8
 76271,0x140db4d20,0x140e09ca0,3,"void NiAVObject::UpdateRigidConstraints(bool a_enable, std::uint8_t a_arg2, std::uint32_t a_arg3)"
 76799,0x140ddca80,0x140e30f40,4,MATERIAL_ID bhkShape::GetMaterialID(hkpShapeKey a_key)
 79947,0x140ebf510,0x140f1b750,3,Skyrim-Upscaler::Main_DrawWorld_MainDraw
