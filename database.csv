@@ -507,6 +507,8 @@ id,sse,vr,status,name
 46763,0x1407db410,0x140806760,2,CombatBehaviorFallbackToRanged src\RE/CombatBehaviorNodesMovement.cpp:11
 46764,0x1407db4a0,0x1408067f0,2,CombatBehaviorReposition src\RE/CombatBehaviorNodesMovement.cpp:9
 46765,0x1407db530,0x140806880,2,CombatBehaviorSurround src\RE/CombatBehaviorNodesMovement.cpp:8
+48139,0x14080c020,0x140837370,4,SCAR::AttackDistanceBase src/Hook_AttackStart.h:99
+48140,0x14080c6f0,0x140837a40,4,SCAR::Hook_AttackStart.h:20
 49311,0x14083c870,0x140867b70,3,RE::CombatApproachTargetSpeedController::sub_14083C870
 49711,0x140844d00,0x14086ffb0,3,RE::Character::sub_140844D00
 49716,0x140844e40,0x1408700f0,4,CombatPathingRevolution::src/Advanced_Hook.h:13
