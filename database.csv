@@ -147,6 +147,7 @@ id,sse,vr,status,name
 19275,0x14028e360,0x14029fa90,4,std::int32_t PlayerCharacter::GetItemCount(TESBoundObject* a_object)
 19277,0x14028e3c0,0x14029faf0,3,float TESObjectREFR::GetWeightInContainer()
 19316,0x1402943b0,0x1402a5ac0,4,bool Actor::Update3D()
+19322,0x1402944F0,0x1402A5C00,3,TESModel* TESObjectREFR::GetSkeletonModel(TESObjectREFR* a_this)
 19323,0x1402945e0,0x1402a5cf0,3,RE::TESObjectREFR::FindReferenceFor3D
 19326,0x140294730,0x1402a5e30,3,void TESObjectREFR::GetTransform(NiTransform& a_transform)
 19338,0x140295060,0x1402a6760,3,bool Actor::IsLimbGone(std::uint32_t a_limb)
@@ -190,9 +191,13 @@ id,sse,vr,status,name
 24207,0x1403606d0,0x14036ffd0,3,RE::TESNPC::UpdateNeck
 24211,0x140360c10,0x140370510,2,enhanced_reanimation::TESNPC::Activate
 24212,0x140361640,0x140370f60,3,enhanced_reanimation::TESNPC::GetActivateText
+24221,0x140363000,0x140372920,3,WhosWho::LoadArmorRelatedFunction4
+24226,0x140363CD0,0x140373630,3,TESNPC::
 24228,0x140363f20,0x140373880,4,RE::TESNPC::UpdateHead
 24232,0x140364350,0x140373cb0,4,"void TESObjectARMO::InitWornArmor(Actor* a_actor, BSTSmartPointer<BipedAnim>* a_biped)"
+24233,0x140364680,0x140373FE0,3,WhosWho::LoadArmorRelatedFunction2
 24236,0x140364ff0,0x140374950,3,FEC::processArmorAttach::PerformNPCDismember
+24237,0x140364680,0x140374D60,3,WhosWho::LoadArmorRelatedFunction3
 24246,0x140365bf0,0x140375550,3,RE::TESNPC::ChangeHeadPart
 24274,0x140368a20,0x140378380,3,RE::TESNPC::HasOverlays
 24275,0x140368b30,0x140378490,3,RE::TESNPC::GetBaseOverlays
@@ -233,6 +238,7 @@ id,sse,vr,status,name
 25977,0x1403c38e0,0x1403d3160,3,"void BSFaceGenAnimationData::Reset(float a_timer, bool a_resetExpression, bool a_resetModifierAndPhoneme, bool a_resetCustom, bool a_closeEyes)"
 25980,0x1403c3f00,0x1403d3780,3,"void BSFaceGenAnimationData::SetExpressionOverride(std::int32_t a_idx, float a_value)"
 26009,0x1403c66a0,0x1403d5f20,4,RE::random
+26258,0x1403D2970,0x1403E22E0,3,WhosWho::GetFaceRelatedData
 26259,0x1403d2a60,0x1403e23d0,3,"void BSFaceGenManager::PrepareHeadPartForShaders(BSFaceGenNiNode* a_node, BGSHeadPart* a_headPart, TESNPC* a_npc)"
 26616,0x1403e5250,0x1403f4da0,4,RE::ActorValueOwner::GetClampedActorValue
 29074,0x1404447a0,0x1404542f0,3,"bool TESCondition::IsTrue(TESObjectREFR* a_actionRef, TESObjectREFR* a_targetRef)"
@@ -645,6 +651,7 @@ id,sse,vr,status,name
 55352,0x140988450,0x1409c35d0,2,po3tweaks::GameTimers::SetGlobal
 55672,0x1409951f0,0x1409CFD10,3,papyrus__ObjectReference::PlaceAtMe
 55945,0x1409a4050,0x1409deb70,3,SPID:Distribute::DeathItemManager::Detail::Add_item
+56038,0x1409a95e0,0x1409E4103,3,TESObjectREFR::Enable
 56227,0x1409ae5c0,0x1409e90e0,3,RE::TESObjectREFR::MoveTo
 56476,0x1409b8750,0x1409f32a0,2,DialogueMovementEnabler::isInMenuMode
 56606,0x1409c6730,0x140a01280,3,RE::hkReferencedObject::AddReference
