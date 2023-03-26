@@ -479,17 +479,41 @@ id,sse,vr,status,name
 43952,0x140781f00,0x1407ad250,4,RE::CombatMagicCaster::StaticCheckTargetValid
 43956,0x140782330,0x1407ad680,4,RE::CombatMagicCaster::CheckTargetValid
 44036,0x140785f80,0x1407b12d0,4,enhanced_reanimation::CombatMagicCasterReanimate::CheckShouldEquip
+46050,0x1407bd150,0x1407e84a0,4,"bool Actor::UpdateNavPos(const NiPoint3& a_pos, const NiPoint3& a_new_pos, float a_speed, float a_distance)"
+46229,0x1407c69d0,0x1407f1d20,4,void CombatBehaviorTreeControl::Ascend() src\RE/CombatBehaviorTreeControl.h:42
+46240,0x1407c6d30,0x1407f2080,4,void CombatBehaviorTreeControl::SetFailed(bool a_fail) src\RE/CombatBehaviorTreeControl.h:47
+46255,0x1407c7690,0x1407f29e0,4,"NodeArray& pushback_parentof(NodeArray& array, NodeArray& cont_node)"
+46261,0x1407c7820,0x1407f2b70,4,"NodeArray& init_withNode_withname(NodeArray& array, const char* name, CombatBehaviorTreeNode* node)"
+46264,0x1407c7a40,0x1407f2d90,4,Character* CombatAI__get_me() src/Util.cpp:101
+46265,0x1407c7b20,0x1407f2e70,4,Character* CombatAI__get_he() src/Util.cpp:96
+46301,0x1407c8c10,0x1407f3f60,4,void CombatBehaviorTreeNode::ctor_nonvirtual() src\RE/CombatBehaviorTreeNode.h:55
+46302,0x1407c8c40,0x1407f3f90,4,void CombatBehaviorTreeNode::dtor_nonvirtual() src\RE/CombatBehaviorTreeNode.h:62
+46304,0x1407c8cb0,0x1407f4000,4,CombatBehaviorTreeNode* CombatBehaviorTreeNode::add_FirstChildren(CombatBehaviorTreeNode* child) src\RE/CombatBehaviorTreeNode.h:42
+46305,0x1407c8d40,0x1407f4090,4,void CombatBehaviorTreeNode::init_childrens_parents(NodeArray& cont_node) src\RE/CombatBehaviorTreeNode.h:35
 46641,0x1407d4a80,0x1407ffdd0,4,"NodeArray* WrapToRandomNode_1407d4a80 (NodeArray& a_array, const char* a_name, RE::TreeCtors_extradata* a_extradata, RE::CombatBehaviorTreeNode* a_node)"
 46712,0x1407d73d0,0x140802720,4,CombatPathingRevolution::src/Fallback_Hook.h:16
 46713,0x1407d7740,0x140802a90,4,CombatPathingRevolution::src/Fallback_Hook.h:77
 46720,0x1407d8200,0x140803550,4,CombatPathingRevolution::src/Circling_Hook.h:167
 46724,0x1407d8c90,0x140803fe0,4,CombatPathingRevolution::src/Backoff_Hook.h:19
 46731,0x1407d97d0,0x140804b20,4,CombatPathingRevolution::src/Backoff_Hook.h:55
+46732,0x1407da060,0x1408053b0,4,"NodeArray& wrap_to_conditional_2(NodeArray& a, const char* name, TreeCtors_extradata* extradata, CombatBehaviorTreeNode* node)"
+46736,0x1407da290,0x1408055e0,4,"NodeArray& wrap_to_valuenode_13(NodeArray& a, const char* name, TreeCtors_extradata* extradata, CombatBehaviorTreeNode* node)"
+46753,0x1407dac80,0x140805fd0,2,CombatBehaviorTreeCreateContextNode_CombatBehaviorContextCloseMovement_ src\RE/CombatBehaviorNodesMovement.cpp:5
+46758,0x1407db140,0x140806490,2,CombatBehaviorAdvance src\RE/CombatBehaviorNodesMovement.cpp:10
+46759,0x1407db1d0,0x140806520,2,CombatBehaviorBackoff src\RE/CombatBehaviorNodesMovement.cpp:7
+46760,0x1407db260,0x1408065b0,2,CombatBehaviorCircle src\RE/CombatBehaviorNodesMovement.cpp:12
+46761,0x1407db2f0,0x140806640,2,CombatBehaviorCircleDistant src\RE/CombatBehaviorNodesMovement.cpp:13
+46762,0x1407db380,0x1408066d0,2,CombatBehaviorFallback src\RE/CombatBehaviorNodesMovement.cpp:6
+46763,0x1407db410,0x140806760,2,CombatBehaviorFallbackToRanged src\RE/CombatBehaviorNodesMovement.cpp:11
+46764,0x1407db4a0,0x1408067f0,2,CombatBehaviorReposition src\RE/CombatBehaviorNodesMovement.cpp:9
+46765,0x1407db530,0x140806880,2,CombatBehaviorSurround src\RE/CombatBehaviorNodesMovement.cpp:8
 49311,0x14083c870,0x140867b70,3,RE::CombatApproachTargetSpeedController::sub_14083C870
 49711,0x140844d00,0x14086ffb0,3,RE::Character::sub_140844D00
+49716,0x140844e40,0x1408700f0,4,CombatPathingRevolution::src/Advanced_Hook.h:13
 49720,0x140845070,0x140870320,4,float Character::GetCircleChanceMult_140845070(Character *param_1)
 49721,0x1408450a0,0x140870350,4,CombatPathingRevolution::src/Circling_Hook.h:61
 49747,0x140845a10,0x140870cc0,3,StaminaNPC::apply_another_get_chance
+49748,0x140845b30,0x140870de0,4,"float Actor::GetAttackChance(Actor* a_targ, RE::BGSAttackData* a_atkData)"
 49749,0x140845c00,0x140870eb0,3,StaminaNPC::apply_get_CombatSpecialAttackChance
 49750,0x140845c30,0x1408705f0,3,StaminaNPC::apply_get_CombatBlockAttackChance
 49751,0x140845c60,0x140870f10,3,StaminaNPC::apply_get_CombatBlockChance
@@ -8719,6 +8743,7 @@ id,sse,vr,status,name
 528536,0x1434963b8,0x1436f1ec8,3,RE::NiRTTI_BSLODMultiIndexTriShape
 528538,0x1434963d0,0x1436f1ee0,3,RE::NiRTTI_BSSubIndexLandTriShape
 528600,0x143497408,0x1436f2f58,4,RE::TlsIndex
+529964,0x1407dff20,0x14080b270,4,CombatPathingRevolution::src/Advanced_Hook.h:90
 542544,0x141520ab0,0x141597e00,3,VTABLE_NiTStringMap_Setting__0
 542598,0x141522c28,0x141599f78,3,VTABLE_MagicItem__PreloadableVisitor_0
 542605,0x141523058,0x14159a3a8,3,VTABLE_MagicItemFindFunctor_0
