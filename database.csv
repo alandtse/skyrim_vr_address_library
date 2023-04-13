@@ -179,6 +179,7 @@ id,sse,vr,status,name
 22340,0x140310ec0,0x140322370,3,po3tweaks::NoCheatMode::ImmortalMode
 22350,0x140311250,0x140322760,3,powerof3tweaks::ToggleCollisionFix::ToggleCollision
 22790,0x140324e90,0x1402af140,4,BGSStoryEventManager* BGSStoryEvent::BGSStoryEventManager::GetSingleton() include\RE\B/BGSStoryEventManager.h:20
+22825,0x140325f00,0x140335740,4,void * SKSE::CreateUIMessageData_140325f00 (BSFixedString * param_1)
 22843,0x140326460,0x140335ca0,3,RE::MessageDataFactoryManager::GetSingleton
 22845,0x140326510,0x140335d50,3,RE::INISettingCollection::ReadFromFile
 23073,0x14032ece0,0x14033e5a0,3,RE::ApplyPerkEntries
