@@ -192,13 +192,13 @@ id,sse,vr,status,name
 24207,0x1403606d0,0x14036ffd0,3,RE::TESNPC::UpdateNeck
 24211,0x140360c10,0x140370510,2,enhanced_reanimation::TESNPC::Activate
 24212,0x140361640,0x140370f60,3,enhanced_reanimation::TESNPC::GetActivateText
-24221,0x140363000,0x140372920,3,WhosWho::LoadArmorRelatedFunction4
+24221,0x140363000,0x140372920,4,WhosWho::LoadArmorRelatedFunction4
 24226,0x140363CD0,0x140373630,3,TESNPC::
 24228,0x140363f20,0x140373880,4,RE::TESNPC::UpdateHead
 24232,0x140364350,0x140373cb0,4,"void TESObjectARMO::InitWornArmor(Actor* a_actor, BSTSmartPointer<BipedAnim>* a_biped)"
-24233,0x140364680,0x140373FE0,3,WhosWho::LoadArmorRelatedFunction2
+24233,0x140364680,0x140373FE0,4,WhosWho::LoadArmorRelatedFunction2
 24236,0x140364ff0,0x140374950,3,FEC::processArmorAttach::PerformNPCDismember
-24237,0x140364680,0x140374D60,3,WhosWho::LoadArmorRelatedFunction3
+24237,0x140365400,0x140374D60,4,WhosWho::LoadArmorRelatedFunction3
 24246,0x140365bf0,0x140375550,3,RE::TESNPC::ChangeHeadPart
 24274,0x140368a20,0x140378380,3,RE::TESNPC::HasOverlays
 24275,0x140368b30,0x140378490,3,RE::TESNPC::GetBaseOverlays
@@ -239,7 +239,7 @@ id,sse,vr,status,name
 25977,0x1403c38e0,0x1403d3160,3,"void BSFaceGenAnimationData::Reset(float a_timer, bool a_resetExpression, bool a_resetModifierAndPhoneme, bool a_resetCustom, bool a_closeEyes)"
 25980,0x1403c3f00,0x1403d3780,3,"void BSFaceGenAnimationData::SetExpressionOverride(std::int32_t a_idx, float a_value)"
 26009,0x1403c66a0,0x1403d5f20,4,RE::random
-26258,0x1403D2970,0x1403E22E0,3,WhosWho::GetFaceRelatedData
+26258,0x1403D2970,0x1403E22E0,4,WhosWho::GetFaceRelatedData
 26259,0x1403d2a60,0x1403e23d0,3,"void BSFaceGenManager::PrepareHeadPartForShaders(BSFaceGenNiNode* a_node, BGSHeadPart* a_headPart, TESNPC* a_npc)"
 26616,0x1403e5250,0x1403f4da0,4,RE::ActorValueOwner::GetClampedActorValue
 29074,0x1404447a0,0x1404542f0,3,"bool TESCondition::IsTrue(TESObjectREFR* a_actionRef, TESObjectREFR* a_targetRef)"
