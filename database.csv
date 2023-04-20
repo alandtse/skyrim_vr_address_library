@@ -10134,7 +10134,7 @@ id,sse,vr,status,name
 684944,0x141e16af8,0x141edca78,3,RE::RTTI_GridCellArray
 684945,0x141e16b20,0x141edcaa0,3,RE::RTTI_TESActionData
 684946,0x141e16b48,0x141edcac8,3,RE::RTTI_BGSActionData
-684947,0x141e16b70,0x141edcaf0,1,RE::RTTI_ActionOutput
+684947,0x141e16b70,0x141edcaf0,4,RE::RTTI_ActionOutput
 684948,0x141e16b98,0x141edcb18,3,RE::RTTI_InventoryUtils__ItemFilter
 684949,0x141e16bc8,0x141edcb48,3,RE::RTTI_InventoryChanges__IItemChangeVisitor
 684950,0x141e16c08,0x141edcb88,3,RE::RTTI_Inventory__StatInventoryVisitor
@@ -14064,7 +14064,7 @@ id,sse,vr,status,name
 688910,0x141e801c0,0x141f47820,1,RE::RTTI___StatsStarSelector
 688911,0x141e801f8,0x141f47858,1,RE::RTTI___UpdateConstellationAnims
 688913,0x141e80270,0x141f47898,1,RE::RTTI___PerkSelectConfirmCallback
-688914,0x141e802b0,0x141f478e0,1,RE::RTTI___LegendarySkillResetConfirmCallback
+688914,0x141e802b0,0x141f478e0,4,RE::RTTI___LegendarySkillResetConfirmCallback
 688915,0x141e802f8,0x141f47968,1,RE::RTTI_FxResponseArgs_13_
 688917,0x141e80360,0x141f47998,1,RE::RTTI_FxResponseArgs_8_
 688918,0x141e80390,0x141f479c8,3,RE::RTTI_StreamingInstallMenu
