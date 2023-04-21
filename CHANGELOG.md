@@ -1,3 +1,10 @@
+# [0.89.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.88.0...v0.89.0) (2023-04-13)
+
+
+### Features
+
+* add SKSE::CreateUIMessageData ([67297ca](https://github.com/alandtse/skyrim_vr_address_library/commit/67297cabcec7623f40935b20fb81c5a6d6705684))
+
 # [0.88.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.87.0...v0.88.0) (2023-03-26)
 
 
