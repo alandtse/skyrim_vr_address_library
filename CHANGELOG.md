@@ -1,3 +1,16 @@
+# [0.90.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.89.0...v0.90.0) (2023-04-21)
+
+
+### Bug Fixes
+
+* fix whoswho addresses and confidence ([e64e6d4](https://github.com/alandtse/skyrim_vr_address_library/commit/e64e6d4c570fbc743b1ecaf8e0b822b0758b750d))
+
+
+### Features
+
+* add latest commonlib ([621b11f](https://github.com/alandtse/skyrim_vr_address_library/commit/621b11f092acd8f92cda4046a6d3d2083e1201ee))
+* verify ActionOutput and LegendarySkillResetConfirmCallback ([e9afd25](https://github.com/alandtse/skyrim_vr_address_library/commit/e9afd25e1f3cf4daa00e36a600ce29063bfa6f4c))
+
 # [0.89.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.88.0...v0.89.0) (2023-04-13)
 
 
