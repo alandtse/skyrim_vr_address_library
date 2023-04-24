@@ -1,3 +1,10 @@
+# [0.91.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.90.0...v0.91.0) (2023-04-24)
+
+
+### Features
+
+* add archerylocationaldamage ([51af2ac](https://github.com/alandtse/skyrim_vr_address_library/commit/51af2ac36e834dcbc68bbefa5421426f48afa3af))
+
 # [0.90.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.89.0...v0.90.0) (2023-04-21)
 
 
