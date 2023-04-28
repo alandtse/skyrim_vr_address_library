@@ -102,6 +102,7 @@ id,sse,vr,status,name
 15812,0x1401d9200,0x1401e9da0,3,InventoryChanges* InventoryChanges::Ctor(TESObjectREFR* a_ref)
 15813,0x1401d92f0,0x1401e9e90,3,void InventoryChanges::Dtor()
 15829,0x1401e08b0,0x1401f1470,3,void InventoryChanges::InitScripts()
+15833,0x1401e1e90,0x1401f2a50,4,"void InventoryChanges::InitOutfitItems(BGSOutfit* a_outfit, std::uint16_t a_npcLevel)"
 15855,0x1401e5190,0x1401f5d50,4,void InventoryChanges::VisitInventory(IItemChangeVisitor& visitor)
 15856,0x1401e51d0,0x1401f5d90,4,void InventoryChanges::VisitWornItems(IItemChangeVisitor& visitor)
 15858,0x1401e5390,0x1401f5f50,4,"void InventoryChanges::SetFavorite(InventoryEntryData* a_entry, ExtraDataList* a_itemList)"
