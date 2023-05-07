@@ -17064,8 +17064,6 @@ id,sse,vr,status,name
 692141,0x141ebd1c0,0x141f81860,3,RE::RTTI_BSSocket
 692142,0x141ebd1e0,0x141f81880,3,RE::RTTI_BSSocketServer
 5370397616,0x14019c3b0,0x1401ac0e0,3,RE::BSShaderProperty::InvalidateMaterial
-5370677424,0x1401e08b0,0x1401f1470,3,RE::InventoryChanges::GenerateLeveledListChanges
-5370704656,0x1401e7310,0x1401f7ed0,3,RE::InventoryChanges::GetItemCount
 5374512336,0x140588cd0,0x140590320,3,RE::BGSSaveLoadManager::PopulateSaveList
 5375528368,0x140680db0,0x14068a230,3,RE::AIProcess::SetActorRefraction
 5388393136,0x1412c5ab0,0x141303ea0,3,RE::BSLightingShaderProperty::InvalidateTextures
