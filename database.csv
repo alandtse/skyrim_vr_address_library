@@ -178,6 +178,7 @@ id,sse,vr,status,name
 21425,0x1402e8400,0x1402f9900,4,RE::Script::ParseParameters
 21435,0x1402e9c50,0x1402fb150,4,void Script::SetProcessScripts(bool a_ProcessScripts)
 21436,0x1402e9c60,0x1402fb160,4,bool Script::GetProcessScripts()
+21523,0x1402f1180,0x140302680,4,"bool GameFunc__handler::RemoveAllItems_1402F1180 (Script * param_1, longlong * param_2, TESObjectREFR * a_reference, TESObjectREFR * a_target, Script * param_5, ScriptLocals * param_6, undefined8 param_7, uint32_t param_8)"
 21887,0x140300210,0x140311710,2,Console::UpdateLevel
 22289,0x14030f9a0,0x140320eb0,3,"ModelReferenceEffect* TESObjectREFR::InstantiateHitArt(BGSArtObject* a_art, float a_dur, TESObjectREFR* a_facingRef, bool a_faceTarget, bool a_attachToCamera, NiAVObject* a_attachNode, bool a_interfaceEffect)"
 22317,0x140310720,0x140321c30,3,BGSStoryEventManager* BGSRegisteredStoryEvent::BGSStoryEventManager::GetSingleton()
@@ -691,9 +692,11 @@ id,sse,vr,status,name
 55141,0x140980190,0x1409baf10,3,FDGE::BSScript::InitializeScriptTypes
 55352,0x140988450,0x1409c35d0,2,po3tweaks::GameTimers::SetGlobal
 55672,0x1409951f0,0x1409CFD10,3,papyrus__ObjectReference::PlaceAtMe
+55684,0x140996470,0x1409d0f90,4,"void RemoveAllItems_140996470 (undefined * a_vm, uint32_t a_stackID, TESObjectREFR * a_ref, TESObjectREFR * a_target, bool a_keepOwnership, bool a_removeQuestItems)"
 55945,0x1409a4050,0x1409deb70,3,SPID:Distribute::DeathItemManager::Detail::Add_item
 56038,0x1409a95e0,0x1409E4103,3,TESObjectREFR::Enable
 56227,0x1409ae5c0,0x1409e90e0,3,RE::TESObjectREFR::MoveTo
+56261,0x1409af710,0x1409ea240,4,"void RemoveItem_1409AF710 (Character * a_this, TESObjectREFR * a_ref, TESBoundObject * a_item, uint32_t a_count, bool a_silent, TESObjectREFR * a_otherContainer, uint32_t a_stackID, undefined8 * a_vm)"
 56476,0x1409b8750,0x1409f32a0,2,DialogueMovementEnabler::isInMenuMode
 56606,0x1409c6730,0x140a01280,3,RE::hkReferencedObject::AddReference
 56607,0x1409c67f0,0x140a01340,3,RE::hkReferencedObject::RemoveReference
