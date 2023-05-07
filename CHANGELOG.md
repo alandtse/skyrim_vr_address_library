@@ -1,3 +1,10 @@
+# [0.93.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.92.0...v0.93.0) (2023-05-07)
+
+
+### Features
+
+* add support for RemoveAllItems Freeze Fix ([9986d9a](https://github.com/alandtse/skyrim_vr_address_library/commit/9986d9a4a189019f298a642472cc37e326af94c7))
+
 # [0.92.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.91.0...v0.92.0) (2023-04-28)
 
 
