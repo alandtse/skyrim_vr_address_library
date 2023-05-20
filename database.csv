@@ -816,6 +816,7 @@ id,sse,vr,status,name
 75460,0x140d6a0c0,0x140dbbb80,3,Skyrim-Upscaler::BSGraphics_Renderer_Begin_UpdateJitter
 75461,0x140d6a2b0,0x140dbbdd0,3,shadowboost::TimeManager_SleepCheck
 75477,0x140d6bfe0,0x140dbdd00,3,Skyrim-Upscaler
+75479,0x140d6c1e0,0x140dbdf60,3,fDrawGrass_*
 75507,0x140d6dbc0,0x140dbf9b0,3,"NiTexture::RendererData* BSRenderManager::CreateRenderTexture(std::uint32_t a_width, std::uint32_t a_height)"
 75522,0x140d6e780,0x140dc05f0,4,"void Renderer::SaveRenderTargetToFile(RENDER_TARGET a_renderTarget, const char* a_filePath, BSGraphics::TextureFileFormat a_textureFileFormat)"
 75595,0x140d72810,0x140dc5530,4,skyrim-nvidia-reflex::CalledDuringRenderStartup
@@ -8702,6 +8703,7 @@ id,sse,vr,status,name
 524721,0x143025ec0,0x14317e760,3,RE::NiRTTI_BSNiNode
 524722,0x143025ed0,0x14317e770,3,RE::NiRTTI_BSInstanceTriShape
 524729,0x143025f08,0x14317e798,4,RE::g_ID3D11Device
+524751,0x143027910,0x143180560,4,SamplerStatesCollection* GetSingleton()
 524755,0x143027a30,0x143180690,4,VertexShader_perTechniqueBuffersArray
 524757,0x143027ad0,0x143180730,4,VertexShader_perMaterialBuffersArray
 524759,0x143027b20,0x143180780,4,VertexShader_perGeometryBuffersArray
