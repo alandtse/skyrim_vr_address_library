@@ -819,6 +819,7 @@ id,sse,vr,status,name
 75479,0x140d6c1e0,0x140dbdf60,3,fDrawGrass_*
 75507,0x140d6dbc0,0x140dbf9b0,3,"NiTexture::RendererData* BSRenderManager::CreateRenderTexture(std::uint32_t a_width, std::uint32_t a_height)"
 75522,0x140d6e780,0x140dc05f0,4,"void Renderer::SaveRenderTargetToFile(RENDER_TARGET a_renderTarget, const char* a_filePath, BSGraphics::TextureFileFormat a_textureFileFormat)"
+75580,0x140d705b0,0x140dc2e70,3,void BSGraphics::SetDirtyStates_140d705b0 (bool isCompute)
 75595,0x140d72810,0x140dc5530,4,skyrim-nvidia-reflex::CalledDuringRenderStartup
 75709,0x140d7cfb0,0x140dd1160,3,void BSGraphics_Renderer_Begin_UpdateJitter_140d7cfb0(BSGraphics::State* a_state)
 75711,0x140d7d130,0x140dd1320,3,Skyrim-Upscaler::buildCameraStateDataHook
