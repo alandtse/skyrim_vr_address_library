@@ -1,3 +1,11 @@
+# [0.95.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.94.0...v0.95.0) (2023-05-20)
+
+
+### Features
+
+* add community shaders ([114b7a6](https://github.com/alandtse/skyrim_vr_address_library/commit/114b7a6a6740281e9b1652e6a25115f1579040b0))
+* add Grass Sampler Fix ([b01ec82](https://github.com/alandtse/skyrim_vr_address_library/commit/b01ec8296e3efde830b3bb1af3d4ec8e7268b9fe))
+
 # [0.94.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.93.0...v0.94.0) (2023-05-12)
 
 
