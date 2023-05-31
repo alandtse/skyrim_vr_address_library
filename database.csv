@@ -277,6 +277,7 @@ id,sse,vr,status,name
 32142,0x1404f0700,0x140500970,3,"bool IAnimationGraphManagerHolder::SetGraphVariableInt(const BSFixedString& a_variableName, std::int32_t a_in)"
 32143,0x1404f0720,0x140500990,3,"bool IAnimationGraphManagerHolder::SetGraphVariableFloat(const BSFixedString& a_variableName, float a_in)"
 32144,0x1404f0740,0x140502b00,3,"bool IAnimationGraphManagerHolder::SetGraphVariableNiPoint3(const BSFixedString& a_variableName, NiPoint3& a_in)"
+32149,0x1404f0960,0x140500bd0,4,undefined8 IAnimationGraphManagerHolder::sub_1404F0960(IAnimationGraphManagerHolder *a_this)
 32155,0x1404f1140,0x1405013b0,4,bool IAnimationGraphManagerHolder::UpdateAnimationGraphManager(const BSAnimationUpdateData& a_updateData)
 32184,0x1404f1e60,0x1405020d0,4,RE::BSAnimationGraphManager::sub_1404F1E60
 32192,0x1404f2620,0x140502890,3,"bool IAnimationGraphManagerHolder::GetGraphVariableNiPoint3(const BSFixedString& a_variableName, NiPoint3& a_out)"
@@ -705,16 +706,26 @@ id,sse,vr,status,name
 56607,0x1409c67f0,0x140a01340,3,RE::hkReferencedObject::RemoveReference
 56801,0x1409cb860,0x140a063b0,4,"hkStringPtr * ctor_1409cb860 (undefined8 a_this, char * a_data)"
 56806,0x1409cba10,0x140a06560,4,"hkStringPtr::hkStringPtr(std::string_view a_data, const std::uint32_t a_mask, const bool a_mark)"
-58602,0x140a0bb80,0x140a466d0,3,AnimationMotionRevoluation::hkbClipGenerator::Activate
+58602,0x140a0bb80,0x140a466d0,4,AnimationMotionRevoluation::hkbClipGenerator::Activate
+58603,0x140a0c270,0x140a46dc0,4,"void hkbClipGenerator::Update_140A0C270(hkbClipGenerator *a_this,longlong *param_2,undefined4 param_3)"
 58604,0x140a0c610,0x140a47160,3,AnimationMotionRevoluation::hkbClipGenerator::Deactivate
 60502,0x140a77780,0x140ab2180,3,hkpPhantom* hkpWorld::AddPhantom(hkpPhantom* a_phantom)
 60504,0x140a77d80,0x140ab2780,3,void hkpWorld::RemovePhantom(hkpPhantom* a_phantom)
 60551,0x140a7b000,0x140ab5a00,3,"void hkpWorld::CastRay(const hkpWorldRayCastInput& a_input, hkpWorldRayCastOutput& a_output)"
+62122,0x140ad2d10,0x140b0d7b0,3,undefined8 BSSynchronizedClipGenerator::sub_140AD2D10 (BSSynchronizedClipGenerator * a_this)
+62391,0x140ade070,0x140b18b40,4,undefined8 hkbCharacter::sub_140ADE070 (hkbCharacter * a_this)
 62584,0x140ae9a70,0x140b245d0,4,"BSResource__EntryDB_BShkbHkxDB__DBTraits_::Func3_140AE9A70 (longlong param_1, undefined8 param_2)"
+62618,0x140aeb360,0x140b25ec0,4,ulonglong BShkbAnimationGraph::sub_140AEB360 (BShkbAnimationGraph * a_this)
 62640,0x140aedd10,0x140b28870,4,"BShkbAnimationGraph::sub_140AEDD10 (ulonglong param_1, undefined8 param_2, char param_3)"
+62655,0x140af0d10,0x140b2baa0,4,"longlong GetHashedAnimFromAnimIndex_140AF0D10 (BShkbAnimationGraph * a_this, undefined param_2)"
 62694,0x140af5fd0,0x140b30db0,3,"bool BShkbAnimationGraph::GetGraphVariableInt(const BSFixedString& a_variableName, int& a_out)"
 62695,0x140af6090,0x140b30e70,3,"bool BShkbAnimationGraph::GetGraphVariableFloat(const BSFixedString& a_variableName, float& a_out)"
 62696,0x140af6150,0x140b30f30,3,"bool BShkbAnimationGraph::GetGraphVariableBool(const BSFixedString& a_variableName, bool& a_out)"
+62923,0x140b00650,0x140b3b430,4,"undefined4 bshkbAnimationGraphHook2_140b00650 (undefined8 param_1, hkbCharacter * param_2, char param_3, undefined8 param_4, undefined8 param_5)"
+62927,0x140b00ce0,0x140b3bac0,4,"void FUN_140b00ce0 (undefined8 param_1, longlong param_2, longlong * param_3, undefined8 param_4)"
+63017,0x140b05710,0x140b40550,4,bool hkbBehaviorGraph::sub_140B05710 (hkbBehaviorGraph * a_this)
+63028,0x140b06670,0x140b414b0,4,"void bshkbAnimationGraphHook_140b06670 (undefined8 param_1, longlong param_2, longlong param_3, undefined param_4, undefined param_5, undefined8 param_6, undefined param_7)"
+63032,0x140b06fc0,0x140b41e00,4,"void hkbCharacterStringData::sub_140B06FC0 (hkbCharacterStringData * a_this, undefined param_2, undefined param_3, undefined param_4, undefined8 param_5, undefined8 param_6, undefined8 param_7)"
 63070,0x140b0a150,0x140b44f30,4,"std::uint64_t AnimationFileManagerSingleton::Load(const hkbContext& a_context, hkbClipGenerator* a_clipGenerator, std::uint64_t a_arg4)"
 63080,0x140b0acd0,0x140b45ab0,4,void AnimationFileManagerSingleton::UpdateQueue_140B0ACD0 (AnimationFileManagerSingleton * param_1)
 63607,0x140b258b0,0x140b60690,3,"bool BShkbAnimationGraph::SetGraphVariableInt(const BSFixedString& a_variableName, const int a_in)"
@@ -821,6 +832,7 @@ id,sse,vr,status,name
 75507,0x140d6dbc0,0x140dbf9b0,3,"NiTexture::RendererData* BSRenderManager::CreateRenderTexture(std::uint32_t a_width, std::uint32_t a_height)"
 75522,0x140d6e780,0x140dc05f0,4,"void Renderer::SaveRenderTargetToFile(RENDER_TARGET a_renderTarget, const char* a_filePath, BSGraphics::TextureFileFormat a_textureFileFormat)"
 75580,0x140d705b0,0x140dc2e70,3,void BSGraphics::SetDirtyStates_140d705b0 (bool isCompute)
+75591,0x140d71f00,0x140dc4b90,3,OpenAnimationReplacer::src/Hooks.h:107
 75595,0x140d72810,0x140dc5530,4,skyrim-nvidia-reflex::CalledDuringRenderStartup
 75709,0x140d7cfb0,0x140dd1160,3,void BSGraphics_Renderer_Begin_UpdateJitter_140d7cfb0(BSGraphics::State* a_state)
 75711,0x140d7d130,0x140dd1320,3,Skyrim-Upscaler::buildCameraStateDataHook
@@ -833,6 +845,7 @@ id,sse,vr,status,name
 76262,0x140db3930,0x140e088b0,4,void bhkRigidBody::SetAngularImpulse(const hkVector4& a_impulse) src\RE\B/bhkRigidBody.cpp:8
 76271,0x140db4d20,0x140e09ca0,3,"void NiAVObject::UpdateRigidConstraints(bool a_enable, std::uint8_t a_arg2, std::uint32_t a_arg3)"
 76799,0x140ddca80,0x140e30f40,4,MATERIAL_ID bhkShape::GetMaterialID(hkpShapeKey a_key)
+77470,0x140df9140,0x140e4e140,4,"bhkMemorySystem * ctor_140df9140 (bhkMemorySystem * param_1, undefined8 param_2, undefined8 param_3, undefined8 param_4)"
 79947,0x140ebf510,0x140f1b750,3,Skyrim-Upscaler::Main_DrawWorld_MainDraw
 80059,0x140ec30f0,0x140f1fbc0,3,RE::UIMessageQueue::ProcessCommands
 80061,0x140ec31d0,0x140f1fca0,3,RE::UIMessageQueue::CreateUIMessageData
