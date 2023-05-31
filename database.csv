@@ -68,6 +68,7 @@ id,sse,vr,status,name
 14190,0x140189fc0,0x140199cf0,3,"void ScriptEventSourceHolder::SendOpenCloseEvent(const NiPointer<TESObjectREFR>& a_ref, const NiPointer<TESObjectREFR>& a_activeRef, bool a_isOpened)"
 14262,0x14018c750,0x14019c480,4,std::uint16_t TESActorBaseData::GetLevel()
 14399,0x140190480,0x1401a01b0,3,RE::TESDescription::GetDescription
+14485,0x140194d20,0x1401a4a50,4,void TESForm::MakeTemporary_140194D20 (TESForm * a_this)
 14509,0x1401957e0,0x1401a5510,2,"void TESForm::AddCompileIndex(FormID& a_id, TESFile* a_file)"
 14579,0x140197a30,0x1401a7760,4,"void TESLeveledList::CalculateCurrentFormList(std::uint16_t a_level, std::int16_t a_count, BSScrapArray<CALCED_OBJECT>& a_calcedObjects, std::uint32_t a_arg5, bool a_usePlayerLevel)"
 14704,0x14019d510,0x1401ad250,3,BSTEventSource<TESHarvestedEvent::ItemHarvested>* TESHarvestedEvent::GetEventSource()
@@ -95,9 +96,11 @@ id,sse,vr,status,name
 15786,0x1401d7e40,0x1401e89e0,4,"void InventoryEntryData::PoisonObject(AlchemyItem* a_alchItem, std::uint32_t a_count)"
 15788,0x1401d7f10,0x1401e8ab0,4,EnchantmentItem * GetEnchantment_1401D7F10 (ExtraContainerChanges__ItemEntry * param_1)
 15800,0x1401d8d10,0x1401e98b0,3,RE::TESObjectREFR::InitInventoryIfRequired
+15801,0x1401d8e20,0x1401e99c0,4,BSExtraData__VFTable * TESObjectREFR::GetContainerChanges_1401D8E20 (TESObjectREFR * param_1)
 15802,0x1401d8e40,0x1401e99e0,3,InventoryChanges* TESObjectREFR::MakeInventoryChanges()
 15806,0x1401d9040,0x1401e9be0,3,std::uint32_t InventoryChanges::GetWornMask()
 15807,0x1401d9080,0x1401e9c20,3,RE::TESObjectREFR::GetStealValue
+15808,0x1401d9170,0x1401e9d10,4,undefined ExtraContainerChanges__Data::WornHasKeyword_1401D9170 (ExtraContainerChanges__Data * a_this)
 15811,0x1401d91e0,0x1401e9d80,3,EssentialFavorites::Crafting::IsQuestObject
 15812,0x1401d9200,0x1401e9da0,3,InventoryChanges* InventoryChanges::Ctor(TESObjectREFR* a_ref)
 15813,0x1401d92f0,0x1401e9e90,3,void InventoryChanges::Dtor()
@@ -168,6 +171,7 @@ id,sse,vr,status,name
 19800,0x1402a6d80,0x1402b84f0,4,std::uint16_t TESObjectREFR::GetCalcLevel(bool a_adjustLevel)
 19805,0x1402a6ee0,0x1402b8650,3,"bool TESObjectREFR::IsAnOwner(const Actor* a_testOwner, bool a_useFaction, bool a_requiresOwner)"
 19818,0x1402a74c0,0x1402b8c30,3,RE::TESObjectREFR::GetLock
+19843,0x1402a8020,0x1402b9790,4,BGSLocationRefType * TESObjectREFR::GetLocationRefType_1402A8020 (TESObjectREFR * a_this)
 19857,0x1402a8cc0,0x1402ba430,3,void TESObjectREFR::InitChildActivates(TESObjectREFR* a_actionRef)
 20095,0x1402b63b0,0x1402c7b20,3,TESObjectCELL* TESWorldSpace::GetSkyCell()
 20470,0x1402c53d0,0x1402d6b40,3,RE::BGSListForm::AddForm
@@ -362,6 +366,7 @@ id,sse,vr,status,name
 36427,0x1405dd770,0x1405e5dc0,3,"void Actor::StealAlarm(TESObjectREFR* a_ref, TESForm* a_object, std::int32_t a_num, std::int32_t a_total, TESForm* a_owner, bool a_allowWarning)"
 36432,0x1405df630,0x1405e7c80,4,"void Actor::TrespassAlarm(TESObjectREFR* a_ref, TESForm* a_ownership, std::int32_t a_crime)"
 36444,0x1405e11c0,0x1405e9810,4,float Actor::GetBoundRadius() float Actor::GetBoundRadius()
+36452,0x1405e1510,0x1405e9b60,3,"float TESObjectREFR::GetSubmergeLevel_1405E1510 (TESObjectREFR * a_this, float a_zPos, TESObjectCELL * a_parentCell)"
 36456,0x1405e1860,0x1405e9ee0,3,RE::Actor::GetTotalCarryWeight_1405E1860
 36457,0x1405e18b0,0x1405e9f30,3,bool Actor::IsOverEncumbered()
 36472,0x1405e20c0,0x1405ea760,4,Character::MoveToPackageLocation_1405E20C0
@@ -438,6 +443,7 @@ id,sse,vr,status,name
 37808,0x140631c80,0x14063ab50,3,void Actor::InterruptCast(bool a_restoreMagicka)
 37810,0x140631d70,0x14063ac40,4,bool Actor::IsCasting(MagicItem* a_spell)
 37820,0x1406322f0,0x14063b1c0,3,void Actor::DeselectSpell(SpellItem* a_spell)
+37822,0x140632610,0x14063b4e0,4,TESForm * GetEquippedShout_140632610 (Actor * a_this)
 37827,0x140632b60,0x14063ba30,4,void Actor::VisitSpells(ForEachSpellVisitor& a_visitor)
 37828,0x140632d10,0x14063bbe0,3,bool Actor::HasSpell(SpellItem* a_spell)
 37829,0x140632d50,0x14063bc20,4,bool Actor::HasShout(TESShout* a_shout)
@@ -468,6 +474,7 @@ id,sse,vr,status,name
 38760,0x1406797d0,0x140682c50,3,"void HighProcessData::SetHeadtrackTarget(HEAD_TRACK_TYPE a_headtrackType, TESObjectREFR* a_target)"
 38850,0x14067d120,0x1406865a0,3,"void AIProcess::SetHeadtrackTarget(Actor* a_owner, NiPoint3& a_targetPosition)"
 38858,0x14067d4a0,0x140686920,4,"void AIProcess::KnockExplosion(Actor* a_actor, const NiPoint3& a_location, float a_magnitude)"
+39171,0x1406928c0,0x14069bec0,4,Character * Character::ctor (Character * a_this)
 39175,0x140692cd0,0x14069c2d0,3,RE::PlayerCharacter::GetArmorValue
 39179,0x140693050,0x14069c650,3,RE::PlayerCharacter::GetDamage
 39181,0x140693110,0x14069c710,3,RE::Actor::DoReset3D
@@ -701,14 +708,21 @@ id,sse,vr,status,name
 56038,0x1409a95e0,0x1409E4103,3,TESObjectREFR::Enable
 56227,0x1409ae5c0,0x1409e90e0,3,RE::TESObjectREFR::MoveTo
 56261,0x1409af710,0x1409ea240,4,"void RemoveItem_1409AF710 (Character * a_this, TESObjectREFR * a_ref, TESBoundObject * a_item, uint32_t a_count, bool a_silent, TESObjectREFR * a_otherContainer, uint32_t a_stackID, undefined8 * a_vm)"
+56475,0x1409b8740,0x1409f3290,4,float papyrus__utility::GetCurrentGameTime_1409B8740 (void)
 56476,0x1409b8750,0x1409f32a0,2,DialogueMovementEnabler::isInMenuMode
 56606,0x1409c6730,0x140a01280,3,RE::hkReferencedObject::AddReference
 56607,0x1409c67f0,0x140a01340,3,RE::hkReferencedObject::RemoveReference
 56801,0x1409cb860,0x140a063b0,4,"hkStringPtr * ctor_1409cb860 (undefined8 a_this, char * a_data)"
 56806,0x1409cba10,0x140a06560,4,"hkStringPtr::hkStringPtr(std::string_view a_data, const std::uint32_t a_mask, const bool a_mark)"
+57886,0x1409fbda0,0x140a368f0,4,hkbAnimationBindingSet hkbCharacter::GetAnimationBindingSet_1409FBDA0 (hkbCharacter * a_this)
 58602,0x140a0bb80,0x140a466d0,4,AnimationMotionRevoluation::hkbClipGenerator::Activate
 58603,0x140a0c270,0x140a46dc0,4,"void hkbClipGenerator::Update_140A0C270(hkbClipGenerator *a_this,longlong *param_2,undefined4 param_3)"
 58604,0x140a0c610,0x140a47160,3,AnimationMotionRevoluation::hkbClipGenerator::Deactivate
+58619,0x140a0dbc0,0x140a48710,4,"void hkbClipGenerator::sub_140A0DBC0 (hkbClipGenerator * a_this, float a_prevLocalTime, float a_newLocalTime, int32_t a_loops, undefined8 * a_eventQueue)"
+58622,0x140a0e210,0x140a48d60,4,"void hkbClipGenerator::sub_140A0E210 (hkbClipGenerator * a_this, float a_deltaTime, float * a_outPrevLocalTime, float * a_outLocalTime, int32_t * a_outLoops, bool * a_outAtEnd)"
+58628,0x140a0f480,0x140a49fd0,4,"void sub_140A0F480 (hkbClipGenerator * a_this, hkaDefaultAnimationControl* a_hkaDefaultAnimationControl)"
+58630,0x140a0f620,0x140a4a170,4,bool hkbClipGenerator::checkAtEnd (hkbClipGenerator * param_1)
+58817,0x140a23f10,0x140a5e8c0,4,hkaMirroredSkeleton * GetMirroredSkeleton (hkbCharacterSetup * a_this)
 60502,0x140a77780,0x140ab2180,3,hkpPhantom* hkpWorld::AddPhantom(hkpPhantom* a_phantom)
 60504,0x140a77d80,0x140ab2780,3,void hkpWorld::RemovePhantom(hkpPhantom* a_phantom)
 60551,0x140a7b000,0x140ab5a00,3,"void hkpWorld::CastRay(const hkpWorldRayCastInput& a_input, hkpWorldRayCastOutput& a_output)"
@@ -728,6 +742,9 @@ id,sse,vr,status,name
 63032,0x140b06fc0,0x140b41e00,4,"void hkbCharacterStringData::sub_140B06FC0 (hkbCharacterStringData * a_this, undefined param_2, undefined param_3, undefined param_4, undefined8 param_5, undefined8 param_6, undefined8 param_7)"
 63070,0x140b0a150,0x140b44f30,4,"std::uint64_t AnimationFileManagerSingleton::Load(const hkbContext& a_context, hkbClipGenerator* a_clipGenerator, std::uint64_t a_arg4)"
 63080,0x140b0acd0,0x140b45ab0,4,void AnimationFileManagerSingleton::UpdateQueue_140B0ACD0 (AnimationFileManagerSingleton * param_1)
+63192,0x140b12fa0,0x140b4dd80,4,"hkVector4 * hkbBlendPoses_140b12fa0 (uint32_t numData, hkQsTransform * src, hkQsTransform * dst, float amount, hkQsTransform * out)"
+63231,0x140b16fb0,0x140b51d90,4,"hkaDefaultAnimationControl * hkaDefaultAnimationControl::ctor (hkaDefaultAnimationControl * a_this, hkaDefaultAnimationControl * a_other)"
+63423,0x140b1e7c0,0x140b595a0,4,"void hkaDefaultAnimationControl::SetAnimationBinding_140B1E7C0 (hkaDefaultAnimationControl * a_this, hkaAnimationBinding * a_binding)"
 63607,0x140b258b0,0x140b60690,3,"bool BShkbAnimationGraph::SetGraphVariableInt(const BSFixedString& a_variableName, const int a_in)"
 63608,0x140b25990,0x140b60770,3,"bool BShkbAnimationGraph::SetGraphVariableFloat(const BSFixedString& a_variableName, const float a_in)"
 63609,0x140b25c70,0x140b60a50,3,"bool BShkbAnimationGraph::SetGraphVariableBool(const BSFixedString& a_variableName, const bool a_in)"
