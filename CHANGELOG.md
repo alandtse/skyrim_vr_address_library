@@ -1,3 +1,10 @@
+# [0.97.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.96.0...v0.97.0) (2023-05-31)
+
+
+### Features
+
+* add openanimationreplacer ([c944aa0](https://github.com/alandtse/skyrim_vr_address_library/commit/c944aa01c25a5f23d8991f0d25bc0526293f216c))
+
 # [0.96.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.95.0...v0.96.0) (2023-05-26)
 
 
