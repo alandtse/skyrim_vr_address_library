@@ -1,3 +1,10 @@
+# [0.98.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.97.1...v0.98.0) (2023-06-04)
+
+
+### Features
+
+* add dualcastingfix ([58888b4](https://github.com/alandtse/skyrim_vr_address_library/commit/58888b40636cc6cfd6ff95de6fd2c8a882742864))
+
 ## [0.97.1](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.97.0...v0.97.1) (2023-05-31)
 
 
