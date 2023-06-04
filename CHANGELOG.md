@@ -1,3 +1,10 @@
+## [0.97.1](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.97.0...v0.97.1) (2023-05-31)
+
+
+### Bug Fixes
+
+* add missing openanimationreplacer ids ([e0dc9f0](https://github.com/alandtse/skyrim_vr_address_library/commit/e0dc9f068f72ee57d76ffdc78f28ecd404b778a3))
+
 # [0.97.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.96.0...v0.97.0) (2023-05-31)
 
 
