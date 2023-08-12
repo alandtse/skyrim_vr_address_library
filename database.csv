@@ -81,6 +81,7 @@ id,sse,vr,status,name
 15491,0x1401c60a0,0x1401d6200,3,RE::BipedAnim::Dtor
 15494,0x1401c61a0,0x1401d6530,3,RE::BipedAnim::RemoveAllParts
 15495,0x1401c6270,0x1401d6600,3,FEC::UpdateCollision::RemoveNodeFromScene
+15499,0x1401c6a30,0x1401D6E90,3,BipedAnim::sub(RE::BipedAnim *a1, RE::TESRace *a_race, RE::TESObjectARMO *a_skin, bool isFemale)
 15501,0x1401c6f90,0x1401d7450,3,FEC::ProcessObject::attachArmorAddon
 15535,0x1401cafb0,0x1401db9e0,3,FEC::ProcessGeometry::processAttachedGeometry
 15547,0x1401cc7c0,0x1401dd210,3,void NiAVObject::RemoveDecals()
@@ -127,6 +128,7 @@ id,sse,vr,status,name
 16175,0x1401fa6c0,0x14020c010,3,void NiCamera::ScreenSplatter::Clear()
 17034,0x14021a4b0,0x14022bdb0,3,TESFurniture::Activate_*
 17361,0x140227070,0x1402383a0,4,"void TESObjectARMA::InitWornArmorAddon(TESObjectARMO* a_armor, BSTSmartPointer<BipedAnim>* a_biped, SEX a_sex)"
+17392,0x140228ad0,0x140239E00,4,"void TESObjectARMO::AddToBiped(RE::TESObjectARMO* a_armor,RE::TESRace* a_race, BSTSmartPointer<BipedAnim>* a_biped, bool isFemale)"
 17439,0x140229ef0,0x14023b240,4,bool TESObjectBOOK::Read(TESObjectREFR* a_reader)
 17470,0x14022a8c0,0x14023bc10,3,BSTEventSource<BooksRead::Event>* BooksRead::GetEventSource()
 17521,0x14022cb50,0x14023dea0,3,po3tweaks::AIFadeOut::GetFadeState
