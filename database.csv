@@ -46,6 +46,7 @@ id,sse,vr,status,name
 13224,0x140158350,0x140168e00,3,po3tweaks::ToggleCollisionFix::ToggleCollision
 13530,0x1401652d0,0x140175a10,3,RE::UIMessageQueue::AddMessage
 13594,0x140167220,0x140177940,3,FDGE::Skyrim::LoadWorldData
+13597,0x140167400,0x140177b20,4,bool TESDataHandler::AddFormToDataHandler(TESForm* a_form)
 13625,0x14016c210,0x14017cc30,3,"ObjectRefHandle TESDataHandler::CreateReferenceAtLocation(TESBoundObject* a_base, const NiPoint3& a_location, const NiPoint3& a_rotation, TESObjectCELL* a_targetCell, TESWorldSpace* a_selfWorldSpace, TESObjectREFR* a_alreadyCreatedRef, BGSPrimitive* a_primitive, const ObjectRefHandle& a_linkedRoomRefHandle, bool a_forcePersist, bool a_arg11)"
 13657,0x1401713d0,0x140181b80,3,RE::TESDataHandler::LoadScripts
 13671,0x1401726a0,0x140182df0,4,void DataHandler::sub_1401726A0 (TESNPC * param_1)
@@ -111,6 +112,7 @@ id,sse,vr,status,name
 15858,0x1401e5390,0x1401f5f50,4,"void InventoryChanges::SetFavorite(InventoryEntryData* a_entry, ExtraDataList* a_itemList)"
 15859,0x1401e58f0,0x1401f64b0,4,"void InventoryChanges::RemoveFavorite(InventoryEntryData* a_entry, ExtraDataList* a_itemList)"
 15868,0x1401e7310,0x1401f7ed0,3,RE::InventoryChanges::GetItemCount
+15878,0x1401e7ba0,0x1401f8710,4,"void InventoryChanges::RemoveAllItems(TESObjectREFR* a_ref, TESObjectREFR* a_moveToRef, bool a_arg4, bool a_keepOwnership, bool a_arg6)"
 15889,0x1401e9d90,0x1401fa900,3,void InventoryChanges::InitLeveledItems()
 15890,0x1401ea020,0x1401fab90,3,void InventoryChanges::InitFromContainerExtra()
 15907,0x1401ecc60,0x1401fd7d0,3,RE::InventoryChanges::SetUniqueID
@@ -186,6 +188,7 @@ id,sse,vr,status,name
 21887,0x140300210,0x140311710,2,Console::UpdateLevel
 22289,0x14030f9a0,0x140320eb0,3,"ModelReferenceEffect* TESObjectREFR::InstantiateHitArt(BGSArtObject* a_art, float a_dur, TESObjectREFR* a_facingRef, bool a_faceTarget, bool a_attachToCamera, NiAVObject* a_attachNode, bool a_interfaceEffect)"
 22317,0x140310720,0x140321c30,3,BGSStoryEventManager* BGSRegisteredStoryEvent::BGSStoryEventManager::GetSingleton()
+22318,0x1403107b0,0x140321cc0,4,void TESFullName::SetFullName(const char* a_name)
 22339,0x140310e60,0x140322370,3,po3tweaks::NoCheatMode::GodMode
 22340,0x140310ec0,0x140322370,3,po3tweaks::NoCheatMode::ImmortalMode
 22350,0x140311250,0x140322760,3,powerof3tweaks::ToggleCollisionFix::ToggleCollision
@@ -322,6 +325,10 @@ id,sse,vr,status,name
 34818,0x140586de0,0x14058e310,3,RE::BGSSaveLoadManager::Save
 34819,0x140587350,0x14058e920,3,RE::BGSSaveLoadManager::Load
 34856,0x140588f90,0x1405905e0,4,bool BGSSaveLoadManager::LoadMostRecentSaveGame()
+35026,0x140592eb0,0x14059a570,4,FormID BGSNumericIDIndex::GetNumericID()
+35027,0x140592f10,0x14059a5d0,4,void BGSNumericIDIndex::SetNumericID(FormID a_formID)
+35112,0x140597d50,0x14059f410,4,"void BGSLoadGameBuffer::LoadDataEndian(void* a_data, std::uint32_t a_offset, std::uint32_t a_size)"
+35163,0x140599db0,0x1405a1470,4,"void BGSSaveGameBuffer::SaveDataEndian(const void* a_data, std::uint32_t a_size)"
 35199,0x14059b140,0x1405a2800,4,void MemoryManager::RegisterMemoryManager()
 35203,0x14059b9a0,0x1405a3060,4,uint32_t ScrapHeap_GetMaxSize_14059b9a0(void)
 35263,0x14059f0f0,0x1405a67b0,4,EnchantmentItem* BGSCreatedObjectManager::AddWeaponEnchantment(BSTArray<Effect>& a_effects)
@@ -599,6 +606,7 @@ id,sse,vr,status,name
 49755,0x140845e20,0x1408710d0,3,StaminaNPC::apply_get_CombatBashChance
 49756,0x140845e80,0x140871130,3,StaminaNPC::apply_get_OffensiveBashChance
 49772,0x140846580,0x140871830,3,StaminaNPC::apply_get_CombatRangedAttackChance
+49814,0x140848820,0x140873af0,4,FreeCameraState::GetCurrentRotation_*
 49858,0x14084b200,0x140876550,2,void PlayerCamera::ForceFirstPerson()
 49863,0x14084b350,0x140876610,2,void PlayerCamera::ForceThirdPerson()
 49876,0x14084b720,0x140876880,2,void PlayerCamera::ToggleFreeCameraMode(bool a_freezeTime)
@@ -641,6 +649,7 @@ id,sse,vr,status,name
 50980,0x14088e890,0x1408bc060,3,InventoryMenu::GetItemChargedEventSource
 50991,0x14088fa00,0x1408BD650,3,Recipes::
 51037,0x140893f80,0x1408c19f0,3,ConfirmLevelUpAttributeCallback::Run
+51048,0x140894f90,0x1408c2a30,3,Photomode::GetLoadScreenModel::src/Hooks.cpp:106
 51081,0x140896ac0,0x1408c4770,3,LockVariations::Model::RequestModel
 51084,0x1408971a0,0x1408c4e40,3,handtohand::LockpickingMenu::LockPickMenuSkillLevel
 51088,0x140897e10,0x1408c5ab0,3,handtohand::LockpickingMenu::LockPickSkills
@@ -653,6 +662,7 @@ id,sse,vr,status,name
 51400,0x1408aa140,0x1408d68f0,2,po3tweaks::SitToWait::HandleWaitRequest
 51420,0x1408ab180,0x1408d7fe0,4,RE::MessageBoxData::CreateMessage
 51422,0x1408ab5c0,0x1408d8420,3,void MessageBoxData::QueueMessage()
+51454,0x1408ad9f0,0x1408dad50,3,TESModelTextureSwap::sub_*
 51540,0x1408ba590,0x1408e7d70,4,"void ChangeName_1408BA590 (RaceSexMenu * param_1, char * param_2)"
 51638,0x1408bf360,0x1408ec3e0,2,StatsMenu::ProcessMessage
 51652,0x1408c20c0,0x1408eedb0,2,StatsMenu::UpdateSkillList
@@ -781,11 +791,14 @@ id,sse,vr,status,name
 66977,0x140c07350,0x140c421d0,3,RE::BSReadWriteLock::LockForWrite
 66982,0x140c07590,0x140c42410,3,RE::BSReadWriteLock::UnlockForRead
 66983,0x140c075a0,0x140c42420,3,RE::BSReadWriteLock::UnlockForWrite
+66988,0x140c078b0,0x140c42730,4,"void BSTimer::SetGlobalTimeMultiplier(float a_multiplier, bool a_arg2)"
 66989,0x140c07900,0x140c42780,4,RE::UpdateGlobalTimeMultiplier_140C07900
 67151,0x140c0d7b0,0x140c485e0,3,void BSThreadEvent::InitSDM()
 67224,0x140c10b30,0x140c4ba30,4,void Rumble::DisableRumble()
 67234,0x140c10dc0,0x140c4d710,4,QuickLoot::
 67240,0x140c11430,0x140c4dd80,4,QuickLoot::
+67243,0x140c11ae0,0x140c4e480,4,void ControlMap::PushInputContext(InputContextID a_context)
+67244,0x140c11bc0,0x140c4e560,4,void ControlMap::PopInputContext(InputContextID a_context)
 67315,0x140c150b0,0x140c519e0,3,void BSInputDeviceManager::PollInputDevices_140c108 (float a_secsSinceLastFrame)
 67373,0x140c165e0,0x140c533a0,4,DirectInput8::IDirectInputDevice8A* BSDirectInputManager::CreateDeviceWithGUID(WinAPI::GUID* a_guid)
 67374,0x140c16620,0x140c533e0,4,void BSDirectInputManager::ReleaseDevice(DirectInput8::IDirectInputDevice8A* a_device)
@@ -808,6 +821,9 @@ id,sse,vr,status,name
 67847,0x140c29e80,0x140c6edb0,3,void Entry::release8(const char*& a_entry)
 67848,0x140c29ff0,0x140c6ef20,3,void Entry::release16(const wchar_t*& a_entry)
 67855,0x140c2a4d0,0x140c6f400,3,RE::BucketTable::GetSingleton
+68476,0x140c448b0,0x140c89960,4,"void BSResource::RegisterLocation(Location* a_location, std::uint32_t a_priority)"
+68476,0x140c448b0,0x140c89960,4,"void BSResource__LooseFileLocation::RegisterLocation (BSResource__LooseFileLocation * a_this, undefined * a_location, uint32_t a_priority)"
+68480,0x140c44a00,0x140c89ab0,4,void BSResource::RegisterGlobalPath (char * a_path)
 68663,0x140c4b990,0x140c90a40,3,RE::LooseFileStream::Ctor
 68835,0x140c52750,0x140c97810,4,NiObject* NiObject::clone_140C52750(NiObject *a_this)
 68838,0x140c52900,0x140c979c0,3,void NiObject::ProcessClone(NiCloningProcess& a_cloning)
@@ -894,12 +910,17 @@ id,sse,vr,status,name
 80268,0x140eccba0,0x140f296f0,3,RE::GFxValue::ObjectInterface::SetMember
 80270,0x140ecccf0,0x140f29840,3,RE::GFxValue::ObjectInterface::SetText
 80279,0x140ecd630,0x140f2a180,4,"void GFxValue::ObjectInterface::VisitMembers(void* a_data, ObjVisitor* a_visitor, bool a_isDObj)"
+80294,0x140ecdee0,0x140f2abd0,4,void BSScaleformExternalTexture::ReleaseTexture()
+80295,0x140ecdf50,0x140f2ac40,4,bool BSScaleformExternalTexture::SetTexture(NiTexture* a_texture)
+80298,0x140ece010,0x140f2ab20,4,bool BSScaleformExternalTexture::LoadPNG(const BSFixedString& a_path)
 80300,0x140ece0d0,0x140f2adc0,3,ScaleformTranslationpp::BSScaleformMovieLoaderEx::Ctor
 80302,0x140ece790,0x140f2b480,3,"bool BSScaleformManager::LoadMovie(IMenu* a_menu, GPtr<GFxMovieView>& a_viewOut, const char* a_fileName, ScaleModeType a_mode, float a_backGroundAlpha)"
 80307,0x140ecee30,0x140f2bb20,4,bool BSScaleformManager::IsValidName(const char* a_name)
 80446,0x140ed3a50,0x140f2da40,3,GString* GString::ctor(const char* a_str)
 80547,0x140ed80b0,0x140f30f20,3,RE::GFxMovieView::InvokeNoReturn
 80620,0x140edbfa0,0x140f38ca0,3,RE::GFxLoader::CreateMovie
+82382,0x140f45350,0x140fa2050,4,bool BSScaleformImageLoader::AddTexture(BSScaleformExternalTexture& a_texture)
+82383,0x140f45820,0x140fa2520,4,void BSScaleformImageLoader::RemoveTexture(BSScaleformExternalTexture& a_texture)
 82462,0x140f48270,0x140fa4f70,3,bool GSysAllocPaged::InitHeapEngine(const void* a_heapDesc)
 82464,0x140f48360,0x140fa5060,3,void GSysAllocPaged::ShutdownHeapEngine()
 87907,0x1410a2370,0x1410fefa0,4,Skyrim-upscaler
@@ -948,6 +969,10 @@ id,sse,vr,status,name
 100125,0x1412d3ad0,0x1413129e0,3,BSLightingShaderMaterialMultiLayerParallax* BSLightingShaderMaterialMultiLayerParallax::Ctor()
 100717,0x1412fdcc0,0x1413401e0,4,"BSShader * BSShader::sub_1412FDCC0 (BSShader * param_1, undefined8 param_2, undefined8 param_3, undefined4 param_4, undefined1 param_5, undefined8 param_6)"
 100847,0x141307160,0x141348390,3,Skyrim-Upscaler
+100877,0x1413094a0,0x14134a6f0,4,BSBatchRenderer::sub_*
+100994,0x141310c50,0x141354b60,4,src\Features/LightLimitFix.h:163
+100997,0x141310e10,0x14090d400,3,src\Features/LightLimitFix.h:164
+101296,0x14131cde0,0x141362c60,4,BSLight::sub_*
 101339,0x14131f810,0x1413656b0,4,"void BSShader::LoadShaders_14131F810 (BSShader * a_this, UINT_PTR * a_stream)"
 101341,0x14131fbd0,0x141365a70,4,"bool BSShader::BeginTechnique_14131FBD0 (BSShader * shader, int vertexDescriptor, int pixelDescriptor, bool skipPIxelShader)"
 101631,0x14132ead0,0x141371a00,3,"void GetLightingShaderDefines(uint32_t descriptor, D3D_SHADER_MACRO* defines)"
@@ -2129,6 +2154,7 @@ id,sse,vr,status,name
 241602,0x14159d430,0x1416145b8,3,VTABLE_TESFaction_2
 241603,0x14159d458,0x1416145e0,3,VTABLE_ConcreteFormFactory_TESFaction_11__0
 241604,0x14159d498,0x141614620,3,VTABLE_ConcreteObjectFormFactory_TESFaction_11_53_5__0
+241610,0x14159d5b4,0x141614744,4,float GetHoursPerDay()
 241623,0x14159d7a0,0x141614930,3,VTABLE_TESIdleForm_0
 241624,0x14159d980,0x141614b10,3,VTABLE_ConcreteFormFactory_TESIdleForm_78__0
 241843,0x14159f780,0x141616910,3,VTABLE_ActorValueOwner_0
@@ -8136,6 +8162,7 @@ id,sse,vr,status,name
 306493,0x1418707b0,0x1419102d0,3,VTABLE_type_info_0
 306518,0x141870fb8,0x1419132e0,3,VTABLE_BSSocket_0
 306519,0x141870fe0,0x141913308,3,VTABLE_BSSocketServer_0
+500908,0x141db19e0,0x141e6ea10,4,char** BSKeyboardDevice::BSKeyboardDevice::locale()
 500931,0x141db1bf0,0x141e6ec20,4,fLODFadeOutMultActors:LOD
 500933,0x141db1c08,0x141e6ec38,4,fLODFadeOutMultItems:LOD
 500935,0x141db1c20,0x141e6ec50,3,fLODFadeOutMultObjects:LOD
@@ -8147,12 +8174,19 @@ id,sse,vr,status,name
 508315,0x141decb30,0x141ea9cb0,4,fBlockLevel1Distance:TerrainManager
 508319,0x141decb60,0x141ea9ce0,4,fTreeLoadDistance:TerrainManager
 508412,0x141ded188,0x141eaa184,4,BGSAddToPlayerInventoryEvent:GetIndex
+508607,0x141dedde0,0x141eaaf20,4,ReticuleController* ReticuleController::GetSingleton()
 508778,0x141deebf0,0x141eabd50,4,RE::lpClassName_141DEEBF0
 509271,0x141df0858,0x141ead84d,2,po3tweaks::GameTimers::detail::sleeping
+509808,0x141df3490,0x141eb2140,4,fFreeCameraTranslationSpeed:Camera
 510025,0x141df3ed8,0x141eb2ed8,3,TrueHUD::g_fShoutMeterEndDuration
 510579,0x141df58f8,0x141eb5360,3,TrueHUD::g_fHUDOpacity
 510713,0x141df5e70,0x141eb59c8,2,Allocator* GetSingleton()
+511882,0x141e05b28,0x141ec5698,4,float BSTimer::QGlobalTimeMultiplier()
 511883,0x141e05b2c,0x141ec569c,3,float GetCurrentGlobalTimeMult()
+511901,0x141e05da0,0x141ec59a8,4,bgGamepadEnable
+511903,0x141e05db8,0x141ec5a88,4,char** BSGamepadDevice::GamePadFile()
+511916,0x141e05e50,0x141ec5b38,4,char** BSKeyboardDevice::BSKeyboardDevice::path()
+511918,0x141e05e68,0x141ec5b60,4,char** BSGamepadDevice::MouseFile()
 512509,0x141e09bd0,0x141ecfaf8,3,RE::BSScaleformManager::CollectDisplayInfo::fSafeZoneXWide
 512511,0x141e09be8,0x141ecfb10,3,RE::BSScaleformManager::CollectDisplayInfo::fSafeZoneYWide
 512513,0x141e09c00,0x141ecfb28,3,RE::BSScaleformManager::CollectDisplayInfo::fSafeZoneX
@@ -8378,6 +8412,7 @@ id,sse,vr,status,name
 514172,0x141ebeae8,0x141f831c8,4,BGSCreatedObjectManager::GetSingleton()
 514178,0x141ebeb20,0x141f83200,3,RE::UI::Singleton
 514179,0x141ebeb28,0x141f83208,4,AnimationObjects* GetSingleton()
+514181,0x141ebeb38,0x141f83218,4,BSTreeManager* GetSingleton()
 514182,0x141ebeb40,0x141f83220,2,BSFaceGenManager* GetSingleton()
 514184,0x141ebeb50,0x141f83240,3,po3tweaks::ToggleCollisionFix::GetCollisionState
 514283,0x141ec0a60,0x141f850e8,2,SubtitleManager* GetSingleton()
@@ -8443,15 +8478,19 @@ id,sse,vr,status,name
 516706,0x142f26210,0x142feacc8,3,RE::NiRTTI_ReferenceEffect
 516712,0x142f26240,0x142feacf8,3,RE::NiRTTI_ShaderReferenceEffect
 516720,0x142f26270,0x142fead28,3,RE::NiRTTI_SummonPlacementEffect
+516851,0x142f266f8,0x142feb200,4,BGSSaveLoadGame* GetSingleton()
 516858,0x142f26730,0x142feb238,3,RE::MagicFavorites::Singleton
 516860,0x142f26740,0x142feb248,3,RE::BGSSaveLoadManager::Singleton
 516871,0x142f26780,0x142feb288,2,RE::UIBlurManager::Singleton
 516923,0x142f26b20,0x142feb6f8,3,RE::TES::Singleton
 516940,0x142f26b7c,0x142feb794,3,float QFrameAnimTime()
 516943,0x142f26bf8,0x142feb7a0,2,RE::Main::Singleton
+517006,0x142f26ec0,0x142feb9b8,4,Scenegraph* WorldRootNode()
 517014,0x142f26ef8,0x142feb9f0,3,RE::PlayerCharacter::Singleton
 517032,0x142f26f80,0x142feba80,3,TrueHUD::g_fNear
+517043,0x142f27140,0x142febc40,4,MenuCursor* GetSingleton()
 517045,0x142f27150,0x142febc50,3,RE::BGSFootstepManager::Singleton
+517046,0x142f27158,0x142febc58,4,BSDirectInputManager* GetSingleton()
 517051,0x142f27180,0x142febc80,3,Inventory3DManager* GetSingleton()
 517052,0x142f27188,0x142fea720,3,UI3DSceneManager* GetSingleton()
 517222,0x142f38950,0x142ffd750,3,RE::NiRTTI_SceneGraph
@@ -8460,6 +8499,8 @@ id,sse,vr,status,name
 517601,0x142f3a680,0x142fff478,3,RE::NiRTTI_BSDoorHavokController
 517602,0x142f3a690,0x142fff488,3,RE::NiRTTI_BSPlayerDistanceCheckController
 517603,0x142f3a6a0,0x142fff498,3,RE::NiRTTI_BSSimpleScaleController
+517709,0x142f3afb4,0x142fffde8,4,bDOFDynamicToggle
+517711,0x142f3afb6,0x142fffdea,4,bool IsGodMode()
 518086,0x142f483f0,0x14300d6a0,3,HandlerDictionary* GetSingleton()
 518706,0x142f4ad88,0x143010038,3,CombatManager* GetSingleton()
 519283,0x142f4bed4,0x143011184,3,RefHandle GetTargetRefHandle()
@@ -8473,7 +8514,9 @@ id,sse,vr,status,name
 519618,0x142f4ded0,0x1430133a8,4,TrueHUD::g_viewPort
 519716,0x142f4e240,0x143013728,3,TESObjectREFR* GetTargetReference()
 519827,0x142f4e6b8,0x143013ae8,4,static MistMenu* GetSingleton()
+520856,0x142f50b28,0x1430a8bb8,4,BSInputEventQueue* GetSingleton()
 520994,0x142f51ec0,0x1430a9f50,4,g_animationFileManager**
+523657,0x142f6b930,0x1430c39f0,4,BSTimer* GetSingleton()
 523660,0x142f6b948,0x1430c3a08,3,float GetSecondsSinceLastFrame()
 523661,0x142f6b94c,0x1430c3a0c,3,TrueHUD::gSecondsSinceLastFrame_RealTime_142F6B94C
 523662,0x142f6b950,0x1430c3a10,3,std::uint32_t GetDurationOfApplicationRunTime()
@@ -8737,6 +8780,7 @@ id,sse,vr,status,name
 524719,0x143025ea8,0x14317e730,3,RE::NiRTTI_BSNonUniformScaleExtraData
 524721,0x143025ec0,0x14317e760,3,RE::NiRTTI_BSNiNode
 524722,0x143025ed0,0x14317e770,3,RE::NiRTTI_BSInstanceTriShape
+524728,0x143025f00,0x14317e790,4,gUnkWindow_*
 524729,0x143025f08,0x14317e798,4,RE::g_ID3D11Device
 524751,0x143027910,0x143180560,4,SamplerStatesCollection* GetSingleton()
 524755,0x143027a30,0x143180690,4,VertexShader_perTechniqueBuffersArray
@@ -8855,6 +8899,16 @@ id,sse,vr,status,name
 527992,0x1432331b8,0x143485758,3,RE::NiRTTI_BSParticleShaderProperty
 528103,0x143233508,0x143485b88,3,RE::NiRTTI_BSTextureSet
 528104,0x143233518,0x143485b98,3,RE::NiRTTI_BSShaderTextureSet
+528120,0x143233560,0x143485c00,4,fDOFCenterWeight
+528121,0x143233564,0x143485c04,4,fDOFmaxDepth
+528124,0x14323356a,0x143485beb,4,bDOFCenterWeightToggle
+528191,0x14323369c,0x143485cd8,4,fDOFNearDist
+528192,0x1432336a0,0x143485cdc,4,fDOFFarDist
+528193,0x1432336a4,0x143485ce0,4,fDOFNearRange
+528194,0x1432336a8,0x143485ce4,4,fDOFFarRange
+528195,0x1432336ac,0x143485ce8,4,fDOFNearBlur
+528196,0x1432336b0,0x143485cec,4,fDOFFarBlur
+528197,0x1432336b4,0x143485cf0,4,fDOFBlueMultiplier
 528205,0x143233818,0x143485ea8,3,RE::NiRTTI_BSSkyShaderProperty
 528214,0x1432838a0,0x1434d5f70,3,RE::NiRTTI_BSFadeNodeCuller
 528220,0x1432838d0,0x1434d5fa0,3,RE::NiRTTI_BSDistantTreeShaderProperty
@@ -9860,6 +9914,7 @@ id,sse,vr,status,name
 564750,0x141865a78,0x1419047a8,3,VTABLE_ImageSpaceEffectOption_0
 564823,0x14186a3d8,0x14190a308,3,VTABLE_BSReloadShaderI_0
 564904,0x14186f730,0x14190eaf8,3,VTABLE___Compression_0
+675707,0x141dd2ea0,0x141e90190,4,EntryPoint* GetEntryPoint()
 684588,0x141e10e08,0x141ed6cf8,3,RE::RTTI_IFormFactory
 684589,0x141e10fa0,0x141ed6e90,3,RE::RTTI_TESIcon
 684590,0x141e110c0,0x141ed6fb0,1,RE::RTTI_ConcreteObjectFormFactory_AlchemyItem_46_17_2_
