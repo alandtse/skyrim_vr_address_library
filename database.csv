@@ -669,6 +669,7 @@ id,sse,vr,status,name
 51899,0x1408d50f0,0x140902c10,3,RE::UIBlurManager::IncrementBlurCount
 51900,0x1408d5130,0x140902c50,3,RE::UIBlurManager::DecrementBlurCount
 51907,0x1408d53d0,0x140902f20,3,TrueHUD::FlashHudMenuMeter_1408D53D0
+51909,0x1408d5530,0x140903080,3,"void FadeOutGame_1408d5530(undefined8 *param_1,bool a_fadingOut,bool a_blackFade,float a_fadeDuration,bool a_arg4,float a_secsBeforeFade)"
 51910,0x1408d5620,0x140903280,3,Fasttravel
 51911,0x1408d5710,0x140903370,3,YASTM::ChargeItem::UpdateInventory
 52050,0x1408da3d0,0x140908170,3,RE::DebugNotification
