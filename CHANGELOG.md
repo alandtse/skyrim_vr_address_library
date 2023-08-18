@@ -1,3 +1,15 @@
+# [0.101.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.100.0...v0.101.0) (2023-08-18)
+
+
+### Bug Fixes
+
+* fix incorrect quoting ([4a7b707](https://github.com/alandtse/skyrim_vr_address_library/commit/4a7b707df40a8812f0c52fa58ddbf5156c9fd010))
+
+
+### Features
+
+* add LLF ([bad1c35](https://github.com/alandtse/skyrim_vr_address_library/commit/bad1c35a2c3066fd6c178e646f5b37305adde4a1))
+
 # [0.100.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.99.0...v0.100.0) (2023-08-12)
 
 
