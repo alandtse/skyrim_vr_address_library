@@ -1,3 +1,11 @@
+# [0.100.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.99.0...v0.100.0) (2023-08-12)
+
+
+### Features
+
+* add FadeOutGame ([dd2ece6](https://github.com/alandtse/skyrim_vr_address_library/commit/dd2ece6c73ef0deda7a25427784da2540216bd70))
+* add latest commonlib, photomode, and llf ([38839e6](https://github.com/alandtse/skyrim_vr_address_library/commit/38839e67bf1c9e1a7aa92640ee3d98fc97df61dc))
+
 # [0.99.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.98.0...v0.99.0) (2023-08-02)
 
 
