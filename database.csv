@@ -372,6 +372,7 @@ id,sse,vr,status,name
 36359,0x1405d8170,0x1405e07a0,3,po3tweaks::ToggleCollisionFix::ApplyMovementDelta
 36392,0x1405da840,0x1405e2ec0,3,void Actor::CalculateCurrentVendorFaction()
 36407,0x1405db310,0x1405e3990,3,"void Actor::EvaluatePackage(bool a_immediate, bool a_resetAI)"
+36408,0x1405db7a0,0x1405e3e20,4,void Actor::InitiateDoNothingPackage()
 36427,0x1405dd770,0x1405e5dc0,3,"void Actor::StealAlarm(TESObjectREFR* a_ref, TESForm* a_object, std::int32_t a_num, std::int32_t a_total, TESForm* a_owner, bool a_allowWarning)"
 36432,0x1405df630,0x1405e7c80,4,"void Actor::TrespassAlarm(TESObjectREFR* a_ref, TESForm* a_ownership, std::int32_t a_crime)"
 36444,0x1405e11c0,0x1405e9810,4,float Actor::GetBoundRadius() float Actor::GetBoundRadius()
