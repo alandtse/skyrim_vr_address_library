@@ -1,3 +1,16 @@
+# [0.103.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.102.0...v0.103.0) (2023-08-28)
+
+
+### Bug Fixes
+
+* fix GetWorldScaleInverse address ([2a9c94a](https://github.com/alandtse/skyrim_vr_address_library/commit/2a9c94a2d8f54a5357765918fefbcd250589546f))
+
+
+### Features
+
+* add BSLightingShader Func6 ([05acd7b](https://github.com/alandtse/skyrim_vr_address_library/commit/05acd7b9027d1b02f88527ef429c6f1494bf2b2b))
+* Add UI::GetTopMostMenu ([#44](https://github.com/alandtse/skyrim_vr_address_library/issues/44)) ([65a7944](https://github.com/alandtse/skyrim_vr_address_library/commit/65a7944bbcb0ad457a6656ebd875c517ebf2cee0))
+
 # [0.102.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.101.0...v0.102.0) (2023-08-22)
 
 
