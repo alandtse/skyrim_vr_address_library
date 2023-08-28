@@ -1297,7 +1297,7 @@ id,sse,vr,status,name
 230556,0x141535bf8,0x1415acf98,3,VTABLE_SettingT_INIPrefSettingCollection__0
 230557,0x141535c10,0x1415acfb0,3,VTABLE_BSTempNodeManager_0
 230682,0x141536b28,0x1415adf70,3,VTABLE_BSAutoQueuedResourceCollection_TESModelDB__TESQueuedHandles__0
-230692,0x141536ba0,0x1415adfe4,3,float GetWorldScaleInverse()
+230692,0x141536ba0,0x1415adfe8,4,float GetWorldScaleInverse()
 230851,0x141538348,0x1415af6c0,3,VTABLE_NiTArray_TESObjectCELL_NiTMallocInterface_TESObjectCELL___0
 230852,0x141538358,0x1415af6d0,3,VTABLE_NiTPrimitiveArray_TESObjectCELL__0
 230853,0x141538368,0x1415af6e0,3,VTABLE_NiTArray_BGSAddonNode_NiTMallocInterface_BGSAddonNode___0
