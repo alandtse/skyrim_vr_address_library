@@ -48,15 +48,19 @@ jobs:
       #----------------------------------------------
       - name: Install library
         run: poetry install --no-interaction
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14
       - name: Semantic Release
-        uses: cycjimmy/semantic-release-action@v3
-        id: semantic   # Need an `id` for output variables
+        uses: cycjimmy/semantic-release-action@v4
+        id: semantic # Need an `id` for output variables
         with:
           # You can specify specifying version range for the extra plugins if you prefer.
           extra_plugins: |
             @semantic-release/changelog
             @semantic-release/git
-            @semantic-release/github@"https://registry.npmjs.org/@achingbrain/semantic-release-github/-/semantic-release-github-0.0.0.tgz"
+            @semantic-release/github
           working_directory: ./skyrim_vr_address_library
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -87,12 +91,12 @@ jobs:
         if: steps.semantic.outputs.new_release_published == 'true'
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '3.1.x'
+          dotnet-version: 6.x.x
       - name: Download NexusUploader
         if: steps.semantic.outputs.new_release_published == 'true'
-        run: dotnet tool install -g NexusUploader
+        run: dotnet tool install -g BUTR.NexusUploader
       - name: Upload files to Nexus
-      # https://github.com/agc93/nexus-uploader
+        # https://github.com/agc93/nexus-uploader using fork https://github.com/BUTR/BUTR.NexusUploader
         if: steps.semantic.outputs.new_release_published == 'true'
         env:
           UNEX_COOKIES: ${{ secrets.UNEX_COOKIES }}
