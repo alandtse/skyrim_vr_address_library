@@ -1,3 +1,11 @@
+# [0.104.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.103.0...v0.104.0) (2023-10-25)
+
+
+### Features
+
+* add BSShaderRenderTargets::Create() ([4b46be1](https://github.com/alandtse/skyrim_vr_address_library/commit/4b46be13a264d8919b3373fcd7a27125de04de1a))
+* add CombatPathingRevolution address ([30bc7e9](https://github.com/alandtse/skyrim_vr_address_library/commit/30bc7e9d85fe907350e4644af04a580fa2b4c4dd))
+
 # [0.103.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.102.0...v0.103.0) (2023-08-28)
 
 
