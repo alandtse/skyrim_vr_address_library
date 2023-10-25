@@ -640,6 +640,7 @@ id,sse,vr,status,name
 50515,0x1408708a0,0x14089be30,3,RE::ItemCrafted::GetEventSource
 50530,0x1408720d0,0x14089d5c0,4,"void EnchantConstructMenu::RenameItem_Impl(InventoryEntryData* a_entryData, ExtraDataList* a_extraList, const char* a_name)"
 50567,0x140874540,0x14089fc10,4,void EnchantConstructMenu::UpdateInterface_140874540 (undefined8 param_1)
+50643,0x140878140,0x1408a3e60,4,CombatPathingRevolution::src/Advance_Hook.h:55
 50688,0x14087ba70,0x1408a77e0,3,EssentialFavorites::Gifting::IsQuestObject
 50738,0x14087f970,0x1408ad1e0,4,void HUDMenu::UpdateCrosshairMagicTarget(bool a_valid) include\RE\H/HUDMenu.h:46
 50747,0x14087fff0,0x1408ad8c0,3,TrueHUD::SetHUDMode?
