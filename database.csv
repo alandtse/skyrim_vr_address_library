@@ -611,6 +611,7 @@ id,sse,vr,status,name
 49756,0x140845e80,0x140871130,3,StaminaNPC::apply_get_OffensiveBashChance
 49772,0x140846580,0x140871830,3,StaminaNPC::apply_get_CombatRangedAttackChance
 49814,0x140848820,0x140873af0,4,FreeCameraState::GetCurrentRotation_*
+49852,0x14084ab90,0x140875f00,3,TweenMenuCameraState * PlayerCamera::Update_14084AB90(PlayerCamera *a_this)
 49858,0x14084b200,0x140876550,2,void PlayerCamera::ForceFirstPerson()
 49863,0x14084b350,0x140876610,2,void PlayerCamera::ForceThirdPerson()
 49876,0x14084b720,0x140876880,2,void PlayerCamera::ToggleFreeCameraMode(bool a_freezeTime)
@@ -836,6 +837,7 @@ id,sse,vr,status,name
 68900,0x140c56b50,0x140c9bc10,3,RE::NiAVObject::Update
 68936,0x140c57a60,0x140c9ccd0,3,RE::NiNode::Ctor
 69270,0x140c66580,0x140cac0e0,3,RE::NiCamera::WorldPtToScreenPt3
+69271,0x140c66710,0x140cac900,3,void UpdateInternalWorldToScreenMatrix (NiCamera * a_this)
 69433,0x140c6cd50,0x140cb2ee0,3,void NiTimeController::LoadBinary(NiStream& a_stream)
 69434,0x140c6cea0,0x140cb3030,3,void NiTimeController::LinkObject(NiStream& a_stream)
 69435,0x140c6cf10,0x140cb30a0,3,bool NiTimeController::RegisterStreamables(NiStream& a_stream)
