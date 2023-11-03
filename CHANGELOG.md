@@ -1,3 +1,10 @@
+# [0.105.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.104.0...v0.105.0) (2023-11-03)
+
+
+### Features
+
+* add capture-warmer support ([8319715](https://github.com/alandtse/skyrim_vr_address_library/commit/831971552b846572608928d886183c3fe842e3b7))
+
 # [0.104.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.103.0...v0.104.0) (2023-10-25)
 
 
