@@ -69,6 +69,7 @@ id,sse,vr,status,name
 14190,0x140189fc0,0x140199cf0,3,"void ScriptEventSourceHolder::SendOpenCloseEvent(const NiPointer<TESObjectREFR>& a_ref, const NiPointer<TESObjectREFR>& a_activeRef, bool a_isOpened)"
 14262,0x14018c750,0x14019c480,4,std::uint16_t TESActorBaseData::GetLevel()
 14399,0x140190480,0x1401a01b0,3,RE::TESDescription::GetDescription
+14482,0x140194c20,0x1401a4950,4,void TESForm::SetPlayerKnows(bool a_known)
 14485,0x140194d20,0x1401a4a50,4,void TESForm::MakeTemporary_140194D20 (TESForm * a_this)
 14509,0x1401957e0,0x1401a5510,2,"void TESForm::AddCompileIndex(FormID& a_id, TESFile* a_file)"
 14579,0x140197a30,0x1401a7760,4,"void TESLeveledList::CalculateCurrentFormList(std::uint16_t a_level, std::int16_t a_count, BSScrapArray<CALCED_OBJECT>& a_calcedObjects, std::uint32_t a_arg5, bool a_usePlayerLevel)"
@@ -114,6 +115,7 @@ id,sse,vr,status,name
 15859,0x1401e58f0,0x1401f64b0,4,"void InventoryChanges::RemoveFavorite(InventoryEntryData* a_entry, ExtraDataList* a_itemList)"
 15868,0x1401e7310,0x1401f7ed0,3,RE::InventoryChanges::GetItemCount
 15878,0x1401e7ba0,0x1401f8710,4,"void InventoryChanges::RemoveAllItems(TESObjectREFR* a_ref, TESObjectREFR* a_moveToRef, bool a_arg4, bool a_keepOwnership, bool a_arg6)"
+15883,0x1401e9130,0x1401f9ca0,4,float InventoryChanges::GetInventoryWeight()
 15889,0x1401e9d90,0x1401fa900,3,void InventoryChanges::InitLeveledItems()
 15890,0x1401ea020,0x1401fab90,3,void InventoryChanges::InitFromContainerExtra()
 15907,0x1401ecc60,0x1401fd7d0,3,RE::InventoryChanges::SetUniqueID
@@ -394,6 +396,7 @@ id,sse,vr,status,name
 36642,0x1405f4150,0x1405fc880,4,"void ReadFromSaveGame_1405F4150 (Actor * a_this, undefined8 param_2)"
 36668,0x1405f7a20,0x140600190,4,"std::int32_t Actor::GetFactionRank(TESFaction* a_faction, bool a_isPlayer)"
 36678,0x1405f8430,0x140600ba0,3,"void Actor::AddToFaction(TESFaction* a_faction, std::int8_t a_rank)"
+36680,0x1405f8590,0x140600d00,4,void Actor::RemoveFromFaction(RE::TESFaction* a_faction)
 36682,0x1405f87f0,0x140600f60,3,RE::Actor::CreateBlood
 36683,0x1405f9a20,0x140602190,3,WashThatBloodOff::Decal::Weapon::CreateBloodOnWeapon
 36690,0x1405f9e30,0x1406025a0,3,RE::Actor::HasPerk
@@ -868,6 +871,18 @@ id,sse,vr,status,name
 74239,0x140d38710,0x140d80bb0,3,RE::INISettingCollection::OpenHandle
 74240,0x140d38720,0x140d80bc0,3,RE::INISettingCollection::CloseHandle
 74377,0x140d3d3d0,0x140d86360,4,BSWindModifier* BSWindModifier::Ctor()
+75445,0x140d68dd0,0x1405be850,4,"void Renderer::Init(RendererInitOSData* a_data, ApplicationWindowProperties* windowProps, WinAPI::HWND window)"
+75447,0x140d69140,0x140dbabc0,4,void Renderer::Shutdown()
+75448,0x140d69590,0x140dbb010,4,"void Renderer::SetWindowPosition(std::uint32_t windowID, std::int32_t x, std::int32_t y)"
+75450,0x140d69620,0x140dbb0a0,4,"void Renderer::RequestWindowResize(std::uint32_t width, std::uint32_t height)"
+75451,0x140d69650,0x140dbb0d0,4,void Renderer::SetWindowActiveState(bool show)
+75452,0x140d696b0,0x140dbb130,4,void Renderer::KillWindow(std::uint32_t windowID)
+75453,0x140d698a0,0x140dbb320,3,void Renderer::WindowSizeChanged(std::uint32_t windowID)
+75454,0x140d69b70,0x140dbb5f0,4,"void Renderer::ResizeWindow(std::uint32_t windowID, std::uint32_t width, std::uint32_t height, bool fullscreen, bool borderless)"
+75455,0x140d69d00,0x140dbb780,3,"void Renderer::UpdateViewPort(std::uint32_t a_unk, std::uint32_t b_unk, bool c_unk)"
+75457,0x140d69ea0,0x140dbb960,4,"void Renderer::CreateSwapChain(WinAPI::HWND* window, bool setCurrent)"
+75458,0x140d6a080,0x140dbbb40,4,void Renderer::Lock()
+75459,0x140d6a0a0,0x140dbbb60,4,void Renderer::Unlock()
 75460,0x140d6a0c0,0x140dbbb80,3,Skyrim-Upscaler::BSGraphics_Renderer_Begin_UpdateJitter
 75461,0x140d6a2b0,0x140dbbdd0,3,shadowboost::TimeManager_SleepCheck
 75477,0x140d6bfe0,0x140dbdd00,3,Skyrim-Upscaler
@@ -8795,6 +8810,7 @@ id,sse,vr,status,name
 524722,0x143025ed0,0x14317e770,3,RE::NiRTTI_BSInstanceTriShape
 524728,0x143025f00,0x14317e790,4,gUnkWindow_*
 524729,0x143025f08,0x14317e798,4,RE::g_ID3D11Device
+524730,0x143025f10,0x14317e7a0,4,RendererWindow* GetCurrentRenderWindow()
 524751,0x143027910,0x143180560,4,SamplerStatesCollection* GetSingleton()
 524755,0x143027a30,0x143180690,4,VertexShader_perTechniqueBuffersArray
 524757,0x143027ad0,0x143180730,4,VertexShader_perMaterialBuffersArray
@@ -8808,6 +8824,7 @@ id,sse,vr,status,name
 524967,0x14302b510,0x143184ef0,4,PixelShader_bufferData
 524970,0x14302bb20,0x143185600,4,RenderTargetManager* GetSingleton()
 524998,0x14302c890,0x143186c10,3,State* GetSingleton()
+525002,0x14302c8b4,0x143186c34,4,ScreenSize GetScreenSize() src\RE\R/Renderer.cpp:128
 525039,0x14302cc68,0x143186dd8,3,RE::NiRTTI_bhkWorldObject
 525051,0x14302cca8,0x143186e18,3,RE::NiRTTI_bhkWorld
 525068,0x14302dde8,0x143187f58,3,RE::NiRTTI_bhkRigidBody
