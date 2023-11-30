@@ -619,15 +619,18 @@ id,sse,vr,status,name
 49863,0x14084b350,0x140876610,2,void PlayerCamera::ForceThirdPerson()
 49876,0x14084b720,0x140876880,2,void PlayerCamera::ToggleFreeCameraMode(bool a_freezeTime)
 49908,0x14084d630,0x140877db0,3,RE::PlayerCamera::UpdateThirdPerson
+50005,0x1408527b0,0x14087CB80,3,DescriptionFramework::
 50061,0x140855b60,0x14087ff20,3,EssentialFavorites::Barter::IsQuestObject
 50099,0x140856a50,0x140880e10,3,RE::ItemList::Update
 50122,0x1408582e0,0x140882580,3,"void BookMenu::OpenBookMenu(const BSString& a_description, const ExtraDataList* a_extraList, TESObjectREFR* a_ref, TESObjectBOOK* a_book, const NiPoint3& a_pos, const NiMatrix3& a_rot, float a_scale, bool a_useDefaultPos)"
 50126,0x140858c70,0x140882f80,3,po3tweaks::CantTakeBook::Button::ButtonShowTakeButton
 50164,0x14085bb30,0x1408864d0,3,RE::Console::SetSelectedRef
 50180,0x14085c2c0,0x140886df0,4,RE::ConsoleLog::VPrint
+50201,0x14085ddb0,0x140888D80,3,DescriptionFramework::
 50212,0x14085ebc0,0x140889b50,3,WhoseQuestIsItAnyway::StoreHook
 50257,0x140862160,0x14088d4e0,3,BSTEventSource<ChestsLooted::Event>* ChestsLooted::GetEventSource()
 50258,0x140862250,0x14088d5d0,3,RE::ItemsPickpocketed::GetEventSource
+50297,0x140863f90,0x14088F4F0,3,DescriptionFramework::
 50440,0x14086b200,0x1408967a0,3,YesImSure::EnchantmentLearned
 50447,0x14086b810,0x140896db0,3,YesImSure::alchemyMenu
 50449,0x14086b980,0x140896f10,4,papyrus_extender::event::alchemy_craft
@@ -645,6 +648,7 @@ id,sse,vr,status,name
 50530,0x1408720d0,0x14089d5c0,4,"void EnchantConstructMenu::RenameItem_Impl(InventoryEntryData* a_entryData, ExtraDataList* a_extraList, const char* a_name)"
 50567,0x140874540,0x14089fc10,4,void EnchantConstructMenu::UpdateInterface_140874540 (undefined8 param_1)
 50643,0x140878140,0x1408a3e60,4,CombatPathingRevolution::src/Advance_Hook.h:55
+50674,0x14087aba0,0x1408A6910,3,DescriptionFramework::
 50688,0x14087ba70,0x1408a77e0,3,EssentialFavorites::Gifting::IsQuestObject
 50738,0x14087f970,0x1408ad1e0,4,void HUDMenu::UpdateCrosshairMagicTarget(bool a_valid) include\RE\H/HUDMenu.h:46
 50747,0x14087fff0,0x1408ad8c0,3,TrueHUD::SetHUDMode?
@@ -654,9 +658,11 @@ id,sse,vr,status,name
 50884,0x140887970,0x1408b4ea0,3,void Inventory3DManager::UpdateItem3D(InventoryEntryData* a_objDesc)
 50885,0x1408879a0,0x1408b4ed0,3,"void Inventory3DManager::UpdateMagic3D(TESForm* a_form, std::uint32_t a_arg2)"
 50886,0x140887d10,0x1408b5240,3,void Inventory3DManager::Clear3D()
+50973,0x14088e050,0x1408BB820,3,DescriptionFramework::
 50978,0x14088e280,0x1408bba50,3,EssentialFavorites::Dropped::IsQuestObject
 50980,0x14088e890,0x1408bc060,3,InventoryMenu::GetItemChargedEventSource
 50991,0x14088fa00,0x1408BD650,3,Recipes::
+51019,0x140890e70,0x1408BEBD0,2,ItemCard::ShowItemData
 51037,0x140893f80,0x1408c19f0,3,ConfirmLevelUpAttributeCallback::Run
 51048,0x140894f90,0x1408c2a30,3,Photomode::GetLoadScreenModel::src/Hooks.cpp:106
 51081,0x140896ac0,0x1408c4770,3,LockVariations::Model::RequestModel
