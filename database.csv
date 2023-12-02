@@ -471,6 +471,7 @@ id,sse,vr,status,name
 37862,0x1406348a0,0x14063d770,3,SOUL_LEVEL Actor::GetSoulSize()
 37863,0x140634900,0x14063d7d0,3,RE::Actor::TrapSoul
 37864,0x140634b80,0x14063da50,3,Actor::RemoveMagicEffectsDueToAction_140634B80
+37865,0x140634bf0,0x14063dac0,4,Character::sub_140634BF0
 37916,0x140636c40,0x14063fc50,3,BSTEventSource<SoulsTrapped::Event>* SoulsTrapped::GetEventSource()
 37917,0x140636d30,0x14063fd40,3,BSTEventSource<SpellsLearned::Event>* SpellsLearned::GetEventSource()
 37938,0x140637a80,0x140640a90,3,RE::ActorEquipManager::EquipObject
