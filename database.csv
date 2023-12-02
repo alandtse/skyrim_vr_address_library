@@ -555,6 +555,7 @@ id,sse,vr,status,name
 41659,0x140719990,0x140744330,2,papyrus_extender::detection::calculatedetection_0x526
 41778,0x1407220b0,0x14074ca60,3,RE::ArrowReleaseHandler::Handle_1407220B0
 42420,0x14072cc80,0x140757690,4,AnimObjectSwapper::AnimObjectSwapHook
+42547,0x140732400,0x14075ce60,4,ArrowProjectile::Func_140732400
 42586,0x140733cc0,0x14075e720,3,RE::BeamProjectile::UpdateImpl_*
 42638,0x1407369b0,0x1407614b0,3,splashes_of_skyrim::ProjectileManager::ProcessInWater::create_splash
 42696,0x14073c410,0x140766fb0,3,splashes_of_skyrim::ExplosionManager::UpdateSound
