@@ -451,6 +451,7 @@ id,sse,vr,status,name
 37787,0x140630410,0x1406392e0,4,void Actor::AddCastPower(SpellItem* a_power)
 37793,0x140630990,0x140639860,4,bool Actor::IsInCastPowerList(SpellItem* a_power)
 37798,0x140630f40,0x140639e10,4,"void Actor::RemoveCastScroll(SpellItem* a_spell, MagicSystem::CastingSource a_source)"
+37799,0x1406310a0,0x140639f70,4,Character::ApplyAllCombatSpellsFromAttack_1406310A0
 37802,0x140631360,0x14063a230,3,RE::Actor::UpdateArmorAbility
 37803,0x1406313d0,0x14063a2a0,3,RE::Actor::UpdateWeaponAbility
 37804,0x1406314f0,0x14063a3c0,4,"void Actor::CastPermanentMagic_1406314F0 (Actor * a_this, bool a_wornItemEnchantments, bool a_baseSpells, bool a_raceSpells, bool a_everyActorAbility)"
