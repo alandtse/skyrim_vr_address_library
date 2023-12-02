@@ -436,6 +436,7 @@ id,sse,vr,status,name
 37588,0x140623f10,0x14062ccc0,4,RE::PlayerCharacter::GetReach_140623F10
 37620,0x140625dd0,0x14062ec40,4,RE::Character::get_weapon_vector_625DD0
 37621,0x140625eb0,0x14062ed20,4,RE::Actor::Actor__GetWeapon_140625EB0
+37628,0x1406260f0,0x14062ef60,4,Actor::WeaponSwingCallBack_1406260F0
 37633,0x140626400,0x14062f270,2,papyrus_extender::events::game::weaponhit::actor::target_0x16a
 37637,0x1406274a0,0x140630340,4,bool Actor::IsAttacking()
 37650,0x140627930,0x1406307d0,3,StaminaNPC::apply_meleeBash_cost
