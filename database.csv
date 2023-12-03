@@ -415,7 +415,7 @@ id,sse,vr,status,name
 36889,0x140606850,0x14060f1d0,3,RE::Actor::IsActorNPC
 36901,0x140607680,0x140610000,3,RE::Actor::SwitchRace
 36925,0x140608850,0x1406113e0,4,"bool Actor::SetWantCasting (Actor * a_actor, CastingSource a_source, bool a_enable)"
-36926,0x1406089e0,0x140611570,4,Actor::SetSneaking
+36926,0x1406089e0,0x140611570,4,void PlayerCharacter::SetSneaking (bool a_sneaking)
 36927,0x140608af0,0x140611680,3,bool Actor::IsBlocking()
 36928,0x140608b30,0x1406116c0,3,bool Actor::IsMoving()
 36935,0x140608d40,0x140611900,4,double Actor::GetMoveDirectionRelativeToFacing()
@@ -436,7 +436,7 @@ id,sse,vr,status,name
 37588,0x140623f10,0x14062ccc0,4,RE::PlayerCharacter::GetReach_140623F10
 37620,0x140625dd0,0x14062ec40,4,RE::Character::get_weapon_vector_625DD0
 37621,0x140625eb0,0x14062ed20,4,RE::Actor::Actor__GetWeapon_140625EB0
-37628,0x1406260f0,0x14062ef60,4,Actor::WeaponSwing
+37628,0x1406260f0,0x14062ef60,4,void Actor::WeaponSwingCallback ()
 37633,0x140626400,0x14062f270,2,papyrus_extender::events::game::weaponhit::actor::target_0x16a
 37637,0x1406274a0,0x140630340,4,bool Actor::IsAttacking()
 37650,0x140627930,0x1406307d0,3,StaminaNPC::apply_meleeBash_cost
@@ -453,7 +453,7 @@ id,sse,vr,status,name
 37787,0x140630410,0x1406392e0,4,void Actor::AddCastPower(SpellItem* a_power)
 37793,0x140630990,0x140639860,4,bool Actor::IsInCastPowerList(SpellItem* a_power)
 37798,0x140630f40,0x140639e10,4,"void Actor::RemoveCastScroll(SpellItem* a_spell, MagicSystem::CastingSource a_source)"
-37799,0x1406310a0,0x140639f70,4,Actor::ApplyWeaponHitSpells
+37799,0x1406310a0,0x140639f70,4,"void Actor::ApplyAllCombatSpellsFromAttack_1406310A0 (ExtraContainerChanges__ItemEntry* param_2, bool param_3, undefined param_4)"
 37802,0x140631360,0x14063a230,3,RE::Actor::UpdateArmorAbility
 37803,0x1406313d0,0x14063a2a0,3,RE::Actor::UpdateWeaponAbility
 37804,0x1406314f0,0x14063a3c0,4,"void Actor::CastPermanentMagic_1406314F0 (Actor * a_this, bool a_wornItemEnchantments, bool a_baseSpells, bool a_raceSpells, bool a_everyActorAbility)"
@@ -473,7 +473,7 @@ id,sse,vr,status,name
 37862,0x1406348a0,0x14063d770,3,SOUL_LEVEL Actor::GetSoulSize()
 37863,0x140634900,0x14063d7d0,3,RE::Actor::TrapSoul
 37864,0x140634b80,0x14063da50,3,Actor::RemoveMagicEffectsDueToAction_140634B80
-37865,0x140634bf0,0x14063dac0,4,ReanimateEffect::GetUp
+37865,0x140634bf0,0x14063dac0,4,Actor::ReanimateEffect::GetUp
 37916,0x140636c40,0x14063fc50,3,BSTEventSource<SoulsTrapped::Event>* SoulsTrapped::GetEventSource()
 37917,0x140636d30,0x14063fd40,3,BSTEventSource<SpellsLearned::Event>* SpellsLearned::GetEventSource()
 37938,0x140637a80,0x140640a90,3,RE::ActorEquipManager::EquipObject
@@ -17210,4 +17210,4 @@ id,sse,vr,status,name
 5374512336,0x140588cd0,0x140590320,3,RE::BGSSaveLoadManager::PopulateSaveList
 5375528368,0x140680db0,0x14068a230,3,RE::AIProcess::SetActorRefraction
 5388393136,0x1412c5ab0,0x141303ea0,3,RE::BSLightingShaderProperty::InvalidateTextures
-5399981752,0x141dd2eb8,0x141e901a8,4,DAT_141dd2eb8
+5399981752,0x141dd2eb8,0x141e901a8,4,CalculateMyCriticalHitChance
