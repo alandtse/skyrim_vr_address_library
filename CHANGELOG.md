@@ -1,3 +1,10 @@
+# [0.108.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.107.0...v0.108.0) (2023-12-03)
+
+
+### Features
+
+* add ScrambledBugs addresses ([7a018a0](https://github.com/alandtse/skyrim_vr_address_library/commit/7a018a06e96a1e52483e712a235906c03bd52330))
+
 # [0.107.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.106.0...v0.107.0) (2023-11-30)
 
 
