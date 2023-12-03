@@ -8212,6 +8212,7 @@ id,sse,vr,status,name
 501797,0x141dc6f60,0x141e83fb0,2,RE::SCRIPT_FUNCTION::FirstConsoleCommand
 502094,0x141dd2ea8,0x141e90198,4,DAT_141dd2ea8
 502187,0x141dd3ba0,0x141e90e90,4,DAT_141dd3ba0
+502190,0x141dd3bb0,0x141e90ea0,4,BGSEntryPointFunction::SelectSpellResultCount
 508313,0x141decb18,0x141ea9c98,4,fBlockLevel0Distance:TerrainManager
 508315,0x141decb30,0x141ea9cb0,4,fBlockLevel1Distance:TerrainManager
 508319,0x141decb60,0x141ea9ce0,4,fTreeLoadDistance:TerrainManager
@@ -9961,6 +9962,7 @@ id,sse,vr,status,name
 564823,0x14186a3d8,0x14190a308,3,VTABLE_BSReloadShaderI_0
 564904,0x14186f730,0x14190eaf8,3,VTABLE___Compression_0
 675707,0x141dd2ea0,0x141e90190,4,EntryPoint* GetEntryPoint()
+675819,0x141dd3b20,0x141e90e10,4,BGSEntryPointFunction::SelectSpellFunction
 684588,0x141e10e08,0x141ed6cf8,3,RE::RTTI_IFormFactory
 684589,0x141e10fa0,0x141ed6e90,3,RE::RTTI_TESIcon
 684590,0x141e110c0,0x141ed6fb0,1,RE::RTTI_ConcreteObjectFormFactory_AlchemyItem_46_17_2_
