@@ -293,10 +293,14 @@ id,sse,vr,status,name
 32155,0x1404f1140,0x1405013b0,4,bool IAnimationGraphManagerHolder::UpdateAnimationGraphManager(const BSAnimationUpdateData& a_updateData)
 32184,0x1404f1e60,0x1405020d0,4,RE::BSAnimationGraphManager::sub_1404F1E60
 32192,0x1404f2620,0x140502890,3,"bool IAnimationGraphManagerHolder::GetGraphVariableNiPoint3(const BSFixedString& a_variableName, NiPoint3& a_out)"
+33257,0x14053d370,0x1405400f0,4,AccumulatingValueModifierEffect::Allocate(AccumulatingValueModifierEffect* accumulatingValueModifierEffect, Actor* caster, MagicItem* magicItem, Effect* effect)
 32275,0x1404f5420,0x140505690,4,RE::ShakeCamera_1404f5420
+33277,0x14053DEB0,0x140540C30,4,ActiveEffect::Adjust(Skyrim::ActiveEffect* activeEffect, float effectiveness, bool requiresHostility)
 32290,0x1404f5c80,0x140505f60,3,RE::TESCamera::SetState
 33282,0x14053e120,0x140540ea0,4,float ActiveEffect::GetMagnitude_14053E120 (ActiveEffect * a_this)
+33283,0x14053E1B0,0x140540f30,4,ActiveEffect::Restart(Skyrim::ActiveEffect* activeEffect)
 33286,0x14053e380,0x140541100,3,void ActiveEffect::Dispel(bool a_force)
+33320,0x140540360,0x140542EA0,3,ActiveEffect::SetEffectiveness(Skyrim::ActiveEffect* activeEffect, float effectiveness)
 33403,0x140544490,0x1405484c0,3,void ActorMagicCaster::CheckAttachCastingArt()
 33423,0x140544ea0,0x140548f70,4,"bool SourceActionMap::DoAction(Actor* a_actor, DEFAULT_OBJECT a_action)"
 33426,0x140544ff0,0x1405490c0,4,float MagicCaster::GetCurrentSpellCost()
@@ -307,6 +311,7 @@ id,sse,vr,status,name
 33675,0x140550cf0,0x140554fb0,4,void MagicCaster::PlayReleaseSound(MagicItem* a_item) src\RE\M/MagicCaster.cpp:47
 33676,0x140550d60,0x140555020,3,"bool MagicCaster::FindTargets(float a_effectivenessMult, std::uint32_t& a_targetCount, TESBoundObject* a_source, bool a_loadCast, bool a_adjustOnlyHostileEffectiveness)"
 33684,0x140551a90,0x140555ca0,3,po3tweaks::Spell::detail::SpellApplyStruct
+33715,0x140552550,0x140556930,4,ActiveEffectFactory::AutoAERegistrar
 33716,0x1405525f0,0x1405569d0,4,"bool ActiveEffectFactory::CheckCast(MagicCaster* a_caster, MagicItem* a_spell, Effect* a_effect, MagicSystem::CannotCastReason& a_reason)"
 33721,0x1405528e0,0x140556cb0,3,"bool MagicTarget::DispelEffect(MagicItem* a_spell, BSPointerHandle<Actor>& a_caster, ActiveEffect* a_effect)"
 33733,0x1405530d0,0x140557380,3,RE::MagicTarget::HasMagicEffect
@@ -8518,6 +8523,7 @@ id,sse,vr,status,name
 516458,0x142f25250,0x142fea140,3,RE::UserEvents::Singleton
 516573,0x142f257a0,0x142fea518,3,BSScaleformManager* GetSingleton()
 516574,0x142f257a8,0x142fea520,3,RE::BSInputDeviceManager::Singleton
+516691,0x142f25d50,0x142fea800,3,ActiveEffectFactory::InstantiateFunctions
 516697,0x142f261d8,0x142feac88,3,RE::NiRTTI_ModelReferenceEffect
 516706,0x142f26210,0x142feacc8,3,RE::NiRTTI_ReferenceEffect
 516712,0x142f26240,0x142feacf8,3,RE::NiRTTI_ShaderReferenceEffect
