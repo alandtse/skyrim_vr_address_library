@@ -48,8 +48,10 @@ id,sse,vr,status,name
 13594,0x140167220,0x140177940,3,FDGE::Skyrim::LoadWorldData
 13597,0x140167400,0x140177b20,4,bool TESDataHandler::AddFormToDataHandler(TESForm* a_form)
 13625,0x14016c210,0x14017cc30,3,"ObjectRefHandle TESDataHandler::CreateReferenceAtLocation(TESBoundObject* a_base, const NiPoint3& a_location, const NiPoint3& a_rotation, TESObjectCELL* a_targetCell, TESWorldSpace* a_selfWorldSpace, TESObjectREFR* a_alreadyCreatedRef, BGSPrimitive* a_primitive, const ObjectRefHandle& a_linkedRoomRefHandle, bool a_forcePersist, bool a_arg11)"
+13647,0x14016f2e0,0x14017fb90,3,"bool TESDataHandler::IsGameModded (TESDataHandler * a_this, bool param_2)"
 13657,0x1401713d0,0x140181b80,3,RE::TESDataHandler::LoadScripts
 13671,0x1401726a0,0x140182df0,4,void DataHandler::sub_1401726A0 (TESNPC * param_1)
+13755,0x140176c80,0x140186bd0,4,"void FUN_140176c80 (IMemoryHeap__VFTable * param_1, IMemoryHeap__VFTable * * param_2, undefined * param_3, undefined8 param_4)"
 13789,0x140177790,0x1401876a0,3,RE::Sky::GetSingleton
 13855,0x14017a700,0x14018a5b0,4,"bool TESFile::OpenTES(NiFile::OpenMode a_accessMode, bool a_lock)"
 13857,0x14017ad40,0x14018abf0,4,bool TESFile::CloseTES(bool a_force)
@@ -60,6 +62,7 @@ id,sse,vr,status,name
 13902,0x14017d910,0x14018d6f0,3,RE::TESFile::GetCurrentSubRecordType
 13903,0x14017d960,0x14018d740,3,RE::TESFile::SeekNextSubrecord
 13904,0x14017da10,0x14018d7f0,3,RE::TESFile::ReadData
+13913,0x14017e130,0x14018df10,4,bool IsESM_14017E130 (TESFile * param_1)
 13923,0x14017e4b0,0x14018e210,3,RE::TESFile::Duplicate
 14108,0x140186790,0x1401964c0,3,ScriptEventSourceHolder* ScriptEventSourceHolder::GetSingleton()
 14127,0x140187040,0x140196d70,3,BGSIdleCollection* BGSIdleCollection::Ctor()
@@ -69,10 +72,16 @@ id,sse,vr,status,name
 14190,0x140189fc0,0x140199cf0,3,"void ScriptEventSourceHolder::SendOpenCloseEvent(const NiPointer<TESObjectREFR>& a_ref, const NiPointer<TESObjectREFR>& a_activeRef, bool a_isOpened)"
 14262,0x14018c750,0x14019c480,4,std::uint16_t TESActorBaseData::GetLevel()
 14399,0x140190480,0x1401a01b0,3,RE::TESDescription::GetDescription
+14461,0x140194230,0x1401a3f60,4,TESForm * LookupFormById_140194230 (int a_formid)
+14471,0x1401947f0,0x1401a4520,4,"void TESForm::sub_1401947F0 (TESForm * a_this, bool param_2)"
 14482,0x140194c20,0x1401a4950,4,void TESForm::SetPlayerKnows(bool a_known)
 14485,0x140194d20,0x1401a4a50,4,void TESForm::MakeTemporary_140194D20 (TESForm * a_this)
 14509,0x1401957e0,0x1401a5510,2,"void TESForm::AddCompileIndex(FormID& a_id, TESFile* a_file)"
+14514,0x140195c20,0x1401a5950,4,"undefined8 FUN_140195c20 (longlong param_1, longlong param_2, ulonglong param_3, int * a_formID, undefined8 * param_5)"
+14515,0x140195ef0,0x1401a5c20,4,"bool FUN_140195ef0 (longlong param_1, undefined8 param_2, ulonglong param_3, uint32 * a_formID, TESForm * * param_5, undefined8 * param_6)"
+14537,0x1401967e0,0x1401a6510,4,"ulonglong FUN_1401967e0 (longlong a_formmap, longlong param_2, uint param_3, undefined4 * param_4)"
 14579,0x140197a30,0x1401a7760,4,"void TESLeveledList::CalculateCurrentFormList(std::uint16_t a_level, std::int16_t a_count, BSScrapArray<CALCED_OBJECT>& a_calcedObjects, std::uint32_t a_arg5, bool a_usePlayerLevel)"
+14653,0x14019b290,0x1401aafc0,4,void TESModelTextureSwap::sub_14019B290 (TESModelTextureSwap * a_this)
 14704,0x14019d510,0x1401ad250,3,BSTEventSource<TESHarvestedEvent::ItemHarvested>* TESHarvestedEvent::GetEventSource()
 14809,0x1401a1730,0x1401b1470,3,RE::TESForm::GetWeight
 15118,0x1401b13f0,0x1401c1400,3,RE::BGSDecalManager::RemoveItem
@@ -125,6 +134,7 @@ id,sse,vr,status,name
 15967,0x1401ee670,0x1401ff150,3,RE::BSPointerHandleManagerInterface::GetHandle
 15980,0x1401ef330,0x1401ffe10,3,RE::Inventory::GetEventSource
 15991,0x1401efec0,0x1402009a0,4,bool GetWornMaskVisitor::Visit(InventoryEntryData* a_entryData)
+16023,0x1401f12a0,0x140201d80,4,"undefined8 FUN_1401f12a0 (uint * param_1, float param_2, undefined8 * param_3)"
 16084,0x1401f5390,0x140205ef0,3,RE::LocalMapCamera::Ctor
 16089,0x1401f5750,0x1402062b0,3,RE::LocalMapCamera::SetNorthRotation
 16175,0x1401fa6c0,0x14020c010,3,void NiCamera::ScreenSplatter::Clear()
@@ -183,6 +193,7 @@ id,sse,vr,status,name
 20470,0x1402c53d0,0x1402d6b40,3,RE::BGSListForm::AddForm
 20529,0x1402c73f0,0x1402d8b60,3,BGSMaterialType* BGSMaterialType::GetMaterialType(MATERIAL_ID a_materialID)
 21086,0x1402da220,0x1402eb730,3,po3tweaks::GetEquippedFix::GetEquipped
+21119,0x1402db610,0x1402ecb20,4,"bool IsRunning_1402DB610 (Actor * a_this, undefined8 param_2, undefined8 param_3, undefined * param_4)"
 21211,0x1402deab0,0x1402effc0,3,po3tweaks::IsFurnitureAnimeTypeFix::IsFurnitureAnimType
 21416,0x1402e75f0,0x1402f8af0,3,RE::Script::CompileAndRun
 21425,0x1402e8400,0x1402f9900,4,RE::Script::ParseParameters
@@ -201,6 +212,8 @@ id,sse,vr,status,name
 22843,0x140326460,0x140335ca0,3,RE::MessageDataFactoryManager::GetSingleton
 22845,0x140326510,0x140335d50,3,RE::INISettingCollection::ReadFromFile
 23073,0x14032ece0,0x14033e5a0,3,RE::ApplyPerkEntries
+23353,0x1403386a0,0x140347f60,4,void BGSPerk::sub_1403386A0 (BGSPerk * a_this)
+23359,0x140338a50,0x140348310,4,"undefined8 BGSPerk__ApplyPerksVisitor::sub_140338A50 (BGSPerk__ApplyPerksVisitor * a_this, BSTArray_BGSPerkEntry__ * param_2)"
 23429,0x14033a820,0x14034a0e0,2,BGSQuestObjective::FillQuestInstanceData
 23486,0x14033cdc0,0x14034c680,2,BSTEventSource<ObjectiveState::Event>* ObjectiveState::GetEventSource()
 23626,0x140345f50,0x140355810,3,powerof3tweaks::FactionStealing::GetFavorCost
@@ -268,6 +281,7 @@ id,sse,vr,status,name
 29218,0x14044b9a0,0x14045b4f0,4,RE::TESObjectCELL::Spawn
 29219,0x14044bbf0,0x14045b740,4,RE::TESObjectCELL::PlaceParticleEffect
 29303,0x140452550,0x140462500,3,RE::NiAVObject::ClearWeaponBlood
+30839,0x1404a8090,0x1404b80a0,3,void BGSDistantTreeBlock::UpdateBlockVisibility (BGSDistantTreeBlock * a_this)
 31140,0x1404b8580,0x1404c8660,3,SeasonsofSkyrim::LODSwap::Terrain::BuildMeshFileName
 31141,0x1404b85c0,0x1404c86a0,3,SeasonsofSkyrim::LODSwap::Terrain::BuildDiffuseTextureFileName
 31142,0x1404b8600,0x1404c86e0,3,SeasonsofSkyrim::LODSwap::Terrain::BuildNormalTextureFileName
@@ -293,14 +307,17 @@ id,sse,vr,status,name
 32155,0x1404f1140,0x1405013b0,4,bool IAnimationGraphManagerHolder::UpdateAnimationGraphManager(const BSAnimationUpdateData& a_updateData)
 32184,0x1404f1e60,0x1405020d0,4,RE::BSAnimationGraphManager::sub_1404F1E60
 32192,0x1404f2620,0x140502890,3,"bool IAnimationGraphManagerHolder::GetGraphVariableNiPoint3(const BSFixedString& a_variableName, NiPoint3& a_out)"
-33257,0x14053d370,0x1405400f0,4,AccumulatingValueModifierEffect::Allocate(AccumulatingValueModifierEffect* accumulatingValueModifierEffect, Actor* caster, MagicItem* magicItem, Effect* effect)
+33257,0x14053d370,0x1405400f0,4,"AccumulatingValueModifierEffect::Allocate(AccumulatingValueModifierEffect* accumulatingValueModifierEffect, Actor* caster, MagicItem* magicItem, Effect* effect)"
 32275,0x1404f5420,0x140505690,4,RE::ShakeCamera_1404f5420
-33277,0x14053DEB0,0x140540C30,4,ActiveEffect::Adjust(Skyrim::ActiveEffect* activeEffect, float effectiveness, bool requiresHostility)
+33277,0x14053DEB0,0x140540C30,4,"ActiveEffect::Adjust(Skyrim::ActiveEffect* activeEffect, float effectiveness, bool requiresHostility)"
 32290,0x1404f5c80,0x140505f60,3,RE::TESCamera::SetState
+32370,0x1404f96c0,0x140509850,4,void DragonCameraState::HandleLookInput_1404F96C0 (DragonCameraState * a_this)
+33257,0x14053d370,0x1405400f0,4,AccumulatingValueModifierEffect::Allocate(AccumulatingValueModifierEffect* accumulatingValueModifierEffect
+33277,0x14053DEB0,0x140540C30,4,ActiveEffect::Adjust(Skyrim::ActiveEffect* activeEffect
 33282,0x14053e120,0x140540ea0,4,float ActiveEffect::GetMagnitude_14053E120 (ActiveEffect * a_this)
 33283,0x14053E1B0,0x140540f30,4,ActiveEffect::Restart(Skyrim::ActiveEffect* activeEffect)
 33286,0x14053e380,0x140541100,3,void ActiveEffect::Dispel(bool a_force)
-33320,0x140540360,0x140542EA0,3,ActiveEffect::SetEffectiveness(Skyrim::ActiveEffect* activeEffect, float effectiveness)
+33320,0x140540360,0x140542EA0,3,"ActiveEffect::SetEffectiveness(Skyrim::ActiveEffect* activeEffect, float effectiveness)"
 33403,0x140544490,0x1405484c0,3,void ActorMagicCaster::CheckAttachCastingArt()
 33423,0x140544ea0,0x140548f70,4,"bool SourceActionMap::DoAction(Actor* a_actor, DEFAULT_OBJECT a_action)"
 33426,0x140544ff0,0x1405490c0,4,float MagicCaster::GetCurrentSpellCost()
@@ -335,6 +352,7 @@ id,sse,vr,status,name
 34818,0x140586de0,0x14058e310,3,RE::BGSSaveLoadManager::Save
 34819,0x140587350,0x14058e920,3,RE::BGSSaveLoadManager::Load
 34856,0x140588f90,0x1405905e0,4,bool BGSSaveLoadManager::LoadMostRecentSaveGame()
+34862,0x140589a60,0x1405910d0,4,void BGSSaveLoadManager::ProcessEvents (BGSSaveLoadManager * a_this)
 35026,0x140592eb0,0x14059a570,4,FormID BGSNumericIDIndex::GetNumericID()
 35027,0x140592f10,0x14059a5d0,4,void BGSNumericIDIndex::SetNumericID(FormID a_formID)
 35112,0x140597d50,0x14059f410,4,"void BGSLoadGameBuffer::LoadDataEndian(void* a_data, std::uint32_t a_offset, std::uint32_t a_size)"
@@ -345,12 +363,14 @@ id,sse,vr,status,name
 35264,0x14059f190,0x1405a6850,4,EnchantmentItem* BGSCreatedObjectManager::AddArmorEnchantment(BSTArray<Effect>& a_effects)
 35317,0x1405a2930,0x1405a9ff0,3,bool BGSImpactManager::PlayImpactDataSounds(ImpactSoundData& a_impactSoundData)
 35320,0x1405a2c60,0x1405aa320,4,"bool BGSImpactManager::PlayImpactEffect(TESObjectREFR* a_ref, BGSImpactDataSet* a_impactEffect, const BSFixedString& a_nodeName, NiPoint3& a_pickDirection, float a_pickLength, bool a_applyNodeRotation, bool a_useNodeLocalRotation)"
+35402,0x1405a6230,0x1405ad8f0,4,"void Calendar::Update_1405a6230 (Calendar * a_this, float GameDaysPassed)"
 35408,0x1405a64f0,0x1405adbb0,4,RE::Calendar::GetGameDaysPassed
 35413,0x1405a6640,0x1405add00,3,"void Calendar::GetTimeDateString(char* a_dest, std::uint32_t a_max, bool a_showYear)"
 35548,0x1405ae010,0x1405b5880,3,main
 35551,0x1405af3d0,0x1405b6d70,4,MainLoop_1405AF3D0
 35556,0x1405b1020,0x1405b8a20,3,Main::sub_*
 35565,0x1405b2ff0,0x1405bab10,3,Main::OnIdle_1405B2FF0
+35589,0x1405b5280,0x1405bcef0,3,void Main::FUN_1405b5280 (Main * a_this)
 35593,0x1405b5490,0x1405bd0f0,2,Main::sub_*
 35598,0x1405b5ef0,0x1405bdb80,4,void Main::SetActive(bool a_active)
 35601,0x1405b6060,0x1405bdcf0,4,NiCamera* Main::WorldRootCamera()
@@ -363,6 +383,7 @@ id,sse,vr,status,name
 35978,0x1405c5220,0x1405cd7c0,3,"void TaskQueueInterface::QueueAddRipple(float a_scale, const NiPoint3& a_pos)"
 35987,0x1405c58c0,0x1405cde60,2,"void TaskQueueInterface::QueueRemoveSpell(ActorHandle& a_actorHandle, SpellItem* a_spellItem)"
 35991,0x1405c5bf0,0x1405ce190,4,"void TaskQueueInterface::QueueForceWeather(TESWeather* a_weather, bool a_forceOverride)"
+36007,0x1405c67a0,0x1405ced40,4,"void TaskQueueInterface::QueueApplyPerk_1405c67a0 (undefined8 a_taskpool, BGSPerk__ApplyPerksVisitor__VFTable * param_2, void * param_3, undefined8 param_4, undefined8 a_count)"
 36010,0x1405c69b0,0x1405cef50,4,"void TaskQueueInterface::QueueActorDisarm(ActorHandle& a_target, ActorHandle& a_caster)"
 36016,0x1405c6ee0,0x1405cf480,3,BSTaskPool_HandleTask_1405C6EE0
 36198,0x1405ce240,0x1405d6840,4,po3tweaks::Spell::ReapplyOnDeath::Load3d
@@ -468,6 +489,7 @@ id,sse,vr,status,name
 37810,0x140631d70,0x14063ac40,4,bool Actor::IsCasting(MagicItem* a_spell)
 37814,0x140632000,0x14063aed0,4,"void Actor::SetWantDualCasting(RE::Actor* a_actor, bool a_enable)"
 37820,0x1406322f0,0x14063b1c0,3,void Actor::DeselectSpell(SpellItem* a_spell)
+37821,0x1406323c0,0x14063b290,4,"void Character::sub_1406323C0 (Character * a_this, undefined8 param_2)"
 37822,0x140632610,0x14063b4e0,4,TESForm * GetEquippedShout_140632610 (Actor * a_this)
 37827,0x140632b60,0x14063ba30,4,void Actor::VisitSpells(ForEachSpellVisitor& a_visitor)
 37828,0x140632d10,0x14063bbe0,3,bool Actor::HasSpell(SpellItem* a_spell)
@@ -485,6 +507,7 @@ id,sse,vr,status,name
 37938,0x140637a80,0x140640a90,3,RE::ActorEquipManager::EquipObject
 37939,0x140637bc0,0x140640bd0,2,"void ActorEquipManager::EquipSpell(Actor* a_actor, SpellItem* a_spell, const BGSEquipSlot* a_slot)"
 37941,0x140637ca0,0x140640cb0,2,"void ActorEquipManager::EquipShout(Actor* a_actor, TESShout* a_shout)"
+37943,0x140637f20,0x140640f30,4,"void FUN_140637f20 (undefined8 param_1, PlayerCharacter * param_2)"
 37945,0x140638190,0x1406411a0,3,RE::ActorEquipManager::UnequipObject
 38047,0x14063cfb0,0x140646020,3,StaminaNPC::apply_deny_player_attack_or_bash
 38079,0x14063f810,0x1406488a0,3,bool TaskQueueInterface::ShouldUseTaskQueue()
@@ -501,6 +524,8 @@ id,sse,vr,status,name
 38850,0x14067d120,0x1406865a0,3,"void AIProcess::SetHeadtrackTarget(Actor* a_owner, NiPoint3& a_targetPosition)"
 38858,0x14067d4a0,0x140686920,4,"void AIProcess::KnockExplosion(Actor* a_actor, const NiPoint3& a_location, float a_magnitude)"
 38900,0x14067fe60,0x1406892e0,4,LLF::AIProcess_CalculateLightValue_GetLuminance
+38966,0x140681fd0,0x14068b440,4,"void FUN_140681fd0 (undefined8 param_1, Actor * a_actor)"
+38967,0x140682020,0x14068b490,4,void FUN_140682020 (longlong param_1)
 39171,0x1406928c0,0x14069bec0,4,Character * Character::ctor (Character * a_this)
 39175,0x140692cd0,0x14069c2d0,3,RE::PlayerCharacter::GetArmorValue
 39179,0x140693050,0x14069c650,3,RE::PlayerCharacter::GetDamage
@@ -571,6 +596,7 @@ id,sse,vr,status,name
 42832,0x140742850,0x14076d400,3,RE::HitData::Populate
 42833,0x140742c00,0x14076d800,4,RE::HitData::init_hitdata_proj_ID
 42842,0x140743510,0x14076e110,3,RE::HitData::sub_*
+42852,0x140744dd0,0x14076fd10,4,void MissileProjectile::UpdateImpl_140744DD0 (MissileProjectile * a_this)
 42856,0x140746d60,0x140771ca0,3,EnhancedInvisibility::MissileProjectile::sub_140746D60
 42928,0x14074b170,0x140776440,3,"BSPointerHandle<Projectile>* Projectile::Launch(BSPointerHandle<Projectile>* a_result, LaunchData& a_data)"
 42943,0x14074c710,0x140777a30,4,ProjectileUpdate
@@ -625,12 +651,16 @@ id,sse,vr,status,name
 49755,0x140845e20,0x1408710d0,3,StaminaNPC::apply_get_CombatBashChance
 49756,0x140845e80,0x140871130,3,StaminaNPC::apply_get_OffensiveBashChance
 49772,0x140846580,0x140871830,3,StaminaNPC::apply_get_CombatRangedAttackChance
+49800,0x140847de0,0x140873090,4,"void ProcessButton_140847DE0 (PlayerInputHandler * a_this, undefined8 param_2)"
 49814,0x140848820,0x140873af0,4,FreeCameraState::GetCurrentRotation_*
+49839,0x140849930,0x140874c00,4,"void HorseCameraState::HandleLookInput_140849930 (HorseCameraState * a_this, float * param_2)"
 49852,0x14084ab90,0x140875f00,3,TweenMenuCameraState * PlayerCamera::Update_14084AB90(PlayerCamera *a_this)
 49858,0x14084b200,0x140876550,2,void PlayerCamera::ForceFirstPerson()
 49863,0x14084b350,0x140876610,2,void PlayerCamera::ForceThirdPerson()
 49876,0x14084b720,0x140876880,2,void PlayerCamera::ToggleFreeCameraMode(bool a_freezeTime)
 49908,0x14084d630,0x140877db0,3,RE::PlayerCamera::UpdateThirdPerson
+49970,0x14084fbe0,0x140730470,4,"void ProcessButton_14084FBE0 (PlayerInputHandler * a_this, undefined8 param_2)"
+49978,0x140850860,0x14087ac20,4,"void HandleLookInput_140850860 (ThirdPersonState * a_this, float * param_2)"
 50005,0x1408527b0,0x14087CB80,3,DescriptionFramework::
 50061,0x140855b60,0x14087ff20,3,EssentialFavorites::Barter::IsQuestObject
 50099,0x140856a50,0x140880e10,3,RE::ItemList::Update
@@ -687,10 +717,14 @@ id,sse,vr,status,name
 51121,0x140899c40,0x1408c7cd0,4,void MagicFavorites::SetFavorite(TESForm* a_form)
 51122,0x140899ca0,0x1408c7d30,4,void MagicFavorites::RemoveFavorite(TESForm* a_form)
 51400,0x1408aa140,0x1408d68f0,2,po3tweaks::SitToWait::HandleWaitRequest
+51402,0x1408aa940,0x1408d7370,4,"bool QuickSaveLoadHandler::ProcessButton_1408AA940 (QuickSaveLoadHandler * a_this, undefined8 param_2)"
 51420,0x1408ab180,0x1408d7fe0,4,RE::MessageBoxData::CreateMessage
 51422,0x1408ab5c0,0x1408d8420,3,void MessageBoxData::QueueMessage()
 51454,0x1408ad9f0,0x1408dad50,3,TESModelTextureSwap::sub_*
+51507,0x1408b2be0,0x1408e0450,3,void PrecacheCharGen_1409796E0_0_1408B2BE0 (undefined8 * a_this)
+51509,0x1408b2d60,0x1408e0730,4,void PrecacheCharGenClear_1409796F0_0_1408B2D60 (undefined8 * a_this)
 51540,0x1408ba590,0x1408e7d70,4,"void ChangeName_1408BA590 (RaceSexMenu * param_1, char * param_2)"
+51614,0x1408bd8c0,0x1408ea840,3,SleepWaitTime_Compare_offset include/offsets.h:57
 51638,0x1408bf360,0x1408ec3e0,2,StatsMenu::ProcessMessage
 51652,0x1408c20c0,0x1408eedb0,2,StatsMenu::UpdateSkillList
 51755,0x1408ccff0,0x1408fa0a0,4,SubtitleManager::KillSubtitles
@@ -788,6 +822,7 @@ id,sse,vr,status,name
 63607,0x140b258b0,0x140b60690,3,"bool BShkbAnimationGraph::SetGraphVariableInt(const BSFixedString& a_variableName, const int a_in)"
 63608,0x140b25990,0x140b60770,3,"bool BShkbAnimationGraph::SetGraphVariableFloat(const BSFixedString& a_variableName, const float a_in)"
 63609,0x140b25c70,0x140b60a50,3,"bool BShkbAnimationGraph::SetGraphVariableBool(const BSFixedString& a_variableName, const bool a_in)"
+64198,0x140b66930,0x140ba17a0,4,"ulonglong FUN_140b66930 (undefined * param_1, hkbCharacter * a_character, undefined * * * param_3, undefined8 param_4, undefined8 param_5)"
 66355,0x140bed530,0x140c283e0,4,RE::BSSoundHandle::Play
 66356,0x140bed570,0x140c28420,3,RE::BSSoundHandle::Play3d
 66358,0x140bed600,0x140c284b0,3,RE::BSSoundHandle::Stop
@@ -889,6 +924,7 @@ id,sse,vr,status,name
 74239,0x140d38710,0x140d80bb0,3,RE::INISettingCollection::OpenHandle
 74240,0x140d38720,0x140d80bc0,3,RE::INISettingCollection::CloseHandle
 74377,0x140d3d3d0,0x140d86360,4,BSWindModifier* BSWindModifier::Ctor()
+74491,0x140d426f0,0x14026f3b0,4,uint16_t FloatToHalf (float a_input)
 75445,0x140d68dd0,0x1405be850,4,"void Renderer::Init(RendererInitOSData* a_data, ApplicationWindowProperties* windowProps, WinAPI::HWND window)"
 75447,0x140d69140,0x140dbabc0,4,void Renderer::Shutdown()
 75448,0x140d69590,0x140dbb010,4,"void Renderer::SetWindowPosition(std::uint32_t windowID, std::int32_t x, std::int32_t y)"
@@ -964,6 +1000,7 @@ id,sse,vr,status,name
 82383,0x140f45820,0x140fa2520,4,void BSScaleformImageLoader::RemoveTexture(BSScaleformExternalTexture& a_texture)
 82462,0x140f48270,0x140fa4f70,3,bool GSysAllocPaged::InitHeapEngine(const void* a_heapDesc)
 82464,0x140f48360,0x140fa5060,3,void GSysAllocPaged::ShutdownHeapEngine()
+85757,0x140fffeb0,0x14105cbb0,4,void FUN_140fffeb0 (undefined8 * param_1)
 87907,0x1410a2370,0x1410fefa0,4,Skyrim-upscaler
 88499,0x1410c3d40,0x141120aa0,3,RE::ActorState::Sub_1410C3D40
 97379,0x14122dad0,0x141265f80,3,RE::BSScript::ObjectBindPolicy::BindObject
@@ -993,6 +1030,7 @@ id,sse,vr,status,name
 98978,0x141295ad0,0x1412ce720,3,UpdateShadowDistanceAndInteriorFlag
 98986,0x141295c30,0x1412ce8a0,4,"void BSShaderManager::GetTexture(const char* a_path, bool a_demand, NiPointer<NiTexture>& a_textureOut, bool a_isHeightMap)"
 98997,0x1412966a0,0x1412cf410,2,BSGraphics::BSShaderAccumulator* BSGraphics::BSShaderAccumulator::GetCurrentAccumulator()
+99023,0x141297410,0x1412d1c50,3,"void FUN_141297410 (longlong param_1, undefined4 param_2, int param_3)"
 99868,0x1412c5ca0,0x141304090,3,RE::NiAVObject::SetRefraction
 99886,0x1412c9320,0x141307710,3,BSShaderTextureSet* BSShaderTextureSet::Ctor()
 100004,0x1412ced50,0x14130dc60,3,BSLightingShaderMaterial* BSLightingShaderMaterial::Ctor()
@@ -1010,10 +1048,14 @@ id,sse,vr,status,name
 100118,0x1412d38f0,0x141312800,3,BSLightingShaderMaterialSnow* BSLightingShaderMaterialSnow::Ctor()
 100125,0x1412d3ad0,0x1413129e0,3,BSLightingShaderMaterialMultiLayerParallax* BSLightingShaderMaterialMultiLayerParallax::Ctor()
 100458,0x1412e5570,0x141325d10,3,void BSShaderRenderTargets::Create()
-100565,0x1412f2bb0,0x141338f60,3,"void Func6_1412F2BB0 (BSLightingShader * a_this, undefined8 param_2, undefined8 param_3, undefined8 param_4)"
+100563,0x1412f2020,0x141338400,3,"void BSLightingShader::Func4_1412F2020 (BSLightingShader * a_this, undefined8 param_2, undefined8 param_3)"
+100565,0x1412f2bb0,0x141338f60,3,"void BSLightingShader::Func6_1412F2BB0 (BSLightingShader * a_this, undefined8 param_2, undefined8 param_3, undefined8 param_4)"
+100602,0x1412f63d0,0x141333470,3,"void BSWaterShader::Func4_1412F63D0 (BSWaterShader * a_this, undefined8 param_2)"
 100717,0x1412fdcc0,0x1413401e0,4,"BSShader * BSShader::sub_1412FDCC0 (BSShader * param_1, undefined8 param_2, undefined8 param_3, undefined4 param_4, undefined1 param_5, undefined8 param_6)"
+100771,0x1413014c0,0x141343d40,3,"bool BSDistantTreeShader::Func2_1413014C0 (BSDistantTreeShader * a_this, undefined8 param_2)"
 100847,0x141307160,0x141348390,3,Skyrim-Upscaler
 100852,0x141308030,0x141349270,4,"void BSBatchRenderer::sub_141308030(BSBatchRenderer *a_this,uint *param_2,uint *param_3,undefined8 param_4,uint param_5)"
+100854,0x141308440,0x141349680,3,"void BSBatchRenderer::RenderPassImmediately_141308440 (BSBatchRenderer * a_Pass, uint32_t a_Technique, bool a_AlphaTest, uint32_t a_RenderFlags)"
 100871,0x1413090c0,0x14134a310,4,"LLF::void FUN_1413090c0 (BSBatchRenderer * * param_1, uint param_2)"
 100877,0x1413094a0,0x14134a6f0,4,BSBatchRenderer::sub_*
 100994,0x141310c50,0x141354b60,4,src\Features/LightLimitFix.h:163
@@ -1021,6 +1063,7 @@ id,sse,vr,status,name
 101296,0x14131cde0,0x141362c60,4,BSLight::sub_*
 101339,0x14131f810,0x1413656b0,4,"void BSShader::LoadShaders_14131F810 (BSShader * a_this, UINT_PTR * a_stream)"
 101341,0x14131fbd0,0x141365a70,4,"bool BSShader::BeginTechnique_14131FBD0 (BSShader * shader, int vertexDescriptor, int pixelDescriptor, bool skipPIxelShader)"
+101499,0x1413251c0,0x1413574f0,3,undefined8 BSShadowDirectionalLight::Func16_1413251C0 (BSShadowDirectionalLight * a_this)
 101631,0x14132ead0,0x141371a00,3,"void GetLightingShaderDefines(uint32_t descriptor, D3D_SHADER_MACRO* defines)"
 101884,0x14133f0c0,0x14137c200,3,RE::BSWin32SaveDataSystemUtility::GetSingleton
 101962,0x141340ff0,0x14137e180,4,"longlong **BSWin32SaveDataSystemUtility::Ctor_141340FF0(longlong param_1,longlong **param_2,char *param_3,int param_4)"
@@ -8242,6 +8285,7 @@ id,sse,vr,status,name
 512515,0x141e09c18,0x141ecfb40,3,RE::BSScaleformManager::CollectDisplayInfo::fSafeZoneY
 513211,0x141e0ded0,0x143423080,4,gShadowSceneNodeArray_*
 513222,0x141e0df14,0x1434230c4,4,shadowoost::gIsInterior
+513256,0x141e0dfcc,0x14342317c,4,ambientSpecularAndFresnel
 513786,0x141e10750,0x141ed6650,4,Skyrim-Upscaler::GetVerticalFOVRad
 513793,0x141e10978,0x141ed6530,4,fShadowDistance:Display
 513847,0x141e10de0,0x141ed6cd0,3,RE::RTTI_BaseFormComponent
@@ -8544,6 +8588,7 @@ id,sse,vr,status,name
 517051,0x142f27180,0x142febc80,3,Inventory3DManager* GetSingleton()
 517052,0x142f27188,0x142fea720,3,UI3DSceneManager* GetSingleton()
 517222,0x142f38950,0x142ffd750,3,RE::NiRTTI_SceneGraph
+517224,0x142f38968,0x142ffd768,4,gSaveScreenshotRequested
 517228,0x142f38978,0x142ffd778,3,TaskQueueInterface* GetSingleton()
 517372,0x142f39650,0x142ffe470,3,ResponseDictionary* GetSingleton()
 517601,0x142f3a680,0x142fff478,3,RE::NiRTTI_BSDoorHavokController
