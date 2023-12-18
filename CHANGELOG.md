@@ -1,3 +1,10 @@
+# [0.110.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.109.0...v0.110.0) (2023-12-18)
+
+
+### Features
+
+* add more addresses for Poached Bugs VR ([#50](https://github.com/alandtse/skyrim_vr_address_library/issues/50)) ([5819db4](https://github.com/alandtse/skyrim_vr_address_library/commit/5819db47add44acf66312a35e13aa0d15d68d2a9))
+
 # [0.109.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.108.0...v0.109.0) (2023-12-03)
 
 
