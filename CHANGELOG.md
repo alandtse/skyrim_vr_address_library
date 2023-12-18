@@ -1,3 +1,10 @@
+# [0.111.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.110.0...v0.111.0) (2023-12-18)
+
+
+### Features
+
+* add enginefixes ids ([500c3cc](https://github.com/alandtse/skyrim_vr_address_library/commit/500c3cc22fe57fbea52500cc13e6f730b4c14abf))
+
 # [0.110.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.109.0...v0.110.0) (2023-12-18)
 
 
