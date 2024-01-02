@@ -1,3 +1,10 @@
+# [0.112.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.111.0...v0.112.0) (2024-01-02)
+
+
+### Features
+
+* Add Loading Screen Truce ([#51](https://github.com/alandtse/skyrim_vr_address_library/issues/51)) ([c3b2189](https://github.com/alandtse/skyrim_vr_address_library/commit/c3b2189bb6afc317b041601d0991023b981a6e7d))
+
 # [0.111.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.110.0...v0.111.0) (2023-12-18)
 
 
