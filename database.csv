@@ -255,6 +255,7 @@ id,sse,vr,status,name
 25868,0x1403bf020,0x1403ce8a0,3,RE::ActorValueOwner::Get_bow_power
 25910,0x1403c0de0,0x1403D0660,4,"FUN_1403c0de0(float param_1, float param_2)"
 25915,0x1403c0fd0,0x1403d0850,4,LimbInjuries::smth_smithed
+25931,0x1403c1700,0x1403d0f80,4,"float GetDualCastingEffectiveness(RE::ActorValueOwner* a_actorValueOwner, float a_cost)"
 25933,0x1403c1740,0x1403d0fc0,3,TrueHUD::GetSoulType
 25977,0x1403c38e0,0x1403d3160,3,"void BSFaceGenAnimationData::Reset(float a_timer, bool a_resetExpression, bool a_resetModifierAndPhoneme, bool a_resetCustom, bool a_closeEyes)"
 25980,0x1403c3f00,0x1403d3780,3,"void BSFaceGenAnimationData::SetExpressionOverride(std::int32_t a_idx, float a_value)"
