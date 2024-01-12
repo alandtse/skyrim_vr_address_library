@@ -826,6 +826,7 @@ id,sse,vr,status,name
 64198,0x140b66930,0x140ba17a0,4,"ulonglong FUN_140b66930 (undefined * param_1, hkbCharacter * a_character, undefined * * * param_3, undefined8 param_4, undefined8 param_5)"
 66355,0x140bed530,0x140c283e0,4,RE::BSSoundHandle::Play
 66356,0x140bed570,0x140c28420,3,RE::BSSoundHandle::Play3d
+66357,0x140bed5c0,0x140c28470,3,RE::BSSoundHandle::Pause
 66358,0x140bed600,0x140c284b0,3,RE::BSSoundHandle::Stop
 66359,0x140bed640,0x140c284f0,4,bool BSSoundHandle::IsPlaying_140bed640 (BSSoundHandle * a_this)
 66360,0x140bed690,0x140c28540,3,RE::BSSoundHandle::IsValid
