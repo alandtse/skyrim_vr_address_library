@@ -1,3 +1,10 @@
+# [0.113.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.112.0...v0.113.0) (2024-01-16)
+
+
+### Features
+
+* Add BSSoundHandle::Pause ([#52](https://github.com/alandtse/skyrim_vr_address_library/issues/52)) ([a96aff3](https://github.com/alandtse/skyrim_vr_address_library/commit/a96aff3aad8f9c6bf49bc03bfd41161e823df466))
+
 # [0.112.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.111.0...v0.112.0) (2024-01-02)
 
 
