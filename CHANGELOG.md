@@ -1,3 +1,10 @@
+# [0.115.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.114.0...v0.115.0) (2024-02-01)
+
+
+### Features
+
+* add SkyReflectionFix ([2fdf84f](https://github.com/alandtse/skyrim_vr_address_library/commit/2fdf84f1e4cfa11798f11a71f7875cb835da2582))
+
 # [0.114.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.113.0...v0.114.0) (2024-01-29)
 
 
