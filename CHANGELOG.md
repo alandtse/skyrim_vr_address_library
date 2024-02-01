@@ -1,3 +1,10 @@
+# [0.116.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.115.0...v0.116.0) (2024-02-01)
+
+
+### Features
+
+* Add upcoming String Distributor and StaggerEffectFix ([#54](https://github.com/alandtse/skyrim_vr_address_library/issues/54)) ([0b3491c](https://github.com/alandtse/skyrim_vr_address_library/commit/0b3491ce1f2a9f2c54e087d52393e3df882c3e60))
+
 # [0.115.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.114.0...v0.115.0) (2024-02-01)
 
 
