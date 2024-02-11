@@ -8892,9 +8892,12 @@ id,sse,vr,status,name
 524719,0x143025ea8,0x14317e730,3,RE::NiRTTI_BSNonUniformScaleExtraData
 524721,0x143025ec0,0x14317e760,3,RE::NiRTTI_BSNiNode
 524722,0x143025ed0,0x14317e770,3,RE::NiRTTI_BSInstanceTriShape
+524724,0x143025ef0,0x14317e7e8,4,gClearColorArray
 524728,0x143025f00,0x14317e790,4,gUnkWindow_*
 524729,0x143025f08,0x14317e798,4,RE::g_ID3D11Device
 524730,0x143025f10,0x14317e7a0,4,RendererWindow* GetCurrentRenderWindow()
+524747,0x1430261b0,0x14317ea60,4,gDepthStates
+524749,0x143026db0,0x14317f6c0,4,gBlendStates
 524751,0x143027910,0x143180560,4,SamplerStatesCollection* GetSingleton()
 524755,0x143027a30,0x143180690,4,VertexShader_perTechniqueBuffersArray
 524757,0x143027ad0,0x143180730,4,VertexShader_perMaterialBuffersArray
