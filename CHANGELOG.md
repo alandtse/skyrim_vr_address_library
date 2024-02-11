@@ -1,3 +1,10 @@
+# [0.117.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.116.0...v0.117.0) (2024-02-11)
+
+
+### Features
+
+* add cs terrain blending addresses ([f95280c](https://github.com/alandtse/skyrim_vr_address_library/commit/f95280ca4446ad74bca5f1122425015dd2a0ef8f))
+
 # [0.116.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.115.0...v0.116.0) (2024-02-01)
 
 
