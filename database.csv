@@ -67,7 +67,7 @@ id,sse,vr,status,name
 13923,0x14017e4b0,0x14018e210,3,RE::TESFile::Duplicate
 14108,0x140186790,0x1401964c0,3,ScriptEventSourceHolder* ScriptEventSourceHolder::GetSingleton()
 14127,0x140187040,0x140196d70,3,BGSIdleCollection* BGSIdleCollection::Ctor()
-14163,0x1401888E0,0x140198610,4,"void SpellItem__GetMenuDisplayObject(TESForm *a1)"
+14163,0x1401888E0,0x140198610,4,void SpellItem__GetMenuDisplayObject(TESForm *a1)
 14179,0x1401894f0,0x140199220,3,"void BGSOpenCloseForm::SetOpenState(TESObjectREFR* a_ref, bool a_open, bool a_snap)"
 14180,0x140189750,0x140199480,3,RE::BGSOpenCloseForm::SetCloseState
 14189,0x140189e30,0x140199b60,3,RE::TESObjectREFR::PlayAnimation
@@ -749,6 +749,7 @@ id,sse,vr,status,name
 51818,0x1408cfea0,0x1408fcf60,4,void TutorialMenu::OpenTutorialMenu(DEFAULT_OBJECT a_tutorial)
 51843,0x1408d11f0,0x1408fe370,3,TweenMenu::
 51859,0x1408d33b0,0x1406f4b40,1,"void UI3DSceneManager::AttachChild(NiAVObject* a_obj, INTERFACE_LIGHT_SCHEME a_scheme) UNCONFIRMED"
+51861,0x1408d3480,0x140900dd0,3,void UI3DSceneManager::DetachChild(NiAVObject* a_obj)
 51867,0x1408d38e0,0x140901370,4,"void UI3DSceneManager::SetCameraPosition_1408d38e0 (longlong a_this, NiPoint3 * a_pos)"
 51869,0x1408d3990,0x140901420,4,"void UI3DSceneManager::SetCameraRotate_1408d3990 (longlong a_this, NiMatrix33 * a_rotate)"
 51870,0x1408d39e0,0x140901470,3,"void UI3DSceneManager::SetCameraFOV_1408d39e0 (longlong a_this, float a_fov)"
@@ -908,6 +909,7 @@ id,sse,vr,status,name
 68839,0x140c529a0,0x140c97a60,3,void NiObject::CreateDeepCopy(NiPointer<NiObject>& a_object)
 68900,0x140c56b50,0x140c9bc10,3,RE::NiAVObject::Update
 68936,0x140c57a60,0x140c9ccd0,3,RE::NiNode::Ctor
+69002,0x140c5ac30,0x140ca01e0,4,void NiStream::LoadLinkID
 69270,0x140c66580,0x140cac0e0,3,RE::NiCamera::WorldPtToScreenPt3
 69271,0x140c66710,0x140cac900,3,void UpdateInternalWorldToScreenMatrix (NiCamera * a_this)
 69433,0x140c6cd50,0x140cb2ee0,3,void NiTimeController::LoadBinary(NiStream& a_stream)
@@ -1048,8 +1050,12 @@ id,sse,vr,status,name
 98986,0x141295c30,0x1412ce8a0,4,"void BSShaderManager::GetTexture(const char* a_path, bool a_demand, NiPointer<NiTexture>& a_textureOut, bool a_isHeightMap)"
 98997,0x1412966a0,0x1412cf410,2,BSGraphics::BSShaderAccumulator* BSGraphics::BSShaderAccumulator::GetCurrentAccumulator()
 99023,0x141297410,0x1412d1c50,3,"void FUN_141297410 (longlong param_1, undefined4 param_2, int param_3)"
+99696,0x1412b99f0,0x1412f7420,4,"void ShadowSceneNode::AttachObject (ShadowSceneNode * a_this, NiAVObject * a_node)"
+99854,0x1412c50f0,0x1413034b0,3,BSLightingShaderProperty * BSLightingShaderProperty::Ctor (BSLightingShaderProperty * a_this)
 99868,0x1412c5ca0,0x141304090,3,RE::NiAVObject::SetRefraction
 99886,0x1412c9320,0x141307710,3,BSShaderTextureSet* BSShaderTextureSet::Ctor()
+99938,0x1412cacd0,0x1413093a0,4,"void BSShaderAccumulator::FinishAccumulating (BSShaderAccumulator *a_this,uint32_t StartRange,uint32_t EndRanges)"
+99943,0x1412cbe90,0x14130a970,3,"void BSShaderAccumulator::sub_1412CBE90 (BSShaderAccumulator * a_this, uint32_t param_2)"
 100004,0x1412ced50,0x14130dc60,3,BSLightingShaderMaterial* BSLightingShaderMaterial::Ctor()
 100016,0x1412cfbc0,0x14130ead0,3,RE::BSLightingShaderMaterialBase::CreateMaterial
 100021,0x1412d01a0,0x14130f0b0,3,BSLightingShaderMaterialEnvmap* BSLightingShaderMaterialEnvmap::Ctor()
