@@ -705,6 +705,7 @@ id,sse,vr,status,name
 50643,0x140878140,0x1408a3e60,4,CombatPathingRevolution::src/Advance_Hook.h:55
 50674,0x14087aba0,0x1408A6910,3,DescriptionFramework::
 50688,0x14087ba70,0x1408a77e0,3,EssentialFavorites::Gifting::IsQuestObject
+50727,0x14087F090,0x1408AC8A0,3,"void UpdateCrosshairCaveLeaving(bool a_valid, const char *a2)"
 50738,0x14087f970,0x1408ad1e0,4,static void UpdateCrosshairMagicTarget(bool a_valid)
 50747,0x14087fff0,0x1408ad8c0,3,TrueHUD::SetHUDMode?
 50751,0x140880160,0x1408ADA40,4,"void HudMenuStrings (int32 a1, struct8 *a2, TESQuest *a3, int64 a4)"
