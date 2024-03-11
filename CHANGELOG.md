@@ -1,3 +1,10 @@
+# [0.119.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.118.0...v0.119.0) (2024-03-11)
+
+
+### Features
+
+* Add missing address for upcoming String Distributor ([#57](https://github.com/alandtse/skyrim_vr_address_library/issues/57)) ([3eb0bf0](https://github.com/alandtse/skyrim_vr_address_library/commit/3eb0bf0c4722ae5bcb791f6e09c8547a6c914279))
+
 # [0.118.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.117.0...v0.118.0) (2024-03-04)
 
 
