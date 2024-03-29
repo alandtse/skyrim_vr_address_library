@@ -360,6 +360,7 @@ id,sse,vr,status,name
 34413,0x14056c9d0,0x140572fd0,3,"DialogueItem* DialogueItem::Ctor(TESQuest* a_quest, TESTopic* a_topic, TESTopicInfo* a_topicInfo, Actor* a_speaker)"
 34429,0x14056D570,0x140573B70,4,"void DialogueSubtitleStrings (char **a1, TESTopic *a2, TESTopicInfo *a3, Character *a4, void *a5)"
 34434,0x14056DA60,0x140574060,4,"void DialogueMenuStrings (void *a1, TESQuest *a2, TESTopic *a3, TESTopicInfo *a4, TESObjectREFR *a5, void *a6)"
+34655,0x14057b920,0x1405830f0,4,"bool BGSSaveLoadGame::GetChange(TESForm* a_form, std::uint32_t a_changes)"
 34808,0x140585a70,0x14058cfa0,4,"ulonglong BGSLoadGameBuffer::sub_140585A70(BGSLoadGameBuffer *param_1,PlayerCharacter *param_2,undefined *param_3,char *param_4)"
 34818,0x140586de0,0x14058e310,3,RE::BGSSaveLoadManager::Save
 34819,0x140587350,0x14058e920,3,RE::BGSSaveLoadManager::Load
@@ -683,6 +684,7 @@ id,sse,vr,status,name
 50164,0x14085bb30,0x1408864d0,3,RE::Console::SetSelectedRef
 50180,0x14085c2c0,0x140886df0,4,RE::ConsoleLog::VPrint
 50201,0x14085ddb0,0x140888D80,3,DescriptionFramework::
+50211,0x14085eaa0,0x140889a30,4,void TESObjectREFR::OpenContainer(std::int32_t a_openType)
 50212,0x14085ebc0,0x140889b50,3,WhoseQuestIsItAnyway::StoreHook
 50257,0x140862160,0x14088d4e0,3,BSTEventSource<ChestsLooted::Event>* ChestsLooted::GetEventSource()
 50258,0x140862250,0x14088d5d0,3,RE::ItemsPickpocketed::GetEventSource
@@ -706,6 +708,8 @@ id,sse,vr,status,name
 50643,0x140878140,0x1408a3e60,4,CombatPathingRevolution::src/Advance_Hook.h:55
 50674,0x14087aba0,0x1408A6910,3,DescriptionFramework::
 50688,0x14087ba70,0x1408a77e0,3,EssentialFavorites::Gifting::IsQuestObject
+50725,0x14087f070,0x1408ac880,4,void SendHUDMessage::PushHUDMode(const char* a_hudMode)
+50726,0x14087f080,0x1408ac890,4,void SendHUDMessage::PopHUDMode(const char* a_hudMode)
 50727,0x14087F090,0x1408AC8A0,3,"void UpdateCrosshairCaveLeaving(bool a_valid, const char *a2)"
 50738,0x14087f970,0x1408ad1e0,4,static void UpdateCrosshairMagicTarget(bool a_valid)
 50747,0x14087fff0,0x1408ad8c0,3,TrueHUD::SetHUDMode?
@@ -847,14 +851,17 @@ id,sse,vr,status,name
 66358,0x140bed600,0x140c284b0,3,RE::BSSoundHandle::Stop
 66359,0x140bed640,0x140c284f0,4,bool BSSoundHandle::IsPlaying_140bed640 (BSSoundHandle * a_this)
 66360,0x140bed690,0x140c28540,3,RE::BSSoundHandle::IsValid
+66363,0x140bed740,0x140c285f0,4,void BSSoundHandle::SetOutputModel(const BGSSoundOutput* a_outputModel)
 66365,0x140bed7b0,0x140c28660,3,bool BSSoundHandle::SetVolume(float a_volume)
 66366,0x140bed800,0x140c286b0,3,bool BSSoundHandle::SetFrequency(float a_frequency)
+66369,0x140bed8f0,0x140c287a0,4,std::uint64_t BSSoundHandle::GetDuration std::uint64_t BSSoundHandle::GetDuration
 66370,0x140bed920,0x140c287d0,4,RE::BSSoundHandle::SetPosition
 66375,0x140bedb10,0x140c289c0,4,RE::BSSoundHandle::SetObjectToFollow
 66384,0x140bedde0,0x140c28c90,4,"bool BSSoundHandle::FadeInPlay (BSSoundHandle * a_this, uint16_t a_fadeTimeMS)"
 66385,0x140bede30,0x140c28ce0,4,bool BSSoundHandle::FadeOutAndRelease(std::uint16_t a_fadeTimeMS)
 66391,0x140bee580,0x140c29430,4,RE::BSAudioManager::GetSingleton
 66401,0x140beee70,0x140c29d20,4,RE::BSAudioManager::PlaySoundInt
+66402,0x140beef00,0x140c29db0,4,"void BSAudioManager::BuildSoundDataFromFile(BSSoundHandle& a_soundHandle, const BSResource::ID& a_file, std::uint32_t a_flags, std::uint32_t a_priority)"
 66403,0x140bef020,0x140c29ed0,3,"void BSAudioManager::BuildSoundDataFromEditorID(BSSoundHandle& a_soundHandle, const char* a_editorID, std::uint32_t a_flags)"
 66404,0x140bef0b0,0x140c29f60,3,RE::BSAudioManager::BuildSoundDataFromDescriptor
 66408,0x140bef520,0x140c2a3d0,3,po3tweaks::DopplerShift::Play
@@ -905,6 +912,7 @@ id,sse,vr,status,name
 68476,0x140c448b0,0x140c89960,4,"void BSResource::RegisterLocation(Location* a_location, std::uint32_t a_priority)"
 68476,0x140c448b0,0x140c89960,4,"void BSResource__LooseFileLocation::RegisterLocation (BSResource__LooseFileLocation * a_this, undefined * a_location, uint32_t a_priority)"
 68480,0x140c44a00,0x140c89ab0,4,void BSResource::RegisterGlobalPath (char * a_path)
+68635,0x140c4a610,0x140c8f6c0,4,void ID::GenerateFromPath(const char* a_path)
 68663,0x140c4b990,0x140c90a40,3,RE::LooseFileStream::Ctor
 68835,0x140c52750,0x140c97810,4,NiObject* NiObject::clone_140C52750(NiObject *a_this)
 68838,0x140c52900,0x140c979c0,3,void NiObject::ProcessClone(NiCloningProcess& a_cloning)
