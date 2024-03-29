@@ -1,3 +1,10 @@
+# [0.120.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.119.0...v0.120.0) (2024-03-24)
+
+
+### Features
+
+* add addresses for deferred cs ([9d94eee](https://github.com/alandtse/skyrim_vr_address_library/commit/9d94eee4106185dee1406816ab4e137e09f52652))
+
 # [0.119.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.118.0...v0.119.0) (2024-03-11)
 
 
