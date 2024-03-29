@@ -1,3 +1,10 @@
+# [0.121.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.120.0...v0.121.0) (2024-03-29)
+
+
+### Features
+
+* sync with latest ng ([f631e08](https://github.com/alandtse/skyrim_vr_address_library/commit/f631e089f6f40f13d2669889e5168afa25ddb7fb))
+
 # [0.120.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.119.0...v0.120.0) (2024-03-24)
 
 
