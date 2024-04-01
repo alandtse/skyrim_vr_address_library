@@ -206,6 +206,7 @@ id,sse,vr,status,name
 21436,0x1402e9c60,0x1402fb160,4,bool Script::GetProcessScripts()
 21523,0x1402f1180,0x140302680,4,"bool GameFunc__handler::RemoveAllItems_1402F1180 (Script * param_1, longlong * param_2, TESObjectREFR * a_reference, TESObjectREFR * a_target, Script * param_5, ScriptLocals * param_6, undefined8 param_7, uint32_t param_8)"
 21887,0x140300210,0x140311710,2,Console::UpdateLevel
+21951,0x140302730,0x140313C30,3,GameFunc__handler::ShowQuestObjectives
 22289,0x14030f9a0,0x140320eb0,3,"ModelReferenceEffect* TESObjectREFR::InstantiateHitArt(BGSArtObject* a_art, float a_dur, TESObjectREFR* a_facingRef, bool a_faceTarget, bool a_attachToCamera, NiAVObject* a_attachNode, bool a_interfaceEffect)"
 22317,0x140310720,0x140321c30,3,BGSStoryEventManager* BGSRegisteredStoryEvent::BGSStoryEventManager::GetSingleton()
 22318,0x1403107b0,0x140321cc0,4,void TESFullName::SetFullName(const char* a_name)
@@ -221,6 +222,7 @@ id,sse,vr,status,name
 23353,0x1403386a0,0x140347f60,4,void BGSPerk::sub_1403386A0 (BGSPerk * a_this)
 23359,0x140338a50,0x140348310,4,"undefined8 BGSPerk__ApplyPerksVisitor::sub_140338A50 (BGSPerk__ApplyPerksVisitor * a_this, BSTArray_BGSPerkEntry__ * param_2)"
 23429,0x14033a820,0x14034a0e0,2,BGSQuestObjective::FillQuestInstanceData
+23467,0x14033C010,0x14034B8D0,4,"void DecideObjectiveHUDDataType(int64 a_objectives, int32 a_QuestObjectiveState)"
 23486,0x14033cdc0,0x14034c680,2,BSTEventSource<ObjectiveState::Event>* ObjectiveState::GetEventSource()
 23626,0x140345f50,0x140355810,3,powerof3tweaks::FactionStealing::GetFavorCost
 23632,0x140346470,0x140355d30,3,"BGSRelationship* BGSRelationship::GetRelationship(TESNPC* a_npc1, TESNPC* a_npc2)"
@@ -238,6 +240,7 @@ id,sse,vr,status,name
 24236,0x140364ff0,0x140374950,3,FEC::processArmorAttach::PerformNPCDismember
 24237,0x140365400,0x140374D60,4,WhosWho::LoadArmorRelatedFunction3
 24246,0x140365bf0,0x140375550,3,RE::TESNPC::ChangeHeadPart
+24469,0x140370020,0x14037F9C0,4,DynamicStringDistributor::
 24274,0x140368a20,0x140378380,3,RE::TESNPC::HasOverlays
 24275,0x140368b30,0x140378490,3,RE::TESNPC::GetBaseOverlays
 24276,0x140368bc0,0x140378520,3,RE::TESNPC::GetNumBaseOverlays
@@ -767,9 +770,11 @@ id,sse,vr,status,name
 51911,0x1408d5710,0x140903370,3,"void SendUIMessage::SendInventoryUpdateMessage(TESObjectREFR* a_inventoryRef, const TESBoundObject* a_updateObj)"
 52050,0x1408da3d0,0x140908170,3,RE::DebugNotification
 52054,0x1408da860,0x14090b1d0,3,RE::PlaySound
+52181,0x1408E1AF0,0x140913210,3,DynamicStringDistributor::
 52208,0x1408e3d70,0x140915f50,2,RE::MapMenu::MarkerClick
 52226,0x1408e6ea0,0x140919520,3,void MapMenu::PlaceMarker()
 52236,0x1408e7c80,0x14091a4e0,3,anonymous_namespace__FastTravelConfirmCallback::Run_1408E7C80
+52276,0x1408EA320,0x14091EF90,3,DynamicStringDistributor::
 52368,0x1408ee900,0x140923570,4,QuitToMainMenuCallback
 52374,0x1408ef500,0x140924430,4,QuickLoot::
 52400,0x1408f03c0,0x1409254b0,4,QuickLoot::
