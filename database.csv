@@ -90,6 +90,7 @@ id,sse,vr,status,name
 15204,0x1401b4b20,0x1401c4b30,3,SeasonsofSkyrim::LandscapeSwap::LoadGrassType::add_cell_grass
 15205,0x1401b5750,0x1401c5760,3,SeasonsofSkyrim::LandscapeSwap::LoadGrassType::add_cell_grass_from_buffer
 15206,0x1401b6010,0x1401c6020,3,SeasonsofSkyrim::LandscapeSwap::LoadGrassType::add_cell_grass_from_file
+15214,0x1401b7640,0x1401c7750,4,"NiAVObject__VFTable * GrassManager::sub_1401B7640 (GrassManager * a_this, undefined param_2, undefined param_3, undefined param_4, undefined8 param_5, undefined8 param_6)"
 15491,0x1401c60a0,0x1401d6200,3,RE::BipedAnim::Dtor
 15494,0x1401c61a0,0x1401d6530,3,RE::BipedAnim::RemoveAllParts
 15495,0x1401c6270,0x1401d6600,3,FEC::UpdateCollision::RemoveNodeFromScene
@@ -240,10 +241,10 @@ id,sse,vr,status,name
 24236,0x140364ff0,0x140374950,3,FEC::processArmorAttach::PerformNPCDismember
 24237,0x140365400,0x140374D60,4,WhosWho::LoadArmorRelatedFunction3
 24246,0x140365bf0,0x140375550,3,RE::TESNPC::ChangeHeadPart
-24469,0x140370020,0x14037F9C0,4,DynamicStringDistributor::
 24274,0x140368a20,0x140378380,3,RE::TESNPC::HasOverlays
 24275,0x140368b30,0x140378490,3,RE::TESNPC::GetBaseOverlays
 24276,0x140368bc0,0x140378520,3,RE::TESNPC::GetNumBaseOverlays
+24469,0x140370020,0x14037F9C0,4,DynamicStringDistributor::
 24472,0x140370290,0x14037fc30,3,TESQuest::CompleteQuest
 24481,0x140370910,0x1403802b0,3,RE::TESQuest::EnsureQuestStarted
 24486,0x140370e90,0x140380830,3,RE::TESQuest::ResetQuest
@@ -1074,6 +1075,7 @@ id,sse,vr,status,name
 99886,0x1412c9320,0x141307710,3,BSShaderTextureSet* BSShaderTextureSet::Ctor()
 99938,0x1412cacd0,0x1413093a0,3,"void BSShaderAccumulator::FinishAccumulating (BSShaderAccumulator *a_this,uint32_t StartRange,uint32_t EndRanges)"
 99943,0x1412cbe90,0x14130a970,3,"void BSShaderAccumulator::sub_1412CBE90 (BSShaderAccumulator * a_this, uint32_t param_2)"
+100000,0x1412ceb10,0x14130da10,4,"void fogMethod (undefined8 param_1, int param_2)"
 100004,0x1412ced50,0x14130dc60,3,BSLightingShaderMaterial* BSLightingShaderMaterial::Ctor()
 100016,0x1412cfbc0,0x14130ead0,3,RE::BSLightingShaderMaterialBase::CreateMaterial
 100021,0x1412d01a0,0x14130f0b0,3,BSLightingShaderMaterialEnvmap* BSLightingShaderMaterialEnvmap::Ctor()
