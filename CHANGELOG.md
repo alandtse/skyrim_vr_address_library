@@ -1,3 +1,10 @@
+# [0.124.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.123.0...v0.124.0) (2024-04-08)
+
+
+### Features
+
+* add more addresses for truepbr ([5a1e324](https://github.com/alandtse/skyrim_vr_address_library/commit/5a1e32497f2672e8e9816f1209a05d4663164e18))
+
 # [0.123.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.122.0...v0.123.0) (2024-04-08)
 
 
