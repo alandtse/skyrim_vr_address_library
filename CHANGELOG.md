@@ -1,3 +1,17 @@
+# [0.122.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.121.0...v0.122.0) (2024-04-01)
+
+
+### Features
+
+* Add addresses for DSD 1.1.0 ([#58](https://github.com/alandtse/skyrim_vr_address_library/issues/58)) ([bbe4c39](https://github.com/alandtse/skyrim_vr_address_library/commit/bbe4c39ace06ab016fc6ff1e8ae83ef76b4a5d9a))
+
+# [0.121.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.120.0...v0.121.0) (2024-03-29)
+
+
+### Features
+
+* sync with latest ng ([f631e08](https://github.com/alandtse/skyrim_vr_address_library/commit/f631e089f6f40f13d2669889e5168afa25ddb7fb))
+
 # [0.120.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.119.0...v0.120.0) (2024-03-24)
 
 
