@@ -17,6 +17,7 @@ id,sse,vr,status,name
 11294,0x140103dd0,0x140114380,4,float MagicSystem::GetMagicCasterTargetUpdateInterval()
 11295,0x140103de0,0x140114390,4,char* MagicSystem::GetCannotCastString(MagicSystem::CannotCastReason a_reason)
 11308,0x140104ad0,0x1401150c0,3,FixedStrings* FixedStrings::GetSingleton()
+11463,0x14010DAE0,0x14011e0c0,3,BSExtraDataList::SetOwnerForm
 11471,0x14010e570,0x14011eb50,4,"void SetCount_14010E570 (BSExtraDataList * param_1, ushort a_count)"
 11474,0x14010e960,0x14011ef40,3,RE::BSExtraDataList::SetSoul
 11483,0x14010f5c0,0x14011fba0,3,RE::ExtraDataList::SetInventoryChanges
@@ -24,6 +25,7 @@ id,sse,vr,status,name
 11633,0x1401172f0,0x1401278d0,3,"void ExtraDataList::SetLinkedRef(TESObjectREFR* a_targetRef, BGSKeyword* a_keyword)"
 11903,0x140125d80,0x140136360,3,RE::ExtraDataList::SetExtraFlags
 11913,0x140126650,0x140136c30,4,bool ExtraDataList::HasQuestObjectAlias (BSExtraDataList * a_this)
+11918,0x140126A00,0x140136Fe0,3,BSExtraDataList::PackageStart
 12176,0x140131990,0x140142140,3,RE::ExtraDataList::Add
 12193,0x1401320f0,0x1401428a0,3,RE::CreateRefHandle
 12204,0x1401329d0,0x140143180,3,RE::LookupReferenceByHandle
@@ -169,6 +171,7 @@ id,sse,vr,status,name
 19201,0x14028b940,0x14029d070,3,bool TESObjectREFR::HasQuestObject()
 19220,0x14028c440,0x14029db70,3,RE::TESObjectREFR::HasEffectKeyword?
 19238,0x14028cc60,0x14029e390,4,float TESObjectREFR::GetScale()
+19239,0x14028ccb0,0x14029e3e0,3,TESObjectREFR::SetScale()
 19244,0x14028d0b0,0x14029e7e0,4,bool TESObjectREFR::CanBeMoved_14028D0B0 (TESObjectREFR * param_1)
 19264,0x14028dbd0,0x14029f300,4,void Actor::RemoveOutfitItems(BGSOutfit* a_outfit)
 19265,0x14028dcf0,0x14029f420,4,"bool Actor::HasOutfitItems (Actor * a_this, BGSOutfit * a_outfit)"
@@ -421,6 +424,7 @@ id,sse,vr,status,name
 36357,0x1405d6fb0,0x1405df5e0,3,FEC::UpdateAVs
 36359,0x1405d8170,0x1405e07a0,3,po3tweaks::ToggleCollisionFix::ApplyMovementDelta
 36392,0x1405da840,0x1405e2ec0,3,void Actor::CalculateCurrentVendorFaction()
+36404,0x1405db180,0x1405e3800,3,Actor::CheckForCurrentAliasPackage
 36407,0x1405db310,0x1405e3990,3,"void Actor::EvaluatePackage(bool a_immediate, bool a_resetAI)"
 36408,0x1405db7a0,0x1405e3e20,4,void Actor::InitiateDoNothingPackage()
 36427,0x1405dd770,0x1405e5dc0,3,"void Actor::StealAlarm(TESObjectREFR* a_ref, TESForm* a_object, std::int32_t a_num, std::int32_t a_total, TESForm* a_owner, bool a_allowWarning)"
@@ -431,6 +435,8 @@ id,sse,vr,status,name
 36457,0x1405e18b0,0x1405e9f30,3,bool Actor::IsOverEncumbered()
 36472,0x1405e20c0,0x1405ea760,4,Character::MoveToPackageLocation_1405E20C0
 36475,0x1405e27f0,0x1405eae90,4,void Actor::EndInterruptPackage(bool a_skipDialogue)
+36489,0x1405e32d0,0x1405eb970,3,Actor::SetRestrained
+36490,0x1405e3330,0x1405eb9d0,3,Actor::SetDontMove
 36492,0x1405e33b0,0x1405eba50,4,bool Actor::IsInRagdollState()
 36523,0x1405e6b50,0x1405ef270,3,EssentialFavorites::Disarm::IsQuestObject
 36532,0x1405e7500,0x1405efc20,3,bool Actor::CanAttackActor(Actor* a_actor)
@@ -455,6 +461,7 @@ id,sse,vr,status,name
 36748,0x1405fc9a0,0x140605190,3,RE::Actor::RequestDetectionLevel
 36752,0x1405fccb0,0x1406054a0,3,"std::int32_t Actor::RequestLOS(Actor* a_target, float a_viewCone)"
 36755,0x1405fd5b0,0x140605e00,4,RE::Actor::GetEyePos
+36759,0x1405fe370,0x140606b80,3,Actor::GetLightLevel
 36801,0x140600400,0x140608c10,3,void Actor::StopMoving(float a_delta)
 36802,0x140600590,0x140608da0,4,RE::Actor::StopMovement
 36872,0x140603b30,0x14060c340,2,Actor::Kill
@@ -799,15 +806,28 @@ id,sse,vr,status,name
 53207,0x14092b800,0x140965f00,3,"SkyrimVM::LoadGame(SkyrimVM* this, LoadStorageWrapper* a_wrapper)"
 53209,0x14092b8e0,0x140965fe0,3,RE::SkyrimVM::DumpStacks
 53221,0x14092d130,0x140967780,4,"void SkyrimVM::RelayEvent(VMHandle a_handle, BSFixedString* a_event, BSScript::IFunctionArguments* a_args, SkyrimVM::ISendEventFilter* a_optionalFilter)"
+53861,0x14094a5d0,0x1409849c0,3,papyrus::Actor::EquipItem
 53948,0x14094d850,0x140987ab0,3,papyrus::Actor::TrapSoul
+53950,0x14094d890,0x140987af0,3,payprus::Actor::UnequipItem
 53960,0x14094df30,0x140988190,2,papyrus__Actor::Bind(BSScript::Internal::VirtualMachine** a_vm)
 54741,0x14096de60,0x1409a7f40,4,papyrus__Debug::SendAnimationEvent
 54832,0x140972e10,0x1409acca0,3,papyrus__Game::GetFormFromFile_140972E10
 54836,0x1409731b0,0x1409ad050,3,papyrus__Game::getplayer_1409731B0
 55141,0x140980190,0x1409baf10,3,FDGE::BSScript::InitializeScriptTypes
 55352,0x140988450,0x1409c35d0,2,po3tweaks::GameTimers::SetGlobal
+55366,0x140988af0,0x1409c3c70,3,papyrus::ImageSpaceModifier::Apply
+55367,0x140988b10,0x1409c3c90,3,papyrus::ImageSpaceModifier::ApplyCrossFade
+55368,0x140988b30,0x1409c3cb0,3,papyrus::ImageSpaceModifier::PopTo
+55382,0x1409893e0,0x1409c4560,3,papyrus::ImageSpaceModifier::RemoveCrossFade
+55616,0x140993100,0x1409cdc20,3,papyrus::ObjectReference::AddItem
+55661,0x140994560,0x1409cf080,3,papyrus::ObjectReference::IsFurnitureInUse
+55663,0x140994660,0x1409cf180,3,papyrus::ObjectReference::IsInDialogueWithPlayer
 55672,0x1409951f0,0x1409CFD10,3,papyrus__ObjectReference::PlaceAtMe
 55684,0x140996470,0x1409d0f90,4,"void RemoveAllItems_140996470 (undefined * a_vm, uint32_t a_stackID, TESObjectREFR * a_ref, TESObjectREFR * a_target, bool a_keepOwnership, bool a_removeQuestItems)"
+55687,0x140996670,0x1409d1190,3,papyrus::ObjectReference::RemoveItem
+55693,0x140996dd0,0x1409d18f0,3,papyrus::ObjectReference::SetAngle
+55706,0x140997a50,0x1409d2570,3,papyrus::ObjectReference::TranslateTo
+55712,0x140998620,0x1409d3140,3,papyrus::ObjectReference::StopTranslation
 55945,0x1409a4050,0x1409deb70,3,SPID:Distribute::DeathItemManager::Detail::Add_item
 56038,0x1409a95e0,0x1409E4103,3,TESObjectREFR::Enable
 56227,0x1409ae5c0,0x1409e90e0,3,RE::TESObjectREFR::MoveTo
@@ -890,6 +910,7 @@ id,sse,vr,status,name
 66988,0x140c078b0,0x140c42730,4,"void BSTimer::SetGlobalTimeMultiplier(float a_multiplier, bool a_arg2)"
 66989,0x140c07900,0x140c42780,4,RE::UpdateGlobalTimeMultiplier_140C07900
 67151,0x140c0d7b0,0x140c485e0,3,void BSThreadEvent::InitSDM()
+67220,0x140c10610,0x140c4b460,3,ShakeController
 67224,0x140c10b30,0x140c4ba30,4,void Rumble::DisableRumble()
 67234,0x140c10dc0,0x140c4d710,4,QuickLoot::
 67240,0x140c11430,0x140c4dd80,4,QuickLoot::
