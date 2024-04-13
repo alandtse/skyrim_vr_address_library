@@ -1,3 +1,10 @@
+# [0.126.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.125.0...v0.126.0) (2024-04-13)
+
+
+### Features
+
+* Add OStim VR addresses ([#59](https://github.com/alandtse/skyrim_vr_address_library/issues/59)) ([9b720cd](https://github.com/alandtse/skyrim_vr_address_library/commit/9b720cddf0f5e0f53bfbddcc3b39136a6c27ed76))
+
 # [0.125.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.124.0...v0.125.0) (2024-04-11)
 
 
