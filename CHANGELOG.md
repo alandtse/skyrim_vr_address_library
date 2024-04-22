@@ -1,3 +1,10 @@
+# [0.127.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.126.0...v0.127.0) (2024-04-22)
+
+
+### Features
+
+* add support for ngio-ng ([fb0a946](https://github.com/alandtse/skyrim_vr_address_library/commit/fb0a9467819e0d1724d64fdd77cecff75d08985e))
+
 # [0.126.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.125.0...v0.126.0) (2024-04-13)
 
 
