@@ -1,3 +1,17 @@
+# [0.126.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.125.0...v0.126.0) (2024-04-13)
+
+
+### Features
+
+* Add OStim VR addresses ([#59](https://github.com/alandtse/skyrim_vr_address_library/issues/59)) ([9b720cd](https://github.com/alandtse/skyrim_vr_address_library/commit/9b720cddf0f5e0f53bfbddcc3b39136a6c27ed76))
+
+# [0.125.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.124.0...v0.125.0) (2024-04-11)
+
+
+### Features
+
+* add cs frame annotation ids ([1fb26ae](https://github.com/alandtse/skyrim_vr_address_library/commit/1fb26ae4ae09139ee8a0ae9ccf41c0b6c64508f1))
+
 # [0.124.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.123.0...v0.124.0) (2024-04-08)
 
 
