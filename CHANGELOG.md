@@ -1,3 +1,129 @@
+# [0.127.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.126.0...v0.127.0) (2024-04-22)
+
+
+### Features
+
+* add support for ngio-ng ([fb0a946](https://github.com/alandtse/skyrim_vr_address_library/commit/fb0a9467819e0d1724d64fdd77cecff75d08985e))
+
+# [0.126.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.125.0...v0.126.0) (2024-04-13)
+
+
+### Features
+
+* Add OStim VR addresses ([#59](https://github.com/alandtse/skyrim_vr_address_library/issues/59)) ([9b720cd](https://github.com/alandtse/skyrim_vr_address_library/commit/9b720cddf0f5e0f53bfbddcc3b39136a6c27ed76))
+
+# [0.125.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.124.0...v0.125.0) (2024-04-11)
+
+
+### Features
+
+* add cs frame annotation ids ([1fb26ae](https://github.com/alandtse/skyrim_vr_address_library/commit/1fb26ae4ae09139ee8a0ae9ccf41c0b6c64508f1))
+
+# [0.124.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.123.0...v0.124.0) (2024-04-08)
+
+
+### Features
+
+* add more addresses for truepbr ([5a1e324](https://github.com/alandtse/skyrim_vr_address_library/commit/5a1e32497f2672e8e9816f1209a05d4663164e18))
+
+# [0.123.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.122.0...v0.123.0) (2024-04-08)
+
+
+### Features
+
+* add truepbr cs addresses ([aab6061](https://github.com/alandtse/skyrim_vr_address_library/commit/aab6061203675d9cedb3ef0fc42c316938c9036d))
+
+# [0.122.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.121.0...v0.122.0) (2024-04-01)
+
+
+### Features
+
+* Add addresses for DSD 1.1.0 ([#58](https://github.com/alandtse/skyrim_vr_address_library/issues/58)) ([bbe4c39](https://github.com/alandtse/skyrim_vr_address_library/commit/bbe4c39ace06ab016fc6ff1e8ae83ef76b4a5d9a))
+
+# [0.121.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.120.0...v0.121.0) (2024-03-29)
+
+
+### Features
+
+* sync with latest ng ([f631e08](https://github.com/alandtse/skyrim_vr_address_library/commit/f631e089f6f40f13d2669889e5168afa25ddb7fb))
+
+# [0.120.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.119.0...v0.120.0) (2024-03-24)
+
+
+### Features
+
+* add addresses for deferred cs ([9d94eee](https://github.com/alandtse/skyrim_vr_address_library/commit/9d94eee4106185dee1406816ab4e137e09f52652))
+
+# [0.119.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.118.0...v0.119.0) (2024-03-11)
+
+
+### Features
+
+* Add missing address for upcoming String Distributor ([#57](https://github.com/alandtse/skyrim_vr_address_library/issues/57)) ([3eb0bf0](https://github.com/alandtse/skyrim_vr_address_library/commit/3eb0bf0c4722ae5bcb791f6e09c8547a6c914279))
+
+# [0.118.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.117.0...v0.118.0) (2024-03-04)
+
+
+### Features
+
+* add latest commonlib and cs sss ([38699da](https://github.com/alandtse/skyrim_vr_address_library/commit/38699da31068a52a99733132fbb640fb61f661ff))
+
+# [0.117.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.116.0...v0.117.0) (2024-02-11)
+
+
+### Features
+
+* add cs terrain blending addresses ([f95280c](https://github.com/alandtse/skyrim_vr_address_library/commit/f95280ca4446ad74bca5f1122425015dd2a0ef8f))
+
+# [0.116.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.115.0...v0.116.0) (2024-02-01)
+
+
+### Features
+
+* Add upcoming String Distributor and StaggerEffectFix ([#54](https://github.com/alandtse/skyrim_vr_address_library/issues/54)) ([0b3491c](https://github.com/alandtse/skyrim_vr_address_library/commit/0b3491ce1f2a9f2c54e087d52393e3df882c3e60))
+
+# [0.115.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.114.0...v0.115.0) (2024-02-01)
+
+
+### Features
+
+* add SkyReflectionFix ([2fdf84f](https://github.com/alandtse/skyrim_vr_address_library/commit/2fdf84f1e4cfa11798f11a71f7875cb835da2582))
+
+# [0.114.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.113.0...v0.114.0) (2024-01-29)
+
+
+### Features
+
+* add latest commonlib ([2da4868](https://github.com/alandtse/skyrim_vr_address_library/commit/2da4868ac5ac5778c5ed82b28e0997f7b1f10b4d))
+
+# [0.113.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.112.0...v0.113.0) (2024-01-16)
+
+
+### Features
+
+* Add BSSoundHandle::Pause ([#52](https://github.com/alandtse/skyrim_vr_address_library/issues/52)) ([a96aff3](https://github.com/alandtse/skyrim_vr_address_library/commit/a96aff3aad8f9c6bf49bc03bfd41161e823df466))
+
+# [0.112.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.111.0...v0.112.0) (2024-01-02)
+
+
+### Features
+
+* Add Loading Screen Truce ([#51](https://github.com/alandtse/skyrim_vr_address_library/issues/51)) ([c3b2189](https://github.com/alandtse/skyrim_vr_address_library/commit/c3b2189bb6afc317b041601d0991023b981a6e7d))
+
+# [0.111.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.110.0...v0.111.0) (2023-12-18)
+
+
+### Features
+
+* add enginefixes ids ([500c3cc](https://github.com/alandtse/skyrim_vr_address_library/commit/500c3cc22fe57fbea52500cc13e6f730b4c14abf))
+
+# [0.110.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.109.0...v0.110.0) (2023-12-18)
+
+
+### Features
+
+* add more addresses for Poached Bugs VR ([#50](https://github.com/alandtse/skyrim_vr_address_library/issues/50)) ([5819db4](https://github.com/alandtse/skyrim_vr_address_library/commit/5819db47add44acf66312a35e13aa0d15d68d2a9))
+
 # [0.109.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.108.0...v0.109.0) (2023-12-03)
 
 
