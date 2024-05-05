@@ -749,6 +749,7 @@ id,sse,vr,status,name
 50453,0x14086cdc0,0x140898350,3,EssentialFavorites::Alchemy::IsQuestObject
 50454,0x14086d0a0,0x140898630,3,EssentialFavorites::Enchanting::IsQuestObject
 50459,0x14086d830,0x140898dc0,3,YesImSure::EnchantmentLearned
+50461,0x14086db70,0x140899100,4,RE::CraftingSubMenu::UpdateCraftingInfo
 50476,0x14086e2c0,0x140899850,4,YesImSure::constructibleObjectMenu
 50477,0x14086e490,0x140899a20,4,YesImSure::smithingMenu
 50485,0x14086ebb0,0x14089a140,3,YesImSure::alchemyMenu
