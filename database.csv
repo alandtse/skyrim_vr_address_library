@@ -740,6 +740,7 @@ id,sse,vr,status,name
 50257,0x140862160,0x14088d4e0,3,BSTEventSource<ChestsLooted::Event>* ChestsLooted::GetEventSource()
 50258,0x140862250,0x14088d5d0,3,RE::ItemsPickpocketed::GetEventSource
 50297,0x140863f90,0x14088F4F0,3,DescriptionFramework::
+50298,0x1408640d0,0x14088F630,3,DescriptionFramework::
 50440,0x14086b200,0x1408967a0,3,YesImSure::EnchantmentLearned
 50447,0x14086b810,0x140896db0,3,YesImSure::alchemyMenu
 50449,0x14086b980,0x140896f10,4,papyrus_extender::event::alchemy_craft
@@ -788,6 +789,7 @@ id,sse,vr,status,name
 51098,0x140898ff0,0x1408c6dd0,3,LockVariations::Sound::rotate_lock
 51121,0x140899c40,0x1408c7cd0,4,void MagicFavorites::SetFavorite(TESForm* a_form)
 51122,0x140899ca0,0x1408c7d30,4,void MagicFavorites::RemoveFavorite(TESForm* a_form)
+51152,0x14089b950,0x1408c97a0,3,MagicMenu::RequestItemCardInfoDelegate()
 51400,0x1408aa140,0x1408d68f0,2,po3tweaks::SitToWait::HandleWaitRequest
 51402,0x1408aa940,0x1408d7370,4,"bool QuickSaveLoadHandler::ProcessButton_1408AA940 (QuickSaveLoadHandler * a_this, undefined8 param_2)"
 51420,0x1408ab180,0x1408d7fe0,4,RE::MessageBoxData::CreateMessage

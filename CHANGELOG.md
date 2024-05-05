@@ -1,3 +1,10 @@
+# [0.128.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.127.0...v0.128.0) (2024-05-05)
+
+
+### Features
+
+* add description framework 2.0 addresses ([#60](https://github.com/alandtse/skyrim_vr_address_library/issues/60)) ([66dea3e](https://github.com/alandtse/skyrim_vr_address_library/commit/66dea3e863960862ef93bb83e1177c82b675c9f9))
+
 # [0.127.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.126.0...v0.127.0) (2024-04-22)
 
 
