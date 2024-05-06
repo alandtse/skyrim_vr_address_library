@@ -198,6 +198,7 @@ id,sse,vr,status,name
 18642,0x14026b160,0x14027c730,3,po3tweaks::QueuedRefCrash::SetFadeNode
 18655,0x14026c5d0,0x14027dba0,3,void TESObjectCELL::sub_14026C5D0 (TESObjectCELL * a_this)
 18755,0x140273ED0,0x1402854C0,4,"void CallsMapMarkerData (int64 a1, int64 **a2)"
+18843,0x140278920,0x140289f20,4,TESObjectREFR::HandleReferenceReset
 19201,0x14028b940,0x14029d070,3,bool TESObjectREFR::HasQuestObject()
 19220,0x14028c440,0x14029db70,3,RE::TESObjectREFR::HasEffectKeyword?
 19238,0x14028cc60,0x14029e390,4,float TESObjectREFR::GetScale()
@@ -313,6 +314,7 @@ id,sse,vr,status,name
 25868,0x1403bf020,0x1403ce8a0,3,RE::ActorValueOwner::Get_bow_power
 25910,0x1403c0de0,0x1403D0660,4,"FUN_1403c0de0(float param_1, float param_2)"
 25915,0x1403c0fd0,0x1403d0850,4,LimbInjuries::smth_smithed
+25931,0x1403c1700,0x1403d0f80,4,"float GetDualCastingEffectiveness(RE::ActorValueOwner* a_actorValueOwner, float a_cost)"
 25933,0x1403c1740,0x1403d0fc0,3,TrueHUD::GetSoulType
 25977,0x1403c38e0,0x1403d3160,3,"void BSFaceGenAnimationData::Reset(float a_timer, bool a_resetExpression, bool a_resetModifierAndPhoneme, bool a_resetCustom, bool a_closeEyes)"
 25980,0x1403c3f00,0x1403d3780,3,"void BSFaceGenAnimationData::SetExpressionOverride(std::int32_t a_idx, float a_value)"
@@ -354,7 +356,9 @@ id,sse,vr,status,name
 32155,0x1404f1140,0x1405013b0,4,bool IAnimationGraphManagerHolder::UpdateAnimationGraphManager(const BSAnimationUpdateData& a_updateData)
 32184,0x1404f1e60,0x1405020d0,4,RE::BSAnimationGraphManager::sub_1404F1E60
 32192,0x1404f2620,0x140502890,3,"bool IAnimationGraphManagerHolder::GetGraphVariableNiPoint3(const BSFixedString& a_variableName, NiPoint3& a_out)"
+33257,0x14053d370,0x1405400f0,4,AccumulatingValueModifierEffect::Allocate(AccumulatingValueModifierEffect* accumulatingValueModifierEffect, Actor* caster, MagicItem* magicItem, Effect* effect)
 32275,0x1404f5420,0x140505690,4,RE::ShakeCamera_1404f5420
+33277,0x14053DEB0,0x140540C30,4,ActiveEffect::Adjust(Skyrim::ActiveEffect* activeEffect, float effectiveness, bool requiresHostility)
 32290,0x1404f5c80,0x140505f60,3,RE::TESCamera::SetState
 32370,0x1404f96c0,0x140509850,4,void DragonCameraState::HandleLookInput_1404F96C0 (DragonCameraState * a_this)
 32469,0x1404FD1C0,0x14050D660,4,bool __fastcall CombatAIHook::sub_1404FD1C0(RE::Actor* a1)
@@ -746,6 +750,7 @@ id,sse,vr,status,name
 50453,0x14086cdc0,0x140898350,3,EssentialFavorites::Alchemy::IsQuestObject
 50454,0x14086d0a0,0x140898630,3,EssentialFavorites::Enchanting::IsQuestObject
 50459,0x14086d830,0x140898dc0,3,YesImSure::EnchantmentLearned
+50461,0x14086db70,0x140899100,4,RE::CraftingSubMenu::UpdateCraftingInfo
 50476,0x14086e2c0,0x140899850,4,YesImSure::constructibleObjectMenu
 50477,0x14086e490,0x140899a20,4,YesImSure::smithingMenu
 50485,0x14086ebb0,0x14089a140,3,YesImSure::alchemyMenu
