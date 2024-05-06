@@ -1,3 +1,10 @@
+# [0.129.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.128.0...v0.129.0) (2024-05-06)
+
+
+### Features
+
+* Add addresses for PoachedBugs VR and AlchemyXPFix ([#61](https://github.com/alandtse/skyrim_vr_address_library/issues/61)) ([4b467e2](https://github.com/alandtse/skyrim_vr_address_library/commit/4b467e25fffd5fe7bc736980dc09d21ac83f0a09))
+
 # [0.128.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.127.0...v0.128.0) (2024-05-05)
 
 
