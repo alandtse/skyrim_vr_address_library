@@ -1,3 +1,10 @@
+# [0.130.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.129.0...v0.130.0) (2024-05-07)
+
+
+### Features
+
+* Add addresses for Dynamic String Distributor 1.1.8 ([#62](https://github.com/alandtse/skyrim_vr_address_library/issues/62)) ([9cd867c](https://github.com/alandtse/skyrim_vr_address_library/commit/9cd867cedd213d3e30b4d6736a12fc519d6a301f))
+
 # [0.129.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.128.0...v0.129.0) (2024-05-06)
 
 
