@@ -101,6 +101,7 @@ id,sse,vr,status,name
 14514,0x140195c20,0x1401a5950,4,"undefined8 FUN_140195c20 (longlong param_1, longlong param_2, ulonglong param_3, int * a_formID, undefined8 * param_5)"
 14515,0x140195ef0,0x1401a5c20,4,"bool FUN_140195ef0 (longlong param_1, undefined8 param_2, ulonglong param_3, uint32 * a_formID, TESForm * * param_5, undefined8 * param_6)"
 14537,0x1401967e0,0x1401a6510,4,"ulonglong FUN_1401967e0 (longlong a_formmap, longlong param_2, uint param_3, undefined4 * param_4)"
+14546,0x140196D80,0x1401A6AB0,4,"void TESFullName__ReadFULLFromFileStream(RE::TESFullName* a_fullname, RE::TESFile* a_file)"
 14579,0x140197a30,0x1401a7760,4,"void TESLeveledList::CalculateCurrentFormList(std::uint16_t a_level, std::int16_t a_count, BSScrapArray<CALCED_OBJECT>& a_calcedObjects, std::uint32_t a_arg5, bool a_usePlayerLevel)"
 14653,0x14019b290,0x1401aafc0,4,void TESModelTextureSwap::sub_14019B290 (TESModelTextureSwap * a_this)
 14704,0x14019d510,0x1401ad250,3,BSTEventSource<TESHarvestedEvent::ItemHarvested>* TESHarvestedEvent::GetEventSource()
@@ -264,6 +265,7 @@ id,sse,vr,status,name
 23632,0x140346470,0x140355d30,3,"BGSRelationship* BGSRelationship::GetRelationship(TESNPC* a_npc1, TESNPC* a_npc2)"
 24012,0x140355940,0x140365200,3,"void TESFaction::SetFactionFightReaction(TESFaction* a_faction, FIGHT_REACTION a_fightReaction)"
 24069,0x140358300,0x140367bc0,4,"bool TESIdleForm::CheckConditions(Actor* a_actor, TESObjectREFR* a_target, bool a_checkParentIdle) bool TESIdleForm::CheckConditions(Actor* a_actor, TESObjectREFR* a_target, bool a_checkParentIdle)"
+24159,0x14035C890,0x14036C150,3,"bool TESNPC__ReadFromFileStream(RE::TESNPC *a_npc, RE::TESFile *a_file)"
 24206,0x140360480,0x14036fd80,3,RE::TESNPC::SetSkinFromTint
 24207,0x1403606d0,0x14036ffd0,3,RE::TESNPC::UpdateNeck
 24211,0x140360c10,0x140370510,2,enhanced_reanimation::TESNPC::Activate
