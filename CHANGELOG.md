@@ -1,3 +1,10 @@
+# [0.131.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.130.0...v0.131.0) (2024-05-14)
+
+
+### Features
+
+* add Blade and Blunt VR Addresses ([#63](https://github.com/alandtse/skyrim_vr_address_library/issues/63)) ([c2cdb20](https://github.com/alandtse/skyrim_vr_address_library/commit/c2cdb202a74db09a8b8f9a355d7e8afaaf65fa38))
+
 # [0.130.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.129.0...v0.130.0) (2024-05-07)
 
 
