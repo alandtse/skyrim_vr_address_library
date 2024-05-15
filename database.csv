@@ -358,13 +358,13 @@ id,sse,vr,status,name
 32155,0x1404f1140,0x1405013b0,4,bool IAnimationGraphManagerHolder::UpdateAnimationGraphManager(const BSAnimationUpdateData& a_updateData)
 32184,0x1404f1e60,0x1405020d0,4,RE::BSAnimationGraphManager::sub_1404F1E60
 32192,0x1404f2620,0x140502890,3,"bool IAnimationGraphManagerHolder::GetGraphVariableNiPoint3(const BSFixedString& a_variableName, NiPoint3& a_out)"
-33257,0x14053d370,0x1405400f0,4,AccumulatingValueModifierEffect::Allocate(AccumulatingValueModifierEffect* accumulatingValueModifierEffect, Actor* caster, MagicItem* magicItem, Effect* effect)
 32275,0x1404f5420,0x140505690,4,RE::ShakeCamera_1404f5420
-33277,0x14053DEB0,0x140540C30,4,ActiveEffect::Adjust(Skyrim::ActiveEffect* activeEffect, float effectiveness, bool requiresHostility)
 32290,0x1404f5c80,0x140505f60,3,RE::TESCamera::SetState
 32370,0x1404f96c0,0x140509850,4,void DragonCameraState::HandleLookInput_1404F96C0 (DragonCameraState * a_this)
 32469,0x1404FD1C0,0x14050D660,4,bool __fastcall CombatAIHook::sub_1404FD1C0(RE::Actor* a1)
+33257,0x14053d370,0x1405400f0,4,"AccumulatingValueModifierEffect::Allocate(AccumulatingValueModifierEffect* accumulatingValueModifierEffect, Actor* caster, MagicItem* magicItem, Effect* effect)"
 33257,0x14053d370,0x1405400f0,4,AccumulatingValueModifierEffect::Allocate(AccumulatingValueModifierEffect* accumulatingValueModifierEffect
+33277,0x14053DEB0,0x140540C30,4,"ActiveEffect::Adjust(Skyrim::ActiveEffect* activeEffect, float effectiveness, bool requiresHostility)"
 33277,0x14053DEB0,0x140540C30,4,"ActiveEffect::Adjust(Skyrim::ActiveEffect* activeEffect, float effectiveness, bool requiresHostility)"
 33282,0x14053e120,0x140540ea0,4,float ActiveEffect::GetMagnitude_14053E120 (ActiveEffect * a_this)
 33283,0x14053E1B0,0x140540f30,4,ActiveEffect::Restart(Skyrim::ActiveEffect* activeEffect)
