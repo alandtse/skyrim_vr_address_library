@@ -1,3 +1,10 @@
+# [0.132.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.131.0...v0.132.0) (2024-05-15)
+
+
+### Features
+
+* add cs skylighting2 ([891a9fc](https://github.com/alandtse/skyrim_vr_address_library/commit/891a9fc4df3060cf7b5a3330b66835bde5bf4b14))
+
 # [0.131.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.130.0...v0.131.0) (2024-05-14)
 
 
