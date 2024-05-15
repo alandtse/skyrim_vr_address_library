@@ -299,6 +299,8 @@ id,sse,vr,status,name
 25620,0x1403ad1f0,0x1403bcec0,4,RE::Sky::Moon_UpdatePhase
 25626,0x1403adf90,0x1403bdc60,4,RE::Sky::Moon::Update_*
 25638,0x1403aebd0,0x1403be8d0,4,splashes_of_skyrim::RainManager::ToggleWaterRipples
+25641,0x1403af1c0,0x1403beec0,3,void Precipitation::SetupMask (Precipitation * a_this)
+25642,0x1403af380,0x1403bf0b0,3,"void Precipitation::RenderMask (Precipitation * a_this, BSParticleShaderRainEmitter * a_emitter)"
 25671,0x1403b0130,0x1403bfea0,4,"void UpdateShaderGeometry(RE::BSGeometry* a_precipGeometry, RE::NiCamera* a_camera, float a_delta, float a_cubeSize, float a_particleDensity, float a_windSpeed, float a_windAngle)"
 25679,0x1403b0f30,0x1403c0ca0,4,RE::Sky::SetMode_1403B0F30
 25682,0x1403b1670,0x1403c1410,4,RE::Sky::Update_1403B1670
@@ -1172,7 +1174,8 @@ id,sse,vr,status,name
 100563,0x1412f2020,0x141338400,3,"void BSLightingShader::Func4_1412F2020 (BSLightingShader * a_this, undefined8 param_2, undefined8 param_3)"
 100565,0x1412f2bb0,0x141338f60,3,"void BSLightingShader::Func6_1412F2BB0 (BSLightingShader * a_this, undefined8 param_2, undefined8 param_3, undefined8 param_4)"
 100602,0x1412f63d0,0x141333470,3,"void BSWaterShader::Func4_1412F63D0 (BSWaterShader * a_this, undefined8 param_2)"
-100717,0x1412fdcc0,0x1413401e0,4,"BSShader * BSShader::sub_1412FDCC0 (BSShader * param_1, undefined8 param_2, undefined8 param_3, undefined4 param_4, undefined1 param_5, undefined8 param_6)"
+100717,0x1412fdcc0,0x1413401e0,4,"BSShader * BSShader::MakeRenderPass (BSShader * a_this, BSShaderProperty * a_property, BSGeometry * a_geometry, uint32_t a_technique, uint8_t a_numLights, BSLight * * a_lights)"
+100718,0x1412fdd60,0x141340280,4,void RenderPassArray::ClearRenderPass(RE::BSRenderPass* pass)
 100771,0x1413014c0,0x141343d40,3,"bool BSDistantTreeShader::Func2_1413014C0 (BSDistantTreeShader * a_this, undefined8 param_2)"
 100840,0x141306240,0x141347320,4,"void BSShaderAccumulator::RenderPersistentPassList (longlong * * passList, uint32_t renderFlags)"
 100847,0x141307160,0x141348390,3,Skyrim-Upscaler
@@ -8684,6 +8687,7 @@ id,sse,vr,status,name
 515428,0x142f01128,0x142fc6018,3,RE::NiRTTI_bhkTiltPreventAction
 515429,0x142f01138,0x142fc6028,3,RE::NiRTTI_bhkWheelAction
 515446,0x142f011d0,0x142fc60c0,3,CrosshairPickData* GetSingleton()
+515451,0x142f011f8,0x142fc60e8,4,PrecipitationShaderCubeSize
 515509,0x142f013c8,0x142fc62b8,4,NiPoint3 GetDirection()
 515540,0x142f01780,0x142fc6670,3,RE::NiRTTI_BSFaceGenAnimationData
 515558,0x142f07ca0,0x142fccb90,3,RE::NiRTTI_BSFaceGenModelExtraData
@@ -9152,6 +9156,7 @@ id,sse,vr,status,name
 528279,0x143283ab0,0x1434d6180,3,RE::NiRTTI_BSCubeMapCamera
 528312,0x143283b68,0x1434d6238,3,RE::NiRTTI_BSFogProperty
 528336,0x143495c48,0x1436f1748,3,RE::NiRTTI_BSClearZNode
+528354,0x143495d50,0x1436f1868,4,BSUtilityShader* BSUtilityShader::GetSingleton()
 528359,0x143495d68,0x1436f1a50,3,RE::NiRTTI_NiCollisionObject
 528360,0x143495d78,0x1436f1a60,3,RE::NiRTTI_BSOrderedNode
 528361,0x143495d88,0x1436f1a70,3,RE::NiRTTI_BSLines
