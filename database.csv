@@ -200,6 +200,7 @@ id,sse,vr,status,name
 18655,0x14026c5d0,0x14027dba0,3,void TESObjectCELL::sub_14026C5D0 (TESObjectCELL * a_this)
 18755,0x140273ED0,0x1402854C0,4,"void CallsMapMarkerData (int64 a1, int64 **a2)"
 18843,0x140278920,0x140289f20,4,TESObjectREFR::HandleReferenceReset
+19119,0x1402866d0,0x140297e00,4,void TESObjectREFR::UpdateSoundCallBack_1402866D0 (Character * a_this)
 19201,0x14028b940,0x14029d070,3,bool TESObjectREFR::HasQuestObject()
 19220,0x14028c440,0x14029db70,3,RE::TESObjectREFR::HasEffectKeyword?
 19238,0x14028cc60,0x14029e390,4,float TESObjectREFR::GetScale()
@@ -481,6 +482,7 @@ id,sse,vr,status,name
 36532,0x1405e7500,0x1405efc20,3,bool Actor::CanAttackActor(Actor* a_actor)
 36537,0x1405e7e40,0x1405f0560,3,RE::Actor::GetHostileToActor
 36541,0x1405e8700,0x1405f0e20,3,po3tweaks::VoiceModulation::SetObjectToFollow
+36543,0x1405e9270,0x1405f1980,4,"void Actor::UpdateSoundCallBack_1405E9270 (Actor * param_1, undefined8 param_2, undefined1 param_3)"
 36559,0x1405ebd90,0x1405f44a0,4,uint32_t Actor::GetCollisionFilterInfo(uint32_t& a_outCollisionFilterInfo)
 36602,0x1405edd50,0x1405f6460,3,void Actor::SetRotationX(float a_angle)
 36604,0x1405edef0,0x1405f6600,4,void Actor::SetLifeState(ACTOR_LIFE_STATE a_lifeState)
@@ -765,6 +767,10 @@ id,sse,vr,status,name
 50515,0x1408708a0,0x14089be30,3,RE::ItemCrafted::GetEventSource
 50530,0x1408720d0,0x14089d5c0,4,"void EnchantConstructMenu::RenameItem_Impl(InventoryEntryData* a_entryData, ExtraDataList* a_extraList, const char* a_name)"
 50567,0x140874540,0x14089fc10,4,void EnchantConstructMenu::UpdateInterface_140874540 (undefined8 param_1)
+50610,0x140875bc0,0x1408a1310,3,IMenu * FUN_140875bc0 (IMenu * param_1)
+50612,0x140875d30,0x1408a14a0,3,"undefined4 sub_140875D30 (DialogueMenu * a_this, undefined8 param_2)"
+50615,0x1408761f0,0x1408a1a50,3,void FUN_1408761f0 (longlong param_1)
+50617,0x1408762f0,0x1408a1b70,3,void FUN_1408762f0 (longlong param_1)
 50643,0x140878140,0x1408a3e60,4,CombatPathingRevolution::src/Advance_Hook.h:55
 50674,0x14087aba0,0x1408A6910,3,DescriptionFramework::
 50688,0x14087ba70,0x1408a77e0,3,EssentialFavorites::Gifting::IsQuestObject
@@ -773,6 +779,7 @@ id,sse,vr,status,name
 50727,0x14087F090,0x1408AC8A0,3,"void UpdateCrosshairCaveLeaving(bool a_valid, const char *a2)"
 50738,0x14087f970,0x1408ad1e0,4,static void UpdateCrosshairMagicTarget(bool a_valid)
 50747,0x14087fff0,0x1408ad8c0,3,TrueHUD::SetHUDMode?
+50748,0x1408800c0,0x1408ad9a0,4,undefined8 Handle_1408800C0 (BSTEventSink_UserEventEnabledEvent_ * a_this)
 50751,0x140880160,0x1408ADA40,4,"void HudMenuStrings (int32 a1, struct8 *a2, TESQuest *a3, int64 a4)"
 50757,0x1408808d0,0x1408ae1e0,3,HUDNotifications::Update
 50771,0x140881cc0,0x1408af5c0,3,TrueHUD::HUDChargeMeter::Update_140881CC0
