@@ -1,0 +1,28 @@
+# https://github.com/BUTR/workflows/blob/master/.github/workflows/refresh-unex-nexusmods.yml
+name: Refresh UNEX Credentials for NexusMods
+
+on:
+  workflow_call:
+    secrets:
+      NEXUSMODS_SESSION_COOKIE:
+        required: true
+
+jobs:
+  refresh-unex-credentials-nexusmods:
+    name: Refresh Credentials for NexusMods
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup .NET 8
+        uses: actions/setup-dotnet@master
+        with:
+          dotnet-version: 8.x.x
+
+      - name: Install BUTR.NexusUploader
+        run: dotnet tool install -g BUTR.NexusUploader
+        shell: pwsh
+
+      - name: Refresh NexusUploader credentials
+        run: unex refresh
+        env:
+          UNEX_SESSION_COOKIE: ${{ secrets.NEXUSMODS_SESSION_COOKIE }}
+        shell: pwsh

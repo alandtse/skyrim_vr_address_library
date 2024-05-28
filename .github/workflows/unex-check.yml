@@ -17,7 +17,7 @@ jobs:
       - name: Check Nexus Cookies
         # https://github.com/agc93/nexus-uploader using fork https://github.com/BUTR/BUTR.NexusUploader
         env:
-          UNEX_COOKIES: ${{ secrets.UNEX_COOKIES }}
+          UNEX_SESSION_COOKIE: ${{ secrets.NEXUSMODS_SESSION_COOKIE }}
           UNEX_APIKEY: ${{ secrets.UNEX_APIKEY }}
         run: |
           unex check --cookie
@@ -25,7 +25,7 @@ jobs:
         # https://github.com/agc93/nexus-uploader
         # https://www.nexusmods.com/users/myaccount?tab=api%20access
         env:
-          UNEX_COOKIES: ${{ secrets.UNEX_COOKIES }}
+          UNEX_SESSION_COOKIE: ${{ secrets.NEXUSMODS_SESSION_COOKIE }}
           UNEX_APIKEY: ${{ secrets.UNEX_APIKEY }}
         run: |
           unex check --key $UNEX_APIKEY

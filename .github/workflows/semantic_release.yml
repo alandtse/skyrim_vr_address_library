@@ -99,7 +99,7 @@ jobs:
         # https://github.com/agc93/nexus-uploader using fork https://github.com/BUTR/BUTR.NexusUploader
         if: steps.semantic.outputs.new_release_published == 'true'
         env:
-          UNEX_COOKIES: ${{ secrets.UNEX_COOKIES }}
+          UNEX_SESSION_COOKIE: ${{ secrets.NEXUSMODS_SESSION_COOKIE }}
           UNEX_APIKEY: ${{ secrets.UNEX_APIKEY }}
           UNEX_FILEDESCRIPTION: https://github.com/alandtse/skyrim_vr_address_library/compare/${{ steps.semantic.outputs.last_release_git_tag }}...${{ steps.semantic.outputs.new_release_git_tag }}
           UNEX_MODID: 58101
