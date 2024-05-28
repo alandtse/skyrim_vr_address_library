@@ -1,3 +1,11 @@
+# [0.133.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.132.0...v0.133.0) (2024-05-28)
+
+
+### Features
+
+* add Andrealphus' Papyrus Functions ids ([f08b3ee](https://github.com/alandtse/skyrim_vr_address_library/commit/f08b3ee2b7a20b1fcff1a5c6e73d18befd2d48f2))
+* add dialogue history ([f257fed](https://github.com/alandtse/skyrim_vr_address_library/commit/f257fedd49e401181a0ac7711b2f0b9a91dddd41))
+
 # [0.132.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.131.0...v0.132.0) (2024-05-15)
 
 
