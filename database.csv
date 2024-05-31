@@ -382,6 +382,7 @@ id,sse,vr,status,name
 33632,0x14054cd10,0x140550ec0,3,"bool MagicCaster::FindTargets(float a_effectivenessMult, std::uint32_t& a_targetCount, TESBoundObject* a_source, bool a_loadCast, bool a_adjustOnlyHostileEffectiveness)"
 33644,0x14054f070,0x1405531a0,3,void MagicCaster::SetCurrentSpell(MagicItem* a_item)
 33657,0x14054f4f0,0x1405536c0,3,void MagicCaster::FinishCast() src\RE\M/MagicCaster.cpp:26
+33672,0x1405506c0,0x140554980,4,MagicCaster::LaunchSpell
 33675,0x140550cf0,0x140554fb0,4,void MagicCaster::PlayReleaseSound(MagicItem* a_item) src\RE\M/MagicCaster.cpp:47
 33676,0x140550d60,0x140555020,3,"bool MagicCaster::FindTargets(float a_effectivenessMult, std::uint32_t& a_targetCount, TESBoundObject* a_source, bool a_loadCast, bool a_adjustOnlyHostileEffectiveness)"
 33684,0x140551a90,0x140555ca0,3,po3tweaks::Spell::detail::SpellApplyStruct
@@ -674,10 +675,12 @@ id,sse,vr,status,name
 42856,0x140746d60,0x140771ca0,3,EnhancedInvisibility::MissileProjectile::sub_140746D60
 42928,0x14074b170,0x140776440,3,"BSPointerHandle<Projectile>* Projectile::Launch(BSPointerHandle<Projectile>* a_result, LaunchData& a_data)"
 42943,0x14074c710,0x140777a30,4,ProjectileUpdate
+43009,0x1407516e0,0x14077CA00,4,Projectile::AutoAim
 43013,0x1407521f0,0x14077d510,4,ProjectileImpact
 43022,0x1407531c0,0x14077e4e0,2,papyrus_extender::events::game::weaponhit::projectile::target_0x38d
 43030,0x140754820,0x14077fbd0,3,po3tweaks::ProjectileRange::UpdateCombatThreat
 43103,0x140759360,0x1407846b0,3,"void VATS::SetMagicTimeSlowdown(float a_magicTimeSlowdown, float a_playerMagicTimeSlowdown)"
+43162,0x14075c760,0x140787AB0,4,CombatProjectileAimController::Update
 43571,0x140772a60,0x14079ddb0,3,po3tweaks::CombatDialogue::SayCombatDialogue
 43952,0x140781f00,0x1407ad250,4,RE::CombatMagicCaster::StaticCheckTargetValid
 43956,0x140782330,0x1407ad680,4,RE::CombatMagicCaster::CheckTargetValid
