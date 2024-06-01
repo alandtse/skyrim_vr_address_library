@@ -111,4 +111,4 @@ jobs:
           changelog: ${{ steps.semantic.outputs.new_release_notes }}
         run: |
           unex upload $UNEX_MODID $file -v $version
-          unex changelog $version "$changelog"
+          unex changelog $version -c "$changelog"
