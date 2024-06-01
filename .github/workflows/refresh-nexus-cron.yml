@@ -16,6 +16,6 @@ env:
 
 jobs:
   aragas-unex-refresh-nexusmods:
-    uses: alandtse/skyrim_vr_address_library/.github/workflows/refresh-unex-nexusmods.yml@master
+    uses: alandtse/skyrim_vr_address_library/.github/workflows/refresh-unex-nexusmods.yml@main
     secrets:
       NEXUSMODS_SESSION_COOKIE: ${{ secrets.NEXUSMODS_SESSION_COOKIE }}
