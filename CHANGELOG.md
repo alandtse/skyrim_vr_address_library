@@ -1,3 +1,10 @@
+# [0.134.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.133.0...v0.134.0) (2024-06-01)
+
+
+### Features
+
+* add support for NPCs Learn to Aim ([#64](https://github.com/alandtse/skyrim_vr_address_library/issues/64)) ([8974fa8](https://github.com/alandtse/skyrim_vr_address_library/commit/8974fa8dcafea864a59a1c5beaccc23b63565383))
+
 # [0.133.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.132.0...v0.133.0) (2024-05-28)
 
 
