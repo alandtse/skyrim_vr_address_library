@@ -211,6 +211,8 @@ id,sse,vr,status,name
 19266,0x14028dda0,0x14029f4d0,4,"void Actor::AddWornOutfit(BGSOutfit* a_outfit, bool a_forceUpdate)"
 19275,0x14028e360,0x14029fa90,4,std::int32_t PlayerCharacter::GetItemCount(TESBoundObject* a_object)
 19277,0x14028e3c0,0x14029faf0,3,float TESObjectREFR::GetWeightInContainer()
+19300,0x14028fb90,0x1402A12A0,3,TESObjectREFR::Load3D
+19301,0x140290550,0x1402A1C60,3,TESObjectREFR::Release3DRelatedData
 19316,0x1402943b0,0x1402a5ac0,4,bool Actor::Update3D()
 19322,0x1402944F0,0x1402A5C00,3,TESModel* TESObjectREFR::GetSkeletonModel(TESObjectREFR* a_this)
 19323,0x1402945e0,0x1402a5cf0,3,RE::TESObjectREFR::FindReferenceFor3D
@@ -402,6 +404,8 @@ id,sse,vr,status,name
 33825,0x140556ce0,0x14055ca70,3,enhanced_reanimation::Actor::CanBeReanimated
 33828,0x140556f20,0x14055ccb0,3,RE::Actor::DispelWornItemEnchantments
 33834,0x140557120,0x14055ceb0,4,BSContainer::ForEachResult MagicItemDataCollector::operator()(Effect* a_effect)
+33869,0x140558c00,0x14055E990,3,ModelReferenceEffect::DetachImpl
+33873,0x140558fc0,0x14055ED50,3,ModelReferenceEffect::sub_*
 33956,0x14055b750,0x140561990,2,enhanced_reanimation::Reanimate::Start
 33961,0x14055bc80,0x140561ec0,4,"void Start_14055BC80 (ActiveEffectReferenceEffectController * param_1, ReferenceEffect * * a_effectOut)"
 34132,0x140560e40,0x1405670b0,3,ENBLightForEffectShaders::ShaderReferenceEffect::Add:AddAddonModel::thunk_0x8C2
