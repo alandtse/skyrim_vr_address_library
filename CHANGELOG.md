@@ -1,3 +1,10 @@
+# [0.135.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.134.0...v0.135.0) (2024-06-11)
+
+
+### Features
+
+* add HDT-SMP Force Field NG ([#65](https://github.com/alandtse/skyrim_vr_address_library/issues/65)) ([909d782](https://github.com/alandtse/skyrim_vr_address_library/commit/909d782dc456ef83fd8b11b4c52792e077b7921d))
+
 # [0.134.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.133.0...v0.134.0) (2024-06-01)
 
 
