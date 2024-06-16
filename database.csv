@@ -413,6 +413,7 @@ id,sse,vr,status,name
 34413,0x14056c9d0,0x140572fd0,3,"DialogueItem* DialogueItem::Ctor(TESQuest* a_quest, TESTopic* a_topic, TESTopicInfo* a_topicInfo, Actor* a_speaker)"
 34429,0x14056D570,0x140573B70,4,"void DialogueSubtitleStrings (char **a1, TESTopic *a2, TESTopicInfo *a3, Character *a4, void *a5)"
 34434,0x14056DA60,0x140574060,4,"void DialogueMenuStrings (void *a1, TESQuest *a2, TESTopic *a3, TESTopicInfo *a4, TESObjectREFR *a5, void *a6)"
+34455,0x14056f230,0x1405757d0,3,MenuTopicManager::sub_*
 34655,0x14057b920,0x1405830f0,4,"bool BGSSaveLoadGame::GetChange(TESForm* a_form, std::uint32_t a_changes)"
 34808,0x140585a70,0x14058cfa0,4,"ulonglong BGSLoadGameBuffer::sub_140585A70(BGSLoadGameBuffer *param_1,PlayerCharacter *param_2,undefined *param_3,char *param_4)"
 34818,0x140586de0,0x14058e310,3,RE::BGSSaveLoadManager::Save
@@ -743,6 +744,8 @@ id,sse,vr,status,name
 49970,0x14084fbe0,0x140730470,4,"void ProcessButton_14084FBE0 (PlayerInputHandler * a_this, undefined8 param_2)"
 49978,0x140850860,0x14087ac20,4,"void HandleLookInput_140850860 (ThirdPersonState * a_this, float * param_2)"
 50005,0x1408527b0,0x14087CB80,3,DescriptionFramework::
+50012,0x140853120,0x14087d4f0,3,BarterMenu::sub_*
+50013,0x1408533b0,0x14087d780,3,BarterMenu::sub_*
 50061,0x140855b60,0x14087ff20,3,EssentialFavorites::Barter::IsQuestObject
 50099,0x140856a50,0x140880e10,3,RE::ItemList::Update
 50122,0x1408582e0,0x140882580,3,"void BookMenu::OpenBookMenu(const BSString& a_description, const ExtraDataList* a_extraList, TESObjectREFR* a_ref, TESObjectBOOK* a_book, const NiPoint3& a_pos, const NiMatrix3& a_rot, float a_scale, bool a_useDefaultPos)"
@@ -753,6 +756,7 @@ id,sse,vr,status,name
 50201,0x14085ddb0,0x140888D80,3,DescriptionFramework::
 50211,0x14085eaa0,0x140889a30,4,void TESObjectREFR::OpenContainer(std::int32_t a_openType)
 50212,0x14085ebc0,0x140889b50,3,WhoseQuestIsItAnyway::StoreHook
+50213,0x14085f0c0,0x14088a2c0,3,ContainerMenu::sub_*
 50257,0x140862160,0x14088d4e0,3,BSTEventSource<ChestsLooted::Event>* ChestsLooted::GetEventSource()
 50258,0x140862250,0x14088d5d0,3,RE::ItemsPickpocketed::GetEventSource
 50297,0x140863f90,0x14088F4F0,3,DescriptionFramework::
@@ -790,6 +794,7 @@ id,sse,vr,status,name
 50751,0x140880160,0x1408ADA40,4,"void HudMenuStrings (int32 a1, struct8 *a2, TESQuest *a3, int64 a4)"
 50757,0x1408808d0,0x1408ae1e0,3,HUDNotifications::Update
 50771,0x140881cc0,0x1408af5c0,3,TrueHUD::HUDChargeMeter::Update_140881CC0
+50776,0x140882520,0x1408afe70,3,EnemyHealth::Update
 50882,0x140887750,0x1408b4c90,3,std::uint32_t Inventory3DManager::Render()
 50884,0x140887970,0x1408b4ea0,3,void Inventory3DManager::UpdateItem3D(InventoryEntryData* a_objDesc)
 50885,0x1408879a0,0x1408b4ed0,3,"void Inventory3DManager::UpdateMagic3D(TESForm* a_form, std::uint32_t a_arg2)"
@@ -823,6 +828,7 @@ id,sse,vr,status,name
 51638,0x1408bf360,0x1408ec3e0,2,StatsMenu::ProcessMessage
 51652,0x1408c20c0,0x1408eedb0,2,StatsMenu::UpdateSkillList
 51755,0x1408ccff0,0x1408fa0a0,4,SubtitleManager::KillSubtitles
+51761,0x1408cd260,0x1408fa330,3,SubtitleManager::DisplayNextSubtitle
 51788,0x1408ce590,0x1408fb660,2,TrainingMenu::ProcessMessage
 51790,0x1408ce6f0,0x1408fb7c0,4,TrainingMenu::TrainCallback::Accept
 51793,0x1408ce8e0,0x1408fb9c0,3,TrainingMenu::Train
