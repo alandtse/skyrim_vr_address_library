@@ -1,3 +1,10 @@
+# [0.136.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.135.0...v0.136.0) (2024-06-16)
+
+
+### Features
+
+* add NPCs Names Distributor NG ([#66](https://github.com/alandtse/skyrim_vr_address_library/issues/66)) ([7f4fbe1](https://github.com/alandtse/skyrim_vr_address_library/commit/7f4fbe1d8563be739ca035492bfc7e87a79c77c2))
+
 # [0.135.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.134.0...v0.135.0) (2024-06-11)
 
 
