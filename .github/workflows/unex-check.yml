@@ -20,7 +20,7 @@ jobs:
           UNEX_SESSION_COOKIE: ${{ secrets.UNEX_NEXUSMODS_SESSION_COOKIE }}
           UNEX_APIKEY: ${{ secrets.UNEX_APIKEY }}
         run: |
-          unex check --session-cookie
+          unex check --session-cookie $UNEX_SESSION_COOKIE
       - name: Check Nexus API Key
         # https://github.com/agc93/nexus-uploader
         # https://www.nexusmods.com/users/myaccount?tab=api%20access
