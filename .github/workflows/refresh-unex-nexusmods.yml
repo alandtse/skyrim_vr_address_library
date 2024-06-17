@@ -4,7 +4,7 @@ name: Refresh UNEX Credentials for NexusMods
 on:
   workflow_call:
     secrets:
-      NEXUSMODS_SESSION_COOKIE:
+      UNEX_NEXUSMODS_SESSION_COOKIE:
         required: true
 
 jobs:
