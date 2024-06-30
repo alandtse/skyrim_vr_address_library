@@ -1,3 +1,10 @@
+# [0.137.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.136.0...v0.137.0) (2024-06-30)
+
+
+### Features
+
+* update experience NG addresses ([#67](https://github.com/alandtse/skyrim_vr_address_library/issues/67)) ([2fe31b4](https://github.com/alandtse/skyrim_vr_address_library/commit/2fe31b4521f6fe333142f0f329f3d70412dcc4fa))
+
 # [0.136.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.135.0...v0.136.0) (2024-06-16)
 
 
