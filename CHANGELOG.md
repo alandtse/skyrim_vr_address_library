@@ -1,3 +1,10 @@
+# [0.140.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.139.0...v0.140.0) (2024-07-06)
+
+
+### Features
+
+* add perFrame_ID3D11Buffer ([321b98c](https://github.com/alandtse/skyrim_vr_address_library/commit/321b98cfef7b01d1f2b28223677716b687c88db8))
+
 # [0.139.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.138.0...v0.139.0) (2024-07-06)
 
 
