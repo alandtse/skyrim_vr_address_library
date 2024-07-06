@@ -9083,6 +9083,7 @@ id,sse,vr,status,name
 524761,0x143027c00,0x1431808d0,4,PixelShader_perTechniqueBuffersArray
 524763,0x143027ca0,0x143180970,4,PixelShader_perMaterialBuffersArray
 524765,0x143027d40,0x143180a10,4,PixelShader_perGeometryBuffersArray
+524768,0x143027e88,0x143180bc8,4,perFrame_ID3D11Buffer
 524773,0x143027eb0,0x143180db0,4,g_RendererShadowState
 524907,0x143028490,0x143181700,3,BSRenderManager* GetSingleton()
 524965,0x14302afd0,0x1431849b0,4,VertexShader_bufferData
