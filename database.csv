@@ -475,6 +475,7 @@ id,sse,vr,status,name
 36287,0x1405d25e0,0x1405daba0,4,RE::Actor::SetGhost
 36331,0x1405d5290,0x1405dd850,2,Actor::Resurrect
 36344,0x1405d62e0,0x1405de910,3,RE::Actor::GetLevel
+36345,0x1405d6300,0x1405de930,3,Actor::DamageHealth
 36346,0x1405d6490,0x1405deac0,3,RE::GameEventHandler::FallLongDistance::CalcDoDamage
 36347,0x1405D6500,0x1405DEB30,4,Character::GetAVPercent
 36357,0x1405d6fb0,0x1405df5e0,3,FEC::UpdateAVs
@@ -547,6 +548,7 @@ id,sse,vr,status,name
 37586,0x140623e60,0x14062cc10,3,RE::Character::sub_140623E60
 37588,0x140623f10,0x14062ccc0,4,RE::PlayerCharacter::GetReach_140623F10
 37605,0x140624f20,0x14062dd90,4,PlayerCharacter::sub_140624F20
+37618,0x140625cd0,0x14062EB40,3,Actor::IsCombatTarget
 37620,0x140625dd0,0x14062ec40,4,RE::Character::get_weapon_vector_625DD0
 37621,0x140625eb0,0x14062ed20,4,RE::Actor::Actor__GetWeapon_140625EB0
 37628,0x1406260f0,0x14062ef60,4,void Actor::WeaponSwingCallback ()
@@ -597,6 +599,7 @@ id,sse,vr,status,name
 37943,0x140637f20,0x140640f30,4,"void FUN_140637f20 (undefined8 param_1, PlayerCharacter * param_2)"
 37945,0x140638190,0x1406411a0,3,RE::ActorEquipManager::UnequipObject
 38047,0x14063cfb0,0x140646020,3,StaminaNPC::apply_deny_player_attack_or_bash
+38048,0x14063d0f0,0x140646160,3,HandleAction
 38079,0x14063f810,0x1406488a0,3,bool TaskQueueInterface::ShouldUseTaskQueue()
 38118,0x140640600,0x140649910,2,PapyrusTweaks::Job_VM_Update
 38141,0x140640f80,0x14064a2b0,4,void Job_Update_grass_140640F80 (void)
