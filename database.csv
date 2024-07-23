@@ -842,6 +842,7 @@ id,sse,vr,status,name
 51509,0x1408b2d60,0x1408e0730,4,void PrecacheCharGenClear_1409796F0_0_1408B2D60 (undefined8 * a_this)
 51540,0x1408ba590,0x1408e7d70,4,"void ChangeName_1408BA590 (RaceSexMenu * param_1, char * param_2)"
 51614,0x1408bd8c0,0x1408ea840,3,SleepWaitTime_Compare_offset include/offsets.h:57
+51618,0x1408bde30,0x1408ead70,4,void SleepWaitMenu::ToggleOpenSleepWaitMenu(bool a_sleeping)
 51638,0x1408bf360,0x1408ec3e0,2,StatsMenu::ProcessMessage
 51652,0x1408c20c0,0x1408eedb0,2,StatsMenu::UpdateSkillList
 51755,0x1408ccff0,0x1408fa0a0,4,SubtitleManager::KillSubtitles
