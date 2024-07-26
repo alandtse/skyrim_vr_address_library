@@ -1,3 +1,10 @@
+# [0.141.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.140.0...v0.141.0) (2024-07-26)
+
+
+### Features
+
+* add CS fancy skylighting ([37f2362](https://github.com/alandtse/skyrim_vr_address_library/commit/37f23624092d5defb5c84428832dbc5e14e321cc))
+
 # [0.140.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.139.0...v0.140.0) (2024-07-06)
 
 
