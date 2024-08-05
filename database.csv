@@ -1,4 +1,4 @@
-gid,sse,vr,status,name
+id,sse,vr,status,name
 10827,0x1400f6e80,0x140107430,3,RE::TESForm::GetFormEditorID
 10878,0x1400f7210,0x1401077c0,3,BGSDefaultObjectManager* BGSDefaultObjectManager::GetSingleton()
 10883,0x1400f72e0,0x140107890,3,RE::TESForm::SetFormEditorID
