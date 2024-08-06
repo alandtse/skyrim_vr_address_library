@@ -338,6 +338,7 @@ id,sse,vr,status,name
 26009,0x1403c66a0,0x1403d5f20,4,RE::random
 26258,0x1403D2970,0x1403E22E0,4,WhosWho::GetFaceRelatedData
 26259,0x1403d2a60,0x1403e23d0,3,"void BSFaceGenManager::PrepareHeadPartForShaders(BSFaceGenNiNode* a_node, BGSHeadPart* a_headPart, TESNPC* a_npc)"
+26574,0x1403e1790,0x1403F1140,3,"void RE::ActorValueList::InitActorValueInfo()"
 26592,0x1403e48d0,0x1403f4420,4,"BGSSkillPerkTreeNode * BGSSkillPerkTreeNode::ctor_1403e48d0 (BGSSkillPerkTreeNode * a_this, int32_t a_index, ActorValueInfo * a_avInfo)"
 26616,0x1403e5250,0x1403f4da0,4,RE::ActorValueOwner::GetClampedActorValue
 29074,0x1404447a0,0x1404542f0,3,"bool TESCondition::IsTrue(TESObjectREFR* a_actionRef, TESObjectREFR* a_targetRef)"
