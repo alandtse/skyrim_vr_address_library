@@ -35,6 +35,7 @@ id,sse,vr,status,name
 12204,0x1401329d0,0x140143180,3,RE::LookupReferenceByHandle
 12210,0x140132bd0,0x140143380,4,DWORD Lock1_140132BD0 (Mutex * a_this)
 12272,0x1401349d0,0x140145380,3,RE::ExtraLock::REFR_LOCK::GetLockLevel
+12448,0x1401384d0,0x140148e80,4,uint32_t RE::TESLeveledList::GetAllBelowForce(RE::ExtraLevCreaModifier* extraLeveledCreatureModifier)
 12626,0x14013c740,0x14014d130,3,"char* ExtraTextDisplayData::GetDisplayName(TESBoundObject* a_baseObject, float a_temperFactor)"
 12784,0x1401424f0,0x140152ee0,3,bhkRigidBody* bhkCollisionObject::GetRigidBody()
 12910,0x140147bb0,0x1401585e0,3,SeasonsofSkyrim::FormSwap::model_loader_queue_ref
@@ -94,6 +95,8 @@ id,sse,vr,status,name
 14190,0x140189fc0,0x140199cf0,3,"void ScriptEventSourceHolder::SendOpenCloseEvent(const NiPointer<TESObjectREFR>& a_ref, const NiPointer<TESObjectREFR>& a_activeRef, bool a_isOpened)"
 14262,0x14018c750,0x14019c480,4,std::uint16_t TESActorBaseData::GetLevel()
 14399,0x140190480,0x1401a01b0,3,RE::TESDescription::GetDescription
+14411,0x140190d50,0x1401a0a80,4,RE::EnchantmentItem* RE::TESForm::GetEnchantment(RE::ExtraDataList* extraDataList)
+14412,0x140190dc0,0x1401a0af0,4,std::uint16_t GetMaximumCharge(ExtraDataList* extraDataList) const;
 14461,0x140194230,0x1401a3f60,4,TESForm * LookupFormById_140194230 (int a_formid)
 14471,0x1401947f0,0x1401a4520,4,"void TESForm::sub_1401947F0 (TESForm * a_this, bool param_2)"
 14482,0x140194c20,0x1401a4950,4,void TESForm::SetPlayerKnows(bool a_known)
@@ -331,6 +334,7 @@ id,sse,vr,status,name
 25868,0x1403bf020,0x1403ce8a0,3,RE::ActorValueOwner::Get_bow_power
 25910,0x1403c0de0,0x1403D0660,4,"FUN_1403c0de0(float param_1, float param_2)"
 25915,0x1403c0fd0,0x1403d0850,4,LimbInjuries::smth_smithed
+25920,0x1403c1200,0x1403d0a80,4,float GetDifficultyMultiplier(uint32_t a_difficulty, ActorValue a_actorValue, bool isPlayer)
 25931,0x1403c1700,0x1403d0f80,4,"float GetDualCastingEffectiveness(RE::ActorValueOwner* a_actorValueOwner, float a_cost)"
 25933,0x1403c1740,0x1403d0fc0,3,TrueHUD::GetSoulType
 25977,0x1403c38e0,0x1403d3160,3,"void BSFaceGenAnimationData::Reset(float a_timer, bool a_resetExpression, bool a_resetModifierAndPhoneme, bool a_resetCustom, bool a_closeEyes)"
@@ -458,6 +462,7 @@ id,sse,vr,status,name
 35620,0x1405b6dc0,0x1405bee40,3,Main::sub_*
 35642,0x1405b8f00,0x1405c0f70,3,SettingsOfSkyrim::
 35882,0x1405c0610,0x1405c8b30,3,po3tweaks::ScreenshotToConsole::DebugNotification
+35918,0x1405c1e40,0x1405ca360,4,bool TaskQueueInterface::ShouldQueueTask()
 35922,0x1405c2670,0x1405cab50,4,"void TaskQueueInterface::QueueNodeAttach_1405c2670 (undefined * a_this, NiAVObject * a_obj, NiNode * a_root, bool a_arg3, bool a_arg4)"
 35923,0x1405c2740,0x1405cac20,4,void TaskQueueInterface::QueueNodeDetach(NiAVObject* a_obj) src\RE\T/TaskQueueInterface.cpp:28
 35934,0x1405c3010,0x1405cb5b0,4,"void TaskQueueInterface::QueueUpdateDestructibleObject(TESObjectREFR* a_refr, float a_damage, bool a_arg3, TESObjectREFR* a_cause)"
@@ -469,6 +474,7 @@ id,sse,vr,status,name
 36016,0x1405c6ee0,0x1405cf480,3,BSTaskPool_HandleTask_1405C6EE0
 36198,0x1405ce240,0x1405d6840,4,po3tweaks::Spell::ReapplyOnDeath::Load3d
 36224,0x1405d0680,0x1405d8c60,4,bool Actor::CanUseIdle(TESIdleForm* a_idle)
+36247,0x1405d0f40,0x1405d9520,4,bool Actor::CanBeKilledBy(Actor* a_attacker)
 36248,0x1405d0fc0,0x1405d95a0,3,void Actor::SetRotationZ(float a_angle)
 36252,0x1405d1190,0x1405d9770,3,RE::Actor::IsRunning
 36259,0x1405d1620,0x1405d9c00,3,bool Actor::IsInMidair()
@@ -480,6 +486,8 @@ id,sse,vr,status,name
 36345,0x1405d6300,0x1405de930,3,Actor::DamageHealth
 36346,0x1405d6490,0x1405deac0,3,RE::GameEventHandler::FallLongDistance::CalcDoDamage
 36347,0x1405D6500,0x1405DEB30,4,Character::GetAVPercent
+36348,0x1405d6570,0x1405deba0,4,Character::GetStaminaPercentage
+36349,0x1405d6640,0x1405dec70,4,Character::GetHealthPercentage
 36357,0x1405d6fb0,0x1405df5e0,3,FEC::UpdateAVs
 36359,0x1405d8170,0x1405e07a0,3,po3tweaks::ToggleCollisionFix::ApplyMovementDelta
 36392,0x1405da840,0x1405e2ec0,3,void Actor::CalculateCurrentVendorFaction()
@@ -497,6 +505,7 @@ id,sse,vr,status,name
 36489,0x1405e32d0,0x1405eb970,3,Actor::SetRestrained
 36490,0x1405e3330,0x1405eb9d0,3,Actor::SetDontMove
 36492,0x1405e33b0,0x1405eba50,4,bool Actor::IsInRagdollState()
+36506,0x1405e4800,0x1405ecea0,3,float Actor::AdjustHealthDamageToDifficulty(Actor a_actor, float a_damage, float onlyReduceDamage)
 36523,0x1405e6b50,0x1405ef270,3,EssentialFavorites::Disarm::IsQuestObject
 36532,0x1405e7500,0x1405efc20,3,bool Actor::CanAttackActor(Actor* a_actor)
 36537,0x1405e7e40,0x1405f0560,3,RE::Actor::GetHostileToActor
@@ -546,6 +555,7 @@ id,sse,vr,status,name
 37522,0x1406210f0,0x140629ea0,4,ActorValueOwner::ModActorValue
 37523,0x140621120,0x140629ed0,3,"Actor::ApplyActorValueModifier_140621120(Actor *a1, int32 a_actorValueModifier, int32 a_actorValue, float a_avDelta, Actor *a_attacker)"
 37524,0x140621350,0x14062a100,4,"float Actor::GetActorValueModifier(ACTOR_VALUE_MODIFIER a_modifier, ActorValue a_value)"
+37527,0x140621590,0x14062a340,4,void Actor::RemoveActorValueModifiers(ActorValue actorValue)
 37571,0x140623610,0x14062c3c0,3,BSTEventSource<DragonSoulsGained::Event>* DragonSoulsGained::GetEventSource()
 37586,0x140623e60,0x14062cc10,3,RE::Character::sub_140623E60
 37588,0x140623f10,0x14062ccc0,4,RE::PlayerCharacter::GetReach_140623F10
@@ -565,6 +575,7 @@ id,sse,vr,status,name
 37752,0x14062e390,0x140637260,3,void Actor::StopInteractingQuick(bool a_unk02)
 37757,0x14062ebc0,0x140637a90,3,bool Actor::GetMount(NiPointer<Actor>& a_outMount)
 37758,0x14062ecd0,0x140637ba0,4,bool Actor::GetRider(NiPointer<Actor>& a_outRider)
+37762,0x14062f170,0x140638040,4,bool Actor::GetControllingActor(NiPointer<Actor>& controllingActor)
 37771,0x14062f560,0x140638430,3,RE::Actor::AddSpell
 37772,0x14062f720,0x1406385f0,3,bool Actor::RemoveSpell(SpellItem* a_spell)
 37777,0x14062fad0,0x1406389a0,4,"void Actor::SetAlpha (Actor * a_this, float a_value)"
@@ -580,6 +591,7 @@ id,sse,vr,status,name
 37808,0x140631c80,0x14063ab50,3,void Actor::InterruptCast(bool a_restoreMagicka)
 37810,0x140631d70,0x14063ac40,4,bool Actor::IsCasting(MagicItem* a_spell)
 37814,0x140632000,0x14063aed0,4,"void Actor::SetWantDualCasting(RE::Actor* a_actor, bool a_enable)"
+37819,0x140632270,0x14063b140,4,"void Actor::SetSelectedSpell(RE::MagicSystem::CastingSource castingSource, MagicItem* selectedSpell)"
 37820,0x1406322f0,0x14063b1c0,3,void Actor::DeselectSpell(SpellItem* a_spell)
 37821,0x1406323c0,0x14063b290,4,"void Character::sub_1406323C0 (Character * a_this, undefined8 param_2)"
 37822,0x140632610,0x14063b4e0,4,TESForm * GetEquippedShout_140632610 (Actor * a_this)
@@ -8788,6 +8800,7 @@ id,sse,vr,status,name
 517224,0x142f38968,0x142ffd768,4,gSaveScreenshotRequested
 517228,0x142f38978,0x142ffd778,3,TaskQueueInterface* GetSingleton()
 517372,0x142f39650,0x142ffe470,3,ResponseDictionary* GetSingleton()
+517597,0x142f3a644,0x142fff43c,3,AITimer* GetSingleton()
 517601,0x142f3a680,0x142fff478,3,RE::NiRTTI_BSDoorHavokController
 517602,0x142f3a690,0x142fff488,3,RE::NiRTTI_BSPlayerDistanceCheckController
 517603,0x142f3a6a0,0x142fff498,3,RE::NiRTTI_BSSimpleScaleController
