@@ -1,3 +1,10 @@
+# [0.142.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.141.0...v0.142.0) (2024-08-06)
+
+
+### Features
+
+* add ActorValueList init function ([#70](https://github.com/alandtse/skyrim_vr_address_library/issues/70)) ([4787700](https://github.com/alandtse/skyrim_vr_address_library/commit/478770067fa7167b8ae46e26e1ef613f013b4dab))
+
 # [0.141.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.140.0...v0.141.0) (2024-07-26)
 
 
