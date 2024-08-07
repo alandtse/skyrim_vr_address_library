@@ -334,7 +334,7 @@ id,sse,vr,status,name
 25868,0x1403bf020,0x1403ce8a0,3,RE::ActorValueOwner::Get_bow_power
 25910,0x1403c0de0,0x1403D0660,4,"FUN_1403c0de0(float param_1, float param_2)"
 25915,0x1403c0fd0,0x1403d0850,4,LimbInjuries::smth_smithed
-25920,0x1403c1200,0x1403d0a80,4,float GetDifficultyMultiplier(uint32_t a_difficulty, ActorValue a_actorValue, bool isPlayer)
+25920,0x1403c1200,0x1403d0a80,4,"float GetDifficultyMultiplier(uint32_t a_difficulty, ActorValue a_actorValue, bool isPlayer)"
 25931,0x1403c1700,0x1403d0f80,4,"float GetDualCastingEffectiveness(RE::ActorValueOwner* a_actorValueOwner, float a_cost)"
 25933,0x1403c1740,0x1403d0fc0,3,TrueHUD::GetSoulType
 25977,0x1403c38e0,0x1403d3160,3,"void BSFaceGenAnimationData::Reset(float a_timer, bool a_resetExpression, bool a_resetModifierAndPhoneme, bool a_resetCustom, bool a_closeEyes)"
@@ -505,7 +505,7 @@ id,sse,vr,status,name
 36489,0x1405e32d0,0x1405eb970,3,Actor::SetRestrained
 36490,0x1405e3330,0x1405eb9d0,3,Actor::SetDontMove
 36492,0x1405e33b0,0x1405eba50,4,bool Actor::IsInRagdollState()
-36506,0x1405e4800,0x1405ecea0,3,float Actor::AdjustHealthDamageToDifficulty(Actor a_actor, float a_damage, float onlyReduceDamage)
+36506,0x1405e4800,0x1405ecea0,3,"float Actor::AdjustHealthDamageToDifficulty(Actor a_actor, float a_damage, float onlyReduceDamage)"
 36523,0x1405e6b50,0x1405ef270,3,EssentialFavorites::Disarm::IsQuestObject
 36532,0x1405e7500,0x1405efc20,3,bool Actor::CanAttackActor(Actor* a_actor)
 36537,0x1405e7e40,0x1405f0560,3,RE::Actor::GetHostileToActor
