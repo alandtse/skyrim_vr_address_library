@@ -1,3 +1,10 @@
+# [0.144.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.143.0...v0.144.0) (2024-08-10)
+
+
+### Features
+
+* add ExtraTextDisplayData::sub_14013CC20 ([#72](https://github.com/alandtse/skyrim_vr_address_library/issues/72)) ([7a7b59b](https://github.com/alandtse/skyrim_vr_address_library/commit/7a7b59bec36fb2c7b0a838317990522418c43298))
+
 # [0.143.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.142.0...v0.143.0) (2024-08-07)
 
 
