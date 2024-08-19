@@ -1,3 +1,31 @@
+# [0.144.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.143.0...v0.144.0) (2024-08-10)
+
+
+### Features
+
+* add ExtraTextDisplayData::sub_14013CC20 ([#72](https://github.com/alandtse/skyrim_vr_address_library/issues/72)) ([7a7b59b](https://github.com/alandtse/skyrim_vr_address_library/commit/7a7b59bec36fb2c7b0a838317990522418c43298))
+
+# [0.143.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.142.0...v0.143.0) (2024-08-07)
+
+
+### Features
+
+* add more IDs for Poached Bugs ([#71](https://github.com/alandtse/skyrim_vr_address_library/issues/71)) ([37da19e](https://github.com/alandtse/skyrim_vr_address_library/commit/37da19ece8eaf3e7e4e1b1f8d6231e73d3389aee))
+
+# [0.142.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.141.0...v0.142.0) (2024-08-06)
+
+
+### Features
+
+* add ActorValueList init function ([#70](https://github.com/alandtse/skyrim_vr_address_library/issues/70)) ([4787700](https://github.com/alandtse/skyrim_vr_address_library/commit/478770067fa7167b8ae46e26e1ef613f013b4dab))
+
+# [0.141.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.140.0...v0.141.0) (2024-07-26)
+
+
+### Features
+
+* add CS fancy skylighting ([37f2362](https://github.com/alandtse/skyrim_vr_address_library/commit/37f23624092d5defb5c84428832dbc5e14e321cc))
+
 # [0.140.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.139.0...v0.140.0) (2024-07-06)
 
 
