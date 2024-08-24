@@ -1,3 +1,10 @@
+# [0.146.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.145.0...v0.146.0) (2024-08-24)
+
+
+### Features
+
+* add additional CS addresses ([f799132](https://github.com/alandtse/skyrim_vr_address_library/commit/f799132994e8a1077a4c7382825008cad9e059f1))
+
 # [0.145.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.144.0...v0.145.0) (2024-08-19)
 
 
