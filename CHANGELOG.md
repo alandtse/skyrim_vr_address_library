@@ -1,3 +1,10 @@
+# [0.147.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.146.0...v0.147.0) (2024-08-26)
+
+
+### Features
+
+* add latest commonlib ([bf42625](https://github.com/alandtse/skyrim_vr_address_library/commit/bf426257f931a89fe41de0b8abb4ba5e6e429682))
+
 # [0.146.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.145.0...v0.146.0) (2024-08-24)
 
 
