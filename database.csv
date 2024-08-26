@@ -811,6 +811,7 @@ id,sse,vr,status,name
 50515,0x1408708a0,0x14089be30,3,RE::ItemCrafted::GetEventSource
 50530,0x1408720d0,0x14089d5c0,4,"void EnchantConstructMenu::RenameItem_Impl(InventoryEntryData* a_entryData, ExtraDataList* a_extraList, const char* a_name)"
 50567,0x140874540,0x14089fc10,4,void EnchantConstructMenu::UpdateInterface_140874540 (undefined8 param_1)
+50569,0x140874a40,0x1408a0190,4,"bool EnchantConstructMenu::CanSelectEnchantmentEntry (EnchantConstructMenu * a_this, uint32_t a_index, bool a_showNotification)"
 50610,0x140875bc0,0x1408a1310,3,IMenu * FUN_140875bc0 (IMenu * param_1)
 50612,0x140875d30,0x1408a14a0,3,"undefined4 sub_140875D30 (DialogueMenu * a_this, undefined8 param_2)"
 50615,0x1408761f0,0x1408a1a50,3,void FUN_1408761f0 (longlong param_1)
