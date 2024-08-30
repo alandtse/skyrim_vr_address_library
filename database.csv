@@ -231,6 +231,7 @@ id,sse,vr,status,name
 19369,0x140296c00,0x1402a8300,4,"bool TESObjectREFR::ActivateRef(TESObjectREFR* a_activator, uint8_t a_arg2, TESBoundObject* a_object, int32_t a_count, bool a_defaultProcessingOnly)"
 19373,0x140298190,0x1402a9890,4,void TESObjectREFR::Enable(bool a_resetInventory)
 19385,0x1402994f0,0x1402aabf0,3,BGSLocation* TESObjectREFR::GetCurrentLocation()
+19396,0x140299a80,0x1402ab180,4,"float TESObjectREFR::GetDistance(TESObjectREFR* a_other, bool a_disabledRefs, bool a_ignoreWorldspace)"
 19400,0x14029a330,0x1402aba40,3,bool TESObjectREFR::IsCrimeToActivate()
 19446,0x14029cb80,0x1402ae290,3,"ShaderReferenceEffect* TESObjectREFR::InstantiateHitShader(TESEffectShader* a_shader, float a_dur, TESObjectREFR* a_facingRef, bool a_faceTarget, bool a_attachToCamera, NiAVObject* a_attachNode, bool a_interfaceEffect)"
 19666,0x1402a2070,0x1402b37e0,3,RE::ScriptEventSourceHolder::SendActivateEvent
@@ -344,7 +345,7 @@ id,sse,vr,status,name
 26009,0x1403c66a0,0x1403d5f20,4,RE::random
 26258,0x1403D2970,0x1403E22E0,4,WhosWho::GetFaceRelatedData
 26259,0x1403d2a60,0x1403e23d0,3,"void BSFaceGenManager::PrepareHeadPartForShaders(BSFaceGenNiNode* a_node, BGSHeadPart* a_headPart, TESNPC* a_npc)"
-26574,0x1403e1790,0x1403F1140,3,"void RE::ActorValueList::InitActorValueInfo()"
+26574,0x1403e1790,0x1403F1140,3,void RE::ActorValueList::InitActorValueInfo()
 26592,0x1403e48d0,0x1403f4420,4,"BGSSkillPerkTreeNode * BGSSkillPerkTreeNode::ctor_1403e48d0 (BGSSkillPerkTreeNode * a_this, int32_t a_index, ActorValueInfo * a_avInfo)"
 26616,0x1403e5250,0x1403f4da0,4,RE::ActorValueOwner::GetClampedActorValue
 29074,0x1404447a0,0x1404542f0,3,"bool TESCondition::IsTrue(TESObjectREFR* a_actionRef, TESObjectREFR* a_targetRef)"
@@ -463,6 +464,7 @@ id,sse,vr,status,name
 35593,0x1405b5490,0x1405bd0f0,2,Main::sub_*
 35598,0x1405b5ef0,0x1405bdb80,4,void Main::SetActive(bool a_active)
 35601,0x1405b6060,0x1405bdcf0,4,NiCamera* Main::WorldRootCamera()
+35608,0x1405b6470,0x1405be100,4,bool Main::IsRoomVisible(NiNode* a_room) src\RE\M/Main.cpp:17
 35620,0x1405b6dc0,0x1405bee40,3,Main::sub_*
 35642,0x1405b8f00,0x1405c0f70,3,SettingsOfSkyrim::
 35882,0x1405c0610,0x1405c8b30,3,po3tweaks::ScreenshotToConsole::DebugNotification
@@ -477,6 +479,7 @@ id,sse,vr,status,name
 36010,0x1405c69b0,0x1405cef50,4,"void TaskQueueInterface::QueueActorDisarm(ActorHandle& a_target, ActorHandle& a_caster)"
 36016,0x1405c6ee0,0x1405cf480,3,BSTaskPool_HandleTask_1405C6EE0
 36198,0x1405ce240,0x1405d6840,4,po3tweaks::Spell::ReapplyOnDeath::Load3d
+36218,0x1405cfac0,0x1405d80a0,4,void Actor::AddDeathItems()
 36224,0x1405d0680,0x1405d8c60,4,bool Actor::CanUseIdle(TESIdleForm* a_idle)
 36247,0x1405d0f40,0x1405d9520,4,bool Actor::CanBeKilledBy(Actor* a_attacker)
 36248,0x1405d0fc0,0x1405d95a0,3,void Actor::SetRotationZ(float a_angle)
@@ -521,6 +524,7 @@ id,sse,vr,status,name
 36621,0x1405f1530,0x1405f9c40,4,RE::Actor::Func156_*
 36631,0x1405f2530,0x1405fac70,3,bool Actor::Decapitate()
 36642,0x1405f4150,0x1405fc880,4,"void ReadFromSaveGame_1405F4150 (Actor * a_this, undefined8 param_2)"
+36658,0x1405f7170,0x1405ff8e0,4,FIGHT_REACTION Actor::GetFactionReaction(Actor* a_other) src\RE\A/Actor.cpp:441
 36668,0x1405f7a20,0x140600190,4,"std::int32_t Actor::GetFactionRank(TESFaction* a_faction, bool a_isPlayer)"
 36678,0x1405f8430,0x140600ba0,3,"void Actor::AddToFaction(TESFaction* a_faction, std::int8_t a_rank)"
 36680,0x1405f8590,0x140600d00,4,void Actor::RemoveFromFaction(RE::TESFaction* a_faction)
@@ -811,6 +815,7 @@ id,sse,vr,status,name
 50515,0x1408708a0,0x14089be30,3,RE::ItemCrafted::GetEventSource
 50530,0x1408720d0,0x14089d5c0,4,"void EnchantConstructMenu::RenameItem_Impl(InventoryEntryData* a_entryData, ExtraDataList* a_extraList, const char* a_name)"
 50567,0x140874540,0x14089fc10,4,void EnchantConstructMenu::UpdateInterface_140874540 (undefined8 param_1)
+50569,0x140874a40,0x1408a0190,4,"bool EnchantConstructMenu::CanSelectEnchantmentEntry (EnchantConstructMenu * a_this, uint32_t a_index, bool a_showNotification)"
 50610,0x140875bc0,0x1408a1310,3,IMenu * FUN_140875bc0 (IMenu * param_1)
 50612,0x140875d30,0x1408a14a0,3,"undefined4 sub_140875D30 (DialogueMenu * a_this, undefined8 param_2)"
 50615,0x1408761f0,0x1408a1a50,3,void FUN_1408761f0 (longlong param_1)
@@ -861,6 +866,7 @@ id,sse,vr,status,name
 51509,0x1408b2d60,0x1408e0730,4,void PrecacheCharGenClear_1409796F0_0_1408B2D60 (undefined8 * a_this)
 51540,0x1408ba590,0x1408e7d70,4,"void ChangeName_1408BA590 (RaceSexMenu * param_1, char * param_2)"
 51614,0x1408bd8c0,0x1408ea840,3,SleepWaitTime_Compare_offset include/offsets.h:57
+51618,0x1408bde30,0x1408ead70,4,void SleepWaitMenu::ToggleOpenSleepWaitMenu(bool a_sleeping)
 51638,0x1408bf360,0x1408ec3e0,2,StatsMenu::ProcessMessage
 51652,0x1408c20c0,0x1408eedb0,2,StatsMenu::UpdateSkillList
 51755,0x1408ccff0,0x1408fa0a0,4,SubtitleManager::KillSubtitles
@@ -1116,6 +1122,7 @@ id,sse,vr,status,name
 75479,0x140d6c1e0,0x140dbdf60,3,fDrawGrass_*
 75507,0x140d6dbc0,0x140dbf9b0,3,"NiTexture::RendererData* BSRenderManager::CreateRenderTexture(std::uint32_t a_width, std::uint32_t a_height)"
 75522,0x140d6e780,0x140dc05f0,4,"void Renderer::SaveRenderTargetToFile(RENDER_TARGET a_renderTarget, const char* a_filePath, BSGraphics::TextureFileFormat a_textureFileFormat)"
+75532,0x140d6ef90,0x140dc1250,4,"void BSGraphics::Renderer::DispatchCSShader (BSGraphics::Renderer * a_this, BSGraphics::ComputeShader * a_computeShader, uint32_t threadGroupCountX, uint32_t threadGroupCountY, uint32_t threadGroupCountZ)"
 75570,0x140d70290,0x140dc2560,3,void BSGraphics::Renderer::SetPerFrameBuffers (BSGraphics::Renderer * a_renderer)
 75580,0x140d705b0,0x140dc2e70,3,void BSGraphics::SetDirtyStates_140d705b0 (bool isCompute)
 75591,0x140d71f00,0x140dc4b90,3,OpenAnimationReplacer::src/Hooks.h:107
@@ -1213,6 +1220,7 @@ id,sse,vr,status,name
 99023,0x141297410,0x1412d1c50,3,"void FUN_141297410 (longlong param_1, undefined4 param_2, int param_3)"
 99692,0x1412b9320,0x1412f6d50,4,"BSLight* ShadowSceneNode::AddLight(NiLight* a_light, const LIGHT_CREATE_PARAMS& a_params)"
 99696,0x1412b99f0,0x1412f7420,4,"void ShadowSceneNode::AttachObject (ShadowSceneNode * a_this, NiAVObject * a_node)"
+99697,0x1412b9a10,0x1412f7440,4,void ShadowSceneNode::RemoveLight(NiLight* a_light) src\RE\S/ShadowSceneNode.cpp:45
 99854,0x1412c50f0,0x1413034b0,3,BSLightingShaderProperty * BSLightingShaderProperty::Ctor (BSLightingShaderProperty * a_this)
 99868,0x1412c5ca0,0x141304090,3,RE::NiAVObject::SetRefraction
 99886,0x1412c9320,0x141307710,3,BSShaderTextureSet* BSShaderTextureSet::Ctor()
@@ -1253,6 +1261,8 @@ id,sse,vr,status,name
 100854,0x141308440,0x141349680,3,"void BSBatchRenderer::RenderPassImmediately_141308440 (BSBatchRenderer * a_Pass, uint32_t a_Technique, bool a_AlphaTest, uint32_t a_RenderFlags)"
 100871,0x1413090c0,0x14134a310,4,"LLF::void FUN_1413090c0 (BSBatchRenderer * * param_1, uint param_2)"
 100877,0x1413094a0,0x14134a6f0,4,BSBatchRenderer::sub_*
+100943,0x14130c5a0,0x14134f7e0,4,BSImagespaceShader* BSImagespaceShader::Ctor()
+100952,0x14130d070,0x1413502b0,4,"void BSImagespaceShader::DispatchComputeShader (BSImagespaceShader * a_this, uint32_t a_threadGroupCountX, uint32_t a_threadGroupCountY, uint32_t a_threadGroupCountZ)"
 100994,0x141310c50,0x141354b60,4,src\Features/LightLimitFix.h:163
 100997,0x141310e10,0x14090d400,3,src\Features/LightLimitFix.h:164
 101296,0x14131cde0,0x141362c60,4,BSLight::sub_*

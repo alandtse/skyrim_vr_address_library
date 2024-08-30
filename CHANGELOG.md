@@ -1,3 +1,39 @@
+# [0.148.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.147.0...v0.148.0) (2024-08-26)
+
+
+### Features
+
+* add latest po3tweaks ([c2169cf](https://github.com/alandtse/skyrim_vr_address_library/commit/c2169cfbd97d7380d5016e60477fb1b10cc47714))
+
+# [0.147.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.146.0...v0.147.0) (2024-08-26)
+
+
+### Features
+
+* add latest commonlib ([bf42625](https://github.com/alandtse/skyrim_vr_address_library/commit/bf426257f931a89fe41de0b8abb4ba5e6e429682))
+
+# [0.146.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.145.0...v0.146.0) (2024-08-24)
+
+
+### Features
+
+* add additional CS addresses ([f799132](https://github.com/alandtse/skyrim_vr_address_library/commit/f799132994e8a1077a4c7382825008cad9e059f1))
+
+# [0.145.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.144.0...v0.145.0) (2024-08-19)
+
+
+### Features
+
+* sync with latest commonlib ([0616009](https://github.com/alandtse/skyrim_vr_address_library/commit/0616009c8ee5ce1e7e644a96faea3047e72b9bf5))
+* sync with latest commonlib ([1c544b0](https://github.com/alandtse/skyrim_vr_address_library/commit/1c544b03fb94dddb953ef2296e09535c1a8587e7))
+
+# [0.144.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.143.0...v0.144.0) (2024-08-10)
+
+
+### Features
+
+* add ExtraTextDisplayData::sub_14013CC20 ([#72](https://github.com/alandtse/skyrim_vr_address_library/issues/72)) ([7a7b59b](https://github.com/alandtse/skyrim_vr_address_library/commit/7a7b59bec36fb2c7b0a838317990522418c43298))
+
 # [0.143.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.142.0...v0.143.0) (2024-08-07)
 
 
