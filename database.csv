@@ -8753,6 +8753,7 @@ id,sse,vr,status,name
 514725,0x142ec5c60,0x142f8ab30,3,VATS* GetSingleton()
 514738,0x142ec5ce0,0x142f8abb0,3,BSMusicManager* GetSingleton()
 514741,0x142ec5cf8,0x142f8abc8,4,RWMutex*
+514783,0x142eff440,0x142fc42f8,4,TESLandTexture* GetDefaultLandTexture()
 514923,0x142eff868,0x142fc4758,4,RE::ActorState::UnarmedWeap
 514959,0x142eff988,0x142fc4878,3,MenuTopicManager* GetSingleton()
 514966,0x142eff9c0,0x142fc48b0,3,RE::NiRTTI_REFRSyncController
