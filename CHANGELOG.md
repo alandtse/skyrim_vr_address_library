@@ -1,3 +1,10 @@
+# [0.150.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.149.0...v0.150.0) (2024-08-31)
+
+
+### Features
+
+* add latest cs ([7f4b882](https://github.com/alandtse/skyrim_vr_address_library/commit/7f4b8825ed0179cd3a0310eb33c7d80d23955e2e))
+
 # [0.149.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.148.0...v0.149.0) (2024-08-31)
 
 
