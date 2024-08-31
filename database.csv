@@ -205,6 +205,7 @@ id,sse,vr,status,name
 18637,0x14026a840,0x14027be10,4,undefined8 TESObjectCELL::sub_14026A840 (TESObjectCELL * a_this)
 18642,0x14026b160,0x14027c730,3,po3tweaks::QueuedRefCrash::SetFadeNode
 18655,0x14026c5d0,0x14027dba0,3,void TESObjectCELL::sub_14026C5D0 (TESObjectCELL * a_this)
+18711,0x140271be0,0x140283200,3,TESObjectCELL::sub_140271BE0
 18755,0x140273ED0,0x1402854C0,4,"void CallsMapMarkerData (int64 a1, int64 **a2)"
 18843,0x140278920,0x140289f20,4,TESObjectREFR::HandleReferenceReset
 19119,0x1402866d0,0x140297e00,4,void TESObjectREFR::UpdateSoundCallBack_1402866D0 (Character * a_this)
@@ -391,6 +392,7 @@ id,sse,vr,status,name
 33282,0x14053e120,0x140540ea0,4,float ActiveEffect::GetMagnitude_14053E120 (ActiveEffect * a_this)
 33283,0x14053E1B0,0x140540f30,4,ActiveEffect::Restart(Skyrim::ActiveEffect* activeEffect)
 33286,0x14053e380,0x140541100,3,void ActiveEffect::Dispel(bool a_force)
+33289,0x14053e670,0x1405413f0,4,bool ActiveEffect::ShouldUpdate()
 33320,0x140540360,0x140542EA0,3,"ActiveEffect::SetEffectiveness(Skyrim::ActiveEffect* activeEffect, float effectiveness)"
 33403,0x140544490,0x1405484c0,3,void ActorMagicCaster::CheckAttachCastingArt()
 33423,0x140544ea0,0x140548f70,4,"bool SourceActionMap::DoAction(Actor* a_actor, DEFAULT_OBJECT a_action)"
@@ -445,6 +447,7 @@ id,sse,vr,status,name
 35203,0x14059b9a0,0x1405a3060,4,uint32_t ScrapHeap_GetMaxSize_14059b9a0(void)
 35263,0x14059f0f0,0x1405a67b0,4,EnchantmentItem* BGSCreatedObjectManager::AddWeaponEnchantment(BSTArray<Effect>& a_effects)
 35264,0x14059f190,0x1405a6850,4,EnchantmentItem* BGSCreatedObjectManager::AddArmorEnchantment(BSTArray<Effect>& a_effects)
+35284,0x1405a1070,0x1405a8730,4,BGSCreatedObjectManager::AddEnchantment
 35317,0x1405a2930,0x1405a9ff0,3,bool BGSImpactManager::PlayImpactDataSounds(ImpactSoundData& a_impactSoundData)
 35320,0x1405a2c60,0x1405aa320,4,"bool BGSImpactManager::PlayImpactEffect(TESObjectREFR* a_ref, BGSImpactDataSet* a_impactEffect, const BSFixedString& a_nodeName, NiPoint3& a_pickDirection, float a_pickLength, bool a_applyNodeRotation, bool a_useNodeLocalRotation)"
 35402,0x1405a6230,0x1405ad8f0,4,"void Calendar::Update_1405a6230 (Calendar * a_this, float GameDaysPassed)"
@@ -560,6 +563,7 @@ id,sse,vr,status,name
 37522,0x1406210f0,0x140629ea0,4,ActorValueOwner::ModActorValue
 37523,0x140621120,0x140629ed0,3,"Actor::ApplyActorValueModifier_140621120(Actor *a1, int32 a_actorValueModifier, int32 a_actorValue, float a_avDelta, Actor *a_attacker)"
 37524,0x140621350,0x14062a100,4,"float Actor::GetActorValueModifier(ACTOR_VALUE_MODIFIER a_modifier, ActorValue a_value)"
+37525,0x1406213d0,0x14062a180,4,"void Actor::HandleActorValueModified(ActorValue actorValue, float oldValue, float deltaValue, Actor* source)"
 37527,0x140621590,0x14062a340,4,void Actor::RemoveActorValueModifiers(ActorValue actorValue)
 37571,0x140623610,0x14062c3c0,3,BSTEventSource<DragonSoulsGained::Event>* DragonSoulsGained::GetEventSource()
 37586,0x140623e60,0x14062cc10,3,RE::Character::sub_140623E60
@@ -870,6 +874,7 @@ id,sse,vr,status,name
 51788,0x1408ce590,0x1408fb660,2,TrainingMenu::ProcessMessage
 51790,0x1408ce6f0,0x1408fb7c0,4,TrainingMenu::TrainCallback::Accept
 51793,0x1408ce8e0,0x1408fb9c0,3,TrainingMenu::Train
+51794,0x1408cea30,0x1408fbb10,3,TrainingMenu::UpdateText
 51795,0x1408cedf0,0x1408fbed0,3,TrainingMenu::SetSkillXpPercent
 51818,0x1408cfea0,0x1408fcf60,4,void TutorialMenu::OpenTutorialMenu(DEFAULT_OBJECT a_tutorial)
 51843,0x1408d11f0,0x1408fe370,3,TweenMenu::
