@@ -924,8 +924,11 @@ id,sse,vr,status,name
 53950,0x14094d890,0x140987af0,3,payprus::Actor::UnequipItem
 53960,0x14094df30,0x140988190,2,papyrus__Actor::Bind(BSScript::Internal::VirtualMachine** a_vm)
 54741,0x14096de60,0x1409a7f40,4,papyrus__Debug::SendAnimationEvent
+54824,0x140972520,0x1409ac3a0,3,papyrus::Game::FastTravel
 54832,0x140972e10,0x1409acca0,3,papyrus__Game::GetFormFromFile_140972E10
 54836,0x1409731b0,0x1409ad050,3,papyrus__Game::getplayer_1409731B0
+54848,0x1409735b0,0x1409ad450,3,bool IsFastTravelEnabled
+54946,0x140979470,0x1409b3b40,3,"void EnableFastTravel(void* a1, void* a2, void* a3, bool a_enable)"
 55141,0x140980190,0x1409baf10,3,FDGE::BSScript::InitializeScriptTypes
 55352,0x140988450,0x1409c35d0,2,po3tweaks::GameTimers::SetGlobal
 55366,0x140988af0,0x1409c3c70,3,papyrus::ImageSpaceModifier::Apply
