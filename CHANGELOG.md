@@ -1,3 +1,10 @@
+# [0.152.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.151.0...v0.152.0) (2024-09-03)
+
+
+### Features
+
+* add journeyman-ng ids ([#75](https://github.com/alandtse/skyrim_vr_address_library/issues/75)) ([132ee54](https://github.com/alandtse/skyrim_vr_address_library/commit/132ee5451967922488040c38c636be477e44e8e9))
+
 # [0.151.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.150.0...v0.151.0) (2024-08-31)
 
 
