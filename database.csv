@@ -1221,6 +1221,7 @@ id,sse,vr,status,name
 98986,0x141295c30,0x1412ce8a0,4,"void BSShaderManager::GetTexture(const char* a_path, bool a_demand, NiPointer<NiTexture>& a_textureOut, bool a_isHeightMap)"
 98989,0x141295fb0,0x1412cec20,3,"void InitDirectionalAmbient (NiColor * a_directionalAmbientColors, NiColor * ambientSpecularColor, float ambientSpecularAlpha)"
 98997,0x1412966a0,0x1412cf410,2,BSGraphics::BSShaderAccumulator* BSGraphics::BSShaderAccumulator::GetCurrentAccumulator()
+99020,0x1412972b0,0x1412d1af0,4,"void ImageSpaceManager::AddEffect (ImageSpaceManager* a_this, uint a_ImageSpaceManager__ImageSpaceEffectEnum, BSImagespaceShader * a_imageSpaceShader)"
 99023,0x141297410,0x1412d1c50,3,"void FUN_141297410 (longlong param_1, undefined4 param_2, int param_3)"
 99692,0x1412b9320,0x1412f6d50,4,"BSLight* ShadowSceneNode::AddLight(NiLight* a_light, const LIGHT_CREATE_PARAMS& a_params)"
 99696,0x1412b99f0,0x1412f7420,4,"void ShadowSceneNode::AttachObject (ShadowSceneNode * a_this, NiAVObject * a_node)"
@@ -1254,6 +1255,7 @@ id,sse,vr,status,name
 100422,0x1412e3ac0,0x141323680,3,void Main::RenderShadowmasks (bool param_1)
 100424,0x1412e3e70,0x141323b10,3,void Main::RenderWorld (bool param_1)
 100458,0x1412e5570,0x141325d10,3,void BSShaderRenderTargets::Create()
+100540,0x1412eeb90,0x141330a40,3,"RENDER_TARGET FUN_1412eeb90 (BSImagespaceShader * * param_1, RENDER_TARGET param_2, RENDER_TARGET param_3)"
 100563,0x1412f2020,0x141338400,3,"void BSLightingShader::Func4_1412F2020 (BSLightingShader * a_this, undefined8 param_2, undefined8 param_3)"
 100565,0x1412f2bb0,0x141338f60,3,"void BSLightingShader::Func6_1412F2BB0 (BSLightingShader * a_this, undefined8 param_2, undefined8 param_3, undefined8 param_4)"
 100602,0x1412f63d0,0x141333470,3,"void BSWaterShader::Func4_1412F63D0 (BSWaterShader * a_this, undefined8 param_2)"
