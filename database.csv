@@ -627,7 +627,7 @@ id,sse,vr,status,name
 37945,0x140638190,0x1406411a0,3,RE::ActorEquipManager::UnequipObject
 38047,0x14063cfb0,0x140646020,3,StaminaNPC::apply_deny_player_attack_or_bash
 38048,0x14063d0f0,0x140646160,3,HandleAction
-38063,0x14063E080,0x140647110,2,ResetBaseValue
+38063,0x14063E080,0x140647110,2,"void ResetBaseValue(ActorValueStorage*, ActorValue)"
 38079,0x14063f810,0x1406488a0,3,bool TaskQueueInterface::ShouldUseTaskQueue()
 38118,0x140640600,0x140649910,2,PapyrusTweaks::Job_VM_Update
 38141,0x140640f80,0x14064a2b0,4,void Job_Update_grass_140640F80 (void)
