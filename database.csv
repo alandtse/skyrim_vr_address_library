@@ -1255,6 +1255,7 @@ id,sse,vr,status,name
 100422,0x1412e3ac0,0x141323680,3,void Main::RenderShadowmasks (bool param_1)
 100424,0x1412e3e70,0x141323b10,3,void Main::RenderWorld (bool param_1)
 100458,0x1412e5570,0x141325d10,3,void BSShaderRenderTargets::Create()
+100475,0x1412e7db0,0x141328f20,4,"void BSImagespaceShader::SetupVolumetricLights(BSImagespaceShader *param_1,RENDER_TARGET a_renderTarget, RENDER_TARGET a_renderTargetSource)"
 100540,0x1412eeb90,0x141330a40,3,"RENDER_TARGET FUN_1412eeb90 (BSImagespaceShader * * param_1, RENDER_TARGET param_2, RENDER_TARGET param_3)"
 100563,0x1412f2020,0x141338400,3,"void BSLightingShader::Func4_1412F2020 (BSLightingShader * a_this, undefined8 param_2, undefined8 param_3)"
 100565,0x1412f2bb0,0x141338f60,3,"void BSLightingShader::Func6_1412F2BB0 (BSLightingShader * a_this, undefined8 param_2, undefined8 param_3, undefined8 param_4)"
