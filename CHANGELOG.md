@@ -1,3 +1,10 @@
+# [0.153.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.152.0...v0.153.0) (2024-09-25)
+
+
+### Features
+
+* add latest CS test ids ([495a49c](https://github.com/alandtse/skyrim_vr_address_library/commit/495a49cdc9094fe3f5aabd72eed883245ec8e779))
+
 # [0.152.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.151.0...v0.152.0) (2024-09-03)
 
 
