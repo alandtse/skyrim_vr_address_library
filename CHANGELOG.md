@@ -1,3 +1,11 @@
+# [0.154.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.153.0...v0.154.0) (2024-10-04)
+
+
+### Features
+
+* add CS VL id ([1de71b0](https://github.com/alandtse/skyrim_vr_address_library/commit/1de71b021bfa4121be6064ff59867e13f3f34edf))
+* added more ids ([#76](https://github.com/alandtse/skyrim_vr_address_library/issues/76)) ([5461fdf](https://github.com/alandtse/skyrim_vr_address_library/commit/5461fdfdcfbf1adb608166551ace7d5f3fcd9189))
+
 # [0.153.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.152.0...v0.153.0) (2024-09-25)
 
 
