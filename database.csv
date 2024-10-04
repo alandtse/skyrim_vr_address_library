@@ -251,6 +251,7 @@ id,sse,vr,status,name
 20905,0x1402d19a0,0x1402e3110,4,BSShaderTextureSet * BGSTextureSet::ToShaderTextureSet (BGSTextureSet * a_textureSet)
 21086,0x1402da220,0x1402eb730,3,po3tweaks::GetEquippedFix::GetEquipped
 21119,0x1402db610,0x1402ecb20,4,"bool IsRunning_1402DB610 (Actor * a_this, undefined8 param_2, undefined8 param_3, undefined * param_4)"
+21187,0x1402DDA40,0x1402EEF50,2,"bool HasKeyword_1402DDA40(TESObjectREFR *a1, int64 a2, int64 a3, double* a4)"
 21211,0x1402deab0,0x1402effc0,3,po3tweaks::IsFurnitureAnimeTypeFix::IsFurnitureAnimType
 21368,0x1402E5170,0x1402F6670,4,"void TESLoadScreen(TESLoadScreen *a1, void *a2)"
 21416,0x1402e75f0,0x1402f8af0,3,RE::Script::CompileAndRun
@@ -479,6 +480,7 @@ id,sse,vr,status,name
 36007,0x1405c67a0,0x1405ced40,4,"void TaskQueueInterface::QueueApplyPerk_1405c67a0 (undefined8 a_taskpool, BGSPerk__ApplyPerksVisitor__VFTable * param_2, void * param_3, undefined8 param_4, undefined8 a_count)"
 36010,0x1405c69b0,0x1405cef50,4,"void TaskQueueInterface::QueueActorDisarm(ActorHandle& a_target, ActorHandle& a_caster)"
 36016,0x1405c6ee0,0x1405cf480,3,BSTaskPool_HandleTask_1405C6EE0
+36195,0x1405CDBF0,0x1405D61F0,2,"Actor* Actor::ctor(Actor *a1, uint8 a2)"
 36198,0x1405ce240,0x1405d6840,4,po3tweaks::Spell::ReapplyOnDeath::Load3d
 36218,0x1405cfac0,0x1405d80a0,4,void Actor::AddDeathItems()
 36224,0x1405d0680,0x1405d8c60,4,bool Actor::CanUseIdle(TESIdleForm* a_idle)
@@ -625,6 +627,7 @@ id,sse,vr,status,name
 37945,0x140638190,0x1406411a0,3,RE::ActorEquipManager::UnequipObject
 38047,0x14063cfb0,0x140646020,3,StaminaNPC::apply_deny_player_attack_or_bash
 38048,0x14063d0f0,0x140646160,3,HandleAction
+38063,0x14063E080,0x140647110,2,"void ResetBaseValue(ActorValueStorage*, ActorValue)"
 38079,0x14063f810,0x1406488a0,3,bool TaskQueueInterface::ShouldUseTaskQueue()
 38118,0x140640600,0x140649910,2,PapyrusTweaks::Job_VM_Update
 38141,0x140640f80,0x14064a2b0,4,void Job_Update_grass_140640F80 (void)
@@ -642,6 +645,7 @@ id,sse,vr,status,name
 38900,0x14067fe60,0x1406892e0,4,LLF::AIProcess_CalculateLightValue_GetLuminance
 38966,0x140681fd0,0x14068b440,4,"void FUN_140681fd0 (undefined8 param_1, Actor * a_actor)"
 38967,0x140682020,0x14068b490,4,void FUN_140682020 (longlong param_1)
+39159,0x140692390,0x14069B990,2,"void ResetCachedBaseValue(CachedValues*, ActorValue)"
 39171,0x1406928c0,0x14069bec0,4,Character * Character::ctor (Character * a_this)
 39175,0x140692cd0,0x14069c2d0,3,RE::PlayerCharacter::GetArmorValue
 39179,0x140693050,0x14069c650,3,RE::PlayerCharacter::GetDamage
@@ -705,6 +709,7 @@ id,sse,vr,status,name
 41349,0x1407090a0,0x1407310b0,3,RE::JumpHandler::ProcessButton_1407090A0
 41361,0x1407096b0,0x140732b00,3,StaminaNPC::apply_PlayerControls__sub_140705530
 41659,0x140719990,0x140744330,2,papyrus_extender::detection::calculatedetection_0x526
+41694,0x14071B670,0x140746010,2, unk_14071B670(__m128 *a1, int64 a2, int64 a3, Actor *a4, float *a5)
 41778,0x1407220b0,0x14074ca60,3,RE::ArrowReleaseHandler::Handle_1407220B0
 42420,0x14072cc80,0x140757690,4,AnimObjectSwapper::AnimObjectSwapHook
 42547,0x140732400,0x14075ce60,4,ArrowProjectile::GetImpactData
