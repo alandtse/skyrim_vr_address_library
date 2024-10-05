@@ -1,3 +1,10 @@
+# [0.155.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.154.1...v0.155.0) (2024-10-05)
+
+
+### Features
+
+* add bEnableAutoDynamicResolution:Display ([da71dde](https://github.com/alandtse/skyrim_vr_address_library/commit/da71ddec39048f4dec27a828253c00ba4c3ca547))
+
 ## [0.154.1](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.154.0...v0.154.1) (2024-10-05)
 
 
