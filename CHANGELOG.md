@@ -1,3 +1,10 @@
+## [0.154.1](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.154.0...v0.154.1) (2024-10-05)
+
+
+### Bug Fixes
+
+* fix quoting ([292a766](https://github.com/alandtse/skyrim_vr_address_library/commit/292a766e21927217dcecc44b9b8652a960983315))
+
 # [0.154.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.153.0...v0.154.0) (2024-10-04)
 
 
