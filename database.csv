@@ -709,7 +709,7 @@ id,sse,vr,status,name
 41349,0x1407090a0,0x1407310b0,3,RE::JumpHandler::ProcessButton_1407090A0
 41361,0x1407096b0,0x140732b00,3,StaminaNPC::apply_PlayerControls__sub_140705530
 41659,0x140719990,0x140744330,2,papyrus_extender::detection::calculatedetection_0x526
-41694,0x14071B670,0x140746010,2, unk_14071B670(__m128 *a1, int64 a2, int64 a3, Actor *a4, float *a5)
+41694,0x14071B670,0x140746010,2,"unk_14071B670(__m128 *a1, int64 a2, int64 a3, Actor *a4, float *a5)"
 41778,0x1407220b0,0x14074ca60,3,RE::ArrowReleaseHandler::Handle_1407220B0
 42420,0x14072cc80,0x140757690,4,AnimObjectSwapper::AnimObjectSwapHook
 42547,0x140732400,0x14075ce60,4,ArrowProjectile::GetImpactData
