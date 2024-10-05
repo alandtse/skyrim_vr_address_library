@@ -8496,6 +8496,7 @@ id,sse,vr,status,name
 508412,0x141ded188,0x141eaa184,4,BGSAddToPlayerInventoryEvent:GetIndex
 508607,0x141dedde0,0x141eaaf20,4,ReticuleController* ReticuleController::GetSingleton()
 508778,0x141deebf0,0x141eabd50,4,RE::lpClassName_141DEEBF0
+508794,0x141deecc8,0x141eabee8,4,bEnableAutoDynamicResolution:Display
 508798,0x141deed08,0x141eabf28,4,gIni_bAlwaysActive_General_*
 509271,0x141df0858,0x141ead84d,2,po3tweaks::GameTimers::detail::sleeping
 509808,0x141df3490,0x141eb2140,4,fFreeCameraTranslationSpeed:Camera
