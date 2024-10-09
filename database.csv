@@ -941,6 +941,7 @@ id,sse,vr,status,name
 55368,0x140988b30,0x1409c3cb0,3,papyrus::ImageSpaceModifier::PopTo
 55382,0x1409893e0,0x1409c4560,3,papyrus::ImageSpaceModifier::RemoveCrossFade
 55616,0x140993100,0x1409cdc20,3,papyrus::ObjectReference::AddItem
+55644,0x140994170,0x1409cec90,3,papyrus::ObjectReference::GetItemCount
 55661,0x140994560,0x1409cf080,3,papyrus::ObjectReference::IsFurnitureInUse
 55663,0x140994660,0x1409cf180,3,papyrus::ObjectReference::IsInDialogueWithPlayer
 55672,0x1409951f0,0x1409CFD10,3,papyrus__ObjectReference::PlaceAtMe
