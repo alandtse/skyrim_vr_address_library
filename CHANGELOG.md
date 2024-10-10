@@ -1,3 +1,10 @@
+# [0.156.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.155.0...v0.156.0) (2024-10-10)
+
+
+### Features
+
+* add papyrus::ObjectReference::GetItemCount ([#77](https://github.com/alandtse/skyrim_vr_address_library/issues/77)) ([21777ad](https://github.com/alandtse/skyrim_vr_address_library/commit/21777ade13c543edbc9e90c923586f9ebfa879a6))
+
 # [0.155.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.154.1...v0.155.0) (2024-10-05)
 
 
