@@ -1,3 +1,10 @@
+# [0.158.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.157.0...v0.158.0) (2024-10-29)
+
+
+### Features
+
+* add NiNode::Destroy ([bdd6744](https://github.com/alandtse/skyrim_vr_address_library/commit/bdd6744781ba8d54ce52f8b2950d51eb50ee1073))
+
 # [0.157.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.156.0...v0.157.0) (2024-10-12)
 
 
