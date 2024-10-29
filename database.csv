@@ -1085,6 +1085,7 @@ id,sse,vr,status,name
 68839,0x140c529a0,0x140c97a60,3,void NiObject::CreateDeepCopy(NiPointer<NiObject>& a_object)
 68900,0x140c56b50,0x140c9bc10,3,RE::NiAVObject::Update
 68936,0x140c57a60,0x140c9ccd0,3,RE::NiNode::Ctor
+68937,0x140c57af0,0x140c9cd60,4,void NiNode::Destroy(NiNode * a_this)
 69002,0x140c5ac30,0x140ca01e0,4,void NiStream::LoadLinkID
 69263,0x140c65760,0x140cab2c0,3,"bool NiCamera::WindowPointToRay(std::int32_t a_x, std::int32_t a_y, NiPoint3& a_origin, NiPoint3& a_dir, float a_windowWidth, float a_windowHeight)"
 69270,0x140c66580,0x140cac0e0,3,RE::NiCamera::WorldPtToScreenPt3
