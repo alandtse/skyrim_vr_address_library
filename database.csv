@@ -1263,7 +1263,9 @@ id,sse,vr,status,name
 99886,0x1412c9320,0x141307710,3,BSShaderTextureSet* BSShaderTextureSet::Ctor()
 99938,0x1412cacd0,0x1413093a0,3,"void BSShaderAccumulator::FinishAccumulating (BSShaderAccumulator *a_this,uint32_t StartRange,uint32_t EndRanges)"
 99940,0x1412cb930,0x14130a240,4,void BSShaderAccumulator::RenderEffects (BSShaderAccumulator * a_this)
+99942,0x1412cbcc0,0x14130a5d0,3,BSShaderAccumulator::BlendedDecals
 99943,0x1412cbe90,0x14130a970,3,"void BSShaderAccumulator::sub_1412CBE90 (BSShaderAccumulator * a_this, uint32_t param_2)"
+99947,0x1412cc3c0,0x14130af00,3,BSShaderAccumulator::ShadowMapOrMask
 99963,0x1412cce40,0x14130ba60,4,"void BSBatchRenderer::RenderBatches (BSBatchRenderer * This, uint32_t StartRange, uint32_t EndRanges, uint32_t RenderFlags, int GeometryGroup)"
 100000,0x1412ceb10,0x14130da10,4,"void fogMethod (undefined8 param_1, int param_2)"
 100004,0x1412ced50,0x14130dc60,3,BSLightingShaderMaterial* BSLightingShaderMaterial::Ctor()
