@@ -1,3 +1,10 @@
+# [0.160.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.159.0...v0.160.0) (2024-12-12)
+
+
+### Features
+
+* add address for communityshaders ([#79](https://github.com/alandtse/skyrim_vr_address_library/issues/79)) ([5a47653](https://github.com/alandtse/skyrim_vr_address_library/commit/5a47653ca1452dda0c76b013d7a073beccd9ccd5))
+
 # [0.159.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.158.0...v0.159.0) (2024-12-05)
 
 
