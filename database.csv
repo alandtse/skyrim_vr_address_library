@@ -408,6 +408,9 @@ id,sse,vr,status,name
 33286,0x14053e380,0x140541100,3,void ActiveEffect::Dispel(bool a_force)
 33289,0x14053e670,0x1405413f0,4,bool ActiveEffect::ShouldUpdate()
 33320,0x140540360,0x140542EA0,3,"ActiveEffect::SetEffectiveness(Skyrim::ActiveEffect* activeEffect, float effectiveness)"
+33371,0x140542fe0,0x140546DD0,3,ActorMagicCaster::sub_*
+33373,0x140543110,0x140546F90,3,ActorMagicCaster::sub_*
+33375,0x1405433b0,0x140547230,3,ActorMagicCaster::ResetNodes
 33403,0x140544490,0x1405484c0,3,void ActorMagicCaster::CheckAttachCastingArt()
 33423,0x140544ea0,0x140548f70,4,"bool SourceActionMap::DoAction(Actor* a_actor, DEFAULT_OBJECT a_action)"
 33426,0x140544ff0,0x1405490c0,4,float MagicCaster::GetCurrentSpellCost()
