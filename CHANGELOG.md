@@ -1,3 +1,10 @@
+# [0.161.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.160.0...v0.161.0) (2024-12-14)
+
+
+### Features
+
+* add lightplacer 2.0 addresses ([#80](https://github.com/alandtse/skyrim_vr_address_library/issues/80)) ([1af6239](https://github.com/alandtse/skyrim_vr_address_library/commit/1af62395f7b8d785cddec10e7abe865147a42ff2))
+
 # [0.160.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.159.0...v0.160.0) (2024-12-12)
 
 
