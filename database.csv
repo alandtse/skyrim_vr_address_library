@@ -65,6 +65,7 @@ id,sse,vr,status,name
 13224,0x140158350,0x140168e00,3,po3tweaks::ToggleCollisionFix::ToggleCollision
 13233,0x140158e70,0x140169920,3,void sub_140158E70 (TES * a_this)
 13240,0x140159290,0x140169d50,4,"void TES::FUN_140159290 (TES * param_1, undefined4 param_2, undefined4 param_3)"
+13260,0x14015af70,0x14016ba30,4,"bool NiNode::ToggleMasterParticleAddonNodes(const NiNode* a_node, bool a_enable)"
 13530,0x1401652d0,0x140175a10,3,RE::UIMessageQueue::AddMessage
 13549,0x140165770,0x140175eb0,4,longlong TESWorldSpace::GetCellByCoordinateMask_140165770 (TESWorldSpace * a_this)
 13594,0x140167220,0x140177940,3,FDGE::Skyrim::LoadWorldData
