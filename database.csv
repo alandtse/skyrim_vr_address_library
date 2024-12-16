@@ -126,6 +126,7 @@ id,sse,vr,status,name
 15495,0x1401c6270,0x1401d6600,3,FEC::UpdateCollision::RemoveNodeFromScene
 15499,0x1401c6a30,0x1401D6E90,3,"BipedAnim::sub(RE::BipedAnim *a1, RE::TESRace *a_race, RE::TESObjectARMO *a_skin, bool isFemale)"
 15501,0x1401c6f90,0x1401d7450,3,FEC::ProcessObject::attachArmorAddon
+15518,0x1401c9840,0x1401d9fb0,3,"BIPOBJECT* BipedAnim::GetShieldObject()"
 15527,0x1401ca8d0,0x1401db060,3,"void BipedAnim::AddAddonNodes(RE::NiAVObject* a_clonedNode, RE::NiAVObject* a_node, std::int32_t a_slot, RE::TESObjectREFR* a_actor, RE::BSTSmartPointer<RE::BipedAnim>& a_bipedAnim)"
 15535,0x1401cafb0,0x1401db9e0,3,FEC::ProcessGeometry::processAttachedGeometry
 15547,0x1401cc7c0,0x1401dd210,3,void NiAVObject::RemoveDecals()
@@ -294,6 +295,7 @@ id,sse,vr,status,name
 24012,0x140355940,0x140365200,3,"void TESFaction::SetFactionFightReaction(TESFaction* a_faction, FIGHT_REACTION a_fightReaction)"
 24069,0x140358300,0x140367bc0,4,"bool TESIdleForm::CheckConditions(Actor* a_actor, TESObjectREFR* a_target, bool a_checkParentIdle) bool TESIdleForm::CheckConditions(Actor* a_actor, TESObjectREFR* a_target, bool a_checkParentIdle)"
 24159,0x14035C890,0x14036C150,3,"bool TESNPC__ReadFromFileStream(RE::TESNPC *a_npc, RE::TESFile *a_file)"
+24180,0x14035f6c0,0x14036ef80,3,"Actor* TESNPC::GetUniqueActor()"
 24206,0x140360480,0x14036fd80,3,RE::TESNPC::SetSkinFromTint
 24207,0x1403606d0,0x14036ffd0,3,RE::TESNPC::UpdateNeck
 24211,0x140360c10,0x140370510,2,enhanced_reanimation::TESNPC::Activate
@@ -451,10 +453,12 @@ id,sse,vr,status,name
 34429,0x14056D570,0x140573B70,4,"void DialogueSubtitleStrings (char **a1, TESTopic *a2, TESTopicInfo *a3, Character *a4, void *a5)"
 34434,0x14056DA60,0x140574060,4,"void DialogueMenuStrings (void *a1, TESQuest *a2, TESTopic *a3, TESTopicInfo *a4, TESObjectREFR *a5, void *a6)"
 34455,0x14056f230,0x1405757d0,3,MenuTopicManager::sub_*
+34627,0x140579880,0x140580fe0,3,"bool BGSSaveLoadFileEntry::PopulateFileEntryData()"
 34655,0x14057b920,0x1405830f0,4,"bool BGSSaveLoadGame::GetChange(TESForm* a_form, std::uint32_t a_changes)"
 34808,0x140585a70,0x14058cfa0,4,"ulonglong BGSLoadGameBuffer::sub_140585A70(BGSLoadGameBuffer *param_1,PlayerCharacter *param_2,undefined *param_3,char *param_4)"
 34818,0x140586de0,0x14058e310,3,RE::BGSSaveLoadManager::Save
 34819,0x140587350,0x14058e920,3,RE::BGSSaveLoadManager::Load
+34847,0x1405888e0,0x14058ff30,3,"void BGSSaveLoadManager::GenerateCharacterID()"
 34850,0x140588cd0,0x140590320,4,bool BGSSaveLoadManager::PopulateSaveList()
 34856,0x140588f90,0x1405905e0,4,bool BGSSaveLoadManager::LoadMostRecentSaveGame()
 34862,0x140589a60,0x1405910d0,4,void BGSSaveLoadManager::ProcessEvents (BGSSaveLoadManager * a_this)
