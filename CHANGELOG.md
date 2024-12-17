@@ -1,3 +1,11 @@
+# [0.162.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.161.0...v0.162.0) (2024-12-17)
+
+
+### Features
+
+* add addresses for updated clibvr ([45e1b68](https://github.com/alandtse/skyrim_vr_address_library/commit/45e1b6883b00f3967e74a5cd511972efc071ba06))
+* add lightplacer 2.1 address ([8fcc809](https://github.com/alandtse/skyrim_vr_address_library/commit/8fcc80970816cfdd6d0d35925b55961a6adf8b9a))
+
 # [0.161.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.160.0...v0.161.0) (2024-12-14)
 
 
