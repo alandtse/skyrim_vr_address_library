@@ -360,6 +360,7 @@ id,sse,vr,status,name
 26009,0x1403c66a0,0x1403d5f20,4,RE::random
 26258,0x1403D2970,0x1403E22E0,4,WhosWho::GetFaceRelatedData
 26259,0x1403d2a60,0x1403e23d0,3,"void BSFaceGenManager::PrepareHeadPartForShaders(BSFaceGenNiNode* a_node, BGSHeadPart* a_headPart, TESNPC* a_npc)"
+26454,0x1403db420,0x1403eada0,2,ApplyMasksToRenderTargets
 26574,0x1403e1790,0x1403F1140,3,void RE::ActorValueList::InitActorValueInfo()
 26592,0x1403e48d0,0x1403f4420,4,"BGSSkillPerkTreeNode * BGSSkillPerkTreeNode::ctor_1403e48d0 (BGSSkillPerkTreeNode * a_this, int32_t a_index, ActorValueInfo * a_avInfo)"
 26616,0x1403e5250,0x1403f4da0,4,RE::ActorValueOwner::GetClampedActorValue
@@ -402,6 +403,7 @@ id,sse,vr,status,name
 32290,0x1404f5c80,0x140505f60,3,RE::TESCamera::SetState
 32370,0x1404f96c0,0x140509850,4,void DragonCameraState::HandleLookInput_1404F96C0 (DragonCameraState * a_this)
 32469,0x1404FD1C0,0x14050D660,4,bool __fastcall CombatAIHook::sub_1404FD1C0(RE::Actor* a1)
+32867,0x14051e7f0,0x14052ede0,2,RenderCursorMenu
 33257,0x14053d370,0x1405400f0,4,"AccumulatingValueModifierEffect::Allocate(AccumulatingValueModifierEffect* accumulatingValueModifierEffect, Actor* caster, MagicItem* magicItem, Effect* effect)"
 33257,0x14053d370,0x1405400f0,4,AccumulatingValueModifierEffect::Allocate(AccumulatingValueModifierEffect* accumulatingValueModifierEffect
 33277,0x14053DEB0,0x140540C30,4,"ActiveEffect::Adjust(Skyrim::ActiveEffect* activeEffect, float effectiveness, bool requiresHostility)"
@@ -477,6 +479,7 @@ id,sse,vr,status,name
 35408,0x1405a64f0,0x1405adbb0,4,RE::Calendar::GetGameDaysPassed
 35413,0x1405a6640,0x1405add00,3,"void Calendar::GetTimeDateString(char* a_dest, std::uint32_t a_max, bool a_showYear)"
 35492,0x1405aa050,0x1405b1710,4,"void GarbageCollector::Add (GarbageCollector * a_this, TESObjectREFR * a_object, bool a_removeFromCell)"
+35545,0x1405acbd0,0x1405b4290,2,WinMain
 35548,0x1405ae010,0x1405b5880,3,main
 35551,0x1405af3d0,0x1405b6d70,4,MainLoop_1405AF3D0
 35556,0x1405b1020,0x1405b8a20,3,Main::sub_*
@@ -513,6 +516,7 @@ id,sse,vr,status,name
 36271,0x1405d1f80,0x1405da540,4,RE::Actor::Jump_1405D1F80
 36286,0x1405d2520,0x1405daae0,3,RE::Actor::GetGhost
 36287,0x1405d25e0,0x1405daba0,4,RE::Actor::SetGhost
+36289,0x1405d27a0,0x1405dad60,2,DrawSheatheWeaponActor
 36331,0x1405d5290,0x1405dd850,2,Actor::Resurrect
 36344,0x1405d62e0,0x1405de910,3,RE::Actor::GetLevel
 36345,0x1405d6300,0x1405de930,3,Actor::DamageHealth
@@ -580,6 +584,7 @@ id,sse,vr,status,name
 36994,0x14060e820,0x1406173e0,3,TrueHUD::FlashHUDStaminaMountHook
 37013,0x14060eef0,0x140617b00,4,TESObjectREFR::sub_14060EEF0
 37016,0x14060f0c0,0x140617cd0,4,float Actor::CalcEquippedWeight_14060F0C0 (Actor * a_this)
+37020,0x14060f240,0x140501530,2,SendAnimation
 37390,0x14061c880,0x140625470,3,BSTEventSource<ActorKill::Event>* ActorKill::GetEventSource()
 37392,0x14061ca60,0x140625650,3,BSTEventSource<DisarmedEvent::Event>* DisarmedEvent::GetEventSource()
 37510,0x140620690,0x140629440,3,RE::Actor::sub_140620690
@@ -716,6 +721,7 @@ id,sse,vr,status,name
 40056,0x1406c7d60,0x1406ee380,3,BSTEventSource<LocationDiscovery::Event>* LocationDiscovery::GetEventSource()
 40060,0x1406c8120,0x1406ee740,3,BSTEventSource<ShoutAttack::Event>* ShoutAttack::GetEventSource()
 40230,0x1406ce720,0x1406f5bf0,3,"void Actor::ProcessVATSAttack(MagicCaster* a_caster, bool a_hasTargetAnim, TESObjectREFR* a_target, bool a_leftHand)"
+40232,0x1406cf690,0x1406f6020,2,DrawSheatheWeaponPC
 40317,0x1406d71c0,0x1406fe060,4,po3tweaks::ToggleAI
 40327,0x1406d9380,0x140700220,4,float ProcessLists::GetSystemTimeClock()
 40330,0x1406d9490,0x140700330,3,"void ProcessLists::StopCombatAndAlarmOnActor(Actor* a_actor, bool a_notAlarm)"
@@ -971,10 +977,12 @@ id,sse,vr,status,name
 55368,0x140988b30,0x1409c3cb0,3,papyrus::ImageSpaceModifier::PopTo
 55382,0x1409893e0,0x1409c4560,3,papyrus::ImageSpaceModifier::RemoveCrossFade
 55616,0x140993100,0x1409cdc20,3,papyrus::ObjectReference::AddItem
+55622,0x1409936e0,0x1401956c0,2,Unknown (required by Skyrim Platform)
 55644,0x140994170,0x1409cec90,3,papyrus::ObjectReference::GetItemCount
 55661,0x140994560,0x1409cf080,3,papyrus::ObjectReference::IsFurnitureInUse
 55663,0x140994660,0x1409cf180,3,papyrus::ObjectReference::IsInDialogueWithPlayer
 55672,0x1409951f0,0x1409CFD10,3,papyrus__ObjectReference::PlaceAtMe
+55682,0x140996340,0x1409d0e60,2,PushActorAway
 55684,0x140996470,0x1409d0f90,4,"void RemoveAllItems_140996470 (undefined * a_vm, uint32_t a_stackID, TESObjectREFR * a_ref, TESObjectREFR * a_target, bool a_keepOwnership, bool a_removeQuestItems)"
 55687,0x140996670,0x1409d1190,3,papyrus::ObjectReference::RemoveItem
 55693,0x140996dd0,0x1409d18f0,3,papyrus::ObjectReference::SetAngle
@@ -1239,6 +1247,7 @@ id,sse,vr,status,name
 97746,0x1412449d0,0x14129a720,3,RE::BSScript::Stack::GetStackFrameVariable
 97831,0x141249f60,0x1412a5380,3,RE::BSScript::CompiledScriptLoader::GetClass
 97923,0x1412507f0,0x14129dd90,3,RE::BSScript::NF_util::NativeFunctionBase::Call
+98077,0x14125a700,0x14127a190,2,SendEvent
 98130,0x141261cb0,0x141281790,3,BSScript::Internal::VirtualMachine::AttemptFunctionCall
 98134,0x141262ee0,0x1412829b0,3,BSScript::Internal::VirtualMachine::ProcessMessageQueue
 98146,0x1412641f0,0x141283cc0,4,"int * CreateStack_1412641F0 (longlong param_1, undefined4 param_2, undefined8 param_3, undefined8 param_4)"
@@ -8771,6 +8780,7 @@ id,sse,vr,status,name
 514139,0x141ebe418,0x141f82ac8,4,ActorValueList* GetSingleton()
 514141,0x141ebe428,0x141f82ad8,3,RE::TESDataHandler::Singleton
 514157,0x141ebea88,0x141f83168,2,GlobalStateCounter
+514164,0x141ebeabc,0x141f8319c,2,GetInvalidRefHandle
 514167,0x141ebead0,0x141f831b0,3,ProcessLists* GetSingleton()
 514172,0x141ebeae8,0x141f831c8,4,BGSCreatedObjectManager::GetSingleton()
 514178,0x141ebeb20,0x141f83200,3,RE::UI::Singleton
