@@ -1,3 +1,25 @@
+# [0.162.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.161.0...v0.162.0) (2024-12-17)
+
+
+### Features
+
+* add addresses for updated clibvr ([45e1b68](https://github.com/alandtse/skyrim_vr_address_library/commit/45e1b6883b00f3967e74a5cd511972efc071ba06))
+* add lightplacer 2.1 address ([8fcc809](https://github.com/alandtse/skyrim_vr_address_library/commit/8fcc80970816cfdd6d0d35925b55961a6adf8b9a))
+
+# [0.161.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.160.0...v0.161.0) (2024-12-14)
+
+
+### Features
+
+* add lightplacer 2.0 addresses ([#80](https://github.com/alandtse/skyrim_vr_address_library/issues/80)) ([1af6239](https://github.com/alandtse/skyrim_vr_address_library/commit/1af62395f7b8d785cddec10e7abe865147a42ff2))
+
+# [0.160.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.159.0...v0.160.0) (2024-12-12)
+
+
+### Features
+
+* add address for communityshaders ([#79](https://github.com/alandtse/skyrim_vr_address_library/issues/79)) ([5a47653](https://github.com/alandtse/skyrim_vr_address_library/commit/5a47653ca1452dda0c76b013d7a073beccd9ccd5))
+
 # [0.159.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.158.0...v0.159.0) (2024-12-05)
 
 
