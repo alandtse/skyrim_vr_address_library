@@ -1,3 +1,10 @@
+# [0.163.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.162.0...v0.163.0) (2025-01-02)
+
+
+### Features
+
+* add Skyrim Platform addresses ([#83](https://github.com/alandtse/skyrim_vr_address_library/issues/83)) ([3fd6d42](https://github.com/alandtse/skyrim_vr_address_library/commit/3fd6d427658c9f0f2688a05fc63079645f7801a9))
+
 # [0.162.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.161.0...v0.162.0) (2024-12-17)
 
 
