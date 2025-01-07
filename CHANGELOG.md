@@ -1,3 +1,10 @@
+# [0.164.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.163.0...v0.164.0) (2025-01-07)
+
+
+### Features
+
+* add Container Distribution Framework addresses ([#84](https://github.com/alandtse/skyrim_vr_address_library/issues/84)) ([7746e01](https://github.com/alandtse/skyrim_vr_address_library/commit/7746e018e3d1f25bd53c677a0ad17aa304a423e4))
+
 # [0.163.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.162.0...v0.163.0) (2025-01-02)
 
 
