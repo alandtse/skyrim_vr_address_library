@@ -12,7 +12,7 @@ jobs:
     if: github.repository == 'alandtse/skyrim_vr_address_library'
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with: 
           repository: alandtse/vr_address_tools
           token: ${{ secrets.PRIVATE_TOKEN_GITHUB }}
