@@ -1,3 +1,10 @@
+# [0.165.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.164.0...v0.165.0) (2025-02-05)
+
+
+### Features
+
+* add SensibleTempering ([#85](https://github.com/alandtse/skyrim_vr_address_library/issues/85)) ([293ac01](https://github.com/alandtse/skyrim_vr_address_library/commit/293ac0192de861d654286607f2c2403b11a3c9c9))
+
 # [0.164.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.163.0...v0.164.0) (2025-01-07)
 
 
