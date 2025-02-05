@@ -348,6 +348,8 @@ id,sse,vr,status,name
 25703,0x1403b55e0,0x1403c5400,4,void Sky::UpdateLightingTransition_1403B55E0 (Sky * param_1)
 25814,0x1403bcaf0,0x1403cc940,4,SoundLevels GetSoundLevelValue (SoundLevels a_soundLevel)
 25822,0x1403bcf40,0x1403ccd90,3,RE::AIForumulas::ComputePickpocketSuccess
+25846,0x1403BDEF0,0x1403CD770,4,ActorValueOwner::sub_1403BDEF0
+25848,0x1403BE160,0x1403CD9E0,4,ActorValueOwner::sub_1403BE160
 25851,0x1403be440,0x1403cdcc0,3,RE::ActorValueOwner::Get_weapon_speed
 25858,0x1403be980,0x1403ce200,4,RE::ActorValueOwner::GetArmorRatingSkillMultiplier
 25863,0x1403bec90,0x1403ce510,3,RE::ActorValueOwner::Get_attack_cost_1403BEC90
@@ -687,6 +689,7 @@ id,sse,vr,status,name
 39175,0x140692cd0,0x14069c2d0,3,RE::PlayerCharacter::GetArmorValue
 39179,0x140693050,0x14069c650,3,RE::PlayerCharacter::GetDamage
 39181,0x140693110,0x14069c710,3,RE::Actor::DoReset3D
+39215,0x140694350,0x14069D950,4,PlayerCharacter::sub_140694350
 39217,0x140694400,0x14069da00,3,RE::ArmorRatingVisitor::VisitArmor
 39221,0x1406944a0,0x14069daa0,3,RE::ArmorRatingVisitor::HaveNotVisitedArmor
 39223,0x140694500,0x14069db00,3,RE::BSContainer::ForEachResult ArmorRatingVisitorBase::Visit(InventoryEntryData* a_entryData)
@@ -760,6 +763,7 @@ id,sse,vr,status,name
 42842,0x140743510,0x14076e110,3,RE::HitData::sub_*
 42852,0x140744dd0,0x14076fd10,4,void MissileProjectile::UpdateImpl_140744DD0 (MissileProjectile * a_this)
 42856,0x140746d60,0x140771ca0,3,EnhancedInvisibility::MissileProjectile::sub_140746D60
+42920,0x14074A950,0x140775C20,4,FUN_14074A950
 42928,0x14074b170,0x140776440,3,"BSPointerHandle<Projectile>* Projectile::Launch(BSPointerHandle<Projectile>* a_result, LaunchData& a_data)"
 42943,0x14074c710,0x140777a30,4,ProjectileUpdate
 43009,0x1407516e0,0x14077CA00,3,Projectile::AutoAim
@@ -860,6 +864,7 @@ id,sse,vr,status,name
 50487,0x14086ee80,0x14089a410,3,YesImSure::enchantmentLearned
 50515,0x1408708a0,0x14089be30,3,RE::ItemCrafted::GetEventSource
 50530,0x1408720d0,0x14089d5c0,4,"void EnchantConstructMenu::RenameItem_Impl(InventoryEntryData* a_entryData, ExtraDataList* a_extraList, const char* a_name)"
+50531,0x140872230,0x14089D720,4,FUN_140872230
 50567,0x140874540,0x14089fc10,4,void EnchantConstructMenu::UpdateInterface_140874540 (undefined8 param_1)
 50569,0x140874a40,0x1408a0190,4,"bool EnchantConstructMenu::CanSelectEnchantmentEntry (EnchantConstructMenu * a_this, uint32_t a_index, bool a_showNotification)"
 50610,0x140875bc0,0x1408a1310,3,IMenu * FUN_140875bc0 (IMenu * param_1)
