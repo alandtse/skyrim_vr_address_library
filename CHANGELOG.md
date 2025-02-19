@@ -1,3 +1,10 @@
+# [0.166.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.165.0...v0.166.0) (2025-02-19)
+
+
+### Features
+
+* add addresses for latest clibvr ([#86](https://github.com/alandtse/skyrim_vr_address_library/issues/86)) ([6dec4bc](https://github.com/alandtse/skyrim_vr_address_library/commit/6dec4bc095ce3b44bca55612062ee533c2c361f9))
+
 # [0.165.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.164.0...v0.165.0) (2025-02-05)
 
 
