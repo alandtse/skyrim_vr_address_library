@@ -70,8 +70,10 @@ id,sse,vr,status,name
 13549,0x140165770,0x140175eb0,4,longlong TESWorldSpace::GetCellByCoordinateMask_140165770 (TESWorldSpace * a_this)
 13594,0x140167220,0x140177940,3,FDGE::Skyrim::LoadWorldData
 13597,0x140167400,0x140177b20,4,bool TESDataHandler::AddFormToDataHandler(TESForm* a_form)
+13618,0x14016b840,0x14017c000,3,"TESWorldSpace* TESDataHandler::GetExtCellDataFromFileByEditorID(const char* a_cellID, std::int32_t& a_outX, std::int32_t& a_outY)"
 13623,0x14016bda0,0x14017c7c0,4,"void FUN_14016bda0 (TESDataHandler * param_1, undefined8 param_2)"
 13625,0x14016c210,0x14017cc30,3,"ObjectRefHandle TESDataHandler::CreateReferenceAtLocation(TESBoundObject* a_base, const NiPoint3& a_location, const NiPoint3& a_rotation, TESObjectCELL* a_targetCell, TESWorldSpace* a_selfWorldSpace, TESObjectREFR* a_alreadyCreatedRef, BGSPrimitive* a_primitive, const ObjectRefHandle& a_linkedRoomRefHandle, bool a_forcePersist, bool a_arg11)"
+13635,0x14016d4d0,0x14017def0,3,"FormID TESDataHandler::GetNextID()"
 13647,0x14016f2e0,0x14017fb90,3,"bool TESDataHandler::IsGameModded (TESDataHandler * a_this, bool param_2)"
 13657,0x1401713d0,0x140181b80,3,RE::TESDataHandler::LoadScripts
 13671,0x1401726a0,0x140182df0,4,void DataHandler::sub_1401726A0 (TESNPC * param_1)
@@ -100,6 +102,7 @@ id,sse,vr,status,name
 14411,0x140190d50,0x1401a0a80,4,RE::EnchantmentItem* RE::TESForm::GetEnchantment(RE::ExtraDataList* extraDataList)
 14412,0x140190dc0,0x1401a0af0,4,std::uint16_t GetMaximumCharge(ExtraDataList* extraDataList) const;
 14461,0x140194230,0x1401a3f60,4,TESForm * LookupFormById_140194230 (int a_formid)
+14467,0x140194640,0x1401a4370,3,"void TESForm::SetFile(TESFile* a_file)"
 14471,0x1401947f0,0x1401a4520,4,"void TESForm::sub_1401947F0 (TESForm * a_this, bool param_2)"
 14482,0x140194c20,0x1401a4950,4,void TESForm::SetPlayerKnows(bool a_known)
 14485,0x140194d20,0x1401a4a50,4,void TESForm::MakeTemporary_140194D20 (TESForm * a_this)
@@ -113,6 +116,8 @@ id,sse,vr,status,name
 14704,0x14019d510,0x1401ad250,3,BSTEventSource<TESHarvestedEvent::ItemHarvested>* TESHarvestedEvent::GetEventSource()
 14809,0x1401a1730,0x1401b1470,3,RE::TESForm::GetWeight
 15118,0x1401b13f0,0x1401c1400,3,RE::BGSDecalManager::RemoveItem
+15157,0x1401b2730,0x1401c2740,3,"bool BGSDynamicPersistenceManager::PromoteReference(TESObjectREFR* a_refr, TESForm* a_owner)"
+15158,0x1401b2910,0x1401c2920,3,"bool BGSDynamicPersistenceManager::DemoteReference(TESObjectREFR* a_refr, TESForm* a_owner, bool a_allowActors = false)"
 15202,0x1401b46a0,0x1401c46b0,4,GrassManager * GrassManager::ctor_1401B46A0 (GrassManager * a_this)
 15204,0x1401b4b20,0x1401c4b30,4,void GrassManager::AddCellGrass (GrassManager * a_this)
 15205,0x1401b5750,0x1401c5760,3,SeasonsofSkyrim::LandscapeSwap::LoadGrassType::add_cell_grass_from_buffer
@@ -151,6 +156,7 @@ id,sse,vr,status,name
 15811,0x1401d91e0,0x1401e9d80,3,EssentialFavorites::Crafting::IsQuestObject
 15812,0x1401d9200,0x1401e9da0,3,InventoryChanges* InventoryChanges::Ctor(TESObjectREFR* a_ref)
 15813,0x1401d92f0,0x1401e9e90,3,void InventoryChanges::Dtor()
+15821,0x1401db660,0x1401ec200,3,"ObjectRefHandle InventoryChanges::RemoveItem(TESObjectREFR* a_ref, TESBoundObject* a_item, std::int32_t a_count, ITEM_REMOVE_REASON a_reason, ExtraDataList* a_extraDataList, TESObjectREFR* a_moveToRef, const NiPoint3& a_dropLoc, TESObjectREFR* a_dropRef)"
 15829,0x1401e08b0,0x1401f1470,3,void InventoryChanges::InitScripts()
 15833,0x1401e1e90,0x1401f2a50,4,"void InventoryChanges::InitOutfitItems(BGSOutfit* a_outfit, std::uint16_t a_npcLevel)"
 15855,0x1401e5190,0x1401f5d50,4,void InventoryChanges::VisitInventory(IItemChangeVisitor& visitor)
@@ -241,6 +247,8 @@ id,sse,vr,status,name
 19326,0x140294730,0x1402a5e30,3,void TESObjectREFR::GetTransform(NiTransform& a_transform)
 19338,0x140295060,0x1402a6760,3,bool Actor::IsLimbGone(std::uint32_t a_limb)
 19354,0x1402961f0,0x1402a78f0,3,RE::TESObjectREFR::GetDisplayFullName
+19359,0x140296550,0x1402a7c50,3,"void TESObjectREFR::SetAngle(const NiPoint3& a_angle)"
+19363,0x140296910,0x1402a8010,3,"void TESObjectREFR::SetPosition(const NiPoint3& a_pos)"
 19369,0x140296c00,0x1402a8300,4,"bool TESObjectREFR::ActivateRef(TESObjectREFR* a_activator, uint8_t a_arg2, TESBoundObject* a_object, int32_t a_count, bool a_defaultProcessingOnly)"
 19373,0x140298190,0x1402a9890,4,void TESObjectREFR::Enable(bool a_resetInventory)
 19375,0x140298c80,0x1402aa380,3,void TESObjectREFR::ResetInventory_140298C80(TESObjectREFR * param_1)
@@ -254,6 +262,8 @@ id,sse,vr,status,name
 19797,0x1402a6ca0,0x1402b8410,4,BGSEncounterZone * TESObjectREFR::GetEncounterZone_1402A6CA0 (TESObjectREFR * param_1)
 19800,0x1402a6d80,0x1402b84f0,4,std::uint16_t TESObjectREFR::GetCalcLevel(bool a_adjustLevel)
 19805,0x1402a6ee0,0x1402b8650,3,"bool TESObjectREFR::IsAnOwner(const Actor* a_testOwner, bool a_useFaction, bool a_requiresOwner)"
+19809,0x1402a7090,0x1402b8800,3,"DoorTeleportData* TESObjectREFR::AddTeleport()"
+19816,0x1402a7270,0x1402b89e0,3,"REFR_LOCK* TESObjectREFR::AddLock()"
 19818,0x1402a74c0,0x1402b8c30,3,RE::TESObjectREFR::GetLock
 19824,0x1402a76f0,0x1402b8e60,4,bool Actor::IsLeveled()
 19843,0x1402a8020,0x1402b9790,4,BGSLocationRefType * TESObjectREFR::GetLocationRefType_1402A8020 (TESObjectREFR * a_this)
@@ -463,6 +473,7 @@ id,sse,vr,status,name
 34455,0x14056f230,0x1405757d0,3,MenuTopicManager::sub_*
 34627,0x140579880,0x140580fe0,3,"bool BGSSaveLoadFileEntry::PopulateFileEntryData()"
 34655,0x14057b920,0x1405830f0,4,"bool BGSSaveLoadGame::GetChange(TESForm* a_form, std::uint32_t a_changes)"
+34670,0x14057cb90,0x140584360,3,"bool BGSSaveLoadGame::IsFormIDInUse(FormID a_formID)"
 34808,0x140585a70,0x14058cfa0,4,"ulonglong BGSLoadGameBuffer::sub_140585A70(BGSLoadGameBuffer *param_1,PlayerCharacter *param_2,undefined *param_3,char *param_4)"
 34818,0x140586de0,0x14058e310,3,RE::BGSSaveLoadManager::Save
 34819,0x140587350,0x14058e920,3,RE::BGSSaveLoadManager::Load
@@ -1148,6 +1159,7 @@ id,sse,vr,status,name
 69640,0x140c76490,0x140cbc8c0,3,RE::BSResourceNiBinaryStream::Seek
 69643,0x140c76580,0x140cbc9b0,3,RE::BSResourceNiBinaryStream::SetEndianSwap
 69681,0x140c77ed0,0x140cbe300,3,RE::NiBillboardNode::RotateToCamera
+69692,0x140c79080,0x140cbf8d0,3,"NiDirectionalLight* NiDirectionalLight::Ctor"
 69804,0x140c7eb60,0x140cc5250,3,RE::NiSkinInstance::Ctor
 70860,0x140cc6090,0x140d0cbe0,4,"void NiControllerSequence::SetPhase(float a_phase, bool a_arg2)"
 70882,0x140cc7cb0,0x140d0e800,4,"bool NiControllerSequence::Activate(std::uint8_t a_interpIndex, bool a_maxOffset, float a_seqWeight, float a_easeInTime, NiControllerSequence* a_partnerSequence, bool a_transition)"
@@ -8792,6 +8804,7 @@ id,sse,vr,status,name
 514164,0x141ebeabc,0x141f8319c,2,GetInvalidRefHandle
 514167,0x141ebead0,0x141f831b0,3,ProcessLists* GetSingleton()
 514172,0x141ebeae8,0x141f831c8,4,BGSCreatedObjectManager::GetSingleton()
+514177,0x141ebeb18,0x141f831f8,3,RE::BGSDynamicPersistenceManager::GetSingleton
 514178,0x141ebeb20,0x141f83200,3,RE::UI::Singleton
 514179,0x141ebeb28,0x141f83208,4,AnimationObjects* GetSingleton()
 514180,0x141ebeb30,0x141f83210,4,GarbageCollector* GetSingleton
