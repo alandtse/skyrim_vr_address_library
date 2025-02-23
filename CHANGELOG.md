@@ -1,3 +1,10 @@
+# [0.167.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.166.0...v0.167.0) (2025-02-23)
+
+
+### Features
+
+* add addresses for currency swap ([05c5d26](https://github.com/alandtse/skyrim_vr_address_library/commit/05c5d263712db038ed74391f1c6b24b185753961))
+
 # [0.166.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.165.0...v0.166.0) (2025-02-19)
 
 
