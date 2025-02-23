@@ -842,10 +842,13 @@ id,sse,vr,status,name
 49970,0x14084fbe0,0x140730470,4,"void ProcessButton_14084FBE0 (PlayerInputHandler * a_this, undefined8 param_2)"
 49978,0x140850860,0x14087ac20,4,"void HandleLookInput_140850860 (ThirdPersonState * a_this, float * param_2)"
 50005,0x1408527b0,0x14087CB80,3,DescriptionFramework::
+50007,0x1408528d0,0x14087cca0,3,saleGoldTarget
+50008,0x140852c30,0x14087d000,3,rawDealTarget
 50012,0x140853120,0x14087d4f0,3,BarterMenu::sub_*
 50013,0x1408533b0,0x14087d780,3,BarterMenu::sub_*
 50061,0x140855b60,0x14087ff20,3,EssentialFavorites::Barter::IsQuestObject
 50099,0x140856a50,0x140880e10,3,RE::ItemList::Update
+50011,0x1408530c0,0x14087d490,3,Actor::ShowBarterMenu custombartertarget
 50122,0x1408582e0,0x140882580,3,"void BookMenu::OpenBookMenu(const BSString& a_description, const ExtraDataList* a_extraList, TESObjectREFR* a_ref, TESObjectBOOK* a_book, const NiPoint3& a_pos, const NiMatrix3& a_rot, float a_scale, bool a_useDefaultPos)"
 50126,0x140858c70,0x140882f80,3,po3tweaks::CantTakeBook::Button::ButtonShowTakeButton
 50155,0x14085a1c0,0x1408848f0,3,"byte Console::sub_14085A1C0 (Console * a_this, undefined8 param_2)"
@@ -889,6 +892,7 @@ id,sse,vr,status,name
 50726,0x14087f080,0x1408ac890,4,void SendHUDMessage::PopHUDMode(const char* a_hudMode)
 50727,0x14087F090,0x1408AC8A0,3,"void UpdateCrosshairCaveLeaving(bool a_valid, const char *a2)"
 50738,0x14087f970,0x1408ad1e0,4,static void UpdateCrosshairMagicTarget(bool a_valid)
+50741,0x14087fb60,0x1408ad3d0,3,BarterHooks::GoldRemovedMessage
 50747,0x14087fff0,0x1408ad8c0,3,TrueHUD::SetHUDMode?
 50748,0x1408800c0,0x1408ad9a0,4,undefined8 Handle_1408800C0 (BSTEventSink_UserEventEnabledEvent_ * a_this)
 50751,0x140880160,0x1408ADA40,4,"void HudMenuStrings (int32 a1, struct8 *a2, TESQuest *a3, int64 a4)"
@@ -935,6 +939,7 @@ id,sse,vr,status,name
 51761,0x1408cd260,0x1408fa330,3,SubtitleManager::DisplayNextSubtitle
 51788,0x1408ce590,0x1408fb660,2,TrainingMenu::ProcessMessage
 51790,0x1408ce6f0,0x1408fb7c0,4,TrainingMenu::TrainCallback::Accept
+51792,0x1408ce740,0x1408fb810,3,TrainingMenu:: SetupTarget? int32 __fastcall sub
 51793,0x1408ce8e0,0x1408fb9c0,3,TrainingMenu::Train
 51794,0x1408cea30,0x1408fbb10,3,TrainingMenu::UpdateText
 51795,0x1408cedf0,0x1408fbed0,3,TrainingMenu::SetSkillXpPercent
