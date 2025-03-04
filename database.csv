@@ -283,6 +283,7 @@ id,sse,vr,status,name
 21435,0x1402e9c50,0x1402fb150,4,void Script::SetProcessScripts(bool a_ProcessScripts)
 21436,0x1402e9c60,0x1402fb160,4,bool Script::GetProcessScripts()
 21523,0x1402f1180,0x140302680,4,"bool GameFunc__handler::RemoveAllItems_1402F1180 (Script * param_1, longlong * param_2, TESObjectREFR * a_reference, TESObjectREFR * a_target, Script * param_5, ScriptLocals * param_6, undefined8 param_7, uint32_t param_8)"
+21556,0x1402f3040,0x140304580,4,"GameFunc::handler::ResetReference_1402F3040(Script *param_1,longlong *param_2,PlayerCharacter *param_3,TESObjectREFR *param_4,Script *param_5,ScriptLocals *param_6,undefined8 param_7,uint32_t param_8)"
 21887,0x140300210,0x140311710,2,Console::UpdateLevel
 21951,0x140302730,0x140313C30,3,GameFunc__handler::ShowQuestObjectives
 22289,0x14030f9a0,0x140320eb0,3,"ModelReferenceEffect* TESObjectREFR::InstantiateHitArt(BGSArtObject* a_art, float a_dur, TESObjectREFR* a_facingRef, bool a_faceTarget, bool a_attachToCamera, NiAVObject* a_attachNode, bool a_interfaceEffect)"
@@ -666,11 +667,11 @@ id,sse,vr,status,name
 37865,0x140634bf0,0x14063dac0,4,Actor::ReanimateEffect::GetUp
 37916,0x140636c40,0x14063fc50,3,BSTEventSource<SoulsTrapped::Event>* SoulsTrapped::GetEventSource()
 37917,0x140636d30,0x14063fd40,3,BSTEventSource<SpellsLearned::Event>* SpellsLearned::GetEventSource()
-37938,0x140637a80,0x140640a90,3,RE::ActorEquipManager::EquipObject
+37938,0x140637a80,0x140640a90,4,RE::ActorEquipManager::EquipObject
 37939,0x140637bc0,0x140640bd0,2,"void ActorEquipManager::EquipSpell(Actor* a_actor, SpellItem* a_spell, const BGSEquipSlot* a_slot)"
 37941,0x140637ca0,0x140640cb0,2,"void ActorEquipManager::EquipShout(Actor* a_actor, TESShout* a_shout)"
 37943,0x140637f20,0x140640f30,4,"void FUN_140637f20 (undefined8 param_1, PlayerCharacter * param_2)"
-37945,0x140638190,0x1406411a0,3,RE::ActorEquipManager::UnequipObject
+37945,0x140638190,0x1406411a0,4,RE::ActorEquipManager::UnequipObject
 38047,0x14063cfb0,0x140646020,3,StaminaNPC::apply_deny_player_attack_or_bash
 38048,0x14063d0f0,0x140646160,3,HandleAction
 38063,0x14063E080,0x140647110,2,"void ResetBaseValue(ActorValueStorage*, ActorValue)"
@@ -974,7 +975,8 @@ id,sse,vr,status,name
 52662,0x1409032c0,0x14093da40,3,RE::SkyrimScript::HandlePolicy::ConvertHandleToString
 52730,0x140906fe0,0x140941760,3,SkyrimScript__ObjectBindPolicy::
 52767,0x140909f30,0x1409446b0,3,PapyrusTweaks::
-52933,0x140915790,0x14094ff10,3,YesImSure::
+52933,0x140915790,0x14094ff10,3,"YesImSure::"
+53024,0x14091a490,0x140954c10,4,"void WritePapyrusLog_14091A490 (longlong param_1, char * param_2, longlong * param_3, undefined4 param_4, undefined4 param_5)"
 53029,0x14091c620,0x140956da0,3,"bool Actor::HasLineOfSight(TESObjectREFR* a_ref, bool& a_arg2)"
 53108,0x1409204a0,0x14095aba0,3,SkyrimVM::SkyrimVM
 53115,0x140921f10,0x14095c670,2,"SkyrimVM::ProcessRegisteredUpdates(SkyrimVM* a_vm, float a_budget)"
@@ -17584,4 +17586,4 @@ id,sse,vr,status,name
 5370397616,0x14019c3b0,0x1401ac0e0,3,RE::BSShaderProperty::InvalidateMaterial
 5375528368,0x140680db0,0x14068a230,3,RE::AIProcess::SetActorRefraction
 5388393136,0x1412c5ab0,0x141303ea0,3,RE::BSLightingShaderProperty::InvalidateTextures
-5399981752,0x141dd2eb8,0x141e901a8,4,CalculateMyCriticalHitChance
+5399981752,0x141dd2eb8,0x141e901a8,4,"CalculateMyCriticalHitChance"
