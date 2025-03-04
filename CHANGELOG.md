@@ -1,3 +1,10 @@
+# [0.168.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.167.0...v0.168.0) (2025-03-04)
+
+
+### Features
+
+* add latest spid ids ([901eb5a](https://github.com/alandtse/skyrim_vr_address_library/commit/901eb5a539f55b7fc7245ccc5eb7e9a115dc0244))
+
 # [0.167.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.166.0...v0.167.0) (2025-02-23)
 
 
