@@ -126,6 +126,7 @@ id,sse,vr,status,name
 15212,0x1401b6af0,0x1401c6b00,3,"ulonglong GrassManager::FUN_1401b6af0 (GrassManager* a_this, int * param_2)"
 15214,0x1401b7640,0x1401c7750,4,"NiAVObject__VFTable * GrassManager::sub_1401B7640 (GrassManager * a_this, undefined param_2, undefined param_3, undefined param_4, undefined8 param_5, undefined8 param_6)"
 15220,0x1401b81d0,0x1401c82e0,4,"bool FUN_1401b81d0 (longlong param_1, undefined8 param_2, undefined4 param_3, undefined4 * param_4, NiAVObject * * param_5, NiAVObject * * param_6)"
+15485,0x1401c5cc0,0x1401d5e30,4,"char * GetGameVersion(void)"
 15491,0x1401c60a0,0x1401d6200,3,RE::BipedAnim::Dtor
 15494,0x1401c61a0,0x1401d6530,3,RE::BipedAnim::RemoveAllParts
 15495,0x1401c6270,0x1401d6600,3,FEC::UpdateCollision::RemoveNodeFromScene
@@ -206,9 +207,9 @@ id,sse,vr,status,name
 18368,0x14025b350,0x14026c790,4,SeasonsofSkyrim::TESObjectLAND::create_land_geometry
 18414,0x14025e6e0,0x14026fb90,4,SeasonsofSkyrim::TESObjectLAND::GetGrassList
 18418,0x14025e9c0,0x14026fe70,4,SeasonsofSkyrim::TESObjectLAND::GetHavokMaterialType
-18446,0x14025f460,0x140270910,4,void TESObjectCELL::dtor (TESObjectCELL * a_this)
+18446,0x14025f460,0x140270910,4,"void TESObjectCELL::dtor (TESObjectCELL * a_this)"
+18458,0x1402609d0,0x140271e80,3,void TESObjectCELL::UpdateActivateParents(RE::TESObjectCELL* a_cell)
 18464,0x140261280,0x140272820,3,"void TESObjectCELL::UpdateManagedNodes(RE::TESObjectCELL* a_cell)"
-18458,0x1402609d0,0x140271e80,3,"void TESObjectCELL::UpdateActivateParents(RE::TESObjectCELL* a_cell)"
 18474,0x140262290,0x140273830,3,BGSLocation* TESObjectCELL::GetLocation()
 18513,0x140263920,0x140274ec0,4,TESObjectLAND * GetTESObjectLAND_140263920 (TESObjectCELL * a_this)
 18536,0x1402654c0,0x140276a90,3,bhkWorld* TESObjectCELL::GetbhkWorld()
@@ -238,9 +239,9 @@ id,sse,vr,status,name
 19266,0x14028dda0,0x14029f4d0,4,"void Actor::AddWornOutfit(BGSOutfit* a_outfit, bool a_forceUpdate)"
 19275,0x14028e360,0x14029fa90,4,std::int32_t PlayerCharacter::GetItemCount(TESBoundObject* a_object)
 19277,0x14028e3c0,0x14029faf0,3,float TESObjectREFR::GetWeightInContainer()
-19302,0x140290900,0x1402a2010,3,TESObjectREFR::Set3D
 19300,0x14028fb90,0x1402A12A0,3,TESObjectREFR::Load3D
 19301,0x140290550,0x1402A1C60,3,TESObjectREFR::Release3DRelatedData
+19302,0x140290900,0x1402a2010,3,TESObjectREFR::Set3D
 19316,0x1402943b0,0x1402a5ac0,4,bool Actor::Update3D()
 19322,0x1402944F0,0x1402A5C00,3,TESModel* TESObjectREFR::GetSkeletonModel(TESObjectREFR* a_this)
 19323,0x1402945e0,0x1402a5cf0,3,RE::TESObjectREFR::FindReferenceFor3D
@@ -845,11 +846,11 @@ id,sse,vr,status,name
 50005,0x1408527b0,0x14087CB80,3,DescriptionFramework::
 50007,0x1408528d0,0x14087cca0,3,saleGoldTarget
 50008,0x140852c30,0x14087d000,3,rawDealTarget
+50011,0x1408530c0,0x14087d490,3,Actor::ShowBarterMenu custombartertarget
 50012,0x140853120,0x14087d4f0,3,BarterMenu::sub_*
 50013,0x1408533b0,0x14087d780,3,BarterMenu::sub_*
 50061,0x140855b60,0x14087ff20,3,EssentialFavorites::Barter::IsQuestObject
 50099,0x140856a50,0x140880e10,3,RE::ItemList::Update
-50011,0x1408530c0,0x14087d490,3,Actor::ShowBarterMenu custombartertarget
 50122,0x1408582e0,0x140882580,3,"void BookMenu::OpenBookMenu(const BSString& a_description, const ExtraDataList* a_extraList, TESObjectREFR* a_ref, TESObjectBOOK* a_book, const NiPoint3& a_pos, const NiMatrix3& a_rot, float a_scale, bool a_useDefaultPos)"
 50126,0x140858c70,0x140882f80,3,po3tweaks::CantTakeBook::Button::ButtonShowTakeButton
 50155,0x14085a1c0,0x1408848f0,3,"byte Console::sub_14085A1C0 (Console * a_this, undefined8 param_2)"
@@ -17586,4 +17587,4 @@ id,sse,vr,status,name
 5370397616,0x14019c3b0,0x1401ac0e0,3,RE::BSShaderProperty::InvalidateMaterial
 5375528368,0x140680db0,0x14068a230,3,RE::AIProcess::SetActorRefraction
 5388393136,0x1412c5ab0,0x141303ea0,3,RE::BSLightingShaderProperty::InvalidateTextures
-5399981752,0x141dd2eb8,0x141e901a8,4,"CalculateMyCriticalHitChance"
+5399981752,0x141dd2eb8,0x141e901a8,4,CalculateMyCriticalHitChance
