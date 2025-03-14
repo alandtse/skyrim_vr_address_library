@@ -15,7 +15,7 @@ jobs:
       - name: Get VR Address Tools
         run: git clone https://github.com/alandtse/vr_address_tools.git .
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
           path: "skyrim_vr_address_library"
@@ -33,7 +33,7 @@ jobs:
       #----------------------------------------------
       - name: Load cached venv
         id: cached-poetry-dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: .venv
           key: venv-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-${{ hashFiles('**/poetry.lock') }}
