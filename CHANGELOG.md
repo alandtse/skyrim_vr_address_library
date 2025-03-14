@@ -1,3 +1,10 @@
+# [0.169.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.168.0...v0.169.0) (2025-03-14)
+
+
+### Features
+
+* support latest po3tweaks ([11a9be3](https://github.com/alandtse/skyrim_vr_address_library/commit/11a9be3797d0ab4fd094b00c2f25d5ae98c7a7af))
+
 # [0.168.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.167.0...v0.168.0) (2025-03-04)
 
 
