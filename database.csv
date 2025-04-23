@@ -504,6 +504,7 @@ id,sse,vr,status,name
 35556,0x1405b1020,0x1405b8a20,3,Main::sub_*
 35560,0x1405b1860,0x1405b9330,3,"void Main::Draw_1405B1860 (Main * a_this, uint32_t param_2, bool a_mainMenuopen)"
 35561,0x1405b2300,0x1405b9c00,4,void Main::RenderWaterEffects (void)
+35562,0x1405b2590,0x1405b9e90,2,void Main::UpdateSky(Main* this)
 35565,0x1405b2ff0,0x1405bab10,3,Main::OnIdle_1405B2FF0
 35589,0x1405b5280,0x1405bcef0,3,void Main::FUN_1405b5280 (Main * a_this)
 35593,0x1405b5490,0x1405bd0f0,2,Main::sub_*
@@ -1356,6 +1357,7 @@ id,sse,vr,status,name
 101296,0x14131cde0,0x141362c60,4,BSLight::sub_*
 101339,0x14131f810,0x1413656b0,4,"void BSShader::LoadShaders_14131F810 (BSShader * a_this, UINT_PTR * a_stream)"
 101341,0x14131fbd0,0x141365a70,4,"bool BSShader::BeginTechnique_14131FBD0 (BSShader * shader, int vertexDescriptor, int pixelDescriptor, bool skipPIxelShader)"
+101498,0x141324e00,0x1413570f0,2,void BSShadowDirectionalLight::DirShadowLightCulling(BSShadowDirectionalLight* this, RE::BSTArray<RE::BSTArray<RE::NiPointer<RE::NiAVObject>>>& jobArrays, RE::BSTArray<RE::NiPointer<RE::NiAVObject>>& nodes)
 101499,0x1413251c0,0x1413574f0,3,undefined8 BSShadowDirectionalLight::Func16_1413251C0 (BSShadowDirectionalLight * a_this)
 101631,0x14132ead0,0x141371a00,3,"void GetLightingShaderDefines(uint32_t descriptor, D3D_SHADER_MACRO* defines)"
 101633,0x14132ef60,0x141371e90,3,uint32_t BSLightingShader::GetPixelTechnique (uint32_t rawTechnique)
