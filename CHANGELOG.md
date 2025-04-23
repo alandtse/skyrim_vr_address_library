@@ -1,3 +1,10 @@
+# [0.170.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.169.0...v0.170.0) (2025-04-23)
+
+
+### Features
+
+* add sky and directional shadow light culling ([#90](https://github.com/alandtse/skyrim_vr_address_library/issues/90)) ([4baebb9](https://github.com/alandtse/skyrim_vr_address_library/commit/4baebb9054013237c8c695dd02d2694232a586dc))
+
 # [0.169.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.168.0...v0.169.0) (2025-03-14)
 
 
