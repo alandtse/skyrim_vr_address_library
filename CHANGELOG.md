@@ -1,3 +1,10 @@
+# [0.171.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.170.0...v0.171.0) (2025-04-28)
+
+
+### Features
+
+* add volumetric lighting settings ([#91](https://github.com/alandtse/skyrim_vr_address_library/issues/91)) ([1943182](https://github.com/alandtse/skyrim_vr_address_library/commit/194318261e02e1fc2fc76371afa5194731a58254))
+
 # [0.170.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.169.0...v0.170.0) (2025-04-23)
 
 
