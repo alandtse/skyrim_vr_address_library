@@ -9323,6 +9323,10 @@ id,sse,vr,status,name
 527834,0x1431d1f00,0x143424340,3,RE::NiRTTI_BSEffectShaderProperty
 527905,0x143232d28,0x143485190,3,RE::NiRTTI_BSWaterShaderProperty
 527906,0x143232d38,0x1434851a0,3,RE::NiRTTI_BSBloodSplatterShaderProperty
+527940,0x143232ef0,0x143485362,4,bEnableVolumetricLighting
+527970,0x143233090,0x143485630,4,iVolumetricLightingTextureWidthLow
+527973,0x14323309c,0x14348563c,4,iVolumetricLightingTextureWidthMedium
+527976,0x1432330a8,0x143485648,4,iVolumetricLightingTextureWidthHigh
 527992,0x1432331b8,0x143485758,3,RE::NiRTTI_BSParticleShaderProperty
 528103,0x143233508,0x143485b88,3,RE::NiRTTI_BSTextureSet
 528104,0x143233518,0x143485b98,3,RE::NiRTTI_BSShaderTextureSet
