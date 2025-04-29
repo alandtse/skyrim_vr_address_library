@@ -1,3 +1,10 @@
+# [0.172.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.171.0...v0.172.0) (2025-04-29)
+
+
+### Features
+
+* add more VL settings ([#92](https://github.com/alandtse/skyrim_vr_address_library/issues/92)) ([84f0ebc](https://github.com/alandtse/skyrim_vr_address_library/commit/84f0ebcd9b1709c3fa4dc5a2b2fadb0af874f06b))
+
 # [0.171.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.170.0...v0.171.0) (2025-04-28)
 
 
