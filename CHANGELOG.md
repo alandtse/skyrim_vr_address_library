@@ -1,3 +1,10 @@
+# [0.173.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.172.0...v0.173.0) (2025-05-02)
+
+
+### Features
+
+* fSplitOverlap address ([#93](https://github.com/alandtse/skyrim_vr_address_library/issues/93)) ([59ef60c](https://github.com/alandtse/skyrim_vr_address_library/commit/59ef60c2b213c77aa15c8867ebd167f3f37a2872))
+
 # [0.172.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.171.0...v0.172.0) (2025-04-29)
 
 
