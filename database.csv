@@ -8600,6 +8600,7 @@ id,sse,vr,status,name
 513464,0x141e0eb48,0x141ed49c8,4,characterLightTexture
 513786,0x141e10750,0x141ed6650,4,Skyrim-Upscaler::GetVerticalFOVRad
 513793,0x141e10978,0x141ed6530,4,fShadowDistance:Display
+513805,0x141e10a08,0x141ed65c0,4,fSplitOverlap:Display
 513847,0x141e10de0,0x141ed6cd0,3,RE::RTTI_BaseFormComponent
 513848,0x141e10e30,0x141ed6d20,3,RE::RTTI_TESForm
 513849,0x141e10e50,0x141ed6d40,3,RE::RTTI_SpellItem
