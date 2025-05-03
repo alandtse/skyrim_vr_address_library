@@ -1,3 +1,10 @@
+# [0.174.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.173.0...v0.174.0) (2025-05-03)
+
+
+### Features
+
+* add GetIsRace and TESObjectARMA::IsValidRace ([#94](https://github.com/alandtse/skyrim_vr_address_library/issues/94)) ([17d118a](https://github.com/alandtse/skyrim_vr_address_library/commit/17d118ad8db859e803496e789a6f4413e4e31af7))
+
 # [0.173.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.172.0...v0.173.0) (2025-05-02)
 
 
