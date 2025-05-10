@@ -8571,6 +8571,10 @@ id,sse,vr,status,name
 502094,0x141dd2ea8,0x141e90198,4,DAT_141dd2ea8
 502187,0x141dd3ba0,0x141e90e90,4,DAT_141dd3ba0
 502190,0x141dd3bb0,0x141e90ea0,4,BGSEntryPointFunction::SelectSpellResultCount
+502558,0x141dd8020,0x141e95338,4,iMasserSize
+502570,0x141dd80b0,0x141e953c8,4,iSecundaSize
+502611,0x141dd82a8,0x141e955d8,4,fSunGlareSize
+502619,0x141dd8308,0x141e95638,4,fSunAlphaTransTime
 505023,0x141de0b60,0x141e9bf40,3,fblock_gamesetting
 505721,0x141de34a0,0x141ea9ae8,4,fPlayerMaxResistanceAddress
 508313,0x141decb18,0x141ea9c98,4,fBlockLevel0Distance:TerrainManager
@@ -9326,6 +9330,7 @@ id,sse,vr,status,name
 527834,0x1431d1f00,0x143424340,3,RE::NiRTTI_BSEffectShaderProperty
 527905,0x143232d28,0x143485190,3,RE::NiRTTI_BSWaterShaderProperty
 527906,0x143232d38,0x1434851a0,3,RE::NiRTTI_BSBloodSplatterShaderProperty
+527924,0x143232da8,0x143485218,4,RE::NiPoint3_SunPosition
 527940,0x143232ef0,0x143485362,4,bEnableVolumetricLighting
 527970,0x143233090,0x143485630,4,iVolumetricLightingTextureWidthLow
 527973,0x14323309c,0x14348563c,4,iVolumetricLightingTextureWidthMedium
