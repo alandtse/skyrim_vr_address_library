@@ -1,3 +1,10 @@
+# [0.175.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.174.0...v0.175.0) (2025-05-10)
+
+
+### Features
+
+* add CS Sky Sync ([#95](https://github.com/alandtse/skyrim_vr_address_library/issues/95)) ([96f695d](https://github.com/alandtse/skyrim_vr_address_library/commit/96f695d883c310df7cbf37b5fec736e8379556e9))
+
 # [0.174.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.173.0...v0.174.0) (2025-05-03)
 
 
