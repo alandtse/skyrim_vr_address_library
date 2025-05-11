@@ -184,6 +184,7 @@ id,sse,vr,status,name
 17208,0x14021efb0,0x1402308a0,4,"NiLight* TESObjectLIGH::GenDynamic(RE::TESObjectREFR* a_ref, RE::NiNode* a_node, char a_forceDynamic, char a_useLightRadius, char a_affectRefOnly)"
 17212,0x14021f660,0x140230f50,3,"void LightREFRData::UpdateLight_Game(RE::TESObjectLIGH* a_light, const RE::NiPointer<RE::NiPointLight>& a_ptLight, RE::TESObjectREFR* a_ref, float a_wantDimmer)"
 17224,0x1402200e0,0x1402319d0,4,void NiPointLight::SetLightAttenuation(float a_radius) include\RE\N/NiPointLight.h:37
+17359,0x140226d70,0x1402380a0,4,"bool TESObjectARMA::IsValidRace(RE::TESObjectARMA* this, RE::TESRace* a_race)"
 17361,0x140227070,0x1402383a0,4,"void TESObjectARMA::InitWornArmorAddon(TESObjectARMO* a_armor, BSTSmartPointer<BipedAnim>* a_biped, SEX a_sex)"
 17392,0x140228ad0,0x140239E00,4,"void TESObjectARMO::AddToBiped(RE::TESObjectARMO* a_armor,RE::TESRace* a_race, BSTSmartPointer<BipedAnim>* a_biped, bool isFemale)"
 17439,0x140229ef0,0x14023b240,4,bool TESObjectBOOK::Read(TESObjectREFR* a_reader)
@@ -274,6 +275,7 @@ id,sse,vr,status,name
 20470,0x1402c53d0,0x1402d6b40,3,RE::BGSListForm::AddForm
 20529,0x1402c73f0,0x1402d8b60,3,BGSMaterialType* BGSMaterialType::GetMaterialType(MATERIAL_ID a_materialID)
 20905,0x1402d19a0,0x1402e3110,4,BSShaderTextureSet * BGSTextureSet::ToShaderTextureSet (BGSTextureSet * a_textureSet)
+21028,0x1402d76b0,0x1402e8bc0,4,"bool GetIsRace(TESObjectREFR* a_npcRef, TESForm* a_raceForm, double* result)"
 21086,0x1402da220,0x1402eb730,3,po3tweaks::GetEquippedFix::GetEquipped
 21119,0x1402db610,0x1402ecb20,4,"bool IsRunning_1402DB610 (Actor * a_this, undefined8 param_2, undefined8 param_3, undefined * param_4)"
 21187,0x1402DDA40,0x1402EEF50,2,"bool HasKeyword_1402DDA40(TESObjectREFR *a1, int64 a2, int64 a3, double* a4)"
@@ -8570,6 +8572,10 @@ id,sse,vr,status,name
 502094,0x141dd2ea8,0x141e90198,4,DAT_141dd2ea8
 502187,0x141dd3ba0,0x141e90e90,4,DAT_141dd3ba0
 502190,0x141dd3bb0,0x141e90ea0,4,BGSEntryPointFunction::SelectSpellResultCount
+502558,0x141dd8020,0x141e95338,4,iMasserSize
+502570,0x141dd80b0,0x141e953c8,4,iSecundaSize
+502611,0x141dd82a8,0x141e955d8,4,fSunGlareSize
+502619,0x141dd8308,0x141e95638,4,fSunAlphaTransTime
 505023,0x141de0b60,0x141e9bf40,3,fblock_gamesetting
 505721,0x141de34a0,0x141ea9ae8,4,fPlayerMaxResistanceAddress
 508313,0x141decb18,0x141ea9c98,4,fBlockLevel0Distance:TerrainManager
@@ -9325,6 +9331,7 @@ id,sse,vr,status,name
 527834,0x1431d1f00,0x143424340,3,RE::NiRTTI_BSEffectShaderProperty
 527905,0x143232d28,0x143485190,3,RE::NiRTTI_BSWaterShaderProperty
 527906,0x143232d38,0x1434851a0,3,RE::NiRTTI_BSBloodSplatterShaderProperty
+527924,0x143232da8,0x143485218,4,RE::NiPoint3_SunPosition
 527940,0x143232ef0,0x143485362,4,bEnableVolumetricLighting
 527970,0x143233090,0x143485630,4,iVolumetricLightingTextureWidthLow
 527973,0x14323309c,0x14348563c,4,iVolumetricLightingTextureWidthMedium
