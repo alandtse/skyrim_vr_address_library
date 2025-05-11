@@ -1,3 +1,10 @@
+# [0.176.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.175.0...v0.176.0) (2025-05-11)
+
+
+### Features
+
+* add Sky::IsDaytime() ([7cdb960](https://github.com/alandtse/skyrim_vr_address_library/commit/7cdb9601874ad8d5fb9631be79fb60850e24dbca))
+
 # [0.175.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.174.0...v0.175.0) (2025-05-10)
 
 
