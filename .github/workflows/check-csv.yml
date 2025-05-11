@@ -1,0 +1,60 @@
+name: Validate and Fix CSV Name Field
+
+on:
+  pull_request:
+    paths:
+      - '**.csv'
+
+jobs:
+  autofix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      - name: Set commit message
+        id: vars
+        run: |
+          echo "message=chore(csv): auto-quote name fields" >> "$GITHUB_OUTPUT"
+
+      - name: Run CSV autofix script
+        id: fix
+        run: |
+          python .github/scripts/autofix_csv_quotes.py > fix_output.txt
+          if grep -q '✅ Fixed:' fix_output.txt; then
+            echo "modified=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "modified=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Auto-commit fixed CSVs
+        if: steps.fix.outputs.modified == 'true'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "${{ steps.vars.outputs.message }}"
+          commit_user_name: "github-actions"
+          commit_user_email: "github-actions@github.com"
+
+      - name: Post PR comment
+        if: steps.fix.outputs.modified == 'true'
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            🔧 **CSV Auto-fix Applied**
+
+            Some entries in your CSV were missing proper quotes around the `name` field.
+            This action has automatically fixed them using a semantic commit:
+
+            ```
+            ${{ steps.vars.outputs.message }}
+            ```
+
+            Please verify that the changes look good!
