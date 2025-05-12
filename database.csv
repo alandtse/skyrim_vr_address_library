@@ -111,7 +111,7 @@ id,sse,vr,status,name
 14515,0x140195ef0,0x1401a5c20,4,"bool FUN_140195ef0 (longlong param_1, undefined8 param_2, ulonglong param_3, uint32 * a_formID, TESForm * * param_5, undefined8 * param_6)"
 14537,0x1401967e0,0x1401a6510,4,"ulonglong FUN_1401967e0 (longlong a_formmap, longlong param_2, uint param_3, undefined4 * param_4)"
 14546,0x140196D80,0x1401A6AB0,4,"void TESFullName__ReadFULLFromFileStream(RE::TESFullName* a_fullname, RE::TESFile* a_file)"
-14577,0x1401973c0,0x1401A70F0,3,TESLeveledList::AddEntry(TESLeveledList *a1, std::uint16_t a2, std::int16_t a3, TESObjectMISC *a4, longlong a5)
+14577,0x1401973c0,0x1401A70F0,3,"TESLeveledList::AddEntry(TESLeveledList *a1, std::uint16_t a2, std::int16_t a3, TESObjectMISC *a4, longlong a5)"
 14579,0x140197a30,0x1401a7760,4,"void TESLeveledList::CalculateCurrentFormList(std::uint16_t a_level, std::int16_t a_count, BSScrapArray<CALCED_OBJECT>& a_calcedObjects, std::uint32_t a_arg5, bool a_usePlayerLevel)"
 14653,0x14019b290,0x1401aafc0,4,void TESModelTextureSwap::sub_14019B290 (TESModelTextureSwap * a_this)
 14704,0x14019d510,0x1401ad250,3,BSTEventSource<TESHarvestedEvent::ItemHarvested>* TESHarvestedEvent::GetEventSource()
@@ -346,7 +346,7 @@ id,sse,vr,status,name
 25482,0x1403a6140,0x1403b5cb0,3,bhkCollisionObject* NiAVObject::GetCollisionObject()
 25483,0x1403a6170,0x1403b5ce0,4,"void PushTemporaryMass(bhkRigidBody* a_body, float a_mass)"
 25484,0x1403a61f0,0x1403b5d60,4,void PopTemporaryMass(bhkRigidBody* a_body)
-25591,0x1403aa4b0,0x1403BA0C0,3,CrossHairPickData::Pick(CrossHairPickData *a1, bhkWorld *hkWorld, NiPoint3 *sourcePoint, NiPoint3 *sourceRotation)
+25591,0x1403aa4b0,0x1403BA0C0,3,"CrossHairPickData::Pick(CrossHairPickData *a1, bhkWorld *hkWorld, NiPoint3 *sourcePoint, NiPoint3 *sourceRotation)"
 25620,0x1403ad1f0,0x1403bcec0,4,RE::Sky::Moon_UpdatePhase
 25626,0x1403adf90,0x1403bdc60,4,RE::Sky::Moon::Update_*
 25638,0x1403aebd0,0x1403be8d0,4,splashes_of_skyrim::RainManager::ToggleWaterRipples
@@ -436,8 +436,8 @@ id,sse,vr,status,name
 33286,0x14053e380,0x140541100,3,void ActiveEffect::Dispel(bool a_force)
 33289,0x14053e670,0x1405413f0,4,bool ActiveEffect::ShouldUpdate()
 33320,0x140540360,0x140542EA0,3,"ActiveEffect::SetEffectiveness(Skyrim::ActiveEffect* activeEffect, float effectiveness)"
-33321,0x140540410,0x140542F50,3,ValueModifierEffect::sub_140540410(ValueModifierEffect *a1, float a2)
-33322,0x140540570,0x1405430B0,3,bool ScriptEffect::ReadFromStream(ScriptEffect *a1@, BGSLoadGameBuffer* a2, std::uint32_t a3)
+33321,0x140540410,0x140542F50,3,"ValueModifierEffect::sub_140540410(ValueModifierEffect *a1, float a2)"
+33322,0x140540570,0x1405430B0,3,"bool ScriptEffect::ReadFromStream(ScriptEffect *a1@, BGSLoadGameBuffer* a2, std::uint32_t a3)"
 33371,0x140542fe0,0x140546DD0,3,ActorMagicCaster::sub_*
 33373,0x140543110,0x140546F90,3,ActorMagicCaster::sub_*
 33375,0x1405433b0,0x140547230,3,ActorMagicCaster::ResetNodes
@@ -452,11 +452,11 @@ id,sse,vr,status,name
 33632,0x14054cd10,0x140550ec0,3,"bool MagicCaster::FindTargets(float a_effectivenessMult, std::uint32_t& a_targetCount, TESBoundObject* a_source, bool a_loadCast, bool a_adjustOnlyHostileEffectiveness)"
 33644,0x14054f070,0x1405531a0,3,void MagicCaster::SetCurrentSpell(MagicItem* a_item)
 33657,0x14054f4f0,0x1405536c0,3,void MagicCaster::FinishCast() src\RE\M/MagicCaster.cpp:26
-33669,0x14054fe00,0x140554000,3,MagicTarget* FUNC_14054FE00(longlong a1, float a2)
+33669,0x14054fe00,0x140554000,3,"MagicTarget* FUNC_14054FE00(longlong a1, float a2)"
 33672,0x1405506c0,0x140554980,3,MagicCaster::LaunchSpell
 33675,0x140550cf0,0x140554fb0,4,void MagicCaster::PlayReleaseSound(MagicItem* a_item) src\RE\M/MagicCaster.cpp:47
 33676,0x140550d60,0x140555020,3,"bool MagicCaster::FindTargets(float a_effectivenessMult, std::uint32_t& a_targetCount, TESBoundObject* a_source, bool a_loadCast, bool a_adjustOnlyHostileEffectiveness)"
-33677,0x140550e20,0x1405550E0,3,MagicTarget* FUNC_140550E20(longlong a1, char a2, float a3, NiPoint3 *a4, TESObjectCELL **a5, longlong a6)
+33677,0x140550e20,0x1405550E0,3,"MagicTarget* FUNC_140550E20(longlong a1, char a2, float a3, NiPoint3 *a4, TESObjectCELL **a5, longlong a6)"
 33684,0x140551a90,0x140555ca0,3,po3tweaks::Spell::detail::SpellApplyStruct
 33715,0x140552550,0x140556930,4,ActiveEffectFactory::AutoAERegistrar
 33716,0x1405525f0,0x1405569d0,4,"bool ActiveEffectFactory::CheckCast(MagicCaster* a_caster, MagicItem* a_spell, Effect* a_effect, MagicSystem::CannotCastReason& a_reason)"
@@ -466,8 +466,8 @@ id,sse,vr,status,name
 33742,0x140553750,0x1405579c0,2,papyrus_extender::events::game::magictargetapply_0x1e8
 33756,0x140554500,0x140558580,3,void MagicTarget::VisitEffects(ForEachActiveEffectVisitor& visitor)
 33763,0x140554700,0x140558740,3,RE::MagicTarget::sub_14055470
-33781,0x140555830,0x140559DF0,4,HasSameUsageEffect::Visit(HasSameUsageEffect *a1,void* a2)
-33785,0x140555980,0x140559F40,4,ResetElapsedTimeMatchingEffects::Visit(ActiveEffect* a1, ResetElapsedTimeMatchingEffects *a2, float a3)
+33781,0x140555830,0x140559DF0,4,"HasSameUsageEffect::Visit(HasSameUsageEffect *a1, void* a2)"
+33785,0x140555980,0x140559F40,4,"ResetElapsedTimeMatchingEffects::Visit(ActiveEffect* a1, ResetElapsedTimeMatchingEffects *a2, float a3)"
 33817,0x140556780,0x14055c510,4,"ActorValueIndices GetActorValueForCost_140556780 (MagicItem * a_this, CastingSource a_castingSource)"
 33818,0x140556810,0x14055c5a0,4,"CannotCastReason GetAssociatedResourceReason_140556810 (MagicItem * a_this, CastingSource a_castingSource)"
 33819,0x140556850,0x14055c5e0,4,"bool UsesResourceWhileCharging_ (MagicItem * a_item, CastingSource a_castingSource)"
@@ -475,7 +475,7 @@ id,sse,vr,status,name
 33821,0x140556990,0x14055c720,4,"bool UsesResourceOnRelease_140556990 (MagicItem * a_item, CastingSource a_castingSource)"
 33822,0x140556a40,0x14055C7D0,3,TESObjectREFR::CanBeTelekinesis(TESObjectREFR *a1)
 33825,0x140556ce0,0x14055ca70,3,enhanced_reanimation::Actor::CanBeReanimated
-33826,0x140556dc0,0x14055CB50,3,EffectSetting::sub_1400FBC60(EffectSetting *a1, TESObjectREFR *a2, Actor *a3)
+33826,0x140556dc0,0x14055CB50,3,"EffectSetting::sub_1400FBC60(EffectSetting *a1, TESObjectREFR *a2, Actor *a3)"
 33828,0x140556f20,0x14055ccb0,3,RE::Actor::DispelWornItemEnchantments
 33834,0x140557120,0x14055ceb0,4,BSContainer::ForEachResult MagicItemDataCollector::operator()(Effect* a_effect)
 33869,0x140558c00,0x14055E990,3,ModelReferenceEffect::DetachImpl
@@ -484,11 +484,11 @@ id,sse,vr,status,name
 33961,0x14055bc80,0x140561ec0,4,"void Start_14055BC80 (ActiveEffectReferenceEffectController * param_1, ReferenceEffect * * a_effectOut)"
 34132,0x140560e40,0x1405670b0,3,ENBLightForEffectShaders::ShaderReferenceEffect::Add:AddAddonModel::thunk_0x8C2
 34188,0x140563460,0x1405696D0,4,"void StaggerEffect (StaggerEffect *a1, float a2)"
-34250,0x140566060,0x14056C2D0,3,FUN_140566060 (void* a1, TelekinesisEffect* a2)
-34252,0x1405663c0,0x14056C720,3,TelekinesisEffect::Func19(TelekinesisEffect *a1, longlong a2, longlong a3, longlong a4)
+34250,0x140566060,0x14056C2D0,3,"FUN_140566060 (void* a1, TelekinesisEffect* a2)"
+34252,0x1405663c0,0x14056C720,3,"TelekinesisEffect::Func19(TelekinesisEffect *a1, longlong a2, longlong a3, longlong a4)"
 34256,0x140566a90,0x14056CFD0,3,TelekinesisEffect::Func21(TelekinesisEffect *a1)
 34259,0x140566bd0,0x14056D0B0,3,TelekinesisEffect::Func20(TelekinesisEffect* a1)
-34260,0x140566c50,0x14056D180,3,TelekinesisEffect::Func4(TelekinesisEffect *a1, float a2)
+34260,0x140566c50,0x14056D180,3,"TelekinesisEffect::Func4(TelekinesisEffect *a1, float a2)"
 34413,0x14056c9d0,0x140572fd0,3,"DialogueItem* DialogueItem::Ctor(TESQuest* a_quest, TESTopic* a_topic, TESTopicInfo* a_topicInfo, Actor* a_speaker)"
 34429,0x14056D570,0x140573B70,4,"void DialogueSubtitleStrings (char **a1, TESTopic *a2, TESTopicInfo *a3, Character *a4, void *a5)"
 34434,0x14056DA60,0x140574060,4,"void DialogueMenuStrings (void *a1, TESQuest *a2, TESTopic *a3, TESTopicInfo *a4, TESObjectREFR *a5, void *a6)"
@@ -594,7 +594,7 @@ id,sse,vr,status,name
 36631,0x1405f2530,0x1405fac70,3,bool Actor::Decapitate()
 36642,0x1405f4150,0x1405fc880,4,"void ReadFromSaveGame_1405F4150 (Actor * a_this, undefined8 param_2)"
 36658,0x1405f7170,0x1405ff8e0,4,FIGHT_REACTION Actor::GetFactionReaction(Actor* a_other) src\RE\A/Actor.cpp:441
-36663,0x1405f77c0,0x1405FFF30,3,Actor::GetAgression(Actor *a1, float a2)
+36663,0x1405f77c0,0x1405FFF30,3,"Actor::GetAgression(Actor *a1, float a2)"
 36668,0x1405f7a20,0x140600190,4,"std::int32_t Actor::GetFactionRank(TESFaction* a_faction, bool a_isPlayer)"
 36678,0x1405f8430,0x140600ba0,3,"void Actor::AddToFaction(TESFaction* a_faction, std::int8_t a_rank)"
 36680,0x1405f8590,0x140600d00,4,void Actor::RemoveFromFaction(RE::TESFaction* a_faction)
@@ -737,7 +737,7 @@ id,sse,vr,status,name
 39371,0x14069d2c0,0x1406bd770,3,po3tweaks::SitToWait::CanSleepWait
 39372,0x14069d6e0,0x1406bde50,2,RE::Actor::CanFastTravel
 39373,0x14069d9a0,0x1406be070,3,RE::Actor::sub_14069D9A0
-39375,0x14069e580,0x1406BEC10,3,PlayerCharacter::Update(PlayerCharacter *a1, float* a2, float a3)
+39375,0x14069e580,0x1406BEC10,3,"PlayerCharacter::Update(PlayerCharacter *a1, float* a2, float a3)"
 39384,0x14069fe60,0x1406c0640,3,"void PlayerCharacter::AddPlayerAddItemEvent(TESObject* a_object, TESForm* a_owner, TESObjectREFR* a_container, AQUIRE_TYPE a_type)"
 39401,0x1406a1820,0x1406c2160,3,splashes_of_skyrim::RainManager::ToggleWaterRipples
 39406,0x1406a1cc0,0x1406c2730,3,po3tweaks::NoPoisonPrompt::PoisonPrompt
@@ -747,10 +747,10 @@ id,sse,vr,status,name
 39413,0x1406a2540,0x1406c30b0,3,RE::PlayerCharacter::AddSkillExperience
 39415,0x1406a25a0,0x1406c3110,3,PlayerCharacter::InitActorValues
 39425,0x1406a2fc0,0x1406c38a0,3,papyrus_extender::papyrus::detail::get_god_mode_impl
-39464,0x1406a8e60,0x1406CA960,3,PlayerCharacter::InitLoadGame(PlayerCharacter *a1, float a2)
-39466,0x1406a9430,0x1406CAFF0,3,PlayerCharacter::Revert(longlong a1, PlayerCharacter *a2, float a3)
+39464,0x1406a8e60,0x1406CA960,3,"PlayerCharacter::InitLoadGame(PlayerCharacter *a1, float a2)"
+39466,0x1406a9430,0x1406CAFF0,3,"PlayerCharacter::Revert(longlong a1, PlayerCharacter *a2, float a3)"
 39471,0x1406a9f90,0x1406cbce0,3,"void ActivatePickRef_1406A9F90 (PlayerCharacter * a_this, VRControls::VRDevice a_device)"
-39474,0x1406aa1f0,0x1406CBF90,3,FUNC_1406AA1F0(void * a1, float a2, longlong a3, longlong a4)
+39474,0x1406aa1f0,0x1406CBF90,3,"FUNC_1406AA1F0(void * a1, float a2, longlong a3, longlong a4"
 39475,0x1406aa260,0x1406cc000,3,RE::PlayerCharacter::StartGrabObject
 39479,0x1406abf00,0x1406CDFD0,3,PlayerCharacter::sub_1406ABF00(PlayerCharacter *a1)
 39480,0x1406acaf0,0x1406cf050,3,void PlayerCharacter::DestroyMouseSprings() src\RE\P/PlayerCharacter.cpp:54
@@ -789,7 +789,7 @@ id,sse,vr,status,name
 40575,0x1406e7320,0x14070e210,4,RE::ProcessLists::HandlePlayerLevelUpdate(ProcessLists *param_1)
 41257,0x140704970,0x14072b900,3,RE::PlayerControls::Ctor
 41271,0x140705530,0x14072c380,3,RE::PlayerControls__sub_140705530
-41346,0x140708bf0,0x14072FF80,3,ActivateHandler::sub_140708BF0(ActivateHandler *a1, longlong a2, longlong a3)
+41346,0x140708bf0,0x14072FF80,3,"ActivateHandler::sub_140708BF0(ActivateHandler *a1, longlong a2, longlong a3)"
 41349,0x1407090a0,0x1407310b0,3,RE::JumpHandler::ProcessButton_1407090A0
 41361,0x1407096b0,0x140732b00,3,StaminaNPC::apply_PlayerControls__sub_140705530
 41659,0x140719990,0x140744330,2,papyrus_extender::detection::calculatedetection_0x526
@@ -1071,7 +1071,7 @@ id,sse,vr,status,name
 60504,0x140a77d80,0x140ab2780,3,void hkpWorld::RemovePhantom(hkpPhantom* a_phantom)
 60551,0x140a7b000,0x140ab5a00,3,"void hkpWorld::CastRay(const hkpWorldRayCastInput& a_input, hkpWorldRayCastOutput& a_output)"
 60628,0x140a7f0e0,0x140ab9ae0,4,"void hkpWorldObject::SetProperty(std::uint32_t a_key, hkpPropertyValue a_value)"
-61571,0x140abb790,0x140AF6190,3,hkpMouseSpringAction::sub_140ABB790(hkpMouseSpringAction *a1, float *a2)
+61571,0x140abb790,0x140AF6190,3,"hkpMouseSpringAction::sub_140ABB790(hkpMouseSpringAction *a1, float *a2)"
 62122,0x140ad2d10,0x140b0d7b0,3,undefined8 BSSynchronizedClipGenerator::sub_140AD2D10 (BSSynchronizedClipGenerator * a_this)
 62391,0x140ade070,0x140b18b40,4,undefined8 hkbCharacter::sub_140ADE070 (hkbCharacter * a_this)
 62584,0x140ae9a70,0x140b245d0,4,"BSResource__EntryDB_BShkbHkxDB__DBTraits_::Func3_140AE9A70 (longlong param_1, undefined8 param_2)"
