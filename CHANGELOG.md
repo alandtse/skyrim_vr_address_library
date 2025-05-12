@@ -1,3 +1,10 @@
+# [0.177.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.176.0...v0.177.0) (2025-05-12)
+
+
+### Features
+
+* add Better Telekinesis addresses ([#96](https://github.com/alandtse/skyrim_vr_address_library/issues/96)) ([960d473](https://github.com/alandtse/skyrim_vr_address_library/commit/960d47332350d9e7a9f8f80ae5ce48cf54fbbccb))
+
 # [0.176.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.175.0...v0.176.0) (2025-05-11)
 
 
