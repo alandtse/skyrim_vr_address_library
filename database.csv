@@ -1190,6 +1190,7 @@ id,sse,vr,status,name
 69447,0x140c6d5e0,0x140cb3770,3,float NiTimeController::ComputeScaledTime(float a_time)
 69449,0x140c6d810,0x140cb39a0,3,void NiTimeController::ProcessClone(NiCloningProcess& a_cloning)
 69459,0x140c6da50,0x140cb3be0,3,AnimationMotionRevoluation::MotionDataContainer::InterpolateRotation
+69528,0x140c70d30,0x140cb6f60,3,"void BSGeometry::CopyTransformAndBounds(BSGeometry *src, BSGeometry *dst, NiCloningProcess *cloningProcess)"
 69564,0x140c72300,0x140cb86b0,3,RE::BSDynamicTriShape::BSDynamicTriShape
 69583,0x140c731f0,0x140cb95a0,4,NiPointLight* NiPointLight::Ctor
 69636,0x140c76060,0x140cbc490,3,RE::BSResourceNiBinaryStream::Ctor
@@ -8601,6 +8602,7 @@ id,sse,vr,status,name
 502526,0x141dd7e80,0x141E95180,4,fActivatePickLength_Interface
 502558,0x141dd8020,0x141e95338,4,iMasserSize
 502570,0x141dd80b0,0x141e953c8,4,iSecundaSize
+502609,0x141dd8290,0x141e955C0,4,fSunBaseSize
 502611,0x141dd82a8,0x141e955d8,4,fSunGlareSize
 502619,0x141dd8308,0x141e95638,4,fSunAlphaTransTime
 505023,0x141de0b60,0x141e9bf40,3,fblock_gamesetting
@@ -9400,6 +9402,7 @@ id,sse,vr,status,name
 528220,0x1432838d0,0x1434d5fa0,3,RE::NiRTTI_BSDistantTreeShaderProperty
 528279,0x143283ab0,0x1434d6180,3,RE::NiRTTI_BSCubeMapCamera
 528312,0x143283b68,0x1434d6238,3,RE::NiRTTI_BSFogProperty
+528314,0x143283b7c,0x1436ed280,3,fShadowDistance
 528336,0x143495c48,0x1436f1748,3,RE::NiRTTI_BSClearZNode
 528354,0x143495d50,0x1436f1868,4,BSUtilityShader* BSUtilityShader::GetSingleton()
 528359,0x143495d68,0x1436f1a50,3,RE::NiRTTI_NiCollisionObject
