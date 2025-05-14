@@ -1,3 +1,10 @@
+# [0.178.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.177.0...v0.178.0) (2025-05-14)
+
+
+### Features
+
+* add BSGeometry clone, sun size, shadow distance offsets [#97](https://github.com/alandtse/skyrim_vr_address_library/issues/97) ([791dbf2](https://github.com/alandtse/skyrim_vr_address_library/commit/791dbf2410c3a982d60150c66371da0a6f4b9dfd))
+
 # [0.177.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.176.0...v0.177.0) (2025-05-12)
 
 
