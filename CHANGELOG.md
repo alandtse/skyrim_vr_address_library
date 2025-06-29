@@ -1,3 +1,10 @@
+# [0.179.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.178.0...v0.179.0) (2025-06-29)
+
+
+### Features
+
+* add VL Raymarch address ([#98](https://github.com/alandtse/skyrim_vr_address_library/issues/98)) ([5c0a3ea](https://github.com/alandtse/skyrim_vr_address_library/commit/5c0a3ea1dafb44cc83a9980c21aa6230ebe23e93))
+
 # [0.178.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.177.0...v0.178.0) (2025-05-14)
 
 
