@@ -1,3 +1,10 @@
+# [0.180.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.179.0...v0.180.0) (2025-07-10)
+
+
+### Features
+
+* add havok addresses for NGIO ([#99](https://github.com/alandtse/skyrim_vr_address_library/issues/99)) ([436a058](https://github.com/alandtse/skyrim_vr_address_library/commit/436a05815d7891e95fe61030ca7fedc497feb056))
+
 # [0.179.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.178.0...v0.179.0) (2025-06-29)
 
 
