@@ -1064,6 +1064,8 @@ id,sse,vr,status,name
 58628,0x140a0f480,0x140a49fd0,4,"void sub_140A0F480 (hkbClipGenerator * a_this, hkaDefaultAnimationControl* a_hkaDefaultAnimationControl)"
 58630,0x140a0f620,0x140a4a170,4,bool hkbClipGenerator::checkAtEnd (hkbClipGenerator * param_1)
 58817,0x140a23f10,0x140a5e8c0,4,hkaMirroredSkeleton * GetMirroredSkeleton (hkbCharacterSetup * a_this)
+59603,0x140a58c00,0x140A93600,4,"RE::hkpBoxShape* hkpBoxShape::createBoxShape(RE::hkpBoxShape*, RE::hkVector4&, float)"
+59971,0x140a640c0,0x140A9EAC0,4,"RE::hkpCylinderShape* hkpCylinderShape::createCylinderShape(RE::hkpCylinderShape*, RE::hkVector4&, RE::hkVector4&, float, int)"
 60094,0x140a6c5e0,0x140aa6fe0,4,void hkpEntity::AddContactListener(hkpContactListener* a_listener)
 60095,0x140a6c680,0x140aa7080,4,void hkpEntity::RemoveContactListener(hkpContactListener* a_listener)
 60096,0x140a6c730,0x140aa7130,4,void hkpEntity::Activate
@@ -1071,6 +1073,9 @@ id,sse,vr,status,name
 60504,0x140a77d80,0x140ab2780,3,void hkpWorld::RemovePhantom(hkpPhantom* a_phantom)
 60551,0x140a7b000,0x140ab5a00,3,"void hkpWorld::CastRay(const hkpWorldRayCastInput& a_input, hkpWorldRayCastOutput& a_output)"
 60628,0x140a7f0e0,0x140ab9ae0,4,"void hkpWorldObject::SetProperty(std::uint32_t a_key, hkpPropertyValue a_value)"
+60675,0x140a83c70,0x140ABE670,4,"RE::hkpShapePhantom* createSimpleShapePhantom(RE::hkpShapePhantom*, RE::hkpShape*, const RE::hkTransform&, uint32_t)"
+60682,0x140a840a0,0x140ABEAA0,4,"void hkpShapePhantom::GetPenetrations(RE::hkpShapePhantom*, RE::hkpCdBodyPairCollector*, RE::hkpCollisionInput*)"
+60791,0x140a878c0,0x140AC22C0,4,"void hkpShapePhantom::SetPosition(RE::hkpShapePhantom*, RE::hkVector4)"
 61571,0x140abb790,0x140AF6190,3,"hkpMouseSpringAction::sub_140ABB790(hkpMouseSpringAction *a1, float *a2)"
 62122,0x140ad2d10,0x140b0d7b0,3,undefined8 BSSynchronizedClipGenerator::sub_140AD2D10 (BSSynchronizedClipGenerator * a_this)
 62391,0x140ade070,0x140b18b40,4,undefined8 hkbCharacter::sub_140ADE070 (hkbCharacter * a_this)
@@ -8640,6 +8645,7 @@ id,sse,vr,status,name
 510025,0x141df3ed8,0x141eb2ed8,3,TrueHUD::g_fShoutMeterEndDuration
 510579,0x141df58f8,0x141eb5360,3,TrueHUD::g_fHUDOpacity
 510713,0x141df5e70,0x141eb59c8,2,Allocator* GetSingleton()
+511265,0x141dfb8ec,0x141EBB44C,4,hkpCylinderShapeType
 511882,0x141e05b28,0x141ec5698,4,float BSTimer::QGlobalTimeMultiplier()
 511883,0x141e05b2c,0x141ec569c,3,float GetCurrentGlobalTimeMult()
 511901,0x141e05da0,0x141ec59a8,4,bgGamepadEnable
@@ -9293,6 +9299,7 @@ id,sse,vr,status,name
 525119,0x14302e020,0x143188168,3,RE::NiRTTI_bhkPhantom
 525121,0x14302e038,0x143188180,3,RE::NiRTTI_bhkAabbPhantom
 525123,0x14302e050,0x143188198,3,RE::NiRTTI_bhkSphereRepShape
+525125,0x14302e064,0x1431881AC,3,hkpBoxShapeType
 525126,0x14302e068,0x1431881b0,3,RE::NiRTTI_bhkConvexShape
 525127,0x14302e078,0x1431881c0,3,RE::NiRTTI_bhkPCollisionObject
 525128,0x14302e088,0x1431881d0,3,RE::NiRTTI_hkPackedNiTriStripsData
