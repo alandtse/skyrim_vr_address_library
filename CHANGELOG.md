@@ -1,3 +1,10 @@
+# [0.181.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.180.0...v0.181.0) (2025-07-14)
+
+
+### Features
+
+* add BSLight::GetLuminance ([#100](https://github.com/alandtse/skyrim_vr_address_library/issues/100)) ([953ac91](https://github.com/alandtse/skyrim_vr_address_library/commit/953ac91bf7d7d0b2c803f3172acc4fee3779baa6))
+
 # [0.180.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.179.0...v0.180.0) (2025-07-10)
 
 
