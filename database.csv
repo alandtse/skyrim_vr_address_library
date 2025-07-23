@@ -1362,7 +1362,7 @@ id,sse,vr,status,name
 101296,0x14131cde0,0x141362c60,4,BSLight::sub_*
 101339,0x14131f810,0x1413656b0,4,"void BSShader::LoadShaders_14131F810 (BSShader * a_this, UINT_PTR * a_stream)"
 101341,0x14131fbd0,0x141365a70,4,"bool BSShader::BeginTechnique_14131FBD0 (BSShader * shader, int vertexDescriptor, int pixelDescriptor, bool skipPIxelShader)"
-101498,0x141324e00,0x1413570f0,2,void BSShadowDirectionalLight::DirShadowLightCulling(BSShadowDirectionalLight* this, BSTArray<BSTArray<NiPointer<NiAVObject>>>& jobArrays, BSTArray<NiPointer<NiAVObject>>& nodes)
+101498,0x141324e00,0x1413570f0,2,"void BSShadowDirectionalLight::DirShadowLightCulling(BSShadowDirectionalLight* this, BSTArray<BSTArray<NiPointer<NiAVObject>>>& jobArrays, BSTArray<NiPointer<NiAVObject>>& nodes)"
 101499,0x1413251c0,0x1413574f0,3,undefined8 BSShadowDirectionalLight::Func16_1413251C0 (BSShadowDirectionalLight * a_this)
 101631,0x14132ead0,0x141371a00,3,"void GetLightingShaderDefines(uint32_t descriptor, D3D_SHADER_MACRO* defines)"
 101633,0x14132ef60,0x141371e90,3,uint32_t BSLightingShader::GetPixelTechnique (uint32_t rawTechnique)
