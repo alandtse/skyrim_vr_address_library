@@ -9321,6 +9321,7 @@ id,sse,vr,status,name
 527634,0x1431d0dc0,0x143422f68,3,RE::NiRTTI_BSShaderProperty
 527635,0x1431d0dd0,0x143422f78,3,RE::NiRTTI_BSLeafAnimNode
 527636,0x1431d0de0,0x143422f88,3,RE::NiRTTI_BSTreeNode
+527650,0x1431d0e20,0x143423058,4,BSGraphics::BSShaderAccumulator
 527668,0x1431d0e70,0x143422fe4,4,f_lightFadeStart
 527669,0x1431d0e74,0x143422fe8,4,f_lightFadeEnd
 527731,0x1431d11a0,0x1434234c0,4,TESImagespaceManager* GetSingleton()
