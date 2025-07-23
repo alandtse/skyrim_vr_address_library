@@ -13,7 +13,8 @@ jobs:
         uses: actions/checkout@v3
         with:
           ref: ${{ github.head_ref }}
-
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
@@ -27,7 +28,7 @@ jobs:
       - name: Run CSV autofix script
         id: fix
         run: |
-          python .github/scripts/autofix_csv_quotes.py > fix_output.txt
+          python scripts/autofix_csv_quotes.py > fix_output.txt
           if grep -q '✅ Fixed:' fix_output.txt; then
             echo "modified=true" >> "$GITHUB_OUTPUT"
           else

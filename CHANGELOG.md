@@ -1,3 +1,38 @@
+# [0.181.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.180.0...v0.181.0) (2025-07-14)
+
+
+### Features
+
+* add BSLight::GetLuminance ([#100](https://github.com/alandtse/skyrim_vr_address_library/issues/100)) ([953ac91](https://github.com/alandtse/skyrim_vr_address_library/commit/953ac91bf7d7d0b2c803f3172acc4fee3779baa6))
+
+# [0.180.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.179.0...v0.180.0) (2025-07-10)
+
+
+### Features
+
+* add havok addresses for NGIO ([#99](https://github.com/alandtse/skyrim_vr_address_library/issues/99)) ([436a058](https://github.com/alandtse/skyrim_vr_address_library/commit/436a05815d7891e95fe61030ca7fedc497feb056))
+
+# [0.179.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.178.0...v0.179.0) (2025-06-29)
+
+
+### Features
+
+* add VL Raymarch address ([#98](https://github.com/alandtse/skyrim_vr_address_library/issues/98)) ([5c0a3ea](https://github.com/alandtse/skyrim_vr_address_library/commit/5c0a3ea1dafb44cc83a9980c21aa6230ebe23e93))
+
+# [0.178.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.177.0...v0.178.0) (2025-05-14)
+
+
+### Features
+
+* add BSGeometry clone, sun size, shadow distance offsets [#97](https://github.com/alandtse/skyrim_vr_address_library/issues/97) ([791dbf2](https://github.com/alandtse/skyrim_vr_address_library/commit/791dbf2410c3a982d60150c66371da0a6f4b9dfd))
+
+# [0.177.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.176.0...v0.177.0) (2025-05-12)
+
+
+### Features
+
+* add Better Telekinesis addresses ([#96](https://github.com/alandtse/skyrim_vr_address_library/issues/96)) ([960d473](https://github.com/alandtse/skyrim_vr_address_library/commit/960d47332350d9e7a9f8f80ae5ce48cf54fbbccb))
+
 # [0.176.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.175.0...v0.176.0) (2025-05-11)
 
 
