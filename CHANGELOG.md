@@ -1,3 +1,15 @@
+# [0.182.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.181.0...v0.182.0) (2025-07-23)
+
+
+### Bug Fixes
+
+* correct bad quotes ([d39e5c0](https://github.com/alandtse/skyrim_vr_address_library/commit/d39e5c0b3993224b7a940c66c6045d42fa7087af))
+
+
+### Features
+
+* add BSGraphics::BSShaderAccumulator ([10bf761](https://github.com/alandtse/skyrim_vr_address_library/commit/10bf7610db4a6610c151a56beabe09c946435ffc))
+
 # [0.181.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.180.0...v0.181.0) (2025-07-14)
 
 
