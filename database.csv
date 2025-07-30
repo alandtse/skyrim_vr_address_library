@@ -35,6 +35,7 @@ id,sse,vr,status,name
 12204,0x1401329d0,0x140143180,3,RE::LookupReferenceByHandle
 12210,0x140132bd0,0x140143380,4,DWORD Lock1_140132BD0 (Mutex * a_this)
 12272,0x1401349d0,0x140145380,3,RE::ExtraLock::REFR_LOCK::GetLockLevel
+12405,0x1401368f0,0x1401472a0,4,bool ExtraLinkedRef::IsNotEqual(const BSExtraData* a_rhs)
 12448,0x1401384d0,0x140148e80,4,uint32_t RE::TESLeveledList::GetAllBelowForce(RE::ExtraLevCreaModifier* extraLeveledCreatureModifier)
 12626,0x14013c740,0x14014d130,3,"char* ExtraTextDisplayData::GetDisplayName(TESBoundObject* a_baseObject, float a_temperFactor)"
 12633,0x14013cc20,0x14014d610,3,ExtraTextDisplayData::sub_14013CC20
@@ -333,11 +334,13 @@ id,sse,vr,status,name
 24481,0x140370910,0x1403802b0,3,RE::TESQuest::EnsureQuestStarted
 24483,0x140370b20,0x1403804c0,3,RE::TESQuest::sub_140370B20(TESQuest *param_1)
 24486,0x140370e90,0x140380830,3,RE::TESQuest::ResetQuest
+24523,0x140375050,0x140384a00,4,"void TESQuest::ForceRefIntoAlias(std::uint32_t a_aliasID, TESObjectREFR* a_ref)"
 24526,0x140375af0,0x1403854a0,3,BGSLocation::TryToClear
 24537,0x140378760,0x140388110,3,RE::TESQuest::CreateRefHandleByAliasID
 24647,0x14037f050,0x14038d9f0,3,Experience::
 24719,0x140380be0,0x140390450,3,BSTEventSource<QuestStatus::Event>* QuestStatus::GetEventSource()
 24778,0x140382720,0x140391F90,4,"void JournalMenuQuestDescriptionStrings (int64 a1, TESQuest *a2)"
+24815,0x140383c40,0x1403934b0,4,"RefHandle& TESQuestTarget::GetTargetReference(RefHandle& a_out, bool a_useExtraList, TESQuest* a_quest)"
 24985,0x14038d990,0x14039d1c0,3,RE::TESTopicInfo::ResponseData::PopulateResponseText
 25466,0x1403a4dd0,0x1403b4940,3,TESObjectREFR* TESHavokUtilities::FindCollidableRef(const hkpCollidable& a_linkedCollidable)
 25467,0x1403a4e50,0x1403b49c0,4,"float ScaleGameplayImpulseForce_1403a4e50 (float a_inputForce, bhkRigidBody * a_body, bool a_factorMass)"
@@ -382,7 +385,9 @@ id,sse,vr,status,name
 26009,0x1403c66a0,0x1403d5f20,4,RE::random
 26258,0x1403D2970,0x1403E22E0,4,WhosWho::GetFaceRelatedData
 26259,0x1403d2a60,0x1403e23d0,3,"void BSFaceGenManager::PrepareHeadPartForShaders(BSFaceGenNiNode* a_node, BGSHeadPart* a_headPart, TESNPC* a_npc)"
-26454,0x1403db420,0x1403eada0,2,ApplyMasksToRenderTargets
+26454,0x1403db420,0x1403eada0,2,"ApplyMasksToRenderTargets"
+26561,0x1403e1130,0x1403f0ae0,4,char* ActorValueList::GetActorValueName(ActorValue a_actorValue)
+26569,0x1403e1420,0x1403f0dd0,4,ActorValueInfo* ActorValueList::GetActorValueInfo(ActorValue a_actorValue)
 26570,0x1403e1450,0x1403f0e00,3,GetActorValueIdFromName_1403E1450 (1403e144d+3)
 26574,0x1403e1790,0x1403F1140,3,void RE::ActorValueList::InitActorValueInfo()
 26592,0x1403e48d0,0x1403f4420,4,"BGSSkillPerkTreeNode * BGSSkillPerkTreeNode::ctor_1403e48d0 (BGSSkillPerkTreeNode * a_this, int32_t a_index, ActorValueInfo * a_avInfo)"
@@ -1065,6 +1070,7 @@ id,sse,vr,status,name
 58630,0x140a0f620,0x140a4a170,4,bool hkbClipGenerator::checkAtEnd (hkbClipGenerator * param_1)
 58817,0x140a23f10,0x140a5e8c0,4,hkaMirroredSkeleton * GetMirroredSkeleton (hkbCharacterSetup * a_this)
 59603,0x140a58c00,0x140A93600,4,"RE::hkpBoxShape* hkpBoxShape::createBoxShape(RE::hkpBoxShape*, RE::hkVector4&, float)"
+59653,0x140a5be20,0x140a96820,4,"void hkpClosestRayHitCollector::AddRayHit(const hkpCdBody& a_body, const hkpShapeRayCastCollectorOutput& a_hitInfo)"
 59971,0x140a640c0,0x140A9EAC0,4,"RE::hkpCylinderShape* hkpCylinderShape::createCylinderShape(RE::hkpCylinderShape*, RE::hkVector4&, RE::hkVector4&, float, int)"
 60094,0x140a6c5e0,0x140aa6fe0,4,void hkpEntity::AddContactListener(hkpContactListener* a_listener)
 60095,0x140a6c680,0x140aa7080,4,void hkpEntity::RemoveContactListener(hkpContactListener* a_listener)
@@ -17663,4 +17669,4 @@ id,sse,vr,status,name
 5370397616,0x14019c3b0,0x1401ac0e0,3,RE::BSShaderProperty::InvalidateMaterial
 5375528368,0x140680db0,0x14068a230,3,RE::AIProcess::SetActorRefraction
 5388393136,0x1412c5ab0,0x141303ea0,3,RE::BSLightingShaderProperty::InvalidateTextures
-5399981752,0x141dd2eb8,0x141e901a8,4,CalculateMyCriticalHitChance
+5399981752,0x141dd2eb8,0x141e901a8,4,"CalculateMyCriticalHitChance"
