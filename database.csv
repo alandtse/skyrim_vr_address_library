@@ -752,7 +752,8 @@ id,sse,vr,status,name
 39410,0x1406a20b0,0x1406c2c00,3,po3tweaks::GameTimers::detail::UpdateTimers
 39413,0x1406a2540,0x1406c30b0,3,RE::PlayerCharacter::AddSkillExperience
 39415,0x1406a25a0,0x1406c3110,3,PlayerCharacter::InitActorValues
-39425,0x1406a2fc0,0x1406c38a0,3,papyrus_extender::papyrus::detail::get_god_mode_impl
+39425,0x1406a2fc0,0x1406c38a0,3,"papyrus_extender::papyrus::detail::get_god_mode_impl"
+39444,0x1406a4a00,0x1406c51f0,3,PlayerCharacter::GetLineOfSightImplementation_*
 39464,0x1406a8e60,0x1406CA960,3,"PlayerCharacter::InitLoadGame(PlayerCharacter *a1, float a2)"
 39466,0x1406a9430,0x1406CAFF0,3,"PlayerCharacter::Revert(longlong a1, PlayerCharacter *a2, float a3)"
 39471,0x1406a9f90,0x1406cbce0,3,"void ActivatePickRef_1406A9F90 (PlayerCharacter * a_this, VRControls::VRDevice a_device)"
@@ -972,7 +973,9 @@ id,sse,vr,status,name
 51618,0x1408bde30,0x1408ead70,4,void SleepWaitMenu::ToggleOpenSleepWaitMenu(bool a_sleeping)
 51638,0x1408bf360,0x1408ec3e0,2,StatsMenu::ProcessMessage
 51652,0x1408c20c0,0x1408eedb0,2,StatsMenu::UpdateSkillList
-51755,0x1408ccff0,0x1408fa0a0,4,SubtitleManager::KillSubtitles
+51753,0x1408ccbb0,0x1408f9c60,4,"void SubtitleManager::ShowSubtitle(SubtitleManager *a_this,TESObjectREFR *a_speaker,BSString *a_subtitle,bool a_alwaysDisplay)"
+51755,0x1408ccff0,0x1408fa0a0,4,"SubtitleManager::KillSubtitles"
+51756,0x1408cd0e0,0x1408fa190,4,void SubtitleManager::ApplyDistanceCheck(SubtitleManager *a_this)
 51761,0x1408cd260,0x1408fa330,3,SubtitleManager::DisplayNextSubtitle
 51788,0x1408ce590,0x1408fb660,2,TrainingMenu::ProcessMessage
 51790,0x1408ce6f0,0x1408fb7c0,4,TrainingMenu::TrainCallback::Accept
@@ -994,6 +997,7 @@ id,sse,vr,status,name
 51909,0x1408d5530,0x140903080,3,"void FadeOutGame_1408d5530(undefined8 *param_1,bool a_fadingOut,bool a_blackFade,float a_fadeDuration,bool a_arg4,float a_secsBeforeFade)"
 51910,0x1408d5620,0x140903280,3,Fasttravel
 51911,0x1408d5710,0x140903370,3,"void SendUIMessage::SendInventoryUpdateMessage(TESObjectREFR* a_inventoryRef, const TESBoundObject* a_updateObj)"
+51916,0x1408d5b90,0x1409037f0,3,"void QueueDialogSubtitles (BSString * a_text)"
 52050,0x1408da3d0,0x140908170,3,RE::DebugNotification
 52054,0x1408da860,0x14090b1d0,3,RE::PlaySound
 52181,0x1408E1AF0,0x140913210,3,DynamicStringDistributor::
@@ -8604,6 +8608,7 @@ id,sse,vr,status,name
 501108,0x141db3360,0x141e70290,4,gIniPref_fGrassStartFadeDistance_Grass_*
 501113,0x141db33a8,0x141e702d8,4,gIni_iMinGrassSize_Grass_*
 501125,0x141db3438,0x141e70368,4,gIni_bAllowLoadGrass_Grass_*
+501146,0x141db34f0,0x141e70420,4,GetILStringMap()
 501244,0x141db3e28,0x141e70d58,4,gIni_uGridsToLoad_General_*
 501401,0x141db4b98,0x141e71c08,3,po3tweaks::EffectShaderZbuffer
 501554,0x141db5590,0x141e72608,4,gIniPref_uLargeRefLODGridSize_General_*
@@ -17670,4 +17675,4 @@ id,sse,vr,status,name
 5370397616,0x14019c3b0,0x1401ac0e0,3,RE::BSShaderProperty::InvalidateMaterial
 5375528368,0x140680db0,0x14068a230,3,RE::AIProcess::SetActorRefraction
 5388393136,0x1412c5ab0,0x141303ea0,3,RE::BSLightingShaderProperty::InvalidateTextures
-5399981752,0x141dd2eb8,0x141e901a8,4,"CalculateMyCriticalHitChance"
+5399981752,0x141dd2eb8,0x141e901a8,4,CalculateMyCriticalHitChance
