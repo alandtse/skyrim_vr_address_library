@@ -67,7 +67,7 @@ id,sse,vr,status,name
 13233,0x140158e70,0x140169920,3,void sub_140158E70 (TES * a_this)
 13240,0x140159290,0x140169d50,4,"void TES::FUN_140159290 (TES * param_1, undefined4 param_2, undefined4 param_3)"
 13260,0x14015af70,0x14016ba30,4,"bool NiNode::ToggleMasterParticleAddonNodes(const NiNode* a_node, bool a_enable)"
-13530,0x1401652d0,0x140175a10,3,RE::UIMessageQueue::AddMessage
+13530,0x1401652d0,0x140175a10,3,"void UIMessageQueue::AddMessage (UIMessageQueue * a_this, BSFixedString * a_menuName, UIMessageTypes a_type, IUIMessageData * a_data)"
 13549,0x140165770,0x140175eb0,4,longlong TESWorldSpace::GetCellByCoordinateMask_140165770 (TESWorldSpace * a_this)
 13594,0x140167220,0x140177940,3,FDGE::Skyrim::LoadWorldData
 13597,0x140167400,0x140177b20,4,bool TESDataHandler::AddFormToDataHandler(TESForm* a_form)
@@ -772,7 +772,7 @@ id,sse,vr,status,name
 39612,0x1406b52a0,0x1406d8580,3,RE::PlayerCharacter::GetTintMask
 39614,0x1406b5450,0x1406d8730,3,RE::PlayerCharacter::GetNumTints
 39657,0x1406b6eb0,0x1406da3d0,3,"void PlayerCharacter::sub_1406B6EB0 (PlayerCharacter * a_this, float param_2, undefined8 param_3, TESObjectCELL * a_cell, bool param_5)"
-39663,0x1406b8340,0x1406db930,2,PlayerCharacter::DiscoveryCheck
+39663,0x1406b8340,0x1406db930,4,PlayerCharacter::DiscoveryCheck
 40056,0x1406c7d60,0x1406ee380,3,BSTEventSource<LocationDiscovery::Event>* LocationDiscovery::GetEventSource()
 40060,0x1406c8120,0x1406ee740,3,BSTEventSource<ShoutAttack::Event>* ShoutAttack::GetEventSource()
 40230,0x1406ce720,0x1406f5bf0,3,"void Actor::ProcessVATSAttack(MagicCaster* a_caster, bool a_hasTargetAnim, TESObjectREFR* a_target, bool a_leftHand)"
@@ -935,6 +935,7 @@ id,sse,vr,status,name
 50748,0x1408800c0,0x1408ad9a0,4,undefined8 Handle_1408800C0 (BSTEventSink_UserEventEnabledEvent_ * a_this)
 50751,0x140880160,0x1408ADA40,4,"void HudMenuStrings (int32 a1, struct8 *a2, TESQuest *a3, int64 a4)"
 50757,0x1408808d0,0x1408ae1e0,3,HUDNotifications::Update
+50758,0x140880fd0,0x1408ae8e0,3,undefined8 ProcessMessage_140880FD0 (HUDNotifications * a_this)
 50771,0x140881cc0,0x1408af5c0,3,TrueHUD::HUDChargeMeter::Update_140881CC0
 50776,0x140882520,0x1408afe70,3,EnemyHealth::Update
 50881,0x140887600,0x1408b4b40,3,"void Inventory3DManager::Begin3D (Inventory3DManager * a_this, INTERFACE_LIGHT_SCHEME a_scheme)"
@@ -1271,7 +1272,7 @@ id,sse,vr,status,name
 79944,0x140ebe510,0x140F1A680,4,"void UI::GetTopMostMenu(RE::UI this, RE::IMenu** a_result, std::uint32_t a_depthLimit)"
 79947,0x140ebf510,0x140f1b750,3,Skyrim-Upscaler::Main_DrawWorld_MainDraw
 80059,0x140ec30f0,0x140f1fbc0,3,RE::UIMessageQueue::ProcessCommands
-80061,0x140ec31d0,0x140f1fca0,3,RE::UIMessageQueue::CreateUIMessageData
+80061,0x140ec31d0,0x140f1fca0,4,RE::UIMessageQueue::CreateUIMessageData
 80077,0x140ec3d50,0x140f20820,3,po3tweaks::SitToWait::ProcessMenu
 80087,0x140ec4420,0x140f20ef0,3,bool BSScaleformManager::FileExists(const char* a_fileName)
 80197,0x140ec83a0,0x140f24ef0,3,RE::GFxValue::ObjectInterface::AttachMovie
@@ -9005,6 +9006,7 @@ id,sse,vr,status,name
 519396,0x142f4c328,0x143011720,3,ContainerMenu::ContainerMode GetContainerMode()
 519421,0x142f4c3f0,0x1430117e8,3,RefHandle GetTargetRefHandle()
 519570,0x142f4c8f0,0x143011ce8,3,RefHandle GetTargetRefHandle()
+519577,0x142f4c908,0x143011d30,4,LAST_LOCATION
 519579,0x142f4c910,0x143011d40,4,TrueHUD::g_worldToCamMatrix
 519618,0x142f4ded0,0x1430133a8,4,TrueHUD::g_viewPort
 519716,0x142f4e240,0x143013728,3,TESObjectREFR* GetTargetReference()
