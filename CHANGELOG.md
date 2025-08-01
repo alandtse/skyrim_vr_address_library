@@ -1,3 +1,11 @@
+# [0.185.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.184.0...v0.185.0) (2025-08-01)
+
+
+### Features
+
+* add DynamicLocationPopups ([320b883](https://github.com/alandtse/skyrim_vr_address_library/commit/320b883fb521b913b9894384d6edeb21121dd760))
+* add FloatingSubtitles addresses ([355eb91](https://github.com/alandtse/skyrim_vr_address_library/commit/355eb9190c67657470d71a32e7c3eaa858342b8a))
+
 # [0.184.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.183.0...v0.184.0) (2025-07-30)
 
 
