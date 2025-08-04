@@ -1242,13 +1242,15 @@ id,sse,vr,status,name
 75457,0x140d69ea0,0x140dbb960,4,"void Renderer::CreateSwapChain(WinAPI::HWND* window, bool setCurrent)"
 75458,0x140d6a080,0x140dbbb40,4,void Renderer::Lock()
 75459,0x140d6a0a0,0x140dbbb60,4,void Renderer::Unlock()
-75460,0x140d6a0c0,0x140dbbb80,3,Skyrim-Upscaler::BSGraphics_Renderer_Begin_UpdateJitter
+75460,0x140d6a0c0,0x140dbbb80,3,void Renderer::Begin(std::uint32_t a_windowID)
 75461,0x140d6a2b0,0x140dbbdd0,3,shadowboost::TimeManager_SleepCheck
+75472,0x140d6b210,0x140dbce30,3,"void CreatePerFrameBuffer (undefined8 param_1, byte param_2)"
 75477,0x140d6bfe0,0x140dbdd00,3,Skyrim-Upscaler
 75479,0x140d6c1e0,0x140dbdf60,3,fDrawGrass_*
 75507,0x140d6dbc0,0x140dbf9b0,3,"NiTexture::RendererData* BSRenderManager::CreateRenderTexture(std::uint32_t a_width, std::uint32_t a_height)"
 75522,0x140d6e780,0x140dc05f0,4,"void Renderer::SaveRenderTargetToFile(RENDER_TARGET a_renderTarget, const char* a_filePath, BSGraphics::TextureFileFormat a_textureFileFormat)"
 75532,0x140d6ef90,0x140dc1250,4,"void BSGraphics::Renderer::DispatchCSShader (BSGraphics::Renderer * a_this, BSGraphics::ComputeShader * a_computeShader, uint32_t threadGroupCountX, uint32_t threadGroupCountY, uint32_t threadGroupCountZ)"
+75564,0x140d70100,0x140dc23d0,4,"void Renderer::SetScissorRect (BSGraphics::Renderer * a_this, int a_left, int a_top, int a_right, int a_bottom)"
 75570,0x140d70290,0x140dc2560,3,void BSGraphics::Renderer::SetPerFrameBuffers (BSGraphics::Renderer * a_renderer)
 75580,0x140d705b0,0x140dc2e70,3,void BSGraphics::SetDirtyStates_140d705b0 (bool isCompute)
 75591,0x140d71f00,0x140dc4b90,3,OpenAnimationReplacer::src/Hooks.h:107
@@ -1345,7 +1347,7 @@ id,sse,vr,status,name
 98989,0x141295fb0,0x1412cec20,3,"void InitDirectionalAmbient (NiColor * a_directionalAmbientColors, NiColor * ambientSpecularColor, float ambientSpecularAlpha)"
 98997,0x1412966a0,0x1412cf410,2,BSGraphics::BSShaderAccumulator* BSGraphics::BSShaderAccumulator::GetCurrentAccumulator()
 99020,0x1412972b0,0x1412d1af0,4,"void ImageSpaceManager::AddEffect (ImageSpaceManager* a_this, uint a_ImageSpaceManager__ImageSpaceEffectEnum, BSImagespaceShader * a_imageSpaceShader)"
-99023,0x141297410,0x1412d1c50,3,"void FUN_141297410 (longlong param_1, undefined4 param_2, int param_3)"
+99023,0x141297410,0x1412d1c50,3,"void PostProcessing (TESImagespaceManager * a_this, uint param_2, RENDER_TARGET render_target)"
 99692,0x1412b9320,0x1412f6d50,4,"BSLight* ShadowSceneNode::AddLight(NiLight* a_light, const LIGHT_CREATE_PARAMS& a_params)"
 99693,0x1412b9610,0x1412f7040,3,"void ShadowSceneNode::AddLight(RE::BSLight* a_light)"
 99696,0x1412b99f0,0x1412f7420,4,"void ShadowSceneNode::AttachObject (ShadowSceneNode * a_this, NiAVObject * a_node)"
@@ -1383,7 +1385,8 @@ id,sse,vr,status,name
 100411,0x1412e21a0,0x1413218c0,4,"void Main::RenderFirstPersonView (char param_1, char param_2)"
 100421,0x1412e3520,0x141323250,3,"void Main::RenderDepth (char param_1, char param_2)"
 100422,0x1412e3ac0,0x141323680,3,void Main::RenderShadowmasks (bool param_1)
-100424,0x1412e3e70,0x141323b10,3,void Main::RenderWorld (bool param_1)
+100424,0x1412e3e70,0x141323b10,3,"void Main::RenderWorld (bool param_1)"
+100430,0x1412e49a0,0x141324e80,3,void RenderEOFImageSpaceEffects (RENDER_TARGET a_rendertarget)
 100458,0x1412e5570,0x141325d10,3,void BSShaderRenderTargets::Create()
 100475,0x1412e7db0,0x141328f20,4,"void BSImagespaceShader::SetupVolumetricLights(BSImagespaceShader *param_1,RENDER_TARGET a_renderTarget, RENDER_TARGET a_renderTargetSource)"
 100540,0x1412eeb90,0x141330a40,3,"RENDER_TARGET FUN_1412eeb90 (BSImagespaceShader * * param_1, RENDER_TARGET param_2, RENDER_TARGET param_3)"
@@ -1392,6 +1395,7 @@ id,sse,vr,status,name
 100602,0x1412f63d0,0x141333470,3,"void BSWaterShader::Func4_1412F63D0 (BSWaterShader * a_this, undefined8 param_2)"
 100717,0x1412fdcc0,0x1413401e0,4,"BSShader * BSShader::MakeRenderPass (BSShader * a_this, BSShaderProperty * a_property, BSGeometry * a_geometry, uint32_t a_technique, uint8_t a_numLights, BSLight * * a_lights)"
 100718,0x1412fdd60,0x141340280,4,void RenderPassArray::ClearRenderPass(RE::BSRenderPass* pass)
+100720,0x1412fde50,0x141340330,4,void renderPassCacheCtor()
 100771,0x1413014c0,0x141343d40,3,"bool BSDistantTreeShader::Func2_1413014C0 (BSDistantTreeShader * a_this, undefined8 param_2)"
 100840,0x141306240,0x141347320,4,"void BSShaderAccumulator::RenderPersistentPassList (longlong * * passList, uint32_t renderFlags)"
 100847,0x141307160,0x141348390,3,Skyrim-Upscaler
@@ -8666,6 +8670,7 @@ id,sse,vr,status,name
 511903,0x141e05db8,0x141ec5a88,4,char** BSGamepadDevice::GamePadFile()
 511916,0x141e05e50,0x141ec5b38,4,char** BSKeyboardDevice::BSKeyboardDevice::path()
 511918,0x141e05e68,0x141ec5b60,4,char** BSGamepadDevice::MouseFile()
+512203,0x141e073d8,0x141ec72b8,4,fDRClampOffset:Display
 512509,0x141e09bd0,0x141ecfaf8,3,RE::BSScaleformManager::CollectDisplayInfo::fSafeZoneXWide
 512511,0x141e09be8,0x141ecfb10,3,RE::BSScaleformManager::CollectDisplayInfo::fSafeZoneYWide
 512513,0x141e09c00,0x141ecfb28,3,RE::BSScaleformManager::CollectDisplayInfo::fSafeZoneX
