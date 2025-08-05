@@ -386,7 +386,8 @@ id,sse,vr,status,name
 26009,0x1403c66a0,0x1403d5f20,4,RE::random
 26258,0x1403D2970,0x1403E22E0,4,WhosWho::GetFaceRelatedData
 26259,0x1403d2a60,0x1403e23d0,3,"void BSFaceGenManager::PrepareHeadPartForShaders(BSFaceGenNiNode* a_node, BGSHeadPart* a_headPart, TESNPC* a_npc)"
-26454,0x1403db420,0x1403eada0,2,"ApplyMasksToRenderTargets"
+26454,0x1403db420,0x1403eada0,2,ApplyMasksToRenderTargets
+26455,0x1403db780,0x1403eb110,3,"void BSFaceGenManager::UpdatePendingCustomizationTextures()"
 26561,0x1403e1130,0x1403f0ae0,4,char* ActorValueList::GetActorValueName(ActorValue a_actorValue)
 26569,0x1403e1420,0x1403f0dd0,4,ActorValueInfo* ActorValueList::GetActorValueInfo(ActorValue a_actorValue)
 26570,0x1403e1450,0x1403f0e00,3,GetActorValueIdFromName_1403E1450 (1403e144d+3)
