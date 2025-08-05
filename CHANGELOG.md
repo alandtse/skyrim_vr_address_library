@@ -1,3 +1,10 @@
+# [0.186.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.185.0...v0.186.0) (2025-08-04)
+
+
+### Features
+
+* add cs upscaler ([cba29fe](https://github.com/alandtse/skyrim_vr_address_library/commit/cba29fe888c33141bb9b12b1232207380cc9be35))
+
 # [0.185.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.184.0...v0.185.0) (2025-08-01)
 
 
