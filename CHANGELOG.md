@@ -1,3 +1,10 @@
+# [0.187.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.186.0...v0.187.0) (2025-08-05)
+
+
+### Features
+
+* add BSFaceGenManager::UpdatePendingCustomizationTextures ([3b7c2a6](https://github.com/alandtse/skyrim_vr_address_library/commit/3b7c2a6ae8105d3b9af9d68bd1b17dc14a69ea16))
+
 # [0.186.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.185.0...v0.186.0) (2025-08-04)
 
 
