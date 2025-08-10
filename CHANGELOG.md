@@ -1,3 +1,10 @@
+# [0.188.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.187.0...v0.188.0) (2025-08-10)
+
+
+### Features
+
+* add hkpShapePhantom::SetShape ([#102](https://github.com/alandtse/skyrim_vr_address_library/issues/102)) ([28c8df1](https://github.com/alandtse/skyrim_vr_address_library/commit/28c8df175f9a5107a387712336c317b979cfce60))
+
 # [0.187.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.186.0...v0.187.0) (2025-08-05)
 
 
