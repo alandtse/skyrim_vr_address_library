@@ -1,3 +1,10 @@
+# [0.189.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.188.0...v0.189.0) (2025-08-11)
+
+
+### Features
+
+* fInteriorShadowDistance:Display ([#103](https://github.com/alandtse/skyrim_vr_address_library/issues/103)) ([4bdcf58](https://github.com/alandtse/skyrim_vr_address_library/commit/4bdcf58d5229f7cdfbd4f200c296127089783535))
+
 # [0.188.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.187.0...v0.188.0) (2025-08-10)
 
 
