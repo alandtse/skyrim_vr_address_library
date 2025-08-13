@@ -1045,6 +1045,9 @@ id,sse,vr,status,name
 55367,0x140988b10,0x1409c3c90,3,papyrus::ImageSpaceModifier::ApplyCrossFade
 55368,0x140988b30,0x1409c3cb0,3,papyrus::ImageSpaceModifier::PopTo
 55382,0x1409893e0,0x1409c4560,3,papyrus::ImageSpaceModifier::RemoveCrossFade
+55387,0x140989620,0x1409c47a0,3,"void papyrus__LeveledActor::AddForm_140989620 (longlong * param_1, undefined4 param_2, longlong param_3, longlong param_4, undefined param_5)"
+55401,0x140989dd0,0x1409c4f50,4,"void papyrus__LeveledItem::AddForm_140989DD0 (longlong * param_1, undefined4 param_2, longlong param_3, longlong param_4, undefined param_5, undefined param_6)"
+55415,0x14098a600,0x1409c5780,3,"void papyrus__LeveledSpell::AddForm_14098A600 (longlong * param_1, undefined4 param_2, longlong param_3, longlong param_4, undefined param_5)"
 55616,0x140993100,0x1409cdc20,3,papyrus::ObjectReference::AddItem
 55622,0x1409936e0,0x1401956c0,2,Unknown (required by Skyrim Platform)
 55644,0x140994170,0x1409cec90,3,papyrus::ObjectReference::GetItemCount
@@ -17683,4 +17686,4 @@ id,sse,vr,status,name
 5370397616,0x14019c3b0,0x1401ac0e0,3,RE::BSShaderProperty::InvalidateMaterial
 5375528368,0x140680db0,0x14068a230,3,RE::AIProcess::SetActorRefraction
 5388393136,0x1412c5ab0,0x141303ea0,3,RE::BSLightingShaderProperty::InvalidateTextures
-5399981752,0x141dd2eb8,0x141e901a8,4,CalculateMyCriticalHitChance
+5399981752,0x141dd2eb8,0x141e901a8,4,"CalculateMyCriticalHitChance"
