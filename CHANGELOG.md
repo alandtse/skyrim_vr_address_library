@@ -1,3 +1,10 @@
+# [0.190.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.189.0...v0.190.0) (2025-08-13)
+
+
+### Features
+
+* add Leveled List Crash Prevention ([410a2ea](https://github.com/alandtse/skyrim_vr_address_library/commit/410a2ea0398c5867090d6ccaa3ab329d348e6586))
+
 # [0.189.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.188.0...v0.189.0) (2025-08-11)
 
 
