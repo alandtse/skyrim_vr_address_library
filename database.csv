@@ -1092,6 +1092,7 @@ id,sse,vr,status,name
 60675,0x140a83c70,0x140ABE670,4,"RE::hkpShapePhantom* createSimpleShapePhantom(RE::hkpShapePhantom*, RE::hkpShape*, const RE::hkTransform&, uint32_t)"
 60682,0x140a840a0,0x140ABEAA0,4,"void hkpShapePhantom::GetPenetrations(RE::hkpShapePhantom*, RE::hkpCdBodyPairCollector*, RE::hkpCollisionInput*)"
 60791,0x140a878c0,0x140AC22C0,4,"void hkpShapePhantom::SetPosition(RE::hkpShapePhantom*, RE::hkVector4)"
+60792,0x140a87930,0x140AC2330,4,"hkWorldOperation::Result hkpShapePhantom::SetShape(RE::hkpShapePhantom*, RE::hkpShape*)"
 61571,0x140abb790,0x140AF6190,3,"hkpMouseSpringAction::sub_140ABB790(hkpMouseSpringAction *a1, float *a2)"
 62122,0x140ad2d10,0x140b0d7b0,3,undefined8 BSSynchronizedClipGenerator::sub_140AD2D10 (BSSynchronizedClipGenerator * a_this)
 62391,0x140ade070,0x140b18b40,4,undefined8 hkbCharacter::sub_140ADE070 (hkbCharacter * a_this)
@@ -8683,6 +8684,7 @@ id,sse,vr,status,name
 513222,0x141e0df14,0x1434230c4,4,shadowoost::gIsInterior
 513256,0x141e0dfcc,0x14342317c,4,ambientSpecularAndFresnel
 513464,0x141e0eb48,0x141ed49c8,4,characterLightTexture
+513755,0x141e10578,0x141ed6338,4,fInteriorShadowDistance:Display
 513786,0x141e10750,0x141ed6650,4,Skyrim-Upscaler::GetVerticalFOVRad
 513793,0x141e10978,0x141ed6530,4,fShadowDistance:Display
 513805,0x141e10a08,0x141ed65c0,4,fSplitOverlap:Display

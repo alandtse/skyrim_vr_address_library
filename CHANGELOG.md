@@ -1,3 +1,24 @@
+# [0.189.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.188.0...v0.189.0) (2025-08-11)
+
+
+### Features
+
+* fInteriorShadowDistance:Display ([#103](https://github.com/alandtse/skyrim_vr_address_library/issues/103)) ([4bdcf58](https://github.com/alandtse/skyrim_vr_address_library/commit/4bdcf58d5229f7cdfbd4f200c296127089783535))
+
+# [0.188.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.187.0...v0.188.0) (2025-08-10)
+
+
+### Features
+
+* add hkpShapePhantom::SetShape ([#102](https://github.com/alandtse/skyrim_vr_address_library/issues/102)) ([28c8df1](https://github.com/alandtse/skyrim_vr_address_library/commit/28c8df175f9a5107a387712336c317b979cfce60))
+
+# [0.187.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.186.0...v0.187.0) (2025-08-05)
+
+
+### Features
+
+* add BSFaceGenManager::UpdatePendingCustomizationTextures ([3b7c2a6](https://github.com/alandtse/skyrim_vr_address_library/commit/3b7c2a6ae8105d3b9af9d68bd1b17dc14a69ea16))
+
 # [0.186.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.185.0...v0.186.0) (2025-08-04)
 
 
