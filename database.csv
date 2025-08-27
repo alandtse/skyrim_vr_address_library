@@ -278,7 +278,8 @@ id,sse,vr,status,name
 20470,0x1402c53d0,0x1402d6b40,3,RE::BGSListForm::AddForm
 20529,0x1402c73f0,0x1402d8b60,3,BGSMaterialType* BGSMaterialType::GetMaterialType(MATERIAL_ID a_materialID)
 20905,0x1402d19a0,0x1402e3110,4,BSShaderTextureSet * BGSTextureSet::ToShaderTextureSet (BGSTextureSet * a_textureSet)
-21028,0x1402d76b0,0x1402e8bc0,4,"bool GetIsRace(TESObjectREFR* a_npcRef, TESForm* a_raceForm, double* result)"
+20978,0x1402d5420,0x1402e6b30,4,"bool SameRace(TESObjectREFR* a_this, TESObjectREFR* a_obj, void* unused, double& result)"
+21028,0x1402d76b0,0x1402e8bc0,4,"bool GetIsRace(TESObjectREFR* a_this, TESForm* a_raceForm, void* unused, double& result)"
 21086,0x1402da220,0x1402eb730,3,po3tweaks::GetEquippedFix::GetEquipped
 21119,0x1402db610,0x1402ecb20,4,"bool IsRunning_1402DB610 (Actor * a_this, undefined8 param_2, undefined8 param_3, undefined * param_4)"
 21187,0x1402DDA40,0x1402EEF50,2,"bool HasKeyword_1402DDA40(TESObjectREFR *a1, int64 a2, int64 a3, double* a4)"
