@@ -1,3 +1,10 @@
+# [0.191.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.190.0...v0.191.0) (2025-08-27)
+
+
+### Features
+
+* add SameRace and fix GetIsRace signature ([#104](https://github.com/alandtse/skyrim_vr_address_library/issues/104)) ([332a99f](https://github.com/alandtse/skyrim_vr_address_library/commit/332a99fe4d3b90b72ee4afabbdc9c863260621bc))
+
 # [0.190.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.189.0...v0.190.0) (2025-08-13)
 
 
