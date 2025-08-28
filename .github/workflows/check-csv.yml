@@ -1,13 +1,16 @@
 name: Validate and Fix CSV Name Field
 
 on:
-  pull_request:
+  pull_request_target:
     paths:
       - '**.csv'
 
 jobs:
   autofix:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
       - name: Checkout PR branch
         uses: actions/checkout@v3
