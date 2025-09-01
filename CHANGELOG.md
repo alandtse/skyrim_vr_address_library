@@ -1,3 +1,10 @@
+# [0.192.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.191.0...v0.192.0) (2025-09-01)
+
+
+### Features
+
+* add addresses for Unified Water ([#105](https://github.com/alandtse/skyrim_vr_address_library/issues/105)) ([e81f7bc](https://github.com/alandtse/skyrim_vr_address_library/commit/e81f7bc5bc9ee7edcc150438d50e3628a92b3cbd))
+
 # [0.191.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.190.0...v0.191.0) (2025-08-27)
 
 
