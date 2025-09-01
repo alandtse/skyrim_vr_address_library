@@ -49,6 +49,7 @@ id,sse,vr,status,name
 13138,0x140150c80,0x1401616b0,4,void AddCellGrassTask::sub_140150C80 (void)
 13148,0x140152030,0x140162a70,4,"undefined8 sub_140152030 (TES * a_this, undefined8 param_2, undefined8 param_3, float param_4)"
 13159,0x1401535d0,0x140164020,3,void TES::PurgeBufferedCells()
+13170,0x140153d00,0x140164750,3,"void TES::SetWorldSpace(TES* a_tes)"
 13171,0x140153f80,0x1401649d0,4,WashThatBloodOff::Rain::Manager::Load_Interior
 13172,0x1401545f0,0x140165040,3,WashThatBloodOff::Rain::Manager::Leave_Interior
 13174,0x140154db0,0x140165800,4,"longlong sub_140154DB0 (TES * a_this, undefined8 a_2, undefined8 param_3)"
@@ -82,6 +83,7 @@ id,sse,vr,status,name
 13789,0x140177790,0x1401876a0,3,RE::Sky::GetSingleton
 13855,0x14017a700,0x14018a5b0,4,"bool TESFile::OpenTES(NiFile::OpenMode a_accessMode, bool a_lock)"
 13857,0x14017ad40,0x14018abf0,4,bool TESFile::CloseTES(bool a_force)
+13888,0x14017cb10,0x14018c920,3,"bool TESFile::SeekForm(TESFile* a_file, TESForm* a_form)"
 13889,0x14017cc90,0x14018caa0,3,FDGE::Skyrim::SkipGrup
 13894,0x14017d110,0x14018cf20,3,bool TESFile::SeekNextForm(bool a_skipIgnored)
 13897,0x14017d4c0,0x14018d2a0,3,RE::TESFile::GetFormType
@@ -220,6 +222,7 @@ id,sse,vr,status,name
 18540,0x1402657a0,0x140276d70,4,TESRegionList* TESObjectCELL::GetRegionList(bool a_createIfMissing)
 18543,0x140265990,0x140276f60,3,"bool TESObjectCELL::GetWaterHeight(const NiPoint3& a_pos, float& a_waterHeight)"
 18568,0x1402665a0,0x140277b70,3,TESObjectREFR::RemoveReference3D
+18631,0x14026a3e0,0x14027b9b0,3,"bool TESFile::SeekLandscapeForCurrentCell(TESFile* a_file)"
 18637,0x14026a840,0x14027be10,4,undefined8 TESObjectCELL::sub_14026A840 (TESObjectCELL * a_this)
 18642,0x14026b160,0x14027c730,3,po3tweaks::QueuedRefCrash::SetFadeNode
 18655,0x14026c5d0,0x14027dba0,3,void TESObjectCELL::sub_14026C5D0 (TESObjectCELL * a_this)
@@ -273,7 +276,9 @@ id,sse,vr,status,name
 19824,0x1402a76f0,0x1402b8e60,4,bool Actor::IsLeveled()
 19843,0x1402a8020,0x1402b9790,4,BGSLocationRefType * TESObjectREFR::GetLocationRefType_1402A8020 (TESObjectREFR * a_this)
 19857,0x1402a8cc0,0x1402ba430,3,void TESObjectREFR::InitChildActivates(TESObjectREFR* a_actionRef)
+20022,0x1402b1b60,0x1402c32d0,3,"bool TESFile::SeekCell(TESWorldSpace* a_worldSpace, TESFile* a_file, int32_t a_x, int32_t a_y)""
 20026,0x1402b20e0,0x1402c3850,4,TESWorldSpace * TESWorldSpace::sub_1402B20E0 (TESWorldSpace * a_this)
+20029,0x1402b27a0,0x1402c3f10,3,"void TES::DestroySkyCell(TES* a_tes)"
 20095,0x1402b63b0,0x1402c7b20,3,TESObjectCELL* TESWorldSpace::GetSkyCell()
 20470,0x1402c53d0,0x1402d6b40,3,RE::BGSListForm::AddForm
 20529,0x1402c73f0,0x1402d8b60,3,BGSMaterialType* BGSMaterialType::GetMaterialType(MATERIAL_ID a_materialID)
@@ -404,6 +409,9 @@ id,sse,vr,status,name
 29253,0x14044e9c0,0x14045e5a0,4,"void BSTempEffectSimpleDecal::ApplyTextureSetToGeometry (BSTempEffectSimpleDecal * a_this, BSGeometry * a_effect3D, BGSTextureSet * a_texture1, bool a_blended)"
 29303,0x140452550,0x140462500,3,RE::NiAVObject::ClearWeaponBlood
 30839,0x1404a8090,0x1404b80a0,3,void BGSDistantTreeBlock::UpdateBlockVisibility (BGSDistantTreeBlock * a_this)
+30934,0x1404ad940,0x1404bd9a0,3,"void BGSTerrainBlock::Attach(BGSTerrainBlock* a_block)"
+30936,0x1404adb60,0x1404bdbc0,3,"void BGSTerrainBlock::Detach(BGSTerrainBlock* a_block)"
+31059,0x1404b5090,0x1404c5170,3,"void BGSTerrainNode::UpdateWaterMeshSubVisibility(BGSTerrainNode* a_node, BSMultiBoundNode* a_waterParent)"
 31140,0x1404b8580,0x1404c8660,3,SeasonsofSkyrim::LODSwap::Terrain::BuildMeshFileName
 31141,0x1404b85c0,0x1404c86a0,3,SeasonsofSkyrim::LODSwap::Terrain::BuildDiffuseTextureFileName
 31142,0x1404b8600,0x1404c86e0,3,SeasonsofSkyrim::LODSwap::Terrain::BuildNormalTextureFileName
@@ -414,6 +422,10 @@ id,sse,vr,status,name
 31151,0x1404b8820,0x1404c8900,3,SeasonsofSkyrim::LODSwap::Tree::BuildTextureFileName
 31152,0x1404b8850,0x1404c8930,3,SeasonsofSkyrim::LODSwap::Tree::BuildTypeListFileName
 31373,0x1404c3e20,0x1404d3f80,3,char TESWaterReflections::UpdateActor (TESWaterReflections * a_this)
+31384,0x1404c6160,0x1404d6310,3,"void TESWaterSystem::UpdateDisplacementMeshPosition(TESWaterSystem* a_waterSystem)"
+31388,0x1404c6890,0x1404d6a50,3,"void TESWaterSystem::InitializeWater(TESWaterSystem* a_waterSystem, BSTriShape* a_waterTri, TESWaterForm* a_form, float a_waterHeight, void* a_unk4, bool a_noDisplacement, bool a_isProcedural)"
+31391,0x1404c7570,0x1404d7730,3,"bool TESWaterSystem::RemoveGeometry(TESWaterSystem* a_waterSystem, BSGeometry* a_geom)"
+31406,0x1404c86c0,0x1404d8880,3,"void TESWaterSystem::Enable(TESWaterSystem* a_waterSystem)"
 31409,0x1404c8810,0x1404d89d0,4,RE::TESWaterSystem::UpdateUnderWaterVariables
 31410,0x1404c8880,0x1404d8a40,3,"void BSTriShape::TESWaterSystem::AddRipple(const NiPoint3& a_pos, float a_scale)"
 31576,0x1404d06c0,0x1404e0860,4,"uint32_t BGSStoryEventManager::AddEvent_Impl1404d06c0(longlong a_this,uint32_t a_index,void *a_event)"
@@ -892,6 +904,7 @@ id,sse,vr,status,name
 50122,0x1408582e0,0x140882580,3,"void BookMenu::OpenBookMenu(const BSString& a_description, const ExtraDataList* a_extraList, TESObjectREFR* a_ref, TESObjectBOOK* a_book, const NiPoint3& a_pos, const NiMatrix3& a_rot, float a_scale, bool a_useDefaultPos)"
 50126,0x140858c70,0x140882f80,3,po3tweaks::CantTakeBook::Button::ButtonShowTakeButton
 50155,0x14085a1c0,0x1408848f0,3,"byte Console::sub_14085A1C0 (Console * a_this, undefined8 param_2)"
+50157,0x14085a760,0x140885100,3,"Console::ExecuteCommand(FxDelegateArgs* args)"
 50164,0x14085bb30,0x1408864d0,3,RE::Console::SetSelectedRef
 50180,0x14085c2c0,0x140886df0,4,RE::ConsoleLog::VPrint
 50201,0x14085ddb0,0x140888D80,3,DescriptionFramework::
@@ -8975,7 +8988,9 @@ id,sse,vr,status,name
 515935,0x142f0d578,0x142fd2468,3,RE::NiRTTI_BSTempEffectParticle
 515938,0x142f0d5a0,0x142fd2490,3,RE::NiRTTI_BSTempEffectSimpleDecal
 515940,0x142f0d5b8,0x142fd24a8,3,RE::NiRTTI_BSTempEffectSPG
+516171,0x142f23e98,0x142fe8d88,4,gWaterLOD
 516226,0x142f249a0,0x142fe9890,3,RE::NiRTTI_bhkAutoWater
+516235,0x142f249f0,0x142fe98e0,3,gDisplacementMeshPos
 516458,0x142f25250,0x142fea140,3,RE::UserEvents::Singleton
 516573,0x142f257a0,0x142fea518,3,BSScaleformManager* GetSingleton()
 516574,0x142f257a8,0x142fea520,3,RE::BSInputDeviceManager::Singleton
@@ -9404,9 +9419,11 @@ id,sse,vr,status,name
 527634,0x1431d0dc0,0x143422f68,3,RE::NiRTTI_BSShaderProperty
 527635,0x1431d0dd0,0x143422f78,3,RE::NiRTTI_BSLeafAnimNode
 527636,0x1431d0de0,0x143422f88,3,RE::NiRTTI_BSTreeNode
+527644,0x1431d0e10,0x143423048,4,gFlowMapSize
 527650,0x1431d0e20,0x143423058,4,BSGraphics::BSShaderAccumulator
 527668,0x1431d0e70,0x143422fe4,4,f_lightFadeStart
 527669,0x1431d0e74,0x143422fe8,4,f_lightFadeEnd
+527694,0x1431d0f80,0x143423298,4,gFlowMapSourceTex
 527731,0x1431d11a0,0x1434234c0,4,TESImagespaceManager* GetSingleton()
 527735,0x1431d1200,0x143423520,3,RE::NiRTTI_ShadowSceneNode
 527752,0x1431d1af8,0x143423e20,3,RE::NiRTTI_BSLightingShaderProperty
@@ -9426,6 +9443,8 @@ id,sse,vr,status,name
 528120,0x143233560,0x143485c00,4,fDOFCenterWeight
 528121,0x143233564,0x143485c04,4,fDOFmaxDepth
 528124,0x14323356a,0x143485beb,4,bDOFCenterWeightToggle
+528164,0x143233630,0x143485c78,4,gDisplacementMeshFlowCellOffset
+528184,0x143233680,0x143485cc8,4,gDisplacementCellTexCoordOffset
 528191,0x14323369c,0x143485cd8,4,fDOFNearDist
 528192,0x1432336a0,0x143485cdc,4,fDOFFarDist
 528193,0x1432336a4,0x143485ce0,4,fDOFNearRange
