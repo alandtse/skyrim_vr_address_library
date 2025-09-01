@@ -276,7 +276,7 @@ id,sse,vr,status,name
 19824,0x1402a76f0,0x1402b8e60,4,bool Actor::IsLeveled()
 19843,0x1402a8020,0x1402b9790,4,BGSLocationRefType * TESObjectREFR::GetLocationRefType_1402A8020 (TESObjectREFR * a_this)
 19857,0x1402a8cc0,0x1402ba430,3,void TESObjectREFR::InitChildActivates(TESObjectREFR* a_actionRef)
-20022,0x1402b1b60,0x1402c32d0,3,"bool TESFile::SeekCell(TESWorldSpace* a_worldSpace, TESFile* a_file, int32_t a_x, int32_t a_y)""
+20022,0x1402b1b60,0x1402c32d0,3,"bool TESFile::SeekCell(TESWorldSpace* a_worldSpace, TESFile* a_file, int32_t a_x, int32_t a_y)"
 20026,0x1402b20e0,0x1402c3850,4,TESWorldSpace * TESWorldSpace::sub_1402B20E0 (TESWorldSpace * a_this)
 20029,0x1402b27a0,0x1402c3f10,3,"void TES::DestroySkyCell(TES* a_tes)"
 20095,0x1402b63b0,0x1402c7b20,3,TESObjectCELL* TESWorldSpace::GetSkyCell()
