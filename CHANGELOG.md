@@ -1,3 +1,10 @@
+## [0.192.1](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.192.0...v0.192.1) (2025-09-02)
+
+
+### Bug Fixes
+
+* remove extra quotations ([#106](https://github.com/alandtse/skyrim_vr_address_library/issues/106)) ([645c69d](https://github.com/alandtse/skyrim_vr_address_library/commit/645c69d252c59fb81fe9dc6e1ad6320360485cdf))
+
 # [0.192.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.191.0...v0.192.0) (2025-09-01)
 
 
