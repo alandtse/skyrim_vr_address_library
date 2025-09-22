@@ -1,3 +1,10 @@
+# [0.193.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.192.1...v0.193.0) (2025-09-22)
+
+
+### Features
+
+* add FXAA functions ([c911f70](https://github.com/alandtse/skyrim_vr_address_library/commit/c911f70dfe10645fa5d9a8c1f2270c0f54674579))
+
 ## [0.192.1](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.192.0...v0.192.1) (2025-09-02)
 
 
