@@ -1348,6 +1348,7 @@ id,sse,vr,status,name
 98893,0x141291c30,0x1412ca540,3,"void BSShaderProperty::SetFlags(EShaderPropertyFlag8 a_flag, bool a_set)"
 98897,0x141291d40,0x1412ca650,3,"void BSShaderProperty::SetMaterial(BSShaderMaterial* a_material, bool a_unk1)"
 98902,0x141292040,0x1412ca950,4,"bool IsValidLight_141292040 (BSLightingShaderProperty * a_this, BSLight * a_light)"
+98974,0x141294e00,0x1412cd830,4,"void BSImageSpace::InitFXAA (undefined8 * a_this, undefined8 param_2, undefined8 * param_3)"
 98978,0x141295ad0,0x1412ce720,3,UpdateShadowDistanceAndInteriorFlag
 98986,0x141295c30,0x1412ce8a0,4,"void BSShaderManager::GetTexture(const char* a_path, bool a_demand, NiPointer<NiTexture>& a_textureOut, bool a_isHeightMap)"
 98989,0x141295fb0,0x1412cec20,3,"void InitDirectionalAmbient (NiColor * a_directionalAmbientColors, NiColor * ambientSpecularColor, float ambientSpecularAlpha)"
@@ -8684,6 +8685,7 @@ id,sse,vr,status,name
 513211,0x141e0ded0,0x143423080,4,gShadowSceneNodeArray_*
 513222,0x141e0df14,0x1434230c4,4,shadowoost::gIsInterior
 513256,0x141e0dfcc,0x14342317c,4,ambientSpecularAndFresnel
+513281,0x141e0e0b0,0x141ed3bd8,4,bFXAAEnabled:Display
 513464,0x141e0eb48,0x141ed49c8,4,characterLightTexture
 513755,0x141e10578,0x141ed6338,4,fInteriorShadowDistance:Display
 513786,0x141e10750,0x141ed6650,4,Skyrim-Upscaler::GetVerticalFOVRad
