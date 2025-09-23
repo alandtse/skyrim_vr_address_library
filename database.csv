@@ -258,6 +258,7 @@ id,sse,vr,status,name
 19359,0x140296550,0x1402a7c50,3,"void TESObjectREFR::SetAngle(const NiPoint3& a_angle)"
 19363,0x140296910,0x1402a8010,3,"void TESObjectREFR::SetPosition(const NiPoint3& a_pos)"
 19369,0x140296c00,0x1402a8300,4,"bool TESObjectREFR::ActivateRef(TESObjectREFR* a_activator, uint8_t a_arg2, TESBoundObject* a_object, int32_t a_count, bool a_defaultProcessingOnly)"
+19372,0x1402977d0,0x1402a8ed0,3,"void TESObjectREFR::MoveRefToNewSpace(TESObjectCELL* a_interior, TESWorldSpace* a_world)"
 19373,0x140298190,0x1402a9890,4,void TESObjectREFR::Enable(bool a_resetInventory)
 19375,0x140298c80,0x1402aa380,3,void TESObjectREFR::ResetInventory_140298C80(TESObjectREFR * param_1)
 19385,0x1402994f0,0x1402aabf0,3,BGSLocation* TESObjectREFR::GetCurrentLocation()
@@ -392,6 +393,10 @@ id,sse,vr,status,name
 26009,0x1403c66a0,0x1403d5f20,4,RE::random
 26258,0x1403D2970,0x1403E22E0,4,WhosWho::GetFaceRelatedData
 26259,0x1403d2a60,0x1403e23d0,3,"void BSFaceGenManager::PrepareHeadPartForShaders(BSFaceGenNiNode* a_node, BGSHeadPart* a_headPart, TESNPC* a_npc)"
+26428,0x1403d9ca0,0x1403e9620,3,"char* BSFaceGenKeyframeMultiple::GetExpressionName(std::uint32_t a_expression)"
+26429,0x1403d9cc0,0x1403e9640,3,"char* BSFaceGenKeyframeMultiple::GetModifierName(std::uint32_t a_modifier)"
+26430,0x1403d9ce0,0x1403e9660,3,"char* BSFaceGenKeyframeMultiple::GetPhonemeName(std::uint32_t a_phoneme)"
+26431,0x1403d9d00,0x1403e9680,3,"char* BSFaceGenKeyframeMultiple::GetCustomName(std::uint32_t a_custom)"
 26454,0x1403db420,0x1403eada0,2,ApplyMasksToRenderTargets
 26455,0x1403db780,0x1403eb110,3,"void BSFaceGenManager::UpdatePendingCustomizationTextures()"
 26561,0x1403e1130,0x1403f0ae0,4,char* ActorValueList::GetActorValueName(ActorValue a_actorValue)
@@ -483,9 +488,11 @@ id,sse,vr,status,name
 33721,0x1405528e0,0x140556cb0,3,"bool MagicTarget::DispelEffect(MagicItem* a_spell, BSPointerHandle<Actor>& a_caster, ActiveEffect* a_effect)"
 33733,0x1405530d0,0x140557380,3,RE::MagicTarget::HasMagicEffect
 33734,0x140553160,0x140557400,3,"bool MagicTarget::HasMagicEffectWithKeyword(BGSKeyword* a_keyword, std::uint64_t a_arg2)"
+33741,0x1405535c0,0x140557830,3,"bool MagicTarget::AddTargetData::CheckAddEffect(MagicTarget::AddTargetData* a_this, ActiveEffectFactory::CheckTargetArgs& a_args, float a_resistance)"
 33742,0x140553750,0x1405579c0,2,papyrus_extender::events::game::magictargetapply_0x1e8
 33756,0x140554500,0x140558580,3,void MagicTarget::VisitEffects(ForEachActiveEffectVisitor& visitor)
 33763,0x140554700,0x140558740,3,RE::MagicTarget::sub_14055470
+33770,0x1405551d0,0x140559070,3,void ActiveEffectFactory::ReportAddTargetFailure(CheckTargetArgs& a_args) src\RE\A/ActiveEffectFactory.cpp:17
 33781,0x140555830,0x140559DF0,4,"HasSameUsageEffect::Visit(HasSameUsageEffect *a1, void* a2)"
 33785,0x140555980,0x140559F40,4,"ResetElapsedTimeMatchingEffects::Visit(ActiveEffect* a1, ResetElapsedTimeMatchingEffects *a2, float a3)"
 33817,0x140556780,0x14055c510,4,"ActorValueIndices GetActorValueForCost_140556780 (MagicItem * a_this, CastingSource a_castingSource)"
@@ -502,6 +509,7 @@ id,sse,vr,status,name
 33873,0x140558fc0,0x14055ED50,3,ModelReferenceEffect::sub_*
 33956,0x14055b750,0x140561990,2,enhanced_reanimation::Reanimate::Start
 33961,0x14055bc80,0x140561ec0,4,"void Start_14055BC80 (ActiveEffectReferenceEffectController * param_1, ReferenceEffect * * a_effectOut)"
+34074,0x14055da10,0x140563c50,3,"void WeaponEnchantmentController::SetAttachRoot(RE::ReferenceEffectController* a_this)"
 34132,0x140560e40,0x1405670b0,3,ENBLightForEffectShaders::ShaderReferenceEffect::Add:AddAddonModel::thunk_0x8C2
 34188,0x140563460,0x1405696D0,4,"void StaggerEffect (StaggerEffect *a1, float a2)"
 34250,0x140566060,0x14056C2D0,3,"FUN_140566060 (void* a1, TelekinesisEffect* a2)"
@@ -610,6 +618,7 @@ id,sse,vr,status,name
 36559,0x1405ebd90,0x1405f44a0,4,uint32_t Actor::GetCollisionFilterInfo(uint32_t& a_outCollisionFilterInfo)
 36602,0x1405edd50,0x1405f6460,3,void Actor::SetRotationX(float a_angle)
 36604,0x1405edef0,0x1405f6600,4,void Actor::SetLifeState(ACTOR_LIFE_STATE a_lifeState)
+36605,0x1405ee410,0x1405f6b20,3,"void Actor::ClearDeathState(RE::Actor* a_this)"
 36621,0x1405f1530,0x1405f9c40,4,RE::Actor::Func156_*
 36631,0x1405f2530,0x1405fac70,3,bool Actor::Decapitate()
 36642,0x1405f4150,0x1405fc880,4,"void ReadFromSaveGame_1405F4150 (Actor * a_this, undefined8 param_2)"
@@ -733,6 +742,7 @@ id,sse,vr,status,name
 38568,0x14065c880,0x140665bd0,3,RE::AIProcess::SetBaseScale
 38726,0x1406777c0,0x140680c40,4,"void HighProcessData::ClearHeadtrackTarget(HEAD_TRACK_TYPE a_headtrackType, bool a_defaultHold)"
 38760,0x1406797d0,0x140682c50,3,"void HighProcessData::SetHeadtrackTarget(HEAD_TRACK_TYPE a_headtrackType, TESObjectREFR* a_target)"
+38781,0x14067a3e0,0x140683850,3,"InventoryEntryData* AIProcess::GetCurrentWeapon(AIProcess* a_this, bool a_leftHand)"
 38819,0x14067bc70,0x1406850f0,4,"void AIProcess::SetRunOncePackage(TESPackage* a_package, Actor* a_actor)"
 38850,0x14067d120,0x1406865a0,3,"void AIProcess::SetHeadtrackTarget(Actor* a_owner, NiPoint3& a_targetPosition)"
 38858,0x14067d4a0,0x140686920,4,"void AIProcess::KnockExplosion(Actor* a_actor, const NiPoint3& a_location, float a_magnitude)"
@@ -820,7 +830,10 @@ id,sse,vr,status,name
 42547,0x140732400,0x14075ce60,4,ArrowProjectile::GetImpactData
 42586,0x140733cc0,0x14075e720,3,RE::BeamProjectile::UpdateImpl_*
 42638,0x1407369b0,0x1407614b0,3,splashes_of_skyrim::ProjectileManager::ProcessInWater::create_splash
-42696,0x14073c410,0x140766fb0,3,splashes_of_skyrim::ExplosionManager::UpdateSound
+42664,0x140738780,0x140763320,3,"void Explosion::Update(Explosion* a_this, float a_delta)"
+42696,0x14073c410,0x140766fb0,3,"bool Explosion::CheckInit3D(Explosion *a_this)"
+42791,0x140740cb0,0x14076b960,3,"void Hazard::Update(Hazard *a_this, float a_delta)"
+42810,0x1407416f0,0x14076c3a0,3,"bool Hazard::CheckInit3D(Hazard *a_this)"
 42832,0x140742850,0x14076d400,3,RE::HitData::Populate
 42833,0x140742c00,0x14076d800,4,RE::HitData::init_hitdata_proj_ID
 42842,0x140743510,0x14076e110,3,RE::HitData::sub_*
@@ -1082,6 +1095,13 @@ id,sse,vr,status,name
 56476,0x1409b8750,0x1409f32a0,2,DialogueMovementEnabler::isInMenuMode
 56606,0x1409c6730,0x140a01280,3,RE::hkReferencedObject::AddReference
 56607,0x1409c67f0,0x140a01340,3,RE::hkReferencedObject::RemoveReference
+56625,0x1409c6eb0,0x140a01a00,3,"void hkLifoAllocator::Init(hkMemoryAllocator* a_this, hkMemoryAllocator* a_slabAllocator, hkMemoryAllocator* a_largeAllocator, hkMemoryAllocator* a_internalAllocator)"
+56626,0x1409c6f50,0x140a01aa0,3,"void hkLifoAllocator::Quit(hkMemoryAllocator *a_this)"
+56627,0x1409c7040,0x140a01b90,3,"void* hkLifoAllocator::BlockAlloc(hkMemoryAllocator *a_this, int32_t a_numBytesIn)"
+56628,0x1409c7080,0x140a01bd0,3,"void hkLifoAllocator::BlockFree(hkMemoryAllocator *a_this, void* a_ptr, std::int32_t a_numBytesIn)"
+56629,0x1409c70c0,0x140a01c10,3,"void* hkLifoAllocator::BufAlloc(hkMemoryAllocator *a_this, std::int32_t& a_reqNumBytesInOut)"
+56630,0x1409c7100,0x140a01c50,3,"void hkLifoAllocator::BufFree(hkMemoryAllocator *a_this, void* a_ptr, std::int32_t a_numBytes)"
+56631,0x1409c7140,0x140a01c90,3,"void* hkLifoAllocator::BufRealloc(hkMemoryAllocator *a_this, void* a_old, std::int32_t a_oldNumBytes, std::int32_t& a_reqNumBytesInOut)"
 56801,0x1409cb860,0x140a063b0,4,"hkStringPtr * ctor_1409cb860 (undefined8 a_this, char * a_data)"
 56806,0x1409cba10,0x140a06560,4,"hkStringPtr::hkStringPtr(std::string_view a_data, const std::uint32_t a_mask, const bool a_mark)"
 57886,0x1409fbda0,0x140a368f0,4,hkbAnimationBindingSet hkbCharacter::GetAnimationBindingSet_1409FBDA0 (hkbCharacter * a_this)
@@ -1209,6 +1229,7 @@ id,sse,vr,status,name
 68936,0x140c57a60,0x140c9ccd0,3,RE::NiNode::Ctor
 68937,0x140c57af0,0x140c9cd60,4,void NiNode::Destroy(NiNode * a_this)
 69002,0x140c5ac30,0x140ca01e0,4,void NiStream::LoadLinkID
+69156,0x140c60fb0,0x140ca6560,3,"void NiObjectNET::RemoveController(NiObjectNET *a_this, NiTimeController* a_controller)"
 69263,0x140c65760,0x140cab2c0,3,"bool NiCamera::WindowPointToRay(std::int32_t a_x, std::int32_t a_y, NiPoint3& a_origin, NiPoint3& a_dir, float a_windowWidth, float a_windowHeight)"
 69270,0x140c66580,0x140cac0e0,3,RE::NiCamera::WorldPtToScreenPt3
 69271,0x140c66710,0x140cac900,3,void UpdateInternalWorldToScreenMatrix (NiCamera * a_this)
@@ -1238,6 +1259,7 @@ id,sse,vr,status,name
 69804,0x140c7eb60,0x140cc5250,3,RE::NiSkinInstance::Ctor
 70860,0x140cc6090,0x140d0cbe0,4,"void NiControllerSequence::SetPhase(float a_phase, bool a_arg2)"
 70882,0x140cc7cb0,0x140d0e800,4,"bool NiControllerSequence::Activate(std::uint8_t a_interpIndex, bool a_maxOffset, float a_seqWeight, float a_easeInTime, NiControllerSequence* a_partnerSequence, bool a_transition)"
+70909,0x140cca2e0,0x140d10e30,3,"bool NiControllerSequence::ResolveTransformInterpolators(NiControllerSequence *a_this, NiAVObject *a_root, NiDefaultAVObjectPalette *a_objectPalette, uint32_t a_formal)"
 72799,0x140d03330,0x140d49ec0,4,void NiParticleSystem::AddModifier(NiPSysModifier* a_modifier)
 73882,0x140d28c40,0x140d70310,3,"Setting * SettingT<T1>::SetStringValue_140D28C40 (Setting * a_this, char * a_string)"
 74040,0x140d2f220,0x140d775e0,4,"BSResource::ErrorCode BSModelDB::Demand(const char* a_modelPath, NiPointer<NiNode>& a_modelOut, const DBTraits::ArgsType& a_args)"
@@ -9041,6 +9063,7 @@ id,sse,vr,status,name
 519716,0x142f4e240,0x143013728,3,TESObjectREFR* GetTargetReference()
 519827,0x142f4e6b8,0x143013ae8,4,static MistMenu* GetSingleton()
 520856,0x142f50b28,0x1430a8bb8,4,BSInputEventQueue* GetSingleton()
+520865,0x142f50b74,0x1430a8c04,3,hkMemoryRouter* GetSingleton()
 520994,0x142f51ec0,0x1430a9f50,4,g_animationFileManager**
 523657,0x142f6b930,0x1430c39f0,4,BSTimer* GetSingleton()
 523660,0x142f6b948,0x1430c3a08,3,float GetSecondsSinceLastFrame()
