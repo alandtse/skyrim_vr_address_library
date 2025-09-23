@@ -1,3 +1,10 @@
+# [0.194.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.193.0...v0.194.0) (2025-09-23)
+
+
+### Features
+
+* add latest commonlib and lightplacer ([#107](https://github.com/alandtse/skyrim_vr_address_library/issues/107)) ([a76d79e](https://github.com/alandtse/skyrim_vr_address_library/commit/a76d79eeb7293247d860d6389bc22846ae9fa771))
+
 # [0.193.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.192.1...v0.193.0) (2025-09-22)
 
 
