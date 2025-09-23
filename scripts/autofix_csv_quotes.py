@@ -1,49 +1,64 @@
 import os
 import csv
+import io
 
-def field_needs_quotes(field: str) -> bool:
-    # If the field contains a comma, parentheses, or quotes and is not quoted already
-    return (',' in field or '(' in field or ')' in field or '"' in field) and not (field.startswith('"') and field.endswith('"'))
+def process_file(filepath: str) -> int:
+    # Read original content
+    with open(filepath, 'r', newline='', encoding='utf-8') as f:
+        original_content = f.read()
 
-def quote_field(field: str) -> str:
-    # Escape internal quotes and surround with quotes
-    return '"' + field.replace('"', '""') + '"'
+    # Parse with csv.reader
+    with open(filepath, 'r', newline='', encoding='utf-8') as f:
+        rows = list(csv.reader(f))
 
-def process_file(filepath: str) -> bool:
-    changed = False
-    with open(filepath, newline='', encoding='utf-8') as f:
-        lines = list(csv.reader(f))
+    # Write back with csv.writer using QUOTE_MINIMAL
+    output = io.StringIO()
+    writer = csv.writer(output, quoting=csv.QUOTE_MINIMAL)
+    writer.writerows(rows)
+    new_content = output.getvalue()
 
-    new_lines = []
-    for row in lines:
-        if len(row) < 5:
-            new_lines.append(row)
-            continue
-        name = ','.join(row[4:]).strip()
-        if field_needs_quotes(name):
-            quoted_name = quote_field(name)
-            row = row[:4] + [quoted_name]
-            changed = True
-        new_lines.append(row)
+    # Only count lines that actually have different content
+    changes_count = 0
+    if original_content != new_content:
+        original_lines = original_content.strip().split('\n')
+        new_lines = new_content.strip().split('\n')
 
-    if changed:
+        for orig_line, new_line in zip(original_lines, new_lines):
+            # Only count as changed if the content is actually different
+            # This catches cases where quoting was added or modified
+            if orig_line.strip() != new_line.strip():
+                changes_count += 1
+
+        # Write the updated file
         with open(filepath, 'w', newline='', encoding='utf-8') as f:
-            writer = csv.writer(f)
-            writer.writerows(new_lines)
+            f.write(new_content)
 
-    return changed
+    return changes_count
 
 def main():
-    modified = False
-    for root, _, files in os.walk('.'):
-        for file in files:
-            if file.endswith('.csv'):
-                path = os.path.join(root, file)
-                if process_file(path):
-                    print(f"✅ Fixed: {path}")
-                    modified = True
+    import sys
 
-    if not modified:
+    # If specific files are provided as arguments, process only those
+    if len(sys.argv) > 1:
+        files_to_process = sys.argv[1:]
+    else:
+        # Default behavior: find all CSV files
+        files_to_process = []
+        for root, _, files in os.walk('.'):
+            for file in files:
+                if file.endswith('.csv'):
+                    files_to_process.append(os.path.join(root, file))
+
+    total_fixes = 0
+    for filepath in files_to_process:
+        if filepath.endswith('.csv') and os.path.exists(filepath):
+            fixes_count = process_file(filepath)
+            if fixes_count > 0:
+                entry_word = "entry" if fixes_count == 1 else "entries"
+                print(f"✅ Fixed {fixes_count} {entry_word} in: {filepath}")
+                total_fixes += fixes_count
+
+    if total_fixes == 0:
         print("✅ No fixes necessary.")
 
 if __name__ == '__main__':

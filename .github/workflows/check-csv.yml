@@ -15,7 +15,8 @@ jobs:
       - name: Checkout PR branch
         uses: actions/checkout@v3
         with:
-          ref: ${{ github.head_ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          ref: ${{ github.event.pull_request.head.ref }}
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
       - name: Set up Python
@@ -28,37 +29,96 @@ jobs:
         run: |
           echo "message=chore(csv): auto-quote name fields" >> "$GITHUB_OUTPUT"
 
+      - name: Get changed CSV files
+        id: changed_files
+        run: |
+          # Get list of changed CSV files in this PR
+          changed_csvs=$(git diff --name-only ${{ github.event.pull_request.base.sha }}..${{ github.event.pull_request.head.sha }} | grep '\.csv$' || true)
+          echo "Changed CSV files: $changed_csvs"
+          echo "files<<EOF" >> "$GITHUB_OUTPUT"
+          echo "$changed_csvs" >> "$GITHUB_OUTPUT"
+          echo "EOF" >> "$GITHUB_OUTPUT"
+
       - name: Run CSV autofix script
         id: fix
+        if: steps.changed_files.outputs.files != ''
         run: |
-          python scripts/autofix_csv_quotes.py > fix_output.txt
-          if grep -q '✅ Fixed:' fix_output.txt; then
-            echo "modified=true" >> "$GITHUB_OUTPUT"
+          # Only process the changed CSV files
+          changed_files="${{ steps.changed_files.outputs.files }}"
+          if [ -n "$changed_files" ]; then
+            output=$(python scripts/autofix_csv_quotes.py $changed_files)
+            echo "$output"
+            if echo "$output" | grep -q '✅ Fixed [0-9]'; then
+              echo "modified=true" >> "$GITHUB_OUTPUT"
+            else
+              echo "modified=false" >> "$GITHUB_OUTPUT"
+            fi
           else
             echo "modified=false" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Auto-commit fixed CSVs
+      - name: Check if maintainer edits are allowed
+        id: maintainer_edits
         if: steps.fix.outputs.modified == 'true'
+        run: |
+          echo "allowed=${{ github.event.pull_request.maintainer_can_modify }}" >> "$GITHUB_OUTPUT"
+
+      - name: Auto-commit CSV fixes
+        if: steps.fix.outputs.modified == 'true' && steps.maintainer_edits.outputs.allowed == 'true'
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "${{ steps.vars.outputs.message }}"
-          commit_user_name: "github-actions"
-          commit_user_email: "github-actions@github.com"
+          commit_message: "style(csv): normalize quoting for fields containing commas"
+          commit_user_name: "github-actions[bot]"
+          commit_user_email: "github-actions[bot]@users.noreply.github.com"
 
-      - name: Post PR comment
-        if: steps.fix.outputs.modified == 'true'
+      - name: Create success comment for auto-commit
+        if: steps.fix.outputs.modified == 'true' && steps.maintainer_edits.outputs.allowed == 'true'
         uses: peter-evans/create-or-update-comment@v4
         with:
           issue-number: ${{ github.event.pull_request.number }}
           body: |
-            🔧 **CSV Auto-fix Applied**
+            ✅ **CSV Auto-fix Applied**
 
-            Some entries in your CSV were missing proper quotes around the `name` field.
-            This action has automatically fixed them using a semantic commit:
+            I've automatically fixed the CSV formatting issues in your PR:
+            - Fixed CSV quoting for entries containing commas
+            - Applied standard CSV formatting
 
+            The changes have been committed to your branch. Please review the changes!
+
+      - name: Create suggestion comment for restricted PRs
+        if: steps.fix.outputs.modified == 'true' && steps.maintainer_edits.outputs.allowed != 'true'
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            🔧 **CSV Auto-fix Suggestion**
+
+            Your CSV has formatting issues. I'd like to fix them automatically, but this PR doesn't allow maintainer edits.
+
+            **Option 1: Enable maintainer edits**
+            - Edit your PR and check "Allow edits from maintainers"
+            - Close and reopen this PR to trigger the auto-fix
+
+            **Option 2: Apply fixes manually**
+            <details>
+            <summary>Click to see manual fix instructions</summary>
+
+            ```bash
+            # Run this in your local repository to apply the fixes:
+            python scripts/autofix_csv_quotes.py
+            git add -A
+            git commit -m "style(csv): normalize quoting for fields containing commas"
+            git push
             ```
-            ${{ steps.vars.outputs.message }}
-            ```
 
-            Please verify that the changes look good!
+            Or download the fixed files from the workflow artifacts.
+            </details>
+
+      - name: Upload fixed files as artifacts
+        if: steps.fix.outputs.modified == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: fixed-csv-files
+          path: |
+            ${{ steps.changed_files.outputs.files }}
+
