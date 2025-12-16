@@ -1,3 +1,10 @@
+# [0.195.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.194.0...v0.195.0) (2025-12-16)
+
+
+### Features
+
+* update to latest commonlibvr ([#111](https://github.com/alandtse/skyrim_vr_address_library/issues/111)) ([3895446](https://github.com/alandtse/skyrim_vr_address_library/commit/3895446171d6c9cff1592d13821511dcfcd91744))
+
 # [0.194.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.193.0...v0.194.0) (2025-09-23)
 
 
