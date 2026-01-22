@@ -1,3 +1,10 @@
+# [0.196.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.195.0...v0.196.0) (2026-01-22)
+
+
+### Features
+
+* sync with commonlib ([f7f7e0d](https://github.com/alandtse/skyrim_vr_address_library/commit/f7f7e0d39f17af4170c11c900ccd6e9c47b39648))
+
 # [0.195.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.194.0...v0.195.0) (2025-12-16)
 
 
