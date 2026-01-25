@@ -340,6 +340,7 @@ id,sse,vr,status,name
 24207,0x1403606d0,0x14036ffd0,3,RE::TESNPC::UpdateNeck
 24211,0x140360c10,0x140370510,2,enhanced_reanimation::TESNPC::Activate
 24212,0x140361640,0x140370f60,3,enhanced_reanimation::TESNPC::GetActivateText
+24220,0x140362e90,0x1403727b0,4,"void TESNPC::UpdateHeadAndHair (TESNPC * a_npc, Actor * a_actor, NiAVObject * a_node)"
 24221,0x140363000,0x140372920,4,WhosWho::LoadArmorRelatedFunction4
 24226,0x140363CD0,0x140373630,3,TESNPC::
 24228,0x140363f20,0x140373880,4,RE::TESNPC::UpdateHead
@@ -17826,4 +17827,4 @@ id,sse,vr,status,name
 5370397616,0x14019c3b0,0x1401ac0e0,3,RE::BSShaderProperty::InvalidateMaterial
 5375528368,0x140680db0,0x14068a230,3,RE::AIProcess::SetActorRefraction
 5388393136,0x1412c5ab0,0x141303ea0,3,RE::BSLightingShaderProperty::InvalidateTextures
-5399981752,0x141dd2eb8,0x141e901a8,4,CalculateMyCriticalHitChance
+5399981752,0x141dd2eb8,0x141e901a8,4,"CalculateMyCriticalHitChance"
