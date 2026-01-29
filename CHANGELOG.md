@@ -1,3 +1,10 @@
+# [0.197.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.196.0...v0.197.0) (2026-01-25)
+
+
+### Features
+
+* add FEC 6.1.0 ([b6b25fb](https://github.com/alandtse/skyrim_vr_address_library/commit/b6b25fb2b61625114a0c702ea67981bea69c29ba))
+
 # [0.196.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.195.0...v0.196.0) (2026-01-22)
 
 
