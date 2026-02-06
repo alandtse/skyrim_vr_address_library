@@ -45,7 +45,8 @@ id,sse,vr,status,name
 12448,0x1401384d0,0x140148e80,4,uint32_t RE::TESLeveledList::GetAllBelowForce(RE::ExtraLevCreaModifier* extraLeveledCreatureModifier)
 12626,0x14013c740,0x14014d130,3,"char* ExtraTextDisplayData::GetDisplayName(TESBoundObject* a_baseObject, float a_temperFactor)"
 12633,0x14013cc20,0x14014d610,3,ExtraTextDisplayData::sub_14013CC20
-12784,0x1401424f0,0x140152ee0,3,bhkRigidBody* bhkCollisionObject::GetRigidBody()
+12784,0x1401424f0,0x140152ee0,3,"bhkRigidBody* bhkCollisionObject::GetRigidBody()"
+12785,0x140142550,0x14054ed90,4,"bool GetHandleValidatedSmartPointer (undefined8 * a_refHandle, undefined8 * a_out)"
 12910,0x140147bb0,0x1401585e0,3,SeasonsofSkyrim::FormSwap::model_loader_queue_ref
 13054,0x14014dc60,0x14015e690,3,RE::INISettingCollection::InsertSetting
 13113,0x14014f700,0x140160130,3,RE::INISettingCollection::Unk_09
@@ -455,6 +456,7 @@ id,sse,vr,status,name
 31406,0x1404c86c0,0x1404d8880,3,void TESWaterSystem::Enable(TESWaterSystem* a_waterSystem)
 31409,0x1404c8810,0x1404d89d0,4,RE::TESWaterSystem::UpdateUnderWaterVariables
 31410,0x1404c8880,0x1404d8a40,3,"void BSTriShape::TESWaterSystem::AddRipple(const NiPoint3& a_pos, float a_scale)"
+31451,0x1404ca620,0x1404da7c0,4,"void TESWaterReflections::Dtor()"
 31576,0x1404d06c0,0x1404e0860,4,"uint32_t BGSStoryEventManager::AddEvent_Impl1404d06c0(longlong a_this,uint32_t a_index,void *a_event)"
 31717,0x1404d7f80,0x1404e8120,3,RE::BGSStoryTeller::BeginStartUpQuest
 31718,0x1404d80a0,0x1404e8240,3,RE::BGSStoryTeller::BeginShutDownQuest
@@ -1500,6 +1502,7 @@ id,sse,vr,status,name
 100430,0x1412e49a0,0x141324e80,3,void RenderEOFImageSpaceEffects (RENDER_TARGET a_rendertarget)
 100458,0x1412e5570,0x141325d10,3,void BSShaderRenderTargets::Create()
 100475,0x1412e7db0,0x141328f20,4,"void BSImagespaceShader::SetupVolumetricLights(BSImagespaceShader *param_1,RENDER_TARGET a_renderTarget, RENDER_TARGET a_renderTargetSource)"
+100480,0x1412e82f0,0x141329460,4,"ImageSpaceEffect * BSImageSpace::Init::IBLF (ImageSpaceEffect * param_1, undefined8 param_2, undefined8 param_3, undefined8 param_4, undefined8 param_5, undefined8 param_6, undefined8 param_7)"
 100540,0x1412eeb90,0x141330a40,3,"RENDER_TARGET FUN_1412eeb90 (BSImagespaceShader * * param_1, RENDER_TARGET param_2, RENDER_TARGET param_3)"
 100563,0x1412f2020,0x141338400,3,"void BSLightingShader::Func4_1412F2020 (BSLightingShader * a_this, undefined8 param_2, undefined8 param_3)"
 100565,0x1412f2bb0,0x141338f60,3,"void BSLightingShader::Func6_1412F2BB0 (BSLightingShader * a_this, undefined8 param_2, undefined8 param_3, undefined8 param_4)"
@@ -1508,6 +1511,7 @@ id,sse,vr,status,name
 100718,0x1412fdd60,0x141340280,4,void RenderPassArray::ClearRenderPass(RE::BSRenderPass* pass)
 100720,0x1412fde50,0x141340330,4,void renderPassCacheCtor()
 100771,0x1413014c0,0x141343d40,3,"bool BSDistantTreeShader::Func2_1413014C0 (BSDistantTreeShader * a_this, undefined8 param_2)"
+100781,0x141302780,0x1412f3a90,1,"void BSCubeMapCamera::Dtor()"
 100840,0x141306240,0x141347320,4,"void BSShaderAccumulator::RenderPersistentPassList (longlong * * passList, uint32_t renderFlags)"
 100847,0x141307160,0x141348390,3,Skyrim-Upscaler
 100852,0x141308030,0x141349270,4,"void BSBatchRenderer::sub_141308030(BSBatchRenderer *a_this,uint *param_2,uint *param_3,undefined8 param_4,uint param_5)"
@@ -8796,7 +8800,8 @@ id,sse,vr,status,name
 513222,0x141e0df14,0x1434230c4,4,shadowoost::gIsInterior
 513256,0x141e0dfcc,0x14342317c,4,ambientSpecularAndFresnel
 513281,0x141e0e0b0,0x141ed3bd8,4,bFXAAEnabled:Display
-513464,0x141e0eb48,0x141ed49c8,4,characterLightTexture
+513464,0x141e0eb48,0x141ed49c8,4,"characterLightTexture"
+513510,0x141e0f390,0x141ed5210,4,bIBLFEnable:Display
 513755,0x141e10578,0x141ed6338,4,fInteriorShadowDistance:Display
 513786,0x141e10750,0x141ed6650,4,Skyrim-Upscaler::GetVerticalFOVRad
 513793,0x141e10978,0x141ed6530,4,fShadowDistance:Display
@@ -17828,4 +17833,4 @@ id,sse,vr,status,name
 5370397616,0x14019c3b0,0x1401ac0e0,3,RE::BSShaderProperty::InvalidateMaterial
 5375528368,0x140680db0,0x14068a230,3,RE::AIProcess::SetActorRefraction
 5388393136,0x1412c5ab0,0x141303ea0,3,RE::BSLightingShaderProperty::InvalidateTextures
-5399981752,0x141dd2eb8,0x141e901a8,4,"CalculateMyCriticalHitChance"
+5399981752,0x141dd2eb8,0x141e901a8,4,CalculateMyCriticalHitChance
