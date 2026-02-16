@@ -1,3 +1,10 @@
+# [0.200.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.199.0...v0.200.0) (2026-02-16)
+
+
+### Features
+
+* add BSShadowDirectionalLight addresses ([62282f2](https://github.com/alandtse/skyrim_vr_address_library/commit/62282f22334c1f7269e5b882fb3a11d4e3d7baa5))
+
 # [0.199.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.198.0...v0.199.0) (2026-02-06)
 
 
