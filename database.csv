@@ -1527,6 +1527,7 @@ id,sse,vr,status,name
 101303,0x14131d3d0,0x141363250,4,"float BSLight::GetLuminance(RE::BSLight *this, RE::NiPoint3 *targetPosition, RE::NiLight *refLight)"
 101339,0x14131f810,0x1413656b0,4,"void BSShader::LoadShaders_14131F810 (BSShader * a_this, UINT_PTR * a_stream)"
 101341,0x14131fbd0,0x141365a70,4,"bool BSShader::BeginTechnique_14131FBD0 (BSShader * shader, int vertexDescriptor, int pixelDescriptor, bool skipPIxelShader)"
+101495,0x141324c30,0x141356ef0,3,"bool BSShadowDirectionalLight::UpdateCamera (BSShadowDirectionalLight * a_this, NiCamera * a_viewCamera)"
 101498,0x141324e00,0x1413570f0,2,"void BSShadowDirectionalLight::DirShadowLightCulling(BSShadowDirectionalLight* this, BSTArray<BSTArray<NiPointer<NiAVObject>>>& jobArrays, BSTArray<NiPointer<NiAVObject>>& nodes)"
 101499,0x1413251c0,0x1413574f0,3,undefined8 BSShadowDirectionalLight::Func16_1413251C0 (BSShadowDirectionalLight * a_this)
 101631,0x14132ead0,0x141371a00,3,"void GetLightingShaderDefines(uint32_t descriptor, D3D_SHADER_MACRO* defines)"
@@ -9431,7 +9432,8 @@ id,sse,vr,status,name
 524728,0x143025f00,0x14317e790,4,gUnkWindow_*
 524729,0x143025f08,0x14317e798,4,RE::g_ID3D11Device
 524730,0x143025f10,0x14317e7a0,4,RendererWindow* GetCurrentRenderWindow()
-524747,0x1430261b0,0x14317ea60,4,gDepthStates
+524747,0x1430261b0,0x14317ea60,4,"gDepthStates"
+524748,0x143026930,0x14317f1e0,4,gRasterStates ID3D11RasterizerState*
 524749,0x143026db0,0x14317f6c0,4,gBlendStates
 524751,0x143027910,0x143180560,4,SamplerStatesCollection* GetSingleton()
 524755,0x143027a30,0x143180690,4,VertexShader_perTechniqueBuffersArray
