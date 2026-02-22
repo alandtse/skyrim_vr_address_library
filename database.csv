@@ -126,6 +126,7 @@ id,sse,vr,status,name
 14653,0x14019b290,0x1401aafc0,4,void TESModelTextureSwap::sub_14019B290 (TESModelTextureSwap * a_this)
 14704,0x14019d510,0x1401ad250,3,BSTEventSource<TESHarvestedEvent::ItemHarvested>* TESHarvestedEvent::GetEventSource()
 14809,0x1401a1730,0x1401b1470,3,RE::TESForm::GetWeight
+15073,0x1401b02a0,0x1401c02b0,4,void hkpAllRayHitTempCollector::Reset()
 15118,0x1401b13f0,0x1401c1400,3,RE::BGSDecalManager::RemoveItem
 15157,0x1401b2730,0x1401c2740,3,"bool BGSDynamicPersistenceManager::PromoteReference(TESObjectREFR* a_refr, TESForm* a_owner)"
 15158,0x1401b2910,0x1401c2920,3,"bool BGSDynamicPersistenceManager::DemoteReference(TESObjectREFR* a_refr, TESForm* a_owner, bool a_allowActors = false)"
@@ -1174,6 +1175,7 @@ id,sse,vr,status,name
 60502,0x140a77780,0x140ab2180,3,hkpPhantom* hkpWorld::AddPhantom(hkpPhantom* a_phantom)
 60504,0x140a77d80,0x140ab2780,3,void hkpWorld::RemovePhantom(hkpPhantom* a_phantom)
 60551,0x140a7b000,0x140ab5a00,3,"void hkpWorld::CastRay(const hkpWorldRayCastInput& a_input, hkpWorldRayCastOutput& a_output)"
+60554,0x140a7b4c0,0x140ab5ec0,4,"inline void hkpWorld::LinearCast(const hkpCollidable* a_colA, const hkpLinearCastInput& a_input, hkpCdPointCollector& a_castCollector, hkpCdPointCollector* a_startCollector = nullptr)"
 60628,0x140a7f0e0,0x140ab9ae0,4,"void hkpWorldObject::SetProperty(std::uint32_t a_key, hkpPropertyValue a_value)"
 60675,0x140a83c70,0x140ABE670,4,"RE::hkpShapePhantom* createSimpleShapePhantom(RE::hkpShapePhantom*, RE::hkpShape*, const RE::hkTransform&, uint32_t)"
 60682,0x140a840a0,0x140ABEAA0,4,"void hkpShapePhantom::GetPenetrations(RE::hkpShapePhantom*, RE::hkpCdBodyPairCollector*, RE::hkpCollisionInput*)"
@@ -1340,6 +1342,7 @@ id,sse,vr,status,name
 75445,0x140d68dd0,0x1405be850,4,"void Renderer::Init(RendererInitOSData* a_data, ApplicationWindowProperties* windowProps, WinAPI::HWND window)"
 75447,0x140d69140,0x140dbabc0,4,void Renderer::Shutdown()
 75448,0x140d69590,0x140dbb010,4,"void Renderer::SetWindowPosition(std::uint32_t windowID, std::int32_t x, std::int32_t y)"
+75449,0x140d695b0,0x140dbb030,4,"void Renderer::ResizeWindow(std::uint32_t a_windowID, std::uint32_t a_width, std::uint32_t a_height, bool a_fullscreen, bool a_borderless)"
 75450,0x140d69620,0x140dbb0a0,4,"void Renderer::RequestWindowResize(std::uint32_t width, std::uint32_t height)"
 75451,0x140d69650,0x140dbb0d0,4,void Renderer::SetWindowActiveState(bool show)
 75452,0x140d696b0,0x140dbb130,4,void Renderer::KillWindow(std::uint32_t windowID)
@@ -1377,7 +1380,9 @@ id,sse,vr,status,name
 76271,0x140db4d20,0x140e09ca0,3,"void NiAVObject::UpdateRigidConstraints(bool a_enable, std::uint8_t a_arg2, std::uint32_t a_arg3)"
 76456,0x140dc1380,0x140e16300,4,bool bhkCharacterController::IsHurtfulBody(hkpRigidBody* a_body)
 76460,0x140dc16c0,0x140e16650,4,"void bhkCharacterController::ProcessHurtfulBody(hkpRigidBody* a_body, const hkContactPoint* a_contactPoint)"
-76799,0x140ddca80,0x140e30f40,4,MATERIAL_ID bhkShape::GetMaterialID(hkpShapeKey a_key)
+76693,0x140dd94e0,0x140e2e4b0,4,"void hkpAllRayHitTempCollector::AddRayHit(const hkpCdBody& a_body, const hkpShapeRayCastCollectorOutput& a_hitInfo)"
+76799,0x140ddca80,0x140e30f40,4,"MATERIAL_ID bhkShape::GetMaterialID(hkpShapeKey a_key)"
+77446,0x140df8690,0x140e4d690,4,"void hkpAllRayHitCollector::AddRayHit(const hkpCdBody& a_body, const hkpShapeRayCastCollectorOutput& a_hitInfo)"
 77470,0x140df9140,0x140e4e140,4,"bhkMemorySystem * ctor_140df9140 (bhkMemorySystem * param_1, undefined8 param_2, undefined8 param_3, undefined8 param_4)"
 79944,0x140ebe510,0x140F1A680,4,"void UI::GetTopMostMenu(RE::UI this, RE::IMenu** a_result, std::uint32_t a_depthLimit)"
 79947,0x140ebf510,0x140f1b750,3,Skyrim-Upscaler::Main_DrawWorld_MainDraw
@@ -1512,6 +1517,7 @@ id,sse,vr,status,name
 100720,0x1412fde50,0x141340330,4,void renderPassCacheCtor()
 100771,0x1413014c0,0x141343d40,3,"bool BSDistantTreeShader::Func2_1413014C0 (BSDistantTreeShader * a_this, undefined8 param_2)"
 100781,0x141302780,0x1412f3a90,1,"void BSCubeMapCamera::Dtor()"
+100781,0x141302780,0x1412f3a90,4,"void BSCubeMapCamera::Dtor()"
 100840,0x141306240,0x141347320,4,"void BSShaderAccumulator::RenderPersistentPassList (longlong * * passList, uint32_t renderFlags)"
 100847,0x141307160,0x141348390,3,Skyrim-Upscaler
 100852,0x141308030,0x141349270,4,"void BSBatchRenderer::sub_141308030(BSBatchRenderer *a_this,uint *param_2,uint *param_3,undefined8 param_4,uint param_5)"
@@ -9050,6 +9056,7 @@ id,sse,vr,status,name
 514415,0x141ec4328,0x141f89190,3,bhkCollisionFilter* GetSingleton()
 514417,0x141ec4338,0x141f891a0,3,RE::NiRTTI_BGSDecalNode
 514462,0x141ec44b0,0x141f89358,3,RE::NiRTTI_BSAnimGroupSequence
+514477,0x141ec47b8,0x141f89658,4,static BSReadWriteLock& GetHandleManagerLock()
 514478,0x141ec47c0,0x141f89660,3,RE::BSPointerHandleManager::GetHandleEntries
 514494,0x142ec4838,0x142f896d8,3,RE::ActorEquipManager::Singleton
 514508,0x142ec5500,0x142f8a3d0,3,RE::NiRTTI_BSSplatterExtraData
