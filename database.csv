@@ -28,7 +28,9 @@ id,sse,vr,status,name
 11530,0x140112700,0x140122ce0,3,void ExtraDataList::SetHeadingTargetRefHandle(ObjectRefHandle& a_handle)
 11633,0x1401172f0,0x1401278d0,3,"void ExtraDataList::SetLinkedRef(TESObjectREFR* a_targetRef, BGSKeyword* a_keyword)"
 11647,0x1401185c0,0x140128ba0,3,"void ExtraDataList::SetActivateParent(TESObjectREFR* a_parentRef, float a_delay)"
-11651,0x140118a30,0x140129010,4,"void ExtraDataList::AddActivateRefChild(TESObjectREFR* a_childRef)"
+11651,0x140118a30,0x140129010,4,void ExtraDataList::AddActivateRefChild(TESObjectREFR* a_childRef)
+11851,0x140123220,0x140133800,3,"void ExtraDataList::SetStartingPosition(TESObjectREFR* a_refr, const NiPoint3& a_position, const NiPoint3& a_rotation, BGSLocation* a_location)"
+11865,0x140123bf0,0x1401341d0,3,"float ExtraDataList::GetObjectHealth()"
 11903,0x140125d80,0x140136360,3,RE::ExtraDataList::SetExtraFlags
 11913,0x140126650,0x140136c30,4,bool ExtraDataList::HasQuestObjectAlias (BSExtraDataList * a_this)
 11918,0x140126A00,0x140136Fe0,3,BSExtraDataList::PackageStart
@@ -100,6 +102,8 @@ id,sse,vr,status,name
 13904,0x14017da10,0x14018d7f0,3,RE::TESFile::ReadData
 13913,0x14017e130,0x14018df10,4,bool IsESM_14017E130 (TESFile * param_1)
 13923,0x14017e4b0,0x14018e210,3,RE::TESFile::Duplicate
+14055,0x1401832b0,0x140193030,3,BGSDestructibleObjectForm* TESBoundObject::GetDestructibleForm()
+14082,0x140185990,0x1401956c0,4,void TESObjectREFR::ClearDestruction()
 14108,0x140186790,0x1401964c0,3,ScriptEventSourceHolder* ScriptEventSourceHolder::GetSingleton()
 14127,0x140187040,0x140196d70,3,BGSIdleCollection* BGSIdleCollection::Ctor()
 14163,0x1401888E0,0x140198610,4,void SpellItem__GetMenuDisplayObject(TESForm *a1)
@@ -427,6 +431,7 @@ id,sse,vr,status,name
 26574,0x1403e1790,0x1403F1140,3,void RE::ActorValueList::InitActorValueInfo()
 26592,0x1403e48d0,0x1403f4420,4,"BGSSkillPerkTreeNode * BGSSkillPerkTreeNode::ctor_1403e48d0 (BGSSkillPerkTreeNode * a_this, int32_t a_index, ActorValueInfo * a_avInfo)"
 26616,0x1403e5250,0x1403f4da0,4,RE::ActorValueOwner::GetClampedActorValue
+26718,0x1403e7c20,0x1403f7770,3,BGSAttackData* BGSAttackData::Ctor()
 28732,0x1404348c0,0x140444410,4,TESPackage* TESPackage::CreatePackage(PACKAGE_PROCEDURE_TYPE a_type)
 28751,0x1404353f0,0x140444f40,4,void TESPackage::SetPackType(PACKAGE_PROCEDURE_TYPE a_type)
 29067,0x140444440,0x140453f90,4,"void TESCondition::Copy(const TESCondition* a_other, TESForm* a_arg2)"
@@ -461,9 +466,20 @@ id,sse,vr,status,name
 31576,0x1404d06c0,0x1404e0860,4,"uint32_t BGSStoryEventManager::AddEvent_Impl1404d06c0(longlong a_this,uint32_t a_index,void *a_event)"
 31717,0x1404d7f80,0x1404e8120,3,RE::BGSStoryTeller::BeginStartUpQuest
 31718,0x1404d80a0,0x1404e8240,3,RE::BGSStoryTeller::BeginShutDownQuest
+31799,0x1404dd020,0x1404ed190,3,"bool AnimationClipDataSingleton::GetClipInformation(const BSFixedString& project_name, const BSFixedString& clip_name, AnimationClipData& ClipInformation)"
+31803,0x1404dd550,0x1404ed6c0,3,"bool AnimationClipDataSingleton::ClipData::GetEventTime(const BSFixedString& event_name, float& time)"
 31812,0x1404dda20,0x1404edb90,3,AnimationMotionRevoluation::MotionDataContainer::ProcessTranslationData
-31813,0x1404ddc90,0x1404ede00,3,AnimationMotionRevoluation::MotionDataContainer::ProcessRotationData
-31949,0x1404e6360,0x1404f64d0,3,AnimationMotionRevoluation::Character::unk_4E6360
+31813,0x1404ddc90,0x1404ede00,3,"AnimationMotionRevoluation::MotionDataContainer::ProcessRotationData"
+31940,0x1404e5780,0x1404f58f0,3,"bool GetClipInfoFromEvent(TESObjectREFR* a, const BSFixedString& event_name, ClipInfo& clipInfo)"
+31942,0x1404e59c0,0x1404f5b30,3,"bool GetClipInfo(BSAnimationGraphManager* mngr, int32_t activeGraph_ind, const BSScrapArray<BSFixedString>& events, ClipInfo& clipInfo)"
+31944,0x1404e5c00,0x1404f5d70,4,"bool SumAnimationDataToTime(const ClipInfo& clipInfo, float time, NiPoint3& translation, NiQuaternion& rotation)"
+31945,0x1404e5e30,0x1404f5fa0,3,"bool GetEventTime(const ClipInfo& clipInfo, const BSFixedString& event_name, float& event_time)"
+31946,0x1404e5f10,0x1404f6080,4,float GetAnimationEndTime(const ClipInfo& clipInfo)
+31947,0x1404e6050,0x1404f61c0,3,float GetAnimationMaxDuration(TESObjectREFR* refr)
+31948,0x1404e6220,0x1404f6390,3,"bool GetAnimationTranslation(const ClipInfo& clipInfo, NiPoint3& translation)"
+31949,0x1404e6360,0x1404f64d0,3,"AnimationMotionRevoluation::Character::unk_4E6360"
+31950,0x1404e69d0,0x1404f6b40,3,"void GetTranslationFromClipData(const ClipInfo& clipInfo, float time, NiPoint3& translation)"
+31951,0x1404e6b30,0x1404f6ca0,3,"bool GetAnimationEndpoint(TESObjectREFR* refr, const ClipInfo& clipInfo, NiPoint3& translation, NiPoint3& rotation_angles, float& end_time, NiPoint3& translation_start, NiPoint3& translation_delta, NiPoint3& rotation_start_angles, NiPoint3& rotate_from_before_angles)"
 32141,0x1404f06e0,0x140500950,3,"bool IAnimationGraphManagerHolder::SetGraphVariableBool(const BSFixedString& a_variableName, bool a_in)"
 32142,0x1404f0700,0x140500970,3,"bool IAnimationGraphManagerHolder::SetGraphVariableInt(const BSFixedString& a_variableName, std::int32_t a_in)"
 32143,0x1404f0720,0x140500990,3,"bool IAnimationGraphManagerHolder::SetGraphVariableFloat(const BSFixedString& a_variableName, float a_in)"
@@ -474,8 +490,13 @@ id,sse,vr,status,name
 32192,0x1404f2620,0x140502890,3,"bool IAnimationGraphManagerHolder::GetGraphVariableNiPoint3(const BSFixedString& a_variableName, NiPoint3& a_out)"
 32275,0x1404f5420,0x140505690,4,RE::ShakeCamera_1404f5420
 32290,0x1404f5c80,0x140505f60,3,RE::TESCamera::SetState
-32370,0x1404f96c0,0x140509850,4,void DragonCameraState::HandleLookInput_1404F96C0 (DragonCameraState * a_this)
-32469,0x1404FD1C0,0x14050D660,4,"bool __fastcall CombatAIHook::sub_1404FD1C0(RE::Actor* a1)"
+32370,0x1404f96c0,0x140509850,4,"void DragonCameraState::HandleLookInput_1404F96C0 (DragonCameraState * a_this)"
+32426,0x1404fbcc0,0x14050c160,3,void CombatBehaviorStack::CheckBuffer(std::uint32_t a_size)
+32436,0x1404fc010,0x14050c4b0,3,void CombatBehaviorIdle::Update()
+32458,0x1404fc700,0x14050cba0,3,NiPointer<CombatInventoryItem> const& CombatBehaviorEquipContext::GetCombatItem()
+32469,0x1404FD1C0,0x14050D660,4,bool __fastcall CombatAIHook::sub_1404FD1C0(RE::Actor* a1)
+32508,0x1404ff740,0x14050fbe0,3,bool CombatController::CheckCombatArea(Actor* atatcker)
+32513,0x1404ffa90,0x14050ff30,3,"bool CombatController::CheckStraightPath(NiPoint3& dst, float dist, float min_dist)"
 32551,0x140501440,0x1405118e0,3,CombatBehaviorTreeManager* CombatBehaviorTree::CombatBehaviorTreeManager::GetSingleton()
 32867,0x14051e7f0,0x14052ede0,2,RenderCursorMenu
 33257,0x14053d370,0x1405400f0,4,"AccumulatingValueModifierEffect::Allocate(AccumulatingValueModifierEffect* accumulatingValueModifierEffect, Actor* caster, MagicItem* magicItem, Effect* effect)"
@@ -605,6 +626,8 @@ id,sse,vr,status,name
 36198,0x1405ce240,0x1405d6840,4,po3tweaks::Spell::ReapplyOnDeath::Load3d
 36218,0x1405cfac0,0x1405d80a0,4,void Actor::AddDeathItems()
 36224,0x1405d0680,0x1405d8c60,4,bool Actor::CanUseIdle(TESIdleForm* a_idle)
+36236,0x1405d0a80,0x1405d9060,4,bool Actor::FightsInWater()
+36238,0x1405d0ad0,0x1405d90b0,4,bool Actor::CanFly()
 36247,0x1405d0f40,0x1405d9520,4,bool Actor::CanBeKilledBy(Actor* a_attacker)
 36248,0x1405d0fc0,0x1405d95a0,3,void Actor::SetRotationZ(float a_angle)
 36252,0x1405d1190,0x1405d9770,3,RE::Actor::IsRunning
@@ -669,6 +692,7 @@ id,sse,vr,status,name
 36801,0x140600400,0x140608c10,3,void Actor::StopMoving(float a_delta)
 36802,0x140600590,0x140608da0,4,RE::Actor::StopMovement
 36812,0x140600cc0,0x1406094d0,4,bool Actor::IsPathing()
+36817,0x140600d80,0x140609590,3,bool Actor::IsOnWaterTriangle()
 36872,0x140603b30,0x14060c340,2,Actor::Kill
 36877,0x1406057c0,0x14060dfd0,3,RE::Actor::IsOnFlyingMount
 36889,0x140606850,0x14060f1d0,3,RE::Actor::IsActorNPC
@@ -809,6 +833,7 @@ id,sse,vr,status,name
 39410,0x1406a20b0,0x1406c2c00,3,po3tweaks::GameTimers::detail::UpdateTimers
 39413,0x1406a2540,0x1406c30b0,3,RE::PlayerCharacter::AddSkillExperience
 39415,0x1406a25a0,0x1406c3110,3,PlayerCharacter::InitActorValues
+39424,0x1406a2fb0,0x1406c3890,4,void PlayerCharacter::SetGodMode(bool a_enable)
 39425,0x1406a2fc0,0x1406c38a0,3,papyrus_extender::papyrus::detail::get_god_mode_impl
 39444,0x1406a4a00,0x1406c51f0,3,PlayerCharacter::GetLineOfSightImplementation_*
 39464,0x1406a8e60,0x1406CA960,3,"PlayerCharacter::InitLoadGame(PlayerCharacter *a1, float a2)"
@@ -867,6 +892,7 @@ id,sse,vr,status,name
 42696,0x14073c410,0x140766fb0,3,"bool Explosion::CheckInit3D(Explosion *a_this)"
 42791,0x140740cb0,0x14076b960,3,"void Hazard::Update(Hazard *a_this, float a_delta)"
 42810,0x1407416f0,0x14076c3a0,3,"bool Hazard::CheckInit3D(Hazard *a_this)"
+42826,0x140742450,0x14076d000,3,"HitData* HitData::Ctor()"
 42832,0x140742850,0x14076d400,3,RE::HitData::Populate
 42833,0x140742c00,0x14076d800,4,RE::HitData::init_hitdata_proj_ID
 42842,0x140743510,0x14076e110,3,RE::HitData::sub_*
@@ -885,36 +911,177 @@ id,sse,vr,status,name
 43235,0x14075fd20,0x14078b070,4,"CombatAnimation* CombatAnimation::Ctor0(Actor* a_actor, ANIM a_anim)"
 43236,0x14075fdd0,0x14078b120,4,"CombatAnimation* CombatAnimation::Ctor1(Actor* a_actor, TESObjectREFR* a_target, ANIM a_anim)"
 43237,0x14075fe80,0x14078b1d0,4,"CombatAnimation* CombatAnimation::Ctor2(Actor* a_actor, BGSAction* a_action)"
+43238,0x14075fef0,0x14078b240,4,bool CombatAnimation::Check()
+43239,0x14075ff10,0x14078b260,4,bool CombatAnimation::Execute()
+43240,0x14075ff20,0x14078b270,4,"bool CombatAnimation::GetEventData(const BSFixedString& a_eventName, float& a_eventTime)"
+43241,0x14075ffa0,0x14078b2f0,4,"bool CombatAnimation::GetEventData(const BSFixedString& a_eventName, float& a_eventTime, NiPoint3& a_translation)"
+43242,0x140760070,0x14078b3c0,4,bool CombatAnimation::GetTranslation(NiPoint3& a_translation)
+43243,0x140760110,0x14078b460,4,float CombatAnimation::GetEventTime(const BSFixedString& a_eventName)
+43244,0x140760190,0x14078b4e0,4,"float CombatAnimation::GetLength()"
 43245,0x1407601f0,0x14078b540,4,"bool CombatAnimation::ConstructAndExecute (CombatAnimation * a_this, Actor * a_actor, ANIM a_anim)"
 43246,0x1407602e0,0x14078b630,4,"bool CombatAnimation::ConstructAndExecute(CombatAnimation* a_this, Actor* a_actor, TESObjectREFR* a_target, ANIM a_anim)"
 43247,0x1407603e0,0x14078b730,4,bool CombatAnimation::LoadClipData()
+43311,0x140761eb0,0x14078d200,3,CombatBlackboardFlag::CombatBlackboardFlag()
+43317,0x1407624c0,0x14078d810,3,void CombatBlackboardManager::AddMember(const CombatBlackboardKeyBase* val)
+43318,0x140762560,0x14078d8b0,3,const CombatBlackboardFlag* CombatBlackboardManager::GetFlag(uint32_t flag)
+43319,0x1407625f0,0x14078d940,3,void CombatBlackboardManager::AddFlag(const CombatBlackboardFlag* val)
+43340,0x140762e60,0x14078e1b0,3,CombatBlackboardManager* CombatBlackboardManager::GetSingleton()
 43571,0x140772a60,0x14079ddb0,3,po3tweaks::CombatDialogue::SayCombatDialogue
+43628,0x140775550,0x1407a08a0,3,bool CombatBehaviorEquipContext::CanEquipItem()
 43952,0x140781f00,0x1407ad250,4,RE::CombatMagicCaster::StaticCheckTargetValid
 43956,0x140782330,0x1407ad680,4,RE::CombatMagicCaster::CheckTargetValid
 44036,0x140785f80,0x1407b12d0,4,enhanced_reanimation::CombatMagicCasterReanimate::CheckShouldEquip
+45660,0x1407aad70,0x1407d60c0,3,bool CombatState::CheckShouldFlee()
+45661,0x1407aae90,0x1407d61e0,3,bool CombatState::CheckShouldHide()
+45702,0x1407ac9f0,0x1407d7d40,3,"CombatTargetLocationSearch::CombatTargetLocationSearch(Actor* actor, Actor* target, float R)"
 46022,0x1407baed0,0x1407e6220,4,"static NiPoint3 * GetAngleToProjectedTarget (NiPoint3 * a_origin, TESObjectREFR * a_target, float a_speed, float a_gravity, uint a_location)"
 46050,0x1407bd150,0x1407e84a0,4,"bool Actor::UpdateNavPos(const NiPoint3& a_pos, const NiPoint3& a_new_pos, float a_speed, float a_distance)"
+46089,0x1407c1200,0x1407ec550,3,bool CombatBehavior::CheckTargetChanged()
+46090,0x1407c1270,0x1407ec5c0,3,"CombatBehaviorThread* CombatBehavior::CreateChildThread(uint32_t child_ind, bool isControlChild)"
+46091,0x1407c1370,0x1407ec6c0,3,"void CombatBehavior::StartChildThread(CombatBehaviorThread* thread, uint32_t child_ind, bool isControlChild)"
+46092,0x1407c1400,0x1407ec750,3,bool CombatBehaviorNode::Validate(CombatBehaviorTreeNode* node)
+46093,0x1407c1410,0x1407ec760,3,bool CombatBehaviorBranch::Validate(CombatBehaviorTreeNode* node)
+46096,0x1407c15b0,0x1407ec900,4,void CombatBehaviorController::Start(CombatBehaviorTreeNode* a_startNode)
+46097,0x1407c1690,0x1407ec9e0,4,void CombatBehaviorController::Update()
+46098,0x1407c1870,0x1407ecbc0,4,void CombatBehaviorController::UpdateThread(CombatBehaviorThread* a_thread)
+46099,0x1407c1900,0x1407ecc50,4,void CombatBehaviorController::Abort()
+46100,0x1407c1a20,0x1407ecd70,4,void CombatBehaviorController::AddThread(CombatBehaviorThread* a_thread)
+46101,0x1407c1b30,0x1407ece80,4,void CombatBehaviorController::AddThreads(const BSTArray<CombatBehaviorThread*>& a_threads)
+46102,0x1407c1ce0,0x1407ed030,4,void CombatBehaviorController::QueueThread(CombatBehaviorThread* a_thread)
+46103,0x1407c1db0,0x1407ed100,4,void CombatBehaviorController::RemoveThread(CombatBehaviorThread* a_thread)
+46104,0x1407c1e40,0x1407ed190,4,CombatBehaviorThread* CombatBehaviorController::GetThread(std::uint32_t a_index)
+46105,0x1407c1e80,0x1407ed1d0,4,"bool CombatBehaviorController::GetResource(const BSFixedString& a_name, NiPointer<CombatBehaviorResource>& a_resource)"
+46106,0x1407c1f80,0x1407ed2d0,4,void CombatBehaviorController::AddResource(CombatBehaviorResource* a_resource)
+46107,0x1407c2010,0x1407ed360,4,"void CombatBehaviorController::RemoveResource(CombatBehaviorResource* a_resource)"
 46110,0x1407c2790,0x1407edae0,4,CombatState* CombatBehaviorController::GetCurrentCombatState()
 46111,0x1407c27d0,0x1407edb20,4,CombatInventory* CombatBehaviorController::GetCurrentCombatInventory
 46112,0x1407c2810,0x1407edb60,4,CombatGroup* CombatBehaviorController::GetCurrentCombatGroup
 46113,0x1407c2850,0x1407edba0,4,CombatController* CombatBehaviorController::GetCurrentCombatController
-46114,0x1407c2880,0x1407edbd0,4,"Actor* CombatBehaviorController::GetCurrentAttacker()"
+46114,0x1407c2880,0x1407edbd0,4,Actor* CombatBehaviorController::GetCurrentAttacker()
+46148,0x1407c3850,0x1407eeba0,3,void CombatBehaviorSequence::Enter()
+46151,0x1407c39b0,0x1407eed00,3,"bool ChildSelectorBase::ValidateChildren(CombatBehaviorTreeNode* node, BSFixedString const& type)"
+46152,0x1407c3a30,0x1407eed80,3,"uint32_t NextChildSelector::SelectChild(CombatBehaviorTreeNode* node, uint32_t a_selected_ind)"
+46153,0x1407c3a50,0x1407eeda0,3,"uint32_t PriorityChildSelector::SelectChild(CombatBehaviorTreeNode* node, uint32_t selected)"
+46154,0x1407c3ac0,0x1407eee10,3,bool PriorityChildSelector::Validate(CombatBehaviorTreeNode* node)
+46155,0x1407c3af0,0x1407eee40,3,"uint32_t RandomValueChildSelector::SelectChild(CombatBehaviorTreeNode* node, uint32_t a_selected_ind)"
+46158,0x1407c3cc0,0x1407ef010,3,bool RandomValueChildSelector::Validate(CombatBehaviorTreeNode* node)
+46159,0x1407c3cf0,0x1407ef040,3,"uint32_t WeightedRandomChildSelector::SelectChild(CombatBehaviorTreeNode* node, uint32_t a_selected_ind)"
+46162,0x1407c3f10,0x1407ef260,3,bool WeightedRandomChildSelector::Validate(CombatBehaviorTreeNode* node)
+46163,0x1407c3f40,0x1407ef290,3,"uint32_t ValueChildSelector::SelectChild(CombatBehaviorTreeNode* node, uint32_t a_selected_ind)"
+46164,0x1407c3fc0,0x1407ef310,3,bool ValueChildSelector::Validate(CombatBehaviorTreeNode* node)
+46165,0x1407c4080,0x1407ef3d0,3,"uint32_t ConditionalChildSelector::SelectChild(CombatBehaviorTreeNode* node, uint32_t selected)"
+46166,0x1407c40e0,0x1407ef430,3,bool ConditionalChildSelector::Validate(CombatBehaviorTreeNode* node)
+46168,0x1407c41b0,0x1407ef500,3,void CombatBehaviorParallel::Enter()
+46169,0x1407c42f0,0x1407ef640,3,void CombatBehaviorParallel::Update()
+46170,0x1407c4470,0x1407ef7c0,3,void CombatBehaviorParallel::Abort()
+46173,0x1407c4750,0x1407efaa0,3,void CombatBehaviorSpawnParallel::Enter()
+46176,0x1407c4910,0x1407efc60,3,CombatBehaviorDynamicConditionalNode::CombatBehaviorDynamicConditionalNode(float interval)
+46178,0x1407c4980,0x1407efcd0,3,void CombatBehaviorDynamicConditionalNode::Enter()
+46179,0x1407c4a00,0x1407efd50,3,void CombatBehaviorDynamicConditionalNode::Update()
+46180,0x1407c4b00,0x1407efe50,3,void CombatBehaviorDynamicConditionalNode::Abort()
+46183,0x1407c4c80,0x1407effd0,3,bool CombatBehaviorDynamicConditionalNode::Validate(CombatBehaviorTreeNode* node)
+46184,0x1407c4cf0,0x1407f0040,3,void CombatBehaviorRepeat::Update()
+46187,0x1407c4ec0,0x1407f0210,3,CombatBehaviorIdle::CombatBehaviorIdle(float interval)
+46190,0x1407c4f40,0x1407f0290,3,void CombatBehaviorPause::Enter()
+46198,0x1407c53a0,0x1407f06f0,3,"CombatBehaviorResource::CombatBehaviorResource(CombatBehaviorController* controller, const BSFixedString& name)"
+46200,0x1407c5510,0x1407f0860,3,"bool CombatBehaviorResource::AcquireResource(CombatBehaviorThread* thread, uint32_t priority, bool can_suspend)"
+46201,0x1407c5670,0x1407f09c0,3,void CombatBehaviorResource::ReleaseResource(CombatBehaviorThread* thread)
+46202,0x1407c5780,0x1407f0ad0,3,void CombatBehaviorResource::ForceAcquireResource(CombatBehaviorThread* new_owner)
+46203,0x1407c57c0,0x1407f0b10,3,void CombatBehaviorResource::ClearOwner(CombatBehaviorThread* thread)
+46206,0x1407c5c00,0x1407f0f50,3,CombatBehaviorAcquireResource::CombatBehaviorAcquireResource()
+46207,0x1407c5c20,0x1407f0f70,3,"CombatBehaviorAcquireResource::CombatBehaviorAcquireResource(const BSFixedString& name, uint32_t priority, FLAG flags)"
+46209,0x1407c5d00,0x1407f1050,3,void CombatBehaviorAcquireResource::Enter()
+46210,0x1407c5da0,0x1407f10f0,3,void CombatBehaviorAcquireResource::Update()
+46211,0x1407c5ec0,0x1407f1210,3,void CombatBehaviorAcquireResource::Exit()
+46212,0x1407c5ef0,0x1407f1240,3,void CombatBehaviorAcquireResource::Abort()
+46226,0x1407c65d0,0x1407f1920,3,"CombatBehaviorThread::CombatBehaviorThread(CombatBehaviorController* a_controller, CombatBehaviorThread* a_parent)"
+46227,0x1407c66d0,0x1407f1a20,3,CombatBehaviorThread::~CombatBehaviorThread()
+46228,0x1407c6800,0x1407f1b50,3,"void CombatBehaviorThread::Update()"
 46229,0x1407c69d0,0x1407f1d20,4,void CombatBehaviorTreeControl::Ascend() src\RE/CombatBehaviorTreeControl.h:42
+46230,0x1407c6a20,0x1407f1d70,3,void CombatBehaviorThread::Descend(std::uint32_t a_index)
+46231,0x1407c6a50,0x1407f1da0,3,void CombatBehaviorThread::Descend(CombatBehaviorTreeNode* a_node)
+46232,0x1407c6a70,0x1407f1dc0,3,bool CombatBehaviorThread::GetInitialUpdate()
+46233,0x1407c6aa0,0x1407f1df0,3,bool CombatBehaviorThread::GetAscendingUpdate()
+46234,0x1407c6ad0,0x1407f1e20,3,bool CombatBehaviorThread::CheckParent(CombatBehaviorThread* a_parent)
+46235,0x1407c6b00,0x1407f1e50,3,bool CombatBehaviorThread::CheckRelated(CombatBehaviorThread* a_other)
+46236,0x1407c6b60,0x1407f1eb0,3,void CombatBehaviorThread::Resume()
+46237,0x1407c6b90,0x1407f1ee0,3,void CombatBehaviorThread::Abort()
+46238,0x1407c6c30,0x1407f1f80,3,void CombatBehaviorThread::Suspend()
+46239,0x1407c6c90,0x1407f1fe0,3,void CombatBehaviorThread::Unsuspend()
 46240,0x1407c6d30,0x1407f2080,4,void CombatBehaviorTreeControl::SetFailed(bool a_fail) src\RE/CombatBehaviorTreeControl.h:47
+46243,0x1407c6e10,0x1407f2160,3,void CombatBehaviorThread::SetAborted()
+46251,0x1407c7500,0x1407f2850,3,void CombatBehaviorThread::AddChildThread(CombatBehaviorThread* a_thread)
 46255,0x1407c7690,0x1407f29e0,4,"NodeArray& pushback_parentof(NodeArray& array, NodeArray& cont_node)"
+46256,0x1407c7730,0x1407f2a80,4,CombatBehaviorTree::TreeBuilder& TreeBuilder::operator[](const TreeBuilder& a_other)
+46257,0x1407c7760,0x1407f2ab0,4,"CombatBehaviorTreeNode* CombatBehaviorTree::TreeBuilder::GetNode()"
 46261,0x1407c7820,0x1407f2b70,4,"NodeArray& init_withNode_withname(NodeArray& array, const char* name, CombatBehaviorTreeNode* node)"
+46262,0x1407c7890,0x1407f2be0,4,"CombatBehaviorTreeNode* CombatBehaviorTree::CreateLink(const char* a_name)"
 46263,0x1407c7950,0x1407f2ca0,4,"void CombatBehaviorTree::CreateTree(CombatBehaviorTreeNode* a_node)"
 46264,0x1407c7a40,0x1407f2d90,4,Character* CombatAI__get_me() src/Util.cpp:101
 46265,0x1407c7b20,0x1407f2e70,4,Character* CombatAI__get_he() src/Util.cpp:96
+46266,0x1407c7bf0,0x1407f2f40,4,TreeBuilder::TreeBuilder(CombatBehaviorTreeNode* a_node)
+46271,0x1407c7d80,0x1407f30d0,3,void CombatBehaviorTreeManager::RegisterBehaviorTree(CombatBehaviorTree* a_tree)
+46272,0x1407c7e70,0x1407f31c0,3,const CombatBehaviorTree* CombatBehaviorTreeManager::FindTree(const BSFixedString& a_name)
+46273,0x1407c7f00,0x1407f3250,3,const CombatBehaviorTreeNode* CombatBehaviorTreeManager::FindRootNode(const BSFixedString& a_name)
+46274,0x1407c7fa0,0x1407f32f0,3,void CombatBehaviorTreeManager::Init()
+46275,0x1407c8010,0x1407f3360,3,void CombatBehaviorTreeManager::InitializeTrees()
 46301,0x1407c8c10,0x1407f3f60,4,void CombatBehaviorTreeNode::ctor_nonvirtual() src\RE/CombatBehaviorTreeNode.h:55
 46302,0x1407c8c40,0x1407f3f90,4,void CombatBehaviorTreeNode::dtor_nonvirtual() src\RE/CombatBehaviorTreeNode.h:62
 46304,0x1407c8cb0,0x1407f4000,4,CombatBehaviorTreeNode* CombatBehaviorTreeNode::add_FirstChildren(CombatBehaviorTreeNode* child) src\RE/CombatBehaviorTreeNode.h:42
 46305,0x1407c8d40,0x1407f4090,4,void CombatBehaviorTreeNode::init_childrens_parents(NodeArray& cont_node) src\RE/CombatBehaviorTreeNode.h:35
+46306,0x1407c8e10,0x1407f4160,4,CombatBehaviorTreeNode* CombatBehaviorTreeNode::FindChild(const BSFixedString& ch_name)
+46307,0x1407c8e50,0x1407f41a0,4,int32_t CombatBehaviorTreeNode::FindChildIndex(const BSFixedString& ch_name)
+46323,0x1407c9000,0x1407f4350,3,void CombatBehaviorTreeRootNode::Enter(CombatBehaviorThread* thread)
+46324,0x1407c9060,0x1407f43b0,3,void CombatBehaviorTreeRootNode::Update(CombatBehaviorThread* thread)
+46325,0x1407c9090,0x140b02fe0,3,void CombatBehaviorTreeRootNode::Abort(CombatBehaviorThread* thread)
+46326,0x1407c90a0,0x1407f43f0,3,bool CombatBehaviorTreeRootNode::Validate(CombatBehaviorTreeNode* node)
+46327,0x1407c90c0,0x1407f4220,3,"void CombatBehaviorTreeRootNode::SaveGame(CombatBehaviorThread* thread, BGSSaveFormBuffer* buf)"
+46328,0x1407c90d0,0x1407f4420,3,"void CombatBehaviorTreeRootNode::LoadGame(CombatBehaviorThread* thread, BGSLoadFormBuffer* buf)"
+46329,0x1407c9120,0x1407fc1b0,3,const BSFixedString& CombatBehaviorTreeRootNode::GetType()
+46330,0x1407c9130,0x1407f4480,3,void CombatBehaviorTreeLinkNode::Enter(CombatBehaviorThread* a_thread)
+46331,0x1407c91a0,0x1407f44f0,3,bool CombatBehaviorTreeLinkNode::Validate(CombatBehaviorTreeNode* a_node)
+46332,0x1407c9200,0x1407fc1c0,3,const BSFixedString& CombatBehaviorTreeLinkNode::GetType()
+46338,0x1407c94d0,0x1407f4820,3,bool CombatAcquireItem::IsValid()
+46341,0x1407c9690,0x1407f49e0,3,void CombatBehaviorContextAcquireWeapon::Enter()
+46342,0x1407c9900,0x1407f4c50,3,void CombatBehaviorContextAcquireWeapon::Exit()
+46349,0x1407ca8c0,0x1407f5c10,3,void CombatBehaviorAcquireItem::Enter()
+46350,0x1407caad0,0x1407f5e20,3,void CombatBehaviorAcquireItem::Update()
+46417,0x1407cd1a0,0x1407f84f0,3,void CombatBehaviorAccessors::Fail()
+46442,0x1407cd9b0,0x1407f8d00,3,bool CombatBehaviorContextAcquireWeapon::HasAmmoTarget()
+46531,0x1407d0790,0x1407fbae0,3,std::uint32_t CombatBehaviorThread::GetChildIndex()
+46589,0x1407d1590,0x1407fc8e0,3,bool CombatBehaviorContextDodgeThreat::CheckShouldDodge()
+46590,0x1407d1740,0x1407fca90,3,void CombatBehaviorDodgeThreat::Enter()
+46591,0x1407d21e0,0x1407fd530,3,void CombatBehaviorDodgeThreat::Update()
+46592,0x1407d23f0,0x1407fd740,3,void CombatBehaviorDodgeThreat::Exit()
+46627,0x1407d3400,0x1407fe750,3,bool CombatBehaviorContextBlock::CheckStopBlocking()
+46628,0x1407d3600,0x1407fe950,3,void CombatBehaviorBlockAttack::Enter()
+46629,0x1407d3900,0x1407fec50,3,void CombatBehaviorBlockAttack::Update()
+46630,0x1407d3aa0,0x1407fedf0,3,void CombatBehaviorBlockAttack::Exit()
+46633,0x1407d3c00,0x1407fef50,3,void CombatBehaviorBlock::Enter()
+46634,0x1407d3ee0,0x1407ff230,3,void CombatBehaviorBlock::Update()
+46635,0x1407d41a0,0x1407ff4f0,3,void CombatBehaviorBlock::Exit()
 46641,0x1407d4a80,0x1407ffdd0,4,"NodeArray* WrapToRandomNode_1407d4a80 (NodeArray& a_array, const char* a_name, RE::TreeCtors_extradata* a_extradata, RE::CombatBehaviorTreeNode* a_node)"
+46695,0x1407d5ba0,0x140800ef0,3,void CombatBehaviorContextCloseMovement::Enter()
+46696,0x1407d5c80,0x140800fd0,3,bool CombatBehaviorContextCloseMovement::CheckOutOfRange()
+46697,0x1407d5ec0,0x140801210,3,bool CombatBehaviorContextCloseMovement::CheckOutOfPosition()
+46698,0x1407d6090,0x1408013e0,3,bool CombatBehaviorContextCloseMovement::CheckShouldStop(float R)
+46699,0x1407d62a0,0x1408015f0,3,bool CombatBehaviorContextCloseMovement::CheckShouldFallbackToRanged()
+46700,0x1407d6310,0x140801660,3,void CombatBehaviorContextCloseMovement::SetTargetLocation(const NiPointer<CombatTargetLocation>& loc)
+46703,0x1407d6430,0x140801780,3,void CombatBehaviorAdvance::Enter()
+46704,0x1407d6980,0x140801cd0,3,void CombatBehaviorAdvance::Update()
+46708,0x1407d6d30,0x140802080,3,void CombatBehaviorReposition::Enter()
+46709,0x1407d6f40,0x140802290,3,void CombatBehaviorSurround::Enter()
+46710,0x1407d72c0,0x140802610,3,"void CombatBehaviorSurround::Update()"
 46712,0x1407d73d0,0x140802720,4,CombatPathingRevolution::src/Fallback_Hook.h:16
 46713,0x1407d7740,0x140802a90,4,CombatPathingRevolution::src/Fallback_Hook.h:77
+46716,0x1407d7b90,0x140802ee0,3,void CombatBehaviorFallbackToRanged::Enter()
+46717,0x1407d7ec0,0x140803210,3,void CombatBehaviorFallbackToRanged::Update()
 46720,0x1407d8200,0x140803550,4,CombatPathingRevolution::src/Circling_Hook.h:167
+46721,0x1407d88f0,0x140803c40,3,void CombatBehaviorCircle::Update()
 46724,0x1407d8c90,0x140803fe0,4,CombatPathingRevolution::src/Backoff_Hook.h:19
+46725,0x1407d9030,0x140804380,3,void CombatBehaviorBackoff::Update()
+46728,0x1407d92b0,0x140804600,3,void CombatBehaviorCircleDistant::Enter()
+46729,0x1407d96c0,0x140804a10,3,void CombatBehaviorCircleDistant::Update()
 46731,0x1407d97d0,0x140804b20,4,CombatPathingRevolution::src/Backoff_Hook.h:55
 46732,0x1407da060,0x1408053b0,4,"NodeArray& wrap_to_conditional_2(NodeArray& a, const char* name, TreeCtors_extradata* extradata, CombatBehaviorTreeNode* node)"
 46736,0x1407da290,0x1408055e0,4,"NodeArray& wrap_to_valuenode_13(NodeArray& a, const char* name, TreeCtors_extradata* extradata, CombatBehaviorTreeNode* node)"
@@ -927,9 +1094,31 @@ id,sse,vr,status,name
 46763,0x1407db410,0x140806760,2,CombatBehaviorFallbackToRanged src\RE/CombatBehaviorNodesMovement.cpp:11
 46764,0x1407db4a0,0x1408067f0,2,CombatBehaviorReposition src\RE/CombatBehaviorNodesMovement.cpp:9
 46765,0x1407db530,0x140806880,2,CombatBehaviorSurround src\RE/CombatBehaviorNodesMovement.cpp:8
+46951,0x1407e0370,0x14080b6c0,3,bool CombatBehaviorEquipContext::CheckEquipmentChanged()
+46952,0x1407e04a0,0x14080b7f0,3,bool CombatBehaviorEquipContext::EquipItem()
 47089,0x1407e5fb0,0x140811300,4,float AITimer::QTimer()
+47118,0x1407e6b10,0x140811e60,3,bool CombatBehaviorContextFlankingMovement::CheckShouldStalk()
+47404,0x1407f27e0,0x14081db30,3,bool CombatBehaviorContextFlee::CheckShouldFlee()
+47405,0x1407f29a0,0x14081dcf0,3,bool CombatBehaviorContextFlee::StartFlee()
+48023,0x140808020,0x140833370,3,bool CombatGroup::IsSearching()
+48026,0x1408080d0,0x140833420,3,bool CombatState::QTargetLost()
+48035,0x140808260,0x1408335b0,3,CombatBehaviorContextMagic::CombatBehaviorContextMagic(CombatInventoryItemMagic* citem)
+48047,0x140808ef0,0x140834240,3,float CombatBehaviorContextMagic::CalcCastMagicChance()
+48048,0x140808f30,0x140834280,3,float CombatBehaviorContextMagic::CalcDualCastMagicChance()
 48139,0x14080c020,0x140837370,4,SCAR::AttackDistanceBase src/Hook_AttackStart.h:99
 48140,0x14080c6f0,0x140837a40,4,SCAR::Hook_AttackStart.h:20
+48141,0x14080cd10,0x140838060,3,bool CombatBehaviorContextMelee::CheckAttackRange()
+48142,0x14080cee0,0x140838230,3,void CombatBehaviorContextMelee::FinishedAttack()
+48145,0x14080d1d0,0x140838520,3,void CombatBehaviorContextMelee::GatherAttackData()
+48146,0x14080d560,0x1408388b0,3,void CombatBehaviorContextMelee::CalculateAnimationData()
+48460,0x140817c60,0x140842fb0,4,bool Actor::IsEssentialDown()
+48461,0x140817c80,0x140842fd0,4,bool Actor::IsInBleedout()
+48463,0x140817cb0,0x140843000,3,float CombatInventory::QRawMaxRange()
+48467,0x140817ec0,0x140843210,3,bool CombatBehaviorContextRangedMovement::CheckOutOfRange()
+48806,0x1408250c0,0x140850410,3,float CombatBehaviorContextShout::CalcCastMagicChance()
+49011,0x14082c540,0x140857890,3,void CombatPath::Update()
+49013,0x14082c790,0x140857ae0,3,void CombatPath::Start()
+49022,0x14082d030,0x140858380,3,"void CombatPath::SetAccelerationDecelerationMult(float accelerationMult, float DecelerationMult)"
 49311,0x14083c870,0x140867b70,3,RE::CombatApproachTargetSpeedController::sub_14083C870
 49711,0x140844d00,0x14086ffb0,3,RE::Character::sub_140844D00
 49716,0x140844e40,0x1408700f0,4,CombatPathingRevolution::src/Advanced_Hook.h:13
@@ -1065,6 +1254,7 @@ id,sse,vr,status,name
 51794,0x1408cea30,0x1408fbb10,3,TrainingMenu::UpdateText
 51795,0x1408cedf0,0x1408fbed0,3,TrainingMenu::SetSkillXpPercent
 51818,0x1408cfea0,0x1408fcf60,4,void TutorialMenu::OpenTutorialMenu(DEFAULT_OBJECT a_tutorial)
+51839,0x1408d0fe0,0x1408fe180,4,static void CloseTweenMenu()
 51843,0x1408d11f0,0x1408fe370,3,TweenMenu::
 51859,0x1408d33b0,0x1406f4b40,1,"void UI3DSceneManager::AttachChild(NiAVObject* a_obj, INTERFACE_LIGHT_SCHEME a_scheme) UNCONFIRMED"
 51859,0x1408d33b0,0x1406f4b40,3,"void UI3DSceneManager::AttachChild (pointer a_this, NiAVObject * a_obj, INTERFACE_LIGHT_SCHEME a_scheme)"
@@ -1181,9 +1371,12 @@ id,sse,vr,status,name
 60682,0x140a840a0,0x140ABEAA0,4,"void hkpShapePhantom::GetPenetrations(RE::hkpShapePhantom*, RE::hkpCdBodyPairCollector*, RE::hkpCollisionInput*)"
 60791,0x140a878c0,0x140AC22C0,4,"void hkpShapePhantom::SetPosition(RE::hkpShapePhantom*, RE::hkVector4)"
 60792,0x140a87930,0x140AC2330,4,"hkWorldOperation::Result hkpShapePhantom::SetShape(RE::hkpShapePhantom*, RE::hkpShape*)"
+61559,0x140abb120,0x140af5b20,3,"void hkpCharacterRigidBody::SetLinearVelocity(const hkVector4& a_newVel, float a_timestep)"
 61571,0x140abb790,0x140AF6190,3,"hkpMouseSpringAction::sub_140ABB790(hkpMouseSpringAction *a1, float *a2)"
 62122,0x140ad2d10,0x140b0d7b0,3,undefined8 BSSynchronizedClipGenerator::sub_140AD2D10 (BSSynchronizedClipGenerator * a_this)
-62391,0x140ade070,0x140b18b40,4,undefined8 hkbCharacter::sub_140ADE070 (hkbCharacter * a_this)
+62391,0x140ade070,0x140b18b40,4,"undefined8 hkbCharacter::sub_140ADE070 (hkbCharacter * a_this)"
+62431,0x140ae2e80,0x140b1d980,3,"bool QueryAnimations(float a_fromTime, BSFixedString& a_projectName, BSScrapArray<ClipData>& a_clips, std::int32_t a_activeGraphIndex)"
+62432,0x140ae2f80,0x140b1da80,3,"bool QueryAnimations(const BSScrapArray<BSFixedString>& a_events, std::int32_t a_activeGraphIndex, BSFixedString& a_projectName, BSScrapArray<ClipData>& a_clips)"
 62584,0x140ae9a70,0x140b245d0,4,"BSResource__EntryDB_BShkbHkxDB__DBTraits_::Func3_140AE9A70 (longlong param_1, undefined8 param_2)"
 62618,0x140aeb360,0x140b25ec0,4,ulonglong BShkbAnimationGraph::sub_140AEB360 (BShkbAnimationGraph * a_this)
 62640,0x140aedd10,0x140b28870,4,"BShkbAnimationGraph::sub_140AEDD10 (ulonglong param_1, undefined8 param_2, char param_3)"
@@ -1429,7 +1622,8 @@ id,sse,vr,status,name
 82462,0x140f48270,0x140fa4f70,3,bool GSysAllocPaged::InitHeapEngine(const void* a_heapDesc)
 82464,0x140f48360,0x140fa5060,3,void GSysAllocPaged::ShutdownHeapEngine()
 85757,0x140fffeb0,0x14105cbb0,4,void FUN_140fffeb0 (undefined8 * param_1)
-87907,0x1410a2370,0x1410fefa0,4,Skyrim-upscaler
+87907,0x1410a2370,0x1410fefa0,4,"Skyrim-upscaler"
+88498,0x1410c3ce0,0x141120930,3,bool IMovementState::CanStrafe()
 88499,0x1410c3d40,0x141120aa0,3,RE::ActorState::Sub_1410C3D40
 97371,0x14122c6f0,0x141264ba0,4,"void ObjectBindPolicy::GetInitialPropertyValues(VMHandle a_handle, const BSFixedString& a_className, BSTScrapHashMap<BSFixedString, Variable>& a_propertyValues, std::uint32_t& a_nonConvertedProperties)"
 97379,0x14122dad0,0x141265f80,3,RE::BSScript::ObjectBindPolicy::BindObject
@@ -9142,6 +9336,16 @@ id,sse,vr,status,name
 517711,0x142f3afb6,0x142fffdea,4,bool IsGodMode()
 518086,0x142f483f0,0x14300d6a0,3,HandlerDictionary* GetSingleton()
 518706,0x142f4ad88,0x143010038,3,CombatManager* GetSingleton()
+518752,0x142f4af68,0x143010218,4,static CombatBehaviorTreeCombat* GetSingleton()
+518759,0x142f4afb0,0x143010260,4,static CombatBehaviorTreeAcquireWeapon* GetSingleton()
+518776,0x142f4b048,0x1430102f8,4,static CombatBehaviorTreeAction* GetSingleton()
+518777,0x142f4b060,0x143010310,4,static CombatBehaviorTreeActionEquipmentSelector* GetSingleton()
+518800,0x142f4b128,0x1430103d8,4,static CombatBehaviorTreeDodgeThreat* GetSingleton()
+518807,0x142f4b170,0x143010420,4,static CombatBehaviorTreeBlock* GetSingleton()
+518824,0x142f4b1f0,0x1430104a0,4,static CombatBehaviorTreeCloseMovement* GetSingleton()
+518923,0x142f4b4a8,0x143010758,4,CombatBlackboardFlag* GetHiding()
+519075,0x142f4b958,0x143010c08,4,static CombatBehaviorTreeMovement* GetSingleton()
+519134,0x142f4bb28,0x143010dd8,4,CombatBlackboardFlag* GetUsingCover()
 519283,0x142f4bed4,0x143011184,3,RefHandle GetTargetRefHandle()
 519293,0x142f4bf40,0x1430111f0,4,ExtraTextDisplayData* BookMenu::GetDisplayData()
 519294,0x142f4bf48,0x1430111f8,4,ExtraDataList* BookMenu::GetExtraList()
@@ -9611,7 +9815,10 @@ id,sse,vr,status,name
 528538,0x1434963d0,0x1436f1ee0,3,RE::NiRTTI_BSSubIndexLandTriShape
 528600,0x143497408,0x1436f2f58,4,RE::TlsIndex
 528751,0x1401b69f0,0x1401c6a00,4,void BGSGrassManager::UpdateGrassRadius (GrassManager * param_1)
+529913,0x1407c1420,0x1407ec770,4,bool CombatBehaviorAction::Validate(CombatBehaviorTreeNode* node)
+529915,0x1407c6a00,0x1407f1d50,4,void CombatBehaviorThread::Ascend(CombatBehaviorTreeNode* a_node)
 529964,0x1407dff20,0x14080b270,4,CombatPathingRevolution::src/Advanced_Hook.h:90
+530050,0x140808b20,0x140833e70,4,MagicSystem::CastingType CombatBehaviorContextMagic::GetCastingType()
 542544,0x141520ab0,0x141597e00,3,VTABLE_NiTStringMap_Setting__0
 542598,0x141522c28,0x141599f78,3,VTABLE_MagicItem__PreloadableVisitor_0
 542605,0x141523058,0x14159a3a8,3,VTABLE_MagicItemFindFunctor_0
