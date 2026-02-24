@@ -17843,3 +17843,4 @@ id,sse,vr,status,name
 5375528368,0x140680db0,0x14068a230,3,RE::AIProcess::SetActorRefraction
 5388393136,0x1412c5ab0,0x141303ea0,3,RE::BSLightingShaderProperty::InvalidateTextures
 5399981752,0x141dd2eb8,0x141e901a8,4,CalculateMyCriticalHitChance
+55610,4,0x140992C30,0x1409CD750,papyrus__ObjectReference__Activate
