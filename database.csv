@@ -1050,7 +1050,6 @@ id,sse,vr,status,name
 51507,0x1408b2be0,0x1408e0450,3,void PrecacheCharGen_1409796E0_0_1408B2BE0 (undefined8 * a_this)
 51509,0x1408b2d60,0x1408e0730,4,void PrecacheCharGenClear_1409796F0_0_1408B2D60 (undefined8 * a_this)
 51540,0x1408ba590,0x1408e7d70,4,"void ChangeName_1408BA590 (RaceSexMenu * param_1, char * param_2)"
-55610,4,0x140992C30,0x1409CD750,papyrus__ObjectReference__Activate
 51614,0x1408bd8c0,0x1408ea840,3,SleepWaitTime_Compare_offset include/offsets.h:57
 51618,0x1408bde30,0x1408ead70,4,void SleepWaitMenu::ToggleOpenSleepWaitMenu(bool a_sleeping)
 51638,0x1408bf360,0x1408ec3e0,2,StatsMenu::ProcessMessage
@@ -1129,6 +1128,7 @@ id,sse,vr,status,name
 55387,0x140989620,0x1409c47a0,3,"void papyrus__LeveledActor::AddForm_140989620 (longlong * param_1, undefined4 param_2, longlong param_3, longlong param_4, undefined param_5)"
 55401,0x140989dd0,0x1409c4f50,4,"void papyrus__LeveledItem::AddForm_140989DD0 (longlong * param_1, undefined4 param_2, longlong param_3, longlong param_4, undefined param_5, undefined param_6)"
 55415,0x14098a600,0x1409c5780,3,"void papyrus__LeveledSpell::AddForm_14098A600 (longlong * param_1, undefined4 param_2, longlong param_3, longlong param_4, undefined param_5)"
+55610,0x140992C30,0x1409CD750,4,papyrus__ObjectReference__Activate
 55616,0x140993100,0x1409cdc20,3,papyrus::ObjectReference::AddItem
 55622,0x1409936e0,0x1401956c0,2,Unknown (required by Skyrim Platform)
 55644,0x140994170,0x1409cec90,3,papyrus::ObjectReference::GetItemCount
