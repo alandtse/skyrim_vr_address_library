@@ -1,3 +1,10 @@
+# [0.203.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.202.0...v0.203.0) (2026-02-26)
+
+
+### Features
+
+* add papyrus__ObjectReference__Activate ([#112](https://github.com/alandtse/skyrim_vr_address_library/issues/112)) ([a49c762](https://github.com/alandtse/skyrim_vr_address_library/commit/a49c762830d73f0d39d819d7aa4be241db48a111))
+
 # [0.202.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.201.0...v0.202.0) (2026-02-24)
 
 
