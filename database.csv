@@ -1483,6 +1483,7 @@ id,sse,vr,status,name
 69002,0x140c5ac30,0x140ca01e0,4,void NiStream::LoadLinkID
 69156,0x140c60fb0,0x140ca6560,4,void NiObjectNET::RemoveController(NiTimeController* a_controller)
 69263,0x140c65760,0x140cab2c0,3,"bool NiCamera::WindowPointToRay(std::int32_t a_x, std::int32_t a_y, NiPoint3& a_origin, NiPoint3& a_dir, float a_windowWidth, float a_windowHeight)"
+69265,0x140c65a20,0x140cab570,3,"static void NiCamera::CalculateFrustumOverlap(RE::NiCamera* camera, float* coord, float* result1, float* result2, float epsilon)"
 69270,0x140c66580,0x140cac0e0,3,RE::NiCamera::WorldPtToScreenPt3
 69271,0x140c66710,0x140cac900,3,void UpdateInternalWorldToScreenMatrix (NiCamera * a_this)
 69433,0x140c6cd50,0x140cb2ee0,3,void NiTimeController::LoadBinary(NiStream& a_stream)
@@ -1521,7 +1522,8 @@ id,sse,vr,status,name
 74239,0x140d38710,0x140d80bb0,3,RE::INISettingCollection::OpenHandle
 74240,0x140d38720,0x140d80bc0,3,RE::INISettingCollection::CloseHandle
 74377,0x140d3d3d0,0x140d86360,4,"BSWindModifier* BSWindModifier::Ctor()"
-74395,0x140d3dbe0,0x140d86b70,4,void BSPortalGraphEntry::ClearVisibility
+74395,0x140d3dbe0,0x140d86b70,4,"void BSPortalGraphEntry::ClearVisibility"
+74397,0x140d3dce0,0x140d86c70,4,"static bool BSPortalGraphEntry::func2(RE::BSPortalGraphEntry* first, RE::BSPortalGraphEntry* second)"
 74398,0x140d3dde0,0x140d86d70,4,"void BSPortalGraphEntry::AddVisibilityToMap(void* a_space, BSCompoundFrustum* a_compoundFrustum)"
 74491,0x140d426f0,0x14026f3b0,4,uint16_t FloatToHalf (float a_input)
 74601,0x140d46da0,0x140d8fcd0,4,"void FUN_140d46da0 (longlong param_1, uint param_2, longlong param_3, uint param_4, char param_5)"
@@ -1663,7 +1665,9 @@ id,sse,vr,status,name
 99693,0x1412b9610,0x1412f7040,3,void ShadowSceneNode::AddLight(RE::BSLight* a_light)
 99696,0x1412b99f0,0x1412f7420,4,"void ShadowSceneNode::AttachObject (ShadowSceneNode * a_this, NiAVObject * a_node)"
 99697,0x1412b9a10,0x1412f7440,4,void ShadowSceneNode::RemoveLight(NiLight* a_light) src\RE\S/ShadowSceneNode.cpp:45
-99698,0x1412b9b60,0x1412f7590,3,void ShadowSceneNode::RemoveLight(const NiPointer<BSLight>& a_light)
+99698,0x1412b9b60,0x1412f7590,3,"void ShadowSceneNode::RemoveLight(const NiPointer<BSLight>& a_light)"
+99708,0x1412baca0,0x1412f86d0,3,"static void ShadowSceneNode::EnableLight(RE::ShadowSceneNode* shadowSceneNode, RE::BSLight* light)"
+99728,0x1412bc770,0x1412fa1f0,4,"static void ShadowSceneNode::SetShadowCasterLightArrayEntry(RE::ShadowSceneNode* shadowSceneNode, RE::BSLight* light, uint32_t index, uint32_t unk4)"
 99735,0x1412bd240,0x1412facc0,4,"BSCompoundFrustum* ShadowSceneNode::BuildSharedCompoundFrustum(BSCullingProcess* a_cullingProcess, BSPortal* a_portal)"
 99854,0x1412c50f0,0x1413034b0,3,BSLightingShaderProperty * BSLightingShaderProperty::Ctor (BSLightingShaderProperty * a_this)
 99865,0x1412c5ab0,0x141303ea0,4,"void BSLightingShaderProperty::OnLoadTextureSet(BSLightingShaderProperty* a_this, undefined* a_2)"
@@ -1695,10 +1699,12 @@ id,sse,vr,status,name
 100306,0x1412dc050,0x14131b240,4,"void VolumetricLightingDescriptor::Render (longlong param_1, undefined8 param_2, bool param_3)"
 100309,0x1412dc3a0,0x14131b590,4,void VolumetricLightingDescriptor::Raymarch (VolumetricLightingDescriptor* this)
 100411,0x1412e21a0,0x1413218c0,4,"void Main::RenderFirstPersonView (char param_1, char param_2)"
+100419,0x1412e2f60,0x1413226e0,3,"void CalculateActiveShadowCasterLights_1412E2F60()"
 100421,0x1412e3520,0x141323250,3,"void Main::RenderDepth (char param_1, char param_2)"
 100422,0x1412e3ac0,0x141323680,3,void Main::RenderShadowmasks (bool param_1)
 100424,0x1412e3e70,0x141323b10,3,void Main::RenderWorld (bool param_1)
-100430,0x1412e49a0,0x141324e80,3,void RenderEOFImageSpaceEffects (RENDER_TARGET a_rendertarget)
+100430,0x1412e49a0,0x141324e80,3,"void RenderEOFImageSpaceEffects (RENDER_TARGET a_rendertarget)"
+100440,0x1412e50a0,0x141356e50,3,static void ApplyLensFlare(RE::BSLight* light) // Likely not valid in VR
 100458,0x1412e5570,0x141325d10,3,void BSShaderRenderTargets::Create()
 100475,0x1412e7db0,0x141328f20,4,"void BSImagespaceShader::SetupVolumetricLights(BSImagespaceShader *param_1,RENDER_TARGET a_renderTarget, RENDER_TARGET a_renderTargetSource)"
 100480,0x1412e82f0,0x141329460,4,"ImageSpaceEffect * BSImageSpace::Init::IBLF (ImageSpaceEffect * param_1, undefined8 param_2, undefined8 param_3, undefined8 param_4, undefined8 param_5, undefined8 param_6, undefined8 param_7)"
@@ -1711,7 +1717,9 @@ id,sse,vr,status,name
 100720,0x1412fde50,0x141340330,4,void renderPassCacheCtor()
 100771,0x1413014c0,0x141343d40,3,"bool BSDistantTreeShader::Func2_1413014C0 (BSDistantTreeShader * a_this, undefined8 param_2)"
 100781,0x141302780,0x1412f3a90,1,"void BSCubeMapCamera::Dtor()"
-100781,0x141302780,0x1412f3a90,4,"void BSCubeMapCamera::Dtor()"
+100781,0x141302780,0x1412f3a90,4,void BSCubeMapCamera::Dtor()
+100817,0x141304da0,0x14134b960,3,"static void BSShadowDirectionalLight::Set(RE::BSShadowLight* light, RE::NiCamera* camera)"
+100819,0x1413054c0,0x14134c220,4,"static void BSShadowLight::Accumulate(RE::BSShadowLight* light)"
 100840,0x141306240,0x141347320,4,"void BSShaderAccumulator::RenderPersistentPassList (longlong * * passList, uint32_t renderFlags)"
 100847,0x141307160,0x141348390,3,Skyrim-Upscaler
 100852,0x141308030,0x141349270,4,"void BSBatchRenderer::sub_141308030(BSBatchRenderer *a_this,uint *param_2,uint *param_3,undefined8 param_4,uint param_5)"
@@ -1724,6 +1732,7 @@ id,sse,vr,status,name
 100994,0x141310c50,0x141354b60,4,src\Features/LightLimitFix.h:163
 100997,0x141310e10,0x14090d400,3,src\Features/LightLimitFix.h:164
 101296,0x14131cde0,0x141362c60,4,BSLight::sub_*
+101298,0x14131cf90,0x141362e10,4,static void BSLight::ClearGeometryList(RE::BSLight* light)
 101303,0x14131d3d0,0x141363250,4,"float BSLight::GetLuminance(RE::BSLight *this, RE::NiPoint3 *targetPosition, RE::NiLight *refLight)"
 101339,0x14131f810,0x1413656b0,4,"void BSShader::LoadShaders_14131F810 (BSShader * a_this, UINT_PTR * a_stream)"
 101341,0x14131fbd0,0x141365a70,4,"bool BSShader::BeginTechnique_14131FBD0 (BSShader * shader, int vertexDescriptor, int pixelDescriptor, bool skipPIxelShader)"
@@ -8997,6 +9006,7 @@ id,sse,vr,status,name
 512511,0x141e09be8,0x141ecfb10,3,RE::BSScaleformManager::CollectDisplayInfo::fSafeZoneYWide
 512513,0x141e09c00,0x141ecfb28,3,RE::BSScaleformManager::CollectDisplayInfo::fSafeZoneX
 512515,0x141e09c18,0x141ecfb40,3,RE::BSScaleformManager::CollectDisplayInfo::fSafeZoneY
+513201,0x141e0de43,0x141ed3ab0,4,static bool GetNumFocusShaderLightsPositive()
 513211,0x141e0ded0,0x143423080,4,gShadowSceneNodeArray_*
 513222,0x141e0df14,0x1434230c4,4,shadowoost::gIsInterior
 513256,0x141e0dfcc,0x14342317c,4,ambientSpecularAndFresnel
@@ -9659,6 +9669,8 @@ id,sse,vr,status,name
 524965,0x14302afd0,0x1431849b0,4,VertexShader_bufferData
 524967,0x14302b510,0x143184ef0,4,PixelShader_bufferData
 524970,0x14302bb20,0x143185600,4,RenderTargetManager* GetSingleton()
+524978,0x14302bd18,0x1431858d0,4,static int GetUnkView[0]
+524979,0x14302bd1c,0x1431858d4,4,static int GetUnkView[1]
 524998,0x14302c890,0x143186c10,3,State* GetSingleton()
 525002,0x14302c8b4,0x143186c34,4,ScreenSize GetScreenSize() src\RE\R/Renderer.cpp:128
 525039,0x14302cc68,0x143186dd8,3,RE::NiRTTI_bhkWorldObject
@@ -9760,6 +9772,7 @@ id,sse,vr,status,name
 527668,0x1431d0e70,0x143422fe4,4,f_lightFadeStart
 527669,0x1431d0e74,0x143422fe8,4,f_lightFadeEnd
 527694,0x1431d0f80,0x143423298,4,gFlowMapSourceTex
+527703,0x1431d0fb8,0x1434232d0,4,static int FocusShadowActors.size
 527731,0x1431d11a0,0x1434234c0,4,TESImagespaceManager* GetSingleton()
 527735,0x1431d1200,0x143423520,3,RE::NiRTTI_ShadowSceneNode
 527752,0x1431d1af8,0x143423e20,3,RE::NiRTTI_BSLightingShaderProperty
@@ -9774,7 +9787,14 @@ id,sse,vr,status,name
 527973,0x14323309c,0x14348563c,4,iVolumetricLightingTextureWidthMedium
 527976,0x1432330a8,0x143485648,4,iVolumetricLightingTextureWidthHigh
 527992,0x1432331b8,0x143485758,3,RE::NiRTTI_BSParticleShaderProperty
+528077,0x143233470,0x143485af0,4,static RE::BSCullingProcess* GetUnknownGlobalCullingProcess()
 528082,0x143233490,0x143485b10,4,DrawWorld& GetSingleton()
+528087,0x1432334b8,0x143485b38,4,static RE::SceneGraph* GetWorldSceneGraph()
+528090,0x1432334d0,0x143485b50,4,static uint32_t* GetLastFrameActiveShadowCasterLightCount1()
+528091,0x1432334d4,0x143485b54,4,static uint32_t* GetLastFrameActiveShadowCasterLightCount2()
+528093,0x1432334dc,0x143485b5c,4,static uint32_t* GetActiveShadowCasterLightMask()
+528095,0x1432334e1,0x143485b61,4,static bool GetUnknownSunBool2()
+528096,0x1432334e2,0x143485b62,4,static bool* GetSelectedFocusShadows()
 528103,0x143233508,0x143485b88,3,RE::NiRTTI_BSTextureSet
 528104,0x143233518,0x143485b98,3,RE::NiRTTI_BSShaderTextureSet
 528120,0x143233560,0x143485c00,4,fDOFCenterWeight
@@ -9795,6 +9815,7 @@ id,sse,vr,status,name
 528279,0x143283ab0,0x1434d6180,3,RE::NiRTTI_BSCubeMapCamera
 528312,0x143283b68,0x1434d6238,3,RE::NiRTTI_BSFogProperty
 528314,0x143283b7c,0x1436ed280,3,fShadowDistance
+528315,0x143283b80,0x1436ed298,4,static BSShadowDirectionalLight* GetSelectedBSShadowDirectionalLightPointer1()
 528336,0x143495c48,0x1436f1748,3,RE::NiRTTI_BSClearZNode
 528354,0x143495d50,0x1436f1868,4,BSUtilityShader* BSUtilityShader::GetSingleton()
 528359,0x143495d68,0x1436f1a50,3,RE::NiRTTI_NiCollisionObject
