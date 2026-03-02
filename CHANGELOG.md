@@ -1,3 +1,10 @@
+# [0.204.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.203.0...v0.204.0) (2026-03-02)
+
+
+### Features
+
+* add Intellightent ([0971188](https://github.com/alandtse/skyrim_vr_address_library/commit/09711885be3e835482b31e63365723c63693e5d2))
+
 # [0.203.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.202.0...v0.203.0) (2026-02-26)
 
 
