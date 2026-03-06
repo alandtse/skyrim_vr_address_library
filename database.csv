@@ -443,6 +443,8 @@ id,sse,vr,status,name
 29219,0x14044bbf0,0x14045b740,4,RE::TESObjectCELL::PlaceParticleEffect
 29253,0x14044e9c0,0x14045e5a0,4,"void BSTempEffectSimpleDecal::ApplyTextureSetToGeometry (BSTempEffectSimpleDecal * a_this, BSGeometry * a_effect3D, BGSTextureSet * a_texture1, bool a_blended)"
 29303,0x140452550,0x140462500,3,RE::NiAVObject::ClearWeaponBlood
+29832,0x1404737a0,0x140483780,4,"bool FindClosestPointOnNavmesh(const BSTSmartPointer<BSPathingCell>& a_cell, const NiPoint3& a_location, FindTriangleForLocationFilter& a_filter, NiPoint3& a_pointOut)"
+29866,0x140476ba0,0x140486b80,4,"bool Pathing::GetPathingCell(const NiPoint3& a_location, TESObjectCELL* a_cell, TESWorldSpace* a_worldSpace, BSTSmartPointer<BSPathingCell>& a_cellOut)"
 30839,0x1404a8090,0x1404b80a0,3,void BGSDistantTreeBlock::UpdateBlockVisibility (BGSDistantTreeBlock * a_this)
 30934,0x1404ad940,0x1404bd9a0,3,void BGSTerrainBlock::Attach(BGSTerrainBlock* a_block)
 30936,0x1404adb60,0x1404bdbc0,3,void BGSTerrainBlock::Detach(BGSTerrainBlock* a_block)
@@ -1433,10 +1435,10 @@ id,sse,vr,status,name
 66646,0x140bf9e40,0x140c34ce0,4,void BSGameSound::SetOutputModel(BSISoundOutputModel* a_outputModel)
 66772,0x140bfe670,0x140c394f0,4,void BSXAudio2GameSound::SeekInSamples(std::uint32_t a_samples)
 66841,0x140c01800,0x140c3c680,3,ScrapHeap* MemoryManager::GetThreadScrapHeap()
-66859,0x140c02260,0x140c3d0e0,3,"void* MemoryManager::Allocate(std::size_t a_size, std::int32_t a_alignment, bool a_alignmentRequired)"
-66860,0x140c024b0,0x140c3d330,3,"void* MemoryManager::Reallocate(void* a_oldMem, std::size_t a_newSize, std::int32_t a_alignment, bool a_aligned)"
-66861,0x140c02560,0x140c3d3e0,3,"void MemoryManager::Deallocate(void* a_mem, bool a_alignmentRequired)"
-66884,0x140c034a0,0x140c3e320,3,"void* ScrapHeap::Allocate(std::size_t a_size, std::size_t a_alignment)"
+66859,0x140c02260,0x140c3d0e0,4,"void* MemoryManager::Allocate(std::size_t a_size, std::int32_t a_alignment, bool a_alignmentRequired)"
+66860,0x140c024b0,0x140c3d330,4,"void* MemoryManager::Reallocate(void* a_oldMem, std::size_t a_newSize, std::int32_t a_alignment, bool a_aligned)"
+66861,0x140c02560,0x140c3d3e0,4,"void MemoryManager::Deallocate(void* a_mem, bool a_alignmentRequired)"
+66884,0x140c034a0,0x140c3e320,4,"void* ScrapHeap::Allocate(std::size_t a_size, std::size_t a_alignment)"
 66885,0x140c03ac0,0x140c3e940,3,void ScrapHeap::Deallocate(void* a_mem)
 66962,0x140c06490,0x140c41310,3,RE::CRC32Calculator::SizeOfSize
 66963,0x140c064f0,0x140c41370,3,RE::CRC32Calculator::SizeOf32
@@ -1511,7 +1513,7 @@ id,sse,vr,status,name
 69564,0x140c72300,0x140cb86b0,3,RE::BSDynamicTriShape::BSDynamicTriShape
 69583,0x140c731f0,0x140cb95a0,4,NiPointLight* NiPointLight::Ctor
 69636,0x140c76060,0x140cbc490,3,RE::BSResourceNiBinaryStream::Ctor
-69638,0x140c76340,0x140cbc770,3,RE::BSResourceNiBinaryStream::Dtor
+69638,0x140c76340,0x140cbc770,4,void dtor_140C76340 (BSResourceNiBinaryStream * a_this)
 69640,0x140c76490,0x140cbc8c0,3,RE::BSResourceNiBinaryStream::Seek
 69643,0x140c76580,0x140cbc9b0,3,RE::BSResourceNiBinaryStream::SetEndianSwap
 69681,0x140c77ed0,0x140cbe300,3,RE::NiBillboardNode::RotateToCamera
@@ -1632,6 +1634,7 @@ id,sse,vr,status,name
 82464,0x140f48360,0x140fa5060,3,void GSysAllocPaged::ShutdownHeapEngine()
 85757,0x140fffeb0,0x14105cbb0,4,void FUN_140fffeb0 (undefined8 * param_1)
 87907,0x1410a2370,0x1410fefa0,4,"Skyrim-upscaler"
+88004,0x1410a7e10,0x141104a40,4,"bool FindTriangleForLocationFilterCheckDeltaZ::IsValidTri(NiPoint3* a_location, BSNavmesh* a_navMesh, std::uint16_t a_tri, NiPoint3* a_pointOnTri)"
 88498,0x1410c3ce0,0x141120930,3,bool IMovementState::CanStrafe()
 88499,0x1410c3d40,0x141120aa0,3,RE::ActorState::Sub_1410C3D40
 97371,0x14122c6f0,0x141264ba0,4,"void ObjectBindPolicy::GetInitialPropertyValues(VMHandle a_handle, const BSFixedString& a_className, BSTScrapHashMap<BSFixedString, Variable>& a_propertyValues, std::uint32_t& a_nonConvertedProperties)"
@@ -9287,7 +9290,8 @@ id,sse,vr,status,name
 514725,0x142ec5c60,0x142f8ab30,3,VATS* GetSingleton()
 514738,0x142ec5ce0,0x142f8abb0,3,BSMusicManager* GetSingleton()
 514741,0x142ec5cf8,0x142f8abc8,4,RWMutex*
-514783,0x142eff440,0x142fc42f8,4,TESLandTexture* GetDefaultLandTexture()
+514783,0x142eff440,0x142fc42f8,4,"TESLandTexture* GetDefaultLandTexture()"
+514893,0x142eff768,0x142fc4658,4,static Pathing* GetSingleton()
 514923,0x142eff868,0x142fc4758,4,RE::ActorState::UnarmedWeap
 514959,0x142eff988,0x142fc4878,3,MenuTopicManager* GetSingleton()
 514966,0x142eff9c0,0x142fc48b0,3,RE::NiRTTI_REFRSyncController
