@@ -1,3 +1,10 @@
+# [0.205.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.204.0...v0.205.0) (2026-03-06)
+
+
+### Features
+
+* add Seamless Saving ([3c1e739](https://github.com/alandtse/skyrim_vr_address_library/commit/3c1e739adcc0b205f0a8ad34257b52717cad67ef))
+
 # [0.204.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.203.0...v0.204.0) (2026-03-02)
 
 
