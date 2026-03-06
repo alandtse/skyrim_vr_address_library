@@ -285,6 +285,7 @@ id,sse,vr,status,name
 19400,0x14029a330,0x1402aba40,3,bool TESObjectREFR::IsCrimeToActivate()
 19446,0x14029cb80,0x1402ae290,3,"ShaderReferenceEffect* TESObjectREFR::InstantiateHitShader(TESEffectShader* a_shader, float a_dur, TESObjectREFR* a_facingRef, bool a_faceTarget, bool a_attachToCamera, NiAVObject* a_attachNode, bool a_interfaceEffect)"
 19666,0x1402a2070,0x1402b37e0,3,RE::ScriptEventSourceHolder::SendActivateEvent
+19760,0x1402a50e0,0x1402b6850,4,"BSResource::ErrorCode SaveStorageWrapper::EnsureCapacity (SaveStorageWrapper * a_this, uint64_t size)"
 19789,0x1402a6670,0x1402b7de0,3,RE::TESObjectREFR::GetOwner
 19793,0x1402a6960,0x1402b80d0,4,void TESObjectREFR::SetOwner(TESForm* a_owner)
 19797,0x1402a6ca0,0x1402b8410,4,BGSEncounterZone * TESObjectREFR::GetEncounterZone_1402A6CA0 (TESObjectREFR * param_1)
@@ -568,9 +569,12 @@ id,sse,vr,status,name
 34429,0x14056D570,0x140573B70,4,"void DialogueSubtitleStrings (char **a1, TESTopic *a2, TESTopicInfo *a3, Character *a4, void *a5)"
 34434,0x14056DA60,0x140574060,4,"void DialogueMenuStrings (void *a1, TESQuest *a2, TESTopic *a3, TESTopicInfo *a4, TESObjectREFR *a5, void *a6)"
 34455,0x14056f230,0x1405757d0,3,MenuTopicManager::sub_*
-34627,0x140579880,0x140580fe0,3,bool BGSSaveLoadFileEntry::PopulateFileEntryData()
+34627,0x140579880,0x140580fe0,3,"bool BGSSaveLoadFileEntry::PopulateFileEntryData()"
+34634,0x140579b90,0x1405812f0,4,"uint BGSSaveLoadFormIDMap::InsertFormID (BGSSaveLoadFormIDMap * a_this, uint a_formID)"
 34655,0x14057b920,0x1405830f0,4,"bool BGSSaveLoadGame::GetChange(TESForm* a_form, std::uint32_t a_changes)"
-34670,0x14057cb90,0x140584360,3,bool BGSSaveLoadGame::IsFormIDInUse(FormID a_formID)
+34670,0x14057cb90,0x140584360,3,"bool BGSSaveLoadGame::IsFormIDInUse(FormID a_formID)"
+34676,0x14057ccc0,0x140584420,3,"void BGSSaveLoadGame::SaveGame (BGSSaveGameBuffer * a_this, anonymous_namespace__Win32FileType * a_Win32FileType)"
+34732,0x140580920,0x140587e30,4,"int SaveGlobalDataChunks (anonymous_namespace__Win32FileType * a_this, uint32_t a_start, uint32_t a_end, uint64_t a_size)"
 34808,0x140585a70,0x14058cfa0,4,"ulonglong BGSLoadGameBuffer::sub_140585A70(BGSLoadGameBuffer *param_1,PlayerCharacter *param_2,undefined *param_3,char *param_4)"
 34818,0x140586de0,0x14058e310,3,RE::BGSSaveLoadManager::Save
 34819,0x140587350,0x14058e920,3,RE::BGSSaveLoadManager::Load
@@ -582,6 +586,8 @@ id,sse,vr,status,name
 35027,0x140592f10,0x14059a5d0,4,void BGSNumericIDIndex::SetNumericID(FormID a_formID)
 35112,0x140597d50,0x14059f410,4,"void BGSLoadGameBuffer::LoadDataEndian(void* a_data, std::uint32_t a_offset, std::uint32_t a_size)"
 35163,0x140599db0,0x1405a1470,4,"void BGSSaveGameBuffer::SaveDataEndian(const void* a_data, std::uint32_t a_size)"
+35172,0x14059a120,0x1405a17e0,4,"static SaveStorageWrapper * SaveStorageWrapper::Ctor (SaveStorageWrapper * a_this, void * svWrapperSpace, anonymous_namespace__Win32FileType * a_fileStream, uint64_t size)"
+35173,0x14059a260,0x1405a1920,4,"static void Dtor(SaveStorageWrapper* a_this)"
 35199,0x14059b140,0x1405a2800,4,void MemoryManager::RegisterMemoryManager()
 35203,0x14059b9a0,0x1405a3060,4,uint32_t ScrapHeap_GetMaxSize_14059b9a0(void)
 35263,0x14059f0f0,0x1405a67b0,4,EnchantmentItem* BGSCreatedObjectManager::AddWeaponEnchantment(BSTArray<Effect>& a_effects)
@@ -1484,7 +1490,7 @@ id,sse,vr,status,name
 69002,0x140c5ac30,0x140ca01e0,4,void NiStream::LoadLinkID
 69156,0x140c60fb0,0x140ca6560,4,void NiObjectNET::RemoveController(NiTimeController* a_controller)
 69263,0x140c65760,0x140cab2c0,3,"bool NiCamera::WindowPointToRay(std::int32_t a_x, std::int32_t a_y, NiPoint3& a_origin, NiPoint3& a_dir, float a_windowWidth, float a_windowHeight)"
-69265,0x140c65a20,0x140cab570,3,"static void NiCamera::CalculateFrustumOverlap(RE::NiCamera* camera, float* coord, float* result1, float* result2, float epsilon)"
+69265,0x140c65a20,0x140cab570,3,"static void NiCamera::CalculateFrustumOverlap(NiCamera *a_this,NiPoint4 *a_worldCoord, NiPoint3 *a_outMinNDC, NiPoint3 *a_outMaxNDC, int32_t a_eyeIndex, float a_nearPlaneEpsilon) // VR has eyeIndex"
 69270,0x140c66580,0x140cac0e0,3,RE::NiCamera::WorldPtToScreenPt3
 69271,0x140c66710,0x140cac900,3,void UpdateInternalWorldToScreenMatrix (NiCamera * a_this)
 69433,0x140c6cd50,0x140cb2ee0,3,void NiTimeController::LoadBinary(NiStream& a_stream)
@@ -1638,11 +1644,18 @@ id,sse,vr,status,name
 97746,0x1412449d0,0x14129a720,3,RE::BSScript::Stack::GetStackFrameVariable
 97831,0x141249f60,0x1412a5380,3,RE::BSScript::CompiledScriptLoader::GetClass
 97923,0x1412507f0,0x14129dd90,3,RE::BSScript::NF_util::NativeFunctionBase::Call
-98077,0x14125a700,0x14127a190,2,SendEvent
+97947,0x141251a50,0x1412ac4b0,4,"bool WritableStringTable::SaveGame (BSScript::WritableStringTable * a_this, SaveStorageWrapper * a_save)"
+97948,0x141251b80,0x1412ac5e0,4,"bool WritableStringTable::WriteFixedString (BSScript::WritableStringTable * a_this, SaveStorageWrapper * a_save, BSFixedString * a_scriptName)"
+97949,0x141251c50,0x1412ac6b0,4,"bool WritableStringTable::WriteString (BSScript::WritableStringTable * a_this, SaveStorageWrapper * a_save, char * a_scriptName)"
+97950,0x141251cb0,0x1412ac710,4,"bool WritableStringTable::WriteString2 (BSScript::WritableStringTable * a_this, SaveStorageWrapper * a_save, char * a_scriptName)"
+98077,0x14125a700,0x14127a190,2,"SendEvent"
+98105,0x14125e550,0x14127dfe0,3,"void BSScript__IVMSaveLoadInterface::SaveGame (BSScript__IVMSaveLoadInterface * a_this, SaveStorageWrapper * a_save, SkyrimScript::SaveFileHandleReaderWriter * a_handle, bool a_bForceResetState)"
+98106,0x14125ea80,0x14127e560,3,"void BSScript__IVMSaveLoadInterface::LoadGame (BSScript__IVMSaveLoadInterface * a_this, LoadStorageWrapper * a_wrapper, SkyrimScript::SaveFileHandleReaderWriter * a_handle)"
 98130,0x141261cb0,0x141281790,3,BSScript::Internal::VirtualMachine::AttemptFunctionCall
 98134,0x141262ee0,0x1412829b0,3,BSScript::Internal::VirtualMachine::ProcessMessageQueue
 98146,0x1412641f0,0x141283cc0,4,"int * CreateStack_1412641F0 (longlong param_1, undefined4 param_2, undefined8 param_3, undefined8 param_4)"
 98149,0x1412646f0,0x1412841c0,4,"void BSScript__Internal__VirtualMachine::CleanUpStack_1412646F0(longlong param_1,longlong param_2)"
+98158,0x1412658d0,0x1412853a0,4,"void ResetState (BSScript__Internal__VirtualMachine * a_this)"
 98160,0x141266030,0x141285b00,3,RE::SaveFileHandleReaderWriter::LoadHandle
 98295,0x141270710,0x1412908a0,3,RE::SaveFileHandleReaderWriter::SaveHandle
 98520,0x141278110,0x1412b1380,3,BSScript::Internal::CodeTasklet::VMProcess
@@ -9670,8 +9683,8 @@ id,sse,vr,status,name
 524965,0x14302afd0,0x1431849b0,4,VertexShader_bufferData
 524967,0x14302b510,0x143184ef0,4,PixelShader_bufferData
 524970,0x14302bb20,0x143185600,4,RenderTargetManager* GetSingleton()
-524978,0x14302bd18,0x1431858d0,4,static int GetUnkView[0]
-524979,0x14302bd1c,0x1431858d4,4,static int GetUnkView[1]
+524978,0x14302bd18,0x1431858d0,4,static int viewHeight
+524979,0x14302bd1c,0x1431858d4,4,static int viewWidth
 524998,0x14302c890,0x143186c10,3,State* GetSingleton()
 525002,0x14302c8b4,0x143186c34,4,ScreenSize GetScreenSize() src\RE\R/Renderer.cpp:128
 525039,0x14302cc68,0x143186dd8,3,RE::NiRTTI_bhkWorldObject
