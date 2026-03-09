@@ -85,7 +85,11 @@ id,sse,vr,status,name
 13623,0x14016bda0,0x14017c7c0,4,"void FUN_14016bda0 (TESDataHandler * param_1, undefined8 param_2)"
 13625,0x14016c210,0x14017cc30,3,"ObjectRefHandle TESDataHandler::CreateReferenceAtLocation(TESBoundObject* a_base, const NiPoint3& a_location, const NiPoint3& a_rotation, TESObjectCELL* a_targetCell, TESWorldSpace* a_selfWorldSpace, TESObjectREFR* a_alreadyCreatedRef, BGSPrimitive* a_primitive, const ObjectRefHandle& a_linkedRoomRefHandle, bool a_forcePersist, bool a_arg11)"
 13635,0x14016d4d0,0x14017def0,3,FormID TESDataHandler::GetNextID()
+13638,0x14016d720,0x14017e0b0,4,"void TESDataHandler::LoadPlugins(TESDataHandler* a_this, char* a_basePath)"
+13639,0x14016dbb0,0x14017e540,3,"void TESDataHandler::FindPluginsInDirectory(TESDataHandler* a_this, char* a_path)"
+13645,0x14016e660,0x14017eff0,3,"longlong TESDataHandler::CompileFiles(TESDataHandler* a_this, BSSimpleList<TESFile*>* a_files)"
 13647,0x14016f2e0,0x14017fb90,3,"bool TESDataHandler::IsGameModded (TESDataHandler * a_this, bool param_2)"
+13652,0x1401700e0,0x140180870,4,"bool TESDataHandler::ConstructObjectList(TESDataHandler* a_this, TESFile* a_file, bool a_isFirstPlugin, char* a_param4)"
 13657,0x1401713d0,0x140181b80,3,RE::TESDataHandler::LoadScripts
 13671,0x1401726a0,0x140182df0,4,void DataHandler::sub_1401726A0 (TESNPC * param_1)
 13755,0x140176c80,0x140186bd0,4,"void FUN_140176c80 (IMemoryHeap__VFTable * param_1, IMemoryHeap__VFTable * * param_2, undefined * param_3, undefined8 param_4)"
@@ -332,7 +336,7 @@ id,sse,vr,status,name
 22845,0x140326510,0x140335d50,3,RE::INISettingCollection::ReadFromFile
 23073,0x14032ece0,0x14033e5a0,3,RE::ApplyPerkEntries
 23229,0x1403335A0,0x140342E60,4,"void JournalMenuQuestObjectiveStrings (char ***a1, char *a2)"
-23353,0x1403386a0,0x140347f60,4,void BGSPerk::sub_1403386A0 (BGSPerk * a_this)
+23353,0x1403386a0,0x140347f60,4,"void ApplyPerk (BGSPerk * a_perk, Actor * a_perkOwner, uint8_t a_removeRank, uint8_t a_applyRank)"
 23359,0x140338a50,0x140348310,4,"undefined8 BGSPerk__ApplyPerksVisitor::sub_140338A50 (BGSPerk__ApplyPerksVisitor * a_this, BSTArray_BGSPerkEntry__ * param_2)"
 23429,0x14033a820,0x14034a0e0,2,BGSQuestObjective::FillQuestInstanceData
 23467,0x14033C010,0x14034B8D0,4,"void DecideObjectiveHUDDataType(int64 a_objectives, int32 a_QuestObjectiveState)"
@@ -18088,4 +18092,4 @@ id,sse,vr,status,name
 5370397616,0x14019c3b0,0x1401ac0e0,3,RE::BSShaderProperty::InvalidateMaterial
 5375528368,0x140680db0,0x14068a230,3,RE::AIProcess::SetActorRefraction
 5388393136,0x1412c5ab0,0x141303ea0,3,RE::BSLightingShaderProperty::InvalidateTextures
-5399981752,0x141dd2eb8,0x141e901a8,4,CalculateMyCriticalHitChance
+5399981752,0x141dd2eb8,0x141e901a8,4,"CalculateMyCriticalHitChance"
