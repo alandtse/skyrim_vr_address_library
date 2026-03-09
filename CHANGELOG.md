@@ -1,3 +1,11 @@
+# [0.206.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.205.0...v0.206.0) (2026-03-09)
+
+
+### Features
+
+* add load time profiler ([4bb2432](https://github.com/alandtse/skyrim_vr_address_library/commit/4bb2432597d79894f4d134d53d05855b0406f49b))
+* sync with latest commonlib ([17d8e00](https://github.com/alandtse/skyrim_vr_address_library/commit/17d8e005645a5d4ed6e506bab8230fe796de6367))
+
 # [0.205.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.204.0...v0.205.0) (2026-03-06)
 
 
