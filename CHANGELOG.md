@@ -1,3 +1,10 @@
+# [0.207.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.206.0...v0.207.0) (2026-03-16)
+
+
+### Features
+
+* add spid, enginefixes64, intellightent ids ([01d1df1](https://github.com/alandtse/skyrim_vr_address_library/commit/01d1df10e8536573448a16e84dc54177d1b8e932))
+
 # [0.206.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.205.0...v0.206.0) (2026-03-09)
 
 
