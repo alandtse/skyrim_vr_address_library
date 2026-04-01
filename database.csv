@@ -745,7 +745,7 @@ id,sse,vr,status,name
 36935,0x140608d40,0x140611900,4,double Actor::GetMoveDirectionRelativeToFacing()
 36943,0x140609000,0x140611bc0,4,"void Actor::UpdateAwakeSound_140609000 (Actor * a_this, NiAVObject * a_obj3D)"
 36973,0x14060b620,0x140614210,3,RE::GameEventHandler::FallLongDistance::CalcDoDamage::process_movefinish_event
-36979,0x14060ca30,0x1406155f0,3,Actor::FixEquipConflictCheck
+36979,0x14060ca30,0x1406155f0,3,Actor::EquipConflictCheck
 36994,0x14060e820,0x1406173e0,3,TrueHUD::FlashHUDStaminaMountHook
 37013,0x14060eef0,0x140617b00,4,TESObjectREFR::sub_14060EEF0
 37016,0x14060f0c0,0x140617cd0,4,float Actor::CalcEquippedWeight_14060F0C0 (Actor * a_this)
