@@ -111,6 +111,7 @@ id,sse,vr,status,name
 13904,0x14017da10,0x14018d7f0,3,RE::TESFile::ReadData
 13913,0x14017e130,0x14018df10,4,bool IsESM_14017E130 (TESFile * param_1)
 13923,0x14017e4b0,0x14018e210,3,RE::TESFile::Duplicate
+14026,0x1401820a0,0x140191e20,3,RE::BGSBipedObjectForm::TestBodyPartByIndex
 14055,0x1401832b0,0x140193030,3,BGSDestructibleObjectForm* TESBoundObject::GetDestructibleForm()
 14082,0x140185990,0x1401956c0,4,void TESObjectREFR::ClearDestruction()
 14108,0x140186790,0x1401964c0,3,ScriptEventSourceHolder* ScriptEventSourceHolder::GetSingleton()
@@ -744,6 +745,7 @@ id,sse,vr,status,name
 36935,0x140608d40,0x140611900,4,double Actor::GetMoveDirectionRelativeToFacing()
 36943,0x140609000,0x140611bc0,4,"void Actor::UpdateAwakeSound_140609000 (Actor * a_this, NiAVObject * a_obj3D)"
 36973,0x14060b620,0x140614210,3,RE::GameEventHandler::FallLongDistance::CalcDoDamage::process_movefinish_event
+36979,0x14060ca30,0x1406155f0,3,Actor::EquipConflictCheck
 36994,0x14060e820,0x1406173e0,3,TrueHUD::FlashHUDStaminaMountHook
 37013,0x14060eef0,0x140617b00,4,TESObjectREFR::sub_14060EEF0
 37016,0x14060f0c0,0x140617cd0,4,float Actor::CalcEquippedWeight_14060F0C0 (Actor * a_this)
