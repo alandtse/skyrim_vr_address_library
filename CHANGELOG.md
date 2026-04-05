@@ -1,3 +1,10 @@
+# [0.208.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.207.0...v0.208.0) (2026-04-05)
+
+
+### Features
+
+* add EquipConflictCheck and TestBodyPartByIndex ([#115](https://github.com/alandtse/skyrim_vr_address_library/issues/115)) ([655e3c0](https://github.com/alandtse/skyrim_vr_address_library/commit/655e3c006f1e437b3c9bee0e3d0d197eb0f678e0))
+
 # [0.207.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.206.0...v0.207.0) (2026-03-16)
 
 
