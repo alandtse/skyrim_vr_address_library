@@ -924,6 +924,7 @@ id,sse,vr,status,name
 41349,0x1407090a0,0x1407310b0,3,RE::JumpHandler::ProcessButton_1407090A0
 41361,0x1407096b0,0x140732b00,3,StaminaNPC::apply_PlayerControls__sub_140705530
 41659,0x140719990,0x140744330,2,papyrus_extender::detection::calculatedetection_0x526
+41661,0x14071a190,0x140744b30,4,"bool IsLightAffectingActor(void* detectionGlobal, BSShadowLight*, Actor*, NiPoint3*)"
 41694,0x14071B670,0x140746010,2,"unk_14071B670(__m128 *a1, int64 a2, int64 a3, Actor *a4, float *a5)"
 41778,0x1407220b0,0x14074ca60,3,RE::ArrowReleaseHandler::Handle_1407220B0
 42420,0x14072cc80,0x140757690,4,AnimObjectSwapper::AnimObjectSwapHook
@@ -1592,7 +1593,6 @@ id,sse,vr,status,name
 74395,0x140d3dbe0,0x140d86b70,4,"void BSPortalGraphEntry::ClearVisibility"
 74397,0x140d3dce0,0x140d86c70,4,"static bool BSPortalGraphEntry::func2(RE::BSPortalGraphEntry* first, RE::BSPortalGraphEntry* second)"
 74398,0x140d3dde0,0x140d86d70,4,"void BSPortalGraphEntry::AddVisibilityToMap(void* a_space, BSCompoundFrustum* a_compoundFrustum)"
-74491,0x140d426f0,0x14026f3b0,4,uint16_t FloatToHalf (float a_input)
 74491,0x140d426f0,0x140d8b6b0,4,uint16_t FloatToHalf (float a_input)
 74601,0x140d46da0,0x140d8fcd0,4,"void FUN_140d46da0 (longlong param_1, uint param_2, longlong param_3, uint param_4, char param_5)"
 74621,0x140d47af0,0x140d90a20,4,"void BSIOStreamTraits::Write (BSIOStreamTraits * a_this, void * a_1, uint a_2)"
@@ -1787,9 +1787,12 @@ id,sse,vr,status,name
 100306,0x1412dc050,0x14131b240,4,"void VolumetricLightingDescriptor::Render (longlong param_1, undefined8 param_2, bool param_3)"
 100309,0x1412dc3a0,0x14131b590,4,void VolumetricLightingDescriptor::Raymarch (VolumetricLightingDescriptor* this)
 100411,0x1412e21a0,0x1413218c0,4,"void Main::RenderFirstPersonView (char param_1, char param_2)"
-100419,0x1412e2f60,0x1413226e0,3,"void CalculateActiveShadowCasterLights_1412E2F60()"
+100415,0x1412e2a60,0x141322130,3,"void MainAccum()"
+100419,0x1412e2f60,0x1413226e0,3,void CalculateActiveShadowCasterLights_1412E2F60()
+100420,0x1412e3480,0x141323190,3,"void RenderActiveShadowCasterLights()"
 100421,0x1412e3520,0x141323250,3,"void Main::RenderDepth (char param_1, char param_2)"
 100422,0x1412e3ac0,0x141323680,3,void Main::RenderShadowmasks (bool param_1)
+100423,0x1412e3b80,0x1409c0c80,3,void RenderShadowLightsWithUtilityShader()
 100424,0x1412e3e70,0x141323b10,3,void Main::RenderWorld (bool param_1)
 100430,0x1412e49a0,0x141324e80,3,"void RenderEOFImageSpaceEffects (RENDER_TARGET a_rendertarget)"
 100440,0x1412e50a0,0x141356e50,3,static void ApplyLensFlare(RE::BSLight* light) // Likely not valid in VR
@@ -1812,7 +1815,8 @@ id,sse,vr,status,name
 100781,0x141302780,0x1412f3a90,4,void BSCubeMapCamera::Dtor()
 100817,0x141304da0,0x14134b960,3,"static void BSShadowDirectionalLight::Set(RE::BSShadowLight* light, RE::NiCamera* camera)"
 100818,0x141305240,0x14134be20,3,"BSShadowLight::AccumulateShadowMap"
-100819,0x1413054c0,0x14134c220,4,"static void BSShadowLight::Accumulate(RE::BSShadowLight* light)"
+100819,0x1413054c0,0x14134c220,4,static void BSShadowLight::Accumulate(RE::BSShadowLight* light)
+100820,0x141305610,0x14134c370,3,"void BSShadowParabolicLight::RenderCascade(BSShadowLight::ShadowmapDescriptor* a_desc, std::uint32_t& a_index, std::uint32_t a_flags)"
 100840,0x141306240,0x141347320,4,"void BSShaderAccumulator::RenderPersistentPassList (longlong * * passList, uint32_t renderFlags)"
 100847,0x141307160,0x141348390,3,Skyrim-Upscaler
 100852,0x141308030,0x141349270,4,"void BSBatchRenderer::sub_141308030(BSBatchRenderer *a_this,uint *param_2,uint *param_3,undefined8 param_4,uint param_5)"
@@ -1825,13 +1829,15 @@ id,sse,vr,status,name
 100994,0x141310c50,0x141354b60,4,src\Features/LightLimitFix.h:163
 100997,0x141310e10,0x141354d20,3,src\Features/LightLimitFix.h:164
 101296,0x14131cde0,0x141362c60,4,BSLight::sub_*
-101298,0x14131cf90,0x141362e10,4,static void BSLight::ClearGeometryList(RE::BSLight* light)
+101298,0x14131cf90,0x141362e10,4,"static void BSLight::ClearGeometryList(RE::BSLight* light)"
+101302,0x14131d1f0,0x141363070,4,bool BSLight::SetLight(NiLight* a_light)
 101303,0x14131d3d0,0x141363250,4,"float BSLight::GetLuminance(RE::BSLight *this, RE::NiPoint3 *targetPosition, RE::NiLight *refLight)"
 101339,0x14131f810,0x1413656b0,4,"void BSShader::LoadShaders_14131F810 (BSShader * a_this, UINT_PTR * a_stream)"
 101341,0x14131fbd0,0x141365a70,4,"bool BSShader::BeginTechnique_14131FBD0 (BSShader * shader, int vertexDescriptor, int pixelDescriptor, bool skipPIxelShader)"
 101495,0x141324c30,0x141356ef0,3,"bool BSShadowDirectionalLight::UpdateCamera (BSShadowDirectionalLight * a_this, NiCamera * a_viewCamera)"
 101498,0x141324e00,0x1413570f0,2,"void BSShadowDirectionalLight::DirShadowLightCulling(BSShadowDirectionalLight* this, BSTArray<BSTArray<NiPointer<NiAVObject>>>& jobArrays, BSTArray<NiPointer<NiAVObject>>& nodes)"
 101499,0x1413251c0,0x1413574f0,3,undefined8 BSShadowDirectionalLight::Func16_1413251C0 (BSShadowDirectionalLight * a_this)
+101613,0x14132d040,0x14136fec0,4,void BSShadowFrustumLight::Render(std::uint32_t& a_index)
 101631,0x14132ead0,0x141371a00,3,"void GetLightingShaderDefines(uint32_t descriptor, D3D_SHADER_MACRO* defines)"
 101633,0x14132ef60,0x141371e90,3,uint32_t BSLightingShader::GetPixelTechnique (uint32_t rawTechnique)
 101821,0x14133e250,0x14137b630,3,BSWin32SystemUtility* BSWin32SystemUtility::GetSingleton()
@@ -9108,6 +9114,7 @@ id,sse,vr,status,name
 513281,0x141e0e0b0,0x141ed3bd8,4,bFXAAEnabled:Display
 513464,0x141e0eb48,0x141ed49c8,4,"characterLightTexture"
 513510,0x141e0f390,0x141ed5210,4,bIBLFEnable:Display
+513748,0x141e10538,0x141ed62f0,4,g_shadowLightIndexMask
 513755,0x141e10578,0x141ed6338,4,fInteriorShadowDistance:Display
 513786,0x141e10750,0x141ed6650,4,Skyrim-Upscaler::GetVerticalFOVRad
 513793,0x141e10978,0x141ed6530,4,fShadowDistance:Display
@@ -9442,6 +9449,7 @@ id,sse,vr,status,name
 517603,0x142f3a6a0,0x142fff498,3,RE::NiRTTI_BSSimpleScaleController
 517709,0x142f3afb4,0x142fffde8,4,bDOFDynamicToggle
 517711,0x142f3afb6,0x142fffdea,4,bool IsGodMode()
+518074,0x142f46b98,0x14300be48,4,g_stealthDetectionGlobal
 518086,0x142f483f0,0x14300d6a0,3,HandlerDictionary* GetSingleton()
 518706,0x142f4ad88,0x143010038,3,CombatManager* GetSingleton()
 518752,0x142f4af68,0x143010218,4,static CombatBehaviorTreeCombat* GetSingleton()
@@ -9763,6 +9771,7 @@ id,sse,vr,status,name
 524765,0x143027d40,0x143180a10,4,PixelShader_perGeometryBuffersArray
 524768,0x143027e88,0x143180bc8,4,perFrame_ID3D11Buffer
 524773,0x143027eb0,0x143180db0,4,g_RendererShadowState
+524780,0x143027ee8,0x143180df0,4,static RENDER_TARGET_DEPTHSTENCIL GetCurrentDepthTargetType()
 524907,0x143028490,0x143181700,3,BSRenderManager* GetSingleton()
 524965,0x14302afd0,0x1431849b0,4,VertexShader_bufferData
 524967,0x14302b510,0x143184ef0,4,PixelShader_bufferData
