@@ -835,6 +835,7 @@ id,sse,vr,status,name
 38483,0x1406598d0,0x140662c10,3,ObjectRefHandle AIProcess::GetHeadtrackTarget()
 38495,0x140659c00,0x140662f40,3,void AIProcess::ClearMuzzleFlashes()
 38568,0x14065c880,0x140665bd0,3,RE::AIProcess::SetBaseScale
+38677,0x1406759E0,0x14067EEB0,4,"bhkBoxShape * bhkBoxShape::bhkBoxShape(bhkBoxShape * a_this, RE::NiPoint3* a_halfExtents)"
 38726,0x1406777c0,0x140680c40,4,"void HighProcessData::ClearHeadtrackTarget(HEAD_TRACK_TYPE a_headtrackType, bool a_defaultHold)"
 38752,0x140679000,0x140682480,4,"void Actor::RefreshEquippedActorValueCharge(const RE::TESForm* a_object, const RE::ExtraDataList* a_extraList, bool a_isLeft)"
 38760,0x1406797d0,0x140682c50,3,"void HighProcessData::SetHeadtrackTarget(HEAD_TRACK_TYPE a_headtrackType, TESObjectREFR* a_target)"
@@ -1415,6 +1416,9 @@ id,sse,vr,status,name
 60094,0x140a6c5e0,0x140aa6fe0,4,void hkpEntity::AddContactListener(hkpContactListener* a_listener)
 60095,0x140a6c680,0x140aa7080,4,void hkpEntity::RemoveContactListener(hkpContactListener* a_listener)
 60096,0x140a6c730,0x140aa7130,4,void hkpEntity::Activate
+60170,0x140a6fac0,0x140AAA4C0,4,"hkpAabbPhantom * hkpAabbPhantom::hkpAabbPhantom(hkpAabbPhantom* a_this, hkAabb* a_aabb, RE::CFilter a_filter)"
+60173,0x140a6fc10,0x140AAA610,4,"void hkpAabbPhantom::RayCast_140A6FC10(hkpAabbPhantom * a_phantom, hkpWorldRayCastInput * a_rayInput, hkpAllRayHitCollector *a_collector)"
+60181,0x140a70650,0x140AAB050,4,"void hkpAabbPhantom::setAabb(hkpAabbPhantom * a_phantom, hkAabb * a_aabb)"
 60502,0x140a77780,0x140ab2180,3,hkpPhantom* hkpWorld::AddPhantom(hkpPhantom* a_phantom)
 60504,0x140a77d80,0x140ab2780,3,void hkpWorld::RemovePhantom(hkpPhantom* a_phantom)
 60551,0x140a7b000,0x140ab5a00,3,"void hkpWorld::CastRay(const hkpWorldRayCastInput& a_input, hkpWorldRayCastOutput& a_output)"
@@ -1650,6 +1654,7 @@ id,sse,vr,status,name
 76460,0x140dc16c0,0x140e16650,4,"void bhkCharacterController::ProcessHurtfulBody(hkpRigidBody* a_body, const hkContactPoint* a_contactPoint)"
 76693,0x140dd94e0,0x140e2e4b0,4,"void hkpAllRayHitTempCollector::AddRayHit(const hkpCdBody& a_body, const hkpShapeRayCastCollectorOutput& a_hitInfo)"
 76799,0x140ddca80,0x140e30f40,4,"MATERIAL_ID bhkShape::GetMaterialID(hkpShapeKey a_key)"
+76924,0x140de1f20,0x140E363E0,4,"bhkCapsuleShape * bhkCapsuleShape::bhkCapsuleShape(bhkCapsuleShape * a_this, RE::NiPoint3 * a_topVec, RE::NiPoint3 * a_botVec, float a_radius)"
 77446,0x140df8690,0x140e4d690,4,"void hkpAllRayHitCollector::AddRayHit(const hkpCdBody& a_body, const hkpShapeRayCastCollectorOutput& a_hitInfo)"
 77470,0x140df9140,0x140e4e140,4,"bhkMemorySystem * ctor_140df9140 (bhkMemorySystem * param_1, undefined8 param_2, undefined8 param_3, undefined8 param_4)"
 79944,0x140ebe510,0x140F1A680,4,"void UI::GetTopMostMenu(RE::UI this, RE::IMenu** a_result, std::uint32_t a_depthLimit)"
