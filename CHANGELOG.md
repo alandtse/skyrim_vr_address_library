@@ -1,3 +1,10 @@
+# [0.210.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.209.0...v0.210.0) (2026-04-09)
+
+
+### Features
+
+* add NGIO 1.6.3 ([#117](https://github.com/alandtse/skyrim_vr_address_library/issues/117)) ([81b5a8b](https://github.com/alandtse/skyrim_vr_address_library/commit/81b5a8b4b676f0da9c6ec36719046aa337335a96))
+
 # [0.209.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.208.0...v0.209.0) (2026-04-07)
 
 
