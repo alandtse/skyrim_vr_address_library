@@ -330,6 +330,7 @@ id,sse,vr,status,name
 21119,0x1402db610,0x1402ecb20,4,"bool IsRunning_1402DB610 (Actor * a_this, undefined8 param_2, undefined8 param_3, undefined * param_4)"
 21187,0x1402DDA40,0x1402EEF50,2,"bool HasKeyword_1402DDA40(TESObjectREFR *a1, int64 a2, int64 a3, double* a4)"
 21211,0x1402deab0,0x1402effc0,3,po3tweaks::IsFurnitureAnimeTypeFix::IsFurnitureAnimType
+21322,0x1402e3820,0x1402f4d30,4,"bool GameFunc__native::IsPlayerInRegion(TESObjectREFR* a_this, TESRegion* a_region, void* unused, double& result)"
 21368,0x1402E5170,0x1402F6670,4,"void TESLoadScreen(TESLoadScreen *a1, void *a2)"
 21416,0x1402e75f0,0x1402f8af0,3,RE::Script::CompileAndRun
 21425,0x1402e8400,0x1402f9900,4,RE::Script::ParseParameters
@@ -1757,7 +1758,7 @@ id,sse,vr,status,name
 99855,0x1412c52e0,0x1413036d0,4,void Dtor (BSLightingShaderProperty * a_this)
 99865,0x1412c5ab0,0x141303ea0,4,"void BSLightingShaderProperty::OnLoadTextureSet(BSLightingShaderProperty* a_this, undefined* a_2)"
 99868,0x1412c5ca0,0x141304090,3,RE::NiAVObject::SetRefraction
-99872,0x1412c7220,0x141305610,4,BSLightingShaderProperty::GetRenderPasses_ShadowMapOrMask
+99872,0x1412c7220,0x141305610,3,BSLightingShaderProperty::GetRenderPasses_ShadowMapOrMask
 99881,0x1412c8bf0,0x141306fe0,4,void ClearRenderPassArrays (BSLightingShaderProperty * a_this)
 99886,0x1412c9320,0x141307710,3,BSShaderTextureSet* BSShaderTextureSet::Ctor()
 99938,0x1412cacd0,0x1413093a0,3,"void BSShaderAccumulator::FinishAccumulating (BSShaderAccumulator *a_this,uint32_t StartRange,uint32_t EndRanges)"
