@@ -1,3 +1,17 @@
+# [0.210.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.209.0...v0.210.0) (2026-04-09)
+
+
+### Features
+
+* add NGIO 1.6.3 ([#117](https://github.com/alandtse/skyrim_vr_address_library/issues/117)) ([81b5a8b](https://github.com/alandtse/skyrim_vr_address_library/commit/81b5a8b4b676f0da9c6ec36719046aa337335a96))
+
+# [0.209.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.208.0...v0.209.0) (2026-04-07)
+
+
+### Features
+
+* add cs shadow limit fix addresses ([31d11f5](https://github.com/alandtse/skyrim_vr_address_library/commit/31d11f5c35a7cf2b2d92b8c0ada72575c120c45d))
+
 # [0.208.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.207.0...v0.208.0) (2026-04-05)
 
 
