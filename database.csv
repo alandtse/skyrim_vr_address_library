@@ -1419,6 +1419,8 @@ id,sse,vr,status,name
 60096,0x140a6c730,0x140aa7130,4,void hkpEntity::Activate
 60170,0x140a6fac0,0x140AAA4C0,4,"hkpAabbPhantom * hkpAabbPhantom::hkpAabbPhantom(hkpAabbPhantom* a_this, hkAabb* a_aabb, RE::CFilter a_filter)"
 60173,0x140a6fc10,0x140AAA610,4,"void hkpAabbPhantom::RayCast_140A6FC10(hkpAabbPhantom * a_phantom, hkpWorldRayCastInput * a_rayInput, hkpAllRayHitCollector *a_collector)"
+60174,0x140a6fe00,0x140AAA800,4,"void hkpAabbPhantom::castRay(hkpAabbPhantom*, hkpWorldRayCastInput*, hkpWorldRayCastOutput*)"
+60175,0x140a70020,0x140AAAA20,4,"void hkpAabbPhantom::linearCast(hkpAabbPhantom*, hkpCollidable*, hkpLinearCastInput*, hkpCdPointCollector*, hkpCdPointCollector*)"
 60181,0x140a70650,0x140AAB050,4,"void hkpAabbPhantom::setAabb(hkpAabbPhantom * a_phantom, hkAabb * a_aabb)"
 60502,0x140a77780,0x140ab2180,3,hkpPhantom* hkpWorld::AddPhantom(hkpPhantom* a_phantom)
 60504,0x140a77d80,0x140ab2780,3,void hkpWorld::RemovePhantom(hkpPhantom* a_phantom)
@@ -1427,6 +1429,7 @@ id,sse,vr,status,name
 60628,0x140a7f0e0,0x140ab9ae0,4,"void hkpWorldObject::SetProperty(std::uint32_t a_key, hkpPropertyValue a_value)"
 60675,0x140a83c70,0x140ABE670,4,"RE::hkpShapePhantom* createSimpleShapePhantom(RE::hkpShapePhantom*, RE::hkpShape*, const RE::hkTransform&, uint32_t)"
 60682,0x140a840a0,0x140ABEAA0,4,"void hkpShapePhantom::GetPenetrations(RE::hkpShapePhantom*, RE::hkpCdBodyPairCollector*, RE::hkpCollisionInput*)"
+60790,0x140a87840,0x140AC2240,4,"void hkpShapePhantom::SetTransform(hkpShapePhantom*, hkTransform*)"
 60791,0x140a878c0,0x140AC22C0,4,"void hkpShapePhantom::SetPosition(RE::hkpShapePhantom*, RE::hkVector4)"
 60792,0x140a87930,0x140AC2330,4,"hkWorldOperation::Result hkpShapePhantom::SetShape(RE::hkpShapePhantom*, RE::hkpShape*)"
 61559,0x140abb120,0x140af5b20,3,"void hkpCharacterRigidBody::SetLinearVelocity(const hkVector4& a_newVel, float a_timestep)"
