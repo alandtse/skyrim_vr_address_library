@@ -1,3 +1,10 @@
+# [0.212.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.211.0...v0.212.0) (2026-05-02)
+
+
+### Features
+
+* add BSGraphics::TriShape::Release ([174c882](https://github.com/alandtse/skyrim_vr_address_library/commit/174c88273a10111bf628eb2db5df94039fc23452))
+
 # [0.211.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.210.0...v0.211.0) (2026-04-13)
 
 
