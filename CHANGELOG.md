@@ -1,3 +1,10 @@
+# [0.211.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.210.0...v0.211.0) (2026-04-13)
+
+
+### Features
+
+* add IsPlayerInRegion ([b7017dc](https://github.com/alandtse/skyrim_vr_address_library/commit/b7017dc042390c2b7a906bce706196b25e634c8d))
+
 # [0.210.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.209.0...v0.210.0) (2026-04-09)
 
 
