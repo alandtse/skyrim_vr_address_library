@@ -1,3 +1,10 @@
+# [0.213.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.212.0...v0.213.0) (2026-05-02)
+
+
+### Features
+
+* add hkpAabbPhantom/hkpShapePhantom functions ([ef38466](https://github.com/alandtse/skyrim_vr_address_library/commit/ef38466fc0d6ff0680b8036a1958a242f7857f28))
+
 # [0.212.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.211.0...v0.212.0) (2026-05-02)
 
 
