@@ -1627,6 +1627,7 @@ id,sse,vr,status,name
 75472,0x140d6b210,0x140dbce30,3,"void UpdateCameraData (undefined8 param_1, byte param_2)"
 75477,0x140d6bfe0,0x140dbdd00,3,Skyrim-Upscaler
 75479,0x140d6c1e0,0x140dbdf60,3,fDrawGrass_*
+75480,0x140d6c320,0x140dbe0d0,5,"void BSGraphics::TriShape::Release(BSGraphics::TriShape* a_this)"
 75507,0x140d6dbc0,0x140dbf9b0,3,"NiTexture::RendererData* BSRenderManager::CreateRenderTexture(std::uint32_t a_width, std::uint32_t a_height)"
 75522,0x140d6e780,0x140dc05f0,4,"void Renderer::SaveRenderTargetToFile(RENDER_TARGET a_renderTarget, const char* a_filePath, BSGraphics::TextureFileFormat a_textureFileFormat)"
 75532,0x140d6ef90,0x140dc1250,4,"void BSGraphics::Renderer::DispatchCSShader (BSGraphics::Renderer * a_this, BSGraphics::ComputeShader * a_computeShader, uint32_t threadGroupCountX, uint32_t threadGroupCountY, uint32_t threadGroupCountZ)"
@@ -1829,6 +1830,8 @@ id,sse,vr,status,name
 100854,0x141308440,0x141349680,3,"void BSBatchRenderer::RenderPassImmediately_141308440 (BSBatchRenderer * a_Pass, uint32_t a_Technique, bool a_AlphaTest, uint32_t a_RenderFlags)"
 100871,0x1413090c0,0x14134a310,4,"LLF::void FUN_1413090c0 (BSBatchRenderer * * param_1, uint param_2)"
 100877,0x1413094a0,0x14134a6f0,4,BSBatchRenderer::sub_*
+100934,0x14130bb80,0x14134edc0,4,BSShaderMaterialHashMap::Link
+100935,0x14130be10,0x14134f050,4,BSShaderMaterialHashMap::Unlink
 100943,0x14130c5a0,0x14134f7e0,4,BSImagespaceShader* BSImagespaceShader::Ctor()
 100951,0x14130cf80,0x1413501F0,3,BSImagespaceShader::sub_*
 100952,0x14130d070,0x1413502b0,4,"void BSImagespaceShader::DispatchComputeShader (BSImagespaceShader * a_this, uint32_t a_threadGroupCountX, uint32_t a_threadGroupCountY, uint32_t a_threadGroupCountZ)"
