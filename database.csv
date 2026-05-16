@@ -1598,6 +1598,7 @@ id,sse,vr,status,name
 74239,0x140d38710,0x140d80bb0,3,RE::INISettingCollection::OpenHandle
 74240,0x140d38720,0x140d80bc0,3,RE::INISettingCollection::CloseHandle
 74377,0x140d3d3d0,0x140d86360,4,"BSWindModifier* BSWindModifier::Ctor()"
+74378,0x140d3d410,0x140d863a0,3,"void UpdateWindVectorForBSWindModifier(float strength, float angle)"
 74395,0x140d3dbe0,0x140d86b70,4,"void BSPortalGraphEntry::ClearVisibility"
 74397,0x140d3dce0,0x140d86c70,4,"static bool BSPortalGraphEntry::func2(RE::BSPortalGraphEntry* first, RE::BSPortalGraphEntry* second)"
 74398,0x140d3dde0,0x140d86d70,4,"void BSPortalGraphEntry::AddVisibilityToMap(void* a_space, BSCompoundFrustum* a_compoundFrustum)"
