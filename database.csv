@@ -491,6 +491,8 @@ id,sse,vr,status,name
 31384,0x1404c6160,0x1404d6310,3,void TESWaterSystem::UpdateDisplacementMeshPosition(TESWaterSystem* a_waterSystem)
 31388,0x1404c6890,0x1404d6a50,3,"void TESWaterSystem::InitializeWater(TESWaterSystem* a_waterSystem, BSTriShape* a_waterTri, TESWaterForm* a_form, float a_waterHeight, void* a_unk4, bool a_noDisplacement, bool a_isProcedural)"
 31391,0x1404c7570,0x1404d7730,3,"bool TESWaterSystem::RemoveGeometry(TESWaterSystem* a_waterSystem, BSGeometry* a_geom)"
+31404,0x1404c8520,0x1404d86e0,4,"void TESWaterSystem::AddLODWater(TESWaterSystem* a_waterSystem, BSTriShape* a_waterShape, TESWorldSpace* a_worldSpace, NiNode* a_lodRoot, NiNode* a_waterParent, bool a_useWorldSpaceHeight)"
+31405,0x1404c8660,0x1404d8820,4,"void TESWaterSystem::RemoveLODWater(TESWaterSystem* a_waterSystem, BSTriShape* a_waterShape, NiNode* a_lodRoot)"
 31406,0x1404c86c0,0x1404d8880,3,void TESWaterSystem::Enable(TESWaterSystem* a_waterSystem)
 31409,0x1404c8810,0x1404d89d0,4,RE::TESWaterSystem::UpdateUnderWaterVariables
 31410,0x1404c8880,0x1404d8a40,3,"void BSTriShape::TESWaterSystem::AddRipple(const NiPoint3& a_pos, float a_scale)"
@@ -18190,4 +18192,4 @@ id,sse,vr,status,name
 5370397616,0x14019c3b0,0x1401ac0e0,3,RE::BSShaderProperty::InvalidateMaterial
 5375528368,0x140680db0,0x14068a230,3,RE::AIProcess::SetActorRefraction
 5388393136,0x1412c5ab0,0x141303ea0,3,RE::BSLightingShaderProperty::InvalidateTextures
-5399981752,0x141dd2eb8,0x141e901a8,4,CalculateMyCriticalHitChance
+5399981752,0x141dd2eb8,0x141e901a8,4,"CalculateMyCriticalHitChance"
