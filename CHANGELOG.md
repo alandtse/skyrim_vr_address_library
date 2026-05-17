@@ -1,3 +1,10 @@
+# [0.214.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.213.0...v0.214.0) (2026-05-17)
+
+
+### Features
+
+* add LODWater functions ([e777d81](https://github.com/alandtse/skyrim_vr_address_library/commit/e777d810dba7015f79eb2d40bdd2ff63d79bf748))
+
 # [0.213.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.212.0...v0.213.0) (2026-05-02)
 
 
