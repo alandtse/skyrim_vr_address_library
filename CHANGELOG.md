@@ -1,3 +1,10 @@
+# [0.216.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.215.0...v0.216.0) (2026-05-25)
+
+
+### Features
+
+* add BGSProcedureFollow + path builder ([#119](https://github.com/alandtse/skyrim_vr_address_library/issues/119)) ([e0eb4f4](https://github.com/alandtse/skyrim_vr_address_library/commit/e0eb4f406aeb53d50b94967899dc8cac1d828fe0))
+
 # [0.215.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.214.0...v0.215.0) (2026-05-25)
 
 
