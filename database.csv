@@ -461,6 +461,9 @@ id,sse,vr,status,name
 26592,0x1403e48d0,0x1403f4420,4,"BGSSkillPerkTreeNode * BGSSkillPerkTreeNode::ctor_1403e48d0 (BGSSkillPerkTreeNode * a_this, int32_t a_index, ActorValueInfo * a_avInfo)"
 26616,0x1403e5250,0x1403f4da0,4,RE::ActorValueOwner::GetClampedActorValue
 26718,0x1403e7c20,0x1403f7770,3,BGSAttackData* BGSAttackData::Ctor()
+27907,0x14040dbd0,0x14041d720,4,"void BGSProcedureFollowExecState::FollowWrapper(BGSProcedureFollowExecState* a_this)"
+27911,0x14040e370,0x14041dec0,4,"void BGSProcedureFollowExecState::FollowOrchestrator(BGSProcedureFollowExecState* a_this)"
+28479,0x140428a10,0x140438560,4,void BGSProcedureTreeProcedure::ExecuteProcedure(BGSProcedureTreeProcedure* a_this)
 28732,0x1404348c0,0x140444410,4,TESPackage* TESPackage::CreatePackage(PACKAGE_PROCEDURE_TYPE a_type)
 28751,0x1404353f0,0x140444f40,4,void TESPackage::SetPackType(PACKAGE_PROCEDURE_TYPE a_type)
 29067,0x140444440,0x140453f90,4,"void TESCondition::Copy(const TESCondition* a_other, TESForm* a_arg2)"
@@ -472,6 +475,7 @@ id,sse,vr,status,name
 29253,0x14044e9c0,0x14045e5a0,4,"void BSTempEffectSimpleDecal::ApplyTextureSetToGeometry (BSTempEffectSimpleDecal * a_this, BSGeometry * a_effect3D, BGSTextureSet * a_texture1, bool a_blended)"
 29303,0x140452550,0x140462500,3,"RE::NiAVObject::ClearWeaponBlood"
 29531,0x140460350,0x140470310,4,"void NavMeshInfoMap::InitializeAfterAllFormsAreReadFromFile_140460350 (NavMeshInfoMap * a_this, undefined8 param_2, ulonglong param_3, char * param_4)"
+29819,0x140473120,0x140483100,4,"void* Pathing::BuildFollowPath(Pathing* a_this, void* a_pathOut, Character* a_actor, void* a_reserved)"
 29832,0x1404737a0,0x140483780,4,"bool FindClosestPointOnNavmesh(const BSTSmartPointer<BSPathingCell>& a_cell, const NiPoint3& a_location, FindTriangleForLocationFilter& a_filter, NiPoint3& a_pointOut)"
 29866,0x140476ba0,0x140486b80,4,"bool Pathing::GetPathingCell(const NiPoint3& a_location, TESObjectCELL* a_cell, TESWorldSpace* a_worldSpace, BSTSmartPointer<BSPathingCell>& a_cellOut)"
 30839,0x1404a8090,0x1404b80a0,3,void BGSDistantTreeBlock::UpdateBlockVisibility (BGSDistantTreeBlock * a_this)
@@ -1542,7 +1546,9 @@ id,sse,vr,status,name
 67844,0x140c29900,0x140c6e830,4,"void BSScaleformTranslator::GetCachedString_140c29900 (wchar_t * * a_pOut, wchar_t * a_bufIn, uint32_t a_unused)"
 67847,0x140c29e80,0x140c6edb0,3,void Entry::release8(const char*& a_entry)
 67848,0x140c29ff0,0x140c6ef20,3,void Entry::release16(const wchar_t*& a_entry)
-67855,0x140c2a4d0,0x140c6f400,3,RE::BucketTable::GetSingleton
+67852,0x140c2a1b0,0x140c6f0e0,4,"void BSStringPool::CreateEntry(BSStringPool::Entry** a_out, const char* a_string, uint32_t a_bucketAndCrc, uint32_t a_length, int a_allocSize, bool a_wide)"
+67855,0x140c2a4d0,0x140c6f400,3,BSStringPool::BucketTable* BSStringPool::BucketTable::GetSingleton()
+67856,0x140c2a590,0x140c6f4c0,4,"void BSStringPool::GetEntry(BSStringPool::Entry** a_out, const char* a_string, uint32_t a_hash, uint32_t a_length)"
 68476,0x140c448b0,0x140c89960,4,"void BSResource::RegisterLocation(Location* a_location, std::uint32_t a_priority)"
 68480,0x140c44a00,0x140c89ab0,4,void BSResource::RegisterGlobalPath (char * a_path)
 68635,0x140c4a610,0x140c8f6c0,4,void ID::GenerateFromPath(const char* a_path)
@@ -1592,6 +1598,7 @@ id,sse,vr,status,name
 70880,0x140cc76e0,0x140d0e230,4,"NiControllerSequence::Activate_*"
 70882,0x140cc7cb0,0x140d0e800,4,"bool NiControllerSequence::Activate(std::uint8_t a_interpIndex, bool a_maxOffset, float a_seqWeight, float a_easeInTime, NiControllerSequence* a_partnerSequence, bool a_transition)"
 70909,0x140cca2e0,0x140d10e30,4,"bool NiControllerSequence::ResolveTransformInterpolators(NiAVObject* a_root, NiDefaultAVObjectPalette* a_objectPalette, std::uint32_t a_formal)"
+72790,0x140d02aa0,0x140d495f0,3,"void NiParticleSystem::CopyMembersFrom(NiParticleSystem* a_src, NiParticleSystem* a_dst, NiCloningProcess& a_cloning)"
 72799,0x140d03330,0x140d49ec0,4,void NiParticleSystem::AddModifier(NiPSysModifier* a_modifier)
 73882,0x140d28c40,0x140d70310,3,"Setting * SettingT<T1>::SetStringValue_140D28C40 (Setting * a_this, char * a_string)"
 74040,0x140d2f220,0x140d775e0,4,"BSResource::ErrorCode BSModelDB::Demand(const char* a_modelPath, NiPointer<NiNode>& a_modelOut, const DBTraits::ArgsType& a_args)"
