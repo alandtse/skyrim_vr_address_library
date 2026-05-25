@@ -1,3 +1,10 @@
+# [0.215.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.214.0...v0.215.0) (2026-05-25)
+
+
+### Features
+
+* add UpdateWindVectorForBSWindModifier ([#118](https://github.com/alandtse/skyrim_vr_address_library/issues/118)) ([7bac81b](https://github.com/alandtse/skyrim_vr_address_library/commit/7bac81b134163e1ae654b8ac1a58c5caa164b334))
+
 # [0.214.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.213.0...v0.214.0) (2026-05-17)
 
 
