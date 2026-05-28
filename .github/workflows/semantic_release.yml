@@ -93,42 +93,15 @@ jobs:
           asset_name: vr_addresslib-${{ steps.semantic.outputs.new_release_version }}.7z
           tag: ${{ steps.semantic.outputs.new_release_git_tag }}
           overwrite: true
-      - name: Upload artifacts for nexus job
-        if: steps.semantic.outputs.new_release_published == 'true'
-        uses: actions/upload-artifact@v4
-        with:
-          name: release-artifacts
-          path: vr_addresslib-${{ steps.semantic.outputs.new_release_version }}.7z
 
+  # Nexus upload is a separate, retriable workflow that pulls the .7z from the
+  # GitHub release (not a run artifact) and skips already-uploaded versions.
+  # If this fails, retry without re-releasing:
+  #   gh workflow run nexus-upload.yml -f tag=<release tag>
   nexus-upload:
     needs: release
-    if: needs.release.outputs.new_release_published == 'true' || github.event_name == 'workflow_dispatch'
-    runs-on: ubuntu-latest
-    
-    steps:
-      - name: Download release artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: release-artifacts
-      - name: Setup Dotnet
-        uses: actions/setup-dotnet@v3
-        with:
-          dotnet-version: 6.x.x
-      - name: Download NexusUploader
-        run: dotnet tool install -g BUTR.NexusUploader
-      - name: Upload files to Nexus
-        # https://github.com/agc93/nexus-uploader using fork https://github.com/BUTR/BUTR.NexusUploader
-        env:
-          UNEX_SESSION_COOKIE: ${{ secrets.UNEX_NEXUSMODS_SESSION_COOKIE }}
-          UNEX_APIKEY: ${{ secrets.UNEX_APIKEY }}
-          UNEX_FILEDESCRIPTION: https://github.com/alandtse/skyrim_vr_address_library/compare/${{ needs.release.outputs.last_release_git_tag }}..${{ needs.release.outputs.new_release_git_tag }}
-          UNEX_MODID: 58101
-          UNEX_GAME: skyrimspecialedition
-          UNEX_FILENAME: VR Address Library
-          UNEX_PREVIOUSFILE: "auto"
-          file: vr_addresslib-${{ needs.release.outputs.new_release_version }}.7z
-          version: ${{ needs.release.outputs.new_release_version }}
-          changelog: ${{ needs.release.outputs.new_release_notes }}
-        run: |
-          unex upload $UNEX_MODID $file -v $version
-          unex changelog $version -c "$changelog"
+    if: needs.release.outputs.new_release_published == 'true'
+    uses: ./.github/workflows/nexus-upload.yml
+    with:
+      tag: ${{ needs.release.outputs.new_release_git_tag }}
+    secrets: inherit
