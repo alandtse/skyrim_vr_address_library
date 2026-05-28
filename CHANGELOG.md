@@ -1,3 +1,11 @@
+# [0.217.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.216.0...v0.217.0) (2026-05-28)
+
+
+### Features
+
+* add CS LOD water + luminance VR ids ([ed3a7b1](https://github.com/alandtse/skyrim_vr_address_library/commit/ed3a7b12ff5caa5d799d4e248f4d4abf9f93c718))
+* fuller FollowWrapper signature (27907) ([ab5c4dc](https://github.com/alandtse/skyrim_vr_address_library/commit/ab5c4dc0f3737756c6ab50ec1c8e28f7c937f035)), closes [#116](https://github.com/alandtse/skyrim_vr_address_library/issues/116) [#119](https://github.com/alandtse/skyrim_vr_address_library/issues/119)
+
 # [0.216.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.215.0...v0.216.0) (2026-05-25)
 
 
