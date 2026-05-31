@@ -1,0 +1,133 @@
+name: "Nexus: Upload Release"
+
+# Standalone, idempotent Nexus upload for the VR Address Library.
+#
+# Why this is separate from semantic_release.yml:
+#   - It pulls the .7z from the *existing GitHub release* (persistent), not a
+#     workflow run artifact (which is tied to the release run and expires), so
+#     it can be retried independently of the release that produced it.
+#   - It delegates to the shared reusable upload-nexus.yml, which sets
+#     check_existing=true: if the version is already on Nexus the upload is
+#     skipped, so re-runs are safe (idempotent).
+#
+# Retry a failed/partial upload:
+#   gh workflow run nexus-upload.yml -f tag=v0.217.0
+# (or run it from the Actions tab and enter the tag).
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release tag to upload to Nexus (e.g. v0.217.0)"
+        required: true
+        type: string
+      dry_run:
+        description: "If true, validate the release and changelog but do not upload"
+        required: false
+        type: choice
+        default: "false"
+        options:
+          - "true"
+          - "false"
+  workflow_call:
+    inputs:
+      tag:
+        description: "Release tag to upload to Nexus"
+        required: true
+        type: string
+      dry_run:
+        required: false
+        type: string
+        default: "false"
+    secrets:
+      UNEX_NEXUSMODS_SESSION_COOKIE:
+        required: true
+      UNEX_APIKEY:
+        required: true
+
+# Least privilege: this workflow only reads from GitHub (release lookup +
+# asset download happen in the reusable workflow via gh) and writes to Nexus.
+permissions:
+  contents: read
+
+jobs:
+  prepare:
+    if: github.repository == 'alandtse/skyrim_vr_address_library'
+    runs-on: ubuntu-latest
+    outputs:
+      tag: ${{ steps.resolve.outputs.tag }}
+      version: ${{ steps.resolve.outputs.version }}
+      changelog: ${{ steps.resolve.outputs.changelog }}
+      file_description: ${{ steps.resolve.outputs.file_description }}
+    steps:
+      - name: Resolve release tag, version, and changelog
+        id: resolve
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          INPUT_TAG: ${{ inputs.tag }}
+        run: |
+          set -euo pipefail
+          TAG="$INPUT_TAG"
+
+          # The release must exist and be published (not a draft) before we
+          # can pull its asset for Nexus.
+          DRAFT=$(gh api "repos/$GITHUB_REPOSITORY/releases/tags/$TAG" --jq '.draft' 2>/dev/null || echo "missing")
+          if [ "$DRAFT" = "missing" ]; then
+            echo "::error::Release '$TAG' not found in $GITHUB_REPOSITORY."
+            exit 1
+          fi
+          if [ "$DRAFT" != "false" ]; then
+            echo "::error::Release '$TAG' is a draft. Publish it before uploading to Nexus."
+            exit 1
+          fi
+          VERSION="${TAG#v}"
+
+          # Changelog = the GitHub release body (single source of truth, works
+          # for both automatic calls and manual re-dispatch).
+          BODY=$(gh release view "$TAG" --repo "$GITHUB_REPOSITORY" --json body -q .body 2>/dev/null || echo "")
+
+          # file_description links to the diff since the previous published
+          # release; fall back to the release page if there is no predecessor.
+          PREV=$(gh api --paginate "repos/$GITHUB_REPOSITORY/releases" \
+            | jq -s -r --arg t "$TAG" 'add | map(select(.draft==false and .prerelease==false) | .tag_name) | index($t) as $i | if $i==null then "" else (.[$i+1] // "") end')
+          if [ -n "$PREV" ]; then
+            DESC="https://github.com/$GITHUB_REPOSITORY/compare/${PREV}..${TAG}"
+          else
+            DESC="https://github.com/$GITHUB_REPOSITORY/releases/tag/${TAG}"
+          fi
+
+          {
+            echo "tag=$TAG"
+            echo "version=$VERSION"
+            echo "file_description=$DESC"
+          } >> "$GITHUB_OUTPUT"
+          EOF_DELIM="__CHANGELOG_EOF_$(openssl rand -hex 8)__"
+          {
+            echo "changelog<<${EOF_DELIM}"
+            echo "$BODY"
+            echo "${EOF_DELIM}"
+          } >> "$GITHUB_OUTPUT"
+
+          echo "Resolved tag=$TAG version=$VERSION previous=${PREV:-<none>}"
+
+  upload:
+    needs: prepare
+    # dry_run validates via the prepare job only; skip the actual Nexus call.
+    if: inputs.dry_run != 'true'
+    uses: alandtse/nexus-workflows/.github/workflows/upload-nexus.yml@1a631200c4d6d0957ea910383daf0ed4fe2efdcb # v1.4.0
+    with:
+      nexus_game_id: skyrimspecialedition
+      nexus_mod_id: "58101"
+      # No artifact_name -> the reusable workflow downloads the .7z from the
+      # GitHub release identified by tag_name.
+      tag_name: ${{ needs.prepare.outputs.tag }}
+      mod_version: ${{ needs.prepare.outputs.version }}
+      mod_filename: VR Address Library
+      changelog: ${{ needs.prepare.outputs.changelog }}
+      file_description: ${{ needs.prepare.outputs.file_description }}
+      previous_file: auto
+      # Idempotency: skip the upload if this version already exists on Nexus.
+      check_existing: true
+    secrets:
+      UNEX_NEXUSMODS_SESSION_COOKIE: ${{ secrets.UNEX_NEXUSMODS_SESSION_COOKIE }}
+      UNEX_APIKEY: ${{ secrets.UNEX_APIKEY }}
