@@ -129,7 +129,7 @@ Output of [merge.py]. This tries to map various comments with the offsets* file.
 
 ##### se-ae.csv
 
-Output of [vr_address_tools.py]. This takes the automated items from se_ae_offsets and combines it with se-ae.csv and whatever is scanned by vr_address_tools. 
+Output of [vr_address_tools.py]. This takes the automated items from se_ae_offsets and combines it with se-ae.csv and whatever is scanned by vr_address_tools.
 
 |sseid|aeid|confidence|name
 |--|--|--|--|

@@ -3,7 +3,7 @@ name: Send submodule updates to parent repo
 
 on:
   push:
-    branches: 
+    branches:
       - main
 
 jobs:
@@ -13,7 +13,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-        with: 
+        with:
           repository: alandtse/vr_address_tools
           token: ${{ secrets.PRIVATE_TOKEN_GITHUB }}
 
