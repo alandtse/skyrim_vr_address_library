@@ -88,9 +88,8 @@ jobs:
 
           # file_description links to the diff since the previous published
           # release; fall back to the release page if there is no predecessor.
-          PREV=$(gh api "repos/$GITHUB_REPOSITORY/releases" \
-            --jq "[.[] | select(.draft==false and .prerelease==false) | .tag_name]" \
-            | jq -r --arg t "$TAG" 'index($t) as $i | if $i==null then "" else (.[$i+1] // "") end')
+          PREV=$(gh api --paginate "repos/$GITHUB_REPOSITORY/releases" \
+            | jq -s -r --arg t "$TAG" 'add | map(select(.draft==false and .prerelease==false) | .tag_name) | index($t) as $i | if $i==null then "" else (.[$i+1] // "") end')
           if [ -n "$PREV" ]; then
             DESC="https://github.com/$GITHUB_REPOSITORY/compare/${PREV}..${TAG}"
           else
@@ -102,10 +101,11 @@ jobs:
             echo "version=$VERSION"
             echo "file_description=$DESC"
           } >> "$GITHUB_OUTPUT"
+          EOF_DELIM="__CHANGELOG_EOF_$(openssl rand -hex 8)__"
           {
-            echo "changelog<<__CHANGELOG_EOF__"
+            echo "changelog<<${EOF_DELIM}"
             echo "$BODY"
-            echo "__CHANGELOG_EOF__"
+            echo "${EOF_DELIM}"
           } >> "$GITHUB_OUTPUT"
 
           echo "Resolved tag=$TAG version=$VERSION previous=${PREV:-<none>}"
@@ -114,7 +114,7 @@ jobs:
     needs: prepare
     # dry_run validates via the prepare job only; skip the actual Nexus call.
     if: inputs.dry_run != 'true'
-    uses: alandtse/nexus-workflows/.github/workflows/upload-nexus.yml@main
+    uses: alandtse/nexus-workflows/.github/workflows/upload-nexus.yml@1a631200c4d6d0957ea910383daf0ed4fe2efdcb # v1.4.0
     with:
       nexus_game_id: skyrimspecialedition
       nexus_mod_id: "58101"
