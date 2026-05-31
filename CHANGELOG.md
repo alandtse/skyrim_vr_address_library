@@ -1,3 +1,10 @@
+# [0.218.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.217.0...v0.218.0) (2026-05-31)
+
+
+### Features
+
+* add MessageBoxMenu button-press + queue-removal ids ([#121](https://github.com/alandtse/skyrim_vr_address_library/issues/121)) ([7706119](https://github.com/alandtse/skyrim_vr_address_library/commit/770611988d911c487ada6807f9ef9bd09e0b3f64))
+
 # [0.217.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.216.0...v0.217.0) (2026-05-28)
 
 
