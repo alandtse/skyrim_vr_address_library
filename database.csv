@@ -1295,6 +1295,8 @@ id,sse,vr,status,name
 51402,0x1408aa940,0x1408d7370,4,"bool QuickSaveLoadHandler::ProcessButton_1408AA940 (QuickSaveLoadHandler * a_this, undefined8 param_2)"
 51420,0x1408ab180,0x1408d7fe0,4,RE::MessageBoxData::CreateMessage
 51422,0x1408ab5c0,0x1408d8420,3,void MessageBoxData::QueueMessage()
+51424,0x1408ab9e0,0x1408d8840,3,void MessageBoxMenu::ProcessButtonPress(const FxDelegateArgs& a_params)
+51426,0x1408abb70,0x1408d8b20,3,void MessageBoxMenu::RemoveMessageFromQueue(MessageBoxData* a_data)
 51454,0x1408ad9f0,0x1408dad50,3,TESModelTextureSwap::sub_*
 51507,0x1408b2be0,0x1408e0450,3,void PrecacheCharGen_1409796E0_0_1408B2BE0 (undefined8 * a_this)
 51509,0x1408b2d60,0x1408e0730,4,void PrecacheCharGenClear_1409796F0_0_1408B2D60 (undefined8 * a_this)
@@ -9505,7 +9507,8 @@ id,sse,vr,status,name
 519618,0x142f4ded0,0x1430133a8,4,TrueHUD::g_viewPort
 519620,0x142f4df28,0x143013408,4,void Inventory3DManager::SetMouseRotation(bool a_active)
 519716,0x142f4e240,0x143013728,3,TESObjectREFR* GetTargetReference()
-519818,0x142f4e670,0x143013aa8,4,std::uint32_t MessageBoxMenu::GetQueueSize()
+519818,0x142f4e670,0x143013aa8,4,RE::MessageBoxMenu skip-type filter table
+519819,0x142f4e690,0x143013ac8,3,RE::MessageBoxMenu message queue (BSTArray<MessageBoxData*>)
 519827,0x142f4e6b8,0x143013ae8,4,static MistMenu* GetSingleton()
 520058,0x142f4ed68,0x1430141c8,4,BSTArray<DEFAULT_OBJECT>& lTutorialMenu::QTutorialsShown()
 520856,0x142f50b28,0x1430a8bb8,4,BSInputEventQueue* GetSingleton()
@@ -12954,7 +12957,7 @@ id,sse,vr,status,name
 686611,0x141e3ae80,0x141f022b0,1,RE::RTTI_BSTCommonStaticMessageQueue_BSTSmartPointer_bgs__saveload__Request_BSTSmartPointerIntrusiveRefCount__8_
 686612,0x141e3af10,0x141f02340,1,RE::RTTI_BSTCommonMessageQueue_BSTSmartPointer_bgs__saveload__Request_BSTSmartPointerIntrusiveRefCount___
 686613,0x141e3af90,0x141f023c0,1,RE::RTTI_BSTMessageQueue_BSTSmartPointer_bgs__saveload__Request_BSTSmartPointerIntrusiveRefCount___
-686614,0x141e3b010,0x141f02440,1,RE::RTTI___LoadGameMissingContentCallBack
+686614,0x141e3b010,0x141f02440,3,RE::RTTI___LoadGameMissingContentCallBack
 686615,0x141e3b058,0x141f02488,3,RE::RTTI_BGSSaveLoadStatsMap
 686616,0x141e3b090,0x141f024c0,1,RE::RTTI_NiTMap_ENUM_FORM_ID_BSSimpleList_SavedFormData_____ptr64______ptr64_
 686617,0x141e3b0f0,0x141f02520,1,RE::RTTI_NiTMapBase_DFALL_NiTMapItem_ENUM_FORM_ID_BSSimpleList_SavedFormData_____ptr64______ptr64____ENUM_FORM_ID_BSSimpleList_SavedFormData_____ptr64______ptr64_
