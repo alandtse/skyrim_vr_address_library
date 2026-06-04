@@ -420,6 +420,7 @@ id,sse,vr,status,name
 25682,0x1403b1670,0x1403c1410,4,RE::Sky::Update_1403B1670
 25684,0x1403b1c80,0x1403c1a20,2,papyrus_extender::events::game::weatherevent::target_0x416
 25687,0x1403b3410,0x1403c31b0,4,void Sky::UpdateWind_1403B3410 (Sky * param_1)
+25689,0x1403b3cb0,0x1403c3a50,3,void Sky::UpdateClouds(Sky* a_this)
 25691,0x1403b4230,0x1403c4050,4,"void Sky::SetColor(NiColor& a_color, COLOR_BLEND* a_colorBlend, float a_addFlash)"
 25694,0x1403b49a0,0x1403c47c0,4,RE::Sky::SetWeather
 25695,0x1403b4a20,0x1403c4840,4,RE::Sky::ResetWeather
