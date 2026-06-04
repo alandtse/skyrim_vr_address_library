@@ -337,6 +337,7 @@ id,sse,vr,status,name
 21435,0x1402e9c50,0x1402fb150,4,void Script::SetProcessScripts(bool a_ProcessScripts)
 21436,0x1402e9c60,0x1402fb160,4,bool Script::GetProcessScripts()
 21523,0x1402f1180,0x140302680,4,"bool GameFunc__handler::RemoveAllItems_1402F1180 (Script * param_1, longlong * param_2, TESObjectREFR * a_reference, TESObjectREFR * a_target, Script * param_5, ScriptLocals * param_6, undefined8 param_7, uint32_t param_8)"
+21549,0x1402f2280,0x140303780,4,"bool GameFunc__handler::GetGameSetting_1402F2280(void * a_paramInfo, void * a_scriptData, TESObjectREFR * a_thisObj, TESObjectREFR * a_containingObj, Script * a_scriptObj, ScriptLocals * a_locals, double * a_result, uint * a_opcodeOffsetPtr)"
 21556,0x1402f3040,0x140304580,4,"GameFunc::handler::ResetReference_1402F3040(Script *param_1,longlong *param_2,PlayerCharacter *param_3,TESObjectREFR *param_4,Script *param_5,ScriptLocals *param_6,undefined8 param_7,uint32_t param_8)"
 21887,0x140300210,0x140311710,2,Console::UpdateLevel
 21951,0x140302730,0x140313C30,3,GameFunc__handler::ShowQuestObjectives
