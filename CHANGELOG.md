@@ -1,3 +1,10 @@
+# [0.219.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.218.1...v0.219.0) (2026-06-04)
+
+
+### Features
+
+* add GetGameSetting ([0591cf8](https://github.com/alandtse/skyrim_vr_address_library/commit/0591cf8882f4acc80b9fff01a4b5eaaf87d8f4fa))
+
 ## [0.218.1](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.218.0...v0.218.1) (2026-06-04)
 
 
