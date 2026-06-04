@@ -1,3 +1,10 @@
+## [0.218.1](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.218.0...v0.218.1) (2026-06-04)
+
+
+### Bug Fixes
+
+* swap to second id for GetHandleValidatedSmartPointer ([#122](https://github.com/alandtse/skyrim_vr_address_library/issues/122)) ([e241450](https://github.com/alandtse/skyrim_vr_address_library/commit/e2414505f1dbe01353e8f1a6d33dfeb6f3528e54))
+
 # [0.218.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.217.0...v0.218.0) (2026-05-31)
 
 
