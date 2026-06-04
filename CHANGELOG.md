@@ -1,3 +1,10 @@
+# [0.220.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.219.0...v0.220.0) (2026-06-04)
+
+
+### Features
+
+* add Sky::UpdateClouds ([23fa22d](https://github.com/alandtse/skyrim_vr_address_library/commit/23fa22d28640c4fb3258408eabe62773efe97c7c))
+
 # [0.219.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.218.1...v0.219.0) (2026-06-04)
 
 
