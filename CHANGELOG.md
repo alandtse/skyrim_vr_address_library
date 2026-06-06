@@ -1,3 +1,10 @@
+# [0.221.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.220.0...v0.221.0) (2026-06-06)
+
+
+### Features
+
+* add save-load + asset-stream ([e648ea5](https://github.com/alandtse/skyrim_vr_address_library/commit/e648ea538d8804b2beb91bc9b35f932282b681f3))
+
 # [0.220.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.219.0...v0.220.0) (2026-06-04)
 
 
