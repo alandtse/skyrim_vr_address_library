@@ -483,6 +483,7 @@ id,sse,vr,status,name
 30839,0x1404a8090,0x1404b80a0,3,void BGSDistantTreeBlock::UpdateBlockVisibility (BGSDistantTreeBlock * a_this)
 30934,0x1404ad940,0x1404bd9a0,3,void BGSTerrainBlock::Attach(BGSTerrainBlock* a_block)
 30936,0x1404adb60,0x1404bdbc0,3,void BGSTerrainBlock::Detach(BGSTerrainBlock* a_block)
+30978,0x1404af910,0x1404bf970,4,"uint32_t AddOrRemoveLODWater(bool* a_add, void* a_object, void** a_objectHolder) src\Features/UnifiedWater.cpp:357"
 31059,0x1404b5090,0x1404c5170,3,"void BGSTerrainNode::UpdateWaterMeshSubVisibility(BGSTerrainNode* a_node, BSMultiBoundNode* a_waterParent)"
 31140,0x1404b8580,0x1404c8660,3,SeasonsofSkyrim::LODSwap::Terrain::BuildMeshFileName
 31141,0x1404b85c0,0x1404c86a0,3,SeasonsofSkyrim::LODSwap::Terrain::BuildDiffuseTextureFileName
@@ -613,6 +614,7 @@ id,sse,vr,status,name
 34655,0x14057b920,0x1405830f0,4,"bool BGSSaveLoadGame::GetChange(TESForm* a_form, std::uint32_t a_changes)"
 34670,0x14057cb90,0x140584360,3,"bool BGSSaveLoadGame::IsFormIDInUse(FormID a_formID)"
 34676,0x14057ccc0,0x140584420,3,"void BGSSaveLoadGame::SaveGame (BGSSaveGameBuffer * a_this, anonymous_namespace__Win32FileType * a_Win32FileType)"
+34677,0x14057d1a0,0x140584910,2,bool BGSSaveLoadGame::LoadGame(Win32FileType* a_file)
 34732,0x140580920,0x140587e30,4,"int SaveGlobalDataChunks (anonymous_namespace__Win32FileType * a_this, uint32_t a_start, uint32_t a_end, uint64_t a_size)"
 34736,0x140581030,0x140588540,3,"undefined8 LoadGlobalData (uint a_datatype, BGSLoadFormBuffer * a_buffer, float * param_3, undefined8 param_4)"
 34808,0x140585a70,0x14058cfa0,4,"ulonglong BGSLoadGameBuffer::sub_140585A70(BGSLoadGameBuffer *param_1,PlayerCharacter *param_2,undefined *param_3,char *param_4)"
@@ -624,6 +626,7 @@ id,sse,vr,status,name
 34862,0x140589a60,0x1405910d0,4,void BGSSaveLoadManager::ProcessEvents (BGSSaveLoadManager * a_this)
 35026,0x140592eb0,0x14059a570,4,FormID BGSNumericIDIndex::GetNumericID()
 35027,0x140592f10,0x14059a5d0,4,void BGSNumericIDIndex::SetNumericID(FormID a_formID)
+35093,0x1405974a0,0x14059eb60,4,void BGSLoadFormData::ReadChangeFormHeader(Win32FileType* a_file)
 35112,0x140597d50,0x14059f410,4,"void BGSLoadGameBuffer::LoadDataEndian(void* a_data, std::uint32_t a_offset, std::uint32_t a_size)"
 35163,0x140599db0,0x1405a1470,4,"void BGSSaveGameBuffer::SaveDataEndian(const void* a_data, std::uint32_t a_size)"
 35172,0x14059a120,0x1405a17e0,4,"static SaveStorageWrapper * SaveStorageWrapper::Ctor (SaveStorageWrapper * a_this, void * svWrapperSpace, anonymous_namespace__Win32FileType * a_fileStream, uint64_t size)"
@@ -1553,10 +1556,12 @@ id,sse,vr,status,name
 67852,0x140c2a1b0,0x140c6f0e0,4,"void BSStringPool::CreateEntry(BSStringPool::Entry** a_out, const char* a_string, uint32_t a_bucketAndCrc, uint32_t a_length, int a_allocSize, bool a_wide)"
 67855,0x140c2a4d0,0x140c6f400,3,BSStringPool::BucketTable* BSStringPool::BucketTable::GetSingleton()
 67856,0x140c2a590,0x140c6f4c0,4,"void BSStringPool::GetEntry(BSStringPool::Entry** a_out, const char* a_string, uint32_t a_hash, uint32_t a_length)"
+68296,0x140c3cb30,0x140c81be0,4,"std::uint32_t BSResource::ArchiveStream::DoRead(void* a_dst, std::uint64_t a_bytes, std::uint64_t* a_read)"
 68476,0x140c448b0,0x140c89960,4,"void BSResource::RegisterLocation(Location* a_location, std::uint32_t a_priority)"
 68480,0x140c44a00,0x140c89ab0,4,void BSResource::RegisterGlobalPath (char * a_path)
 68635,0x140c4a610,0x140c8f6c0,4,void ID::GenerateFromPath(const char* a_path)
 68663,0x140c4b990,0x140c90a40,3,RE::LooseFileStream::Ctor
+68688,0x140c4c360,0x140c91410,4,"std::uint32_t BSResource::LooseFileStream::DoRead(void* a_dst, std::uint64_t a_bytes, std::uint64_t* a_read)"
 68820,0x140c51f70,0x140c97030,4,float NiPoint3::GetPolarAngle (NiPoint3 * a_this)
 68835,0x140c52750,0x140c97810,4,NiObject* NiObject::clone_140C52750(NiObject *a_this)
 68838,0x140c52900,0x140c979c0,3,void NiObject::ProcessClone(NiCloningProcess& a_cloning)
@@ -1774,6 +1779,7 @@ id,sse,vr,status,name
 99697,0x1412b9a10,0x1412f7440,4,void ShadowSceneNode::RemoveLight(NiLight* a_light) src\RE\S/ShadowSceneNode.cpp:45
 99698,0x1412b9b60,0x1412f7590,3,"void ShadowSceneNode::RemoveLight(const NiPointer<BSLight>& a_light)"
 99708,0x1412baca0,0x1412f86d0,3,"static void ShadowSceneNode::EnableLight(RE::ShadowSceneNode* shadowSceneNode, RE::BSLight* light)"
+99725,0x1412bc190,0x1412f9c10,4,"float ShadowSceneNode::GetLuminanceAtPoint(NiPoint3* targetPosition, int* numHits, float sunLightLevel, float lightLevel, NiLight* refLight, int shadowBitMask) src\Features\LightLimitFix/ShadowCasterManager.cpp:3687"
 99728,0x1412bc770,0x1412fa1f0,4,"static void ShadowSceneNode::SetShadowCasterLightArrayEntry(RE::ShadowSceneNode* shadowSceneNode, RE::BSLight* light, uint32_t index, uint32_t unk4)"
 99730,0x1412bc7f0,0x1412fa270,4,"void ShadowSceneNode::ClearShadowCasterArray(ShadowSceneNode * a_this)"
 99735,0x1412bd240,0x1412facc0,4,"BSCompoundFrustum* ShadowSceneNode::BuildSharedCompoundFrustum(BSCullingProcess* a_cullingProcess, BSPortal* a_portal)"
@@ -18206,5 +18212,3 @@ id,sse,vr,status,name
 5375528368,0x140680db0,0x14068a230,3,RE::AIProcess::SetActorRefraction
 5388393136,0x1412c5ab0,0x141303ea0,3,RE::BSLightingShaderProperty::InvalidateTextures
 5399981752,0x141dd2eb8,0x141e901a8,4,"CalculateMyCriticalHitChance"
-30978,0x1404af910,0x1404bf970,4,"uint32_t AddOrRemoveLODWater(bool* a_add, void* a_object, void** a_objectHolder) src\Features/UnifiedWater.cpp:357"
-99725,0x1412bc190,0x1412f9c10,4,"float ShadowSceneNode::GetLuminanceAtPoint(NiPoint3* targetPosition, int* numHits, float sunLightLevel, float lightLevel, NiLight* refLight, int shadowBitMask) src\Features\LightLimitFix/ShadowCasterManager.cpp:3687"
