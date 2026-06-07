@@ -617,6 +617,8 @@ id,sse,vr,status,name
 34677,0x14057d1a0,0x140584910,2,bool BGSSaveLoadGame::LoadGame(Win32FileType* a_file)
 34732,0x140580920,0x140587e30,4,"int SaveGlobalDataChunks (anonymous_namespace__Win32FileType * a_this, uint32_t a_start, uint32_t a_end, uint64_t a_size)"
 34736,0x140581030,0x140588540,3,"undefined8 LoadGlobalData (uint a_datatype, BGSLoadFormBuffer * a_buffer, float * param_3, undefined8 param_4)"
+34738,0x140581430,0x140588940,3,"void InitGlobalData(std::uint32_t a_firstType, std::uint32_t a_lastType)"
+34740,0x1405816a0,0x140588bb0,3,"void FinishLoadGlobalData(std::uint32_t a_firstType, std::uint32_t a_lastType)"
 34808,0x140585a70,0x14058cfa0,4,"ulonglong BGSLoadGameBuffer::sub_140585A70(BGSLoadGameBuffer *param_1,PlayerCharacter *param_2,undefined *param_3,char *param_4)"
 34818,0x140586de0,0x14058e310,3,RE::BGSSaveLoadManager::Save
 34819,0x140587350,0x14058e920,3,RE::BGSSaveLoadManager::Load
