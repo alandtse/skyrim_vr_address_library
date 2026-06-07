@@ -1,3 +1,10 @@
+# [0.222.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.221.0...v0.222.0) (2026-06-07)
+
+
+### Features
+
+* add global-data load ([c143150](https://github.com/alandtse/skyrim_vr_address_library/commit/c143150755405ee7fd3c865047729f5d9ae6ebbd))
+
 # [0.221.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.220.0...v0.221.0) (2026-06-06)
 
 
