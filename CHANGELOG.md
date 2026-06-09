@@ -1,3 +1,10 @@
+# [0.223.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.222.0...v0.223.0) (2026-06-09)
+
+
+### Features
+
+* add Sky::UpdateColors ([c21464d](https://github.com/alandtse/skyrim_vr_address_library/commit/c21464d0a3ad3fd6b505c9865dc8a9677a63558b))
+
 # [0.222.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.221.0...v0.222.0) (2026-06-07)
 
 
