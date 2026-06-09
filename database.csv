@@ -1,4 +1,4 @@
-id,sse,vr,status,name
+﻿id,sse,vr,status,name
 10207,0x1400eb2d0,0x1400fc720,4,void SetFocusShadowDisplay1()
 10209,0x1400eb2f0,0x1400fc740,4,void SetFocusShadowDisplay2()
 10827,0x1400f6e80,0x140107430,3,RE::TESForm::GetFormEditorID
@@ -419,6 +419,7 @@ id,sse,vr,status,name
 25679,0x1403b0f30,0x1403c0ca0,4,RE::Sky::SetMode_1403B0F30
 25682,0x1403b1670,0x1403c1410,4,RE::Sky::Update_1403B1670
 25684,0x1403b1c80,0x1403c1a20,2,papyrus_extender::events::game::weatherevent::target_0x416
+25686,0x1403b2f20,0x1403c2cc0,3,void Sky::UpdateColors(float a_delta)
 25687,0x1403b3410,0x1403c31b0,4,void Sky::UpdateWind_1403B3410 (Sky * param_1)
 25689,0x1403b3cb0,0x1403c3a50,3,void Sky::UpdateClouds(Sky* a_this)
 25691,0x1403b4230,0x1403c4050,4,"void Sky::SetColor(NiColor& a_color, COLOR_BLEND* a_colorBlend, float a_addFlash)"
@@ -18213,4 +18214,4 @@ id,sse,vr,status,name
 5370397616,0x14019c3b0,0x1401ac0e0,3,RE::BSShaderProperty::InvalidateMaterial
 5375528368,0x140680db0,0x14068a230,3,RE::AIProcess::SetActorRefraction
 5388393136,0x1412c5ab0,0x141303ea0,3,RE::BSLightingShaderProperty::InvalidateTextures
-5399981752,0x141dd2eb8,0x141e901a8,4,"CalculateMyCriticalHitChance"
+5399981752,0x141dd2eb8,0x141e901a8,4,CalculateMyCriticalHitChance
