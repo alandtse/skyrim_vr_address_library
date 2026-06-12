@@ -1,4 +1,4 @@
-﻿id,sse,vr,status,name
+id,sse,vr,status,name
 10207,0x1400eb2d0,0x1400fc720,4,void SetFocusShadowDisplay1()
 10209,0x1400eb2f0,0x1400fc740,4,void SetFocusShadowDisplay2()
 10827,0x1400f6e80,0x140107430,3,RE::TESForm::GetFormEditorID
@@ -711,6 +711,7 @@
 36457,0x1405e18b0,0x1405e9f30,3,bool Actor::IsOverEncumbered()
 36472,0x1405e20c0,0x1405ea760,4,Character::MoveToPackageLocation_1405E20C0
 36475,0x1405e27f0,0x1405eae90,4,void Actor::EndInterruptPackage(bool a_skipDialogue)
+36487,0x1405e3250,0x1405eb8f0,3,bool Actor::IsMovementAnimationDriven() const
 36489,0x1405e32d0,0x1405eb970,3,Actor::SetRestrained
 36490,0x1405e3330,0x1405eb9d0,3,Actor::SetDontMove
 36492,0x1405e33b0,0x1405eba50,4,bool Actor::IsInRagdollState()
@@ -779,6 +780,7 @@
 37586,0x140623e60,0x14062cc10,3,RE::Character::sub_140623E60
 37588,0x140623f10,0x14062ccc0,4,RE::PlayerCharacter::GetReach_140623F10
 37605,0x140624f20,0x14062dd90,4,PlayerCharacter::sub_140624F20
+37608,0x1406251b0,0x14062e020,3,"bool Actor::StartCombat(Actor* a_target, CombatGroup* a_combatGroup)"
 37618,0x140625cd0,0x14062EB40,3,Actor::IsCombatTarget
 37620,0x140625dd0,0x14062ec40,4,RE::Character::get_weapon_vector_625DD0
 37621,0x140625eb0,0x14062ed20,4,RE::Actor::Actor__GetWeapon_140625EB0
@@ -1302,6 +1304,7 @@
 51400,0x1408aa140,0x1408d68f0,2,po3tweaks::SitToWait::HandleWaitRequest
 51402,0x1408aa940,0x1408d7370,4,"bool QuickSaveLoadHandler::ProcessButton_1408AA940 (QuickSaveLoadHandler * a_this, undefined8 param_2)"
 51420,0x1408ab180,0x1408d7fe0,4,RE::MessageBoxData::CreateMessage
+51421,0x1408ab470,0x1408d82d0,3,"bool MessageBoxMenu::Create(BSString& a_message, const BSTSmartPointer<IMessageBoxCallback>& a_callback, std::uint8_t a_buttonPressOffset, std::int32_t a_warningType, std::int32_t a_menuDepth, const BSTArray<BSString>& a_buttons)"
 51422,0x1408ab5c0,0x1408d8420,3,void MessageBoxData::QueueMessage()
 51424,0x1408ab9e0,0x1408d8840,3,void MessageBoxMenu::ProcessButtonPress(const FxDelegateArgs& a_params)
 51426,0x1408abb70,0x1408d8b20,3,void MessageBoxMenu::RemoveMessageFromQueue(MessageBoxData* a_data)
@@ -1730,9 +1733,13 @@
 82464,0x140f48360,0x140fa5060,3,void GSysAllocPaged::ShutdownHeapEngine()
 85757,0x140fffeb0,0x14105cbb0,4,void FUN_140fffeb0 (undefined8 * param_1)
 87907,0x1410a2370,0x1410fefa0,4,"Skyrim-upscaler"
+87965,0x1410a5740,0x141102370,3,"BSPathingLocation* BSPathingLocation::ctor(const NiPoint3& a_location, const BSTSmartPointer<BSPathingCell>& a_cell)"
+87978,0x1410a5e50,0x141102a80,3,"bool BSPathingLocation::GetNavMeshAndTriangle(BSTSmartPointer<BSNavmesh>& a_navMeshOut, std::uint16_t& a_triOut) const"
+87985,0x1410a64c0,0x1411030f0,3,bool BSPathingLocation::ResolveToClosestNavmeshAndTriangle(FindTriangleForLocationFilter& a_filter)
 88004,0x1410a7e10,0x141104a40,4,"bool FindTriangleForLocationFilterCheckDeltaZ::IsValidTri(NiPoint3* a_location, BSNavmesh* a_navMesh, std::uint16_t a_tri, NiPoint3* a_pointOnTri)"
 88498,0x1410c3ce0,0x141120930,3,bool IMovementState::CanStrafe()
 88499,0x1410c3d40,0x141120aa0,3,RE::ActorState::Sub_1410C3D40
+88674,0x1410cf350,0x14112c080,3,NiPoint3 BSNavmesh::GetNormal(std::uint16_t a_tri) const
 97371,0x14122c6f0,0x141264ba0,4,"void ObjectBindPolicy::GetInitialPropertyValues(VMHandle a_handle, const BSFixedString& a_className, BSTScrapHashMap<BSFixedString, Variable>& a_propertyValues, std::uint32_t& a_nonConvertedProperties)"
 97379,0x14122dad0,0x141265f80,3,RE::BSScript::ObjectBindPolicy::BindObject
 97462,0x141233670,0x14126bb20,3,void Object::Dtor()
@@ -9520,6 +9527,7 @@
 519716,0x142f4e240,0x143013728,3,TESObjectREFR* GetTargetReference()
 519818,0x142f4e670,0x143013aa8,4,RE::MessageBoxMenu skip-type filter table
 519819,0x142f4e690,0x143013ac8,3,RE::MessageBoxMenu message queue (BSTArray<MessageBoxData*>)
+519822,0x142f4e6a8,0x143013ae0,3,MessageBoxMenu message queue lock (BSSpinLock)
 519827,0x142f4e6b8,0x143013ae8,4,static MistMenu* GetSingleton()
 520058,0x142f4ed68,0x1430141c8,4,BSTArray<DEFAULT_OBJECT>& lTutorialMenu::QTutorialsShown()
 520856,0x142f50b28,0x1430a8bb8,4,BSInputEventQueue* GetSingleton()
