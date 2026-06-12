@@ -1,3 +1,10 @@
+# [0.224.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.223.0...v0.224.0) (2026-06-12)
+
+
+### Features
+
+* add 8 VR ids from po3 catch-up merge ([156b2fc](https://github.com/alandtse/skyrim_vr_address_library/commit/156b2fce019eb5f50d59da9653b34ad0aefdf6b2)), closes [#183](https://github.com/alandtse/skyrim_vr_address_library/issues/183)
+
 # [0.223.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.222.0...v0.223.0) (2026-06-09)
 
 
