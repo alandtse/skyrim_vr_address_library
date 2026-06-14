@@ -1,3 +1,10 @@
+# [0.225.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.224.0...v0.225.0) (2026-06-14)
+
+
+### Features
+
+* add shadow-distance + light-LOD fade ([171b184](https://github.com/alandtse/skyrim_vr_address_library/commit/171b184e4daf9ba17799a0a0b0b8c47af72ba492))
+
 # [0.224.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.223.0...v0.224.0) (2026-06-12)
 
 
