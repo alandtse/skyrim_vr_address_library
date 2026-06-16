@@ -1,3 +1,10 @@
+# [0.226.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.225.0...v0.226.0) (2026-06-16)
+
+
+### Features
+
+* add ShadowSceneNode funcs ([0891983](https://github.com/alandtse/skyrim_vr_address_library/commit/08919831c78d8d554e37e9969a8304ca7ea0915d))
+
 # [0.225.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.224.0...v0.225.0) (2026-06-14)
 
 
