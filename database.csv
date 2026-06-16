@@ -1789,11 +1789,14 @@
 99696,0x1412b99f0,0x1412f7420,4,"void ShadowSceneNode::AttachObject (ShadowSceneNode * a_this, NiAVObject * a_node)"
 99697,0x1412b9a10,0x1412f7440,4,void ShadowSceneNode::RemoveLight(NiLight* a_light) src\RE\S/ShadowSceneNode.cpp:45
 99698,0x1412b9b60,0x1412f7590,3,"void ShadowSceneNode::RemoveLight(const NiPointer<BSLight>& a_light)"
+99704,0x1412ba7f0,0x1412f8220,3,void ShadowSceneNode::ClearLightArrays()
 99708,0x1412baca0,0x1412f86d0,3,"static void ShadowSceneNode::EnableLight(RE::ShadowSceneNode* shadowSceneNode, RE::BSLight* light)"
 99725,0x1412bc190,0x1412f9c10,4,"float ShadowSceneNode::GetLuminanceAtPoint(NiPoint3* targetPosition, int* numHits, float sunLightLevel, float lightLevel, NiLight* refLight, int shadowBitMask) src\Features\LightLimitFix/ShadowCasterManager.cpp:3687"
 99728,0x1412bc770,0x1412fa1f0,4,"static void ShadowSceneNode::SetShadowCasterLightArrayEntry(RE::ShadowSceneNode* shadowSceneNode, RE::BSLight* light, uint32_t index, uint32_t unk4)"
 99730,0x1412bc7f0,0x1412fa270,4,"void ShadowSceneNode::ClearShadowCasterArray(ShadowSceneNode * a_this)"
 99735,0x1412bd240,0x1412facc0,4,"BSCompoundFrustum* ShadowSceneNode::BuildSharedCompoundFrustum(BSCullingProcess* a_cullingProcess, BSPortal* a_portal)"
+99752,0x1412beae0,0x1412fc4f0,3,"void ShadowSceneNode::AccumulateLight(RE::BSLight* a_light, RE::BSTArray<RE::NiAVObject*>* a_accumList, bool a_flag)"
+99753,0x1412bf7f0,0x1412fd220,3,void ShadowSceneNode::AccumulateLight(RE::BSLight* a_light)
 99854,0x1412c50f0,0x1413034b0,3,BSLightingShaderProperty * BSLightingShaderProperty::Ctor (BSLightingShaderProperty * a_this)
 99855,0x1412c52e0,0x1413036d0,4,void Dtor (BSLightingShaderProperty * a_this)
 99865,0x1412c5ab0,0x141303ea0,4,"void BSLightingShaderProperty::OnLoadTextureSet(BSLightingShaderProperty* a_this, undefined* a_2)"
@@ -1833,7 +1836,7 @@
 100420,0x1412e3480,0x141323190,3,"void RenderActiveShadowCasterLights()"
 100421,0x1412e3520,0x141323250,3,"void Main::RenderDepth (char param_1, char param_2)"
 100422,0x1412e3ac0,0x141323680,3,void Main::RenderShadowmasks (bool param_1)
-100423,0x1412e3b80,0x1409c0c80,3,void RenderShadowLightsWithUtilityShader()
+100423,0x1412e3b80,0x141323740,3,void RenderShadowLightsWithUtilityShader()
 100424,0x1412e3e70,0x141323b10,3,void Main::RenderWorld (bool param_1)
 100430,0x1412e49a0,0x141324e80,3,"void RenderEOFImageSpaceEffects (RENDER_TARGET a_rendertarget)"
 100440,0x1412e50a0,0x141356e50,3,static void ApplyLensFlare(RE::BSLight* light) // Likely not valid in VR
