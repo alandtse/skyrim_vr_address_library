@@ -1783,6 +1783,7 @@
 99020,0x1412972b0,0x1412d1af0,4,"void ImageSpaceManager::AddEffect (ImageSpaceManager* a_this, uint a_ImageSpaceManager__ImageSpaceEffectEnum, BSImagespaceShader * a_imageSpaceShader)"
 99023,0x141297410,0x1412d1c50,3,"void PostProcessing (TESImagespaceManager * a_this, uint param_2, RENDER_TARGET render_target)"
 99686,0x1412b8580,0x1412f5f80,3,"ShadowSceneNode::ctor_*"
+99687,0x1412b8ab0,0x1412f64e0,3,"void ShadowSceneNode::ClearSceneAndFog(ShadowSceneNode* this)"
 99692,0x1412b9320,0x1412f6d50,4,"BSLight* ShadowSceneNode::AddLight(NiLight* a_light, const LIGHT_CREATE_PARAMS& a_params)"
 99692,0x1412b9320,0x1412f6d50,4,"BSLight* ShadowSceneNode::AddLight(NiLight* a_light, const LIGHT_CREATE_PARAMS& a_params)"
 99693,0x1412b9610,0x1412f7040,3,void ShadowSceneNode::AddLight(RE::BSLight* a_light)
@@ -1795,6 +1796,7 @@
 99728,0x1412bc770,0x1412fa1f0,4,"static void ShadowSceneNode::SetShadowCasterLightArrayEntry(RE::ShadowSceneNode* shadowSceneNode, RE::BSLight* light, uint32_t index, uint32_t unk4)"
 99730,0x1412bc7f0,0x1412fa270,4,"void ShadowSceneNode::ClearShadowCasterArray(ShadowSceneNode * a_this)"
 99735,0x1412bd240,0x1412facc0,4,"BSCompoundFrustum* ShadowSceneNode::BuildSharedCompoundFrustum(BSCullingProcess* a_cullingProcess, BSPortal* a_portal)"
+99741,0x1412bdf60,0x1412fb9e0,3,"void ShadowSceneNode::ResetScene(ShadowSceneNode* this, BSPortalGraph* a_graph)"
 99752,0x1412beae0,0x1412fc4f0,3,"void ShadowSceneNode::AccumulateLight(RE::BSLight* a_light, RE::BSTArray<RE::NiAVObject*>* a_accumList, bool a_flag)"
 99753,0x1412bf7f0,0x1412fd220,3,void ShadowSceneNode::AccumulateLight(RE::BSLight* a_light)
 99854,0x1412c50f0,0x1413034b0,3,BSLightingShaderProperty * BSLightingShaderProperty::Ctor (BSLightingShaderProperty * a_this)
