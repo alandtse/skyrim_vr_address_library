@@ -1,3 +1,10 @@
+# [0.227.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.226.0...v0.227.0) (2026-06-17)
+
+
+### Features
+
+* add ShadowSceneNode ResetScene + ClearSceneAndFog ([#124](https://github.com/alandtse/skyrim_vr_address_library/issues/124)) ([a5a6341](https://github.com/alandtse/skyrim_vr_address_library/commit/a5a6341856ce86d8f48c6a2a2fad74bf7ea185c5))
+
 # [0.226.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.225.0...v0.226.0) (2026-06-16)
 
 
