@@ -1,3 +1,10 @@
+# [0.228.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.227.0...v0.228.0) (2026-06-20)
+
+
+### Features
+
+* add latest OS code ([5b31a95](https://github.com/alandtse/skyrim_vr_address_library/commit/5b31a95d8445b4325a0fd14143e2f2fc1057a5aa))
+
 # [0.227.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.226.0...v0.227.0) (2026-06-17)
 
 
