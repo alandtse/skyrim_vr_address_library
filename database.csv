@@ -210,8 +210,15 @@
 15967,0x1401ee670,0x1401ff150,3,RE::BSPointerHandleManagerInterface::GetHandle
 15980,0x1401ef330,0x1401ffe10,3,RE::Inventory::GetEventSource
 15991,0x1401efec0,0x1402009a0,4,bool GetWornMaskVisitor::Visit(InventoryEntryData* a_entryData)
+16021,0x1401f0de0,0x1402018c0,4,"void* RE::BSIStream::DecompressLipData()"
 16023,0x1401f12a0,0x140201d80,4,"undefined8 FUN_1401f12a0 (uint * param_1, float param_2, undefined8 * param_3)"
 16027,0x1401f1cb0,0x140202790,4,"void InventoryEntryData::SetWorn(bool a_worn, bool a_left, bool a_deleteExtraList)"
+16035,0x1401f26e0,0x1402031c0,4,"void RE::BSResource::EntryDB<RE::LipSynchAnimDB::DBTraits>::Func1()"
+16036,0x1401f2850,0x140203330,4,"void RE::BSResource::EntryDB<RE::LipSynchAnimDB::DBTraits>::Func2()"
+16064,0x1401f3c70,0x1402047d0,4,"void RE::BSResource::EntryDB<RE::LipSynchAnimDB::DBTraits>::Unk_03()"
+16069,0x1401f42e0,0x140204e40,4,"int RE::LipSynchAnimDB::DecompressTask(RE::BSResource::EntryDBBase* a_dbBase, std::uint64_t* a_taskData, std::uint64_t a_arg3, std::uint64_t a_arg4, std::uint32_t a_flags)"
+16070,0x1401f4520,0x140205080,4,"void RE::LipSynchAnimDB::ProcessStatus(RE::BSResource::EntryDBBase* a_dbBase, std::uint64_t* a_taskData)"
+16081,0x1401f4f20,0x140205a80,4,"bool RE::BSResource::EntryDB<RE::LipSynchAnimDB::DBTraits>::Func3(RE::BSResource::EntryDBBase* a_dbBase, std::uint64_t* a_taskData, std::uint64_t a_arg3, std::uint64_t* a_arg4, std::uint32_t a_flags)"
 16084,0x1401f5390,0x140205ef0,3,RE::LocalMapCamera::Ctor
 16089,0x1401f5750,0x1402062b0,3,RE::LocalMapCamera::SetNorthRotation
 16175,0x1401fa6c0,0x14020c010,3,"void NiCamera::ScreenSplatter::Clear()"
@@ -9932,6 +9939,7 @@
 527669,0x1431d0e74,0x143422fe8,4,f_lightFadeEnd
 527694,0x1431d0f80,0x143423298,4,gFlowMapSourceTex
 527703,0x1431d0fb8,0x1434232d0,4,static int FocusShadowActors.size
+527719,0x1431d1020,0x143423340,4,RE::BSVolumetricLightingRenderData_red
 527731,0x1431d11a0,0x1434234c0,4,TESImagespaceManager* GetSingleton()
 527735,0x1431d1200,0x143423520,3,RE::NiRTTI_ShadowSceneNode
 527752,0x1431d1af8,0x143423e20,3,RE::NiRTTI_BSLightingShaderProperty
