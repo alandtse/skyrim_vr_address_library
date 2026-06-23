@@ -1,3 +1,10 @@
+# [0.229.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.228.0...v0.229.0) (2026-06-23)
+
+
+### Features
+
+* add LipSynchAnimDB and BSVolumetricLightingRenderData ([#125](https://github.com/alandtse/skyrim_vr_address_library/issues/125)) ([2db0ded](https://github.com/alandtse/skyrim_vr_address_library/commit/2db0ded30ea1105b1051710877c5e1dd231ad984))
+
 # [0.228.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.227.0...v0.228.0) (2026-06-20)
 
 
