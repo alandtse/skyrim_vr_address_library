@@ -1868,7 +1868,7 @@
 100781,0x141302780,0x1412f3a90,4,void BSCubeMapCamera::Dtor()
 100817,0x141304da0,0x14134b960,3,"static void BSShadowDirectionalLight::SetupFocusShadowMaps(RE::BSShadowLight* light, RE::NiCamera* camera)"
 100818,0x141305240,0x14134be20,3,"BSShadowLight::AccumulateShadowMap"
-100819,0x1413054c0,0x14134c220,4,static void BSShadowLight::Accumulate(RE::BSShadowLight* light)
+100819,0x1413054c0,0x14134c220,4,static void BSShadowDirectionalLight::SetupFocusShadowAccumulators(RE::BSShadowLight* light)
 100820,0x141305610,0x14134c370,3,"void BSShadowParabolicLight::RenderCascade(BSShadowLight::ShadowmapDescriptor* a_desc, std::uint32_t& a_index, std::uint32_t a_flags)"
 100840,0x141306240,0x141347320,4,"void BSShaderAccumulator::RenderPersistentPassList (longlong * * passList, uint32_t renderFlags)"
 100847,0x141307160,0x141348390,3,Skyrim-Upscaler
