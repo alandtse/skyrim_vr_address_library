@@ -1,3 +1,10 @@
+# [0.230.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.229.0...v0.230.0) (2026-06-24)
+
+
+### Features
+
+* add SKSE Menu Framework ([891e40e](https://github.com/alandtse/skyrim_vr_address_library/commit/891e40e4193fcf87f5a4783179c4eb1d80cc50bf))
+
 # [0.229.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.228.0...v0.229.0) (2026-06-23)
 
 
