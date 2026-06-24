@@ -657,7 +657,7 @@
 35545,0x1405acbd0,0x1405b4290,2,WinMain
 35548,0x1405ae010,0x1405b5880,3,main
 35551,0x1405af3d0,0x1405b6d70,4,MainLoop_1405AF3D0
-35556,0x1405b1020,0x1405b8a20,3,Main::sub_*
+35556,0x1405b1020,0x1405b8a20,3,void Main::Render()
 35560,0x1405b1860,0x1405b9330,3,"void Main::Draw_1405B1860 (Main * a_this, uint32_t param_2, bool a_mainMenuopen)"
 35561,0x1405b2300,0x1405b9c00,4,void Main::RenderWaterEffects (void)
 35562,0x1405b2590,0x1405b9e90,2,void Main::UpdateSky(Main* this)
@@ -848,6 +848,7 @@
 38048,0x14063d0f0,0x140646160,3,HandleAction
 38063,0x14063E080,0x140647110,2,"void ResetBaseValue(ActorValueStorage*, ActorValue)"
 38079,0x14063f810,0x1406488a0,3,bool TaskQueueInterface::ShouldUseTaskQueue()
+38085,0x14063fa50,0x140648ae0,3,void RenderFrame()
 38118,0x140640600,0x140649910,2,PapyrusTweaks::Job_VM_Update
 38141,0x140640f80,0x14064a2b0,4,void Job_Update_grass_140640F80 (void)
 38158,0x140642f50,0x14064c2a0,4,void AIProcess::ComputeLastTimeProcessed()
