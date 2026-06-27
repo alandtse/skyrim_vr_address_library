@@ -904,7 +904,7 @@
 39415,0x1406a25a0,0x1406c3110,3,PlayerCharacter::InitActorValues
 39424,0x1406a2fb0,0x1406c3890,4,void PlayerCharacter::SetGodMode(bool a_enable)
 39425,0x1406a2fc0,0x1406c38a0,3,papyrus_extender::papyrus::detail::get_god_mode_impl
-39444,0x1406a4a00,0x1406c51f0,3,PlayerCharacter::GetLineOfSightImplementation_*
+39444,0x1406a4a00,0x1406c51f0,3,PlayerCharacter::HasLOS_impl
 39464,0x1406a8e60,0x1406CA960,3,"PlayerCharacter::InitLoadGame(PlayerCharacter *a1, float a2)"
 39466,0x1406a9430,0x1406CAFF0,3,"PlayerCharacter::Revert(longlong a1, PlayerCharacter *a2, float a3)"
 39471,0x1406a9f90,0x1406cbce0,3,"void ActivatePickRef_1406A9F90 (PlayerCharacter * a_this, VRControls::VRDevice a_device)"
@@ -1672,7 +1672,7 @@
 75570,0x140d70290,0x140dc2560,3,void BSGraphics::Renderer::SetPerFrameBuffers (BSGraphics::Renderer * a_renderer)
 75580,0x140d705b0,0x140dc2e70,3,void BSGraphics::SetDirtyStates_140d705b0 (bool isCompute)
 75591,0x140d71f00,0x140dc4b90,3,OpenAnimationReplacer::src/Hooks.h:107
-75595,0x140d72810,0x140dc5530,4,skyrim-nvidia-reflex::CalledDuringRenderStartup
+75595,0x140d72810,0x140dc5530,4,BSGraphics::InitD3D
 75628,0x140d74090,0x140dc6eb0,3,ZeroDepthStencilData
 75694,0x140d7bab0,0x140dcf4f0,3,"void SetCameraData(const NiCamera* a_camera, std::uint32_t a_flags)"
 75709,0x140d7cfb0,0x140dd1160,3,void BSGraphics_Renderer_Begin_UpdateJitter_140d7cfb0(BSGraphics::State* a_state)
