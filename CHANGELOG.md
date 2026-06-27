@@ -1,3 +1,10 @@
+# [0.232.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.231.0...v0.232.0) (2026-06-27)
+
+
+### Features
+
+* add camera collision, Havok utilities, and actor base ([#128](https://github.com/alandtse/skyrim_vr_address_library/issues/128)) ([8584963](https://github.com/alandtse/skyrim_vr_address_library/commit/858496394ced6f1503d47dc5a2c8e0dbdacfce84))
+
 # [0.231.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.230.0...v0.231.0) (2026-06-27)
 
 
