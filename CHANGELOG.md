@@ -1,3 +1,10 @@
+# [0.231.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.230.0...v0.231.0) (2026-06-27)
+
+
+### Features
+
+* add A-Pose Bug Fix ([#127](https://github.com/alandtse/skyrim_vr_address_library/issues/127)) ([4bee7e8](https://github.com/alandtse/skyrim_vr_address_library/commit/4bee7e81f794ffb7efee72c7d7124449d7277873))
+
 # [0.230.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.229.0...v0.230.0) (2026-06-24)
 
 
