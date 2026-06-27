@@ -122,7 +122,7 @@
 14180,0x140189750,0x140199480,3,RE::BGSOpenCloseForm::SetCloseState
 14189,0x140189e30,0x140199b60,3,RE::TESObjectREFR::PlayAnimation
 14190,0x140189fc0,0x140199cf0,3,"void ScriptEventSourceHolder::SendOpenCloseEvent(const NiPointer<TESObjectREFR>& a_ref, const NiPointer<TESObjectREFR>& a_activeRef, bool a_isOpened)"
-14261,0x14018c680,0x14019c3b0,4,void TESActorBaseData::SetActorBaseFlag(ACTOR_BASE_DATA::Flag a_flag, bool a_set, bool a_notify)
+14261,0x14018c680,0x14019c3b0,4,"void TESActorBaseData::SetActorBaseFlag(ACTOR_BASE_DATA::Flag a_flag, bool a_set, bool a_notify)"
 14262,0x14018c750,0x14019c480,4,std::uint16_t TESActorBaseData::GetLevel()
 14399,0x140190480,0x1401a01b0,3,RE::TESDescription::GetDescription
 14411,0x140190d50,0x1401a0a80,4,RE::EnchantmentItem* RE::TESForm::GetEnchantment(RE::ExtraDataList* extraDataList)
