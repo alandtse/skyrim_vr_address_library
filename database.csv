@@ -1,4 +1,4 @@
-ï»¿id,sse,vr,status,name
+﻿id,sse,vr,status,name
 10207,0x1400eb2d0,0x1400fc720,4,void SetFocusShadowDisplay1()
 10209,0x1400eb2f0,0x1400fc740,4,void SetFocusShadowDisplay2()
 10827,0x1400f6e80,0x140107430,3,RE::TESForm::GetFormEditorID
