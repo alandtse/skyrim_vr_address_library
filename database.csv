@@ -539,6 +539,8 @@
 32155,0x1404f1140,0x1405013b0,4,bool IAnimationGraphManagerHolder::UpdateAnimationGraphManager(const BSAnimationUpdateData& a_updateData)
 32184,0x1404f1e60,0x1405020d0,4,RE::BSAnimationGraphManager::sub_1404F1E60
 32192,0x1404f2620,0x140502890,3,"bool IAnimationGraphManagerHolder::GetGraphVariableNiPoint3(const BSFixedString& a_variableName, NiPoint3& a_out)"
+32270,0x1404f45f0,0x140504860,3,"void TESHavokUtilities::LinearCastPhantom(bhkSimpleShapePhantom* a_phantom, bhkWorld* a_world, float* a_startPos, float* a_endPos, float* a_hitResult, TESObjectREFR** a_hitRef, float a_phantomSize)"
+32271,0x1404f4c00,0x140504e70,3,"bool TESHavokUtilities::CheckCharacterCollision(bhkSimpleShapePhantom* a_phantom, TESObjectREFR* a_character, float* a_pos, float a_casterSize, float a_checkHeight)"
 32275,0x1404f5420,0x140505690,4,RE::ShakeCamera_1404f5420
 32290,0x1404f5c80,0x140505f60,3,RE::TESCamera::SetState
 32370,0x1404f96c0,0x140509850,4,"void DragonCameraState::HandleLookInput_1404F96C0 (DragonCameraState * a_this)"
@@ -1211,12 +1213,14 @@
 49858,0x14084b200,0x140876550,2,void PlayerCamera::ForceFirstPerson()
 49863,0x14084b350,0x140876610,2,void PlayerCamera::ForceThirdPerson()
 49876,0x14084b720,0x140876880,2,void PlayerCamera::ToggleFreeCameraMode(bool a_freezeTime)
+49899,0x14084c870,0x140876ff0,3,"bool PlayerCamera::CheckCameraCollision(NiPoint3& a_pos, bool a_fadeCharacter)"
 49908,0x14084d630,0x140877db0,3,RE::PlayerCamera::UpdateThirdPerson
 49947,0x14084ea70,0x14072c030,3,void PlayerCamera::PushCameraState(CameraState a_state)
+49966,0x14084f830,0x140879be0,3,"void ThirdPersonState::ResetFreeRotation()"
 49970,0x14084fbe0,0x140730470,4,"void ProcessButton_14084FBE0 (PlayerInputHandler * a_this, undefined8 param_2)"
 49977,0x1408505a0,0x14087a960,4,"ThirdPersonState::UpdateDelayedParameters_*"
 49978,0x140850860,0x14087ac20,4,"void HandleLookInput_140850860 (ThirdPersonState * a_this, float * param_2)"
-49980,0x140850a80,0x14087ae40,4,ThirdPersonState::sub_*
+49980,0x140850a80,0x14087ae40,3,"void ThirdPersonState::UpdateCameraCollision()"
 49981,0x140850bf0,0x14087afb0,4,"ThirdPersonState::UpdatePosOffset_*"
 50005,0x1408527b0,0x14087CB80,3,DescriptionFramework::
 50007,0x1408528d0,0x14087cca0,3,saleGoldTarget
