@@ -1477,7 +1477,9 @@
 62927,0x140b00ce0,0x140b3bac0,4,"void FUN_140b00ce0 (undefined8 param_1, longlong param_2, longlong * param_3, undefined8 param_4)"
 63017,0x140b05710,0x140b40550,4,bool hkbBehaviorGraph::sub_140B05710 (hkbBehaviorGraph * a_this)
 63028,0x140b06670,0x140b414b0,4,"void bshkbAnimationGraphHook_140b06670 (undefined8 param_1, longlong param_2, longlong param_3, undefined param_4, undefined param_5, undefined8 param_6, undefined param_7)"
+63030,0x140b06d20,0x140b41b60,4,"longlong FUN_140b06d20(undefined8 param_1,undefined8 param_2,longlong *param_3,longlong param_4)"
 63032,0x140b06fc0,0x140b41e00,4,"void hkbCharacterStringData::sub_140B06FC0 (hkbCharacterStringData * a_this, undefined param_2, undefined param_3, undefined param_4, undefined8 param_5, undefined8 param_6, undefined8 param_7)"
+63069,0x140b09fb0,0x140b44d90,4,"int AnimationFileManagerSingleton::Func1_140B09FB0 (longlong param_1,longlong *param_2,longlong param_3,undefined8 param_4)"
 63070,0x140b0a150,0x140b44f30,4,"std::uint64_t AnimationFileManagerSingleton::Load(const hkbContext& a_context, hkbClipGenerator* a_clipGenerator, std::uint64_t a_arg4)"
 63080,0x140b0acd0,0x140b45ab0,4,void AnimationFileManagerSingleton::UpdateQueue_140B0ACD0 (AnimationFileManagerSingleton * param_1)
 63192,0x140b12fa0,0x140b4dd80,4,"hkVector4 * hkbBlendPoses_140b12fa0 (uint32_t numData, hkQsTransform * src, hkQsTransform * dst, float amount, hkQsTransform * out)"
