@@ -856,7 +856,7 @@
 38141,0x140640f80,0x14064a2b0,4,void Job_Update_grass_140640F80 (void)
 38158,0x140642f50,0x14064c2a0,4,void AIProcess::ComputeLastTimeProcessed()
 38198,0x140644600,0x14064d950,4,"void AIProcess::AddToProcedureIndexRunning(Actor* a_actor, std::uint32_t a_num)"
-38290,0x14064b140,0x140654490,4,RE::ActorProcess::PlayIdle
+38290,0x14064b140,0x140654490,4,"bool AIProcess::SetupSpecialIdle(Actor* a_actor, DEFAULT_OBJECT a_object, TESIdleForm* a_idle, bool a_unk, bool a_unk2, TESObjectREFR* a_unk5)"
 38291,0x14064b570,0x1406548c0,4,"void AIProcess::StopCurrentIdle(Actor* a_actor, bool a_forceIdleStop)"
 38308,0x14064cb30,0x140655e80,4,void AIProcess::RandomlyPlaySpecialIdles(Actor* a_actor)
 38311,0x14064cdf0,0x140656140,4,"void AIProcess::SetActorsDetectionEvent(Actor* a_actor, const NiPoint3& a_location, std::int32_t a_soundLevel, TESObjectREFR* a_ref)"
