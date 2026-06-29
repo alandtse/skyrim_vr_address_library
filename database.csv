@@ -78,7 +78,7 @@
 13221,0x1401580c0,0x140168b70,3,NiAVObject* TES::Pick(bhkPickData& a_pickData)
 13224,0x140158350,0x140168e00,3,po3tweaks::ToggleCollisionFix::ToggleCollision
 13233,0x140158e70,0x140169920,3,void sub_140158E70 (TES * a_this)
-13240,0x140159290,0x140169d50,4,"void TES::FUN_140159290 (TES * param_1, undefined4 param_2, undefined4 param_3)"
+13240,0x140159290,0x140169d50,4,void TES::ClearGrassFadeAt(int a_x, int a_y)
 13260,0x14015af70,0x14016ba30,4,"bool NiNode::ToggleMasterParticleAddonNodes(const NiNode* a_node, bool a_enable)"
 13530,0x1401652d0,0x140175a10,3,"void UIMessageQueue::AddMessage (UIMessageQueue * a_this, BSFixedString * a_menuName, UIMessageTypes a_type, IUIMessageData * a_data)"
 13549,0x140165770,0x140175eb0,4,longlong TESWorldSpace::GetCellByCoordinateMask_140165770 (TESWorldSpace * a_this)
@@ -1665,7 +1665,7 @@
 75458,0x140d6a080,0x140dbbb40,4,void Renderer::Lock()
 75459,0x140d6a0a0,0x140dbbb60,4,void Renderer::Unlock()
 75460,0x140d6a0c0,0x140dbbb80,3,void Renderer::Begin(std::uint32_t a_windowID)
-75461,0x140d6a2b0,0x140dbbdd0,3,shadowboost::TimeManager_SleepCheck
+75461,0x140d6a2b0,0x140dbbdd0,3,void BSGraphics::Renderer::End()
 75462,0x140d6a330,0x140dbbe60,3,"void Renderer::UpdateRenderTargetsAndStates (BSGraphics::Renderer * param_1, bool param_2)"
 75469,0x140d6aca0,0x140dbc860,3,CreateDepthStencilRenderTarget
 75472,0x140d6b210,0x140dbce30,3,"void UpdateCameraData (undefined8 param_1, byte param_2)"
@@ -1904,6 +1904,8 @@
 101613,0x14132d040,0x14136fec0,4,void BSShadowFrustumLight::Render(std::uint32_t& a_index)
 101631,0x14132ead0,0x141371a00,3,"void GetLightingShaderDefines(uint32_t descriptor, D3D_SHADER_MACRO* defines)"
 101633,0x14132ef60,0x141371e90,3,uint32_t BSLightingShader::GetPixelTechnique (uint32_t rawTechnique)
+101779,0x14133a750,0x141377b30,3,void StartTimer(int a_index)
+101780,0x14133a7b0,0x141377b90,3,void StopTimer(int a_index)
 101821,0x14133e250,0x14137b630,3,BSWin32SystemUtility* BSWin32SystemUtility::GetSingleton()
 101884,0x14133f0c0,0x14137c200,3,RE::BSWin32SaveDataSystemUtility::GetSingleton
 101962,0x141340ff0,0x14137e180,4,"longlong **BSWin32SaveDataSystemUtility::Ctor_141340FF0(longlong param_1,longlong **param_2,char *param_3,int param_4)"
