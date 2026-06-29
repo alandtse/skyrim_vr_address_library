@@ -1904,6 +1904,8 @@
 101613,0x14132d040,0x14136fec0,4,void BSShadowFrustumLight::Render(std::uint32_t& a_index)
 101631,0x14132ead0,0x141371a00,3,"void GetLightingShaderDefines(uint32_t descriptor, D3D_SHADER_MACRO* defines)"
 101633,0x14132ef60,0x141371e90,3,uint32_t BSLightingShader::GetPixelTechnique (uint32_t rawTechnique)
+101779,0x14133a750,0x141377b30,3,void StartTimer(int a_index)
+101780,0x14133a7b0,0x141377b90,3,void StopTimer(int a_index)
 101821,0x14133e250,0x14137b630,3,BSWin32SystemUtility* BSWin32SystemUtility::GetSingleton()
 101884,0x14133f0c0,0x14137c200,3,RE::BSWin32SaveDataSystemUtility::GetSingleton
 101962,0x141340ff0,0x14137e180,4,"longlong **BSWin32SaveDataSystemUtility::Ctor_141340FF0(longlong param_1,longlong **param_2,char *param_3,int param_4)"
