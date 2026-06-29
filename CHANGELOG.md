@@ -1,3 +1,10 @@
+# [0.233.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.232.0...v0.233.0) (2026-06-29)
+
+
+### Features
+
+* add StartTimer/StopTimer ([#130](https://github.com/alandtse/skyrim_vr_address_library/issues/130)) ([47f85e1](https://github.com/alandtse/skyrim_vr_address_library/commit/47f85e15228438a1121e3b9e34569d717e7327ea))
+
 # [0.232.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.231.0...v0.232.0) (2026-06-27)
 
 
