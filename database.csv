@@ -298,6 +298,7 @@
 19316,0x1402943b0,0x1402a5ac0,4,bool Actor::Update3D()
 19322,0x1402944F0,0x1402A5C00,3,TESModel* TESObjectREFR::GetSkeletonModel(TESObjectREFR* a_this)
 19323,0x1402945e0,0x1402a5cf0,3,RE::TESObjectREFR::FindReferenceFor3D
+19325,0x1402946d0,0x1402a5dd0,3,"NiMatrix3* TESObjectREFR::GetRotationMatrix(NiMatrix3* a_out)"
 19326,0x140294730,0x1402a5e30,3,void TESObjectREFR::GetTransform(NiTransform& a_transform)
 19338,0x140295060,0x1402a6760,3,bool Actor::IsLimbGone(std::uint32_t a_limb)
 19354,0x1402961f0,0x1402a78f0,3,RE::TESObjectREFR::GetDisplayFullName
