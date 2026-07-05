@@ -1704,6 +1704,7 @@
 76924,0x140de1f20,0x140E363E0,4,"bhkCapsuleShape * bhkCapsuleShape::bhkCapsuleShape(bhkCapsuleShape * a_this, RE::NiPoint3 * a_topVec, RE::NiPoint3 * a_botVec, float a_radius)"
 77446,0x140df8690,0x140e4d690,4,"void hkpAllRayHitCollector::AddRayHit(const hkpCdBody& a_body, const hkpShapeRayCastCollectorOutput& a_hitInfo)"
 77470,0x140df9140,0x140e4e140,4,"bhkMemorySystem * ctor_140df9140 (bhkMemorySystem * param_1, undefined8 param_2, undefined8 param_3, undefined8 param_4)"
+78843,0x140e43640,0x140e9f890,4,"undefined8 *hkpConvexVerticesShape::sub_140E43640(undefined8 *param_1,undefined8 param_2,char *param_3)"
 79944,0x140ebe510,0x140F1A680,4,"void UI::GetTopMostMenu(RE::UI this, RE::IMenu** a_result, std::uint32_t a_depthLimit)"
 79947,0x140ebf510,0x140f1b750,3,Skyrim-Upscaler::Main_DrawWorld_MainDraw
 80059,0x140ec30f0,0x140f1fbc0,3,RE::UIMessageQueue::ProcessCommands
