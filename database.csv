@@ -1493,6 +1493,7 @@
 63607,0x140b258b0,0x140b60690,3,"bool BShkbAnimationGraph::SetGraphVariableInt(const BSFixedString& a_variableName, const int a_in)"
 63608,0x140b25990,0x140b60770,3,"bool BShkbAnimationGraph::SetGraphVariableFloat(const BSFixedString& a_variableName, const float a_in)"
 63609,0x140b25c70,0x140b60a50,3,"bool BShkbAnimationGraph::SetGraphVariableBool(const BSFixedString& a_variableName, const bool a_in)"
+64067,0x140b5e120,0x140b98f70,4,"void hkpConvexVerticesShape::sub_140B5E120(longlong param_1,longlong *param_2)"
 64198,0x140b66930,0x140ba17a0,4,"ulonglong FUN_140b66930 (undefined * param_1, hkbCharacter * a_character, undefined * * * param_3, undefined8 param_4, undefined8 param_5)"
 66355,0x140bed530,0x140c283e0,4,RE::BSSoundHandle::Play
 66356,0x140bed570,0x140c28420,3,RE::BSSoundHandle::Play3d
