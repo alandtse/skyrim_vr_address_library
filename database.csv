@@ -1216,7 +1216,7 @@
 49899,0x14084c870,0x140876ff0,3,"bool PlayerCamera::CheckCameraCollision(NiPoint3& a_pos, bool a_fadeCharacter)"
 49908,0x14084d630,0x140877db0,3,RE::PlayerCamera::UpdateThirdPerson
 49947,0x14084ea70,0x14072c030,3,void PlayerCamera::PushCameraState(CameraState a_state)
-49960,0x14084f490,0x140879840,3,"void ThirdPersonState::Update_14084F490 (longlong *param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4)"
+49960,0x14084f490,0x140879840,2,"void ThirdPersonState::Update_14084F490 (longlong *param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4)"
 49966,0x14084f830,0x140879be0,3,"void ThirdPersonState::ResetFreeRotation()"
 49970,0x14084fbe0,0x140730470,4,"void ProcessButton_14084FBE0 (PlayerInputHandler * a_this, undefined8 param_2)"
 49977,0x1408505a0,0x14087a960,4,"ThirdPersonState::UpdateDelayedParameters_*"
