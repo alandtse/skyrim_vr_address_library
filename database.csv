@@ -1382,6 +1382,7 @@
 53116,0x140922a90,0x14095d1f0,4,"SkyrimVM::ProcessTasklets(SkyrimVM* a_vm, float a_budget)"
 53144,0x1409252c0,0x14095fd10,3,RE::SkyrimVM::QueuePostRenderCall
 53195,0x14092a9c0,0x140965410,3,SkyrimVM::HandleEvent(BSScript::StatsEvent* stats)
+53204,0x14092b5e0,0x140965c90,3,void SkyrimVM::Freeze()
 53205,0x14092b6c0,0x140965d80,2,PapyrusTweaks::
 53207,0x14092b800,0x140965f00,3,"SkyrimVM::LoadGame(SkyrimVM* this, LoadStorageWrapper* a_wrapper)"
 53209,0x14092b8e0,0x140965fe0,3,RE::SkyrimVM::DumpStacks
