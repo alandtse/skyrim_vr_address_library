@@ -245,6 +245,7 @@
 18137,0x14024a480,0x14025bb60,4,ulonglong sub_14024A480 (CellLoaderTask * a_this)
 18149,0x14024aad0,0x14025c1b0,3,"void FUN_14024aad0 (IMemoryHeap__VFTable * param_1, IMemoryHeap__VFTable * param_2, undefined param_3)"
 18150,0x14024ad30,0x14025c420,3,"void FUN_14024ad30 (MutexRW * param_1, TESWorldSpace * param_2, short param_3, short param_4, undefined param_5)"
+18183,0x14024c600,0x14025dcf0,3,"bool ImageSpaceModifierInstanceForm::SetTarget(TESImageSpaceModifier* a_target, float a_transitionTime, float a_duration, NiAVObject* a_node)"
 18185,0x14024c860,0x14025df50,4,"ImageSpaceModifierInstanceForm* ImageSpaceModifierInstanceForm::Trigger(TESImageSpaceModifier* a_imod, float a_strength, NiAVObject* a_target)"
 18187,0x14024cad0,0x14025e1c0,4,"ImageSpaceModifierInstanceForm* TESImageSpaceModifier::TriggerIfNotActive(float a_strength, NiAVObject* a_target)"
 18188,0x14024ccd0,0x14025e3c0,4,void ImageSpaceModifierInstanceForm::Stop(TESImageSpaceModifier* a_imod)
@@ -329,6 +330,9 @@
 20029,0x1402b27a0,0x1402c3f10,3,"void TES::DestroySkyCell(TES* a_tes)"
 20095,0x1402b63b0,0x1402c7b20,3,"TESObjectCELL* TESWorldSpace::GetSkyCell()"
 20103,0x1402b6eb0,0x1402c8620,4,"bool TESWorldSpace::GetMaxHeightAt(const NiPoint3& xy, float& outHeight)"
+20263,0x1402be2d0,0x1402cfa40,3,"bool BGSCameraShot::IsValid()"
+20264,0x1402be320,0x1402cfa90,3,void BGSCameraShot::ReleaseNodes()
+20266,0x1402be690,0x1402cfe00,3,"void BGSCameraShot::SetTargetNode(NiNode* a_node)"
 20470,0x1402c53d0,0x1402d6b40,3,RE::BGSListForm::AddForm
 20529,0x1402c73f0,0x1402d8b60,3,BGSMaterialType* BGSMaterialType::GetMaterialType(MATERIAL_ID a_materialID)
 20905,0x1402d19a0,0x1402e3110,4,BSShaderTextureSet * BGSTextureSet::ToShaderTextureSet (BGSTextureSet * a_textureSet)
@@ -1799,6 +1803,7 @@
 99023,0x141297410,0x1412d1c50,3,"void PostProcessing (TESImagespaceManager * a_this, uint param_2, RENDER_TARGET render_target)"
 99686,0x1412b8580,0x1412f5f80,3,"ShadowSceneNode::ctor_*"
 99687,0x1412b8ab0,0x1412f64e0,3,"void ShadowSceneNode::ClearSceneAndFog(ShadowSceneNode* this)"
+99691,0x1412b92c0,0x1412f6cf0,4,"void ShadowSceneNode::AddLight(NiLight* a_light)"
 99692,0x1412b9320,0x1412f6d50,4,"BSLight* ShadowSceneNode::AddLight(NiLight* a_light, const LIGHT_CREATE_PARAMS& a_params)"
 99692,0x1412b9320,0x1412f6d50,4,"BSLight* ShadowSceneNode::AddLight(NiLight* a_light, const LIGHT_CREATE_PARAMS& a_params)"
 99693,0x1412b9610,0x1412f7040,3,void ShadowSceneNode::AddLight(RE::BSLight* a_light)
