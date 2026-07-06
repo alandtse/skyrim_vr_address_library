@@ -1710,6 +1710,8 @@
 76261,0x140db3890,0x140e08810,4,void bhkRigidBody::SetLinearImpulse(const hkVector4& a_impulse) src\RE\B/bhkRigidBody.cpp:22
 76262,0x140db3930,0x140e088b0,4,void bhkRigidBody::SetAngularImpulse(const hkVector4& a_impulse) src\RE\B/bhkRigidBody.cpp:8
 76271,0x140db4d20,0x140e09ca0,3,"void NiAVObject::UpdateRigidConstraints(bool a_enable, std::uint8_t a_arg2, std::uint32_t a_arg3)"
+76421,0x140dbe770,0x140e136f0,3,"bool bhkCharacterController::TryMoveTo(const hkVector4& a_pos, void* a_arg2, bool a_ignoreDepth)"
+76426,0x140dbef90,0x140e13f10,2,float bhkCharRigidBodyController::GetSupportMass()
 76456,0x140dc1380,0x140e16300,4,bool bhkCharacterController::IsHurtfulBody(hkpRigidBody* a_body)
 76460,0x140dc16c0,0x140e16650,4,"void bhkCharacterController::ProcessHurtfulBody(hkpRigidBody* a_body, const hkContactPoint* a_contactPoint)"
 76693,0x140dd94e0,0x140e2e4b0,4,"void hkpAllRayHitTempCollector::AddRayHit(const hkpCdBody& a_body, const hkpShapeRayCastCollectorOutput& a_hitInfo)"
