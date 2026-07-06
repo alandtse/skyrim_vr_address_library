@@ -330,9 +330,12 @@
 20029,0x1402b27a0,0x1402c3f10,3,"void TES::DestroySkyCell(TES* a_tes)"
 20095,0x1402b63b0,0x1402c7b20,3,"TESObjectCELL* TESWorldSpace::GetSkyCell()"
 20103,0x1402b6eb0,0x1402c8620,4,"bool TESWorldSpace::GetMaxHeightAt(const NiPoint3& xy, float& outHeight)"
+20262,0x1402bdec0,0x1402cf630,3,"void BGSCameraShot::Play(TESObjectREFR* a_target, std::int32_t a_mode)"
 20263,0x1402be2d0,0x1402cfa40,3,"bool BGSCameraShot::IsValid()"
 20264,0x1402be320,0x1402cfa90,3,void BGSCameraShot::ReleaseNodes()
+20265,0x1402be470,0x1402cfbe0,3,"void BGSCameraShot::SetLocationNode(NiAVObject* a_node)"
 20266,0x1402be690,0x1402cfe00,3,"void BGSCameraShot::SetTargetNode(NiNode* a_node)"
+20267,0x1402be8d0,0x1402d0040,3,"void BGSCameraShot::Update(float a_currentTime)"
 20470,0x1402c53d0,0x1402d6b40,3,RE::BGSListForm::AddForm
 20529,0x1402c73f0,0x1402d8b60,3,BGSMaterialType* BGSMaterialType::GetMaterialType(MATERIAL_ID a_materialID)
 20905,0x1402d19a0,0x1402e3110,4,BSShaderTextureSet * BGSTextureSet::ToShaderTextureSet (BGSTextureSet * a_textureSet)
