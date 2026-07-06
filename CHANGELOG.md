@@ -1,3 +1,17 @@
+# [0.234.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.233.0...v0.234.0) (2026-07-06)
+
+
+### Features
+
+* add bhkCharacterController::TryMoveTo and GetSupportMass ids ([#137](https://github.com/alandtse/skyrim_vr_address_library/issues/137)) ([f3d9e0e](https://github.com/alandtse/skyrim_vr_address_library/commit/f3d9e0e5546feec9e0cac7676b5715cb1590f970))
+* add BSTimer::Update address id ([#133](https://github.com/alandtse/skyrim_vr_address_library/issues/133)) ([642977e](https://github.com/alandtse/skyrim_vr_address_library/commit/642977e06c54fb2b3bfd6d50f9b82f24686737cb)), closes [#203](https://github.com/alandtse/skyrim_vr_address_library/issues/203)
+* add generic-subsystem address ids found via VATS RE ([#132](https://github.com/alandtse/skyrim_vr_address_library/issues/132)) ([9c8005b](https://github.com/alandtse/skyrim_vr_address_library/commit/9c8005b775b0f43daf7cfb8d14a51a1bce160d8a))
+* add SkyrimVM::Freeze address id ([#134](https://github.com/alandtse/skyrim_vr_address_library/issues/134)) ([a2370a7](https://github.com/alandtse/skyrim_vr_address_library/commit/a2370a7d2c66e3bc0de547ed7229b3a1bd44c473))
+* add TESObjectREFR::GetRotationMatrix address id ([#136](https://github.com/alandtse/skyrim_vr_address_library/issues/136)) ([6ecd996](https://github.com/alandtse/skyrim_vr_address_library/commit/6ecd996bdf1ac290bc0d692ac50a50c4fba41964))
+* add three more BGSCameraShot method ids ([#135](https://github.com/alandtse/skyrim_vr_address_library/issues/135)) ([928d98e](https://github.com/alandtse/skyrim_vr_address_library/commit/928d98e8e75953482658a132c98c27beb390c0b3)), closes [#132](https://github.com/alandtse/skyrim_vr_address_library/issues/132)
+* add VariadicCollisionDynamics ([#138](https://github.com/alandtse/skyrim_vr_address_library/issues/138)) ([cc3feee](https://github.com/alandtse/skyrim_vr_address_library/commit/cc3feee1338d0bccbc24815a1228158e1825edba))
+* add VATS internal-method address ids 43087-43098 ([#131](https://github.com/alandtse/skyrim_vr_address_library/issues/131)) ([7923154](https://github.com/alandtse/skyrim_vr_address_library/commit/79231544fe2f55d7eb13967676aab86139e0da0c)), closes [#203](https://github.com/alandtse/skyrim_vr_address_library/issues/203)
+
 # [0.233.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.232.0...v0.233.0) (2026-06-29)
 
 
