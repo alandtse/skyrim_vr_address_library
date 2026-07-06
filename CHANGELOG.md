@@ -1,3 +1,10 @@
+# [0.235.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.234.0...v0.235.0) (2026-07-06)
+
+
+### Features
+
+* add console SaveGame command handler ([#139](https://github.com/alandtse/skyrim_vr_address_library/issues/139)) ([d7ab3b2](https://github.com/alandtse/skyrim_vr_address_library/commit/d7ab3b2553daeff4a061dfdcc86df7fcdc074e5f))
+
 # [0.234.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.233.0...v0.234.0) (2026-07-06)
 
 
