@@ -114,7 +114,7 @@ jobs:
     needs: prepare
     # dry_run validates via the prepare job only; skip the actual Nexus call.
     if: inputs.dry_run != 'true'
-    uses: alandtse/nexus-workflows/.github/workflows/upload-nexus.yml@1a631200c4d6d0957ea910383daf0ed4fe2efdcb # v1.4.0
+    uses: alandtse/nexus-workflows/.github/workflows/upload-nexus.yml@main
     with:
       nexus_game_id: skyrimspecialedition
       nexus_mod_id: "58101"
