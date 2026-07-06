@@ -1556,6 +1556,7 @@
 66977,0x140c07350,0x140c421d0,3,RE::BSReadWriteLock::LockForWrite
 66982,0x140c07590,0x140c42410,3,RE::BSReadWriteLock::UnlockForRead
 66983,0x140c075a0,0x140c42420,3,RE::BSReadWriteLock::UnlockForWrite
+66987,0x140c076a0,0x140c42520,3,"void BSTimer::Update(std::int32_t a_currentTicks)"
 66988,0x140c078b0,0x140c42730,4,"void BSTimer::SetGlobalTimeMultiplier(float a_multiplier, bool a_arg2)"
 66989,0x140c07900,0x140c42780,4,RE::UpdateGlobalTimeMultiplier_140C07900
 67151,0x140c0d7b0,0x140c485e0,3,void BSThreadEvent::InitSDM()
