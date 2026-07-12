@@ -658,6 +658,8 @@
 35203,0x14059b9a0,0x1405a3060,4,uint32_t ScrapHeap_GetMaxSize_14059b9a0(void)
 35263,0x14059f0f0,0x1405a67b0,4,EnchantmentItem* BGSCreatedObjectManager::AddWeaponEnchantment(BSTArray<Effect>& a_effects)
 35264,0x14059f190,0x1405a6850,4,EnchantmentItem* BGSCreatedObjectManager::AddArmorEnchantment(BSTArray<Effect>& a_effects)
+35265,0x14059f230,0x1405a68f0,4,"AlchemyItem* BGSCreatedObjectManager::AddPotion(BSTSmartPointer<AlchemyItem>& a_out, BSTArray<Effect>& a_effects)"
+35266,0x14059f2e0,0x1405a69a0,4,"AlchemyItem* BGSCreatedObjectManager::AddPoison(BSTSmartPointer<AlchemyItem>& a_out, BSTArray<Effect>& a_effects)"
 35267,0x14059f390,0x1405a6a50,4,"void BGSCreatedObjectManager::DestroyEnchantment(EnchantmentItem* a_enchantment, bool a_isWeapon)"
 35284,0x1405a1070,0x1405a8730,4,BGSCreatedObjectManager::AddEnchantment
 35317,0x1405a2930,0x1405a9ff0,3,bool BGSImpactManager::PlayImpactDataSounds(ImpactSoundData& a_impactSoundData)
