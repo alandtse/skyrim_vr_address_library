@@ -1,3 +1,11 @@
+# [0.236.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.235.0...v0.236.0) (2026-07-13)
+
+
+### Features
+
+* add AddPotion/AddPoison ([#142](https://github.com/alandtse/skyrim_vr_address_library/issues/142)) ([6ca423e](https://github.com/alandtse/skyrim_vr_address_library/commit/6ca423e75e02c54c2e22062feaf499b2710e9d9f))
+* add BSBatchRenderer helper ([#141](https://github.com/alandtse/skyrim_vr_address_library/issues/141)) ([f1134bc](https://github.com/alandtse/skyrim_vr_address_library/commit/f1134bcaefb69ac4654094424832a5618772c2cb))
+
 # [0.235.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.234.0...v0.235.0) (2026-07-06)
 
 
