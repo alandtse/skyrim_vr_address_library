@@ -1614,6 +1614,7 @@
 68972,0x140c598f0,0x140c9eea0,4,void NiStream::~NiStream(NiStream * a_this)
 69002,0x140c5ac30,0x140ca01e0,4,void NiStream::LoadLinkID
 69156,0x140c60fb0,0x140ca6560,4,void NiObjectNET::RemoveController(NiTimeController* a_controller)
+69251,0x140c64730,0x140ca9e20,3,"void NiCamera::CopyMembers(NiCamera* a_target, NiCloningProcess* a_cloning)"
 69263,0x140c65760,0x140cab2c0,3,"bool NiCamera::WindowPointToRay(std::int32_t a_x, std::int32_t a_y, NiPoint3& a_origin, NiPoint3& a_dir, float a_windowWidth, float a_windowHeight)"
 69265,0x140c65a20,0x140cab570,3,"static void NiCamera::CalculateFrustumOverlap(NiCamera *a_this,NiPoint4 *a_worldCoord, NiPoint3 *a_outMinNDC, NiPoint3 *a_outMaxNDC, int32_t a_eyeIndex, float a_nearPlaneEpsilon) // VR has eyeIndex"
 69270,0x140c66580,0x140cac0e0,3,RE::NiCamera::WorldPtToScreenPt3
