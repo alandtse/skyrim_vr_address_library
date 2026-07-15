@@ -1,3 +1,10 @@
+# [0.237.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.236.0...v0.237.0) (2026-07-15)
+
+
+### Features
+
+* add NiCamera::CopyMembers ([#143](https://github.com/alandtse/skyrim_vr_address_library/issues/143)) ([0cdae0d](https://github.com/alandtse/skyrim_vr_address_library/commit/0cdae0d6fcf610679119ac5467ea75b2091ccc88))
+
 # [0.236.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.235.0...v0.236.0) (2026-07-13)
 
 
