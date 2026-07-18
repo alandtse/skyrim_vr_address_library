@@ -1,3 +1,10 @@
+# [0.238.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.237.0...v0.238.0) (2026-07-18)
+
+
+### Features
+
+* add BSShadowLight ctor and IsInRange ([#144](https://github.com/alandtse/skyrim_vr_address_library/issues/144)) ([04d56ce](https://github.com/alandtse/skyrim_vr_address_library/commit/04d56ce8c8f05db125ae8e23ddd0cd0dbb14e595))
+
 # [0.237.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.236.0...v0.237.0) (2026-07-15)
 
 
