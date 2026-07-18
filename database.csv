@@ -78,7 +78,7 @@
 13221,0x1401580c0,0x140168b70,3,NiAVObject* TES::Pick(bhkPickData& a_pickData)
 13224,0x140158350,0x140168e00,3,po3tweaks::ToggleCollisionFix::ToggleCollision
 13233,0x140158e70,0x140169920,3,void sub_140158E70 (TES * a_this)
-13240,0x140159290,0x140169d50,4,void TES::ClearGrassFadeAt(int a_x, int a_y)
+13240,0x140159290,0x140169d50,4,"void TES::ClearGrassFadeAt(int a_x, int a_y)"
 13260,0x14015af70,0x14016ba30,4,"bool NiNode::ToggleMasterParticleAddonNodes(const NiNode* a_node, bool a_enable)"
 13530,0x1401652d0,0x140175a10,3,"void UIMessageQueue::AddMessage (UIMessageQueue * a_this, BSFixedString * a_menuName, UIMessageTypes a_type, IUIMessageData * a_data)"
 13549,0x140165770,0x140175eb0,4,longlong TESWorldSpace::GetCellByCoordinateMask_140165770 (TESWorldSpace * a_this)
@@ -1573,6 +1573,7 @@
 67240,0x140c11430,0x140c4dd80,4,QuickLoot::
 67243,0x140c11ae0,0x140c4e480,4,void ControlMap::PushInputContext(InputContextID a_context)
 67244,0x140c11bc0,0x140c4e560,4,void ControlMap::PopInputContext(InputContextID a_context)
+67252,0x140c11f30,0x140c4e8d0,4,"void UIManager::AllowTextInput1(ControlMap *a_controlMap, bool a_allow)"
 67315,0x140c150b0,0x140c519e0,3,void BSInputDeviceManager::PollInputDevices_140c108 (float a_secsSinceLastFrame)
 67373,0x140c165e0,0x140c533a0,4,DirectInput8::IDirectInputDevice8A* BSDirectInputManager::CreateDeviceWithGUID(WinAPI::GUID* a_guid)
 67374,0x140c16620,0x140c533e0,4,void BSDirectInputManager::ReleaseDevice(DirectInput8::IDirectInputDevice8A* a_device)
@@ -18275,4 +18276,4 @@
 5370397616,0x14019c3b0,0x1401ac0e0,3,RE::BSShaderProperty::InvalidateMaterial
 5375528368,0x140680db0,0x14068a230,3,RE::AIProcess::SetActorRefraction
 5388393136,0x1412c5ab0,0x141303ea0,3,RE::BSLightingShaderProperty::InvalidateTextures
-5399981752,0x141dd2eb8,0x141e901a8,4,CalculateMyCriticalHitChance
+5399981752,0x141dd2eb8,0x141e901a8,4,"CalculateMyCriticalHitChance"
