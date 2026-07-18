@@ -1,3 +1,10 @@
+# [0.239.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.238.0...v0.239.0) (2026-07-18)
+
+
+### Features
+
+* add UIManager::AllowTextInput1 ([3aad25a](https://github.com/alandtse/skyrim_vr_address_library/commit/3aad25a67dc73ef7920d7cebad5927b6a3c01a56))
+
 # [0.238.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.237.0...v0.238.0) (2026-07-18)
 
 
