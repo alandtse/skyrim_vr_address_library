@@ -960,7 +960,11 @@
 40566,0x1406e6ad0,0x14070d9c0,3,PlayerSkills::EvaluateSkillData
 40575,0x1406e7320,0x14070e210,4,RE::ProcessLists::HandlePlayerLevelUpdate(ProcessLists *param_1)
 41257,0x140704970,0x14072b900,3,RE::PlayerControls::Ctor
-41271,0x140705530,0x14072c380,3,RE::PlayerControls__sub_140705530
+41266,0x140705250,0x14072c0a0,3,RE::PlayerControls::SetActivateHandlerBlocked
+41271,0x140705530,0x14072c380,3,RE::PlayerControls::SendActionToInterestedActors
+41272,0x140705940,0x14072c790,3,RE::PlayerControls::SendSprintStopToInterestedActors
+41277,0x140706070,0x14072ced0,3,RE::PlayerControls::RegisterHandler
+41278,0x1407061F0,0x14072d050,3,RE::PlayerControls::UnregisterHandler
 41346,0x140708bf0,0x14072FF80,3,"ActivateHandler::sub_140708BF0(ActivateHandler *a1, longlong a2, longlong a3)"
 41349,0x1407090a0,0x1407310b0,3,RE::JumpHandler::ProcessButton_1407090A0
 41361,0x1407096b0,0x140732b00,3,StaminaNPC::apply_PlayerControls__sub_140705530
