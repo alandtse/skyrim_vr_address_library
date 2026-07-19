@@ -1568,13 +1568,26 @@
 66989,0x140c07900,0x140c42780,4,RE::UpdateGlobalTimeMultiplier_140C07900
 67151,0x140c0d7b0,0x140c485e0,3,void BSThreadEvent::InitSDM()
 67220,0x140c10610,0x140c4b460,3,ShakeController
+67223,0x140c10860,0x140c4b740,3,RE::Rumble::Update
 67224,0x140c10b30,0x140c4ba30,4,void Rumble::DisableRumble()
-67234,0x140c10dc0,0x140c4d710,4,QuickLoot::
-67240,0x140c11430,0x140c4dd80,4,QuickLoot::
+67234,0x140c10dc0,0x140c4d710,4,RE::ControlMap::Ctor
+67237,0x140c10fd0,0x140c4d920,4,"void ControlMap::SetGamePadType(PC_GAMEPAD_TYPE a_gamePadType)"
+67240,0x140c11430,0x140c4dd80,4,"void ControlMap::LoadCustomControlMap()"
+67242,0x140c11600,0x140c4df50,3,RE::ControlMap::ProcessButtonEvent
 67243,0x140c11ae0,0x140c4e480,4,void ControlMap::PushInputContext(InputContextID a_context)
 67244,0x140c11bc0,0x140c4e560,4,void ControlMap::PopInputContext(InputContextID a_context)
+67245,0x140c11c60,0x140c4e600,4,"void ControlMap::ToggleControls(UserEvents::USER_EVENT_FLAG a_flags, bool a_enable, bool a_storeState)"
+67246,0x140c11cf0,0x140c4e690,4,void ControlMap::StoreControls()
+67247,0x140c11d10,0x140c4e6b0,4,void ControlMap::LoadStoredControls()
+67248,0x140c11d40,0x140c4e6e0,4,"void ControlMap::GetControlsState(std::uint32_t* a_enabledControls, std::uint32_t* a_storedControls)"
+67249,0x140c11d60,0x140c4e700,4,"void ControlMap::SetControlsState(std::uint32_t a_enabledControls, std::uint32_t a_storedControls)"
+67250,0x140c11d80,0x140c4e720,4,void ControlMap::ResetControls()
 67252,0x140c11f30,0x140c4e8d0,4,"void UIManager::AllowTextInput1(ControlMap *a_controlMap, bool a_allow)"
+67253,0x140c11f60,0x140c4e900,4,"bool ControlMap::GetButtonNameFromUserEvent(const BSFixedString& a_eventID, INPUT_DEVICE a_device, BSFixedString& a_buttonName)"
+67254,0x140c120b0,0x140c4ea50,4,RE::ControlMap::RefreshLinkedMappings
+67299,0x140c14b70,0x140c514e0,4,RE::ButtonEvent::IsDown
 67315,0x140c150b0,0x140c519e0,3,void BSInputDeviceManager::PollInputDevices_140c108 (float a_secsSinceLastFrame)
+67316,0x140c15180,0x140c51ac0,4,"bool BSInputDeviceManager::GetButtonNameFromID(INPUT_DEVICE a_device, std::int32_t a_id, BSFixedString& a_buttonName) const"
 67373,0x140c165e0,0x140c533a0,4,DirectInput8::IDirectInputDevice8A* BSDirectInputManager::CreateDeviceWithGUID(WinAPI::GUID* a_guid)
 67374,0x140c16620,0x140c533e0,4,void BSDirectInputManager::ReleaseDevice(DirectInput8::IDirectInputDevice8A* a_device)
 67375,0x140c16650,0x140c53410,4,"void BSDirectInputManager::GetDeviceState(DirectInput8::IDirectInputDevice8A* a_device, std::uint32_t a_size, void* a_outData)"
