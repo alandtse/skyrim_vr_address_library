@@ -1,3 +1,12 @@
+# [0.240.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.239.0...v0.240.0) (2026-07-20)
+
+
+### Features
+
+* add ControlMap/Rumble/ButtonEvent ([#145](https://github.com/alandtse/skyrim_vr_address_library/issues/145)) ([b595b8d](https://github.com/alandtse/skyrim_vr_address_library/commit/b595b8d06846fd42b7deab9d4e1dc1924a1e446d))
+* add MenuControls RegisterHandler/UnregisterHandler ([#147](https://github.com/alandtse/skyrim_vr_address_library/issues/147)) ([baef886](https://github.com/alandtse/skyrim_vr_address_library/commit/baef8864208fc5262cb62590c73a1194cf387775))
+* add PlayerControls RegisterHandler/UnregisterHandler ([#146](https://github.com/alandtse/skyrim_vr_address_library/issues/146)) ([758b9c4](https://github.com/alandtse/skyrim_vr_address_library/commit/758b9c47592ea5afd1c7a521508e620bbbfe17f4))
+
 # [0.239.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.238.0...v0.239.0) (2026-07-18)
 
 
