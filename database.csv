@@ -1340,7 +1340,7 @@
 51360,0x1408A8130,0x1408d4140,4,RE::MenuControls::GetKeyRepeatRates
 51361,0x1408A8150,0x1408d4160,4,RE::MenuControls::SetKeyRepeatRates
 51400,0x1408aa140,0x1408d68f0,2,po3tweaks::SitToWait::HandleWaitRequest
-51402,0x1408aa940,0x1408d7370,4,"bool QuickSaveLoadHandler::ProcessButton_1408AA940 (QuickSaveLoadHandler * a_this, undefined8 param_2)"
+51402,0x1408aa940,0x1408d7370,4,"bool QuickSaveLoadHandler::ProcessButton(QuickSaveLoadHandler *a_this, ButtonEvent *a_event)"
 51420,0x1408ab180,0x1408d7fe0,4,RE::MessageBoxData::CreateMessage
 51421,0x1408ab470,0x1408d82d0,3,"bool MessageBoxMenu::Create(BSString& a_message, const BSTSmartPointer<IMessageBoxCallback>& a_callback, std::uint8_t a_buttonPressOffset, std::int32_t a_warningType, std::int32_t a_menuDepth, const BSTArray<BSString>& a_buttons)"
 51422,0x1408ab5c0,0x1408d8420,3,void MessageBoxData::QueueMessage()
