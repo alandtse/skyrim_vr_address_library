@@ -1331,6 +1331,10 @@
 51122,0x140899ca0,0x1408c7d30,4,void MagicFavorites::RemoveFavorite(TESForm* a_form)
 51152,0x14089b950,0x1408c97a0,3,MagicMenu::RequestItemCardInfoDelegate()
 51223,0x1408a0230,0x1408ce4e0,4,void MagicItemList::Update_Impl(TESObjectREFR* a_owner)
+51358,0x1408A7F20,0x1408d3f30,3,RE::MenuControls::RegisterHandler
+51359,0x1408A7FF0,0x1408d4000,3,RE::MenuControls::UnregisterHandler
+51360,0x1408A8130,0x1408d4140,4,RE::MenuControls::GetKeyRepeatRates
+51361,0x1408A8150,0x1408d4160,4,RE::MenuControls::SetKeyRepeatRates
 51400,0x1408aa140,0x1408d68f0,2,po3tweaks::SitToWait::HandleWaitRequest
 51402,0x1408aa940,0x1408d7370,4,"bool QuickSaveLoadHandler::ProcessButton_1408AA940 (QuickSaveLoadHandler * a_this, undefined8 param_2)"
 51420,0x1408ab180,0x1408d7fe0,4,RE::MessageBoxData::CreateMessage
