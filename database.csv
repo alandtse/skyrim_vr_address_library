@@ -416,6 +416,8 @@
 24816,0x140383d40,0x1403935b0,4,"ObjectRefHandle& TESQuestTarget::GetTrackingRef(ObjectRefHandle& a_out, const TESQuest* a_quest)"
 24985,0x14038d990,0x14039d1c0,3,"RE::TESTopicInfo::ResponseData::PopulateResponseText"
 25083,0x140393780,0x1403a3000,4,TESTopicInfo::TESResponseList* TESTopicInfo::GetResponseList(TESResponseList* a_list)
+25154,0x140396a80,0x1403a6300,4,void BGSAcousticSpaceListener::EntityRemovedCallback(hkpEntity* a_entity)
+25155,0x140396b00,0x1403a6380,3,BGSAcousticSpaceListener::Unk_07
 25466,0x1403a4dd0,0x1403b4940,3,TESObjectREFR* TESHavokUtilities::FindCollidableRef(const hkpCollidable& a_linkedCollidable)
 25467,0x1403a4e50,0x1403b49c0,4,"float ScaleGameplayImpulseForce_1403a4e50 (float a_inputForce, bhkRigidBody * a_body, bool a_factorMass)"
 25468,0x1403a4f70,0x1403b4ae0,4,"void AddExplosionImpulse_1403a4f70 (NiAVObject * a_obj3D, hkVector4 * a_pos, float a_force, HitData * a_hitData)"
@@ -1480,6 +1482,7 @@
 60174,0x140a6fe00,0x140AAA800,4,"void hkpAabbPhantom::castRay(hkpAabbPhantom*, hkpWorldRayCastInput*, hkpWorldRayCastOutput*)"
 60175,0x140a70020,0x140AAAA20,4,"void hkpAabbPhantom::linearCast(hkpAabbPhantom*, hkpCollidable*, hkpLinearCastInput*, hkpCdPointCollector*, hkpCdPointCollector*)"
 60181,0x140a70650,0x140AAB050,4,"void hkpAabbPhantom::setAabb(hkpAabbPhantom * a_phantom, hkAabb * a_aabb)"
+60493,0x140a76450,0x140ab0e50,4,void hkpWorld::RemoveEntity(hkpEntity* a_entity)
 60502,0x140a77780,0x140ab2180,3,hkpPhantom* hkpWorld::AddPhantom(hkpPhantom* a_phantom)
 60504,0x140a77d80,0x140ab2780,3,void hkpWorld::RemovePhantom(hkpPhantom* a_phantom)
 60551,0x140a7b000,0x140ab5a00,3,"void hkpWorld::CastRay(const hkpWorldRayCastInput& a_input, hkpWorldRayCastOutput& a_output)"
@@ -1611,6 +1614,7 @@
 67438,0x140c18c30,0x140c5d290,4,bool BSInputDevice::LoadControlsDefinitionFile(const char* a_fileName) src\RE\B/BSInputDevice.cpp:38
 67441,0x140c190f0,0x140c5d750,4,"void BSInputDevice::SetButtonState(std::uint32_t a_buttonId, float a_timeSinceLastPoll, bool a_buttonWasPressed, bool a_buttonIsPressed)"
 67457,0x140c199f0,0x140c5e2a0,4,void BSPCGamepadDeviceHandler::InitializeDelegate()
+67472,0x140c1a130,0x140c5e9c0,4,void BSWin32KeyboardDevice::Poll()
 67819,0x140c28bf0,0x140c6db20,3,BSFixedString* BSFixedString::ctor8(const char* a_data)
 67834,0x140c29510,0x140c6e440,3,BSFixedString* BSFixedString::ctor16(const wchar_t* a_data)
 67844,0x140c29900,0x140c6e830,4,"void BSScaleformTranslator::GetCachedString_140c29900 (wchar_t * * a_pOut, wchar_t * a_bufIn, uint32_t a_unused)"
