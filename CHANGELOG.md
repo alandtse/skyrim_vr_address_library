@@ -1,3 +1,10 @@
+# [0.241.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.240.0...v0.241.0) (2026-07-20)
+
+
+### Features
+
+* add missing EngineFixes address library ids ([7a3d267](https://github.com/alandtse/skyrim_vr_address_library/commit/7a3d267d9c33bb532bf5891af12cf660a8b4eebd))
+
 # [0.240.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.239.0...v0.240.0) (2026-07-20)
 
 
