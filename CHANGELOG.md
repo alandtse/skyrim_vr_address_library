@@ -1,3 +1,10 @@
+# [0.242.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.241.0...v0.242.0) (2026-07-24)
+
+
+### Features
+
+* add BGSCreatedObjectManager/PlayerRegionState ([efb0fc7](https://github.com/alandtse/skyrim_vr_address_library/commit/efb0fc73a33f51b51030c9f7612640c7e448b069))
+
 # [0.241.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.240.0...v0.241.0) (2026-07-20)
 
 
