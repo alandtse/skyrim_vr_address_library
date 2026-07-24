@@ -233,7 +233,8 @@
 17392,0x140228ad0,0x140239E00,4,"void TESObjectARMO::AddToBiped(RE::TESObjectARMO* a_armor,RE::TESRace* a_race, BSTSmartPointer<BipedAnim>* a_biped, bool isFemale)"
 17439,0x140229ef0,0x14023b240,4,bool TESObjectBOOK::Read(TESObjectREFR* a_reader)
 17470,0x14022a8c0,0x14023bc10,3,BSTEventSource<BooksRead::Event>* BooksRead::GetEventSource()
-17521,0x14022cb50,0x14023dea0,3,po3tweaks::AIFadeOut::GetFadeState
+17485,0x14022b6d0,0x14023ca20,3,TESObjectCONT::Activate
+17521,0x14022cb50,0x14023dea0,3,TESObjectDOOR::Activate
 17522,0x14022d1d0,0x14023e530,2,po3tweaks::LoadDoorPrompt
 17539,0x14022e8d0,0x14023fc40,4,"void TESObjectDOOR::LinkRandomTeleportDoors (TESObjectREFR * a_door, TESObjectREFR * a_linkedDoor)"
 17689,0x140235070,0x1402463e0,4,"NiAVObject * TESObjectWEAP::GetFireNode (TESObjectWEAP * a_this, NiAVObject * a_root)"
@@ -933,7 +934,7 @@
 39568,0x1406b2530,0x1406d58a0,3,"bool PlayerCharacter::AttemptPickpocket(TESObjectREFR* a_containerRef, InventoryEntryData* a_entry, std::int32_t a_number, bool a_fromContainer)"
 39574,0x1406b3110,0x1406d6480,4,"void PlayerCharacter::SetEscaping(bool a_flag, bool a_escaped)"
 39577,0x1406b34e0,0x1406d6850,4,RE::PlayerCharacter::WeaponSwingCallBack_1406B34E0
-39584,0x1406b3a50,0x1406d6dc0,3,po3tweaks::FactionStealing::CanTake
+39584,0x1406b3a50,0x1406d6dc0,3,RE::PlayerCharacter::IsAllowedToTakeItemWithValue
 39612,0x1406b52a0,0x1406d8580,3,RE::PlayerCharacter::GetTintMask
 39614,0x1406b5450,0x1406d8730,3,RE::PlayerCharacter::GetNumTints
 39657,0x1406b6eb0,0x1406da3d0,3,"void PlayerCharacter::sub_1406B6EB0 (PlayerCharacter * a_this, float param_2, undefined8 param_3, TESObjectCELL * a_cell, bool param_5)"
@@ -1315,6 +1316,7 @@
 50885,0x1408879a0,0x1408b4ed0,3,"void Inventory3DManager::UpdateMagic3D(TESForm* a_form, std::uint32_t a_arg2)"
 50886,0x140887d10,0x1408b5240,3,void Inventory3DManager::Clear3D()
 50887,0x140887df0,0x1408b5360,3,bool Inventory3DManager::ToggleItemZoom
+50948,0x14088b9b0,0x1408b9210,3,InventoryEntryData::GetExtraListForRemoval
 50973,0x14088e050,0x1408BB820,3,DescriptionFramework::
 50978,0x14088e280,0x1408bba50,3,EssentialFavorites::Dropped::IsQuestObject
 50980,0x14088e890,0x1408bc060,3,InventoryMenu::GetItemChargedEventSource
@@ -1326,7 +1328,7 @@
 51080,0x140896930,0x1408c45e0,4,void LockpickingMenu::OpenMenu(RE::TESObjectREFR* a_target)
 51081,0x140896ac0,0x1408c4770,3,LockVariations::Model::RequestModel
 51084,0x1408971a0,0x1408c4e40,3,handtohand::LockpickingMenu::LockPickMenuSkillLevel
-51088,0x140897e10,0x1408c5ab0,3,handtohand::LockpickingMenu::LockPickSkills
+51088,0x140897e10,0x1408c5ab0,3,LockpickingMenu::Unlock
 51093,0x1408983e0,0x1408c6080,3,RememberLockpickAngle::LockpickBreakAddr
 51094,0x1408987d0,0x1408c6500,3,LockVariations::Sound::update_pick_angle
 51096,0x140898cd0,0x1408c69f0,3,LockVariations::Sound::update_lock_angle
@@ -1592,7 +1594,8 @@
 67250,0x140c11d80,0x140c4e720,4,void ControlMap::ResetControls()
 67252,0x140c11f30,0x140c4e8d0,4,"void UIManager::AllowTextInput1(ControlMap *a_controlMap, bool a_allow)"
 67253,0x140c11f60,0x140c4e900,4,"bool ControlMap::GetButtonNameFromUserEvent(const BSFixedString& a_eventID, INPUT_DEVICE a_device, BSFixedString& a_buttonName)"
-67254,0x140c120b0,0x140c4ea50,4,RE::ControlMap::RefreshLinkedMappings
+67254,0x140c120b0,0x140c4ea50,4,void ControlMap::RefreshLinkedMappings()
+67255,0x140C123a0,0x140c4ed40,3,void ControlMap::Clear()
 67299,0x140c14b70,0x140c514e0,4,RE::ButtonEvent::IsDown
 67315,0x140c150b0,0x140c519e0,3,void BSInputDeviceManager::PollInputDevices_140c108 (float a_secsSinceLastFrame)
 67316,0x140c15180,0x140c51ac0,4,"bool BSInputDeviceManager::GetButtonNameFromID(INPUT_DEVICE a_device, std::int32_t a_id, BSFixedString& a_buttonName) const"
