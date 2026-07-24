@@ -14,7 +14,7 @@ repos:
         args: ["--maxkb=50000"] # Allow large database files (sse_vr.csv is ~20MB)
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.15.15
+    rev: v0.15.22
     hooks:
       - id: ruff
         args: [--fix]
