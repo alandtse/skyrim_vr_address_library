@@ -128,7 +128,6 @@
 14411,0x140190d50,0x1401a0a80,4,RE::EnchantmentItem* RE::TESForm::GetEnchantment(RE::ExtraDataList* extraDataList)
 14412,0x140190dc0,0x1401a0af0,4,"std::uint16_t GetMaximumCharge(ExtraDataList* extraDataList) const;"
 14438,0x140191e10,0x1401a1b40,4,TESForm * TESForm::ctor_140191E10 (TESForm * a_this)
-14461,0x140194230,0x1401a3f60,4,TESForm * LookupFormById_140194230 (int a_formid)
 14461,0x140194230,0x1401a3f60,4,static TESForm * TESForm::LookupFormById_140194230 (int a_formid)
 14467,0x140194640,0x1401a4370,3,void TESForm::SetFile(TESFile* a_file)
 14471,0x1401947f0,0x1401a4520,4,"void TESForm::sub_1401947F0 (TESForm * a_this, bool param_2)"
@@ -137,7 +136,6 @@
 14508,0x140195600,0x1401a5330,4,"void TESForm::SetFormId_140195600(TESForm *a_this,uint a_formID, bool param_3)"
 14509,0x1401957e0,0x1401a5510,2,"void TESForm::AddCompileIndex(FormID& a_id, TESFile* a_file)"
 14511,0x1401958f0,0x1401a5620,4,"void TESForm::InitializeFormDataStructures()"
-14514,0x140195c20,0x1401a5950,4,"undefined8 FUN_140195c20 (longlong param_1, longlong param_2, ulonglong param_3, int * a_formID, undefined8 * param_5)"
 14514,0x140195c20,0x1401a5950,4,"uint32_t RemoteAt (undefined8 * a_this, undefined8 * param_2, uint32_t a_crc, int * a_formIdPtr, void * a_prevValueFunctor)"
 14515,0x140195ef0,0x1401a5c20,4,"bool FUN_140195ef0 (longlong param_1, undefined8 param_2, ulonglong param_3, uint32 * a_formID, TESForm * * param_5, undefined8 * param_6)"
 14537,0x1401967e0,0x1401a6510,4,"ulonglong FUN_1401967e0 (longlong a_formmap, longlong param_2, uint param_3, undefined4 * param_4)"
@@ -563,9 +561,7 @@
 32513,0x1404ffa90,0x14050ff30,3,"bool CombatController::CheckStraightPath(NiPoint3& dst, float dist, float min_dist)"
 32551,0x140501440,0x1405118e0,3,CombatBehaviorTreeManager* CombatBehaviorTree::CombatBehaviorTreeManager::GetSingleton()
 32867,0x14051e7f0,0x14052ede0,2,RenderCursorMenu
-33257,0x14053d370,0x1405400f0,4,"AccumulatingValueModifierEffect::Allocate(AccumulatingValueModifierEffect* accumulatingValueModifierEffect, Actor* caster, MagicItem* magicItem, Effect* effect)"
 33257,0x14053d370,0x1405400f0,4,AccumulatingValueModifierEffect::Allocate(AccumulatingValueModifierEffect* accumulatingValueModifierEffect
-33277,0x14053DEB0,0x140540C30,4,"ActiveEffect::Adjust(Skyrim::ActiveEffect* activeEffect, float effectiveness, bool requiresHostility)"
 33277,0x14053DEB0,0x140540C30,4,"ActiveEffect::Adjust(Skyrim::ActiveEffect* activeEffect, float effectiveness, bool requiresHostility)"
 33282,0x14053e120,0x140540ea0,4,float ActiveEffect::GetMagnitude_14053E120 (ActiveEffect * a_this)
 33283,0x14053E1B0,0x140540f30,4,ActiveEffect::Restart(Skyrim::ActiveEffect* activeEffect)
@@ -663,6 +659,8 @@
 35265,0x14059f230,0x1405a68f0,4,"AlchemyItem* BGSCreatedObjectManager::AddPotion(BSTSmartPointer<AlchemyItem>& a_out, BSTArray<Effect>& a_effects)"
 35266,0x14059f2e0,0x1405a69a0,4,"AlchemyItem* BGSCreatedObjectManager::AddPoison(BSTSmartPointer<AlchemyItem>& a_out, BSTArray<Effect>& a_effects)"
 35267,0x14059f390,0x1405a6a50,4,"void BGSCreatedObjectManager::DestroyEnchantment(EnchantmentItem* a_enchantment, bool a_isWeapon)"
+35268,0x14059f480,0x1405a6b40,4,"void BGSCreatedObjectManager::IncrementRef(AlchemyItem* a_alchItem)"
+35269,0x14059f6e0,0x1405a6da0,4,"void BGSCreatedObjectManager::DecrementRef(AlchemyItem* a_alchItem)"
 35284,0x1405a1070,0x1405a8730,4,BGSCreatedObjectManager::AddEnchantment
 35317,0x1405a2930,0x1405a9ff0,3,bool BGSImpactManager::PlayImpactDataSounds(ImpactSoundData& a_impactSoundData)
 35320,0x1405a2c60,0x1405aa320,4,"bool BGSImpactManager::PlayImpactEffect(TESObjectREFR* a_ref, BGSImpactDataSet* a_impactEffect, const BSFixedString& a_nodeName, NiPoint3& a_pickDirection, float a_pickLength, bool a_applyNodeRotation, bool a_useNodeLocalRotation)"
@@ -1369,7 +1367,6 @@
 51818,0x1408cfea0,0x1408fcf60,4,void TutorialMenu::OpenTutorialMenu(DEFAULT_OBJECT a_tutorial)
 51839,0x1408d0fe0,0x1408fe180,4,static void CloseTweenMenu()
 51843,0x1408d11f0,0x1408fe370,3,TweenMenu::
-51859,0x1408d33b0,0x1406f4b40,1,"void UI3DSceneManager::AttachChild(NiAVObject* a_obj, INTERFACE_LIGHT_SCHEME a_scheme) UNCONFIRMED"
 51859,0x1408d33b0,0x1406f4b40,3,"void UI3DSceneManager::AttachChild (pointer a_this, NiAVObject * a_obj, INTERFACE_LIGHT_SCHEME a_scheme)"
 51861,0x1408d3480,0x140900dd0,3,void UI3DSceneManager::DetachChild(NiAVObject* a_obj)
 51867,0x1408d38e0,0x140901370,4,"void UI3DSceneManager::SetCameraPosition_1408d38e0 (longlong a_this, NiPoint3 * a_pos)"
@@ -1850,7 +1847,6 @@
 99687,0x1412b8ab0,0x1412f64e0,3,"void ShadowSceneNode::ClearSceneAndFog(ShadowSceneNode* this)"
 99691,0x1412b92c0,0x1412f6cf0,4,"void ShadowSceneNode::AddLight(NiLight* a_light)"
 99692,0x1412b9320,0x1412f6d50,4,"BSLight* ShadowSceneNode::AddLight(NiLight* a_light, const LIGHT_CREATE_PARAMS& a_params)"
-99692,0x1412b9320,0x1412f6d50,4,"BSLight* ShadowSceneNode::AddLight(NiLight* a_light, const LIGHT_CREATE_PARAMS& a_params)"
 99693,0x1412b9610,0x1412f7040,3,void ShadowSceneNode::AddLight(RE::BSLight* a_light)
 99696,0x1412b99f0,0x1412f7420,4,"void ShadowSceneNode::AttachObject (ShadowSceneNode * a_this, NiAVObject * a_node)"
 99697,0x1412b9a10,0x1412f7440,4,void ShadowSceneNode::RemoveLight(NiLight* a_light) src\RE\S/ShadowSceneNode.cpp:45
@@ -1922,7 +1918,6 @@
 100721,0x1412fe020,0x141340500,4,BSRenderPassCache::Kill
 100722,0x1412fe0e0,0x1413405c0,3,BSRenderPassCache::Clear
 100771,0x1413014c0,0x141343d40,3,"bool BSDistantTreeShader::Func2_1413014C0 (BSDistantTreeShader * a_this, undefined8 param_2)"
-100781,0x141302780,0x1412f3a90,1,"void BSCubeMapCamera::Dtor()"
 100781,0x141302780,0x1412f3a90,4,void BSCubeMapCamera::Dtor()
 100810,0x1413047f0,0x14134b330,3,"BSShadowLight::ctor"
 100817,0x141304da0,0x14134b960,3,"static void BSShadowDirectionalLight::SetupFocusShadowMaps(RE::BSShadowLight* light, RE::NiCamera* camera)"
@@ -9497,7 +9492,6 @@
 514741,0x142ec5cf8,0x142f8abc8,4,RWMutex*
 514783,0x142eff440,0x142fc42f8,4,"TESLandTexture* GetDefaultLandTexture()"
 514893,0x142eff768,0x142fc4658,4,static Pathing* GetSingleton()
-514893,0x142eff768,0x142fc4658,4,static Pathing* GetSingleton()
 514923,0x142eff868,0x142fc4758,4,RE::ActorState::UnarmedWeap
 514959,0x142eff988,0x142fc4878,3,MenuTopicManager* GetSingleton()
 514966,0x142eff9c0,0x142fc48b0,3,RE::NiRTTI_REFRSyncController
@@ -9513,9 +9507,7 @@
 515509,0x142f013c8,0x142fc62b8,4,NiPoint3 GetDirection()
 515516,0x142f013f4,0x142fc62e4,4,float GetSunriseBegin
 515517,0x142f013f8,0x142fc62e8,4,float GetSunriseEnd src\RE\S/Sky.cpp:31
-515518,0x142f013fc,0x142fc62ec,1,float GetSunsetBegin src\RE\S/Sky.cpp:45
 515518,0x142f013fc,0x142fc62ec,4,float GetSunsetBegin()
-515519,0x142f01400,0x142fc62f0,1,float GetSunsetEnd src\RE\S/Sky.cpp:59
 515519,0x142f01400,0x142fc62f0,4,float GetSunsetEnd()
 515540,0x142f01780,0x142fc6670,3,RE::NiRTTI_BSFaceGenAnimationData
 515558,0x142f07ca0,0x142fccb90,3,RE::NiRTTI_BSFaceGenModelExtraData
@@ -9558,6 +9550,7 @@
 517046,0x142f27158,0x142febc58,4,BSDirectInputManager* GetSingleton()
 517051,0x142f27180,0x142febc80,3,Inventory3DManager* GetSingleton()
 517052,0x142f27188,0x142fea720,3,UI3DSceneManager* GetSingleton()
+517160,0x142f386f0,0x142ffd4f0,4,PlayerRegionState* PlayerRegionState::GetSingleton()
 517222,0x142f38950,0x142ffd750,3,RE::NiRTTI_SceneGraph
 517224,0x142f38968,0x142ffd768,4,gSaveScreenshotRequested
 517228,0x142f38978,0x142ffd778,3,TaskQueueInterface* GetSingleton()
