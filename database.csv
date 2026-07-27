@@ -18295,3 +18295,8 @@
 5375528368,0x140680db0,0x14068a230,3,RE::AIProcess::SetActorRefraction
 5388393136,0x1412c5ab0,0x141303ea0,3,RE::BSLightingShaderProperty::InvalidateTextures
 5399981752,0x141dd2eb8,0x141e901a8,4,"CalculateMyCriticalHitChance"
+35438,0x1405a7d10,0x1405af3d0,3,RE::ChainExplosion::Initialize
+35439,0x1405a7d30,0x1405af3f0,3,RE::ChainExplosion::Update
+35445,0x1405a81f0,0x1405af8b0,3,RE::ChainExplosion::ProcessEvent
+35446,0x1405a8310,0x1405af9d0,3,RE::ChainExplosion::FindTargets
+35462,0x1405a8d50,0x1405b0410,3,RE::ChainExplosion::Dtor
