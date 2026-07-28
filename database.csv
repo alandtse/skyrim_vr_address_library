@@ -18295,3 +18295,29 @@
 5375528368,0x140680db0,0x14068a230,3,RE::AIProcess::SetActorRefraction
 5388393136,0x1412c5ab0,0x141303ea0,3,RE::BSLightingShaderProperty::InvalidateTextures
 5399981752,0x141dd2eb8,0x141e901a8,4,"CalculateMyCriticalHitChance"
+75148,0x140d5ede0,0x140da8dc0,3,NiObject* BSProceduralLightningController::CreateClone(NiCloningProcess& a_cloning)
+75150,0x140d5ef80,0x140da8f60,3,void BSProceduralLightningController::LoadBinary(NiStream& a_stream)
+75151,0x140d5eff0,0x140da8fd0,3,void BSProceduralLightningController::LinkObject(NiStream& a_stream)
+75152,0x140d5f090,0x140da9070,3,bool BSProceduralLightningController::RegisterStreamables(NiStream& a_stream)
+75153,0x140d5f130,0x140da9110,3,void BSProceduralLightningController::SaveBinary(NiStream& a_stream)
+75154,0x140d5f1c0,0x140da91a0,3,bool BSProceduralLightningController::IsEqual(NiObject* a_object)
+75158,0x140d5f5e0,0x140da95c0,3,void BSProceduralLightningController::Update(float a_time)
+75159,0x140d5fc00,0x140da9cc0,3,const char* BSProceduralLightningController::GetCtlrID()
+75160,0x140d5fc10,0x140da9cd0,3,bool BSProceduralLightningController::TargetIsRequiredType() const
+75161,0x140d5fc40,0x140da9d00,3,std::uint16_t BSProceduralLightningController::GetInterpolatorCount() const
+75162,0x140d5fc50,0x140da9d10,3,const char* BSProceduralLightningController::GetInterpolatorID(std::uint16_t a_index)
+75163,0x140d5fc70,0x140da9d30,3,std::uint16_t BSProceduralLightningController::GetInterpolatorIndex(const char* a_id) const
+75164,0x140d5fce0,0x140da9da0,3,std::uint16_t BSProceduralLightningController::GetInterpolatorIndexFx(const BSFixedString& a_id) const
+75165,0x140d5fd00,0x140da9dc0,3,NiInterpolator* BSProceduralLightningController::GetInterpolator(std::uint16_t a_index) const
+75166,0x140d5fd20,0x140da9de0,3,"void BSProceduralLightningController::SetInterpolator(NiInterpolator* a_interpolator, std::uint16_t a_index)"
+75167,0x140d5fd70,0x140da9e30,3,NiInterpolator* BSProceduralLightningController::CreatePoseInterpolator(std::uint16_t a_index)
+75168,0x140d5fd80,0x140da9e40,3,"void BSProceduralLightningController::SynchronizePoseInterpolator(NiInterpolator* a_interp, std::uint16_t a_index)"
+75169,0x140d5fd90,0x140da9e50,3,"NiBlendInterpolator* BSProceduralLightningController::CreateBlendInterpolator(std::uint16_t a_index, bool a_managerControlled, bool a_accumulateAnimations, float a_weightThreshold, std::uint8_t a_arraySize) const"
+75170,0x140d5fe60,0x140da9f20,3,"void BSProceduralLightningController::GuaranteeTimeRange(float a_startTime, float a_endTime)"
+75171,0x140d5fe70,0x140da9f30,3,void BSProceduralLightningController::ProcessClone(NiCloningProcess& a_cloning)
+75190,0x140d60880,0x140daa9a0,3,void BSProceduralLightningController::~BSProceduralLightningController()
+75191,0x140d608c0,0x140daa9e0,3,void BSProceduralLightningTasklet::~BSProceduralLightningTasklet()
+75194,0x140d60940,0x140daaa60,3,const NiRTTI* BSProceduralLightningController::GetRTTI() const
+75196,0x140d60990,0x140daaab0,3,"bool BSProceduralLightningController::InterpolatorIsCorrectType(NiInterpolator* a_interpolator, std::uint16_t a_index) const"
+75198,0x140d60ca0,0x140daadc0,3,void BSProceduralLightningTasklet::Func3()
+75199,0x140d60cb0,0x140daadd0,3,void BSProceduralLightningTasklet::Func2()
