@@ -18300,3 +18300,4 @@
 35445,0x1405a81f0,0x1405af8b0,3,RE::ChainExplosion::ProcessEvent
 35446,0x1405a8310,0x1405af9d0,3,RE::ChainExplosion::FindTargets
 35462,0x1405a8d50,0x1405b0410,3,RE::ChainExplosion::Dtor
+35463,0x1405a8d90,0x1405b0450,3,RE::IExplosionFactory::Dtor
