@@ -6483,6 +6483,7 @@ sseid,aeid,confidence,name
 50653,51547,1,
 50655,51549,1,
 50657,51554,1,
+50718,51612,4,RE::HUDMenu::ProcessMessage
 50749,51644,1,BSTEventSink_BSRemoteGamepadEvent_::Handle_*
 50750,51645,1,HUDObject::RegisterHUDComponent_*
 50751,51646,1,
@@ -6495,7 +6496,7 @@ sseid,aeid,confidence,name
 50763,51658,1,HUDMeter::ProcessMessage_*
 50764,51659,1,
 50766,51661,1,ActorValueMeter::ProcessMessage_*
-50773,51668,1,Compass::Update_*
+50773,51668,4,RE::Compass::Update
 50776,51671,1,EnemyHealth::Update_*
 50782,51677,1,FloatingQuestMarker::sub_*
 50783,51678,1,FloatingQuestMarker::RegisterHUDComponent_*
