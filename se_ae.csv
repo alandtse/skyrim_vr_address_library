@@ -7165,7 +7165,9 @@ sseid,aeid,confidence,name
 80302,82325,3,RE::BSScaleformManager::LoadMovie
 80446,82562,3,RE::GString::Ctor
 80905,83005,3,GASObject::GASObjectInterface_Func4
+80915,83015,3,GASObject::GASObjectInterface_Func9
 80929,83029,3,SetMemberFallback
+80931,83031,3,GASObject::GASObjectInterface_Func10
 82462,84557,3,RE::GSysAllocPaged::InitHeapEngine
 82464,84559,3,RE::GSysAllocPaged::ShutdownHeapEngine
 85760,87840,1,

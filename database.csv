@@ -1819,7 +1819,9 @@
 80547,0x140ed80b0,0x140f30f20,3,RE::GFxMovieView::InvokeNoReturn
 80620,0x140edbfa0,0x140f38ca0,3,RE::GFxLoader::CreateMovie
 80905,0x140ee98f0,0x140f465f0,3,GASObject::GASObjectInterface_Func4
+80915,0x140eea220,0x140f46f20,3,GASObject::GASObjectInterface_Func9
 80929,0x140eeada0,0x140f47aa0,3,SetMemberFallback
+80931,0x140eeb3b0,0x140f480b0,3,GASObject::GASObjectInterface_Func10
 82382,0x140f45350,0x140fa2050,4,bool BSScaleformImageLoader::AddTexture(BSScaleformExternalTexture& a_texture)
 82383,0x140f45820,0x140fa2520,4,void BSScaleformImageLoader::RemoveTexture(BSScaleformExternalTexture& a_texture)
 82462,0x140f48270,0x140fa4f70,3,bool GSysAllocPaged::InitHeapEngine(const void* a_heapDesc)
