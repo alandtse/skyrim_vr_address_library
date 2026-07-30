@@ -1784,6 +1784,7 @@
 80061,0x140ec31d0,0x140f1fca0,4,RE::UIMessageQueue::CreateUIMessageData
 80077,0x140ec3d50,0x140f20820,3,po3tweaks::SitToWait::ProcessMenu
 80087,0x140ec4420,0x140f20ef0,3,bool BSScaleformManager::FileExists(const char* a_fileName)
+80178,0x140ec79c0,0x140f24510,4,GRefCountNTSImpl::Release
 80197,0x140ec83a0,0x140f24ef0,3,RE::GFxValue::ObjectInterface::AttachMovie
 80201,0x140ec8b10,0x140f25660,4,"bool GFxValue::ObjectInterface::CreateEmptyMovieClip (void * a_this, void * a_data, GFxValue * a_movieClip, char * a_instanceName, int32_t a_depth)"
 80207,0x140ec9490,0x140f25fe0,3,RE::GFxValue::ObjectInterface::DeleteMember
