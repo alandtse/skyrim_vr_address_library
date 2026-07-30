@@ -30138,3 +30138,6 @@ sseid,aeid,confidence,name
 847305,290566,1,??_R3type_info@@8
 847306,290570,1,??_R3BSSocket@@8
 847307,290574,1,??_R3BSSocketServer@@8
+81525,83579,3,GFxValue::ObjectInterface::ResolveCharacter
+81751,83812,3,GFxValue::ObjectInterface::ResolveCharacter2
+81202,83265,3,GASEnvironment::FindTarget
