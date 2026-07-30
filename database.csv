@@ -1938,6 +1938,7 @@
 100540,0x1412eeb90,0x141330a40,3,"RENDER_TARGET FUN_1412eeb90 (BSImagespaceShader * * param_1, RENDER_TARGET param_2, RENDER_TARGET param_3)"
 100563,0x1412f2020,0x141338400,3,"void BSLightingShader::Func4_1412F2020 (BSLightingShader * a_this, undefined8 param_2, undefined8 param_3)"
 100565,0x1412f2bb0,0x141338f60,3,"void BSLightingShader::Func6_1412F2BB0 (BSLightingShader * a_this, undefined8 param_2, undefined8 param_3, undefined8 param_4)"
+100588,0x1412f5630,0x14133c260,3,"void BSLightingShaderMaterialLandscape::sub_1412F5630 (BSLightingShaderMaterialLandscape * a_this)"
 100602,0x1412f63d0,0x141333470,3,"void BSWaterShader::Func4_1412F63D0 (BSWaterShader * a_this, undefined8 param_2)"
 100710,0x1412fd790,0x14133fcb0,4,BSRenderPass::Set
 100711,0x1412fd830,0x14133fd50,4,"BSRenderPass::SetLights"
