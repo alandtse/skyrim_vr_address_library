@@ -869,6 +869,7 @@
 38062,0x14063de00,0x140646e90,3,"void SetBaseValue(ActorValueStorage*, ActorValue, float a_value)"
 38063,0x14063E080,0x140647110,2,"void ResetBaseValue(ActorValueStorage*, ActorValue)"
 38064,0x14063e2b0,0x140647340,3,void ClearBaseValues(ActorValueStorage*)
+38071,0x14063ece0,0x140647d70,3,void ClearModifiers(ActorValueStorage*)
 38079,0x14063f810,0x1406488a0,3,bool TaskQueueInterface::ShouldUseTaskQueue()
 38085,0x14063fa50,0x140648ae0,3,void RenderFrame()
 38118,0x140640600,0x140649910,2,PapyrusTweaks::Job_VM_Update

@@ -4860,6 +4860,7 @@ sseid,aeid,confidence,name
 37964,38920,1,
 37965,38921,1,
 37968,38924,1,
+38071,39026,3,ClearModifiers
 38079,39033,3,RE::TaskQueueInterface::ShouldUseTaskQueue
 38101,39057,1,Job_Destructible_*
 38102,39058,1,Job_Pick_reference_*
