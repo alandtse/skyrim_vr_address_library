@@ -1,3 +1,10 @@
+# [0.244.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.243.0...v0.244.0) (2026-07-30)
+
+
+### Features
+
+* add SynchronizedMap/BSTaskManager ids ([2b32301](https://github.com/alandtse/skyrim_vr_address_library/commit/2b32301b9d40462ef3f129f49dc50ff9be6a7e34))
+
 # [0.243.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.242.0...v0.243.0) (2026-07-30)
 
 
