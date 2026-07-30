@@ -865,7 +865,10 @@
 37945,0x140638190,0x1406411a0,4,RE::ActorEquipManager::UnequipObject
 38047,0x14063cfb0,0x140646020,3,StaminaNPC::apply_deny_player_attack_or_bash
 38048,0x14063d0f0,0x140646160,3,HandleAction
+38061,0x14063dd60,0x140646df0,3,"bool GetBaseValue(ActorValueStorage*, ActorValue, float* a_value)"
+38062,0x14063de00,0x140646e90,3,"void SetBaseValue(ActorValueStorage*, ActorValue, float a_value)"
 38063,0x14063E080,0x140647110,2,"void ResetBaseValue(ActorValueStorage*, ActorValue)"
+38064,0x14063e2b0,0x140647340,3,void ClearBaseValues(ActorValueStorage*)
 38079,0x14063f810,0x1406488a0,3,bool TaskQueueInterface::ShouldUseTaskQueue()
 38085,0x14063fa50,0x140648ae0,3,void RenderFrame()
 38118,0x140640600,0x140649910,2,PapyrusTweaks::Job_VM_Update
@@ -894,6 +897,7 @@
 38900,0x14067fe60,0x1406892e0,4,LLF::AIProcess_CalculateLightValue_GetLuminance
 38966,0x140681fd0,0x14068b440,4,"void FUN_140681fd0 (undefined8 param_1, Actor * a_actor)"
 38967,0x140682020,0x14068b490,4,void FUN_140682020 (longlong param_1)
+39017,0x1406894b0,0x140692910,3,FUN_1406894b0
 39159,0x140692390,0x14069B990,2,"void ResetCachedBaseValue(CachedValues*, ActorValue)"
 39171,0x1406928c0,0x14069bec0,4,Character * Character::ctor (Character * a_this)
 39175,0x140692cd0,0x14069c2d0,3,RE::PlayerCharacter::GetArmorValue
