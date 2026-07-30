@@ -1684,10 +1684,26 @@
 72790,0x140d02aa0,0x140d495f0,3,"void NiParticleSystem::CopyMembersFrom(NiParticleSystem* a_src, NiParticleSystem* a_dst, NiCloningProcess& a_cloning)"
 72799,0x140d03330,0x140d49ec0,4,void NiParticleSystem::AddModifier(NiPSysModifier* a_modifier)
 73882,0x140d28c40,0x140d70310,3,"Setting * SettingT<T1>::SetStringValue_140D28C40 (Setting * a_this, char * a_string)"
+73893,0x140d29090,0x140d70fb0,3,"void BSTaskManager::BSTaskManager(BSTaskManager* a_this, std::uint32_t a_extraNodes, std::uint32_t a_threadCount, std::uint32_t a_bucketCount)"
+73894,0x140d292e0,0x140d71200,3,"void BSTaskManager::~BSTaskManager(BSTaskManager* a_this)"
+73896,0x140d29490,0x140d713b0,3,"void BSTaskManager::ResubmitTask(BSTask* a_task)"
 73897,0x140d29580,0x140d714a0,3,"void IOManager::NotifyTaskComplete(RE::BSTask* a_task)"
+73915,0x140d2a620,0x140d727f0,3,"void BSTaskManager::InitAllocators(BSTaskManager* a_this)"
+73916,0x140d2a6b0,0x140d72880,3,"void SynchronizedMap<std::int64_t,NiPointer<BSTask>>::SynchronizedMap(SynchronizedMap<std::int64_t,NiPointer<BSTask>>* a_this, std::uint32_t a_poolSize, std::uint32_t a_bucketCount, std::uint32_t a_bucketCapacity)"
+73917,0x140d2a860,0x140d72a30,3,"void* SynchronizedMap<std::int64_t,NiPointer<BSTask>>::InitThreadCache(IMemoryHeap* a_buffer, std::uint32_t a_capacity)"
+73920,0x140d2aad0,0x140d72d30,3,"void SynchronizedMap<std::int64_t,NiPointer<BSTask>>::~SynchronizedMap(SynchronizedMap<std::int64_t,NiPointer<BSTask>>* a_this)"
+73923,0x140d2ae00,0x140d73060,3,"SynchronizedMap<std::int64_t,NiPointer<BSTask>>* SynchronizedMap<std::int64_t,NiPointer<BSTask>>::dtor_deleting(SynchronizedMap<std::int64_t,NiPointer<BSTask>>* a_this)"
+73924,0x140d2ae40,0x140d730a0,3,"BSTaskManager* BSTaskManager::dtor_deleting(BSTaskManager* a_this)"
+73943,0x140d2b840,0x140d73ae0,3,"std::uint32_t SynchronizedMap<std::int64_t,NiPointer<BSTask>>::GetBucketIndex(std::int64_t a_key)"
+73951,0x140d2be20,0x140d741c0,3,"bool SynchronizedMap<std::int64_t,NiPointer<BSTask>>::Erase(std::int64_t a_key, NiPointer<BSTask>& a_valueOut)"
+73952,0x140d2bef0,0x140d74290,3,"bool SynchronizedMap<std::int64_t,NiPointer<BSTask>>::FindFirstMatching(NiPointer<BSTask>& a_valueOut)"
+73958,0x140d2c640,0x140d749e0,3,"bool SynchronizedMap<std::int64_t,NiPointer<BSTask>>::FindOrInsert(std::int64_t a_key, NiPointer<BSTask>& a_value, IMemoryHeap* a_heap, bool a_skipDuplicates)"
+73959,0x140d2c710,0x140d74ab0,3,"bool SynchronizedMap<std::int64_t,NiPointer<BSTask>>::FindOrInsertByHash(std::int64_t a_key, NiPointer<BSTask>& a_value, IMemoryHeap* a_heap, bool a_skipDuplicates)"
 73967,0x140d2cb30,0x140d74ed0,3,IOManager::IOManager()
 73968,0x140d2cc50,0x140d74ff0,3,IOManager::~IOManager()
 73970,0x140d2cec0,0x140d75270,3,"void IOManager::ResubmitTask(RE::BSTask* a_task)"
+73975,0x140d2d500,0x140d758c0,3,"std::uint32_t IOManager::GetBucketIndex(std::uint64_t a_packedTaskId)"
+73985,0x140d2d860,0x140d75c20,3,"IOManager* IOManager::dtor_deleting(IOManager* a_this)"
 74040,0x140d2f220,0x140d775e0,4,"BSResource::ErrorCode BSModelDB::Demand(const char* a_modelPath, NiPointer<NiNode>& a_modelOut, const DBTraits::ArgsType& a_args)"
 74236,0x140d38120,0x140d805b0,3,RE::INISettingCollection::WriteSetting
 74237,0x140d38310,0x14053c550,3,RE::INISettingCollection::ReadSetting
