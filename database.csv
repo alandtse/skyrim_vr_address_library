@@ -1797,7 +1797,7 @@
 80217,0x140ec9eb0,0x140f26a00,4,"bool GFxValue::ObjectInterface::GetDisplayMatrix(void* a_data, GMatrix2D* a_mat) const"
 80218,0x140ec9f30,0x140f26a80,3,RE::GFxValue::ObjectInterface::GetElement
 80222,0x140eca150,0x140f26ca0,3,RE::GFxValue::ObjectInterface::GetMember
-80229,0x140eca4e0,0x140f27030,4,"undefined8 GFxValue::ObjectInterface::sub_140eca4e0 (longlong * a_this, longlong param_2, undefined8 param_3, undefined8 param_4)"
+80229,0x140eca4e0,0x140f27030,4,"bool GFxValue::ObjectInterface::GotoAndPlay(void* a_data, std::uint32_t a_frame, bool a_stop) (numeric-frame overload; sibling of id 80230's string-frame overload -- identical vtable-dispatch pattern to it, minus the frame-label-resolution step; all 3 confirmed call sites always pass true for a_stop)"
 80230,0x140eca570,0x140f270c0,3,RE::GFxValue::ObjectInterface::GotoAndPlay
 80231,0x140eca620,0x140f27170,3,RE::GFxValue::ObjectInterface::HasMember
 80233,0x140eca860,0x140f273b0,3,RE::GFxValue::ObjectInterface::Invoke
@@ -1812,9 +1812,9 @@
 80265,0x140ecc960,0x140f294b0,3,RE::GFxValue::ObjectInterface::SetElement
 80268,0x140eccba0,0x140f296f0,3,RE::GFxValue::ObjectInterface::SetMember
 80270,0x140ecccf0,0x140f29840,3,RE::GFxValue::ObjectInterface::SetText
-80274,0x140eccf60,0x140f29ab0,4,"void GFxValue::ObjectInterface::sub_140eccf60 (longlong ** param_1, ulonglong * a_result)"
-80275,0x140ecd150,0x140f29ca0,4,"void GFxValue::ObjectInterface::sub_140ecd150 (longlong * param_1, ulonglong * a_result, longlong param_3)"
-80278,0x140ecd3c0,0x140f29f10,3,"void GFxValue::ObjectInterface::sub_140ecd3c0 (longlong * a_this, longlong a_data, longlong * a_visitor, uint32_t a_idx, int32_t a_count)"
+80274,0x140eccf60,0x140f29ab0,4,"GString GFxValue::ToString() const (real implementation of the already-documented public GFxValue::ToString; a type-tag switch converting undefined/null/bool/number/string/widestring inline, delegating object/array/displayobject cases to id 80275)"
+80275,0x140ecd150,0x140f29ca0,4,"void GFxValue::ObjectInterface::ObjectToString(void* a_data, GString* a_result) const (helper called by id 80274's ToString for object/array/displayobject-typed values; resolves the value's ObjectInterface pointer then a virtual call to fetch its string form -- exact public API name unconfirmed, name/signature descriptive not asserted)"
+80278,0x140ecd3c0,0x140f29f10,3,"bool GFxValue::ObjectInterface::RemoveElements(void* a_data, std::uint32_t a_idx, std::int32_t a_count) (already-declared CommonLibVR signature; matches decompiled index/count-range removal with per-type refcount release)"
 80279,0x140ecd630,0x140f2a180,4,"void GFxValue::ObjectInterface::VisitMembers(void* a_data, ObjVisitor* a_visitor, bool a_isDObj)"
 80287,0x140ecd970,0x140f2a510,3,void IMenu::RefreshPlatform()
 80294,0x140ecdee0,0x140f2abd0,4,void BSScaleformExternalTexture::ReleaseTexture()

@@ -7166,10 +7166,10 @@ sseid,aeid,confidence,name
 76171,77999,3,RE::NiAVObject::UpdateRigidBodySettings
 76271,78103,3,RE::NiAVObject::SetRigidConstraints
 80087,82411,3,RE::BSScaleformManager::FileExists
-80229,82252,3,GFxValue::ObjectInterface::sub_140eca4e0
-80274,82297,3,GFxValue::ObjectInterface::sub_140eccf60
-80275,82298,3,GFxValue::ObjectInterface::sub_140ecd150
-80278,82301,3,GFxValue::ObjectInterface::sub_140ecd3c0
+80229,82252,3,GFxValue::ObjectInterface::GotoAndPlay
+80274,82297,3,GFxValue::ToString
+80275,82298,3,GFxValue::ObjectInterface::ObjectToString
+80278,82301,3,GFxValue::ObjectInterface::RemoveElements
 80302,82325,3,RE::BSScaleformManager::LoadMovie
 80446,82562,3,RE::GString::Ctor
 82462,84557,3,RE::GSysAllocPaged::InitHeapEngine
