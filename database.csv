@@ -61,7 +61,7 @@
 13148,0x140152030,0x140162a70,4,"undefined8 sub_140152030 (TES * a_this, undefined8 param_2, undefined8 param_3, float param_4)"
 13159,0x1401535d0,0x140164020,3,void TES::PurgeBufferedCells()
 13170,0x140153d00,0x140164750,3,void TES::SetWorldSpace(TES* a_tes)
-13171,0x140153f80,0x1401649d0,4,WashThatBloodOff::Rain::Manager::Load_Interior
+13171,0x140153f80,0x1401649d0,4,"RE::TES::SetCurrentCell(RE::TESObjectCELL* a_cell, const RE::NiPoint3& a_position, float a_unk4)"
 13172,0x1401545f0,0x140165040,3,WashThatBloodOff::Rain::Manager::Leave_Interior
 13174,0x140154db0,0x140165800,4,"longlong sub_140154DB0 (TES * a_this, undefined8 a_2, undefined8 param_3)"
 13177,0x140155090,0x140165ae0,3,"TESObjectCELL* TES::GetCell(const NiPoint3& a_position)"
@@ -77,6 +77,7 @@
 13213,0x1401575d0,0x140168020,4,void sub_1401575D0 (TES * a_this)
 13221,0x1401580c0,0x140168b70,3,NiAVObject* TES::Pick(bhkPickData& a_pickData)
 13224,0x140158350,0x140168e00,3,po3tweaks::ToggleCollisionFix::ToggleCollision
+13230,0x140158970,0x140169420,4,"void TES::FinishLoad()"
 13233,0x140158e70,0x140169920,3,void sub_140158E70 (TES * a_this)
 13240,0x140159290,0x140169d50,4,"void TES::ClearGrassFadeAt(int a_x, int a_y)"
 13260,0x14015af70,0x14016ba30,4,"bool NiNode::ToggleMasterParticleAddonNodes(const NiNode* a_node, bool a_enable)"

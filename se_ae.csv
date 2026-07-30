@@ -2002,7 +2002,7 @@ sseid,aeid,confidence,name
 13161,13306,1,TES::sub_*
 13164,13309,1,
 13165,13310,1,
-13171,13316,3,WashThatBloodOff::Rain::Manager::Load_Interior
+13171,13316,4,"RE::TES::SetCurrentCell(RE::TESObjectCELL* a_cell, const RE::NiPoint3& a_position, float a_unk4)"
 13172,13317,3,WashThatBloodOff::Rain::Manager::Leave_Interior
 13177,13322,3,RE::TES::Getcell
 13178,13323,1,TES::sub_*
@@ -2026,7 +2026,7 @@ sseid,aeid,confidence,name
 13222,13372,1,
 13224,13375,3,po3tweaks::ToggleCollisionFix::ToggleCollision
 13226,13377,1,
-13230,13381,1,TES::sub_*
+13230,13381,4,"void RE::TES::FinishLoad()"
 13237,13388,1,TES::sub_*
 13238,13389,1,TES::sub_*
 13240,13391,1,
