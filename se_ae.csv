@@ -7153,6 +7153,10 @@ sseid,aeid,confidence,name
 69447,70824,3,RE::NiTimeController::ComputeScaledTime
 69449,70826,3,RE::NiTimeController::ProcessClone
 69564,70948,3,RE::BSDynamicTriShape::BSDynamicTriShape
+73897,75634,3,IOManager::NotifyTaskComplete
+73967,75703,3,IOManager::IOManager
+73968,75704,3,IOManager::~IOManager
+73970,75706,3,IOManager::ResubmitTask
 75507,77299,3,RE::RendererData::CreateRenderTexture
 76170,77998,3,RE::NiAVObject::SetCollisionLayer
 76171,77999,3,RE::NiAVObject::UpdateRigidBodySettings
@@ -19285,7 +19289,7 @@ sseid,aeid,confidence,name
 524539,411118,3,RE::NiRTTI_NiPSysCollider
 524540,411119,1,
 524541,411120,1,
-524542,411121,1,
+524542,411121,3,IOManager::singleton
 524543,411122,1,
 524544,411123,1,
 524545,411124,1,
