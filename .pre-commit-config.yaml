@@ -24,3 +24,6 @@ repos:
     rev: v1.7.12
     hooks:
       - id: actionlint
+
+ci:
+  autoupdate_commit_msg: "chore(deps): pre-commit autoupdate"
