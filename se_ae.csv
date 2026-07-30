@@ -7166,6 +7166,7 @@ sseid,aeid,confidence,name
 76171,77999,3,RE::NiAVObject::UpdateRigidBodySettings
 76271,78103,3,RE::NiAVObject::SetRigidConstraints
 80087,82411,3,RE::BSScaleformManager::FileExists
+80225,82248,3,GFxValue::ObjectInterface::GetText
 80229,82252,3,GFxValue::ObjectInterface::GotoAndPlay
 80274,82297,3,GFxValue::ToString
 80275,82298,3,GFxValue::ObjectInterface::ObjectToString

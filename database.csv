@@ -1797,6 +1797,7 @@
 80217,0x140ec9eb0,0x140f26a00,4,"bool GFxValue::ObjectInterface::GetDisplayMatrix(void* a_data, GMatrix2D* a_mat) const"
 80218,0x140ec9f30,0x140f26a80,3,RE::GFxValue::ObjectInterface::GetElement
 80222,0x140eca150,0x140f26ca0,3,RE::GFxValue::ObjectInterface::GetMember
+80225,0x140eca320,0x140f26e70,3,"void GFxValue::ObjectInterface::GetText(void* a_data, GFxValue* a_val, bool a_isDObj) const (tentative name; symmetric getter to confirmed SetText id 80270 -- checks TextField type via vtable+0x160, reads via vtable+0x2d8, else falls back to GetMember(this,data,\"text\"/\"htmlText\",val,isDObj); structurally confirmed identical in SE/AE/VR; not currently exposed as a public GFxValue::ObjectInterface method in CommonLibVR headers)"
 80229,0x140eca4e0,0x140f27030,4,"bool GFxValue::ObjectInterface::GotoAndPlay(void* a_data, std::uint32_t a_frame, bool a_stop) (numeric-frame overload; sibling of id 80230's string-frame overload -- identical vtable-dispatch pattern to it, minus the frame-label-resolution step; all 3 confirmed call sites always pass true for a_stop)"
 80230,0x140eca570,0x140f270c0,3,RE::GFxValue::ObjectInterface::GotoAndPlay
 80231,0x140eca620,0x140f27170,3,RE::GFxValue::ObjectInterface::HasMember
