@@ -1,3 +1,19 @@
+# [0.243.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.242.0...v0.243.0) (2026-07-30)
+
+
+### Bug Fixes
+
+* correct mislabeled TES id, add FinishLoad ([d4c4962](https://github.com/alandtse/skyrim_vr_address_library/commit/d4c49623ae7a0ab8a48e812230ee2ed36da9ee59))
+
+
+### Features
+
+* add BSTaskletManager ids ([5dabd5b](https://github.com/alandtse/skyrim_vr_address_library/commit/5dabd5bfcae68d84278f973b864f3579fae96f75))
+* add LoadedAreaBound method ids ([b21120b](https://github.com/alandtse/skyrim_vr_address_library/commit/b21120bc96eec1258b5ed84b7419e860084d1bff))
+* add QuickLoot IE ([14391eb](https://github.com/alandtse/skyrim_vr_address_library/commit/14391ebbc534d29cd3a1bb56097848a4767e8e5c))
+* register BGSAcousticSpace::Deactivate id ([eec5565](https://github.com/alandtse/skyrim_vr_address_library/commit/eec55653c957e6cc0d43a9b0c7343fdc07fc778c))
+* register IOManager singleton and core methods ([fe92b5b](https://github.com/alandtse/skyrim_vr_address_library/commit/fe92b5b4447b5d1a3cbdcf728b4c39969b82a6ca))
+
 # [0.242.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.241.0...v0.242.0) (2026-07-24)
 
 
