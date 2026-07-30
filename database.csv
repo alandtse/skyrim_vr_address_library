@@ -1312,7 +1312,11 @@
 50757,0x1408808d0,0x1408ae1e0,3,HUDNotifications::Update
 50758,0x140880fd0,0x1408ae8e0,3,undefined8 ProcessMessage_140880FD0 (HUDNotifications * a_this)
 50771,0x140881cc0,0x1408af5c0,3,TrueHUD::HUDChargeMeter::Update_140881CC0
+50775,0x1408823f0,0x1408afd30,3,"void __thiscall Compass::SetMarkers (Compass * a_this)"
 50776,0x140882520,0x1408afe70,3,EnemyHealth::Update
+50826,0x1408856f0,0x1408b2bd0,3,"undefined8 HUDMarkerManager::UpdateQuests (HUDMarkerManager * a_this, TESQuest ** a_quest, longlong * param_3)"
+50851,0x140885fe0,0x1408b3430,3,"undefined8 HUDMarkerManager::AddMarker (HUDMarkerManager * a_this, longlong param_2, longlong param_3, undefined8 param_4, uint32_t param_5)"
+50870,0x140886c60,0x1408b4170,3,"void HUDMarkerManager::UpdateLocations (HUDMarkerManager * a_this)"
 50881,0x140887600,0x1408b4b40,3,"void Inventory3DManager::Begin3D (Inventory3DManager * a_this, INTERFACE_LIGHT_SCHEME a_scheme)"
 50882,0x140887750,0x1408b4c90,3,std::uint32_t Inventory3DManager::Render()
 50883,0x140887810,0x1408b4d50,3,void Inventory3DManager::End3D
@@ -1793,6 +1797,7 @@
 80217,0x140ec9eb0,0x140f26a00,4,"bool GFxValue::ObjectInterface::GetDisplayMatrix(void* a_data, GMatrix2D* a_mat) const"
 80218,0x140ec9f30,0x140f26a80,3,RE::GFxValue::ObjectInterface::GetElement
 80222,0x140eca150,0x140f26ca0,3,RE::GFxValue::ObjectInterface::GetMember
+80229,0x140eca4e0,0x140f27030,4,"undefined8 GFxValue::ObjectInterface::sub_140eca4e0 (longlong * a_this, longlong param_2, undefined8 param_3, undefined8 param_4)"
 80230,0x140eca570,0x140f270c0,3,RE::GFxValue::ObjectInterface::GotoAndPlay
 80231,0x140eca620,0x140f27170,3,RE::GFxValue::ObjectInterface::HasMember
 80233,0x140eca860,0x140f273b0,3,RE::GFxValue::ObjectInterface::Invoke
@@ -1807,6 +1812,9 @@
 80265,0x140ecc960,0x140f294b0,3,RE::GFxValue::ObjectInterface::SetElement
 80268,0x140eccba0,0x140f296f0,3,RE::GFxValue::ObjectInterface::SetMember
 80270,0x140ecccf0,0x140f29840,3,RE::GFxValue::ObjectInterface::SetText
+80274,0x140eccf60,0x140f29ab0,4,"void GFxValue::ObjectInterface::sub_140eccf60 (longlong ** param_1, ulonglong * a_result)"
+80275,0x140ecd150,0x140f29ca0,4,"void GFxValue::ObjectInterface::sub_140ecd150 (longlong * param_1, ulonglong * a_result, longlong param_3)"
+80278,0x140ecd3c0,0x140f29f10,3,"void GFxValue::ObjectInterface::sub_140ecd3c0 (longlong * a_this, longlong a_data, longlong * a_visitor, uint32_t a_idx, int32_t a_count)"
 80279,0x140ecd630,0x140f2a180,4,"void GFxValue::ObjectInterface::VisitMembers(void* a_data, ObjVisitor* a_visitor, bool a_isDObj)"
 80287,0x140ecd970,0x140f2a510,3,void IMenu::RefreshPlatform()
 80294,0x140ecdee0,0x140f2abd0,4,void BSScaleformExternalTexture::ReleaseTexture()
@@ -9621,6 +9629,8 @@
 519572,0x142f4c8f8,0x143011cf0,4,IGiftMenuScriptCallback* GiftMenu::GetCallbackFn()
 519577,0x142f4c908,0x143011d30,4,LAST_LOCATION
 519579,0x142f4c910,0x143011d40,4,TrueHUD::g_worldToCamMatrix
+519587,0x142f4c950,0x143011d18,3,HUDMarker::FrameOffsets
+519611,0x142f4ca00,0x143011e20,3,HUDMarkerManager
 519618,0x142f4ded0,0x1430133a8,4,TrueHUD::g_viewPort
 519620,0x142f4df28,0x143013408,4,void Inventory3DManager::SetMouseRotation(bool a_active)
 519716,0x142f4e240,0x143013728,3,TESObjectREFR* GetTargetReference()
