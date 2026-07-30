@@ -30142,3 +30142,5 @@ sseid,aeid,confidence,name
 81525,83579,3,GFxValue::ObjectInterface::ResolveCharacter
 81751,83812,3,GFxValue::ObjectInterface::ResolveCharacter2
 81202,83265,3,GASEnvironment::FindTarget
+73914,75651,3,BSTaskManagerThread::Run
+73925,75666,3,BSTaskManagerThread::dtor_deleting
