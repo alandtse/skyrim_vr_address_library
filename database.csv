@@ -18329,3 +18329,7 @@
 5375528368,0x140680db0,0x14068a230,3,RE::AIProcess::SetActorRefraction
 5388393136,0x1412c5ab0,0x141303ea0,3,RE::BSLightingShaderProperty::InvalidateTextures
 5399981752,0x141dd2eb8,0x141e901a8,4,"CalculateMyCriticalHitChance"
+80930,0x140eeb340,0x140f48040,2,GASObject::SetMemberFlags
+80941,0x140eeb950,0x140f48650,2,GASObject::Unwatch
+80943,0x140eeba70,0x140f48770,2,GASObject::VisitMembers
+80944,0x140eebc80,0x140f48980,2,GASObject::Watch

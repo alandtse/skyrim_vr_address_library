@@ -30134,3 +30134,7 @@ sseid,aeid,confidence,name
 847305,290566,1,??_R3type_info@@8
 847306,290570,1,??_R3BSSocket@@8
 847307,290574,1,??_R3BSSocketServer@@8
+80930,83030,2,GASObject::SetMemberFlags
+80941,83041,2,GASObject::Unwatch
+80943,83043,2,GASObject::VisitMembers
+80944,83044,2,GASObject::Watch
