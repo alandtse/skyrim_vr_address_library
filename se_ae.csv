@@ -30130,3 +30130,5 @@ sseid,aeid,confidence,name
 847305,290566,1,??_R3type_info@@8
 847306,290570,1,??_R3BSSocket@@8
 847307,290574,1,??_R3BSSocketServer@@8
+81705,83766,3,GFxMovieRoot::Advance
+81803,83873,3,GFxMovieRoot::GotoLabeledFrame
