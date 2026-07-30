@@ -30130,3 +30130,5 @@ sseid,aeid,confidence,name
 847305,290566,1,??_R3type_info@@8
 847306,290570,1,??_R3BSSocket@@8
 847307,290574,1,??_R3BSSocketServer@@8
+84045,85953,3,GetSpecialTransformProperty
+84051,85959,3,SetSpecialTransformProperty
