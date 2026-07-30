@@ -39,7 +39,7 @@
 11921,0x140126cd0,0x1401372b0,4,"void ExtraDataList::SetEnchantment(EnchantmentItem* a_enchantment, std::uint16_t a_chargeAmount, bool a_removeOnUnequip)"
 11931,0x1401273b0,0x140137990,4,void ExtraDataList::ClearGrasshandles (BSExtraDataList * param_1)
 11932,0x140127480,0x140137a60,4,"void ExtraDataList::FUN_140127480 (BSExtraDataList * param_1, BSExtraData * param_2)"
-11933,0x1401275e0,0x140137bc0,4,"void sub_1401275E0 (BSExtraDataList * a_this, BSExtraData * * param_2)"
+11933,0x1401275e0,0x140137bc0,4,"void BSExtraDataList::GetCellGrassData (BSExtraDataList * a_this, BSExtraData * * a_out)"
 12176,0x140131990,0x140142140,3,RE::ExtraDataList::Add
 12193,0x1401320f0,0x1401428a0,3,RE::CreateRefHandle
 12204,0x1401329d0,0x140143180,3,RE::LookupReferenceByHandle
@@ -267,7 +267,7 @@
 18543,0x140265990,0x140276f60,3,"bool TESObjectCELL::GetWaterHeight(const NiPoint3& a_pos, float& a_waterHeight)"
 18568,0x1402665a0,0x140277b70,3,TESObjectREFR::RemoveReference3D
 18631,0x14026a3e0,0x14027b9b0,3,bool TESFile::SeekLandscapeForCurrentCell(TESFile* a_file)
-18637,0x14026a840,0x14027be10,4,undefined8 TESObjectCELL::sub_14026A840 (TESObjectCELL * a_this)
+18637,0x14026a840,0x14027be10,4,void TESObjectCELL::LoadTempData (TESObjectCELL * a_this)
 18642,0x14026b160,0x14027c730,3,po3tweaks::QueuedRefCrash::SetFadeNode
 18655,0x14026c5d0,0x14027dba0,3,void TESObjectCELL::sub_14026C5D0 (TESObjectCELL * a_this)
 18711,0x140271be0,0x140283200,3,TESObjectCELL::sub_140271BE0
