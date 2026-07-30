@@ -1301,6 +1301,7 @@
 50674,0x14087aba0,0x1408A6910,3,DescriptionFramework::
 50680,0x14087b1e0,0x1408a6f50,4,"void GiftMenu::OpenMenu_Impl(Actor* a_gifter, Actor* a_receiver, BSTSmartPointer<IGiftMenuScriptCallback>* a_callbackFn, BGSListForm* a_filterList, bool a_showStolenItems, bool a_useFavorPoints)"
 50688,0x14087ba70,0x1408a77e0,3,EssentialFavorites::Gifting::IsQuestObject
+50718,0x14087d580,0x1408aa8b0,4,UI_MESSAGE_RESULTS HUDMenu::ProcessMessage(RE::UIMessage& a_message)
 50725,0x14087f070,0x1408ac880,4,void SendHUDMessage::PushHUDMode(const char* a_hudMode)
 50726,0x14087f080,0x1408ac890,4,void SendHUDMessage::PopHUDMode(const char* a_hudMode)
 50727,0x14087F090,0x1408AC8A0,3,"void UpdateCrosshairCaveLeaving(bool a_valid, const char *a2)"
@@ -1312,7 +1313,12 @@
 50757,0x1408808d0,0x1408ae1e0,3,HUDNotifications::Update
 50758,0x140880fd0,0x1408ae8e0,3,undefined8 ProcessMessage_140880FD0 (HUDNotifications * a_this)
 50771,0x140881cc0,0x1408af5c0,3,TrueHUD::HUDChargeMeter::Update_140881CC0
+50773,0x140882070,0x1408af970,4,void Compass::Update()
+50775,0x1408823f0,0x1408afd30,3,void __thiscall Compass::SetMarkers (Compass * a_this)
 50776,0x140882520,0x1408afe70,3,EnemyHealth::Update
+50826,0x1408856f0,0x1408b2bd0,3,"undefined8 HUDMarkerManager::UpdateQuests (HUDMarkerManager * a_this, TESQuest ** a_quest, longlong * param_3)"
+50851,0x140885fe0,0x1408b3430,3,"undefined8 HUDMarkerManager::AddMarker (HUDMarkerManager * a_this, longlong param_2, longlong param_3, undefined8 param_4, uint32_t param_5)"
+50870,0x140886c60,0x1408b4170,3,void HUDMarkerManager::UpdateLocations (HUDMarkerManager * a_this)
 50881,0x140887600,0x1408b4b40,3,"void Inventory3DManager::Begin3D (Inventory3DManager * a_this, INTERFACE_LIGHT_SCHEME a_scheme)"
 50882,0x140887750,0x1408b4c90,3,std::uint32_t Inventory3DManager::Render()
 50883,0x140887810,0x1408b4d50,3,void Inventory3DManager::End3D
@@ -1688,12 +1694,14 @@
 73894,0x140d292e0,0x140d71200,3,"void BSTaskManager::~BSTaskManager(BSTaskManager* a_this)"
 73896,0x140d29490,0x140d713b0,3,"void BSTaskManager::ResubmitTask(BSTask* a_task)"
 73897,0x140d29580,0x140d714a0,3,"void IOManager::NotifyTaskComplete(RE::BSTask* a_task)"
+73914,0x140d2a220,0x140d723f0,3,void BSTaskManagerThread::Run(BSTaskManagerThread* a_this)
 73915,0x140d2a620,0x140d727f0,3,"void BSTaskManager::InitAllocators(BSTaskManager* a_this)"
 73916,0x140d2a6b0,0x140d72880,3,"void SynchronizedMap<std::int64_t,NiPointer<BSTask>>::SynchronizedMap(SynchronizedMap<std::int64_t,NiPointer<BSTask>>* a_this, std::uint32_t a_poolSize, std::uint32_t a_bucketCount, std::uint32_t a_bucketCapacity)"
 73917,0x140d2a860,0x140d72a30,3,"void* SynchronizedMap<std::int64_t,NiPointer<BSTask>>::InitThreadCache(IMemoryHeap* a_buffer, std::uint32_t a_capacity)"
 73920,0x140d2aad0,0x140d72d30,3,"void SynchronizedMap<std::int64_t,NiPointer<BSTask>>::~SynchronizedMap(SynchronizedMap<std::int64_t,NiPointer<BSTask>>* a_this)"
 73923,0x140d2ae00,0x140d73060,3,"SynchronizedMap<std::int64_t,NiPointer<BSTask>>* SynchronizedMap<std::int64_t,NiPointer<BSTask>>::dtor_deleting(SynchronizedMap<std::int64_t,NiPointer<BSTask>>* a_this)"
 73924,0x140d2ae40,0x140d730a0,3,"BSTaskManager* BSTaskManager::dtor_deleting(BSTaskManager* a_this)"
+73925,0x140d2ae80,0x140d730e0,3,BSTaskManagerThread* BSTaskManagerThread::dtor_deleting(BSTaskManagerThread* a_this)
 73943,0x140d2b840,0x140d73ae0,3,"std::uint32_t SynchronizedMap<std::int64_t,NiPointer<BSTask>>::GetBucketIndex(std::int64_t a_key)"
 73951,0x140d2be20,0x140d741c0,3,"bool SynchronizedMap<std::int64_t,NiPointer<BSTask>>::Erase(std::int64_t a_key, NiPointer<BSTask>& a_valueOut)"
 73952,0x140d2bef0,0x140d74290,3,"bool SynchronizedMap<std::int64_t,NiPointer<BSTask>>::FindFirstMatching(NiPointer<BSTask>& a_valueOut)"
@@ -1793,6 +1801,8 @@
 80217,0x140ec9eb0,0x140f26a00,4,"bool GFxValue::ObjectInterface::GetDisplayMatrix(void* a_data, GMatrix2D* a_mat) const"
 80218,0x140ec9f30,0x140f26a80,3,RE::GFxValue::ObjectInterface::GetElement
 80222,0x140eca150,0x140f26ca0,3,RE::GFxValue::ObjectInterface::GetMember
+80225,0x140eca320,0x140f26e70,3,"void GFxValue::ObjectInterface::GetText(void* a_data, GFxValue* a_val, bool a_isDObj) const"
+80229,0x140eca4e0,0x140f27030,4,"bool GFxValue::ObjectInterface::GotoAndPlay(void* a_data, std::uint32_t a_frame, bool a_stop)"
 80230,0x140eca570,0x140f270c0,3,RE::GFxValue::ObjectInterface::GotoAndPlay
 80231,0x140eca620,0x140f27170,3,RE::GFxValue::ObjectInterface::HasMember
 80233,0x140eca860,0x140f273b0,3,RE::GFxValue::ObjectInterface::Invoke
@@ -1807,6 +1817,9 @@
 80265,0x140ecc960,0x140f294b0,3,RE::GFxValue::ObjectInterface::SetElement
 80268,0x140eccba0,0x140f296f0,3,RE::GFxValue::ObjectInterface::SetMember
 80270,0x140ecccf0,0x140f29840,3,RE::GFxValue::ObjectInterface::SetText
+80274,0x140eccf60,0x140f29ab0,4,GString GFxValue::ToString() const
+80275,0x140ecd150,0x140f29ca0,4,"void GFxValue::ObjectInterface::ObjectToString(void* a_data, GString* a_result) const"
+80278,0x140ecd3c0,0x140f29f10,3,"bool GFxValue::ObjectInterface::RemoveElements(void* a_data, std::uint32_t a_idx, std::int32_t a_count)"
 80279,0x140ecd630,0x140f2a180,4,"void GFxValue::ObjectInterface::VisitMembers(void* a_data, ObjVisitor* a_visitor, bool a_isDObj)"
 80287,0x140ecd970,0x140f2a510,3,void IMenu::RefreshPlatform()
 80294,0x140ecdee0,0x140f2abd0,4,void BSScaleformExternalTexture::ReleaseTexture()
@@ -1818,10 +1831,16 @@
 80446,0x140ed3a50,0x140f2da40,3,GString* GString::ctor(const char* a_str)
 80547,0x140ed80b0,0x140f30f20,3,RE::GFxMovieView::InvokeNoReturn
 80620,0x140edbfa0,0x140f38ca0,3,RE::GFxLoader::CreateMovie
+81202,0x140efe220,0x140f5af20,3,"void* GASEnvironment::FindTarget(void* a_pathValue, char* a_path, void* a_unused, undefined8 a_flags)"
+81525,0x140f0eef0,0x140f6bbf0,3,"void* GFxValue::ObjectInterface::ResolveCharacter(void* a_data, void* a_valueData, undefined8 a_extra1, undefined8 a_flags)"
+81751,0x140f1f020,0x140f7bd20,3,"void* GFxValue::ObjectInterface::ResolveCharacter2(void* a_valueData, void* a_targetPath, void* a_valueData2, undefined8 a_flags)"
+81844,0x140f24c50,0x140f81950,2,"void LoadMovieImageCallback(void* a_movieRoot, void* a_loadQueueEntry, void* a_action, void* a_urlInfo)"
 82382,0x140f45350,0x140fa2050,4,bool BSScaleformImageLoader::AddTexture(BSScaleformExternalTexture& a_texture)
 82383,0x140f45820,0x140fa2520,4,void BSScaleformImageLoader::RemoveTexture(BSScaleformExternalTexture& a_texture)
 82462,0x140f48270,0x140fa4f70,3,bool GSysAllocPaged::InitHeapEngine(const void* a_heapDesc)
 82464,0x140f48360,0x140fa5060,3,void GSysAllocPaged::ShutdownHeapEngine()
+84045,0x140fa27e0,0x140fff4e0,3,"void GetSpecialTransformProperty(void* a_data, void* a_movieView, void* a_name, void* a_result)"
+84051,0x140fa2ff0,0x140fffcf0,3,"void SetSpecialTransformProperty(void* a_data, void* a_movieView, void* a_valueLo, void* a_valueHi, void* a_isDObj)"
 85757,0x140fffeb0,0x14105cbb0,4,void FUN_140fffeb0 (undefined8 * param_1)
 87907,0x1410a2370,0x1410fefa0,4,"Skyrim-upscaler"
 87965,0x1410a5740,0x141102370,3,"BSPathingLocation* BSPathingLocation::ctor(const NiPoint3& a_location, const BSTSmartPointer<BSPathingCell>& a_cell)"
@@ -1938,6 +1957,7 @@
 100540,0x1412eeb90,0x141330a40,3,"RENDER_TARGET FUN_1412eeb90 (BSImagespaceShader * * param_1, RENDER_TARGET param_2, RENDER_TARGET param_3)"
 100563,0x1412f2020,0x141338400,3,"void BSLightingShader::Func4_1412F2020 (BSLightingShader * a_this, undefined8 param_2, undefined8 param_3)"
 100565,0x1412f2bb0,0x141338f60,3,"void BSLightingShader::Func6_1412F2BB0 (BSLightingShader * a_this, undefined8 param_2, undefined8 param_3, undefined8 param_4)"
+100587,0x1412f5590,0x14133c1c0,3,"void BSLightingShader::SetupTexture(unsigned int a_slot, RE::NiPointer<RE::NiSourceTexture> const& a_texture, RE::BSLightingShaderMaterialBase * a_material)"
 100602,0x1412f63d0,0x141333470,3,"void BSWaterShader::Func4_1412F63D0 (BSWaterShader * a_this, undefined8 param_2)"
 100710,0x1412fd790,0x14133fcb0,4,BSRenderPass::Set
 100711,0x1412fd830,0x14133fd50,4,"BSRenderPass::SetLights"
@@ -9621,6 +9641,8 @@
 519572,0x142f4c8f8,0x143011cf0,4,IGiftMenuScriptCallback* GiftMenu::GetCallbackFn()
 519577,0x142f4c908,0x143011d30,4,LAST_LOCATION
 519579,0x142f4c910,0x143011d40,4,TrueHUD::g_worldToCamMatrix
+519587,0x142f4c950,0x143011d18,3,HUDMarker::FrameOffsets
+519611,0x142f4ca00,0x143011e20,3,HUDMarkerManager
 519618,0x142f4ded0,0x1430133a8,4,TrueHUD::g_viewPort
 519620,0x142f4df28,0x143013408,4,void Inventory3DManager::SetMouseRotation(bool a_active)
 519716,0x142f4e240,0x143013728,3,TESObjectREFR* GetTargetReference()
@@ -18325,3 +18347,9 @@
 5375528368,0x140680db0,0x14068a230,3,RE::AIProcess::SetActorRefraction
 5388393136,0x1412c5ab0,0x141303ea0,3,RE::BSLightingShaderProperty::InvalidateTextures
 5399981752,0x141dd2eb8,0x141e901a8,4,"CalculateMyCriticalHitChance"
+74000,0x140d2dda0,0x140d76180,2,void QueuedFile::ProcessStateMachine()
+73999,0x140d2dd50,0x140d76130,2,void QueuedFile::BeginProcessing()
+73995,0x140d2dc90,0x140d76070,2,void QueuedFile::~QueuedFile()
+74013,0x140d2e350,0x140d76730,2,QueuedFile* QueuedFile::dtor_deleting()
+74003,0x140d2df00,0x140d762e0,2,void QueuedFile::NotifyChildrenAndFinalize(std::uint32_t a_flag)
+74005,0x140d2e090,0x140d76470,2,void QueuedFile::AddChild(BSTask* a_child)
