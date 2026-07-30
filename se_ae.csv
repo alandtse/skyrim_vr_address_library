@@ -30130,3 +30130,10 @@ sseid,aeid,confidence,name
 847305,290566,1,??_R3type_info@@8
 847306,290570,1,??_R3BSSocket@@8
 847307,290574,1,??_R3BSSocketServer@@8
+74000,75739,3,void QueuedFile::ProcessStateMachine()
+73999,75738,3,void QueuedFile::BeginProcessing()
+73995,75734,3,void QueuedFile::~QueuedFile()
+74013,75755,3,QueuedFile* QueuedFile::dtor_deleting()
+74003,75742,3,void QueuedFile::NotifyChildrenAndFinalize(std::uint32_t a_flag)
+74005,75744,3,void QueuedFile::AddChild(BSTask* a_child)
+73996,75735,3,std::int32_t QueuedFile::GetTotalChildrenCount()
