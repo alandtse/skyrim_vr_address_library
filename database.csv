@@ -1712,6 +1712,12 @@
 73970,0x140d2cec0,0x140d75270,3,"void IOManager::ResubmitTask(RE::BSTask* a_task)"
 73975,0x140d2d500,0x140d758c0,3,"std::uint32_t IOManager::GetBucketIndex(std::uint64_t a_packedTaskId)"
 73985,0x140d2d860,0x140d75c20,3,"IOManager* IOManager::dtor_deleting(IOManager* a_this)"
+73995,0x140d2dc90,0x140d76070,2,void QueuedFile::~QueuedFile()
+73999,0x140d2dd50,0x140d76130,2,void QueuedFile::BeginProcessing()
+74000,0x140d2dda0,0x140d76180,2,void QueuedFile::ProcessStateMachine()
+74003,0x140d2df00,0x140d762e0,2,void QueuedFile::NotifyChildrenAndFinalize(std::uint32_t a_flag)
+74005,0x140d2e090,0x140d76470,2,void QueuedFile::AddChild(BSTask* a_child)
+74013,0x140d2e350,0x140d76730,2,QueuedFile* QueuedFile::dtor_deleting()
 74040,0x140d2f220,0x140d775e0,4,"BSResource::ErrorCode BSModelDB::Demand(const char* a_modelPath, NiPointer<NiNode>& a_modelOut, const DBTraits::ArgsType& a_args)"
 74236,0x140d38120,0x140d805b0,3,RE::INISettingCollection::WriteSetting
 74237,0x140d38310,0x14053c550,3,RE::INISettingCollection::ReadSetting
@@ -18347,9 +18353,3 @@
 5375528368,0x140680db0,0x14068a230,3,RE::AIProcess::SetActorRefraction
 5388393136,0x1412c5ab0,0x141303ea0,3,RE::BSLightingShaderProperty::InvalidateTextures
 5399981752,0x141dd2eb8,0x141e901a8,4,"CalculateMyCriticalHitChance"
-74000,0x140d2dda0,0x140d76180,2,void QueuedFile::ProcessStateMachine()
-73999,0x140d2dd50,0x140d76130,2,void QueuedFile::BeginProcessing()
-73995,0x140d2dc90,0x140d76070,2,void QueuedFile::~QueuedFile()
-74013,0x140d2e350,0x140d76730,2,QueuedFile* QueuedFile::dtor_deleting()
-74003,0x140d2df00,0x140d762e0,2,void QueuedFile::NotifyChildrenAndFinalize(std::uint32_t a_flag)
-74005,0x140d2e090,0x140d76470,2,void QueuedFile::AddChild(BSTask* a_child)

@@ -7164,6 +7164,13 @@ sseid,aeid,confidence,name
 73967,75703,3,IOManager::IOManager
 73968,75704,3,IOManager::~IOManager
 73970,75706,3,IOManager::ResubmitTask
+73995,75734,3,QueuedFile::~QueuedFile
+73996,75735,3,QueuedFile::GetTotalChildrenCount
+73999,75738,3,QueuedFile::BeginProcessing
+74000,75739,3,QueuedFile::ProcessStateMachine
+74003,75742,3,QueuedFile::NotifyChildrenAndFinalize
+74005,75744,3,QueuedFile::AddChild
+74013,75755,3,QueuedFile::dtor_deleting
 75507,77299,3,RE::RendererData::CreateRenderTexture
 76170,77998,3,RE::NiAVObject::SetCollisionLayer
 76171,77999,3,RE::NiAVObject::UpdateRigidBodySettings
@@ -30148,10 +30155,3 @@ sseid,aeid,confidence,name
 847305,290566,1,??_R3type_info@@8
 847306,290570,1,??_R3BSSocket@@8
 847307,290574,1,??_R3BSSocketServer@@8
-74000,75739,3,QueuedFile::ProcessStateMachine
-73999,75738,3,QueuedFile::BeginProcessing
-73995,75734,3,QueuedFile::~QueuedFile
-74013,75755,3,QueuedFile::dtor_deleting
-74003,75742,3,QueuedFile::NotifyChildrenAndFinalize
-74005,75744,3,QueuedFile::AddChild
-73996,75735,3,QueuedFile::GetTotalChildrenCount
