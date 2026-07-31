@@ -1,3 +1,10 @@
+# [0.245.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.244.0...v0.245.0) (2026-07-31)
+
+
+### Features
+
+* register GFx/IO/ActorValueStorage RE address ids ([#177](https://github.com/alandtse/skyrim_vr_address_library/issues/177)) ([253d497](https://github.com/alandtse/skyrim_vr_address_library/commit/253d49742c252a453c8613f6681b1da85e52cef2))
+
 # [0.244.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.243.0...v0.244.0) (2026-07-30)
 
 
