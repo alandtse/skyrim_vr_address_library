@@ -1718,10 +1718,11 @@
 73975,0x140d2d500,0x140d758c0,3,"std::uint32_t IOManager::GetBucketIndex(std::uint64_t a_packedTaskId)"
 73985,0x140d2d860,0x140d75c20,3,"IOManager* IOManager::dtor_deleting(IOManager* a_this)"
 73995,0x140d2dc90,0x140d76070,2,void QueuedFile::~QueuedFile()
+73996,0x140d2dd00,0x140d760e0,2,std::uint32_t QueuedFile::GetTotalChildrenCount()
 73999,0x140d2dd50,0x140d76130,2,void QueuedFile::BeginProcessing()
 74000,0x140d2dda0,0x140d76180,2,void QueuedFile::ProcessStateMachine()
 74003,0x140d2df00,0x140d762e0,2,void QueuedFile::NotifyChildrenAndFinalize(std::uint32_t a_flag)
-74005,0x140d2e090,0x140d76470,2,void QueuedFile::AddChild(BSTask* a_child)
+74005,0x140d2e090,0x140d76470,2,void QueuedFile::AddChild(QueuedFile* a_child)
 74013,0x140d2e350,0x140d76730,2,QueuedFile* QueuedFile::dtor_deleting()
 74040,0x140d2f220,0x140d775e0,4,"BSResource::ErrorCode BSModelDB::Demand(const char* a_modelPath, NiPointer<NiNode>& a_modelOut, const DBTraits::ArgsType& a_args)"
 74236,0x140d38120,0x140d805b0,3,RE::INISettingCollection::WriteSetting
