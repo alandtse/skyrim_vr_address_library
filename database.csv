@@ -1818,6 +1818,8 @@
 80446,0x140ed3a50,0x140f2da40,3,GString* GString::ctor(const char* a_str)
 80547,0x140ed80b0,0x140f30f20,3,RE::GFxMovieView::InvokeNoReturn
 80620,0x140edbfa0,0x140f38ca0,3,RE::GFxLoader::CreateMovie
+81705,0x140f1b370,0x140f78070,3,RE::GFxMovieRoot::Advance
+81803,0x140f20a60,0x140f7d760,3,RE::GFxMovieRoot::GotoLabeledFrame
 82382,0x140f45350,0x140fa2050,4,bool BSScaleformImageLoader::AddTexture(BSScaleformExternalTexture& a_texture)
 82383,0x140f45820,0x140fa2520,4,void BSScaleformImageLoader::RemoveTexture(BSScaleformExternalTexture& a_texture)
 82462,0x140f48270,0x140fa4f70,3,bool GSysAllocPaged::InitHeapEngine(const void* a_heapDesc)
@@ -18325,5 +18327,3 @@
 5375528368,0x140680db0,0x14068a230,3,RE::AIProcess::SetActorRefraction
 5388393136,0x1412c5ab0,0x141303ea0,3,RE::BSLightingShaderProperty::InvalidateTextures
 5399981752,0x141dd2eb8,0x141e901a8,4,"CalculateMyCriticalHitChance"
-81705,0x140f1b370,0x140f78070,3,RE::GFxMovieRoot::Advance
-81803,0x140f20a60,0x140f7d760,3,RE::GFxMovieRoot::GotoLabeledFrame
