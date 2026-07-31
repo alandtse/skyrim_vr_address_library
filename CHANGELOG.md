@@ -1,3 +1,17 @@
+# [0.246.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.245.0...v0.246.0) (2026-07-31)
+
+
+### Bug Fixes
+
+* drop RE:: prefix, correct param name (ids 68203/68207) ([#182](https://github.com/alandtse/skyrim_vr_address_library/issues/182)) ([4ec757c](https://github.com/alandtse/skyrim_vr_address_library/commit/4ec757c8fcb294713855cac97d601a23407a6157))
+
+
+### Features
+
+* register BSBatchRenderer alpha group ids ([#178](https://github.com/alandtse/skyrim_vr_address_library/issues/178)) ([e406547](https://github.com/alandtse/skyrim_vr_address_library/commit/e4065472ef24b1096a7014bf44816bc79d8fb64f))
+* register BSProceduralGeomEvent address ids ([#181](https://github.com/alandtse/skyrim_vr_address_library/issues/181)) ([1d946bf](https://github.com/alandtse/skyrim_vr_address_library/commit/1d946bfe10dcb10db38672cdcdfec13f025947d8))
+* register QueuedFile GetTotalChildrenCount id ([#180](https://github.com/alandtse/skyrim_vr_address_library/issues/180)) ([0bc1f61](https://github.com/alandtse/skyrim_vr_address_library/commit/0bc1f61ddc17d3a0710aa258c7d0402201cf0aa1))
+
 # [0.245.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.244.0...v0.245.0) (2026-07-31)
 
 
