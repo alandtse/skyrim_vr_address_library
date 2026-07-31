@@ -1942,6 +1942,7 @@
 99942,0x1412cbcc0,0x14130a5d0,3,BSShaderAccumulator::BlendedDecals
 99943,0x1412cbe90,0x14130a970,3,"void BSShaderAccumulator::sub_1412CBE90 (BSShaderAccumulator * a_this, uint32_t param_2)"
 99947,0x1412cc3c0,0x14130af00,3,BSShaderAccumulator::ShadowMapOrMask
+99957,0x1412cca70,0x14130b6b0,1,"BSBatchRenderer::GeometryGroup * BSShaderAccumulator::StartGroupingAlphas(BSShaderAccumulator * a_this, NiBound * a_bound)"
 99963,0x1412cce40,0x14130ba60,4,"void BSBatchRenderer::RenderBatches (BSBatchRenderer * This, uint32_t StartRange, uint32_t EndRanges, uint32_t RenderFlags, int GeometryGroup)"
 100000,0x1412ceb10,0x14130da10,4,"void fogMethod (undefined8 param_1, int param_2)"
 100004,0x1412ced50,0x14130dc60,3,BSLightingShaderMaterial* BSLightingShaderMaterial::Ctor()
@@ -1996,12 +1997,17 @@
 100818,0x141305240,0x14134be20,3,"BSShadowLight::AccumulateShadowMap"
 100819,0x1413054c0,0x14134c220,4,static void BSShadowDirectionalLight::SetupFocusShadowAccumulators(RE::BSShadowLight* light)
 100820,0x141305610,0x14134c370,3,"void BSShadowParabolicLight::RenderCascade(BSShadowLight::ShadowmapDescriptor* a_desc, std::uint32_t& a_index, std::uint32_t a_flags)"
+100839,0x1413061b0,0x141347290,1,"void BSBatchRenderer::ClearGeometryGroupPasses(BSBatchRenderer::GeometryGroup * a_group)"
 100840,0x141306240,0x141347320,4,"void BSShaderAccumulator::RenderPersistentPassList (longlong * * passList, uint32_t renderFlags)"
+100843,0x141306db0,0x141347fe0,1,"void BSBatchRenderer::ClearAllRenderPasses(BSBatchRenderer * a_this)"
 100847,0x141307160,0x141348390,3,Skyrim-Upscaler
 100852,0x141308030,0x141349270,4,"void BSBatchRenderer::ApplyPassAlphaCullState(BSRenderPass *a_this,uint *param_2,uint *param_3,undefined8 param_4,uint param_5)"
 100853,0x1413083b0,0x1413495f0,4,"void BSBatchRenderer::GetRenderPassIndex(BSBatchRenderer *a_this,uint *param_2)"
 100854,0x141308440,0x141349680,3,"void BSBatchRenderer::RenderPassImmediately_141308440 (BSBatchRenderer * a_Pass, uint32_t a_Technique, bool a_AlphaTest, uint32_t a_RenderFlags)"
+100856,0x141308540,0x141349790,1,void BSBatchRenderer::ClearAlphaGeometryGroups()
+100857,0x141308560,0x1413497b0,1,void BSBatchRenderer::SortAlphaGeometryGroups()
 100871,0x1413090c0,0x14134a310,4,"LLF::void FUN_1413090c0 (BSBatchRenderer * * param_1, uint param_2)"
+100874,0x141309280,0x14134a4d0,1,"BSBatchRenderer::GeometryGroup * BSBatchRenderer::StartGroupingAlphas(BSBatchRenderer * a_this, NiBound * a_bound, NiCamera * a_camera, bool a_sortByClosestPoint)"
 100877,0x1413094a0,0x14134a6f0,4,BSBatchRenderer::sub_*
 100934,0x14130bb80,0x14134edc0,4,BSShaderMaterialHashMap::Link
 100935,0x14130be10,0x14134f050,4,BSShaderMaterialHashMap::Unlink
