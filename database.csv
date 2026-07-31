@@ -985,8 +985,8 @@
 42420,0x14072cc80,0x140757690,4,AnimObjectSwapper::AnimObjectSwapHook
 42547,0x140732400,0x14075ce60,4,ArrowProjectile::GetImpactData
 42586,0x140733cc0,0x14075e720,3,RE::BeamProjectile::UpdateImpl_*
-42600,0x1407345b0,0x14075f040,3,"undefined8 BeamProjectile::RegisterProceduralGeomSinks (BeamProjectile * a_this, longlong * param_2, longlong param_3)"
-42616,0x140734fe0,0x14075fae0,3,void BSTEventSource<BSProceduralGeomEvent>::AddEventSink(BSTEventSink<BSProceduralGeomEvent>* a_eventSink)
+42600,0x1407345b0,0x14075f040,4,"ulonglong BeamProjectile::RegisterProceduralGeomSinks (BeamProjectile * a_this, longlong * param_2, longlong param_3)"
+42616,0x140734fe0,0x14075fae0,4,void BSTEventSource<BSProceduralGeomEvent>::AddEventSink(BSTEventSink<BSProceduralGeomEvent>* a_eventSink)
 42638,0x1407369b0,0x1407614b0,3,splashes_of_skyrim::ProjectileManager::ProcessInWater::create_splash
 42664,0x140738780,0x140763320,3,"void Explosion::Update(Explosion* a_this, float a_delta)"
 42696,0x14073c410,0x140766fb0,3,"bool Explosion::CheckInit3D(Explosion *a_this)"
@@ -1744,8 +1744,8 @@
 75057,0x140d5a2b0,0x140da33c0,4,bool BSCompoundFrustum::Process(NiAVObject* a_object)
 75075,0x140d5ba80,0x140da4b90,4,void BSCompoundFrustum::GetActivePlaneState(std::uint32_t* a_outPlaneState)
 75076,0x140d5bad0,0x140da4be0,4,"void BSCompoundFrustum::SetActivePlaneState(std::uint32_t* a_planeState)"
-75175,0x140d60170,0x140daa230,3,void BSProceduralLightningController::SendGeomEvent(BSProceduralLightningController * a_this)
-75197,0x140d60a00,0x140daab20,3,void BSTEventSource<BSProceduralGeomEvent>::SendEvent(const BSProceduralGeomEvent* a_event)
+75175,0x140d60170,0x140daa230,4,void BSProceduralLightningController::SendGeomEvent(BSProceduralLightningController * a_this)
+75197,0x140d60a00,0x140daab20,4,void BSTEventSource<BSProceduralGeomEvent>::SendEvent(const BSProceduralGeomEvent* a_event)
 75445,0x140d68dd0,0x1405be850,4,"void Renderer::Init(RendererInitOSData* a_data, ApplicationWindowProperties* windowProps, WinAPI::HWND window)"
 75447,0x140d69140,0x140dbabc0,4,void Renderer::Shutdown()
 75448,0x140d69590,0x140dbb010,4,"void Renderer::SetWindowPosition(std::uint32_t windowID, std::int32_t x, std::int32_t y)"
