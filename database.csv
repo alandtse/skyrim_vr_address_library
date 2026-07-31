@@ -1638,8 +1638,8 @@
 67852,0x140c2a1b0,0x140c6f0e0,4,"void BSStringPool::CreateEntry(BSStringPool::Entry** a_out, const char* a_string, uint32_t a_bucketAndCrc, uint32_t a_length, int a_allocSize, bool a_wide)"
 67855,0x140c2a4d0,0x140c6f400,3,BSStringPool::BucketTable* BSStringPool::BucketTable::GetSingleton()
 67856,0x140c2a590,0x140c6f4c0,4,"void BSStringPool::GetEntry(BSStringPool::Entry** a_out, const char* a_string, uint32_t a_hash, uint32_t a_length)"
-68203,0x140c39950,0x140c7ea00,4,RE::BSWin32TaskletManager* BSWin32TaskletManager::GetSingleton()
-68207,0x140c39ac0,0x140c7eb70,4,"bool BSTaskletManager::CreateTaskGroup(RE::BSTaskletGroup& a_out)"
+68203,0x140c39950,0x140c7ea00,4,BSWin32TaskletManager* BSWin32TaskletManager::GetSingleton()
+68207,0x140c39ac0,0x140c7eb70,4,"bool BSTaskletManager::CreateTaskGroup(BSTaskletGroup& a_taskGroup)"
 68296,0x140c3cb30,0x140c81be0,4,"std::uint32_t BSResource::ArchiveStream::DoRead(void* a_dst, std::uint64_t a_bytes, std::uint64_t* a_read)"
 68476,0x140c448b0,0x140c89960,4,"void BSResource::RegisterLocation(Location* a_location, std::uint32_t a_priority)"
 68480,0x140c44a00,0x140c89ab0,4,void BSResource::RegisterGlobalPath (char * a_path)
