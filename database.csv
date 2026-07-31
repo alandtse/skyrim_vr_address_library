@@ -1821,7 +1821,11 @@
 80905,0x140ee98f0,0x140f465f0,3,GASObject::GASObjectInterface_Func4
 80915,0x140eea220,0x140f46f20,3,GASObject::GASObjectInterface_Func9
 80929,0x140eeada0,0x140f47aa0,3,SetMemberFallback
+80930,0x140eeb340,0x140f48040,2,GASObject::SetMemberFlags
 80931,0x140eeb3b0,0x140f480b0,3,GASObject::GASObjectInterface_Func10
+80941,0x140eeb950,0x140f48650,2,GASObject::Unwatch
+80943,0x140eeba70,0x140f48770,2,GASObject::VisitMembers
+80944,0x140eebc80,0x140f48980,2,GASObject::Watch
 82382,0x140f45350,0x140fa2050,4,bool BSScaleformImageLoader::AddTexture(BSScaleformExternalTexture& a_texture)
 82383,0x140f45820,0x140fa2520,4,void BSScaleformImageLoader::RemoveTexture(BSScaleformExternalTexture& a_texture)
 82462,0x140f48270,0x140fa4f70,3,bool GSysAllocPaged::InitHeapEngine(const void* a_heapDesc)
@@ -18329,7 +18333,3 @@
 5375528368,0x140680db0,0x14068a230,3,RE::AIProcess::SetActorRefraction
 5388393136,0x1412c5ab0,0x141303ea0,3,RE::BSLightingShaderProperty::InvalidateTextures
 5399981752,0x141dd2eb8,0x141e901a8,4,"CalculateMyCriticalHitChance"
-80930,0x140eeb340,0x140f48040,2,GASObject::SetMemberFlags
-80941,0x140eeb950,0x140f48650,2,GASObject::Unwatch
-80943,0x140eeba70,0x140f48770,2,GASObject::VisitMembers
-80944,0x140eebc80,0x140f48980,2,GASObject::Watch

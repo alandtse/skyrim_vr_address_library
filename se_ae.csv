@@ -7167,7 +7167,11 @@ sseid,aeid,confidence,name
 80905,83005,3,GASObject::GASObjectInterface_Func4
 80915,83015,3,GASObject::GASObjectInterface_Func9
 80929,83029,3,SetMemberFallback
+80930,83030,2,GASObject::SetMemberFlags
 80931,83031,3,GASObject::GASObjectInterface_Func10
+80941,83041,2,GASObject::Unwatch
+80943,83043,2,GASObject::VisitMembers
+80944,83044,2,GASObject::Watch
 82462,84557,3,RE::GSysAllocPaged::InitHeapEngine
 82464,84559,3,RE::GSysAllocPaged::ShutdownHeapEngine
 85760,87840,1,
@@ -30134,7 +30138,3 @@ sseid,aeid,confidence,name
 847305,290566,1,??_R3type_info@@8
 847306,290570,1,??_R3BSSocket@@8
 847307,290574,1,??_R3BSSocketServer@@8
-80930,83030,2,GASObject::SetMemberFlags
-80941,83041,2,GASObject::Unwatch
-80943,83043,2,GASObject::VisitMembers
-80944,83044,2,GASObject::Watch
