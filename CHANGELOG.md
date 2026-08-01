@@ -1,3 +1,10 @@
+# [0.247.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.246.0...v0.247.0) (2026-08-01)
+
+
+### Features
+
+* addSmoothTerrain ([#183](https://github.com/alandtse/skyrim_vr_address_library/issues/183)) ([c0b8c42](https://github.com/alandtse/skyrim_vr_address_library/commit/c0b8c427b76789de7a75f2fb44c256c96803ccb8))
+
 # [0.246.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.245.0...v0.246.0) (2026-07-31)
 
 
