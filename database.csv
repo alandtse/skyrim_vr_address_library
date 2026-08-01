@@ -251,8 +251,12 @@
 18188,0x14024ccd0,0x14025e3c0,4,void ImageSpaceModifierInstanceForm::Stop(TESImageSpaceModifier* a_imod)
 18192,0x14024d210,0x14025e900,4,void ImageSpaceModifierInstanceForm::StopCrossFade(float a_seconds)
 18331,0x140255660,0x140266a10,4,"undefined TESObjectLAND::sub_140255660 (TESObjectLAND * a_this, bool param_2)"
+18334,0x1402567f0,0x140267ba0,4,void TESObjectLAND::sub_1402567F0(TESObjectLAND*)
 18342,0x140257b00,0x140268eb0,4,"ulonglong TESObjectLAND::sub_140257B00 (TESObjectLAND * a_this, undefined param_2, undefined param_3, undefined param_4, undefined4 param_5)"
+18359,0x14025a7c0,0x14026bb70,4,const std::uint16_t* GetLandIndexList()
 18368,0x14025b350,0x14026c790,4,SeasonsofSkyrim::TESObjectLAND::create_land_geometry
+18369,0x14025b710,0x14026cb50,4,TESLandTexture* TESObjectLAND::sub_14025B710(TESObjectLAND*)
+18380,0x14025cba0,0x14026e050,4,"BSTriShape* BuildQuadTriShape(TESObjectLAND::LoadedLandData*, std::uint32_t)"
 18414,0x14025e6e0,0x14026fb90,4,SeasonsofSkyrim::TESObjectLAND::GetGrassList
 18418,0x14025e9c0,0x14026fe70,4,SeasonsofSkyrim::TESObjectLAND::GetHavokMaterialType
 18446,0x14025f460,0x140270910,4,"void TESObjectCELL::dtor (TESObjectCELL * a_this)"
@@ -497,7 +501,10 @@
 29090,0x1404454c0,0x140455010,3,bool TESConditionItem::IsTrue(ConditionCheckParams& a_solution)
 29218,0x14044b9a0,0x14045b4f0,4,RE::TESObjectCELL::Spawn
 29219,0x14044bbf0,0x14045b740,4,RE::TESObjectCELL::PlaceParticleEffect
+29251,0x14044dbf0,0x14045d7b0,4,"bool BSTempEffectSimpleDecal::Initialize_Impl(BSTempEffectSimpleDecal* a_this, void* a_params)"
 29253,0x14044e9c0,0x14045e5a0,4,"void BSTempEffectSimpleDecal::ApplyTextureSetToGeometry (BSTempEffectSimpleDecal * a_this, BSGeometry * a_effect3D, BGSTextureSet * a_texture1, bool a_blended)"
+29258,0x14044f6b0,0x14045f290,4,"void BSTempEffectSimpleDecal::CollectTrianglesFromObject(BSTempEffectSimpleDecal* a_this, NiAVObject* a_object)"
+29259,0x14044f6f0,0x14045f2d0,4,"std::uintptr_t BSTempEffectSimpleDecal::CollectTriangles(BSTempEffectSimpleDecal* a_this, BSTriShape* a_shape)"
 29303,0x140452550,0x140462500,3,"RE::NiAVObject::ClearWeaponBlood"
 29531,0x140460350,0x140470310,4,"void NavMeshInfoMap::InitializeAfterAllFormsAreReadFromFile_140460350 (NavMeshInfoMap * a_this, undefined8 param_2, ulonglong param_3, char * param_4)"
 29819,0x140473120,0x140483100,4,"void* Pathing::BuildFollowPath(Pathing* a_this, void* a_pathOut, Character* a_actor, void* a_reserved)"
@@ -1765,9 +1772,11 @@
 75462,0x140d6a330,0x140dbbe60,3,"void Renderer::UpdateRenderTargetsAndStates (BSGraphics::Renderer * param_1, bool param_2)"
 75469,0x140d6aca0,0x140dbc860,3,CreateDepthStencilRenderTarget
 75472,0x140d6b210,0x140dbce30,3,"void UpdateCameraData (undefined8 param_1, byte param_2)"
+75475,0x140d6bd10,0x140dbda30,4,"BSGraphics::TriShape* CreateTriShapeRendererData(BSGraphics::Renderer* a_renderer, void* a_vertexData, std::uint32_t a_sizeBytes, std::uint64_t a_vertexDesc, void* a_sharedIndexBuffer)"
 75477,0x140d6bfe0,0x140dbdd00,3,Skyrim-Upscaler
 75479,0x140d6c1e0,0x140dbdf60,3,fDrawGrass_*
 75480,0x140d6c320,0x140dbe0d0,5,"void BSGraphics::TriShape::Release(BSGraphics::TriShape* a_this)"
+75503,0x140d6da10,0x140dbf800,4,"void* CreateIndexBuffer(BSGraphics::Renderer* a_renderer, std::uint32_t a_indexCount, std::uint16_t* a_indices)"
 75507,0x140d6dbc0,0x140dbf9b0,3,"NiTexture::RendererData* BSRenderManager::CreateRenderTexture(std::uint32_t a_width, std::uint32_t a_height)"
 75522,0x140d6e780,0x140dc05f0,4,"void Renderer::SaveRenderTargetToFile(RENDER_TARGET a_renderTarget, const char* a_filePath, BSGraphics::TextureFileFormat a_textureFileFormat)"
 75532,0x140d6ef90,0x140dc1250,4,"void BSGraphics::Renderer::DispatchCSShader (BSGraphics::Renderer * a_this, BSGraphics::ComputeShader * a_computeShader, uint32_t threadGroupCountX, uint32_t threadGroupCountY, uint32_t threadGroupCountZ)"
@@ -9716,6 +9725,7 @@
 523943,0x143013680,0x14316be80,3,RE::NiRTTI_NiTimeController
 523948,0x1430136a0,0x14316bea0,3,RE::NiRTTI_NiExtraData
 523949,0x1430136b0,0x14316beb0,3,RE::NiRTTI_NiGeometryData
+523950,0x1430136c0,0x14316bec0,4,BSGraphics::TriShapeBufferManager** GeometryBufferManager
 523951,0x1430136c8,0x14316bec8,3,RE::NiRTTI_BSGeometry
 523953,0x1430136e0,0x14316bee0,3,RE::NiRTTI_BSDynamicTriShape
 523954,0x1430136f0,0x14316bef0,3,RE::NiRTTI_NiPointLight
