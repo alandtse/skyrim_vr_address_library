@@ -1485,7 +1485,10 @@
 56631,0x1409c7140,0x140a01c90,4,"void* hkLifoAllocator::BufRealloc(void* a_old, std::int32_t a_oldNumBytes, std::int32_t& a_reqNumBytesInOut)"
 56801,0x1409cb860,0x140a063b0,4,"hkStringPtr * ctor_1409cb860 (undefined8 a_this, char * a_data)"
 56806,0x1409cba10,0x140a06560,4,"hkStringPtr::hkStringPtr(std::string_view a_data, const std::uint32_t a_mask, const bool a_mark)"
+57759,0x1409f0360,0x140a2aeb0,4,"void hkbBehaviorGraph::handleEvent(const hkbContext& a_context, const hkbEvent a_event)"
 57886,0x1409fbda0,0x140a368f0,4,hkbAnimationBindingSet hkbCharacter::GetAnimationBindingSet_1409FBDA0 (hkbCharacter * a_this)
+57938,0x1409ffa90,0x140a3a5e0,4,"void hkbGenerator::activateAndSyncVariableBindings (hkbGenerator * a_this, hkbContext * a_context, bool a_activate)"
+57940,0x1409ffba0,0x140a3a6f0,4,"void hkbNode::cacheBindables (hkbNode * a_this)"
 58602,0x140a0bb80,0x140a466d0,4,AnimationMotionRevoluation::hkbClipGenerator::Activate
 58603,0x140a0c270,0x140a46dc0,4,"void hkbClipGenerator::Update_140A0C270(hkbClipGenerator *a_this,longlong *param_2,undefined4 param_3)"
 58604,0x140a0c610,0x140a47160,3,AnimationMotionRevoluation::hkbClipGenerator::Deactivate
@@ -1493,7 +1496,12 @@
 58622,0x140a0e210,0x140a48d60,4,"void hkbClipGenerator::sub_140A0E210 (hkbClipGenerator * a_this, float a_deltaTime, float * a_outPrevLocalTime, float * a_outLocalTime, int32_t * a_outLoops, bool * a_outAtEnd)"
 58628,0x140a0f480,0x140a49fd0,4,"void sub_140A0F480 (hkbClipGenerator * a_this, hkaDefaultAnimationControl* a_hkaDefaultAnimationControl)"
 58630,0x140a0f620,0x140a4a170,4,bool hkbClipGenerator::checkAtEnd (hkbClipGenerator * param_1)
+58672,0x140a15110,0x140a4fc60,4,"void hkbNode::collectActiveNodesLeafFirstRecurse (hkbNode * a_this, hkbContext * a_context, hkbNode * a_templateNode, void * a_indexList, void * a_childIndexList, void * a_unk6, void * a_activeNodeInfoArray, void * a_unk8, bool a_deactivateFlag)"
+58804,0x140a234b0,0x140a5de60,4,"void hkbVariableBindingSet::updateBindings (hkbVariableBindingSet * a_this, hkbContext * a_context, bool a_activate, hkbBindable * a_bindable)"
+58810,0x140a23b50,0x140a5e500,4,"void hkbVariableBindingSet::cacheBindables (hkbVariableBindingSet * a_this, hkbBindable * a_bindable)"
+58811,0x140a23bc0,0x140a5e570,4,"void hkbVariableBindingSet::cacheBinding (hkbVariableBindingSet * a_this, void * a_binding, hkbBindable * a_bindable)"
 58817,0x140a23f10,0x140a5e8c0,4,hkaMirroredSkeleton * GetMirroredSkeleton (hkbCharacterSetup * a_this)
+59343,0x140a42d10,0x140a7d6c0,3,"void hkbVariableBindingSetUtils::updateBinding (void * a_evalContext, void * a_binding, bool a_isPrimaryBinding, hkbBindable * a_bindable, bool a_activate)"
 59603,0x140a58c00,0x140A93600,4,"RE::hkpBoxShape* hkpBoxShape::createBoxShape(RE::hkpBoxShape*, RE::hkVector4&, float)"
 59653,0x140a5be20,0x140a96820,4,"void hkpClosestRayHitCollector::AddRayHit(const hkpCdBody& a_body, const hkpShapeRayCastCollectorOutput& a_hitInfo)"
 59971,0x140a640c0,0x140A9EAC0,4,"RE::hkpCylinderShape* hkpCylinderShape::createCylinderShape(RE::hkpCylinderShape*, RE::hkVector4&, RE::hkVector4&, float, int)"
