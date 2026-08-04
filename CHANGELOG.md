@@ -1,3 +1,10 @@
+# [0.248.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.247.0...v0.248.0) (2026-08-04)
+
+
+### Features
+
+* register hkb Havok Behavior ([#187](https://github.com/alandtse/skyrim_vr_address_library/issues/187)) ([1bcb5f0](https://github.com/alandtse/skyrim_vr_address_library/commit/1bcb5f0c7fcde7f684b9a0a17ae63ca311848bf1))
+
 # [0.247.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.246.0...v0.247.0) (2026-08-01)
 
 
