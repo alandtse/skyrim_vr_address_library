@@ -1502,6 +1502,10 @@
 58811,0x140a23bc0,0x140a5e570,4,"void hkbVariableBindingSet::cacheBinding (hkbVariableBindingSet * a_this, void * a_binding, hkbBindable * a_bindable)"
 58817,0x140a23f10,0x140a5e8c0,4,hkaMirroredSkeleton * GetMirroredSkeleton (hkbCharacterSetup * a_this)
 59343,0x140a42d10,0x140a7d6c0,3,"void hkbVariableBindingSetUtils::updateBinding (void * a_evalContext, void * a_binding, bool a_isPrimaryBinding, hkbBindable * a_bindable, bool a_activate)"
+59345,0x140a431a0,0x140a7db50,4,"void hkbVariableBindingSetUtils::updateBindingInt8 (void * a_evalContext, void * a_binding, unsigned int * a_variableValue, int a_variableIndex, void * a_memberPtr, bool a_isPrimaryBinding, bool a_hasRange, bool a_activate)"
+59346,0x140a43300,0x140a7dcb0,4,"void hkbVariableBindingSetUtils::updateBindingInt16 (void * a_evalContext, void * a_binding, unsigned int * a_variableValue, int a_variableIndex, void * a_memberPtr, bool a_isPrimaryBinding, bool a_hasRange, bool a_activate)"
+59347,0x140a43460,0x140a7de10,4,"void hkbVariableBindingSetUtils::updateBindingInt32 (void * a_evalContext, void * a_binding, void * a_variableValue, int a_variableIndex, void * a_memberPtr, bool a_isPrimaryBinding, bool a_hasRange, bool a_activate)"
+59348,0x140a435a0,0x140a7df50,4,"void hkbVariableBindingSetUtils::updateBindingReal (void * a_evalContext, void * a_binding, void * a_variableValue, int a_variableIndex, void * a_memberPtr, bool a_isPrimaryBinding, bool a_hasRange, bool a_activate)"
 59603,0x140a58c00,0x140A93600,4,"RE::hkpBoxShape* hkpBoxShape::createBoxShape(RE::hkpBoxShape*, RE::hkVector4&, float)"
 59653,0x140a5be20,0x140a96820,4,"void hkpClosestRayHitCollector::AddRayHit(const hkpCdBody& a_body, const hkpShapeRayCastCollectorOutput& a_hitInfo)"
 59971,0x140a640c0,0x140A9EAC0,4,"RE::hkpCylinderShape* hkpCylinderShape::createCylinderShape(RE::hkpCylinderShape*, RE::hkVector4&, RE::hkVector4&, float, int)"
