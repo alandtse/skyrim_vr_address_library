@@ -1,3 +1,10 @@
+# [0.249.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.248.0...v0.249.0) (2026-08-06)
+
+
+### Features
+
+* add hkbVariableBindingSetUtils ([#188](https://github.com/alandtse/skyrim_vr_address_library/issues/188)) ([4abceb6](https://github.com/alandtse/skyrim_vr_address_library/commit/4abceb6c6208788f55c795fc32f7104425dec2ac))
+
 # [0.248.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.247.0...v0.248.0) (2026-08-04)
 
 
