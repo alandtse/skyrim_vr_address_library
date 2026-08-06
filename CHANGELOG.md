@@ -1,3 +1,10 @@
+# [0.250.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.249.0...v0.250.0) (2026-08-06)
+
+
+### Features
+
+* add SetBackHemisphereAccumulator VR ID ([#189](https://github.com/alandtse/skyrim_vr_address_library/issues/189)) ([553313d](https://github.com/alandtse/skyrim_vr_address_library/commit/553313ddddd6a08ecea7e470b7c4d1f738426bf6))
+
 # [0.249.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.248.0...v0.249.0) (2026-08-06)
 
 
