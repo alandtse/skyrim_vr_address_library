@@ -2053,6 +2053,7 @@
 101495,0x141324c30,0x141356ef0,3,"bool BSShadowDirectionalLight::UpdateCamera (BSShadowDirectionalLight * a_this, NiCamera * a_viewCamera)"
 101498,0x141324e00,0x1413570f0,2,"void BSShadowDirectionalLight::DirShadowLightCulling(BSShadowDirectionalLight* this, BSTArray<BSTArray<NiPointer<NiAVObject>>>& jobArrays, BSTArray<NiPointer<NiAVObject>>& nodes)"
 101499,0x1413251c0,0x1413574f0,3,undefined8 BSShadowDirectionalLight::Func16_1413251C0 (BSShadowDirectionalLight * a_this)
+101600,0x14132c650,0x14136f4b0,4,BSParabolicCullingProcess::SetBackHemisphereAccumulator
 101613,0x14132d040,0x14136fec0,4,void BSShadowFrustumLight::Render(std::uint32_t& a_index)
 101631,0x14132ead0,0x141371a00,3,"void GetLightingShaderDefines(uint32_t descriptor, D3D_SHADER_MACRO* defines)"
 101633,0x14132ef60,0x141371e90,3,uint32_t BSLightingShader::GetPixelTechnique (uint32_t rawTechnique)
