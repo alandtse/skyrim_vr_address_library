@@ -1,3 +1,15 @@
+# [0.251.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.250.0...v0.251.0) (2026-08-13)
+
+
+### Bug Fixes
+
+* correct BShkbAnimationGraph SetGraphVariable* ids ([#190](https://github.com/alandtse/skyrim_vr_address_library/issues/190)) ([ae35116](https://github.com/alandtse/skyrim_vr_address_library/commit/ae3511672f3dca3c294ba982180ec1979b91806c))
+
+
+### Features
+
+* register SmoothTerrain collision VR ids ([#191](https://github.com/alandtse/skyrim_vr_address_library/issues/191)) ([19905ff](https://github.com/alandtse/skyrim_vr_address_library/commit/19905ff92c7e389aa9142403e2cb72b242c61a69)), closes [#6](https://github.com/alandtse/skyrim_vr_address_library/issues/6)
+
 # [0.250.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.249.0...v0.250.0) (2026-08-06)
 
 
