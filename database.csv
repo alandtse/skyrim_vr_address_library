@@ -1542,6 +1542,9 @@
 62694,0x140af5fd0,0x140b30db0,3,"bool BShkbAnimationGraph::GetGraphVariableInt(const BSFixedString& a_variableName, int& a_out)"
 62695,0x140af6090,0x140b30e70,3,"bool BShkbAnimationGraph::GetGraphVariableFloat(const BSFixedString& a_variableName, float& a_out)"
 62696,0x140af6150,0x140b30f30,3,"bool BShkbAnimationGraph::GetGraphVariableBool(const BSFixedString& a_variableName, bool& a_out)"
+62708,0x140af7190,0x140b31f70,3,"bool BShkbAnimationGraph::SetGraphVariableInt(const BSFixedString& a_variableName, const int a_in)"
+62709,0x140af7250,0x140b32030,3,"bool BShkbAnimationGraph::SetGraphVariableFloat(const BSFixedString& a_variableName, const float a_in)"
+62710,0x140af7310,0x140b320f0,3,"bool BShkbAnimationGraph::SetGraphVariableBool(const BSFixedString& a_variableName, const bool a_in)"
 62923,0x140b00650,0x140b3b430,4,"undefined4 bshkbAnimationGraphHook2_140b00650 (undefined8 param_1, hkbCharacter * param_2, char param_3, undefined8 param_4, undefined8 param_5)"
 62927,0x140b00ce0,0x140b3bac0,4,"void FUN_140b00ce0 (undefined8 param_1, longlong param_2, longlong * param_3, undefined8 param_4)"
 63017,0x140b05710,0x140b40550,4,bool hkbBehaviorGraph::sub_140B05710 (hkbBehaviorGraph * a_this)
@@ -1554,9 +1557,9 @@
 63192,0x140b12fa0,0x140b4dd80,4,"hkVector4 * hkbBlendPoses_140b12fa0 (uint32_t numData, hkQsTransform * src, hkQsTransform * dst, float amount, hkQsTransform * out)"
 63231,0x140b16fb0,0x140b51d90,4,"hkaDefaultAnimationControl * hkaDefaultAnimationControl::ctor (hkaDefaultAnimationControl * a_this, hkaDefaultAnimationControl * a_other)"
 63423,0x140b1e7c0,0x140b595a0,4,"void hkaDefaultAnimationControl::SetAnimationBinding_140B1E7C0 (hkaDefaultAnimationControl * a_this, hkaAnimationBinding * a_binding)"
-63607,0x140b258b0,0x140b60690,3,"bool BShkbAnimationGraph::SetGraphVariableInt(const BSFixedString& a_variableName, const int a_in)"
-63608,0x140b25990,0x140b60770,3,"bool BShkbAnimationGraph::SetGraphVariableFloat(const BSFixedString& a_variableName, const float a_in)"
-63609,0x140b25c70,0x140b60a50,3,"bool BShkbAnimationGraph::SetGraphVariableBool(const BSFixedString& a_variableName, const bool a_in)"
+63607,0x140b258b0,0x140b60690,1,sub_140B258B0
+63608,0x140b25990,0x140b60770,1,sub_140B25990
+63609,0x140b25c70,0x140b60a50,1,sub_140B25C70
 64067,0x140b5e120,0x140b98f70,4,"void hkpConvexVerticesShape::sub_140B5E120(longlong param_1,longlong *param_2)"
 64198,0x140b66930,0x140ba17a0,4,"ulonglong FUN_140b66930 (undefined * param_1, hkbCharacter * a_character, undefined * * * param_3, undefined8 param_4, undefined8 param_5)"
 66355,0x140bed530,0x140c283e0,4,RE::BSSoundHandle::Play
