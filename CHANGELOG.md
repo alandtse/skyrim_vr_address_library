@@ -1,3 +1,10 @@
+# [0.252.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.251.0...v0.252.0) (2026-08-16)
+
+
+### Features
+
+* register ActorValueStorage lock/reset VR ids ([#192](https://github.com/alandtse/skyrim_vr_address_library/issues/192)) ([bde801f](https://github.com/alandtse/skyrim_vr_address_library/commit/bde801fc348cf0d569cff13a7e642eb39b7e170f))
+
 # [0.251.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.250.0...v0.251.0) (2026-08-13)
 
 
