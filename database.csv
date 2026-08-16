@@ -1656,6 +1656,7 @@
 67457,0x140c199f0,0x140c5e2a0,4,void BSPCGamepadDeviceHandler::InitializeDelegate()
 67472,0x140c1a130,0x140c5e9c0,4,void BSWin32KeyboardDevice::Poll()
 67819,0x140c28bf0,0x140c6db20,3,BSFixedString* BSFixedString::ctor8(const char* a_data)
+67823,0x140c28d60,0x140c6dc90,3,FUN_140c28d60
 67834,0x140c29510,0x140c6e440,3,BSFixedString* BSFixedString::ctor16(const wchar_t* a_data)
 67844,0x140c29900,0x140c6e830,4,"void BSScaleformTranslator::GetCachedString_140c29900 (wchar_t * * a_pOut, wchar_t * a_bufIn, uint32_t a_unused)"
 67847,0x140c29e80,0x140c6edb0,3,void Entry::release8(const char*& a_entry)
@@ -2071,6 +2072,7 @@
 102238,0x14134bdb0,0x14138baba,3,RE::_CRT::RTDynamicCast
 106534,0x141367330,0x1413c25d0,4,BSLightingShaderProperty::DeletingDtor
 227915,0x1415092a0,0x14157f3e8,4,GetCurrentThreadId()
+228343,0x14151f2a0,0x1415965f0,3,Str1_14151F2A0
 228344,0x14151f2b0,0x141596600,3,VTABLE_BaseFormComponent_0
 228345,0x14151f2d8,0x141596628,3,VTABLE_IFormFactory_0
 228346,0x14151f318,0x141596668,3,VTABLE_AlchemyItem_0
@@ -9665,6 +9667,7 @@
 517224,0x142f38968,0x142ffd768,4,gSaveScreenshotRequested
 517228,0x142f38978,0x142ffd778,3,TaskQueueInterface* GetSingleton()
 517372,0x142f39650,0x142ffe470,3,ResponseDictionary* GetSingleton()
+517485,0x142f3a2b8,0x142fff0d8,3,DAT_142f3a2b8
 517597,0x142f3a644,0x142fff43c,3,AITimer* GetSingleton()
 517601,0x142f3a680,0x142fff478,3,RE::NiRTTI_BSDoorHavokController
 517602,0x142f3a690,0x142fff488,3,RE::NiRTTI_BSPlayerDistanceCheckController
