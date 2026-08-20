@@ -91,6 +91,28 @@ A dump of addresslib for SkyrimSSE 1.6.318.0 (AE). This should be considered can
 * aeid  - Addresslib id for Anniversary Edition
 * ae_addr - AE offset (e.g., 140001022)
 
+##### offsets-1-6-1170.0.csv
+
+A dump of addresslib for SkyrimSSE 1.6.1170.0 (AE). This should be considered canonical for the aeid -> ae_addr mapping.
+
+|aeid|ae_addr|
+|--|--|
+1|1022
+
+* aeid  - Addresslib id for Anniversary Edition
+* ae_addr - AE offset relative to module base 0x140000000 (e.g., 1022)
+
+##### offsets-1-7-99.0.csv
+
+A dump of addresslib for SkyrimSSE 1.7.99.0 (AE). This should be considered canonical for the aeid -> ae_addr mapping.
+
+|aeid|ae_addr|
+|--|--|
+1|1022
+
+* aeid  - Addresslib id for Anniversary Edition
+* ae_addr - AE offset relative to module base 0x140000000 (e.g., 1022)
+
 ##### 1.5.97_comments.csv
 
 Some mappings by Ultra of 1.5.97.0 used in IDA/ghidra. This has some naming info (but should be considered less current then AddressLibraryDatabase)
