@@ -1,3 +1,10 @@
+# [0.253.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.252.0...v0.253.0) (2026-08-21)
+
+
+### Features
+
+* add hkpContinuousSimulation crash-site id ([#193](https://github.com/alandtse/skyrim_vr_address_library/issues/193)) ([090c25a](https://github.com/alandtse/skyrim_vr_address_library/commit/090c25ae98390df52f7cb859af976710c2ff9e12))
+
 # [0.252.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.251.0...v0.252.0) (2026-08-16)
 
 
