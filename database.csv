@@ -1560,6 +1560,7 @@
 63607,0x140b258b0,0x140b60690,1,sub_140B258B0
 63608,0x140b25990,0x140b60770,1,sub_140B25990
 63609,0x140b25c70,0x140b60a50,1,sub_140B25C70
+63764,0x140b425c0,0x140b846e0,3,hkpContinuousSimulation::sub_140B425C0
 64067,0x140b5e120,0x140b98f70,4,"void hkpConvexVerticesShape::sub_140B5E120(longlong param_1,longlong *param_2)"
 64198,0x140b66930,0x140ba17a0,4,"ulonglong FUN_140b66930 (undefined * param_1, hkbCharacter * a_character, undefined * * * param_3, undefined8 param_4, undefined8 param_5)"
 66355,0x140bed530,0x140c283e0,4,RE::BSSoundHandle::Play
