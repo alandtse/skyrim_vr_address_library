@@ -372,6 +372,7 @@
 22825,0x140325f00,0x140335740,4,void * SKSE::CreateUIMessageData_140325f00 (BSFixedString * param_1)
 22843,0x140326460,0x140335ca0,3,RE::MessageDataFactoryManager::GetSingleton
 22845,0x140326510,0x140335d50,3,RE::INISettingCollection::ReadFromFile
+22879,0x140328110,0x140337A00,2,"bool unkExecuteConsole(void *a1, int64_t a2, int32_t a3, int64_t a4)"
 23073,0x14032ece0,0x14033e5a0,3,RE::ApplyPerkEntries
 23229,0x1403335A0,0x140342E60,4,"void JournalMenuQuestObjectiveStrings (char ***a1, char *a2)"
 23353,0x1403386a0,0x140347f60,4,"void ApplyPerk (BGSPerk * a_perk, Actor * a_perkOwner, uint8_t a_removeRank, uint8_t a_applyRank)"
@@ -496,8 +497,10 @@
 28479,0x140428a10,0x140438560,4,void BGSProcedureTreeProcedure::ExecuteProcedure(BGSProcedureTreeProcedure* a_this)
 28732,0x1404348c0,0x140444410,4,TESPackage* TESPackage::CreatePackage(PACKAGE_PROCEDURE_TYPE a_type)
 28751,0x1404353f0,0x140444f40,4,void TESPackage::SetPackType(PACKAGE_PROCEDURE_TYPE a_type)
+29065,0x140444370,0x140453EC0,4, "void TESCondition::InitItem(TESForm* owner)"
 29067,0x140444440,0x140453f90,4,"void TESCondition::Copy(const TESCondition* a_other, TESForm* a_arg2)"
 29074,0x1404447a0,0x1404542f0,3,"bool TESCondition::IsTrue(TESObjectREFR* a_actionRef, TESObjectREFR* a_targetRef)"
+29078,0x140444920,0x140454470,2,"bool TESCondition::IsTrue(ConditionCheckParams& solution)"
 29086,0x140445020,0x140454b70,4,"void TESConditionItem::Copy(const TESConditionItem* a_other, TESForm* a_arg2)"
 29090,0x1404454c0,0x140455010,3,bool TESConditionItem::IsTrue(ConditionCheckParams& a_solution)
 29218,0x14044b9a0,0x14045b4f0,4,RE::TESObjectCELL::Spawn
@@ -1409,6 +1412,7 @@
 52050,0x1408da3d0,0x140908170,3,RE::DebugNotification
 52054,0x1408da860,0x14090b1d0,3,RE::PlaySound
 52055,0x1408da8d0,0x14090b240,4,inline void PlayMenuSound(const BGSSoundDescriptorForm* a_descriptor)
+52065,0x1408dae20,0x14090E1F0,2,"int32_t unkRunConsole(uint64_t)"
 52181,0x1408E1AF0,0x140913210,3,DynamicStringDistributor::
 52208,0x1408e3d70,0x140915f50,2,RE::MapMenu::MarkerClick
 52226,0x1408e6ea0,0x140919520,3,void MapMenu::PlaceMarker()
