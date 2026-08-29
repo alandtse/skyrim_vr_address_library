@@ -364,6 +364,7 @@
 22289,0x14030f9a0,0x140320eb0,3,"ModelReferenceEffect* TESObjectREFR::InstantiateHitArt(BGSArtObject* a_art, float a_dur, TESObjectREFR* a_facingRef, bool a_faceTarget, bool a_attachToCamera, NiAVObject* a_attachNode, bool a_interfaceEffect)"
 22317,0x140310720,0x140321c30,3,BGSStoryEventManager* BGSRegisteredStoryEvent::BGSStoryEventManager::GetSingleton()
 22318,0x1403107b0,0x140321cc0,4,void TESFullName::SetFullName(const char* a_name)
+23332,0x140337660,0x140346F20,2,"bool BGSEntryPointPerkEntry::EvaluateConditions(uint32_t size, void* data)"
 22339,0x140310e60,0x140322370,3,po3tweaks::NoCheatMode::GodMode
 22340,0x140310ec0,0x140322370,3,po3tweaks::NoCheatMode::ImmortalMode
 22350,0x140311250,0x140322760,3,powerof3tweaks::ToggleCollisionFix::ToggleCollision
@@ -375,6 +376,7 @@
 22879,0x140328110,0x140337A00,2,"bool unkExecuteConsole(void *a1, int64_t a2, int32_t a3, int64_t a4)"
 23073,0x14032ece0,0x14033e5a0,3,RE::ApplyPerkEntries
 23229,0x1403335A0,0x140342E60,4,"void JournalMenuQuestObjectiveStrings (char ***a1, char *a2)"
+23346,0x140338060,0x140347920,2,"BGSPerk::ReadFromFileStream(TESFile* file)"
 23353,0x1403386a0,0x140347f60,4,"void ApplyPerk (BGSPerk * a_perk, Actor * a_perkOwner, uint8_t a_removeRank, uint8_t a_applyRank)"
 23359,0x140338a50,0x140348310,4,"undefined8 BGSPerk__ApplyPerksVisitor::sub_140338A50 (BGSPerk__ApplyPerksVisitor * a_this, BSTArray_BGSPerkEntry__ * param_2)"
 23429,0x14033a820,0x14034a0e0,2,BGSQuestObjective::FillQuestInstanceData
