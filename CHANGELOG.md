@@ -1,3 +1,10 @@
+# [0.254.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.253.0...v0.254.0) (2026-08-31)
+
+
+### Features
+
+* add noahboddie mod ids ([#195](https://github.com/alandtse/skyrim_vr_address_library/issues/195)) ([ce29b5a](https://github.com/alandtse/skyrim_vr_address_library/commit/ce29b5a0004d4a59684ede3dff9226d8a3c37810))
+
 # [0.253.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.252.0...v0.253.0) (2026-08-21)
 
 
