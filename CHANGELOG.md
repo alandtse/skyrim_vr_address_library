@@ -1,3 +1,10 @@
+# [0.255.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.254.0...v0.255.0) (2026-09-01)
+
+
+### Features
+
+* register GC array/object cleanup ([#197](https://github.com/alandtse/skyrim_vr_address_library/issues/197)) ([ca73db8](https://github.com/alandtse/skyrim_vr_address_library/commit/ca73db8620099556e2ddc371de9a6b40267bc435))
+
 # [0.254.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.253.0...v0.254.0) (2026-08-31)
 
 
