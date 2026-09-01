@@ -2053,6 +2053,7 @@
 100934,0x14130bb80,0x14134edc0,4,BSShaderMaterialHashMap::Link
 100935,0x14130be10,0x14134f050,4,BSShaderMaterialHashMap::Unlink
 100943,0x14130c5a0,0x14134f7e0,4,BSImagespaceShader* BSImagespaceShader::Ctor()
+100950,0x14130cd20,0x14134ff90,3,"void ImageSpaceEffect::Render (ImageSpaceEffect * a_this, BSTriShape * a_shape, ImageSpaceEffectParam * a_param)"
 100951,0x14130cf80,0x1413501F0,3,BSImagespaceShader::sub_*
 100952,0x14130d070,0x1413502b0,4,"void BSImagespaceShader::DispatchComputeShader (BSImagespaceShader * a_this, uint32_t a_threadGroupCountX, uint32_t a_threadGroupCountY, uint32_t a_threadGroupCountZ)"
 100994,0x141310c50,0x141354b60,4,src\Features/LightLimitFix.h:163
