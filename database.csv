@@ -2024,6 +2024,8 @@
 100587,0x1412f5590,0x14133c1c0,3,"void BSLightingShader::SetupTexture(unsigned int a_slot, RE::NiPointer<RE::NiSourceTexture> const& a_texture, RE::BSLightingShaderMaterialBase * a_material)"
 100588,0x1412f5630,0x14133c260,3,"void BSLightingShaderMaterialLandscape::sub_1412F5630 (BSLightingShaderMaterialLandscape * a_this)"
 100602,0x1412f63d0,0x141333470,3,"void BSWaterShader::Func4_1412F63D0 (BSWaterShader * a_this, undefined8 param_2)"
+100668,0x1412fc2b0,0x14133e7d0,3,"void ImageSpaceEffect::sub_1412FC2B0 (ImageSpaceEffect * a_this, uint32_t a_slot, RE::ImageSpaceEffect* a_effect, RE::ImageSpaceEffectParam* a_param, int32_t a_unk5)"
+100669,0x1412fc3d0,0x14133e8f0,3,"void ImageSpaceEffect::sub_1412FC3D0 (ImageSpaceEffect * a_this, uint32_t a_index, uint32_t a_unk3, uint32_t a_unk4)"
 100710,0x1412fd790,0x14133fcb0,4,BSRenderPass::Set
 100711,0x1412fd830,0x14133fd50,4,"BSRenderPass::SetLights"
 100717,0x1412fdcc0,0x1413401e0,4,"BSShader * BSShader::MakeRenderPass (BSShader * a_this, BSShaderProperty * a_property, BSGeometry * a_geometry, uint32_t a_technique, uint8_t a_numLights, BSLight * * a_lights)"
@@ -2069,6 +2071,11 @@
 101495,0x141324c30,0x141356ef0,3,"bool BSShadowDirectionalLight::UpdateCamera (BSShadowDirectionalLight * a_this, NiCamera * a_viewCamera)"
 101498,0x141324e00,0x1413570f0,2,"void BSShadowDirectionalLight::DirShadowLightCulling(BSShadowDirectionalLight* this, BSTArray<BSTArray<NiPointer<NiAVObject>>>& jobArrays, BSTArray<NiPointer<NiAVObject>>& nodes)"
 101499,0x1413251c0,0x1413574f0,3,undefined8 BSShadowDirectionalLight::Func16_1413251C0 (BSShadowDirectionalLight * a_this)
+101562,0x141329cf0,0x14136c520,3,void ImageSpaceEffectFullScreenBlur::sub_141329CF0(ImageSpaceEffectFullScreenBlur* a_this)
+101564,0x141329df0,0x14136c620,3,void ImageSpaceEffectFullScreenBlur::Setup(ImageSpaceEffectFullScreenBlur* a_this)
+101565,0x14132a370,0x14136cba0,3,void ImageSpaceEffectFullScreenBlur::Render(ImageSpaceEffectFullScreenBlur* a_this)
+101566,0x14132a560,0x14136cd90,3,ulonglong ImageSpaceEffectFullScreenBlur::UpdateParams(ImageSpaceEffectFullScreenBlur* a_this)
+101570,0x14132a8b0,0x14136d0e0,3,"ImageSpaceEffectFullScreenBlur* ImageSpaceEffectFullScreenBlur::dtor (ImageSpaceEffectFullScreenBlur* a_this, uint32_t in_EDX)"
 101600,0x14132c650,0x14136f4b0,4,BSParabolicCullingProcess::SetBackHemisphereAccumulator
 101613,0x14132d040,0x14136fec0,4,void BSShadowFrustumLight::Render(std::uint32_t& a_index)
 101631,0x14132ead0,0x141371a00,3,"void GetLightingShaderDefines(uint32_t descriptor, D3D_SHADER_MACRO* defines)"
