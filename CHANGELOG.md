@@ -1,3 +1,10 @@
+# [0.257.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.256.0...v0.257.0) (2026-09-01)
+
+
+### Features
+
+* add FullScreenBlur ([#199](https://github.com/alandtse/skyrim_vr_address_library/issues/199)) ([5133597](https://github.com/alandtse/skyrim_vr_address_library/commit/5133597823881bcbbb98a1c319f5bf4ed5b16a0d))
+
 # [0.256.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.255.0...v0.256.0) (2026-09-01)
 
 
