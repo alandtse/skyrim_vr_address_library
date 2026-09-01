@@ -1,3 +1,10 @@
+# [0.256.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.255.0...v0.256.0) (2026-09-01)
+
+
+### Features
+
+* add ImageSpaceEffect::Render VR address ([#198](https://github.com/alandtse/skyrim_vr_address_library/issues/198)) ([e0ac12d](https://github.com/alandtse/skyrim_vr_address_library/commit/e0ac12dd28837270324f573767a878bd92ff8bc5))
+
 # [0.255.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.254.0...v0.255.0) (2026-09-01)
 
 
