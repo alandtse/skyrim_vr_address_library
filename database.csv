@@ -7,9 +7,11 @@
 10909,0x1400f7e90,0x140108440,4,void Effect::Copy(const Effect* a_other)
 10920,0x1400f8490,0x140108a40,4,void Effect::SetMagnitude(float a_magnitude)
 10924,0x1400f8550,0x140108b00,4,void Effect::SetDuration(std::int32_t a_duration)
+10929,0x1400f8630,0x140108be0,4,"ulonglong FUN_1400f8630(longlong param_1, longlong param_2)"
 10974,0x1400f9ca0,0x14010a250,3,RE::INISettingCollection::Unk_07
 10979,0x1400f9e90,0x14010a440,3,RE::BSString::Set_CStr
 11045,0x1400fcfe0,0x14010d590,3,MemoryManager* MemoryManager::GetSingleton()
+11171,0x1401004c0,0x140110a70,4,TESForm* FUN_1401004c0(TESForm* param_1)
 11183,0x1401007f0,0x140110da0,3,bool MagicItem::IsPermanent()
 11194,0x140100df0,0x1401113a0,4,EffectSetting* MagicItem::GetAVEffectSetting()
 11207,0x140101790,0x140111d40,4,bool MagicItem::HasEffect(EffectArchetype a_archetype)
@@ -23,6 +25,7 @@
 11295,0x140103de0,0x140114390,4,char* MagicSystem::GetCannotCastString(MagicSystem::CannotCastReason a_reason)
 11299,0x140103f90,0x140114540,4,"void MagicSystem::GetMagicItemDescription(BSString& a_out, MagicItem* a_magicItem, const char* a_beginTagFormat, const char* a_endTagFormat)"
 11308,0x140104ad0,0x1401150c0,3,FixedStrings* FixedStrings::GetSingleton()
+11356,0x1401057d0,0x140115dc0,4,"undefined FUN_1401057D0(longlong param_1, longlong param_2)"
 11463,0x14010DAE0,0x14011e0c0,3,BSExtraDataList::SetOwnerForm
 11471,0x14010e570,0x14011eb50,4,"void SetCount_14010E570 (BSExtraDataList * param_1, ushort a_count)"
 11474,0x14010e960,0x14011ef40,3,RE::BSExtraDataList::SetSoul
@@ -461,6 +464,7 @@
 25814,0x1403bcaf0,0x1403cc940,4,SoundLevels GetSoundLevelValue (SoundLevels a_soundLevel)
 25822,0x1403bcf40,0x1403ccd90,3,RE::AIForumulas::ComputePickpocketSuccess
 25846,0x1403BDEF0,0x1403CD770,4,ActorValueOwner::sub_1403BDEF0
+25847,0x1403bdf20,0x1403cd7a0,4,"undefined ActorValueOwner::sub_1403BDF20(ActorValueOwner* this, undefined param_1, undefined param_2, undefined param_3, undefined4 param_4, undefined1 param_5)"
 25848,0x1403BE160,0x1403CD9E0,4,ActorValueOwner::sub_1403BE160
 25851,0x1403be440,0x1403cdcc0,3,RE::ActorValueOwner::Get_weapon_speed
 25858,0x1403be980,0x1403ce200,4,RE::ActorValueOwner::GetArmorRatingSkillMultiplier
@@ -488,8 +492,9 @@
 26455,0x1403db780,0x1403eb110,3,"void BSFaceGenManager::UpdatePendingCustomizationTextures()"
 26466,0x1403dc1c0,0x1403ebb30,4,"void Character::HandleCharacterFaceMeshUpdate (Character * a_this, BGSHeadPart * a_headpart)"
 26561,0x1403e1130,0x1403f0ae0,4,char* ActorValueList::GetActorValueName(ActorValue a_actorValue)
+26563,0x1403e1230,0x1403f0be0,4,const char* ActorValueList::GetActorValueScriptName(ActorValue av)
 26569,0x1403e1420,0x1403f0dd0,4,ActorValueInfo* ActorValueList::GetActorValueInfo(ActorValue a_actorValue)
-26570,0x1403e1450,0x1403f0e00,3,GetActorValueIdFromName_1403E1450 (1403e144d+3)
+26570,0x1403e1450,0x1403f0e00,4,GetActorValueIdFromName_1403E1450 (1403e144d+3)
 26574,0x1403e1790,0x1403F1140,3,void RE::ActorValueList::InitActorValueInfo()
 26592,0x1403e48d0,0x1403f4420,4,"BGSSkillPerkTreeNode * BGSSkillPerkTreeNode::ctor_1403e48d0 (BGSSkillPerkTreeNode * a_this, int32_t a_index, ActorValueInfo * a_avInfo)"
 26616,0x1403e5250,0x1403f4da0,4,RE::ActorValueOwner::GetClampedActorValue
@@ -641,6 +646,9 @@
 34256,0x140566a90,0x14056CFD0,3,TelekinesisEffect::Func21(TelekinesisEffect *a1)
 34259,0x140566bd0,0x14056D0B0,3,TelekinesisEffect::Func20(TelekinesisEffect* a1)
 34260,0x140566c50,0x14056D180,3,"TelekinesisEffect::Func4(TelekinesisEffect *a1, float a2)"
+34269,0x1405671f0,0x14056d7e0,4,"IMemoryHeap* FUN_1405671f0(IMemoryHeap* param_1, Character* param_2, MagicItem* param_3, longlong param_4)"
+34271,0x1405672c0,0x14056d8b0,4,"IMemoryHeap* FUN_1405672c0(Character* param_1, MagicItem* param_2, longlong param_3)"
+34274,0x140567470,0x14056da60,4,undefined ValueModifierEffect::Func1_140567470(ValueModifierEffect* this)
 34309,0x1405693b0,0x14056f9a0,2,void BGSAcousticSpace::Deactivate()
 34413,0x14056c9d0,0x140572fd0,3,"DialogueItem* DialogueItem::Ctor(TESQuest* a_quest, TESTopic* a_topic, TESTopicInfo* a_topicInfo, Actor* a_speaker)"
 34429,0x14056D570,0x140573B70,4,"void DialogueSubtitleStrings (char **a1, TESTopic *a2, TESTopicInfo *a3, Character *a4, void *a5)"
@@ -731,6 +739,7 @@
 36289,0x1405d27a0,0x1405dad60,2,DrawSheatheWeaponActor
 36331,0x1405d5290,0x1405dd850,3,Actor::Resurrect
 36332,0x1405d56b0,0x1405ddc70,4,"void Actor::ResetInventory(Actor * a_this, bool a_leveledOnly)"
+36333,0x1405d57b0,0x1405ddd70,4,undefined Character::sub_1405D57B0(Character* a_this)
 36344,0x1405d62e0,0x1405de910,3,RE::Actor::GetLevel
 36345,0x1405d6300,0x1405de930,3,Actor::DamageHealth
 36346,0x1405d6490,0x1405deac0,3,RE::GameEventHandler::FallLongDistance::CalcDoDamage
@@ -808,11 +817,12 @@
 37020,0x14060f240,0x140501530,2,SendAnimation
 37390,0x14061c880,0x140625470,3,BSTEventSource<ActorKill::Event>* ActorKill::GetEventSource()
 37392,0x14061ca60,0x140625650,3,BSTEventSource<DisarmedEvent::Event>* DisarmedEvent::GetEventSource()
+37509,0x140620610,0x1406293c0,4,undefined Actor::sub_140620610(Actor* a_this)
 37510,0x140620690,0x140629440,3,RE::Actor::sub_140620690
 37513,0x140620900,0x1406296b0,3,RE::Actor::RestoreActorValue_140620900
 37516,0x140620cc0,0x140629a70,3,RE::Character::Update_RegenDelay__140620CC0
 37522,0x1406210f0,0x140629ea0,4,ActorValueOwner::ModActorValue
-37523,0x140621120,0x140629ed0,3,"Actor::ApplyActorValueModifier_140621120(Actor *a1, int32 a_actorValueModifier, int32 a_actorValue, float a_avDelta, Actor *a_attacker)"
+37523,0x140621120,0x140629ed0,4,"Actor::ApplyActorValueModifier_140621120(Actor *a1, int32 a_actorValueModifier, int32 a_actorValue, float a_avDelta, Actor *a_attacker)"
 37524,0x140621350,0x14062a100,4,"float Actor::GetActorValueModifier(ACTOR_VALUE_MODIFIER a_modifier, ActorValue a_value)"
 37525,0x1406213d0,0x14062a180,4,"void Actor::HandleActorValueModified(ActorValue actorValue, float oldValue, float deltaValue, Actor* source)"
 37527,0x140621590,0x14062a340,4,void Actor::RemoveActorValueModifiers(ActorValue actorValue)
@@ -974,8 +984,8 @@
 40456,0x1406e3020,0x140709e50,4,"void PlayerCharacter::AddPlayerAddItemEvent(TESObject* a_object, TESForm* a_owner, TESObjectREFR* a_container, AQUIRE_TYPE a_type) src\RE\P/PlayerCharacter.cpp:32"
 40552,0x1406e6130,0x14070d020,3,PlayerSkills::GetSkillData
 40553,0x1406e6180,0x14070d070,3,PlayerSkills::GetLevelData
-40554,0x1406e61d0,0x14070d0c0,3,PlayerSkills::ModSkillPoints
-40555,0x1406e64d0,0x14070d3c0,3,PlayerSkills::ModSkillLevels
+40554,0x1406e61d0,0x14070d0c0,4,PlayerSkills::ModSkillPoints
+40555,0x1406e64d0,0x14070d3c0,4,PlayerSkills::ModSkillLevels
 40556,0x1406e65c0,0x14070d4b0,2,PlayerSkills::SetLevel
 40558,0x1406e6670,0x14070d560,4,PlayerSkills::CanLevelUp
 40560,0x1406e6740,0x14070d630,3,RE::PlayerCharacter::PlayerSkills::AdvanceLevel
@@ -1002,6 +1012,7 @@
 42616,0x140734fe0,0x14075fae0,4,void BSTEventSource<BSProceduralGeomEvent>::AddEventSink(BSTEventSink<BSProceduralGeomEvent>* a_eventSink)
 42638,0x1407369b0,0x1407614b0,3,splashes_of_skyrim::ProjectileManager::ProcessInWater::create_splash
 42664,0x140738780,0x140763320,3,"void Explosion::Update(Explosion* a_this, float a_delta)"
+42672,0x140739080,0x140763c20,4,undefined Explosion::sub_140739080(Explosion* this)
 42696,0x14073c410,0x140766fb0,3,"bool Explosion::CheckInit3D(Explosion *a_this)"
 42791,0x140740cb0,0x14076b960,3,"void Hazard::Update(Hazard *a_this, float a_delta)"
 42810,0x1407416f0,0x14076c3a0,3,"bool Hazard::CheckInit3D(Hazard *a_this)"
@@ -1302,7 +1313,7 @@
 50452,0x14086cc10,0x1408981a0,3,YesImSure::constructibleObjectMenu
 50453,0x14086cdc0,0x140898350,3,EssentialFavorites::Alchemy::IsQuestObject
 50454,0x14086d0a0,0x140898630,3,EssentialFavorites::Enchanting::IsQuestObject
-50459,0x14086d830,0x140898dc0,3,YesImSure::EnchantmentLearned
+50459,0x14086d830,0x140898dc0,4,YesImSure::EnchantmentLearned
 50461,0x14086db70,0x140899100,4,RE::CraftingSubMenu::UpdateCraftingInfo
 50476,0x14086e2c0,0x140899850,4,YesImSure::constructibleObjectMenu
 50477,0x14086e490,0x140899a20,4,YesImSure::smithingMenu
@@ -1365,6 +1376,7 @@
 51098,0x140898ff0,0x1408c6dd0,3,LockVariations::Sound::rotate_lock
 51121,0x140899c40,0x1408c7cd0,4,void MagicFavorites::SetFavorite(TESForm* a_form)
 51122,0x140899ca0,0x1408c7d30,4,void MagicFavorites::RemoveFavorite(TESForm* a_form)
+51143,0x14089a7f0,0x1408c8880,4,undefined MagicItemData::Func4_14089A7F0(MagicItemData* a_this)
 51152,0x14089b950,0x1408c97a0,3,MagicMenu::RequestItemCardInfoDelegate()
 51223,0x1408a0230,0x1408ce4e0,4,void MagicItemList::Update_Impl(TESObjectREFR* a_owner)
 51358,0x1408A7F20,0x1408d3f30,3,RE::MenuControls::RegisterHandler
@@ -1448,11 +1460,13 @@
 53950,0x14094d890,0x140987af0,3,payprus::Actor::UnequipItem
 53960,0x14094df30,0x140988190,3,papyrus__Actor__Bind
 54741,0x14096de60,0x1409a7f40,4,papyrus__Debug::SendAnimationEvent
+54817,0x1409721c0,0x1409abfd0,4,"undefined papyrus::Game::AdvanceSkill_1409721C0(longlong* param_1, undefined4 param_2, undefined8 param_3, char** param_4, float param_5)"
 54824,0x140972520,0x1409ac3a0,3,papyrus::Game::FastTravel
 54832,0x140972e10,0x1409acca0,3,papyrus__Game::GetFormFromFile_140972E10
 54836,0x1409731b0,0x1409ad050,3,papyrus__Game::getplayer_1409731B0
 54848,0x1409735b0,0x1409ad450,3,bool IsFastTravelEnabled
 54946,0x140979470,0x1409b3b40,3,"void EnableFastTravel(void* a1, void* a2, void* a3, bool a_enable)"
+55002,0x140979990,0x1409b4160,4,"undefined IncrementSkillFromPapyrus_140979990(char** param_1, undefined8 param_2, longlong* param_3, undefined4 param_4)"
 55141,0x140980190,0x1409baf10,3,FDGE::BSScript::InitializeScriptTypes
 55352,0x140988450,0x1409c35d0,2,po3tweaks::GameTimers::SetGlobal
 55366,0x140988af0,0x1409c3c70,3,papyrus::ImageSpaceModifier::Apply
@@ -9731,6 +9745,7 @@
 519819,0x142f4e690,0x143013ac8,3,RE::MessageBoxMenu message queue (BSTArray<MessageBoxData*>)
 519822,0x142f4e6a8,0x143013ae0,3,MessageBoxMenu message queue lock (BSSpinLock)
 519827,0x142f4e6b8,0x143013ae8,4,static MistMenu* GetSingleton()
+519908,0x142f4e920,0x143013c70,4,bool gIsBeastMode
 520058,0x142f4ed68,0x1430141c8,4,BSTArray<DEFAULT_OBJECT>& lTutorialMenu::QTutorialsShown()
 520856,0x142f50b28,0x1430a8bb8,4,BSInputEventQueue* GetSingleton()
 520865,0x142f50b74,0x1430a8c04,4,tlsSlot
