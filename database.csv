@@ -1396,8 +1396,13 @@
 51540,0x1408ba590,0x1408e7d70,4,"void ChangeName_1408BA590 (RaceSexMenu * param_1, char * param_2)"
 51614,0x1408bd8c0,0x1408ea840,3,SleepWaitTime_Compare_offset include/offsets.h:57
 51618,0x1408bde30,0x1408ead70,4,void SleepWaitMenu::ToggleOpenSleepWaitMenu(bool a_sleeping)
+51636,0x1408be990,0x1408eb8d0,3,IMenu* StatsMenu::ctor_1408BE990(IMenu* param_1)
 51638,0x1408bf360,0x1408ec3e0,2,StatsMenu::ProcessMessage
 51652,0x1408c20c0,0x1408eedb0,2,StatsMenu::UpdateSkillList
+51654,0x1408c2ba0,0x1408efad0,3,undefined StatsMenu::sub_1408C2BA0(StatsMenu* this)
+51658,0x1408c4ca0,0x1408f1620,3,undefined StatsMenu::sub_1408C4CA0(StatsMenu* this)
+51666,0x1408c7110,0x1408f5bf0,3,undefined StatsMenu::sub_1408C7110(StatsMenu* this)
+51738,0x1408cc7b0,0x1408f9730,3,undefined FUN_1408CC7B0(void)
 51753,0x1408ccbb0,0x1408f9c60,4,"void SubtitleManager::ShowSubtitle(SubtitleManager *a_this,TESObjectREFR *a_speaker,BSString *a_subtitle,bool a_alwaysDisplay)"
 51755,0x1408ccff0,0x1408fa0a0,4,SubtitleManager::KillSubtitles
 51756,0x1408cd0e0,0x1408fa190,4,void SubtitleManager::ApplyDistanceCheck(SubtitleManager *a_this)
