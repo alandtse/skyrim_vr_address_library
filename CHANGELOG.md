@@ -1,3 +1,10 @@
+# [0.258.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.257.0...v0.258.0) (2026-09-02)
+
+
+### Features
+
+* add actor-value-generator ([#200](https://github.com/alandtse/skyrim_vr_address_library/issues/200)) ([d17bdb7](https://github.com/alandtse/skyrim_vr_address_library/commit/d17bdb781195f2bdf2c3a15db3a4f79b09e9baec))
+
 # [0.257.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.256.0...v0.257.0) (2026-09-01)
 
 
