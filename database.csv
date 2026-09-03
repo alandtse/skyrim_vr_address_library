@@ -935,6 +935,8 @@
 39247,0x140695020,0x14069e620,3,BSTEventSource<LevelIncrease::Event>* LevelIncrease::GetEventSource()
 39248,0x140695110,0x14069e710,3,BSTEventSource<SkillIncrease::Event>* SkillIncrease::GetEventSource()
 39340,0x140699040,0x1406a26a0,2,PlayerCharacter::Ctor
+39343,0x14069a9d0,0x1406bae40,3,void Actor::StartSleeping(int32_t a_hours)
+39344,0x14069ab10,0x1406baf80,3,void PlayerCharacter::StartWaiting(int32_t a_hours)
 39346,0x14069abf0,0x1408ed870,2,PlayerCharacter::
 39365,0x14069c2a0,0x1406bc6c0,3,"bool PlayerCharacter::CenterOnCell_Impl(const char* a_cellName, RE::TESObjectCELL* a_cell)"
 39371,0x14069d2c0,0x1406bd770,3,po3tweaks::SitToWait::CanSleepWait
