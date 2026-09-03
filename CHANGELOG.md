@@ -1,3 +1,10 @@
+# [0.259.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.258.0...v0.259.0) (2026-09-03)
+
+
+### Features
+
+* add StartWaiting/StartSleeping ([#201](https://github.com/alandtse/skyrim_vr_address_library/issues/201)) ([765f21c](https://github.com/alandtse/skyrim_vr_address_library/commit/765f21c598d5f213c5904c4a06b0a7481bf62ecc))
+
 # [0.258.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.257.0...v0.258.0) (2026-09-02)
 
 
