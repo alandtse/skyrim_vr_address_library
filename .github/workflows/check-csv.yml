@@ -81,6 +81,7 @@ jobs:
 
             I've automatically fixed the CSV formatting issues in your PR:
             - Fixed CSV quoting for entries containing commas
+            - Sorted entries into ascending id order
             - Applied standard CSV formatting
 
             The changes have been committed to your branch. Please review the changes!
