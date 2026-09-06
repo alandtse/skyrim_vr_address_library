@@ -86,6 +86,9 @@ from there on every merge.
 
 - Conventional Commits, title ≤ 50 chars. New/corrected ids → `feat:`. Release commits
   (`chore(release): X.Y.Z [skip ci]`) are bot-authored — never hand-write one.
+- **`ci` is its own type, not a scope.** A `.github/workflows/*` or CI-config-only change is
+  `ci: ...`, never `fix(ci): ...`/`feat(ci): ...` — stacking it as a scope on `fix`/`feat`
+  claims a patch/minor release for a change with no user-facing release impact.
 
 ## Collaboration / git safety
 
