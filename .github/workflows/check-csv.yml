@@ -4,9 +4,13 @@ on:
   pull_request_target:
     paths:
       - '**.csv'
+  workflow_dispatch: {}
+  schedule:
+    - cron: '0 6 * * 1'
 
 jobs:
   autofix:
+    if: github.event_name == 'pull_request_target'
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -81,6 +85,7 @@ jobs:
 
             I've automatically fixed the CSV formatting issues in your PR:
             - Fixed CSV quoting for entries containing commas
+            - Sorted entries into ascending id order
             - Applied standard CSV formatting
 
             The changes have been committed to your branch. Please review the changes!
@@ -121,3 +126,43 @@ jobs:
           name: fixed-csv-files
           path: |
             ${{ steps.changed_files.outputs.files }}
+
+  scheduled_cleanup:
+    if: github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout default branch
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Run CSV autofix script on all CSVs
+        id: fix
+        run: |
+          output=$(python scripts/autofix_csv_quotes.py)
+          echo "$output"
+          if echo "$output" | grep -q '✅ Fixed [0-9]'; then
+            echo "modified=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "modified=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Open PR with fixes
+        if: steps.fix.outputs.modified == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "style(csv): normalize quoting and id ordering"
+          title: "style(csv): scheduled CSV cleanup"
+          body: |
+            Automated cleanup from the `check-csv.yml` ${{ github.event_name }} run.
+
+            Catches drift the `pull_request_target` pass can't see -- e.g. rows
+            added while this workflow was disabled, or manual commits that
+            bypassed a PR.
+          branch: automated/csv-cleanup
+          delete-branch: true

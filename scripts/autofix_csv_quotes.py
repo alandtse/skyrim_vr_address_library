@@ -12,6 +12,12 @@ def process_file(filepath: str) -> int:
     with open(filepath, "r", newline="", encoding="utf-8") as f:
         rows = list(csv.reader(f))
 
+    # Keep the header in place, sort the data rows numerically by id.
+    if rows:
+        header, data_rows = rows[0], rows[1:]
+        data_rows.sort(key=lambda r: int(r[0]))
+        rows = [header] + data_rows
+
     # Write back with csv.writer using QUOTE_MINIMAL
     output = io.StringIO()
     writer = csv.writer(output, quoting=csv.QUOTE_MINIMAL)
@@ -26,9 +32,14 @@ def process_file(filepath: str) -> int:
 
         for orig_line, new_line in zip(original_lines, new_lines):
             # Only count as changed if the content is actually different
-            # This catches cases where quoting was added or modified
+            # This catches cases where quoting was added/modified or rows
+            # were reordered by id.
             if orig_line.strip() != new_line.strip():
                 changes_count += 1
+
+        # A reorder can leave every zipped pair equal (same lines, shifted
+        # position) even though the file content differs overall.
+        changes_count = max(changes_count, 1)
 
         # Write the updated file
         with open(filepath, "w", newline="", encoding="utf-8") as f:
