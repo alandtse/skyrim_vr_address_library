@@ -8313,6 +8313,7 @@ sseid,aeid,confidence,name
 100841,107631,1,
 100847,107637,1,
 100848,107638,1,BSBatchRenderer::Func3_*
+100851,107641,1,BSBatchRenderer::GetNextPassSlotInGroup
 100852,107642,1,BSBatchRenderer::sub_*
 100854,107644,1,
 100855,107645,1,
