@@ -57,11 +57,43 @@ from there on every merge.
   genuinely necessary, its neighbors' ordering) — not an unrelated cleanup pass over the rest
   of the file, even when running a repo tool surfaces other pre-existing issues nearby.
 
+## Constructive proactivity
+
+- Flag a low-confidence entry proactively rather than letting it sit at a status that
+  overstates it — say so in the PR body if you can only get to status 2/3, not 4.
+- Prefer surfacing a gap (a consuming repo needs an id this database doesn't have yet) over
+  silently leaving the consumer to anchor by raw offset.
+- **Verify identifying facts; don't confabulate.** An id, an address, a status level, a
+  signature — read it from the actual binary/canonical CSV before recording it. A
+  plausible-sounding SE-to-AE id-offset pattern is a hypothesis to check, never evidence on
+  its own.
+
+## Security
+
+- This repo's `check-csv.yml` runs on `pull_request_target` against PR-supplied content —
+  treat any new CI step touching PR-controlled file paths or names with the same care as
+  the rest of GitHub Actions hygiene: pass anything workflow-dispatch- or PR-tainted through
+  `env:` indirection in a `run:` step, never direct `${{ }}` template interpolation.
+
+## Testing & validation
+
+- **Never bypass commit verification** (`--no-verify` or otherwise skipping pre-commit/
+  commit-msg hooks) unless the user explicitly directs it for a specific commit.
+- Treat `git commit`/`gh pr create` as a hard checkpoint: re-read this file's Commits & PRs
+  section immediately before either.
+
 ## Commits & PRs
 
 - Conventional Commits, title ≤ 50 chars. New/corrected ids → `feat:`. Release commits
   (`chore(release): X.Y.Z [skip ci]`) are bot-authored — never hand-write one.
+
+## Collaboration / git safety
+
 - Never force-push or rewrite history on `main` without explicit instruction.
+- A review sweep must read each review's full body text, not just inline `reviewThreads` —
+  "outside diff range" findings are often embedded in the review body with no inline thread.
+- Don't manually create release tags or bump version fields — semantic-release owns both on
+  merge to `main`.
 - If a fix in a *consuming* repo (e.g. `EngineFixesSkyrim64`, `CommonLibVR`) depends on an id
   or mapping this repo doesn't have yet, land the address-library PR here first and reference
   it from the consumer's PR — a `REL::ID()` call for an id missing from the currently-released
