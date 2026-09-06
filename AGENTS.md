@@ -32,11 +32,12 @@ from there on every merge.
   caller's decompiled call site becomes dramatically clearer once the callee's signature is
   actually complete, which is itself a good cross-check that the fix was correct.
 - **New rows go in ascending numeric `id` order, at their actual position — not appended at
-  end of file.** (A past session got this wrong and had to fix it; don't repeat it.)
+  end of file.**
 - **CSV quoting must match `csv.QUOTE_MINIMAL`**: quote a `name` field only if it contains a
   comma, quote, or newline; leave it unquoted otherwise. `check-csv.yml`'s bot is *supposed*
   to auto-fix this on every PR touching a `.csv` file, but verify it actually ran (`gh pr
-  checks`) rather than assuming — it can silently stop firing for months. To check by hand:
+  checks`) rather than assuming — as of this writing it has not run since 2025-09-23. To
+  check by hand:
   `python scripts/autofix_csv_quotes.py <changed-file>` and review the diff — but only commit
   the lines your own change actually touched; that script rewrites the *entire* file it's
   pointed at, and this repo's `database.csv` currently carries pre-existing quoting
