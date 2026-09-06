@@ -1,6 +1,6 @@
-import os
 import csv
 import io
+import os
 
 
 def process_file(filepath: str) -> int:
