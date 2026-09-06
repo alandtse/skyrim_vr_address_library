@@ -1,3 +1,16 @@
+# [0.260.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.259.0...v0.260.0) (2026-09-06)
+
+
+### Bug Fixes
+
+* **ci:** re-enable and extend CSV autofix to sort by id ([#205](https://github.com/alandtse/skyrim_vr_address_library/issues/205)) ([b930509](https://github.com/alandtse/skyrim_vr_address_library/commit/b930509527e1ee7e2ff860254f1ab3662d794696))
+
+
+### Features
+
+* add BGSDecalManager::ApplyDecal ([#202](https://github.com/alandtse/skyrim_vr_address_library/issues/202)) ([4491eb8](https://github.com/alandtse/skyrim_vr_address_library/commit/4491eb88ff50985c00392df0b4d23e5a720f7b7b))
+* add GetNextPassSlotInGroup ([#203](https://github.com/alandtse/skyrim_vr_address_library/issues/203)) ([575d5b9](https://github.com/alandtse/skyrim_vr_address_library/commit/575d5b9fe90a07d6bb5ef67ffa74ed8b999a3857))
+
 # [0.259.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.258.0...v0.259.0) (2026-09-03)
 
 
