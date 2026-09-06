@@ -149,6 +149,7 @@
 14653,0x14019b290,0x1401aafc0,4,void TESModelTextureSwap::sub_14019B290 (TESModelTextureSwap * a_this)
 14704,0x14019d510,0x1401ad250,3,BSTEventSource<TESHarvestedEvent::ItemHarvested>* TESHarvestedEvent::GetEventSource()
 14809,0x1401a1730,0x1401b1470,3,RE::TESForm::GetWeight
+15029,0x1401ad2f0,0x1401bd040,2,"void BGSDecalManager::ApplyDecal(DECAL_CREATION_DATA*, bool, BGSDecalGroup*)"
 15073,0x1401b02a0,0x1401c02b0,4,void hkpAllRayHitTempCollector::Reset()
 15118,0x1401b13f0,0x1401c1400,3,RE::BGSDecalManager::RemoveItem
 15157,0x1401b2730,0x1401c2740,3,"bool BGSDynamicPersistenceManager::PromoteReference(TESObjectREFR* a_refr, TESForm* a_owner)"
