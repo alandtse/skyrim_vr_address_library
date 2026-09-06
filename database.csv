@@ -2065,6 +2065,7 @@
 100840,0x141306240,0x141347320,4,"void BSShaderAccumulator::RenderPersistentPassList (longlong * * passList, uint32_t renderFlags)"
 100843,0x141306db0,0x141347fe0,4,"void BSBatchRenderer::ClearAllRenderPasses(BSBatchRenderer * a_this)"
 100847,0x141307160,0x141348390,3,Skyrim-Upscaler
+100851,0x141307fc0,0x141349200,4,"bool BSBatchRenderer::GetNextPassSlotInGroup(BSRenderPass *a_this, uint32_t param_2, uint32_t *param_3)"
 100852,0x141308030,0x141349270,4,"void BSBatchRenderer::ApplyPassAlphaCullState(BSRenderPass *a_this,uint *param_2,uint *param_3,undefined8 param_4,uint param_5)"
 100853,0x1413083b0,0x1413495f0,4,"void BSBatchRenderer::GetRenderPassIndex(BSBatchRenderer *a_this,uint *param_2)"
 100854,0x141308440,0x141349680,3,"void BSBatchRenderer::RenderPassImmediately_141308440 (BSBatchRenderer * a_Pass, uint32_t a_Technique, bool a_AlphaTest, uint32_t a_RenderFlags)"
