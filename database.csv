@@ -553,6 +553,7 @@
 31306,0x1404c1160,0x1404d12b0,4,BGSWaterCollisionManager::BGSWaterUpdateI::UpdateCameraInWater
 31307,0x1404c11a0,0x1404d12f0,4,BGSWaterCollisionManager::BGSWaterUpdateI::Link
 31308,0x1404c11e0,0x1404d1330,4,BGSWaterCollisionManager::BGSWaterUpdateI::Update
+31309,0x1404c1420,0x1404d1570,4,BGSWaterCollisionManager::bhkPlaceableWater::CheckPenetrations
 31310,0x1404c1690,0x1404d17e0,4,BGSWaterCollisionManager::BGSWaterUpdateI::ClearTrackedRefs
 31311,0x1404c1740,0x1404d1890,4,BGSWaterCollisionManager::BGSWaterUpdateI::AddOverlappingCollidable
 31312,0x1404c19f0,0x1404d1b40,4,BGSWaterCollisionManager::BGSWaterUpdateI::RemoveOverlappingCollidable
@@ -564,6 +565,7 @@
 31322,0x1404c1f10,0x1404d2070,4,BGSWaterCollisionManager::bhkWaterfall::RemoveOverlappingCollidable
 31323,0x1404c1f30,0x1404d2090,4,BGSWaterCollisionManager::bhkWaterfall::IsActive
 31324,0x1404c1f60,0x1404d20c0,4,BGSWaterCollisionManager::bhkWaterfall::Update
+31326,0x1404c20f0,0x1404d2250,4,BGSWaterCollisionManager::bhkAutoWater::CreateAutoWaterPhantom
 31327,0x1404c2200,0x1404d2360,4,BGSWaterCollisionManager::bhkAutoWater::SetDisabled
 31338,0x1404c2e20,0x1404d2f80,4,BGSWaterCollisionManager::bshkAutoWater::ctor
 31339,0x1404c2e80,0x1404d2fe0,4,BGSWaterCollisionManager::bshkAutoWater::AddOverlappingCollidable
