@@ -43,7 +43,7 @@
 11931,0x1401273b0,0x140137990,4,void ExtraDataList::ClearGrasshandles (BSExtraDataList * param_1)
 11932,0x140127480,0x140137a60,4,"void ExtraDataList::FUN_140127480 (BSExtraDataList * param_1, BSExtraData * param_2)"
 11933,0x1401275e0,0x140137bc0,4,"void BSExtraDataList::GetCellGrassData (BSExtraDataList * a_this, BSExtraData * * a_out)"
-11938,0x140127a70,0x1401191b0,4,FUN_140127a70
+11938,0x140127a70,0x1401191b0,4,"void FUN_140127a70 (ExtraDataList * a_extraDataList, BGSWaterCollisionManager::bhkPlaceableWater * a_water)"
 12176,0x140131990,0x140142140,3,RE::ExtraDataList::Add
 12193,0x1401320f0,0x1401428a0,3,RE::CreateRefHandle
 12204,0x1401329d0,0x140143180,3,RE::LookupReferenceByHandle
@@ -305,7 +305,7 @@
 19300,0x14028fb90,0x1402A12A0,3,TESObjectREFR::Load3D
 19301,0x140290550,0x1402A1C60,3,TESObjectREFR::Release3DRelatedData
 19302,0x140290900,0x1402a2010,3,TESObjectREFR::Set3D
-19309,0x1402917f0,0x1402a2f00,4,TESObjectREFR::sub_1402917F0
+19309,0x1402917f0,0x1402a2f00,4,void TESObjectREFR::sub_1402917F0 (TESObjectREFR * a_this)
 19316,0x1402943b0,0x1402a5ac0,4,bool Actor::Update3D()
 19322,0x1402944F0,0x1402A5C00,3,TESModel* TESObjectREFR::GetSkeletonModel(TESObjectREFR* a_this)
 19323,0x1402945e0,0x1402a5cf0,3,RE::TESObjectREFR::FindReferenceFor3D
@@ -323,14 +323,14 @@
 19396,0x140299a80,0x1402ab180,4,"float TESObjectREFR::GetDistance(TESObjectREFR* a_other, bool a_disabledRefs, bool a_ignoreWorldspace)"
 19400,0x14029a330,0x1402aba40,3,bool TESObjectREFR::IsCrimeToActivate()
 19446,0x14029cb80,0x1402ae290,3,"ShaderReferenceEffect* TESObjectREFR::InstantiateHitShader(TESEffectShader* a_shader, float a_dur, TESObjectREFR* a_facingRef, bool a_faceTarget, bool a_attachToCamera, NiAVObject* a_attachNode, bool a_interfaceEffect)"
-19453,0x14029d2e0,0x1402ae9f0,4,BGSWaterCollisionManager::BGSWaterUpdateI::ctor
-19456,0x14029d490,0x1402aec00,4,BGSWaterCollisionManager::bhkPlaceableWater::ctor
-19457,0x14029d510,0x1402aec80,4,FUN_14029d510
-19458,0x14029d5a0,0x1402aed10,4,BGSWaterCollisionManager::bhkWaterfall::ctor
-19503,0x14029e8a0,0x1402b0010,4,BGSWaterCollisionManager::BGSWaterUpdateI::`scalar_deleting_destructor'
-19520,0x14029ed90,0x1402b0500,4,BGSWaterCollisionManager::bhkPlaceableWater::dtor
-19528,0x14029efe0,0x1402b0750,4,BGSWaterCollisionManager::bhkWaterfall::dtor
-19617,0x1402a00a0,0x1402b1810,4,BGSWaterCollisionManager::bhkWaterfall::GetTransform
+19453,0x14029d2e0,0x1402ae9f0,4,BGSWaterCollisionManager::BGSWaterUpdateI * BGSWaterCollisionManager::BGSWaterUpdateI::ctor (BGSWaterCollisionManager::BGSWaterUpdateI * a_this)
+19456,0x14029d490,0x1402aec00,4,BGSWaterCollisionManager::bhkPlaceableWater * BGSWaterCollisionManager::bhkPlaceableWater::ctor (BGSWaterCollisionManager::bhkPlaceableWater * a_this)
+19457,0x14029d510,0x1402aec80,4,"bhkRigidBody * FUN_14029d510 (char * a_mem, void * a_params)"
+19458,0x14029d5a0,0x1402aed10,4,BGSWaterCollisionManager::bhkWaterfall * BGSWaterCollisionManager::bhkWaterfall::ctor (BGSWaterCollisionManager::bhkWaterfall * a_this)
+19503,0x14029e8a0,0x1402b0010,4,void BGSWaterCollisionManager::BGSWaterUpdateI::`scalar_deleting_destructor' (BGSWaterCollisionManager::BGSWaterUpdateI * a_this)
+19520,0x14029ed90,0x1402b0500,4,BGSWaterCollisionManager::bhkPlaceableWater * BGSWaterCollisionManager::bhkPlaceableWater::dtor (BGSWaterCollisionManager::bhkPlaceableWater * a_this)
+19528,0x14029efe0,0x1402b0750,4,BGSWaterCollisionManager::bhkWaterfall * BGSWaterCollisionManager::bhkWaterfall::dtor (BGSWaterCollisionManager::bhkWaterfall * a_this)
+19617,0x1402a00a0,0x1402b1810,4,"void BGSWaterCollisionManager::bhkWaterfall::GetTransform (BGSWaterCollisionManager::BGSWaterUpdateI * a_this, hkTransform * a_outTransform)"
 19666,0x1402a2070,0x1402b37e0,3,RE::ScriptEventSourceHolder::SendActivateEvent
 19760,0x1402a50e0,0x1402b6850,4,"BSResource::ErrorCode SaveStorageWrapper::EnsureCapacity (SaveStorageWrapper * a_this, uint64_t size)"
 19789,0x1402a6670,0x1402b7de0,3,RE::TESObjectREFR::GetOwner
@@ -546,37 +546,37 @@
 31150,0x1404b87e0,0x1404c88c0,3,SeasonsofSkyrim::LODSwap::Tree::BuildMeshFileName
 31151,0x1404b8820,0x1404c8900,3,SeasonsofSkyrim::LODSwap::Tree::BuildTextureFileName
 31152,0x1404b8850,0x1404c8930,3,SeasonsofSkyrim::LODSwap::Tree::BuildTypeListFileName
-31300,0x1404c0ed0,0x1404d1020,4,BGSWaterCollisionManager::BGSWaterUpdateI::dtor
-31301,0x1404c0f70,0x1404d10c0,4,BGSWaterCollisionManager::BGSWaterUpdateI::SetContext
-31302,0x1404c0f80,0x1404d10d0,4,BGSWaterCollisionManager::BGSWaterUpdateI::SetDisabled
-31303,0x1404c0fa0,0x1404d10f0,4,BGSWaterCollisionManager::BGSWaterUpdateI::Unlink
-31306,0x1404c1160,0x1404d12b0,4,BGSWaterCollisionManager::BGSWaterUpdateI::UpdateCameraInWater
-31307,0x1404c11a0,0x1404d12f0,4,BGSWaterCollisionManager::BGSWaterUpdateI::Link
-31308,0x1404c11e0,0x1404d1330,4,BGSWaterCollisionManager::BGSWaterUpdateI::Update
-31309,0x1404c1420,0x1404d1570,4,BGSWaterCollisionManager::bhkPlaceableWater::CheckPenetrations
-31310,0x1404c1690,0x1404d17e0,4,BGSWaterCollisionManager::BGSWaterUpdateI::ClearTrackedRefs
-31311,0x1404c1740,0x1404d1890,4,BGSWaterCollisionManager::BGSWaterUpdateI::AddOverlappingCollidable
-31312,0x1404c19f0,0x1404d1b40,4,BGSWaterCollisionManager::BGSWaterUpdateI::RemoveOverlappingCollidable
-31313,0x1404c1c20,0x1404d1d80,4,BGSWaterCollisionManager::bhkPlaceableWater::NotifyCollidableEntered
-31314,0x1404c1c30,0x1404d1d90,4,BGSWaterCollisionManager::bhkPlaceableWater::NotifyCollidableExited
-31316,0x1404c1d30,0x1404d1e90,4,BGSWaterCollisionManager::bhkPlaceableWater::GetTransform
-31317,0x1404c1d70,0x1404d1ed0,4,BGSWaterCollisionManager::bhkPlaceableWater::IsActive
-31318,0x1404c1da0,0x1404d1f00,4,BGSWaterCollisionManager::bhkPlaceableWater::RefreshOverlaps
-31319,0x1404c1e60,0x1404d1fc0,4,BGSWaterCollisionManager::bhkPlaceableWater::Update
-31321,0x1404c1ef0,0x1404d2050,4,BGSWaterCollisionManager::bhkWaterfall::AddOverlappingCollidable
-31322,0x1404c1f10,0x1404d2070,4,BGSWaterCollisionManager::bhkWaterfall::RemoveOverlappingCollidable
-31323,0x1404c1f30,0x1404d2090,4,BGSWaterCollisionManager::bhkWaterfall::IsActive
-31324,0x1404c1f60,0x1404d20c0,4,BGSWaterCollisionManager::bhkWaterfall::Update
-31326,0x1404c20f0,0x1404d2250,4,BGSWaterCollisionManager::bhkAutoWater::CreateAutoWaterPhantom
-31327,0x1404c2200,0x1404d2360,4,BGSWaterCollisionManager::bhkAutoWater::SetDisabled
-31338,0x1404c2e20,0x1404d2f80,4,BGSWaterCollisionManager::bshkAutoWater::ctor
-31339,0x1404c2e80,0x1404d2fe0,4,BGSWaterCollisionManager::bshkAutoWater::AddOverlappingCollidable
-31340,0x1404c2ec0,0x1404d3020,4,BGSWaterCollisionManager::bshkAutoWater::RemoveOverlappingCollidable
-31341,0x1404c2f00,0x1404d3060,4,BGSWaterCollisionManager::bshkAutoWater::GetTransform
-31342,0x1404c2f20,0x1404d3080,4,BGSWaterCollisionManager::bshkAutoWater::IsActive
-31343,0x1404c2f60,0x1404d30c0,4,BGSWaterCollisionManager::bshkAutoWater::Update
-31353,0x1404c3520,0x1404d3680,4,BGSWaterCollisionManager::bhkAutoWater::`scalar_deleting_destructor'
-31354,0x1404c3560,0x1404d36c0,4,BGSWaterCollisionManager::bshkAutoWater::dtor
+31300,0x1404c0ed0,0x1404d1020,4,void BGSWaterCollisionManager::BGSWaterUpdateI::dtor (BGSWaterCollisionManager::BGSWaterUpdateI * a_this)
+31301,0x1404c0f70,0x1404d10c0,4,"void BGSWaterCollisionManager::BGSWaterUpdateI::SetContext (BGSWaterCollisionManager::BGSWaterUpdateI * a_this, void * a_context)"
+31302,0x1404c0f80,0x1404d10d0,4,"void BGSWaterCollisionManager::BGSWaterUpdateI::SetDisabled (BGSWaterCollisionManager::BGSWaterUpdateI * a_this, bool a_disabled)"
+31303,0x1404c0fa0,0x1404d10f0,4,void BGSWaterCollisionManager::BGSWaterUpdateI::Unlink (BGSWaterCollisionManager::BGSWaterUpdateI * a_this)
+31306,0x1404c1160,0x1404d12b0,4,void BGSWaterCollisionManager::BGSWaterUpdateI::UpdateCameraInWater (BGSWaterCollisionManager::BGSWaterUpdateI * a_this)
+31307,0x1404c11a0,0x1404d12f0,4,void BGSWaterCollisionManager::BGSWaterUpdateI::Link (BGSWaterCollisionManager::BGSWaterUpdateI * a_this)
+31308,0x1404c11e0,0x1404d1330,4,void BGSWaterCollisionManager::BGSWaterUpdateI::Update (BGSWaterCollisionManager::BGSWaterUpdateI * a_this)
+31309,0x1404c1420,0x1404d1570,4,void BGSWaterCollisionManager::bhkPlaceableWater::CheckPenetrations (BGSWaterCollisionManager::bhkPlaceableWater * a_this)
+31310,0x1404c1690,0x1404d17e0,4,void BGSWaterCollisionManager::BGSWaterUpdateI::ClearTrackedRefs (BGSWaterCollisionManager::BGSWaterUpdateI * a_this)
+31311,0x1404c1740,0x1404d1890,4,"bool BGSWaterCollisionManager::BGSWaterUpdateI::AddOverlappingCollidable (BGSWaterCollisionManager::BGSWaterUpdateI * a_this, hkpCollidable * a_collidable)"
+31312,0x1404c19f0,0x1404d1b40,4,"bool BGSWaterCollisionManager::BGSWaterUpdateI::RemoveOverlappingCollidable (BGSWaterCollisionManager::BGSWaterUpdateI * a_this, hkpCollidable * a_collidable)"
+31313,0x1404c1c20,0x1404d1d80,4,"void BGSWaterCollisionManager::bhkPlaceableWater::NotifyCollidableEntered (BGSWaterCollisionManager::bhkPlaceableWater * a_this, hkpCollidable * a_collidable)"
+31314,0x1404c1c30,0x1404d1d90,4,"void BGSWaterCollisionManager::bhkPlaceableWater::NotifyCollidableExited (BGSWaterCollisionManager::bhkPlaceableWater * a_this, hkpCollidable * a_collidable)"
+31316,0x1404c1d30,0x1404d1e90,4,"void BGSWaterCollisionManager::bhkPlaceableWater::GetTransform (BGSWaterCollisionManager::BGSWaterUpdateI * a_this, hkTransform * a_outTransform)"
+31317,0x1404c1d70,0x1404d1ed0,4,bool BGSWaterCollisionManager::bhkPlaceableWater::IsActive (BGSWaterCollisionManager::bhkPlaceableWater * a_this)
+31318,0x1404c1da0,0x1404d1f00,4,void BGSWaterCollisionManager::bhkPlaceableWater::RefreshOverlaps (BGSWaterCollisionManager::BGSWaterUpdateI * a_this)
+31319,0x1404c1e60,0x1404d1fc0,4,void BGSWaterCollisionManager::bhkPlaceableWater::Update (BGSWaterCollisionManager::BGSWaterUpdateI * a_this)
+31321,0x1404c1ef0,0x1404d2050,4,"void BGSWaterCollisionManager::bhkWaterfall::AddOverlappingCollidable (BGSWaterCollisionManager::bhkWaterfall * a_this, hkpCollidable * a_collidable)"
+31322,0x1404c1f10,0x1404d2070,4,"void BGSWaterCollisionManager::bhkWaterfall::RemoveOverlappingCollidable (BGSWaterCollisionManager::bhkWaterfall * a_this, hkpCollidable * a_collidable)"
+31323,0x1404c1f30,0x1404d2090,4,bool BGSWaterCollisionManager::bhkWaterfall::IsActive (BGSWaterCollisionManager::bhkWaterfall * a_this)
+31324,0x1404c1f60,0x1404d20c0,4,void BGSWaterCollisionManager::bhkWaterfall::Update (BGSWaterCollisionManager::BGSWaterUpdateI * a_this)
+31326,0x1404c20f0,0x1404d2250,4,void BGSWaterCollisionManager::bhkAutoWater::CreateAutoWaterPhantom (BGSWaterCollisionManager::bhkAutoWater * a_this)
+31327,0x1404c2200,0x1404d2360,4,"void BGSWaterCollisionManager::bhkAutoWater::SetDisabled (BGSWaterCollisionManager::bhkAutoWater * a_this, bool a_disabled)"
+31338,0x1404c2e20,0x1404d2f80,4,BGSWaterCollisionManager::bshkAutoWater * BGSWaterCollisionManager::bshkAutoWater::ctor (BGSWaterCollisionManager::bshkAutoWater * a_this)
+31339,0x1404c2e80,0x1404d2fe0,4,"void BGSWaterCollisionManager::bshkAutoWater::AddOverlappingCollidable (BGSWaterCollisionManager::bshkAutoWater * a_this, hkpCollidable * a_collidable)"
+31340,0x1404c2ec0,0x1404d3020,4,"void BGSWaterCollisionManager::bshkAutoWater::RemoveOverlappingCollidable (BGSWaterCollisionManager::bshkAutoWater * a_this, hkpCollidable * a_collidable)"
+31341,0x1404c2f00,0x1404d3060,4,"void BGSWaterCollisionManager::bshkAutoWater::GetTransform (BGSWaterCollisionManager::bshkAutoWater * a_this, hkTransform * a_outTransform)"
+31342,0x1404c2f20,0x1404d3080,4,bool BGSWaterCollisionManager::bshkAutoWater::IsActive (BGSWaterCollisionManager::BGSWaterUpdateI * a_this)
+31343,0x1404c2f60,0x1404d30c0,4,void BGSWaterCollisionManager::bshkAutoWater::Update (BGSWaterCollisionManager::BGSWaterUpdateI * a_this)
+31353,0x1404c3520,0x1404d3680,4,void BGSWaterCollisionManager::bhkAutoWater::`scalar_deleting_destructor' (BGSWaterCollisionManager::bhkAutoWater * a_this)
+31354,0x1404c3560,0x1404d36c0,4,BGSWaterCollisionManager::bshkAutoWater * BGSWaterCollisionManager::bshkAutoWater::dtor (BGSWaterCollisionManager::bshkAutoWater * a_this)
 31373,0x1404c3e20,0x1404d3f80,3,char TESWaterReflections::UpdateActor (TESWaterReflections * a_this)
 31384,0x1404c6160,0x1404d6310,3,void TESWaterSystem::UpdateDisplacementMeshPosition(TESWaterSystem* a_waterSystem)
 31388,0x1404c6890,0x1404d6a50,3,"void TESWaterSystem::InitializeWater(TESWaterSystem* a_waterSystem, BSTriShape* a_waterTri, TESWaterForm* a_form, float a_waterHeight, void* a_unk4, bool a_noDisplacement, bool a_isProcedural)"
