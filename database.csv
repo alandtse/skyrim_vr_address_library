@@ -550,6 +550,8 @@
 31307,0x1404c11a0,0x1404d12f0,4,BGSWaterCollisionManager::BGSWaterUpdateI::Link
 31311,0x1404c1740,0x1404d1890,4,BGSWaterCollisionManager::BGSWaterUpdateI::AddOverlappingCollidable
 31312,0x1404c19f0,0x1404d1b40,4,BGSWaterCollisionManager::BGSWaterUpdateI::RemoveOverlappingCollidable
+31321,0x1404c1ef0,0x1404d2050,4,BGSWaterCollisionManager::bhkWaterfall::AddOverlappingCollidable
+31322,0x1404c1f10,0x1404d2070,4,BGSWaterCollisionManager::bhkWaterfall::RemoveOverlappingCollidable
 31339,0x1404c2e80,0x1404d2fe0,4,BGSWaterCollisionManager::bshkAutoWater::AddOverlappingCollidable
 31340,0x1404c2ec0,0x1404d3020,4,BGSWaterCollisionManager::bshkAutoWater::RemoveOverlappingCollidable
 31353,0x1404c3520,0x1404d3680,4,BGSWaterCollisionManager::bhkAutoWater::`scalar_deleting_destructor'
