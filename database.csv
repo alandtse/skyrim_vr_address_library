@@ -324,7 +324,9 @@
 19400,0x14029a330,0x1402aba40,3,bool TESObjectREFR::IsCrimeToActivate()
 19446,0x14029cb80,0x1402ae290,3,"ShaderReferenceEffect* TESObjectREFR::InstantiateHitShader(TESEffectShader* a_shader, float a_dur, TESObjectREFR* a_facingRef, bool a_faceTarget, bool a_attachToCamera, NiAVObject* a_attachNode, bool a_interfaceEffect)"
 19457,0x14029d510,0x1402aec80,4,FUN_14029d510
+19503,0x14029e8a0,0x1402b0010,4,BGSWaterCollisionManager::BGSWaterUpdateI::`scalar_deleting_destructor'
 19520,0x14029ed90,0x1402b0500,4,BGSWaterCollisionManager::bhkPlaceableWater::dtor
+19528,0x14029efe0,0x1402b0750,4,BGSWaterCollisionManager::bhkWaterfall::dtor
 19666,0x1402a2070,0x1402b37e0,3,RE::ScriptEventSourceHolder::SendActivateEvent
 19760,0x1402a50e0,0x1402b6850,4,"BSResource::ErrorCode SaveStorageWrapper::EnsureCapacity (SaveStorageWrapper * a_this, uint64_t size)"
 19789,0x1402a6670,0x1402b7de0,3,RE::TESObjectREFR::GetOwner
@@ -541,8 +543,12 @@
 31151,0x1404b8820,0x1404c8900,3,SeasonsofSkyrim::LODSwap::Tree::BuildTextureFileName
 31152,0x1404b8850,0x1404c8930,3,SeasonsofSkyrim::LODSwap::Tree::BuildTypeListFileName
 31300,0x1404c0ed0,0x1404d1020,4,BGSWaterCollisionManager::BGSWaterUpdateI::dtor
+31301,0x1404c0f70,0x1404d10c0,4,BGSWaterCollisionManager::BGSWaterUpdateI::SetContext
 31302,0x1404c0f80,0x1404d10d0,4,BGSWaterCollisionManager::BGSWaterUpdateI::SetDisabled
 31303,0x1404c0fa0,0x1404d10f0,4,BGSWaterCollisionManager::BGSWaterUpdateI::Unlink
+31307,0x1404c11a0,0x1404d12f0,4,BGSWaterCollisionManager::BGSWaterUpdateI::Link
+31353,0x1404c3520,0x1404d3680,4,BGSWaterCollisionManager::bhkAutoWater::`scalar_deleting_destructor'
+31354,0x1404c3560,0x1404d36c0,4,BGSWaterCollisionManager::bshkAutoWater::dtor
 31373,0x1404c3e20,0x1404d3f80,3,char TESWaterReflections::UpdateActor (TESWaterReflections * a_this)
 31384,0x1404c6160,0x1404d6310,3,void TESWaterSystem::UpdateDisplacementMeshPosition(TESWaterSystem* a_waterSystem)
 31388,0x1404c6890,0x1404d6a50,3,"void TESWaterSystem::InitializeWater(TESWaterSystem* a_waterSystem, BSTriShape* a_waterTri, TESWaterForm* a_form, float a_waterHeight, void* a_unk4, bool a_noDisplacement, bool a_isProcedural)"

@@ -2923,7 +2923,9 @@ sseid,aeid,confidence,name
 19400,19827,3,RE::TESObjectREFR::IsCrimeToActivate
 19446,19872,3,RE::TESObjectREFR::InstantiateHitShader
 19457,19457,3,FUN_14029d510
+19503,19930,3,BGSWaterCollisionManager::BGSWaterUpdateI::`scalar_deleting_destructor'
 19520,19946,3,BGSWaterCollisionManager::bhkPlaceableWater::dtor
+19528,19954,3,BGSWaterCollisionManager::bhkWaterfall::dtor
 19805,20210,3,RE::TESObjectREFR::IsAnOwner
 19857,20264,3,RE::TESObjectREFR::InitChildActivates
 20095,20543,3,RE::TESWorldSpace::GetSkyCell
@@ -4143,6 +4145,7 @@ sseid,aeid,confidence,name
 31300,32084,3,BGSWaterCollisionManager::BGSWaterUpdateI::dtor
 31302,32086,3,BGSWaterCollisionManager::BGSWaterUpdateI::SetDisabled
 31303,32087,3,BGSWaterCollisionManager::BGSWaterUpdateI::Unlink
+31307,32091,3,BGSWaterCollisionManager::BGSWaterUpdateI::Link
 31410,32217,3,RE::TESWaterSystem::AddRipple
 32141,32885,3,RE::IAnimationGraphManagerHolder::SetGraphVariableBool_1404F06E0
 32142,32886,3,RE::IAnimationGraphManagerHolder::SetGraphVariableInt_1404F0700
