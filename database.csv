@@ -557,6 +557,8 @@
 31310,0x1404c1690,0x1404d17e0,4,BGSWaterCollisionManager::BGSWaterUpdateI::ClearTrackedRefs
 31311,0x1404c1740,0x1404d1890,4,BGSWaterCollisionManager::BGSWaterUpdateI::AddOverlappingCollidable
 31312,0x1404c19f0,0x1404d1b40,4,BGSWaterCollisionManager::BGSWaterUpdateI::RemoveOverlappingCollidable
+31313,0x1404c1c20,0x1404d1d80,4,BGSWaterCollisionManager::bhkPlaceableWater::NotifyCollidableEntered
+31314,0x1404c1c30,0x1404d1d90,4,BGSWaterCollisionManager::bhkPlaceableWater::NotifyCollidableExited
 31316,0x1404c1d30,0x1404d1e90,4,BGSWaterCollisionManager::bhkPlaceableWater::GetTransform
 31317,0x1404c1d70,0x1404d1ed0,4,BGSWaterCollisionManager::bhkPlaceableWater::IsActive
 31318,0x1404c1da0,0x1404d1f00,4,BGSWaterCollisionManager::bhkPlaceableWater::RefreshOverlaps
