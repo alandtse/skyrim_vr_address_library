@@ -4146,6 +4146,10 @@ sseid,aeid,confidence,name
 31302,32086,3,BGSWaterCollisionManager::BGSWaterUpdateI::SetDisabled
 31303,32087,3,BGSWaterCollisionManager::BGSWaterUpdateI::Unlink
 31307,32091,3,BGSWaterCollisionManager::BGSWaterUpdateI::Link
+31311,32095,3,BGSWaterCollisionManager::BGSWaterUpdateI::AddOverlappingCollidable
+31312,32096,3,BGSWaterCollisionManager::BGSWaterUpdateI::RemoveOverlappingCollidable
+31339,32124,3,BGSWaterCollisionManager::bshkAutoWater::AddOverlappingCollidable
+31340,32125,3,BGSWaterCollisionManager::bshkAutoWater::RemoveOverlappingCollidable
 31410,32217,3,RE::TESWaterSystem::AddRipple
 32141,32885,3,RE::IAnimationGraphManagerHolder::SetGraphVariableBool_1404F06E0
 32142,32886,3,RE::IAnimationGraphManagerHolder::SetGraphVariableInt_1404F0700
