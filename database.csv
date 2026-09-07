@@ -546,6 +546,7 @@
 31301,0x1404c0f70,0x1404d10c0,4,BGSWaterCollisionManager::BGSWaterUpdateI::SetContext
 31302,0x1404c0f80,0x1404d10d0,4,BGSWaterCollisionManager::BGSWaterUpdateI::SetDisabled
 31303,0x1404c0fa0,0x1404d10f0,4,BGSWaterCollisionManager::BGSWaterUpdateI::Unlink
+31306,0x1404c1160,0x1404d12b0,4,BGSWaterCollisionManager::BGSWaterUpdateI::UpdateCameraInWater
 31307,0x1404c11a0,0x1404d12f0,4,BGSWaterCollisionManager::BGSWaterUpdateI::Link
 31311,0x1404c1740,0x1404d1890,4,BGSWaterCollisionManager::BGSWaterUpdateI::AddOverlappingCollidable
 31312,0x1404c19f0,0x1404d1b40,4,BGSWaterCollisionManager::BGSWaterUpdateI::RemoveOverlappingCollidable

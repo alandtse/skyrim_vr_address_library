@@ -4145,6 +4145,7 @@ sseid,aeid,confidence,name
 31300,32084,3,BGSWaterCollisionManager::BGSWaterUpdateI::dtor
 31302,32086,3,BGSWaterCollisionManager::BGSWaterUpdateI::SetDisabled
 31303,32087,3,BGSWaterCollisionManager::BGSWaterUpdateI::Unlink
+31306,32090,3,BGSWaterCollisionManager::BGSWaterUpdateI::UpdateCameraInWater
 31307,32091,3,BGSWaterCollisionManager::BGSWaterUpdateI::Link
 31311,32095,3,BGSWaterCollisionManager::BGSWaterUpdateI::AddOverlappingCollidable
 31312,32096,3,BGSWaterCollisionManager::BGSWaterUpdateI::RemoveOverlappingCollidable
