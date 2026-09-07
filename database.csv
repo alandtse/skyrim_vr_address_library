@@ -564,6 +564,7 @@
 31322,0x1404c1f10,0x1404d2070,4,BGSWaterCollisionManager::bhkWaterfall::RemoveOverlappingCollidable
 31323,0x1404c1f30,0x1404d2090,4,BGSWaterCollisionManager::bhkWaterfall::IsActive
 31324,0x1404c1f60,0x1404d20c0,4,BGSWaterCollisionManager::bhkWaterfall::Update
+31327,0x1404c2200,0x1404d2360,4,BGSWaterCollisionManager::bhkAutoWater::SetDisabled
 31338,0x1404c2e20,0x1404d2f80,4,BGSWaterCollisionManager::bshkAutoWater::ctor
 31339,0x1404c2e80,0x1404d2fe0,4,BGSWaterCollisionManager::bshkAutoWater::AddOverlappingCollidable
 31340,0x1404c2ec0,0x1404d3020,4,BGSWaterCollisionManager::bshkAutoWater::RemoveOverlappingCollidable
