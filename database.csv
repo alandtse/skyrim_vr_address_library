@@ -43,6 +43,7 @@
 11931,0x1401273b0,0x140137990,4,void ExtraDataList::ClearGrasshandles (BSExtraDataList * param_1)
 11932,0x140127480,0x140137a60,4,"void ExtraDataList::FUN_140127480 (BSExtraDataList * param_1, BSExtraData * param_2)"
 11933,0x1401275e0,0x140137bc0,4,"void BSExtraDataList::GetCellGrassData (BSExtraDataList * a_this, BSExtraData * * a_out)"
+11938,0x140127a70,0x1401191b0,4,FUN_140127a70
 12176,0x140131990,0x140142140,3,RE::ExtraDataList::Add
 12193,0x1401320f0,0x1401428a0,3,RE::CreateRefHandle
 12204,0x1401329d0,0x140143180,3,RE::LookupReferenceByHandle
@@ -304,6 +305,7 @@
 19300,0x14028fb90,0x1402A12A0,3,TESObjectREFR::Load3D
 19301,0x140290550,0x1402A1C60,3,TESObjectREFR::Release3DRelatedData
 19302,0x140290900,0x1402a2010,3,TESObjectREFR::Set3D
+19309,0x1402917f0,0x1402a2f00,4,TESObjectREFR::sub_1402917F0
 19316,0x1402943b0,0x1402a5ac0,4,bool Actor::Update3D()
 19322,0x1402944F0,0x1402A5C00,3,TESModel* TESObjectREFR::GetSkeletonModel(TESObjectREFR* a_this)
 19323,0x1402945e0,0x1402a5cf0,3,RE::TESObjectREFR::FindReferenceFor3D
@@ -321,6 +323,8 @@
 19396,0x140299a80,0x1402ab180,4,"float TESObjectREFR::GetDistance(TESObjectREFR* a_other, bool a_disabledRefs, bool a_ignoreWorldspace)"
 19400,0x14029a330,0x1402aba40,3,bool TESObjectREFR::IsCrimeToActivate()
 19446,0x14029cb80,0x1402ae290,3,"ShaderReferenceEffect* TESObjectREFR::InstantiateHitShader(TESEffectShader* a_shader, float a_dur, TESObjectREFR* a_facingRef, bool a_faceTarget, bool a_attachToCamera, NiAVObject* a_attachNode, bool a_interfaceEffect)"
+19457,0x14029d510,0x1402aec80,4,FUN_14029d510
+19520,0x14029ed90,0x1402b0500,4,BGSWaterCollisionManager::bhkPlaceableWater::dtor
 19666,0x1402a2070,0x1402b37e0,3,RE::ScriptEventSourceHolder::SendActivateEvent
 19760,0x1402a50e0,0x1402b6850,4,"BSResource::ErrorCode SaveStorageWrapper::EnsureCapacity (SaveStorageWrapper * a_this, uint64_t size)"
 19789,0x1402a6670,0x1402b7de0,3,RE::TESObjectREFR::GetOwner
@@ -536,6 +540,9 @@
 31150,0x1404b87e0,0x1404c88c0,3,SeasonsofSkyrim::LODSwap::Tree::BuildMeshFileName
 31151,0x1404b8820,0x1404c8900,3,SeasonsofSkyrim::LODSwap::Tree::BuildTextureFileName
 31152,0x1404b8850,0x1404c8930,3,SeasonsofSkyrim::LODSwap::Tree::BuildTypeListFileName
+31300,0x1404c0ed0,0x1404d1020,4,BGSWaterCollisionManager::BGSWaterUpdateI::dtor
+31302,0x1404c0f80,0x1404d10d0,4,BGSWaterCollisionManager::BGSWaterUpdateI::SetDisabled
+31303,0x1404c0fa0,0x1404d10f0,4,BGSWaterCollisionManager::BGSWaterUpdateI::Unlink
 31373,0x1404c3e20,0x1404d3f80,3,char TESWaterReflections::UpdateActor (TESWaterReflections * a_this)
 31384,0x1404c6160,0x1404d6310,3,void TESWaterSystem::UpdateDisplacementMeshPosition(TESWaterSystem* a_waterSystem)
 31388,0x1404c6890,0x1404d6a50,3,"void TESWaterSystem::InitializeWater(TESWaterSystem* a_waterSystem, BSTriShape* a_waterTri, TESWaterForm* a_form, float a_waterHeight, void* a_unk4, bool a_noDisplacement, bool a_isProcedural)"
