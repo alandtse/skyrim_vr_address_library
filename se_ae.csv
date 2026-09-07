@@ -2926,6 +2926,7 @@ sseid,aeid,confidence,name
 19503,19930,3,BGSWaterCollisionManager::BGSWaterUpdateI::`scalar_deleting_destructor'
 19520,19946,3,BGSWaterCollisionManager::bhkPlaceableWater::dtor
 19528,19954,3,BGSWaterCollisionManager::bhkWaterfall::dtor
+19617,20019,3,BGSWaterCollisionManager::bhkWaterfall::GetTransform
 19805,20210,3,RE::TESObjectREFR::IsAnOwner
 19857,20264,3,RE::TESObjectREFR::InitChildActivates
 20095,20543,3,RE::TESWorldSpace::GetSkyCell
@@ -4149,8 +4150,13 @@ sseid,aeid,confidence,name
 31307,32091,3,BGSWaterCollisionManager::BGSWaterUpdateI::Link
 31311,32095,3,BGSWaterCollisionManager::BGSWaterUpdateI::AddOverlappingCollidable
 31312,32096,3,BGSWaterCollisionManager::BGSWaterUpdateI::RemoveOverlappingCollidable
+31316,32100,3,BGSWaterCollisionManager::bhkPlaceableWater::GetTransform
+31317,32101,3,BGSWaterCollisionManager::bhkPlaceableWater::IsActive
+31323,32107,3,BGSWaterCollisionManager::bhkWaterfall::IsActive
 31339,32124,3,BGSWaterCollisionManager::bshkAutoWater::AddOverlappingCollidable
 31340,32125,3,BGSWaterCollisionManager::bshkAutoWater::RemoveOverlappingCollidable
+31341,32126,3,BGSWaterCollisionManager::bshkAutoWater::GetTransform
+31342,32127,3,BGSWaterCollisionManager::bshkAutoWater::IsActive
 31410,32217,3,RE::TESWaterSystem::AddRipple
 32141,32885,3,RE::IAnimationGraphManagerHolder::SetGraphVariableBool_1404F06E0
 32142,32886,3,RE::IAnimationGraphManagerHolder::SetGraphVariableInt_1404F0700

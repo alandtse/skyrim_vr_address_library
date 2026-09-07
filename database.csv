@@ -327,6 +327,7 @@
 19503,0x14029e8a0,0x1402b0010,4,BGSWaterCollisionManager::BGSWaterUpdateI::`scalar_deleting_destructor'
 19520,0x14029ed90,0x1402b0500,4,BGSWaterCollisionManager::bhkPlaceableWater::dtor
 19528,0x14029efe0,0x1402b0750,4,BGSWaterCollisionManager::bhkWaterfall::dtor
+19617,0x1402a00a0,0x1402b1810,4,BGSWaterCollisionManager::bhkWaterfall::GetTransform
 19666,0x1402a2070,0x1402b37e0,3,RE::ScriptEventSourceHolder::SendActivateEvent
 19760,0x1402a50e0,0x1402b6850,4,"BSResource::ErrorCode SaveStorageWrapper::EnsureCapacity (SaveStorageWrapper * a_this, uint64_t size)"
 19789,0x1402a6670,0x1402b7de0,3,RE::TESObjectREFR::GetOwner
@@ -550,10 +551,15 @@
 31307,0x1404c11a0,0x1404d12f0,4,BGSWaterCollisionManager::BGSWaterUpdateI::Link
 31311,0x1404c1740,0x1404d1890,4,BGSWaterCollisionManager::BGSWaterUpdateI::AddOverlappingCollidable
 31312,0x1404c19f0,0x1404d1b40,4,BGSWaterCollisionManager::BGSWaterUpdateI::RemoveOverlappingCollidable
+31316,0x1404c1d30,0x1404d1e90,4,BGSWaterCollisionManager::bhkPlaceableWater::GetTransform
+31317,0x1404c1d70,0x1404d1ed0,4,BGSWaterCollisionManager::bhkPlaceableWater::IsActive
 31321,0x1404c1ef0,0x1404d2050,4,BGSWaterCollisionManager::bhkWaterfall::AddOverlappingCollidable
 31322,0x1404c1f10,0x1404d2070,4,BGSWaterCollisionManager::bhkWaterfall::RemoveOverlappingCollidable
+31323,0x1404c1f30,0x1404d2090,4,BGSWaterCollisionManager::bhkWaterfall::IsActive
 31339,0x1404c2e80,0x1404d2fe0,4,BGSWaterCollisionManager::bshkAutoWater::AddOverlappingCollidable
 31340,0x1404c2ec0,0x1404d3020,4,BGSWaterCollisionManager::bshkAutoWater::RemoveOverlappingCollidable
+31341,0x1404c2f00,0x1404d3060,4,BGSWaterCollisionManager::bshkAutoWater::GetTransform
+31342,0x1404c2f20,0x1404d3080,4,BGSWaterCollisionManager::bshkAutoWater::IsActive
 31353,0x1404c3520,0x1404d3680,4,BGSWaterCollisionManager::bhkAutoWater::`scalar_deleting_destructor'
 31354,0x1404c3560,0x1404d36c0,4,BGSWaterCollisionManager::bshkAutoWater::dtor
 31373,0x1404c3e20,0x1404d3f80,3,char TESWaterReflections::UpdateActor (TESWaterReflections * a_this)
