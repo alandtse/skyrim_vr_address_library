@@ -1,3 +1,10 @@
+# [0.261.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.260.0...v0.261.0) (2026-09-07)
+
+
+### Features
+
+* add BGSWaterCollisionManager addresses ([#207](https://github.com/alandtse/skyrim_vr_address_library/issues/207)) ([5876e6f](https://github.com/alandtse/skyrim_vr_address_library/commit/5876e6f8f6b8a49f5dddbbfcf2751deb74008eef))
+
 # [0.260.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.259.0...v0.260.0) (2026-09-06)
 
 
