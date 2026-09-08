@@ -55,12 +55,9 @@ def main():
     if len(sys.argv) > 1:
         files_to_process = sys.argv[1:]
     else:
-        # Default behavior: find all CSV files
-        files_to_process = []
-        for root, _, files in os.walk("."):
-            for file in files:
-                if file.endswith(".csv"):
-                    files_to_process.append(os.path.join(root, file))
+        # Keep the default scoped to database.csv; other CSV schemas are not
+        # safe to numeric-sort.
+        files_to_process = ["database.csv"]
 
     total_fixes = 0
     for filepath in files_to_process:
