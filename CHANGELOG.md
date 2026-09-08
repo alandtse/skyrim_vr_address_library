@@ -1,3 +1,10 @@
+# [0.262.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.261.0...v0.262.0) (2026-09-08)
+
+
+### Features
+
+* register VR addresses for po3 sync's new RE (BSCubeMapCamera, RenderTargetManager) ([#210](https://github.com/alandtse/skyrim_vr_address_library/issues/210)) ([ea0eb93](https://github.com/alandtse/skyrim_vr_address_library/commit/ea0eb936328860e4a670f4472fef27b4a22cf2a8))
+
 # [0.261.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.260.0...v0.261.0) (2026-09-07)
 
 
