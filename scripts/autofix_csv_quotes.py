@@ -55,10 +55,8 @@ def main():
     if len(sys.argv) > 1:
         files_to_process = sys.argv[1:]
     else:
-        # Default behavior: only database.csv is expected to have a leading
-        # decimal `id` column safe to numeric-sort -- every other CSV in this
-        # repo uses a different schema (id last, hex-keyed, etc.) and walking
-        # the whole tree here previously crashed on them.
+        # Keep the default scoped to database.csv; other CSV schemas are not
+        # safe to numeric-sort.
         files_to_process = ["database.csv"]
 
     total_fixes = 0
