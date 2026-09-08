@@ -1870,6 +1870,7 @@
 75507,0x140d6dbc0,0x140dbf9b0,3,"NiTexture::RendererData* BSRenderManager::CreateRenderTexture(std::uint32_t a_width, std::uint32_t a_height)"
 75522,0x140d6e780,0x140dc05f0,4,"void Renderer::SaveRenderTargetToFile(RENDER_TARGET a_renderTarget, const char* a_filePath, BSGraphics::TextureFileFormat a_textureFileFormat)"
 75532,0x140d6ef90,0x140dc1250,4,"void BSGraphics::Renderer::DispatchCSShader (BSGraphics::Renderer * a_this, BSGraphics::ComputeShader * a_computeShader, uint32_t threadGroupCountX, uint32_t threadGroupCountY, uint32_t threadGroupCountZ)"
+75561,0x140d6ffd0,0x140dc22a0,4,"ID3D11Resource* GetID3D11Resource(BSGraphics::Renderer* a_renderer, uint64_t a_bufferType, uint32_t** a_outIndex, uint32_t a_bufferKind)"
 75564,0x140d70100,0x140dc23d0,4,"void Renderer::SetScissorRect (BSGraphics::Renderer * a_this, int a_left, int a_top, int a_right, int a_bottom)"
 75570,0x140d70290,0x140dc2560,3,void BSGraphics::Renderer::SetPerFrameBuffers (BSGraphics::Renderer * a_renderer)
 75580,0x140d705b0,0x140dc2e70,3,void BSGraphics::SetDirtyStates_140d705b0 (bool isCompute)
@@ -11251,6 +11252,7 @@
 563921,0x141835d88,0x1418cc820,3,VTABLE_bnet__Callback_bnet___impl__FixedString_40_1_1_bnet___impl__StdAllocator_char___bnet__HttpResponseInfo__0
 564165,0x141847680,0x1418e2018,3,VTABLE_BSTCommonMessageQueue_BSScript__Internal__FunctionMessage__0
 564175,0x141847730,0x1418e20c8,3,VTABLE_BSTCommonMessageQueue_BSScript__Internal__SuspendedStack__0
+564236,0x1418513e0,0x1418f0488,3,"RE::BSReadWriteLock terrainCellMapLock"
 564750,0x141865a78,0x1419047a8,3,VTABLE_ImageSpaceEffectOption_0
 564823,0x14186a3d8,0x14190a308,3,VTABLE_BSReloadShaderI_0
 564904,0x14186f730,0x14190eaf8,3,VTABLE___Compression_0
