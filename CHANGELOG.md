@@ -1,3 +1,10 @@
+## [0.262.1](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.262.0...v0.262.1) (2026-09-08)
+
+
+### Bug Fixes
+
+* verify cubemap/rendertarget VR addresses ([#211](https://github.com/alandtse/skyrim_vr_address_library/issues/211)) ([772e3e3](https://github.com/alandtse/skyrim_vr_address_library/commit/772e3e3c6bb24f2075830111167fb077060c2987))
+
 # [0.262.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.261.0...v0.262.0) (2026-09-08)
 
 
