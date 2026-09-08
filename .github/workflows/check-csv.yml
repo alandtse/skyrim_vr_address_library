@@ -141,10 +141,10 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Run CSV autofix script on all CSVs
+      - name: Run CSV autofix script on database.csv
         id: fix
         run: |
-          output=$(python scripts/autofix_csv_quotes.py)
+          output=$(python scripts/autofix_csv_quotes.py database.csv)
           echo "$output"
           if echo "$output" | grep -q '✅ Fixed [0-9]'; then
             echo "modified=true" >> "$GITHUB_OUTPUT"
