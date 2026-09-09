@@ -1,3 +1,10 @@
+# [0.264.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.263.0...v0.264.0) (2026-09-09)
+
+
+### Features
+
+* register grass addresses ([#213](https://github.com/alandtse/skyrim_vr_address_library/issues/213)) ([e9ea202](https://github.com/alandtse/skyrim_vr_address_library/commit/e9ea2024512e5d1eb47cf00ea704395dc000b9c2))
+
 # [0.263.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.262.1...v0.263.0) (2026-09-08)
 
 
