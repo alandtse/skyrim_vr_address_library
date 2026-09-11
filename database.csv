@@ -157,11 +157,11 @@
 15158,0x1401b2910,0x1401c2920,3,"bool BGSDynamicPersistenceManager::DemoteReference(TESObjectREFR* a_refr, TESForm* a_owner, bool a_allowActors = false)"
 15202,0x1401b46a0,0x1401c46b0,4,GrassManager * GrassManager::ctor_1401B46A0 (GrassManager * a_this)
 15204,0x1401b4b20,0x1401c4b30,4,void GrassManager::AddCellGrass (GrassManager * a_this)
-15205,0x1401b5750,0x1401c5760,3,SeasonsofSkyrim::LandscapeSwap::LoadGrassType::add_cell_grass_from_buffer
-15206,0x1401b6010,0x1401c6020,3,SeasonsofSkyrim::LandscapeSwap::LoadGrassType::add_cell_grass_from_file
+15205,0x1401b5750,0x1401c5760,4,"bool GrassManager::AddCellGrassFromBuffer(GrassManager* this, TESObjectCELL* a_cell)"
+15206,0x1401b6010,0x1401c6020,4,"bool GrassManager::LoadCellGID(GrassManager* this, TESObjectCELL* a_cell)"
 15207,0x1401b6470,0x1401c6480,4,"void GrassManager::sub_1401B6470 (GrassManager * a_this, TESObjectCELL * a_cell)"
 15212,0x1401b6af0,0x1401c6b00,3,"ulonglong GrassManager::FUN_1401b6af0 (GrassManager* a_this, int * param_2)"
-15214,0x1401b7640,0x1401c7750,4,"NiAVObject__VFTable * GrassManager::sub_1401B7640 (GrassManager * a_this, undefined param_2, undefined param_3, undefined param_4, undefined8 param_5, undefined8 param_6)"
+15214,0x1401b7640,0x1401c7750,4,"BSMultiStreamInstanceTriShape* GrassManager::LoadGrassType(GrassManager* this, void* a_param, uint32_t a_cellXDivided, uint32_t a_cellYDivided, uint64_t* a_typeKey, BSFixedString* a_modelPath)"
 15220,0x1401b81d0,0x1401c82e0,4,"bool FUN_1401b81d0 (longlong param_1, undefined8 param_2, undefined4 param_3, undefined4 * param_4, NiAVObject * * param_5, NiAVObject * * param_6)"
 15485,0x1401c5cc0,0x1401d5e30,4,char * GetGameVersion(void)
 15491,0x1401c60a0,0x1401d6200,3,RE::BipedAnim::Dtor
@@ -2117,7 +2117,7 @@
 100839,0x1413061b0,0x141347290,4,void BSBatchRenderer::ClearGeometryGroupPasses(BSBatchRenderer::GeometryGroup * a_group)
 100840,0x141306240,0x141347320,4,"void BSShaderAccumulator::RenderPersistentPassList (longlong * * passList, uint32_t renderFlags)"
 100843,0x141306db0,0x141347fe0,4,void BSBatchRenderer::ClearAllRenderPasses(BSBatchRenderer * a_this)
-100847,0x141307160,0x141348390,3,Skyrim-Upscaler
+100847,0x141307160,0x141348390,3,"void BSRenderPass::DrawGeometry(BSRenderPass* this)"
 100851,0x141307fc0,0x141349200,4,"bool BSBatchRenderer::GetNextPassSlotInGroup(BSRenderPass *a_this, uint32_t param_2, uint32_t *param_3)"
 100852,0x141308030,0x141349270,4,"void BSBatchRenderer::ApplyPassAlphaCullState(BSRenderPass *a_this,uint *param_2,uint *param_3,undefined8 param_4,uint param_5)"
 100853,0x1413083b0,0x1413495f0,4,"void BSBatchRenderer::GetRenderPassIndex(BSBatchRenderer *a_this,uint *param_2)"
@@ -18504,5 +18504,7 @@
 692142,0x141ebd1e0,0x141f81880,3,RE::RTTI_BSSocketServer
 5370397616,0x14019c3b0,0x1401ac0e0,3,RE::BSShaderProperty::InvalidateMaterial
 5375528368,0x140680db0,0x14068a230,3,RE::AIProcess::SetActorRefraction
+5382627248,0x140d45fb0,0x140d8eee0,3,"uint32_t BSMultiStreamInstanceTriShape::AddGroupGIDBuffer(BSMultiStreamInstanceTriShape* this, void* a2, uint16_t* a3)"
+5382629008,0x140d46690,0x140d8f5c0,3,"void BSMultiStreamInstanceTriShape::AddQueuedGroupGIDBuffer(BSMultiStreamInstanceTriShape* this, void* a2, uint16_t* a3, void* a4)"
 5388393136,0x1412c5ab0,0x141303ea0,3,RE::BSLightingShaderProperty::InvalidateTextures
 5399981752,0x141dd2eb8,0x141e901a8,4,CalculateMyCriticalHitChance
