@@ -2133,6 +2133,7 @@
 100950,0x14130cd20,0x14134ff90,3,"void ImageSpaceEffect::Render (ImageSpaceEffect * a_this, BSTriShape * a_shape, ImageSpaceEffectParam * a_param)"
 100951,0x14130cf80,0x1413501F0,3,BSImagespaceShader::sub_*
 100952,0x14130d070,0x1413502b0,4,"void BSImagespaceShader::DispatchComputeShader (BSImagespaceShader * a_this, uint32_t a_threadGroupCountX, uint32_t a_threadGroupCountY, uint32_t a_threadGroupCountZ)"
+100979,0x14130ec70,0x1413527d0,3,"void BSUtilityShader::SetupGeometry(BSUtilityShader * a_this, BSRenderPass * a_pass, uint32_t a_flags)"
 100994,0x141310c50,0x141354b60,4,src\Features/LightLimitFix.h:163
 100997,0x141310e10,0x141354d20,3,src\Features/LightLimitFix.h:164
 101291,0x14131c560,0x1413623e0,3,"void BSLight::UpdateLODFadeAndCull(BSLight* this, NiCullingProcess* a_cull)"
