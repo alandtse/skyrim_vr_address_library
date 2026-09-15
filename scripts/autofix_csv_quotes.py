@@ -20,7 +20,7 @@ def process_file(filepath: str) -> int:
 
     # Write back with csv.writer using QUOTE_MINIMAL
     output = io.StringIO()
-    writer = csv.writer(output, quoting=csv.QUOTE_MINIMAL)
+    writer = csv.writer(output, quoting=csv.QUOTE_MINIMAL, lineterminator="\n")
     writer.writerows(rows)
     new_content = output.getvalue()
 
