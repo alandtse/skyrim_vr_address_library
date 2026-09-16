@@ -871,6 +871,8 @@
 37571,0x140623610,0x14062c3c0,3,BSTEventSource<DragonSoulsGained::Event>* DragonSoulsGained::GetEventSource()
 37586,0x140623e60,0x14062cc10,3,RE::Character::sub_140623E60
 37588,0x140623f10,0x14062ccc0,4,RE::PlayerCharacter::GetReach_140623F10
+37601,0x140624e50,0x1406e96b0,2,CombatGroup* Actor::GetCombatGroup()
+37602,0x140624e70,0x1406f2d70,2,void Actor::SetCombatGroup(CombatGroup* a_group)
 37605,0x140624f20,0x14062dd90,4,PlayerCharacter::sub_140624F20
 37608,0x1406251b0,0x14062e020,3,"bool Actor::StartCombat(Actor* a_target, CombatGroup* a_combatGroup)"
 37618,0x140625cd0,0x14062EB40,3,Actor::IsCombatTarget
