@@ -1,3 +1,10 @@
+# [0.266.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.265.0...v0.266.0) (2026-09-16)
+
+
+### Features
+
+* add Actor::GetCombatGroup/SetCombatGroup ([#219](https://github.com/alandtse/skyrim_vr_address_library/issues/219)) ([d5acb42](https://github.com/alandtse/skyrim_vr_address_library/commit/d5acb423cc07b36007bc25e1f5b1a5badcbd8812))
+
 # [0.265.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.264.0...v0.265.0) (2026-09-13)
 
 
