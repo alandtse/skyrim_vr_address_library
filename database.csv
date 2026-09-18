@@ -1060,7 +1060,7 @@
 42664,0x140738780,0x140763320,3,"void Explosion::Update(Explosion* a_this, float a_delta)"
 42672,0x140739080,0x140763c20,4,undefined Explosion::sub_140739080(Explosion* this)
 42696,0x14073c410,0x140766fb0,3,bool Explosion::CheckInit3D(Explosion *a_this)
-42727,0x14073d9d0,0x140768570,3,RE::FlameProjectile::UpdateImpl
+42727,0x14073d9d0,0x140768570,3,"void FlameProjectile::UpdateImpl(FlameProjectile* a_this, float a_delta)"
 42791,0x140740cb0,0x14076b960,3,"void Hazard::Update(Hazard *a_this, float a_delta)"
 42810,0x1407416f0,0x14076c3a0,3,bool Hazard::CheckInit3D(Hazard *a_this)
 42826,0x140742450,0x14076d000,3,HitData* HitData::Ctor()
