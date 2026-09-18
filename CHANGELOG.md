@@ -1,3 +1,10 @@
+# [0.267.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.266.0...v0.267.0) (2026-09-18)
+
+
+### Features
+
+* add RE::FlameProjectile::UpdateImpl ([#220](https://github.com/alandtse/skyrim_vr_address_library/issues/220)) ([b2f87a5](https://github.com/alandtse/skyrim_vr_address_library/commit/b2f87a563a86d2b7f0445885bd738786b2a9c927))
+
 # [0.266.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.265.0...v0.266.0) (2026-09-16)
 
 
