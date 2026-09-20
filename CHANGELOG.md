@@ -1,3 +1,10 @@
+# [0.268.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.267.0...v0.268.0) (2026-09-20)
+
+
+### Features
+
+* add culling, alpha group and shadow ids ([#221](https://github.com/alandtse/skyrim_vr_address_library/issues/221)) ([67d9ef4](https://github.com/alandtse/skyrim_vr_address_library/commit/67d9ef46267fb99e9561cdcfe2282dfb3f4ee36c))
+
 # [0.267.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.266.0...v0.267.0) (2026-09-18)
 
 
