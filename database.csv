@@ -1840,7 +1840,10 @@
 74607,0x140d47590,0x140d904c0,4,"BSMultiBoundShape* BSMultiBoundShape::LoadFromStream(BSMultiBoundShape* param_1, NiPoint3* param_2, NiPoint3* param_3, bool param_4, undefined4 param_5, int param_6, longlong param_7, int param_8)"
 74621,0x140d47af0,0x140d90a20,4,"void BSIOStreamTraits::Write (BSIOStreamTraits * a_this, void * a_1, uint a_2)"
 74702,0x140d4c7e0,0x140d956c0,4,"bool BSOcclusionPlane::WithinFrustumDistFirst(const NiFrustumPlanes* a_planes, const NiPoint3* a_point)"
+74807,0x140d51070,0x140d99f80,3,"void BSCullingProcess::AppendVirtual(BSGeometry* a_geometry, std::int32_t a_alphaGroupIndex)"
+74810,0x140d51480,0x140d9a280,3,void BSCullingProcess::FlushAlphaGroupQueue()
 74812,0x140d517c0,0x140d9a5e0,4,bool BSCullingProcess::AddShared(NiAVObject* a_object)
+74832,0x140d522b0,0x140d9b240,3,void* BSCullingProcess::PopFreeQueueEntry(void* a_pool)
 74889,0x140d546b0,0x140d9d640,4,BSFurnitureMarkerNode* BSFurnitureMarkerNode::FindBSFurnitureMarkerNode(NiObjectNET* a_object)
 75057,0x140d5a2b0,0x140da33c0,4,bool BSCompoundFrustum::Process(NiAVObject* a_object)
 75075,0x140d5ba80,0x140da4b90,4,void BSCompoundFrustum::GetActivePlaneState(std::uint32_t* a_outPlaneState)
@@ -2036,6 +2039,7 @@
 99696,0x1412b99f0,0x1412f7420,4,"void ShadowSceneNode::AttachObject (ShadowSceneNode * a_this, NiAVObject * a_node)"
 99697,0x1412b9a10,0x1412f7440,4,void ShadowSceneNode::RemoveLight(NiLight* a_light) src\RE\S/ShadowSceneNode.cpp:45
 99698,0x1412b9b60,0x1412f7590,3,void ShadowSceneNode::RemoveLight(const NiPointer<BSLight>& a_light)
+99701,0x1412b9db0,0x1412f77e0,3,void ShadowSceneNode::ProcessQueuedLights(bool param_1)
 99704,0x1412ba7f0,0x1412f8220,3,void ShadowSceneNode::ClearLightArrays()
 99708,0x1412baca0,0x1412f86d0,3,"static void ShadowSceneNode::EnableLight(RE::ShadowSceneNode* shadowSceneNode, RE::BSLight* light)"
 99725,0x1412bc190,0x1412f9c10,4,"float ShadowSceneNode::GetLuminanceAtPoint(NiPoint3* targetPosition, int* numHits, float sunLightLevel, float lightLevel, NiLight* refLight, int shadowBitMask) src\Features\LightLimitFix/ShadowCasterManager.cpp:3687"
@@ -2088,6 +2092,7 @@
 100422,0x1412e3ac0,0x141323680,3,void Main::RenderShadowmasks (bool param_1)
 100423,0x1412e3b80,0x141323740,3,void RenderShadowLightsWithUtilityShader()
 100424,0x1412e3e70,0x141323b10,3,void Main::RenderWorld (bool param_1)
+100425,0x1412e4370,0x141323ef0,3,void Main::PostRenderCleanup()
 100430,0x1412e49a0,0x141324e80,3,void RenderEOFImageSpaceEffects (RENDER_TARGET a_rendertarget)
 100440,0x1412e50a0,0x141356e50,3,static void ApplyLensFlare(RE::BSLight* light) // Likely not valid in VR
 100458,0x1412e5570,0x141325d10,3,void BSShaderRenderTargets::Create()
@@ -10254,6 +10259,8 @@
 528314,0x143283b7c,0x1436ed280,3,fShadowDistance
 528315,0x143283b80,0x1436ed298,4,static BSShadowDirectionalLight* GetSelectedBSShadowDirectionalLightPointer1()
 528316,0x143283b88,0x1436ed284,3,float ShadowDistanceSquared_Current
+528319,0x143283ba0,0x1434d6250,3,std::uint32_t BSBatchRenderer__alphaGeometryGroupCount
+528327,0x143490bd0,0x1436e3280,3,BSBatchRenderer::GeometryGroup BSBatchRenderer__alphaGeometryGroups[]
 528336,0x143495c48,0x1436f1748,3,RE::NiRTTI_BSClearZNode
 528354,0x143495d50,0x1436f1868,4,BSUtilityShader* BSUtilityShader::GetSingleton()
 528359,0x143495d68,0x1436f1a50,3,RE::NiRTTI_NiCollisionObject
