@@ -2039,6 +2039,7 @@
 99696,0x1412b99f0,0x1412f7420,4,"void ShadowSceneNode::AttachObject (ShadowSceneNode * a_this, NiAVObject * a_node)"
 99697,0x1412b9a10,0x1412f7440,4,void ShadowSceneNode::RemoveLight(NiLight* a_light) src\RE\S/ShadowSceneNode.cpp:45
 99698,0x1412b9b60,0x1412f7590,3,void ShadowSceneNode::RemoveLight(const NiPointer<BSLight>& a_light)
+99701,0x1412b9db0,0x1412f77e0,3,void ShadowSceneNode::ProcessQueuedLights(bool param_1)
 99704,0x1412ba7f0,0x1412f8220,3,void ShadowSceneNode::ClearLightArrays()
 99708,0x1412baca0,0x1412f86d0,3,"static void ShadowSceneNode::EnableLight(RE::ShadowSceneNode* shadowSceneNode, RE::BSLight* light)"
 99725,0x1412bc190,0x1412f9c10,4,"float ShadowSceneNode::GetLuminanceAtPoint(NiPoint3* targetPosition, int* numHits, float sunLightLevel, float lightLevel, NiLight* refLight, int shadowBitMask) src\Features\LightLimitFix/ShadowCasterManager.cpp:3687"
@@ -2091,6 +2092,7 @@
 100422,0x1412e3ac0,0x141323680,3,void Main::RenderShadowmasks (bool param_1)
 100423,0x1412e3b80,0x141323740,3,void RenderShadowLightsWithUtilityShader()
 100424,0x1412e3e70,0x141323b10,3,void Main::RenderWorld (bool param_1)
+100425,0x1412e4370,0x141323ef0,3,void Main::PostRenderCleanup()
 100430,0x1412e49a0,0x141324e80,3,void RenderEOFImageSpaceEffects (RENDER_TARGET a_rendertarget)
 100440,0x1412e50a0,0x141356e50,3,static void ApplyLensFlare(RE::BSLight* light) // Likely not valid in VR
 100458,0x1412e5570,0x141325d10,3,void BSShaderRenderTargets::Create()
