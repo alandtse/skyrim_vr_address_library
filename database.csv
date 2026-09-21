@@ -2125,7 +2125,7 @@
 100839,0x1413061b0,0x141347290,4,void BSBatchRenderer::ClearGeometryGroupPasses(BSBatchRenderer::GeometryGroup * a_group)
 100840,0x141306240,0x141347320,4,"void BSShaderAccumulator::RenderPersistentPassList (longlong * * passList, uint32_t renderFlags)"
 100843,0x141306db0,0x141347fe0,4,void BSBatchRenderer::ClearAllRenderPasses(BSBatchRenderer * a_this)
-100847,0x141307160,0x141348390,3,"void BSRenderPass::DrawGeometry(BSRenderPass* this)"
+100847,0x141307160,0x141348390,3,void BSRenderPass::DrawGeometry(BSRenderPass* this)
 100851,0x141307fc0,0x141349200,4,"bool BSBatchRenderer::GetNextPassSlotInGroup(BSRenderPass *a_this, uint32_t param_2, uint32_t *param_3)"
 100852,0x141308030,0x141349270,4,"void BSBatchRenderer::ApplyPassAlphaCullState(BSRenderPass *a_this,uint *param_2,uint *param_3,undefined8 param_4,uint param_5)"
 100853,0x1413083b0,0x1413495f0,4,"void BSBatchRenderer::GetRenderPassIndex(BSBatchRenderer *a_this,uint *param_2)"
@@ -11263,7 +11263,7 @@
 563921,0x141835d88,0x1418cc820,3,VTABLE_bnet__Callback_bnet___impl__FixedString_40_1_1_bnet___impl__StdAllocator_char___bnet__HttpResponseInfo__0
 564165,0x141847680,0x1418e2018,3,VTABLE_BSTCommonMessageQueue_BSScript__Internal__FunctionMessage__0
 564175,0x141847730,0x1418e20c8,3,VTABLE_BSTCommonMessageQueue_BSScript__Internal__SuspendedStack__0
-564236,0x1418513e0,0x1418f0488,3,"RE::BSReadWriteLock terrainCellMapLock"
+564236,0x1418513e0,0x1418f0488,3,RE::BSReadWriteLock terrainCellMapLock
 564750,0x141865a78,0x1419047a8,3,VTABLE_ImageSpaceEffectOption_0
 564823,0x14186a3d8,0x14190a308,3,VTABLE_BSReloadShaderI_0
 564904,0x14186f730,0x14190eaf8,3,VTABLE___Compression_0
