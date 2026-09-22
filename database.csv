@@ -502,6 +502,7 @@
 26454,0x1403db420,0x1403eada0,2,ApplyMasksToRenderTargets
 26455,0x1403db780,0x1403eb110,3,void BSFaceGenManager::UpdatePendingCustomizationTextures()
 26466,0x1403dc1c0,0x1403ebb30,4,"void Character::HandleCharacterFaceMeshUpdate (Character * a_this, BGSHeadPart * a_headpart)"
+26468,0x1403dc3c0,0x1403ebd30,3,"void ChangeActorHeadPart(Actor* a_actor, BGSHeadPart* a_oldPart, BGSHeadPart* a_newPart)"
 26561,0x1403e1130,0x1403f0ae0,4,char* ActorValueList::GetActorValueName(ActorValue a_actorValue)
 26563,0x1403e1230,0x1403f0be0,4,const char* ActorValueList::GetActorValueScriptName(ActorValue av)
 26569,0x1403e1420,0x1403f0dd0,4,ActorValueInfo* ActorValueList::GetActorValueInfo(ActorValue a_actorValue)
