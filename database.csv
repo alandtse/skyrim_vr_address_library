@@ -404,6 +404,8 @@
 24180,0x14035f6c0,0x14036ef80,3,Actor* TESNPC::GetUniqueActor()
 24206,0x140360480,0x14036fd80,3,RE::TESNPC::SetSkinFromTint
 24207,0x1403606d0,0x14036ffd0,3,RE::TESNPC::UpdateNeck
+24209,0x140360840,0x140370140,3,"void TESNPC::UpdateMorphs(TESNPC* a_npc, void* a_unk1, BSFaceGenNiNode* a_faceNode)"
+24210,0x140360a30,0x140370330,3,"void TESNPC::UpdateMorph(TESNPC* a_npc, BGSHeadPart* a_headPart, BSFaceGenNiNode* a_faceNode)"
 24211,0x140360c10,0x140370510,2,enhanced_reanimation::TESNPC::Activate
 24212,0x140361640,0x140370f60,3,enhanced_reanimation::TESNPC::GetActivateText
 24220,0x140362e90,0x1403727b0,4,"void TESNPC::UpdateHeadAndHair (TESNPC * a_npc, Actor * a_actor, NiAVObject * a_node)"
@@ -490,8 +492,11 @@
 25977,0x1403c38e0,0x1403d3160,3,"void BSFaceGenAnimationData::Reset(float a_timer, bool a_resetExpression, bool a_resetModifierAndPhoneme, bool a_resetCustom, bool a_closeEyes)"
 25980,0x1403c3f00,0x1403d3780,3,"void BSFaceGenAnimationData::SetExpressionOverride(std::int32_t a_idx, float a_value)"
 26009,0x1403c66a0,0x1403d5f20,4,RE::random
+26252,0x1403d2220,0x1403e1b80,3,"void BSFaceGenManager::ApplyMorph(BSFaceGenNiNode* a_faceNode, TESNPC* a_npc, const BSFixedString& a_morphName, float a_relative)"
+26254,0x1403d2380,0x1403e1ce0,3,"void BSFaceGenManager::ApplyMorphByPart(BSFaceGenNiNode* a_faceNode, BGSHeadPart* a_headPart, const BSFixedString& a_morphName, float a_relative)"
 26258,0x1403D2970,0x1403E22E0,4,WhosWho::GetFaceRelatedData
 26259,0x1403d2a60,0x1403e23d0,3,"void BSFaceGenManager::PrepareHeadPartForShaders(BSFaceGenNiNode* a_node, BGSHeadPart* a_headPart, TESNPC* a_npc)"
+26300,0x1403d4630,0x1403e3fa0,3,"uint8_t BSFaceGenModel::ApplyRaceMorph(BSFixedString* a_morphName, TESModelTri* a_modelMorph, NiAVObject** a_headNode, float a_relative, uint8_t a_unk1)"
 26303,0x1403d4b70,0x1403e44e0,4,"void BSFaceGenModelExtraData::SetBoneName (BSFaceGenModelExtraData * a_this, uint32_t a_index, BSFixedString * a_name)"
 26343,0x1403d68e0,0x1403e6250,4,"void BSFaceGenMorphDataHead::ApplyMorphWeight (BSFaceGenMorphDataHead * a_this, NiAVObject * a_node, float a_weight)"
 26406,0x1403d8840,0x1403e81b0,4,"void BSFaceGenNiNode::LoadAndProcessGeometryData(BSFaceGenNiNode * a_headNode, NiNode * a_skeleton, BSGeometry * a_geometry)"
@@ -501,8 +506,11 @@
 26431,0x1403d9d00,0x1403e9680,4,char* BSFaceGenKeyframeMultiple::GetCustomName(std::uint32_t a_custom)
 26454,0x1403db420,0x1403eada0,2,ApplyMasksToRenderTargets
 26455,0x1403db780,0x1403eb110,3,void BSFaceGenManager::UpdatePendingCustomizationTextures()
+26458,0x1403dbda0,0x1403eb710,3,uint32_t UpdateModelFace(NiAVObject* a_object)
 26466,0x1403dc1c0,0x1403ebb30,4,"void Character::HandleCharacterFaceMeshUpdate (Character * a_this, BGSHeadPart * a_headpart)"
 26468,0x1403dc3c0,0x1403ebd30,3,"void ChangeActorHeadPart(Actor* a_actor, BGSHeadPart* a_oldPart, BGSHeadPart* a_newPart)"
+26472,0x1403dc720,0x1403ec090,3,"uint32_t UpdateModelSkin(NiAVObject* a_object, NiColorA** a_color)"
+26473,0x1403dc7e0,0x1403ec150,3,"uint32_t UpdateModelHair(NiAVObject* a_object, NiColorA** a_color)"
 26561,0x1403e1130,0x1403f0ae0,4,char* ActorValueList::GetActorValueName(ActorValue a_actorValue)
 26563,0x1403e1230,0x1403f0be0,4,const char* ActorValueList::GetActorValueScriptName(ActorValue av)
 26569,0x1403e1420,0x1403f0dd0,4,ActorValueInfo* ActorValueList::GetActorValueInfo(ActorValue a_actorValue)
@@ -765,6 +773,7 @@
 35991,0x1405c5bf0,0x1405ce190,4,"void TaskQueueInterface::QueueForceWeather(TESWeather* a_weather, bool a_forceOverride)"
 36007,0x1405c67a0,0x1405ced40,4,"void TaskQueueInterface::QueueApplyPerk_1405c67a0 (undefined8 a_taskpool, BGSPerk__ApplyPerksVisitor__VFTable * param_2, void * param_3, undefined8 param_4, undefined8 a_count)"
 36010,0x1405c69b0,0x1405cef50,4,"void TaskQueueInterface::QueueActorDisarm(ActorHandle& a_target, ActorHandle& a_caster)"
+36012,0x1405c6bf0,0x1405cf190,3,"uint32_t TaskQueueInterface::SetNiGeometryTexture(NiAVObject* a_geometry, BSTextureSet* a_textureSet)"
 36016,0x1405c6ee0,0x1405cf480,3,BSTaskPool_HandleTask_1405C6EE0
 36195,0x1405CDBF0,0x1405D61F0,2,"Actor* Actor::ctor(Actor *a1, uint8 a2)"
 36198,0x1405ce240,0x1405d6840,4,po3tweaks::Spell::ReapplyOnDeath::Load3d
@@ -1405,6 +1414,7 @@
 50885,0x1408879a0,0x1408b4ed0,3,"void Inventory3DManager::UpdateMagic3D(TESForm* a_form, std::uint32_t a_arg2)"
 50886,0x140887d10,0x1408b5240,3,void Inventory3DManager::Clear3D()
 50887,0x140887df0,0x1408b5360,3,bool Inventory3DManager::ToggleItemZoom
+50896,0x140888290,0x1408b5b40,3,"void Inventory3DManager::InitializeDisplayObject(void* a_unk1, TESForm* a_form1, TESForm* a_form2, NiNode** a_node)"
 50948,0x14088b9b0,0x1408b9210,3,InventoryEntryData::GetExtraListForRemoval
 50973,0x14088e050,0x1408BB820,3,DescriptionFramework::
 50978,0x14088e280,0x1408bba50,3,EssentialFavorites::Dropped::IsQuestObject
@@ -1441,7 +1451,10 @@
 51454,0x1408ad9f0,0x1408dad50,3,TESModelTextureSwap::sub_*
 51507,0x1408b2be0,0x1408e0450,3,void PrecacheCharGen_1409796E0_0_1408B2BE0 (undefined8 * a_this)
 51509,0x1408b2d60,0x1408e0730,4,void PrecacheCharGenClear_1409796F0_0_1408B2D60 (undefined8 * a_this)
+51526,0x1408b4820,0x1408e23b0,3,"void RaceSexMenu::DoubleMorphCallback(float a_newValue, uint32_t a_sliderId)"
+51534,0x1408b5e20,0x1408e39b0,3,"void* RaceSexMenu::LoadSliders(uint64_t a_unk1, uint8_t a_unk2)"
 51540,0x1408ba590,0x1408e7d70,4,"void ChangeName_1408BA590 (RaceSexMenu * param_1, char * param_2)"
+51580,0x1408bc760,0x1408e9850,3,"int32_t AddRaceMenuSlider(RaceMenuSliderArray* a_sliders, RaceMenuSlider* a_slider)"
 51614,0x1408bd8c0,0x1408ea840,3,SleepWaitTime_Compare_offset include/offsets.h:57
 51618,0x1408bde30,0x1408ead70,4,void SleepWaitMenu::ToggleOpenSleepWaitMenu(bool a_sleeping)
 51636,0x1408be990,0x1408eb8d0,3,IMenu* StatsMenu::ctor_1408BE990(IMenu* param_1)
@@ -1755,6 +1768,7 @@
 68937,0x140c57af0,0x140c9cd60,4,void NiNode::Destroy(NiNode * a_this)
 68971,0x140c59690,0x140c9ec40,4,NiStream * NiStream::NiStream(NiStream * a_this)
 68972,0x140c598f0,0x140c9eea0,4,void NiStream::~NiStream(NiStream * a_this)
+68973,0x140c59ae0,0x140c9f090,3,void NiStream::AddObject(NiObject* a_object)
 69002,0x140c5ac30,0x140ca01e0,4,void NiStream::LoadLinkID
 69156,0x140c60fb0,0x140ca6560,4,void NiObjectNET::RemoveController(NiTimeController* a_controller)
 69251,0x140c64730,0x140ca9e20,3,"void NiCamera::CopyMembers(NiCamera* a_target, NiCloningProcess* a_cloning)"
@@ -1762,6 +1776,8 @@
 69265,0x140c65a20,0x140cab570,3,"static void NiCamera::CalculateFrustumOverlap(NiCamera *a_this,NiPoint4 *a_worldCoord, NiPoint3 *a_outMinNDC, NiPoint3 *a_outMaxNDC, int32_t a_eyeIndex, float a_nearPlaneEpsilon) // VR has eyeIndex"
 69270,0x140c66580,0x140cac0e0,3,RE::NiCamera::WorldPtToScreenPt3
 69271,0x140c66710,0x140cac900,3,void UpdateInternalWorldToScreenMatrix (NiCamera * a_this)
+69284,0x140c67490,0x140cad6d0,3,BSTriShape* CreateBSTriShape()
+69335,0x140c68d20,0x140caef60,3,NiSourceTexture* CreateSourceTexture(const BSFixedString& a_name)
 69433,0x140c6cd50,0x140cb2ee0,3,void NiTimeController::LoadBinary(NiStream& a_stream)
 69434,0x140c6cea0,0x140cb3030,3,void NiTimeController::LinkObject(NiStream& a_stream)
 69435,0x140c6cf10,0x140cb30a0,3,bool NiTimeController::RegisterStreamables(NiStream& a_stream)
@@ -1777,6 +1793,7 @@
 69449,0x140c6d810,0x140cb39a0,3,void NiTimeController::ProcessClone(NiCloningProcess& a_cloning)
 69459,0x140c6da50,0x140cb3be0,3,AnimationMotionRevoluation::MotionDataContainer::InterpolateRotation
 69528,0x140c70d30,0x140cb6f60,3,"void BSGeometry::CopyTransformAndBounds(BSGeometry *src, BSGeometry *dst, NiCloningProcess *cloningProcess)"
+69562,0x140c72180,0x140cb8530,3,BSDynamicTriShape* CreateBSDynamicTriShape()
 69564,0x140c72300,0x140cb86b0,3,RE::BSDynamicTriShape::BSDynamicTriShape
 69583,0x140c731f0,0x140cb95a0,4,NiPointLight* NiPointLight::Ctor
 69636,0x140c76060,0x140cbc490,3,RE::BSResourceNiBinaryStream::Ctor
@@ -1788,6 +1805,7 @@
 69692,0x140c79080,0x140cbf8d0,3,NiDirectionalLight* NiDirectionalLight::Ctor
 69699,0x140c792a0,0x140cbfaf0,4,void NiCullingProcess::SetFrustum(const NiFrustum* a_frustum)
 69804,0x140c7eb60,0x140cc5250,3,RE::NiSkinInstance::Ctor
+69838,0x140c80b80,0x140cc7420,3,void NiTriBasedGeom::NiTriBasedGeom(NiGeometryData* a_data)
 70860,0x140cc6090,0x140d0cbe0,4,"void NiControllerSequence::SetPhase(float a_phase, bool a_arg2)"
 70880,0x140cc76e0,0x140d0e230,4,NiControllerSequence::Activate_*
 70882,0x140cc7cb0,0x140d0e800,4,"bool NiControllerSequence::Activate(std::uint8_t a_interpIndex, bool a_maxOffset, float a_seqWeight, float a_easeInTime, NiControllerSequence* a_partnerSequence, bool a_transition)"
@@ -2021,6 +2039,7 @@
 98721,0x141288890,0x1412ba8b0,3,BSScript::LinkerProcessor::ConvertVariables
 98722,0x1412896e0,0x1412bb700,3,BSScript::LinkerProcessor::ConvertProperties
 98759,0x14128cce0,0x1412bee20,3,Object* BSScript::UnlinkedTypes::Object::Ctor()
+98844,0x14128f900,0x1412c8230,3,BSFadeNode* BSFadeNode::BSFadeNode()
 98893,0x141291c30,0x1412ca540,3,"void BSShaderProperty::SetFlags(EShaderPropertyFlag8 a_flag, bool a_set)"
 98897,0x141291d40,0x1412ca650,3,"void BSShaderProperty::SetMaterial(BSShaderMaterial* a_material, bool a_unk1)"
 98902,0x141292040,0x1412ca950,4,"bool IsValidLight_141292040 (BSLightingShaderProperty * a_this, BSLight * a_light)"
@@ -2052,6 +2071,7 @@
 99753,0x1412bf7f0,0x1412fd220,3,void ShadowSceneNode::AccumulateLight(RE::BSLight* a_light)
 99854,0x1412c50f0,0x1413034b0,3,BSLightingShaderProperty * BSLightingShaderProperty::Ctor (BSLightingShaderProperty * a_this)
 99855,0x1412c52e0,0x1413036d0,4,void Dtor (BSLightingShaderProperty * a_this)
+99862,0x1412c56d0,0x141303ac0,3,uint32_t BSLightingShaderProperty::InitializeShader(BSGeometry* a_geometry)
 99865,0x1412c5ab0,0x141303ea0,4,"void BSLightingShaderProperty::OnLoadTextureSet(BSLightingShaderProperty* a_this, undefined* a_2)"
 99868,0x1412c5ca0,0x141304090,3,RE::NiAVObject::SetRefraction
 99872,0x1412c7220,0x141305610,3,BSLightingShaderProperty::GetRenderPasses_ShadowMapOrMask
@@ -2067,6 +2087,7 @@
 99996,0x1412ce260,0x14130d090,3,"void BSGrassShader::SetupGeometry(BSGrassShader* a_this, BSRenderPass* a_pass, uint a_flags)"
 100000,0x1412ceb10,0x14130da10,4,"void fogMethod (undefined8 param_1, int param_2)"
 100004,0x1412ced50,0x14130dc60,3,BSLightingShaderMaterial* BSLightingShaderMaterial::Ctor()
+100006,0x1412cef40,0x14130de50,3,void BSLightingShaderMaterial::CopyFrom(BSLightingShaderMaterial* a_other)
 100016,0x1412cfbc0,0x14130ead0,3,RE::BSLightingShaderMaterialBase::CreateMaterial
 100021,0x1412d01a0,0x14130f0b0,3,BSLightingShaderMaterialEnvmap* BSLightingShaderMaterialEnvmap::Ctor()
 100029,0x1412d06f0,0x14130f600,3,BSLightingShaderMaterialEnvmap::GetTextures
