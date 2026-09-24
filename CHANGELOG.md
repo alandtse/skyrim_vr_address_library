@@ -1,3 +1,10 @@
+# [0.270.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.269.0...v0.270.0) (2026-09-24)
+
+
+### Features
+
+* add RaceMenu VR ([#224](https://github.com/alandtse/skyrim_vr_address_library/issues/224)) ([918aa62](https://github.com/alandtse/skyrim_vr_address_library/commit/918aa62ec4f3ca6839ea1df034ad2e1753f415cf))
+
 # [0.269.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.268.0...v0.269.0) (2026-09-24)
 
 
