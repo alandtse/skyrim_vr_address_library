@@ -1,3 +1,11 @@
+# [0.269.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.268.0...v0.269.0) (2026-09-24)
+
+
+### Features
+
+* add BSLight deleting destructor ([#225](https://github.com/alandtse/skyrim_vr_address_library/issues/225)) ([df6c507](https://github.com/alandtse/skyrim_vr_address_library/commit/df6c5077973c1acb6be6a50eff1919ad208818d2))
+* add Sky::ResetModelHandle ([#226](https://github.com/alandtse/skyrim_vr_address_library/issues/226)) ([cf7bcec](https://github.com/alandtse/skyrim_vr_address_library/commit/cf7bcec3cc559d1fc3efefeac3a02887845a57ab))
+
 # [0.268.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.267.0...v0.268.0) (2026-09-20)
 
 
