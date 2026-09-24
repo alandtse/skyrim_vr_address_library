@@ -472,6 +472,7 @@
 25703,0x1403b55e0,0x1403c5400,4,void Sky::UpdateLightingTransition_1403B55E0 (Sky * param_1)
 25704,0x1403b57b0,0x1403c55d0,3,void Sky::UpdateLightLODFadeDistances(Sky* this)
 25706,0x1403b5d20,0x1403c5b40,4,"void Sky::FillColorBlend(COLOR_BLEND& a_colorBlend, TESWeather* a_currentWeather, float a_weatherPct, TESWeather::ColorTime& a_time1, TESWeather::ColorTime& a_time2)"
+25746,0x1403b8d30,0x1403c8b50,4,"void Sky::ResetModelHandle(ModelDBHandle* a_handle, ModelDBHandle::U_Entry* a_entry)"
 25814,0x1403bcaf0,0x1403cc940,4,SoundLevels GetSoundLevelValue (SoundLevels a_soundLevel)
 25822,0x1403bcf40,0x1403ccd90,3,RE::AIForumulas::ComputePickpocketSuccess
 25846,0x1403BDEF0,0x1403CD770,4,ActorValueOwner::sub_1403BDEF0
