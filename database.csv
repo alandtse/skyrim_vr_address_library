@@ -1453,7 +1453,7 @@
 51507,0x1408b2be0,0x1408e0450,3,void PrecacheCharGen_1409796E0_0_1408B2BE0 (undefined8 * a_this)
 51509,0x1408b2d60,0x1408e0730,4,void PrecacheCharGenClear_1409796F0_0_1408B2D60 (undefined8 * a_this)
 51526,0x1408b4820,0x1408e23b0,3,"void RaceSexMenu::DoubleMorphCallback(float a_newValue, uint32_t a_sliderId)"
-51534,0x1408b5e20,0x1408e39b0,3,"void RaceSexMenu::LoadSliders(TESActorBase* a_actorOverride, uint8_t a_unk2)"
+51534,0x1408b5e20,0x1408e39b0,3,RaceSexMenu::ApplySliderValue
 51540,0x1408ba590,0x1408e7d70,4,"void ChangeName_1408BA590 (RaceSexMenu * param_1, char * param_2)"
 51580,0x1408bc760,0x1408e9850,3,"int32_t AddRaceMenuSlider(RaceMenuSliderArray* a_sliders, RaceMenuSlider* a_slider)"
 51614,0x1408bd8c0,0x1408ea840,3,SleepWaitTime_Compare_offset include/offsets.h:57
