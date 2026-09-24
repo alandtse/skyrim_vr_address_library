@@ -506,7 +506,7 @@
 26431,0x1403d9d00,0x1403e9680,4,char* BSFaceGenKeyframeMultiple::GetCustomName(std::uint32_t a_custom)
 26454,0x1403db420,0x1403eada0,2,ApplyMasksToRenderTargets
 26455,0x1403db780,0x1403eb110,3,void BSFaceGenManager::UpdatePendingCustomizationTextures()
-26458,0x1403dbda0,0x1403eb710,3,uint32_t UpdateModelFace(NiAVObject* a_object)
+26458,0x1403dbda0,0x1403eb710,3,void BSFaceGenNiNode::UpdateModelFace()
 26466,0x1403dc1c0,0x1403ebb30,4,"void Character::HandleCharacterFaceMeshUpdate (Character * a_this, BGSHeadPart * a_headpart)"
 26468,0x1403dc3c0,0x1403ebd30,3,"void ChangeActorHeadPart(Actor* a_actor, BGSHeadPart* a_oldPart, BGSHeadPart* a_newPart)"
 26472,0x1403dc720,0x1403ec090,3,"uint32_t UpdateModelSkin(NiAVObject* a_object, NiColorA** a_color)"
@@ -1414,7 +1414,7 @@
 50885,0x1408879a0,0x1408b4ed0,3,"void Inventory3DManager::UpdateMagic3D(TESForm* a_form, std::uint32_t a_arg2)"
 50886,0x140887d10,0x1408b5240,3,void Inventory3DManager::Clear3D()
 50887,0x140887df0,0x1408b5360,3,bool Inventory3DManager::ToggleItemZoom
-50896,0x140888290,0x1408b5b40,3,"void Inventory3DManager::InitializeDisplayObject(void* a_unk1, TESForm* a_form1, TESForm* a_form2, NiNode** a_node)"
+50896,0x140888290,0x1408b5b40,3,"void Inventory3DManager::InitializeDisplayObject(TESForm* a_form1, TESForm* a_form2, NiNode* a_node)"
 50948,0x14088b9b0,0x1408b9210,3,InventoryEntryData::GetExtraListForRemoval
 50973,0x14088e050,0x1408BB820,3,DescriptionFramework::
 50978,0x14088e280,0x1408bba50,3,EssentialFavorites::Dropped::IsQuestObject
@@ -1452,7 +1452,7 @@
 51507,0x1408b2be0,0x1408e0450,3,void PrecacheCharGen_1409796E0_0_1408B2BE0 (undefined8 * a_this)
 51509,0x1408b2d60,0x1408e0730,4,void PrecacheCharGenClear_1409796F0_0_1408B2D60 (undefined8 * a_this)
 51526,0x1408b4820,0x1408e23b0,3,"void RaceSexMenu::DoubleMorphCallback(float a_newValue, uint32_t a_sliderId)"
-51534,0x1408b5e20,0x1408e39b0,3,"void* RaceSexMenu::LoadSliders(uint64_t a_unk1, uint8_t a_unk2)"
+51534,0x1408b5e20,0x1408e39b0,3,"void RaceSexMenu::LoadSliders(TESActorBase* a_actorOverride, uint8_t a_unk2)"
 51540,0x1408ba590,0x1408e7d70,4,"void ChangeName_1408BA590 (RaceSexMenu * param_1, char * param_2)"
 51580,0x1408bc760,0x1408e9850,3,"int32_t AddRaceMenuSlider(RaceMenuSliderArray* a_sliders, RaceMenuSlider* a_slider)"
 51614,0x1408bd8c0,0x1408ea840,3,SleepWaitTime_Compare_offset include/offsets.h:57
