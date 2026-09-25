@@ -38,8 +38,9 @@ jobs:
           # copy -- otherwise a PR could edit the script to silence the check.
           git show "$BASE_SHA:scripts/autofix_csv_quotes.py" > "$RUNNER_TEMP/autofix.py"
 
-          # NUL-delimited and never interpolated into shell/${{ }} text, so an
-          # attacker-chosen file name can't inject commands or corrupt output.
+          # NUL-delimited and never interpolated into shell or template text,
+          # so an attacker-chosen file name can't inject commands or corrupt
+          # output.
           git diff -z --name-only --diff-filter=AM "$BASE_SHA" "$HEAD_SHA" -- 'database.csv' \
             | xargs -0 -r python "$RUNNER_TEMP/autofix.py"
 
