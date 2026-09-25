@@ -1,3 +1,10 @@
+# [0.271.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.270.0...v0.271.0) (2026-09-25)
+
+
+### Features
+
+* add NiObject deferred-release queue ([#229](https://github.com/alandtse/skyrim_vr_address_library/issues/229)) ([c0a5937](https://github.com/alandtse/skyrim_vr_address_library/commit/c0a593780d59ea10b46db7ce37b4a9a49f1911ad))
+
 # [0.270.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.269.0...v0.270.0) (2026-09-24)
 
 
