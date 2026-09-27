@@ -1910,7 +1910,7 @@
 75648,0x140d74d60,0x140dc7ba0,4,"void RenderTargetManager::SetCurrentCubeMapRenderTarget(RENDER_TARGET_CUBEMAP a_renderTarget, SetRenderTargetMode a_mode, std::uint32_t a_faceIndex, bool a_updateViewport)"
 75694,0x140d7bab0,0x140dcf4f0,3,"void SetCameraData(const NiCamera* a_camera, std::uint32_t a_flags)"
 75709,0x140d7cfb0,0x140dd1160,3,void BSGraphics_Renderer_Begin_UpdateJitter_140d7cfb0(BSGraphics::State* a_state)
-75711,0x140d7d130,0x140dd1320,3,Skyrim-Upscaler::buildCameraStateDataHook
+75711,0x140d7d130,0x140dd1320,3,"void BSGraphics::State::BuildCameraStateData(CameraStateData* a_entry, NiCamera* a_camera, bool a_useJitter)"
 75721,0x140d7dc50,0x140dd2b60,4,"HRESULT BSGraphics::Renderer::LoadTextureFromStream (ID3D11Device * a_this, BSResourceNiBinaryStream * a_stream, BSGraphics::Texture** a_texture, BSGraphics::DDSInfo* a_ddsinfo, uint32_t param_5, uint32_t param_6)"
 75976,0x140da3ca0,0x140df8c10,4,void hkpWorldObject::RemoveProperty(std::uint32_t a_key)
 76023,0x140da6e60,0x140dfbde0,4,HavokWorld::Init_*
