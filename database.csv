@@ -1854,6 +1854,7 @@
 74395,0x140d3dbe0,0x140d86b70,4,void BSPortalGraphEntry::ClearVisibility
 74397,0x140d3dce0,0x140d86c70,4,"static bool BSPortalGraphEntry::func2(RE::BSPortalGraphEntry* first, RE::BSPortalGraphEntry* second)"
 74398,0x140d3dde0,0x140d86d70,4,"void BSPortalGraphEntry::AddVisibilityToMap(void* a_space, BSCompoundFrustum* a_compoundFrustum)"
+74481,0x140d41970,0x140d8a900,3,"RE::NiAVObject* NiAVObject::LookupBoneNodeByName(RE::NiAVObject* a_this, const RE::BSFixedString& a_name, bool a3)"
 74491,0x140d426f0,0x140d8b6b0,4,uint16_t FloatToHalf (float a_input)
 74596,0x140d464e0,0x140d8f410,4,"ulonglong GrassManager::FindOrAddMultiBoundShape(GrassManager* param_1, longlong param_2)"
 74599,0x140d46b20,0x140d8fa50,4,"void GrassManager::QueueMultiBoundShapeLoad(GrassManager* param_1, longlong param_2, longlong param_3)"
