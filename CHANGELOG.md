@@ -1,3 +1,10 @@
+## [0.271.1](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.271.0...v0.271.1) (2026-09-27)
+
+
+### Bug Fixes
+
+* add NiAVObject::LookupBoneNodeByName ([#233](https://github.com/alandtse/skyrim_vr_address_library/issues/233)) ([37b77f3](https://github.com/alandtse/skyrim_vr_address_library/commit/37b77f3f00ae0d7474845a3acb6fb957b2212c71))
+
 # [0.271.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.270.0...v0.271.0) (2026-09-25)
 
 
