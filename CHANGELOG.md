@@ -1,3 +1,10 @@
+# [0.272.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.271.1...v0.272.0) (2026-09-28)
+
+
+### Features
+
+* add BSDismemberSkinInstance Ctor and Create ([#234](https://github.com/alandtse/skyrim_vr_address_library/issues/234)) ([2fcf130](https://github.com/alandtse/skyrim_vr_address_library/commit/2fcf130a0abb28999898ba08f81e9027fb249c99))
+
 ## [0.271.1](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.271.0...v0.271.1) (2026-09-27)
 
 
