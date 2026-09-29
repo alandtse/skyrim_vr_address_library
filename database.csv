@@ -186,6 +186,7 @@
 15782,0x1401d7590,0x1401e8130,3,"bool InventoryEntryData::IsOwnedBy_Impl(Actor* a_testOwner, TESForm* a_itemOwner, bool a_defaultTo)"
 15786,0x1401d7e40,0x1401e89e0,4,"void InventoryEntryData::PoisonObject(AlchemyItem* a_alchItem, std::uint32_t a_count)"
 15788,0x1401d7f10,0x1401e8ab0,4,EnchantmentItem * GetEnchantment_1401D7F10 (ExtraContainerChanges__ItemEntry * param_1)
+15789,0x1401d7f40,0x1401e8ae0,3,"void InventoryEntryData::SetWorn(bool a_worn, bool a_left, bool a_deleteExtraList)"
 15800,0x1401d8d10,0x1401e98b0,3,RE::TESObjectREFR::InitInventoryIfRequired
 15801,0x1401d8e20,0x1401e99c0,4,BSExtraData__VFTable * TESObjectREFR::GetContainerChanges_1401D8E20 (TESObjectREFR * param_1)
 15802,0x1401d8e40,0x1401e99e0,3,InventoryChanges* TESObjectREFR::MakeInventoryChanges()
@@ -217,7 +218,7 @@
 15991,0x1401efec0,0x1402009a0,4,bool GetWornMaskVisitor::Visit(InventoryEntryData* a_entryData)
 16021,0x1401f0de0,0x1402018c0,4,void* RE::BSIStream::DecompressLipData()
 16023,0x1401f12a0,0x140201d80,4,"undefined8 FUN_1401f12a0 (uint * param_1, float param_2, undefined8 * param_3)"
-16027,0x1401f1cb0,0x140202790,4,"void InventoryEntryData::SetWorn(bool a_worn, bool a_left, bool a_deleteExtraList)"
+16027,0x1401f1cb0,0x140202790,4,FUN_1401f1cb0
 16035,0x1401f26e0,0x1402031c0,4,void RE::BSResource::EntryDB<RE::LipSynchAnimDB::DBTraits>::Func1()
 16036,0x1401f2850,0x140203330,4,void RE::BSResource::EntryDB<RE::LipSynchAnimDB::DBTraits>::Func2()
 16064,0x1401f3c70,0x1402047d0,4,void RE::BSResource::EntryDB<RE::LipSynchAnimDB::DBTraits>::Unk_03()
