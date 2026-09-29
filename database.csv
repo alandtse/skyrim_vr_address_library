@@ -202,15 +202,15 @@
 15856,0x1401e51d0,0x1401f5d90,4,void InventoryChanges::VisitWornItems(IItemChangeVisitor& visitor)
 15858,0x1401e5390,0x1401f5f50,4,"void InventoryChanges::SetFavorite(InventoryEntryData* a_entry, ExtraDataList* a_itemList)"
 15859,0x1401e58f0,0x1401f64b0,4,"void InventoryChanges::RemoveFavorite(InventoryEntryData* a_entry, ExtraDataList* a_itemList)"
-15868,0x1401e7310,0x1401f7ed0,3,RE::InventoryChanges::GetItemCount
+15868,0x1401e7310,0x1401f7ed0,3,std::int16_t InventoryChanges::GetItemCount(TESBoundObject* a_obj)
 15878,0x1401e7ba0,0x1401f8710,4,"void InventoryChanges::RemoveAllItems(TESObjectREFR* a_ref, TESObjectREFR* a_moveToRef, bool a_arg4, bool a_keepOwnership, bool a_arg6)"
 15883,0x1401e9130,0x1401f9ca0,4,float InventoryChanges::GetInventoryWeight()
 15889,0x1401e9d90,0x1401fa900,3,void InventoryChanges::InitLeveledItems()
 15890,0x1401ea020,0x1401fab90,3,void InventoryChanges::InitFromContainerExtra()
 15906,0x1401ec990,0x1401fd500,4,"BSExtraDataList * InventoryChanges::EnchantObject (InventoryChanges * a_this, TESBoundObject * a_obj, BSExtraDataList * a_extraList, EnchantmentItem * a_enchantment, uint16_t a_charge)"
-15907,0x1401ecc60,0x1401fd7d0,3,RE::InventoryChanges::SetUniqueID
-15908,0x1401ecd30,0x1401fd8a0,2,RE::InventoryChanges::GetNextUniqueID
-15909,0x1401ece20,0x1401fd990,3,RE::InventoryChanges::TransferItemUID
+15907,0x1401ecc60,0x1401fd7d0,3,"void InventoryChanges::SetUniqueID(ExtraDataList* a_itemList, TESForm* a_oldForm, TESForm* a_newForm)"
+15908,0x1401ecd30,0x1401fd8a0,2,std::uint16_t InventoryChanges::GetNextUniqueID()
+15909,0x1401ece20,0x1401fd990,3,"void InventoryChanges::SendContainerChangedEvent(ExtraDataList* a_itemExtraList, TESObjectREFR* a_fromRefr, TESForm* a_item, std::int32_t a_count)"
 15916,0x1401ed550,0x1401fe070,4,TESActionData* TESActionData::Ctor()
 15967,0x1401ee670,0x1401ff150,3,RE::BSPointerHandleManagerInterface::GetHandle
 15980,0x1401ef330,0x1401ffe10,3,RE::Inventory::GetEventSource
