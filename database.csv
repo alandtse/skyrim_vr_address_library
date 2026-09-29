@@ -202,7 +202,7 @@
 15856,0x1401e51d0,0x1401f5d90,4,void InventoryChanges::VisitWornItems(IItemChangeVisitor& visitor)
 15858,0x1401e5390,0x1401f5f50,4,"void InventoryChanges::SetFavorite(InventoryEntryData* a_entry, ExtraDataList* a_itemList)"
 15859,0x1401e58f0,0x1401f64b0,4,"void InventoryChanges::RemoveFavorite(InventoryEntryData* a_entry, ExtraDataList* a_itemList)"
-15868,0x1401e7310,0x1401f7ed0,3,RE::InventoryChanges::GetItemCount
+15868,0x1401e7310,0x1401f7ed0,3,std::int16_t InventoryChanges::GetItemCount(TESBoundObject* a_obj)
 15878,0x1401e7ba0,0x1401f8710,4,"void InventoryChanges::RemoveAllItems(TESObjectREFR* a_ref, TESObjectREFR* a_moveToRef, bool a_arg4, bool a_keepOwnership, bool a_arg6)"
 15883,0x1401e9130,0x1401f9ca0,4,float InventoryChanges::GetInventoryWeight()
 15889,0x1401e9d90,0x1401fa900,3,void InventoryChanges::InitLeveledItems()
