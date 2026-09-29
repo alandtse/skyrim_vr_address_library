@@ -26,6 +26,7 @@
 11299,0x140103f90,0x140114540,4,"void MagicSystem::GetMagicItemDescription(BSString& a_out, MagicItem* a_magicItem, const char* a_beginTagFormat, const char* a_endTagFormat)"
 11308,0x140104ad0,0x1401150c0,3,FixedStrings* FixedStrings::GetSingleton()
 11356,0x1401057d0,0x140115dc0,4,"undefined FUN_1401057D0(longlong param_1, longlong param_2)"
+11452,0x14010cc40,0x14011d220,3,bool ExtraDataList::IsInventoryStackable(bool a_ignoreWorn) const
 11463,0x14010DAE0,0x14011e0c0,3,BSExtraDataList::SetOwnerForm
 11471,0x14010e570,0x14011eb50,4,"void SetCount_14010E570 (BSExtraDataList * param_1, ushort a_count)"
 11474,0x14010e960,0x14011ef40,3,RE::BSExtraDataList::SetSoul
@@ -129,6 +130,7 @@
 14190,0x140189fc0,0x140199cf0,3,"void ScriptEventSourceHolder::SendOpenCloseEvent(const NiPointer<TESObjectREFR>& a_ref, const NiPointer<TESObjectREFR>& a_activeRef, bool a_isOpened)"
 14261,0x14018c680,0x14019c3b0,4,"void TESActorBaseData::SetActorBaseFlag(ACTOR_BASE_DATA::Flag a_flag, bool a_set, bool a_notify)"
 14262,0x14018c750,0x14019c480,4,std::uint16_t TESActorBaseData::GetLevel()
+14390,0x140190070,0x14019fda0,3,void TESContainer::CollectUniqueInventoryObjects(BSScrapArray<ContainerObject*>& a_objects) const
 14399,0x140190480,0x1401a01b0,3,RE::TESDescription::GetDescription
 14411,0x140190d50,0x1401a0a80,4,RE::EnchantmentItem* RE::TESForm::GetEnchantment(RE::ExtraDataList* extraDataList)
 14412,0x140190dc0,0x1401a0af0,4,std::uint16_t GetMaximumCharge(ExtraDataList* extraDataList) const;
@@ -181,11 +183,13 @@
 15745,0x1401d5c20,0x1401e67c0,4,InventoryEntryData& InventoryEntryData::DeepCopy(const InventoryEntryData& a_other)
 15752,0x1401d64e0,0x1401e7080,4,RE::ExtraContainerChanges__get_max_something
 15757,0x1401d66e0,0x1401e7280,3,std::int32_t InventoryEntryData::GetValue()
+15760,0x1401d6970,0x1401e7510,3,ExtraDataList* InventoryEntryData::GetFavoriteExtraList() const
 15767,0x1401d6ba0,0x1401e7740,3,bool InventoryEntryData::IsQuestObject()
 15779,0x1401d7330,0x1401e7ed0,4,RE::GetArmorFinalRating
 15782,0x1401d7590,0x1401e8130,3,"bool InventoryEntryData::IsOwnedBy_Impl(Actor* a_testOwner, TESForm* a_itemOwner, bool a_defaultTo)"
 15786,0x1401d7e40,0x1401e89e0,4,"void InventoryEntryData::PoisonObject(AlchemyItem* a_alchItem, std::uint32_t a_count)"
 15788,0x1401d7f10,0x1401e8ab0,4,EnchantmentItem * GetEnchantment_1401D7F10 (ExtraContainerChanges__ItemEntry * param_1)
+15797,0x1401d89f0,0x1401e9590,3,std::int32_t InventoryEntryData::NormalizeAndCountNonStackableExtraLists()
 15800,0x1401d8d10,0x1401e98b0,3,RE::TESObjectREFR::InitInventoryIfRequired
 15801,0x1401d8e20,0x1401e99c0,4,BSExtraData__VFTable * TESObjectREFR::GetContainerChanges_1401D8E20 (TESObjectREFR * param_1)
 15802,0x1401d8e40,0x1401e99e0,3,InventoryChanges* TESObjectREFR::MakeInventoryChanges()
@@ -285,6 +289,7 @@
 19002,0x14027ddc0,0x14028f390,3,TESObjectCELL::AttachReference3D
 19102,0x140283f90,0x1402956c0,3,TESObjectREFR::ClearData
 19105,0x1402850e0,0x140296810,3,void TESObjectREFR::InitializeAfterAllFormsAreReadFromFile
+19110,0x140285be0,0x140297310,3,void TESObjectREFR::AddLockChange()
 19119,0x1402866d0,0x140297e00,4,void TESObjectREFR::UpdateSoundCallBack_1402866D0 (Character * a_this)
 19133,0x140287d30,0x140299460,4,"void TESObjectREFR::ReadFromSaveGame (TESObjectREFR * a_this, BGSLoadFormBuffer * a_buffer)"
 19142,0x1402896f0,0x14029ae20,4,"ObjectRefHandle TESObjectREFR::CreateReference(ObjectRefHandle& a_handleOut, FormType a_formType, bool a_addActorToProcessList)"
@@ -543,8 +548,12 @@
 29832,0x1404737a0,0x140483780,4,"bool FindClosestPointOnNavmesh(const BSTSmartPointer<BSPathingCell>& a_cell, const NiPoint3& a_location, FindTriangleForLocationFilter& a_filter, NiPoint3& a_pointOut)"
 29866,0x140476ba0,0x140486b80,4,"bool Pathing::GetPathingCell(const NiPoint3& a_location, TESObjectCELL* a_cell, TESWorldSpace* a_worldSpace, BSTSmartPointer<BSPathingCell>& a_cellOut)"
 30839,0x1404a8090,0x1404b80a0,3,void BGSDistantTreeBlock::UpdateBlockVisibility (BGSDistantTreeBlock * a_this)
+30932,0x1404ad510,0x1404bd570,3,"BGSTerrainChunk* BGSTerrainChunk::Ctor(BGSTerrainNode* a_node, BSStream& a_stream, std::int32_t a_cellX, std::int32_t a_cellY)"
+30933,0x1404ad820,0x1404bd880,3,void BGSTerrainChunk::Dtor()
 30934,0x1404ad940,0x1404bd9a0,3,void BGSTerrainBlock::Attach(BGSTerrainBlock* a_block)
 30936,0x1404adb60,0x1404bdbc0,3,void BGSTerrainBlock::Detach(BGSTerrainBlock* a_block)
+30939,0x1404add70,0x1404bddd0,3,void BGSTerrainChunk::AttachWater(bool a_attach)
+30947,0x1404ae090,0x1404be0f0,3,void BGSTerrainChunk::Prepare()
 30978,0x1404af910,0x1404bf970,4,"uint32_t AddOrRemoveLODWater(bool* a_add, void* a_object, void** a_objectHolder) src\Features/UnifiedWater.cpp:357"
 31059,0x1404b5090,0x1404c5170,3,"void BGSTerrainNode::UpdateWaterMeshSubVisibility(BGSTerrainNode* a_node, BSMultiBoundNode* a_waterParent)"
 31140,0x1404b8580,0x1404c8660,3,SeasonsofSkyrim::LODSwap::Terrain::BuildMeshFileName
@@ -556,6 +565,8 @@
 31150,0x1404b87e0,0x1404c88c0,3,SeasonsofSkyrim::LODSwap::Tree::BuildMeshFileName
 31151,0x1404b8820,0x1404c8900,3,SeasonsofSkyrim::LODSwap::Tree::BuildTextureFileName
 31152,0x1404b8850,0x1404c8930,3,SeasonsofSkyrim::LODSwap::Tree::BuildTypeListFileName
+31235,0x1404bd330,0x1404cd480,3,void BGSAutoWater::GenerateMultibounds(TESObjectCELL* a_cell)
+31236,0x1404bd5e0,0x1404cd730,3,"void BGSAutoWater::GeneratePlaceableWater(TESObjectCELL* a_cell, NiAVObject* a_water)"
 31300,0x1404c0ed0,0x1404d1020,4,void BGSWaterCollisionManager::BGSWaterUpdateI::dtor (BGSWaterCollisionManager::BGSWaterUpdateI * a_this)
 31301,0x1404c0f70,0x1404d10c0,4,"void BGSWaterCollisionManager::BGSWaterUpdateI::SetContext (BGSWaterCollisionManager::BGSWaterUpdateI * a_this, void * a_context)"
 31302,0x1404c0f80,0x1404d10d0,4,"void BGSWaterCollisionManager::BGSWaterUpdateI::SetDisabled (BGSWaterCollisionManager::BGSWaterUpdateI * a_this, bool a_disabled)"
@@ -1852,6 +1863,7 @@
 74240,0x140d38720,0x140d80bc0,3,RE::INISettingCollection::CloseHandle
 74377,0x140d3d3d0,0x140d86360,4,BSWindModifier* BSWindModifier::Ctor()
 74378,0x140d3d410,0x140d863a0,4,"void UpdateWindVectorForBSWindModifier(float strength, float angle)"
+74387,0x140d3d6b0,0x140d86640,3,void BSTempNodeManager::UpdateTempNodeTimers(float a_elapsedTime)
 74395,0x140d3dbe0,0x140d86b70,4,void BSPortalGraphEntry::ClearVisibility
 74397,0x140d3dce0,0x140d86c70,4,"static bool BSPortalGraphEntry::func2(RE::BSPortalGraphEntry* first, RE::BSPortalGraphEntry* second)"
 74398,0x140d3dde0,0x140d86d70,4,"void BSPortalGraphEntry::AddVisibilityToMap(void* a_space, BSCompoundFrustum* a_compoundFrustum)"
@@ -1867,6 +1879,8 @@
 74810,0x140d51480,0x140d9a280,3,void BSCullingProcess::FlushAlphaGroupQueue()
 74812,0x140d517c0,0x140d9a5e0,4,bool BSCullingProcess::AddShared(NiAVObject* a_object)
 74832,0x140d522b0,0x140d9b240,3,void* BSCullingProcess::PopFreeQueueEntry(void* a_pool)
+74857,0x140d53440,0x140d9c3d0,3,bool BSParticleSystemManager::IsValidMasterParticleSystem(std::uint32_t a_index)
+74860,0x140d53670,0x140d9c600,3,BSMasterParticleSystem* BSParticleSystemManager::GetMasterParticleSystemAt(std::uint32_t a_index)
 74889,0x140d546b0,0x140d9d640,4,BSFurnitureMarkerNode* BSFurnitureMarkerNode::FindBSFurnitureMarkerNode(NiObjectNET* a_object)
 75057,0x140d5a2b0,0x140da33c0,4,bool BSCompoundFrustum::Process(NiAVObject* a_object)
 75075,0x140d5ba80,0x140da4b90,4,void BSCompoundFrustum::GetActivePlaneState(std::uint32_t* a_outPlaneState)
