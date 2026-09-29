@@ -1201,6 +1201,7 @@
 46255,0x1407c7690,0x1407f29e0,4,"NodeArray& pushback_parentof(NodeArray& array, NodeArray& cont_node)"
 46256,0x1407c7730,0x1407f2a80,4,CombatBehaviorTree::TreeBuilder& TreeBuilder::operator[](const TreeBuilder& a_other)
 46257,0x1407c7760,0x1407f2ab0,4,CombatBehaviorTreeNode* CombatBehaviorTree::TreeBuilder::GetNode()
+46258,0x1407c7770,0x1407f2ac0,3,CombatBehaviorTree::CombatBehaviorTree(const char* a_name)
 46261,0x1407c7820,0x1407f2b70,4,"NodeArray& init_withNode_withname(NodeArray& array, const char* name, CombatBehaviorTreeNode* node)"
 46262,0x1407c7890,0x1407f2be0,4,CombatBehaviorTreeNode* CombatBehaviorTree::CreateLink(const char* a_name)
 46263,0x1407c7950,0x1407f2ca0,4,void CombatBehaviorTree::CreateTree(CombatBehaviorTreeNode* a_node)
