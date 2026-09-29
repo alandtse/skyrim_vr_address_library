@@ -549,6 +549,7 @@
 29866,0x140476ba0,0x140486b80,4,"bool Pathing::GetPathingCell(const NiPoint3& a_location, TESObjectCELL* a_cell, TESWorldSpace* a_worldSpace, BSTSmartPointer<BSPathingCell>& a_cellOut)"
 30839,0x1404a8090,0x1404b80a0,3,void BGSDistantTreeBlock::UpdateBlockVisibility (BGSDistantTreeBlock * a_this)
 30932,0x1404ad510,0x1404bd570,3,"BGSTerrainChunk* BGSTerrainChunk::Ctor(BGSTerrainNode* a_node, BSStream& a_stream, std::int32_t a_cellX, std::int32_t a_cellY)"
+30933,0x1404ad820,0x1404bd880,3,void BGSTerrainChunk::Dtor()
 30934,0x1404ad940,0x1404bd9a0,3,void BGSTerrainBlock::Attach(BGSTerrainBlock* a_block)
 30936,0x1404adb60,0x1404bdbc0,3,void BGSTerrainBlock::Detach(BGSTerrainBlock* a_block)
 30947,0x1404ae090,0x1404be0f0,3,void BGSTerrainChunk::Prepare()
