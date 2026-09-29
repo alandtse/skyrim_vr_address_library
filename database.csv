@@ -940,7 +940,7 @@
 37798,0x140630f40,0x140639e10,4,"void Actor::RemoveCastScroll(SpellItem* a_spell, MagicSystem::CastingSource a_source)"
 37799,0x1406310a0,0x140639f70,4,"void Actor::ApplyAllCombatSpellsFromAttack_1406310A0 (ExtraContainerChanges__ItemEntry* param_2, bool param_3, undefined param_4)"
 37802,0x140631360,0x14063a230,3,RE::Actor::UpdateArmorAbility
-37803,0x1406313d0,0x14063a2a0,3,RE::Actor::UpdateWeaponAbility
+37803,0x1406313d0,0x14063a2a0,3,"void Actor::UpdateWeaponAbility(const TESForm* a_object, const ExtraDataList* a_extraList, bool a_isLeft)"
 37804,0x1406314f0,0x14063a3c0,4,"void Actor::CastPermanentMagic_1406314F0 (Actor * a_this, bool a_wornItemEnchantments, bool a_baseSpells, bool a_raceSpells, bool a_everyActorAbility)"
 37805,0x1406316b0,0x14063a580,3,po3tweaks::Spells::DispelAdded::GetAliasInstanceArray
 37808,0x140631c80,0x14063ab50,3,void Actor::InterruptCast(bool a_restoreMagicka)
@@ -992,7 +992,7 @@
 38568,0x14065c880,0x140665bd0,3,RE::AIProcess::SetBaseScale
 38677,0x1406759E0,0x14067EEB0,4,"bhkBoxShape * bhkBoxShape::bhkBoxShape(bhkBoxShape * a_this, RE::NiPoint3* a_halfExtents)"
 38726,0x1406777c0,0x140680c40,4,"void HighProcessData::ClearHeadtrackTarget(HEAD_TRACK_TYPE a_headtrackType, bool a_defaultHold)"
-38752,0x140679000,0x140682480,4,"void Actor::RefreshEquippedActorValueCharge(const RE::TESForm* a_object, const RE::ExtraDataList* a_extraList, bool a_isLeft)"
+38752,0x140679000,0x140682480,3,BSTArray_EraseRange_RefCountedPairs
 38760,0x1406797d0,0x140682c50,3,"void HighProcessData::SetHeadtrackTarget(HEAD_TRACK_TYPE a_headtrackType, TESObjectREFR* a_target)"
 38773,0x140679c10,0x140683090,3,void AIProcess::ClearFurniture()
 38781,0x14067a3e0,0x140683850,4,InventoryEntryData* AIProcess::GetCurrentWeapon(bool a_leftHand)
