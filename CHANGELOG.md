@@ -1,3 +1,10 @@
+# [0.273.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.272.0...v0.273.0) (2026-09-29)
+
+
+### Features
+
+* add terrain, render and inventory functions ([#242](https://github.com/alandtse/skyrim_vr_address_library/issues/242)) ([a202397](https://github.com/alandtse/skyrim_vr_address_library/commit/a2023973a71d409e6284ea0b6a914c79b79c65d2))
+
 # [0.272.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.271.1...v0.272.0) (2026-09-28)
 
 
