@@ -475,6 +475,8 @@
 25704,0x1403b57b0,0x1403c55d0,3,void Sky::UpdateLightLODFadeDistances(Sky* this)
 25706,0x1403b5d20,0x1403c5b40,4,"void Sky::FillColorBlend(COLOR_BLEND& a_colorBlend, TESWeather* a_currentWeather, float a_weatherPct, TESWeather::ColorTime& a_time1, TESWeather::ColorTime& a_time2)"
 25746,0x1403b8d30,0x1403c8b50,4,"void Sky::ResetModelHandle(ModelDBHandle* a_handle, ModelDBHandle::U_Entry* a_entry)"
+25799,0x1403bbf20,0x1403cbd60,3,"void Sun::SubmitOcclusionQuery(std::uint32_t a_renderFlags, BSShaderAccumulator* a_accumulator, NiCamera* a_camera)"
+25801,0x1403bc010,0x1403cbe50,3,void Sun::UpdateOcclusionQueries()
 25814,0x1403bcaf0,0x1403cc940,4,SoundLevels GetSoundLevelValue (SoundLevels a_soundLevel)
 25822,0x1403bcf40,0x1403ccd90,3,RE::AIForumulas::ComputePickpocketSuccess
 25846,0x1403BDEF0,0x1403CD770,4,ActorValueOwner::sub_1403BDEF0
@@ -512,6 +514,7 @@
 26468,0x1403dc3c0,0x1403ebd30,3,"void ChangeActorHeadPart(Actor* a_actor, BGSHeadPart* a_oldPart, BGSHeadPart* a_newPart)"
 26472,0x1403dc720,0x1403ec090,3,"uint32_t UpdateModelSkin(NiAVObject* a_object, NiColorA** a_color)"
 26473,0x1403dc7e0,0x1403ec150,3,"uint32_t UpdateModelHair(NiAVObject* a_object, NiColorA** a_color)"
+26509,0x1403dec60,0x1403ee610,3,"void BSTreeNode::ComputeTreeLODBlend(std::uintptr_t a_arg1, std::uintptr_t a_arg2, std::uintptr_t a_arg3)"
 26561,0x1403e1130,0x1403f0ae0,4,char* ActorValueList::GetActorValueName(ActorValue a_actorValue)
 26563,0x1403e1230,0x1403f0be0,4,const char* ActorValueList::GetActorValueScriptName(ActorValue av)
 26569,0x1403e1420,0x1403f0dd0,4,ActorValueInfo* ActorValueList::GetActorValueInfo(ActorValue a_actorValue)
@@ -542,10 +545,22 @@
 29819,0x140473120,0x140483100,4,"void* Pathing::BuildFollowPath(Pathing* a_this, void* a_pathOut, Character* a_actor, void* a_reserved)"
 29832,0x1404737a0,0x140483780,4,"bool FindClosestPointOnNavmesh(const BSTSmartPointer<BSPathingCell>& a_cell, const NiPoint3& a_location, FindTriangleForLocationFilter& a_filter, NiPoint3& a_pointOut)"
 29866,0x140476ba0,0x140486b80,4,"bool Pathing::GetPathingCell(const NiPoint3& a_location, TESObjectCELL* a_cell, TESWorldSpace* a_worldSpace, BSTSmartPointer<BSPathingCell>& a_cellOut)"
+30737,0x1404a1430,0x1404b13d0,3,"BGSDistantObjectBlock* BGSDistantObjectBlock::Ctor(BGSTerrainNode* a_node, BSStream& a_stream)"
+30739,0x1404a17c0,0x1404b1760,3,void BGSDistantObjectBlock::Detach()
+30741,0x1404a18d0,0x1404b1870,3,void BGSDistantObjectBlock::Attach()
+30746,0x1404a1b90,0x1404b1b30,3,void BGSDistantObjectBlock::Prepare()
+30826,0x1404a7040,0x1404b7050,3,"BGSDistantTreeBlock* BGSDistantTreeBlock::Ctor(BGSTerrainNode* a_node, std::uint32_t a_LODLevel)"
+30830,0x1404a7480,0x1404b7490,3,void BGSDistantTreeBlock::Detach()
+30832,0x1404a76d0,0x1404b76e0,3,void BGSDistantTreeBlock::Attach()
 30839,0x1404a8090,0x1404b80a0,3,void BGSDistantTreeBlock::UpdateBlockVisibility (BGSDistantTreeBlock * a_this)
 30934,0x1404ad940,0x1404bd9a0,3,void BGSTerrainBlock::Attach(BGSTerrainBlock* a_block)
 30936,0x1404adb60,0x1404bdbc0,3,void BGSTerrainBlock::Detach(BGSTerrainBlock* a_block)
+30939,0x1404add70,0x1404bddd0,3,void BGSTerrainChunk::AttachWater(bool a_attach)
 30978,0x1404af910,0x1404bf970,4,"uint32_t AddOrRemoveLODWater(bool* a_add, void* a_object, void** a_objectHolder) src\Features/UnifiedWater.cpp:357"
+31017,0x1404b2960,0x1404c2a30,3,"void BGSTerrainManager::Update(const NiPoint3& a_viewPos, const std::int32_t& a_updateType)"
+31018,0x1404b2da0,0x1404c2e70,3,NiNode* BGSTerrainManager::GetLODLandRootForLevel(std::uint32_t a_level)
+31026,0x1404b3190,0x1404c3260,3,"void BGSTerrainManager::UnloadAll(bool a_unloadStaticData, bool a_shutdown)"
+31036,0x1404b38a0,0x1404c3980,3,void BGSTerrainManager::SetCullState(const CullState& a_state)
 31059,0x1404b5090,0x1404c5170,3,"void BGSTerrainNode::UpdateWaterMeshSubVisibility(BGSTerrainNode* a_node, BSMultiBoundNode* a_waterParent)"
 31140,0x1404b8580,0x1404c8660,3,SeasonsofSkyrim::LODSwap::Terrain::BuildMeshFileName
 31141,0x1404b85c0,0x1404c86a0,3,SeasonsofSkyrim::LODSwap::Terrain::BuildDiffuseTextureFileName
@@ -556,6 +571,7 @@
 31150,0x1404b87e0,0x1404c88c0,3,SeasonsofSkyrim::LODSwap::Tree::BuildMeshFileName
 31151,0x1404b8820,0x1404c8900,3,SeasonsofSkyrim::LODSwap::Tree::BuildTextureFileName
 31152,0x1404b8850,0x1404c8930,3,SeasonsofSkyrim::LODSwap::Tree::BuildTypeListFileName
+31230,0x1404bca00,0x1404ccb50,3,"void BGSAutoWater::GeneratePlaceableWaterForCell(TESObjectCELL* a_cell, bool a_unk)"
 31300,0x1404c0ed0,0x1404d1020,4,void BGSWaterCollisionManager::BGSWaterUpdateI::dtor (BGSWaterCollisionManager::BGSWaterUpdateI * a_this)
 31301,0x1404c0f70,0x1404d10c0,4,"void BGSWaterCollisionManager::BGSWaterUpdateI::SetContext (BGSWaterCollisionManager::BGSWaterUpdateI * a_this, void * a_context)"
 31302,0x1404c0f80,0x1404d10d0,4,"void BGSWaterCollisionManager::BGSWaterUpdateI::SetDisabled (BGSWaterCollisionManager::BGSWaterUpdateI * a_this, bool a_disabled)"
@@ -1616,6 +1632,7 @@
 60790,0x140a87840,0x140AC2240,4,"void hkpShapePhantom::SetTransform(hkpShapePhantom*, hkTransform*)"
 60791,0x140a878c0,0x140AC22C0,4,"void hkpShapePhantom::SetPosition(RE::hkpShapePhantom*, RE::hkVector4)"
 60792,0x140a87930,0x140AC2330,4,"hkWorldOperation::Result hkpShapePhantom::SetShape(RE::hkpShapePhantom*, RE::hkpShape*)"
+61388,0x140aa8740,0x140ae3140,3,"void hkpResponseModifier::SetInvMassScalingForContact(hkpDynamicsContactMgr* a_mgr, hkpRigidBody* a_body, hkpConstraintOwner& a_constraintOwner, const hkVector4& a_factor)"
 61559,0x140abb120,0x140af5b20,3,"void hkpCharacterRigidBody::SetLinearVelocity(const hkVector4& a_newVel, float a_timestep)"
 61571,0x140abb790,0x140AF6190,3,"hkpMouseSpringAction::sub_140ABB790(hkpMouseSpringAction *a1, float *a2)"
 62122,0x140ad2d10,0x140b0d7b0,3,undefined8 BSSynchronizedClipGenerator::sub_140AD2D10 (BSSynchronizedClipGenerator * a_this)
@@ -1675,6 +1692,7 @@
 66409,0x140bef570,0x140c2a420,3,po3tweaks::DopplerShift::Play3d
 66453,0x140bf0d50,0x140c2bc00,4,"void BSAudioManager::ComposeMessage(SOUND_MSG a_message, std::uint32_t a_id, std::int32_t a_iData, void* a_pData, NiPointer<NiAVObject> a_spData, const NiPoint3& a_vector3)"
 66456,0x140bf0fb0,0x140c2be60,4,"void BSAudioManager::PrecacheDescriptor(const BSISoundDescriptor* a_descriptor, std::uint32_t a_flags)"
+66472,0x140bf3ec0,0x140c2ed60,3,void BSAudioManager::ReleaseAllSounds()
 66646,0x140bf9e40,0x140c34ce0,4,void BSGameSound::SetOutputModel(BSISoundOutputModel* a_outputModel)
 66772,0x140bfe670,0x140c394f0,4,void BSXAudio2GameSound::SeekInSamples(std::uint32_t a_samples)
 66841,0x140c01800,0x140c3c680,3,ScrapHeap* MemoryManager::GetThreadScrapHeap()
@@ -1809,6 +1827,9 @@
 69699,0x140c792a0,0x140cbfaf0,4,void NiCullingProcess::SetFrustum(const NiFrustum* a_frustum)
 69804,0x140c7eb60,0x140cc5250,3,RE::NiSkinInstance::Ctor
 69838,0x140c80b80,0x140cc7420,3,void NiTriBasedGeom::NiTriBasedGeom(NiGeometryData* a_data)
+70361,0x140c91820,0x140cd8370,3,"NiPick* NiPick::ctor(std::uint32_t a_initialSize, std::uint32_t a_growBy)"
+70362,0x140c918e0,0x140cd8430,3,void NiPick::dtor()
+70363,0x140c91930,0x140cd8480,3,"bool NiPick::PickObjects(const NiPoint3& a_origin, const NiPoint3& a_direction, bool a_append)"
 70860,0x140cc6090,0x140d0cbe0,4,"void NiControllerSequence::SetPhase(float a_phase, bool a_arg2)"
 70880,0x140cc76e0,0x140d0e230,4,NiControllerSequence::Activate_*
 70882,0x140cc7cb0,0x140d0e800,4,"bool NiControllerSequence::Activate(std::uint8_t a_interpIndex, bool a_maxOffset, float a_seqWeight, float a_easeInTime, NiControllerSequence* a_partnerSequence, bool a_transition)"
@@ -1910,6 +1931,7 @@
 75640,0x140d74be0,0x140dc7a20,3,"void RenderTargetManager::CreateCubeMapRenderTarget(RENDER_TARGET_CUBEMAP a_renderTarget, const CubeMapRenderTargetProperties& a_properties)"
 75647,0x140d74d10,0x140dc7b50,4,"void RenderTargetManager::SetCurrentDepthStencilTarget(RENDER_TARGET_DEPTHSTENCIL a_renderTarget, SetRenderTargetMode a_mode, std::uint32_t a_slice)"
 75648,0x140d74d60,0x140dc7ba0,4,"void RenderTargetManager::SetCurrentCubeMapRenderTarget(RENDER_TARGET_CUBEMAP a_renderTarget, SetRenderTargetMode a_mode, std::uint32_t a_faceIndex, bool a_updateViewport)"
+75654,0x140d74ec0,0x140dc7d10,3,"void Renderer::SetRenderTarget(std::uint32_t a_renderTargetSlot, RENDER_TARGET a_renderTarget, SetRenderTargetMode a_mode, bool a_updateViewport)"
 75694,0x140d7bab0,0x140dcf4f0,3,"void SetCameraData(const NiCamera* a_camera, std::uint32_t a_flags)"
 75709,0x140d7cfb0,0x140dd1160,3,void BSGraphics_Renderer_Begin_UpdateJitter_140d7cfb0(BSGraphics::State* a_state)
 75711,0x140d7d130,0x140dd1320,3,"void BSGraphics::State::BuildCameraStateData(CameraStateData* a_entry, NiCamera* a_camera, bool a_useJitter)"
@@ -2017,6 +2039,7 @@
 97463,0x141233720,0x14126bbd0,3,VMHandle Object::GetHandle()
 97468,0x141234360,0x14126c810,3,void Object::IncRef()
 97469,0x141234410,0x14126c8c0,3,std::uint32_t Object::DecRef()
+97538,0x1412386d0,0x141270b80,3,void ObjectTypeInfo::ReleaseData()
 97742,0x1412444c0,0x14129a210,3,void Stack::Dtor()
 97746,0x1412449d0,0x14129a720,3,RE::BSScript::Stack::GetStackFrameVariable
 97831,0x141249f60,0x1412a5380,3,RE::BSScript::CompiledScriptLoader::GetClass
@@ -2053,6 +2076,7 @@
 98987,0x141295e90,0x1412ceb00,4,void BSShaderManager::SetRenderMode(etRenderMode a_renderMode)
 98989,0x141295fb0,0x1412cec20,3,"void InitDirectionalAmbient (NiColor * a_directionalAmbientColors, NiColor * ambientSpecularColor, float ambientSpecularAlpha)"
 98997,0x1412966a0,0x1412cf410,2,BSGraphics::BSShaderAccumulator* BSGraphics::BSShaderAccumulator::GetCurrentAccumulator()
+98998,0x1412966b0,0x1412cf420,3,void BSShaderAccumulator::SetCurrentAccumulator(BSShaderAccumulator* a_accumulator)
 99020,0x1412972b0,0x1412d1af0,4,"void ImageSpaceManager::AddEffect (ImageSpaceManager* a_this, uint a_ImageSpaceManager__ImageSpaceEffectEnum, BSImagespaceShader * a_imageSpaceShader)"
 99023,0x141297410,0x1412d1c50,3,"void PostProcessing (TESImagespaceManager * a_this, uint param_2, RENDER_TARGET render_target)"
 99686,0x1412b8580,0x1412f5f80,3,ShadowSceneNode::ctor_*
@@ -2073,6 +2097,9 @@
 99741,0x1412bdf60,0x1412fb9e0,3,"void ShadowSceneNode::ResetScene(ShadowSceneNode* this, BSPortalGraph* a_graph)"
 99752,0x1412beae0,0x1412fc4f0,3,"void ShadowSceneNode::AccumulateLight(RE::BSLight* a_light, RE::BSTArray<RE::NiAVObject*>* a_accumList, bool a_flag)"
 99753,0x1412bf7f0,0x1412fd220,3,void ShadowSceneNode::AccumulateLight(RE::BSLight* a_light)
+99789,0x1412c15c0,0x1412ff010,3,"void Renderer::SubmitAccumulator(NiCamera* a_camera, BSShaderAccumulator* a_accumulator, std::uint32_t a_renderFlags)"
+99790,0x1412c1600,0x1412ff050,3,"void Renderer::StartAccumulating(NiCamera* a_camera, BSShaderAccumulator* a_accumulator, std::uint32_t a_renderFlags)"
+99791,0x1412c1690,0x1412ff0e0,3,"void Renderer::FinishAccumulatingPostResolveDepth(NiCamera* a_unusedCamera, BSShaderAccumulator* a_accumulator, std::uint32_t a_renderFlags)"
 99854,0x1412c50f0,0x1413034b0,3,BSLightingShaderProperty * BSLightingShaderProperty::Ctor (BSLightingShaderProperty * a_this)
 99855,0x1412c52e0,0x1413036d0,4,void Dtor (BSLightingShaderProperty * a_this)
 99862,0x1412c56d0,0x141303ac0,3,uint32_t BSLightingShaderProperty::InitializeShader(BSGeometry* a_geometry)
@@ -2086,8 +2113,10 @@
 99942,0x1412cbcc0,0x14130a5d0,3,BSShaderAccumulator::BlendedDecals
 99943,0x1412cbe90,0x14130a970,3,"void BSShaderAccumulator::sub_1412CBE90 (BSShaderAccumulator * a_this, uint32_t param_2)"
 99947,0x1412cc3c0,0x14130af00,3,BSShaderAccumulator::ShadowMapOrMask
+99952,0x1412cc6b0,0x14130b2f0,3,void NiBackToFrontAccumulator::ClearItemsList()
 99957,0x1412cca70,0x14130b6b0,4,"BSBatchRenderer::GeometryGroup * BSShaderAccumulator::StartGroupingAlphas(BSShaderAccumulator * a_this, NiBound * a_bound)"
 99963,0x1412cce40,0x14130ba60,4,"void BSBatchRenderer::RenderBatches (BSBatchRenderer * This, uint32_t StartRange, uint32_t EndRanges, uint32_t RenderFlags, int GeometryGroup)"
+99964,0x1412ccf90,0x14130bbb0,3,void BSShaderAccumulator::RenderFirstPersonView_End(bool a_force)
 99996,0x1412ce260,0x14130d090,3,"void BSGrassShader::SetupGeometry(BSGrassShader* a_this, BSRenderPass* a_pass, uint a_flags)"
 100000,0x1412ceb10,0x14130da10,4,"void fogMethod (undefined8 param_1, int param_2)"
 100004,0x1412ced50,0x14130dc60,3,BSLightingShaderMaterial* BSLightingShaderMaterial::Ctor()
@@ -2124,6 +2153,9 @@
 100458,0x1412e5570,0x141325d10,3,void BSShaderRenderTargets::Create()
 100475,0x1412e7db0,0x141328f20,4,"void BSImagespaceShader::SetupVolumetricLights(BSImagespaceShader *param_1,RENDER_TARGET a_renderTarget, RENDER_TARGET a_renderTargetSource)"
 100480,0x1412e82f0,0x141329460,4,"ImageSpaceEffect * BSImageSpace::Init::IBLF (ImageSpaceEffect * param_1, undefined8 param_2, undefined8 param_3, undefined8 param_4, undefined8 param_5, undefined8 param_6, undefined8 param_7)"
+100496,0x1412eabf0,0x14132bd50,3,void BSImagespaceShader::DispatchCopySubRegion()
+100520,0x1412ebd70,0x14132da70,3,"RENDER_TARGET BSImagespaceShader::RenderSSAO(RENDER_TARGET a_inputRenderTarget, RENDER_TARGET a_outputRenderTarget)"
+100537,0x1412ee8d0,0x141330780,3,"RENDER_TARGET BSImagespaceShader::RenderSnowSSS(RENDER_TARGET a_inputRenderTarget, RENDER_TARGET a_outputRenderTarget)"
 100540,0x1412eeb90,0x141330a40,3,"RENDER_TARGET FUN_1412eeb90 (BSImagespaceShader * * param_1, RENDER_TARGET param_2, RENDER_TARGET param_3)"
 100563,0x1412f2020,0x141338400,3,"void BSLightingShader::Func4_1412F2020 (BSLightingShader * a_this, undefined8 param_2, undefined8 param_3)"
 100565,0x1412f2bb0,0x141338f60,3,"void BSLightingShader::Func6_1412F2BB0 (BSLightingShader * a_this, undefined8 param_2, undefined8 param_3, undefined8 param_4)"
