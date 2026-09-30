@@ -278,6 +278,7 @@
 18464,0x140261280,0x140272820,3,void TESObjectCELL::UpdateManagedNodes(RE::TESObjectCELL* a_cell)
 18474,0x140262290,0x140273830,3,BGSLocation* TESObjectCELL::GetLocation()
 18513,0x140263920,0x140274ec0,4,TESObjectLAND * GetTESObjectLAND_140263920 (TESObjectCELL * a_this)
+18521,0x140264e50,0x140276420,3,NiNode* TESObjectCELL::GetCell3D()
 18536,0x1402654c0,0x140276a90,3,bhkWorld* TESObjectCELL::GetbhkWorld()
 18540,0x1402657a0,0x140276d70,4,TESRegionList* TESObjectCELL::GetRegionList(bool a_createIfMissing)
 18543,0x140265990,0x140276f60,3,"bool TESObjectCELL::GetWaterHeight(const NiPoint3& a_pos, float& a_waterHeight)"
