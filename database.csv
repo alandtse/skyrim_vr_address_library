@@ -1937,6 +1937,7 @@
 74697,0x140d4c270,0x140d95150,3,NiFrustumPlanes* BSOcclusionPlane::GetFrustumPlanes(NiPoint3* a_viewPos)
 74698,0x140d4c290,0x140d95170,3,"bool BSOcclusionPlane::IntersectsPlanes(NiFrustumPlanes* a_planes, bool a_testPoint, NiPoint3* a_point)"
 74699,0x140d4c3e0,0x140d952c0,3,bool BSOcclusionPlane::IntersectsCullPlanes()
+74700,0x140d4c420,0x140d95300,3,bool BSOcclusionPlane::TestAgainstPlanes(NiFrustumPlanes* a_planes)
 74701,0x140d4c6c0,0x140d955a0,3,bool BSOcclusionPlane::InsidePlanes(NiFrustumPlanes* a_planes)
 74702,0x140d4c7e0,0x140d956c0,4,"bool BSOcclusionPlane::WithinFrustumDistFirst(const NiFrustumPlanes* a_planes, const NiPoint3* a_point)"
 74703,0x140d4caa0,0x140d95980,3,bool BSOcclusionPlane::IntersectsBound(NiBound* a_bound)
@@ -1975,6 +1976,9 @@
 75069,0x140d5b0d0,0x140da41e0,3,void BSCompoundFrustum::AddOcclusionBox(BSOcclusionBox* a_box)
 75070,0x140d5b210,0x140da4320,3,void BSCompoundFrustum::Append(BSCompoundFrustum* a_other)
 75071,0x140d5b440,0x140da4550,3,"void BSCompoundFrustum::ShiftOperators(std::int32_t a_delta, bool a_clearFront)"
+75072,0x140d5b590,0x140da46a0,3,void BSCompoundFrustum::PrependUnionGroupStart()
+75073,0x140d5b6a0,0x140da47b0,3,void BSCompoundFrustum::PrependIntersectionGroupStart()
+75074,0x140d5b7b0,0x140da48c0,3,"void BSCompoundFrustum::CopyForPortal(BSCompoundFrustum* a_src, BSPortal* a_portal)"
 75075,0x140d5ba80,0x140da4b90,4,void BSCompoundFrustum::GetActivePlaneState(std::uint32_t* a_outPlaneState)
 75076,0x140d5bad0,0x140da4be0,4,void BSCompoundFrustum::SetActivePlaneState(std::uint32_t* a_planeState)
 75077,0x140d5bb20,0x140da4c30,3,void BSCompoundFrustum::RemoveEmptyGroups()
