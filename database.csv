@@ -453,8 +453,16 @@
 24485,0x140370e80,0x140380820,3,std::uint16_t TESQuest::GetCurrentStage()
 24486,0x140370e90,0x140380830,3,RE::TESQuest::ResetQuest
 24509,0x140372ad0,0x140382480,3,bool TESQuest::UpdateCurrentInstanceGlobal(TESGlobal* a_global)
+24517,0x140372eb0,0x140382860,3,void TESQuest::PromoteAliasedRefs()
+24519,0x140373970,0x140383320,3,void TESQuest::FillAliases()
+24520,0x1403745d0,0x140383f80,3,void TESQuest::ClearAliases()
+24522,0x140374b20,0x1403844d0,3,void TESQuest::ClearReferenceAlias()
 24523,0x140375050,0x140384a00,4,"void TESQuest::ForceRefIntoAlias(std::uint32_t a_aliasID, TESObjectREFR* a_ref)"
+24524,0x140375430,0x140384de0,3,void TESQuest::ClearLocationAlias()
+24525,0x1403757c0,0x140385170,3,void TESQuest::ForceLocationIntoAlias()
 24526,0x140375af0,0x1403854a0,3,BGSLocation::TryToClear
+24534,0x1403766f0,0x1403860a0,3,void TESQuest::FillReferenceAlias()
+24535,0x140377e40,0x1403877f0,3,void TESQuest::FillLocationAlias()
 24537,0x140378760,0x140388110,3,RE::TESQuest::CreateRefHandleByAliasID
 24538,0x1403787e0,0x140388190,3,void* TESQuest::FindAliasData(std::uint32_t a_aliasID)
 24549,0x140378ea0,0x140388850,4,"void TESQuest::GetJournalTextForInstance(BSString& out, std::uint32_t instanceID)"
