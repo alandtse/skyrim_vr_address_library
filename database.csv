@@ -400,6 +400,8 @@
 23346,0x140338060,0x140347920,2,bool BGSPerk::Load(TESFile* a_file)
 23353,0x1403386a0,0x140347f60,4,"void ApplyPerk (BGSPerk * a_perk, Actor * a_perkOwner, uint8_t a_removeRank, uint8_t a_applyRank)"
 23359,0x140338a50,0x140348310,4,"undefined8 BGSPerk__ApplyPerksVisitor::sub_140338A50 (BGSPerk__ApplyPerksVisitor * a_this, BSTArray_BGSPerkEntry__ * param_2)"
+23420,0x14033a330,0x140349bf0,3,void BGSQuestInstanceText::AddGlobalValue(TESGlobal* a_global)
+23425,0x14033a680,0x140349f40,3,bool BGSQuestInstanceText::UpdateGlobalValue(TESGlobal* a_global)
 23429,0x14033a820,0x14034a0e0,2,BGSQuestObjective::FillQuestInstanceData
 23467,0x14033C010,0x14034B8D0,4,"void DecideObjectiveHUDDataType(int64 a_objectives, int32 a_QuestObjectiveState)"
 23486,0x14033cdc0,0x14034c680,2,BSTEventSource<ObjectiveState::Event>* ObjectiveState::GetEventSource()
@@ -735,6 +737,7 @@
 34429,0x14056D570,0x140573B70,4,"void DialogueSubtitleStrings (char **a1, TESTopic *a2, TESTopicInfo *a3, Character *a4, void *a5)"
 34434,0x14056DA60,0x140574060,4,"void DialogueMenuStrings (void *a1, TESQuest *a2, TESTopic *a3, TESTopicInfo *a4, TESObjectREFR *a5, void *a6)"
 34455,0x14056f230,0x1405757d0,3,MenuTopicManager::sub_*
+34463,0x140570440,0x1405769e0,3,void MenuTopicManager::SkipText()
 34627,0x140579880,0x140580fe0,3,bool BGSSaveLoadFileEntry::PopulateFileEntryData()
 34634,0x140579b90,0x1405812f0,4,"uint BGSSaveLoadFormIDMap::InsertFormID (BGSSaveLoadFormIDMap * a_this, uint a_formID)"
 34655,0x14057b920,0x1405830f0,4,"bool BGSSaveLoadGame::GetChange(TESForm* a_form, std::uint32_t a_changes)"
