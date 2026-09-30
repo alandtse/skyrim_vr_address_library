@@ -1,3 +1,10 @@
+# [0.275.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.274.0...v0.275.0) (2026-09-30)
+
+
+### Features
+
+* add quest global and SkipText rows ([#245](https://github.com/alandtse/skyrim_vr_address_library/issues/245)) ([dd68909](https://github.com/alandtse/skyrim_vr_address_library/commit/dd68909a80a325ea5535592fea9e3626009a681d))
+
 # [0.274.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.273.0...v0.274.0) (2026-09-30)
 
 
