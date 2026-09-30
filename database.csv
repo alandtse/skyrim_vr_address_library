@@ -772,11 +772,13 @@
 34446,0x14056e760,0x140574d60,3,"BSEventNotifyControl MenuTopicManager::ProcessMenuOpenCloseEvent(const MenuOpenCloseEvent* a_event, BSTEventSource<MenuOpenCloseEvent>* a_source)"
 34447,0x14056e7f0,0x140574df0,3,"BSEventNotifyControl MenuTopicManager::ProcessPositionPlayerEvent(const PositionPlayerEvent* a_event, BSTEventSource<PositionPlayerEvent>* a_source)"
 34448,0x14056e820,0x140574e20,3,void MenuTopicManager::Reset()
+34450,0x14056ec20,0x1405751c0,3,void MenuTopicManager::RefreshBranches()
 34452,0x14056ef30,0x1405754d0,3,void MenuTopicManager::PopDialogueList()
 34455,0x14056f230,0x1405757d0,3,void MenuTopicManager::BeginDialogueWithPlayer()
 34456,0x14056f8b0,0x140575e50,3,void MenuTopicManager::SetRootTopicInfo(TESTopicInfo* a_info)
 34457,0x14056fb20,0x1405760c0,3,void MenuTopicManager::AdvanceCurrentResponse(bool a_forceEnd)
 34458,0x14056fbc0,0x140576160,3,void MenuTopicManager::AdvanceToNextLine()
+34460,0x140570150,0x1405766f0,3,void MenuTopicManager::SelectNextTopicInfo()
 34461,0x140570300,0x1405768a0,3,TESObjectREFR* MenuTopicManager::GetSpeaker()
 34462,0x140570360,0x140576900,3,void MenuTopicManager::UpdateAdvance()
 34465,0x140570620,0x140576bc0,3,void MenuTopicManager::SetLastSpeaker(TESObjectREFR* a_ref)
