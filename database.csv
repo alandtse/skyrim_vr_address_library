@@ -1829,7 +1829,7 @@
 69447,0x140c6d5e0,0x140cb3770,3,float NiTimeController::ComputeScaledTime(float a_time)
 69449,0x140c6d810,0x140cb39a0,3,void NiTimeController::ProcessClone(NiCloningProcess& a_cloning)
 69459,0x140c6da50,0x140cb3be0,3,AnimationMotionRevoluation::MotionDataContainer::InterpolateRotation
-69528,0x140c70d30,0x140cb6f60,3,"void BSGeometry::CopyTransformAndBounds(BSGeometry *src, BSGeometry *dst, NiCloningProcess *cloningProcess)"
+69528,0x140c70d30,0x140cb6f60,3,"void BSGeometry::CopyMembers(BSGeometry* a_target, NiCloningProcess* a_cloning)"
 69529,0x140c70e40,0x140cb70b0,3,void BSGeometry::LoadBinary(NiStream* a_stream)
 69541,0x140c715c0,0x140cb78c0,3,void BSGeometry::UpdateWorldBound()
 69554,0x140c71d40,0x140cb8000,3,"void TransformBoundToWorld(NiBound* a_out, NiBound* a_model, NiTransform* a_world)"
@@ -2143,9 +2143,11 @@
 99881,0x1412c8bf0,0x141306fe0,4,void ClearRenderPassArrays (BSLightingShaderProperty * a_this)
 99886,0x1412c9320,0x141307710,3,BSShaderTextureSet* BSShaderTextureSet::Ctor()
 99920,0x1412c9c90,0x141308080,3,BSShaderAccumulator* BSShaderAccumulator::ctor(int a_priority)
-99925,0x1412ca250,0x141308750,3,"void BSShaderAccumulator::AccumulateSceneGraph(NiAVObject* a_root, std::uint8_t a_flag)"
+99925,0x1412ca250,0x141308750,3,"void BSShaderAccumulator::AccumulateSceneGraph(NiAVObject* a_root, bool a_filterByShaderProperty)"
+99935,0x1412cabf0,0x1413092c0,3,void BSShaderAccumulator::FinishAccumulatingDefaultMode(std::uint32_t a_flags)
+99937,0x1412cac90,0x141309360,3,void BSShaderAccumulator::FinishAccumulatingPostResolveDepth(std::uint32_t a_flags)
 99938,0x1412cacd0,0x1413093a0,3,"void BSShaderAccumulator::FinishAccumulating (BSShaderAccumulator *a_this,uint32_t StartRange,uint32_t EndRanges)"
-99939,0x1412cb2e0,0x1413099c0,3,void BSShaderAccumulator::RenderPostAccumulationPasses(int a_flags)
+99939,0x1412cb2e0,0x1413099c0,3,void BSShaderAccumulator::RenderPostAccumulationPasses(std::uint32_t a_flags)
 99940,0x1412cb930,0x14130a240,4,void BSShaderAccumulator::RenderEffects (BSShaderAccumulator * a_this)
 99942,0x1412cbcc0,0x14130a5d0,3,BSShaderAccumulator::BlendedDecals
 99943,0x1412cbe90,0x14130a970,3,"void BSShaderAccumulator::sub_1412CBE90 (BSShaderAccumulator * a_this, uint32_t param_2)"
@@ -2154,6 +2156,8 @@
 99957,0x1412cca70,0x14130b6b0,4,"BSBatchRenderer::GeometryGroup * BSShaderAccumulator::StartGroupingAlphas(BSShaderAccumulator * a_this, NiBound * a_bound)"
 99963,0x1412cce40,0x14130ba60,4,"void BSBatchRenderer::RenderBatches (BSBatchRenderer * This, uint32_t StartRange, uint32_t EndRanges, uint32_t RenderFlags, int GeometryGroup)"
 99964,0x1412ccf90,0x14130bbb0,3,void BSShaderAccumulator::RenderFirstPersonView_End(bool a_force)
+99971,0x1412cd520,0x14130c0f0,3,"std::uint32_t AccumulateSceneGraphNode(NiAVObject* a_object, AccumulateSceneGraphContext* a_context)"
+99974,0x1412cd6d0,0x14130c360,3,"std::uint32_t AccumulateNodeChildren(AccumulateSceneGraphContext* a_context, NiNode* a_node)"
 99996,0x1412ce260,0x14130d090,3,"void BSGrassShader::SetupGeometry(BSGrassShader* a_this, BSRenderPass* a_pass, uint a_flags)"
 100000,0x1412ceb10,0x14130da10,4,"void fogMethod (undefined8 param_1, int param_2)"
 100004,0x1412ced50,0x14130dc60,3,BSLightingShaderMaterial* BSLightingShaderMaterial::Ctor()
@@ -2174,6 +2178,8 @@
 100125,0x1412d3ad0,0x1413129e0,3,BSLightingShaderMaterialMultiLayerParallax* BSLightingShaderMaterialMultiLayerParallax::Ctor()
 100211,0x1412d6b40,0x141315ac0,3,CullDescriptor* BSCullingProcess::InitCullDescriptor(CullDescriptor* a_this)
 100213,0x1412d6bb0,0x141315b40,3,"void BSCullingProcess::DispatchCullAndAccumulate(CullDescriptor* a_job, int a_mode, int a_phase)"
+100216,0x1412d6f20,0x1413162b0,3,void SubmitCullResultsJob(CullDescriptor* a_job)
+100217,0x1412d6f90,0x141316320,3,void FlushAlphaGroupQueueJob(CullDescriptor* a_job)
 100297,0x1412dbad0,0x14131acc0,3,VolumetricLightingDescriptor& VolumetricLightingDescriptor::GetDescriptor()
 100299,0x1412dbb80,0x14131ad70,3,"void VolumetricLightingDescriptor::SetQuality(VolumetricLightingDescriptor& this, uint32_t quality)"
 100306,0x1412dc050,0x14131b240,4,"void VolumetricLightingDescriptor::Render (longlong param_1, undefined8 param_2, bool param_3)"
@@ -2182,8 +2188,8 @@
 100411,0x1412e21a0,0x1413218c0,4,"void Main::RenderFirstPersonView (char param_1, char param_2)"
 100414,0x1412e2660,0x141321d80,3,void Main::QueueListAccumulationJobs(NiCamera* a_camera)
 100415,0x1412e2a60,0x141322130,3,void MainAccum()
-100416,0x1412e2c50,0x141322390,3,void FirstListAccumulationJob(void* a_job)
-100417,0x1412e2de0,0x1413224c0,3,void ListAccumulationJob(void* a_job)
+100416,0x1412e2c50,0x141322390,3,void FirstListAccumulationJob(CullDescriptor* a_job)
+100417,0x1412e2de0,0x1413224c0,3,void ListAccumulationJob(CullDescriptor* a_job)
 100419,0x1412e2f60,0x1413226e0,3,void CalculateActiveShadowCasterLights_1412E2F60()
 100420,0x1412e3480,0x141323190,3,void RenderActiveShadowCasterLights()
 100421,0x1412e3520,0x141323250,3,"void Main::RenderDepth(bool a_renderFirstPerson, bool a_controlDrivenDepthRange)"
