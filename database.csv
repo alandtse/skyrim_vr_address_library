@@ -279,6 +279,7 @@
 18464,0x140261280,0x140272820,3,void TESObjectCELL::UpdateManagedNodes(RE::TESObjectCELL* a_cell)
 18474,0x140262290,0x140273830,3,BGSLocation* TESObjectCELL::GetLocation()
 18513,0x140263920,0x140274ec0,4,TESObjectLAND * GetTESObjectLAND_140263920 (TESObjectCELL * a_this)
+18519,0x140263e90,0x140275430,3,void TESObjectCELL::RegisterWithPortalGraph()
 18521,0x140264e50,0x140276420,3,NiNode* TESObjectCELL::GetCell3D()
 18536,0x1402654c0,0x140276a90,3,bhkWorld* TESObjectCELL::GetbhkWorld()
 18540,0x1402657a0,0x140276d70,4,TESRegionList* TESObjectCELL::GetRegionList(bool a_createIfMissing)
@@ -360,6 +361,7 @@
 20022,0x1402b1b60,0x1402c32d0,3,"bool TESFile::SeekCell(TESWorldSpace* a_worldSpace, TESFile* a_file, int32_t a_x, int32_t a_y)"
 20026,0x1402b20e0,0x1402c3850,4,TESWorldSpace * TESWorldSpace::sub_1402B20E0 (TESWorldSpace * a_this)
 20029,0x1402b27a0,0x1402c3f10,3,void TES::DestroySkyCell(TES* a_tes)
+20070,0x1402b4600,0x1402c5d70,3,BSPortalGraph* TESWorldSpace::GetPortalGraph()
 20095,0x1402b63b0,0x1402c7b20,3,TESObjectCELL* TESWorldSpace::GetSkyCell()
 20103,0x1402b6eb0,0x1402c8620,4,"bool TESWorldSpace::GetMaxHeightAt(const NiPoint3& xy, float& outHeight)"
 20262,0x1402bdec0,0x1402cf630,3,"void BGSCameraShot::Play(TESObjectREFR* a_target, std::int32_t a_mode)"
@@ -1912,6 +1914,7 @@
 74397,0x140d3dce0,0x140d86c70,4,"static bool BSPortalGraphEntry::func2(RE::BSPortalGraphEntry* first, RE::BSPortalGraphEntry* second)"
 74398,0x140d3dde0,0x140d86d70,4,"void BSPortalGraphEntry::AddVisibilityToMap(void* a_space, BSCompoundFrustum* a_compoundFrustum)"
 74399,0x140d3deb0,0x140d86e40,3,BSCompoundFrustum* BSPortalGraphEntry::FindVisibility(NiNode* a_node)
+74418,0x140d3ed70,0x140d87d00,3,void BSPortalGraph::AddByPointer(NiNode* a_node)
 74440,0x140d3fa20,0x140d889b0,3,void BSOcclusionShape::CopyTransformTo(BSOcclusionShape* a_dest)
 74441,0x140d3fa60,0x140d889f0,3,BSOcclusionShape* BSOcclusionShape::CtorDefault(BSOcclusionShape* a_this)
 74444,0x140d3fd80,0x140d88d10,3,"bool QuadIntersectsPlanes(NiFrustumPlanes* a_planes, NiPoint3* a_corners, bool* a_edgeOutside)"
