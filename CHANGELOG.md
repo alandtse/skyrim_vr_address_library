@@ -1,3 +1,10 @@
+# [0.274.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.273.0...v0.274.0) (2026-09-30)
+
+
+### Features
+
+* add culling dispatch and accumulator rows ([#243](https://github.com/alandtse/skyrim_vr_address_library/issues/243)) ([200b677](https://github.com/alandtse/skyrim_vr_address_library/commit/200b677428a5f7df019b0e4ce96762f2e92075f5))
+
 # [0.273.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.272.0...v0.273.0) (2026-09-29)
 
 
