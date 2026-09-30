@@ -1900,6 +1900,7 @@
 74440,0x140d3fa20,0x140d889b0,3,void BSOcclusionShape::CopyTransformTo(BSOcclusionShape* a_dest)
 74441,0x140d3fa60,0x140d889f0,3,BSOcclusionShape* BSOcclusionShape::CtorDefault(BSOcclusionShape* a_this)
 74444,0x140d3fd80,0x140d88d10,3,"bool QuadIntersectsPlanes(NiFrustumPlanes* a_planes, NiPoint3* a_corners, bool* a_edgeOutside)"
+74445,0x140d405b0,0x140d89540,3,"void SetCullPlanes(NiFrustumPlanes* a_planes, NiPoint3* a_origin)"
 74481,0x140d41970,0x140d8a900,3,"RE::NiAVObject* NiAVObject::LookupBoneNodeByName(RE::NiAVObject* a_this, const RE::BSFixedString& a_name, bool a3)"
 74491,0x140d426f0,0x140d8b6b0,4,uint16_t FloatToHalf (float a_input)
 74493,0x140d42710,0x140d8b6d0,3,"void ConvexHull2D(ScrapHeap* a_heap, std::uint32_t a_count, std::int32_t* a_points, std::uint32_t* a_outCount, std::uint32_t* a_outIndices)"
@@ -1915,6 +1916,7 @@
 74676,0x140d49970,0x140d928a0,3,void BSOcclusionBox::GetCorners(NiPoint3* a_out)
 74677,0x140d49a00,0x140d92930,3,bool BSOcclusionBox::BuildFrustumPlanes(NiCamera* a_camera)
 74678,0x140d4a070,0x140d92fa0,3,"bool BSOcclusionBox::CopyFrustumPlanes(NiCamera* a_camera, NiFrustumPlanes* a_out0, NiFrustumPlanes* a_out1)"
+74679,0x140d4a280,0x140d931b0,3,"bool BSOcclusionBox::IsPotentiallyVisible(NiCamera* a_camera, NiFrustumPlanes* a_planes)"
 74680,0x140d4ad50,0x140d93c30,3,bool BSOcclusionBox::AreCornersInsidePlanes(NiFrustumPlanes* a_planes)
 74688,0x140d4b820,0x140d94700,3,NiObject* BSOcclusionPlane::CreateClone()
 74690,0x140d4b900,0x140d947e0,3,BSOcclusionPlane* BSOcclusionPlane::CtorDefault(BSOcclusionPlane* a_this)
@@ -1926,8 +1928,10 @@
 74696,0x140d4c170,0x140d95050,3,"void BSOcclusionPlane::CopyFrustumPlanes(NiPoint3* a_viewPos, NiPlane* a_out)"
 74697,0x140d4c270,0x140d95150,3,NiFrustumPlanes* BSOcclusionPlane::GetFrustumPlanes(NiPoint3* a_viewPos)
 74698,0x140d4c290,0x140d95170,3,"bool BSOcclusionPlane::IntersectsPlanes(NiFrustumPlanes* a_planes, bool a_testPoint, NiPoint3* a_point)"
+74699,0x140d4c3e0,0x140d952c0,3,bool BSOcclusionPlane::IntersectsCullPlanes()
 74701,0x140d4c6c0,0x140d955a0,3,bool BSOcclusionPlane::InsidePlanes(NiFrustumPlanes* a_planes)
 74702,0x140d4c7e0,0x140d956c0,4,"bool BSOcclusionPlane::WithinFrustumDistFirst(const NiFrustumPlanes* a_planes, const NiPoint3* a_point)"
+74703,0x140d4caa0,0x140d95980,3,bool BSOcclusionPlane::IntersectsBound(NiBound* a_bound)
 74806,0x140d51050,0x140d99f60,3,"void BSCullingProcess::AppendNonAccum(NiAVObject* a_object, int a_alphaGroupIndex)"
 74807,0x140d51070,0x140d99f80,3,"void BSCullingProcess::AppendVirtual(BSGeometry* a_geometry, std::int32_t a_alphaGroupIndex)"
 74808,0x140d51100,0x140d9a010,3,void BSCullingProcess::ClearCollectedGeometry()
@@ -2175,9 +2179,11 @@
 99741,0x1412bdf60,0x1412fb9e0,3,"void ShadowSceneNode::ResetScene(ShadowSceneNode* this, BSPortalGraph* a_graph)"
 99752,0x1412beae0,0x1412fc4f0,3,"void ShadowSceneNode::AccumulateLight(RE::BSLight* a_light, RE::BSTArray<RE::NiAVObject*>* a_accumList, bool a_flag)"
 99753,0x1412bf7f0,0x1412fd220,3,void ShadowSceneNode::AccumulateLight(RE::BSLight* a_light)
+99787,0x1412c1350,0x1412feda0,3,"bool TestSunOcclusionShapes(NiFrustumPlanes* a_planes, void* a_visitor)"
 99789,0x1412c15c0,0x1412ff010,3,"void Renderer::SubmitAccumulator(NiCamera* a_camera, BSShaderAccumulator* a_accumulator, std::uint32_t a_renderFlags)"
 99790,0x1412c1600,0x1412ff050,3,"void Renderer::StartAccumulating(NiCamera* a_camera, BSShaderAccumulator* a_accumulator, std::uint32_t a_renderFlags)"
 99791,0x1412c1690,0x1412ff0e0,3,"void Renderer::FinishAccumulatingPostResolveDepth(NiCamera* a_unusedCamera, BSShaderAccumulator* a_accumulator, std::uint32_t a_renderFlags)"
+99803,0x1412c2b30,0x141300d00,3,"void BuildTransformedBoxPlanes(NiPlane* a_out, NiPoint3* a_min, NiPoint3* a_max, NiTransform* a_transform)"
 99854,0x1412c50f0,0x1413034b0,3,BSLightingShaderProperty * BSLightingShaderProperty::Ctor (BSLightingShaderProperty * a_this)
 99855,0x1412c52e0,0x1413036d0,4,void Dtor (BSLightingShaderProperty * a_this)
 99862,0x1412c56d0,0x141303ac0,3,uint32_t BSLightingShaderProperty::InitializeShader(BSGeometry* a_geometry)
@@ -10438,6 +10444,7 @@
 529915,0x1407c6a00,0x1407f1d50,4,void CombatBehaviorThread::Ascend(CombatBehaviorTreeNode* a_node)
 529964,0x1407dff20,0x14080b270,4,CombatPathingRevolution::src/Advanced_Hook.h:90
 530050,0x140808b20,0x140833e70,4,MagicSystem::CastingType CombatBehaviorContextMagic::GetCastingType()
+530687,0x140d40600,0x140d89590,3,"void CopyPlanesRebased(NiFrustumPlanes* a_src, NiFrustumPlanes* a_dest, NiPoint3* a_origin)"
 542544,0x141520ab0,0x141597e00,3,VTABLE_NiTStringMap_Setting__0
 542598,0x141522c28,0x141599f78,3,VTABLE_MagicItem__PreloadableVisitor_0
 542605,0x141523058,0x14159a3a8,3,VTABLE_MagicItemFindFunctor_0
