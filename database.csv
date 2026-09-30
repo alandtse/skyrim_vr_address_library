@@ -85,6 +85,7 @@
 13230,0x140158970,0x140169420,4,void TES::FinishLoad()
 13233,0x140158e70,0x140169920,3,void sub_140158E70 (TES * a_this)
 13240,0x140159290,0x140169d50,4,"void TES::ClearGrassFadeAt(int a_x, int a_y)"
+13257,0x14015a6e0,0x14016b1a0,3,void TES::UpdatePortalVisibility(BSCullingProcess* a_process)
 13260,0x14015af70,0x14016ba30,4,"bool NiNode::ToggleMasterParticleAddonNodes(const NiNode* a_node, bool a_enable)"
 13530,0x1401652d0,0x140175a10,3,"void UIMessageQueue::AddMessage (UIMessageQueue * a_this, BSFixedString * a_menuName, UIMessageTypes a_type, IUIMessageData * a_data)"
 13549,0x140165770,0x140175eb0,4,longlong TESWorldSpace::GetCellByCoordinateMask_140165770 (TESWorldSpace * a_this)
@@ -1894,9 +1895,16 @@
 74377,0x140d3d3d0,0x140d86360,4,BSWindModifier* BSWindModifier::Ctor()
 74378,0x140d3d410,0x140d863a0,4,"void UpdateWindVectorForBSWindModifier(float strength, float angle)"
 74387,0x140d3d6b0,0x140d86640,3,void BSTempNodeManager::UpdateTempNodeTimers(float a_elapsedTime)
+74390,0x140d3d8c0,0x140d86850,3,BSPortalGraphEntry* BSPortalGraphEntry::Ctor(BSPortalGraphEntry* a_this)
+74391,0x140d3d970,0x140d86900,3,void BSPortalGraphEntry::Dtor()
+74392,0x140d3da90,0x140d86a20,3,void BSPortalGraphEntry::SetRoomRoot(BSMultiBoundRoom* a_room)
+74393,0x140d3dad0,0x140d86a60,3,void BSPortalGraphEntry::ClearRoomAccumList()
+74394,0x140d3db50,0x140d86ae0,3,void BSPortalGraphEntry::AddRoomToAccumList(BSMultiBoundRoom* a_room)
 74395,0x140d3dbe0,0x140d86b70,4,void BSPortalGraphEntry::ClearVisibility
+74396,0x140d3dca0,0x140d86c30,3,void BSPortalGraphEntry::SetPortalGraph(BSPortalGraph* a_graph)
 74397,0x140d3dce0,0x140d86c70,4,"static bool BSPortalGraphEntry::func2(RE::BSPortalGraphEntry* first, RE::BSPortalGraphEntry* second)"
 74398,0x140d3dde0,0x140d86d70,4,"void BSPortalGraphEntry::AddVisibilityToMap(void* a_space, BSCompoundFrustum* a_compoundFrustum)"
+74399,0x140d3deb0,0x140d86e40,3,BSCompoundFrustum* BSPortalGraphEntry::FindVisibility(NiNode* a_node)
 74440,0x140d3fa20,0x140d889b0,3,void BSOcclusionShape::CopyTransformTo(BSOcclusionShape* a_dest)
 74441,0x140d3fa60,0x140d889f0,3,BSOcclusionShape* BSOcclusionShape::CtorDefault(BSOcclusionShape* a_this)
 74444,0x140d3fd80,0x140d88d10,3,"bool QuadIntersectsPlanes(NiFrustumPlanes* a_planes, NiPoint3* a_corners, bool* a_edgeOutside)"
