@@ -1920,11 +1920,31 @@
 75009,0x140d58850,0x140da1860,3,"void BSGeometryListCullingProcess::AppendNonAccum(BSGeometry* a_geometry, int a_alphaGroupIndex)"
 75051,0x140d59b60,0x140da2c70,3,BSCompoundFrustum* BSCompoundFrustum::Ctor(BSCompoundFrustum* a_this)
 75052,0x140d59d00,0x140da2e10,3,void BSCompoundFrustum::Dtor(BSCompoundFrustum* a_this)
+75053,0x140d59db0,0x140da2ec0,3,BSCompoundFrustum* BSCompoundFrustum::AllocateFromPool()
+75054,0x140d59e90,0x140da2fa0,3,void BSCompoundFrustum::ReleaseToPool(BSCompoundFrustum* a_frustum)
 75055,0x140d59f40,0x140da3050,3,void BSCompoundFrustum::CopyTo(BSCompoundFrustum* a_dest)
+75056,0x140d5a240,0x140da3350,3,void BSCompoundFrustum::Reset()
 75057,0x140d5a2b0,0x140da33c0,4,bool BSCompoundFrustum::Process(NiAVObject* a_object)
+75058,0x140d5a3c0,0x140da34d0,3,bool BSCompoundFrustum::ProcessPortal(BSPortal* a_portal)
+75059,0x140d5a4d0,0x140da35e0,3,bool BSCompoundFrustum::ProcessMultiBoundShape(BSMultiBoundShape* a_shape)
+75060,0x140d5a5e0,0x140da36f0,3,void BSCompoundFrustum::ProcessOcclusionShape(BSOcclusionShape* a_shape)
+75061,0x140d5a640,0x140da3750,3,void BSCompoundFrustum::SetCamera(NiCamera* a_camera)
+75062,0x140d5a6c0,0x140da37d0,3,void BSCompoundFrustum::StartGroupIntersection()
+75063,0x140d5a710,0x140da3820,3,void BSCompoundFrustum::StartGroupUnion()
+75064,0x140d5a770,0x140da3880,3,void BSCompoundFrustum::EndGroup()
+75065,0x140d5a7d0,0x140da38e0,3,void BSCompoundFrustum::AddPortalOpening(BSPortal* a_portal)
+75066,0x140d5a920,0x140da3a30,3,"void BSCompoundFrustum::AddOcclusionShapeIfVisible(BSOcclusionShape* a_shape, BSCompoundFrustum* a_parent)"
+75067,0x140d5a9e0,0x140da3af0,3,"void BSCompoundFrustum::AddOcclusionShapeToGroup(BSOcclusionShape* a_shape, BSCompoundFrustum* a_parent, bool* a_needsGroupStart)"
+75068,0x140d5ab00,0x140da3c10,3,void BSCompoundFrustum::AddPortal(BSPortal* a_portal)
+75069,0x140d5b0d0,0x140da41e0,3,void BSCompoundFrustum::AddOcclusionBox(BSOcclusionBox* a_box)
+75070,0x140d5b210,0x140da4320,3,void BSCompoundFrustum::Append(BSCompoundFrustum* a_other)
+75071,0x140d5b440,0x140da4550,3,"void BSCompoundFrustum::ShiftOperators(std::int32_t a_delta, bool a_clearFront)"
 75075,0x140d5ba80,0x140da4b90,4,void BSCompoundFrustum::GetActivePlaneState(std::uint32_t* a_outPlaneState)
 75076,0x140d5bad0,0x140da4be0,4,void BSCompoundFrustum::SetActivePlaneState(std::uint32_t* a_planeState)
+75077,0x140d5bb20,0x140da4c30,3,void BSCompoundFrustum::RemoveEmptyGroups()
 75078,0x140d5bc00,0x140da4d10,3,void BSCompoundFrustum::Prethread()
+75085,0x140d5c300,0x140da5410,3,"bool BSCompoundFrustum::SphereIntersectsPlanes(NiBound* a_bound, NiFrustumPlanes* a_planes)"
+75086,0x140d5c3a0,0x140da54b0,3,"bool BSCompoundFrustum::SphereInsidePlanes(NiBound* a_bound, NiFrustumPlanes* a_planes)"
 75175,0x140d60170,0x140daa230,4,void BSProceduralLightningController::SendGeomEvent(BSProceduralLightningController * a_this)
 75197,0x140d60a00,0x140daab20,4,void BSTEventSource<BSProceduralGeomEvent>::SendEvent(const BSProceduralGeomEvent* a_event)
 75445,0x140d68dd0,0x1405be850,4,"void Renderer::Init(RendererInitOSData* a_data, ApplicationWindowProperties* windowProps, WinAPI::HWND window)"
