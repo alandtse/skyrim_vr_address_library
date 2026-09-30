@@ -2179,7 +2179,7 @@
 99741,0x1412bdf60,0x1412fb9e0,3,"void ShadowSceneNode::ResetScene(ShadowSceneNode* this, BSPortalGraph* a_graph)"
 99752,0x1412beae0,0x1412fc4f0,3,"void ShadowSceneNode::AccumulateLight(RE::BSLight* a_light, RE::BSTArray<RE::NiAVObject*>* a_accumList, bool a_flag)"
 99753,0x1412bf7f0,0x1412fd220,3,void ShadowSceneNode::AccumulateLight(RE::BSLight* a_light)
-99787,0x1412c1350,0x1412feda0,3,"bool TestSunOcclusionShapes(NiFrustumPlanes* a_planes, void* a_visitor)"
+99787,0x1412c1350,0x1412feda0,3,"bool TestPortalGraphOcclusionShapes(NiFrustumPlanes* a_planes, void* a_visitor)"
 99789,0x1412c15c0,0x1412ff010,3,"void Renderer::SubmitAccumulator(NiCamera* a_camera, BSShaderAccumulator* a_accumulator, std::uint32_t a_renderFlags)"
 99790,0x1412c1600,0x1412ff050,3,"void Renderer::StartAccumulating(NiCamera* a_camera, BSShaderAccumulator* a_accumulator, std::uint32_t a_renderFlags)"
 99791,0x1412c1690,0x1412ff0e0,3,"void Renderer::FinishAccumulatingPostResolveDepth(NiCamera* a_unusedCamera, BSShaderAccumulator* a_accumulator, std::uint32_t a_renderFlags)"
