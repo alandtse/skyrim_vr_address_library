@@ -637,6 +637,7 @@
 31576,0x1404d06c0,0x1404e0860,4,"uint32_t BGSStoryEventManager::AddEvent_Impl1404d06c0(longlong a_this,uint32_t a_index,void *a_event)"
 31717,0x1404d7f80,0x1404e8120,3,RE::BGSStoryTeller::BeginStartUpQuest
 31718,0x1404d80a0,0x1404e8240,3,RE::BGSStoryTeller::BeginShutDownQuest
+31752,0x1404da790,0x1404ea900,3,void MenuTopicManager::AddBlockingBranch(BGSDialogueBranch* a_branch)
 31799,0x1404dd020,0x1404ed190,3,"bool AnimationClipDataSingleton::GetClipInformation(const BSFixedString& project_name, const BSFixedString& clip_name, AnimationClipData& ClipInformation)"
 31803,0x1404dd550,0x1404ed6c0,3,"bool AnimationClipDataSingleton::ClipData::GetEventTime(const BSFixedString& event_name, float& time)"
 31812,0x1404dda20,0x1404edb90,3,AnimationMotionRevoluation::MotionDataContainer::ProcessTranslationData
@@ -742,7 +743,29 @@
 34413,0x14056c9d0,0x140572fd0,3,"DialogueItem* DialogueItem::Ctor(TESQuest* a_quest, TESTopic* a_topic, TESTopicInfo* a_topicInfo, Actor* a_speaker)"
 34429,0x14056D570,0x140573B70,4,"void DialogueSubtitleStrings (char **a1, TESTopic *a2, TESTopicInfo *a3, Character *a4, void *a5)"
 34434,0x14056DA60,0x140574060,4,"void DialogueMenuStrings (void *a1, TESQuest *a2, TESTopic *a3, TESTopicInfo *a4, TESObjectREFR *a5, void *a6)"
-34455,0x14056f230,0x1405757d0,3,MenuTopicManager::sub_*
+34442,0x14056e540,0x140574b40,3,bool MenuTopicManager::SelectFirstResponse(bool a_skipHidden)
+34443,0x14056e5c0,0x140574bc0,3,bool MenuTopicManager::SelectNextResponse()
+34444,0x14056e5f0,0x140574bf0,3,bool MenuTopicManager::SelectResponseAt(std::int32_t a_index)
+34445,0x14056e710,0x140574d10,3,Dialogue* MenuTopicManager::GetSelectedResponse()
+34446,0x14056e760,0x140574d60,3,"BSEventNotifyControl MenuTopicManager::ProcessMenuOpenCloseEvent(const MenuOpenCloseEvent* a_event, BSTEventSource<MenuOpenCloseEvent>* a_source)"
+34447,0x14056e7f0,0x140574df0,3,"BSEventNotifyControl MenuTopicManager::ProcessPositionPlayerEvent(const PositionPlayerEvent* a_event, BSTEventSource<PositionPlayerEvent>* a_source)"
+34448,0x14056e820,0x140574e20,3,void MenuTopicManager::Reset()
+34452,0x14056ef30,0x1405754d0,3,void MenuTopicManager::PopDialogueList()
+34455,0x14056f230,0x1405757d0,3,void MenuTopicManager::BeginDialogueWithPlayer()
+34456,0x14056f8b0,0x140575e50,3,void MenuTopicManager::SetRootTopicInfo(TESTopicInfo* a_info)
+34457,0x14056fb20,0x1405760c0,3,void MenuTopicManager::AdvanceCurrentResponse(bool a_forceEnd)
+34458,0x14056fbc0,0x140576160,3,void MenuTopicManager::AdvanceToNextLine()
+34461,0x140570300,0x1405768a0,3,TESObjectREFR* MenuTopicManager::GetSpeaker()
+34462,0x140570360,0x140576900,3,void MenuTopicManager::UpdateAdvance()
+34465,0x140570620,0x140576bc0,3,void MenuTopicManager::SetLastSpeaker(TESObjectREFR* a_ref)
+34466,0x140570660,0x140576c00,3,void MenuTopicManager::GetSpeakerAsCharacter(Character** a_out)
+34467,0x1405706e0,0x140576c80,3,void MenuTopicManager::EndDialogue()
+34468,0x140570ac0,0x140577060,3,std::int32_t MenuTopicManager::CountTopicsInHistory()
+34469,0x140570b80,0x140577120,3,void MenuTopicManager::ClearBranches()
+34472,0x140570e90,0x140577430,3,void MenuTopicManager::Save(BGSSaveGameBuffer* a_buffer)
+34473,0x140570f20,0x1405774c0,3,void MenuTopicManager::Load(BGSLoadGameBuffer* a_buffer)
+34474,0x140570f90,0x140577530,3,void MenuTopicManager::Revert()
+34476,0x140571040,0x1405775e0,3,void MenuTopicManager::StartGreeting()
 34627,0x140579880,0x140580fe0,3,bool BGSSaveLoadFileEntry::PopulateFileEntryData()
 34634,0x140579b90,0x1405812f0,4,"uint BGSSaveLoadFormIDMap::InsertFormID (BGSSaveLoadFormIDMap * a_this, uint a_formID)"
 34655,0x14057b920,0x1405830f0,4,"bool BGSSaveLoadGame::GetChange(TESForm* a_form, std::uint32_t a_changes)"
