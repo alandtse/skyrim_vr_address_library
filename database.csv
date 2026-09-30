@@ -397,6 +397,7 @@
 22340,0x140310ec0,0x140322370,3,po3tweaks::NoCheatMode::ImmortalMode
 22350,0x140311250,0x140322760,3,powerof3tweaks::ToggleCollisionFix::ToggleCollision
 22465,0x140316e60,0x140328370,3,Cmd_SaveGame_Execute
+22754,0x1403232e0,0x140332a90,3,void TESQuest::CompleteAllStages()
 22790,0x140324e90,0x1402af140,4,BGSStoryEventManager* BGSStoryEvent::BGSStoryEventManager::GetSingleton() include\RE\B/BGSStoryEventManager.h:20
 22825,0x140325f00,0x140335740,4,void * SKSE::CreateUIMessageData_140325f00 (BSFixedString * param_1)
 22843,0x140326460,0x140335ca0,3,RE::MessageDataFactoryManager::GetSingleton
@@ -438,15 +439,24 @@
 24275,0x140368b30,0x140378490,3,RE::TESNPC::GetBaseOverlays
 24276,0x140368bc0,0x140378520,3,RE::TESNPC::GetNumBaseOverlays
 24330,0x14036b470,0x14037add0,4,"void NiAVObject::SetFMDBoneNames (NiAVObject * a_this, NiAVObject * a_target)"
+24462,0x14036fbd0,0x14037f570,3,BGSQuestObjective* TESQuest::GetObjective(std::uint32_t a_index)
+24468,0x14036ffe0,0x14037f980,3,void TESQuest::SetEnabled(bool a_enabled)
 24469,0x140370020,0x14037F9C0,4,DynamicStringDistributor::
+24470,0x1403700e0,0x14037fa80,3,void TESQuest::SetKeepInstance(bool a_keep)
 24472,0x140370290,0x14037fc30,3,TESQuest::CompleteQuest
+24474,0x140370390,0x14037fd30,3,void TESQuest::SetActiveFlag(bool a_active)
+24478,0x140370770,0x140380110,3,void TESQuest::RunStartUpStages()
+24479,0x140370800,0x1403801a0,3,void TESQuest::RunShutDownStages()
+24480,0x140370890,0x140380230,3,void TESQuest::StopPlayingScenes()
 24481,0x140370910,0x1403802b0,3,RE::TESQuest::EnsureQuestStarted
 24483,0x140370b20,0x1403804c0,3,RE::TESQuest::sub_140370B20(TESQuest *param_1)
+24485,0x140370e80,0x140380820,3,std::uint16_t TESQuest::GetCurrentStage()
 24486,0x140370e90,0x140380830,3,RE::TESQuest::ResetQuest
 24509,0x140372ad0,0x140382480,3,bool TESQuest::UpdateCurrentInstanceGlobal(TESGlobal* a_global)
 24523,0x140375050,0x140384a00,4,"void TESQuest::ForceRefIntoAlias(std::uint32_t a_aliasID, TESObjectREFR* a_ref)"
 24526,0x140375af0,0x1403854a0,3,BGSLocation::TryToClear
 24537,0x140378760,0x140388110,3,RE::TESQuest::CreateRefHandleByAliasID
+24538,0x1403787e0,0x140388190,3,void* TESQuest::FindAliasData(std::uint32_t a_aliasID)
 24549,0x140378ea0,0x140388850,4,"void TESQuest::GetJournalTextForInstance(BSString& out, std::uint32_t instanceID)"
 24647,0x14037f050,0x14038d9f0,3,Experience::
 24719,0x140380be0,0x140390450,3,BSTEventSource<QuestStatus::Event>* QuestStatus::GetEventSource()
