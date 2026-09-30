@@ -1809,6 +1809,7 @@
 69156,0x140c60fb0,0x140ca6560,4,void NiObjectNET::RemoveController(NiTimeController* a_controller)
 69180,0x140c61ce0,0x140ca7290,4,void QueueNiRefObjectForDeferredRelease(NiPointer<NiRefObject>* a_object)
 69251,0x140c64730,0x140ca9e20,3,"void NiCamera::CopyMembers(NiCamera* a_target, NiCloningProcess* a_cloning)"
+69258,0x140c65090,0x140caa7f0,3,NiCamera* NiCamera::Ctor(NiCamera* a_this)
 69263,0x140c65760,0x140cab2c0,3,"bool NiCamera::WindowPointToRay(std::int32_t a_x, std::int32_t a_y, NiPoint3& a_origin, NiPoint3& a_dir, float a_windowWidth, float a_windowHeight)"
 69265,0x140c65a20,0x140cab570,3,"static void NiCamera::CalculateFrustumOverlap(NiCamera *a_this,NiPoint4 *a_worldCoord, NiPoint3 *a_outMinNDC, NiPoint3 *a_outMaxNDC, int32_t a_eyeIndex, float a_nearPlaneEpsilon) // VR has eyeIndex"
 69270,0x140c66580,0x140cac0e0,3,RE::NiCamera::WorldPtToScreenPt3
@@ -1817,6 +1818,7 @@
 69284,0x140c67490,0x140cad6d0,3,BSTriShape* CreateBSTriShape()
 69335,0x140c68d20,0x140caef60,3,NiSourceTexture* CreateSourceTexture(const BSFixedString& a_name)
 69406,0x140c6bc70,0x140cb1960,3,BSDismemberSkinInstance* BSDismemberSkinInstance::Ctor(BSDismemberSkinInstance* a_this)
+69426,0x140c6c390,0x140cb2520,3,"NiPlane* MakePlaneFromNormalPoint(NiPlane* a_out, NiPoint3* a_normal, NiPoint3* a_point)"
 69427,0x140c6c3e0,0x140cb2570,3,"NiPlane* MakePlaneFromPoints(NiPlane* a_out, NiPoint3* a_p0, NiPoint3* a_p1, NiPoint3* a_p2)"
 69433,0x140c6cd50,0x140cb2ee0,3,void NiTimeController::LoadBinary(NiStream& a_stream)
 69434,0x140c6cea0,0x140cb3030,3,void NiTimeController::LinkObject(NiStream& a_stream)
@@ -2293,6 +2295,14 @@
 100818,0x141305240,0x14134be20,3,BSShadowLight::AccumulateShadowMap
 100819,0x1413054c0,0x14134c220,4,static void BSShadowDirectionalLight::SetupFocusShadowAccumulators(RE::BSShadowLight* light)
 100820,0x141305610,0x14134c370,3,"void BSShadowParabolicLight::RenderCascade(BSShadowLight::ShadowmapDescriptor* a_desc, std::uint32_t& a_index, std::uint32_t a_flags)"
+100824,0x141305c60,0x14134cfb0,3,bool BSShadowLight::GetIsFrustumOrDirectionalLight()
+100828,0x141305e90,0x14134d0f0,3,bool BSShadowLight::GetIsDirectionalLight()
+100829,0x141305ea0,0x14134d100,3,bool BSShadowLight::GetIsOmniLight()
+100830,0x141305eb0,0x14134d110,3,bool BSShadowLight::GetIsFrustumLight()
+100831,0x141305ec0,0x14134d120,3,bool BSShadowLight::GetIsParabolicLight()
+100833,0x141305ee0,0x14134d140,3,bool BSShadowLight::GetNeedsClipPlanes()
+100834,0x141305ef0,0x14134d150,3,std::uint32_t BSShadowLight::GetPassExtraParam(std::uint32_t a_accumFlag)
+100836,0x141306020,0x14134d310,3,"void BSShadowLight::TransformClipSpacePlanes(REX::W32::D3DXMatrix* a_matrix1, REX::W32::D3DXMatrix* a_matrix2)"
 100839,0x1413061b0,0x141347290,4,void BSBatchRenderer::ClearGeometryGroupPasses(BSBatchRenderer::GeometryGroup * a_group)
 100840,0x141306240,0x141347320,4,"void BSShaderAccumulator::RenderPersistentPassList (longlong * * passList, uint32_t renderFlags)"
 100843,0x141306db0,0x141347fe0,4,void BSBatchRenderer::ClearAllRenderPasses(BSBatchRenderer * a_this)
@@ -2322,11 +2332,21 @@
 101302,0x14131d1f0,0x141363070,4,bool BSLight::SetLight(NiLight* a_light)
 101303,0x14131d3d0,0x141363250,4,"float BSLight::GetLuminance(RE::BSLight *this, RE::NiPoint3 *targetPosition, RE::NiLight *refLight)"
 101319,0x14131ede0,0x141364c60,3,"BSLight* BSLight::dtor_deleting(BSLight* a_this, std::uint32_t a_flags)"
+101324,0x14131f0d0,0x141364f50,3,bool BSLight::IsShadowLight()
 101339,0x14131f810,0x1413656b0,4,"void BSShader::LoadShaders_14131F810 (BSShader * a_this, UINT_PTR * a_stream)"
 101341,0x14131fbd0,0x141365a70,4,"bool BSShader::BeginTechnique_14131FBD0 (BSShader * shader, int vertexDescriptor, int pixelDescriptor, bool skipPIxelShader)"
+101493,0x141324ac0,0x141356c30,3,"void BSShadowDirectionalLight::TransformClipSpacePlanes(REX::W32::D3DXMatrix* a_matrix1, REX::W32::D3DXMatrix* a_matrix2)"
+101494,0x141324b40,0x141356cb0,3,"void BSShadowDirectionalLight::Accumulate(std::uint32_t& a_globalShadowLightCount, std::uint32_t a_shadowMaskChannel, NiAVObject* a_cullingScene)"
 101495,0x141324c30,0x141356ef0,3,"bool BSShadowDirectionalLight::UpdateCamera (BSShadowDirectionalLight * a_this, NiCamera * a_viewCamera)"
+101496,0x141324d90,0x141357080,3,std::uint32_t BSShadowDirectionalLight::GetPassExtraParam(std::uint32_t a_accumFlag)
+101497,0x141324da0,0x141357090,3,void BSShadowDirectionalLight::ReturnShadowmaps()
 101498,0x141324e00,0x1413570f0,2,"void BSShadowDirectionalLight::DirShadowLightCulling(BSShadowDirectionalLight* this, BSTArray<BSTArray<NiPointer<NiAVObject>>>& jobArrays, BSTArray<NiPointer<NiAVObject>>& nodes)"
 101499,0x1413251c0,0x1413574f0,3,undefined8 BSShadowDirectionalLight::Func16_1413251C0 (BSShadowDirectionalLight * a_this)
+101500,0x141327740,0x141359ac0,3,"void BSShadowDirectionalLight::InterpolateSunDirection(NiPoint3* a_direction, std::int32_t a_prevUpdateMode)"
+101501,0x1413279e0,0x141359d60,3,void BSShadowDirectionalLight::AdvanceSunVector(NiPoint3* a_inOut)
+101505,0x141327eb0,0x14135a560,3,bool BSShadowDirectionalLight::GetIsFrustumOrDirectionalLight()
+101506,0x141327ec0,0x14135a570,3,bool BSShadowDirectionalLight::GetIsDirectionalLight()
+101507,0x141327ed0,0x14135a580,3,bool BSShadowDirectionalLight::GetNeedsClipPlanes()
 101562,0x141329cf0,0x14136c520,3,void ImageSpaceEffectFullScreenBlur::sub_141329CF0(ImageSpaceEffectFullScreenBlur* a_this)
 101564,0x141329df0,0x14136c620,3,void ImageSpaceEffectFullScreenBlur::Setup(ImageSpaceEffectFullScreenBlur* a_this)
 101565,0x14132a370,0x14136cba0,3,void ImageSpaceEffectFullScreenBlur::Render(ImageSpaceEffectFullScreenBlur* a_this)
@@ -2334,7 +2354,16 @@
 101570,0x14132a8b0,0x14136d0e0,3,"ImageSpaceEffectFullScreenBlur* ImageSpaceEffectFullScreenBlur::dtor (ImageSpaceEffectFullScreenBlur* a_this, uint32_t in_EDX)"
 101600,0x14132c650,0x14136f4b0,4,BSParabolicCullingProcess::SetBackHemisphereAccumulator
 101601,0x14132c690,0x14136f4f0,3,"void BSParabolicCullingProcess::AppendNonAccum(NiAVObject* a_object, int a_alphaGroupIndex)"
+101612,0x14132cfd0,0x14136fe60,3,"void BSShadowFrustumLight::Accumulate(std::uint32_t& a_globalShadowLightCount, std::uint32_t a_shadowMaskChannel, NiAVObject* a_cullingScene)"
 101613,0x14132d040,0x14136fec0,4,void BSShadowFrustumLight::Render(std::uint32_t& a_index)
+101617,0x14132d570,0x1413703f0,3,bool BSShadowFrustumLight::GetIsFrustumOrDirectionalLight()
+101618,0x14132d580,0x141370400,3,bool BSShadowFrustumLight::GetIsFrustumLight()
+101623,0x14132e140,0x141370fd0,3,"void BSShadowParabolicLight::Accumulate(std::uint32_t& a_globalShadowLightCount, std::uint32_t a_shadowMaskChannel, NiAVObject* a_cullingScene)"
+101625,0x14132e590,0x141371440,3,void BSShadowParabolicLight::ReturnShadowmaps()
+101627,0x14132e660,0x141371510,3,bool BSShadowParabolicLight::GetIsOmniLight()
+101628,0x14132e670,0x141371520,3,bool BSShadowParabolicLight::GetIsParabolicLight()
+101629,0x14132e680,0x141371530,3,bool BSShadowParabolicLight::GetNeedsClipPlanes()
+101630,0x14132e690,0x141371540,3,std::uint32_t BSShadowParabolicLight::GetPassExtraParam(std::uint32_t a_accumFlag)
 101631,0x14132ead0,0x141371a00,3,"void GetLightingShaderDefines(uint32_t descriptor, D3D_SHADER_MACRO* defines)"
 101633,0x14132ef60,0x141371e90,3,uint32_t BSLightingShader::GetPixelTechnique (uint32_t rawTechnique)
 101779,0x14133a750,0x141377b30,3,void StartTimer(int a_index)
