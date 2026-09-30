@@ -2124,6 +2124,7 @@
 99872,0x1412c7220,0x141305610,3,BSLightingShaderProperty::GetRenderPasses_ShadowMapOrMask
 99881,0x1412c8bf0,0x141306fe0,4,void ClearRenderPassArrays (BSLightingShaderProperty * a_this)
 99886,0x1412c9320,0x141307710,3,BSShaderTextureSet* BSShaderTextureSet::Ctor()
+99920,0x1412c9c90,0x141308080,3,BSShaderAccumulator* BSShaderAccumulator::ctor(int a_priority)
 99938,0x1412cacd0,0x1413093a0,3,"void BSShaderAccumulator::FinishAccumulating (BSShaderAccumulator *a_this,uint32_t StartRange,uint32_t EndRanges)"
 99940,0x1412cb930,0x14130a240,4,void BSShaderAccumulator::RenderEffects (BSShaderAccumulator * a_this)
 99942,0x1412cbcc0,0x14130a5d0,3,BSShaderAccumulator::BlendedDecals
@@ -2151,6 +2152,8 @@
 100110,0x1412d3360,0x141312270,3,BSLightingShaderMaterialLODLandscape* BSLightingShaderMaterialLODLandscape::Ctor()
 100118,0x1412d38f0,0x141312800,3,BSLightingShaderMaterialSnow* BSLightingShaderMaterialSnow::Ctor()
 100125,0x1412d3ad0,0x1413129e0,3,BSLightingShaderMaterialMultiLayerParallax* BSLightingShaderMaterialMultiLayerParallax::Ctor()
+100211,0x1412d6b40,0x141315ac0,3,CullDescriptor* BSCullingProcess::InitCullDescriptor(CullDescriptor* a_this)
+100213,0x1412d6bb0,0x141315b40,3,"void BSCullingProcess::DispatchCullAndAccumulate(CullDescriptor* a_job, int a_mode, int a_phase)"
 100297,0x1412dbad0,0x14131acc0,3,VolumetricLightingDescriptor& VolumetricLightingDescriptor::GetDescriptor()
 100299,0x1412dbb80,0x14131ad70,3,"void VolumetricLightingDescriptor::SetQuality(VolumetricLightingDescriptor& this, uint32_t quality)"
 100306,0x1412dc050,0x14131b240,4,"void VolumetricLightingDescriptor::Render (longlong param_1, undefined8 param_2, bool param_3)"
