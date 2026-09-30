@@ -449,9 +449,12 @@
 24479,0x140370800,0x1403801a0,3,void TESQuest::RunShutDownStages()
 24480,0x140370890,0x140380230,3,void TESQuest::StopPlayingScenes()
 24481,0x140370910,0x1403802b0,3,RE::TESQuest::EnsureQuestStarted
-24483,0x140370b20,0x1403804c0,3,RE::TESQuest::sub_140370B20(TESQuest *param_1)
+24482,0x140370a30,0x1403803d0,3,bool TESQuest::SetStage(std::uint16_t a_stage)
+24483,0x140370b20,0x1403804c0,3,bool TESQuest::IsStageDone(std::uint16_t a_stage)
 24485,0x140370e80,0x140380820,3,std::uint16_t TESQuest::GetCurrentStage()
 24486,0x140370e90,0x140380830,3,RE::TESQuest::ResetQuest
+24494,0x1403712c0,0x140380c70,3,void TESQuest::UpdatePlayingScenes()
+24500,0x1403714f0,0x140380ea0,3,void* TESQuest::FindStage(std::uint16_t a_stage)
 24509,0x140372ad0,0x140382480,3,bool TESQuest::UpdateCurrentInstanceGlobal(TESGlobal* a_global)
 24517,0x140372eb0,0x140382860,3,void TESQuest::PromoteAliasedRefs()
 24519,0x140373970,0x140383320,3,void TESQuest::FillAliases()
@@ -466,6 +469,7 @@
 24537,0x140378760,0x140388110,3,RE::TESQuest::CreateRefHandleByAliasID
 24538,0x1403787e0,0x140388190,3,void* TESQuest::FindAliasData(std::uint32_t a_aliasID)
 24549,0x140378ea0,0x140388850,4,"void TESQuest::GetJournalTextForInstance(BSString& out, std::uint32_t instanceID)"
+24564,0x14037ade0,0x14038a800,3,"BSTArray<TESTopic*>* TESQuest::GetTopicsOfSubtype(std::int32_t a_type, const void* a_key)"
 24647,0x14037f050,0x14038d9f0,3,Experience::
 24719,0x140380be0,0x140390450,3,BSTEventSource<QuestStatus::Event>* QuestStatus::GetEventSource()
 24778,0x140382720,0x140391F90,4,"void JournalMenuQuestDescriptionStrings (int64 a1, TESQuest *a2)"
