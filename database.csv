@@ -91,6 +91,7 @@
 13549,0x140165770,0x140175eb0,4,longlong TESWorldSpace::GetCellByCoordinateMask_140165770 (TESWorldSpace * a_this)
 13594,0x140167220,0x140177940,3,FDGE::Skyrim::LoadWorldData
 13597,0x140167400,0x140177b20,4,bool TESDataHandler::AddFormToDataHandler(TESForm* a_form)
+13602,0x140167bc0,0x1401782e0,3,void TESDataHandler::CreateHardcodedForms()
 13618,0x14016b840,0x14017c000,3,"TESWorldSpace* TESDataHandler::GetExtCellDataFromFileByEditorID(const char* a_cellID, std::int32_t& a_outX, std::int32_t& a_outY)"
 13623,0x14016bda0,0x14017c7c0,4,"void FUN_14016bda0 (TESDataHandler * param_1, undefined8 param_2)"
 13625,0x14016c210,0x14017cc30,3,"ObjectRefHandle TESDataHandler::CreateReferenceAtLocation(TESBoundObject* a_base, const NiPoint3& a_location, const NiPoint3& a_rotation, TESObjectCELL* a_targetCell, TESWorldSpace* a_selfWorldSpace, TESObjectREFR* a_alreadyCreatedRef, BGSPrimitive* a_primitive, const ObjectRefHandle& a_linkedRoomRefHandle, bool a_forcePersist, bool a_arg11)"
@@ -286,11 +287,14 @@
 18631,0x14026a3e0,0x14027b9b0,3,bool TESFile::SeekLandscapeForCurrentCell(TESFile* a_file)
 18637,0x14026a840,0x14027be10,4,void TESObjectCELL::LoadTempData (TESObjectCELL * a_this)
 18642,0x14026b160,0x14027c730,3,po3tweaks::QueuedRefCrash::SetFadeNode
+18652,0x14026c410,0x14027d9e0,3,NiNode* TESObjectCELL::GetLightMarkerNode()
+18653,0x14026c4d0,0x14027daa0,3,NiNode* TESObjectCELL::GetSoundMarkerNode()
 18655,0x14026c5d0,0x14027dba0,3,void TESObjectCELL::sub_14026C5D0 (TESObjectCELL * a_this)
+18685,0x14026fd10,0x1402812f0,3,BSPortalGraph* TESObjectCELL::GetPortalGraph()
 18711,0x140271be0,0x140283200,3,TESObjectCELL::sub_140271BE0
 18755,0x140273ED0,0x1402854C0,4,"void CallsMapMarkerData (int64 a1, int64 **a2)"
 18843,0x140278920,0x140289f20,4,TESObjectREFR::HandleReferenceReset
-19002,0x14027ddc0,0x14028f390,3,TESObjectCELL::AttachReference3D
+19002,0x14027ddc0,0x14028f390,3,void TESObjectCELL::AttachReference3D(TESObjectREFR* a_ref)
 19102,0x140283f90,0x1402956c0,3,TESObjectREFR::ClearData
 19105,0x1402850e0,0x140296810,3,void TESObjectREFR::InitializeAfterAllFormsAreReadFromFile
 19110,0x140285be0,0x140297310,3,void TESObjectREFR::AddLockChange()
