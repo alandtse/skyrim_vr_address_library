@@ -1,3 +1,10 @@
+# [0.276.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.275.0...v0.276.0) (2026-10-04)
+
+
+### Features
+
+* add culling and frustum rows ([#246](https://github.com/alandtse/skyrim_vr_address_library/issues/246)) ([00c0654](https://github.com/alandtse/skyrim_vr_address_library/commit/00c0654d5b818baee2eef02577e0afeff4de9e04))
+
 # [0.275.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.274.0...v0.275.0) (2026-09-30)
 
 
