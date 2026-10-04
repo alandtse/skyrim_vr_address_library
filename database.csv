@@ -409,6 +409,8 @@
 23346,0x140338060,0x140347920,2,bool BGSPerk::Load(TESFile* a_file)
 23353,0x1403386a0,0x140347f60,4,"void ApplyPerk (BGSPerk * a_perk, Actor * a_perkOwner, uint8_t a_removeRank, uint8_t a_applyRank)"
 23359,0x140338a50,0x140348310,4,"undefined8 BGSPerk__ApplyPerksVisitor::sub_140338A50 (BGSPerk__ApplyPerksVisitor * a_this, BSTArray_BGSPerkEntry__ * param_2)"
+23420,0x14033a330,0x140349bf0,3,void BGSQuestInstanceText::AddGlobalValue(TESGlobal* a_global)
+23425,0x14033a680,0x140349f40,3,bool BGSQuestInstanceText::UpdateGlobalValue(TESGlobal* a_global)
 23429,0x14033a820,0x14034a0e0,2,BGSQuestObjective::FillQuestInstanceData
 23467,0x14033C010,0x14034B8D0,4,"void DecideObjectiveHUDDataType(int64 a_objectives, int32 a_QuestObjectiveState)"
 23486,0x14033cdc0,0x14034c680,2,BSTEventSource<ObjectiveState::Event>* ObjectiveState::GetEventSource()
@@ -781,6 +783,7 @@
 34460,0x140570150,0x1405766f0,3,void MenuTopicManager::SelectNextTopicInfo()
 34461,0x140570300,0x1405768a0,3,TESObjectREFR* MenuTopicManager::GetSpeaker()
 34462,0x140570360,0x140576900,3,void MenuTopicManager::UpdateAdvance()
+34463,0x140570440,0x1405769e0,3,void MenuTopicManager::SkipText()
 34465,0x140570620,0x140576bc0,3,void MenuTopicManager::SetLastSpeaker(TESObjectREFR* a_ref)
 34466,0x140570660,0x140576c00,3,void MenuTopicManager::GetSpeakerAsCharacter(Character** a_out)
 34467,0x1405706e0,0x140576c80,3,void MenuTopicManager::EndDialogue()
