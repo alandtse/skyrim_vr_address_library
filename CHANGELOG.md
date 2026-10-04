@@ -1,3 +1,10 @@
+## [0.276.1](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.276.0...v0.276.1) (2026-10-04)
+
+
+### Bug Fixes
+
+* correct Inventory3D and BSDismemberSkinInstance rows ([#247](https://github.com/alandtse/skyrim_vr_address_library/issues/247)) ([78ac104](https://github.com/alandtse/skyrim_vr_address_library/commit/78ac1041e02f2096da988a7f0d372ab47959deb7))
+
 # [0.276.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.275.0...v0.276.0) (2026-10-04)
 
 
