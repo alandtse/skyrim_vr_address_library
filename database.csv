@@ -1500,9 +1500,9 @@
 50881,0x140887600,0x1408b4b40,3,"void Inventory3DManager::Begin3D (Inventory3DManager * a_this, INTERFACE_LIGHT_SCHEME a_scheme)"
 50882,0x140887750,0x1408b4c90,3,std::uint32_t Inventory3DManager::Render()
 50883,0x140887810,0x1408b4d50,3,void Inventory3DManager::End3D
-50884,0x140887970,0x1408b4ea0,3,void Inventory3DManager::UpdateItem3D(InventoryEntryData* a_objDesc)
-50885,0x1408879a0,0x1408b4ed0,3,"void Inventory3DManager::UpdateMagic3D(TESForm* a_form, std::uint32_t a_arg2)"
-50886,0x140887d10,0x1408b5240,3,void Inventory3DManager::Clear3D()
+50884,0x140887970,0x1408b4ea0,3,void Inventory3DManager::LoadInventoryItem(InventoryEntryData* a_objDesc)
+50885,0x1408879a0,0x1408b4ed0,3,"void Inventory3DManager::LoadInventoryItem(TESBoundObject* a_object, ExtraDataList* a_extraDataList)"
+50886,0x140887d10,0x1408b5240,3,void Inventory3DManager::UnloadInventoryItem()
 50887,0x140887df0,0x1408b5360,3,bool Inventory3DManager::ToggleItemZoom
 50896,0x140888290,0x1408b5b40,3,"void Inventory3DManager::InitializeDisplayObject(TESForm* a_form1, TESForm* a_form2, NiNode* a_node)"
 50948,0x14088b9b0,0x1408b9210,3,InventoryEntryData::GetExtraListForRemoval
@@ -1873,7 +1873,8 @@
 69279,0x140c66f80,0x140cad0a0,3,void BSTriShape::LoadBinary(NiStream* a_stream)
 69284,0x140c67490,0x140cad6d0,3,BSTriShape* CreateBSTriShape()
 69335,0x140c68d20,0x140caef60,3,NiSourceTexture* CreateSourceTexture(const BSFixedString& a_name)
-69406,0x140c6bc70,0x140cb1960,3,BSDismemberSkinInstance* BSDismemberSkinInstance::Ctor(BSDismemberSkinInstance* a_this)
+69398,0x140c6b6e0,0x140cb18c0,3,BSDismemberSkinInstance* BSDismemberSkinInstance::Create()
+69406,0x140c6bc70,0x140cb1e30,3,BSDismemberSkinInstance* BSDismemberSkinInstance::Ctor(BSDismemberSkinInstance* a_this)
 69426,0x140c6c390,0x140cb2520,3,"NiPlane* MakePlaneFromNormalPoint(NiPlane* a_out, NiPoint3* a_normal, NiPoint3* a_point)"
 69427,0x140c6c3e0,0x140cb2570,3,"NiPlane* MakePlaneFromPoints(NiPlane* a_out, NiPoint3* a_p0, NiPoint3* a_p1, NiPoint3* a_p2)"
 69433,0x140c6cd50,0x140cb2ee0,3,void NiTimeController::LoadBinary(NiStream& a_stream)
