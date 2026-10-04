@@ -2396,11 +2396,11 @@
 101341,0x14131fbd0,0x141365a70,4,"bool BSShader::BeginTechnique_14131FBD0 (BSShader * shader, int vertexDescriptor, int pixelDescriptor, bool skipPIxelShader)"
 101493,0x141324ac0,0x141356c30,3,"void BSShadowDirectionalLight::TransformClipSpacePlanes(REX::W32::D3DXMatrix* a_matrix1, REX::W32::D3DXMatrix* a_matrix2)"
 101494,0x141324b40,0x141356cb0,3,"void BSShadowDirectionalLight::Accumulate(std::uint32_t& a_globalShadowLightCount, std::uint32_t a_shadowMaskChannel, NiAVObject* a_cullingScene)"
-101495,0x141324c30,0x141356ef0,3,"void BSShadowDirectionalLight::Render(std::uint32_t& a_index)"
+101495,0x141324c30,0x141356ef0,3,void BSShadowDirectionalLight::Render(std::uint32_t& a_index)
 101496,0x141324d90,0x141357080,3,std::uint32_t BSShadowDirectionalLight::GetPassExtraParam(std::uint32_t a_accumFlag)
 101497,0x141324da0,0x141357090,3,void BSShadowDirectionalLight::ReturnShadowmaps()
 101498,0x141324e00,0x1413570f0,2,"void BSShadowDirectionalLight::DirShadowLightCulling(BSShadowDirectionalLight* this, BSTArray<BSTArray<NiPointer<NiAVObject>>>& jobArrays, BSTArray<NiPointer<NiAVObject>>& nodes)"
-101499,0x1413251c0,0x1413574f0,3,"bool BSShadowDirectionalLight::UpdateCamera(const NiCamera* a_viewCamera)"
+101499,0x1413251c0,0x1413574f0,3,bool BSShadowDirectionalLight::UpdateCamera(const NiCamera* a_viewCamera)
 101500,0x141327740,0x141359ac0,3,"void BSShadowDirectionalLight::InterpolateSunDirection(NiPoint3* a_direction, std::int32_t a_prevUpdateMode)"
 101501,0x1413279e0,0x141359d60,3,void BSShadowDirectionalLight::AdvanceSunVector(NiPoint3* a_inOut)
 101505,0x141327eb0,0x14135a560,3,bool BSShadowDirectionalLight::GetIsFrustumOrDirectionalLight()
