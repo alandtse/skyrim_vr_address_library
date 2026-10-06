@@ -7229,6 +7229,8 @@ sseid,aeid,confidence,name
 82008,84083,3,GFxSprite::~GFxSprite
 82017,84093,3,GFxSprite::dtor_deleting_thunk
 82026,84102,3,GFxSprite::dtor_deleting
+82052,84127,3,GFxSprite::CallFrame
+82080,84154,3,GFxSprite::FillTabableArray
 82092,84168,3,GFxSprite::GetOrCreateASObject_thunk
 82093,84169,3,GFxSprite::GetOrCreateASObject_thunk
 82095,84171,3,GFxSprite::GetBounds
@@ -7239,6 +7241,8 @@ sseid,aeid,confidence,name
 82144,84223,3,GFxSprite::GetProperty
 82148,84227,3,GFxSprite::GetTopMostMouseEntity
 82153,84232,3,GFxSprite::SetFrame
+82163,84242,3,GFxSprite::IsFocusEnabled
+82166,84244,3,GFxSprite::IsTabable
 82189,84268,3,GFxSprite::PointTestLocal
 82200,84279,3,GFxSprite::ReplaceChildCharacter
 82228,84310,3,GFxSprite::SetPlayState

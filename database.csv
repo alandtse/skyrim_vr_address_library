@@ -2184,6 +2184,8 @@
 82008,0x140f31890,0x140f8e590,4,GFxSprite::~GFxSprite
 82017,0x140f31ce4,0x140f8e9e4,4,GFxSprite::dtor_deleting_thunk
 82026,0x140f31ff0,0x140f8ecf0,4,GFxSprite::dtor_deleting
+82052,0x140f33e10,0x140f90b10,4,"void GFxSprite::CallFrame (GFxSprite * a_this, uint a_frame)"
+82080,0x140f35c40,0x140f92940,4,"void GFxSprite::FillTabableArray (GFxSprite * a_this, void * a_params)"
 82092,0x140f371e0,0x140f93ee0,4,void * GFxSprite::GetOrCreateASObject_thunk (GFxSprite * a_this)
 82093,0x140f371f0,0x140f93ef0,4,void * GFxSprite::GetOrCreateASObject_thunk (GFxSprite * a_this)
 82095,0x140f37250,0x140f93f50,4,"void * GFxSprite::GetBounds (GFxSprite * a_this, void * a_out, GMatrix2D * a_transform)"
@@ -2193,6 +2195,8 @@
 82144,0x140f38a60,0x140f95760,3,"bool GFxSprite::GetProperty (GFxSprite * a_this, uint a_propIndex, void * a_value)"
 82148,0x140f38e30,0x140f95b30,3,"void * GFxSprite::GetTopMostMouseEntity (GFxSprite * a_this, void * a_point, void * a_descr)"
 82153,0x140f393a0,0x140f960a0,4,"void GFxSprite::SetFrame (GFxSprite * a_this, int a_frame)"
+82163,0x140f39a20,0x140f96720,4,bool GFxSprite::IsFocusEnabled (GFxSprite * a_this)
+82166,0x140f39c20,0x140f96920,4,bool GFxSprite::IsTabable (GFxSprite * a_this)
 82189,0x140f3abd0,0x140f978d0,4,"bool GFxSprite::PointTestLocal (GFxSprite * a_this, void * a_point, uchar a_hitTestMask)"
 82200,0x140f3b890,0x140f98590,4,"bool GFxSprite::ReplaceChildCharacter (GFxSprite * a_this, void * a_oldChar, void * a_newChar)"
 82228,0x140f3cee0,0x140f99be0,4,"void GFxSprite::SetPlayState (GFxSprite * a_this, bool a_playing)"
