@@ -7231,11 +7231,15 @@ sseid,aeid,confidence,name
 82026,84102,3,GFxSprite::dtor_deleting
 82092,84168,3,GFxSprite::GetOrCreateASObject_thunk
 82093,84169,3,GFxSprite::GetOrCreateASObject_thunk
+82095,84171,3,GFxSprite::GetBounds
 82103,84179,3,GFxSprite::GetCurrentFrame
 82117,84196,3,GFxSprite::FindFrameForLabel
 82129,84208,3,GFxSprite::GetOrCreateASObject
+82135,84214,3,GFxSprite::GetRectBounds
 82144,84223,3,GFxSprite::GetProperty
+82148,84227,3,GFxSprite::GetTopMostMouseEntity
 82153,84232,3,GFxSprite::SetFrame
+82189,84268,3,GFxSprite::PointTestLocal
 82200,84279,3,GFxSprite::ReplaceChildCharacter
 82228,84310,3,GFxSprite::SetPlayState
 82234,84316,3,GFxSprite::SetProperty
