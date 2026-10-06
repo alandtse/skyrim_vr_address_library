@@ -2160,6 +2160,7 @@
 80446,0x140ed3a50,0x140f2da40,3,GString* GString::ctor(const char* a_str)
 80547,0x140ed80b0,0x140f30f20,3,RE::GFxMovieView::InvokeNoReturn
 80620,0x140edbfa0,0x140f38ca0,3,RE::GFxLoader::CreateMovie
+80776,0x140ee3780,0x140f40480,4,"void * GASFnCall::Arg (GASFnCall * a_this, uint a_index)"
 80905,0x140ee98f0,0x140f465f0,3,GASObject::GASObjectInterface_Func4
 80915,0x140eea220,0x140f46f20,3,GASObject::GASObjectInterface_Func9
 80929,0x140eeada0,0x140f47aa0,3,SetMemberFallback
@@ -2169,17 +2170,39 @@
 80943,0x140eeba70,0x140f48770,2,GASObject::VisitMembers
 80944,0x140eebc80,0x140f48980,2,GASObject::Watch
 81202,0x140efe220,0x140f5af20,3,"void* GASEnvironment::FindTarget(void* a_pathValue, char* a_path, void* a_unused, undefined8 a_flags)"
+81482,0x140f0e010,0x140f6ad10,4,bool GFxCharacter::IsVerboseAction (GFxCharacter * a_this)
+81484,0x140f0e040,0x140f6ad40,4,GFxCharacter::IsVerboseActionErrors
 81525,0x140f0eef0,0x140f6bbf0,3,"void* GFxValue::ObjectInterface::ResolveCharacter(void* a_data, void* a_valueData, undefined8 a_extra1, undefined8 a_flags)"
+81643,0x140f17660,0x140f74360,4,GFxMovieRoot::~GFxMovieRoot
+81676,0x140f18bc0,0x140f758c0,4,GFxMovieRoot::dtor_deleting
 81705,0x140f1b370,0x140f78070,3,RE::GFxMovieRoot::Advance
 81751,0x140f1f020,0x140f7bd20,3,"void* GFxValue::ObjectInterface::ResolveCharacter2(void* a_valueData, void* a_targetPath, void* a_valueData2, undefined8 a_flags)"
 81803,0x140f20a60,0x140f7d760,3,RE::GFxMovieRoot::GotoLabeledFrame
 81844,0x140f24c50,0x140f81950,2,"void LoadMovieImageCallback(void* a_movieRoot, void* a_loadQueueEntry, void* a_action, void* a_urlInfo)"
+81887,0x140f28250,0x140f84f50,4,"void GFxMovieRoot::SetSuppressActionErrors (GFxMovieRoot * a_this, bool a_enable)"
+81911,0x140f296c0,0x140f863c0,4,"void GFxMovieRoot::SetVerboseAction (GFxMovieRoot * a_this, bool a_enable)"
+82008,0x140f31890,0x140f8e590,4,GFxSprite::~GFxSprite
+82017,0x140f31ce4,0x140f8e9e4,4,GFxSprite::dtor_deleting_thunk
+82026,0x140f31ff0,0x140f8ecf0,4,GFxSprite::dtor_deleting
+82092,0x140f371e0,0x140f93ee0,4,void * GFxSprite::GetOrCreateASObject_thunk (GFxSprite * a_this)
+82093,0x140f371f0,0x140f93ef0,4,void * GFxSprite::GetOrCreateASObject_thunk (GFxSprite * a_this)
+82103,0x140f37950,0x140f94650,4,uint GFxSprite::GetCurrentFrame (GFxSprite * a_this)
+82117,0x140f37cc0,0x140f949c0,4,"bool GFxSprite::FindFrameForLabel (GFxSprite * a_this, char * a_label, int * a_frameOut, bool a_exact)"
+82144,0x140f38a60,0x140f95760,3,"bool GFxSprite::GetProperty (GFxSprite * a_this, uint a_propIndex, void * a_value)"
+82153,0x140f393a0,0x140f960a0,4,"void GFxSprite::SetFrame (GFxSprite * a_this, int a_frame)"
+82200,0x140f3b890,0x140f98590,4,"bool GFxSprite::ReplaceChildCharacter (GFxSprite * a_this, void * a_oldChar, void * a_newChar)"
+82228,0x140f3cee0,0x140f99be0,4,"void GFxSprite::SetPlayState (GFxSprite * a_this, bool a_playing)"
+82234,0x140f3d2b0,0x140f99fb0,3,"bool GFxSprite::SetProperty (GFxSprite * a_this, int a_propIndex, void * a_value, bool a_flag)"
 82382,0x140f45350,0x140fa2050,4,bool BSScaleformImageLoader::AddTexture(BSScaleformExternalTexture& a_texture)
 82383,0x140f45820,0x140fa2520,4,void BSScaleformImageLoader::RemoveTexture(BSScaleformExternalTexture& a_texture)
 82462,0x140f48270,0x140fa4f70,3,bool GSysAllocPaged::InitHeapEngine(const void* a_heapDesc)
 82464,0x140f48360,0x140fa5060,3,void GSysAllocPaged::ShutdownHeapEngine()
+83641,0x140f85e60,0x140fe2b60,4,GFxEditTextCharacter::~GFxEditTextCharacter
+83665,0x140f86590,0x140fe3290,4,GFxEditTextCharacter::dtor_deleting
 84045,0x140fa27e0,0x140fff4e0,3,"void GetSpecialTransformProperty(void* a_data, void* a_movieView, void* a_name, void* a_result)"
 84051,0x140fa2ff0,0x140fffcf0,3,"void SetSpecialTransformProperty(void* a_data, void* a_movieView, void* a_valueLo, void* a_valueHi, void* a_isDObj)"
+85631,0x140ff6440,0x141053140,4,GFxStaticTextCharacter::~GFxStaticTextCharacter
+85634,0x140ff6530,0x141053230,4,GFxStaticTextCharacter::dtor_deleting
 85757,0x140fffeb0,0x14105cbb0,4,void FUN_140fffeb0 (undefined8 * param_1)
 87907,0x1410a2370,0x1410fefa0,4,Skyrim-upscaler
 87965,0x1410a5740,0x141102370,3,"BSPathingLocation* BSPathingLocation::ctor(const NiPoint3& a_location, const BSTSmartPointer<BSPathingCell>& a_cell)"
