@@ -2300,7 +2300,7 @@
 82462,0x140f48270,0x140fa4f70,3,bool GSysAllocPaged::InitHeapEngine(const void* a_heapDesc)
 82464,0x140f48360,0x140fa5060,3,void GSysAllocPaged::ShutdownHeapEngine()
 82556,0x140f4d680,0x140faa380,4,GFxLog::LogMessageVarg
-82638,0x140f52650,0x140faf350,4,"void * GASFnCall::Arg (GASFnCall * a_this, uint a_index)"
+82638,0x140f52650,0x140faf350,4,"void GFxLog::LogScriptError (GFxLog * a_this, void * a_format, void * a_arg1, void * a_arg2)"
 83684,0x140f87470,0x140fe4170,4,Scaleform::Render::Text::DocView::ClearImageSubstitutor
 83691,0x140f88160,0x140fe4e60,4,Scaleform::Render::Text::DocView::CreateImageSubstitutor
 83693,0x140f88200,0x140fe4f00,4,"void GFxEditTextCharacter::Display (GFxEditTextCharacter * a_this, GFxDisplayContext * a_context)"
