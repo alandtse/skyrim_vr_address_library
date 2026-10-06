@@ -2120,9 +2120,15 @@
 80061,0x140ec31d0,0x140f1fca0,4,RE::UIMessageQueue::CreateUIMessageData
 80077,0x140ec3d50,0x140f20820,3,po3tweaks::SitToWait::ProcessMenu
 80087,0x140ec4420,0x140f20ef0,3,bool BSScaleformManager::FileExists(const char* a_fileName)
+80176,0x140ec7930,0x140f24480,4,void * GRefCountNTSImpl::GetWeakProxy (GRefCountNTSImpl * a_this)
 80178,0x140ec79c0,0x140f24510,4,GRefCountNTSImpl::Release
 80197,0x140ec83a0,0x140f24ef0,3,RE::GFxValue::ObjectInterface::AttachMovie
+80200,0x140ec8a60,0x140f255b0,4,"void GFxMovieRoot::CreateArray (GFxMovieRoot * a_this, GFxValue * a_value)"
 80201,0x140ec8b10,0x140f25660,4,"bool GFxValue::ObjectInterface::CreateEmptyMovieClip (void * a_this, void * a_data, GFxValue * a_movieClip, char * a_instanceName, int32_t a_depth)"
+80202,0x140ec8d30,0x140f25880,4,"void GFxMovieRoot::CreateFunction (GFxMovieRoot * a_this, GFxValue * a_value, GFxFunctionHandler * a_fc, void * a_userData)"
+80204,0x140ec8ea0,0x140f259f0,4,"void GFxMovieRoot::CreateObject (GFxMovieRoot * a_this, GFxValue * a_value, char * a_className, GFxValue * a_args, std::uint32_t a_numArgs)"
+80205,0x140ec9330,0x140f25e80,4,"void GFxMovieRoot::CreateString (GFxMovieRoot * a_this, GFxValue * a_value, char * a_string)"
+80206,0x140ec93d0,0x140f25f20,4,"void GFxMovieRoot::CreateStringW (GFxMovieRoot * a_this, GFxValue * a_value, wchar_t * a_string)"
 80207,0x140ec9490,0x140f25fe0,3,RE::GFxValue::ObjectInterface::DeleteMember
 80214,0x140ec9bd0,0x140f26720,3,RE::GFxValue::ObjectInterface::GetArraySize
 80215,0x140ec9be0,0x140f26730,4,"bool GFxValue::ObjectInterface::GetCxform(void* a_data, GRenderer::Cxform* a_cx) const"
@@ -2159,7 +2165,17 @@
 80307,0x140ecee30,0x140f2bb20,4,bool BSScaleformManager::IsValidName(const char* a_name)
 80446,0x140ed3a50,0x140f2da40,3,GString* GString::ctor(const char* a_str)
 80547,0x140ed80b0,0x140f30f20,3,RE::GFxMovieView::InvokeNoReturn
+80585,0x140edac40,0x140f37940,4,"void GMatrix2D::EncloseTransform (GMatrix2D * a_this, void * a_out, void * a_rect)"
 80620,0x140edbfa0,0x140f38ca0,3,RE::GFxLoader::CreateMovie
+80737,0x140ee1bd0,0x140f3e8d0,4,void GASStringNode::ReleaseNode (GASStringNode * a_this)
+80758,0x140ee27a0,0x140f3f4a0,4,"void * GASValue::AssignFrom (GASValue * a_this, void * a_src)"
+80766,0x140ee2e10,0x140f3fb10,4,void GASValue::dtor (GASValue * a_this)
+80783,0x140ee3d10,0x140f40a10,4,void GASValue::DropRefs (GASValue * a_this)
+80795,0x140ee4620,0x140f41320,4,"void GASValue::SetAsCharacter (GASValue * a_this, void * a_character)"
+80805,0x140ee4ce0,0x140f419e0,4,"void * GASValue::ToCharacter (GASValue * a_this, void * a_env)"
+80806,0x140ee4d20,0x140f41a20,4,"bool GASValue::ToBool (GASValue * a_this, void * a_env)"
+80815,0x140ee59b0,0x140f426b0,4,"void * GASValue::ToString (GASValue * a_this, void * a_out, void * a_env, int a_radix, bool a_flag)"
+80817,0x140ee5ec0,0x140f42bc0,4,uint GASValue::ToUInt32 (GASValue * a_this)
 80905,0x140ee98f0,0x140f465f0,3,GASObject::GASObjectInterface_Func4
 80915,0x140eea220,0x140f46f20,3,GASObject::GASObjectInterface_Func9
 80929,0x140eeada0,0x140f47aa0,3,SetMemberFallback
@@ -2169,18 +2185,166 @@
 80943,0x140eeba70,0x140f48770,2,GASObject::VisitMembers
 80944,0x140eebc80,0x140f48980,2,GASObject::Watch
 81202,0x140efe220,0x140f5af20,3,"void* GASEnvironment::FindTarget(void* a_pathValue, char* a_path, void* a_unused, undefined8 a_flags)"
+81228,0x140f00c80,0x140f5d980,4,void * GASEnvironment::GetLog (GASEnvironment * a_this)
+81231,0x140f00f70,0x140f5dc70,4,void * GASEnvironment::GetMovieRoot (GASEnvironment * a_this)
+81353,0x140f08ac0,0x140f657c0,4,void GFxCharacterHandle::dtor (GFxCharacterHandle * a_this)
+81368,0x140f09020,0x140f65d20,4,"void Scaleform::GFx::DisplayObjectBase::AddToPrePassList (Scaleform::GFx::DisplayObjectBase * a_this, void * a_root)"
+81385,0x140f09f10,0x140f66c10,4,void * Scaleform::GFx::DisplayObjectBase::GetCharacterHandle (Scaleform::GFx::DisplayObjectBase * a_this)
+81386,0x140f0a0d0,0x140f66dd0,4,"void Scaleform::GFx::DisplayObjectBase::EnsureMatrix3D (Scaleform::GFx::DisplayObjectBase * a_this, void * * a_slot)"
+81392,0x140f0a400,0x140f67100,4,void GFxASCharacter::InvokeCallback (GFxASCharacter * a_this)
+81412,0x140f0b7c0,0x140f684c0,4,Scaleform::GFx::DisplayObjectBase::GetActiveBlendMode
+81431,0x140f0bc90,0x140f68990,4,"void Scaleform::GFx::DisplayObjectBase::GetRootRelativeMatrix (Scaleform::GFx::DisplayObjectBase * a_this, GMatrix2D * a_out)"
+81462,0x140f0d750,0x140f6a450,4,"void Scaleform::GFx::DisplayObjectBase::GetWorldCxform (Scaleform::GFx::DisplayObjectBase * a_this, Cxform * a_out)"
+81463,0x140f0d7a0,0x140f6a4a0,4,"void Scaleform::GFx::DisplayObjectBase::GetWorldMatrix3D (Scaleform::GFx::DisplayObjectBase * a_this, GMatrix3D * a_out)"
+81465,0x140f0d8f0,0x140f6a5f0,4,"void Scaleform::GFx::DisplayObjectBase::GetWorldMatrix (Scaleform::GFx::DisplayObjectBase * a_this, GMatrix2D * a_out)"
+81474,0x140f0ddf0,0x140f6aaf0,4,"bool Scaleform::GFx::DisplayObjectBase::HasMatrix3D (Scaleform::GFx::DisplayObjectBase * a_this, bool a_inherit)"
+81515,0x140f0eab0,0x140f6b7b0,4,"void Scaleform::GFx::DisplayObjectBase::RemoveFromPrePassList (Scaleform::GFx::DisplayObjectBase * a_this, void * a_root)"
 81525,0x140f0eef0,0x140f6bbf0,3,"void* GFxValue::ObjectInterface::ResolveCharacter(void* a_data, void* a_valueData, undefined8 a_extra1, undefined8 a_flags)"
+81568,0x140f12530,0x140f6f230,4,"void GFxDisplayList::Display (GFxDisplayList * a_this, GFxDisplayContext * a_context)"
+81685,0x140f18ed0,0x140f75bd0,4,"void GFxMovieRoot::MoveFocusByTab (GFxMovieRoot * a_this, bool a_shift)"
+81699,0x140f1a5c0,0x140f772c0,4,"void GFxMovieRoot::AddPrePassCharacter (GFxMovieRoot * a_this, void * a_character)"
 81705,0x140f1b370,0x140f78070,3,RE::GFxMovieRoot::Advance
+81707,0x140f1bf60,0x140f78c60,4,"bool GFxMovieRoot::AttachDisplayCallback (GFxMovieRoot * a_this, char * a_pathToObject, void ( * a_callback)(void * a_user), void * a_user)"
+81728,0x140f1d100,0x140f79e00,4,void GFxMovieRoot::Display (GFxMovieRoot * a_this)
+81729,0x140f1d340,0x140f7a040,4,"void GFxMovieRoot::DisplayFocusRect (GFxMovieRoot * a_this, GFxDisplayContext * a_context)"
+81730,0x140f1d8d0,0x140f7a5d0,3,void GFxMovieRoot::DisplayPrePass (GFxMovieRoot * a_this)
+81731,0x140f1dc90,0x140f7a990,4,"void GFxMovieRoot::DisplayTopmostLevels (GFxMovieRoot * a_this, GFxDisplayContext * a_context)"
+81748,0x140f1ed70,0x140f7ba70,4,"void GFxMovieRoot::ApplyFocusMoveEvent (GFxMovieRoot * a_this, void * a_event)"
 81751,0x140f1f020,0x140f7bd20,3,"void* GFxValue::ObjectInterface::ResolveCharacter2(void* a_valueData, void* a_targetPath, void* a_valueData2, undefined8 a_flags)"
+81752,0x140f1f060,0x140f7bd60,4,void GFxMovieRoot::ForceCollectGarbage (GFxMovieRoot * a_this)
+81755,0x140f1f360,0x140f7c060,4,float GFxMovieRoot::GetBackgroundAlpha (GFxMovieRoot * a_this)
+81756,0x140f1f380,0x140f7c080,4,std::uint32_t GFxMovieRoot::GetControllerCount (GFxMovieRoot * a_this)
+81757,0x140f1f390,0x140f7c090,4,"std::uint32_t GFxMovieRoot::GetControllerFocusGroup (GFxMovieRoot * a_this, std::uint32_t a_controllerIdx)"
+81759,0x140f1f410,0x140f7c110,4,std::uint32_t GFxMovieRoot::GetCurrentFrame (GFxMovieRoot * a_this)
+81764,0x140f1f500,0x140f7c200,4,"bool GFxMovieRoot::GetDirtyFlag (GFxMovieRoot * a_this, bool a_doReset)"
+81765,0x140f1f520,0x140f7c220,4,void GFxMovieRoot::AdvanceInputQueue (GFxMovieRoot * a_this)
+81769,0x140f1f6c0,0x140f7c3c0,4,GMemoryHeap* GFxMovieRoot::GetHeap (GFxMovieRoot * a_this)
+81773,0x140f1f7d0,0x140f7c4d0,4,GFxMovieDef::MemoryContext* GFxMovieRoot::GetMemoryContext (GFxMovieRoot * a_this)
+81775,0x140f1f820,0x140f7c520,4,"void * GFxMovieRoot::GetModalClip (GFxMovieRoot * a_this, uint a_controller)"
+81776,0x140f1f890,0x140f7c590,4,std::uint32_t GFxMovieRoot::GetMouseCursorCount (GFxMovieRoot * a_this)
+81777,0x140f1f8a0,0x140f7c5a0,3,"void GFxMovieRoot::GetMouseState (GFxMovieRoot * a_this, std::uint32_t a_mouseIndex, float * a_x, float * a_y, std::uint32_t * a_buttons)"
+81778,0x140f1f930,0x140f7c630,4,GFxMovieDef* GFxMovieRoot::GetMovieDef (GFxMovieRoot * a_this)
+81784,0x140f1fb60,0x140f7c860,4,PlayState GFxMovieRoot::GetPlayState (GFxMovieRoot * a_this)
+81785,0x140f1fb80,0x140f7c880,4,GRectF GFxMovieRoot::GetSafeRect (GFxMovieRoot * a_this)
+81790,0x140f1fe10,0x140f7cb10,4,"void GFxMovieRoot::GetStats (GFxMovieRoot * a_this, GStatBag * a_bag, bool a_reset)"
+81792,0x140f1fef0,0x140f7cbf0,4,"void * GFxMovieRoot::GetTopMostEntity (GFxMovieRoot * a_this, float * a_point, uint a_mouseIndex, bool a_testAll, void * a_ignoreClip)"
+81793,0x140f200b0,0x140f7cdb0,4,void* GFxMovieRoot::GetUserData (GFxMovieRoot * a_this)
+81794,0x140f200c0,0x140f7cdc0,4,"bool GFxMovieRoot::GetVariable (GFxMovieRoot * a_this, GFxValue * a_val, char * a_pathToVar)"
+81795,0x140f201b0,0x140f7ceb0,3,"bool GFxMovieRoot::GetVariableArray (GFxMovieRoot * a_this, SetArrayType a_type, char * a_pathToVar, std::uint32_t a_index, void * a_data, std::uint32_t a_count)"
+81796,0x140f208d0,0x140f7d5d0,4,"std::uint32_t GFxMovieRoot::GetVariableArraySize (GFxMovieRoot * a_this, char * a_pathToVar)"
+81797,0x140f209a0,0x140f7d6a0,4,AlignType GFxMovieRoot::GetViewAlignment (GFxMovieRoot * a_this)
+81798,0x140f209b0,0x140f7d6b0,4,ScaleModeType GFxMovieRoot::GetViewScaleMode (GFxMovieRoot * a_this)
+81799,0x140f209c0,0x140f7d6c0,4,"void GFxMovieRoot::GetViewport (GFxMovieRoot * a_this, GViewport * a_viewDesc)"
+81800,0x140f209f0,0x140f7d6f0,4,bool GFxMovieRoot::GetVisible (GFxMovieRoot * a_this)
+81801,0x140f20a20,0x140f7d720,4,GRectF GFxMovieRoot::GetVisibleFrameRect (GFxMovieRoot * a_this)
+81802,0x140f20a40,0x140f7d740,4,"void GFxMovieRoot::GotoFrame (GFxMovieRoot * a_this, std::uint32_t a_frameNumber)"
 81803,0x140f20a60,0x140f7d760,3,RE::GFxMovieRoot::GotoLabeledFrame
+81804,0x140f20b30,0x140f7d830,3,"HEResult GFxMovieRoot::HandleEvent (GFxMovieRoot * a_this, GFxEvent * a_event)"
+81806,0x140f21250,0x140f7df50,4,bool GFxMovieRoot::HasLooped (GFxMovieRoot * a_this)
+81807,0x140f21280,0x140f7df80,4,"void GFxMovieRoot::HideFocusRect (GFxMovieRoot * a_this, uint a_controller)"
+81808,0x140f21350,0x140f7e050,4,"bool GFxMovieRoot::HitTest3D (GFxMovieRoot * a_this, GPoint3F * a_ptOut, float a_x, float a_y, std::uint32_t a_controllerIdx)"
+81809,0x140f21670,0x140f7e370,4,"bool GFxMovieRoot::HitTest (GFxMovieRoot * a_this, float a_x, float a_y, HitTestType a_testCond, std::uint32_t a_controllerIdx)"
+81811,0x140f21a60,0x140f7e760,4,"void GFxMovieRoot::InitFocusKeyInfo (GFxMovieRoot * a_this, void * a_focusInfo, void * a_keyEntry, uint a_flag, GFxFocusGroupDescr * a_group)"
+81814,0x140f21e70,0x140f7eb70,4,"bool GFxMovieRoot::Invoke (GFxMovieRoot * a_this, char * a_methodName, GFxValue * a_result, GFxValue * a_args, std::uint32_t a_numArgs)"
+81815,0x140f21f50,0x140f7ec50,4,"bool GFxMovieRoot::InvokeFmt (GFxMovieRoot * a_this, char * a_methodName, GFxValue * a_result, char * a_argFmt, ...)"
+81818,0x140f22230,0x140f7ef30,3,"bool GFxMovieRoot::InvokeArgs (GFxMovieRoot * a_this, char * a_methodName, GFxValue * a_result, char * a_argFmt, std::va_list a_args)"
+81819,0x140f22310,0x140f7f010,4,"bool GFxMovieRoot::IsAvailable (GFxMovieRoot * a_this, char * a_pathToVar)"
+81821,0x140f22480,0x140f7f180,4,bool GFxMovieRoot::IsMovieFocused (GFxMovieRoot * a_this)
+81822,0x140f22490,0x140f7f190,4,bool GFxMovieRoot::IsPaused (GFxMovieRoot * a_this)
+81834,0x140f23200,0x140f7ff00,4,"void GFxMovieRoot::NotifyMouseState (GFxMovieRoot * a_this, float a_x, float a_y, std::uint32_t a_buttons, std::uint32_t a_mouseIndex)"
+81840,0x140f23800,0x140f80500,4,"void GFxMovieRoot::ProcessFocusKey (GFxMovieRoot * a_this, uint a_eventType, void * a_keyEntry, void * a_focusInfo)"
+81841,0x140f246b0,0x140f813b0,4,void GFxMovieRoot::ProcessInput (GFxMovieRoot * a_this)
+81842,0x140f24900,0x140f81600,4,"void GFxMovieRoot::ProcessKeyEvent (GFxMovieRoot * a_this, void * a_levelInfo, void * a_event)"
 81844,0x140f24c50,0x140f81950,2,"void LoadMovieImageCallback(void* a_movieRoot, void* a_loadQueueEntry, void* a_action, void* a_urlInfo)"
+81848,0x140f25ae0,0x140f827e0,4,"void GFxMovieRoot::ProcessMouseEvent (GFxMovieRoot * a_this, void * a_level, void * a_event, uint * a_mouseMask)"
+81850,0x140f26140,0x140f82e40,4,"void GFxMovieRoot::SetFocusWithEvents (GFxMovieRoot * a_this, void * a_newFocus, uint a_flags, uint a_controller, uint a_method)"
+81856,0x140f26610,0x140f83310,4,void GFxMovieRoot::Release (GFxMovieRoot * a_this)
+81860,0x140f268e0,0x140f835e0,4,"void GFxMovieRoot::RemovePrePassCharacter (GFxMovieRoot * a_this, void * a_character)"
+81872,0x140f27050,0x140f83d50,4,"void GFxMovieRoot::ResetFocusForCharacter (GFxMovieRoot * a_this, void * a_character)"
+81873,0x140f27230,0x140f83f30,4,void GFxMovieRoot::ResetFocusGroups (GFxMovieRoot * a_this)
+81883,0x140f27a70,0x140f84770,4,void GFxMovieRoot::Restart (GFxMovieRoot * a_this)
+81888,0x140f28270,0x140f84f70,4,"void GFxMovieRoot::SetBackgroundAlpha (GFxMovieRoot * a_this, float a_alpha)"
+81889,0x140f282a0,0x140f84fa0,4,"void GFxMovieRoot::SetBackgroundColor (GFxMovieRoot * a_this, GColor a_bgColor)"
+81890,0x140f282b0,0x140f84fb0,4,"void GFxMovieRoot::SetControllerCount (GFxMovieRoot * a_this, std::uint32_t a_count)"
+81891,0x140f282d0,0x140f84fd0,4,"bool GFxMovieRoot::SetControllerFocusGroup (GFxMovieRoot * a_this, std::uint32_t a_controllerIdx, std::uint32_t a_focusGroupIndex)"
+81892,0x140f28310,0x140f85010,4,"void GFxMovieRoot::SetExternalInterfaceRetVal (GFxMovieRoot * a_this, GFxValue * a_val)"
+81893,0x140f28320,0x140f85020,4,"void GFxMovieRoot::TransferKeyboardFocus (GFxMovieRoot * a_this, void * a_newFocus, uint a_controller)"
+81895,0x140f284b0,0x140f851b0,4,"void GFxMovieRoot::SetKeyboardFocusTo (GFxMovieRoot * a_this, void * a_character, uint a_controller)"
+81898,0x140f28950,0x140f85650,4,"void GFxMovieRoot::SetModalClip (GFxMovieRoot * a_this, void * a_sprite, uint a_controller)"
+81899,0x140f28a20,0x140f85720,4,"void GFxMovieRoot::SetMouseCursorCount (GFxMovieRoot * a_this, std::uint32_t a_count)"
+81900,0x140f28a40,0x140f85740,4,"void GFxMovieRoot::SetPause (GFxMovieRoot * a_this, bool a_pause)"
+81901,0x140f28b20,0x140f85820,4,"void GFxMovieRoot::SetPerspective3D (GFxMovieRoot * a_this, GMatrix3D * a_projMatIn)"
+81903,0x140f28d10,0x140f85a10,4,"void GFxMovieRoot::SetPlayState (GFxMovieRoot * a_this, PlayState a_state)"
+81904,0x140f28d30,0x140f85a30,4,"void GFxMovieRoot::SetSafeRect (GFxMovieRoot * a_this, GRectF * a_rect)"
+81906,0x140f28e70,0x140f85b70,4,"void GFxMouseState::SetTopmostEntity (GFxMouseState * a_this, void * a_entity)"
+81907,0x140f28f40,0x140f85c40,4,"void GFxMovieRoot::SetUserData (GFxMovieRoot * a_this, void * a_data)"
+81908,0x140f28f50,0x140f85c50,4,"bool GFxMovieRoot::SetVariable (GFxMovieRoot * a_this, char * a_pathToVar, GFxValue * a_value, SetVarType a_setType)"
+81909,0x140f29090,0x140f85d90,4,"bool GFxMovieRoot::SetVariableArray (GFxMovieRoot * a_this, SetArrayType a_type, char * a_pathToVar, std::uint32_t a_index, void * a_data, std::uint32_t a_count, SetVarType a_setType)"
+81910,0x140f294c0,0x140f861c0,4,"bool GFxMovieRoot::SetVariableArraySize (GFxMovieRoot * a_this, char * a_pathToVar, std::uint32_t a_count, SetVarType a_setType)"
+81912,0x140f296e0,0x140f863e0,4,"void GFxMovieRoot::SetView3D (GFxMovieRoot * a_this, GMatrix3D * a_viewMatIn)"
+81913,0x140f297a0,0x140f864a0,4,"void GFxMovieRoot::SetViewAlignment (GFxMovieRoot * a_this, AlignType a_type)"
+81914,0x140f297c0,0x140f864c0,4,"void GFxMovieRoot::SetViewScaleMode (GFxMovieRoot * a_this, ScaleModeType a_type)"
+81915,0x140f297e0,0x140f864e0,4,"void GFxMovieRoot::SetViewport (GFxMovieRoot * a_this, GViewport * a_viewDesc)"
+81916,0x140f29a60,0x140f86760,4,"void GFxMovieRoot::SetVisible (GFxMovieRoot * a_this, bool a_visible)"
+81922,0x140f29f30,0x140f86c30,4,"bool GFxMovieRoot::TranslateLocalToScreen (GFxMovieRoot * a_this, char * a_pathToCharacter, GPointF * a_pt, GPointF * a_presPt, void * a_userMatrix)"
+81923,0x140f2a110,0x140f86e10,4,"GRectF GFxMovieRoot::TranslateToScreen (GFxMovieRoot * a_this, GRectF * a_p, void * a_userMatrix)"
+81924,0x140f2a220,0x140f86f20,4,"GPointF GFxMovieRoot::TranslateToScreen (GFxMovieRoot * a_this, GPointF * a_p, void * a_userMatrix)"
+82069,0x140f34520,0x140f91220,4,"void GFxSprite::Display (GFxSprite * a_this, GFxDisplayContext * a_context)"
+82129,0x140f38610,0x140f95310,4,void * GFxSprite::GetOrCreateASObject (GFxSprite * a_this)
+82137,0x140f38890,0x140f95590,4,"void * GFxSprite::GetRelativeTarget (GFxSprite * a_this, void * a_name, bool a_flag)"
+82176,0x140f3a070,0x140f96d70,4,"bool GFxSprite::OnEvent (GFxSprite * a_this, void * a_eventId)"
+82183,0x140f3a680,0x140f97380,4,"void GFxSprite::OnGettingKeyboardFocus (GFxSprite * a_this, uint a_controller)"
+82187,0x140f3a940,0x140f97640,4,"bool GFxSprite::OnLosingKeyboardFocus (GFxSprite * a_this, void * a_newFocus, uint a_controller)"
 82382,0x140f45350,0x140fa2050,4,bool BSScaleformImageLoader::AddTexture(BSScaleformExternalTexture& a_texture)
 82383,0x140f45820,0x140fa2520,4,void BSScaleformImageLoader::RemoveTexture(BSScaleformExternalTexture& a_texture)
 82462,0x140f48270,0x140fa4f70,3,bool GSysAllocPaged::InitHeapEngine(const void* a_heapDesc)
 82464,0x140f48360,0x140fa5060,3,void GSysAllocPaged::ShutdownHeapEngine()
+82556,0x140f4d680,0x140faa380,4,GFxLog::LogMessageVarg
+82638,0x140f52650,0x140faf350,4,"void * GASFnCall::Arg (GASFnCall * a_this, uint a_index)"
+83684,0x140f87470,0x140fe4170,4,Scaleform::Render::Text::DocView::ClearImageSubstitutor
+83691,0x140f88160,0x140fe4e60,4,Scaleform::Render::Text::DocView::CreateImageSubstitutor
+83693,0x140f88200,0x140fe4f00,4,"void GFxEditTextCharacter::Display (GFxEditTextCharacter * a_this, GFxDisplayContext * a_context)"
 84045,0x140fa27e0,0x140fff4e0,3,"void GetSpecialTransformProperty(void* a_data, void* a_movieView, void* a_name, void* a_result)"
 84051,0x140fa2ff0,0x140fffcf0,3,"void SetSpecialTransformProperty(void* a_data, void* a_movieView, void* a_valueLo, void* a_valueHi, void* a_isDObj)"
+84627,0x140fbaf30,0x141017c30,4,"void GASSelectionCtorFunction::FindFocus (GASSelectionCtorFunction * a_this, void * a_fn)"
+84638,0x140fbbfd0,0x141018cd0,4,"void GASSelectionCtorFunction::MoveFocus (GASSelectionCtorFunction * a_this, void * a_fn)"
+84987,0x140fcd140,0x141029e40,4,"void GFxMouseState::GenerateMouseEvents (GFxMouseState * a_this, uint a_mouseIndex, GFxMouseState * a_state, uint a_buttonMask)"
+85372,0x140fe4110,0x141040e10,4,"GFxDisplayContext * GFxDisplayContext::ctor (GFxDisplayContext * a_this, void * a_stateBag, void * a_ref, void * a_unkB8, uint a_unkC0, float * a_matrix6, void * a_unkE0, uchar a_flag30)"
+85374,0x140fe42d0,0x141040fd0,4,void GFxDisplayContext::dtor (GFxDisplayContext * a_this)
+85379,0x140fe5140,0x141041e40,4,"void GFxDisplayContext::SetupStates (GFxDisplayContext * a_this, void * a_stateBag, void * a_ref, void * a_unkB8, uint a_unkC0, float * a_matrix6)"
+85380,0x140fe5320,0x141042020,4,void GFxDisplayContext::EndClipLayer (GFxDisplayContext * a_this)
+85381,0x140fe5360,0x141042060,4,"void GFxDisplayContext::RestoreDisplayState (GFxDisplayContext * a_this, void * a_savedState)"
+85384,0x140fe5760,0x141042460,4,"void GFxDisplayContext::BeginClipLayer (GFxDisplayContext * a_this, void * a_object)"
+85644,0x140ff6e90,0x141053b90,4,"void GFxStaticTextCharacter::Display (GFxStaticTextCharacter * a_this, GFxDisplayContext * a_context)"
 85757,0x140fffeb0,0x14105cbb0,4,void FUN_140fffeb0 (undefined8 * param_1)
+85880,0x1410047f0,0x1410614f0,3,"void * GFxFontCacheManager::ctor_params (GFxFontCacheManager * a_this, void * a_params, uchar a_flagA, uchar a_flagB)"
+85881,0x1410048a0,0x1410615a0,3,void * GFxFontCacheManager::ctor (GFxFontCacheManager * a_this)
+85882,0x141004980,0x141061680,3,"void * GFxFontCache::ctor (GFxFontCache * a_this, void * a_heap)"
+85884,0x141004e10,0x141061b10,4,void GFxFontCacheManager::dtor_impl (GFxFontCacheManager * a_this)
+85885,0x141004e70,0x141061b70,4,void GFxFontCache::dtor (GFxFontCache * a_this)
+85889,0x141005170,0x141061e70,4,"void * GFxFontCacheManager::dtor_deleting (GFxFontCacheManager * a_this, uint a_flags)"
+85901,0x141005a20,0x141062720,4,void GFxFontCache::Clear (GFxFontCache * a_this)
+85916,0x141006d60,0x141063a60,4,"void GFxFontCacheManager::CreateCache (GFxFontCacheManager * a_this, void * a_params, uchar a_flag)"
+85943,0x14100a600,0x141067300,4,"void GFxFontCache::SetRenderer (GFxFontCache * a_this, void * a_renderer)"
+86164,0x141017b90,0x141074890,3,"void Scaleform::Render::Text::LineBuffer::Display (Scaleform::Render::Text::LineBuffer * a_this, GFxDisplayContext * a_context, GMatrix2D * a_matrix, Cxform * a_cxform, char a_flag, void * a_displayParams, void * a_highlighter)"
+86176,0x14101ab70,0x141077870,4,Scaleform::Render::Text::LineBuffer::GetMinLineHeight
+86177,0x14101abd0,0x1410778d0,4,Scaleform::Render::Text::LineBuffer::GetVScrollOffsetInFixp
+86383,0x14102ba70,0x141088770,4,Scaleform::Render::Text::DocView::AppendHtml
+86395,0x14102c250,0x141088f50,4,"void Scaleform::Render::Text::DocView::Display (Scaleform::Render::Text::DocView * a_this, GFxDisplayContext * a_context, GMatrix2D * a_matrix, Cxform * a_cxform, char a_flag)"
+86401,0x14102d890,0x14108a590,4,Scaleform::Render::Text::DocView::ForceReformat
+86413,0x141030a70,0x14108d770,4,Scaleform::Render::Text::DocView::GetHScrollOffset
+86417,0x141030bb0,0x14108d8b0,4,Scaleform::Render::Text::DocView::GetLineLength
+86419,0x141030d70,0x14108da70,4,Scaleform::Render::Text::DocView::GetLineOffset
+86422,0x141030f40,0x14108dc40,4,Scaleform::Render::Text::DocView::GetMaxHScroll
+86425,0x141031170,0x14108de70,4,Scaleform::Render::Text::DocView::GetSelectionBackgroundColor
+86428,0x1410312d0,0x14108dfd0,4,Scaleform::Render::Text::DocView::GetSelectionTextColor
+86433,0x1410313f0,0x14108e0f0,4,Scaleform::Render::Text::DocView::GetViewRect
+86439,0x141032540,0x14108f240,4,Scaleform::Render::Text::DocView::InsertText
+86453,0x141032e80,0x14108fb80,4,Scaleform::Render::Text::DocView::ReplaceTextA
+86462,0x1410333e0,0x1410900e0,4,Scaleform::Render::Text::DocView::SetHScrollOffset
+86469,0x141033690,0x141090390,4,Scaleform::Render::Text::DocView::SetTextFormat
+86470,0x1410336c0,0x1410903c0,4,Scaleform::Render::Text::DocView::SetVScrollOffset
+86942,0x14104ef30,0x1410abc30,4,Scaleform::Render::Text::LineBuffer::IsLineVisible
 87907,0x1410a2370,0x1410fefa0,4,Skyrim-upscaler
 87965,0x1410a5740,0x141102370,3,"BSPathingLocation* BSPathingLocation::ctor(const NiPoint3& a_location, const BSTSmartPointer<BSPathingCell>& a_cell)"
 87978,0x1410a5e50,0x141102a80,3,"bool BSPathingLocation::GetNavMeshAndTriangle(BSTSmartPointer<BSNavmesh>& a_navMeshOut, std::uint16_t& a_triOut) const"
