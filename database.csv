@@ -2197,6 +2197,8 @@
 82153,0x140f393a0,0x140f960a0,4,"void GFxSprite::SetFrame (GFxSprite * a_this, int a_frame)"
 82163,0x140f39a20,0x140f96720,4,bool GFxSprite::IsFocusEnabled (GFxSprite * a_this)
 82166,0x140f39c20,0x140f96920,4,bool GFxSprite::IsTabable (GFxSprite * a_this)
+82177,0x140f3a0d0,0x140f96dd0,3,"bool GFxSprite::HandleButtonEvent (GFxSprite * a_this, void * a_eventId)"
+82186,0x140f3a7d0,0x140f974d0,4,"bool GFxSprite::OnKeyEvent (GFxSprite * a_this, void * a_eventId, void * a_keyMask)"
 82189,0x140f3abd0,0x140f978d0,4,"bool GFxSprite::PointTestLocal (GFxSprite * a_this, void * a_point, uchar a_hitTestMask)"
 82200,0x140f3b890,0x140f98590,4,"bool GFxSprite::ReplaceChildCharacter (GFxSprite * a_this, void * a_oldChar, void * a_newChar)"
 82228,0x140f3cee0,0x140f99be0,4,"void GFxSprite::SetPlayState (GFxSprite * a_this, bool a_playing)"

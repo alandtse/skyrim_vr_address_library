@@ -7243,6 +7243,8 @@ sseid,aeid,confidence,name
 82153,84232,3,GFxSprite::SetFrame
 82163,84242,3,GFxSprite::IsFocusEnabled
 82166,84244,3,GFxSprite::IsTabable
+82177,84256,3,GFxSprite::HandleButtonEvent
+82186,84265,3,GFxSprite::OnKeyEvent
 82189,84268,3,GFxSprite::PointTestLocal
 82200,84279,3,GFxSprite::ReplaceChildCharacter
 82228,84310,3,GFxSprite::SetPlayState
