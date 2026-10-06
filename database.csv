@@ -26,6 +26,7 @@
 11299,0x140103f90,0x140114540,4,"void MagicSystem::GetMagicItemDescription(BSString& a_out, MagicItem* a_magicItem, const char* a_beginTagFormat, const char* a_endTagFormat)"
 11308,0x140104ad0,0x1401150c0,3,FixedStrings* FixedStrings::GetSingleton()
 11356,0x1401057d0,0x140115dc0,4,"undefined FUN_1401057D0(longlong param_1, longlong param_2)"
+11437,0x140107690,0x140117c80,4,ExtraDataList * ExtraDataList::ctor (ExtraDataList * a_this)
 11452,0x14010cc40,0x14011d220,3,bool ExtraDataList::IsInventoryStackable(bool a_ignoreWorn) const
 11463,0x14010DAE0,0x14011e0c0,3,BSExtraDataList::SetOwnerForm
 11471,0x14010e570,0x14011eb50,4,"void SetCount_14010E570 (BSExtraDataList * param_1, ushort a_count)"
