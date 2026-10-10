@@ -20,6 +20,7 @@
 11218,0x140101e30,0x1401123e0,3,uint32_t MagicItem::GetLongestDuration_140101e30 (MagicItem * param_1)
 11219,0x140101ed0,0x140112480,3,int32_t MagicItem::GetLargestArea_140101ED0 (MagicItem * param_1)
 11222,0x140102030,0x1401125e0,4,"void MagicItem::Traverse (MagicItem * a_this, MagicItemTraversalFunctor * a_visitor)"
+11233,0x140102570,0x140112b20,3,void FreeMemory(void* a_ptr)
 11286,0x140103b10,0x1401140c0,4,BGSSoundDescriptorForm* MagicSystem::GetMagicFailureSound(MagicSystem::SpellType a_type)
 11294,0x140103dd0,0x140114380,4,float MagicSystem::GetMagicCasterTargetUpdateInterval()
 11295,0x140103de0,0x140114390,4,char* MagicSystem::GetCannotCastString(MagicSystem::CannotCastReason a_reason)
@@ -1906,8 +1907,12 @@
 69681,0x140c77ed0,0x140cbe300,3,RE::NiBillboardNode::RotateToCamera
 69692,0x140c79080,0x140cbf8d0,3,NiDirectionalLight* NiDirectionalLight::Ctor
 69699,0x140c792a0,0x140cbfaf0,4,void NiCullingProcess::SetFrustum(const NiFrustum* a_frustum)
+69758,0x140c7ca70,0x140cc32c0,3,"bool NiSkinPartition::DrawPartition(NiSkinPartition::DrawContext* a_context, std::uint32_t a_index)"
+69759,0x140c7cb60,0x140cc33b0,3,"bool NiSkinPartition::HasPartitionForLOD(std::uint32_t a_singleLevel, std::uint32_t a_lodIndex)"
 69804,0x140c7eb60,0x140cc5250,3,RE::NiSkinInstance::Ctor
 69838,0x140c80b80,0x140cc7420,3,void NiTriBasedGeom::NiTriBasedGeom(NiGeometryData* a_data)
+70265,0x140c8e220,0x140cd4d20,3,"bool BSLODTriShape::HasDrawableLOD(std::uint32_t a_lodModeA, std::uint32_t a_lodModeB, bool a_checkB)"
+70266,0x140c8e300,0x140cd4e00,3,std::uint32_t BSLODTriShape::GetTriangleCountForLOD(std::uint32_t a_lodMode)
 70361,0x140c91820,0x140cd8370,3,"NiPick* NiPick::ctor(std::uint32_t a_initialSize, std::uint32_t a_growBy)"
 70362,0x140c918e0,0x140cd8430,3,void NiPick::dtor()
 70363,0x140c91930,0x140cd8480,3,"bool NiPick::PickObjects(const NiPoint3& a_origin, const NiPoint3& a_direction, bool a_append)"
@@ -2088,6 +2093,8 @@
 75647,0x140d74d10,0x140dc7b50,4,"void RenderTargetManager::SetCurrentDepthStencilTarget(RENDER_TARGET_DEPTHSTENCIL a_renderTarget, SetRenderTargetMode a_mode, std::uint32_t a_slice)"
 75648,0x140d74d60,0x140dc7ba0,4,"void RenderTargetManager::SetCurrentCubeMapRenderTarget(RENDER_TARGET_CUBEMAP a_renderTarget, SetRenderTargetMode a_mode, std::uint32_t a_faceIndex, bool a_updateViewport)"
 75654,0x140d74ec0,0x140dc7d10,3,"void Renderer::SetRenderTarget(std::uint32_t a_renderTargetSlot, RENDER_TARGET a_renderTarget, SetRenderTargetMode a_mode, bool a_updateViewport)"
+75681,0x140d7a180,0x140dcdb30,3,std::uint64_t NiTriShape::CreateSkinPartitionBuffers(void* a_extra)
+75682,0x140d7a6d0,0x140dce080,3,void NiTriShape::CreateBSTriShapeFromData(bool a_dynamic)
 75694,0x140d7bab0,0x140dcf4f0,3,"void SetCameraData(const NiCamera* a_camera, std::uint32_t a_flags)"
 75709,0x140d7cfb0,0x140dd1160,3,void BSGraphics_Renderer_Begin_UpdateJitter_140d7cfb0(BSGraphics::State* a_state)
 75711,0x140d7d130,0x140dd1320,3,"void BSGraphics::State::BuildCameraStateData(CameraStateData* a_entry, NiCamera* a_camera, bool a_useJitter)"
@@ -2426,12 +2433,16 @@
 101630,0x14132e690,0x141371540,3,std::uint32_t BSShadowParabolicLight::GetPassExtraParam(std::uint32_t a_accumFlag)
 101631,0x14132ead0,0x141371a00,3,"void GetLightingShaderDefines(uint32_t descriptor, D3D_SHADER_MACRO* defines)"
 101633,0x14132ef60,0x141371e90,3,uint32_t BSLightingShader::GetPixelTechnique (uint32_t rawTechnique)
+101660,0x1413300c0,0x140db0690,3,std::uint32_t BSMeshLODTriShape::GetStartIndexForCurrentLOD()
+101662,0x141330160,0x140db06c0,3,"bool BSMeshLODTriShape::HasDrawableLOD(std::uint32_t a_lodModeA, std::uint32_t a_lodModeB, bool a_checkB)"
+101663,0x141330240,0x140db0820,3,std::uint32_t BSMeshLODTriShape::GetTriangleCountForLOD(std::uint32_t a_lodMode)
 101779,0x14133a750,0x141377b30,3,void StartTimer(int a_index)
 101780,0x14133a7b0,0x141377b90,3,void StopTimer(int a_index)
 101821,0x14133e250,0x14137b630,3,BSWin32SystemUtility* BSWin32SystemUtility::GetSingleton()
 101884,0x14133f0c0,0x14137c200,3,RE::BSWin32SaveDataSystemUtility::GetSingleton
 101962,0x141340ff0,0x14137e180,4,"longlong **BSWin32SaveDataSystemUtility::Ctor_141340FF0(longlong param_1,longlong **param_2,char *param_3,int param_4)"
 101985,0x1413420c0,0x14137f330,4,"ulonglong anonymous_namespace__Win32FileType::CopyToBuffer_1413420C0(longlong param_1,undefined8 param_2,uint param_3)"
+102158,0x14134a498,0x14138a1ac,3,void NiMemFree(void* a_ptr)
 102238,0x14134bdb0,0x14138baba,3,RE::_CRT::RTDynamicCast
 106534,0x141367330,0x1413c25d0,4,BSLightingShaderProperty::DeletingDtor
 227915,0x1415092a0,0x14157f3e8,4,GetCurrentThreadId()
