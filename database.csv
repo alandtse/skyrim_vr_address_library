@@ -2095,6 +2095,7 @@
 75654,0x140d74ec0,0x140dc7d10,3,"void Renderer::SetRenderTarget(std::uint32_t a_renderTargetSlot, RENDER_TARGET a_renderTarget, SetRenderTargetMode a_mode, bool a_updateViewport)"
 75681,0x140d7a180,0x140dcdb30,3,std::uint64_t NiTriShape::CreateSkinPartitionBuffers(void* a_extra)
 75682,0x140d7a6d0,0x140dce080,3,void NiTriShape::CreateBSTriShapeFromData(bool a_dynamic)
+75684,0x140d7aec0,0x140dce930,3,"BSTriShape* NiTriShape::ConvertToBSTriShape(void* a_unused1, std::uint32_t a_unused2, void* a_listener, bool a_dynamic)"
 75694,0x140d7bab0,0x140dcf4f0,3,"void SetCameraData(const NiCamera* a_camera, std::uint32_t a_flags)"
 75709,0x140d7cfb0,0x140dd1160,3,void BSGraphics_Renderer_Begin_UpdateJitter_140d7cfb0(BSGraphics::State* a_state)
 75711,0x140d7d130,0x140dd1320,3,"void BSGraphics::State::BuildCameraStateData(CameraStateData* a_entry, NiCamera* a_camera, bool a_useJitter)"
