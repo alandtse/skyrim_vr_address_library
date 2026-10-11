@@ -1595,6 +1595,7 @@ sseid,aeid,confidence,name
 11415,11560,1,BSExtraData::dtor_*
 11417,11562,1,ExtraHavok::dtor_*
 11418,11563,1,ExtraSeenData::dtor_*
+11427,11572,3,ExtraDataList::dtor_impl
 11429,11575,1,ExtraDataList::AddExtraDataUnsafe_*
 11430,11576,1,ExtraDataList::RemoveExtraDataUnsafe_*
 11432,11578,1,
@@ -1603,6 +1604,7 @@ sseid,aeid,confidence,name
 11435,11581,1,ExtraDataList::GetCountOfExtraDataEntries_*
 11436,11582,1,ExtraDataList::HasExtraData_Unsafe_*
 11437,11583,1,ExtraDataList::ctor_*
+11438,11584,3,ExtraDataList::dtor
 11440,11586,1,
 11441,11587,1,
 11446,11592,1,
