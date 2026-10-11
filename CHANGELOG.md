@@ -1,3 +1,17 @@
+# [0.277.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.276.1...v0.277.0) (2026-10-11)
+
+
+### Features
+
+* add ExtraDataList constructor ([#251](https://github.com/alandtse/skyrim_vr_address_library/issues/251)) ([ee105a0](https://github.com/alandtse/skyrim_vr_address_library/commit/ee105a03e2724d44a174a6b63e5645739ebe5ed3))
+* add ExtraDataList destructor rows ([#254](https://github.com/alandtse/skyrim_vr_address_library/issues/254)) ([97f701f](https://github.com/alandtse/skyrim_vr_address_library/commit/97f701fd486969496ad07369979a2b66b3763cc5))
+* add light-list fence and attach ids ([#257](https://github.com/alandtse/skyrim_vr_address_library/issues/257)) ([babe8e6](https://github.com/alandtse/skyrim_vr_address_library/commit/babe8e678eab46686ae8622bfb74503f9166d598))
+* add LOD shape and skin partition rows ([#256](https://github.com/alandtse/skyrim_vr_address_library/issues/256)) ([7abd704](https://github.com/alandtse/skyrim_vr_address_library/commit/7abd704c16be3fb37a0824038c1347fd49fb4679))
+* add NiBoneMatrixSetterI::SetBoneMatrices ([#255](https://github.com/alandtse/skyrim_vr_address_library/issues/255)) ([d9dea38](https://github.com/alandtse/skyrim_vr_address_library/commit/d9dea38188b0e59dc58c40bd0bb132e4f31fb375))
+* add Scaleform GFx and AS rows ([#250](https://github.com/alandtse/skyrim_vr_address_library/issues/250)) ([3637819](https://github.com/alandtse/skyrim_vr_address_library/commit/3637819ed0afd97c7c27f5a0de9d1153f17be775))
+* add Scaleform SE-AE id rows ([#252](https://github.com/alandtse/skyrim_vr_address_library/issues/252)) ([09b2e46](https://github.com/alandtse/skyrim_vr_address_library/commit/09b2e46bfb36ad793035f1498df440f048280d83))
+* add Scaleform vtable and dtor rows ([#253](https://github.com/alandtse/skyrim_vr_address_library/issues/253)) ([ca6a86e](https://github.com/alandtse/skyrim_vr_address_library/commit/ca6a86e0a26fe453226b86c4934786fc6671821c))
+
 ## [0.276.1](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.276.0...v0.276.1) (2026-10-04)
 
 
