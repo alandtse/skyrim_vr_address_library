@@ -20,12 +20,14 @@
 11218,0x140101e30,0x1401123e0,3,uint32_t MagicItem::GetLongestDuration_140101e30 (MagicItem * param_1)
 11219,0x140101ed0,0x140112480,3,int32_t MagicItem::GetLargestArea_140101ED0 (MagicItem * param_1)
 11222,0x140102030,0x1401125e0,4,"void MagicItem::Traverse (MagicItem * a_this, MagicItemTraversalFunctor * a_visitor)"
+11233,0x140102570,0x140112b20,3,void FreeMemory(void* a_ptr)
 11286,0x140103b10,0x1401140c0,4,BGSSoundDescriptorForm* MagicSystem::GetMagicFailureSound(MagicSystem::SpellType a_type)
 11294,0x140103dd0,0x140114380,4,float MagicSystem::GetMagicCasterTargetUpdateInterval()
 11295,0x140103de0,0x140114390,4,char* MagicSystem::GetCannotCastString(MagicSystem::CannotCastReason a_reason)
 11299,0x140103f90,0x140114540,4,"void MagicSystem::GetMagicItemDescription(BSString& a_out, MagicItem* a_magicItem, const char* a_beginTagFormat, const char* a_endTagFormat)"
 11308,0x140104ad0,0x1401150c0,3,FixedStrings* FixedStrings::GetSingleton()
 11356,0x1401057d0,0x140115dc0,4,"undefined FUN_1401057D0(longlong param_1, longlong param_2)"
+11437,0x140107690,0x140117c80,4,ExtraDataList * ExtraDataList::ctor (ExtraDataList * a_this)
 11452,0x14010cc40,0x14011d220,3,bool ExtraDataList::IsInventoryStackable(bool a_ignoreWorn) const
 11463,0x14010DAE0,0x14011e0c0,3,BSExtraDataList::SetOwnerForm
 11471,0x14010e570,0x14011eb50,4,"void SetCount_14010E570 (BSExtraDataList * param_1, ushort a_count)"
@@ -1785,6 +1787,7 @@
 66891,0x140c03c80,0x140c3eb00,4,void Clean (ScrapHeap * a_this)
 66894,0x140c03db0,0x140c3ec30,4,"void InsertFreeBlock (ScrapHeap * a_this, undefined param_2)"
 66895,0x140c03eb0,0x140c3ed30,4,"void RemoveFreeBlock (ScrapHeap * a_this, undefined * param_2)"
+66906,0x140c04980,0x140c3f800,3,"void BSTArray::RemoveElements(BSTArray* this, void* a_data, uint32_t a_dstIndex, uint32_t a_srcIndex, uint32_t a_count, uint32_t a_elemSize)"
 66962,0x140c06490,0x140c41310,3,RE::CRC32Calculator::SizeOfSize
 66963,0x140c064f0,0x140c41370,3,RE::CRC32Calculator::SizeOf32
 66964,0x140c06570,0x140c413f0,3,RE::CRC32Calculator::SizeOf64
@@ -1906,8 +1909,12 @@
 69681,0x140c77ed0,0x140cbe300,3,RE::NiBillboardNode::RotateToCamera
 69692,0x140c79080,0x140cbf8d0,3,NiDirectionalLight* NiDirectionalLight::Ctor
 69699,0x140c792a0,0x140cbfaf0,4,void NiCullingProcess::SetFrustum(const NiFrustum* a_frustum)
+69758,0x140c7ca70,0x140cc32c0,3,"bool NiSkinPartition::DrawPartition(NiSkinPartition::DrawContext* a_context, std::uint32_t a_index)"
+69759,0x140c7cb60,0x140cc33b0,3,"bool NiSkinPartition::HasPartitionForLOD(std::uint32_t a_singleLevel, std::uint32_t a_lodIndex)"
 69804,0x140c7eb60,0x140cc5250,3,RE::NiSkinInstance::Ctor
 69838,0x140c80b80,0x140cc7420,3,void NiTriBasedGeom::NiTriBasedGeom(NiGeometryData* a_data)
+70265,0x140c8e220,0x140cd4d20,3,"bool BSLODTriShape::HasDrawableLOD(std::uint32_t a_lodModeA, std::uint32_t a_lodModeB, bool a_checkB)"
+70266,0x140c8e300,0x140cd4e00,3,std::uint32_t BSLODTriShape::GetTriangleCountForLOD(std::uint32_t a_lodMode)
 70361,0x140c91820,0x140cd8370,3,"NiPick* NiPick::ctor(std::uint32_t a_initialSize, std::uint32_t a_growBy)"
 70362,0x140c918e0,0x140cd8430,3,void NiPick::dtor()
 70363,0x140c91930,0x140cd8480,3,"bool NiPick::PickObjects(const NiPoint3& a_origin, const NiPoint3& a_direction, bool a_append)"
@@ -2088,6 +2095,9 @@
 75647,0x140d74d10,0x140dc7b50,4,"void RenderTargetManager::SetCurrentDepthStencilTarget(RENDER_TARGET_DEPTHSTENCIL a_renderTarget, SetRenderTargetMode a_mode, std::uint32_t a_slice)"
 75648,0x140d74d60,0x140dc7ba0,4,"void RenderTargetManager::SetCurrentCubeMapRenderTarget(RENDER_TARGET_CUBEMAP a_renderTarget, SetRenderTargetMode a_mode, std::uint32_t a_faceIndex, bool a_updateViewport)"
 75654,0x140d74ec0,0x140dc7d10,3,"void Renderer::SetRenderTarget(std::uint32_t a_renderTargetSlot, RENDER_TARGET a_renderTarget, SetRenderTargetMode a_mode, bool a_updateViewport)"
+75681,0x140d7a180,0x140dcdb30,3,std::uint64_t NiTriShape::CreateSkinPartitionBuffers(void* a_extra)
+75682,0x140d7a6d0,0x140dce080,3,void NiTriShape::CreateBSTriShapeFromData(bool a_dynamic)
+75684,0x140d7aec0,0x140dce930,3,"BSTriShape* NiTriShape::ConvertToBSTriShape(void* a_unused1, std::uint32_t a_unused2, void* a_listener, bool a_dynamic)"
 75694,0x140d7bab0,0x140dcf4f0,3,"void SetCameraData(const NiCamera* a_camera, std::uint32_t a_flags)"
 75709,0x140d7cfb0,0x140dd1160,3,void BSGraphics_Renderer_Begin_UpdateJitter_140d7cfb0(BSGraphics::State* a_state)
 75711,0x140d7d130,0x140dd1320,3,"void BSGraphics::State::BuildCameraStateData(CameraStateData* a_entry, NiCamera* a_camera, bool a_useJitter)"
@@ -2120,9 +2130,15 @@
 80061,0x140ec31d0,0x140f1fca0,4,RE::UIMessageQueue::CreateUIMessageData
 80077,0x140ec3d50,0x140f20820,3,po3tweaks::SitToWait::ProcessMenu
 80087,0x140ec4420,0x140f20ef0,3,bool BSScaleformManager::FileExists(const char* a_fileName)
+80176,0x140ec7930,0x140f24480,4,void * GRefCountNTSImpl::GetWeakProxy (GRefCountNTSImpl * a_this)
 80178,0x140ec79c0,0x140f24510,4,GRefCountNTSImpl::Release
 80197,0x140ec83a0,0x140f24ef0,3,RE::GFxValue::ObjectInterface::AttachMovie
+80200,0x140ec8a60,0x140f255b0,4,"void GFxMovieRoot::CreateArray (GFxMovieRoot * a_this, GFxValue * a_value)"
 80201,0x140ec8b10,0x140f25660,4,"bool GFxValue::ObjectInterface::CreateEmptyMovieClip (void * a_this, void * a_data, GFxValue * a_movieClip, char * a_instanceName, int32_t a_depth)"
+80202,0x140ec8d30,0x140f25880,4,"void GFxMovieRoot::CreateFunction (GFxMovieRoot * a_this, GFxValue * a_value, GFxFunctionHandler * a_fc, void * a_userData)"
+80204,0x140ec8ea0,0x140f259f0,4,"void GFxMovieRoot::CreateObject (GFxMovieRoot * a_this, GFxValue * a_value, char * a_className, GFxValue * a_args, std::uint32_t a_numArgs)"
+80205,0x140ec9330,0x140f25e80,4,"void GFxMovieRoot::CreateString (GFxMovieRoot * a_this, GFxValue * a_value, char * a_string)"
+80206,0x140ec93d0,0x140f25f20,4,"void GFxMovieRoot::CreateStringW (GFxMovieRoot * a_this, GFxValue * a_value, wchar_t * a_string)"
 80207,0x140ec9490,0x140f25fe0,3,RE::GFxValue::ObjectInterface::DeleteMember
 80214,0x140ec9bd0,0x140f26720,3,RE::GFxValue::ObjectInterface::GetArraySize
 80215,0x140ec9be0,0x140f26730,4,"bool GFxValue::ObjectInterface::GetCxform(void* a_data, GRenderer::Cxform* a_cx) const"
@@ -2159,8 +2175,18 @@
 80307,0x140ecee30,0x140f2bb20,4,bool BSScaleformManager::IsValidName(const char* a_name)
 80446,0x140ed3a50,0x140f2da40,3,GString* GString::ctor(const char* a_str)
 80547,0x140ed80b0,0x140f30f20,3,RE::GFxMovieView::InvokeNoReturn
+80585,0x140edac40,0x140f37940,4,"void GMatrix2D::EncloseTransform (GMatrix2D * a_this, void * a_out, void * a_rect)"
 80620,0x140edbfa0,0x140f38ca0,3,RE::GFxLoader::CreateMovie
+80737,0x140ee1bd0,0x140f3e8d0,4,void GASStringNode::ReleaseNode (GASStringNode * a_this)
+80758,0x140ee27a0,0x140f3f4a0,4,"void * GASValue::AssignFrom (GASValue * a_this, void * a_src)"
+80766,0x140ee2e10,0x140f3fb10,4,void GASValue::dtor (GASValue * a_this)
 80776,0x140ee3780,0x140f40480,4,"void * GASFnCall::Arg (GASFnCall * a_this, uint a_index)"
+80783,0x140ee3d10,0x140f40a10,4,void GASValue::DropRefs (GASValue * a_this)
+80795,0x140ee4620,0x140f41320,4,"void GASValue::SetAsCharacter (GASValue * a_this, void * a_character)"
+80805,0x140ee4ce0,0x140f419e0,4,"void * GASValue::ToCharacter (GASValue * a_this, void * a_env)"
+80806,0x140ee4d20,0x140f41a20,4,"bool GASValue::ToBool (GASValue * a_this, void * a_env)"
+80815,0x140ee59b0,0x140f426b0,4,"void * GASValue::ToString (GASValue * a_this, void * a_out, void * a_env, int a_radix, bool a_flag)"
+80817,0x140ee5ec0,0x140f42bc0,4,uint GASValue::ToUInt32 (GASValue * a_this)
 80905,0x140ee98f0,0x140f465f0,3,GASObject::GASObjectInterface_Func4
 80915,0x140eea220,0x140f46f20,3,GASObject::GASObjectInterface_Func9
 80929,0x140eeada0,0x140f47aa0,3,SetMemberFallback
@@ -2170,35 +2196,140 @@
 80943,0x140eeba70,0x140f48770,2,GASObject::VisitMembers
 80944,0x140eebc80,0x140f48980,2,GASObject::Watch
 81202,0x140efe220,0x140f5af20,3,"void* GASEnvironment::FindTarget(void* a_pathValue, char* a_path, void* a_unused, undefined8 a_flags)"
+81228,0x140f00c80,0x140f5d980,4,void * GASEnvironment::GetLog (GASEnvironment * a_this)
+81231,0x140f00f70,0x140f5dc70,4,void * GASEnvironment::GetMovieRoot (GASEnvironment * a_this)
+81353,0x140f08ac0,0x140f657c0,4,void GFxCharacterHandle::dtor (GFxCharacterHandle * a_this)
+81368,0x140f09020,0x140f65d20,4,"void Scaleform::GFx::DisplayObjectBase::AddToPrePassList (Scaleform::GFx::DisplayObjectBase * a_this, void * a_root)"
+81385,0x140f09f10,0x140f66c10,4,void * Scaleform::GFx::DisplayObjectBase::GetCharacterHandle (Scaleform::GFx::DisplayObjectBase * a_this)
+81386,0x140f0a0d0,0x140f66dd0,4,"void Scaleform::GFx::DisplayObjectBase::EnsureMatrix3D (Scaleform::GFx::DisplayObjectBase * a_this, void * * a_slot)"
+81392,0x140f0a400,0x140f67100,4,void GFxASCharacter::InvokeCallback (GFxASCharacter * a_this)
+81412,0x140f0b7c0,0x140f684c0,4,Scaleform::GFx::DisplayObjectBase::GetActiveBlendMode
+81431,0x140f0bc90,0x140f68990,4,"void Scaleform::GFx::DisplayObjectBase::GetRootRelativeMatrix (Scaleform::GFx::DisplayObjectBase * a_this, GMatrix2D * a_out)"
+81462,0x140f0d750,0x140f6a450,4,"void Scaleform::GFx::DisplayObjectBase::GetWorldCxform (Scaleform::GFx::DisplayObjectBase * a_this, Cxform * a_out)"
+81463,0x140f0d7a0,0x140f6a4a0,4,"void Scaleform::GFx::DisplayObjectBase::GetWorldMatrix3D (Scaleform::GFx::DisplayObjectBase * a_this, GMatrix3D * a_out)"
+81465,0x140f0d8f0,0x140f6a5f0,4,"void Scaleform::GFx::DisplayObjectBase::GetWorldMatrix (Scaleform::GFx::DisplayObjectBase * a_this, GMatrix2D * a_out)"
+81474,0x140f0ddf0,0x140f6aaf0,4,"bool Scaleform::GFx::DisplayObjectBase::HasMatrix3D (Scaleform::GFx::DisplayObjectBase * a_this, bool a_inherit)"
 81482,0x140f0e010,0x140f6ad10,4,bool GFxCharacter::IsVerboseAction (GFxCharacter * a_this)
 81484,0x140f0e040,0x140f6ad40,4,GFxCharacter::IsVerboseActionErrors
+81515,0x140f0eab0,0x140f6b7b0,4,"void Scaleform::GFx::DisplayObjectBase::RemoveFromPrePassList (Scaleform::GFx::DisplayObjectBase * a_this, void * a_root)"
 81525,0x140f0eef0,0x140f6bbf0,3,"void* GFxValue::ObjectInterface::ResolveCharacter(void* a_data, void* a_valueData, undefined8 a_extra1, undefined8 a_flags)"
+81568,0x140f12530,0x140f6f230,4,"void GFxDisplayList::Display (GFxDisplayList * a_this, GFxDisplayContext * a_context)"
 81643,0x140f17660,0x140f74360,4,GFxMovieRoot::~GFxMovieRoot
 81676,0x140f18bc0,0x140f758c0,4,GFxMovieRoot::dtor_deleting
+81685,0x140f18ed0,0x140f75bd0,4,"void GFxMovieRoot::MoveFocusByTab (GFxMovieRoot * a_this, bool a_shift)"
+81699,0x140f1a5c0,0x140f772c0,4,"void GFxMovieRoot::AddPrePassCharacter (GFxMovieRoot * a_this, void * a_character)"
 81705,0x140f1b370,0x140f78070,3,RE::GFxMovieRoot::Advance
+81707,0x140f1bf60,0x140f78c60,4,"bool GFxMovieRoot::AttachDisplayCallback (GFxMovieRoot * a_this, char * a_pathToObject, void ( * a_callback)(void * a_user), void * a_user)"
+81728,0x140f1d100,0x140f79e00,4,void GFxMovieRoot::Display (GFxMovieRoot * a_this)
+81729,0x140f1d340,0x140f7a040,4,"void GFxMovieRoot::DisplayFocusRect (GFxMovieRoot * a_this, GFxDisplayContext * a_context)"
+81730,0x140f1d8d0,0x140f7a5d0,3,void GFxMovieRoot::DisplayPrePass (GFxMovieRoot * a_this)
+81731,0x140f1dc90,0x140f7a990,4,"void GFxMovieRoot::DisplayTopmostLevels (GFxMovieRoot * a_this, GFxDisplayContext * a_context)"
+81748,0x140f1ed70,0x140f7ba70,4,"void GFxMovieRoot::ApplyFocusMoveEvent (GFxMovieRoot * a_this, void * a_event)"
 81751,0x140f1f020,0x140f7bd20,3,"void* GFxValue::ObjectInterface::ResolveCharacter2(void* a_valueData, void* a_targetPath, void* a_valueData2, undefined8 a_flags)"
+81752,0x140f1f060,0x140f7bd60,4,void GFxMovieRoot::ForceCollectGarbage (GFxMovieRoot * a_this)
+81755,0x140f1f360,0x140f7c060,4,float GFxMovieRoot::GetBackgroundAlpha (GFxMovieRoot * a_this)
+81756,0x140f1f380,0x140f7c080,4,std::uint32_t GFxMovieRoot::GetControllerCount (GFxMovieRoot * a_this)
+81757,0x140f1f390,0x140f7c090,4,"std::uint32_t GFxMovieRoot::GetControllerFocusGroup (GFxMovieRoot * a_this, std::uint32_t a_controllerIdx)"
+81759,0x140f1f410,0x140f7c110,4,std::uint32_t GFxMovieRoot::GetCurrentFrame (GFxMovieRoot * a_this)
+81764,0x140f1f500,0x140f7c200,4,"bool GFxMovieRoot::GetDirtyFlag (GFxMovieRoot * a_this, bool a_doReset)"
+81765,0x140f1f520,0x140f7c220,4,void GFxMovieRoot::AdvanceInputQueue (GFxMovieRoot * a_this)
+81769,0x140f1f6c0,0x140f7c3c0,4,GMemoryHeap* GFxMovieRoot::GetHeap (GFxMovieRoot * a_this)
+81773,0x140f1f7d0,0x140f7c4d0,4,GFxMovieDef::MemoryContext* GFxMovieRoot::GetMemoryContext (GFxMovieRoot * a_this)
+81775,0x140f1f820,0x140f7c520,4,"void * GFxMovieRoot::GetModalClip (GFxMovieRoot * a_this, uint a_controller)"
+81776,0x140f1f890,0x140f7c590,4,std::uint32_t GFxMovieRoot::GetMouseCursorCount (GFxMovieRoot * a_this)
+81777,0x140f1f8a0,0x140f7c5a0,3,"void GFxMovieRoot::GetMouseState (GFxMovieRoot * a_this, std::uint32_t a_mouseIndex, float * a_x, float * a_y, std::uint32_t * a_buttons)"
+81778,0x140f1f930,0x140f7c630,4,GFxMovieDef* GFxMovieRoot::GetMovieDef (GFxMovieRoot * a_this)
+81784,0x140f1fb60,0x140f7c860,4,PlayState GFxMovieRoot::GetPlayState (GFxMovieRoot * a_this)
+81785,0x140f1fb80,0x140f7c880,4,GRectF GFxMovieRoot::GetSafeRect (GFxMovieRoot * a_this)
+81790,0x140f1fe10,0x140f7cb10,4,"void GFxMovieRoot::GetStats (GFxMovieRoot * a_this, GStatBag * a_bag, bool a_reset)"
+81792,0x140f1fef0,0x140f7cbf0,4,"void * GFxMovieRoot::GetTopMostEntity (GFxMovieRoot * a_this, float * a_point, uint a_mouseIndex, bool a_testAll, void * a_ignoreClip)"
+81793,0x140f200b0,0x140f7cdb0,4,void* GFxMovieRoot::GetUserData (GFxMovieRoot * a_this)
+81794,0x140f200c0,0x140f7cdc0,4,"bool GFxMovieRoot::GetVariable (GFxMovieRoot * a_this, GFxValue * a_val, char * a_pathToVar)"
+81795,0x140f201b0,0x140f7ceb0,3,"bool GFxMovieRoot::GetVariableArray (GFxMovieRoot * a_this, SetArrayType a_type, char * a_pathToVar, std::uint32_t a_index, void * a_data, std::uint32_t a_count)"
+81796,0x140f208d0,0x140f7d5d0,4,"std::uint32_t GFxMovieRoot::GetVariableArraySize (GFxMovieRoot * a_this, char * a_pathToVar)"
+81797,0x140f209a0,0x140f7d6a0,4,AlignType GFxMovieRoot::GetViewAlignment (GFxMovieRoot * a_this)
+81798,0x140f209b0,0x140f7d6b0,4,ScaleModeType GFxMovieRoot::GetViewScaleMode (GFxMovieRoot * a_this)
+81799,0x140f209c0,0x140f7d6c0,4,"void GFxMovieRoot::GetViewport (GFxMovieRoot * a_this, GViewport * a_viewDesc)"
+81800,0x140f209f0,0x140f7d6f0,4,bool GFxMovieRoot::GetVisible (GFxMovieRoot * a_this)
+81801,0x140f20a20,0x140f7d720,4,GRectF GFxMovieRoot::GetVisibleFrameRect (GFxMovieRoot * a_this)
+81802,0x140f20a40,0x140f7d740,4,"void GFxMovieRoot::GotoFrame (GFxMovieRoot * a_this, std::uint32_t a_frameNumber)"
 81803,0x140f20a60,0x140f7d760,3,RE::GFxMovieRoot::GotoLabeledFrame
+81804,0x140f20b30,0x140f7d830,3,"HEResult GFxMovieRoot::HandleEvent (GFxMovieRoot * a_this, GFxEvent * a_event)"
+81806,0x140f21250,0x140f7df50,4,bool GFxMovieRoot::HasLooped (GFxMovieRoot * a_this)
+81807,0x140f21280,0x140f7df80,4,"void GFxMovieRoot::HideFocusRect (GFxMovieRoot * a_this, uint a_controller)"
+81808,0x140f21350,0x140f7e050,4,"bool GFxMovieRoot::HitTest3D (GFxMovieRoot * a_this, GPoint3F * a_ptOut, float a_x, float a_y, std::uint32_t a_controllerIdx)"
+81809,0x140f21670,0x140f7e370,4,"bool GFxMovieRoot::HitTest (GFxMovieRoot * a_this, float a_x, float a_y, HitTestType a_testCond, std::uint32_t a_controllerIdx)"
+81811,0x140f21a60,0x140f7e760,4,"void GFxMovieRoot::InitFocusKeyInfo (GFxMovieRoot * a_this, void * a_focusInfo, void * a_keyEntry, uint a_flag, GFxFocusGroupDescr * a_group)"
+81814,0x140f21e70,0x140f7eb70,4,"bool GFxMovieRoot::Invoke (GFxMovieRoot * a_this, char * a_methodName, GFxValue * a_result, GFxValue * a_args, std::uint32_t a_numArgs)"
+81815,0x140f21f50,0x140f7ec50,4,"bool GFxMovieRoot::InvokeFmt (GFxMovieRoot * a_this, char * a_methodName, GFxValue * a_result, char * a_argFmt, ...)"
+81818,0x140f22230,0x140f7ef30,3,"bool GFxMovieRoot::InvokeArgs (GFxMovieRoot * a_this, char * a_methodName, GFxValue * a_result, char * a_argFmt, std::va_list a_args)"
+81819,0x140f22310,0x140f7f010,4,"bool GFxMovieRoot::IsAvailable (GFxMovieRoot * a_this, char * a_pathToVar)"
+81821,0x140f22480,0x140f7f180,4,bool GFxMovieRoot::IsMovieFocused (GFxMovieRoot * a_this)
+81822,0x140f22490,0x140f7f190,4,bool GFxMovieRoot::IsPaused (GFxMovieRoot * a_this)
+81834,0x140f23200,0x140f7ff00,4,"void GFxMovieRoot::NotifyMouseState (GFxMovieRoot * a_this, float a_x, float a_y, std::uint32_t a_buttons, std::uint32_t a_mouseIndex)"
+81840,0x140f23800,0x140f80500,4,"void GFxMovieRoot::ProcessFocusKey (GFxMovieRoot * a_this, uint a_eventType, void * a_keyEntry, void * a_focusInfo)"
+81841,0x140f246b0,0x140f813b0,4,void GFxMovieRoot::ProcessInput (GFxMovieRoot * a_this)
+81842,0x140f24900,0x140f81600,4,"void GFxMovieRoot::ProcessKeyEvent (GFxMovieRoot * a_this, void * a_levelInfo, void * a_event)"
 81844,0x140f24c50,0x140f81950,2,"void LoadMovieImageCallback(void* a_movieRoot, void* a_loadQueueEntry, void* a_action, void* a_urlInfo)"
+81848,0x140f25ae0,0x140f827e0,4,"void GFxMovieRoot::ProcessMouseEvent (GFxMovieRoot * a_this, void * a_level, void * a_event, uint * a_mouseMask)"
+81850,0x140f26140,0x140f82e40,4,"void GFxMovieRoot::SetFocusWithEvents (GFxMovieRoot * a_this, void * a_newFocus, uint a_flags, uint a_controller, uint a_method)"
+81856,0x140f26610,0x140f83310,4,void GFxMovieRoot::Release (GFxMovieRoot * a_this)
+81860,0x140f268e0,0x140f835e0,4,"void GFxMovieRoot::RemovePrePassCharacter (GFxMovieRoot * a_this, void * a_character)"
+81872,0x140f27050,0x140f83d50,4,"void GFxMovieRoot::ResetFocusForCharacter (GFxMovieRoot * a_this, void * a_character)"
+81873,0x140f27230,0x140f83f30,4,void GFxMovieRoot::ResetFocusGroups (GFxMovieRoot * a_this)
+81883,0x140f27a70,0x140f84770,4,void GFxMovieRoot::Restart (GFxMovieRoot * a_this)
 81887,0x140f28250,0x140f84f50,4,"void GFxMovieRoot::SetSuppressActionErrors (GFxMovieRoot * a_this, bool a_enable)"
+81888,0x140f28270,0x140f84f70,4,"void GFxMovieRoot::SetBackgroundAlpha (GFxMovieRoot * a_this, float a_alpha)"
+81889,0x140f282a0,0x140f84fa0,4,"void GFxMovieRoot::SetBackgroundColor (GFxMovieRoot * a_this, GColor a_bgColor)"
+81890,0x140f282b0,0x140f84fb0,4,"void GFxMovieRoot::SetControllerCount (GFxMovieRoot * a_this, std::uint32_t a_count)"
+81891,0x140f282d0,0x140f84fd0,4,"bool GFxMovieRoot::SetControllerFocusGroup (GFxMovieRoot * a_this, std::uint32_t a_controllerIdx, std::uint32_t a_focusGroupIndex)"
+81892,0x140f28310,0x140f85010,4,"void GFxMovieRoot::SetExternalInterfaceRetVal (GFxMovieRoot * a_this, GFxValue * a_val)"
+81893,0x140f28320,0x140f85020,4,"void GFxMovieRoot::TransferKeyboardFocus (GFxMovieRoot * a_this, void * a_newFocus, uint a_controller)"
+81895,0x140f284b0,0x140f851b0,4,"void GFxMovieRoot::SetKeyboardFocusTo (GFxMovieRoot * a_this, void * a_character, uint a_controller)"
+81898,0x140f28950,0x140f85650,4,"void GFxMovieRoot::SetModalClip (GFxMovieRoot * a_this, void * a_sprite, uint a_controller)"
+81899,0x140f28a20,0x140f85720,4,"void GFxMovieRoot::SetMouseCursorCount (GFxMovieRoot * a_this, std::uint32_t a_count)"
+81900,0x140f28a40,0x140f85740,4,"void GFxMovieRoot::SetPause (GFxMovieRoot * a_this, bool a_pause)"
+81901,0x140f28b20,0x140f85820,4,"void GFxMovieRoot::SetPerspective3D (GFxMovieRoot * a_this, GMatrix3D * a_projMatIn)"
+81903,0x140f28d10,0x140f85a10,4,"void GFxMovieRoot::SetPlayState (GFxMovieRoot * a_this, PlayState a_state)"
+81904,0x140f28d30,0x140f85a30,4,"void GFxMovieRoot::SetSafeRect (GFxMovieRoot * a_this, GRectF * a_rect)"
+81906,0x140f28e70,0x140f85b70,4,"void GFxMouseState::SetTopmostEntity (GFxMouseState * a_this, void * a_entity)"
+81907,0x140f28f40,0x140f85c40,4,"void GFxMovieRoot::SetUserData (GFxMovieRoot * a_this, void * a_data)"
+81908,0x140f28f50,0x140f85c50,4,"bool GFxMovieRoot::SetVariable (GFxMovieRoot * a_this, char * a_pathToVar, GFxValue * a_value, SetVarType a_setType)"
+81909,0x140f29090,0x140f85d90,4,"bool GFxMovieRoot::SetVariableArray (GFxMovieRoot * a_this, SetArrayType a_type, char * a_pathToVar, std::uint32_t a_index, void * a_data, std::uint32_t a_count, SetVarType a_setType)"
+81910,0x140f294c0,0x140f861c0,4,"bool GFxMovieRoot::SetVariableArraySize (GFxMovieRoot * a_this, char * a_pathToVar, std::uint32_t a_count, SetVarType a_setType)"
 81911,0x140f296c0,0x140f863c0,4,"void GFxMovieRoot::SetVerboseAction (GFxMovieRoot * a_this, bool a_enable)"
+81912,0x140f296e0,0x140f863e0,4,"void GFxMovieRoot::SetView3D (GFxMovieRoot * a_this, GMatrix3D * a_viewMatIn)"
+81913,0x140f297a0,0x140f864a0,4,"void GFxMovieRoot::SetViewAlignment (GFxMovieRoot * a_this, AlignType a_type)"
+81914,0x140f297c0,0x140f864c0,4,"void GFxMovieRoot::SetViewScaleMode (GFxMovieRoot * a_this, ScaleModeType a_type)"
+81915,0x140f297e0,0x140f864e0,4,"void GFxMovieRoot::SetViewport (GFxMovieRoot * a_this, GViewport * a_viewDesc)"
+81916,0x140f29a60,0x140f86760,4,"void GFxMovieRoot::SetVisible (GFxMovieRoot * a_this, bool a_visible)"
+81922,0x140f29f30,0x140f86c30,4,"bool GFxMovieRoot::TranslateLocalToScreen (GFxMovieRoot * a_this, char * a_pathToCharacter, GPointF * a_pt, GPointF * a_presPt, void * a_userMatrix)"
+81923,0x140f2a110,0x140f86e10,4,"GRectF GFxMovieRoot::TranslateToScreen (GFxMovieRoot * a_this, GRectF * a_p, void * a_userMatrix)"
+81924,0x140f2a220,0x140f86f20,4,"GPointF GFxMovieRoot::TranslateToScreen (GFxMovieRoot * a_this, GPointF * a_p, void * a_userMatrix)"
 82008,0x140f31890,0x140f8e590,4,GFxSprite::~GFxSprite
 82017,0x140f31ce4,0x140f8e9e4,4,GFxSprite::dtor_deleting_thunk
 82026,0x140f31ff0,0x140f8ecf0,4,GFxSprite::dtor_deleting
 82052,0x140f33e10,0x140f90b10,4,"void GFxSprite::CallFrame (GFxSprite * a_this, uint a_frame)"
+82069,0x140f34520,0x140f91220,4,"void GFxSprite::Display (GFxSprite * a_this, GFxDisplayContext * a_context)"
 82080,0x140f35c40,0x140f92940,4,"void GFxSprite::FillTabableArray (GFxSprite * a_this, void * a_params)"
 82092,0x140f371e0,0x140f93ee0,4,void * GFxSprite::GetOrCreateASObject_thunk (GFxSprite * a_this)
 82093,0x140f371f0,0x140f93ef0,4,void * GFxSprite::GetOrCreateASObject_thunk (GFxSprite * a_this)
 82095,0x140f37250,0x140f93f50,4,"void * GFxSprite::GetBounds (GFxSprite * a_this, void * a_out, GMatrix2D * a_transform)"
 82103,0x140f37950,0x140f94650,4,uint GFxSprite::GetCurrentFrame (GFxSprite * a_this)
 82117,0x140f37cc0,0x140f949c0,4,"bool GFxSprite::FindFrameForLabel (GFxSprite * a_this, char * a_label, int * a_frameOut, bool a_exact)"
+82129,0x140f38610,0x140f95310,4,void * GFxSprite::GetOrCreateASObject (GFxSprite * a_this)
 82135,0x140f38710,0x140f95410,4,"void * GFxSprite::GetRectBounds (GFxSprite * a_this, void * a_out, GMatrix2D * a_transform)"
+82137,0x140f38890,0x140f95590,4,"void * GFxSprite::GetRelativeTarget (GFxSprite * a_this, void * a_name, bool a_flag)"
 82144,0x140f38a60,0x140f95760,3,"bool GFxSprite::GetProperty (GFxSprite * a_this, uint a_propIndex, void * a_value)"
 82148,0x140f38e30,0x140f95b30,3,"void * GFxSprite::GetTopMostMouseEntity (GFxSprite * a_this, void * a_point, void * a_descr)"
 82153,0x140f393a0,0x140f960a0,4,"void GFxSprite::SetFrame (GFxSprite * a_this, int a_frame)"
 82163,0x140f39a20,0x140f96720,4,bool GFxSprite::IsFocusEnabled (GFxSprite * a_this)
 82166,0x140f39c20,0x140f96920,4,bool GFxSprite::IsTabable (GFxSprite * a_this)
+82176,0x140f3a070,0x140f96d70,4,"bool GFxSprite::OnEvent (GFxSprite * a_this, void * a_eventId)"
 82177,0x140f3a0d0,0x140f96dd0,3,"bool GFxSprite::HandleButtonEvent (GFxSprite * a_this, void * a_eventId)"
+82183,0x140f3a680,0x140f97380,4,"void GFxSprite::OnGettingKeyboardFocus (GFxSprite * a_this, uint a_controller)"
 82186,0x140f3a7d0,0x140f974d0,4,"bool GFxSprite::OnKeyEvent (GFxSprite * a_this, void * a_eventId, void * a_keyMask)"
+82187,0x140f3a940,0x140f97640,4,"bool GFxSprite::OnLosingKeyboardFocus (GFxSprite * a_this, void * a_newFocus, uint a_controller)"
 82189,0x140f3abd0,0x140f978d0,4,"bool GFxSprite::PointTestLocal (GFxSprite * a_this, void * a_point, uchar a_hitTestMask)"
 82200,0x140f3b890,0x140f98590,4,"bool GFxSprite::ReplaceChildCharacter (GFxSprite * a_this, void * a_oldChar, void * a_newChar)"
 82228,0x140f3cee0,0x140f99be0,4,"void GFxSprite::SetPlayState (GFxSprite * a_this, bool a_playing)"
@@ -2207,13 +2338,56 @@
 82383,0x140f45820,0x140fa2520,4,void BSScaleformImageLoader::RemoveTexture(BSScaleformExternalTexture& a_texture)
 82462,0x140f48270,0x140fa4f70,3,bool GSysAllocPaged::InitHeapEngine(const void* a_heapDesc)
 82464,0x140f48360,0x140fa5060,3,void GSysAllocPaged::ShutdownHeapEngine()
+82556,0x140f4d680,0x140faa380,4,GFxLog::LogMessageVarg
+82638,0x140f52650,0x140faf350,4,"void GFxLog::LogScriptError (GFxLog * a_this, void * a_format, void * a_arg1, void * a_arg2)"
 83641,0x140f85e60,0x140fe2b60,4,GFxEditTextCharacter::~GFxEditTextCharacter
 83665,0x140f86590,0x140fe3290,4,GFxEditTextCharacter::dtor_deleting
+83684,0x140f87470,0x140fe4170,4,Scaleform::Render::Text::DocView::ClearImageSubstitutor
+83691,0x140f88160,0x140fe4e60,4,Scaleform::Render::Text::DocView::CreateImageSubstitutor
+83693,0x140f88200,0x140fe4f00,4,"void GFxEditTextCharacter::Display (GFxEditTextCharacter * a_this, GFxDisplayContext * a_context)"
 84045,0x140fa27e0,0x140fff4e0,3,"void GetSpecialTransformProperty(void* a_data, void* a_movieView, void* a_name, void* a_result)"
 84051,0x140fa2ff0,0x140fffcf0,3,"void SetSpecialTransformProperty(void* a_data, void* a_movieView, void* a_valueLo, void* a_valueHi, void* a_isDObj)"
+84627,0x140fbaf30,0x141017c30,4,"void GASSelectionCtorFunction::FindFocus (GASSelectionCtorFunction * a_this, void * a_fn)"
+84638,0x140fbbfd0,0x141018cd0,4,"void GASSelectionCtorFunction::MoveFocus (GASSelectionCtorFunction * a_this, void * a_fn)"
+84987,0x140fcd140,0x141029e40,4,"void GFxMouseState::GenerateMouseEvents (GFxMouseState * a_this, uint a_mouseIndex, GFxMouseState * a_state, uint a_buttonMask)"
+85372,0x140fe4110,0x141040e10,4,"GFxDisplayContext * GFxDisplayContext::ctor (GFxDisplayContext * a_this, void * a_stateBag, void * a_ref, void * a_unkB8, uint a_unkC0, float * a_matrix6, void * a_unkE0, uchar a_flag30)"
+85374,0x140fe42d0,0x141040fd0,4,void GFxDisplayContext::dtor (GFxDisplayContext * a_this)
+85379,0x140fe5140,0x141041e40,4,"void GFxDisplayContext::SetupStates (GFxDisplayContext * a_this, void * a_stateBag, void * a_ref, void * a_unkB8, uint a_unkC0, float * a_matrix6)"
+85380,0x140fe5320,0x141042020,4,void GFxDisplayContext::EndClipLayer (GFxDisplayContext * a_this)
+85381,0x140fe5360,0x141042060,4,"void GFxDisplayContext::RestoreDisplayState (GFxDisplayContext * a_this, void * a_savedState)"
+85384,0x140fe5760,0x141042460,4,"void GFxDisplayContext::BeginClipLayer (GFxDisplayContext * a_this, void * a_object)"
 85631,0x140ff6440,0x141053140,4,GFxStaticTextCharacter::~GFxStaticTextCharacter
 85634,0x140ff6530,0x141053230,4,GFxStaticTextCharacter::dtor_deleting
+85644,0x140ff6e90,0x141053b90,4,"void GFxStaticTextCharacter::Display (GFxStaticTextCharacter * a_this, GFxDisplayContext * a_context)"
 85757,0x140fffeb0,0x14105cbb0,4,void FUN_140fffeb0 (undefined8 * param_1)
+85880,0x1410047f0,0x1410614f0,3,"void * GFxFontCacheManager::ctor_params (GFxFontCacheManager * a_this, void * a_params, uchar a_flagA, uchar a_flagB)"
+85881,0x1410048a0,0x1410615a0,3,void * GFxFontCacheManager::ctor (GFxFontCacheManager * a_this)
+85882,0x141004980,0x141061680,3,"void * GFxFontCache::ctor (GFxFontCache * a_this, void * a_heap)"
+85884,0x141004e10,0x141061b10,4,void GFxFontCacheManager::dtor_impl (GFxFontCacheManager * a_this)
+85885,0x141004e70,0x141061b70,4,void GFxFontCache::dtor (GFxFontCache * a_this)
+85889,0x141005170,0x141061e70,4,"void * GFxFontCacheManager::dtor_deleting (GFxFontCacheManager * a_this, uint a_flags)"
+85901,0x141005a20,0x141062720,4,void GFxFontCache::Clear (GFxFontCache * a_this)
+85916,0x141006d60,0x141063a60,4,"void GFxFontCacheManager::CreateCache (GFxFontCacheManager * a_this, void * a_params, uchar a_flag)"
+85943,0x14100a600,0x141067300,4,"void GFxFontCache::SetRenderer (GFxFontCache * a_this, void * a_renderer)"
+86164,0x141017b90,0x141074890,3,"void Scaleform::Render::Text::LineBuffer::Display (Scaleform::Render::Text::LineBuffer * a_this, GFxDisplayContext * a_context, GMatrix2D * a_matrix, Cxform * a_cxform, char a_flag, void * a_displayParams, void * a_highlighter)"
+86176,0x14101ab70,0x141077870,4,Scaleform::Render::Text::LineBuffer::GetMinLineHeight
+86177,0x14101abd0,0x1410778d0,4,Scaleform::Render::Text::LineBuffer::GetVScrollOffsetInFixp
+86383,0x14102ba70,0x141088770,4,Scaleform::Render::Text::DocView::AppendHtml
+86395,0x14102c250,0x141088f50,4,"void Scaleform::Render::Text::DocView::Display (Scaleform::Render::Text::DocView * a_this, GFxDisplayContext * a_context, GMatrix2D * a_matrix, Cxform * a_cxform, char a_flag)"
+86401,0x14102d890,0x14108a590,4,Scaleform::Render::Text::DocView::ForceReformat
+86413,0x141030a70,0x14108d770,4,Scaleform::Render::Text::DocView::GetHScrollOffset
+86417,0x141030bb0,0x14108d8b0,4,Scaleform::Render::Text::DocView::GetLineLength
+86419,0x141030d70,0x14108da70,4,Scaleform::Render::Text::DocView::GetLineOffset
+86422,0x141030f40,0x14108dc40,4,Scaleform::Render::Text::DocView::GetMaxHScroll
+86425,0x141031170,0x14108de70,4,Scaleform::Render::Text::DocView::GetSelectionBackgroundColor
+86428,0x1410312d0,0x14108dfd0,4,Scaleform::Render::Text::DocView::GetSelectionTextColor
+86433,0x1410313f0,0x14108e0f0,4,Scaleform::Render::Text::DocView::GetViewRect
+86439,0x141032540,0x14108f240,4,Scaleform::Render::Text::DocView::InsertText
+86453,0x141032e80,0x14108fb80,4,Scaleform::Render::Text::DocView::ReplaceTextA
+86462,0x1410333e0,0x1410900e0,4,Scaleform::Render::Text::DocView::SetHScrollOffset
+86469,0x141033690,0x141090390,4,Scaleform::Render::Text::DocView::SetTextFormat
+86470,0x1410336c0,0x1410903c0,4,Scaleform::Render::Text::DocView::SetVScrollOffset
+86942,0x14104ef30,0x1410abc30,4,Scaleform::Render::Text::LineBuffer::IsLineVisible
 87907,0x1410a2370,0x1410fefa0,4,Skyrim-upscaler
 87965,0x1410a5740,0x141102370,3,"BSPathingLocation* BSPathingLocation::ctor(const NiPoint3& a_location, const BSTSmartPointer<BSPathingCell>& a_cell)"
 87978,0x1410a5e50,0x141102a80,3,"bool BSPathingLocation::GetNavMeshAndTriangle(BSTSmartPointer<BSNavmesh>& a_navMeshOut, std::uint16_t& a_triOut) const"
@@ -2278,14 +2452,18 @@
 99697,0x1412b9a10,0x1412f7440,4,void ShadowSceneNode::RemoveLight(NiLight* a_light) src\RE\S/ShadowSceneNode.cpp:45
 99698,0x1412b9b60,0x1412f7590,3,void ShadowSceneNode::RemoveLight(const NiPointer<BSLight>& a_light)
 99701,0x1412b9db0,0x1412f77e0,3,void ShadowSceneNode::ProcessQueuedLights(bool param_1)
+99702,0x1412ba3e0,0x1412f7e10,3,"void ShadowSceneNode::RemoveLightAssociations(ShadowSceneNode* this, void* a_root)"
 99704,0x1412ba7f0,0x1412f8220,3,void ShadowSceneNode::ClearLightArrays()
 99708,0x1412baca0,0x1412f86d0,3,"static void ShadowSceneNode::EnableLight(RE::ShadowSceneNode* shadowSceneNode, RE::BSLight* light)"
+99715,0x1412bb6b0,0x1412f9110,3,void BSGeometry::AttachNearbyLights()
+99717,0x1412bba50,0x1412f94d0,3,void BSTriShape::AttachToLights()
 99725,0x1412bc190,0x1412f9c10,4,"float ShadowSceneNode::GetLuminanceAtPoint(NiPoint3* targetPosition, int* numHits, float sunLightLevel, float lightLevel, NiLight* refLight, int shadowBitMask) src\Features\LightLimitFix/ShadowCasterManager.cpp:3687"
 99728,0x1412bc770,0x1412fa1f0,4,"static void ShadowSceneNode::SetShadowCasterLightArrayEntry(RE::ShadowSceneNode* shadowSceneNode, RE::BSLight* light, uint32_t index, uint32_t unk4)"
 99730,0x1412bc7f0,0x1412fa270,4,void ShadowSceneNode::ClearShadowCasterArray(ShadowSceneNode * a_this)
 99734,0x1412bc9a0,0x1412fa420,3,"void ShadowSceneNode::PropagateRoomVisibility(BSMultiBoundRoom* a_room, BSCullingProcess* a_process, NiFrustumPlanes* a_planes, bool a_resetUnbound, bool a_skipOcclusion)"
 99735,0x1412bd240,0x1412facc0,4,"BSCompoundFrustum* ShadowSceneNode::BuildSharedCompoundFrustum(BSCullingProcess* a_cullingProcess, BSPortal* a_portal)"
 99741,0x1412bdf60,0x1412fb9e0,3,"void ShadowSceneNode::ResetScene(ShadowSceneNode* this, BSPortalGraph* a_graph)"
+99744,0x1412be5f0,0x1412fc070,3,"void ShadowSceneNode::UnlinkChildLights(ShadowSceneNode* this, NiNode* a_node)"
 99752,0x1412beae0,0x1412fc4f0,3,"void ShadowSceneNode::AccumulateLight(RE::BSLight* a_light, RE::BSTArray<RE::NiAVObject*>* a_accumList, bool a_flag)"
 99753,0x1412bf7f0,0x1412fd220,3,void ShadowSceneNode::AccumulateLight(RE::BSLight* a_light)
 99787,0x1412c1350,0x1412feda0,3,"bool TestPortalGraphOcclusionShapes(NiFrustumPlanes* a_planes, void* a_visitor)"
@@ -2416,16 +2594,24 @@
 100951,0x14130cf80,0x1413501F0,3,BSImagespaceShader::sub_*
 100952,0x14130d070,0x1413502b0,4,"void BSImagespaceShader::DispatchComputeShader (BSImagespaceShader * a_this, uint32_t a_threadGroupCountX, uint32_t a_threadGroupCountY, uint32_t a_threadGroupCountZ)"
 100979,0x14130ec70,0x1413527d0,3,"void BSUtilityShader::SetupGeometry(BSUtilityShader * a_this, BSRenderPass * a_pass, uint32_t a_flags)"
+100988,0x1413108c0,0x1413547e0,3,"void BSShaderPropertyLightData::RemoveGeometryFromLights(BSShaderPropertyLightData* this, BSGeometry* a_geometry)"
+100990,0x141310a30,0x141354950,3,"void BSShaderPropertyLightData::AddLight(BSShaderPropertyLightData* this, BSLight* a_light)"
+100991,0x141310bb0,0x141354ad0,3,"void BSShaderPropertyLightData::RemoveLight(BSShaderPropertyLightData* this, BSLight* a_light)"
 100994,0x141310c50,0x141354b60,4,src\Features/LightLimitFix.h:163
-100997,0x141310e10,0x141354d20,3,src\Features/LightLimitFix.h:164
+100995,0x141310d30,0x141354c40,3,void BSShaderPropertyLightData::PushLightListFence(BSShaderPropertyLightData* this)
+100996,0x141310d40,0x141354c50,3,void BSShaderPropertyLightData::PopLightListFence(BSShaderPropertyLightData* this)
+100997,0x141310e10,0x141354d20,3,"uint32_t CalculateActiveNonShadowCasterLights(BSShaderPropertyLightData* a_lightData, BSLight** a_lights, uint32_t a_maxCount, int* a_shadowCount, ShadowSceneNode* a_ssn, BSLightingShaderProperty* a_property, bool a_addShadow, bool* a_useShadowSun, bool a_firstPerson, uint32_t a_firstPersonMask, bool a_skipAccumulation)"
+101009,0x141311700,0x141355440,3,"void BSLight::RemoveGeometry(BSLight* this, BSTriShape* a_geometry)"
+101290,0x14131c350,0x1413621d0,3,void BSLight::~BSLight(BSLight* this)
 101291,0x14131c560,0x1413623e0,3,"void BSLight::UpdateLODFadeAndCull(BSLight* this, NiCullingProcess* a_cull)"
-101296,0x14131cde0,0x141362c60,4,BSLight::sub_*
+101296,0x14131cde0,0x141362c60,4,"void BSLight::AttachGeometry(BSLight* this, BSGeometry* a_geometry)"
 101298,0x14131cf90,0x141362e10,4,static void BSLight::ClearGeometryList(RE::BSLight* light)
 101299,0x14131d000,0x141362e80,3,"bool BSLight::IsInRange(RE::BSLight* light, RE::NiPoint3* boundCenter, RE::NiLight* niLight, float scale)"
 101302,0x14131d1f0,0x141363070,4,bool BSLight::SetLight(NiLight* a_light)
 101303,0x14131d3d0,0x141363250,4,"float BSLight::GetLuminance(RE::BSLight *this, RE::NiPoint3 *targetPosition, RE::NiLight *refLight)"
 101319,0x14131ede0,0x141364c60,3,"BSLight* BSLight::dtor_deleting(BSLight* a_this, std::uint32_t a_flags)"
 101324,0x14131f0d0,0x141364f50,3,bool BSLight::IsShadowLight()
+101335,0x14131f630,0x1413654b0,3,"void NiBoneMatrixSetterI::SetBoneMatrices(NiBoneMatrixSetterI* a_this, NiSkinInstance* a_skin, void* a_context, NiTransform* a_transform)"
 101339,0x14131f810,0x1413656b0,4,"void BSShader::LoadShaders_14131F810 (BSShader * a_this, UINT_PTR * a_stream)"
 101341,0x14131fbd0,0x141365a70,4,"bool BSShader::BeginTechnique_14131FBD0 (BSShader * shader, int vertexDescriptor, int pixelDescriptor, bool skipPIxelShader)"
 101493,0x141324ac0,0x141356c30,3,"void BSShadowDirectionalLight::TransformClipSpacePlanes(REX::W32::D3DXMatrix* a_matrix1, REX::W32::D3DXMatrix* a_matrix2)"
@@ -2459,12 +2645,16 @@
 101630,0x14132e690,0x141371540,3,std::uint32_t BSShadowParabolicLight::GetPassExtraParam(std::uint32_t a_accumFlag)
 101631,0x14132ead0,0x141371a00,3,"void GetLightingShaderDefines(uint32_t descriptor, D3D_SHADER_MACRO* defines)"
 101633,0x14132ef60,0x141371e90,3,uint32_t BSLightingShader::GetPixelTechnique (uint32_t rawTechnique)
+101660,0x1413300c0,0x140db0690,3,std::uint32_t BSMeshLODTriShape::GetStartIndexForCurrentLOD()
+101662,0x141330160,0x140db06c0,3,"bool BSMeshLODTriShape::HasDrawableLOD(std::uint32_t a_lodModeA, std::uint32_t a_lodModeB, bool a_checkB)"
+101663,0x141330240,0x140db0820,3,std::uint32_t BSMeshLODTriShape::GetTriangleCountForLOD(std::uint32_t a_lodMode)
 101779,0x14133a750,0x141377b30,3,void StartTimer(int a_index)
 101780,0x14133a7b0,0x141377b90,3,void StopTimer(int a_index)
 101821,0x14133e250,0x14137b630,3,BSWin32SystemUtility* BSWin32SystemUtility::GetSingleton()
 101884,0x14133f0c0,0x14137c200,3,RE::BSWin32SaveDataSystemUtility::GetSingleton
 101962,0x141340ff0,0x14137e180,4,"longlong **BSWin32SaveDataSystemUtility::Ctor_141340FF0(longlong param_1,longlong **param_2,char *param_3,int param_4)"
 101985,0x1413420c0,0x14137f330,4,"ulonglong anonymous_namespace__Win32FileType::CopyToBuffer_1413420C0(longlong param_1,undefined8 param_2,uint param_3)"
+102158,0x14134a498,0x14138a1ac,3,void NiMemFree(void* a_ptr)
 102238,0x14134bdb0,0x14138baba,3,RE::_CRT::RTDynamicCast
 106534,0x141367330,0x1413c25d0,4,BSLightingShaderProperty::DeletingDtor
 227915,0x1415092a0,0x14157f3e8,4,GetCurrentThreadId()
