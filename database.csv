@@ -1787,6 +1787,7 @@
 66891,0x140c03c80,0x140c3eb00,4,void Clean (ScrapHeap * a_this)
 66894,0x140c03db0,0x140c3ec30,4,"void InsertFreeBlock (ScrapHeap * a_this, undefined param_2)"
 66895,0x140c03eb0,0x140c3ed30,4,"void RemoveFreeBlock (ScrapHeap * a_this, undefined * param_2)"
+66906,0x140c04980,0x140c3f800,3,"void BSTArray::RemoveElements(BSTArray* this, void* a_data, uint32_t a_dstIndex, uint32_t a_srcIndex, uint32_t a_count, uint32_t a_elemSize)"
 66962,0x140c06490,0x140c41310,3,RE::CRC32Calculator::SizeOfSize
 66963,0x140c064f0,0x140c41370,3,RE::CRC32Calculator::SizeOf32
 66964,0x140c06570,0x140c413f0,3,RE::CRC32Calculator::SizeOf64
@@ -2418,14 +2419,18 @@
 99697,0x1412b9a10,0x1412f7440,4,void ShadowSceneNode::RemoveLight(NiLight* a_light) src\RE\S/ShadowSceneNode.cpp:45
 99698,0x1412b9b60,0x1412f7590,3,void ShadowSceneNode::RemoveLight(const NiPointer<BSLight>& a_light)
 99701,0x1412b9db0,0x1412f77e0,3,void ShadowSceneNode::ProcessQueuedLights(bool param_1)
+99702,0x1412ba3e0,0x1412f7e10,3,"void ShadowSceneNode::RemoveLightAssociations(ShadowSceneNode* this, void* a_root)"
 99704,0x1412ba7f0,0x1412f8220,3,void ShadowSceneNode::ClearLightArrays()
 99708,0x1412baca0,0x1412f86d0,3,"static void ShadowSceneNode::EnableLight(RE::ShadowSceneNode* shadowSceneNode, RE::BSLight* light)"
+99715,0x1412bb6b0,0x1412f9110,3,void BSGeometry::AttachNearbyLights()
+99717,0x1412bba50,0x1412f94d0,3,void BSTriShape::AttachToLights()
 99725,0x1412bc190,0x1412f9c10,4,"float ShadowSceneNode::GetLuminanceAtPoint(NiPoint3* targetPosition, int* numHits, float sunLightLevel, float lightLevel, NiLight* refLight, int shadowBitMask) src\Features\LightLimitFix/ShadowCasterManager.cpp:3687"
 99728,0x1412bc770,0x1412fa1f0,4,"static void ShadowSceneNode::SetShadowCasterLightArrayEntry(RE::ShadowSceneNode* shadowSceneNode, RE::BSLight* light, uint32_t index, uint32_t unk4)"
 99730,0x1412bc7f0,0x1412fa270,4,void ShadowSceneNode::ClearShadowCasterArray(ShadowSceneNode * a_this)
 99734,0x1412bc9a0,0x1412fa420,3,"void ShadowSceneNode::PropagateRoomVisibility(BSMultiBoundRoom* a_room, BSCullingProcess* a_process, NiFrustumPlanes* a_planes, bool a_resetUnbound, bool a_skipOcclusion)"
 99735,0x1412bd240,0x1412facc0,4,"BSCompoundFrustum* ShadowSceneNode::BuildSharedCompoundFrustum(BSCullingProcess* a_cullingProcess, BSPortal* a_portal)"
 99741,0x1412bdf60,0x1412fb9e0,3,"void ShadowSceneNode::ResetScene(ShadowSceneNode* this, BSPortalGraph* a_graph)"
+99744,0x1412be5f0,0x1412fc070,3,"void ShadowSceneNode::UnlinkChildLights(ShadowSceneNode* this, NiNode* a_node)"
 99752,0x1412beae0,0x1412fc4f0,3,"void ShadowSceneNode::AccumulateLight(RE::BSLight* a_light, RE::BSTArray<RE::NiAVObject*>* a_accumList, bool a_flag)"
 99753,0x1412bf7f0,0x1412fd220,3,void ShadowSceneNode::AccumulateLight(RE::BSLight* a_light)
 99787,0x1412c1350,0x1412feda0,3,"bool TestPortalGraphOcclusionShapes(NiFrustumPlanes* a_planes, void* a_visitor)"
@@ -2556,10 +2561,17 @@
 100951,0x14130cf80,0x1413501F0,3,BSImagespaceShader::sub_*
 100952,0x14130d070,0x1413502b0,4,"void BSImagespaceShader::DispatchComputeShader (BSImagespaceShader * a_this, uint32_t a_threadGroupCountX, uint32_t a_threadGroupCountY, uint32_t a_threadGroupCountZ)"
 100979,0x14130ec70,0x1413527d0,3,"void BSUtilityShader::SetupGeometry(BSUtilityShader * a_this, BSRenderPass * a_pass, uint32_t a_flags)"
+100988,0x1413108c0,0x1413547e0,3,"void BSShaderPropertyLightData::RemoveGeometryFromLights(BSShaderPropertyLightData* this, BSGeometry* a_geometry)"
+100990,0x141310a30,0x141354950,3,"void BSShaderPropertyLightData::AddLight(BSShaderPropertyLightData* this, BSLight* a_light)"
+100991,0x141310bb0,0x141354ad0,3,"void BSShaderPropertyLightData::RemoveLight(BSShaderPropertyLightData* this, BSLight* a_light)"
 100994,0x141310c50,0x141354b60,4,src\Features/LightLimitFix.h:163
-100997,0x141310e10,0x141354d20,3,src\Features/LightLimitFix.h:164
+100995,0x141310d30,0x141354c40,3,void BSShaderPropertyLightData::PushLightListFence(BSShaderPropertyLightData* this)
+100996,0x141310d40,0x141354c50,3,void BSShaderPropertyLightData::PopLightListFence(BSShaderPropertyLightData* this)
+100997,0x141310e10,0x141354d20,3,"uint32_t CalculateActiveNonShadowCasterLights(BSShaderPropertyLightData* a_lightData, BSLight** a_lights, uint32_t a_maxCount, int* a_shadowCount, ShadowSceneNode* a_ssn, BSLightingShaderProperty* a_property, bool a_addShadow, bool* a_useShadowSun, bool a_firstPerson, uint32_t a_firstPersonMask, bool a_skipAccumulation)"
+101009,0x141311700,0x141355440,3,"void BSLight::RemoveGeometry(BSLight* this, BSTriShape* a_geometry)"
+101290,0x14131c350,0x1413621d0,3,void BSLight::~BSLight(BSLight* this)
 101291,0x14131c560,0x1413623e0,3,"void BSLight::UpdateLODFadeAndCull(BSLight* this, NiCullingProcess* a_cull)"
-101296,0x14131cde0,0x141362c60,4,BSLight::sub_*
+101296,0x14131cde0,0x141362c60,4,"void BSLight::AttachGeometry(BSLight* this, BSGeometry* a_geometry)"
 101298,0x14131cf90,0x141362e10,4,static void BSLight::ClearGeometryList(RE::BSLight* light)
 101299,0x14131d000,0x141362e80,3,"bool BSLight::IsInRange(RE::BSLight* light, RE::NiPoint3* boundCenter, RE::NiLight* niLight, float scale)"
 101302,0x14131d1f0,0x141363070,4,bool BSLight::SetLight(NiLight* a_light)
