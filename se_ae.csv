@@ -5178,6 +5178,8 @@ sseid,aeid,confidence,name
 40354,41367,3,ProcessLists::UpdateHighActors
 40396,41410,3,RE::ProcessLists::ClearCachedFactionFightReactions
 40459,41476,3,BeginLowActorUpdate
+40478,41497,3,LockFreeRing2048Push
+40499,41507,3,LockFreeRing2048Pop
 41104,42183,1,
 41105,42184,1,IMovementSetKeepOffsetFromActor::Func0_*
 41106,42185,1,MovementPlannerAgentKeepOffset::Func11_*
@@ -7176,6 +7178,7 @@ sseid,aeid,confidence,name
 67834,69176,3,RE::BSFixedString::Ctor16
 67847,69192,3,RE::BSStringPool::Release8
 67848,69193,3,RE::BSStringPool::Release16
+67987,69348,3,DestroyJobList
 67988,69349,3,JobList::QueueJob
 67991,69352,3,JobList::Submit
 67992,69353,3,JobList::Finish

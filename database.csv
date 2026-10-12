@@ -1125,6 +1125,7 @@
 40230,0x1406ce720,0x1406f5bf0,3,"void Actor::ProcessVATSAttack(MagicCaster* a_caster, bool a_hasTargetAnim, TESObjectREFR* a_target, bool a_leftHand)"
 40232,0x1406cf690,0x1406f6020,2,DrawSheatheWeaponPC
 40287,0x1406d3ff0,0x1406fae90,3,void ProcessLists::Update()
+40288,0x1406d4530,0x1406fb3d0,3,void ProcessLists::ProcessLowMovementMessages()
 40291,0x1406d46d0,0x1406fb570,3,"void ProcessLists::UpdateNonHighActors(float, std::uint8_t, bool)"
 40292,0x1406d4880,0x1406fb720,3,void ProcessLists::UpdateLowActorBatch(bool)
 40293,0x1406d4af0,0x1406fb990,3,void ProcessLists::UpdateLowActorsHelperJob(bool)
@@ -1140,6 +1141,8 @@
 40396,0x1406dec50,0x140705b00,3,void ProcessLists::ClearCachedFactionFightReactions()
 40456,0x1406e3020,0x140709e50,4,"void PlayerCharacter::AddPlayerAddItemEvent(TESObject* a_object, TESForm* a_owner, TESObjectREFR* a_container, AQUIRE_TYPE a_type) src\RE\P/PlayerCharacter.cpp:32"
 40459,0x1406e33e0,0x14070a210,3,"void* BeginLowActorUpdate(void*, float, float, std::uint8_t, float, std::uint32_t)"
+40478,0x1406e3ee0,0x14070ad10,3,"std::uint64_t LockFreeRing2048Push(void*, void*)"
+40499,0x1406e4540,0x14070b370,3,void* LockFreeRing2048Pop(void*)
 40552,0x1406e6130,0x14070d020,3,PlayerSkills::GetSkillData
 40553,0x1406e6180,0x14070d070,3,PlayerSkills::GetLevelData
 40554,0x1406e61d0,0x14070d0c0,4,PlayerSkills::ModSkillPoints
