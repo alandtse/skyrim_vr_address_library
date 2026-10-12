@@ -1042,6 +1042,7 @@
 38071,0x14063ece0,0x140647d70,3,void ClearModifiers(ActorValueStorage*)
 38079,0x14063f810,0x1406488a0,3,bool TaskQueueInterface::ShouldUseTaskQueue()
 38085,0x14063fa50,0x140648ae0,3,void RenderFrame()
+38090,0x14063fd50,0x140649060,3,void Job_TES_animation()
 38118,0x140640600,0x140649910,2,PapyrusTweaks::Job_VM_Update
 38141,0x140640f80,0x14064a2b0,4,void Job_Update_grass_140640F80 (void)
 38158,0x140642f50,0x14064c2a0,4,void AIProcess::ComputeLastTimeProcessed()
