@@ -67,6 +67,7 @@
 13135,0x140150a00,0x140161430,3,RE::INISettingCollection::Unk_08
 13137,0x140150b20,0x140161550,4,void sub_140150B20 (TESObjectCELL * a_this)
 13138,0x140150c80,0x1401616b0,4,void AddCellGrassTask::sub_140150C80 (void)
+13147,0x140151e60,0x1401628a0,3,void TES::SetGridFromPosition(TES* a_this, NiPoint3* a_position)
 13148,0x140152030,0x140162a70,4,"bool TES::UpdateGridForPosition(TES* a_this, NiPoint3* a_position, bool a_flag, float a_unk)"
 13159,0x1401535d0,0x140164020,3,void TES::PurgeBufferedCells()
 13170,0x140153d00,0x140164750,3,void TES::SetWorldSpace(TES* a_tes)
@@ -91,6 +92,9 @@
 13240,0x140159290,0x140169d50,4,"void TES::ClearGrassFadeAt(int a_x, int a_y)"
 13257,0x14015a6e0,0x14016b1a0,3,void TES::UpdatePortalVisibility(BSCullingProcess* a_process)
 13260,0x14015af70,0x14016ba30,4,"bool NiNode::ToggleMasterParticleAddonNodes(const NiNode* a_node, bool a_enable)"
+13277,0x14015bcb0,0x14016c770,3,void TES::LoadExteriorGrid(TES* a_this)
+13278,0x14015bf70,0x14016ca30,3,void TES::LoadGridCells(TES* a_this)
+13282,0x14015c4d0,0x14016cf90,3,uint TES::PurgeInteriorBuffer(TES* a_this, bool a_keepCurrent)
 13286,0x14015c7e0,0x14016d2a0,3,void TES::UpdateLandLODBlendFlags(TES* a_this)
 13530,0x1401652d0,0x140175a10,3,"void UIMessageQueue::AddMessage (UIMessageQueue * a_this, BSFixedString * a_menuName, UIMessageTypes a_type, IUIMessageData * a_data)"
 13549,0x140165770,0x140175eb0,4,longlong TESWorldSpace::GetCellByCoordinateMask_140165770 (TESWorldSpace * a_this)
@@ -296,6 +300,7 @@
 18652,0x14026c410,0x14027d9e0,3,NiNode* TESObjectCELL::GetLightMarkerNode()
 18653,0x14026c4d0,0x14027daa0,3,NiNode* TESObjectCELL::GetSoundMarkerNode()
 18655,0x14026c5d0,0x14027dba0,3,void TESObjectCELL::sub_14026C5D0 (TESObjectCELL * a_this)
+18669,0x14026e5f0,0x14027fbd0,3,bool TESObjectCELL::IsReferenceListLocked(TESObjectCELL* a_this)
 18685,0x14026fd10,0x1402812f0,3,BSPortalGraph* TESObjectCELL::GetPortalGraph()
 18711,0x140271be0,0x140283200,3,TESObjectCELL::sub_140271BE0
 18755,0x140273ED0,0x1402854C0,4,"void CallsMapMarkerData (int64 a1, int64 **a2)"
@@ -10163,6 +10168,7 @@
 514182,0x141ebeb40,0x141f83220,2,BSFaceGenManager* GetSingleton()
 514184,0x141ebeb50,0x141f83240,3,po3tweaks::ToggleCollisionFix::GetCollisionState
 514185,0x141ebeb51,0x141f83241,3,gTESLODBlendFlagsPending_141ebeb51
+514186,0x141ebeb52,0x141f83242,3,gLoadingMenuShown_141ebeb52
 514283,0x141ec0a60,0x141f850e8,2,SubtitleManager* GetSingleton()
 514284,0x141ec0a68,0x141f850f0,4,static FOCollisionListener* GetSingleton()
 514285,0x141ec0a70,0x141f850f8,3,RE::UIMessageQueue::Singleton
@@ -10702,7 +10708,7 @@
 527635,0x1431d0dd0,0x143422f78,3,RE::NiRTTI_BSLeafAnimNode
 527636,0x1431d0de0,0x143422f88,3,RE::NiRTTI_BSTreeNode
 527641,0x1431d0e0c,0x143423044,4,gTESLODBlendInProgress_1431d0e0c
-527644,0x1431d0e10,0x143423048,4,gFlowMapSize
+527644,0x1431d0e10,0x143423048,4,gTESGridsToLoadCopy_1431d0e10
 527650,0x1431d0e20,0x143423058,4,BSGraphics::BSShaderAccumulator
 527668,0x1431d0e70,0x143422fe4,4,f_lightFadeStart
 527669,0x1431d0e74,0x143422fe8,4,f_lightFadeEnd
