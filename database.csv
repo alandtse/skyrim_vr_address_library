@@ -67,11 +67,11 @@
 13135,0x140150a00,0x140161430,3,RE::INISettingCollection::Unk_08
 13137,0x140150b20,0x140161550,4,void sub_140150B20 (TESObjectCELL * a_this)
 13138,0x140150c80,0x1401616b0,4,void AddCellGrassTask::sub_140150C80 (void)
-13148,0x140152030,0x140162a70,4,"undefined8 sub_140152030 (TES * a_this, undefined8 param_2, undefined8 param_3, float param_4)"
+13148,0x140152030,0x140162a70,4,"bool TES::UpdateGridForPosition(TES* a_this, NiPoint3* a_position, bool a_flag, float a_unk)"
 13159,0x1401535d0,0x140164020,3,void TES::PurgeBufferedCells()
 13170,0x140153d00,0x140164750,3,void TES::SetWorldSpace(TES* a_tes)
 13171,0x140153f80,0x1401649d0,4,"RE::TES::SetCurrentCell(RE::TESObjectCELL* a_cell, const RE::NiPoint3& a_position, float a_unk4)"
-13172,0x1401545f0,0x140165040,3,WashThatBloodOff::Rain::Manager::Leave_Interior
+13172,0x1401545f0,0x140165040,3,void TES::ResetCellGrid(TES* a_this)
 13174,0x140154db0,0x140165800,4,"longlong sub_140154DB0 (TES * a_this, undefined8 a_2, undefined8 param_3)"
 13177,0x140155090,0x140165ae0,3,TESObjectCELL* TES::GetCell(const NiPoint3& a_position)
 13183,0x140155570,0x140165fc0,4,FUN_140155570
@@ -91,6 +91,7 @@
 13240,0x140159290,0x140169d50,4,"void TES::ClearGrassFadeAt(int a_x, int a_y)"
 13257,0x14015a6e0,0x14016b1a0,3,void TES::UpdatePortalVisibility(BSCullingProcess* a_process)
 13260,0x14015af70,0x14016ba30,4,"bool NiNode::ToggleMasterParticleAddonNodes(const NiNode* a_node, bool a_enable)"
+13286,0x14015c7e0,0x14016d2a0,3,void TES::UpdateLandLODBlendFlags(TES* a_this)
 13530,0x1401652d0,0x140175a10,3,"void UIMessageQueue::AddMessage (UIMessageQueue * a_this, BSFixedString * a_menuName, UIMessageTypes a_type, IUIMessageData * a_data)"
 13549,0x140165770,0x140175eb0,4,longlong TESWorldSpace::GetCellByCoordinateMask_140165770 (TESWorldSpace * a_this)
 13594,0x140167220,0x140177940,3,FDGE::Skyrim::LoadWorldData
@@ -2547,6 +2548,7 @@
 100540,0x1412eeb90,0x141330a40,3,"RENDER_TARGET FUN_1412eeb90 (BSImagespaceShader * * param_1, RENDER_TARGET param_2, RENDER_TARGET param_3)"
 100563,0x1412f2020,0x141338400,3,"void BSLightingShader::Func4_1412F2020 (BSLightingShader * a_this, undefined8 param_2, undefined8 param_3)"
 100565,0x1412f2bb0,0x141338f60,3,"void BSLightingShader::Func6_1412F2BB0 (BSLightingShader * a_this, undefined8 param_2, undefined8 param_3, undefined8 param_4)"
+100583,0x1412f4e20,0x14133b930,3,"void SetLODBlendOffsetConstant(void* a_constants, float* a_origin, float a_value0, float a_value1)"
 100587,0x1412f5590,0x14133c1c0,3,"void BSLightingShader::SetupTexture(unsigned int a_slot, RE::NiPointer<RE::NiSourceTexture> const& a_texture, RE::BSLightingShaderMaterialBase * a_material)"
 100588,0x1412f5630,0x14133c260,3,void BSLightingShaderMaterialLandscape::sub_1412F5630 (BSLightingShaderMaterialLandscape * a_this)
 100602,0x1412f63d0,0x141333470,3,"void BSWaterShader::Func4_1412F63D0 (BSWaterShader * a_this, undefined8 param_2)"
@@ -9924,6 +9926,9 @@
 513201,0x141e0de43,0x141ed3ab0,4,static bool GetNumFocusShaderLightsPositive()
 513211,0x141e0ded0,0x143423080,4,gShadowSceneNodeArray_*
 513222,0x141e0df14,0x1434230c4,4,shadowoost::gIsInterior
+513236,0x141e0df78,0x143423128,3,gTESLODBlendFromOrigin_141e0df78
+513238,0x141e0df80,0x143423130,3,gTESLODBlendToOrigin_141e0df80
+513239,0x141e0df88,0x143423138,3,gTESLODBlendStartTime_141e0df88
 513256,0x141e0dfcc,0x14342317c,4,ambientSpecularAndFresnel
 513281,0x141e0e0b0,0x141ed3bd8,4,bFXAAEnabled:Display
 513464,0x141e0eb48,0x141ed49c8,4,characterLightTexture
@@ -10157,6 +10162,7 @@
 514181,0x141ebeb38,0x141f83218,4,BSTreeManager* GetSingleton()
 514182,0x141ebeb40,0x141f83220,2,BSFaceGenManager* GetSingleton()
 514184,0x141ebeb50,0x141f83240,3,po3tweaks::ToggleCollisionFix::GetCollisionState
+514185,0x141ebeb51,0x141f83241,3,gTESLODBlendFlagsPending_141ebeb51
 514283,0x141ec0a60,0x141f850e8,2,SubtitleManager* GetSingleton()
 514284,0x141ec0a68,0x141f850f0,4,static FOCollisionListener* GetSingleton()
 514285,0x141ec0a70,0x141f850f8,3,RE::UIMessageQueue::Singleton
