@@ -61,7 +61,7 @@ def _numeric_id_rows(rows, changed, problems):
             kept.append(r)
             kept_changed.append(c)
         elif c:
-            problems.append("malformed id %r" % r[0])
+            problems.append(f"malformed id {r[0]!r}")
     return kept, kept_changed
 
 
@@ -84,7 +84,7 @@ def check_database(rows, base_rows, se_offsets):
     dups, misordered = _order_problem(ids, changed)
     if dups or misordered:
         problems.append(
-            "ids not ascending and unique" + (" (duplicates %s)" % dups if dups else "")
+            "ids not ascending and unique" + (f" (duplicates {dups})" if dups else "")
         )
     by_vr = defaultdict(list)
     for r in rows:
@@ -98,21 +98,21 @@ def check_database(rows, base_rows, se_offsets):
             continue
         i = int(r[0])
         if len(r) != 5:
-            problems.append("%d: %d columns, expected 5" % (i, len(r)))
+            problems.append(f"{i}: {len(r)} columns, expected 5")
             continue
         try:
             sse, vr = int(r[1], 16), int(r[2], 16)
         except ValueError:
-            problems.append("%d: address is not hex (%s, %s)" % (i, r[1], r[2]))
+            problems.append(f"{i}: address is not hex ({r[1]}, {r[2]})")
             continue
         if r[3] not in ("0", "1", "2", "3", "4"):
-            problems.append("%d: bad status %r" % (i, r[3]))
+            problems.append(f"{i}: bad status {r[3]!r}")
         want = se_offsets.get(i)
         if want is not None and want != sse:
-            problems.append("%d: SE address %#x != offsets table %#x" % (i, sse, want))
+            problems.append(f"{i}: SE address {sse:#x} != offsets table {want:#x}")
         clash = [j for j in by_vr[vr] if j != i]
         if clash:
-            problems.append("%d: VR address %#x also used by id %s" % (i, vr, clash))
+            problems.append(f"{i}: VR address {vr:#x} also used by id {clash}")
     return problems
 
 
@@ -126,20 +126,19 @@ def check_se_ae(rows, base_rows, ae_offsets):
         if not is_changed:
             continue
         if len(r) < 2 or not _is_number(r[1]):
-            problems.append("%s: malformed row" % r[0])
+            problems.append(f"{r[0]}: malformed row")
         elif int(r[1]) not in ae_offsets:
-            problems.append(
-                "%s->%s: aeid absent from AE 1.6.1170 offsets" % (r[0], r[1])
-            )
+            problems.append(f"{r[0]}->{r[1]}: aeid absent from AE 1.6.1170 offsets")
     return problems
 
 
 def _git_show(ref, path):
-    p = subprocess.run(["git", "show", "%s:%s" % (ref, path)], capture_output=True)
+    p = subprocess.run(
+        ["git", "show", f"{ref}:{path}"], check=False, capture_output=True
+    )
     if p.returncode != 0:
         raise RuntimeError(
-            "git show %s:%s failed: %s"
-            % (ref, path, p.stderr.decode("utf-8", "replace").strip())
+            f"git show {ref}:{path} failed: {p.stderr.decode('utf-8', 'replace').strip()}"
         )
     return p.stdout.decode("utf-8")
 
@@ -176,8 +175,8 @@ def main(argv=None):
         )
     ]
     for f, p in problems:
-        print("%s: %s" % (f, p))
-    print("%d problem(s)" % len(problems))
+        print(f"{f}: {p}")
+    print(f"{len(problems)} problem(s)")
     return 1 if problems else 0
 
 
