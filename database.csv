@@ -803,6 +803,7 @@
 34473,0x140570f20,0x1405774c0,3,void MenuTopicManager::Load(BGSLoadGameBuffer* a_buffer)
 34474,0x140570f90,0x140577530,3,void MenuTopicManager::Revert()
 34476,0x140571040,0x1405775e0,3,void MenuTopicManager::StartGreeting()
+34549,0x140576390,0x14057c960,3,JobList* GetJobListByIndex(std::uint32_t)
 34627,0x140579880,0x140580fe0,3,bool BGSSaveLoadFileEntry::PopulateFileEntryData()
 34634,0x140579b90,0x1405812f0,4,"uint BGSSaveLoadFormIDMap::InsertFormID (BGSSaveLoadFormIDMap * a_this, uint a_formID)"
 34655,0x14057b920,0x1405830f0,4,"bool BGSSaveLoadGame::GetChange(TESForm* a_form, std::uint32_t a_changes)"
@@ -1047,6 +1048,7 @@
 38071,0x14063ece0,0x140647d70,3,void ClearModifiers(ActorValueStorage*)
 38079,0x14063f810,0x1406488a0,3,bool TaskQueueInterface::ShouldUseTaskQueue()
 38085,0x14063fa50,0x140648ae0,3,void RenderFrame()
+38090,0x14063fd50,0x140649060,3,void Job_TES_animation()
 38118,0x140640600,0x140649910,2,PapyrusTweaks::Job_VM_Update
 38141,0x140640f80,0x14064a2b0,4,void Job_Update_grass_140640F80 (void)
 38158,0x140642f50,0x14064c2a0,4,void AIProcess::ComputeLastTimeProcessed()
@@ -1129,13 +1131,25 @@
 40060,0x1406c8120,0x1406ee740,3,BSTEventSource<ShoutAttack::Event>* ShoutAttack::GetEventSource()
 40230,0x1406ce720,0x1406f5bf0,3,"void Actor::ProcessVATSAttack(MagicCaster* a_caster, bool a_hasTargetAnim, TESObjectREFR* a_target, bool a_leftHand)"
 40232,0x1406cf690,0x1406f6020,2,DrawSheatheWeaponPC
+40287,0x1406d3ff0,0x1406fae90,3,void ProcessLists::Update()
+40288,0x1406d4530,0x1406fb3d0,3,void ProcessLists::ProcessLowMovementMessages()
+40291,0x1406d46d0,0x1406fb570,3,"void ProcessLists::UpdateNonHighActors(float, std::uint8_t, bool)"
+40292,0x1406d4880,0x1406fb720,3,void ProcessLists::UpdateLowActorBatch(bool)
+40293,0x1406d4af0,0x1406fb990,3,void ProcessLists::UpdateLowActorsHelperJob(bool)
+40294,0x1406d4b80,0x1406fba20,3,"void ProcessLists::UpdateMiddleLowActors(std::int64_t*, bool*, float, bool)"
+40295,0x1406d4e00,0x1406fbca0,3,"void ProcessLists::UpdateMiddleHighActors(std::int64_t*, bool*, float, bool)"
+40297,0x1406d53f0,0x1406fc290,3,void ProcessLists::UpdateHighActorMovement()
 40317,0x1406d71c0,0x1406fe060,4,po3tweaks::ToggleAI
 40327,0x1406d9380,0x140700220,4,float ProcessLists::GetSystemTimeClock()
 40330,0x1406d9490,0x140700330,3,"void ProcessLists::StopCombatAndAlarmOnActor(Actor* a_actor, bool a_notAlarm)"
+40354,0x1406db820,0x1407026c0,3,"void ProcessLists::UpdateHighActors(float, bool, JobList*)"
 40388,0x1406de1a0,0x140705050,4,bool ProcessLists::AreHostileActorsNear(BSScrapArray<ActorHandle>* a_arrayOut)
 40394,0x1406de9a0,0x140705850,4,"std::int16_t ProcessLists::RequestHighestDetectionLevelAgainstActor(Actor* a_actor, std::uint32_t& a_LOSCount)"
 40396,0x1406dec50,0x140705b00,3,void ProcessLists::ClearCachedFactionFightReactions()
 40456,0x1406e3020,0x140709e50,4,"void PlayerCharacter::AddPlayerAddItemEvent(TESObject* a_object, TESForm* a_owner, TESObjectREFR* a_container, AQUIRE_TYPE a_type) src\RE\P/PlayerCharacter.cpp:32"
+40459,0x1406e33e0,0x14070a210,3,"void* BeginLowActorUpdate(void*, float, float, std::uint8_t, float, std::uint32_t)"
+40478,0x1406e3ee0,0x14070ad10,3,"std::uint64_t LockFreeRing2048Push(void*, void*)"
+40499,0x1406e4540,0x14070b370,3,void* LockFreeRing2048Pop(void*)
 40552,0x1406e6130,0x14070d020,3,PlayerSkills::GetSkillData
 40553,0x1406e6180,0x14070d070,3,PlayerSkills::GetLevelData
 40554,0x1406e61d0,0x14070d0c0,4,PlayerSkills::ModSkillPoints
@@ -1854,6 +1868,14 @@
 67852,0x140c2a1b0,0x140c6f0e0,4,"void BSStringPool::CreateEntry(BSStringPool::Entry** a_out, const char* a_string, uint32_t a_bucketAndCrc, uint32_t a_length, int a_allocSize, bool a_wide)"
 67855,0x140c2a4d0,0x140c6f400,3,BSStringPool::BucketTable* BSStringPool::BucketTable::GetSingleton()
 67856,0x140c2a590,0x140c6f4c0,4,"void BSStringPool::GetEntry(BSStringPool::Entry** a_out, const char* a_string, uint32_t a_hash, uint32_t a_length)"
+67988,0x140c31d40,0x140c76c20,3,void JobList::QueueJob()
+67991,0x140c31e80,0x140c76d60,3,void JobList::Submit()
+67992,0x140c31ea0,0x140c76d80,3,void JobList::Finish()
+67994,0x140c31f40,0x140c76e40,3,void JobList::CallClear()
+67997,0x140c32030,0x140c76f40,3,void BSJobs::SubmitJobDesc()
+68009,0x140c32890,0x140c76da0,3,void JobList::Finish_impl()
+68022,0x140c335c0,0x140c78710,3,void JobList::ctor()
+68054,0x140c34650,0x140c797e0,3,void JobList::Clear()
 68203,0x140c39950,0x140c7ea00,4,BSWin32TaskletManager* BSWin32TaskletManager::GetSingleton()
 68207,0x140c39ac0,0x140c7eb70,4,bool BSTaskletManager::CreateTaskGroup(BSTaskletGroup& a_taskGroup)
 68296,0x140c3cb30,0x140c81be0,4,"std::uint32_t BSResource::ArchiveStream::DoRead(void* a_dst, std::uint64_t a_bytes, std::uint64_t* a_read)"
