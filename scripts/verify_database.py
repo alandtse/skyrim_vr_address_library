@@ -6,7 +6,7 @@ Checks, on the rows that differ from --base (every row when --base is omitted):
   se_ae.csv     ids ascending and unique, aeid present in offsets-1-6-1170.0.csv
 
 Usage: python scripts/verify_database.py [--base REF]
-Exits 1 when any problem is found. Ghidra-backed checks (status 4 byte equality) are out of scope.
+Exits 1 when any problem is found, 2 when --base cannot be read. Ghidra-backed checks (status 4 byte equality) are out of scope.
 """
 
 import argparse
@@ -19,11 +19,15 @@ from collections import Counter, defaultdict
 IMAGE_BASE = 0x140000000
 
 
+def _is_number(text):
+    return text.isascii() and text.isdigit()
+
+
 def parse_rows(text):
     return [
         r
         for r in list(csv.reader(io.StringIO(text.lstrip("\ufeff"))))[1:]
-        if r and r[0].isdigit()
+        if r and r[0].strip()
     ]
 
 
@@ -31,24 +35,43 @@ def load_offsets(text):
     return {
         int(r[0]): int(r[1], 16) + IMAGE_BASE
         for r in parse_rows(text)
-        if len(r) >= 2 and r[1]
+        if _is_number(r[0]) and len(r) >= 2 and r[1]
     }
 
 
-def _unordered(ids):
-    return ids != sorted(ids) or len(set(ids)) != len(ids)
+def _split_malformed_ids(rows, problems):
+    """Rows with a numeric id; the others are reported as malformed."""
+    valid = []
+    for r in rows:
+        if _is_number(r[0]):
+            valid.append(r)
+        else:
+            problems.append("malformed id %r" % r[0])
+    return valid
+
+
+def _order_problem(ids, changed):
+    """Duplicate ids and out-of-order neighbours that involve a changed row."""
+    counts = Counter(ids)
+    dups = sorted({i for i, c in zip(ids, changed, strict=True) if c and counts[i] > 1})
+    misordered = any(
+        c and ((k > 0 and ids[k - 1] >= i) or (k + 1 < len(ids) and i >= ids[k + 1]))
+        for k, (i, c) in enumerate(zip(ids, changed, strict=True))
+    )
+    return dups, misordered
 
 
 def check_database(rows, base_rows, se_offsets):
     """Problems in `rows`; only rows that differ from `base_rows` get per-row checks."""
     problems = []
+    rows = _split_malformed_ids(rows, problems)
+    base = {tuple(r) for r in base_rows}
     ids = [int(r[0]) for r in rows]
-    if _unordered(ids):
-        dups = sorted(i for i, n in Counter(ids).items() if n > 1)
+    dups, misordered = _order_problem(ids, [tuple(r) not in base for r in rows])
+    if dups or misordered:
         problems.append(
             "ids not ascending and unique" + (" (duplicates %s)" % dups if dups else "")
         )
-    base = {tuple(r) for r in base_rows}
     by_vr = defaultdict(list)
     for r in rows:
         if len(r) == 5:
@@ -81,14 +104,15 @@ def check_database(rows, base_rows, se_offsets):
 
 def check_se_ae(rows, base_rows, ae_offsets):
     problems = []
-    ids = [int(r[0]) for r in rows]
-    if _unordered(ids):
-        problems.append("sseids not ascending and unique")
+    rows = _split_malformed_ids(rows, problems)
     base = {tuple(r) for r in base_rows}
+    ids = [int(r[0]) for r in rows]
+    if any(_order_problem(ids, [tuple(r) not in base for r in rows])):
+        problems.append("sseids not ascending and unique")
     for r in rows:
         if tuple(r) in base:
             continue
-        if len(r) < 2 or not r[1].isdigit():
+        if len(r) < 2 or not _is_number(r[1]):
             problems.append("%s: malformed row" % r[0])
         elif int(r[1]) not in ae_offsets:
             problems.append(
@@ -99,7 +123,12 @@ def check_se_ae(rows, base_rows, ae_offsets):
 
 def _git_show(ref, path):
     p = subprocess.run(["git", "show", "%s:%s" % (ref, path)], capture_output=True)
-    return p.stdout.decode("utf-8") if p.returncode == 0 else ""
+    if p.returncode != 0:
+        raise RuntimeError(
+            "git show %s:%s failed: %s"
+            % (ref, path, p.stderr.decode("utf-8", "replace").strip())
+        )
+    return p.stdout.decode("utf-8")
 
 
 def _read(path):
@@ -111,8 +140,12 @@ def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--base", help="git ref; only rows that differ from it are checked")
     args = ap.parse_args(argv)
-    base_db = parse_rows(_git_show(args.base, "database.csv")) if args.base else []
-    base_sa = parse_rows(_git_show(args.base, "se_ae.csv")) if args.base else []
+    try:
+        base_db = parse_rows(_git_show(args.base, "database.csv")) if args.base else []
+        base_sa = parse_rows(_git_show(args.base, "se_ae.csv")) if args.base else []
+    except RuntimeError as e:
+        print(e, file=sys.stderr)
+        return 2
     problems = [
         ("database.csv", p)
         for p in check_database(
