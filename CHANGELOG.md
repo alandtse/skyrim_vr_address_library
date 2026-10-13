@@ -1,3 +1,11 @@
+# [0.278.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.277.0...v0.278.0) (2026-10-13)
+
+
+### Features
+
+* add job list and low actor rows ([#259](https://github.com/alandtse/skyrim_vr_address_library/issues/259)) ([51751fd](https://github.com/alandtse/skyrim_vr_address_library/commit/51751fd6ad16adea8e8c29ac765611219902fb99))
+* add TES LOD blend rows ([#261](https://github.com/alandtse/skyrim_vr_address_library/issues/261)) ([ebdc36f](https://github.com/alandtse/skyrim_vr_address_library/commit/ebdc36fa3c221bebdc420b2ddd1671d887610744))
+
 # [0.277.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.276.1...v0.277.0) (2026-10-11)
 
 
