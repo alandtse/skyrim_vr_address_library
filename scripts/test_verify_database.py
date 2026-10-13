@@ -85,3 +85,19 @@ def test_bad_base_ref_is_an_error_not_an_empty_base():
     with pytest.raises(RuntimeError, match="git show"):
         v._git_show("no-such-ref-for-verifier-test", "database.csv")
     assert v.main(["--base", "no-such-ref-for-verifier-test"]) == 2
+
+
+def test_unchanged_malformed_id_is_skipped_against_a_base():
+    bad = ["x", "0x1", "0x2", "4", "legacy"]
+    assert v.check_database([bad], [bad], SE) == []
+    assert v.check_se_ae([["x", "9", "1", ""]], [["x", "9", "1", ""]], {9: 1}) == []
+    assert any("malformed id" in p for p in v.check_database([bad], [], SE))
+
+
+def test_extra_identical_copy_counts_as_changed():
+    row = ["1", "0x140001000", "0x9", "4", "a"]
+    out = v.check_database([row, row], [row], SE)
+    assert any("duplicates [1]" in p for p in out)
+    se_ae = ["3", "77", "1", ""]
+    out = v.check_se_ae([se_ae, se_ae], [se_ae], {})
+    assert any("not ascending" in p for p in out) and any("77" in p for p in out)

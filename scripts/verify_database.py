@@ -39,15 +39,30 @@ def load_offsets(text):
     }
 
 
-def _split_malformed_ids(rows, problems):
-    """Rows with a numeric id; the others are reported as malformed."""
-    valid = []
+def _changed_flags(rows, base_rows):
+    """True for rows not matched by a base row; each base row matches one copy."""
+    remaining = Counter(tuple(r) for r in base_rows)
+    flags = []
     for r in rows:
-        if _is_number(r[0]):
-            valid.append(r)
+        key = tuple(r)
+        if remaining[key] > 0:
+            remaining[key] -= 1
+            flags.append(False)
         else:
+            flags.append(True)
+    return flags
+
+
+def _numeric_id_rows(rows, changed, problems):
+    """Rows with a numeric id and their changed flags; changed others are reported."""
+    kept, kept_changed = [], []
+    for r, c in zip(rows, changed, strict=True):
+        if _is_number(r[0]):
+            kept.append(r)
+            kept_changed.append(c)
+        elif c:
             problems.append("malformed id %r" % r[0])
-    return valid
+    return kept, kept_changed
 
 
 def _order_problem(ids, changed):
@@ -64,10 +79,9 @@ def _order_problem(ids, changed):
 def check_database(rows, base_rows, se_offsets):
     """Problems in `rows`; only rows that differ from `base_rows` get per-row checks."""
     problems = []
-    rows = _split_malformed_ids(rows, problems)
-    base = {tuple(r) for r in base_rows}
+    rows, changed = _numeric_id_rows(rows, _changed_flags(rows, base_rows), problems)
     ids = [int(r[0]) for r in rows]
-    dups, misordered = _order_problem(ids, [tuple(r) not in base for r in rows])
+    dups, misordered = _order_problem(ids, changed)
     if dups or misordered:
         problems.append(
             "ids not ascending and unique" + (" (duplicates %s)" % dups if dups else "")
@@ -79,8 +93,8 @@ def check_database(rows, base_rows, se_offsets):
                 by_vr[int(r[2], 16)].append(int(r[0]))
             except ValueError:
                 pass
-    for r in rows:
-        if tuple(r) in base:
+    for r, is_changed in zip(rows, changed, strict=True):
+        if not is_changed:
             continue
         i = int(r[0])
         if len(r) != 5:
@@ -104,13 +118,12 @@ def check_database(rows, base_rows, se_offsets):
 
 def check_se_ae(rows, base_rows, ae_offsets):
     problems = []
-    rows = _split_malformed_ids(rows, problems)
-    base = {tuple(r) for r in base_rows}
+    rows, changed = _numeric_id_rows(rows, _changed_flags(rows, base_rows), problems)
     ids = [int(r[0]) for r in rows]
-    if any(_order_problem(ids, [tuple(r) not in base for r in rows])):
+    if any(_order_problem(ids, changed)):
         problems.append("sseids not ascending and unique")
-    for r in rows:
-        if tuple(r) in base:
+    for r, is_changed in zip(rows, changed, strict=True):
+        if not is_changed:
             continue
         if len(r) < 2 or not _is_number(r[1]):
             problems.append("%s: malformed row" % r[0])
