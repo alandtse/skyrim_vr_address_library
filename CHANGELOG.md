@@ -1,3 +1,11 @@
+# [0.279.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.278.0...v0.279.0) (2026-10-14)
+
+
+### Features
+
+* add occlusion visibility rows ([#262](https://github.com/alandtse/skyrim_vr_address_library/issues/262)) ([a364e0d](https://github.com/alandtse/skyrim_vr_address_library/commit/a364e0dca36e4483a5c068152fcedf48085f9b13))
+* add TES LOD blend AE id mappings ([#264](https://github.com/alandtse/skyrim_vr_address_library/issues/264)) ([ab34124](https://github.com/alandtse/skyrim_vr_address_library/commit/ab341247d59b06712a7d8b93661f1f016cf76cb3))
+
 # [0.278.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.277.0...v0.278.0) (2026-10-13)
 
 
