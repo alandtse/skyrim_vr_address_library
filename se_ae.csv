@@ -2035,6 +2035,7 @@ sseid,aeid,confidence,name
 13238,13389,1,TES::sub_*
 13240,13391,1,
 13243,13394,1,TES::sub_*
+13258,13409,3,TES::ResetOcclusionVisibility
 13277,13428,3,TES::LoadExteriorGrid
 13278,13430,3,TES::LoadGridCells
 13282,13436,3,TES::PurgeInteriorBuffer
@@ -4610,6 +4611,7 @@ sseid,aeid,confidence,name
 35317,36212,3,RE::BGSImpactManager::PlayImpactSound
 35320,36215,3,RE::BGSImpactManager::PlayImpactEffect
 35413,36311,3,RE::Calendar::GetTimeDateString
+35571,36574,3,Main::UpdateCullingFrustum
 35978,36953,3,RE::TaskQueueInterface::QueueBulletWaterDisplacementTask
 35987,36962,3,RE::TaskQueueInterface::QueueRemoveSpellTask
 36248,37230,3,RE::Actor::SetRotationZ
@@ -7224,6 +7226,11 @@ sseid,aeid,confidence,name
 74003,75742,3,QueuedFile::NotifyChildrenAndFinalize
 74005,75744,3,QueuedFile::AddChild
 74013,75755,3,QueuedFile::dtor_deleting
+74649,76380,3,BSMultiBoundAABB::TestOcclusionShape
+74682,76414,3,BSOcclusionBox::IsOcclusionPlane
+74683,76415,3,BSOcclusionBox::IsOcclusionBox
+74706,76440,3,BSOcclusionPlane::IsOcclusionPlane
+74707,76441,3,BSOcclusionPlane::IsOcclusionBox
 75507,77299,3,RE::RendererData::CreateRenderTexture
 76170,77998,3,RE::NiAVObject::SetCollisionLayer
 76171,77999,3,RE::NiAVObject::UpdateRigidBodySettings
@@ -8505,6 +8512,9 @@ sseid,aeid,confidence,name
 99043,105694,1,
 99044,105695,1,
 99045,105696,1,
+99736,106380,3,ShadowSceneNode::UpdateSunOcclusionPlanes
+99750,106398,3,AppendRoomToAccumList
+99752,106400,3,ShadowSceneNode::AccumulateLight
 100004,106711,3,RE::BSLightingShaderMaterial::Ctor
 100021,106728,3,RE::BSLightingShaderMaterialEnvmap::Ctor
 100033,106740,3,RE::BSLightingShaderMaterialEye::Ctor
@@ -8716,6 +8726,7 @@ sseid,aeid,confidence,name
 101557,108555,1,
 101559,108557,1,ImageSpaceEffectBlur::Func2_*
 101560,108558,1,ImageSpaceEffectBlur::Func7_*
+101599,108602,3,BSParabolicCullingProcess::UpdateLightPlanes
 101659,108741,1,
 101661,108743,1,BSMeshLODTriShape::Func55_141330150
 101662,108744,1,
@@ -19574,6 +19585,7 @@ sseid,aeid,confidence,name
 524545,411124,1,
 524546,411125,1,
 524547,411126,1,
+524576,411193,3,gPortalGraphEntryVisibilityMapLock_143023D48
 524597,411237,1,
 524598,411238,3,RE::NiRTTI_BSBlastNode
 524599,411239,3,RE::NiRTTI_BSDebrisNode
@@ -19619,6 +19631,7 @@ sseid,aeid,confidence,name
 524683,411298,1,
 524684,411299,3,RE::NiRTTI_BSPSysMultiTargetEmitterCtlr
 524685,411300,1,
+524691,411306,3,gPortalVisibilityPassActive_1430243E0
 524743,411357,1,
 524744,411359,1,
 524745,411360,1,
