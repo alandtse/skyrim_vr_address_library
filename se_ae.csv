@@ -1996,7 +1996,8 @@ sseid,aeid,confidence,name
 13128,13270,1,
 13129,13271,1,NiStream::Func12_*
 13140,13280,1,TES::sub_*
-13148,13288,1,TES::sub_*
+13147,13287,3,TES::SetGridFromPosition
+13148,13288,3,TES::UpdateGridForPosition
 13153,13293,1,TES::sub_*
 13155,13295,1,TES::sub_*
 13156,13296,1,
@@ -2035,6 +2036,10 @@ sseid,aeid,confidence,name
 13240,13391,1,
 13243,13394,1,TES::sub_*
 13258,13409,3,TES::ResetOcclusionVisibility
+13277,13428,3,TES::LoadExteriorGrid
+13278,13430,3,TES::LoadGridCells
+13282,13436,3,TES::PurgeInteriorBuffer
+13286,13440,3,TES::UpdateLandLODBlendFlags
 13439,13536,1,
 13440,13537,1,
 13442,13539,1,
@@ -2806,6 +2811,7 @@ sseid,aeid,confidence,name
 18617,19086,1,
 18618,19087,1,
 18619,19088,1,
+18669,19145,3,TESObjectCELL::IsReferenceListLocked
 18691,19177,1,TESObjectCELL::sub_*
 18694,19180,1,TESObjectCELL::UpdateGrassFade_*
 18695,19181,1,TESObjectCELL::ClearGrassFade_*
@@ -8522,6 +8528,7 @@ sseid,aeid,confidence,name
 100110,106817,3,RE::BSLightingShaderMaterialLODLandscape::Ctor
 100118,106825,3,RE::BSLightingShaderMaterialSnow::Ctor
 100125,106832,3,RE::BSLightingShaderMaterialMultiLayerParallax::Ctor
+100583,107323,3,SetLODBlendOffsetConstant
 100747,107528,1,BSEffectShader::Func7_*
 100748,107529,1,BSEffectShader::sub_*
 100757,107537,1,BSDistantTreeShaderProperty::sub_141301090
@@ -19289,9 +19296,14 @@ sseid,aeid,confidence,name
 512511,389572,3,RE::BSScaleformManager::CollectDisplayInfo::fSafeZoneYWide
 512513,389575,3,RE::BSScaleformManager::CollectDisplayInfo::fSafeZoneX
 512515,389578,3,RE::BSScaleformManager::CollectDisplayInfo::fSafeZoneY
+513236,390976,3,gTESLODBlendFromOrigin_141e0df78
+513238,390978,3,gTESLODBlendToOrigin_141e0df80
+513239,390980,3,gTESLODBlendStartTime_141e0df88
 514139,400267,3,RE::ActorValueList::GetSingleton
 514167,400315,3,RE::ProcessLists::GetSingleton
 514182,400331,3,RE::BSFaceGenManager::GetSingleton
+514185,400335,3,gTESLODBlendFlagsPending_141ebeb51
+514186,400336,3,gLoadingMenuShown_141ebeb52
 514290,400450,3,RE::TESWaterSystem::GetSingleton
 514292,400452,3,RE::BGSGrassManager::GetSingleton
 514349,400503,3,RE::FormFactory::FormFactoriesInitialized
@@ -20070,6 +20082,8 @@ sseid,aeid,confidence,name
 527336,414287,1,
 527337,414288,1,
 527338,414289,1,
+527641,414593,3,gTESLODBlendInProgress_1431d0e0c
+527644,414596,3,gTESGridsToLoadCopy_1431d0e10
 527970,414916,1,
 527971,414917,1,
 527972,414918,1,
