@@ -2561,7 +2561,7 @@
 100306,0x1412dc050,0x14131b240,4,"void VolumetricLightingDescriptor::Render (longlong param_1, undefined8 param_2, bool param_3)"
 100309,0x1412dc3a0,0x14131b590,4,void VolumetricLightingDescriptor::Raymarch (VolumetricLightingDescriptor* this)
 100408,0x1412e1fe0,0x141321700,3,void UpdateWorldCameraProjection()
-100411,0x1412e21a0,0x1413218c0,4,"void Main::RenderFirstPersonView (char param_1, char param_2)"
+100411,0x1412e21a0,0x1413244e0,2,"void Main::RenderFirstPersonView (char param_1, char param_2)"
 100414,0x1412e2660,0x141321d80,3,void Main::QueueListAccumulationJobs(NiCamera* a_camera)
 100415,0x1412e2a60,0x141322130,3,void MainAccum()
 100416,0x1412e2c50,0x141322390,3,void FirstListAccumulationJob(CullDescriptor* a_job)
