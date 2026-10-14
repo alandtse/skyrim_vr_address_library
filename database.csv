@@ -91,6 +91,7 @@
 13233,0x140158e70,0x140169920,3,void sub_140158E70 (TES * a_this)
 13240,0x140159290,0x140169d50,4,"void TES::ClearGrassFadeAt(int a_x, int a_y)"
 13257,0x14015a6e0,0x14016b1a0,3,void TES::UpdatePortalVisibility(BSCullingProcess* a_process)
+13258,0x14015ad30,0x14016b7f0,3,"void TES::ResetOcclusionVisibility(BSCullingProcess* a_process, bool a_unused, bool a_resetRoomOccluders)"
 13260,0x14015af70,0x14016ba30,4,"bool NiNode::ToggleMasterParticleAddonNodes(const NiNode* a_node, bool a_enable)"
 13277,0x14015bcb0,0x14016c770,3,void TES::LoadExteriorGrid(TES* a_this)
 13278,0x14015bf70,0x14016ca30,3,void TES::LoadGridCells(TES* a_this)
@@ -853,6 +854,7 @@
 35562,0x1405b2590,0x1405b9e90,2,void Main::UpdateSky(Main* this)
 35565,0x1405b2ff0,0x1405bab10,3,Main::OnIdle_1405B2FF0
 35567,0x1405b3830,0x1405bb440,4,FUN_1405b3830
+35571,0x1405b3c00,0x1405bb810,3,void Main::UpdateCullingFrustum()
 35589,0x1405b5280,0x1405bcef0,3,void Main::FUN_1405b5280 (Main * a_this)
 35593,0x1405b5490,0x1405bd0f0,2,Main::sub_*
 35598,0x1405b5ef0,0x1405bdb80,4,void Main::SetActive(bool a_active)
@@ -2015,6 +2017,7 @@
 74601,0x140d46da0,0x140d8fcd0,4,"void FUN_140d46da0 (longlong param_1, uint param_2, longlong param_3, uint param_4, char param_5)"
 74607,0x140d47590,0x140d904c0,4,"BSMultiBoundShape* BSMultiBoundShape::LoadFromStream(BSMultiBoundShape* param_1, NiPoint3* param_2, NiPoint3* param_3, bool param_4, undefined4 param_5, int param_6, longlong param_7, int param_8)"
 74621,0x140d47af0,0x140d90a20,4,"void BSIOStreamTraits::Write (BSIOStreamTraits * a_this, void * a_1, uint a_2)"
+74649,0x140d485a0,0x140d914d0,3,"bool BSMultiBoundAABB::TestOcclusionShape(std::uint64_t a_unused, BSCullingProcess* a_process, BSOcclusionShape* a_shape)"
 74671,0x140d48f80,0x140d91eb0,3,NiObject* BSOcclusionBox::CreateClone()
 74673,0x140d49070,0x140d91fa0,3,BSOcclusionBox* BSOcclusionBox::CtorDefault(BSOcclusionBox* a_this)
 74674,0x140d491a0,0x140d920d0,3,"BSOcclusionBox* BSOcclusionBox::Ctor(BSOcclusionBox* a_this, NiPoint3* a_center, NiPoint3* a_size, NiMatrix3* a_rotation)"
@@ -2025,6 +2028,8 @@
 74679,0x140d4a280,0x140d931b0,3,"bool BSOcclusionBox::IsPotentiallyVisible(NiCamera* a_camera, NiFrustumPlanes* a_planes)"
 74680,0x140d4ad50,0x140d93c30,3,bool BSOcclusionBox::AreCornersInsidePlanes(NiFrustumPlanes* a_planes)
 74681,0x140d4ae00,0x140d93ce0,3,bool BSOcclusionBox::PruneFrustumPlanes(NiPoint3* a_origin)
+74682,0x140d4b6a0,0x140d94580,3,bool BSOcclusionBox::IsOcclusionPlane()
+74683,0x140d4b6b0,0x140d94590,3,bool BSOcclusionBox::IsOcclusionBox()
 74688,0x140d4b820,0x140d94700,3,NiObject* BSOcclusionPlane::CreateClone()
 74690,0x140d4b900,0x140d947e0,3,BSOcclusionPlane* BSOcclusionPlane::CtorDefault(BSOcclusionPlane* a_this)
 74691,0x140d4ba10,0x140d948f0,3,"BSOcclusionPlane* BSOcclusionPlane::Ctor(BSOcclusionPlane* a_this, NiPoint3* a_center, NiPoint2* a_size, NiMatrix3* a_rotation)"
@@ -2041,6 +2046,8 @@
 74702,0x140d4c7e0,0x140d956c0,4,"bool BSOcclusionPlane::WithinFrustumDistFirst(const NiFrustumPlanes* a_planes, const NiPoint3* a_point)"
 74703,0x140d4caa0,0x140d95980,3,bool BSOcclusionPlane::IntersectsBound(NiBound* a_bound)
 74704,0x140d4cc20,0x140d95b00,3,bool BSOcclusionPlane::IsVisibleFromPoint(NiPoint3* a_point)
+74706,0x140d4cde0,0x140d95cc0,3,bool BSOcclusionPlane::IsOcclusionPlane()
+74707,0x140d4cdf0,0x140d95cd0,3,bool BSOcclusionPlane::IsOcclusionBox()
 74806,0x140d51050,0x140d99f60,3,"void BSCullingProcess::AppendNonAccum(NiAVObject* a_object, int a_alphaGroupIndex)"
 74807,0x140d51070,0x140d99f80,3,"void BSCullingProcess::AppendVirtual(BSGeometry* a_geometry, std::int32_t a_alphaGroupIndex)"
 74808,0x140d51100,0x140d9a010,3,void BSCullingProcess::ClearCollectedGeometry()
@@ -2492,11 +2499,13 @@
 99730,0x1412bc7f0,0x1412fa270,4,void ShadowSceneNode::ClearShadowCasterArray(ShadowSceneNode * a_this)
 99734,0x1412bc9a0,0x1412fa420,3,"void ShadowSceneNode::PropagateRoomVisibility(BSMultiBoundRoom* a_room, BSCullingProcess* a_process, NiFrustumPlanes* a_planes, bool a_resetUnbound, bool a_skipOcclusion)"
 99735,0x1412bd240,0x1412facc0,4,"BSCompoundFrustum* ShadowSceneNode::BuildSharedCompoundFrustum(BSCullingProcess* a_cullingProcess, BSPortal* a_portal)"
+99736,0x1412bd460,0x1412faee0,3,void ShadowSceneNode::UpdateSunOcclusionPlanes(NiCamera* a_camera)
 99741,0x1412bdf60,0x1412fb9e0,3,"void ShadowSceneNode::ResetScene(ShadowSceneNode* this, BSPortalGraph* a_graph)"
 99744,0x1412be5f0,0x1412fc070,3,"void ShadowSceneNode::UnlinkChildLights(ShadowSceneNode* this, NiNode* a_node)"
-99752,0x1412beae0,0x1412fc4f0,3,"void ShadowSceneNode::AccumulateLight(RE::BSLight* a_light, RE::BSTArray<RE::NiAVObject*>* a_accumList, bool a_flag)"
+99750,0x1412bea00,0x1405c1340,3,"void AppendRoomToAccumList(BSTArray<NiPointer<NiAVObject>>* a_accumList, BSMultiBoundRoom* a_room)"
+99752,0x1412beae0,0x1412fc4f0,3,"void ShadowSceneNode::AccumulateLight(RE::BSLight* a_light, RE::BSTArray<RE::NiPointer<RE::NiAVObject>>* a_accumList, bool a_isDynamicMainScene)"
 99753,0x1412bf7f0,0x1412fd220,3,void ShadowSceneNode::AccumulateLight(RE::BSLight* a_light)
-99787,0x1412c1350,0x1412feda0,3,"bool TestPortalGraphOcclusionShapes(NiFrustumPlanes* a_planes, void* a_visitor)"
+99787,0x1412c1350,0x1412feda0,3,"bool TestPortalGraphOcclusionShapes(NiPoint3* a_viewerPos, BSCullingProcess* a_process, void* a_visitor)"
 99789,0x1412c15c0,0x1412ff010,3,"void Renderer::SubmitAccumulator(NiCamera* a_camera, BSShaderAccumulator* a_accumulator, std::uint32_t a_renderFlags)"
 99790,0x1412c1600,0x1412ff050,3,"void Renderer::StartAccumulating(NiCamera* a_camera, BSShaderAccumulator* a_accumulator, std::uint32_t a_renderFlags)"
 99791,0x1412c1690,0x1412ff0e0,3,"void Renderer::FinishAccumulatingPostResolveDepth(NiCamera* a_unusedCamera, BSShaderAccumulator* a_accumulator, std::uint32_t a_renderFlags)"
@@ -2662,6 +2671,7 @@
 101565,0x14132a370,0x14136cba0,3,void ImageSpaceEffectFullScreenBlur::Render(ImageSpaceEffectFullScreenBlur* a_this)
 101566,0x14132a560,0x14136cd90,3,ulonglong ImageSpaceEffectFullScreenBlur::UpdateParams(ImageSpaceEffectFullScreenBlur* a_this)
 101570,0x14132a8b0,0x14136d0e0,3,"ImageSpaceEffectFullScreenBlur* ImageSpaceEffectFullScreenBlur::dtor (ImageSpaceEffectFullScreenBlur* a_this, uint32_t in_EDX)"
+101599,0x14132c530,0x14136f390,3,"void BSParabolicCullingProcess::UpdateLightPlanes(NiCamera* a_camera, float a_lightRadius, bool a_storeLightCamera)"
 101600,0x14132c650,0x14136f4b0,4,BSParabolicCullingProcess::SetBackHemisphereAccumulator
 101601,0x14132c690,0x14136f4f0,3,"void BSParabolicCullingProcess::AppendNonAccum(NiAVObject* a_object, int a_alphaGroupIndex)"
 101612,0x14132cfd0,0x14136fe60,3,"void BSShadowFrustumLight::Accumulate(std::uint32_t& a_globalShadowLightCount, std::uint32_t a_shadowMaskChannel, NiAVObject* a_cullingScene)"
@@ -10563,6 +10573,7 @@
 524568,0x143023d00,0x14317c580,3,RE::NiRTTI_BSWindModifier
 524572,0x143023d20,0x14317c5a0,3,RE::NiRTTI_BSTempNodeManager
 524573,0x143023d30,0x14317c5b0,3,RE::NiRTTI_BSTempNode
+524576,0x143023d48,0x14317c5c8,3,gPortalGraphEntryVisibilityMapLock_143023D48
 524577,0x143023d50,0x14317c5d0,3,RE::NiRTTI_BSOcclusionShape
 524594,0x143023e48,0x14317c6c8,3,RE::NiRTTI_BSRangeNode
 524598,0x143024080,0x14317c900,3,RE::NiRTTI_BSBlastNode
@@ -10592,6 +10603,7 @@
 524686,0x1430243a0,0x14317cc20,3,RE::NiRTTI_BSGeometryListCullingProcess
 524688,0x1430243b8,0x14317cc38,3,RE::NiRTTI_BSSubIndexTriShape
 524689,0x1430243c8,0x14317cc48,3,RE::NiRTTI_BSDistantObjectLargeRefExtraData
+524691,0x1430243e0,0x14317cc60,3,gPortalVisibilityPassActive_1430243E0
 524698,0x143025d90,0x14317e618,3,RE::NiRTTI_BSMasterParticleSystem
 524703,0x143025db8,0x14317e640,3,RE::NiRTTI_BSProceduralLightningController
 524704,0x143025dc8,0x14317e650,3,RE::NiRTTI_BSInvMarker
