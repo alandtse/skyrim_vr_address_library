@@ -1,3 +1,10 @@
+# [0.281.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.280.0...v0.281.0) (2026-10-15)
+
+
+### Features
+
+* add BSShaderAccumulator first-person ids ([#274](https://github.com/alandtse/skyrim_vr_address_library/issues/274)) ([d1bab0e](https://github.com/alandtse/skyrim_vr_address_library/commit/d1bab0e0a498183fbc44c6770ddf03f510fd0c09))
+
 # [0.280.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.279.0...v0.280.0) (2026-10-15)
 
 
