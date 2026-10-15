@@ -1,3 +1,15 @@
+# [0.280.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.279.0...v0.280.0) (2026-10-15)
+
+
+### Features
+
+* add bhkCollisionFilter layer setters ([#269](https://github.com/alandtse/skyrim_vr_address_library/issues/269)) ([3e5f343](https://github.com/alandtse/skyrim_vr_address_library/commit/3e5f343bb52e12ae4b24cc78a1f192f0966848d5))
+* add cell loading, LOD and engine fix rows ([#268](https://github.com/alandtse/skyrim_vr_address_library/issues/268)) ([0486519](https://github.com/alandtse/skyrim_vr_address_library/commit/0486519c2d47d13acd1872adfac10c7649aaabcd))
+* add reflection and shadow renderer rows ([#267](https://github.com/alandtse/skyrim_vr_address_library/issues/267)) ([f82448f](https://github.com/alandtse/skyrim_vr_address_library/commit/f82448f1f6718ecf472c72f173699c5903a58dae))
+* add room lighting and offset data rows ([#270](https://github.com/alandtse/skyrim_vr_address_library/issues/270)) ([e2375a6](https://github.com/alandtse/skyrim_vr_address_library/commit/e2375a6cc635ce8cb3ca2632709f7e7898ec4a73))
+* correct BSCubeMapCamera::Dtor VR address ([#265](https://github.com/alandtse/skyrim_vr_address_library/issues/265)) ([8936e48](https://github.com/alandtse/skyrim_vr_address_library/commit/8936e483f82865e4102241ae3971ec3bc2752940))
+* use the live VR RenderFirstPersonView ([#266](https://github.com/alandtse/skyrim_vr_address_library/issues/266)) ([c382c44](https://github.com/alandtse/skyrim_vr_address_library/commit/c382c447cd4dcab41e4bd3d090828e484b5cfe96))
+
 # [0.279.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.278.0...v0.279.0) (2026-10-14)
 
 
