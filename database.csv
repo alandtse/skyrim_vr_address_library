@@ -67,7 +67,7 @@
 13135,0x140150a00,0x140161430,3,RE::INISettingCollection::Unk_08
 13137,0x140150b20,0x140161550,4,void sub_140150B20 (TESObjectCELL * a_this)
 13138,0x140150c80,0x1401616b0,4,void AddCellGrassTask::sub_140150C80 (void)
-13142,0x140151b60,0x1401625a0,3,TES::sub_140151B60
+13142,0x140151b60,0x1401625a0,3,TESObjectCELL* TES::GetCurrentCell()
 13147,0x140151e60,0x1401628a0,3,void TES::SetGridFromPosition(TES* a_this, NiPoint3* a_position)
 13148,0x140152030,0x140162a70,4,"bool TES::UpdateGridForPosition(TES* a_this, NiPoint3* a_position, bool a_flag, float a_unk)"
 13159,0x1401535d0,0x140164020,3,void TES::PurgeBufferedCells()
@@ -118,7 +118,7 @@
 13657,0x1401713d0,0x140181b80,3,RE::TESDataHandler::LoadScripts
 13671,0x1401726a0,0x140182df0,4,void DataHandler::sub_1401726A0 (TESNPC * param_1)
 13755,0x140176c80,0x140186bd0,4,"void FUN_140176c80 (IMemoryHeap__VFTable * param_1, IMemoryHeap__VFTable * * param_2, undefined * param_3, undefined8 param_4)"
-13777,0x1401774e0,0x1401873f0,3,sub_1401774E0
+13777,0x1401774e0,0x1401873f0,3,void BSPointerHandleManager::FreeHandle(std::uint32_t* a_handle)
 13789,0x140177790,0x1401876a0,3,RE::Sky::GetSingleton
 13855,0x14017a700,0x14018a5b0,4,"bool TESFile::OpenTES(NiFile::OpenMode a_accessMode, bool a_lock)"
 13857,0x14017ad40,0x14018abf0,4,bool TESFile::CloseTES(bool a_force)
@@ -302,20 +302,20 @@
 18536,0x1402654c0,0x140276a90,3,bhkWorld* TESObjectCELL::GetbhkWorld()
 18540,0x1402657a0,0x140276d70,4,TESRegionList* TESObjectCELL::GetRegionList(bool a_createIfMissing)
 18543,0x140265990,0x140276f60,3,"bool TESObjectCELL::GetWaterHeight(const NiPoint3& a_pos, float& a_waterHeight)"
-18548,0x140265dd0,0x1402773a0,3,TESObjectCELL::sub_140265DD0
+18548,0x140265dd0,0x1402773a0,3,ImageSpaceBaseData* TESObjectCELL::GetTESImageSpace()
 18568,0x1402665a0,0x140277b70,3,TESObjectREFR::RemoveReference3D
 18594,0x140267c80,0x140279250,3,TESObjectCELL::sub_140267C80
 18631,0x14026a3e0,0x14027b9b0,3,bool TESFile::SeekLandscapeForCurrentCell(TESFile* a_file)
 18637,0x14026a840,0x14027be10,4,void TESObjectCELL::LoadTempData (TESObjectCELL * a_this)
 18642,0x14026b160,0x14027c730,3,po3tweaks::QueuedRefCrash::SetFadeNode
-18643,0x14026b1a0,0x14027c770,3,TESObjectCELL::QCanHideLOD
+18643,0x14026b1a0,0x14027c770,3,bool TESObjectCELL::QCanHideLOD()
 18644,0x14026b1d0,0x14027c7a0,3,sub_14026B1D0
 18652,0x14026c410,0x14027d9e0,3,NiNode* TESObjectCELL::GetLightMarkerNode()
 18653,0x14026c4d0,0x14027daa0,3,NiNode* TESObjectCELL::GetSoundMarkerNode()
 18655,0x14026c5d0,0x14027dba0,3,void TESObjectCELL::sub_14026C5D0 (TESObjectCELL * a_this)
 18669,0x14026e5f0,0x14027fbd0,3,bool TESObjectCELL::IsReferenceListLocked(TESObjectCELL* a_this)
-18677,0x14026e870,0x14027fe50,3,TESObjectCELL::sub_14026E870
-18678,0x14026e8f0,0x14027fed0,3,TESObjectCELL::sub_14026E8F0
+18677,0x14026e870,0x14027fe50,3,void TESObjectCELL::IncQueuedDistantRefCount()
+18678,0x14026e8f0,0x14027fed0,3,void TESObjectCELL::DecQueuedDistantRefCount()
 18685,0x14026fd10,0x1402812f0,3,BSPortalGraph* TESObjectCELL::GetPortalGraph()
 18711,0x140271be0,0x140283200,3,TESObjectCELL::sub_140271BE0
 18755,0x140273ED0,0x1402854C0,4,"void CallsMapMarkerData (int64 a1, int64 **a2)"
@@ -385,7 +385,7 @@
 19843,0x1402a8020,0x1402b9790,4,BGSLocationRefType * TESObjectREFR::GetLocationRefType_1402A8020 (TESObjectREFR * a_this)
 19857,0x1402a8cc0,0x1402ba430,3,void TESObjectREFR::InitChildActivates(TESObjectREFR* a_actionRef)
 20022,0x1402b1b60,0x1402c32d0,3,"bool TESFile::SeekCell(TESWorldSpace* a_worldSpace, TESFile* a_file, int32_t a_x, int32_t a_y)"
-20023,0x1402b1df0,0x1402c3560,3,TESWorldSpace::GetIndexForCellCoord
+20023,0x1402b1df0,0x1402c3560,3,"std::int32_t TESWorldSpace::GetIndexForCellCoord(TESFile* a_file, std::int32_t a_cellX, std::int32_t a_cellY)"
 20026,0x1402b20e0,0x1402c3850,4,TESWorldSpace * TESWorldSpace::sub_1402B20E0 (TESWorldSpace * a_this)
 20028,0x1402b2470,0x1402c3be0,3,TESWorldSpace::sub_1402B2470
 20029,0x1402b27a0,0x1402c3f10,3,void TES::DestroySkyCell(TES* a_tes)
@@ -543,8 +543,8 @@
 25704,0x1403b57b0,0x1403c55d0,3,void Sky::UpdateLightLODFadeDistances(Sky* this)
 25706,0x1403b5d20,0x1403c5b40,4,"void Sky::FillColorBlend(COLOR_BLEND& a_colorBlend, TESWeather* a_currentWeather, float a_weatherPct, TESWeather::ColorTime& a_time1, TESWeather::ColorTime& a_time2)"
 25746,0x1403b8d30,0x1403c8b50,4,"void Sky::ResetModelHandle(ModelDBHandle* a_handle, ModelDBHandle::U_Entry* a_entry)"
-25762,0x1403b9340,0x1403c9160,3,Sky::sub_1403B9340
-25765,0x1403b94c0,0x1403c92e0,3,Sky::sub_1403B94C0
+25762,0x1403b9340,0x1403c9160,3,BGSLightingTemplate* Sky::GetCurrentRoomLightingTemplate()
+25765,0x1403b94c0,0x1403c92e0,3,BGSLightingTemplate* Sky::GetPreviousRoomLightingTemplate()
 25799,0x1403bbf20,0x1403cbd60,3,"void Sun::SubmitOcclusionQuery(std::uint32_t a_renderFlags, BSShaderAccumulator* a_accumulator, NiCamera* a_camera)"
 25801,0x1403bc010,0x1403cbe50,3,void Sun::UpdateOcclusionQueries()
 25814,0x1403bcaf0,0x1403cc940,4,SoundLevels GetSoundLevelValue (SoundLevels a_soundLevel)
@@ -826,7 +826,7 @@
 34474,0x140570f90,0x140577530,3,void MenuTopicManager::Revert()
 34476,0x140571040,0x1405775e0,3,void MenuTopicManager::StartGreeting()
 34549,0x140576390,0x14057c960,3,JobList* GetJobListByIndex(std::uint32_t)
-34550,0x1405763b0,0x14057c980,3,sub_1405763B0
+34550,0x1405763b0,0x14057c980,3,bool IsBSTheadLockOwnedByThread(std::int32_t a_thread)
 34627,0x140579880,0x140580fe0,3,bool BGSSaveLoadFileEntry::PopulateFileEntryData()
 34634,0x140579b90,0x1405812f0,4,"uint BGSSaveLoadFormIDMap::InsertFormID (BGSSaveLoadFormIDMap * a_this, uint a_formID)"
 34655,0x14057b920,0x1405830f0,4,"bool BGSSaveLoadGame::GetChange(TESForm* a_form, std::uint32_t a_changes)"
@@ -2163,7 +2163,7 @@
 75721,0x140d7dc50,0x140dd2b60,4,"HRESULT BSGraphics::Renderer::LoadTextureFromStream (ID3D11Device * a_this, BSResourceNiBinaryStream * a_stream, BSGraphics::Texture** a_texture, BSGraphics::DDSInfo* a_ddsinfo, uint32_t param_5, uint32_t param_6)"
 75976,0x140da3ca0,0x140df8c10,4,void hkpWorldObject::RemoveProperty(std::uint32_t a_key)
 76023,0x140da6e60,0x140dfbde0,4,HavokWorld::Init_*
-76027,0x140da7580,0x140dfc500,3,bhkWorld::PickObject
+76027,0x140da7580,0x140dfc500,3,bool bhkWorld::PickObject(bhkPickData& a_pickData)
 76033,0x140da81e0,0x140dfd160,3,RE::NiAVObject::SetMotionType
 76160,0x140dad060,0x140e01fe0,4,NiAVObject * GetNiObjectFromHavokCollidable_140DAD060 (hkpCollidable * param_1)
 76170,0x140dae3d0,0x140e03350,3,void NiAVObject::SetCollisionLayer(COL_LAYER a_collisionLayer)
@@ -9931,7 +9931,7 @@
 502526,0x141dd7e80,0x141E95180,4,fActivatePickLength_Interface
 502558,0x141dd8020,0x141e95338,4,iMasserSize
 502570,0x141dd80b0,0x141e953c8,4,iSecundaSize
-502588,0x141dd8188,0x141e954a0,3,DAT_141DD8188
+502588,0x141dd8188,0x141e954a0,3,fRoomLightingTransitionDuration
 502609,0x141dd8290,0x141e955C0,4,fSunBaseSize
 502611,0x141dd82a8,0x141e955d8,4,fSunGlareSize
 502619,0x141dd8308,0x141e95638,4,fSunAlphaTransTime
@@ -10245,8 +10245,8 @@
 514415,0x141ec4328,0x141f89190,3,bhkCollisionFilter* GetSingleton()
 514417,0x141ec4338,0x141f891a0,3,RE::NiRTTI_BGSDecalNode
 514462,0x141ec44b0,0x141f89358,3,RE::NiRTTI_BSAnimGroupSequence
-514475,0x141ec47ac,0x141f8964c,3,DAT_141EC47AC
-514476,0x141ec47b0,0x141f89650,3,DAT_141EC47B0
+514475,0x141ec47ac,0x141f8964c,3,gHandleFreeListHead_141EC47AC
+514476,0x141ec47b0,0x141f89650,3,gHandleFreeListTail_141EC47B0
 514477,0x141ec47b8,0x141f89658,4,static BSReadWriteLock& GetHandleManagerLock()
 514478,0x141ec47c0,0x141f89660,3,RE::BSPointerHandleManager::GetHandleEntries
 514494,0x142ec4838,0x142f896d8,3,RE::ActorEquipManager::Singleton
