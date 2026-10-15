@@ -2154,6 +2154,8 @@
 76426,0x140dbef90,0x140e13f10,2,float bhkCharRigidBodyController::GetSupportMass()
 76456,0x140dc1380,0x140e16300,4,bool bhkCharacterController::IsHurtfulBody(hkpRigidBody* a_body)
 76460,0x140dc16c0,0x140e16650,4,"void bhkCharacterController::ProcessHurtfulBody(hkpRigidBody* a_body, const hkContactPoint* a_contactPoint)"
+76683,0x140dd6d10,0x140e2bce0,4,"void bhkCollisionFilter::SetLayerPairCollisionEnabled(COL_LAYER a_layerA, COL_LAYER a_layerB, bool a_enabled)"
+76684,0x140dd6d90,0x140e2bd60,4,"void bhkCollisionFilter::SetLayerBitfield(COL_LAYER a_layer, std::uint64_t a_mask)"
 76693,0x140dd94e0,0x140e2e4b0,4,"void hkpAllRayHitTempCollector::AddRayHit(const hkpCdBody& a_body, const hkpShapeRayCastCollectorOutput& a_hitInfo)"
 76799,0x140ddca80,0x140e30f40,4,MATERIAL_ID bhkShape::GetMaterialID(hkpShapeKey a_key)
 76924,0x140de1f20,0x140E363E0,4,"bhkCapsuleShape * bhkCapsuleShape::bhkCapsuleShape(bhkCapsuleShape * a_this, RE::NiPoint3 * a_topVec, RE::NiPoint3 * a_botVec, float a_radius)"
