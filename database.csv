@@ -2563,9 +2563,13 @@
 99943,0x1412cbe90,0x14130a970,3,"void BSShaderAccumulator::sub_1412CBE90 (BSShaderAccumulator * a_this, uint32_t param_2)"
 99947,0x1412cc3c0,0x14130af00,3,BSShaderAccumulator::ShadowMapOrMask
 99952,0x1412cc6b0,0x14130b2f0,3,void NiBackToFrontAccumulator::ClearItemsList()
+99954,0x1412cc730,0x14130b370,3,void BSShaderAccumulator::RenderFirstPersonViewPasses(NiCamera * a_camera)
 99955,0x1412cca10,0x14130b650,3,void BSShaderAccumulator::ReleaseGeometryGroupAt(std::int32_t a_index)
+99956,0x1412cca30,0x14130b670,3,void BSShaderAccumulator::RenderFirstPersonView_Begin()
 99957,0x1412cca70,0x14130b6b0,4,"BSBatchRenderer::GeometryGroup * BSShaderAccumulator::StartGroupingAlphas(BSShaderAccumulator * a_this, NiBound * a_bound)"
-99963,0x1412cce40,0x14130ba60,4,"void BSBatchRenderer::RenderBatches (BSBatchRenderer * This, uint32_t StartRange, uint32_t EndRanges, uint32_t RenderFlags, int GeometryGroup)"
+99958,0x1412ccad0,0x14130b710,3,"void BSShaderAccumulator::IssueSunOcclusionQuery(BSGeometry * a_geometry, int32_t a_index, NiCamera * a_camera)"
+99960,0x1412ccd90,0x14130b9b0,3,void BSShaderAccumulator::ClearSunOcclusionTests()
+99963,0x1412cce40,0x14130ba60,4,"void BSShaderAccumulator::RenderBatches(uint32_t a_startRange, uint32_t a_endRange, uint32_t a_renderFlags, int32_t a_geometryGroup)"
 99964,0x1412ccf90,0x14130bbb0,3,void BSShaderAccumulator::RenderFirstPersonView_End(bool a_force)
 99971,0x1412cd520,0x14130c0f0,3,"std::uint32_t AccumulateSceneGraphNode(NiAVObject* a_object, AccumulateSceneGraphContext* a_context)"
 99974,0x1412cd6d0,0x14130c360,3,"std::uint32_t AccumulateNodeChildren(AccumulateSceneGraphContext* a_context, NiNode* a_node)"
