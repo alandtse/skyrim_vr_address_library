@@ -39,6 +39,8 @@
 11633,0x1401172f0,0x1401278d0,3,"void ExtraDataList::SetLinkedRef(TESObjectREFR* a_targetRef, BGSKeyword* a_keyword)"
 11647,0x1401185c0,0x140128ba0,3,"void ExtraDataList::SetActivateParent(TESObjectREFR* a_parentRef, float a_delay)"
 11651,0x140118a30,0x140129010,4,void ExtraDataList::AddActivateRefChild(TESObjectREFR* a_childRef)
+11718,0x14011c990,0x14012cf70,3,BGSLightingTemplate* BSExtraDataList::GetRoomLightingTemplate()
+11719,0x14011ca00,0x14012cfe0,3,TESImageSpace* BSExtraDataList::GetRoomImageSpace()
 11851,0x140123220,0x140133800,3,"void ExtraDataList::SetStartingPosition(TESObjectREFR* a_refr, const NiPoint3& a_position, const NiPoint3& a_rotation, BGSLocation* a_location)"
 11865,0x140123bf0,0x1401341d0,3,float ExtraDataList::GetObjectHealth()
 11903,0x140125d80,0x140136360,3,RE::ExtraDataList::SetExtraFlags
@@ -375,6 +377,7 @@
 20070,0x1402b4600,0x1402c5d70,3,BSPortalGraph* TESWorldSpace::GetPortalGraph()
 20095,0x1402b63b0,0x1402c7b20,3,TESObjectCELL* TESWorldSpace::GetSkyCell()
 20103,0x1402b6eb0,0x1402c8620,4,"bool TESWorldSpace::GetMaxHeightAt(const NiPoint3& xy, float& outHeight)"
+20110,0x1402b7aa0,0x1402c9210,3,OFFSET_DATA* TESWorldSpace::GetOffsetData(TESFile* a_file)
 20262,0x1402bdec0,0x1402cf630,3,"void BGSCameraShot::Play(TESObjectREFR* a_target, std::int32_t a_mode)"
 20263,0x1402be2d0,0x1402cfa40,3,bool BGSCameraShot::IsValid()
 20264,0x1402be320,0x1402cfa90,3,void BGSCameraShot::ReleaseNodes()
@@ -526,6 +529,8 @@
 25704,0x1403b57b0,0x1403c55d0,3,void Sky::UpdateLightLODFadeDistances(Sky* this)
 25706,0x1403b5d20,0x1403c5b40,4,"void Sky::FillColorBlend(COLOR_BLEND& a_colorBlend, TESWeather* a_currentWeather, float a_weatherPct, TESWeather::ColorTime& a_time1, TESWeather::ColorTime& a_time2)"
 25746,0x1403b8d30,0x1403c8b50,4,"void Sky::ResetModelHandle(ModelDBHandle* a_handle, ModelDBHandle::U_Entry* a_entry)"
+25761,0x1403b92d0,0x1403c90f0,3,TESImageSpace* Sky::GetCurrentRoomImageSpace()
+25764,0x1403b9450,0x1403c9270,3,TESImageSpace* Sky::GetPreviousRoomImageSpace()
 25799,0x1403bbf20,0x1403cbd60,3,"void Sun::SubmitOcclusionQuery(std::uint32_t a_renderFlags, BSShaderAccumulator* a_accumulator, NiCamera* a_camera)"
 25801,0x1403bc010,0x1403cbe50,3,void Sun::UpdateOcclusionQueries()
 25814,0x1403bcaf0,0x1403cc940,4,SoundLevels GetSoundLevelValue (SoundLevels a_soundLevel)

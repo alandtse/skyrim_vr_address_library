@@ -1683,6 +1683,8 @@ sseid,aeid,confidence,name
 11663,11809,1,
 11665,11811,1,
 11666,11812,1,
+11718,11864,3,BSExtraDataList::GetRoomLightingTemplate
+11719,11865,3,BSExtraDataList::GetRoomImageSpace
 11813,11953,1,
 11814,11954,1,ExtraDataList::GetHavokWorld_*
 11815,11955,1,
@@ -2939,6 +2941,7 @@ sseid,aeid,confidence,name
 19805,20210,3,RE::TESObjectREFR::IsAnOwner
 19857,20264,3,RE::TESObjectREFR::InitChildActivates
 20095,20543,3,RE::TESWorldSpace::GetSkyCell
+20110,20559,3,TESWorldSpace::GetOffsetData
 20529,20968,3,RE::BGSMaterialType::GetMaterialType
 21886,22368,1,GameFunc::handler::IncrementPCSkill_*
 21887,22369,1,GameFunc::handler::UpdateLevel_*
