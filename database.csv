@@ -2152,6 +2152,7 @@
 75532,0x140d6ef90,0x140dc1250,4,"void BSGraphics::Renderer::DispatchCSShader (BSGraphics::Renderer * a_this, BSGraphics::ComputeShader * a_computeShader, uint32_t threadGroupCountX, uint32_t threadGroupCountY, uint32_t threadGroupCountZ)"
 75561,0x140d6ffd0,0x140dc22a0,4,"ID3D11Resource* GetID3D11Resource(BSGraphics::Renderer* a_renderer, uint64_t a_bufferType, uint32_t** a_outIndex, uint32_t a_bufferKind)"
 75564,0x140d70100,0x140dc23d0,4,"void Renderer::SetScissorRect (BSGraphics::Renderer * a_this, int a_left, int a_top, int a_right, int a_bottom)"
+75569,0x140d701d0,0x140dc24a0,4,"int PollOcclusionQuery(void* a_renderer, void** a_query, bool a_wait, bool a_flush)"
 75570,0x140d70290,0x140dc2560,3,void BSGraphics::Renderer::SetPerFrameBuffers (BSGraphics::Renderer * a_renderer)
 75580,0x140d705b0,0x140dc2e70,3,void BSGraphics::SetDirtyStates_140d705b0 (bool isCompute)
 75591,0x140d71f00,0x140dc4b90,3,OpenAnimationReplacer::src/Hooks.h:107
@@ -2571,6 +2572,7 @@
 99960,0x1412ccd90,0x14130b9b0,3,void BSShaderAccumulator::ClearSunOcclusionTests()
 99963,0x1412cce40,0x14130ba60,4,"void BSShaderAccumulator::RenderBatches(uint32_t a_startRange, uint32_t a_endRange, uint32_t a_renderFlags, int32_t a_geometryGroup)"
 99964,0x1412ccf90,0x14130bbb0,3,void BSShaderAccumulator::RenderFirstPersonView_End(bool a_force)
+99967,0x1412cd140,0x14130bd60,4,void BSShaderAccumulator::UpdateSunOcclusionTestResult(int a_index)
 99971,0x1412cd520,0x14130c0f0,3,"std::uint32_t AccumulateSceneGraphNode(NiAVObject* a_object, AccumulateSceneGraphContext* a_context)"
 99974,0x1412cd6d0,0x14130c360,3,"std::uint32_t AccumulateNodeChildren(AccumulateSceneGraphContext* a_context, NiNode* a_node)"
 99996,0x1412ce260,0x14130d090,3,"void BSGrassShader::SetupGeometry(BSGrassShader* a_this, BSRenderPass* a_pass, uint a_flags)"
@@ -10811,6 +10813,7 @@
 527973,0x14323309c,0x14348563c,4,iVolumetricLightingTextureWidthMedium
 527976,0x1432330a8,0x143485648,4,iVolumetricLightingTextureWidthHigh
 527992,0x1432331b8,0x143485758,3,RE::NiRTTI_BSParticleShaderProperty
+528064,0x143233400,0x1434859e0,4,static BSShaderAccumulator** GetUnkBSShaderAccumulator()
 528071,0x143233438,0x14348580c,3,std::uint32_t gListAccumulationJobCount
 528072,0x143233440,0x143485ac0,3,BSTArray<BSTArray<NiPointer<NiAVObject>>> gListAccumulationLists
 528077,0x143233470,0x143485af0,4,static RE::BSCullingProcess* GetUnknownGlobalCullingProcess()
