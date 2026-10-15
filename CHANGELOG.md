@@ -1,3 +1,10 @@
+# [0.282.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.281.0...v0.282.0) (2026-10-15)
+
+
+### Features
+
+* add sun occlusion poll ids ([#273](https://github.com/alandtse/skyrim_vr_address_library/issues/273)) ([556f0bf](https://github.com/alandtse/skyrim_vr_address_library/commit/556f0bf1ec53a5e35f98f84d1c05feb6cd1d791f))
+
 # [0.281.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.280.0...v0.281.0) (2026-10-15)
 
 
