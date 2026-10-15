@@ -2152,7 +2152,7 @@
 75532,0x140d6ef90,0x140dc1250,4,"void BSGraphics::Renderer::DispatchCSShader (BSGraphics::Renderer * a_this, BSGraphics::ComputeShader * a_computeShader, uint32_t threadGroupCountX, uint32_t threadGroupCountY, uint32_t threadGroupCountZ)"
 75561,0x140d6ffd0,0x140dc22a0,4,"ID3D11Resource* GetID3D11Resource(BSGraphics::Renderer* a_renderer, uint64_t a_bufferType, uint32_t** a_outIndex, uint32_t a_bufferKind)"
 75564,0x140d70100,0x140dc23d0,4,"void Renderer::SetScissorRect (BSGraphics::Renderer * a_this, int a_left, int a_top, int a_right, int a_bottom)"
-75569,0x140d701d0,0x140dc24a0,4,"int PollOcclusionQuery(void* a_unused, void** a_query, bool a_wait, bool a_flush)"
+75569,0x140d701d0,0x140dc24a0,4,"int PollOcclusionQuery(void* a_renderer, void** a_query, bool a_wait, bool a_flush)"
 75570,0x140d70290,0x140dc2560,3,void BSGraphics::Renderer::SetPerFrameBuffers (BSGraphics::Renderer * a_renderer)
 75580,0x140d705b0,0x140dc2e70,3,void BSGraphics::SetDirtyStates_140d705b0 (bool isCompute)
 75591,0x140d71f00,0x140dc4b90,3,OpenAnimationReplacer::src/Hooks.h:107
