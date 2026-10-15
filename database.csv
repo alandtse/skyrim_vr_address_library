@@ -90,7 +90,7 @@
 13213,0x1401575d0,0x140168020,4,void sub_1401575D0 (TES * a_this)
 13221,0x1401580c0,0x140168b70,3,NiAVObject* TES::Pick(bhkPickData& a_pickData)
 13224,0x140158350,0x140168e00,3,po3tweaks::ToggleCollisionFix::ToggleCollision
-13227,0x1401584c0,0x140168f70,3,sub_1401584C0
+13227,0x1401584c0,0x140168f70,3,void TES::PreloadInterior(TESObjectCELL* a_cell)
 13230,0x140158970,0x140169420,4,void TES::FinishLoad()
 13233,0x140158e70,0x140169920,3,void sub_140158E70 (TES * a_this)
 13240,0x140159290,0x140169d50,4,"void TES::ClearGrassFadeAt(int a_x, int a_y)"
@@ -116,7 +116,7 @@
 13646,0x14016ea00,0x14017f350,3,void TESDataHandler::ClearData()
 13647,0x14016f2e0,0x14017fb90,3,"bool TESDataHandler::IsGameModded (TESDataHandler * a_this, bool param_2)"
 13652,0x1401700e0,0x140180870,4,"bool TESDataHandler::ConstructObjectList(TESDataHandler* a_this, TESFile* a_file, bool a_isFirstPlugin, char* a_param4)"
-13654,0x1401703f0,0x140180b80,3,TESDataHandler::sub_1401703F0
+13654,0x1401703f0,0x140180b80,3,"bool TESDataHandler::ConstructObject(TESFile* a_file, bool a_checkExisting, TESForm* a_form, bool a_flag)"
 13657,0x1401713d0,0x140181b80,3,RE::TESDataHandler::LoadScripts
 13671,0x1401726a0,0x140182df0,4,void DataHandler::sub_1401726A0 (TESNPC * param_1)
 13755,0x140176c80,0x140186bd0,4,"void FUN_140176c80 (IMemoryHeap__VFTable * param_1, IMemoryHeap__VFTable * * param_2, undefined * param_3, undefined8 param_4)"
@@ -274,9 +274,9 @@
 18137,0x14024a480,0x14025bb60,4,ulonglong sub_14024A480 (CellLoaderTask * a_this)
 18149,0x14024aad0,0x14025c1b0,3,"void FUN_14024aad0 (IMemoryHeap__VFTable * param_1, IMemoryHeap__VFTable * param_2, undefined param_3)"
 18150,0x14024ad30,0x14025c420,3,"void FUN_14024ad30 (MutexRW * param_1, TESWorldSpace * param_2, short param_3, short param_4, undefined param_5)"
-18152,0x14024afc0,0x14025c6b0,3,sub_14024AFC0
-18153,0x14024b150,0x14025c840,3,sub_14024B150
-18154,0x14024b2f0,0x14025c9e0,3,sub_14024B2F0
+18152,0x14024afc0,0x14025c6b0,3,std::uint32_t ExteriorCellLoader::TryCancelTasks()
+18153,0x14024b150,0x14025c840,3,void ExteriorCellLoader::WaitForTasks()
+18154,0x14024b2f0,0x14025c9e0,3,void ExteriorCellLoader::PostProcessCompletedTasks()
 18183,0x14024c600,0x14025dcf0,3,"bool ImageSpaceModifierInstanceForm::SetTarget(TESImageSpaceModifier* a_target, float a_transitionTime, float a_duration, NiAVObject* a_node)"
 18185,0x14024c860,0x14025df50,4,"ImageSpaceModifierInstanceForm* ImageSpaceModifierInstanceForm::Trigger(TESImageSpaceModifier* a_imod, float a_strength, NiAVObject* a_target)"
 18187,0x14024cad0,0x14025e1c0,4,"ImageSpaceModifierInstanceForm* TESImageSpaceModifier::TriggerIfNotActive(float a_strength, NiAVObject* a_target)"
@@ -298,7 +298,7 @@
 18464,0x140261280,0x140272820,3,void TESObjectCELL::UpdateManagedNodes(RE::TESObjectCELL* a_cell)
 18474,0x140262290,0x140273830,3,BGSLocation* TESObjectCELL::GetLocation()
 18513,0x140263920,0x140274ec0,4,TESObjectLAND * GetTESObjectLAND_140263920 (TESObjectCELL * a_this)
-18518,0x140263be0,0x140275180,3,TESObjectCELL::Attach
+18518,0x140263be0,0x140275180,3,void TESObjectCELL::Attach(NiNode* a_parent)
 18519,0x140263e90,0x140275430,3,void TESObjectCELL::RegisterWithPortalGraph()
 18521,0x140264e50,0x140276420,3,NiNode* TESObjectCELL::GetCell3D()
 18536,0x1402654c0,0x140276a90,3,bhkWorld* TESObjectCELL::GetbhkWorld()
@@ -306,12 +306,12 @@
 18543,0x140265990,0x140276f60,3,"bool TESObjectCELL::GetWaterHeight(const NiPoint3& a_pos, float& a_waterHeight)"
 18548,0x140265dd0,0x1402773a0,3,ImageSpaceBaseData* TESObjectCELL::GetTESImageSpace()
 18568,0x1402665a0,0x140277b70,3,TESObjectREFR::RemoveReference3D
-18594,0x140267c80,0x140279250,3,TESObjectCELL::sub_140267C80
+18594,0x140267c80,0x140279250,3,void TESObjectCELL::sub_140267C80(bool a_flag)
 18631,0x14026a3e0,0x14027b9b0,3,bool TESFile::SeekLandscapeForCurrentCell(TESFile* a_file)
 18637,0x14026a840,0x14027be10,4,void TESObjectCELL::LoadTempData (TESObjectCELL * a_this)
 18642,0x14026b160,0x14027c730,3,po3tweaks::QueuedRefCrash::SetFadeNode
 18643,0x14026b1a0,0x14027c770,3,bool TESObjectCELL::QCanHideLOD()
-18644,0x14026b1d0,0x14027c7a0,3,sub_14026B1D0
+18644,0x14026b1d0,0x14027c7a0,3,static void TESObjectCELL::SkipVisibleDistantFadeForLoadedCells()
 18652,0x14026c410,0x14027d9e0,3,NiNode* TESObjectCELL::GetLightMarkerNode()
 18653,0x14026c4d0,0x14027daa0,3,NiNode* TESObjectCELL::GetSoundMarkerNode()
 18655,0x14026c5d0,0x14027dba0,3,void TESObjectCELL::sub_14026C5D0 (TESObjectCELL * a_this)
@@ -323,7 +323,7 @@
 18755,0x140273ED0,0x1402854C0,4,"void CallsMapMarkerData (int64 a1, int64 **a2)"
 18843,0x140278920,0x140289f20,4,TESObjectREFR::HandleReferenceReset
 19002,0x14027ddc0,0x14028f390,3,void TESObjectCELL::AttachReference3D(TESObjectREFR* a_ref)
-19024,0x140280160,0x140291770,3,sub_140280160
+19024,0x140280160,0x140291770,3,"BSMultiBoundNode* TESObjectCELL::sub_140280160(const ObjectRefHandle& a_handle, bool a_flag)"
 19102,0x140283f90,0x1402956c0,3,TESObjectREFR::ClearData
 19105,0x1402850e0,0x140296810,3,void TESObjectREFR::InitializeAfterAllFormsAreReadFromFile
 19110,0x140285be0,0x140297310,3,void TESObjectREFR::AddLockChange()
@@ -389,7 +389,7 @@
 20022,0x1402b1b60,0x1402c32d0,3,"bool TESFile::SeekCell(TESWorldSpace* a_worldSpace, TESFile* a_file, int32_t a_x, int32_t a_y)"
 20023,0x1402b1df0,0x1402c3560,3,"std::int32_t TESWorldSpace::GetIndexForCellCoord(TESFile* a_file, std::int32_t a_cellX, std::int32_t a_cellY)"
 20026,0x1402b20e0,0x1402c3850,4,TESWorldSpace * TESWorldSpace::sub_1402B20E0 (TESWorldSpace * a_this)
-20028,0x1402b2470,0x1402c3be0,3,TESWorldSpace::sub_1402B2470
+20028,0x1402b2470,0x1402c3be0,3,"bool TESWorldSpace::GetCellCoordsFromFileByEditorID(const char* a_cellID, std::int32_t& a_outX, std::int32_t& a_outY)"
 20029,0x1402b27a0,0x1402c3f10,3,void TES::DestroySkyCell(TES* a_tes)
 20070,0x1402b4600,0x1402c5d70,3,BSPortalGraph* TESWorldSpace::GetPortalGraph()
 20095,0x1402b63b0,0x1402c7b20,3,TESObjectCELL* TESWorldSpace::GetSkyCell()
@@ -640,7 +640,7 @@
 31026,0x1404b3190,0x1404c3260,3,"void BGSTerrainManager::UnloadAll(bool a_unloadStaticData, bool a_shutdown)"
 31036,0x1404b38a0,0x1404c3980,3,void BGSTerrainManager::SetCullState(const CullState& a_state)
 31059,0x1404b5090,0x1404c5170,3,"void BGSTerrainNode::UpdateWaterMeshSubVisibility(BGSTerrainNode* a_node, BSMultiBoundNode* a_waterParent)"
-31060,0x1404b5220,0x1404c5300,3,sub_1404B5220
+31060,0x1404b5220,0x1404c5300,3,void BGSTerrainNode::UpdateBlockVisibility()
 31140,0x1404b8580,0x1404c8660,3,SeasonsofSkyrim::LODSwap::Terrain::BuildMeshFileName
 31141,0x1404b85c0,0x1404c86a0,3,SeasonsofSkyrim::LODSwap::Terrain::BuildDiffuseTextureFileName
 31142,0x1404b8600,0x1404c86e0,3,SeasonsofSkyrim::LODSwap::Terrain::BuildNormalTextureFileName
@@ -712,7 +712,7 @@
 31949,0x1404e6360,0x1404f64d0,3,AnimationMotionRevoluation::Character::unk_4E6360
 31950,0x1404e69d0,0x1404f6b40,3,"void GetTranslationFromClipData(const ClipInfo& clipInfo, float time, NiPoint3& translation)"
 31951,0x1404e6b30,0x1404f6ca0,3,"bool GetAnimationEndpoint(TESObjectREFR* refr, const ClipInfo& clipInfo, NiPoint3& translation, NiPoint3& rotation_angles, float& end_time, NiPoint3& translation_start, NiPoint3& translation_delta, NiPoint3& rotation_start_angles, NiPoint3& rotate_from_before_angles)"
-32049,0x1404ed090,0x1404fd300,3,sub_1404ED090
+32049,0x1404ed090,0x1404fd300,3,"bool sub_1404ED090(void* a_manager, BGSActionData& a_actionData)"
 32141,0x1404f06e0,0x140500950,3,"bool IAnimationGraphManagerHolder::SetGraphVariableBool(const BSFixedString& a_variableName, bool a_in)"
 32142,0x1404f0700,0x140500970,3,"bool IAnimationGraphManagerHolder::SetGraphVariableInt(const BSFixedString& a_variableName, std::int32_t a_in)"
 32143,0x1404f0720,0x140500990,3,"bool IAnimationGraphManagerHolder::SetGraphVariableFloat(const BSFixedString& a_variableName, float a_in)"
@@ -1940,7 +1940,7 @@
 69406,0x140c6bc70,0x140cb1e30,3,BSDismemberSkinInstance* BSDismemberSkinInstance::Ctor(BSDismemberSkinInstance* a_this)
 69426,0x140c6c390,0x140cb2520,3,"NiPlane* MakePlaneFromNormalPoint(NiPlane* a_out, NiPoint3* a_normal, NiPoint3* a_point)"
 69427,0x140c6c3e0,0x140cb2570,3,"NiPlane* MakePlaneFromPoints(NiPlane* a_out, NiPoint3* a_p0, NiPoint3* a_p1, NiPoint3* a_p2)"
-69431,0x140c6c5f0,0x140cb2780,3,NiCamera::BuildFrustumPlanesFromTangents
+69431,0x140c6c5f0,0x140cb2780,3,"void NiFrustumPlanes::Set(const NiFrustum& a_frustum, const NiTransform& a_transform)"
 69433,0x140c6cd50,0x140cb2ee0,3,void NiTimeController::LoadBinary(NiStream& a_stream)
 69434,0x140c6cea0,0x140cb3030,3,void NiTimeController::LinkObject(NiStream& a_stream)
 69435,0x140c6cf10,0x140cb30a0,3,bool NiTimeController::RegisterStreamables(NiStream& a_stream)
@@ -2596,7 +2596,7 @@
 100306,0x1412dc050,0x14131b240,4,"void VolumetricLightingDescriptor::Render (longlong param_1, undefined8 param_2, bool param_3)"
 100309,0x1412dc3a0,0x14131b590,4,void VolumetricLightingDescriptor::Raymarch (VolumetricLightingDescriptor* this)
 100408,0x1412e1fe0,0x141321700,3,void UpdateWorldCameraProjection()
-100411,0x1412e21a0,0x1413244e0,2,"void Main::RenderFirstPersonView (char param_1, char param_2)"
+100411,0x1412e21a0,0x1413244e0,2,"void Main::RenderFirstPersonView(bool a_gamePaused, bool a_controlDrivenDepthRange)"
 100414,0x1412e2660,0x141321d80,3,void Main::QueueListAccumulationJobs(NiCamera* a_camera)
 100415,0x1412e2a60,0x141322130,3,void MainAccum()
 100416,0x1412e2c50,0x141322390,3,void FirstListAccumulationJob(CullDescriptor* a_job)
@@ -10807,8 +10807,8 @@
 527973,0x14323309c,0x14348563c,4,iVolumetricLightingTextureWidthMedium
 527976,0x1432330a8,0x143485648,4,iVolumetricLightingTextureWidthHigh
 527992,0x1432331b8,0x143485758,3,RE::NiRTTI_BSParticleShaderProperty
-528071,0x143233438,0x14348580c,3,DAT_143233438
-528072,0x143233440,0x143485ac0,3,DAT_143233440
+528071,0x143233438,0x14348580c,3,std::uint32_t gListAccumulationJobCount
+528072,0x143233440,0x143485ac0,3,BSTArray<BSTArray<NiPointer<NiAVObject>>> gListAccumulationLists
 528077,0x143233470,0x143485af0,4,static RE::BSCullingProcess* GetUnknownGlobalCullingProcess()
 528082,0x143233490,0x143485b10,4,DrawWorld& GetSingleton()
 528087,0x1432334b8,0x143485b38,4,static RE::SceneGraph* GetWorldSceneGraph()
