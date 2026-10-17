@@ -2492,6 +2492,7 @@
 98134,0x141262ee0,0x1412829b0,3,BSScript::Internal::VirtualMachine::ProcessMessageQueue
 98146,0x1412641f0,0x141283cc0,4,"int * CreateStack_1412641F0 (longlong param_1, undefined4 param_2, undefined8 param_3, undefined8 param_4)"
 98149,0x1412646f0,0x1412841c0,4,"void BSScript__Internal__VirtualMachine::CleanUpStack_1412646F0(longlong param_1,longlong param_2)"
+98155,0x141265170,0x141284c40,3,bool BSScript::Internal::VirtualMachine::PopFunctionMessage(FunctionMessage* a_out)
 98158,0x1412658d0,0x1412853a0,4,void ResetState (BSScript__Internal__VirtualMachine * a_this)
 98160,0x141266030,0x141285b00,3,RE::SaveFileHandleReaderWriter::LoadHandle
 98217,0x14126d230,0x14128d1f0,4,BSScript::Internal::VirtualMachine::ProcessArrayCleanup
