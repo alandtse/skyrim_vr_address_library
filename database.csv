@@ -1031,6 +1031,8 @@
 37757,0x14062ebc0,0x140637a90,3,bool Actor::GetMount(NiPointer<Actor>& a_outMount)
 37758,0x14062ecd0,0x140637ba0,4,bool Actor::GetRider(NiPointer<Actor>& a_outRider)
 37762,0x14062f170,0x140638040,4,bool Actor::GetControllingActor(NiPointer<Actor>& controllingActor)
+37767,0x14062f420,0x1406382f0,3,void SpellsLearned::AddEventSink(BSTEventSink<SpellsLearned::Event>* a_eventSink)
+37768,0x14062f450,0x140638320,3,void SpellsLearned::RemoveEventSink(BSTEventSink<SpellsLearned::Event>* a_eventSink)
 37771,0x14062f560,0x140638430,3,RE::Actor::AddSpell
 37772,0x14062f720,0x1406385f0,3,bool Actor::RemoveSpell(SpellItem* a_spell)
 37777,0x14062fad0,0x1406389a0,4,"void Actor::SetAlpha (Actor * a_this, float a_value)"
@@ -1062,8 +1064,12 @@
 37863,0x140634900,0x14063d7d0,3,RE::Actor::TrapSoul
 37864,0x140634b80,0x14063da50,3,Actor::RemoveMagicEffectsDueToAction_140634B80
 37865,0x140634bf0,0x14063dac0,4,Actor::ReanimateEffect::GetUp
+37873,0x1406355c0,0x14063e5d0,3,void SpellsLearned::SendEvent()
+37913,0x140636680,0x14063f690,3,void BSTEventSource<SpellsLearned::Event>::SendEvent(const SpellsLearned::Event* a_event)
 37916,0x140636c40,0x14063fc50,3,BSTEventSource<SoulsTrapped::Event>* SoulsTrapped::GetEventSource()
 37917,0x140636d30,0x14063fd40,3,BSTEventSource<SpellsLearned::Event>* SpellsLearned::GetEventSource()
+37919,0x140636f80,0x14063ff90,3,void BSTEventSource<SpellsLearned::Event>::AddEventSink(BSTEventSink<SpellsLearned::Event>* a_eventSink)
+37926,0x1406374a0,0x1406404b0,3,void BSTEventSource<SpellsLearned::Event>::RemoveEventSink(BSTEventSink<SpellsLearned::Event>* a_eventSink)
 37938,0x140637a80,0x140640a90,4,RE::ActorEquipManager::EquipObject
 37939,0x140637bc0,0x140640bd0,2,"void ActorEquipManager::EquipSpell(Actor* a_actor, SpellItem* a_spell, const BGSEquipSlot* a_slot)"
 37941,0x140637ca0,0x140640cb0,2,"void ActorEquipManager::EquipShout(Actor* a_actor, TESShout* a_shout)"
