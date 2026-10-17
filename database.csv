@@ -362,6 +362,7 @@
 19373,0x140298190,0x1402a9890,4,void TESObjectREFR::Enable(bool a_resetInventory)
 19375,0x140298c80,0x1402aa380,3,void TESObjectREFR::ResetInventory_140298C80(TESObjectREFR * param_1)
 19385,0x1402994f0,0x1402aabf0,3,BGSLocation* TESObjectREFR::GetCurrentLocation()
+19390,0x140299790,0x1402aae90,3,TESObjectCELL* TESObjectREFR::GetSaveParentCell() const
 19396,0x140299a80,0x1402ab180,4,"float TESObjectREFR::GetDistance(TESObjectREFR* a_other, bool a_disabledRefs, bool a_ignoreWorldspace)"
 19400,0x14029a330,0x1402aba40,3,bool TESObjectREFR::IsCrimeToActivate()
 19446,0x14029cb80,0x1402ae290,3,"ShaderReferenceEffect* TESObjectREFR::InstantiateHitShader(TESEffectShader* a_shader, float a_dur, TESObjectREFR* a_facingRef, bool a_faceTarget, bool a_attachToCamera, NiAVObject* a_attachNode, bool a_interfaceEffect)"
@@ -800,6 +801,7 @@
 34269,0x1405671f0,0x14056d7e0,4,"IMemoryHeap* FUN_1405671f0(IMemoryHeap* param_1, Character* param_2, MagicItem* param_3, longlong param_4)"
 34271,0x1405672c0,0x14056d8b0,4,"IMemoryHeap* FUN_1405672c0(Character* param_1, MagicItem* param_2, longlong param_3)"
 34274,0x140567470,0x14056da60,4,undefined ValueModifierEffect::Func1_140567470(ValueModifierEffect* this)
+34308,0x1405692b0,0x14056f8a0,3,void BGSAcousticSpace::Activate()
 34309,0x1405693b0,0x14056f9a0,2,void BGSAcousticSpace::Deactivate()
 34413,0x14056c9d0,0x140572fd0,3,"DialogueItem* DialogueItem::Ctor(TESQuest* a_quest, TESTopic* a_topic, TESTopicInfo* a_topicInfo, Actor* a_speaker)"
 34429,0x14056D570,0x140573B70,4,"void DialogueSubtitleStrings (char **a1, TESTopic *a2, TESTopicInfo *a3, Character *a4, void *a5)"
@@ -1030,6 +1032,8 @@
 37757,0x14062ebc0,0x140637a90,3,bool Actor::GetMount(NiPointer<Actor>& a_outMount)
 37758,0x14062ecd0,0x140637ba0,4,bool Actor::GetRider(NiPointer<Actor>& a_outRider)
 37762,0x14062f170,0x140638040,4,bool Actor::GetControllingActor(NiPointer<Actor>& controllingActor)
+37767,0x14062f420,0x1406382f0,3,void SpellsLearned::AddEventSink(BSTEventSink<SpellsLearned::Event>* a_eventSink)
+37768,0x14062f450,0x140638320,3,void SpellsLearned::RemoveEventSink(BSTEventSink<SpellsLearned::Event>* a_eventSink)
 37771,0x14062f560,0x140638430,3,RE::Actor::AddSpell
 37772,0x14062f720,0x1406385f0,3,bool Actor::RemoveSpell(SpellItem* a_spell)
 37777,0x14062fad0,0x1406389a0,4,"void Actor::SetAlpha (Actor * a_this, float a_value)"
@@ -1061,8 +1065,12 @@
 37863,0x140634900,0x14063d7d0,3,RE::Actor::TrapSoul
 37864,0x140634b80,0x14063da50,3,Actor::RemoveMagicEffectsDueToAction_140634B80
 37865,0x140634bf0,0x14063dac0,4,Actor::ReanimateEffect::GetUp
+37873,0x1406355c0,0x14063e5d0,3,void SpellsLearned::SendEvent()
+37913,0x140636680,0x14063f690,3,void BSTEventSource<SpellsLearned::Event>::SendEvent(const SpellsLearned::Event* a_event)
 37916,0x140636c40,0x14063fc50,3,BSTEventSource<SoulsTrapped::Event>* SoulsTrapped::GetEventSource()
 37917,0x140636d30,0x14063fd40,3,BSTEventSource<SpellsLearned::Event>* SpellsLearned::GetEventSource()
+37919,0x140636f80,0x14063ff90,3,void BSTEventSource<SpellsLearned::Event>::AddEventSink(BSTEventSink<SpellsLearned::Event>* a_eventSink)
+37926,0x1406374a0,0x1406404b0,3,void BSTEventSource<SpellsLearned::Event>::RemoveEventSink(BSTEventSink<SpellsLearned::Event>* a_eventSink)
 37938,0x140637a80,0x140640a90,4,RE::ActorEquipManager::EquipObject
 37939,0x140637bc0,0x140640bd0,2,"void ActorEquipManager::EquipSpell(Actor* a_actor, SpellItem* a_spell, const BGSEquipSlot* a_slot)"
 37941,0x140637ca0,0x140640cb0,2,"void ActorEquipManager::EquipShout(Actor* a_actor, TESShout* a_shout)"
@@ -1127,6 +1135,7 @@
 39373,0x14069d9a0,0x1406be070,3,RE::Actor::sub_14069D9A0
 39375,0x14069e580,0x1406BEC10,3,"PlayerCharacter::Update(PlayerCharacter *a1, float* a2, float a3)"
 39384,0x14069fe60,0x1406c0640,3,"void PlayerCharacter::AddPlayerAddItemEvent(TESObject* a_object, TESForm* a_owner, TESObjectREFR* a_container, AQUIRE_TYPE a_type)"
+39391,0x1406a0870,0x1406c11a0,3,void PlayerCharacter::SetParentCell(TESObjectCELL* a_cell)
 39401,0x1406a1820,0x1406c2160,3,splashes_of_skyrim::RainManager::ToggleWaterRipples
 39406,0x1406a1cc0,0x1406c2730,3,po3tweaks::NoPoisonPrompt::PoisonPrompt
 39407,0x1406a1e30,0x1406c28a0,3,YesImSure::NoPoisonPrompt::PoisonPromptLeftHand
@@ -1905,6 +1914,7 @@
 68009,0x140c32890,0x140c76da0,3,void JobList::Finish_impl()
 68022,0x140c335c0,0x140c78710,3,void JobList::ctor()
 68054,0x140c34650,0x140c797e0,3,void JobList::Clear()
+68058,0x140c34930,0x140c79af0,3,std::uint32_t BSJobs::JobThread::ThreadProc()
 68203,0x140c39950,0x140c7ea00,4,BSWin32TaskletManager* BSWin32TaskletManager::GetSingleton()
 68207,0x140c39ac0,0x140c7eb70,4,bool BSTaskletManager::CreateTaskGroup(BSTaskletGroup& a_taskGroup)
 68296,0x140c3cb30,0x140c81be0,4,"std::uint32_t BSResource::ArchiveStream::DoRead(void* a_dst, std::uint64_t a_bytes, std::uint64_t* a_read)"
@@ -2482,6 +2492,7 @@
 97948,0x141251b80,0x1412ac5e0,4,"bool WritableStringTable::WriteFixedString (BSScript::WritableStringTable * a_this, SaveStorageWrapper * a_save, BSFixedString * a_scriptName)"
 97949,0x141251c50,0x1412ac6b0,4,"bool WritableStringTable::WriteString (BSScript::WritableStringTable * a_this, SaveStorageWrapper * a_save, char * a_scriptName)"
 97950,0x141251cb0,0x1412ac710,4,"bool WritableStringTable::WriteString2 (BSScript::WritableStringTable * a_this, SaveStorageWrapper * a_save, char * a_scriptName)"
+98044,0x141256f30,0x1412765b0,3,void BSScript::Internal::VirtualMachine::Update(float a_budget)
 98077,0x14125a700,0x14127a190,2,SendEvent
 98105,0x14125e550,0x14127dfe0,3,"void BSScript__IVMSaveLoadInterface::SaveGame (BSScript__IVMSaveLoadInterface * a_this, SaveStorageWrapper * a_save, SkyrimScript::SaveFileHandleReaderWriter * a_handle, bool a_bForceResetState)"
 98106,0x14125ea80,0x14127e560,3,"void BSScript__IVMSaveLoadInterface::LoadGame (BSScript__IVMSaveLoadInterface * a_this, LoadStorageWrapper * a_wrapper, SkyrimScript::SaveFileHandleReaderWriter * a_handle)"
@@ -2489,6 +2500,7 @@
 98134,0x141262ee0,0x1412829b0,3,BSScript::Internal::VirtualMachine::ProcessMessageQueue
 98146,0x1412641f0,0x141283cc0,4,"int * CreateStack_1412641F0 (longlong param_1, undefined4 param_2, undefined8 param_3, undefined8 param_4)"
 98149,0x1412646f0,0x1412841c0,4,"void BSScript__Internal__VirtualMachine::CleanUpStack_1412646F0(longlong param_1,longlong param_2)"
+98155,0x141265170,0x141284c40,3,bool BSScript::Internal::VirtualMachine::PopFunctionMessage(FunctionMessage* a_out)
 98158,0x1412658d0,0x1412853a0,4,void ResetState (BSScript__Internal__VirtualMachine * a_this)
 98160,0x141266030,0x141285b00,3,RE::SaveFileHandleReaderWriter::LoadHandle
 98217,0x14126d230,0x14128d1f0,4,BSScript::Internal::VirtualMachine::ProcessArrayCleanup
