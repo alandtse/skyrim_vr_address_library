@@ -801,6 +801,7 @@
 34269,0x1405671f0,0x14056d7e0,4,"IMemoryHeap* FUN_1405671f0(IMemoryHeap* param_1, Character* param_2, MagicItem* param_3, longlong param_4)"
 34271,0x1405672c0,0x14056d8b0,4,"IMemoryHeap* FUN_1405672c0(Character* param_1, MagicItem* param_2, longlong param_3)"
 34274,0x140567470,0x14056da60,4,undefined ValueModifierEffect::Func1_140567470(ValueModifierEffect* this)
+34308,0x1405692b0,0x14056f8a0,3,void BGSAcousticSpace::Activate()
 34309,0x1405693b0,0x14056f9a0,2,void BGSAcousticSpace::Deactivate()
 34413,0x14056c9d0,0x140572fd0,3,"DialogueItem* DialogueItem::Ctor(TESQuest* a_quest, TESTopic* a_topic, TESTopicInfo* a_topicInfo, Actor* a_speaker)"
 34429,0x14056D570,0x140573B70,4,"void DialogueSubtitleStrings (char **a1, TESTopic *a2, TESTopicInfo *a3, Character *a4, void *a5)"
