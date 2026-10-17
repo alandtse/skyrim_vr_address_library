@@ -1127,6 +1127,7 @@
 39373,0x14069d9a0,0x1406be070,3,RE::Actor::sub_14069D9A0
 39375,0x14069e580,0x1406BEC10,3,"PlayerCharacter::Update(PlayerCharacter *a1, float* a2, float a3)"
 39384,0x14069fe60,0x1406c0640,3,"void PlayerCharacter::AddPlayerAddItemEvent(TESObject* a_object, TESForm* a_owner, TESObjectREFR* a_container, AQUIRE_TYPE a_type)"
+39391,0x1406a0870,0x1406c11a0,3,void PlayerCharacter::SetParentCell(TESObjectCELL* a_cell)
 39401,0x1406a1820,0x1406c2160,3,splashes_of_skyrim::RainManager::ToggleWaterRipples
 39406,0x1406a1cc0,0x1406c2730,3,po3tweaks::NoPoisonPrompt::PoisonPrompt
 39407,0x1406a1e30,0x1406c28a0,3,YesImSure::NoPoisonPrompt::PoisonPromptLeftHand
@@ -1905,6 +1906,7 @@
 68009,0x140c32890,0x140c76da0,3,void JobList::Finish_impl()
 68022,0x140c335c0,0x140c78710,3,void JobList::ctor()
 68054,0x140c34650,0x140c797e0,3,void JobList::Clear()
+68058,0x140c34930,0x140c79af0,3,std::uint32_t BSJobs::JobThread::ThreadProc()
 68203,0x140c39950,0x140c7ea00,4,BSWin32TaskletManager* BSWin32TaskletManager::GetSingleton()
 68207,0x140c39ac0,0x140c7eb70,4,bool BSTaskletManager::CreateTaskGroup(BSTaskletGroup& a_taskGroup)
 68296,0x140c3cb30,0x140c81be0,4,"std::uint32_t BSResource::ArchiveStream::DoRead(void* a_dst, std::uint64_t a_bytes, std::uint64_t* a_read)"
@@ -2482,6 +2484,7 @@
 97948,0x141251b80,0x1412ac5e0,4,"bool WritableStringTable::WriteFixedString (BSScript::WritableStringTable * a_this, SaveStorageWrapper * a_save, BSFixedString * a_scriptName)"
 97949,0x141251c50,0x1412ac6b0,4,"bool WritableStringTable::WriteString (BSScript::WritableStringTable * a_this, SaveStorageWrapper * a_save, char * a_scriptName)"
 97950,0x141251cb0,0x1412ac710,4,"bool WritableStringTable::WriteString2 (BSScript::WritableStringTable * a_this, SaveStorageWrapper * a_save, char * a_scriptName)"
+98044,0x141256f30,0x1412765b0,3,void BSScript::Internal::VirtualMachine::Update(float a_budget)
 98077,0x14125a700,0x14127a190,2,SendEvent
 98105,0x14125e550,0x14127dfe0,3,"void BSScript__IVMSaveLoadInterface::SaveGame (BSScript__IVMSaveLoadInterface * a_this, SaveStorageWrapper * a_save, SkyrimScript::SaveFileHandleReaderWriter * a_handle, bool a_bForceResetState)"
 98106,0x14125ea80,0x14127e560,3,"void BSScript__IVMSaveLoadInterface::LoadGame (BSScript__IVMSaveLoadInterface * a_this, LoadStorageWrapper * a_wrapper, SkyrimScript::SaveFileHandleReaderWriter * a_handle)"
