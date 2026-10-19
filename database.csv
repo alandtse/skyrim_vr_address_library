@@ -974,7 +974,7 @@
 36730,0x1405fc040,0x140604830,4,"void Actor::PlayASound(BSSoundHandle& a_result, FormID a_formID, bool a_arg3, std::uint32_t a_flags)"
 36748,0x1405fc9a0,0x140605190,3,RE::Actor::RequestDetectionLevel
 36752,0x1405fccb0,0x1406054a0,3,"std::int32_t Actor::RequestLOS(Actor* a_target, float a_viewCone)"
-36754,0x1405fd2c0,0x140605b10,4,"longlong Actor::CalculateLOS(Actor * a_this, float * a_targetPos, float * a_hitPosOut, float a_viewCone)"
+36754,0x1405fd2c0,0x140605b10,4,"NiAVObject* Actor::CalculateLOS(NiPoint3* a_targetPos, NiPoint3* a_hitPosOut, float a_viewCone)"
 36755,0x1405fd5b0,0x140605e00,4,RE::Actor::GetEyePos
 36759,0x1405fe370,0x140606b80,3,Actor::GetLightLevel
 36801,0x140600400,0x140608c10,3,void Actor::StopMoving(float a_delta)
@@ -19104,7 +19104,10 @@
 692141,0x141ebd1c0,0x141f81860,3,RE::RTTI_BSSocket
 692142,0x141ebd1e0,0x141f81880,3,RE::RTTI_BSSocketServer
 5370397616,0x14019c3b0,0x1401ac0e0,3,RE::BSShaderProperty::InvalidateMaterial
+5372528864,0x1403a48e0,0x1403b4450,3,"SpecificItemCollector::SpecificItemCollector(int a_layer, Actor* a_actor)"
+5375507952,0x14067bdf0,0x140685270,4,bhkCharacterController* AIProcess::GetCharacterController()
 5375528368,0x140680db0,0x14068a230,3,RE::AIProcess::SetActorRefraction
+5375529184,0x1406810e0,0x14068a550,4,NiAVObject* AIProcess::GetHeadNode()
 5382627248,0x140d45fb0,0x140d8eee0,3,"uint32_t BSMultiStreamInstanceTriShape::AddGroupGIDBuffer(BSMultiStreamInstanceTriShape* this, void* a2, uint16_t* a3)"
 5382629008,0x140d46690,0x140d8f5c0,3,"void BSMultiStreamInstanceTriShape::AddQueuedGroupGIDBuffer(BSMultiStreamInstanceTriShape* this, void* a2, uint16_t* a3, void* a4)"
 5388393136,0x1412c5ab0,0x141303ea0,3,RE::BSLightingShaderProperty::InvalidateTextures
