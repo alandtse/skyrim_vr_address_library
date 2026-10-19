@@ -94,6 +94,9 @@
 13230,0x140158970,0x140169420,4,void TES::FinishLoad()
 13233,0x140158e70,0x140169920,3,void sub_140158E70 (TES * a_this)
 13240,0x140159290,0x140169d50,4,"void TES::ClearGrassFadeAt(int a_x, int a_y)"
+13241,0x1401593b0,0x140169e70,3,void TES::PreloadEssentialAddonNodes()
+13243,0x140159630,0x14016a0f0,3,void TES::PreloadBloodEffects()
+13245,0x140159a30,0x14016a4f0,4,void TES::PreloadBodyPartData()
 13257,0x14015a6e0,0x14016b1a0,3,void TES::UpdatePortalVisibility(BSCullingProcess* a_process)
 13258,0x14015ad30,0x14016b7f0,3,"void TES::ResetOcclusionVisibility(BSCullingProcess* a_process, bool a_unused, bool a_resetRoomOccluders)"
 13260,0x14015af70,0x14016ba30,4,"bool NiNode::ToggleMasterParticleAddonNodes(const NiNode* a_node, bool a_enable)"
@@ -137,6 +140,8 @@
 13923,0x14017e4b0,0x14018e210,3,RE::TESFile::Duplicate
 14026,0x1401820a0,0x140191e20,3,RE::BGSBipedObjectForm::TestBodyPartByIndex
 14055,0x1401832b0,0x140193030,3,BGSDestructibleObjectForm* TESBoundObject::GetDestructibleForm()
+14073,0x1401850a0,0x140194e30,3,void BGSDestructibleObjectForm::QueueStagePreloads()
+14074,0x140185280,0x140194fb0,4,void BGSDestructibleObjectForm::PreloadReplacementModels()
 14082,0x140185990,0x1401956c0,4,void TESObjectREFR::ClearDestruction()
 14108,0x140186790,0x1401964c0,3,ScriptEventSourceHolder* ScriptEventSourceHolder::GetSingleton()
 14127,0x140187040,0x140196d70,3,BGSIdleCollection* BGSIdleCollection::Ctor()
@@ -285,6 +290,8 @@
 18331,0x140255660,0x140266a10,4,"undefined TESObjectLAND::sub_140255660 (TESObjectLAND * a_this, bool param_2)"
 18334,0x1402567f0,0x140267ba0,4,void TESObjectLAND::sub_1402567F0(TESObjectLAND*)
 18342,0x140257b00,0x140268eb0,4,"ulonglong TESObjectLAND::sub_140257B00 (TESObjectLAND * a_this, undefined param_2, undefined param_3, undefined param_4, undefined4 param_5)"
+18350,0x1402588b0,0x140269c60,3,"bool TESObjectLAND::GetColorAtPosition(const NiPoint3* a_position, NiColorA* a_color)"
+18354,0x140259b60,0x14026af10,4,"void TESObjectLAND::GetNormalAtPosition(const NiPoint3* a_position, NiPoint3* a_interpolatedNormal, NiPoint3* a_normal)"
 18359,0x14025a7c0,0x14026bb70,4,const std::uint16_t* GetLandIndexList()
 18368,0x14025b350,0x14026c790,4,SeasonsofSkyrim::TESObjectLAND::create_land_geometry
 18369,0x14025b710,0x14026cb50,4,TESLandTexture* TESObjectLAND::sub_14025B710(TESObjectLAND*)
@@ -616,6 +623,9 @@
 29258,0x14044f6b0,0x14045f290,4,"void BSTempEffectSimpleDecal::CollectTrianglesFromObject(BSTempEffectSimpleDecal* a_this, NiAVObject* a_object)"
 29259,0x14044f6f0,0x14045f2d0,4,"std::uintptr_t BSTempEffectSimpleDecal::CollectTriangles(BSTempEffectSimpleDecal* a_this, BSTriShape* a_shape)"
 29303,0x140452550,0x140462500,3,RE::NiAVObject::ClearWeaponBlood
+29325,0x1404533a0,0x140463350,3,"void BSTerrainEffect::AlignInstanceToLandNormal(float* a_instance, float* a_rotation)"
+29328,0x1404538b0,0x140463860,3,void BSTerrainEffect::UpdateEffectTransform()
+29336,0x1404541b0,0x140464160,4,void BSTerrainEffect::UpdateInstanceTransforms(void* a_instances)
 29531,0x140460350,0x140470310,4,"void NavMeshInfoMap::InitializeAfterAllFormsAreReadFromFile_140460350 (NavMeshInfoMap * a_this, undefined8 param_2, ulonglong param_3, char * param_4)"
 29819,0x140473120,0x140483100,4,"void* Pathing::BuildFollowPath(Pathing* a_this, void* a_pathOut, Character* a_actor, void* a_reserved)"
 29832,0x1404737a0,0x140483780,4,"bool FindClosestPointOnNavmesh(const BSTSmartPointer<BSPathingCell>& a_cell, const NiPoint3& a_location, FindTriangleForLocationFilter& a_filter, NiPoint3& a_pointOut)"
@@ -1228,6 +1238,7 @@
 43013,0x1407521f0,0x14077d510,4,ProjectileImpact
 43022,0x1407531c0,0x14077e4e0,2,papyrus_extender::events::game::weaponhit::projectile::target_0x38d
 43030,0x140754820,0x14077fbd0,3,po3tweaks::ProjectileRange::UpdateCombatThreat
+43035,0x140754dc0,0x140780150,3,void Projectile::QueueModelLoads()
 43087,0x1407570f0,0x1407822f0,3,void VATS::SetMode(std::uint32_t a_mode)
 43090,0x140757960,0x140782cf0,4,void VATS::QueueCommand()
 43094,0x140757dd0,0x140783160,4,"void VATS::AdvanceCommand(bool a_arg1, bool a_last, bool a_arg3)"
