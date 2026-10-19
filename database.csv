@@ -807,6 +807,7 @@
 34188,0x140563460,0x1405696D0,4,"void StaggerEffect (StaggerEffect *a1, float a2)"
 34250,0x140566060,0x14056C2D0,3,"FUN_140566060 (void* a1, TelekinesisEffect* a2)"
 34252,0x1405663c0,0x14056C720,3,"TelekinesisEffect::Func19(TelekinesisEffect *a1, longlong a2, longlong a3, longlong a4)"
+34255,0x140566550,0x14056c8e0,3,void TelekinesisEffect::GrabObjects()
 34256,0x140566a90,0x14056CFD0,3,TelekinesisEffect::Func21(TelekinesisEffect *a1)
 34259,0x140566bd0,0x14056D0B0,3,TelekinesisEffect::Func20(TelekinesisEffect* a1)
 34260,0x140566c50,0x14056D180,3,"TelekinesisEffect::Func4(TelekinesisEffect *a1, float a2)"
