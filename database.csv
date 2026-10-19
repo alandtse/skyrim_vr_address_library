@@ -176,11 +176,11 @@
 15157,0x1401b2730,0x1401c2740,3,"bool BGSDynamicPersistenceManager::PromoteReference(TESObjectREFR* a_refr, TESForm* a_owner)"
 15158,0x1401b2910,0x1401c2920,3,"bool BGSDynamicPersistenceManager::DemoteReference(TESObjectREFR* a_refr, TESForm* a_owner, bool a_allowActors = false)"
 15202,0x1401b46a0,0x1401c46b0,4,GrassManager * GrassManager::ctor_1401B46A0 (GrassManager * a_this)
-15204,0x1401b4b20,0x1401c4b30,4,void GrassManager::AddCellGrass (GrassManager * a_this)
+15204,0x1401b4b20,0x1401c4b30,4,"void GrassManager::AddCellGrass(TESObjectCELL* a_cell, bool* a_abort)"
 15205,0x1401b5750,0x1401c5760,4,"bool GrassManager::AddCellGrassFromBuffer(GrassManager* this, TESObjectCELL* a_cell)"
 15206,0x1401b6010,0x1401c6020,4,"bool GrassManager::LoadCellGID(GrassManager* this, TESObjectCELL* a_cell)"
 15207,0x1401b6470,0x1401c6480,4,"void GrassManager::sub_1401B6470 (GrassManager * a_this, TESObjectCELL * a_cell)"
-15212,0x1401b6af0,0x1401c6b00,3,"ulonglong GrassManager::FUN_1401b6af0 (GrassManager* a_this, int * param_2)"
+15212,0x1401b6af0,0x1401c6b00,3,"std::uint32_t GrassManager::CreateGrassPatch(void* a_params)"
 15214,0x1401b7640,0x1401c7750,4,"BSMultiStreamInstanceTriShape* GrassManager::LoadGrassType(GrassManager* this, void* a_param, uint32_t a_cellXDivided, uint32_t a_cellYDivided, uint64_t* a_typeKey, BSFixedString* a_modelPath)"
 15220,0x1401b81d0,0x1401c82e0,4,"bool FUN_1401b81d0 (longlong param_1, undefined8 param_2, undefined4 param_3, undefined4 * param_4, NiAVObject * * param_5, NiAVObject * * param_6)"
 15485,0x1401c5cc0,0x1401d5e30,4,char * GetGameVersion(void)
