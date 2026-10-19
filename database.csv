@@ -183,7 +183,7 @@
 15205,0x1401b5750,0x1401c5760,4,"bool GrassManager::AddCellGrassFromBuffer(GrassManager* this, TESObjectCELL* a_cell)"
 15206,0x1401b6010,0x1401c6020,4,"bool GrassManager::LoadCellGID(GrassManager* this, TESObjectCELL* a_cell)"
 15207,0x1401b6470,0x1401c6480,4,void GrassManager::RemoveCellGrass(TESObjectCELL* a_cell)
-15212,0x1401b6af0,0x1401c6b00,3,"std::uint32_t GrassManager::CreateGrassPatch(void* a_params)"
+15212,0x1401b6af0,0x1401c6b00,3,std::uint32_t GrassManager::CreateGrassPatch(void* a_params)
 15214,0x1401b7640,0x1401c7750,4,"BSMultiStreamInstanceTriShape* GrassManager::LoadGrassType(GrassManager* this, void* a_param, uint32_t a_cellXDivided, uint32_t a_cellYDivided, uint64_t* a_typeKey, BSFixedString* a_modelPath)"
 15220,0x1401b81d0,0x1401c82e0,4,"ulonglong GrassManager::GrassTypeMapInsert(void* a_table, void* a_buckets, std::uint32_t a_hash, void* a_key, void* a_value)"
 15485,0x1401c5cc0,0x1401d5e30,4,char * GetGameVersion(void)
