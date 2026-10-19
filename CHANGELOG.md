@@ -1,3 +1,17 @@
+# [0.283.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.282.0...v0.283.0) (2026-10-19)
+
+
+### Bug Fixes
+
+* name grass, cell and land functions ([#278](https://github.com/alandtse/skyrim_vr_address_library/issues/278)) ([9ab66b2](https://github.com/alandtse/skyrim_vr_address_library/commit/9ab66b250e726ad89f47b7854ec455f38d702083))
+
+
+### Features
+
+* add land, preload and terrain ids ([#279](https://github.com/alandtse/skyrim_vr_address_library/issues/279)) ([73a2df3](https://github.com/alandtse/skyrim_vr_address_library/commit/73a2df3c7969e4100b8aef7d35b19e26d16c4f46))
+* add LOS ray helper ids ([#277](https://github.com/alandtse/skyrim_vr_address_library/issues/277)) ([4285908](https://github.com/alandtse/skyrim_vr_address_library/commit/4285908b3d2f3f98aafed89a03b6b0e79d649e0b))
+* add water reflections ctor and update ids ([#276](https://github.com/alandtse/skyrim_vr_address_library/issues/276)) ([4cb5d5a](https://github.com/alandtse/skyrim_vr_address_library/commit/4cb5d5abc51d7e1fee5e9652ac25d97648f7bc45))
+
 # [0.282.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.281.0...v0.282.0) (2026-10-15)
 
 
