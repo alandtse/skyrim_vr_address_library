@@ -2018,7 +2018,7 @@
 73970,0x140d2cec0,0x140d75270,3,void IOManager::ResubmitTask(RE::BSTask* a_task)
 73975,0x140d2d500,0x140d758c0,3,std::uint32_t IOManager::GetBucketIndex(std::uint64_t a_packedTaskId)
 73985,0x140d2d860,0x140d75c20,3,IOManager* IOManager::dtor_deleting(IOManager* a_this)
-73994,0x140d2dbb0,0x140d75f90,3,"QueuedFile* QueuedFile::QueuedFile(std::uint8_t a_priority, void* a_arg2)"
+73994,0x140d2dbb0,0x140d75f90,3,"QueuedFile* QueuedFile::QueuedFile(std::uint8_t a_priority, QueuedFile* a_parent)"
 73995,0x140d2dc90,0x140d76070,2,void QueuedFile::~QueuedFile()
 73996,0x140d2dd00,0x140d760e0,2,std::uint32_t QueuedFile::GetTotalChildrenCount()
 73999,0x140d2dd50,0x140d76130,2,void QueuedFile::BeginProcessing()
