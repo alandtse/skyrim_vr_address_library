@@ -84,6 +84,8 @@
 13190,0x140155a80,0x1401664d0,4,void TES::AddGrassForGrid()
 13191,0x140155ba0,0x1401665f0,4,void TES::RemoveGrassForGrid()
 13198,0x1401566f0,0x140167140,4,"bool TES::GetLandHeight(const NiPoint3& a_positionIn, float& a_heightOut)"
+13199,0x140156830,0x140167280,4,"void TES::GetLandNormal(const NiPoint3* a_position, NiPoint3* a_interpolatedNormal, NiPoint3* a_normal)"
+13200,0x140156970,0x1401673c0,4,"void TES::GetLandColor(const NiPoint3* a_position, NiColorA* a_color)"
 13202,0x140156b60,0x1401675b0,4,TESLandTexture* TES::GetLandTexture(const NiPoint3& a_position)
 13203,0x140156cd0,0x140167720,4,MATERIAL_ID TES::GetLandMaterialType(const NiPoint3& a_position)
 13212,0x140157360,0x140167db0,4,"float TES::GetWaterHeight(const NiPoint3& a_pos, TESObjectCELL* a_cell)"
@@ -107,7 +109,8 @@
 13597,0x140167400,0x140177b20,4,bool TESDataHandler::AddFormToDataHandler(TESForm* a_form)
 13602,0x140167bc0,0x1401782e0,3,void TESDataHandler::CreateHardcodedForms()
 13618,0x14016b840,0x14017c000,3,"TESWorldSpace* TESDataHandler::GetExtCellDataFromFileByEditorID(const char* a_cellID, std::int32_t& a_outX, std::int32_t& a_outY)"
-13623,0x14016bda0,0x14017c7c0,4,"void FUN_14016bda0 (TESDataHandler * param_1, undefined8 param_2)"
+13620,0x14016bac0,0x14017c4e0,4,"TESObjectCELL* TESDataHandler::CreateCellAt(int a_x, int a_y, TESWorldSpace* a_world, bool a_arg4)"
+13623,0x14016bda0,0x14017c7c0,4,void TESDataHandler::UnloadCell(TESObjectCELL* a_cell)
 13625,0x14016c210,0x14017cc30,3,"ObjectRefHandle TESDataHandler::CreateReferenceAtLocation(TESBoundObject* a_base, const NiPoint3& a_location, const NiPoint3& a_rotation, TESObjectCELL* a_targetCell, TESWorldSpace* a_selfWorldSpace, TESObjectREFR* a_alreadyCreatedRef, BGSPrimitive* a_primitive, const ObjectRefHandle& a_linkedRoomRefHandle, bool a_forcePersist, bool a_arg11)"
 13635,0x14016d4d0,0x14017def0,3,FormID TESDataHandler::GetNextID()
 13638,0x14016d720,0x14017e0b0,4,"void TESDataHandler::LoadPlugins(TESDataHandler* a_this, char* a_basePath)"
@@ -182,7 +185,7 @@
 15207,0x1401b6470,0x1401c6480,4,void GrassManager::RemoveCellGrass(TESObjectCELL* a_cell)
 15212,0x1401b6af0,0x1401c6b00,3,"std::uint32_t GrassManager::CreateGrassPatch(void* a_params)"
 15214,0x1401b7640,0x1401c7750,4,"BSMultiStreamInstanceTriShape* GrassManager::LoadGrassType(GrassManager* this, void* a_param, uint32_t a_cellXDivided, uint32_t a_cellYDivided, uint64_t* a_typeKey, BSFixedString* a_modelPath)"
-15220,0x1401b81d0,0x1401c82e0,4,"bool FUN_1401b81d0 (longlong param_1, undefined8 param_2, undefined4 param_3, undefined4 * param_4, NiAVObject * * param_5, NiAVObject * * param_6)"
+15220,0x1401b81d0,0x1401c82e0,4,"ulonglong GrassManager::GrassTypeMapInsert(void* a_table, void* a_buckets, std::uint32_t a_hash, void* a_key, void* a_value)"
 15485,0x1401c5cc0,0x1401d5e30,4,char * GetGameVersion(void)
 15491,0x1401c60a0,0x1401d6200,3,RE::BipedAnim::Dtor
 15494,0x1401c61a0,0x1401d6530,3,RE::BipedAnim::RemoveAllParts
@@ -272,7 +275,7 @@
 17965,0x140243380,0x140254a50,3,BGSLocation::ClearedCheck
 18046,0x1402463a0,0x140257a70,3,BSTEventSource<LocationCleared::Event>* LocationCleared::GetEventSource()
 18137,0x14024a480,0x14025bb60,4,ulonglong sub_14024A480 (CellLoaderTask * a_this)
-18149,0x14024aad0,0x14025c1b0,3,"void FUN_14024aad0 (IMemoryHeap__VFTable * param_1, IMemoryHeap__VFTable * param_2, undefined param_3)"
+18149,0x14024aad0,0x14025c1b0,3,"void QueueCellLoadTask(TESObjectCELL* a_cell, bool a_arg3)"
 18150,0x14024ad30,0x14025c420,3,"void QueueCellLoad(TESWorldSpace* a_world, int a_x, int a_y, int a_arg4)"
 18152,0x14024afc0,0x14025c6b0,3,std::uint32_t ExteriorCellLoader::TryCancelTasks()
 18153,0x14024b150,0x14025c840,3,void ExteriorCellLoader::WaitForTasks()
@@ -284,7 +287,9 @@
 18192,0x14024d210,0x14025e900,4,void ImageSpaceModifierInstanceForm::StopCrossFade(float a_seconds)
 18331,0x140255660,0x140266a10,4,"void TESObjectLAND::LoadLand(int a_arg1, int a_arg2)"
 18334,0x1402567f0,0x140267ba0,4,void TESObjectLAND::sub_1402567F0(TESObjectLAND*)
-18342,0x140257b00,0x140268eb0,4,"ulonglong TESObjectLAND::sub_140257B00 (TESObjectLAND * a_this, undefined param_2, undefined param_3, undefined param_4, undefined4 param_5)"
+18338,0x140256f40,0x1402682f0,4,"bool TESObjectLAND::GetLandCoordData(void* a_coordData, const NiPoint3* a_position, std::uint32_t a_flags)"
+18342,0x140257b00,0x140268eb0,4,"ulonglong TESObjectLAND::GatherGrassParams(int a_x, int a_y, GrassParam* a_out, std::uint32_t a_flags)"
+18353,0x140258f90,0x14026a340,4,"void TESObjectLAND::GetLandData(void* a_coordData, float* a_height, NiPoint3* a_interpolatedNormal, NiPoint3* a_normal, NiColorA* a_color)"
 18359,0x14025a7c0,0x14026bb70,4,const std::uint16_t* GetLandIndexList()
 18368,0x14025b350,0x14026c790,4,SeasonsofSkyrim::TESObjectLAND::create_land_geometry
 18369,0x14025b710,0x14026cb50,4,TESLandTexture* TESObjectLAND::sub_14025B710(TESObjectLAND*)
@@ -1122,9 +1127,10 @@
 39344,0x14069ab10,0x1406baf80,3,void PlayerCharacter::StartWaiting(int32_t a_hours)
 39346,0x14069abf0,0x1408ed870,2,PlayerCharacter::
 39365,0x14069c2a0,0x1406bc6c0,3,"bool PlayerCharacter::CenterOnCell_Impl(const char* a_cellName, RE::TESObjectCELL* a_cell)"
+39366,0x14069c540,0x1406bc970,3,char PlayerCharacter::UpdateCellTransition()
 39371,0x14069d2c0,0x1406bd770,3,po3tweaks::SitToWait::CanSleepWait
 39372,0x14069d6e0,0x1406bde50,2,RE::Actor::CanFastTravel
-39373,0x14069d9a0,0x1406be070,3,RE::Actor::sub_14069D9A0
+39373,0x14069d9a0,0x1406be070,3,void PlayerCharacter::ExecuteCellTransition()
 39375,0x14069e580,0x1406BEC10,3,"PlayerCharacter::Update(PlayerCharacter *a1, float* a2, float a3)"
 39384,0x14069fe60,0x1406c0640,3,"void PlayerCharacter::AddPlayerAddItemEvent(TESObject* a_object, TESForm* a_owner, TESObjectREFR* a_container, AQUIRE_TYPE a_type)"
 39401,0x1406a1820,0x1406c2160,3,splashes_of_skyrim::RainManager::ToggleWaterRipples
@@ -1155,6 +1161,7 @@
 39612,0x1406b52a0,0x1406d8580,3,RE::PlayerCharacter::GetTintMask
 39614,0x1406b5450,0x1406d8730,3,RE::PlayerCharacter::GetNumTints
 39657,0x1406b6eb0,0x1406da3d0,3,"void PlayerCharacter::MoveToPositionInCell(float* a_position, float* a_rotation, TESObjectCELL* a_cell, int a_arg4)"
+39658,0x1406b7670,0x1406dac20,4,"void PlayerCharacter::MoveToPositionInWorldSpace(float* a_position, float* a_rotation, TESWorldSpace* a_world, bool a_arg4)"
 39663,0x1406b8340,0x1406db930,4,PlayerCharacter::DiscoveryCheck
 40056,0x1406c7d60,0x1406ee380,3,BSTEventSource<LocationDiscovery::Event>* LocationDiscovery::GetEventSource()
 40060,0x1406c8120,0x1406ee740,3,BSTEventSource<ShoutAttack::Event>* ShoutAttack::GetEventSource()
@@ -2041,6 +2048,7 @@
 74445,0x140d405b0,0x140d89540,3,"void SetCullPlanes(NiFrustumPlanes* a_planes, NiPoint3* a_origin)"
 74481,0x140d41970,0x140d8a900,3,"RE::NiAVObject* NiAVObject::LookupBoneNodeByName(RE::NiAVObject* a_this, const RE::BSFixedString& a_name, bool a3)"
 74491,0x140d426f0,0x140d8b6b0,4,uint16_t FloatToHalf (float a_input)
+74492,0x140d42700,0x140d8b6c0,4,float HalfToFloat(std::uint16_t a_input)
 74493,0x140d42710,0x140d8b6d0,3,"void ConvexHull2D(ScrapHeap* a_heap, std::uint32_t a_count, std::int32_t* a_points, std::uint32_t* a_outCount, std::uint32_t* a_outIndices)"
 74596,0x140d464e0,0x140d8f410,4,"ulonglong GrassManager::FindOrAddMultiBoundShape(GrassManager* param_1, longlong param_2)"
 74599,0x140d46b20,0x140d8fa50,4,"void GrassManager::QueueMultiBoundShapeLoad(GrassManager* param_1, longlong param_2, longlong param_3)"
