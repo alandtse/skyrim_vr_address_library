@@ -96,6 +96,9 @@
 13230,0x140158970,0x140169420,4,void TES::FinishLoad()
 13233,0x140158e70,0x140169920,3,void sub_140158E70 (TES * a_this)
 13240,0x140159290,0x140169d50,4,"void TES::ClearGrassFadeAt(int a_x, int a_y)"
+13241,0x1401593b0,0x140169e70,3,void TES::PreloadEssentialAddonNodes()
+13243,0x140159630,0x14016a0f0,3,void TES::PreloadBloodEffects()
+13245,0x140159a30,0x14016a4f0,4,void TES::PreloadBodyPartData()
 13257,0x14015a6e0,0x14016b1a0,3,void TES::UpdatePortalVisibility(BSCullingProcess* a_process)
 13258,0x14015ad30,0x14016b7f0,3,"void TES::ResetOcclusionVisibility(BSCullingProcess* a_process, bool a_unused, bool a_resetRoomOccluders)"
 13260,0x14015af70,0x14016ba30,4,"bool NiNode::ToggleMasterParticleAddonNodes(const NiNode* a_node, bool a_enable)"
@@ -140,6 +143,8 @@
 13923,0x14017e4b0,0x14018e210,3,RE::TESFile::Duplicate
 14026,0x1401820a0,0x140191e20,3,RE::BGSBipedObjectForm::TestBodyPartByIndex
 14055,0x1401832b0,0x140193030,3,BGSDestructibleObjectForm* TESBoundObject::GetDestructibleForm()
+14073,0x1401850a0,0x140194e30,3,void BGSDestructibleObjectForm::QueueStagePreloads()
+14074,0x140185280,0x140194fb0,4,void BGSDestructibleObjectForm::PreloadReplacementModels()
 14082,0x140185990,0x1401956c0,4,void TESObjectREFR::ClearDestruction()
 14108,0x140186790,0x1401964c0,3,ScriptEventSourceHolder* ScriptEventSourceHolder::GetSingleton()
 14127,0x140187040,0x140196d70,3,BGSIdleCollection* BGSIdleCollection::Ctor()
@@ -286,11 +291,16 @@
 18188,0x14024ccd0,0x14025e3c0,4,void ImageSpaceModifierInstanceForm::Stop(TESImageSpaceModifier* a_imod)
 18192,0x14024d210,0x14025e900,4,void ImageSpaceModifierInstanceForm::StopCrossFade(float a_seconds)
 18331,0x140255660,0x140266a10,4,"void TESObjectLAND::LoadLand(int a_arg1, int a_arg2)"
-18334,0x1402567f0,0x140267ba0,4,void TESObjectLAND::sub_1402567F0(TESObjectLAND*)
+18332,0x140255760,0x140266b10,3,void TESObjectLAND::ReadLandDataFromFile()
+18334,0x1402567f0,0x140267ba0,4,void TESObjectLAND::BuildLand3D(TESObjectLAND*)
 18338,0x140256f40,0x1402682f0,4,"bool TESObjectLAND::GetLandCoordData(void* a_coordData, const NiPoint3* a_position, std::uint32_t a_flags)"
 18342,0x140257b00,0x140268eb0,4,"ulonglong TESObjectLAND::GatherGrassParams(int a_x, int a_y, GrassParam* a_out, std::uint32_t a_flags)"
+18350,0x1402588b0,0x140269c60,3,"bool TESObjectLAND::GetColorAtPosition(const NiPoint3* a_position, NiColorA* a_color)"
 18353,0x140258f90,0x14026a340,4,"void TESObjectLAND::GetLandData(void* a_coordData, float* a_height, NiPoint3* a_interpolatedNormal, NiPoint3* a_normal, NiColorA* a_color)"
+18354,0x140259b60,0x14026af10,4,"void TESObjectLAND::GetNormalAtPosition(const NiPoint3* a_position, NiPoint3* a_interpolatedNormal, NiPoint3* a_normal)"
+18355,0x140259bd0,0x14026af80,3,"void TESObjectLAND::ComputeNormalAtPosition(const NiPoint3* a_position, NiPoint3* a_interpolatedNormal, NiPoint3* a_normal)"
 18359,0x14025a7c0,0x14026bb70,4,const std::uint16_t* GetLandIndexList()
+18365,0x14025aa40,0x14026be80,3,std::uint64_t TESObjectLAND::AllocateLoadedData()
 18368,0x14025b350,0x14026c790,4,SeasonsofSkyrim::TESObjectLAND::create_land_geometry
 18369,0x14025b710,0x14026cb50,4,TESLandTexture* TESObjectLAND::sub_14025B710(TESObjectLAND*)
 18380,0x14025cba0,0x14026e050,4,"BSTriShape* BuildQuadTriShape(TESObjectLAND::LoadedLandData*, std::uint32_t)"
@@ -616,11 +626,16 @@
 29090,0x1404454c0,0x140455010,3,bool TESConditionItem::IsTrue(ConditionCheckParams& a_solution)
 29218,0x14044b9a0,0x14045b4f0,4,RE::TESObjectCELL::Spawn
 29219,0x14044bbf0,0x14045b740,4,RE::TESObjectCELL::PlaceParticleEffect
+29248,0x14044da80,0x14045d640,3,void InitGlobalPreloadParent()
+29249,0x14044db60,0x14045d720,3,void ReleaseGlobalPreloadParent()
 29251,0x14044dbf0,0x14045d7b0,4,"bool BSTempEffectSimpleDecal::Initialize_Impl(BSTempEffectSimpleDecal* a_this, void* a_params)"
 29253,0x14044e9c0,0x14045e5a0,4,"void BSTempEffectSimpleDecal::ApplyTextureSetToGeometry (BSTempEffectSimpleDecal * a_this, BSGeometry * a_effect3D, BGSTextureSet * a_texture1, bool a_blended)"
 29258,0x14044f6b0,0x14045f290,4,"void BSTempEffectSimpleDecal::CollectTrianglesFromObject(BSTempEffectSimpleDecal* a_this, NiAVObject* a_object)"
 29259,0x14044f6f0,0x14045f2d0,4,"std::uintptr_t BSTempEffectSimpleDecal::CollectTriangles(BSTempEffectSimpleDecal* a_this, BSTriShape* a_shape)"
 29303,0x140452550,0x140462500,3,RE::NiAVObject::ClearWeaponBlood
+29325,0x1404533a0,0x140463350,3,"void BSTerrainEffect::AlignInstanceToLandNormal(float* a_instance, float* a_rotation)"
+29328,0x1404538b0,0x140463860,3,void BSTerrainEffect::UpdateEffectTransform()
+29336,0x1404541b0,0x140464160,4,void BSTerrainEffect::UpdateInstanceTransforms(void* a_instances)
 29531,0x140460350,0x140470310,4,"void NavMeshInfoMap::InitializeAfterAllFormsAreReadFromFile_140460350 (NavMeshInfoMap * a_this, undefined8 param_2, ulonglong param_3, char * param_4)"
 29819,0x140473120,0x140483100,4,"void* Pathing::BuildFollowPath(Pathing* a_this, void* a_pathOut, Character* a_actor, void* a_reserved)"
 29832,0x1404737a0,0x140483780,4,"bool FindClosestPointOnNavmesh(const BSTSmartPointer<BSPathingCell>& a_cell, const NiPoint3& a_location, FindTriangleForLocationFilter& a_filter, NiPoint3& a_pointOut)"
@@ -801,6 +816,7 @@
 34188,0x140563460,0x1405696D0,4,"void StaggerEffect (StaggerEffect *a1, float a2)"
 34250,0x140566060,0x14056C2D0,3,"FUN_140566060 (void* a1, TelekinesisEffect* a2)"
 34252,0x1405663c0,0x14056C720,3,"TelekinesisEffect::Func19(TelekinesisEffect *a1, longlong a2, longlong a3, longlong a4)"
+34255,0x140566550,0x14056c8e0,3,void TelekinesisEffect::GrabObjects()
 34256,0x140566a90,0x14056CFD0,3,TelekinesisEffect::Func21(TelekinesisEffect *a1)
 34259,0x140566bd0,0x14056D0B0,3,TelekinesisEffect::Func20(TelekinesisEffect* a1)
 34260,0x140566c50,0x14056D180,3,"TelekinesisEffect::Func4(TelekinesisEffect *a1, float a2)"
@@ -891,6 +907,7 @@
 35571,0x1405b3c00,0x1405bb810,3,void Main::UpdateCullingFrustum()
 35589,0x1405b5280,0x1405bcef0,3,void Main::FUN_1405b5280 (Main * a_this)
 35593,0x1405b5490,0x1405bd0f0,2,Main::sub_*
+35596,0x1405b5bd0,0x1405bd860,3,void Main::PostReloadInit()
 35598,0x1405b5ef0,0x1405bdb80,4,void Main::SetActive(bool a_active)
 35601,0x1405b6060,0x1405bdcf0,4,NiCamera* Main::WorldRootCamera()
 35608,0x1405b6470,0x1405be100,4,bool Main::IsRoomVisible(NiNode* a_room) src\RE\M/Main.cpp:17
@@ -989,6 +1006,7 @@
 36872,0x140603b30,0x14060c340,2,Actor::Kill
 36877,0x1406057c0,0x14060dfd0,3,RE::Actor::IsOnFlyingMount
 36889,0x140606850,0x14060f1d0,3,RE::Actor::IsActorNPC
+36899,0x1406071a0,0x14060fb20,3,void Actor::PreloadRaceModels(TESRace* a_race)
 36901,0x140607680,0x140610000,3,RE::Actor::SwitchRace
 36925,0x140608850,0x1406113e0,4,"bool Actor::SetWantCasting (Actor * a_actor, CastingSource a_source, bool a_enable)"
 36926,0x1406089e0,0x140611570,4,void PlayerCharacter::SetSneaking (bool a_sneaking)
@@ -1103,6 +1121,8 @@
 38760,0x1406797d0,0x140682c50,3,"void HighProcessData::SetHeadtrackTarget(HEAD_TRACK_TYPE a_headtrackType, TESObjectREFR* a_target)"
 38773,0x140679c10,0x140683090,3,void AIProcess::ClearFurniture()
 38781,0x14067a3e0,0x140683850,4,InventoryEntryData* AIProcess::GetCurrentWeapon(bool a_leftHand)
+38786,0x14067a4c0,0x140683930,3,"std::uint64_t ActorProcess::SetEquippedHandItem(ExtraContainerChanges::ItemEntry* a_item, bool a_left, NiAVObject* a_3d)"
+38787,0x14067a940,0x140683dc0,3,"std::uint64_t ActorProcess::SetEquippedHandItemEntry(ExtraContainerChanges::ItemEntry* a_item, bool a_left)"
 38799,0x14067b1d0,0x140684650,4,"static NiAVObject * GetTorchNode (ActorProcess * a_this, BSTSmartPointer_BipedAnim_ * a_biped)"
 38819,0x14067bc70,0x1406850f0,4,"void AIProcess::SetRunOncePackage(TESPackage* a_package, Actor* a_actor)"
 38850,0x14067d120,0x1406865a0,3,"void AIProcess::SetHeadtrackTarget(Actor* a_owner, NiPoint3& a_targetPosition)"
@@ -1112,6 +1132,7 @@
 38966,0x140681fd0,0x14068b440,4,"void FUN_140681fd0 (undefined8 param_1, Actor * a_actor)"
 38967,0x140682020,0x14068b490,4,void FUN_140682020 (longlong param_1)
 39017,0x1406894b0,0x140692910,3,FUN_1406894b0
+39044,0x14068d6f0,0x140696b40,3,std::uint64_t QueuedItem::PreloadModels(Character* a_actor)
 39159,0x140692390,0x14069B990,2,"void ResetCachedBaseValue(CachedValues*, ActorValue)"
 39171,0x1406928c0,0x14069bec0,4,Character * Character::ctor (Character * a_this)
 39175,0x140692cd0,0x14069c2d0,3,RE::PlayerCharacter::GetArmorValue
@@ -1237,6 +1258,7 @@
 43013,0x1407521f0,0x14077d510,4,ProjectileImpact
 43022,0x1407531c0,0x14077e4e0,2,papyrus_extender::events::game::weaponhit::projectile::target_0x38d
 43030,0x140754820,0x14077fbd0,3,po3tweaks::ProjectileRange::UpdateCombatThreat
+43035,0x140754dc0,0x140780150,3,void Projectile::QueueModelLoads()
 43087,0x1407570f0,0x1407822f0,3,void VATS::SetMode(std::uint32_t a_mode)
 43090,0x140757960,0x140782cf0,4,void VATS::QueueCommand()
 43094,0x140757dd0,0x140783160,4,"void VATS::AdvanceCommand(bool a_arg1, bool a_last, bool a_arg3)"
@@ -1772,6 +1794,7 @@
 61388,0x140aa8740,0x140ae3140,3,"void hkpResponseModifier::SetInvMassScalingForContact(hkpDynamicsContactMgr* a_mgr, hkpRigidBody* a_body, hkpConstraintOwner& a_constraintOwner, const hkVector4& a_factor)"
 61559,0x140abb120,0x140af5b20,3,"void hkpCharacterRigidBody::SetLinearVelocity(const hkVector4& a_newVel, float a_timestep)"
 61571,0x140abb790,0x140AF6190,3,"hkpMouseSpringAction::sub_140ABB790(hkpMouseSpringAction *a1, float *a2)"
+61874,0x140ac93f0,0x140b03df0,3,void hkpGravityGun::FindTargetBody()
 62122,0x140ad2d10,0x140b0d7b0,3,undefined8 BSSynchronizedClipGenerator::sub_140AD2D10 (BSSynchronizedClipGenerator * a_this)
 62391,0x140ade070,0x140b18b40,4,undefined8 hkbCharacter::sub_140ADE070 (hkbCharacter * a_this)
 62431,0x140ae2e80,0x140b1d980,3,"bool QueryAnimations(float a_fromTime, BSFixedString& a_projectName, BSScrapArray<ClipData>& a_clips, std::int32_t a_activeGraphIndex)"
@@ -2480,6 +2503,8 @@
 88498,0x1410c3ce0,0x141120930,3,bool IMovementState::CanStrafe()
 88499,0x1410c3d40,0x141120aa0,3,RE::ActorState::Sub_1410C3D40
 88674,0x1410cf350,0x14112c080,3,NiPoint3 BSNavmesh::GetNormal(std::uint16_t a_tri) const
+89364,0x1410fc9e0,0x141159720,3,void ProcessAvoidBoxChecks()
+89365,0x1410fcbf0,0x141159930,3,std::uint64_t CheckAvoidBox()
 97371,0x14122c6f0,0x141264ba0,4,"void ObjectBindPolicy::GetInitialPropertyValues(VMHandle a_handle, const BSFixedString& a_className, BSTScrapHashMap<BSFixedString, Variable>& a_propertyValues, std::uint32_t& a_nonConvertedProperties)"
 97379,0x14122dad0,0x141265f80,3,RE::BSScript::ObjectBindPolicy::BindObject
 97462,0x141233670,0x14126bb20,3,void Object::Dtor()
