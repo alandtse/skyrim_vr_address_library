@@ -288,11 +288,14 @@
 18188,0x14024ccd0,0x14025e3c0,4,void ImageSpaceModifierInstanceForm::Stop(TESImageSpaceModifier* a_imod)
 18192,0x14024d210,0x14025e900,4,void ImageSpaceModifierInstanceForm::StopCrossFade(float a_seconds)
 18331,0x140255660,0x140266a10,4,"undefined TESObjectLAND::sub_140255660 (TESObjectLAND * a_this, bool param_2)"
-18334,0x1402567f0,0x140267ba0,4,void TESObjectLAND::sub_1402567F0(TESObjectLAND*)
+18332,0x140255760,0x140266b10,3,void TESObjectLAND::ReadLandDataFromFile()
+18334,0x1402567f0,0x140267ba0,4,void TESObjectLAND::BuildLand3D(TESObjectLAND*)
 18342,0x140257b00,0x140268eb0,4,"ulonglong TESObjectLAND::sub_140257B00 (TESObjectLAND * a_this, undefined param_2, undefined param_3, undefined param_4, undefined4 param_5)"
 18350,0x1402588b0,0x140269c60,3,"bool TESObjectLAND::GetColorAtPosition(const NiPoint3* a_position, NiColorA* a_color)"
 18354,0x140259b60,0x14026af10,4,"void TESObjectLAND::GetNormalAtPosition(const NiPoint3* a_position, NiPoint3* a_interpolatedNormal, NiPoint3* a_normal)"
+18355,0x140259bd0,0x14026af80,3,"void TESObjectLAND::ComputeNormalAtPosition(const NiPoint3* a_position, NiPoint3* a_interpolatedNormal, NiPoint3* a_normal)"
 18359,0x14025a7c0,0x14026bb70,4,const std::uint16_t* GetLandIndexList()
+18365,0x14025aa40,0x14026be80,3,std::uint64_t TESObjectLAND::AllocateLoadedData()
 18368,0x14025b350,0x14026c790,4,SeasonsofSkyrim::TESObjectLAND::create_land_geometry
 18369,0x14025b710,0x14026cb50,4,TESLandTexture* TESObjectLAND::sub_14025B710(TESObjectLAND*)
 18380,0x14025cba0,0x14026e050,4,"BSTriShape* BuildQuadTriShape(TESObjectLAND::LoadedLandData*, std::uint32_t)"
@@ -894,6 +897,7 @@
 35571,0x1405b3c00,0x1405bb810,3,void Main::UpdateCullingFrustum()
 35589,0x1405b5280,0x1405bcef0,3,void Main::FUN_1405b5280 (Main * a_this)
 35593,0x1405b5490,0x1405bd0f0,2,Main::sub_*
+35596,0x1405b5bd0,0x1405bd860,3,void Main::PostReloadInit()
 35598,0x1405b5ef0,0x1405bdb80,4,void Main::SetActive(bool a_active)
 35601,0x1405b6060,0x1405bdcf0,4,NiCamera* Main::WorldRootCamera()
 35608,0x1405b6470,0x1405be100,4,bool Main::IsRoomVisible(NiNode* a_room) src\RE\M/Main.cpp:17
@@ -1115,6 +1119,7 @@
 38966,0x140681fd0,0x14068b440,4,"void FUN_140681fd0 (undefined8 param_1, Actor * a_actor)"
 38967,0x140682020,0x14068b490,4,void FUN_140682020 (longlong param_1)
 39017,0x1406894b0,0x140692910,3,FUN_1406894b0
+39044,0x14068d6f0,0x140696b40,3,std::uint64_t QueuedItem::PreloadModels(Character* a_actor)
 39159,0x140692390,0x14069B990,2,"void ResetCachedBaseValue(CachedValues*, ActorValue)"
 39171,0x1406928c0,0x14069bec0,4,Character * Character::ctor (Character * a_this)
 39175,0x140692cd0,0x14069c2d0,3,RE::PlayerCharacter::GetArmorValue
