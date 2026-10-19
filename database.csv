@@ -1778,6 +1778,7 @@
 61388,0x140aa8740,0x140ae3140,3,"void hkpResponseModifier::SetInvMassScalingForContact(hkpDynamicsContactMgr* a_mgr, hkpRigidBody* a_body, hkpConstraintOwner& a_constraintOwner, const hkVector4& a_factor)"
 61559,0x140abb120,0x140af5b20,3,"void hkpCharacterRigidBody::SetLinearVelocity(const hkVector4& a_newVel, float a_timestep)"
 61571,0x140abb790,0x140AF6190,3,"hkpMouseSpringAction::sub_140ABB790(hkpMouseSpringAction *a1, float *a2)"
+61874,0x140ac93f0,0x140b03df0,3,void hkpGravityGun::FindTargetBody()
 62122,0x140ad2d10,0x140b0d7b0,3,undefined8 BSSynchronizedClipGenerator::sub_140AD2D10 (BSSynchronizedClipGenerator * a_this)
 62391,0x140ade070,0x140b18b40,4,undefined8 hkbCharacter::sub_140ADE070 (hkbCharacter * a_this)
 62431,0x140ae2e80,0x140b1d980,3,"bool QueryAnimations(float a_fromTime, BSFixedString& a_projectName, BSScrapArray<ClipData>& a_clips, std::int32_t a_activeGraphIndex)"
