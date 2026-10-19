@@ -1115,6 +1115,7 @@
 38773,0x140679c10,0x140683090,3,void AIProcess::ClearFurniture()
 38781,0x14067a3e0,0x140683850,4,InventoryEntryData* AIProcess::GetCurrentWeapon(bool a_leftHand)
 38786,0x14067a4c0,0x140683930,3,"std::uint64_t ActorProcess::SetEquippedHandItem(ExtraContainerChanges::ItemEntry* a_item, bool a_left, NiAVObject* a_3d)"
+38787,0x14067a940,0x140683dc0,3,"std::uint64_t ActorProcess::SetEquippedHandItemEntry(ExtraContainerChanges::ItemEntry* a_item, bool a_left)"
 38799,0x14067b1d0,0x140684650,4,"static NiAVObject * GetTorchNode (ActorProcess * a_this, BSTSmartPointer_BipedAnim_ * a_biped)"
 38819,0x14067bc70,0x1406850f0,4,"void AIProcess::SetRunOncePackage(TESPackage* a_package, Actor* a_actor)"
 38850,0x14067d120,0x1406865a0,3,"void AIProcess::SetHeadtrackTarget(Actor* a_owner, NiPoint3& a_targetPosition)"
