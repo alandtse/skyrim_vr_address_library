@@ -70,7 +70,7 @@
 13137,0x140150b20,0x140161550,4,void TESObjectCELL::QueueAddCellGrassTask()
 13138,0x140150c80,0x1401616b0,4,void AddCellGrassTask::Run()
 13142,0x140151b60,0x1401625a0,3,TESObjectCELL* TES::GetCurrentCell()
-13147,0x140151e60,0x1401628a0,3,void TES::SetGridFromPosition(TES* a_this, NiPoint3* a_position)
+13147,0x140151e60,0x1401628a0,3,"void TES::SetGridFromPosition(TES* a_this, NiPoint3* a_position)"
 13148,0x140152030,0x140162a70,4,"bool TES::UpdateGridForPosition(TES* a_this, NiPoint3* a_position, bool a_flag, float a_unk)"
 13159,0x1401535d0,0x140164020,3,void TES::PurgeBufferedCells()
 13170,0x140153d00,0x140164750,3,void TES::SetWorldSpace(TES* a_tes)
@@ -104,7 +104,7 @@
 13260,0x14015af70,0x14016ba30,4,"bool NiNode::ToggleMasterParticleAddonNodes(const NiNode* a_node, bool a_enable)"
 13277,0x14015bcb0,0x14016c770,3,void TES::LoadExteriorGrid(TES* a_this)
 13278,0x14015bf70,0x14016ca30,3,void TES::LoadGridCells(TES* a_this)
-13282,0x14015c4d0,0x14016cf90,3,uint TES::PurgeInteriorBuffer(TES* a_this, bool a_keepCurrent)
+13282,0x14015c4d0,0x14016cf90,3,"uint TES::PurgeInteriorBuffer(TES* a_this, bool a_keepCurrent)"
 13286,0x14015c7e0,0x14016d2a0,3,void TES::UpdateLandLODBlendFlags(TES* a_this)
 13530,0x1401652d0,0x140175a10,3,"void UIMessageQueue::AddMessage (UIMessageQueue * a_this, BSFixedString * a_menuName, UIMessageTypes a_type, IUIMessageData * a_data)"
 13549,0x140165770,0x140175eb0,4,longlong TESWorldSpace::GetCellByCoordinateMask_140165770 (TESWorldSpace * a_this)
