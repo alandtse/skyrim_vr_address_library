@@ -1,3 +1,10 @@
+# [0.284.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.283.0...v0.284.0) (2026-10-20)
+
+
+### Features
+
+* add VM, SpellsLearned, SetParentCell ids ([#275](https://github.com/alandtse/skyrim_vr_address_library/issues/275)) ([b8358c8](https://github.com/alandtse/skyrim_vr_address_library/commit/b8358c81380719bec3c76bb60015b50dae6df4c8))
+
 # [0.283.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.282.0...v0.283.0) (2026-10-19)
 
 
