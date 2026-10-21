@@ -1,3 +1,10 @@
+## [0.284.1](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.284.0...v0.284.1) (2026-10-21)
+
+
+### Bug Fixes
+
+* quote two CSV signatures ([#282](https://github.com/alandtse/skyrim_vr_address_library/issues/282)) ([00c9f13](https://github.com/alandtse/skyrim_vr_address_library/commit/00c9f1373d73ef6c8fb78ebd1e3dddab6283012c))
+
 # [0.284.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.283.0...v0.284.0) (2026-10-20)
 
 
