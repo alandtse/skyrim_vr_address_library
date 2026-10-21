@@ -1,3 +1,10 @@
+# [0.285.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.284.1...v0.285.0) (2026-10-21)
+
+
+### Features
+
+* add cull, input and render ids ([#283](https://github.com/alandtse/skyrim_vr_address_library/issues/283)) ([06f76ee](https://github.com/alandtse/skyrim_vr_address_library/commit/06f76ee17e229a4b9d39dc26566e0836a83c3830))
+
 ## [0.284.1](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.284.0...v0.284.1) (2026-10-21)
 
 
