@@ -545,6 +545,8 @@
 25641,0x1403af1c0,0x1403beec0,3,void Precipitation::SetupMask (Precipitation * a_this)
 25642,0x1403af380,0x1403bf0b0,3,"void Precipitation::RenderMask (Precipitation * a_this, BSParticleShaderRainEmitter * a_emitter)"
 25643,0x1403af530,0x1403bf290,3,Precipitation::sub_*
+25645,0x1403afca0,0x1403bfa00,3,Precipitation::OcclusionMapData* Precipitation::OcclusionMapData::ctor()
+25648,0x1403aff60,0x1403bfcd0,4,BSGeometryListCullingProcess* BSGeometryListCullingProcess::dtor_deleting(uint32_t a_flags)
 25671,0x1403b0130,0x1403bfea0,4,"void UpdateShaderGeometry(RE::BSGeometry* a_precipGeometry, RE::NiCamera* a_camera, float a_delta, float a_cubeSize, float a_particleDensity, float a_windSpeed, float a_windAngle)"
 25675,0x1403b0540,0x1403c02b0,4,void Sky::Ctor(Sky *a_this)
 25678,0x1403b0e80,0x1403c0bf0,4,bool Sky::IsDaytime()
@@ -898,7 +900,8 @@
 35413,0x1405a6640,0x1405add00,3,"void Calendar::GetTimeDateString(char* a_dest, std::uint32_t a_max, bool a_showYear)"
 35492,0x1405aa050,0x1405b1710,4,"void GarbageCollector::Add (GarbageCollector * a_this, TESObjectREFR * a_object, bool a_removeFromCell)"
 35545,0x1405acbd0,0x1405b4290,2,WinMain
-35548,0x1405ae010,0x1405b5880,3,main
+35546,0x1405acc20,0x1405b42e0,3,"Main* Main::ctor(HWND__* a_wnd, HINSTANCE__* a_instance)"
+35548,0x1405ae010,0x1405b5880,3,bool InitApplication()
 35551,0x1405af3d0,0x1405b6d70,4,MainLoop_1405AF3D0
 35556,0x1405b1020,0x1405b8a20,3,void Main::Render()
 35560,0x1405b1860,0x1405b9330,3,"void Main::Draw_1405B1860 (Main * a_this, uint32_t param_2, bool a_mainMenuopen)"
@@ -1234,6 +1237,7 @@
 41272,0x140705940,0x14072c790,3,RE::PlayerControls::SendSprintStopToInterestedActors
 41277,0x140706070,0x14072ced0,3,RE::PlayerControls::RegisterHandler
 41278,0x1407061F0,0x14072d050,3,RE::PlayerControls::UnregisterHandler
+41289,0x140706c10,0x14072dc70,3,void PlayerControls::DispatchInputEvent(InputEvent* a_event)
 41346,0x140708bf0,0x14072FF80,3,"ActivateHandler::sub_140708BF0(ActivateHandler *a1, longlong a2, longlong a3)"
 41349,0x1407090a0,0x1407310b0,3,RE::JumpHandler::ProcessButton_1407090A0
 41361,0x1407096b0,0x140732b00,3,StaminaNPC::apply_PlayerControls__sub_140705530
@@ -2124,10 +2128,13 @@
 74704,0x140d4cc20,0x140d95b00,3,bool BSOcclusionPlane::IsVisibleFromPoint(NiPoint3* a_point)
 74706,0x140d4cde0,0x140d95cc0,3,bool BSOcclusionPlane::IsOcclusionPlane()
 74707,0x140d4cdf0,0x140d95cd0,3,bool BSOcclusionPlane::IsOcclusionBox()
+74802,0x140d50ae0,0x140d999c0,3,BSCullingProcess* BSCullingProcess::ctor(NiVisibleArray* a_visibleSet)
 74806,0x140d51050,0x140d99f60,3,"void BSCullingProcess::AppendNonAccum(NiAVObject* a_object, int a_alphaGroupIndex)"
 74807,0x140d51070,0x140d99f80,3,"void BSCullingProcess::AppendVirtual(BSGeometry* a_geometry, std::int32_t a_alphaGroupIndex)"
 74808,0x140d51100,0x140d9a010,3,void BSCullingProcess::ClearCollectedGeometry()
+74809,0x140d51280,0x140d9a190,3,"void BSCullingProcess::AccumulateGeometry(BSShaderAccumulator* a_accumulator)"
 74810,0x140d51480,0x140d9a280,3,void BSCullingProcess::FlushAlphaGroupQueue()
+74811,0x140d51650,0x140d9a450,3,"void BSCullingProcess::SubmitCullResults(BSTArray<NiPointer<NiAVObject>>* a_objects, NiCamera* a_camera, bool a_filterByFlag, bool a_useJobs)"
 74812,0x140d517c0,0x140d9a5e0,4,bool BSCullingProcess::AddShared(NiAVObject* a_object)
 74814,0x140d51990,0x140d9a7b0,3,bool BSCullingProcess::TestBaseVisibility3(NiBound* a_bound)
 74815,0x140d51a50,0x140d9a870,3,bool BSCullingProcess::TestBaseVisibility2(BSOcclusionPlane* a_bound)
@@ -2137,7 +2144,10 @@
 74857,0x140d53440,0x140d9c3d0,3,bool BSParticleSystemManager::IsValidMasterParticleSystem(std::uint32_t a_index)
 74860,0x140d53670,0x140d9c600,3,BSMasterParticleSystem* BSParticleSystemManager::GetMasterParticleSystemAt(std::uint32_t a_index)
 74889,0x140d546b0,0x140d9d640,4,BSFurnitureMarkerNode* BSFurnitureMarkerNode::FindBSFurnitureMarkerNode(NiObjectNET* a_object)
+75008,0x140d58800,0x140da1810,4,void BSGeometryListCullingProcess::~BSGeometryListCullingProcess()
 75009,0x140d58850,0x140da1860,3,"void BSGeometryListCullingProcess::AppendNonAccum(BSGeometry* a_geometry, int a_alphaGroupIndex)"
+75010,0x140d588a0,0x140da19b0,4,"void BSGeometryListCullingProcess::SubmitCollectedGeometry(BSCullingProcess* a_process, bool a_useJobs)"
+75011,0x140d588d0,0x140da19e0,4,void BSGeometryListCullingProcess::ReserveObjectArray()
 75051,0x140d59b60,0x140da2c70,3,BSCompoundFrustum* BSCompoundFrustum::Ctor(BSCompoundFrustum* a_this)
 75052,0x140d59d00,0x140da2e10,3,void BSCompoundFrustum::Dtor(BSCompoundFrustum* a_this)
 75053,0x140d59db0,0x140da2ec0,3,BSCompoundFrustum* BSCompoundFrustum::AllocateFromPool()
@@ -2189,8 +2199,8 @@
 75469,0x140d6aca0,0x140dbc860,3,CreateDepthStencilRenderTarget
 75472,0x140d6b210,0x140dbce30,3,"void UpdateCameraData (undefined8 param_1, byte param_2)"
 75475,0x140d6bd10,0x140dbda30,4,"BSGraphics::TriShape* CreateTriShapeRendererData(BSGraphics::Renderer* a_renderer, void* a_vertexData, std::uint32_t a_sizeBytes, std::uint64_t a_vertexDesc, void* a_sharedIndexBuffer)"
-75477,0x140d6bfe0,0x140dbdd00,3,Skyrim-Upscaler
-75479,0x140d6c1e0,0x140dbdf60,3,fDrawGrass_*
+75477,0x140d6bfe0,0x140dbdd00,3,"void BSGraphics::Renderer::DrawIndexedTriangleList(void* a_buffers, uint32_t a_startIndex, uint32_t a_triangleCount)"
+75479,0x140d6c1e0,0x140dbdf60,3,"void BSGraphics::Renderer::DrawIndexedInstancedTriangles(void* a_buffers, uint32_t a_startIndex, int32_t a_triangleCount, int32_t a_instanceCount, uint64_t a_vertexDesc, void* a_secondaryStream)"
 75480,0x140d6c320,0x140dbe0d0,5,void BSGraphics::TriShape::Release(BSGraphics::TriShape* a_this)
 75503,0x140d6da10,0x140dbf800,4,"void* CreateIndexBuffer(BSGraphics::Renderer* a_renderer, std::uint32_t a_indexCount, std::uint16_t* a_indices)"
 75507,0x140d6dbc0,0x140dbf9b0,3,"NiTexture::RendererData* BSRenderManager::CreateRenderTexture(std::uint32_t a_width, std::uint32_t a_height)"
@@ -2604,6 +2614,7 @@
 99881,0x1412c8bf0,0x141306fe0,4,void ClearRenderPassArrays (BSLightingShaderProperty * a_this)
 99886,0x1412c9320,0x141307710,3,BSShaderTextureSet* BSShaderTextureSet::Ctor()
 99920,0x1412c9c90,0x141308080,3,BSShaderAccumulator* BSShaderAccumulator::ctor(int a_priority)
+99923,0x1412ca110,0x141308570,3,"bool BSShaderAccumulator::AccumulateObject(BSGeometry* a_geometry, std::uint64_t a_alphaGroupToken)"
 99925,0x1412ca250,0x141308750,3,"void BSShaderAccumulator::AccumulateSceneGraph(NiAVObject* a_root, bool a_filterByShaderProperty)"
 99935,0x1412cabf0,0x1413092c0,3,void BSShaderAccumulator::FinishAccumulatingDefaultMode(std::uint32_t a_flags)
 99937,0x1412cac90,0x141309360,3,void BSShaderAccumulator::FinishAccumulatingPostResolveDepth(std::uint32_t a_flags)
@@ -2709,10 +2720,11 @@
 100840,0x141306240,0x141347320,4,"void BSShaderAccumulator::RenderPersistentPassList (longlong * * passList, uint32_t renderFlags)"
 100843,0x141306db0,0x141347fe0,4,void BSBatchRenderer::ClearAllRenderPasses(BSBatchRenderer * a_this)
 100847,0x141307160,0x141348390,3,void BSRenderPass::DrawGeometry(BSRenderPass* this)
+100848,0x141307930,0x141348b70,3,"void BSBatchRenderer::RenderActivePassRange(std::uint32_t a_firstPass, std::uint32_t a_lastPass, std::uint32_t a_renderFlags)"
 100851,0x141307fc0,0x141349200,4,"bool BSBatchRenderer::GetNextPassSlotInGroup(BSRenderPass *a_this, uint32_t param_2, uint32_t *param_3)"
 100852,0x141308030,0x141349270,4,"void BSBatchRenderer::ApplyPassAlphaCullState(BSRenderPass *a_this,uint *param_2,uint *param_3,undefined8 param_4,uint param_5)"
 100853,0x1413083b0,0x1413495f0,4,"void BSBatchRenderer::GetRenderPassIndex(BSBatchRenderer *a_this,uint *param_2)"
-100854,0x141308440,0x141349680,3,"void BSBatchRenderer::RenderPassImmediately_141308440 (BSBatchRenderer * a_Pass, uint32_t a_Technique, bool a_AlphaTest, uint32_t a_RenderFlags)"
+100854,0x141308440,0x141349680,3,"void BSBatchRenderer::SetupAndDrawPass(BSRenderPass* a_pass, std::uint32_t a_technique, bool a_alphaTest, std::uint32_t a_renderFlags)"
 100856,0x141308540,0x141349790,4,void BSBatchRenderer::ClearAlphaGeometryGroups()
 100857,0x141308560,0x1413497b0,4,void BSBatchRenderer::SortAlphaGeometryGroups()
 100871,0x1413090c0,0x14134a310,4,"LLF::void FUN_1413090c0 (BSBatchRenderer * * param_1, uint param_2)"
@@ -2745,6 +2757,7 @@
 101335,0x14131f630,0x1413654b0,3,"void NiBoneMatrixSetterI::SetBoneMatrices(NiBoneMatrixSetterI* a_this, NiSkinInstance* a_skin, void* a_context, NiTransform* a_transform)"
 101339,0x14131f810,0x1413656b0,4,"void BSShader::LoadShaders_14131F810 (BSShader * a_this, UINT_PTR * a_stream)"
 101341,0x14131fbd0,0x141365a70,4,"bool BSShader::BeginTechnique_14131FBD0 (BSShader * shader, int vertexDescriptor, int pixelDescriptor, bool skipPIxelShader)"
+101491,0x141324500,0x141356630,3,BSShadowDirectionalLight* BSShadowDirectionalLight::ctor(uint32_t a_shadowCount)
 101493,0x141324ac0,0x141356c30,3,"void BSShadowDirectionalLight::TransformClipSpacePlanes(REX::W32::D3DXMatrix* a_matrix1, REX::W32::D3DXMatrix* a_matrix2)"
 101494,0x141324b40,0x141356cb0,3,"void BSShadowDirectionalLight::Accumulate(std::uint32_t& a_globalShadowLightCount, std::uint32_t a_shadowMaskChannel, NiAVObject* a_cullingScene)"
 101495,0x141324c30,0x141356ef0,3,void BSShadowDirectionalLight::Render(std::uint32_t& a_index)
