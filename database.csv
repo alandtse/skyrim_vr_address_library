@@ -2132,7 +2132,7 @@
 74806,0x140d51050,0x140d99f60,3,"void BSCullingProcess::AppendNonAccum(NiAVObject* a_object, int a_alphaGroupIndex)"
 74807,0x140d51070,0x140d99f80,3,"void BSCullingProcess::AppendVirtual(BSGeometry* a_geometry, std::int32_t a_alphaGroupIndex)"
 74808,0x140d51100,0x140d9a010,3,void BSCullingProcess::ClearCollectedGeometry()
-74809,0x140d51280,0x140d9a190,3,"void BSCullingProcess::AccumulateGeometry(BSShaderAccumulator* a_accumulator)"
+74809,0x140d51280,0x140d9a190,3,void BSCullingProcess::AccumulateGeometry(BSShaderAccumulator* a_accumulator)
 74810,0x140d51480,0x140d9a280,3,void BSCullingProcess::FlushAlphaGroupQueue()
 74811,0x140d51650,0x140d9a450,3,"void BSCullingProcess::SubmitCullResults(BSTArray<NiPointer<NiAVObject>>* a_objects, NiCamera* a_camera, bool a_filterByFlag, bool a_useJobs)"
 74812,0x140d517c0,0x140d9a5e0,4,bool BSCullingProcess::AddShared(NiAVObject* a_object)
