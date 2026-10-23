@@ -441,7 +441,7 @@
 22317,0x140310720,0x140321c30,3,BGSStoryEventManager* BGSRegisteredStoryEvent::BGSStoryEventManager::GetSingleton()
 22318,0x1403107b0,0x140321cc0,4,void TESFullName::SetFullName(const char* a_name)
 22339,0x140310e60,0x140322370,3,po3tweaks::NoCheatMode::GodMode
-22340,0x140310ec0,0x140322370,3,po3tweaks::NoCheatMode::ImmortalMode
+22340,0x140310ec0,0x1403223d0,3,po3tweaks::NoCheatMode::ImmortalMode
 22350,0x140311250,0x140322760,3,powerof3tweaks::ToggleCollisionFix::ToggleCollision
 22465,0x140316e60,0x140328370,3,Cmd_SaveGame_Execute
 22754,0x1403232e0,0x140332a90,3,void TESQuest::CompleteAllStages()
@@ -1731,7 +1731,7 @@
 55415,0x14098a600,0x1409c5780,3,"void papyrus__LeveledSpell::AddForm_14098A600 (longlong * param_1, undefined4 param_2, longlong param_3, longlong param_4, undefined param_5)"
 55610,0x140992C30,0x1409CD750,4,papyrus__ObjectReference__Activate
 55616,0x140993100,0x1409cdc20,3,papyrus::ObjectReference::AddItem
-55622,0x1409936e0,0x1401956c0,2,Unknown (required by Skyrim Platform)
+55622,0x1409936e0,0x1409ce200,2,Unknown (required by Skyrim Platform)
 55644,0x140994170,0x1409cec90,3,papyrus::ObjectReference::GetItemCount
 55661,0x140994560,0x1409cf080,3,papyrus::ObjectReference::IsFurnitureInUse
 55663,0x140994660,0x1409cf180,3,papyrus::ObjectReference::IsInDialogueWithPlayer
