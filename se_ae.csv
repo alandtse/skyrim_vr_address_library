@@ -3473,6 +3473,7 @@ sseid,aeid,confidence,name
 25213,25741,1,
 25482,26022,3,RE::NiAVObject::GetCollisionObject
 25684,26231,3,papyrus_extender::events::game::weatherevent::target_0x416
+25686,26233,3,RE::Sky::GetFog
 25822,26379,3,RE::AIForumulas::ComputePickpocketSuccess
 25977,26586,3,RE::BSFaceGenAnimationData::Reset
 25980,26594,3,RE::BSFaceGenAnimationData::SetExpressionOverride
@@ -4614,6 +4615,8 @@ sseid,aeid,confidence,name
 35317,36212,3,RE::BGSImpactManager::PlayImpactSound
 35320,36215,3,RE::BGSImpactManager::PlayImpactEffect
 35413,36311,3,RE::Calendar::GetTimeDateString
+35551,36544,3,RE::Main::MainLoop
+35560,36559,3,RE::Main::Draw
 35571,36574,3,Main::UpdateCullingFrustum
 35978,36953,3,RE::TaskQueueInterface::QueueBulletWaterDisplacementTask
 35987,36962,3,RE::TaskQueueInterface::QueueRemoveSpellTask
@@ -8518,6 +8521,8 @@ sseid,aeid,confidence,name
 99736,106380,3,ShadowSceneNode::UpdateSunOcclusionPlanes
 99750,106398,3,AppendRoomToAccumList
 99752,106400,3,ShadowSceneNode::AccumulateLight
+99938,106583,3,RE::BSShaderAccumulator::FinishAccumulatingCommonPasses
+99963,106609,3,RE::BSBatchRenderer::RenderBatches
 100004,106711,3,RE::BSLightingShaderMaterial::Ctor
 100021,106728,3,RE::BSLightingShaderMaterialEnvmap::Ctor
 100033,106740,3,RE::BSLightingShaderMaterialEye::Ctor
@@ -8531,6 +8536,7 @@ sseid,aeid,confidence,name
 100110,106817,3,RE::BSLightingShaderMaterialLODLandscape::Ctor
 100118,106825,3,RE::BSLightingShaderMaterialSnow::Ctor
 100125,106832,3,RE::BSLightingShaderMaterialMultiLayerParallax::Ctor
+100421,107139,3,RE::Main::RenderDepth
 100583,107323,3,SetLODBlendOffsetConstant
 100747,107528,1,BSEffectShader::Func7_*
 100748,107529,1,BSEffectShader::sub_*
@@ -8564,7 +8570,7 @@ sseid,aeid,confidence,name
 100847,107637,1,
 100848,107638,1,BSBatchRenderer::Func3_*
 100851,107641,1,BSBatchRenderer::GetNextPassSlotInGroup
-100852,107642,1,BSBatchRenderer::sub_*
+100852,107642,1,RE::BSBatchRenderer::ApplyPassAlphaCullState
 100854,107644,1,
 100855,107645,1,
 100856,107646,1,
