@@ -1,0 +1,45 @@
+name: Validate database rows
+
+on:
+  pull_request:
+    paths:
+      - 'database.csv'
+      - 'se_ae.csv'
+      - 'scripts/verify_database.py'
+      - '.github/workflows/check-database.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout PR merge ref
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install test dependencies
+        run: python -m pip install pytest
+
+      - name: Run verify_database unit tests
+        run: python -m pytest scripts/test_verify_database.py -q
+
+      - name: Verify changed rows against trusted base script
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          set -euo pipefail
+
+          # Always run the BASE branch's copy of the script, never the PR's own
+          # copy -- otherwise a PR could relax the checks it is supposed to pass.
+          git show "$BASE_SHA:scripts/verify_database.py" > "$RUNNER_TEMP/verify_database.py"
+
+          python "$RUNNER_TEMP/verify_database.py" --base "$BASE_SHA"
