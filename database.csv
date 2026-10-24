@@ -118,9 +118,16 @@
 13635,0x14016d4d0,0x14017def0,3,FormID TESDataHandler::GetNextID()
 13638,0x14016d720,0x14017e0b0,4,"void TESDataHandler::LoadPlugins(TESDataHandler* a_this, char* a_basePath)"
 13639,0x14016dbb0,0x14017e540,3,"void TESDataHandler::FindPluginsInDirectory(TESDataHandler* a_this, char* a_path)"
-13645,0x14016e660,0x14017eff0,3,"bool TESDataHandler::CompileFiles(TESDataHandler* a_this, BSSimpleList<TESFile*>* a_files)"
+13640,0x14016ded0,0x14017e850,4,void TESDataHandler::SortESMsByMasters()
+13642,0x14016e150,0x14017ead0,4,"void TESDataHandler::MoveFileInList(TESFile* a_file, TESFile* a_anchor)"
+13643,0x14016e4c0,0x14017ee40,4,void TESDataHandler::DuplicateCheckedFiles()
+13644,0x14016e570,0x14017eef0,4,std::int32_t TESDataHandler::CountFiles(std::int32_t a_mode)
+13645,0x14016e660,0x14017eff0,3,"bool TESDataHandler::CompileFiles(TESDataHandler* a_this, bool a_incremental)"
 13646,0x14016ea00,0x14017f350,3,void TESDataHandler::ClearData()
 13647,0x14016f2e0,0x14017fb90,3,"bool TESDataHandler::IsGameModded (TESDataHandler * a_this, bool param_2)"
+13648,0x14016f360,0x14017fc70,3,RE::TESDataHandler::BuildLoadOrder
+13649,0x14016fc00,0x140180390,4,bool TESDataHandler::WritePluginsTxt(BSTArray<TESFile*>& a_files)
+13650,0x14016fea0,0x140180630,4,"void TESDataHandler::ReadPluginsTxt(BSTArray<BSFixedString>& a_names, bool a_enabledOnly)"
 13652,0x1401700e0,0x140180870,4,"bool TESDataHandler::ConstructObjectList(TESDataHandler* a_this, TESFile* a_file, bool a_isFirstPlugin, char* a_param4)"
 13654,0x1401703f0,0x140180b80,3,"bool TESDataHandler::ConstructObject(TESFile* a_file, bool a_checkExisting, TESForm* a_form, bool a_flag)"
 13657,0x1401713d0,0x140181b80,3,RE::TESDataHandler::LoadScripts
@@ -130,6 +137,9 @@
 13789,0x140177790,0x1401876a0,3,RE::Sky::GetSingleton
 13855,0x14017a700,0x14018a5b0,4,"bool TESFile::OpenTES(NiFile::OpenMode a_accessMode, bool a_lock)"
 13857,0x14017ad40,0x14018abf0,4,bool TESFile::CloseTES(bool a_force)
+13860,0x14017b000,0x14018aeb0,3,RE::TESFile::ReadHeader
+13869,0x14017ba60,0x14018b8b0,4,bool TESFile::ResolveMasters(BSSimpleList<TESFile*>* a_files)
+13878,0x14017c4e0,0x14018c330,4,bool TESFile::ResolveMastersRecursive()
 13888,0x14017cb10,0x14018c920,3,"bool TESFile::SeekForm(TESFile* a_file, TESForm* a_form)"
 13889,0x14017cc90,0x14018caa0,3,FDGE::Skyrim::SkipGrup
 13894,0x14017d110,0x14018cf20,3,bool TESFile::SeekNextForm(bool a_skipIgnored)
@@ -140,6 +150,8 @@
 13903,0x14017d960,0x14018d740,3,RE::TESFile::SeekNextSubrecord
 13904,0x14017da10,0x14018d7f0,3,RE::TESFile::ReadData
 13913,0x14017e130,0x14018df10,4,bool IsESM_14017E130 (TESFile * param_1)
+13917,0x14017e200,0x14018df60,4,void TESFile::SetChecked(bool a_checked)
+13919,0x14017e280,0x14018dfe0,4,void TESFile::SetActive(bool a_active)
 13923,0x14017e4b0,0x14018e210,3,RE::TESFile::Duplicate
 14026,0x1401820a0,0x140191e20,3,RE::BGSBipedObjectForm::TestBodyPartByIndex
 14055,0x1401832b0,0x140193030,3,BGSDestructibleObjectForm* TESBoundObject::GetDestructibleForm()
@@ -154,6 +166,7 @@
 14180,0x140189750,0x140199480,3,RE::BGSOpenCloseForm::SetCloseState
 14189,0x140189e30,0x140199b60,3,RE::TESObjectREFR::PlayAnimation
 14190,0x140189fc0,0x140199cf0,3,"void ScriptEventSourceHolder::SendOpenCloseEvent(const NiPointer<TESObjectREFR>& a_ref, const NiPointer<TESObjectREFR>& a_activeRef, bool a_isOpened)"
+14254,0x14018c080,0x14019bdb0,4,bool TESActorBaseData::HasLeveledTemplate()
 14261,0x14018c680,0x14019c3b0,4,"void TESActorBaseData::SetActorBaseFlag(ACTOR_BASE_DATA::Flag a_flag, bool a_set, bool a_notify)"
 14262,0x14018c750,0x14019c480,4,std::uint16_t TESActorBaseData::GetLevel()
 14390,0x140190070,0x14019fda0,3,void TESContainer::CollectUniqueInventoryObjects(BSScrapArray<ContainerObject*>& a_objects) const
@@ -340,7 +353,7 @@
 19002,0x14027ddc0,0x14028f390,3,void TESObjectCELL::AttachReference3D(TESObjectREFR* a_ref)
 19024,0x140280160,0x140291770,3,"BSMultiBoundNode* TESObjectCELL::sub_140280160(const ObjectRefHandle& a_handle, bool a_flag)"
 19102,0x140283f90,0x1402956c0,3,TESObjectREFR::ClearData
-19105,0x1402850e0,0x140296810,3,void TESObjectREFR::InitializeAfterAllFormsAreReadFromFile
+19105,0x1402850e0,0x140296810,3,void TESObjectREFR::InitItemImpl()
 19110,0x140285be0,0x140297310,3,void TESObjectREFR::AddLockChange()
 19119,0x1402866d0,0x140297e00,4,void TESObjectREFR::UpdateSoundCallBack_1402866D0 (Character * a_this)
 19133,0x140287d30,0x140299460,4,"void TESObjectREFR::ReadFromSaveGame (TESObjectREFR * a_this, BGSLoadFormBuffer * a_buffer)"
@@ -911,12 +924,12 @@
 35567,0x1405b3830,0x1405bb440,4,FUN_1405b3830
 35571,0x1405b3c00,0x1405bb810,3,void Main::UpdateCullingFrustum()
 35589,0x1405b5280,0x1405bcef0,3,void Main::FUN_1405b5280 (Main * a_this)
-35593,0x1405b5490,0x1405bd0f0,2,Main::sub_*
+35593,0x1405b5490,0x1405bd0f0,2,void Main::ReloadFormData()
 35596,0x1405b5bd0,0x1405bd860,3,void Main::PostReloadInit()
 35598,0x1405b5ef0,0x1405bdb80,4,void Main::SetActive(bool a_active)
 35601,0x1405b6060,0x1405bdcf0,4,NiCamera* Main::WorldRootCamera()
 35608,0x1405b6470,0x1405be100,4,bool Main::IsRoomVisible(NiNode* a_room) src\RE\M/Main.cpp:17
-35620,0x1405b6dc0,0x1405bee40,3,Main::sub_*
+35620,0x1405b6dc0,0x1405bee40,3,void Main::SetupPlayerBaseForm()
 35642,0x1405b8f00,0x1405c0f70,3,SettingsOfSkyrim::
 35882,0x1405c0610,0x1405c8b30,3,po3tweaks::ScreenshotToConsole::DebugNotification
 35918,0x1405c1e40,0x1405ca360,4,bool TaskQueueInterface::ShouldQueueTask()
@@ -1004,6 +1017,7 @@
 36754,0x1405fd2c0,0x140605b10,4,"NiAVObject* Actor::CalculateLOS(NiPoint3* a_targetPos, NiPoint3* a_hitPosOut, float a_viewCone)"
 36755,0x1405fd5b0,0x140605e00,4,RE::Actor::GetEyePos
 36759,0x1405fe370,0x140606b80,3,Actor::GetLightLevel
+36775,0x1405ff4b0,0x140607cc0,3,void Actor::InitItemImpl()
 36801,0x140600400,0x140608c10,3,void Actor::StopMoving(float a_delta)
 36802,0x140600590,0x140608da0,4,RE::Actor::StopMovement
 36812,0x140600cc0,0x1406094d0,4,bool Actor::IsPathing()
@@ -1624,6 +1638,7 @@
 51143,0x14089a7f0,0x1408c8880,4,undefined MagicItemData::Func4_14089A7F0(MagicItemData* a_this)
 51152,0x14089b950,0x1408c97a0,3,MagicMenu::RequestItemCardInfoDelegate()
 51223,0x1408a0230,0x1408ce4e0,4,void MagicItemList::Update_Impl(TESObjectREFR* a_owner)
+51253,0x1408a26b0,0x1408d0bf0,3,void LoadNewDLCContent()
 51358,0x1408A7F20,0x1408d3f30,3,RE::MenuControls::RegisterHandler
 51359,0x1408A7FF0,0x1408d4000,3,RE::MenuControls::UnregisterHandler
 51360,0x1408A8130,0x1408d4140,4,RE::MenuControls::GetKeyRepeatRates
