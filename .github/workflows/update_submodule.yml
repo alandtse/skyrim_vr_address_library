@@ -6,6 +6,10 @@ on:
     branches:
       - main
 
+concurrency:
+  group: submodule-update-parent
+  cancel-in-progress: false
+
 jobs:
   update:
     runs-on: ubuntu-latest

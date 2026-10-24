@@ -34,6 +34,7 @@ A csv for generating release csv files for loading in CommonLibVR to replace [ad
        * 2 - Manually entered and assumed manually verified
        * 3 - Manually entered with suggested automatic tools verification
        * 4 - Bit for bit identical (offsets and patches should work identically)
+       * Any other value is rejected by CI on a changed row.
   * name (optional) - A friendly name to describe the id
 
 #### Release CSVs

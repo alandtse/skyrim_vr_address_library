@@ -1,131 +1,60 @@
 name: Validate and Fix CSV Name Field
 
 on:
-  pull_request_target:
+  pull_request:
     paths:
-      - '**.csv'
+      - 'database.csv'
   workflow_dispatch: {}
   schedule:
     - cron: '0 6 * * 1'
 
+permissions:
+  contents: read
+
 jobs:
-  autofix:
-    if: github.event_name == 'pull_request_target'
+  check:
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pull-requests: write
     steps:
-      - name: Checkout PR branch
+      - name: Checkout PR merge ref
         uses: actions/checkout@v4
         with:
-          repository: ${{ github.event.pull_request.head.repo.full_name }}
-          ref: ${{ github.event.pull_request.head.ref }}
-          token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
+          persist-credentials: false
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.x"
 
-      - name: Set commit message
-        id: vars
+      - name: Verify CSV formatting against trusted base script
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
         run: |
-          echo "message=chore(csv): auto-quote name fields" >> "$GITHUB_OUTPUT"
+          set -euo pipefail
 
-      - name: Get changed CSV files
-        id: changed_files
-        run: |
-          # Get list of changed CSV files in this PR
-          changed_csvs=$(git diff --name-only ${{ github.event.pull_request.base.sha }}..${{ github.event.pull_request.head.sha }} | grep '\.csv$' || true)
-          echo "Changed CSV files: $changed_csvs"
-          echo "files<<EOF" >> "$GITHUB_OUTPUT"
-          echo "$changed_csvs" >> "$GITHUB_OUTPUT"
-          echo "EOF" >> "$GITHUB_OUTPUT"
+          # Always run the BASE branch's copy of the script, never the PR's own
+          # copy -- otherwise a PR could edit the script to silence the check.
+          git show "$BASE_SHA:scripts/autofix_csv_quotes.py" > "$RUNNER_TEMP/autofix.py"
 
-      - name: Run CSV autofix script
-        id: fix
-        if: steps.changed_files.outputs.files != ''
-        run: |
-          # Only process the changed CSV files
-          changed_files="${{ steps.changed_files.outputs.files }}"
-          if [ -n "$changed_files" ]; then
-            output=$(python scripts/autofix_csv_quotes.py $changed_files)
-            echo "$output"
-            if echo "$output" | grep -q '✅ Fixed [0-9]'; then
-              echo "modified=true" >> "$GITHUB_OUTPUT"
-            else
-              echo "modified=false" >> "$GITHUB_OUTPUT"
-            fi
-          else
-            echo "modified=false" >> "$GITHUB_OUTPUT"
+          # NUL-delimited and never interpolated into shell or template text,
+          # so an attacker-chosen file name can't inject commands or corrupt
+          # output.
+          git diff -z --name-only --diff-filter=AM "$BASE_SHA" "$HEAD_SHA" -- 'database.csv' \
+            | xargs -0 -r python "$RUNNER_TEMP/autofix.py"
+
+          if ! git diff --quiet -- 'database.csv'; then
+            {
+              echo '### CSV formatting needs fixing'
+              echo 'Run `python scripts/autofix_csv_quotes.py` and commit the result.'
+              echo '```diff'
+              git diff -- 'database.csv'
+              echo '```'
+            } >> "$GITHUB_STEP_SUMMARY"
+            echo "::error::database.csv is not normalized; see job summary for the diff."
+            exit 1
           fi
-
-      - name: Check if maintainer edits are allowed
-        id: maintainer_edits
-        if: steps.fix.outputs.modified == 'true'
-        run: |
-          echo "allowed=${{ github.event.pull_request.maintainer_can_modify }}" >> "$GITHUB_OUTPUT"
-
-      - name: Auto-commit CSV fixes
-        if: steps.fix.outputs.modified == 'true' && steps.maintainer_edits.outputs.allowed == 'true'
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "style(csv): normalize quoting for fields containing commas"
-          commit_user_name: "github-actions[bot]"
-          commit_user_email: "github-actions[bot]@users.noreply.github.com"
-
-      - name: Create success comment for auto-commit
-        if: steps.fix.outputs.modified == 'true' && steps.maintainer_edits.outputs.allowed == 'true'
-        uses: peter-evans/create-or-update-comment@v4
-        with:
-          issue-number: ${{ github.event.pull_request.number }}
-          body: |
-            ✅ **CSV Auto-fix Applied**
-
-            I've automatically fixed the CSV formatting issues in your PR:
-            - Fixed CSV quoting for entries containing commas
-            - Sorted entries into ascending id order
-            - Applied standard CSV formatting
-
-            The changes have been committed to your branch. Please review the changes!
-
-      - name: Create suggestion comment for restricted PRs
-        if: steps.fix.outputs.modified == 'true' && steps.maintainer_edits.outputs.allowed != 'true'
-        uses: peter-evans/create-or-update-comment@v4
-        with:
-          issue-number: ${{ github.event.pull_request.number }}
-          body: |
-            🔧 **CSV Auto-fix Suggestion**
-
-            Your CSV has formatting issues. I'd like to fix them automatically, but this PR doesn't allow maintainer edits.
-
-            **Option 1: Enable maintainer edits**
-            - Edit your PR and check "Allow edits from maintainers"
-            - Close and reopen this PR to trigger the auto-fix
-
-            **Option 2: Apply fixes manually**
-            <details>
-            <summary>Click to see manual fix instructions</summary>
-
-            ```bash
-            # Run this in your local repository to apply the fixes:
-            python scripts/autofix_csv_quotes.py
-            git add -A
-            git commit -m "style(csv): normalize quoting for fields containing commas"
-            git push
-            ```
-
-            Or download the fixed files from the workflow artifacts.
-            </details>
-
-      - name: Upload fixed files as artifacts
-        if: steps.fix.outputs.modified == 'true'
-        uses: actions/upload-artifact@v4
-        with:
-          name: fixed-csv-files
-          path: |
-            ${{ steps.changed_files.outputs.files }}
 
   scheduled_cleanup:
     if: github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
@@ -161,8 +90,8 @@ jobs:
           body: |
             Automated cleanup from the `check-csv.yml` ${{ github.event_name }} run.
 
-            Catches drift the `pull_request_target` pass can't see -- e.g. rows
-            added while this workflow was disabled, or manual commits that
+            Catches drift the PR `check` job can't see -- e.g. rows added
+            while this workflow was disabled, or manual commits that
             bypassed a PR.
           branch: automated/csv-cleanup
           delete-branch: true
