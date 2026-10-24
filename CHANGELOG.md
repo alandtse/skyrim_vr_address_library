@@ -1,3 +1,20 @@
+# [0.286.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.285.0...v0.286.0) (2026-10-24)
+
+
+### Bug Fixes
+
+* **addresslib:** add linked LOD shadow globals ([#292](https://github.com/alandtse/skyrim_vr_address_library/issues/292)) ([f142fa4](https://github.com/alandtse/skyrim_vr_address_library/commit/f142fa44aeec1ef637b442477bb8b91c866039fc))
+* correct status for 12 divergent ids ([#286](https://github.com/alandtse/skyrim_vr_address_library/issues/286)) ([2ee8e7d](https://github.com/alandtse/skyrim_vr_address_library/commit/2ee8e7d6eb7ce28e3254e61ef552c103d88045be))
+* correct two VR addresses copied from a neighbour ([#289](https://github.com/alandtse/skyrim_vr_address_library/issues/289)) ([f231718](https://github.com/alandtse/skyrim_vr_address_library/commit/f231718792a4981f2d05c455b2f4948291e03c0d))
+* restore status 4 for TriShape::Release ([#287](https://github.com/alandtse/skyrim_vr_address_library/issues/287)) ([a382179](https://github.com/alandtse/skyrim_vr_address_library/commit/a38217960e3099bff9451ba2854c189cbf25470a))
+
+
+### Features
+
+* add plugin load and master check ids ([#293](https://github.com/alandtse/skyrim_vr_address_library/issues/293)) ([b1cb8f8](https://github.com/alandtse/skyrim_vr_address_library/commit/b1cb8f8db2e3cc51034282b4d14e7907403f727a))
+* add render and sky SE to AE id pairs ([#285](https://github.com/alandtse/skyrim_vr_address_library/issues/285)) ([928ac9f](https://github.com/alandtse/skyrim_vr_address_library/commit/928ac9f31031919f3d9e74d266d204c7238cf7fc))
+* **addresslib:** add active manager mapping ([#291](https://github.com/alandtse/skyrim_vr_address_library/issues/291)) ([cf2a131](https://github.com/alandtse/skyrim_vr_address_library/commit/cf2a131fc1a79eea873169303c18118e0b50f44a))
+
 # [0.285.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.284.1...v0.285.0) (2026-10-21)
 
 
