@@ -553,7 +553,7 @@
 25679,0x1403b0f30,0x1403c0ca0,4,RE::Sky::SetMode_1403B0F30
 25682,0x1403b1670,0x1403c1410,4,RE::Sky::Update_1403B1670
 25684,0x1403b1c80,0x1403c1a20,2,papyrus_extender::events::game::weatherevent::target_0x416
-25686,0x1403b2f20,0x1403c2cc0,3,void Sky::UpdateColors(float a_delta)
+25686,0x1403b2f20,0x1403c2cc0,3,void Sky::GetFog(Sky *a_this)
 25687,0x1403b3410,0x1403c31b0,4,void Sky::UpdateWind_1403B3410 (Sky * param_1)
 25689,0x1403b3cb0,0x1403c3a50,3,void Sky::UpdateClouds(Sky* a_this)
 25691,0x1403b4230,0x1403c4050,4,"void Sky::SetColor(NiColor& a_color, COLOR_BLEND* a_colorBlend, float a_addFlash)"
@@ -2618,7 +2618,7 @@
 99925,0x1412ca250,0x141308750,3,"void BSShaderAccumulator::AccumulateSceneGraph(NiAVObject* a_root, bool a_filterByShaderProperty)"
 99935,0x1412cabf0,0x1413092c0,3,void BSShaderAccumulator::FinishAccumulatingDefaultMode(std::uint32_t a_flags)
 99937,0x1412cac90,0x141309360,3,void BSShaderAccumulator::FinishAccumulatingPostResolveDepth(std::uint32_t a_flags)
-99938,0x1412cacd0,0x1413093a0,3,"void BSShaderAccumulator::FinishAccumulating (BSShaderAccumulator *a_this,uint32_t StartRange,uint32_t EndRanges)"
+99938,0x1412cacd0,0x1413093a0,3,"void BSShaderAccumulator::FinishAccumulatingCommonPasses(BSShaderAccumulator *a_this, int32_t a_flags)"
 99939,0x1412cb2e0,0x1413099c0,3,void BSShaderAccumulator::RenderPostAccumulationPasses(std::uint32_t a_flags)
 99940,0x1412cb930,0x14130a240,4,void BSShaderAccumulator::RenderEffects (BSShaderAccumulator * a_this)
 99942,0x1412cbcc0,0x14130a5d0,3,BSShaderAccumulator::BlendedDecals
@@ -2631,7 +2631,7 @@
 99957,0x1412cca70,0x14130b6b0,4,"BSBatchRenderer::GeometryGroup * BSShaderAccumulator::StartGroupingAlphas(BSShaderAccumulator * a_this, NiBound * a_bound)"
 99958,0x1412ccad0,0x14130b710,3,"void BSShaderAccumulator::IssueSunOcclusionQuery(BSGeometry * a_geometry, int32_t a_index, NiCamera * a_camera)"
 99960,0x1412ccd90,0x14130b9b0,3,void BSShaderAccumulator::ClearSunOcclusionTests()
-99963,0x1412cce40,0x14130ba60,4,"void BSShaderAccumulator::RenderBatches(uint32_t a_startRange, uint32_t a_endRange, uint32_t a_renderFlags, int32_t a_geometryGroup)"
+99963,0x1412cce40,0x14130ba60,4,"void BSShaderAccumulator::RenderBatches(BSShaderAccumulator *a_this, uint32_t a_startRange, uint32_t a_endRange, uint32_t a_renderFlags, int32_t a_geometryGroup)"
 99964,0x1412ccf90,0x14130bbb0,3,void BSShaderAccumulator::RenderFirstPersonView_End(bool a_force)
 99967,0x1412cd140,0x14130bd60,4,void BSShaderAccumulator::UpdateSunOcclusionTestResult(int a_index)
 99971,0x1412cd520,0x14130c0f0,3,"std::uint32_t AccumulateSceneGraphNode(NiAVObject* a_object, AccumulateSceneGraphContext* a_context)"
