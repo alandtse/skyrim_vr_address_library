@@ -2098,7 +2098,13 @@ sseid,aeid,confidence,name
 13594,13690,3,FDGE::Skyrim::LoadWorldData
 13597,13693,1,
 13625,13723,3,RE::TESDataHandler::CreateReferenceAtLocation
+13640,13745,3,RE::TESDataHandler::SortESMsByMasters
+13642,13747,3,RE::TESDataHandler::MoveFileInList
+13643,13748,3,RE::TESDataHandler::DuplicateCheckedFiles
+13644,13749,3,RE::TESDataHandler::CountFiles
 13645,13753,3,RE::TESDataHandler::CompileFiles
+13648,441529,3,RE::TESDataHandler::BuildLoadOrder
+13649,441531,3,RE::TESDataHandler::WritePluginsTxt
 13650,13758,3,RE::TESDataHandler::ReadPluginsTxt
 13651,13759,1,
 13655,13764,1,
@@ -2227,6 +2233,7 @@ sseid,aeid,confidence,name
 14180,14288,3,RE::BGSOpenCloseForm::SetCloseState
 14182,14291,1,
 14190,14299,3,RE::ScriptEventSourceHolder::SendOpenCloseEvent
+14254,14371,3,RE::TESActorBaseData::HasLeveledTemplate
 14390,14543,1,TESContainer::sub_*
 14391,14544,1,
 14392,14545,1,TESContainer::dtor_*
@@ -2884,6 +2891,7 @@ sseid,aeid,confidence,name
 19095,19497,1,
 19097,19499,1,
 19104,19506,1,TESObjectREFR::Load_*
+19105,19507,3,RE::TESObjectREFR::InitItemImpl
 19106,19508,1,TESObjectREFR::sub_*
 19107,19509,1,
 19115,19517,1,TESObjectREFR::Update3DPosition_*
@@ -4622,6 +4630,7 @@ sseid,aeid,confidence,name
 35320,36215,3,RE::BGSImpactManager::PlayImpactEffect
 35413,36311,3,RE::Calendar::GetTimeDateString
 35571,36574,3,Main::UpdateCullingFrustum
+35593,36601,3,RE::Main::ReloadFormData
 35620,36630,3,RE::Main::SetupPlayerBaseForm
 35978,36953,3,RE::TaskQueueInterface::QueueBulletWaterDisplacementTask
 35987,36962,3,RE::TaskQueueInterface::QueueRemoveSpellTask
@@ -4639,6 +4648,7 @@ sseid,aeid,confidence,name
 36631,37639,3,RE::Actor::Decapitate
 36678,37686,3,RE::Actor::AddToFaction
 36723,37735,3,RE::Actor::KillImmediate
+36775,37791,3,RE::Actor::InitItemImpl
 36796,37812,1,Character::sub_*
 36797,37813,1,Character::sub_*
 36799,37815,1,Character::sub_*
@@ -6624,6 +6634,7 @@ sseid,aeid,confidence,name
 51121,52004,3,papyrus_extender::fave_util::magic::favorite
 51122,52005,3,papyrus_extender::fave_util::magic::unfavorite
 51246,36604,1,Start-on-Save::DoBeforeNewOrLoad
+51253,52125,3,RE::LoadNewDLCContent
 51422,52271,3,RE::MessageBoxData::QueueMessage
 52226,53113,3,RE::MapMenu::PlaceMarker
 52374,53270,3,QuickLoot::
