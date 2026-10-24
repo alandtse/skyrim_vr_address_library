@@ -2098,6 +2098,8 @@ sseid,aeid,confidence,name
 13594,13690,3,FDGE::Skyrim::LoadWorldData
 13597,13693,1,
 13625,13723,3,RE::TESDataHandler::CreateReferenceAtLocation
+13645,13753,3,RE::TESDataHandler::CompileFiles
+13650,13758,3,RE::TESDataHandler::ReadPluginsTxt
 13651,13759,1,
 13655,13764,1,
 13656,13765,1,
@@ -2145,6 +2147,11 @@ sseid,aeid,confidence,name
 13816,13900,1,
 13818,13902,1,
 13819,13903,1,
+13860,13936,3,RE::TESFile::ReadHeader
+13869,13945,3,RE::TESFile::ResolveMasters
+13878,13960,3,RE::TESFile::ResolveMastersRecursive
+13917,14005,3,RE::TESFile::SetChecked
+13919,14007,3,RE::TESFile::SetActive
 13952,14057,1,
 13958,14062,1,
 13959,14063,1,
@@ -4615,6 +4622,7 @@ sseid,aeid,confidence,name
 35320,36215,3,RE::BGSImpactManager::PlayImpactEffect
 35413,36311,3,RE::Calendar::GetTimeDateString
 35571,36574,3,Main::UpdateCullingFrustum
+35620,36630,3,RE::Main::SetupPlayerBaseForm
 35978,36953,3,RE::TaskQueueInterface::QueueBulletWaterDisplacementTask
 35987,36962,3,RE::TaskQueueInterface::QueueRemoveSpellTask
 36248,37230,3,RE::Actor::SetRotationZ

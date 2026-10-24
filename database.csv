@@ -121,6 +121,7 @@
 13645,0x14016e660,0x14017eff0,3,"bool TESDataHandler::CompileFiles(TESDataHandler* a_this, BSSimpleList<TESFile*>* a_files)"
 13646,0x14016ea00,0x14017f350,3,void TESDataHandler::ClearData()
 13647,0x14016f2e0,0x14017fb90,3,"bool TESDataHandler::IsGameModded (TESDataHandler * a_this, bool param_2)"
+13650,0x14016fea0,0x140180630,4,"void TESDataHandler::ReadPluginsTxt(BSTArray<BSFixedString>& a_names, bool a_enabledOnly)"
 13652,0x1401700e0,0x140180870,4,"bool TESDataHandler::ConstructObjectList(TESDataHandler* a_this, TESFile* a_file, bool a_isFirstPlugin, char* a_param4)"
 13654,0x1401703f0,0x140180b80,3,"bool TESDataHandler::ConstructObject(TESFile* a_file, bool a_checkExisting, TESForm* a_form, bool a_flag)"
 13657,0x1401713d0,0x140181b80,3,RE::TESDataHandler::LoadScripts
@@ -130,6 +131,9 @@
 13789,0x140177790,0x1401876a0,3,RE::Sky::GetSingleton
 13855,0x14017a700,0x14018a5b0,4,"bool TESFile::OpenTES(NiFile::OpenMode a_accessMode, bool a_lock)"
 13857,0x14017ad40,0x14018abf0,4,bool TESFile::CloseTES(bool a_force)
+13860,0x14017b000,0x14018aeb0,3,RE::TESFile::ReadHeader
+13869,0x14017ba60,0x14018b8b0,4,bool TESFile::ResolveMasters(BSSimpleList<TESFile*>* a_files)
+13878,0x14017c4e0,0x14018c330,4,bool TESFile::ResolveMastersRecursive()
 13888,0x14017cb10,0x14018c920,3,"bool TESFile::SeekForm(TESFile* a_file, TESForm* a_form)"
 13889,0x14017cc90,0x14018caa0,3,FDGE::Skyrim::SkipGrup
 13894,0x14017d110,0x14018cf20,3,bool TESFile::SeekNextForm(bool a_skipIgnored)
@@ -140,6 +144,8 @@
 13903,0x14017d960,0x14018d740,3,RE::TESFile::SeekNextSubrecord
 13904,0x14017da10,0x14018d7f0,3,RE::TESFile::ReadData
 13913,0x14017e130,0x14018df10,4,bool IsESM_14017E130 (TESFile * param_1)
+13917,0x14017e200,0x14018df60,4,void TESFile::SetChecked(bool a_checked)
+13919,0x14017e280,0x14018dfe0,4,void TESFile::SetActive(bool a_active)
 13923,0x14017e4b0,0x14018e210,3,RE::TESFile::Duplicate
 14026,0x1401820a0,0x140191e20,3,RE::BGSBipedObjectForm::TestBodyPartByIndex
 14055,0x1401832b0,0x140193030,3,BGSDestructibleObjectForm* TESBoundObject::GetDestructibleForm()
@@ -916,7 +922,7 @@
 35598,0x1405b5ef0,0x1405bdb80,4,void Main::SetActive(bool a_active)
 35601,0x1405b6060,0x1405bdcf0,4,NiCamera* Main::WorldRootCamera()
 35608,0x1405b6470,0x1405be100,4,bool Main::IsRoomVisible(NiNode* a_room) src\RE\M/Main.cpp:17
-35620,0x1405b6dc0,0x1405bee40,3,Main::sub_*
+35620,0x1405b6dc0,0x1405bee40,3,void Main::SetupPlayerBaseForm()
 35642,0x1405b8f00,0x1405c0f70,3,SettingsOfSkyrim::
 35882,0x1405c0610,0x1405c8b30,3,po3tweaks::ScreenshotToConsole::DebugNotification
 35918,0x1405c1e40,0x1405ca360,4,bool TaskQueueInterface::ShouldQueueTask()
