@@ -403,6 +403,8 @@
 19528,0x14029efe0,0x1402b0750,4,BGSWaterCollisionManager::bhkWaterfall * BGSWaterCollisionManager::bhkWaterfall::dtor (BGSWaterCollisionManager::bhkWaterfall * a_this)
 19617,0x1402a00a0,0x1402b1810,4,"void BGSWaterCollisionManager::bhkWaterfall::GetTransform (BGSWaterCollisionManager::BGSWaterUpdateI * a_this, hkTransform * a_outTransform)"
 19666,0x1402a2070,0x1402b37e0,3,RE::ScriptEventSourceHolder::SendActivateEvent
+19725,0x1402a3e10,0x1402b5580,4,"void TESObjectREFR::UpdateAnimation(TESObjectREFR* a_this, float a_delta)"
+19729,0x1402a40d0,0x1402b5840,4,"void TESObjectREFR::sub_1402A40D0(TESObjectREFR* a_this, float a_delta)"
 19760,0x1402a50e0,0x1402b6850,4,"BSResource::ErrorCode SaveStorageWrapper::EnsureCapacity (SaveStorageWrapper * a_this, uint64_t size)"
 19789,0x1402a6670,0x1402b7de0,3,RE::TESObjectREFR::GetOwner
 19793,0x1402a6960,0x1402b80d0,4,void TESObjectREFR::SetOwner(TESForm* a_owner)
@@ -1192,6 +1194,7 @@
 39424,0x1406a2fb0,0x1406c3890,4,void PlayerCharacter::SetGodMode(bool a_enable)
 39425,0x1406a2fc0,0x1406c38a0,3,papyrus_extender::papyrus::detail::get_god_mode_impl
 39444,0x1406a4a00,0x1406c51f0,3,PlayerCharacter::HasLOS_impl
+39445,0x1406a4d90,0x1406c55c0,3,"void PlayerCharacter::UpdateAnimation(PlayerCharacter* a_this, float a_delta)"
 39464,0x1406a8e60,0x1406CA960,3,"PlayerCharacter::InitLoadGame(PlayerCharacter *a1, float a2)"
 39466,0x1406a9430,0x1406CAFF0,3,"PlayerCharacter::Revert(longlong a1, PlayerCharacter *a2, float a3)"
 39471,0x1406a9f90,0x1406cbce0,3,"void ActivatePickRef_1406A9F90 (PlayerCharacter * a_this, VRControls::VRDevice a_device)"
