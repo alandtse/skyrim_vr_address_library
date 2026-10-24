@@ -8522,7 +8522,7 @@ sseid,aeid,confidence,name
 99750,106398,3,AppendRoomToAccumList
 99752,106400,3,ShadowSceneNode::AccumulateLight
 99938,106583,3,RE::BSShaderAccumulator::FinishAccumulatingCommonPasses
-99963,106609,3,RE::BSBatchRenderer::RenderBatches
+99963,106609,3,RE::BSShaderAccumulator::RenderBatches
 100004,106711,3,RE::BSLightingShaderMaterial::Ctor
 100021,106728,3,RE::BSLightingShaderMaterialEnvmap::Ctor
 100033,106740,3,RE::BSLightingShaderMaterialEye::Ctor
