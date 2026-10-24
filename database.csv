@@ -2201,7 +2201,7 @@
 75475,0x140d6bd10,0x140dbda30,4,"BSGraphics::TriShape* CreateTriShapeRendererData(BSGraphics::Renderer* a_renderer, void* a_vertexData, std::uint32_t a_sizeBytes, std::uint64_t a_vertexDesc, void* a_sharedIndexBuffer)"
 75477,0x140d6bfe0,0x140dbdd00,3,"void BSGraphics::Renderer::DrawIndexedTriangleList(void* a_buffers, uint32_t a_startIndex, uint32_t a_triangleCount)"
 75479,0x140d6c1e0,0x140dbdf60,3,"void BSGraphics::Renderer::DrawIndexedInstancedTriangles(void* a_buffers, uint32_t a_startIndex, int32_t a_triangleCount, int32_t a_instanceCount, uint64_t a_vertexDesc, void* a_secondaryStream)"
-75480,0x140d6c320,0x140dbe0d0,5,void BSGraphics::TriShape::Release(BSGraphics::TriShape* a_this)
+75480,0x140d6c320,0x140dbe0d0,4,void BSGraphics::TriShape::Release(BSGraphics::TriShape* a_this)
 75503,0x140d6da10,0x140dbf800,4,"void* CreateIndexBuffer(BSGraphics::Renderer* a_renderer, std::uint32_t a_indexCount, std::uint16_t* a_indices)"
 75507,0x140d6dbc0,0x140dbf9b0,3,"NiTexture::RendererData* BSRenderManager::CreateRenderTexture(std::uint32_t a_width, std::uint32_t a_height)"
 75522,0x140d6e780,0x140dc05f0,4,"void Renderer::SaveRenderTargetToFile(RENDER_TARGET a_renderTarget, const char* a_filePath, BSGraphics::TextureFileFormat a_textureFileFormat)"
