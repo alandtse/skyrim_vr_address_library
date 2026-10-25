@@ -1,3 +1,10 @@
+# [0.287.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.286.0...v0.287.0) (2026-10-25)
+
+
+### Features
+
+* **bsmodeldb:** add model load function ids ([#294](https://github.com/alandtse/skyrim_vr_address_library/issues/294)) ([fd5fdd7](https://github.com/alandtse/skyrim_vr_address_library/commit/fd5fdd7443abeffe76539cd210cb7bb124de1577))
+
 # [0.286.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.285.0...v0.286.0) (2026-10-24)
 
 
