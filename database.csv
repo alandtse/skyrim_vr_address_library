@@ -23,6 +23,7 @@
 11233,0x140102570,0x140112b20,3,void FreeMemory(void* a_ptr)
 11264,0x140102d00,0x1401132b0,3,"void* BSResource::EntryDB::FreeArgs(void* a_pool, void* a_args)"
 11269,0x140102fa0,0x140113550,3,"int BSResource::EntryDB::OpenStream(void* a_entryDB, void* a_entry, const char* a_name, void* a_rootLocation, void** a_streamOut)"
+11270,0x1401033e0,0x140113990,3,"int BSModelDB::LoadEntryStream(void* a_entryDB, void* a_entry, const char* a_name, void* a_args, int a_state)"
 11286,0x140103b10,0x1401140c0,4,BGSSoundDescriptorForm* MagicSystem::GetMagicFailureSound(MagicSystem::SpellType a_type)
 11294,0x140103dd0,0x140114380,4,float MagicSystem::GetMagicCasterTargetUpdateInterval()
 11295,0x140103de0,0x140114390,4,char* MagicSystem::GetCannotCastString(MagicSystem::CannotCastReason a_reason)
@@ -208,6 +209,7 @@
 15214,0x1401b7640,0x1401c7750,4,"BSMultiStreamInstanceTriShape* GrassManager::LoadGrassType(GrassManager* this, void* a_param, uint32_t a_cellXDivided, uint32_t a_cellYDivided, uint64_t* a_typeKey, BSFixedString* a_modelPath)"
 15220,0x1401b81d0,0x1401c82e0,4,"ulonglong GrassManager::GrassTypeMapInsert(void* a_table, void* a_buckets, std::uint32_t a_hash, void* a_key, void* a_value)"
 15259,0x1401b9ae0,0x1401c9bf0,3,"BSResource::ErrorCode BSModelDB::LoadEntry(void* a_entryDB, const char* a_name, void* a_entry, void* a_entryOut, const DBTraits::ArgsType& a_args)"
+15274,0x1401ba000,0x1401ca170,3,"void BSResource::EntryDB::ProcessEntry(void* a_entryDB, void* a_entry)"
 15485,0x1401c5cc0,0x1401d5e30,4,char * GetGameVersion(void)
 15491,0x1401c60a0,0x1401d6200,3,RE::BipedAnim::Dtor
 15494,0x1401c61a0,0x1401d6530,3,RE::BipedAnim::RemoveAllParts
@@ -2086,6 +2088,7 @@
 74013,0x140d2e350,0x140d76730,2,QueuedFile* QueuedFile::dtor_deleting()
 74031,0x140d2e880,0x140d76c40,3,"void BSModelDB::ParseModel(BSTSmartPointer<BSResource::Stream>* a_stream, const char* a_modelName, const DBTraits::ArgsType& a_args, NiPointer<NiNode>& a_modelOut, std::uint32_t& a_typeOut)"
 74040,0x140d2f220,0x140d775e0,4,"BSResource::ErrorCode BSModelDB::Demand(const char* a_modelPath, NiPointer<NiNode>& a_modelOut, const DBTraits::ArgsType& a_args)"
+74055,0x140d300f0,0x140d784b0,3,"void BSResource::EntryDB::ProcessLoadQueue(void* a_loadQueue, void* a_context)"
 74078,0x140d30c50,0x140d79010,3,"BSResource::ErrorCode BSModelDB::LoadByName(void* a_entryDB, const char* a_path, void* a_entryOut, bool a_unk, const DBTraits::ArgsType& a_args)"
 74084,0x140d30fe0,0x140d793a0,3,"bool BSModelDB::FindOrCreateEntry(void* a_entryDB, void* a_id, void** a_entryOut, bool a_unk)"
 74207,0x140d36950,0x140d7edd0,3,"bool BSStream::Load(const char* a_path, NiBinaryStream* a_stream)"
