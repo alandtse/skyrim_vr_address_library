@@ -1981,7 +1981,7 @@
 68296,0x140c3cb30,0x140c81be0,4,"std::uint32_t BSResource::ArchiveStream::DoRead(void* a_dst, std::uint64_t a_bytes, std::uint64_t* a_read)"
 68476,0x140c448b0,0x140c89960,4,"void BSResource::RegisterLocation(Location* a_location, std::uint32_t a_priority)"
 68480,0x140c44a00,0x140c89ab0,4,void BSResource::RegisterGlobalPath (char * a_path)
-68631,0x140c4a420,0x140c8f4d0,3,"BSResource::ID* BSResource::ID::ID(const char* a_path)"
+68631,0x140c4a420,0x140c8f4d0,3,BSResource::ID* BSResource::ID::ID(const char* a_path)
 68635,0x140c4a610,0x140c8f6c0,4,void ID::GenerateFromPath(const char* a_path)
 68663,0x140c4b990,0x140c90a40,3,RE::LooseFileStream::Ctor
 68688,0x140c4c360,0x140c91410,4,"std::uint32_t BSResource::LooseFileStream::DoRead(void* a_dst, std::uint64_t a_bytes, std::uint64_t* a_read)"
