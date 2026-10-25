@@ -2756,6 +2756,7 @@
 100854,0x141308440,0x141349680,3,"void BSBatchRenderer::SetupAndDrawPass(BSRenderPass* a_pass, std::uint32_t a_technique, bool a_alphaTest, std::uint32_t a_renderFlags)"
 100856,0x141308540,0x141349790,4,void BSBatchRenderer::ClearAlphaGeometryGroups()
 100857,0x141308560,0x1413497b0,4,void BSBatchRenderer::SortAlphaGeometryGroups()
+100860,0x141308760,0x1413499b0,4,void ClearBSShaders()
 100871,0x1413090c0,0x14134a310,4,"LLF::void FUN_1413090c0 (BSBatchRenderer * * param_1, uint param_2)"
 100874,0x141309280,0x14134a4d0,4,"BSBatchRenderer::GeometryGroup * BSBatchRenderer::StartGroupingAlphas(BSBatchRenderer * a_this, NiBound * a_bound, NiCamera * a_camera, bool a_sortByClosestPoint)"
 100877,0x1413094a0,0x14134a6f0,4,BSBatchRenderer::sub_*
