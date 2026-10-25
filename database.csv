@@ -21,6 +21,8 @@
 11219,0x140101ed0,0x140112480,3,int32_t MagicItem::GetLargestArea_140101ED0 (MagicItem * param_1)
 11222,0x140102030,0x1401125e0,4,"void MagicItem::Traverse (MagicItem * a_this, MagicItemTraversalFunctor * a_visitor)"
 11233,0x140102570,0x140112b20,3,void FreeMemory(void* a_ptr)
+11264,0x140102d00,0x1401132b0,3,"void* BSResource::EntryDB::FreeArgs(void* a_pool, void* a_args)"
+11269,0x140102fa0,0x140113550,3,"int BSResource::EntryDB::OpenStream(void* a_entryDB, void* a_entry, const char* a_name, void* a_rootLocation, void** a_streamOut)"
 11286,0x140103b10,0x1401140c0,4,BGSSoundDescriptorForm* MagicSystem::GetMagicFailureSound(MagicSystem::SpellType a_type)
 11294,0x140103dd0,0x140114380,4,float MagicSystem::GetMagicCasterTargetUpdateInterval()
 11295,0x140103de0,0x140114390,4,char* MagicSystem::GetCannotCastString(MagicSystem::CannotCastReason a_reason)
@@ -153,6 +155,7 @@
 13917,0x14017e200,0x14018df60,4,void TESFile::SetChecked(bool a_checked)
 13919,0x14017e280,0x14018dfe0,4,void TESFile::SetActive(bool a_active)
 13923,0x14017e4b0,0x14018e210,3,RE::TESFile::Duplicate
+13994,0x1401815b0,0x140191330,3,void BSModelDB::InitializeStatics()
 14026,0x1401820a0,0x140191e20,3,RE::BGSBipedObjectForm::TestBodyPartByIndex
 14055,0x1401832b0,0x140193030,3,BGSDestructibleObjectForm* TESBoundObject::GetDestructibleForm()
 14073,0x1401850a0,0x140194e30,3,void BGSDestructibleObjectForm::QueueStagePreloads()
@@ -2084,6 +2087,8 @@
 74031,0x140d2e880,0x140d76c40,3,"void BSModelDB::ParseModel(BSTSmartPointer<BSResource::Stream>* a_stream, const char* a_modelName, const DBTraits::ArgsType& a_args, NiPointer<NiNode>& a_modelOut, std::uint32_t& a_typeOut)"
 74040,0x140d2f220,0x140d775e0,4,"BSResource::ErrorCode BSModelDB::Demand(const char* a_modelPath, NiPointer<NiNode>& a_modelOut, const DBTraits::ArgsType& a_args)"
 74078,0x140d30c50,0x140d79010,3,"BSResource::ErrorCode BSModelDB::LoadByName(void* a_entryDB, const char* a_path, void* a_entryOut, bool a_unk, const DBTraits::ArgsType& a_args)"
+74084,0x140d30fe0,0x140d793a0,3,"bool BSModelDB::FindOrCreateEntry(void* a_entryDB, void* a_id, void** a_entryOut, bool a_unk)"
+74207,0x140d36950,0x140d7edd0,3,"bool BSStream::Load(const char* a_path, NiBinaryStream* a_stream)"
 74236,0x140d38120,0x140d805b0,3,RE::INISettingCollection::WriteSetting
 74237,0x140d38310,0x14053c550,3,RE::INISettingCollection::ReadSetting
 74239,0x140d38710,0x140d80bb0,3,RE::INISettingCollection::OpenHandle
