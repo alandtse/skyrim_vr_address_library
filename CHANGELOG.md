@@ -1,3 +1,12 @@
+# [0.288.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.287.0...v0.288.0) (2026-10-25)
+
+
+### Features
+
+* add 122 VR addresses used by urSovngarde ([#295](https://github.com/alandtse/skyrim_vr_address_library/issues/295)) ([ef907cd](https://github.com/alandtse/skyrim_vr_address_library/commit/ef907cd4f7503606939bf892af9e75456f48aae8))
+* add VR ids for aiming, bow draw and spell casting ([#296](https://github.com/alandtse/skyrim_vr_address_library/issues/296)) ([fdb572a](https://github.com/alandtse/skyrim_vr_address_library/commit/fdb572ab6eada6ffeb59f0205a2db9b86fb4c9ef))
+* **addresslib:** add ClearBSShaders VR id ([#297](https://github.com/alandtse/skyrim_vr_address_library/issues/297)) ([4d690f4](https://github.com/alandtse/skyrim_vr_address_library/commit/4d690f42778d28853c488ba693e26ab2a2989afd))
+
 # [0.287.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.286.0...v0.287.0) (2026-10-25)
 
 
