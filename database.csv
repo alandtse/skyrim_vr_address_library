@@ -435,6 +435,8 @@
 19528,0x14029efe0,0x1402b0750,4,BGSWaterCollisionManager::bhkWaterfall * BGSWaterCollisionManager::bhkWaterfall::dtor (BGSWaterCollisionManager::bhkWaterfall * a_this)
 19617,0x1402a00a0,0x1402b1810,4,"void BGSWaterCollisionManager::bhkWaterfall::GetTransform (BGSWaterCollisionManager::BGSWaterUpdateI * a_this, hkTransform * a_outTransform)"
 19666,0x1402a2070,0x1402b37e0,3,RE::ScriptEventSourceHolder::SendActivateEvent
+19725,0x1402a3e10,0x1402b5580,4,"void TESObjectREFR::UpdateAnimation(TESObjectREFR* a_this, float a_delta)"
+19729,0x1402a40d0,0x1402b5840,4,"void TESObjectREFR::sub_1402A40D0(TESObjectREFR* a_this, float a_delta)"
 19760,0x1402a50e0,0x1402b6850,4,"BSResource::ErrorCode SaveStorageWrapper::EnsureCapacity (SaveStorageWrapper * a_this, uint64_t size)"
 19789,0x1402a6670,0x1402b7de0,3,RE::TESObjectREFR::GetOwner
 19793,0x1402a6960,0x1402b80d0,4,void TESObjectREFR::SetOwner(TESForm* a_owner)
@@ -1286,6 +1288,7 @@
 39424,0x1406a2fb0,0x1406c3890,4,void PlayerCharacter::SetGodMode(bool a_enable)
 39425,0x1406a2fc0,0x1406c38a0,3,papyrus_extender::papyrus::detail::get_god_mode_impl
 39444,0x1406a4a00,0x1406c51f0,3,PlayerCharacter::HasLOS_impl
+39445,0x1406a4d90,0x1406c55c0,3,"void PlayerCharacter::UpdateAnimation(PlayerCharacter* a_this, float a_delta)"
 39456,0x1406a5300,0x1406c6e00,3,PlayerCharacter::PickUpObject
 39458,0x1406a59d0,0x1406c74d0,3,PlayerCharacter::SetWaypoint
 39459,0x1406a5b30,0x1406c7630,3,PlayerCharacter::RemoveWaypoint
@@ -1390,6 +1393,7 @@
 43098,0x1407581f0,0x140783580,3,"void VATS::UpdateKillCam(PlayerCharacter* a_player, void* a_arg2, std::uint32_t* a_arg3)"
 43103,0x140759360,0x1407846b0,3,"void VATS::SetMagicTimeSlowdown(float a_magicTimeSlowdown, float a_playerMagicTimeSlowdown)"
 43162,0x14075c760,0x140787AB0,3,CombatProjectileAimController::Update
+43174,0x14075d7b0,0x140788B00,3,void CombatProjectileAimController::UpdateAimSolution(CombatProjectileAimController* a_this)
 43235,0x14075fd20,0x14078b070,4,"CombatAnimation* CombatAnimation::Ctor0(Actor* a_actor, ANIM a_anim)"
 43236,0x14075fdd0,0x14078b120,4,"CombatAnimation* CombatAnimation::Ctor1(Actor* a_actor, TESObjectREFR* a_target, ANIM a_anim)"
 43237,0x14075fe80,0x14078b1d0,4,"CombatAnimation* CombatAnimation::Ctor2(Actor* a_actor, BGSAction* a_action)"
@@ -2874,6 +2878,7 @@
 100854,0x141308440,0x141349680,3,"void BSBatchRenderer::SetupAndDrawPass(BSRenderPass* a_pass, std::uint32_t a_technique, bool a_alphaTest, std::uint32_t a_renderFlags)"
 100856,0x141308540,0x141349790,4,void BSBatchRenderer::ClearAlphaGeometryGroups()
 100857,0x141308560,0x1413497b0,4,void BSBatchRenderer::SortAlphaGeometryGroups()
+100860,0x141308760,0x1413499b0,4,void ClearBSShaders()
 100871,0x1413090c0,0x14134a310,4,"LLF::void FUN_1413090c0 (BSBatchRenderer * * param_1, uint param_2)"
 100874,0x141309280,0x14134a4d0,4,"BSBatchRenderer::GeometryGroup * BSBatchRenderer::StartGroupingAlphas(BSBatchRenderer * a_this, NiBound * a_bound, NiCamera * a_camera, bool a_sortByClosestPoint)"
 100877,0x1413094a0,0x14134a6f0,4,BSBatchRenderer::sub_*
