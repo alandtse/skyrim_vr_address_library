@@ -209,7 +209,9 @@
 15214,0x1401b7640,0x1401c7750,4,"BSMultiStreamInstanceTriShape* GrassManager::LoadGrassType(GrassManager* this, void* a_param, uint32_t a_cellXDivided, uint32_t a_cellYDivided, uint64_t* a_typeKey, BSFixedString* a_modelPath)"
 15220,0x1401b81d0,0x1401c82e0,4,"ulonglong GrassManager::GrassTypeMapInsert(void* a_table, void* a_buckets, std::uint32_t a_hash, void* a_key, void* a_value)"
 15259,0x1401b9ae0,0x1401c9bf0,3,"BSResource::ErrorCode BSModelDB::LoadEntry(void* a_entryDB, const char* a_name, void* a_entry, void* a_entryOut, const DBTraits::ArgsType& a_args)"
+15260,0x1401b9de0,0x1401c9f50,3,"bool BSResource::EntryDB::AllocArgs(void* a_pool, void** a_argsOut)"
 15274,0x1401ba000,0x1401ca170,3,"void BSResource::EntryDB::ProcessEntry(void* a_entryDB, void* a_entry)"
+15282,0x1401ba650,0x1401ca7c0,3,"bool BSResource::EntryDB::QueueEntry(void* a_entryDB, const char* a_name, void* a_entry, void** a_entryOut, int a_priority, void* a_args)"
 15485,0x1401c5cc0,0x1401d5e30,4,char * GetGameVersion(void)
 15491,0x1401c60a0,0x1401d6200,3,RE::BipedAnim::Dtor
 15494,0x1401c61a0,0x1401d6530,3,RE::BipedAnim::RemoveAllParts
