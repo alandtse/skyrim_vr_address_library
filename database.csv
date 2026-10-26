@@ -2123,6 +2123,7 @@
 69271,0x140c66710,0x140cac900,3,void UpdateInternalWorldToScreenMatrix (NiCamera * a_this)
 69279,0x140c66f80,0x140cad0a0,3,void BSTriShape::LoadBinary(NiStream* a_stream)
 69284,0x140c67490,0x140cad6d0,3,BSTriShape* CreateBSTriShape()
+69287,0x140c675f0,0x140cad830,3,void BSTriShape::~BSTriShape()
 69335,0x140c68d20,0x140caef60,3,NiSourceTexture* CreateSourceTexture(const BSFixedString& a_name)
 69398,0x140c6b6e0,0x140cb18c0,3,BSDismemberSkinInstance* BSDismemberSkinInstance::Create()
 69406,0x140c6bc70,0x140cb1e30,3,BSDismemberSkinInstance* BSDismemberSkinInstance::Ctor(BSDismemberSkinInstance* a_this)
@@ -2145,6 +2146,7 @@
 69459,0x140c6da50,0x140cb3be0,3,AnimationMotionRevoluation::MotionDataContainer::InterpolateRotation
 69528,0x140c70d30,0x140cb6f60,3,"void BSGeometry::CopyMembers(BSGeometry* a_target, NiCloningProcess* a_cloning)"
 69529,0x140c70e40,0x140cb70b0,3,void BSGeometry::LoadBinary(NiStream* a_stream)
+69535,0x140c712c0,0x140cb75c0,3,void BSGeometry::~BSGeometry()
 69541,0x140c715c0,0x140cb78c0,3,void BSGeometry::UpdateWorldBound()
 69554,0x140c71d40,0x140cb8000,3,"void TransformBoundToWorld(NiBound* a_out, NiBound* a_model, NiTransform* a_world)"
 69562,0x140c72180,0x140cb8530,3,BSDynamicTriShape* CreateBSDynamicTriShape()
@@ -2897,6 +2899,7 @@
 100996,0x141310d40,0x141354c50,3,void BSShaderPropertyLightData::PopLightListFence(BSShaderPropertyLightData* this)
 100997,0x141310e10,0x141354d20,3,"uint32_t CalculateActiveNonShadowCasterLights(BSShaderPropertyLightData* a_lightData, BSLight** a_lights, uint32_t a_maxCount, int* a_shadowCount, ShadowSceneNode* a_ssn, BSLightingShaderProperty* a_property, bool a_addShadow, bool* a_useShadowSun, bool a_firstPerson, uint32_t a_firstPersonMask, bool a_skipAccumulation)"
 101009,0x141311700,0x141355440,3,"void BSLight::RemoveGeometry(BSLight* this, BSTriShape* a_geometry)"
+101151,0x1413177c0,0x141360420,3,void BSLines::~BSLines()
 101290,0x14131c350,0x1413621d0,3,void BSLight::~BSLight(BSLight* this)
 101291,0x14131c560,0x1413623e0,3,"void BSLight::UpdateLODFadeAndCull(BSLight* this, NiCullingProcess* a_cull)"
 101296,0x14131cde0,0x141362c60,4,"void BSLight::AttachGeometry(BSLight* this, BSGeometry* a_geometry)"
