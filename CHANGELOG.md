@@ -1,3 +1,14 @@
+# [0.289.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.288.0...v0.289.0) (2026-10-27)
+
+
+### Features
+
+* add grass fade and group queue ids ([#299](https://github.com/alandtse/skyrim_vr_address_library/issues/299)) ([6aae950](https://github.com/alandtse/skyrim_vr_address_library/commit/6aae95016f4801eed0084363024ae624d520c732))
+* add helper names from recursive RE ([#298](https://github.com/alandtse/skyrim_vr_address_library/issues/298)) ([4f45987](https://github.com/alandtse/skyrim_vr_address_library/commit/4f459879a6223bd8c9ad70b385c6d56dde3942e3))
+* add NGIO 2.0 addresses ([#301](https://github.com/alandtse/skyrim_vr_address_library/issues/301)) ([7b7d0a5](https://github.com/alandtse/skyrim_vr_address_library/commit/7b7d0a5f7a4d651cf3fb8804644cab471699fdce))
+* add VR ids for geometry destructors ([#300](https://github.com/alandtse/skyrim_vr_address_library/issues/300)) ([207d0e3](https://github.com/alandtse/skyrim_vr_address_library/commit/207d0e3016f1be1b381a7919dc9a99ea52f284d8))
+* add water flow map and singleton ids ([#303](https://github.com/alandtse/skyrim_vr_address_library/issues/303)) ([70c3f5c](https://github.com/alandtse/skyrim_vr_address_library/commit/70c3f5c9a9d6d8b3eb1b5ec8e8591c64c012a308))
+
 # [0.288.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.287.0...v0.288.0) (2026-10-25)
 
 
