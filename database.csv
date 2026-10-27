@@ -547,7 +547,7 @@
 24221,0x140363000,0x140372920,4,WhosWho::LoadArmorRelatedFunction4
 24222,0x140363210,0x140372b30,3,"bool TESNPC::GenerateFaceGenData(TESNPC * a_this, char * a_buffer)"
 24226,0x140363CD0,0x140373630,3,TESNPC::
-24228,0x140363f20,0x140373880,4,RE::TESNPC::UpdateHead
+24228,0x140363f20,0x140373880,3,"void TESNPC::UpdateHead(Actor* a_actor, NiPointer<BSFaceGenNiNode>* a_faceNode)"
 24232,0x140364350,0x140373cb0,4,"void TESObjectARMO::InitWornArmor(Actor* a_actor, BSTSmartPointer<BipedAnim>* a_biped)"
 24233,0x140364680,0x140373FE0,4,WhosWho::LoadArmorRelatedFunction2
 24234,0x140364710,0x140374070,3,"void EquipAndProcessChanges (TESNPC * a_this, PlayerCharacter * param_2, undefined8 param_3, undefined8 param_4, undefined8 param_5, undefined8 param_6)"
@@ -1299,6 +1299,7 @@
 39175,0x140692cd0,0x14069c2d0,3,RE::PlayerCharacter::GetArmorValue
 39179,0x140693050,0x14069c650,3,RE::PlayerCharacter::GetDamage
 39181,0x140693110,0x14069c710,3,RE::Actor::DoReset3D
+39184,0x140693820,0x14069ce20,4,"void Character::SetFaceNodeSkinned(NiNode* a_root, BSFaceGenNiNode* a_faceNode)"
 39215,0x140694350,0x14069D950,4,PlayerCharacter::sub_140694350
 39217,0x140694400,0x14069da00,3,RE::ArmorRatingVisitor::VisitArmor
 39221,0x1406944a0,0x14069daa0,3,RE::ArmorRatingVisitor::HaveNotVisitedArmor
