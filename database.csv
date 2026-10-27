@@ -550,7 +550,7 @@
 24227,0x140363de0,0x140373740,4,"void TESNPC::LoadFaceGenHead(NiPointer<BSFaceGenNiNode>* a_outFaceNode, void* a_outHandle)"
 24228,0x140363f20,0x140373880,3,"void TESNPC::UpdateHead(Actor* a_actor, NiPointer<BSFaceGenNiNode>* a_faceNode)"
 24231,0x140364280,0x140373be0,4,"void TESNPC::AttachWornItems(TESObjectREFR* a_ref, BSTSmartPointer<BipedAnim>* a_biped)"
-24232,0x140364350,0x140373cb0,4,"void TESObjectARMO::InitWornArmor(Actor* a_actor, BSTSmartPointer<BipedAnim>* a_biped)"
+24232,0x140364350,0x140373cb0,4,"void TESObjectARMO::InitWornArmor(TESNPC* a_npc, Actor* a_actor, BSTSmartPointer<BipedAnim>* a_biped, InventoryEntryData* a_entry)"
 24233,0x140364680,0x140373FE0,4,"bool TESNPC::AttachWornItem(void* a_unused, BSTSmartPointer<BipedAnim>* a_biped, TESBoundObject* a_item)"
 24234,0x140364710,0x140374070,3,"void EquipAndProcessChanges (TESNPC * a_this, PlayerCharacter * param_2, undefined8 param_3, undefined8 param_4, undefined8 param_5, undefined8 param_6)"
 24235,0x140364f00,0x140374860,4,"void TESNPC::AttachWornItemsOfType(TESObjectREFR* a_ref, BSTSmartPointer<BipedAnim>* a_biped, FormType a_formType)"
