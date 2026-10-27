@@ -2171,6 +2171,7 @@
 69279,0x140c66f80,0x140cad0a0,3,void BSTriShape::LoadBinary(NiStream* a_stream)
 69284,0x140c67490,0x140cad6d0,3,BSTriShape* CreateBSTriShape()
 69287,0x140c675f0,0x140cad830,3,void BSTriShape::~BSTriShape()
+69314,0x140c67ea0,0x140cae0e0,4,void InitSinCosLUT()
 69335,0x140c68d20,0x140caef60,3,NiSourceTexture* CreateSourceTexture(const BSFixedString& a_name)
 69398,0x140c6b6e0,0x140cb18c0,3,BSDismemberSkinInstance* BSDismemberSkinInstance::Create()
 69406,0x140c6bc70,0x140cb1e30,3,BSDismemberSkinInstance* BSDismemberSkinInstance::Ctor(BSDismemberSkinInstance* a_this)
@@ -2447,7 +2448,7 @@
 76924,0x140de1f20,0x140E363E0,4,"bhkCapsuleShape * bhkCapsuleShape::bhkCapsuleShape(bhkCapsuleShape * a_this, RE::NiPoint3 * a_topVec, RE::NiPoint3 * a_botVec, float a_radius)"
 76940,0x140de2a40,0x140e36f00,4,void bhkBoxShape::InitializeShape(const BoxInfo* a_info)
 77186,0x140dec000,0x140e40fd0,4,"std::uintptr_t bhkTriSampledHeightFieldBvTreeShape::InitFromCInfo(bhkShape* a_shape, HeightFieldCInfo* a_cinfo)"
-77215,0x140ded7c0,0x140e427c0,4,"void HavokThreadMemorySink::Handle(void* a_sink, ThreadEvent* a_event)"
+77215,0x140ded7c0,0x140e427c0,4,"int HavokThreadMemorySink::Handle(HavokThreadMemorySink* a_this, ThreadEvent* a_event)"
 77446,0x140df8690,0x140e4d690,4,"void hkpAllRayHitCollector::AddRayHit(const hkpCdBody& a_body, const hkpShapeRayCastCollectorOutput& a_hitInfo)"
 77470,0x140df9140,0x140e4e140,4,"bhkMemorySystem * ctor_140df9140 (bhkMemorySystem * param_1, undefined8 param_2, undefined8 param_3, undefined8 param_4)"
 78843,0x140e43640,0x140e9f890,4,"undefined8 *hkpConvexVerticesShape::sub_140E43640(undefined8 *param_1,undefined8 param_2,char *param_3)"
@@ -10703,6 +10704,7 @@
 523928,0x1430125b0,0x14316adb0,3,RE::NiRTTI_BSTriShape
 523929,0x1430125c0,0x14316adc0,3,RE::NiRTTI_NiProperty
 523931,0x1430125d8,0x14316add8,3,RE::NiRTTI_NiAlphaProperty
+523933,0x1430125f0,0x14316adf0,3,float sinLUT[512]
 523934,0x143012df0,0x14316b5f0,3,float cosLUT[512]
 523939,0x143013608,0x14316be08,3,RE::NiRTTI_NiSourceTexture
 523940,0x143013618,0x14316be18,3,RE::NiRTTI_BSFlattenedBoneTree
