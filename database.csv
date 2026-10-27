@@ -376,7 +376,7 @@
 18644,0x14026b1d0,0x14027c7a0,3,static void TESObjectCELL::SkipVisibleDistantFadeForLoadedCells()
 18652,0x14026c410,0x14027d9e0,3,NiNode* TESObjectCELL::GetLightMarkerNode()
 18653,0x14026c4d0,0x14027daa0,3,NiNode* TESObjectCELL::GetSoundMarkerNode()
-18655,0x14026c5d0,0x14027dba0,3,void TESObjectCELL::sub_14026C5D0 (TESObjectCELL * a_this)
+18655,0x14026c5d0,0x14027dba0,3,void TESObjectCELL::Detach()
 18669,0x14026e5f0,0x14027fbd0,3,bool TESObjectCELL::IsReferenceListLocked(TESObjectCELL* a_this)
 18677,0x14026e870,0x14027fe50,3,void TESObjectCELL::IncQueuedDistantRefCount()
 18678,0x14026e8f0,0x14027fed0,3,void TESObjectCELL::DecQueuedDistantRefCount()
@@ -754,8 +754,9 @@
 31150,0x1404b87e0,0x1404c88c0,3,SeasonsofSkyrim::LODSwap::Tree::BuildMeshFileName
 31151,0x1404b8820,0x1404c8900,3,SeasonsofSkyrim::LODSwap::Tree::BuildTextureFileName
 31152,0x1404b8850,0x1404c8930,3,SeasonsofSkyrim::LODSwap::Tree::BuildTypeListFileName
-31230,0x1404bca00,0x1404ccb50,3,"void BGSAutoWater::GeneratePlaceableWaterForCell(TESObjectCELL* a_cell, bool a_unk)"
-31235,0x1404bd330,0x1404cd480,3,void BGSAutoWater::GenerateMultibounds(TESObjectCELL* a_cell)
+31230,0x1404bca00,0x1404ccb50,3,"void BGSAutoWater::GeneratePlaceableWaterForCell(TESObjectCELL* a_cell, bool a_skipFlowMap)"
+31231,0x1404bcc20,0x1404ccd70,3,"void BGSAutoWater::LoadCellFlowMap(TESObjectCELL* a_cell, BSGeometry* a_geometry)"
+31235,0x1404bd330,0x1404cd480,4,void BGSAutoWater::GenerateMultibounds(TESObjectCELL* a_cell)
 31236,0x1404bd5e0,0x1404cd730,3,"void BGSAutoWater::GeneratePlaceableWater(TESObjectCELL* a_cell, NiAVObject* a_water)"
 31300,0x1404c0ed0,0x1404d1020,4,void BGSWaterCollisionManager::BGSWaterUpdateI::dtor (BGSWaterCollisionManager::BGSWaterUpdateI * a_this)
 31301,0x1404c0f70,0x1404d10c0,4,"void BGSWaterCollisionManager::BGSWaterUpdateI::SetContext (BGSWaterCollisionManager::BGSWaterUpdateI * a_this, void * a_context)"
@@ -798,7 +799,7 @@
 31405,0x1404c8660,0x1404d8820,4,"void TESWaterSystem::RemoveLODWater(TESWaterSystem* a_waterSystem, BSTriShape* a_waterShape, NiNode* a_lodRoot)"
 31406,0x1404c86c0,0x1404d8880,3,void TESWaterSystem::Enable(TESWaterSystem* a_waterSystem)
 31409,0x1404c8810,0x1404d89d0,4,RE::TESWaterSystem::UpdateUnderWaterVariables
-31410,0x1404c8880,0x1404d8a40,3,"void BSTriShape::TESWaterSystem::AddRipple(const NiPoint3& a_pos, float a_scale)"
+31410,0x1404c8880,0x1404d8a40,3,"void TESWaterSystem::AddRipple(const NiPoint3& a_pos, float a_scale)"
 31451,0x1404ca620,0x1404da7c0,4,void TESWaterReflections::Dtor()
 31576,0x1404d06c0,0x1404e0860,4,"uint32_t BGSStoryEventManager::AddEvent_Impl1404d06c0(longlong a_this,uint32_t a_index,void *a_event)"
 31717,0x1404d7f80,0x1404e8120,3,RE::BGSStoryTeller::BeginStartUpQuest
@@ -2100,7 +2101,7 @@
 67254,0x140c120b0,0x140c4ea50,4,void ControlMap::RefreshLinkedMappings()
 67255,0x140C123a0,0x140c4ed40,3,void ControlMap::Clear()
 67299,0x140c14b70,0x140c514e0,4,RE::ButtonEvent::IsDown
-67315,0x140c150b0,0x140c519e0,3,void BSInputDeviceManager::PollInputDevices_140c108 (float a_secsSinceLastFrame)
+67315,0x140c150b0,0x140c519e0,3,void BSInputDeviceManager::PollInputDevices(float a_secsSinceLastFrame)
 67316,0x140c15180,0x140c51ac0,4,"bool BSInputDeviceManager::GetButtonNameFromID(INPUT_DEVICE a_device, std::int32_t a_id, BSFixedString& a_buttonName) const"
 67373,0x140c165e0,0x140c533a0,4,DirectInput8::IDirectInputDevice8A* BSDirectInputManager::CreateDeviceWithGUID(WinAPI::GUID* a_guid)
 67374,0x140c16620,0x140c533e0,4,void BSDirectInputManager::ReleaseDevice(DirectInput8::IDirectInputDevice8A* a_device)
@@ -10523,6 +10524,7 @@
 514285,0x141ec0a70,0x141f850f8,3,RE::UIMessageQueue::Singleton
 514286,0x141ec0a78,0x141f85100,3,RE::InterfaceStrings::Singleton
 514287,0x141ec0a80,0x141f85108,3,RE::Calendar::Singleton
+514289,0x141ec0a90,0x141f85118,3,BGSAutoWater* GetSingleton()
 514290,0x141ec0a98,0x141f85120,3,TESWaterSystem* GetSingleton()
 514292,0x141ec0aa8,0x141f85130,4,BGSGrassManager* GetSingleton()
 514313,0x141ec3b68,0x141f889c8,4,RE::Projectile::Manager::GetSingleton
