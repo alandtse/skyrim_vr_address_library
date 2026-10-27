@@ -85,7 +85,7 @@
 13119,0x14014fb40,0x140160570,3,RE::INISettingCollection::RemoveSetting
 13135,0x140150a00,0x140161430,3,RE::INISettingCollection::Unk_08
 13137,0x140150b20,0x140161550,4,void TESObjectCELL::QueueAddCellGrassTask()
-13138,0x140150c80,0x1401616b0,4,void AddCellGrassTask::Run()
+13138,0x140150c80,0x1401616b0,3,void AddCellGrassTask::Run()
 13142,0x140151b60,0x1401625a0,3,TESObjectCELL* TES::GetCurrentCell()
 13147,0x140151e60,0x1401628a0,3,"void TES::SetGridFromPosition(TES* a_this, NiPoint3* a_position)"
 13148,0x140152030,0x140162a70,4,"bool TES::UpdateGridForPosition(TES* a_this, NiPoint3* a_position, bool a_flag, float a_unk)"
@@ -112,6 +112,7 @@
 13227,0x1401584c0,0x140168f70,3,void TES::PreloadInterior(TESObjectCELL* a_cell)
 13230,0x140158970,0x140169420,4,void TES::FinishLoad()
 13233,0x140158e70,0x140169920,3,void sub_140158E70 (TES * a_this)
+13239,0x1401591f0,0x140169cb0,4,void TES::UpdateGrassFadeInGrid()
 13240,0x140159290,0x140169d50,4,"void TES::ClearGrassFadeAt(int a_x, int a_y)"
 13241,0x1401593b0,0x140169e70,3,void TES::PreloadEssentialAddonNodes()
 13243,0x140159630,0x14016a0f0,3,void TES::PreloadBloodEffects()
@@ -223,6 +224,7 @@
 15205,0x1401b5750,0x1401c5760,4,"bool GrassManager::AddCellGrassFromBuffer(GrassManager* this, TESObjectCELL* a_cell)"
 15206,0x1401b6010,0x1401c6020,4,"bool GrassManager::LoadCellGID(GrassManager* this, TESObjectCELL* a_cell)"
 15207,0x1401b6470,0x1401c6480,4,void GrassManager::RemoveCellGrass(TESObjectCELL* a_cell)
+15209,0x1401b6890,0x1401c68a0,4,void GrassManager::AttachPendingGrassShapes()
 15212,0x1401b6af0,0x1401c6b00,3,std::uint32_t GrassManager::CreateGrassPatch(void* a_params)
 15214,0x1401b7640,0x1401c7750,4,"BSMultiStreamInstanceTriShape* GrassManager::LoadGrassType(GrassManager* this, void* a_param, uint32_t a_cellXDivided, uint32_t a_cellYDivided, uint64_t* a_typeKey, BSFixedString* a_modelPath)"
 15220,0x1401b81d0,0x1401c82e0,4,"ulonglong GrassManager::GrassTypeMapInsert(void* a_table, void* a_buckets, std::uint32_t a_hash, void* a_key, void* a_value)"
@@ -379,6 +381,8 @@
 18677,0x14026e870,0x14027fe50,3,void TESObjectCELL::IncQueuedDistantRefCount()
 18678,0x14026e8f0,0x14027fed0,3,void TESObjectCELL::DecQueuedDistantRefCount()
 18685,0x14026fd10,0x1402812f0,3,BSPortalGraph* TESObjectCELL::GetPortalGraph()
+18694,0x140270140,0x140281720,3,void TESObjectCELL::UpdateGrassFade()
+18695,0x140270340,0x140281950,3,void TESObjectCELL::ClearGrassFade()
 18711,0x140271be0,0x140283200,3,TESObjectCELL::sub_140271BE0
 18755,0x140273ED0,0x1402854C0,4,"void CallsMapMarkerData (int64 a1, int64 **a2)"
 18843,0x140278920,0x140289f20,4,TESObjectREFR::HandleReferenceReset
@@ -2279,9 +2283,13 @@
 74491,0x140d426f0,0x140d8b6b0,4,uint16_t FloatToHalf (float a_input)
 74492,0x140d42700,0x140d8b6c0,4,float HalfToFloat(std::uint16_t a_input)
 74493,0x140d42710,0x140d8b6d0,3,"void ConvexHull2D(ScrapHeap* a_heap, std::uint32_t a_count, std::int32_t* a_points, std::uint32_t* a_outCount, std::uint32_t* a_outIndices)"
-74596,0x140d464e0,0x140d8f410,4,"ulonglong GrassManager::FindOrAddMultiBoundShape(GrassManager* param_1, longlong param_2)"
-74599,0x140d46b20,0x140d8fa50,4,"void GrassManager::QueueMultiBoundShapeLoad(GrassManager* param_1, longlong param_2, longlong param_3)"
+74596,0x140d464e0,0x140d8f410,3,std::uint32_t BSMultiStreamInstanceTriShape::AddGroupGIDStream(void* a_stream)
+74598,0x140d46810,0x140d8f740,3,"void BSMultiStreamInstanceTriShape::AddQueuedGroup(std::uint32_t a_numInstances, std::uint16_t* a_instanceData, std::uint32_t a_numShortsPerInstance, BSTArray<std::uint32_t>* a_groupIndicies, float a_boundsPadding)"
+74599,0x140d46b20,0x140d8fa50,3,"void BSMultiStreamInstanceTriShape::AddQueuedGroupGIDStream(void* a_stream, BSTArray<std::uint32_t>* a_groupIndicies)"
 74601,0x140d46da0,0x140d8fcd0,4,void BSMultiStreamInstanceTriShape::SaveGrassGroup()
+74603,0x140d470b0,0x140d8ffe0,3,void BSMultiStreamInstanceTriShape::ProcessGroupAttachTasks()
+74604,0x140d47270,0x140d901a0,4,void BSMultiStreamInstanceTriShape::RemoveGroupAttachTasksForShape()
+74605,0x140d473b0,0x140d902e0,4,void BSMultiStreamInstanceTriShape::RemoveGroupAttachTasksForIndices(BSTArray<std::uint32_t>* a_groupIndicies)
 74607,0x140d47590,0x140d904c0,4,"BSMultiBoundShape* BSMultiBoundShape::LoadFromStream(BSMultiBoundShape* param_1, NiPoint3* param_2, NiPoint3* param_3, bool param_4, undefined4 param_5, int param_6, longlong param_7, int param_8)"
 74621,0x140d47af0,0x140d90a20,4,"void BSIOStreamTraits::Write (BSIOStreamTraits * a_this, void * a_1, uint a_2)"
 74649,0x140d485a0,0x140d914d0,3,"bool BSMultiBoundAABB::TestOcclusionShape(std::uint64_t a_unused, BSCullingProcess* a_process, BSOcclusionShape* a_shape)"
