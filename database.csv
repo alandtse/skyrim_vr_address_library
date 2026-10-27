@@ -233,11 +233,21 @@
 15274,0x1401ba000,0x1401ca170,3,"void BSResource::EntryDB::ProcessEntry(void* a_entryDB, void* a_entry)"
 15282,0x1401ba650,0x1401ca7c0,3,"bool BSResource::EntryDB::QueueEntry(void* a_entryDB, const char* a_name, void* a_entry, void** a_entryOut, int a_priority, void* a_args)"
 15485,0x1401c5cc0,0x1401d5e30,4,char * GetGameVersion(void)
+15486,0x1401c5cd0,0x1401d5e40,4,void BIPOBJECT::Clear()
+15487,0x1401c5e60,0x1401d5fd0,4,void BIPOBJECT::Assign(BIPOBJECT* a_other)
 15491,0x1401c60a0,0x1401d6200,3,RE::BipedAnim::Dtor
+15493,0x1401c6140,0x1401d64d0,4,void BipedAnim::RemoveAllObjects()
 15494,0x1401c61a0,0x1401d6530,3,RE::BipedAnim::RemoveAllParts
-15495,0x1401c6270,0x1401d6600,3,FEC::UpdateCollision::RemoveNodeFromScene
-15499,0x1401c6a30,0x1401D6E90,3,"BipedAnim::sub(RE::BipedAnim *a1, RE::TESRace *a_race, RE::TESObjectARMO *a_skin, bool isFemale)"
-15501,0x1401c6f90,0x1401d7450,3,FEC::ProcessObject::attachArmorAddon
+15495,0x1401c6270,0x1401d6600,4,void BipedAnim::DetachNode(NiAVObject* a_node)
+15496,0x1401c6300,0x1401d6690,3,"void BipedAnim::RemoveObject(BIPOBJECT* a_object, bool a_unk, std::int32_t a_unk2)"
+15497,0x1401c67d0,0x1401d6c30,4,void BipedAnim::RemovePartByNode(NiAVObject* a_node)
+15498,0x1401c6860,0x1401d6cc0,3,void BipedAnim::ClearPartExtraData(NiAVObject* a_node)
+15499,0x1401c6a30,0x1401D6E90,4,"void BipedAnim::InitSkin(TESRace* a_race, TESObjectARMO* a_skin, bool a_isFemale)"
+15500,0x1401c6c50,0x1401d70b0,3,"void BipedAnim::RemoveConflictingObjects(TESObjectARMO* a_armor, TESObjectARMA* a_addon, bool a_flag)"
+15501,0x1401c6f90,0x1401d7450,3,"void BipedAnim::AttachBufferedObjects(float a_unk, char* a_flag, Actor* a_actor)"
+15505,0x1401c8470,0x1401d8a80,4,"void BipedAnim::SetWeaponObject(TESObjectWEAP* a_weapon, bool a_useActorSlot)"
+15510,0x1401c8ce0,0x1401d9440,4,void BipedAnim::SetAmmoObject(TESAmmo* a_ammo)
+15513,0x1401c8fc0,0x1401d9720,4,"void BipedAnim::SetLightObject(TESObjectLIGH* a_light, bool a_useActorSlot)"
 15518,0x1401c9840,0x1401d9fb0,3,BIPOBJECT* BipedAnim::GetShieldObject()
 15527,0x1401ca8d0,0x1401db060,3,"void BipedAnim::AddAddonNodes(RE::NiAVObject* a_clonedNode, RE::NiAVObject* a_node, std::int32_t a_slot, RE::TESObjectREFR* a_actor, RE::BSTSmartPointer<RE::BipedAnim>& a_bipedAnim)"
 15535,0x1401cafb0,0x1401db9e0,3,FEC::ProcessGeometry::processAttachedGeometry
