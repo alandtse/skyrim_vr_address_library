@@ -2444,7 +2444,9 @@
 76693,0x140dd94e0,0x140e2e4b0,4,"void hkpAllRayHitTempCollector::AddRayHit(const hkpCdBody& a_body, const hkpShapeRayCastCollectorOutput& a_hitInfo)"
 76799,0x140ddca80,0x140e30f40,4,MATERIAL_ID bhkShape::GetMaterialID(hkpShapeKey a_key)
 76924,0x140de1f20,0x140E363E0,4,"bhkCapsuleShape * bhkCapsuleShape::bhkCapsuleShape(bhkCapsuleShape * a_this, RE::NiPoint3 * a_topVec, RE::NiPoint3 * a_botVec, float a_radius)"
+76940,0x140de2a40,0x140e36f00,4,void bhkBoxShape::InitializeShape(const BoxInfo* a_info)
 77186,0x140dec000,0x140e40fd0,4,"std::uintptr_t bhkTriSampledHeightFieldBvTreeShape::InitFromCInfo(bhkShape* a_shape, HeightFieldCInfo* a_cinfo)"
+77215,0x140ded7c0,0x140e427c0,4,"void HavokThreadMemorySink::Handle(void* a_sink, ThreadEvent* a_event)"
 77446,0x140df8690,0x140e4d690,4,"void hkpAllRayHitCollector::AddRayHit(const hkpCdBody& a_body, const hkpShapeRayCastCollectorOutput& a_hitInfo)"
 77470,0x140df9140,0x140e4e140,4,"bhkMemorySystem * ctor_140df9140 (bhkMemorySystem * param_1, undefined8 param_2, undefined8 param_3, undefined8 param_4)"
 78843,0x140e43640,0x140e9f890,4,"undefined8 *hkpConvexVerticesShape::sub_140E43640(undefined8 *param_1,undefined8 param_2,char *param_3)"
@@ -10699,6 +10701,7 @@
 523928,0x1430125b0,0x14316adb0,3,RE::NiRTTI_BSTriShape
 523929,0x1430125c0,0x14316adc0,3,RE::NiRTTI_NiProperty
 523931,0x1430125d8,0x14316add8,3,RE::NiRTTI_NiAlphaProperty
+523934,0x143012df0,0x14316b5f0,3,float cosLUT[512]
 523939,0x143013608,0x14316be08,3,RE::NiRTTI_NiSourceTexture
 523940,0x143013618,0x14316be18,3,RE::NiRTTI_BSFlattenedBoneTree
 523941,0x143013660,0x14316be60,3,RE::NiRTTI_BSDismemberSkinInstance
