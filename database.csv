@@ -544,15 +544,18 @@
 24211,0x140360c10,0x140370510,2,enhanced_reanimation::TESNPC::Activate
 24212,0x140361640,0x140370f60,3,enhanced_reanimation::TESNPC::GetActivateText
 24220,0x140362e90,0x1403727b0,3,"void TESNPC::UpdateHeadAndHair(Actor* a_actor, NiNode* a_node)"
-24221,0x140363000,0x140372920,4,WhosWho::LoadArmorRelatedFunction4
+24221,0x140363000,0x140372920,3,"void TESNPC::UpdateBiped(Actor* a_actor, BSTSmartPointer<BipedAnim>* a_biped, bool a_force)"
 24222,0x140363210,0x140372b30,3,"bool TESNPC::GenerateFaceGenData(TESNPC * a_this, char * a_buffer)"
 24226,0x140363CD0,0x140373630,3,TESNPC::
+24227,0x140363de0,0x140373740,4,"void TESNPC::LoadFaceGenHead(NiPointer<BSFaceGenNiNode>* a_outFaceNode, void* a_outHandle)"
 24228,0x140363f20,0x140373880,3,"void TESNPC::UpdateHead(Actor* a_actor, NiPointer<BSFaceGenNiNode>* a_faceNode)"
+24231,0x140364280,0x140373be0,4,"void TESNPC::AttachWornItems(TESObjectREFR* a_ref, BSTSmartPointer<BipedAnim>* a_biped)"
 24232,0x140364350,0x140373cb0,4,"void TESObjectARMO::InitWornArmor(Actor* a_actor, BSTSmartPointer<BipedAnim>* a_biped)"
-24233,0x140364680,0x140373FE0,4,WhosWho::LoadArmorRelatedFunction2
+24233,0x140364680,0x140373FE0,4,"bool TESNPC::AttachWornItem(void* a_unused, BSTSmartPointer<BipedAnim>* a_biped, TESBoundObject* a_item)"
 24234,0x140364710,0x140374070,3,"void EquipAndProcessChanges (TESNPC * a_this, PlayerCharacter * param_2, undefined8 param_3, undefined8 param_4, undefined8 param_5, undefined8 param_6)"
-24236,0x140364ff0,0x140374950,3,FEC::processArmorAttach::PerformNPCDismember
-24237,0x140365400,0x140374D60,4,WhosWho::LoadArmorRelatedFunction3
+24235,0x140364f00,0x140374860,4,"void TESNPC::AttachWornItemsOfType(TESObjectREFR* a_ref, BSTSmartPointer<BipedAnim>* a_biped, FormType a_formType)"
+24236,0x140364ff0,0x140374950,4,void TESNPC::LoadActor3D(Actor* a_actor)
+24237,0x140365400,0x140374D60,4,"void TESNPC::UpdateWornItems(Actor* a_actor, BSTSmartPointer<BipedAnim>* a_biped, BSTArray<TESBoundObject*>* a_items)"
 24246,0x140365bf0,0x140375550,3,RE::TESNPC::ChangeHeadPart
 24274,0x140368a20,0x140378380,3,RE::TESNPC::HasOverlays
 24275,0x140368b30,0x140378490,3,RE::TESNPC::GetBaseOverlays
