@@ -2904,6 +2904,7 @@ sseid,aeid,confidence,name
 19143,19545,1,TESObjectREFR::GetSavedFormType_*
 19201,19627,3,RE::TESObjectREFR::HasQuestObject
 19238,19664,3,RE::TESObjectREFR::GetScale_14028CC60
+19254,19680,3,TESObjectREFR::ClearLight
 19277,19703,3,RE::TESObjectREFR::GetWeightInContainer
 19301,19728,1,TESObjectREFR::Release3DRelatedData_*
 19302,19729,1,TESObjectREFR::Set3D_*

@@ -402,6 +402,7 @@
 19244,0x14028d0b0,0x14029e7e0,4,bool TESObjectREFR::CanBeMoved_14028D0B0 (TESObjectREFR * param_1)
 19252,0x14028d580,0x14029ecb0,3,"void TESObjectREFR::AttachLight(RE::TESObjectREFR* a_this, bool a_isMagicLight)"
 19253,0x14028d650,0x14029ed80,3,"void TESObjectREFR::RemoveLight(RE::TESObjectREFR* a_this, bool a_isMagicLight)"
+19254,0x14028d690,0x14029edc0,3,"void TESObjectREFR::ClearLight (TESObjectREFR * a_this, bool a_isMagicLight)"
 19263,0x14028d9e0,0x14029f110,3,TESObjectREFR::RemoveItem
 19264,0x14028dbd0,0x14029f300,4,void Actor::RemoveOutfitItems(BGSOutfit* a_outfit)
 19265,0x14028dcf0,0x14029f420,4,"bool Actor::HasOutfitItems (Actor * a_this, BGSOutfit * a_outfit)"
