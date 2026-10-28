@@ -661,8 +661,10 @@
 26009,0x1403c66a0,0x1403d5f20,4,RE::random
 26252,0x1403d2220,0x1403e1b80,3,"void BSFaceGenManager::ApplyMorph(BSFaceGenNiNode* a_faceNode, TESNPC* a_npc, const BSFixedString& a_morphName, float a_relative)"
 26254,0x1403d2380,0x1403e1ce0,3,"void BSFaceGenManager::ApplyMorphByPart(BSFaceGenNiNode* a_faceNode, BGSHeadPart* a_headPart, const BSFixedString& a_morphName, float a_relative)"
+26256,0x1403d24f0,0x1403e1e50,3,
 26258,0x1403D2970,0x1403E22E0,4,WhosWho::GetFaceRelatedData
 26259,0x1403d2a60,0x1403e23d0,3,"void BSFaceGenManager::PrepareHeadPartForShaders(BSFaceGenNiNode* a_node, BGSHeadPart* a_headPart, TESNPC* a_npc)"
+26299,0x1403d45b0,0x1403e3f20,3,
 26300,0x1403d4630,0x1403e3fa0,3,"uint8_t BSFaceGenModel::ApplyRaceMorph(BSFixedString* a_morphName, TESModelTri* a_modelMorph, NiAVObject** a_headNode, float a_relative, uint8_t a_unk1)"
 26303,0x1403d4b70,0x1403e44e0,4,"void BSFaceGenModelExtraData::SetBoneName (BSFaceGenModelExtraData * a_this, uint32_t a_index, BSFixedString * a_name)"
 26343,0x1403d68e0,0x1403e6250,4,"void BSFaceGenMorphDataHead::ApplyMorphWeight (BSFaceGenMorphDataHead * a_this, NiAVObject * a_node, float a_weight)"
