@@ -1766,6 +1766,8 @@
 50886,0x140887d10,0x1408b5240,3,void Inventory3DManager::UnloadInventoryItem()
 50887,0x140887df0,0x1408b5360,3,bool Inventory3DManager::ToggleItemZoom
 50896,0x140888290,0x1408b5b40,3,"void Inventory3DManager::InitializeDisplayObject(TESForm* a_form1, TESForm* a_form2, NiNode* a_node)"
+50899,0x140888730,0x1408b60a0,2,
+50900,0x1408887e0,0x1408b6220,2,
 50948,0x14088b9b0,0x1408b9210,3,InventoryEntryData::GetExtraListForRemoval
 50973,0x14088e050,0x1408BB820,3,DescriptionFramework::
 50978,0x14088e280,0x1408bba50,3,EssentialFavorites::Dropped::IsQuestObject
