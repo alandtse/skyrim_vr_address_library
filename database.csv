@@ -240,6 +240,7 @@
 15501,0x1401c6f90,0x1401d7450,3,FEC::ProcessObject::attachArmorAddon
 15518,0x1401c9840,0x1401d9fb0,3,BIPOBJECT* BipedAnim::GetShieldObject()
 15527,0x1401ca8d0,0x1401db060,3,"void BipedAnim::AddAddonNodes(RE::NiAVObject* a_clonedNode, RE::NiAVObject* a_node, std::int32_t a_slot, RE::TESObjectREFR* a_actor, RE::BSTSmartPointer<RE::BipedAnim>& a_bipedAnim)"
+15534,0x1401cac70,0x1401db680,3,
 15535,0x1401cafb0,0x1401db9e0,3,FEC::ProcessGeometry::processAttachedGeometry
 15547,0x1401cc7c0,0x1401dd210,3,void NiAVObject::RemoveDecals()
 15569,0x1401cd350,0x1401ddde0,3,RE::NiNode::AttachWeapon
