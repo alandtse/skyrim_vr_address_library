@@ -1031,8 +1031,8 @@
 35632,0x1405b8620,0x1405c0630,3,void InitTESThread::WaitForInitialization()
 35642,0x1405b8f00,0x1405c0f70,3,SettingsOfSkyrim::
 35825,0x1405beb00,0x1405c6f70,3,void StartVMInitThread()
-35869,0x1405c0090,0x1405c85b0,3,void SceneGraph::SetNearDistance(const float* a_distance)
-35871,0x1405c00c0,0x1405c85e0,3,void SceneGraph::SetFarDistance(float a_distance)
+35869,0x1405c0090,0x1405c85b0,3,"void SceneGraph::SetNearDistance (SceneGraph * a_this, float * a_distance)"
+35871,0x1405c00c0,0x1405c85e0,3,"void SceneGraph::SetFarDistance (SceneGraph * a_this, float a_distance)"
 35882,0x1405c0610,0x1405c8b30,3,po3tweaks::ScreenshotToConsole::DebugNotification
 35918,0x1405c1e40,0x1405ca360,4,bool TaskQueueInterface::ShouldQueueTask()
 35922,0x1405c2670,0x1405cab50,4,"void TaskQueueInterface::QueueNodeAttach_1405c2670 (undefined * a_this, NiAVObject * a_obj, NiNode * a_root, bool a_arg3, bool a_arg4)"
@@ -1852,12 +1852,12 @@
 52055,0x1408da8d0,0x14090b240,4,inline void PlayMenuSound(const BGSSoundDescriptorForm* a_descriptor)
 52065,0x1408dae20,0x14090E1F0,4,Mutex Console::ProcessConsoleCommandQueue(Mutex* a_queue)
 52181,0x1408E1AF0,0x140913210,3,DynamicStringDistributor::
-52188,0x1408e2850,0x140913fa0,3,bool MapMenu::CreateTempMarkerRef()
+52188,0x1408e2850,0x140913fa0,3,bool MapMenu::CreateTempMarkerRef (void)
 52208,0x1408e3d70,0x140915f50,2,RE::MapMenu::MarkerClick
-52225,0x1408e6cf0,0x140919330,3,void MapMenu::SetFreezeFrameBackground(bool a_enable)
+52225,0x1408e6cf0,0x140919330,3,"void MapMenu::SetFreezeFrameBackground (MapMenu * a_this, bool a_enable)"
 52226,0x1408e6ea0,0x140919520,3,void MapMenu::PlaceMarker()
-52228,0x1408e7380,0x140919910,2,bool MapMenu::UpdateCamera()
-52231,0x1408e7530,0x140919a20,2,void MapMenu::Close()
+52228,0x1408e7380,0x140919910,2,bool MapMenu::UpdateCamera (MapMenu * a_this)
+52231,0x1408e7530,0x140919a20,2,void MapMenu::Close (MapMenu * a_this)
 52236,0x1408e7c80,0x14091a4e0,3,anonymous_namespace__FastTravelConfirmCallback::Run_1408E7C80
 52276,0x1408EA320,0x14091EF90,3,DynamicStringDistributor::
 52368,0x1408ee900,0x140923570,4,QuitToMainMenuCallback
