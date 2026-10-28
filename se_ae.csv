@@ -4635,6 +4635,8 @@ sseid,aeid,confidence,name
 35571,36574,3,Main::UpdateCullingFrustum
 35593,36601,3,RE::Main::ReloadFormData
 35620,36630,3,RE::Main::SetupPlayerBaseForm
+35869,36840,3,SceneGraph::SetNearDistance
+35871,36842,3,SceneGraph::SetFarDistance
 35978,36953,3,RE::TaskQueueInterface::QueueBulletWaterDisplacementTask
 35987,36962,3,RE::TaskQueueInterface::QueueRemoveSpellTask
 36248,37230,3,RE::Actor::SetRotationZ
@@ -6639,7 +6641,10 @@ sseid,aeid,confidence,name
 51246,36604,1,Start-on-Save::DoBeforeNewOrLoad
 51253,52125,3,RE::LoadNewDLCContent
 51422,52271,3,RE::MessageBoxData::QueueMessage
+52225,53112,3,MapMenu::SetFreezeFrameBackground
 52226,53113,3,RE::MapMenu::PlaceMarker
+52228,53115,3,MapMenu::UpdateCamera
+52231,53118,3,MapMenu::Close
 52374,53270,3,QuickLoot::
 52400,53299,3,QuickLoot::
 52653,53506,3,RE::SkyrimScript::HandlePolicy::IsHandleObjectAvailable
