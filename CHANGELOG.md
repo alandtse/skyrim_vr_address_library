@@ -1,3 +1,10 @@
+## [0.290.1](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.290.0...v0.290.1) (2026-10-29)
+
+
+### Bug Fixes
+
+* drop wrong VR address for QueueLensFlare ([#317](https://github.com/alandtse/skyrim_vr_address_library/issues/317)) ([64b9621](https://github.com/alandtse/skyrim_vr_address_library/commit/64b9621284033601456bb89b0d73dcce6c17077f))
+
 # [0.290.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.289.0...v0.290.0) (2026-10-29)
 
 
