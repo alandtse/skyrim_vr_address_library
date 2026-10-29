@@ -42,6 +42,18 @@ from there on every merge.
   the lines your own change actually touched; that script rewrites the *entire* file it's
   pointed at, and this repo's `database.csv` currently carries pre-existing quoting
   inconsistencies elsewhere that are not this PR's problem to fix.
+- **Every row needs an SE address.** `database.csv` maps SE address-library ids to VR addresses,
+  and `scripts/verify_database.py` rejects a blank `sse` column. A function or global that exists
+  only in VR (no counterpart in `SkyrimSE.exe`) has no id to map and does not belong here. Confirm
+  the absence in Ghidra on SE before dropping a row, and use the SE address as the id for an SE
+  address with no addresslib id.
+- **`name` is a compact signature**, as in CommonLib: `ret Class::Method(Type* a_name, ...)`, with no
+  space before the parenthesis, `Type*` rather than `Type *`, no `RE::` prefix, and no explicit
+  `this`/`a_this` parameter on member functions (static functions have none either). Use `()`, not
+  `(void)`. Do not paste a decompiler prototype, and do not use a mod's hook label. Take parameter
+  and return types from the raw disassembly, not Ghidra's auto-inferred signature, and use a type
+  Ghidra does not have (e.g. `ThreadEvent*`) only when the binary proves it; otherwise use `void*`.
+  Data rows are `Type name`.
 - **`se_ae.csv`** (`sseid,aeid,confidence,name`) maps this project's SE-numbered ids to the
   separate numeric id space AE's own community Address Library uses for the same function.
   New rows follow the same ascending-order rule. Neighboring ids in a cluster often (not
