@@ -10639,7 +10639,7 @@
 516943,0x142f26bf8,0x142feb7a0,2,RE::Main::Singleton
 517006,0x142f26ec0,0x142feb9b8,4,Scenegraph* WorldRootNode()
 517014,0x142f26ef8,0x142feb9f0,3,RE::PlayerCharacter::Singleton
-517032,0x142f26f80,0x142feba80,3,TrueHUD::g_fNear
+517032,0x142f26f80,0x142feba80,3,HighActorCuller gHighActorCuller
 517043,0x142f27140,0x142febc40,4,MenuCursor* GetSingleton()
 517045,0x142f27150,0x142febc50,3,RE::BGSFootstepManager::Singleton
 517046,0x142f27158,0x142febc58,4,BSDirectInputManager* GetSingleton()
