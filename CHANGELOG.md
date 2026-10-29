@@ -1,3 +1,12 @@
+# [0.290.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.289.0...v0.290.0) (2026-10-29)
+
+
+### Features
+
+* add head, biped and face node ids ([#304](https://github.com/alandtse/skyrim_vr_address_library/issues/304)) ([72e4e4e](https://github.com/alandtse/skyrim_vr_address_library/commit/72e4e4ea511d66c09e1d7c4763f572772240685f))
+* add map menu and scenegraph ids ([#306](https://github.com/alandtse/skyrim_vr_address_library/issues/306)) ([1508075](https://github.com/alandtse/skyrim_vr_address_library/commit/1508075a76b5e11d2e4415b29eb19fc4cea448c2))
+* add sin LUT rows, fix Handle signature ([#305](https://github.com/alandtse/skyrim_vr_address_library/issues/305)) ([8aeb0d0](https://github.com/alandtse/skyrim_vr_address_library/commit/8aeb0d09ba27c3885e1a7ac67c2d8745f4a5a01e))
+
 # [0.289.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.288.0...v0.289.0) (2026-10-27)
 
 
