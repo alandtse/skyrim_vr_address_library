@@ -1,3 +1,10 @@
+# [0.291.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.290.1...v0.291.0) (2026-10-29)
+
+
+### Features
+
+* add ordered node ancestor finder id ([#318](https://github.com/alandtse/skyrim_vr_address_library/issues/318)) ([b653661](https://github.com/alandtse/skyrim_vr_address_library/commit/b653661d80bdc4c7ee7263c6a12abbc846b1aea6))
+
 ## [0.290.1](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.290.0...v0.290.1) (2026-10-29)
 
 
