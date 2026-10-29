@@ -11100,7 +11100,7 @@
 528064,0x143233400,0x1434859e0,4,static BSShaderAccumulator** GetUnkBSShaderAccumulator()
 528071,0x143233438,0x14348580c,3,std::uint32_t gListAccumulationJobCount
 528072,0x143233440,0x143485ac0,3,BSTArray<BSTArray<NiPointer<NiAVObject>>> gListAccumulationLists
-528077,0x143233470,0x143485af0,4,static RE::BSCullingProcess* GetUnknownGlobalCullingProcess()
+528077,0x143233470,0x143485af0,4,BSTArray<BSGeometryListCullingProcess*> gDrawWorldGeomListCullProcs
 528082,0x143233490,0x143485b10,4,DrawWorld& GetSingleton()
 528087,0x1432334b8,0x143485b38,4,static RE::SceneGraph* GetWorldSceneGraph()
 528090,0x1432334d0,0x143485b50,4,static uint32_t* GetLastFrameActiveShadowCasterLightCount1()
@@ -19393,4 +19393,11 @@
 5382627248,0x140d45fb0,0x140d8eee0,3,"uint32_t BSMultiStreamInstanceTriShape::AddGroupGIDBuffer(BSMultiStreamInstanceTriShape* this, void* a2, uint16_t* a3)"
 5382629008,0x140d46690,0x140d8f5c0,3,"void BSMultiStreamInstanceTriShape::AddQueuedGroupGIDBuffer(BSMultiStreamInstanceTriShape* this, void* a2, uint16_t* a3, void* a4)"
 5388393136,0x1412c5ab0,0x141303ea0,3,RE::BSLightingShaderProperty::InvalidateTextures
+5388987984,,0x141356e50,2,void BSShadowDirectionalLight::ApplyLensFlare()
+5388989520,,0x141357450,2,void BSShadowDirectionalLight::ClearShadowMaps()
 5399981752,0x141dd2eb8,0x141e901a8,4,CalculateMyCriticalHitChance
+5400980360,,0x141ec6b88,2,bDepthBufferCulling_VRPerformance
+5401043704,,0x141ed62f8,2,gSunShadowUpdateDue
+5401044200,,0x141ed64e8,2,fMinOccludeeBoxExtent_VR
+5420615304,,0x143180688,2,gVRRenderDataConstantBuffer
+5420619528,,0x143181708,2,g_drawStereo
