@@ -11124,7 +11124,7 @@
 528064,0x143233400,0x1434859e0,4,static BSShaderAccumulator** GetUnkBSShaderAccumulator()
 528071,0x143233438,0x14348580c,3,std::uint32_t gListAccumulationJobCount
 528072,0x143233440,0x143485ac0,3,BSTArray<BSTArray<NiPointer<NiAVObject>>> gListAccumulationLists
-528077,0x143233470,0x143485af0,4,static RE::BSCullingProcess* GetUnknownGlobalCullingProcess()
+528077,0x143233470,0x143485af0,4,BSTArray<BSGeometryListCullingProcess*> gDrawWorldGeomListCullProcs
 528082,0x143233490,0x143485b10,4,DrawWorld& GetSingleton()
 528087,0x1432334b8,0x143485b38,4,static RE::SceneGraph* GetWorldSceneGraph()
 528090,0x1432334d0,0x143485b50,4,static uint32_t* GetLastFrameActiveShadowCasterLightCount1()
