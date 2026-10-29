@@ -2906,7 +2906,7 @@
 100424,0x1412e3e70,0x141323b10,3,void Main::RenderWorld (bool param_1)
 100425,0x1412e4370,0x141323ef0,3,void Main::PostRenderCleanup()
 100430,0x1412e49a0,0x141324e80,3,void RenderEOFImageSpaceEffects (RENDER_TARGET a_rendertarget)
-100440,0x1412e50a0,0x141356e50,3,static void ApplyLensFlare(RE::BSLight* light) // Likely not valid in VR
+100440,0x1412e50a0,0x0,0,void BSLight::QueueLensFlare()
 100458,0x1412e5570,0x141325d10,3,void BSShaderRenderTargets::Create()
 100475,0x1412e7db0,0x141328f20,4,"void BSImagespaceShader::SetupVolumetricLights(BSImagespaceShader *param_1,RENDER_TARGET a_renderTarget, RENDER_TARGET a_renderTargetSource)"
 100480,0x1412e82f0,0x141329460,4,"ImageSpaceEffect * BSImageSpace::Init::IBLF (ImageSpaceEffect * param_1, undefined8 param_2, undefined8 param_3, undefined8 param_4, undefined8 param_5, undefined8 param_6, undefined8 param_7)"
