@@ -8657,6 +8657,7 @@ sseid,aeid,confidence,name
 101138,108121,1,NiNode::sub_*
 101139,108123,1,BSOrderedNode::OnVisible_*
 101140,108124,1,BSOrderedNode::UpdateDownwardPass_*
+101142,108126,3,FindBSOrderedNodeAncestor
 101143,108127,1,
 101144,108128,1,
 101145,108129,1,BSOrderedNode::dtor_*

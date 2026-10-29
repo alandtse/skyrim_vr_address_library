@@ -2976,6 +2976,7 @@
 100996,0x141310d40,0x141354c50,3,void BSShaderPropertyLightData::PopLightListFence(BSShaderPropertyLightData* this)
 100997,0x141310e10,0x141354d20,3,"uint32_t CalculateActiveNonShadowCasterLights(BSShaderPropertyLightData* a_lightData, BSLight** a_lights, uint32_t a_maxCount, int* a_shadowCount, ShadowSceneNode* a_ssn, BSLightingShaderProperty* a_property, bool a_addShadow, bool* a_useShadowSun, bool a_firstPerson, uint32_t a_firstPersonMask, bool a_skipAccumulation)"
 101009,0x141311700,0x141355440,3,"void BSLight::RemoveGeometry(BSLight* this, BSTriShape* a_geometry)"
+101142,0x1413173d0,0x141360030,4,BSOrderedNode* FindBSOrderedNodeAncestor(NiAVObject* a_object)
 101151,0x1413177c0,0x141360420,3,void BSLines::~BSLines()
 101290,0x14131c350,0x1413621d0,3,void BSLight::~BSLight(BSLight* this)
 101291,0x14131c560,0x1413623e0,3,"void BSLight::UpdateLODFadeAndCull(BSLight* this, NiCullingProcess* a_cull)"
