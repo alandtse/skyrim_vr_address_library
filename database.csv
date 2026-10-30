@@ -2149,6 +2149,8 @@
 67441,0x140c190f0,0x140c5d750,4,"void BSInputDevice::SetButtonState(std::uint32_t a_buttonId, float a_timeSinceLastPoll, bool a_buttonWasPressed, bool a_buttonIsPressed)"
 67457,0x140c199f0,0x140c5e2a0,4,void BSPCGamepadDeviceHandler::InitializeDelegate()
 67472,0x140c1a130,0x140c5e9c0,3,void BSWin32KeyboardDevice::Poll()
+67673,0x140c24750,0x140c69680,3,
+67677,0x140c249b0,0x140c698e0,3,
 67740,0x140c26240,0x140c6b170,4,SetThreadName
 67819,0x140c28bf0,0x140c6db20,3,BSFixedString* BSFixedString::ctor8(const char* a_data)
 67823,0x140c28d60,0x140c6dc90,3,FUN_140c28d60
