@@ -4172,6 +4172,7 @@ sseid,aeid,confidence,name
 30640,31467,1,
 30645,31481,1,
 30646,31478,1,AutoRegisterPathBuilderFactory_PathingRequestClosePoint_anonymous_namespace__PathBuilderClosePointPath_::Func1_*
+31079,31870,2,std::uint32_t BSSubIndexTriShape::GetNumSegments() const
 31300,32084,3,BGSWaterCollisionManager::BGSWaterUpdateI::dtor
 31302,32086,3,BGSWaterCollisionManager::BGSWaterUpdateI::SetDisabled
 31303,32087,3,BGSWaterCollisionManager::BGSWaterUpdateI::Unlink
@@ -7231,6 +7232,9 @@ sseid,aeid,confidence,name
 68054,69404,3,JobList::Clear
 68838,70190,3,RE::NiObject::ProcessClone
 68839,70191,3,RE::NiObject::CreateDeepCopy
+68893,70244,2,"void NiAVObject::CopyTransformAndCollision(NiAVObject* a_target, NiCloningProcess* a_cloning)"
+69139,70500,2,"void NiObjectNET::CopyMembers(NiObjectNET* a_target, NiCloningProcess* a_cloning)"
+69278,70649,2,"void BSTriShape::CopyMembers(BSTriShape* a_target, NiCloningProcess* a_cloning)"
 69433,70810,3,RE::NiTimeController::LoadBinary
 69434,70811,3,RE::NiTimeController::LinkObject
 69435,70812,3,RE::NiTimeController::RegisterStreamables
@@ -7243,6 +7247,7 @@ sseid,aeid,confidence,name
 69442,70819,3,RE::NiTimeController::SetTarget
 69447,70824,3,RE::NiTimeController::ComputeScaledTime
 69449,70826,3,RE::NiTimeController::ProcessClone
+69528,70912,2,"void BSGeometry::CopyMembers(BSGeometry* a_target, NiCloningProcess* a_cloning)"
 69564,70948,3,RE::BSDynamicTriShape::BSDynamicTriShape
 73897,75634,3,IOManager::NotifyTaskComplete
 73914,75651,3,BSTaskManagerThread::Run
@@ -7262,6 +7267,16 @@ sseid,aeid,confidence,name
 74683,76415,3,BSOcclusionBox::IsOcclusionBox
 74706,76440,3,BSOcclusionPlane::IsOcclusionPlane
 74707,76441,3,BSOcclusionPlane::IsOcclusionBox
+75014,76776,2,"void BSSubIndexTriShape::CopyMembers(BSSubIndexTriShape* a_target, NiCloningProcess* a_cloning)"
+75020,76782,2,BSSubIndexTriShape* BSSubIndexTriShape::Create()
+75023,76785,2,"void BSSubIndexTriShape::SetSegmentRange(std::uint32_t a_segment, std::uint32_t a_index, std::uint32_t a_numTris)"
+75024,76786,2,"void BSSubIndexTriShape::SetSegment(std::uint32_t a_segment, std::uint32_t a_index, std::uint32_t a_numTris, std::uint8_t a_active, std::uint8_t a_drawEnabled)"
+75025,76787,2,void BSSubIndexTriShape::ClearSegment(std::uint32_t a_segment)
+75026,76788,2,void BSSubIndexTriShape::FinalizeSegments()
+75027,76789,2,void BSSubIndexTriShape::RefreshSegmentActiveFlag(std::uint32_t a_segment)
+75028,76790,2,void BSSubIndexTriShape::ClearSegmentActiveFlag(std::uint32_t a_segment)
+75029,76791,2,void BSSubIndexTriShape::RecomputeSegmentData()
+75031,76793,2,BSSubIndexTriShape* BSSubIndexTriShape::ctor()
 75507,77299,3,RE::RendererData::CreateRenderTexture
 76170,77998,3,RE::NiAVObject::SetCollisionLayer
 76171,77999,3,RE::NiAVObject::UpdateRigidBodySettings

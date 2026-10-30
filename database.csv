@@ -2182,6 +2182,7 @@
 68835,0x140c52750,0x140c97810,4,NiObject* NiObject::clone_140C52750(NiObject *a_this)
 68838,0x140c52900,0x140c979c0,3,void NiObject::ProcessClone(NiCloningProcess& a_cloning)
 68839,0x140c529a0,0x140c97a60,3,void NiObject::CreateDeepCopy(NiPointer<NiObject>& a_object)
+68893,0x140c56700,0x140c9b7c0,2,"void NiAVObject::CopyTransformAndCollision(NiAVObject* a_target, NiCloningProcess* a_cloning)"
 68900,0x140c56b50,0x140c9bc10,3,RE::NiAVObject::Update
 68936,0x140c57a60,0x140c9ccd0,3,RE::NiNode::Ctor
 68937,0x140c57af0,0x140c9cd60,4,void NiNode::Destroy(NiNode * a_this)
@@ -2190,6 +2191,7 @@
 68972,0x140c598f0,0x140c9eea0,4,void NiStream::~NiStream(NiStream * a_this)
 68973,0x140c59ae0,0x140c9f090,3,void NiStream::AddObject(NiObject* a_object)
 69002,0x140c5ac30,0x140ca01e0,4,void NiStream::LoadLinkID
+69139,0x140c5ffd0,0x140ca5580,2,"void NiObjectNET::CopyMembers(NiObjectNET* a_target, NiCloningProcess* a_cloning)"
 69156,0x140c60fb0,0x140ca6560,4,void NiObjectNET::RemoveController(NiTimeController* a_controller)
 69180,0x140c61ce0,0x140ca7290,4,void QueueNiRefObjectForDeferredRelease(NiPointer<NiRefObject>* a_object)
 69251,0x140c64730,0x140ca9e20,3,"void NiCamera::CopyMembers(NiCamera* a_target, NiCloningProcess* a_cloning)"
@@ -2199,6 +2201,7 @@
 69269,0x140c66530,0x140cac090,3,NiCamera::WorldPtToScreenPt3
 69270,0x140c66580,0x140cac0e0,3,RE::NiCamera::WorldPtToScreenPt3
 69271,0x140c66710,0x140cac900,3,void UpdateInternalWorldToScreenMatrix (NiCamera * a_this)
+69278,0x140c66ef0,0x140cad010,2,"void BSTriShape::CopyMembers(BSTriShape* a_target, NiCloningProcess* a_cloning)"
 69279,0x140c66f80,0x140cad0a0,3,void BSTriShape::LoadBinary(NiStream* a_stream)
 69284,0x140c67490,0x140cad6d0,3,BSTriShape* CreateBSTriShape()
 69287,0x140c675f0,0x140cad830,3,void BSTriShape::~BSTriShape()
