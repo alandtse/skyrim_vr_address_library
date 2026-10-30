@@ -1,3 +1,10 @@
+# [0.292.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.291.0...v0.292.0) (2026-10-30)
+
+
+### Features
+
+* add MessageBox, MistMenu, and IMenu VR addresses ([#319](https://github.com/alandtse/skyrim_vr_address_library/issues/319)) ([203baa1](https://github.com/alandtse/skyrim_vr_address_library/commit/203baa1068b16cec9fb8d00db8ef8c87b290ce85))
+
 # [0.291.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.290.1...v0.291.0) (2026-10-29)
 
 
