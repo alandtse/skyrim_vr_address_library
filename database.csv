@@ -1829,9 +1829,11 @@
 51449,0x1408ad6f0,0x1408da710,2,void MistMenu::PostDisplay(MistMenu* a_this)
 51454,0x1408ad9f0,0x1408dad50,3,TESModelTextureSwap::sub_*
 51455,0x1408adc70,0x1408db0d0,3,void ShowMistMenu(bool a_flag)
+51494,0x1408b1bc0,0x1408df4e0,3,
 51507,0x1408b2be0,0x1408e0450,3,void PrecacheCharGen_1409796E0_0_1408B2BE0 (undefined8 * a_this)
 51509,0x1408b2d60,0x1408e0730,4,void PrecacheCharGenClear_1409796F0_0_1408B2D60 (undefined8 * a_this)
 51526,0x1408b4820,0x1408e23b0,3,"void RaceSexMenu::DoubleMorphCallback(float a_newValue, uint32_t a_sliderId)"
+51532,0x1408b5230,0x1408e2dc0,3,
 51534,0x1408b5e20,0x1408e39b0,3,"void RaceSexMenu::LoadSliders(TESActorBase* a_actorOverride, uint8_t a_unk2)"
 51540,0x1408ba590,0x1408e7d70,4,"void ChangeName_1408BA590 (RaceSexMenu * param_1, char * param_2)"
 51580,0x1408bc760,0x1408e9850,3,"int32_t AddRaceMenuSlider(RaceMenuSliderArray* a_sliders, RaceMenuSlider* a_slider)"
@@ -2539,6 +2541,7 @@
 80302,0x140ece790,0x140f2b480,3,"bool BSScaleformManager::LoadMovie(IMenu* a_menu, GPtr<GFxMovieView>& a_viewOut, const char* a_fileName, ScaleModeType a_mode, float a_backGroundAlpha)"
 80307,0x140ecee30,0x140f2bb20,4,bool BSScaleformManager::IsValidName(const char* a_name)
 80446,0x140ed3a50,0x140f2da40,3,GString* GString::ctor(const char* a_str)
+80520,0x140ed6ac0,0x140f342e0,3,
 80547,0x140ed80b0,0x140f30f20,3,RE::GFxMovieView::InvokeNoReturn
 80585,0x140edac40,0x140f37940,4,"void GMatrix2D::EncloseTransform (GMatrix2D * a_this, void * a_out, void * a_rect)"
 80620,0x140edbfa0,0x140f38ca0,3,RE::GFxLoader::CreateMovie
