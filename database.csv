@@ -760,6 +760,7 @@
 31036,0x1404b38a0,0x1404c3980,3,void BGSTerrainManager::SetCullState(const CullState& a_state)
 31059,0x1404b5090,0x1404c5170,3,"void BGSTerrainNode::UpdateWaterMeshSubVisibility(BGSTerrainNode* a_node, BSMultiBoundNode* a_waterParent)"
 31060,0x1404b5220,0x1404c5300,3,void BGSTerrainNode::UpdateBlockVisibility()
+31079,0x1404b66a0,0x1404c6780,2,std::uint32_t BSSubIndexTriShape::GetNumSegments() const
 31140,0x1404b8580,0x1404c8660,3,SeasonsofSkyrim::LODSwap::Terrain::BuildMeshFileName
 31141,0x1404b85c0,0x1404c86a0,3,SeasonsofSkyrim::LODSwap::Terrain::BuildDiffuseTextureFileName
 31142,0x1404b8600,0x1404c86e0,3,SeasonsofSkyrim::LODSwap::Terrain::BuildNormalTextureFileName
@@ -2181,6 +2182,7 @@
 68835,0x140c52750,0x140c97810,4,NiObject* NiObject::clone_140C52750(NiObject *a_this)
 68838,0x140c52900,0x140c979c0,3,void NiObject::ProcessClone(NiCloningProcess& a_cloning)
 68839,0x140c529a0,0x140c97a60,3,void NiObject::CreateDeepCopy(NiPointer<NiObject>& a_object)
+68893,0x140c56700,0x140c9b7c0,2,"void NiAVObject::CopyTransformAndCollision(NiAVObject* a_target, NiCloningProcess* a_cloning)"
 68900,0x140c56b50,0x140c9bc10,3,RE::NiAVObject::Update
 68936,0x140c57a60,0x140c9ccd0,3,RE::NiNode::Ctor
 68937,0x140c57af0,0x140c9cd60,4,void NiNode::Destroy(NiNode * a_this)
@@ -2189,6 +2191,7 @@
 68972,0x140c598f0,0x140c9eea0,4,void NiStream::~NiStream(NiStream * a_this)
 68973,0x140c59ae0,0x140c9f090,3,void NiStream::AddObject(NiObject* a_object)
 69002,0x140c5ac30,0x140ca01e0,4,void NiStream::LoadLinkID
+69139,0x140c5ffd0,0x140ca5580,2,"void NiObjectNET::CopyMembers(NiObjectNET* a_target, NiCloningProcess* a_cloning)"
 69156,0x140c60fb0,0x140ca6560,4,void NiObjectNET::RemoveController(NiTimeController* a_controller)
 69180,0x140c61ce0,0x140ca7290,4,void QueueNiRefObjectForDeferredRelease(NiPointer<NiRefObject>* a_object)
 69251,0x140c64730,0x140ca9e20,3,"void NiCamera::CopyMembers(NiCamera* a_target, NiCloningProcess* a_cloning)"
@@ -2198,6 +2201,7 @@
 69269,0x140c66530,0x140cac090,3,NiCamera::WorldPtToScreenPt3
 69270,0x140c66580,0x140cac0e0,3,RE::NiCamera::WorldPtToScreenPt3
 69271,0x140c66710,0x140cac900,3,void UpdateInternalWorldToScreenMatrix (NiCamera * a_this)
+69278,0x140c66ef0,0x140cad010,2,"void BSTriShape::CopyMembers(BSTriShape* a_target, NiCloningProcess* a_cloning)"
 69279,0x140c66f80,0x140cad0a0,3,void BSTriShape::LoadBinary(NiStream* a_stream)
 69284,0x140c67490,0x140cad6d0,3,BSTriShape* CreateBSTriShape()
 69287,0x140c675f0,0x140cad830,3,void BSTriShape::~BSTriShape()
@@ -2377,6 +2381,16 @@
 75009,0x140d58850,0x140da1860,3,"void BSGeometryListCullingProcess::AppendNonAccum(BSGeometry* a_geometry, int a_alphaGroupIndex)"
 75010,0x140d588a0,0x140da19b0,4,"void BSGeometryListCullingProcess::SubmitCollectedGeometry(BSCullingProcess* a_process, bool a_useJobs)"
 75011,0x140d588d0,0x140da19e0,4,void BSGeometryListCullingProcess::ReserveObjectArray()
+75014,0x140d58b10,0x140da1c20,2,"void BSSubIndexTriShape::CopyMembers(BSSubIndexTriShape* a_target, NiCloningProcess* a_cloning)"
+75020,0x140d59060,0x140da2170,2,BSSubIndexTriShape* BSSubIndexTriShape::Create()
+75023,0x140d59260,0x140da2370,2,"void BSSubIndexTriShape::SetSegmentRange(std::uint32_t a_segment, std::uint32_t a_index, std::uint32_t a_numTris)"
+75024,0x140d592a0,0x140da23b0,2,"void BSSubIndexTriShape::SetSegment(std::uint32_t a_segment, std::uint32_t a_index, std::uint32_t a_numTris, std::uint8_t a_active, std::uint8_t a_drawEnabled)"
+75025,0x140d59310,0x140da2420,2,void BSSubIndexTriShape::ClearSegment(std::uint32_t a_segment)
+75026,0x140d59360,0x140da2470,2,void BSSubIndexTriShape::FinalizeSegments()
+75027,0x140d593e0,0x140da24f0,2,void BSSubIndexTriShape::RefreshSegmentActiveFlag(std::uint32_t a_segment)
+75028,0x140d59410,0x140da2520,2,void BSSubIndexTriShape::ClearSegmentActiveFlag(std::uint32_t a_segment)
+75029,0x140d59430,0x140da2540,2,void BSSubIndexTriShape::RecomputeSegmentData()
+75031,0x140d595e0,0x140da26f0,2,BSSubIndexTriShape* BSSubIndexTriShape::ctor()
 75051,0x140d59b60,0x140da2c70,3,BSCompoundFrustum* BSCompoundFrustum::Ctor(BSCompoundFrustum* a_this)
 75052,0x140d59d00,0x140da2e10,3,void BSCompoundFrustum::Dtor(BSCompoundFrustum* a_this)
 75053,0x140d59db0,0x140da2ec0,3,BSCompoundFrustum* BSCompoundFrustum::AllocateFromPool()
