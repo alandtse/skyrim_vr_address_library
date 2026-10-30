@@ -863,7 +863,7 @@
 32525,0x140500680,0x140510b20,3,sub_140500680
 32528,0x1405007f0,0x140510c90,4,sub_1405007F0
 32551,0x140501440,0x1405118e0,3,CombatBehaviorTreeManager* CombatBehaviorTree::CombatBehaviorTreeManager::GetSingleton()
-32867,0x14051e7f0,0x14052ede0,2,RenderCursorMenu
+32867,0x14051e7f0,0x14052ede0,2,void IMenu::PostDisplay(IMenu* a_this)
 33257,0x14053d370,0x1405400f0,4,AccumulatingValueModifierEffect::Allocate(AccumulatingValueModifierEffect* accumulatingValueModifierEffect
 33277,0x14053DEB0,0x140540C30,4,"ActiveEffect::Adjust(Skyrim::ActiveEffect* activeEffect, float effectiveness, bool requiresHostility)"
 33278,0x14053df40,0x140540cc0,4,ActiveEffect::CalculateDurationAndMagnitude_14053DF40
@@ -1814,11 +1814,19 @@
 51361,0x1408A8150,0x1408d4160,4,RE::MenuControls::SetKeyRepeatRates
 51400,0x1408aa140,0x1408d68f0,2,po3tweaks::SitToWait::HandleWaitRequest
 51402,0x1408aa940,0x1408d7370,4,"bool QuickSaveLoadHandler::ProcessButton(QuickSaveLoadHandler *a_this, ButtonEvent *a_event)"
-51420,0x1408ab180,0x1408d7fe0,4,RE::MessageBoxData::CreateMessage
+51418,0x1408ab030,0x1408d7ca0,2,MessageBoxMenu* MessageBoxMenu::ctor(MessageBoxMenu* a_this)
+51420,0x1408ab180,0x1408d7fe0,3,"bool MessageBoxData::CreateMessage(const char* a_message, void (*a_callback)(std::uint8_t), std::uint8_t a_buttonPressOffset, std::int32_t a_warningType, std::int32_t a_menuDepth, ...)"
 51421,0x1408ab470,0x1408d82d0,3,"bool MessageBoxMenu::Create(BSString& a_message, const BSTSmartPointer<IMessageBoxCallback>& a_callback, std::uint8_t a_buttonPressOffset, std::int32_t a_warningType, std::int32_t a_menuDepth, const BSTArray<BSString>& a_buttons)"
-51422,0x1408ab5c0,0x1408d8420,3,void MessageBoxData::QueueMessage()
+51422,0x1408ab5c0,0x1408d8420,3,void MessageBoxData::QueueMessage(MessageBoxData* a_this)
+51423,0x1408ab920,0x1408d8780,3,"void MessageBoxMenu::Accept(MessageBoxMenu* a_this, CallbackProcessor* a_processor)"
 51424,0x1408ab9e0,0x1408d8840,3,void MessageBoxMenu::ProcessButtonPress(const FxDelegateArgs& a_params)
-51426,0x1408abb70,0x1408d8b20,3,void MessageBoxMenu::RemoveMessageFromQueue(MessageBoxData* a_data)
+51425,0x1408abae0,0x1408d8940,3,"UI_MESSAGE_RESULTS MessageBoxMenu::ProcessMessage(MessageBoxMenu* a_this, UIMessage& a_message)"
+51426,0x1408abb70,0x1408d8b20,3,"void MessageBoxMenu::RemoveMessageFromQueue(MessageBoxMenu* a_this, MessageBoxData* a_data)"
+51427,0x1408abc80,0x1408d8c30,2,void MessageBoxMenu::PopulateMessage(MessageBoxMenu* a_this)
+51433,0x1408ac6d0,0x1408d9680,2,"MessageBoxData* MessageBoxData::ctor(MessageBoxData* a_this, BSString& a_message, const BSTArray<BSString>& a_buttons, const BSTSmartPointer<IMessageBoxCallback>& a_callback, std::uint8_t a_buttonPressOffset, std::int32_t a_warningType, std::int32_t a_menuDepth)"
+51435,0x1408ac7f0,0x1408d97a0,3,"void* MessageBoxMenu::deleting_dtor(MessageBoxMenu* a_this, std::uint8_t a_flags)"
+51445,0x1408acb30,0x1408d9af0,2,MistMenu* MistMenu::ctor(MistMenu* a_this)
+51449,0x1408ad6f0,0x1408da710,2,void MistMenu::PostDisplay(MistMenu* a_this)
 51454,0x1408ad9f0,0x1408dad50,3,TESModelTextureSwap::sub_*
 51455,0x1408adc70,0x1408db0d0,3,void ShowMistMenu(bool a_flag)
 51507,0x1408b2be0,0x1408e0450,3,void PrecacheCharGen_1409796E0_0_1408B2BE0 (undefined8 * a_this)
@@ -2477,7 +2485,7 @@
 79937,0x140ebe150,0x140f1a3b0,4,UI::IsMenuOpen
 79944,0x140ebe510,0x140F1A680,3,"void UI::GetTopMostMenu(RE::UI this, RE::IMenu** a_result, std::uint32_t a_depthLimit)"
 79945,0x140ebe630,0x140f1a770,3,UI::ProcessMessages
-79947,0x140ebf510,0x140f1b750,3,Skyrim-Upscaler::Main_DrawWorld_MainDraw
+79947,0x140ebf510,0x140f1b750,3,void UI::DrawInterface(UI* a_this)
 80059,0x140ec30f0,0x140f1fbc0,3,RE::UIMessageQueue::ProcessCommands
 80061,0x140ec31d0,0x140f1fca0,4,RE::UIMessageQueue::CreateUIMessageData
 80077,0x140ec3d50,0x140f20820,3,po3tweaks::SitToWait::ProcessMenu
@@ -2518,7 +2526,12 @@
 80275,0x140ecd150,0x140f29ca0,4,"void GFxValue::ObjectInterface::ObjectToString(void* a_data, GString* a_result) const"
 80278,0x140ecd3c0,0x140f29f10,3,"bool GFxValue::ObjectInterface::RemoveElements(void* a_data, std::uint32_t a_idx, std::int32_t a_count)"
 80279,0x140ecd630,0x140f2a180,4,"void GFxValue::ObjectInterface::VisitMembers(void* a_data, ObjVisitor* a_visitor, bool a_isDObj)"
-80287,0x140ecd970,0x140f2a510,3,void IMenu::RefreshPlatform()
+80281,0x140ecd7b0,0x140f2a300,3,IMenu* IMenu::ctor(IMenu* a_this)
+80282,0x140ecd7f0,0x140f2a380,3,void IMenu::dtor(IMenu* a_this)
+80283,0x140ecd850,0x140f2a3f0,3,"UI_MESSAGE_RESULTS IMenu::ProcessMessage(IMenu* a_this, UIMessage& a_message)"
+80284,0x140ecd8a0,0x140f2a440,3,"void IMenu::AdvanceMovie(IMenu* a_this, float a_interval, std::uint32_t a_currentTime)"
+80287,0x140ecd970,0x140f2a510,3,void IMenu::RefreshPlatform(IMenu* a_this)
+80291,0x140ecdd70,0x140f2aa60,3,"void* IMenu::deleting_dtor(IMenu* a_this, std::uint8_t a_flags)"
 80294,0x140ecdee0,0x140f2abd0,4,void BSScaleformExternalTexture::ReleaseTexture()
 80295,0x140ecdf50,0x140f2ac40,4,bool BSScaleformExternalTexture::SetTexture(NiTexture* a_texture)
 80298,0x140ece010,0x140f2ab20,3,bool BSScaleformExternalTexture::LoadPNG(const BSFixedString& a_path)
