@@ -2227,8 +2227,14 @@
 69535,0x140c712c0,0x140cb75c0,3,void BSGeometry::~BSGeometry()
 69541,0x140c715c0,0x140cb78c0,3,void BSGeometry::UpdateWorldBound()
 69554,0x140c71d40,0x140cb8000,3,"void TransformBoundToWorld(NiBound* a_out, NiBound* a_model, NiTransform* a_world)"
+69556,0x140c71f00,0x140cb82b0,3,
+69557,0x140c71fe0,0x140cb8390,3,
 69562,0x140c72180,0x140cb8530,3,BSDynamicTriShape* CreateBSDynamicTriShape()
+69563,0x140c72250,0x140cb8600,3,
 69564,0x140c72300,0x140cb86b0,3,RE::BSDynamicTriShape::BSDynamicTriShape
+69565,0x140c72350,0x140cb8700,3,
+69569,0x140c72480,0x140cb8830,3,
+69573,0x140c72c60,0x140cb9010,3,
 69583,0x140c731f0,0x140cb95a0,4,NiPointLight* NiPointLight::Ctor
 69636,0x140c76060,0x140cbc490,3,RE::BSResourceNiBinaryStream::Ctor
 69637,0x140c76170,0x140cbc5a0,4,"BSResourceNiBinaryStream * ctor_140C76170 (BSResourceNiBinaryStream * a_this, BSResource__Stream * a_stream, bool a_fullReadHint, bool a_useOwnBuffer)"
