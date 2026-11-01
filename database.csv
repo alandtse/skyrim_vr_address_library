@@ -703,6 +703,9 @@
 26592,0x1403e48d0,0x1403f4420,4,"BGSSkillPerkTreeNode * BGSSkillPerkTreeNode::ctor_1403e48d0 (BGSSkillPerkTreeNode * a_this, int32_t a_index, ActorValueInfo * a_avInfo)"
 26616,0x1403e5250,0x1403f4da0,4,RE::ActorValueOwner::GetClampedActorValue
 26718,0x1403e7c20,0x1403f7770,3,BGSAttackData* BGSAttackData::Ctor()
+26753,0x1403e9ae0,0x1403f9630,3,void* BGSPackageDataList::GetByUID(std::uint8_t a_uid)
+27464,0x1403fa640,0x14040a190,3,"void* BGSProcedureBase::EvaluatePackageDataTarget(void** a_context, std::uint32_t a_index, void** a_outTarget)"
+27467,0x1403fa870,0x14040a3c0,3,"void* GetBoundPackageData(void* a_bindings, std::uint32_t a_index, BGSPackageDataList* a_dataList)"
 27907,0x14040dbd0,0x14041d720,4,"void BGSProcedureFollowExecState::FollowWrapper(BGSProcedureFollowExecState* a_this, void* a_state, undefined1 a_param3)"
 27911,0x14040e370,0x14041dec0,4,void BGSProcedureFollowExecState::FollowOrchestrator(BGSProcedureFollowExecState* a_this)
 28479,0x140428a10,0x140438560,4,void BGSProcedureTreeProcedure::ExecuteProcedure(BGSProcedureTreeProcedure* a_this)
@@ -976,6 +979,7 @@
 34582,0x140577ef0,0x14057f650,4,BGSSaveLoadChangesMap::Find
 34627,0x140579880,0x140580fe0,3,bool BGSSaveLoadFileEntry::PopulateFileEntryData()
 34634,0x140579b90,0x1405812f0,4,"uint BGSSaveLoadFormIDMap::InsertFormID (BGSSaveLoadFormIDMap * a_this, uint a_formID)"
+34645,0x14057a950,0x140582120,3,void BGSSaveLoadGame::InitAndFinishLoadForms(bool a_flushIO)
 34655,0x14057b920,0x1405830f0,4,"bool BGSSaveLoadGame::GetChange(TESForm* a_form, std::uint32_t a_changes)"
 34670,0x14057cb90,0x140584360,3,bool BGSSaveLoadGame::IsFormIDInUse(FormID a_formID)
 34676,0x14057ccc0,0x140584420,3,"void BGSSaveLoadGame::SaveGame (BGSSaveGameBuffer * a_this, anonymous_namespace__Win32FileType * a_Win32FileType)"
@@ -994,6 +998,8 @@
 35026,0x140592eb0,0x14059a570,4,FormID BGSNumericIDIndex::GetNumericID()
 35027,0x140592f10,0x14059a5d0,4,void BGSNumericIDIndex::SetNumericID(FormID a_formID)
 35093,0x1405974a0,0x14059eb60,4,void BGSLoadFormData::ReadChangeFormHeader(Win32FileType* a_file)
+35095,0x140597590,0x14059ec50,3,TESForm* BGSLoadFormData::GetForm()
+35096,0x1405975d0,0x14059ec90,3,TESObjectREFR* BGSLoadFormData::GetReference()
 35100,0x140597870,0x14059ef30,4,BGSLoadGameBuffer::BGSLoadGameBuffer
 35107,0x140597aa0,0x14059f160,4,BGSLoadGameBuffer::ReadFormID
 35111,0x140597cf0,0x14059f3b0,4,std::uint32_t BGSLoadFormBuffer::ReadVSVal()

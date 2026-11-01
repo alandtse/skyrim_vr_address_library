@@ -3494,6 +3494,9 @@ sseid,aeid,confidence,name
 25977,26586,3,RE::BSFaceGenAnimationData::Reset
 25980,26594,3,RE::BSFaceGenAnimationData::SetExpressionOverride
 26259,26838,3,RE::BSFaceGenManager::PrepareHeadPartForShaders
+26753,27429,2,void* BGSPackageDataList::GetByUID(std::uint8_t a_uid)
+27464,28181,2,"void* BGSProcedureBase::EvaluatePackageDataTarget(void** a_context, std::uint32_t a_index, void** a_outTarget)"
+27467,28187,2,"void* GetBoundPackageData(void* a_bindings, std::uint32_t a_index, BGSPackageDataList* a_dataList)"
 27611,28332,1,
 27612,28333,1,BGSAIWorldLocation::sub_*
 27613,28334,1,BGSProcedureTyped_BGSProcedureBase_BGSProcedureParamInfo___kProcedureActivateParamTypes_::Func20_*
@@ -4542,6 +4545,7 @@ sseid,aeid,confidence,name
 34628,35548,1,
 34629,35549,1,
 34630,35550,1,
+34645,35567,2,void BGSSaveLoadGame::InitAndFinishLoadForms(bool a_flushIO)
 34725,35634,1,
 34732,35638,1,Win32FileType::sub_*
 34736,35642,1,
@@ -4608,6 +4612,7 @@ sseid,aeid,confidence,name
 35092,35984,1,
 35094,35986,1,
 35095,35987,1,
+35096,35988,2,TESObjectREFR* BGSLoadFormData::GetReference()
 35097,35989,1,
 35098,35990,1,BGSLoadFormBuffer::Func1_*
 35099,35991,1,
