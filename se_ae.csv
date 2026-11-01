@@ -2097,6 +2097,7 @@ sseid,aeid,confidence,name
 13593,13689,1,
 13594,13690,3,FDGE::Skyrim::LoadWorldData
 13597,13693,1,
+13623,13721,3,TESDataHandler::UnloadCell
 13625,13723,3,RE::TESDataHandler::CreateReferenceAtLocation
 13640,13745,3,RE::TESDataHandler::SortESMsByMasters
 13642,13747,3,RE::TESDataHandler::MoveFileInList
@@ -2788,6 +2789,8 @@ sseid,aeid,confidence,name
 18509,18964,1,TESObjectCELL::sub_*
 18510,18965,1,TESObjectCELL::sub_*
 18513,18970,1,TESObjectCELL::sub_*
+18520,18978,3,TESObjectCELL::GetOrCreateCell3D
+18523,18981,3,TESObjectCELL::Unload
 18524,18982,1,TESObjectCELL::GetOwner_*
 18528,18986,1,TESObjectCELL::sub_*
 18531,18989,1,
@@ -2827,6 +2830,7 @@ sseid,aeid,confidence,name
 18617,19086,1,
 18618,19087,1,
 18619,19088,1,
+18637,19111,3,TESObjectCELL::LoadTempData
 18669,19145,3,TESObjectCELL::IsReferenceListLocked
 18691,19177,1,TESObjectCELL::sub_*
 18694,19180,1,TESObjectCELL::UpdateGrassFade_*
