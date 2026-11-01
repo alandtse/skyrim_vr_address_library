@@ -2313,6 +2313,7 @@ sseid,aeid,confidence,name
 14613,14788,1,TESForm::GetMeshNameWithoutPrefix_*
 14704,14875,3,RE::TESHarvestedEvent::GetEventSource
 14809,14988,3,RE::TESForm::GetWeight
+15156,15329,3,BGSDynamicPersistenceManager::DemoteReferences
 15495,15660,3,FEC::UpdateCollision::RemoveNodeFromScene
 15501,15678,3,FEC::ProcessObject::attachArmorAddon
 15535,15712,3,FEC::ProcessGeometry::processAttachedGeometry
@@ -2679,6 +2680,8 @@ sseid,aeid,confidence,name
 17942,18339,1,
 17951,18355,1,BGSLocation::FindInFileFast_*
 17953,18357,1,
+17956,18360,3,BGSLocation::IncrementLoadedCount
+17957,18361,3,BGSLocation::DecrementLoadedCount
 17962,18366,1,BGSLocation::sub_140243130
 17965,18369,1,BGSLocation::sub_140243380
 17966,18370,1,BGSLocation::sub_*
@@ -7249,6 +7252,8 @@ sseid,aeid,confidence,name
 69449,70826,3,RE::NiTimeController::ProcessClone
 69564,70948,3,RE::BSDynamicTriShape::BSDynamicTriShape
 73897,75634,3,IOManager::NotifyTaskComplete
+73901,75638,3,IOManager::CancelTask
+73902,75639,3,IOManager::WaitForTask
 73914,75651,3,BSTaskManagerThread::Run
 73925,75666,3,BSTaskManagerThread::dtor_deleting
 73967,75703,3,IOManager::IOManager

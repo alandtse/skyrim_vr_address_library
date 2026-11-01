@@ -217,6 +217,7 @@
 15029,0x1401ad2f0,0x1401bd040,2,"void BGSDecalManager::ApplyDecal(DECAL_CREATION_DATA*, bool, BGSDecalGroup*)"
 15073,0x1401b02a0,0x1401c02b0,4,void hkpAllRayHitTempCollector::Reset()
 15118,0x1401b13f0,0x1401c1400,3,RE::BGSDecalManager::RemoveItem
+15156,0x1401b2640,0x1401c2650,3,"void BGSDynamicPersistenceManager::DemoteReferences(BSTArray<BSPointerHandle<TESObjectREFR>>& a_handles, TESForm* a_owner)"
 15157,0x1401b2730,0x1401c2740,3,"bool BGSDynamicPersistenceManager::PromoteReference(TESObjectREFR* a_refr, TESForm* a_owner)"
 15158,0x1401b2910,0x1401c2920,3,"bool BGSDynamicPersistenceManager::DemoteReference(TESObjectREFR* a_refr, TESForm* a_owner, bool a_allowActors = false)"
 15202,0x1401b46a0,0x1401c46b0,4,GrassManager * GrassManager::ctor_1401B46A0 (GrassManager * a_this)
@@ -331,6 +332,8 @@
 17539,0x14022e8d0,0x14023fc40,4,"void TESObjectDOOR::LinkRandomTeleportDoors (TESObjectREFR * a_door, TESObjectREFR * a_linkedDoor)"
 17689,0x140235070,0x1402463e0,4,"NiAVObject * TESObjectWEAP::GetFireNode (TESObjectWEAP * a_this, NiAVObject * a_root)"
 17693,0x140235240,0x1402465b0,3,RE::TESObjectWEAP::Fire_140235240
+17956,0x140242c50,0x140254320,3,void BGSLocation::IncrementLoadedCount()
+17957,0x140242d80,0x140254450,3,void BGSLocation::DecrementLoadedCount()
 17965,0x140243380,0x140254a50,3,BGSLocation::ClearedCheck
 18046,0x1402463a0,0x140257a70,3,BSTEventSource<LocationCleared::Event>* LocationCleared::GetEventSource()
 18133,0x14024a0e0,0x14025b7c0,4,sub_14024A0E0
@@ -2261,6 +2264,8 @@
 73894,0x140d292e0,0x140d71200,3,void BSTaskManager::~BSTaskManager(BSTaskManager* a_this)
 73896,0x140d29490,0x140d713b0,3,void BSTaskManager::ResubmitTask(BSTask* a_task)
 73897,0x140d29580,0x140d714a0,3,void IOManager::NotifyTaskComplete(RE::BSTask* a_task)
+73901,0x140d297d0,0x140d71730,3,bool IOManager::CancelTask(BSTask* a_task)
+73902,0x140d29950,0x140d718b0,3,void IOManager::WaitForTask(BSTask* a_task)
 73914,0x140d2a220,0x140d723f0,3,void BSTaskManagerThread::Run(BSTaskManagerThread* a_this)
 73915,0x140d2a620,0x140d727f0,3,void BSTaskManager::InitAllocators(BSTaskManager* a_this)
 73916,0x140d2a6b0,0x140d72880,3,"void SynchronizedMap<std::int64_t,NiPointer<BSTask>>::SynchronizedMap(SynchronizedMap<std::int64_t,NiPointer<BSTask>>* a_this, std::uint32_t a_poolSize, std::uint32_t a_bucketCount, std::uint32_t a_bucketCapacity)"
