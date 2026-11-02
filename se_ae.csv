@@ -4658,6 +4658,7 @@ sseid,aeid,confidence,name
 36259,37243,3,RE::Actor::IsInMidair
 36392,37383,3,RE::Actor::CalculateCurrentVendorFaction
 36407,37401,3,RE::Actor::EvaluatePackage
+36424,37418,3,Character::SetTravelPackage
 36427,37422,3,RE::Actor::StealAlarm
 36457,37453,3,RE::Actor::IsOverEncumbered
 36492,37491,3,RE::Actor::IsInRagdollState
