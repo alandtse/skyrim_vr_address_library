@@ -1,3 +1,12 @@
+# [0.293.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.292.0...v0.293.0) (2026-11-02)
+
+
+### Features
+
+* add cell, location count and IOManager ids ([#322](https://github.com/alandtse/skyrim_vr_address_library/issues/322)) ([9939439](https://github.com/alandtse/skyrim_vr_address_library/commit/99394393cff09c911ba047641ad2b8a5788ab3c7))
+* add load form and package data ids ([#323](https://github.com/alandtse/skyrim_vr_address_library/issues/323)) ([09228cf](https://github.com/alandtse/skyrim_vr_address_library/commit/09228cf2945950093cc51c5578906166c7a6c1e9))
+* map segment and clone helpers ([#320](https://github.com/alandtse/skyrim_vr_address_library/issues/320)) ([6d57a44](https://github.com/alandtse/skyrim_vr_address_library/commit/6d57a4475aa42b645a0b63a38784bab58a41a00d))
+
 # [0.292.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.291.0...v0.292.0) (2026-10-30)
 
 
