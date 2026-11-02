@@ -980,7 +980,7 @@
 34627,0x140579880,0x140580fe0,3,bool BGSSaveLoadFileEntry::PopulateFileEntryData()
 34634,0x140579b90,0x1405812f0,4,"uint BGSSaveLoadFormIDMap::InsertFormID (BGSSaveLoadFormIDMap * a_this, uint a_formID)"
 34645,0x14057a950,0x140582120,3,void BGSSaveLoadGame::InitAndFinishLoadForms(bool a_flushIO)
-34647,0x14057aea0,0x140582670,3,bool BGSSaveLoadGame::QueueReferenceLoad(TESObjectREFR* a_ref, BGSLoadGameBuffer* a_buffer)
+34647,0x14057aea0,0x140582670,3,"bool BGSSaveLoadGame::QueueReferenceLoad(TESObjectREFR* a_ref, BGSLoadGameBuffer* a_buffer)"
 34655,0x14057b920,0x1405830f0,4,"bool BGSSaveLoadGame::GetChange(TESForm* a_form, std::uint32_t a_changes)"
 34670,0x14057cb90,0x140584360,3,bool BGSSaveLoadGame::IsFormIDInUse(FormID a_formID)
 34676,0x14057ccc0,0x140584420,3,"void BGSSaveLoadGame::SaveGame (BGSSaveGameBuffer * a_this, anonymous_namespace__Win32FileType * a_Win32FileType)"

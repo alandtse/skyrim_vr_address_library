@@ -4546,7 +4546,7 @@ sseid,aeid,confidence,name
 34629,35549,1,
 34630,35550,1,
 34645,35567,2,void BGSSaveLoadGame::InitAndFinishLoadForms(bool a_flushIO)
-34647,35569,2,bool BGSSaveLoadGame::QueueReferenceLoad(TESObjectREFR* a_ref, BGSLoadGameBuffer* a_buffer)
+34647,35569,2,"bool BGSSaveLoadGame::QueueReferenceLoad(TESObjectREFR* a_ref, BGSLoadGameBuffer* a_buffer)"
 34725,35634,1,
 34732,35638,1,Win32FileType::sub_*
 34736,35642,1,
