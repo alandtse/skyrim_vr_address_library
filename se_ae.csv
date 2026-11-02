@@ -2097,6 +2097,7 @@ sseid,aeid,confidence,name
 13593,13689,1,
 13594,13690,3,FDGE::Skyrim::LoadWorldData
 13597,13693,1,
+13623,13721,3,TESDataHandler::UnloadCell
 13625,13723,3,RE::TESDataHandler::CreateReferenceAtLocation
 13640,13745,3,RE::TESDataHandler::SortESMsByMasters
 13642,13747,3,RE::TESDataHandler::MoveFileInList
@@ -2312,6 +2313,7 @@ sseid,aeid,confidence,name
 14613,14788,1,TESForm::GetMeshNameWithoutPrefix_*
 14704,14875,3,RE::TESHarvestedEvent::GetEventSource
 14809,14988,3,RE::TESForm::GetWeight
+15156,15329,3,BGSDynamicPersistenceManager::DemoteReferences
 15495,15660,3,FEC::UpdateCollision::RemoveNodeFromScene
 15501,15678,3,FEC::ProcessObject::attachArmorAddon
 15535,15712,3,FEC::ProcessGeometry::processAttachedGeometry
@@ -2678,6 +2680,8 @@ sseid,aeid,confidence,name
 17942,18339,1,
 17951,18355,1,BGSLocation::FindInFileFast_*
 17953,18357,1,
+17956,18360,3,BGSLocation::IncrementLoadedCount
+17957,18361,3,BGSLocation::DecrementLoadedCount
 17962,18366,1,BGSLocation::sub_140243130
 17965,18369,1,BGSLocation::sub_140243380
 17966,18370,1,BGSLocation::sub_*
@@ -2788,6 +2792,8 @@ sseid,aeid,confidence,name
 18509,18964,1,TESObjectCELL::sub_*
 18510,18965,1,TESObjectCELL::sub_*
 18513,18970,1,TESObjectCELL::sub_*
+18520,18978,3,TESObjectCELL::GetOrCreateCell3D
+18523,18981,3,TESObjectCELL::Unload
 18524,18982,1,TESObjectCELL::GetOwner_*
 18528,18986,1,TESObjectCELL::sub_*
 18531,18989,1,
@@ -2827,6 +2833,7 @@ sseid,aeid,confidence,name
 18617,19086,1,
 18618,19087,1,
 18619,19088,1,
+18637,19111,3,TESObjectCELL::LoadTempData
 18669,19145,3,TESObjectCELL::IsReferenceListLocked
 18691,19177,1,TESObjectCELL::sub_*
 18694,19180,1,TESObjectCELL::UpdateGrassFade_*
@@ -7250,6 +7257,8 @@ sseid,aeid,confidence,name
 69528,70912,2,"void BSGeometry::CopyMembers(BSGeometry* a_target, NiCloningProcess* a_cloning)"
 69564,70948,3,RE::BSDynamicTriShape::BSDynamicTriShape
 73897,75634,3,IOManager::NotifyTaskComplete
+73901,75638,3,IOManager::CancelTask
+73902,75639,3,IOManager::WaitForTask
 73914,75651,3,BSTaskManagerThread::Run
 73925,75666,3,BSTaskManagerThread::dtor_deleting
 73967,75703,3,IOManager::IOManager
