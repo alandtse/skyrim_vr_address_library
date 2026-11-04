@@ -4667,6 +4667,7 @@ sseid,aeid,confidence,name
 36259,37243,3,RE::Actor::IsInMidair
 36392,37383,3,RE::Actor::CalculateCurrentVendorFaction
 36407,37401,3,RE::Actor::EvaluatePackage
+36424,37418,3,Character::SetTravelPackage
 36427,37422,3,RE::Actor::StealAlarm
 36457,37453,3,RE::Actor::IsOverEncumbered
 36492,37491,3,RE::Actor::IsInRagdollState
@@ -4676,6 +4677,7 @@ sseid,aeid,confidence,name
 36604,37612,3,RE::Actor::SetLifeState
 36631,37639,3,RE::Actor::Decapitate
 36678,37686,3,RE::Actor::AddToFaction
+36715,37725,3,bool MagicTarget::IsInvulnerable()
 36723,37735,3,RE::Actor::KillImmediate
 36775,37791,3,RE::Actor::InitItemImpl
 36796,37812,1,Character::sub_*
@@ -5222,6 +5224,7 @@ sseid,aeid,confidence,name
 39340,40411,1,PlayerCharacter::ctor_140699040
 39365,40437,3,RE::PlayerCharacter::CenterOnCell_Impl
 39425,40501,3,papyrus_extender::papyrus::detail::get_god_mode_impl
+39428,40504,3,bool PlayerCharacter::IsInvulnerable()
 39507,40586,3,RE::PlayerCharacter::SetAIDriven
 39568,40654,3,RE::PlayerCharacter::AttemptPickpocket
 39612,40698,3,"TintMask* PlayerCharacter::GetTintMask(std::int32_t a_type, std::int32_t a_index)"
