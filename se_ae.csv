@@ -3364,6 +3364,14 @@ sseid,aeid,confidence,name
 24105,24603,1,
 24106,24604,1,
 24107,24605,1,Character::sub_*
+24183,24687,3,"void TESNPC::SetFaceMorph(std::int32_t a_index, float a_value)"
+24184,24688,3,float TESNPC::GetFaceMorph(std::int32_t a_index)
+24185,24689,3,"void TESNPC::SetFacePart(std::int32_t a_index, std::int32_t a_value)"
+24186,24690,3,std::int32_t TESNPC::GetFacePart(std::int32_t a_index)
+24187,24691,3,"const char* GetFaceMorphName(std::int32_t a_index, float a_value)"
+24189,24693,3,"void FormatFacePartName(char* a_buffer, std::uint64_t a_size, std::int32_t a_part, std::uint32_t a_value, bool a_useDefault)"
+24198,24702,3,void TESNPC::SetHairColor(BGSColorForm* a_hairColor)
+24199,24703,3,void TESNPC::SetFaceTexture(BGSTextureSet* a_textureSet)
 24201,24705,1,TESNPC::sub_*
 24203,24707,1,TESNPC::sub_*
 24206,24710,3,RE::TESNPC::SetSkinFromTint
@@ -5216,6 +5224,7 @@ sseid,aeid,confidence,name
 39425,40501,3,papyrus_extender::papyrus::detail::get_god_mode_impl
 39507,40586,3,RE::PlayerCharacter::SetAIDriven
 39568,40654,3,RE::PlayerCharacter::AttemptPickpocket
+39612,40698,3,"TintMask* PlayerCharacter::GetTintMask(std::int32_t a_type, std::int32_t a_index)"
 40056,41067,3,RE::LocationDiscovery::GetEventSource
 40060,41071,3,RE::ShoutAttack::GetEventSource
 40287,41296,3,ProcessLists::Update
@@ -6668,6 +6677,16 @@ sseid,aeid,confidence,name
 51499,52361,3,void RaceSexMenu::CommitTintingMaskSliderChange(const FxDelegateArgs& a_params)
 51500,52362,3,void RaceSexMenu::CommitMaskSliderChange(const FxDelegateArgs& a_params)
 51501,52363,3,void RaceSexMenu::CommitMaskColorSliderChange(const FxDelegateArgs& a_params)
+51521,52396,3,void RaceSexMenu::RefreshFaceTintTextures()
+51522,52397,3,void RaceSexMenu::ApplyFaceTextureSet(BGSTextureSet* a_textureSet)
+51524,52399,3,"void RaceSexMenu::ApplyTintingMaskSliderValue(std::uint32_t a_value, std::uint32_t a_sliderIndex)"
+51525,52400,3,"void RaceSexMenu::ApplyMorphSliderValue(float a_value, std::uint32_t a_sliderIndex)"
+51526,52401,3,"void RaceSexMenu::DoubleMorphCallback(float a_newValue, std::uint32_t a_sliderId)"
+51527,52402,3,"void RaceSexMenu::ApplyPresetSliderValue(std::uint32_t a_value, std::uint32_t a_sliderIndex)"
+51528,52403,3,"void RaceSexMenu::ApplyHairColorPresetSliderValue(std::uint32_t a_value, std::uint32_t a_sliderIndex)"
+51529,52404,3,"void RaceSexMenu::ApplyMaskSliderValue(float a_value, std::uint32_t a_sliderIndex)"
+51530,52405,3,"void RaceSexMenu::ApplyMaskColorSliderValue(std::uint32_t a_value, std::uint32_t a_sliderIndex)"
+51531,52406,3,"void RaceSexMenu::ApplyFaceDetailsSliderValue(float a_value, std::uint32_t a_sliderIndex)"
 52225,53112,3,MapMenu::SetFreezeFrameBackground
 52226,53113,3,RE::MapMenu::PlaceMarker
 52228,53115,3,MapMenu::UpdateCamera

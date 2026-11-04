@@ -554,6 +554,14 @@
 24069,0x140358300,0x140367bc0,4,"bool TESIdleForm::CheckConditions(Actor* a_actor, TESObjectREFR* a_target, bool a_checkParentIdle) bool TESIdleForm::CheckConditions(Actor* a_actor, TESObjectREFR* a_target, bool a_checkParentIdle)"
 24159,0x14035C890,0x14036C150,3,"bool TESNPC__ReadFromFileStream(RE::TESNPC *a_npc, RE::TESFile *a_file)"
 24180,0x14035f6c0,0x14036ef80,3,Actor* TESNPC::GetUniqueActor()
+24183,0x14035f800,0x14036f0c0,3,"void TESNPC::SetFaceMorph(std::int32_t a_index, float a_value)"
+24184,0x14035f8e0,0x14036f1a0,3,float TESNPC::GetFaceMorph(std::int32_t a_index)
+24185,0x14035f910,0x14036f1d0,3,"void TESNPC::SetFacePart(std::int32_t a_index, std::int32_t a_value)"
+24186,0x14035f9e0,0x14036f2a0,3,std::int32_t TESNPC::GetFacePart(std::int32_t a_index)
+24187,0x14035fa40,0x14036f300,3,"const char* GetFaceMorphName(std::int32_t a_index, float a_value)"
+24189,0x14035fa90,0x14036f350,3,"void FormatFacePartName(char* a_buffer, std::uint64_t a_size, std::int32_t a_part, std::uint32_t a_value, bool a_useDefault)"
+24198,0x14035fce0,0x14036f5a0,3,void TESNPC::SetHairColor(BGSColorForm* a_hairColor)
+24199,0x14035fd80,0x14036f640,3,void TESNPC::SetFaceTexture(BGSTextureSet* a_textureSet)
 24202,0x1403601f0,0x14036fab0,4,BGSHeadPart* TESNPC::GetHeadPartByType(BGSHeadPart::HeadPartType a_type)
 24206,0x140360480,0x14036fd80,3,RE::TESNPC::SetSkinFromTint
 24207,0x1403606d0,0x14036ffd0,3,RE::TESNPC::UpdateNeck
@@ -1384,7 +1392,7 @@
 39574,0x1406b3110,0x1406d6480,4,"void PlayerCharacter::SetEscaping(bool a_flag, bool a_escaped)"
 39577,0x1406b34e0,0x1406d6850,4,RE::PlayerCharacter::WeaponSwingCallBack_1406B34E0
 39584,0x1406b3a50,0x1406d6dc0,3,RE::PlayerCharacter::IsAllowedToTakeItemWithValue
-39612,0x1406b52a0,0x1406d8580,3,RE::PlayerCharacter::GetTintMask
+39612,0x1406b52a0,0x1406d8580,3,"TintMask* PlayerCharacter::GetTintMask(std::int32_t a_type, std::int32_t a_index)"
 39614,0x1406b5450,0x1406d8730,3,RE::PlayerCharacter::GetNumTints
 39630,0x1406b5dc0,0x1406d90e0,3,bool TESObjectREFR::IsInMountBlockedWorldspace()
 39657,0x1406b6eb0,0x1406da3d0,3,"void PlayerCharacter::MoveToPositionInCell(float* a_position, float* a_rotation, TESObjectCELL* a_cell, int a_arg4)"
@@ -1860,7 +1868,16 @@
 51501,0x1408b2400,0x1408dfc70,3,void RaceSexMenu::CommitMaskColorSliderChange(const FxDelegateArgs& a_params)
 51507,0x1408b2be0,0x1408e0450,3,void PrecacheCharGen_1409796E0_0_1408B2BE0 (undefined8 * a_this)
 51509,0x1408b2d60,0x1408e0730,4,void PrecacheCharGenClear_1409796F0_0_1408B2D60 (undefined8 * a_this)
+51521,0x1408b40c0,0x1408e1c40,3,void RaceSexMenu::RefreshFaceTintTextures()
+51522,0x1408b4270,0x1408e1df0,3,void RaceSexMenu::ApplyFaceTextureSet(BGSTextureSet* a_textureSet)
+51524,0x1408b4580,0x1408e2110,3,"void RaceSexMenu::ApplyTintingMaskSliderValue(std::uint32_t a_value, std::uint32_t a_sliderIndex)"
+51525,0x1408b46b0,0x1408e2240,3,"void RaceSexMenu::ApplyMorphSliderValue(float a_value, std::uint32_t a_sliderIndex)"
 51526,0x1408b4820,0x1408e23b0,3,"void RaceSexMenu::DoubleMorphCallback(float a_newValue, uint32_t a_sliderId)"
+51527,0x1408b4a70,0x1408e2600,3,"void RaceSexMenu::ApplyPresetSliderValue(std::uint32_t a_value, std::uint32_t a_sliderIndex)"
+51528,0x1408b4cd0,0x1408e2860,3,"void RaceSexMenu::ApplyHairColorPresetSliderValue(std::uint32_t a_value, std::uint32_t a_sliderIndex)"
+51529,0x1408b4e20,0x1408e29b0,3,"void RaceSexMenu::ApplyMaskSliderValue(float a_value, std::uint32_t a_sliderIndex)"
+51530,0x1408b5010,0x1408e2ba0,3,"void RaceSexMenu::ApplyMaskColorSliderValue(std::uint32_t a_value, std::uint32_t a_sliderIndex)"
+51531,0x1408b5160,0x1408e2cf0,3,"void RaceSexMenu::ApplyFaceDetailsSliderValue(float a_value, std::uint32_t a_sliderIndex)"
 51532,0x1408b5230,0x1408e2dc0,3,
 51534,0x1408b5e20,0x1408e39b0,3,"void RaceSexMenu::LoadSliders(TESActorBase* a_actorOverride, uint8_t a_unk2)"
 51540,0x1408ba590,0x1408e7d70,4,"void ChangeName_1408BA590 (RaceSexMenu * param_1, char * param_2)"
