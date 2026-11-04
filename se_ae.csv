@@ -2316,6 +2316,7 @@ sseid,aeid,confidence,name
 15156,15329,3,BGSDynamicPersistenceManager::DemoteReferences
 15495,15660,3,FEC::UpdateCollision::RemoveNodeFromScene
 15501,15678,3,FEC::ProcessObject::attachArmorAddon
+15534,15711,3,BipedAnim::AttachObjectNode
 15535,15712,3,FEC::ProcessGeometry::processAttachedGeometry
 15547,15723,3,RE::NiAVObject::ClearDecals
 15569,15746,1,VampiresCastNoShadow::attach_weapon
@@ -6612,6 +6613,7 @@ sseid,aeid,confidence,name
 50896,51772,1,Inventory3DManager::InitializeDisplayObject_*
 50897,51773,1,Inventory3DManager::sub_*
 50899,51775,1,Inventory3DManager::sub_*
+50900,51776,2,
 50906,51783,1,
 50907,51785,1,BSResource::IEntryDB::PostFlushNotify::Func0_*
 50910,51788,1,NewInventoryMenuItemLoadTask::sub_*
@@ -6656,6 +6658,7 @@ sseid,aeid,confidence,name
 51246,36604,1,Start-on-Save::DoBeforeNewOrLoad
 51253,52125,3,RE::LoadNewDLCContent
 51422,52271,3,RE::MessageBoxData::QueueMessage
+51494,52362,2,void RaceSexMenu::DoubleMorphCallbackHandler(void* a_params)
 52225,53112,3,MapMenu::SetFreezeFrameBackground
 52226,53113,3,RE::MapMenu::PlaceMarker
 52228,53115,3,MapMenu::UpdateCamera
@@ -7261,7 +7264,11 @@ sseid,aeid,confidence,name
 69447,70824,3,RE::NiTimeController::ComputeScaledTime
 69449,70826,3,RE::NiTimeController::ProcessClone
 69528,70912,2,"void BSGeometry::CopyMembers(BSGeometry* a_target, NiCloningProcess* a_cloning)"
+69557,70941,3,void BSDynamicTriShape::LoadBinary(NiStream* a_stream)
+69563,70947,3,"BSDynamicTriShape* BSDynamicTriShape::ctor(std::uint64_t a_vertexDesc, std::uint16_t a_vertexCount, std::uint16_t a_triangleCount, std::uint32_t a_dataSize)"
 69564,70948,3,RE::BSDynamicTriShape::BSDynamicTriShape
+69569,70953,3,void BSDynamicTriShape::ResizeDynamicData(std::uint32_t a_dataSize)
+69573,70958,3,BSDynamicTriShape* BSDynamicTriShape::scalar_deleting_destructor(std::uint32_t a_flags)
 73897,75634,3,IOManager::NotifyTaskComplete
 73901,75638,3,IOManager::CancelTask
 73902,75639,3,IOManager::WaitForTask
@@ -7310,6 +7317,7 @@ sseid,aeid,confidence,name
 80278,82301,3,GFxValue::ObjectInterface::RemoveElements
 80302,82325,3,RE::BSScaleformManager::LoadMovie
 80446,82562,3,RE::GString::Ctor
+80520,82640,3,
 80585,82708,3,GMatrix2D::EncloseTransform
 80737,82841,3,GASStringNode::ReleaseNode
 80758,82863,3,GASValue::AssignFrom
