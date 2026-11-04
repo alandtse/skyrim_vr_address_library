@@ -1848,7 +1848,16 @@
 51449,0x1408ad6f0,0x1408da710,2,void MistMenu::PostDisplay(MistMenu* a_this)
 51454,0x1408ad9f0,0x1408dad50,3,TESModelTextureSwap::sub_*
 51455,0x1408adc70,0x1408db0d0,3,void ShowMistMenu(bool a_flag)
-51494,0x1408b1bc0,0x1408df4e0,3,void RaceSexMenu::DoubleMorphCallbackHandler(void* a_params)
+51491,0x1408b1800,0x1408df120,3,void RaceSexMenu::CommitWeightSliderChange(const FxDelegateArgs& a_params)
+51492,0x1408b1aa0,0x1408df3c0,3,void RaceSexMenu::CommitFaceDetailsSliderChange(const FxDelegateArgs& a_params)
+51493,0x1408b1b30,0x1408df450,3,void RaceSexMenu::CommitMorphSliderChange(const FxDelegateArgs& a_params)
+51494,0x1408b1bc0,0x1408df4e0,3,void RaceSexMenu::CommitDoubleMorphSliderChange(const FxDelegateArgs& a_params)
+51495,0x1408b1c50,0x1408df570,3,void RaceSexMenu::CommitHeadPartSliderChange(const FxDelegateArgs& a_params)
+51496,0x1408b1de0,0x1408df650,3,void RaceSexMenu::CommitPresetSliderChange(const FxDelegateArgs& a_params)
+51498,0x1408b21d0,0x1408dfa40,3,void RaceSexMenu::CommitHairColorPresetSliderChange(const FxDelegateArgs& a_params)
+51499,0x1408b2270,0x1408dfae0,3,void RaceSexMenu::CommitTintingMaskSliderChange(const FxDelegateArgs& a_params)
+51500,0x1408b2390,0x1408dfc00,3,void RaceSexMenu::CommitMaskSliderChange(const FxDelegateArgs& a_params)
+51501,0x1408b2400,0x1408dfc70,3,void RaceSexMenu::CommitMaskColorSliderChange(const FxDelegateArgs& a_params)
 51507,0x1408b2be0,0x1408e0450,3,void PrecacheCharGen_1409796E0_0_1408B2BE0 (undefined8 * a_this)
 51509,0x1408b2d60,0x1408e0730,4,void PrecacheCharGenClear_1409796F0_0_1408B2D60 (undefined8 * a_this)
 51526,0x1408b4820,0x1408e23b0,3,"void RaceSexMenu::DoubleMorphCallback(float a_newValue, uint32_t a_sliderId)"

@@ -6658,7 +6658,16 @@ sseid,aeid,confidence,name
 51246,36604,1,Start-on-Save::DoBeforeNewOrLoad
 51253,52125,3,RE::LoadNewDLCContent
 51422,52271,3,RE::MessageBoxData::QueueMessage
-51494,52362,2,void RaceSexMenu::DoubleMorphCallbackHandler(void* a_params)
+51491,52353,3,void RaceSexMenu::CommitWeightSliderChange(const FxDelegateArgs& a_params)
+51492,52354,3,void RaceSexMenu::CommitFaceDetailsSliderChange(const FxDelegateArgs& a_params)
+51493,52355,3,void RaceSexMenu::CommitMorphSliderChange(const FxDelegateArgs& a_params)
+51494,52356,3,void RaceSexMenu::CommitDoubleMorphSliderChange(const FxDelegateArgs& a_params)
+51495,52357,3,void RaceSexMenu::CommitHeadPartSliderChange(const FxDelegateArgs& a_params)
+51496,52358,3,void RaceSexMenu::CommitPresetSliderChange(const FxDelegateArgs& a_params)
+51498,52360,3,void RaceSexMenu::CommitHairColorPresetSliderChange(const FxDelegateArgs& a_params)
+51499,52361,3,void RaceSexMenu::CommitTintingMaskSliderChange(const FxDelegateArgs& a_params)
+51500,52362,3,void RaceSexMenu::CommitMaskSliderChange(const FxDelegateArgs& a_params)
+51501,52363,3,void RaceSexMenu::CommitMaskColorSliderChange(const FxDelegateArgs& a_params)
 52225,53112,3,MapMenu::SetFreezeFrameBackground
 52226,53113,3,RE::MapMenu::PlaceMarker
 52228,53115,3,MapMenu::UpdateCamera
