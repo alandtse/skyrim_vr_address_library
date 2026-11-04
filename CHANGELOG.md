@@ -1,3 +1,19 @@
+# [0.294.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.293.0...v0.294.0) (2026-11-04)
+
+
+### Features
+
+* add biped geometry creation id ([#309](https://github.com/alandtse/skyrim_vr_address_library/issues/309)) ([b1ee527](https://github.com/alandtse/skyrim_vr_address_library/commit/b1ee527529ab3a10437d303e396fe9d98a66fbaa))
+* add Character travel package id ([#324](https://github.com/alandtse/skyrim_vr_address_library/issues/324)) ([5dcf022](https://github.com/alandtse/skyrim_vr_address_library/commit/5dcf022a8a78c11a0efd1c2b8a276239b405dc4b))
+* add dynamic geometry lifecycle ids ([#314](https://github.com/alandtse/skyrim_vr_address_library/issues/314)) ([fb22bb4](https://github.com/alandtse/skyrim_vr_address_library/commit/fb22bb4b043cd2d7c0a747e60e8ed95e92aa45ac))
+* add face morph dispatch ids ([#310](https://github.com/alandtse/skyrim_vr_address_library/issues/310)) ([8db2b94](https://github.com/alandtse/skyrim_vr_address_library/commit/8db2b94efd24e6b449fe11995b1d3ace54f8aefc))
+* add geometry allocator ids ([#313](https://github.com/alandtse/skyrim_vr_address_library/issues/313)) ([410e620](https://github.com/alandtse/skyrim_vr_address_library/commit/410e6206eac5cd4dbb878874678ae33af88b0f62))
+* add head part cache ids ([#308](https://github.com/alandtse/skyrim_vr_address_library/issues/308)) ([2c74c5f](https://github.com/alandtse/skyrim_vr_address_library/commit/2c74c5ffb636d1b81d006294d8481c167ab0186d))
+* add inventory model update ids ([#312](https://github.com/alandtse/skyrim_vr_address_library/issues/312)) ([1c4fcf5](https://github.com/alandtse/skyrim_vr_address_library/commit/1c4fcf5da9e8b2faa84d706ba4c9772bfc6dc48b))
+* add MagicTarget IsInvulnerable ids ([#326](https://github.com/alandtse/skyrim_vr_address_library/issues/326)) ([60e5edc](https://github.com/alandtse/skyrim_vr_address_library/commit/60e5edcaf54dc87d916ead5c2c3b484521806ba4))
+* add RaceMenu and GFx dispatch ids ([#311](https://github.com/alandtse/skyrim_vr_address_library/issues/311)) ([6e2adcf](https://github.com/alandtse/skyrim_vr_address_library/commit/6e2adcf8fab0e8ca0f721392725bd84571a7fa8b))
+* name RaceMenu and dynamic geometry ids ([#327](https://github.com/alandtse/skyrim_vr_address_library/issues/327)) ([a6742f0](https://github.com/alandtse/skyrim_vr_address_library/commit/a6742f02c4c39809e7177bddcd01312b731ee7a5))
+
 # [0.293.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.292.0...v0.293.0) (2026-11-02)
 
 
