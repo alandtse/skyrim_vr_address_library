@@ -4668,6 +4668,7 @@ sseid,aeid,confidence,name
 36604,37612,3,RE::Actor::SetLifeState
 36631,37639,3,RE::Actor::Decapitate
 36678,37686,3,RE::Actor::AddToFaction
+36715,37725,3,bool MagicTarget::IsInvulnerable()
 36723,37735,3,RE::Actor::KillImmediate
 36775,37791,3,RE::Actor::InitItemImpl
 36796,37812,1,Character::sub_*
@@ -5214,6 +5215,7 @@ sseid,aeid,confidence,name
 39340,40411,1,PlayerCharacter::ctor_140699040
 39365,40437,3,RE::PlayerCharacter::CenterOnCell_Impl
 39425,40501,3,papyrus_extender::papyrus::detail::get_god_mode_impl
+39428,40504,3,bool PlayerCharacter::IsInvulnerable()
 39507,40586,3,RE::PlayerCharacter::SetAIDriven
 39568,40654,3,RE::PlayerCharacter::AttemptPickpocket
 40056,41067,3,RE::LocationDiscovery::GetEventSource

@@ -1154,6 +1154,7 @@
 36695,0x1405f9f20,0x140602690,4,inline void Actor::RemoveBasePerks(Actor* a_actor)
 36700,0x1405fa1b0,0x140602920,3,"void Character::PerformStagger_1405FA1B0 (Actor * a_target, float a_staggerMult, Actor * a_aggressor)"
 36707,0x1405fa750,0x140602f40,4,Actor::SetPlayerTeammate
+36715,0x1405fa910,0x140603100,3,bool MagicTarget::IsInvulnerable()
 36720,0x1405fb450,0x140603c40,3,po3tweaks::IsFurnitureAnimeTypeFix::GetEquippedFurnitureType
 36723,0x1405fb640,0x140603e30,3,void Actor::KillImmediate()
 36730,0x1405fc040,0x140604830,4,"void Actor::PlayASound(BSSoundHandle& a_result, FormID a_formID, bool a_arg3, std::uint32_t a_flags)"
@@ -1364,6 +1365,7 @@
 39415,0x1406a25a0,0x1406c3110,3,PlayerCharacter::InitActorValues
 39424,0x1406a2fb0,0x1406c3890,4,void PlayerCharacter::SetGodMode(bool a_enable)
 39425,0x1406a2fc0,0x1406c38a0,3,papyrus_extender::papyrus::detail::get_god_mode_impl
+39428,0x1406a2ff0,0x1406c38f0,3,bool PlayerCharacter::IsInvulnerable()
 39441,0x1406a4540,0x1406c4d30,4,"void PlayerCharacter::BuildPlayerMarkerPath(TESObjectREFR* a_target, void* a_outPath, std::uint64_t a_arg3)"
 39444,0x1406a4a00,0x1406c51f0,3,PlayerCharacter::HasLOS_impl
 39445,0x1406a4d90,0x1406c55c0,3,"void PlayerCharacter::UpdateAnimation(PlayerCharacter* a_this, float a_delta)"
