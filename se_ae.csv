@@ -1610,6 +1610,7 @@ sseid,aeid,confidence,name
 11446,11592,1,
 11448,11594,1,
 11449,11595,1,
+11477,11623,3,void ExtraDataList::SetSoundHandle(const BSSoundHandle* a_handle)
 11491,11637,1,
 11492,11638,1,
 11493,11639,1,
@@ -1643,6 +1644,7 @@ sseid,aeid,confidence,name
 11560,11706,1,ExtraDataList::GetCharge_*
 11561,11707,1,ExtraDataList::GetSoulLevel_*
 11562,11708,1,
+11565,11711,3,void ExtraDataList::GetSoundHandle(BSSoundHandle* a_out)
 11576,11722,1,
 11578,11724,1,
 11580,11726,1,
@@ -1683,6 +1685,7 @@ sseid,aeid,confidence,name
 11663,11809,1,
 11665,11811,1,
 11666,11812,1,
+11696,11842,3,void* ExtraDataList::GetOcclusionShape()
 11718,11864,3,BSExtraDataList::GetRoomLightingTemplate
 11719,11865,3,BSExtraDataList::GetRoomImageSpace
 11813,11953,1,
@@ -1792,6 +1795,7 @@ sseid,aeid,confidence,name
 12170,12311,1,MagicTarget::dtor_*
 12171,12312,1,NonActorMagicTarget::dtor_*
 12194,12327,1,BSTArrayAllocatorFunctor_BSTSmallArrayHeapAllocator_16__::Free_*
+12203,12331,3,"bool BSPointerHandleManagerInterface::GetSmartPointer(RefHandle* a_handle, NiPointer<TESObjectREFR>* a_refrOut)"
 12204,12332,3,RE::LookupReferenceByHandle
 12220,12345,1,
 12221,12346,1,
@@ -2032,6 +2036,7 @@ sseid,aeid,confidence,name
 13222,13372,1,
 13224,13375,3,po3tweaks::ToggleCollisionFix::ToggleCollision
 13226,13377,1,
+13227,13378,3,void TES::PreloadInterior(TESObjectCELL* a_cell)
 13230,13381,4,"void RE::TES::FinishLoad()"
 13237,13388,1,TES::sub_*
 13238,13389,1,TES::sub_*
@@ -2235,6 +2240,7 @@ sseid,aeid,confidence,name
 14182,14291,1,
 14190,14299,3,RE::ScriptEventSourceHolder::SendOpenCloseEvent
 14254,14371,3,RE::TESActorBaseData::HasLeveledTemplate
+14384,14537,3,bool TESForm::IsInventoryObjectType(std::uint8_t a_formType)
 14390,14543,1,TESContainer::sub_*
 14391,14544,1,
 14392,14545,1,TESContainer::dtor_*
@@ -2276,6 +2282,7 @@ sseid,aeid,confidence,name
 14503,14661,1,TESForm::CreateGroupData_*
 14504,14662,1,TESForm::IsParentForm_*
 14505,14663,1,TESForm::IsParentFormTree_*
+14506,14664,3,"void TESForm::SetInGameFormFlag(std::uint16_t a_flag, bool a_set)"
 14508,14666,1,TESForm::SetFormID_*
 14509,14667,3,RE::TESForm::AddCompileIndex
 14510,14668,1,
@@ -2821,6 +2828,7 @@ sseid,aeid,confidence,name
 18585,19054,1,
 18586,19055,1,TESObjectCELL::sub_*
 18588,19057,1,TESObjectCELL::sub_*
+18590,19059,3,void TESObjectCELL::SetReferenceLightsAttached(bool a_attach)
 18591,19060,1,
 18596,19065,1,TESObjectCELL::sub_*
 18597,19066,1,TESObjectCELL::sub_*
@@ -2842,6 +2850,8 @@ sseid,aeid,confidence,name
 18697,19183,1,TESObjectCELL::sub_*
 18698,19184,1,
 18699,19185,1,
+18701,19187,3,void TESObjectCELL::AttachReferenceStep(std::uint32_t* a_handle)
+18702,19188,3,"void TESObjectCELL::DetachReference(void* a_context, std::uint32_t* a_handle, std::uint8_t* a_outFlag, void* a_refsOut, void* a_doorsOut)"
 18706,19192,1,TESObjectCELL::sub_*
 18707,19193,1,
 18708,19194,1,
@@ -2873,6 +2883,7 @@ sseid,aeid,confidence,name
 18859,19295,1,NiTMapBase_DFALL_NiTMapItem_BSMultiBoundNode__BSPointerHandle_TESObjectREFR_BSUntypedPointerHandle_20_6_____BSMultiBoundNode__BSPointerHandle_TESObjectREFR_BSUntypedPointerHandle_20_6___::dtor_*
 18861,19297,1,NiTMapBase_DFALL_NiTMapItem_BSPointerHandle_TESObjectREFR_BSUntypedPointerHandle_20_6___NiNode____BSPointerHandle_TESObjectREFR_BSUntypedPointerHandle_20_6___NiNode__::dtor_*
 18862,19298,1,NiTMapBase_DFALL_NiTMapItem_BSPointerHandle_TESObjectREFR_BSUntypedPointerHandle_20_6___NiPointer_BSMultiBoundNode____BSPointerHandle_TESObjectREFR_BSUntypedPointerHandle_20_6___NiPointer_BSMultiBoundNode__::dtor_*
+18947,19362,3,void BSTEventSource<TESCellAttachDetachEvent>::SendEvent(const TESCellAttachDetachEvent* a_event)
 19021,19434,1,TESObjectCELL::sub_*
 19023,19436,1,
 19024,19437,1,
@@ -2911,6 +2922,10 @@ sseid,aeid,confidence,name
 19141,19543,1,
 19143,19545,1,TESObjectREFR::GetSavedFormType_*
 19201,19627,3,RE::TESObjectREFR::HasQuestObject
+19206,19632,3,bool NiNode::AttachAddonNode()
+19207,19633,3,bool NiNode::DetachFemaleAddonNode()
+19209,19635,3,bool NiNode::ActivateAddonNode()
+19212,19638,3,bool NiNode::HasAddonNodes()
 19238,19664,3,RE::TESObjectREFR::GetScale_14028CC60
 19254,19680,3,TESObjectREFR::ClearLight
 19277,19703,3,RE::TESObjectREFR::GetWeightInContainer
@@ -2956,6 +2971,12 @@ sseid,aeid,confidence,name
 19390,19817,1,TESObjectREFR::GetSaveParentCell_*
 19392,19819,1,
 19400,19827,3,RE::TESObjectREFR::IsCrimeToActivate
+19401,19828,3,void TESObjectREFR::SetLoopingSoundPlaying(bool a_play)
+19402,19829,3,bool TESObjectREFR::CanPlayLoopingSound()
+19403,19830,3,bool TESObjectREFR::IsEnabledAndNotOpenDoor()
+19405,19832,3,"void TESObjectREFR::UpdateAddonNodeSounds(NiAVObject* a_node, bool a_stop)"
+19409,19837,3,void TESObjectREFR::AddToWaterSystem()
+19410,19838,3,void TESObjectREFR::RemoveFromWaterSystem()
 19446,19872,3,RE::TESObjectREFR::InstantiateHitShader
 19457,19457,3,FUN_14029d510
 19503,19930,3,BGSWaterCollisionManager::BGSWaterUpdateI::`scalar_deleting_destructor'
@@ -2963,6 +2984,7 @@ sseid,aeid,confidence,name
 19528,19954,3,BGSWaterCollisionManager::bhkWaterfall::dtor
 19617,20019,3,BGSWaterCollisionManager::bhkWaterfall::GetTransform
 19805,20210,3,RE::TESObjectREFR::IsAnOwner
+19811,20216,3,void* TESObjectREFR::GetTeleportData()
 19857,20264,3,RE::TESObjectREFR::InitChildActivates
 20095,20543,3,RE::TESWorldSpace::GetSkyCell
 20110,20559,3,TESWorldSpace::GetOffsetData
@@ -7251,6 +7273,7 @@ sseid,aeid,confidence,name
 63609,62708,3,RE::BShkbAnimationGraph::SetGraphVariableBool
 66365,67626,3,RE::BSSoundHandle::SetVolume
 66366,67627,3,RE::BSSoundHandle::SetFrequency
+66382,67643,3,bool BSSoundHandle::Release()
 66385,67646,3,RE::BSSoundHandle::FadeOutAndRelease
 66403,67665,3,RE::BSAudioManager::BuildSoundDataFromEditorID
 66841,68088,3,RE::MemoryManager::GetThreadScrapHeap

@@ -41,13 +41,16 @@
 11471,0x14010e570,0x14011eb50,4,"void SetCount_14010E570 (BSExtraDataList * param_1, ushort a_count)"
 11473,0x14010e800,0x14011ede0,4,ExtraDataList::SetCharge
 11474,0x14010e960,0x14011ef40,3,RE::BSExtraDataList::SetSoul
+11477,0x14010ed20,0x14011f300,3,void ExtraDataList::SetSoundHandle(const BSSoundHandle* a_handle)
 11483,0x14010f5c0,0x14011fba0,3,RE::ExtraDataList::SetInventoryChanges
 11530,0x140112700,0x140122ce0,3,void ExtraDataList::SetHeadingTargetRefHandle(ObjectRefHandle& a_handle)
+11565,0x140113ac0,0x1401240a0,3,void ExtraDataList::GetSoundHandle(BSSoundHandle* a_out)
 11633,0x1401172f0,0x1401278d0,3,"void ExtraDataList::SetLinkedRef(TESObjectREFR* a_targetRef, BGSKeyword* a_keyword)"
 11647,0x1401185c0,0x140128ba0,3,"void ExtraDataList::SetActivateParent(TESObjectREFR* a_parentRef, float a_delay)"
 11651,0x140118a30,0x140129010,4,void ExtraDataList::AddActivateRefChild(TESObjectREFR* a_childRef)
 11660,0x140119450,0x140129a30,4,ExtraDataList::SetLevelMod
 11676,0x14011a060,0x14012a640,4,ExtraDataList::SetPoison
+11696,0x14011b2b0,0x14012b890,3,void* ExtraDataList::GetOcclusionShape()
 11718,0x14011c990,0x14012cf70,3,BGSLightingTemplate* BSExtraDataList::GetRoomLightingTemplate()
 11719,0x14011ca00,0x14012cfe0,3,TESImageSpace* BSExtraDataList::GetRoomImageSpace()
 11851,0x140123220,0x140133800,3,"void ExtraDataList::SetStartingPosition(TESObjectREFR* a_refr, const NiPoint3& a_position, const NiPoint3& a_rotation, BGSLocation* a_location)"
@@ -65,6 +68,7 @@
 12006,0x14012e7e0,0x14013eee0,4,ExtraFactionChanges* ExtraFactionChanges::ExtraFactionChanges()
 12176,0x140131990,0x140142140,3,RE::ExtraDataList::Add
 12193,0x1401320f0,0x1401428a0,3,RE::CreateRefHandle
+12203,0x1401328a0,0x140143050,3,"bool BSPointerHandleManagerInterface::GetSmartPointer(RefHandle* a_handle, NiPointer<TESObjectREFR>* a_refrOut)"
 12204,0x1401329d0,0x140143180,3,RE::LookupReferenceByHandle
 12210,0x140132bd0,0x140143380,4,DWORD Lock1_140132BD0 (Mutex * a_this)
 12215,0x140132d60,0x140143510,3,BSFixedString** GetStaticEmptyBSFixedString()
@@ -192,6 +196,7 @@
 14262,0x14018c750,0x14019c480,4,std::uint16_t TESActorBaseData::GetLevel()
 14272,0x14018cb00,0x14019c830,4,"void TESActorBaseData::SetFactionRank(TESFaction* a_faction, std::int8_t a_rank)"
 14383,0x14018fc40,0x14019f970,4,TESContainer::GetItemCount
+14384,0x14018fd20,0x14019fa50,3,bool TESForm::IsInventoryObjectType(std::uint8_t a_formType)
 14390,0x140190070,0x14019fda0,3,void TESContainer::CollectUniqueInventoryObjects(BSScrapArray<ContainerObject*>& a_objects) const
 14399,0x140190480,0x1401a01b0,3,RE::TESDescription::GetDescription
 14411,0x140190d50,0x1401a0a80,4,RE::EnchantmentItem* RE::TESForm::GetEnchantment(RE::ExtraDataList* extraDataList)
@@ -202,6 +207,7 @@
 14471,0x1401947f0,0x1401a4520,4,"void TESForm::sub_1401947F0 (TESForm * a_this, bool param_2)"
 14482,0x140194c20,0x1401a4950,4,void TESForm::SetPlayerKnows(bool a_known)
 14485,0x140194d20,0x1401a4a50,4,void TESForm::MakeTemporary_140194D20 (TESForm * a_this)
+14506,0x1401955a0,0x1401a52d0,3,"void TESForm::SetInGameFormFlag(std::uint16_t a_flag, bool a_set)"
 14508,0x140195600,0x1401a5330,4,"void TESForm::SetFormId_140195600(TESForm *a_this,uint a_formID, bool param_3)"
 14509,0x1401957e0,0x1401a5510,2,"void TESForm::AddCompileIndex(FormID& a_id, TESFile* a_file)"
 14511,0x1401958f0,0x1401a5620,4,void TESForm::InitializeFormDataStructures()
@@ -384,6 +390,7 @@
 18543,0x140265990,0x140276f60,3,"bool TESObjectCELL::GetWaterHeight(const NiPoint3& a_pos, float& a_waterHeight)"
 18548,0x140265dd0,0x1402773a0,3,ImageSpaceBaseData* TESObjectCELL::GetTESImageSpace()
 18568,0x1402665a0,0x140277b70,3,void TESObjectCELL::RemoveReference(TESObjectREFR* a_ref)
+18590,0x1402678c0,0x140278e90,3,void TESObjectCELL::SetReferenceLightsAttached(bool a_attach)
 18594,0x140267c80,0x140279250,3,void TESObjectCELL::sub_140267C80(bool a_flag)
 18606,0x140268ef0,0x14027a4c0,4,TESObjectCELL::GetCOCPlacementInfo
 18631,0x14026a3e0,0x14027b9b0,3,bool TESFile::SeekLandscapeForCurrentCell(TESFile* a_file)
@@ -400,9 +407,12 @@
 18685,0x14026fd10,0x1402812f0,3,BSPortalGraph* TESObjectCELL::GetPortalGraph()
 18694,0x140270140,0x140281720,3,void TESObjectCELL::UpdateGrassFade()
 18695,0x140270340,0x140281950,3,void TESObjectCELL::ClearGrassFade()
+18701,0x1402706e0,0x140281cf0,3,void TESObjectCELL::AttachReferenceStep(std::uint32_t* a_handle)
+18702,0x140270b10,0x140282120,3,"void TESObjectCELL::DetachReference(void* a_context, std::uint32_t* a_handle, std::uint8_t* a_outFlag, void* a_refsOut, void* a_doorsOut)"
 18711,0x140271be0,0x140283200,3,TESObjectCELL::sub_140271BE0
 18755,0x140273ED0,0x1402854C0,4,"void CallsMapMarkerData (int64 a1, int64 **a2)"
 18843,0x140278920,0x140289f20,4,TESObjectREFR::HandleReferenceReset
+18947,0x14027b190,0x14028c790,3,void BSTEventSource<TESCellAttachDetachEvent>::SendEvent(const TESCellAttachDetachEvent* a_event)
 18949,0x14027b6d0,0x14028ccd0,4,BSTEventSource::SendEvent
 19002,0x14027ddc0,0x14028f390,3,void TESObjectCELL::AttachReference3D(TESObjectREFR* a_ref)
 19024,0x140280160,0x140291770,3,"BSMultiBoundNode* TESObjectCELL::sub_140280160(const ObjectRefHandle& a_handle, bool a_flag)"
@@ -413,6 +423,10 @@
 19133,0x140287d30,0x140299460,4,"void TESObjectREFR::ReadFromSaveGame (TESObjectREFR * a_this, BGSLoadFormBuffer * a_buffer)"
 19142,0x1402896f0,0x14029ae20,4,"ObjectRefHandle TESObjectREFR::CreateReference(ObjectRefHandle& a_handleOut, FormType a_formType, bool a_addActorToProcessList)"
 19201,0x14028b940,0x14029d070,3,bool TESObjectREFR::HasQuestObject()
+19206,0x14028bad0,0x14029d200,3,bool NiNode::AttachAddonNode()
+19207,0x14028bce0,0x14029d410,3,bool NiNode::DetachFemaleAddonNode()
+19209,0x14028beb0,0x14029d5e0,3,bool NiNode::ActivateAddonNode()
+19212,0x14028c120,0x14029d850,3,bool NiNode::HasAddonNodes()
 19220,0x14028c440,0x14029db70,3,RE::TESObjectREFR::HasEffectKeyword?
 19238,0x14028cc60,0x14029e390,4,float TESObjectREFR::GetScale()
 19239,0x14028ccb0,0x14029e3e0,3,TESObjectREFR::SetScale()
@@ -456,6 +470,12 @@
 19390,0x140299790,0x1402aae90,3,TESObjectCELL* TESObjectREFR::GetSaveParentCell() const
 19396,0x140299a80,0x1402ab180,4,"float TESObjectREFR::GetDistance(TESObjectREFR* a_other, bool a_disabledRefs, bool a_ignoreWorldspace)"
 19400,0x14029a330,0x1402aba40,3,bool TESObjectREFR::IsCrimeToActivate()
+19401,0x14029a550,0x1402abc60,3,void TESObjectREFR::SetLoopingSoundPlaying(bool a_play)
+19402,0x14029aa70,0x1402ac180,3,bool TESObjectREFR::CanPlayLoopingSound()
+19403,0x14029aad0,0x1402ac1e0,3,bool TESObjectREFR::IsEnabledAndNotOpenDoor()
+19405,0x14029ab70,0x1402ac280,3,"void TESObjectREFR::UpdateAddonNodeSounds(NiAVObject* a_node, bool a_stop)"
+19409,0x14029b010,0x1402ac720,3,void TESObjectREFR::AddToWaterSystem()
+19410,0x14029b120,0x1402ac830,3,void TESObjectREFR::RemoveFromWaterSystem()
 19418,0x14029b980,0x1402ad090,4,TESObjectREFR::GetHandle
 19446,0x14029cb80,0x1402ae290,3,"ShaderReferenceEffect* TESObjectREFR::InstantiateHitShader(TESEffectShader* a_shader, float a_dur, TESObjectREFR* a_facingRef, bool a_faceTarget, bool a_attachToCamera, NiAVObject* a_attachNode, bool a_interfaceEffect)"
 19453,0x14029d2e0,0x1402ae9f0,4,BGSWaterCollisionManager::BGSWaterUpdateI * BGSWaterCollisionManager::BGSWaterUpdateI::ctor (BGSWaterCollisionManager::BGSWaterUpdateI * a_this)
@@ -477,6 +497,7 @@
 19800,0x1402a6d80,0x1402b84f0,4,std::uint16_t TESObjectREFR::GetCalcLevel(bool a_adjustLevel)
 19805,0x1402a6ee0,0x1402b8650,3,"bool TESObjectREFR::IsAnOwner(const Actor* a_testOwner, bool a_useFaction, bool a_requiresOwner)"
 19809,0x1402a7090,0x1402b8800,3,DoorTeleportData* TESObjectREFR::AddTeleport()
+19811,0x1402a71a0,0x1402b8910,3,void* TESObjectREFR::GetTeleportData()
 19816,0x1402a7270,0x1402b89e0,3,REFR_LOCK* TESObjectREFR::AddLock()
 19818,0x1402a74c0,0x1402b8c30,3,RE::TESObjectREFR::GetLock
 19824,0x1402a76f0,0x1402b8e60,4,bool Actor::IsLeveled()
@@ -2116,6 +2137,7 @@
 66369,0x140bed8f0,0x140c287a0,4,std::uint64_t BSSoundHandle::GetDuration std::uint64_t BSSoundHandle::GetDuration
 66370,0x140bed920,0x140c287d0,4,RE::BSSoundHandle::SetPosition
 66375,0x140bedb10,0x140c289c0,4,RE::BSSoundHandle::SetObjectToFollow
+66382,0x140bedd20,0x140c28bd0,3,bool BSSoundHandle::Release()
 66384,0x140bedde0,0x140c28c90,4,"bool BSSoundHandle::FadeInPlay (BSSoundHandle * a_this, uint16_t a_fadeTimeMS)"
 66385,0x140bede30,0x140c28ce0,4,bool BSSoundHandle::FadeOutAndRelease(std::uint16_t a_fadeTimeMS)
 66391,0x140bee580,0x140c29430,4,RE::BSAudioManager::GetSingleton
