@@ -252,8 +252,8 @@
 15513,0x1401c8fc0,0x1401d9720,4,"void BipedAnim::SetLightObject(TESObjectLIGH* a_light, bool a_useActorSlot)"
 15518,0x1401c9840,0x1401d9fb0,3,BIPOBJECT* BipedAnim::GetShieldObject()
 15527,0x1401ca8d0,0x1401db060,3,"void BipedAnim::AddAddonNodes(RE::NiAVObject* a_clonedNode, RE::NiAVObject* a_node, std::int32_t a_slot, RE::TESObjectREFR* a_actor, RE::BSTSmartPointer<RE::BipedAnim>& a_bipedAnim)"
-15534,0x1401cac70,0x1401db680,3,
-15535,0x1401cafb0,0x1401db9e0,3,FEC::ProcessGeometry::processAttachedGeometry
+15534,0x1401cac70,0x1401db680,3,BipedAnim::AttachObjectNode
+15535,0x1401cafb0,0x1401db9e0,3,BipedAnim::AttachNodeToRoot
 15547,0x1401cc7c0,0x1401dd210,3,void NiAVObject::RemoveDecals()
 15569,0x1401cd350,0x1401ddde0,3,RE::NiNode::AttachWeapon
 15576,0x1401cdd40,0x1401de820,2,"void BSDismemberSkinInstance::UpdateDismemberPartion(std::uint16_t a_slot, bool a_enable)"
@@ -554,6 +554,14 @@
 24069,0x140358300,0x140367bc0,4,"bool TESIdleForm::CheckConditions(Actor* a_actor, TESObjectREFR* a_target, bool a_checkParentIdle) bool TESIdleForm::CheckConditions(Actor* a_actor, TESObjectREFR* a_target, bool a_checkParentIdle)"
 24159,0x14035C890,0x14036C150,3,"bool TESNPC__ReadFromFileStream(RE::TESNPC *a_npc, RE::TESFile *a_file)"
 24180,0x14035f6c0,0x14036ef80,3,Actor* TESNPC::GetUniqueActor()
+24183,0x14035f800,0x14036f0c0,3,"void TESNPC::SetFaceMorph(std::int32_t a_index, float a_value)"
+24184,0x14035f8e0,0x14036f1a0,3,float TESNPC::GetFaceMorph(std::int32_t a_index)
+24185,0x14035f910,0x14036f1d0,3,"void TESNPC::SetFacePart(std::int32_t a_index, std::int32_t a_value)"
+24186,0x14035f9e0,0x14036f2a0,3,std::int32_t TESNPC::GetFacePart(std::int32_t a_index)
+24187,0x14035fa40,0x14036f300,3,"const char* GetFaceMorphName(std::int32_t a_index, float a_value)"
+24189,0x14035fa90,0x14036f350,3,"void FormatFacePartName(char* a_buffer, std::uint64_t a_size, std::int32_t a_part, std::uint32_t a_value, bool a_useDefault)"
+24198,0x14035fce0,0x14036f5a0,3,void TESNPC::SetHairColor(BGSColorForm* a_hairColor)
+24199,0x14035fd80,0x14036f640,3,void TESNPC::SetFaceTexture(BGSTextureSet* a_textureSet)
 24202,0x1403601f0,0x14036fab0,4,BGSHeadPart* TESNPC::GetHeadPartByType(BGSHeadPart::HeadPartType a_type)
 24206,0x140360480,0x14036fd80,3,RE::TESNPC::SetSkinFromTint
 24207,0x1403606d0,0x14036ffd0,3,RE::TESNPC::UpdateNeck
@@ -1387,7 +1395,7 @@
 39574,0x1406b3110,0x1406d6480,4,"void PlayerCharacter::SetEscaping(bool a_flag, bool a_escaped)"
 39577,0x1406b34e0,0x1406d6850,4,RE::PlayerCharacter::WeaponSwingCallBack_1406B34E0
 39584,0x1406b3a50,0x1406d6dc0,3,RE::PlayerCharacter::IsAllowedToTakeItemWithValue
-39612,0x1406b52a0,0x1406d8580,3,RE::PlayerCharacter::GetTintMask
+39612,0x1406b52a0,0x1406d8580,3,"TintMask* PlayerCharacter::GetTintMask(std::int32_t a_type, std::int32_t a_index)"
 39614,0x1406b5450,0x1406d8730,3,RE::PlayerCharacter::GetNumTints
 39630,0x1406b5dc0,0x1406d90e0,3,bool TESObjectREFR::IsInMountBlockedWorldspace()
 39657,0x1406b6eb0,0x1406da3d0,3,"void PlayerCharacter::MoveToPositionInCell(float* a_position, float* a_rotation, TESObjectCELL* a_cell, int a_arg4)"
@@ -1804,8 +1812,8 @@
 50886,0x140887d10,0x1408b5240,3,void Inventory3DManager::UnloadInventoryItem()
 50887,0x140887df0,0x1408b5360,3,bool Inventory3DManager::ToggleItemZoom
 50896,0x140888290,0x1408b5b40,3,"void Inventory3DManager::InitializeDisplayObject(TESForm* a_form1, TESForm* a_form2, NiNode* a_node)"
-50899,0x140888730,0x1408b60a0,2,
-50900,0x1408887e0,0x1408b6220,2,
+50899,0x140888730,0x1408b60a0,3,
+50900,0x1408887e0,0x1408b6220,3,
 50948,0x14088b9b0,0x1408b9210,3,InventoryEntryData::GetExtraListForRemoval
 50973,0x14088e050,0x1408BB820,3,DescriptionFramework::
 50978,0x14088e280,0x1408bba50,3,EssentialFavorites::Dropped::IsQuestObject
@@ -1851,10 +1859,28 @@
 51449,0x1408ad6f0,0x1408da710,2,void MistMenu::PostDisplay(MistMenu* a_this)
 51454,0x1408ad9f0,0x1408dad50,3,TESModelTextureSwap::sub_*
 51455,0x1408adc70,0x1408db0d0,3,void ShowMistMenu(bool a_flag)
-51494,0x1408b1bc0,0x1408df4e0,3,
+51491,0x1408b1800,0x1408df120,3,void RaceSexMenu::CommitWeightSliderChange(const FxDelegateArgs& a_params)
+51492,0x1408b1aa0,0x1408df3c0,3,void RaceSexMenu::CommitFaceDetailsSliderChange(const FxDelegateArgs& a_params)
+51493,0x1408b1b30,0x1408df450,3,void RaceSexMenu::CommitMorphSliderChange(const FxDelegateArgs& a_params)
+51494,0x1408b1bc0,0x1408df4e0,3,void RaceSexMenu::CommitDoubleMorphSliderChange(const FxDelegateArgs& a_params)
+51495,0x1408b1c50,0x1408df570,3,void RaceSexMenu::CommitHeadPartSliderChange(const FxDelegateArgs& a_params)
+51496,0x1408b1de0,0x1408df650,3,void RaceSexMenu::CommitPresetSliderChange(const FxDelegateArgs& a_params)
+51498,0x1408b21d0,0x1408dfa40,3,void RaceSexMenu::CommitHairColorPresetSliderChange(const FxDelegateArgs& a_params)
+51499,0x1408b2270,0x1408dfae0,3,void RaceSexMenu::CommitTintingMaskSliderChange(const FxDelegateArgs& a_params)
+51500,0x1408b2390,0x1408dfc00,3,void RaceSexMenu::CommitMaskSliderChange(const FxDelegateArgs& a_params)
+51501,0x1408b2400,0x1408dfc70,3,void RaceSexMenu::CommitMaskColorSliderChange(const FxDelegateArgs& a_params)
 51507,0x1408b2be0,0x1408e0450,3,void PrecacheCharGen_1409796E0_0_1408B2BE0 (undefined8 * a_this)
 51509,0x1408b2d60,0x1408e0730,4,void PrecacheCharGenClear_1409796F0_0_1408B2D60 (undefined8 * a_this)
+51521,0x1408b40c0,0x1408e1c40,3,void RaceSexMenu::RefreshFaceTintTextures()
+51522,0x1408b4270,0x1408e1df0,3,void RaceSexMenu::ApplyFaceTextureSet(BGSTextureSet* a_textureSet)
+51524,0x1408b4580,0x1408e2110,3,"void RaceSexMenu::ApplyTintingMaskSliderValue(std::uint32_t a_value, std::uint32_t a_sliderIndex)"
+51525,0x1408b46b0,0x1408e2240,3,"void RaceSexMenu::ApplyMorphSliderValue(float a_value, std::uint32_t a_sliderIndex)"
 51526,0x1408b4820,0x1408e23b0,3,"void RaceSexMenu::DoubleMorphCallback(float a_newValue, uint32_t a_sliderId)"
+51527,0x1408b4a70,0x1408e2600,3,"void RaceSexMenu::ApplyPresetSliderValue(std::uint32_t a_value, std::uint32_t a_sliderIndex)"
+51528,0x1408b4cd0,0x1408e2860,3,"void RaceSexMenu::ApplyHairColorPresetSliderValue(std::uint32_t a_value, std::uint32_t a_sliderIndex)"
+51529,0x1408b4e20,0x1408e29b0,3,"void RaceSexMenu::ApplyMaskSliderValue(float a_value, std::uint32_t a_sliderIndex)"
+51530,0x1408b5010,0x1408e2ba0,3,"void RaceSexMenu::ApplyMaskColorSliderValue(std::uint32_t a_value, std::uint32_t a_sliderIndex)"
+51531,0x1408b5160,0x1408e2cf0,3,"void RaceSexMenu::ApplyFaceDetailsSliderValue(float a_value, std::uint32_t a_sliderIndex)"
 51532,0x1408b5230,0x1408e2dc0,3,
 51534,0x1408b5e20,0x1408e39b0,3,"void RaceSexMenu::LoadSliders(TESActorBase* a_actorOverride, uint8_t a_unk2)"
 51540,0x1408ba590,0x1408e7d70,4,"void ChangeName_1408BA590 (RaceSexMenu * param_1, char * param_2)"
@@ -2257,14 +2283,14 @@
 69535,0x140c712c0,0x140cb75c0,3,void BSGeometry::~BSGeometry()
 69541,0x140c715c0,0x140cb78c0,3,void BSGeometry::UpdateWorldBound()
 69554,0x140c71d40,0x140cb8000,3,"void TransformBoundToWorld(NiBound* a_out, NiBound* a_model, NiTransform* a_world)"
-69556,0x140c71f00,0x140cb82b0,3,
-69557,0x140c71fe0,0x140cb8390,3,
+69556,0x140c71f00,0x140cb82b0,3,"void BSDynamicTriShape::CopyMembers(BSDynamicTriShape* a_target, NiCloningProcess* a_cloning)"
+69557,0x140c71fe0,0x140cb8390,3,void BSDynamicTriShape::LoadBinary(NiStream* a_stream)
 69562,0x140c72180,0x140cb8530,3,BSDynamicTriShape* CreateBSDynamicTriShape()
-69563,0x140c72250,0x140cb8600,3,
+69563,0x140c72250,0x140cb8600,3,"BSDynamicTriShape* BSDynamicTriShape::ctor(std::uint64_t a_vertexDesc, std::uint16_t a_vertexCount, std::uint16_t a_triangleCount, std::uint32_t a_dataSize)"
 69564,0x140c72300,0x140cb86b0,3,RE::BSDynamicTriShape::BSDynamicTriShape
-69565,0x140c72350,0x140cb8700,3,
-69569,0x140c72480,0x140cb8830,3,
-69573,0x140c72c60,0x140cb9010,3,
+69565,0x140c72350,0x140cb8700,3,void BSDynamicTriShape::~BSDynamicTriShape()
+69569,0x140c72480,0x140cb8830,3,void BSDynamicTriShape::ResizeDynamicData(std::uint32_t a_dataSize)
+69573,0x140c72c60,0x140cb9010,3,BSDynamicTriShape* BSDynamicTriShape::scalar_deleting_destructor(std::uint32_t a_flags)
 69583,0x140c731f0,0x140cb95a0,4,NiPointLight* NiPointLight::Ctor
 69636,0x140c76060,0x140cbc490,3,RE::BSResourceNiBinaryStream::Ctor
 69637,0x140c76170,0x140cbc5a0,4,"BSResourceNiBinaryStream * ctor_140C76170 (BSResourceNiBinaryStream * a_this, BSResource__Stream * a_stream, bool a_fullReadHint, bool a_useOwnBuffer)"
