@@ -2683,6 +2683,13 @@ sseid,aeid,confidence,name
 17800,18212,1,
 17803,18215,1,
 17805,18217,1,
+17912,18313,3,bool LoadedReferenceMap::Insert(TESObjectREFR* a_ref)
+17913,18314,3,bool LoadedReferenceMap::Remove(TESObjectREFR* a_ref)
+17919,18320,3,void LoadedReferenceCollection::Create()
+17920,18321,3,void LoadedReferenceCollection::Destroy()
+17921,18322,3,void LoadedReferenceCollection::AddReference(TESObjectREFR* a_ref)
+17922,18323,3,void LoadedReferenceCollection::RemoveReference(TESObjectREFR* a_ref)
+17923,18324,3,LoadedReferenceMap* LoadedReferenceCollection::GetListForType(FormType a_formType)
 17932,18336,1,
 17941,18338,1,
 17942,18339,1,
@@ -19444,6 +19451,7 @@ sseid,aeid,confidence,name
 514478,400622,3,RE::BSPointerHandleManager::GetHandleEntries
 514512,400672,3,RE::ScreenSplatter::Singleton
 514725,400883,3,RE::VATS::GetSingleton
+514727,400885,3,LoadedReferenceCollection* GetSingleton()
 514738,400896,3,RE::BSMusicManager::GetSingleton
 514959,401099,3,RE::MenuTopicManager::GetSingleton
 515123,401262,3,RE::BGSImpactManager::Singleton

@@ -340,6 +340,13 @@
 17539,0x14022e8d0,0x14023fc40,4,"void TESObjectDOOR::LinkRandomTeleportDoors (TESObjectREFR * a_door, TESObjectREFR * a_linkedDoor)"
 17689,0x140235070,0x1402463e0,4,"NiAVObject * TESObjectWEAP::GetFireNode (TESObjectWEAP * a_this, NiAVObject * a_root)"
 17693,0x140235240,0x1402465b0,3,RE::TESObjectWEAP::Fire_140235240
+17912,0x14023eca0,0x140250370,3,bool LoadedReferenceMap::Insert(TESObjectREFR* a_ref)
+17913,0x14023eed0,0x1402505a0,3,bool LoadedReferenceMap::Remove(TESObjectREFR* a_ref)
+17919,0x14023f3c0,0x140250a90,3,void LoadedReferenceCollection::Create()
+17920,0x14023f460,0x140250b30,3,void LoadedReferenceCollection::Destroy()
+17921,0x14023f4a0,0x140250b70,3,void LoadedReferenceCollection::AddReference(TESObjectREFR* a_ref)
+17922,0x14023f570,0x140250c40,3,void LoadedReferenceCollection::RemoveReference(TESObjectREFR* a_ref)
+17923,0x14023f600,0x140250cd0,3,LoadedReferenceMap* LoadedReferenceCollection::GetListForType(FormType a_formType)
 17956,0x140242c50,0x140254320,3,void BGSLocation::IncrementLoadedCount()
 17957,0x140242d80,0x140254450,3,void BGSLocation::DecrementLoadedCount()
 17965,0x140243380,0x140254a50,3,BGSLocation::ClearedCheck
@@ -10687,6 +10694,7 @@
 514705,0x142ec5bd0,0x142f8aaa0,4,RE::ControlMap::Singleton
 514706,0x142ec5bd8,0x142f8aaa8,3,RE::PlayerControls::Singleton
 514725,0x142ec5c60,0x142f8ab30,3,VATS* GetSingleton()
+514727,0x142ec5c70,0x142f8ab40,3,LoadedReferenceCollection* GetSingleton()
 514738,0x142ec5ce0,0x142f8abb0,3,BSMusicManager* GetSingleton()
 514741,0x142ec5cf8,0x142f8abc8,4,RWMutex*
 514783,0x142eff440,0x142fc42f8,4,TESLandTexture* GetDefaultLandTexture()
