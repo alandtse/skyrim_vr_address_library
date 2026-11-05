@@ -1,3 +1,11 @@
+# [0.295.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.294.0...v0.295.0) (2026-11-05)
+
+
+### Features
+
+* add cell reference and collection ids ([#328](https://github.com/alandtse/skyrim_vr_address_library/issues/328)) ([0a983df](https://github.com/alandtse/skyrim_vr_address_library/commit/0a983df14ffa1fff62dcc5a49f99b1433b18fec5))
+* add float interpolator create ids ([#330](https://github.com/alandtse/skyrim_vr_address_library/issues/330)) ([702e794](https://github.com/alandtse/skyrim_vr_address_library/commit/702e7941fafababa1e4dbde1ab0781529103c52c))
+
 # [0.294.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.293.0...v0.294.0) (2026-11-04)
 
 
