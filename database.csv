@@ -383,7 +383,7 @@
 18540,0x1402657a0,0x140276d70,4,TESRegionList* TESObjectCELL::GetRegionList(bool a_createIfMissing)
 18543,0x140265990,0x140276f60,3,"bool TESObjectCELL::GetWaterHeight(const NiPoint3& a_pos, float& a_waterHeight)"
 18548,0x140265dd0,0x1402773a0,3,ImageSpaceBaseData* TESObjectCELL::GetTESImageSpace()
-18568,0x1402665a0,0x140277b70,3,TESObjectREFR::RemoveReference3D
+18568,0x1402665a0,0x140277b70,3,void TESObjectCELL::RemoveReference(TESObjectREFR* a_ref)
 18594,0x140267c80,0x140279250,3,void TESObjectCELL::sub_140267C80(bool a_flag)
 18606,0x140268ef0,0x14027a4c0,4,TESObjectCELL::GetCOCPlacementInfo
 18631,0x14026a3e0,0x14027b9b0,3,bool TESFile::SeekLandscapeForCurrentCell(TESFile* a_file)
