@@ -2314,6 +2314,11 @@
 70880,0x140cc76e0,0x140d0e230,4,NiControllerSequence::Activate_*
 70882,0x140cc7cb0,0x140d0e800,4,"bool NiControllerSequence::Activate(std::uint8_t a_interpIndex, bool a_maxOffset, float a_seqWeight, float a_easeInTime, NiControllerSequence* a_partnerSequence, bool a_transition)"
 70909,0x140cca2e0,0x140d10e30,4,"bool NiControllerSequence::ResolveTransformInterpolators(NiAVObject* a_root, NiDefaultAVObjectPalette* a_objectPalette, std::uint32_t a_formal)"
+71069,0x140cd0340,0x140d16e90,3,NiFloatData* NiFloatData::Create()
+71071,0x140cd0460,0x140d16fb0,3,"void NiFloatData::ReplaceAnim(NiFloatKey* a_keys, std::uint32_t a_numKeys, KeyType a_type)"
+71088,0x140cd0bf0,0x140d17740,3,NiFloatInterpolator* NiFloatInterpolator::Create()
+72049,0x140ceb380,0x140d31ed0,3,NiLightDimmerController* NiLightDimmerController::Create()
+72540,0x140cface0,0x140d41830,3,NiLinFloatKey* NiLinFloatKey::CreateArray(std::uint32_t a_count)
 72790,0x140d02aa0,0x140d495f0,3,"void NiParticleSystem::CopyMembersFrom(NiParticleSystem* a_src, NiParticleSystem* a_dst, NiCloningProcess& a_cloning)"
 72799,0x140d03330,0x140d49ec0,4,void NiParticleSystem::AddModifier(NiPSysModifier* a_modifier)
 73882,0x140d28c40,0x140d70310,3,"Setting * SettingT<T1>::SetStringValue_140D28C40 (Setting * a_this, char * a_string)"
