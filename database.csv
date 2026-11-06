@@ -538,6 +538,8 @@
 21187,0x1402DDA40,0x1402EEF50,2,"bool HasKeyword_1402DDA40(TESObjectREFR *a1, int64 a2, int64 a3, double* a4)"
 21211,0x1402deab0,0x1402effc0,3,po3tweaks::IsFurnitureAnimeTypeFix::IsFurnitureAnimType
 21322,0x1402e3820,0x1402f4d30,3,"bool GameFunc__native::IsPlayerInRegion(TESObjectREFR* a_this, TESRegion* a_region, void* unused, double& result)"
+21344,0x1402e4380,0x1402f5880,3,bool Sky::IsRaining()
+21345,0x1402e4400,0x1402f5900,3,bool Sky::IsSnowing()
 21368,0x1402E5170,0x1402F6670,4,"void TESLoadScreen(TESLoadScreen *a1, void *a2)"
 21416,0x1402e75f0,0x1402f8af0,3,RE::Script::CompileAndRun
 21425,0x1402e8400,0x1402f9900,4,RE::Script::ParseParameters
