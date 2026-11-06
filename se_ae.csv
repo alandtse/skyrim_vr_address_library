@@ -7365,6 +7365,7 @@ sseid,aeid,confidence,name
 75028,76790,2,void BSSubIndexTriShape::ClearSegmentActiveFlag(std::uint32_t a_segment)
 75029,76791,2,void BSSubIndexTriShape::RecomputeSegmentData()
 75031,76793,2,BSSubIndexTriShape* BSSubIndexTriShape::ctor()
+75460,77245,3,void Renderer::Begin(std::uint32_t a_windowID)
 75507,77299,3,RE::RendererData::CreateRenderTexture
 76170,77998,3,RE::NiAVObject::SetCollisionLayer
 76171,77999,3,RE::NiAVObject::UpdateRigidBodySettings
