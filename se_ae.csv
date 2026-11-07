@@ -7373,6 +7373,7 @@ sseid,aeid,confidence,name
 76095,77929,3,void bhkWorld::HavokWorldExitWrite()
 76170,77998,3,RE::NiAVObject::SetCollisionLayer
 76171,77999,3,RE::NiAVObject::UpdateRigidBodySettings
+76247,78077,3,bool bhkRigidBody::SetMotionType(std::uint32_t a_motionType)
 76271,78103,3,RE::NiAVObject::SetRigidConstraints
 80087,82411,3,RE::BSScaleformManager::FileExists
 80176,82196,3,GRefCountNTSImpl::GetWeakProxy
