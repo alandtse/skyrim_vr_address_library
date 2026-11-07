@@ -1,3 +1,11 @@
+# [0.296.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.295.0...v0.296.0) (2026-11-07)
+
+
+### Features
+
+* add Havok physics ids ([#332](https://github.com/alandtse/skyrim_vr_address_library/issues/332)) ([7d0843d](https://github.com/alandtse/skyrim_vr_address_library/commit/7d0843d2c672cb966254f441909d058b456153bd))
+* add Sky rain and snow ids ([#331](https://github.com/alandtse/skyrim_vr_address_library/issues/331)) ([5d929fa](https://github.com/alandtse/skyrim_vr_address_library/commit/5d929fa3a2e0b181121458eb7bc262ca9cad45a0))
+
 # [0.295.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.294.0...v0.295.0) (2026-11-05)
 
 
