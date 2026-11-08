@@ -1,3 +1,10 @@
+# [0.298.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.297.0...v0.298.0) (2026-11-08)
+
+
+### Features
+
+* add MagicCaster ProcessQuickRelease id ([#335](https://github.com/alandtse/skyrim_vr_address_library/issues/335)) ([1893666](https://github.com/alandtse/skyrim_vr_address_library/commit/18936668a220ce6d1c2acf61265e001ef575b7fc))
+
 # [0.297.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.296.0...v0.297.0) (2026-11-08)
 
 
