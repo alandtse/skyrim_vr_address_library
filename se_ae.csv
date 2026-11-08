@@ -6723,10 +6723,13 @@ sseid,aeid,confidence,name
 51529,52404,3,"void RaceSexMenu::ApplyMaskSliderValue(float a_value, std::uint32_t a_sliderIndex)"
 51530,52405,3,"void RaceSexMenu::ApplyMaskColorSliderValue(std::uint32_t a_value, std::uint32_t a_sliderIndex)"
 51531,52406,3,"void RaceSexMenu::ApplyFaceDetailsSliderValue(float a_value, std::uint32_t a_sliderIndex)"
+52081,52971,2,LocalMapMenu::UpdateMarkers
+52182,53074,3,TryAddRoutedMarker
 52225,53112,3,MapMenu::SetFreezeFrameBackground
 52226,53113,3,RE::MapMenu::PlaceMarker
 52228,53115,3,MapMenu::UpdateCamera
 52231,53118,3,MapMenu::Close
+52252,53142,3,LoadWorldMapOverlayTextures
 52374,53270,3,QuickLoot::
 52400,53299,3,QuickLoot::
 52653,53506,3,RE::SkyrimScript::HandlePolicy::IsHandleObjectAvailable
