@@ -1,3 +1,10 @@
+# [0.297.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.296.0...v0.297.0) (2026-11-08)
+
+
+### Features
+
+* add PlayerRegionState pointer id ([#334](https://github.com/alandtse/skyrim_vr_address_library/issues/334)) ([8ea0e13](https://github.com/alandtse/skyrim_vr_address_library/commit/8ea0e1376681046d3521d24b09afd073ebf6078f))
+
 # [0.296.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.295.0...v0.296.0) (2026-11-07)
 
 
