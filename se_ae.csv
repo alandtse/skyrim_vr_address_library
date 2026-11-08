@@ -3404,9 +3404,11 @@ sseid,aeid,confidence,name
 24201,24705,1,TESNPC::sub_*
 24203,24707,1,TESNPC::sub_*
 24206,24710,3,RE::TESNPC::SetSkinFromTint
-24209,24713,1,TESNPC::UpdateMorphs_*
+24209,24713,3,TESNPC::UpdateMorphs
+24210,24714,3,TESNPC::UpdateMorph
 24211,24715,3,enhanced_reanimation::TESNPC::Activate
 24212,24716,3,enhanced_reanimation::TESNPC::GetActivateText
+24220,24724,3,TESNPC::UpdateHeadAndHair
 24222,24726,1,TESNPC::sub_*
 24228,24732,1,VampiresCastNoShadow::attach_head
 24229,24733,1,
@@ -4276,6 +4278,7 @@ sseid,aeid,confidence,name
 32719,33481,1,
 32728,33492,1,
 32729,33493,1,
+32867,33632,3,IMenu::PostDisplay
 32954,33740,1,
 32961,33746,1,
 32962,33747,1,
@@ -6652,9 +6655,9 @@ sseid,aeid,confidence,name
 50893,51769,1,Inventory3DManager::ProcessThumbstick_*
 50894,51770,1,Inventory3DManager::ProcessMouseMove_*
 50895,51771,1,Inventory3DManager::sub_*
-50896,51772,1,Inventory3DManager::InitializeDisplayObject_*
+50896,51772,3,Inventory3DManager::InitializeDisplayObject
 50897,51773,1,Inventory3DManager::sub_*
-50899,51775,1,Inventory3DManager::sub_*
+50899,51775,3,Inventory3DManager::sub_*
 50900,51776,2,
 50906,51783,1,
 50907,51785,1,BSResource::IEntryDB::PostFlushNotify::Func0_*
