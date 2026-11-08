@@ -1,3 +1,10 @@
+# [0.299.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.298.0...v0.299.0) (2026-11-08)
+
+
+### Features
+
+* add AE ids for face morph and PostDisplay ([#336](https://github.com/alandtse/skyrim_vr_address_library/issues/336)) ([cb12635](https://github.com/alandtse/skyrim_vr_address_library/commit/cb1263596551debcbdf7a8969a63f35925a0ab58))
+
 # [0.298.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.297.0...v0.298.0) (2026-11-08)
 
 
