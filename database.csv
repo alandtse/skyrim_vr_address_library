@@ -1769,6 +1769,7 @@
 50013,0x1408533b0,0x14087d780,3,BarterMenu::sub_*
 50061,0x140855b60,0x14087ff20,3,EssentialFavorites::Barter::IsQuestObject
 50099,0x140856a50,0x140880e10,3,RE::ItemList::Update
+50105,0x140856e10,0x1408811d0,3,"void ResizeGFxValueArray_140856E10(void* a_array, void* a_alloc, std::uint64_t a_newSize)"
 50118,0x1408575f0,0x1408819c0,3,BookMenu::ProcessMessage
 50122,0x1408582e0,0x140882580,3,"void BookMenu::OpenBookMenu(const BSString& a_description, const ExtraDataList* a_extraList, TESObjectREFR* a_ref, TESObjectBOOK* a_book, const NiPoint3& a_pos, const NiMatrix3& a_rot, float a_scale, bool a_useDefaultPos)"
 50126,0x140858c70,0x140882f80,3,po3tweaks::CantTakeBook::Button::ButtonShowTakeButton
@@ -1843,7 +1844,7 @@
 50886,0x140887d10,0x1408b5240,3,void Inventory3DManager::UnloadInventoryItem()
 50887,0x140887df0,0x1408b5360,3,bool Inventory3DManager::ToggleItemZoom
 50896,0x140888290,0x1408b5b40,3,"void Inventory3DManager::InitializeDisplayObject(TESForm* a_form1, TESForm* a_form2, NiNode* a_node)"
-50899,0x140888730,0x1408b60a0,3,
+50899,0x140888730,0x1408b60a0,3,"void Inventory3DManager::sub_140888730(TESForm* a_form, ExtraDataList* a_extraList)"
 50900,0x1408887e0,0x1408b6220,3,
 50948,0x14088b9b0,0x1408b9210,3,InventoryEntryData::GetExtraListForRemoval
 50973,0x14088e050,0x1408BB820,3,DescriptionFramework::
