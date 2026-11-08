@@ -4381,6 +4381,7 @@ sseid,aeid,confidence,name
 33562,34332,1,GrabActorEffect::Func32_*
 33563,34336,1,GrabActorEffect::Func8_*
 33564,34333,1,GrabActorEffect::Func20_*
+33631,34409,3,"bool MagicCaster::ProcessQuickRelease(MagicItem* a_spell, TESObjectREFR* a_target, TESBoundObject* a_source, bool a_loadCast)"
 33671,34451,1,ActorMagicCaster::sub_*
 33680,34460,1,
 33683,34463,1,MagicCaster::PostCreationCallback::Func1_*
