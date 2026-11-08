@@ -19452,6 +19452,7 @@ sseid,aeid,confidence,name
 514186,400336,3,gLoadingMenuShown_141ebeb52
 514290,400450,3,RE::TESWaterSystem::GetSingleton
 514292,400452,3,RE::BGSGrassManager::GetSingleton
+514317,400477,3,PlayerRegionState* GetSingleton()
 514349,400503,3,RE::FormFactory::FormFactoriesInitialized
 514351,400507,3,RE::TESForm::allForms
 514352,400509,3,RE::TESForm::allFormsByEditorID
@@ -19472,6 +19473,7 @@ sseid,aeid,confidence,name
 516940,403447,3,RE::Main::QFrameAnimTime
 517051,403559,3,RE::Inventory3DManager::GetSingleton?
 517052,403560,3,RE::UIRenderManager::singleton
+517160,403693,3,PlayerRegionState g_PlayerRegionState
 517228,403759,3,TaskQueueInterface.cpp::TaskQueueInterface::GetSingleton
 517372,403902,3,RE::ResponseDictionary::GetSingleton?
 518086,404607,3,RE::HandlerDictionary::GetSingleton?

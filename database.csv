@@ -10685,6 +10685,7 @@
 514313,0x141ec3b68,0x141f889c8,4,RE::Projectile::Manager::GetSingleton
 514315,0x141ec3b78,0x141f889d8,3,RE::SkyrimVM::Singleton
 514316,0x141ec3b80,0x141f889e0,4,BGSStoryTeller* GetSingleton()
+514317,0x141ec3b88,0x141f889e8,4,PlayerRegionState* GetSingleton()
 514349,0x141ec3cb3,0x141ec3cb3,2,RE::FormFactory::FormFactoriesInitialized
 514351,0x141ec3cb8,0x141f88b18,2,RE::TESForm::allForms
 514352,0x141ec3cc0,0x141f88b20,2,RE::TESForm::allFormsByEditorID
@@ -10781,7 +10782,7 @@
 517058,0x142f271b8,0x142febcb0,4,unk_142F271B8
 517059,0x142f271c0,0x142febcb8,3,g_ActorMediator
 517060,0x142f271c8,0x142febcc0,4,unk_142F271C8
-517160,0x142f386f0,0x142ffd4f0,4,PlayerRegionState* PlayerRegionState::GetSingleton()
+517160,0x142f386f0,0x142ffd4f0,4,PlayerRegionState g_PlayerRegionState
 517222,0x142f38950,0x142ffd750,3,RE::NiRTTI_SceneGraph
 517224,0x142f38968,0x142ffd768,4,gSaveScreenshotRequested
 517228,0x142f38978,0x142ffd778,3,TaskQueueInterface* GetSingleton()
