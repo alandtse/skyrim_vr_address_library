@@ -940,6 +940,7 @@
 33622,0x14054c1a0,0x1405503e0,4,void MagicCaster::UpdateImpl(float a_delta) src\RE\M/MagicCaster.cpp:80
 33623,0x14054c300,0x140550540,4,MagicCaster::CastSpell
 33630,0x14054cb70,0x140550d40,4,void MagicCaster::InterruptCast(bool a_refund) src\RE\M/MagicCaster.cpp:40
+33631,0x14054cbe0,0x140550db0,3,"bool MagicCaster::ProcessQuickRelease(MagicItem* a_spell, TESObjectREFR* a_target, TESBoundObject* a_source, bool a_loadCast)"
 33632,0x14054cd10,0x140550ec0,3,"bool MagicCaster::FindTargets(float a_effectivenessMult, std::uint32_t& a_targetCount, TESBoundObject* a_source, bool a_loadCast, bool a_adjustOnlyHostileEffectiveness)"
 33644,0x14054f070,0x1405531a0,3,void MagicCaster::SetCurrentSpell(MagicItem* a_item)
 33657,0x14054f4f0,0x1405536c0,3,void MagicCaster::FinishCast() src\RE\M/MagicCaster.cpp:26
