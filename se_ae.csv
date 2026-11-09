@@ -6732,7 +6732,6 @@ sseid,aeid,confidence,name
 52226,53113,3,RE::MapMenu::PlaceMarker
 52228,53115,3,MapMenu::UpdateCamera
 52231,53118,3,MapMenu::Close
-52235,53126,2,AppendOrdinaryMarkerHandles
 52260,53150,3,GetMapWorldSpace
 52374,53270,3,QuickLoot::
 52400,53299,3,QuickLoot::
