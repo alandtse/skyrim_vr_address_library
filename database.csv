@@ -1959,7 +1959,7 @@
 52055,0x1408da8d0,0x14090b240,4,inline void PlayMenuSound(const BGSSoundDescriptorForm* a_descriptor)
 52065,0x1408dae20,0x14090E1F0,4,Mutex Console::ProcessConsoleCommandQueue(Mutex* a_queue)
 52081,0x1408dbf30,0x14090f3c0,3,void LocalMapMenu::UpdateMarkers()
-52181,0x1408E1AF0,0x140913210,3,DynamicStringDistributor::
+52181,0x1408E1AF0,0x140913210,3,"void AppendQuestMarkers(BSTArray<MapMenuMarker>* a_markers, void* a_questTargets, std::uint32_t a_param3)"
 52182,0x1408e1ee0,0x140913610,3,"std::uint32_t TryAddRoutedMarker_1408E1EE0(BSTArray<MapMenuMarker>* a_markers, std::uint32_t* a_handle, TeleportPath* a_path, std::int32_t a_param4, std::int32_t a_routeFlag, char* a_outFlag)"
 52188,0x1408e2850,0x140913fa0,3,bool MapMenu::CreateTempMarkerRef()
 52195,0x1408e2c60,0x1409143b0,3,"std::uint32_t AddMarkerEntry_1408E2C60(BSTArray<MapMenuMarker>* a_markers, std::uint32_t* a_ref, TESFullName* a_name, std::uint32_t a_param4)"
