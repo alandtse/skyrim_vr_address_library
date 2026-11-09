@@ -1533,6 +1533,8 @@
 43319,0x1407625f0,0x14078d940,3,void CombatBlackboardManager::AddFlag(const CombatBlackboardFlag* val)
 43340,0x140762e60,0x14078e1b0,3,CombatBlackboardManager* CombatBlackboardManager::GetSingleton()
 43466,0x140768c10,0x140793f60,4,"bool SayCombatDialogueResolveHandles(void* a_arg1, CombatController* a_combatController, std::int32_t a_type, std::int32_t a_subtype, bool a_flag)"
+43490,0x14076AA00,0x140795D50,3,void CombatGroup::RemoveMember(Actor* a_member)
+43566,0x140772520,0x14079D870,3,void CombatGroup::RemoveTarget(std::uint32_t a_index)
 43571,0x140772a60,0x14079ddb0,3,po3tweaks::CombatDialogue::SayCombatDialogue
 43628,0x140775550,0x1407a08a0,3,bool CombatBehaviorEquipContext::CanEquipItem()
 43952,0x140781f00,0x1407ad250,4,RE::CombatMagicCaster::StaticCheckTargetValid
