@@ -6724,6 +6724,9 @@ sseid,aeid,confidence,name
 51529,52404,3,"void RaceSexMenu::ApplyMaskSliderValue(float a_value, std::uint32_t a_sliderIndex)"
 51530,52405,3,"void RaceSexMenu::ApplyMaskColorSliderValue(std::uint32_t a_value, std::uint32_t a_sliderIndex)"
 51531,52406,3,"void RaceSexMenu::ApplyFaceDetailsSliderValue(float a_value, std::uint32_t a_sliderIndex)"
+52081,52971,2,LocalMapMenu::UpdateMarkers
+52181,53073,3,AppendQuestMarkers
+52182,53074,3,TryAddRoutedMarker
 52183,53075,3,ResolveRoutedMarkerHandle
 52184,53076,3,AddCurrentLocationMarker
 52186,53078,3,BindCustomDestinationMarker
@@ -6732,6 +6735,7 @@ sseid,aeid,confidence,name
 52226,53113,3,RE::MapMenu::PlaceMarker
 52228,53115,3,MapMenu::UpdateCamera
 52231,53118,3,MapMenu::Close
+52252,53142,3,LoadWorldMapOverlayTextures
 52260,53150,3,GetMapWorldSpace
 52374,53270,3,QuickLoot::
 52400,53299,3,QuickLoot::
