@@ -2993,6 +2993,7 @@ sseid,aeid,confidence,name
 19805,20210,3,RE::TESObjectREFR::IsAnOwner
 19811,20216,3,void* TESObjectREFR::GetTeleportData()
 19857,20264,3,RE::TESObjectREFR::InitChildActivates
+20089,20536,3,TESWorldSpace::CollectMapMarkerHandles
 20095,20543,3,RE::TESWorldSpace::GetSkyCell
 20110,20559,3,TESWorldSpace::GetOffsetData
 20529,20968,3,RE::BGSMaterialType::GetMaterialType
@@ -6726,11 +6727,16 @@ sseid,aeid,confidence,name
 52081,52971,2,LocalMapMenu::UpdateMarkers
 52181,53073,3,AppendQuestMarkers
 52182,53074,3,TryAddRoutedMarker
+52183,53075,3,ResolveRoutedMarkerHandle
+52184,53076,3,AddCurrentLocationMarker
+52186,53078,3,BindCustomDestinationMarker
+52193,53085,3,CompareRouteRootWorldSpaces
 52225,53112,3,MapMenu::SetFreezeFrameBackground
 52226,53113,3,RE::MapMenu::PlaceMarker
 52228,53115,3,MapMenu::UpdateCamera
 52231,53118,3,MapMenu::Close
 52252,53142,3,LoadWorldMapOverlayTextures
+52260,53150,3,GetMapWorldSpace
 52374,53270,3,QuickLoot::
 52400,53299,3,QuickLoot::
 52653,53506,3,RE::SkyrimScript::HandlePolicy::IsHandleObjectAvailable
