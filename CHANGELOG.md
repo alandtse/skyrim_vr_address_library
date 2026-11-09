@@ -1,3 +1,11 @@
+# [0.300.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.299.0...v0.300.0) (2026-11-09)
+
+
+### Features
+
+* add AE ids for world map markers ([#338](https://github.com/alandtse/skyrim_vr_address_library/issues/338)) ([cac3281](https://github.com/alandtse/skyrim_vr_address_library/commit/cac3281fc36a46c83b43b894bfd10b24e2ed3021))
+* add world map helper ids ([#339](https://github.com/alandtse/skyrim_vr_address_library/issues/339)) ([d6e729c](https://github.com/alandtse/skyrim_vr_address_library/commit/d6e729c68d2b8e1c82af8de196cf3554459052f7))
+
 # [0.299.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.298.0...v0.299.0) (2026-11-08)
 
 

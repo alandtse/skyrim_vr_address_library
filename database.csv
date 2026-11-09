@@ -1959,12 +1959,15 @@
 52054,0x1408da860,0x14090b1d0,3,RE::PlaySound
 52055,0x1408da8d0,0x14090b240,4,inline void PlayMenuSound(const BGSSoundDescriptorForm* a_descriptor)
 52065,0x1408dae20,0x14090E1F0,4,Mutex Console::ProcessConsoleCommandQueue(Mutex* a_queue)
-52181,0x1408E1AF0,0x140913210,3,DynamicStringDistributor::
+52081,0x1408dbf30,0x14090f3c0,3,void LocalMapMenu::UpdateMarkers()
+52181,0x1408E1AF0,0x140913210,3,"void AppendQuestMarkers(BSTArray<MapMenuMarker>* a_markers, void* a_questTargets, std::uint32_t a_param3)"
+52182,0x1408e1ee0,0x140913610,3,"std::uint32_t TryAddRoutedMarker_1408E1EE0(BSTArray<MapMenuMarker>* a_markers, std::uint32_t* a_handle, TeleportPath* a_path, std::int32_t a_param4, std::int32_t a_routeFlag, char* a_outFlag)"
 52183,0x1408E1FC0,0x1409136F0,2,
 52184,0x1408E21E0,0x140913910,2,
 52186,0x1408E2360,0x140913AB0,2,
 52188,0x1408e2850,0x140913fa0,3,bool MapMenu::CreateTempMarkerRef()
 52193,0x1408E2B00,0x140914250,2,
+52195,0x1408e2c60,0x1409143b0,3,"std::uint32_t AddMarkerEntry_1408E2C60(BSTArray<MapMenuMarker>* a_markers, std::uint32_t* a_ref, TESFullName* a_name, std::uint32_t a_param4)"
 52208,0x1408e3d70,0x140915f50,2,RE::MapMenu::MarkerClick
 52225,0x1408e6cf0,0x140919330,3,void MapMenu::SetFreezeFrameBackground(bool a_enable)
 52226,0x1408e6ea0,0x140919520,3,void MapMenu::PlaceMarker()
@@ -1972,6 +1975,7 @@
 52231,0x1408e7530,0x140919a20,2,void MapMenu::Close()
 52235,0x1408E78F0,0x14091A060,2,
 52236,0x1408e7c80,0x14091a4e0,3,anonymous_namespace__FastTravelConfirmCallback::Run_1408E7C80
+52252,0x1408e8270,0x14091af50,3,void LoadWorldMapOverlayTextures_1408E8270()
 52260,0x1408E8CA0,0x14091C0A0,2,
 52276,0x1408EA320,0x14091EF90,3,DynamicStringDistributor::
 52368,0x1408ee900,0x140923570,4,QuitToMainMenuCallback
