@@ -1080,8 +1080,8 @@
 35408,0x1405a64f0,0x1405adbb0,4,RE::Calendar::GetGameDaysPassed
 35413,0x1405a6640,0x1405add00,3,"void Calendar::GetTimeDateString(char* a_dest, std::uint32_t a_max, bool a_showYear)"
 35492,0x1405aa050,0x1405b1710,4,"void GarbageCollector::Add (GarbageCollector * a_this, TESObjectREFR * a_object, bool a_removeFromCell)"
-35494,0x1405AA3F0,0x1405B1AB0,3,void GarbageCollector::QueueAnimationGraphManager(GarbageCollector* a_this, void* a_manager)
-35497,0x1405AA6B0,0x1405B1D70,3,void GarbageCollector::QueueBipedAnim(GarbageCollector* a_this, BipedAnim** a_biped)
+35494,0x1405AA3F0,0x1405B1AB0,3,"void GarbageCollector::QueueAnimationGraphManager(GarbageCollector* a_this, void* a_manager)"
+35497,0x1405AA6B0,0x1405B1D70,3,"void GarbageCollector::QueueBipedAnim(GarbageCollector* a_this, BipedAnim** a_biped)"
 35501,0x1405AAA30,0x1405B20F0,3,void GarbageCollector::ProcessDeferredReleases(GarbageCollector* a_this)
 35503,0x1405AACA0,0x1405B2360,3,void GarbageCollector::FlushDeferredReleases(GarbageCollector* a_this)
 35545,0x1405acbd0,0x1405b4290,2,WinMain
