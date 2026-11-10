@@ -254,14 +254,22 @@
 15499,0x1401c6a30,0x1401D6E90,4,"void BipedAnim::InitSkin(TESRace* a_race, TESObjectARMO* a_skin, bool a_isFemale)"
 15500,0x1401c6c50,0x1401d70b0,3,"void BipedAnim::RemoveConflictingObjects(TESObjectARMO* a_armor, TESObjectARMA* a_addon, bool a_flag)"
 15501,0x1401c6f90,0x1401d7450,3,"void BipedAnim::AttachBufferedObjects(float a_unk, char* a_flag, Actor* a_actor)"
+15503,0x1401C82E0,0x1401D88F0,2,void BipedAnim::CreateEmptySlotAnimationGraphs()
+15504,0x1401C8380,0x1401D8990,2,void BipedAnim::CollectSlotBehaviorGraphData()
 15505,0x1401c8470,0x1401d8a80,4,"void BipedAnim::SetWeaponObject(TESObjectWEAP* a_weapon, bool a_useActorSlot)"
 15510,0x1401c8ce0,0x1401d9440,4,void BipedAnim::SetAmmoObject(TESAmmo* a_ammo)
 15513,0x1401c8fc0,0x1401d9720,4,"void BipedAnim::SetLightObject(TESObjectLIGH* a_light, bool a_useActorSlot)"
 15518,0x1401c9840,0x1401d9fb0,3,BIPOBJECT* BipedAnim::GetShieldObject()
 15519,0x1401c98f0,0x1401da060,3,BIPOBJECT* BipedAnim::GetBodyObject()
+15522,0x1401C9BD0,0x1401DA340,2,void BipedAnim::QueueHelmetLoadForSlot()
 15527,0x1401ca8d0,0x1401db060,3,"void BipedAnim::AddAddonNodes(RE::NiAVObject* a_clonedNode, RE::NiAVObject* a_node, std::int32_t a_slot, RE::TESObjectREFR* a_actor, RE::BSTSmartPointer<RE::BipedAnim>& a_bipedAnim)"
+15530,0x1401CAA40,0x1401DB1D0,2,BSLightingShaderProperty* NiAVObject::GetLightingShaderProperty()
 15534,0x1401cac70,0x1401db680,3,BipedAnim::AttachObjectNode
 15535,0x1401cafb0,0x1401db9e0,3,BipedAnim::AttachNodeToRoot
+15537,0x1401CB8A0,0x1401DC310,2,void BipedAnim::UpdateDismemberPartitionsRecursive()
+15540,0x1401CBD10,0x1401DC760,2,void BipedAnim::DisableDismemberPartitionsRecursive()
+15541,0x1401CBE70,0x1401DC8C0,2,bool BipedAnim::CreateSlotAnimationGraph()
+15542,0x1401CC240,0x1401DCC90,2,bool BipedAnim::RetrieveSlotBehaviorGraphData()
 15547,0x1401cc7c0,0x1401dd210,3,void NiAVObject::RemoveDecals()
 15569,0x1401cd350,0x1401ddde0,3,RE::NiNode::AttachWeapon
 15576,0x1401cdd40,0x1401de820,2,"void BSDismemberSkinInstance::UpdateDismemberPartion(std::uint16_t a_slot, bool a_enable)"
