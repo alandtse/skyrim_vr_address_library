@@ -2329,6 +2329,7 @@ sseid,aeid,confidence,name
 15518,15695,3,BipedAnim::GetShieldObject
 15519,15696,3,BipedAnim::GetBodyObject
 15522,15699,2,BipedAnim::QueueHelmetLoadForSlot
+15529,15706,2,BipedAnim::IsSlotDefaultObject
 15530,15707,2,NiAVObject::GetLightingShaderProperty
 15534,15711,3,BipedAnim::AttachObjectNode
 15535,15712,3,FEC::ProcessGeometry::processAttachedGeometry
@@ -2336,7 +2337,10 @@ sseid,aeid,confidence,name
 15540,15717,2,BipedAnim::DisableDismemberPartitionsRecursive
 15541,15718,2,BipedAnim::CreateSlotAnimationGraph
 15542,15719,2,BipedAnim::RetrieveSlotBehaviorGraphData
+15544,15720,2,BSTDeque_ModelHandle_Reset
 15547,15723,3,RE::NiAVObject::ClearDecals
+15553,15729,2,BSTDeque_ModelHandle_Clear
+15561,15739,2,BipedAnim::ApplySlotTextureSetToGeometry
 15569,15746,1,VampiresCastNoShadow::attach_weapon
 15576,15753,3,RE::BSDismemberSkinInstance::UpdateDismemberPartion
 15757,15995,3,RE::InventoryEntryData::GetValue
