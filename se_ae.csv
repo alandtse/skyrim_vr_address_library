@@ -4249,6 +4249,7 @@ sseid,aeid,confidence,name
 32143,32887,3,RE::IAnimationGraphManagerHolder::SetGraphVariableFloat_1404F0720
 32144,32888,3,RE::IAnimationGraphManagerHolder::SetGraphVariableNiPoint3_1404F0740
 32192,32884,3,RE::IAnimationGraphManagerHolder::GetGraphVariableNiPoint3
+32468,33215,3,CombatController::Dtor
 32519,33271,1,
 32521,33273,1,
 32522,33274,1,

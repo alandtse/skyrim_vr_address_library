@@ -909,6 +909,7 @@
 32426,0x1404fbcc0,0x14050c160,3,void CombatBehaviorStack::CheckBuffer(std::uint32_t a_size)
 32436,0x1404fc010,0x14050c4b0,3,void CombatBehaviorIdle::Update()
 32458,0x1404fc700,0x14050cba0,3,NiPointer<CombatInventoryItem> const& CombatBehaviorEquipContext::GetCombatItem()
+32468,0x1404fcde0,0x14050d280,3,void CombatController::Dtor()
 32469,0x1404FD1C0,0x14050D660,4,bool __fastcall CombatAIHook::sub_1404FD1C0(RE::Actor* a1)
 32488,0x1404fdfe0,0x14050e480,3,CombatController::SetTarget
 32489,0x1404fe300,0x14050e7a0,4,CombatController::UpdateTarget
