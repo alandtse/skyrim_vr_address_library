@@ -454,6 +454,7 @@
 19300,0x14028fb90,0x1402A12A0,3,TESObjectREFR::Load3D
 19301,0x140290550,0x1402A1C60,3,TESObjectREFR::Release3DRelatedData
 19302,0x140290900,0x1402a2010,3,TESObjectREFR::Set3D
+19304,0x1402915F0,0x1402A2D00,3,TESObjectREFR::SendObjectLoadedEvent
 19309,0x1402917f0,0x1402a2f00,4,void TESObjectREFR::sub_1402917F0 (TESObjectREFR * a_this)
 19315,0x140294000,0x1402a5710,3,TESObjectREFR::UpdateReference3D
 19316,0x1402943b0,0x1402a5ac0,4,bool Actor::Update3D()
@@ -1312,6 +1313,7 @@
 37827,0x140632b60,0x14063ba30,4,void Actor::VisitSpells(ForEachSpellVisitor& a_visitor)
 37828,0x140632d10,0x14063bbe0,3,bool Actor::HasSpell(SpellItem* a_spell)
 37829,0x140632d50,0x14063bc20,4,bool Actor::HasShout(TESShout* a_shout)
+37830,0x140632D70,0x14063BC40,3,Character::SetHandCastingArt
 37832,0x140633090,0x14063bf60,4,RE::MagicTarget::Func1_140633090
 37854,0x1406345f0,0x14063d4c0,4,float Actor::GetVoiceRecoveryTime()
 37858,0x140634680,0x14063d550,4,bool Actor::IsCurrentShout(SpellItem* a_spell)
@@ -1522,6 +1524,7 @@
 42928,0x14074b170,0x140776440,3,"BSPointerHandle<Projectile>* Projectile::Launch(BSPointerHandle<Projectile>* a_result, LaunchData& a_data)"
 42930,0x14074bc00,0x140776f20,4,void Projectile::Kill()
 42943,0x14074c710,0x140777a30,4,ProjectileUpdate
+42983,0x14074F650,0x14077A970,3,ProcessProjectileCollisions
 43009,0x1407516e0,0x14077CA00,3,Projectile::AutoAim
 43013,0x1407521f0,0x14077d510,4,ProjectileImpact
 43022,0x1407531c0,0x14077e4e0,2,papyrus_extender::events::game::weaponhit::projectile::target_0x38d
@@ -2976,6 +2979,7 @@
 99703,0x1412ba7a0,0x1412f81d0,3,void BSGeometryListCullingProcess::ProcessAllQueuedLights()
 99704,0x1412ba7f0,0x1412f8220,3,void ShadowSceneNode::ClearLightArrays()
 99708,0x1412baca0,0x1412f86d0,3,"static void ShadowSceneNode::EnableLight(RE::ShadowSceneNode* shadowSceneNode, RE::BSLight* light)"
+99714,0x1412BB540,0x1412F8FA0,3,NiNode::IsSubtreeRenderable
 99715,0x1412bb6b0,0x1412f9110,3,void BSGeometry::AttachNearbyLights()
 99717,0x1412bba50,0x1412f94d0,3,void BSTriShape::AttachToLights()
 99725,0x1412bc190,0x1412f9c10,4,"float ShadowSceneNode::GetLuminanceAtPoint(NiPoint3* targetPosition, int* numHits, float sunLightLevel, float lightLevel, NiLight* refLight, int shadowBitMask) src\Features\LightLimitFix/ShadowCasterManager.cpp:3687"
@@ -2986,9 +2990,12 @@
 99736,0x1412bd460,0x1412faee0,3,void ShadowSceneNode::UpdateSunOcclusionPlanes(NiCamera* a_camera)
 99741,0x1412bdf60,0x1412fb9e0,3,"void ShadowSceneNode::ResetScene(ShadowSceneNode* this, BSPortalGraph* a_graph)"
 99744,0x1412be5f0,0x1412fc070,3,"void ShadowSceneNode::UnlinkChildLights(ShadowSceneNode* this, NiNode* a_node)"
+99746,0x1412BE790,0x1412FC210,3,"void ShadowSceneNode::PurgeStaleLights(ShadowSceneNode* a_this, BSTArray<NiPointer<BSLight>>* a_lights)"
 99750,0x1412bea00,0x1405c1340,3,"void AppendRoomToAccumList(BSTArray<NiPointer<NiAVObject>>* a_accumList, BSMultiBoundRoom* a_room)"
 99752,0x1412beae0,0x1412fc4f0,3,"void ShadowSceneNode::AccumulateLight(RE::BSLight* a_light, RE::BSTArray<RE::NiPointer<RE::NiAVObject>>* a_accumList, bool a_isDynamicMainScene)"
 99753,0x1412bf7f0,0x1412fd220,3,void ShadowSceneNode::AccumulateLight(RE::BSLight* a_light)
+99773,0x1412C0BD0,0x1412FE620,3,"void BSLightArray_Erase(BSTArray<NiPointer<BSLight>>* a_array, std::uint32_t a_index, std::uint32_t a_count)"
+99774,0x1412C0CC0,0x1412FE710,3,BSLightArray_EraseAtIterator
 99787,0x1412c1350,0x1412feda0,3,"bool TestPortalGraphOcclusionShapes(NiPoint3* a_viewerPos, BSCullingProcess* a_process, void* a_visitor)"
 99789,0x1412c15c0,0x1412ff010,3,"void Renderer::SubmitAccumulator(NiCamera* a_camera, BSShaderAccumulator* a_accumulator, std::uint32_t a_renderFlags)"
 99790,0x1412c1600,0x1412ff050,3,"void Renderer::StartAccumulating(NiCamera* a_camera, BSShaderAccumulator* a_accumulator, std::uint32_t a_renderFlags)"
