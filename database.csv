@@ -1558,7 +1558,15 @@
 43319,0x1407625f0,0x14078d940,3,void CombatBlackboardManager::AddFlag(const CombatBlackboardFlag* val)
 43340,0x140762e60,0x14078e1b0,3,CombatBlackboardManager* CombatBlackboardManager::GetSingleton()
 43466,0x140768c10,0x140793f60,4,"bool SayCombatDialogueResolveHandles(void* a_arg1, CombatController* a_combatController, std::int32_t a_type, std::int32_t a_subtype, bool a_flag)"
+43482,0x14076A450,0x1407957A0,3,bool CombatGroup::AddTarget(TESObjectREFR* a_target)
+43483,0x14076A560,0x1407958B0,3,void CombatGroup::RemoveTargetByRef(TESObjectREFR* a_ref)
+43484,0x14076A5E0,0x140795930,3,bool CombatGroup::IsTarget(TESObjectREFR* a_ref)
+43485,0x14076A690,0x1407959E0,3,bool CombatGroup::IsTargetHandle(const std::uint32_t* a_handle)
+43486,0x14076A720,0x140795A70,3,bool CombatGroup::CanAllMembersAttackActor(Actor* a_target)
+43489,0x14076A890,0x140795BE0,3,bool CombatGroup::AddMember(Character* a_member)
 43490,0x14076AA00,0x140795D50,3,void CombatGroup::RemoveMember(Actor* a_member)
+43491,0x14076AB60,0x140795EB0,3,bool CombatGroup::IsMember(TESObjectREFR* a_ref)
+43493,0x14076ACA0,0x140795FF0,3,bool CombatGroup::CanActorAttackAllTargets(Character* a_actor)
 43566,0x140772520,0x14079D870,3,void CombatGroup::RemoveTarget(std::uint32_t a_index)
 43571,0x140772a60,0x14079ddb0,3,po3tweaks::CombatDialogue::SayCombatDialogue
 43628,0x140775550,0x1407a08a0,3,bool CombatBehaviorEquipContext::CanEquipItem()
