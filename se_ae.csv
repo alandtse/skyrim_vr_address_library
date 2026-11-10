@@ -4688,6 +4688,8 @@ sseid,aeid,confidence,name
 35317,36212,3,RE::BGSImpactManager::PlayImpactSound
 35320,36215,3,RE::BGSImpactManager::PlayImpactEffect
 35413,36311,3,RE::Calendar::GetTimeDateString
+35501,36468,3,
+35503,36470,3,
 35551,36544,3,RE::Main::MainLoop
 35560,36559,3,RE::Main::Draw
 35571,36574,3,Main::UpdateCullingFrustum
