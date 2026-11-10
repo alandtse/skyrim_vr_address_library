@@ -4692,6 +4692,8 @@ sseid,aeid,confidence,name
 35497,36464,3,
 35501,36468,3,
 35503,36470,3,
+35505,36472,3,
+35510,36477,3,
 35551,36544,3,RE::Main::MainLoop
 35560,36559,3,RE::Main::Draw
 35571,36574,3,Main::UpdateCullingFrustum
