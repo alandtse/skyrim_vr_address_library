@@ -2994,8 +2994,8 @@
 99750,0x1412bea00,0x1405c1340,3,"void AppendRoomToAccumList(BSTArray<NiPointer<NiAVObject>>* a_accumList, BSMultiBoundRoom* a_room)"
 99752,0x1412beae0,0x1412fc4f0,3,"void ShadowSceneNode::AccumulateLight(RE::BSLight* a_light, RE::BSTArray<RE::NiPointer<RE::NiAVObject>>* a_accumList, bool a_isDynamicMainScene)"
 99753,0x1412bf7f0,0x1412fd220,3,void ShadowSceneNode::AccumulateLight(RE::BSLight* a_light)
-99773,0x1412C0BD0,0x1412FE620,3,"void BSLightArray_Erase(BSTArray<NiPointer<BSLight>>* a_array, std::uint32_t a_index, std::uint32_t a_count)"
-99774,0x1412C0CC0,0x1412FE710,3,BSLightArray_EraseAtIterator
+99773,0x1412C0BD0,0x1412FE620,3,"void BSTArray<NiPointer<BSLight>>::Erase(BSTArray<NiPointer<BSLight>>* a_this, std::uint32_t a_index, std::uint32_t a_count)"
+99774,0x1412C0CC0,0x1412FE710,3,BSTArray<NiPointer<BSLight>>::EraseAtIterator
 99787,0x1412c1350,0x1412feda0,3,"bool TestPortalGraphOcclusionShapes(NiPoint3* a_viewerPos, BSCullingProcess* a_process, void* a_visitor)"
 99789,0x1412c15c0,0x1412ff010,3,"void Renderer::SubmitAccumulator(NiCamera* a_camera, BSShaderAccumulator* a_accumulator, std::uint32_t a_renderFlags)"
 99790,0x1412c1600,0x1412ff050,3,"void Renderer::StartAccumulating(NiCamera* a_camera, BSShaderAccumulator* a_accumulator, std::uint32_t a_renderFlags)"
