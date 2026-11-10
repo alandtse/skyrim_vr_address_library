@@ -2321,8 +2321,11 @@ sseid,aeid,confidence,name
 14704,14875,3,RE::TESHarvestedEvent::GetEventSource
 14809,14988,3,RE::TESForm::GetWeight
 15156,15329,3,BGSDynamicPersistenceManager::DemoteReferences
+15492,15657,3,BipedAnim::SetRoot
 15495,15660,3,FEC::UpdateCollision::RemoveNodeFromScene
 15501,15678,3,FEC::ProcessObject::attachArmorAddon
+15518,15695,3,BipedAnim::GetShieldObject
+15519,15696,3,BipedAnim::GetBodyObject
 15534,15711,3,BipedAnim::AttachObjectNode
 15535,15712,3,FEC::ProcessGeometry::processAttachedGeometry
 15547,15723,3,RE::NiAVObject::ClearDecals
@@ -2929,6 +2932,8 @@ sseid,aeid,confidence,name
 19141,19543,1,
 19143,19545,1,TESObjectREFR::GetSavedFormType_*
 19201,19627,3,RE::TESObjectREFR::HasQuestObject
+19204,19630,3,Actor::GetShieldObjectSlot
+19205,19631,3,Actor::GetBodyObject
 19206,19632,3,bool NiNode::AttachAddonNode()
 19207,19633,3,bool NiNode::DetachFemaleAddonNode()
 19209,19635,3,bool NiNode::ActivateAddonNode()

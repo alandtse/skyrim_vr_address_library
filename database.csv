@@ -244,6 +244,7 @@
 15486,0x1401c5cd0,0x1401d5e40,4,void BIPOBJECT::Clear()
 15487,0x1401c5e60,0x1401d5fd0,4,void BIPOBJECT::Assign(BIPOBJECT* a_other)
 15491,0x1401c60a0,0x1401d6200,3,RE::BipedAnim::Dtor
+15492,0x1401c6100,0x1401d6260,3,"void BipedAnim::SetRoot(BipedAnim* a_this, NiAVObject* a_skeleton)"
 15493,0x1401c6140,0x1401d64d0,4,void BipedAnim::RemoveAllObjects()
 15494,0x1401c61a0,0x1401d6530,3,RE::BipedAnim::RemoveAllParts
 15495,0x1401c6270,0x1401d6600,4,void BipedAnim::DetachNode(NiAVObject* a_node)
@@ -257,6 +258,7 @@
 15510,0x1401c8ce0,0x1401d9440,4,void BipedAnim::SetAmmoObject(TESAmmo* a_ammo)
 15513,0x1401c8fc0,0x1401d9720,4,"void BipedAnim::SetLightObject(TESObjectLIGH* a_light, bool a_useActorSlot)"
 15518,0x1401c9840,0x1401d9fb0,3,BIPOBJECT* BipedAnim::GetShieldObject()
+15519,0x1401c98f0,0x1401da060,3,BIPOBJECT* BipedAnim::GetBodyObject()
 15527,0x1401ca8d0,0x1401db060,3,"void BipedAnim::AddAddonNodes(RE::NiAVObject* a_clonedNode, RE::NiAVObject* a_node, std::int32_t a_slot, RE::TESObjectREFR* a_actor, RE::BSTSmartPointer<RE::BipedAnim>& a_bipedAnim)"
 15534,0x1401cac70,0x1401db680,3,BipedAnim::AttachObjectNode
 15535,0x1401cafb0,0x1401db9e0,3,BipedAnim::AttachNodeToRoot
@@ -430,6 +432,8 @@
 19133,0x140287d30,0x140299460,4,"void TESObjectREFR::ReadFromSaveGame (TESObjectREFR * a_this, BGSLoadFormBuffer * a_buffer)"
 19142,0x1402896f0,0x14029ae20,4,"ObjectRefHandle TESObjectREFR::CreateReference(ObjectRefHandle& a_handleOut, FormType a_formType, bool a_addActorToProcessList)"
 19201,0x14028b940,0x14029d070,3,bool TESObjectREFR::HasQuestObject()
+19204,0x14028ba70,0x14029d1a0,3,std::int32_t Actor::GetShieldObjectSlot()
+19205,0x14028baa0,0x14029d1d0,3,std::int32_t Actor::GetBodyObject()
 19206,0x14028bad0,0x14029d200,3,bool NiNode::AttachAddonNode()
 19207,0x14028bce0,0x14029d410,3,bool NiNode::DetachFemaleAddonNode()
 19209,0x14028beb0,0x14029d5e0,3,bool NiNode::ActivateAddonNode()
