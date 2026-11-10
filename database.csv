@@ -1089,7 +1089,7 @@
 35499,0x1405AA890,0x1405B1F50,3,"void GarbageCollector::QueueQueuedFile(GarbageCollector* a_this, QueuedFile** a_file)"
 35500,0x1405AA960,0x1405B2020,3,"void GarbageCollector::QueueCloneReserver(GarbageCollector* a_this, BSCloneReserver** a_reserver)"
 35501,0x1405AAA30,0x1405B20F0,3,void GarbageCollector::ProcessDeferredReleases(GarbageCollector* a_this)
-35502,0x1405AABD0,0x1405B2290,3,"void GarbageCollector::ReleaseQueuedTempEffects(GarbageCollector* a_this)"
+35502,0x1405AABD0,0x1405B2290,3,void GarbageCollector::ReleaseQueuedTempEffects(GarbageCollector* a_this)
 35503,0x1405AACA0,0x1405B2360,3,void GarbageCollector::FlushDeferredReleases(GarbageCollector* a_this)
 35505,0x1405AB2B0,0x1405B2970,3,"void GarbageCollector::SetDeferredReleaseEnabled(GarbageCollector* a_this, bool a_enabled)"
 35509,0x1405AB410,0x1405B2AD0,3,bool GarbageCollector::ReleaseQueuedAnimationGraphManager(GarbageCollector* a_this)
@@ -1097,9 +1097,9 @@
 35511,0x1405AB570,0x1405B2C30,3,bool GarbageCollector::ReleaseQueuedReplaced3D(GarbageCollector* a_this)
 35512,0x1405AB600,0x1405B2CC0,3,bool GarbageCollector::DeleteQueuedForms(GarbageCollector* a_this)
 35513,0x1405AB6F0,0x1405B2DB0,3,bool GarbageCollector::ReleaseQueuedRefHandles(GarbageCollector* a_this)
-35514,0x1405AB8A0,0x1405B2F60,3,"bool GarbageCollector::ReleaseQueuedNavMeshes(GarbageCollector* a_this)"
-35515,0x1405ABA20,0x1405B30E0,3,"bool GarbageCollector::ReleaseQueuedFiles(GarbageCollector* a_this)"
-35516,0x1405ABA60,0x1405B3120,3,"bool GarbageCollector::ReleaseQueuedCloneReservers(GarbageCollector* a_this)"
+35514,0x1405AB8A0,0x1405B2F60,3,bool GarbageCollector::ReleaseQueuedNavMeshes(GarbageCollector* a_this)
+35515,0x1405ABA20,0x1405B30E0,3,bool GarbageCollector::ReleaseQueuedFiles(GarbageCollector* a_this)
+35516,0x1405ABA60,0x1405B3120,3,bool GarbageCollector::ReleaseQueuedCloneReservers(GarbageCollector* a_this)
 35545,0x1405acbd0,0x1405b4290,2,WinMain
 35546,0x1405acc20,0x1405b42e0,3,"Main* Main::ctor(HWND__* a_wnd, HINSTANCE__* a_instance)"
 35548,0x1405ae010,0x1405b5880,3,bool InitApplication()
