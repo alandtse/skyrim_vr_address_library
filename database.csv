@@ -1421,8 +1421,8 @@
 39444,0x1406a4a00,0x1406c51f0,3,PlayerCharacter::HasLOS_impl
 39445,0x1406a4d90,0x1406c55c0,3,"void PlayerCharacter::UpdateAnimation(PlayerCharacter* a_this, float a_delta)"
 39456,0x1406a5300,0x1406c6e00,3,PlayerCharacter::PickUpObject
-39458,0x1406a59d0,0x1406c74d0,3,"void PlayerCharacter::SetWaypoint(NiPoint3* a_position, TESForm* a_worldSpaceOrCell)"
-39459,0x1406a5b30,0x1406c7630,3,"void PlayerCharacter::RemoveWaypoint()"
+39458,0x1406a59d0,0x1406c74d0,3,PlayerCharacter::SetWaypoint
+39459,0x1406a5b30,0x1406c7630,3,PlayerCharacter::RemoveWaypoint
 39464,0x1406a8e60,0x1406CA960,3,"PlayerCharacter::InitLoadGame(PlayerCharacter *a1, float a2)"
 39466,0x1406a9430,0x1406CAFF0,3,"PlayerCharacter::Revert(longlong a1, PlayerCharacter *a2, float a3)"
 39471,0x1406a9f90,0x1406cbce0,3,"void ActivatePickRef_1406A9F90 (PlayerCharacter * a_this, VRControls::VRDevice a_device)"
