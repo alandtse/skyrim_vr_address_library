@@ -1080,13 +1080,18 @@
 35408,0x1405a64f0,0x1405adbb0,4,RE::Calendar::GetGameDaysPassed
 35413,0x1405a6640,0x1405add00,3,"void Calendar::GetTimeDateString(char* a_dest, std::uint32_t a_max, bool a_showYear)"
 35492,0x1405aa050,0x1405b1710,4,"void GarbageCollector::Add (GarbageCollector * a_this, TESObjectREFR * a_object, bool a_removeFromCell)"
+35493,0x1405AA2B0,0x1405B1970,3,"void GarbageCollector::QueueFormForDeletion(GarbageCollector* a_this, TESForm* a_form)"
 35494,0x1405AA3F0,0x1405B1AB0,3,"void GarbageCollector::QueueAnimationGraphManager(GarbageCollector* a_this, void* a_manager)"
+35495,0x1405AA4C0,0x1405B1B80,3,"void GarbageCollector::QueueReplaced3D(GarbageCollector* a_this, NiAVObject* a_object)"
 35497,0x1405AA6B0,0x1405B1D70,3,"void GarbageCollector::QueueBipedAnim(GarbageCollector* a_this, BipedAnim** a_biped)"
 35501,0x1405AAA30,0x1405B20F0,3,void GarbageCollector::ProcessDeferredReleases(GarbageCollector* a_this)
 35503,0x1405AACA0,0x1405B2360,3,void GarbageCollector::FlushDeferredReleases(GarbageCollector* a_this)
 35505,0x1405AB2B0,0x1405B2970,3,"void GarbageCollector::SetDeferredReleaseEnabled(GarbageCollector* a_this, bool a_enabled)"
 35509,0x1405AB410,0x1405B2AD0,3,bool GarbageCollector::ReleaseQueuedAnimationGraphManager(GarbageCollector* a_this)
 35510,0x1405AB4E0,0x1405B2BA0,3,bool GarbageCollector::ReleaseQueuedBipedAnim(GarbageCollector* a_this)
+35511,0x1405AB570,0x1405B2C30,3,bool GarbageCollector::ReleaseQueuedReplaced3D(GarbageCollector* a_this)
+35512,0x1405AB600,0x1405B2CC0,3,bool GarbageCollector::DeleteQueuedForms(GarbageCollector* a_this)
+35513,0x1405AB6F0,0x1405B2DB0,3,bool GarbageCollector::ReleaseQueuedRefHandles(GarbageCollector* a_this)
 35545,0x1405acbd0,0x1405b4290,2,WinMain
 35546,0x1405acc20,0x1405b42e0,3,"Main* Main::ctor(HWND__* a_wnd, HINSTANCE__* a_instance)"
 35548,0x1405ae010,0x1405b5880,3,bool InitApplication()
@@ -1416,8 +1421,8 @@
 39444,0x1406a4a00,0x1406c51f0,3,PlayerCharacter::HasLOS_impl
 39445,0x1406a4d90,0x1406c55c0,3,"void PlayerCharacter::UpdateAnimation(PlayerCharacter* a_this, float a_delta)"
 39456,0x1406a5300,0x1406c6e00,3,PlayerCharacter::PickUpObject
-39458,0x1406a59d0,0x1406c74d0,3,PlayerCharacter::SetWaypoint
-39459,0x1406a5b30,0x1406c7630,3,PlayerCharacter::RemoveWaypoint
+39458,0x1406a59d0,0x1406c74d0,3,"void PlayerCharacter::SetWaypoint(NiPoint3* a_position, TESForm* a_worldSpaceOrCell)"
+39459,0x1406a5b30,0x1406c7630,3,"void PlayerCharacter::RemoveWaypoint()"
 39464,0x1406a8e60,0x1406CA960,3,"PlayerCharacter::InitLoadGame(PlayerCharacter *a1, float a2)"
 39466,0x1406a9430,0x1406CAFF0,3,"PlayerCharacter::Revert(longlong a1, PlayerCharacter *a2, float a3)"
 39471,0x1406a9f90,0x1406cbce0,3,"void ActivatePickRef_1406A9F90 (PlayerCharacter * a_this, VRControls::VRDevice a_device)"
