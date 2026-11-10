@@ -1,3 +1,11 @@
+# [0.301.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.300.0...v0.301.0) (2026-11-10)
+
+
+### Features
+
+* add CombatGroup removal ids ([#341](https://github.com/alandtse/skyrim_vr_address_library/issues/341)) ([531cb25](https://github.com/alandtse/skyrim_vr_address_library/commit/531cb25a30cfb0adb657b0ac04c58c80d4ec3029))
+* add GarbageCollector queue ids ([#342](https://github.com/alandtse/skyrim_vr_address_library/issues/342)) ([7381d75](https://github.com/alandtse/skyrim_vr_address_library/commit/7381d75f1e9504bc56a14604d8d53b0de4522da2))
+
 # [0.300.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.299.0...v0.300.0) (2026-11-09)
 
 
