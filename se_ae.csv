@@ -5870,10 +5870,12 @@ sseid,aeid,confidence,name
 43457,44639,1,
 43458,44665,1,
 43459,44666,1,
+43482,44704,3,CombatGroup::AddTarget
 43483,44705,3,CombatGroup::RemoveTargetByRef
 43484,44706,3,CombatGroup::IsTarget
 43485,44707,3,CombatGroup::IsTargetHandle
 43486,44708,3,CombatGroup::CanAllMembersAttackActor
+43489,44711,3,CombatGroup::AddMember
 43490,44712,3,
 43491,44713,3,CombatGroup::IsMember
 43493,44715,3,CombatGroup::CanActorAttackAllTargets
