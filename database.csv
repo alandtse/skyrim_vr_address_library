@@ -1085,6 +1085,7 @@
 35501,0x1405AAA30,0x1405B20F0,3,void GarbageCollector::ProcessDeferredReleases(GarbageCollector* a_this)
 35503,0x1405AACA0,0x1405B2360,3,void GarbageCollector::FlushDeferredReleases(GarbageCollector* a_this)
 35505,0x1405AB2B0,0x1405B2970,3,"void GarbageCollector::SetDeferredReleaseEnabled(GarbageCollector* a_this, bool a_enabled)"
+35509,0x1405AB410,0x1405B2AD0,3,bool GarbageCollector::ReleaseQueuedAnimationGraphManager(GarbageCollector* a_this)
 35510,0x1405AB4E0,0x1405B2BA0,3,bool GarbageCollector::ReleaseQueuedBipedAnim(GarbageCollector* a_this)
 35545,0x1405acbd0,0x1405b4290,2,WinMain
 35546,0x1405acc20,0x1405b42e0,3,"Main* Main::ctor(HWND__* a_wnd, HINSTANCE__* a_instance)"
