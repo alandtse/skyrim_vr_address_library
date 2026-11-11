@@ -2029,7 +2029,7 @@
 52181,0x1408E1AF0,0x140913210,3,"void AppendQuestMarkers(BSTArray<MapMenuMarker>* a_markers, void* a_questTargets, std::uint32_t a_param3)"
 52182,0x1408e1ee0,0x140913610,3,"std::uint32_t TryAddRoutedMarker_1408E1EE0(BSTArray<MapMenuMarker>* a_markers, std::uint32_t* a_handle, TeleportPath* a_path, std::int32_t a_param4, std::int32_t a_routeFlag, char* a_outFlag)"
 52183,0x1408E1FC0,0x1409136F0,3,"std::uint32_t* ResolveRoutedMarkerHandle(std::uint32_t* a_out, std::uint32_t* a_handle, TeleportPath* a_path, int a_routeFlag, bool a_flag)"
-52184,0x1408E21E0,0x140913910,2,"void AddCurrentLocationMarker(BSTArray<MapMenuMarker>* a_markers, NiPoint3* a_position, bool a_flag)"
+52184,0x1408E21E0,0x140913910,2,"void AddCurrentLocationMarker(BSTArray<MapMenuMarker>* a_markers, NiPoint3* a_position)"
 52186,0x1408E2360,0x140913AB0,3,"std::uint32_t* BindCustomDestinationMarker(std::uint32_t* a_out, BSTArray<MapMenuMarker>* a_markers)"
 52188,0x1408e2850,0x140913fa0,3,bool MapMenu::CreateTempMarkerRef()
 52193,0x1408E2B00,0x140914250,3,bool CompareRouteRootWorldSpaces(TeleportPath* a_path)
