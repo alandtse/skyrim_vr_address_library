@@ -255,26 +255,26 @@
 15500,0x1401c6c50,0x1401d70b0,3,"void BipedAnim::RemoveConflictingObjects(TESObjectARMO* a_armor, TESObjectARMA* a_addon, bool a_flag)"
 15501,0x1401c6f90,0x1401d7450,3,"void BipedAnim::AttachBufferedObjects(float a_unk, char* a_flag, Actor* a_actor)"
 15503,0x1401C82E0,0x1401D88F0,2,void BipedAnim::CreateEmptySlotAnimationGraphs()
-15504,0x1401C8380,0x1401D8990,2,void BipedAnim::CollectSlotBehaviorGraphData()
+15504,0x1401C8380,0x1401D8990,2,bool BipedAnim::CollectSlotBehaviorGraphData(BSScrapArray<BSFixedString>& a_out)
 15505,0x1401c8470,0x1401d8a80,4,"void BipedAnim::SetWeaponObject(TESObjectWEAP* a_weapon, bool a_useActorSlot)"
 15510,0x1401c8ce0,0x1401d9440,4,void BipedAnim::SetAmmoObject(TESAmmo* a_ammo)
 15513,0x1401c8fc0,0x1401d9720,4,"void BipedAnim::SetLightObject(TESObjectLIGH* a_light, bool a_useActorSlot)"
 15518,0x1401c9840,0x1401d9fb0,3,BIPOBJECT* BipedAnim::GetShieldObject()
 15519,0x1401c98f0,0x1401da060,3,BIPOBJECT* BipedAnim::GetBodyObject()
-15522,0x1401C9BD0,0x1401DA340,2,void BipedAnim::QueueHelmetLoadForSlot()
+15522,0x1401C9BD0,0x1401DA340,2,"void BipedAnim::QueueHelmetLoadForSlot(std::uint8_t a_priority, QueuedFile* a_parent, QueuedFile** a_file, std::uint32_t a_slot)"
 15527,0x1401ca8d0,0x1401db060,3,"void BipedAnim::AddAddonNodes(RE::NiAVObject* a_clonedNode, RE::NiAVObject* a_node, std::int32_t a_slot, RE::TESObjectREFR* a_actor, RE::BSTSmartPointer<RE::BipedAnim>& a_bipedAnim)"
 15529,0x1401CA9F0,0x1401DB180,2,bool BipedAnim::IsSlotDefaultObject(int a_slot)
 15530,0x1401CAA40,0x1401DB1D0,2,BSLightingShaderProperty* NiAVObject::GetLightingShaderProperty()
 15534,0x1401cac70,0x1401db680,3,BipedAnim::AttachObjectNode
 15535,0x1401cafb0,0x1401db9e0,3,BipedAnim::AttachNodeToRoot
-15537,0x1401CB8A0,0x1401DC310,2,void BipedAnim::UpdateDismemberPartitionsRecursive()
-15540,0x1401CBD10,0x1401DC760,2,void BipedAnim::DisableDismemberPartitionsRecursive()
-15541,0x1401CBE70,0x1401DC8C0,2,bool BipedAnim::CreateSlotAnimationGraph()
-15542,0x1401CC240,0x1401DCC90,2,bool BipedAnim::RetrieveSlotBehaviorGraphData()
-15544,0x1401CC3E0,0x1401DCE30,2,void BSTDeque_ModelHandle_Reset()
-15545,0x1401CC5B0,0x1401DD000,2,void ModelHandle_Assign()
+15537,0x1401CB8A0,0x1401DC310,2,"void BipedAnim::UpdateDismemberPartitionsRecursive(NiAVObject* a_node, std::uint32_t a_slot, bool a_enable)"
+15540,0x1401CBD10,0x1401DC760,2,"void BipedAnim::DisableDismemberPartitionsRecursive(NiAVObject* a_node, std::uint32_t a_slot)"
+15541,0x1401CBE70,0x1401DC8C0,2,"bool BipedAnim::CreateSlotAnimationGraph(std::int32_t a_slot, TESObjectREFR* a_ref)"
+15542,0x1401CC240,0x1401DCC90,2,"bool BipedAnim::RetrieveSlotBehaviorGraphData(std::int32_t a_slot, BSFixedString& a_out)"
+15544,0x1401CC3E0,0x1401DCE30,2,"void BSTDeque_ModelHandle_Reset(BSTDeque<ModelDBHandle>* a_src, BSTDeque<ModelDBHandle>* a_dst)"
+15545,0x1401CC5B0,0x1401DD000,2,"void ModelHandle_Assign(ModelDBHandle* a_dst, const ModelDBHandle* a_src)"
 15547,0x1401cc7c0,0x1401dd210,3,void NiAVObject::RemoveDecals()
-15553,0x1401CC9F0,0x1401DD440,2,void BSTDeque_ModelHandle_Clear()
+15553,0x1401CC9F0,0x1401DD440,2,void BSTDeque_ModelHandle_Clear(BSTDeque<ModelDBHandle>* a_deque)
 15561,0x1401CCD50,0x1401DD7E0,2,bool BipedAnim::ApplySlotTextureSetToGeometry(NiAVObject* a_geometry)
 15569,0x1401cd350,0x1401ddde0,3,RE::NiNode::AttachWeapon
 15576,0x1401cdd40,0x1401de820,2,"void BSDismemberSkinInstance::UpdateDismemberPartion(std::uint16_t a_slot, bool a_enable)"
@@ -536,7 +536,7 @@
 20028,0x1402b2470,0x1402c3be0,3,"bool TESWorldSpace::GetCellCoordsFromFileByEditorID(const char* a_cellID, std::int32_t& a_outX, std::int32_t& a_outY)"
 20029,0x1402b27a0,0x1402c3f10,3,void TES::DestroySkyCell(TES* a_tes)
 20070,0x1402b4600,0x1402c5d70,3,BSPortalGraph* TESWorldSpace::GetPortalGraph()
-20089,0x1402B5CF0,0x1402C7460,3,void TESWorldSpace::CollectMapMarkerHandles()
+20089,0x1402B5CF0,0x1402C7460,3,"void TESWorldSpace::CollectMapMarkerHandles(BSTArray<ObjectRefHandle>* a_out, bool a_localOnly)"
 20095,0x1402b63b0,0x1402c7b20,3,TESObjectCELL* TESWorldSpace::GetSkyCell()
 20103,0x1402b6eb0,0x1402c8620,4,"bool TESWorldSpace::GetMaxHeightAt(const NiPoint3& xy, float& outHeight)"
 20110,0x1402b7aa0,0x1402c9210,3,OFFSET_DATA* TESWorldSpace::GetOffsetData(TESFile* a_file)
@@ -902,7 +902,7 @@
 31809,0x1404dd860,0x1404ed9d0,4,"std::uint32_t AppendBoundAnimationData(BSTArray<BoundAnimationData>& a_datas, float a_duration, const void* a_translationKeys, const void* a_rotationKeys)"
 31812,0x1404dda20,0x1404edb90,4,"void MotionDataContainer::ProcessTranslationData(float a_time, NiPoint3& a_out)"
 31813,0x1404ddc90,0x1404ede00,4,"void MotionDataContainer::ProcessRotationData(float a_time, NiQuaternion& a_out)"
-31850,0x1404ded70,0x1404eeee0,4,"bool AnimationClipDataSingleton::ParseClipMotionData(void* a_stream, void* a_project)"
+31850,0x1404ded70,0x1404eeee0,4,"bool ParseClipMotionData(BSResourceNiBinaryStream* a_stream, void* a_entries, void* a_indices, std::int32_t a_count)"
 31940,0x1404e5780,0x1404f58f0,3,"bool GetClipInfoFromEvent(TESObjectREFR* a, const BSFixedString& event_name, ClipInfo& clipInfo)"
 31942,0x1404e59c0,0x1404f5b30,3,"bool GetClipInfo(BSAnimationGraphManager* mngr, int32_t activeGraph_ind, const BSScrapArray<BSFixedString>& events, ClipInfo& clipInfo)"
 31944,0x1404e5c00,0x1404f5d70,4,"bool SumAnimationDataToTime(const ClipInfo& clipInfo, float time, NiPoint3& translation, NiQuaternion& rotation)"
@@ -2029,7 +2029,7 @@
 52181,0x1408E1AF0,0x140913210,3,"void AppendQuestMarkers(BSTArray<MapMenuMarker>* a_markers, void* a_questTargets, std::uint32_t a_param3)"
 52182,0x1408e1ee0,0x140913610,3,"std::uint32_t TryAddRoutedMarker_1408E1EE0(BSTArray<MapMenuMarker>* a_markers, std::uint32_t* a_handle, TeleportPath* a_path, std::int32_t a_param4, std::int32_t a_routeFlag, char* a_outFlag)"
 52183,0x1408E1FC0,0x1409136F0,3,"std::uint32_t* ResolveRoutedMarkerHandle(std::uint32_t* a_out, std::uint32_t* a_handle, TeleportPath* a_path, int a_routeFlag, bool a_flag)"
-52184,0x1408E21E0,0x140913910,2,"void AddCurrentLocationMarker(BSTArray<MapMenuMarker>* a_markers, NiPoint3* a_position, bool a_flag)"
+52184,0x1408E21E0,0x140913910,2,"void AddCurrentLocationMarker(BSTArray<MapMenuMarker>* a_markers, NiPoint3* a_position)"
 52186,0x1408E2360,0x140913AB0,3,"std::uint32_t* BindCustomDestinationMarker(std::uint32_t* a_out, BSTArray<MapMenuMarker>* a_markers)"
 52188,0x1408e2850,0x140913fa0,3,bool MapMenu::CreateTempMarkerRef()
 52193,0x1408E2B00,0x140914250,3,bool CompareRouteRootWorldSpaces(TeleportPath* a_path)
@@ -2039,7 +2039,7 @@
 52226,0x1408e6ea0,0x140919520,3,void MapMenu::PlaceMarker()
 52228,0x1408e7380,0x140919910,2,bool MapMenu::UpdateCamera()
 52231,0x1408e7530,0x140919a20,2,void MapMenu::Close()
-52235,0x1408E78F0,0x14091A060,3,AppendOrdinaryMarkerHandles
+52235,0x1408E78F0,0x14091A060,3,"bool AppendOrdinaryMarkerHandles(BSTArray<ObjectRefHandle>* a_handles, BSTArray<MapMenuMarker>** a_markers)"
 52236,0x1408e7c80,0x14091a4e0,3,anonymous_namespace__FastTravelConfirmCallback::Run_1408E7C80
 52252,0x1408e8270,0x14091af50,3,void LoadWorldMapOverlayTextures_1408E8270()
 52260,0x1408E8CA0,0x14091C0A0,3,TESWorldSpace* GetMapWorldSpace()
@@ -2190,7 +2190,7 @@
 62618,0x140aeb360,0x140b25ec0,4,ulonglong BShkbAnimationGraph::sub_140AEB360 (BShkbAnimationGraph * a_this)
 62640,0x140aedd10,0x140b28870,4,"BShkbAnimationGraph::sub_140AEDD10 (ulonglong param_1, undefined8 param_2, char param_3)"
 62649,0x140af0360,0x140b2b0f0,4,"bool BShkbAnimationGraph::QueryAnimations_fromTime(float a_fromTime, BSScrapArray<ClipData>& a_clips)"
-62650,0x140af03a0,0x140b2b130,4,bool BShkbAnimationGraph::QueryAnimations_fromEvents(const BSScrapArray<BSFixedString>& a_events)
+62650,0x140af03a0,0x140b2b130,4,"bool BShkbAnimationGraph::QueryAnimations_fromEvents(const BSScrapArray<BSFixedString>& a_events, BSScrapArray<ClipData>& a_clips)"
 62655,0x140af0d10,0x140b2baa0,4,"longlong GetHashedAnimFromAnimIndex_140AF0D10 (BShkbAnimationGraph * a_this, undefined param_2)"
 62694,0x140af5fd0,0x140b30db0,3,"bool BShkbAnimationGraph::GetGraphVariableInt(const BSFixedString& a_variableName, int& a_out)"
 62695,0x140af6090,0x140b30e70,3,"bool BShkbAnimationGraph::GetGraphVariableFloat(const BSFixedString& a_variableName, float& a_out)"
@@ -2201,7 +2201,7 @@
 62923,0x140b00650,0x140b3b430,4,"undefined4 bshkbAnimationGraphHook2_140b00650 (undefined8 param_1, hkbCharacter * param_2, char param_3, undefined8 param_4, undefined8 param_5)"
 62927,0x140b00ce0,0x140b3bac0,4,"void FUN_140b00ce0 (undefined8 param_1, longlong param_2, longlong * param_3, undefined8 param_4)"
 62935,0x140b01670,0x140b3c450,4,"bool hkbCharacter::QueryClips_fromTime(float a_fromTime, BSScrapArray<ClipData>& a_clips)"
-62936,0x140b016d0,0x140b3c4b0,4,bool hkbCharacter::QueryClips_fromEvents(const BSScrapArray<BSFixedString>& a_events)
+62936,0x140b016d0,0x140b3c4b0,4,"bool hkbCharacter::QueryClips_fromEvents(const BSScrapArray<BSFixedString>& a_events, BSScrapArray<ClipData>& a_clips)"
 62952,0x140b03140,0x140b3df80,4,"bool ClipAddingFunctor::AddClip(void* a_unk, float a_deltaTime, hkbClipGenerator* a_clip, const float* a_weights)"
 63004,0x140b04f80,0x140b3fdc0,4,std::uint32_t BSScrapArray_ClipData::push_back(const ClipData& a_clip)
 63017,0x140b05710,0x140b40550,4,bool hkbBehaviorGraph::sub_140B05710 (hkbBehaviorGraph * a_this)
@@ -3031,7 +3031,7 @@
 99696,0x1412b99f0,0x1412f7420,4,"void ShadowSceneNode::AttachObject (ShadowSceneNode * a_this, NiAVObject * a_node)"
 99697,0x1412b9a10,0x1412f7440,4,void ShadowSceneNode::RemoveLight(NiLight* a_light) src\RE\S/ShadowSceneNode.cpp:45
 99698,0x1412b9b60,0x1412f7590,3,void ShadowSceneNode::RemoveLight(const NiPointer<BSLight>& a_light)
-99701,0x1412b9db0,0x1412f77e0,3,void ShadowSceneNode::ProcessQueuedLights(bool param_1)
+99701,0x1412b9db0,0x1412f77e0,3,void ShadowSceneNode::ProcessQueuedLights(BSGeometryListCullingProcess* a_cullingProcess)
 99702,0x1412ba3e0,0x1412f7e10,3,"void ShadowSceneNode::RemoveLightAssociations(ShadowSceneNode* this, void* a_root)"
 99703,0x1412ba7a0,0x1412f81d0,3,void BSGeometryListCullingProcess::ProcessAllQueuedLights()
 99704,0x1412ba7f0,0x1412f8220,3,void ShadowSceneNode::ClearLightArrays()
@@ -3047,7 +3047,7 @@
 99736,0x1412bd460,0x1412faee0,3,void ShadowSceneNode::UpdateSunOcclusionPlanes(NiCamera* a_camera)
 99741,0x1412bdf60,0x1412fb9e0,3,"void ShadowSceneNode::ResetScene(ShadowSceneNode* this, BSPortalGraph* a_graph)"
 99744,0x1412be5f0,0x1412fc070,3,"void ShadowSceneNode::UnlinkChildLights(ShadowSceneNode* this, NiNode* a_node)"
-99746,0x1412BE790,0x1412FC210,3,"void ShadowSceneNode::PurgeStaleLights(ShadowSceneNode* a_this, BSTArray<NiPointer<BSLight>>* a_lights)"
+99746,0x1412BE790,0x1412FC210,3,"void ShadowSceneNode::PurgeStaleLights(BSTArray<NiPointer<BSLight>>* a_lights, BSGeometryListCullingProcess* a_cullingProcess)"
 99750,0x1412bea00,0x1405c1340,3,"void AppendRoomToAccumList(BSTArray<NiPointer<NiAVObject>>* a_accumList, BSMultiBoundRoom* a_room)"
 99752,0x1412beae0,0x1412fc4f0,3,"void ShadowSceneNode::AccumulateLight(RE::BSLight* a_light, RE::BSTArray<RE::NiPointer<RE::NiAVObject>>* a_accumList, bool a_isDynamicMainScene)"
 99753,0x1412bf7f0,0x1412fd220,3,void ShadowSceneNode::AccumulateLight(RE::BSLight* a_light)
