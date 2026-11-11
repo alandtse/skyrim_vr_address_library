@@ -1,3 +1,18 @@
+# [0.302.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.301.0...v0.302.0) (2026-11-11)
+
+
+### Bug Fixes
+
+* name PlayerCharacter waypoint functions ([#343](https://github.com/alandtse/skyrim_vr_address_library/issues/343)) ([1c3c2d6](https://github.com/alandtse/skyrim_vr_address_library/commit/1c3c2d6e62b20a54454d65d277b86566a837333d))
+
+
+### Features
+
+* add animation motion chain ids ([#346](https://github.com/alandtse/skyrim_vr_address_library/issues/346)) ([9cf7fc9](https://github.com/alandtse/skyrim_vr_address_library/commit/9cf7fc9fdfa931cd1ad1cf152a885dd7d3052774))
+* add BipedAnim root and body ids ([#345](https://github.com/alandtse/skyrim_vr_address_library/issues/345)) ([e90c155](https://github.com/alandtse/skyrim_vr_address_library/commit/e90c15554833ec0760a079d22ccf05fae8b65b0e))
+* add light, projectile and event ids ([#344](https://github.com/alandtse/skyrim_vr_address_library/issues/344)) ([10dcf65](https://github.com/alandtse/skyrim_vr_address_library/commit/10dcf658096bebc41b796d85df8b6f157fa3786d))
+* add seven world map function mappings ([#337](https://github.com/alandtse/skyrim_vr_address_library/issues/337)) ([1ed9ab1](https://github.com/alandtse/skyrim_vr_address_library/commit/1ed9ab1e79414fc7f506c2ef14c6e03271484caf))
+
 # [0.301.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.300.0...v0.301.0) (2026-11-10)
 
 
