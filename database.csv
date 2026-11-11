@@ -2990,6 +2990,8 @@
 97469,0x141234410,0x14126c8c0,3,std::uint32_t Object::DecRef()
 97500,0x141235d50,0x14126e200,2,void BSScript::Variable::SetObject(BSScript::Object** a_obj)
 97501,0x141235e10,0x14126e2c0,2,"void BSScript::Variable::SetObject(BSScript::Object** a_obj, BSScript::TypeInfo* a_type)"
+97502,0x141235ec0,0x14126e370,2,BSScript::Array** BSScript::Variable::GetArray()
+97503,0x141235f60,0x14126e410,2,void BSScript::Variable::SetArray(BSScript::Array** a_val)
 97505,0x141236190,0x14126e640,2,"bool BSScript::Variable::Save(SaveStorageWrapper* a_storage, BSScript::IVMSaveLoadInterface* a_saveLoad)"
 97506,0x141236490,0x14126e940,2,"bool BSScript::Variable::Load(BSStorage* a_storage, BSScript::IVMSaveLoadInterface* a_loader, BSScript::IVirtualMachine* a_vm, bool* a_ok)"
 97507,0x141236a10,0x14126eec0,2,"void BSScript::Variable::ToString(char* a_buffer, std::uint32_t a_size, bool a_quoteStrings, bool a_handleOnly)"
