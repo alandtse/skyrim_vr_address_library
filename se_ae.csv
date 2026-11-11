@@ -8449,6 +8449,8 @@ sseid,aeid,confidence,name
 97504,104292,1,
 97505,104293,1,
 97506,104294,1,
+97507,104295,2,
+97509,104297,2,
 97514,104299,1,
 97515,104300,1,
 97517,104302,1,
@@ -8467,6 +8469,7 @@ sseid,aeid,confidence,name
 97709,104454,1,BSScript::ErrorLogger::Func0_*
 97710,105035,1,
 97717,104456,1,
+97724,104463,2,
 97726,104465,1,
 97727,104466,1,
 97728,104467,1,
@@ -8567,6 +8570,7 @@ sseid,aeid,confidence,name
 98166,104890,1,BSScript::Internal::VirtualMachine::sub_*
 98172,104896,1,BSScript::Internal::VirtualMachine::sub_*
 98173,104897,1,BSScript::Internal::VirtualMachine::sub_*
+98290,105011,2,
 98291,105012,1,
 98294,105014,1,BSScript::Internal::OneVariableArgument::Func1_*
 98295,105016,3,RE::SaveFileHandleReaderWriter::SaveHandle
