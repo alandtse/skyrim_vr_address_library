@@ -4257,6 +4257,9 @@ sseid,aeid,confidence,name
 31341,32126,3,BGSWaterCollisionManager::bshkAutoWater::GetTransform
 31342,32127,3,BGSWaterCollisionManager::bshkAutoWater::IsActive
 31410,32217,3,RE::TESWaterSystem::AddRipple
+31812,32582,3,
+31813,32583,3,
+31949,32703,3,
 32141,32885,3,RE::IAnimationGraphManagerHolder::SetGraphVariableBool_1404F06E0
 32142,32886,3,RE::IAnimationGraphManagerHolder::SetGraphVariableInt_1404F0700
 32143,32887,3,RE::IAnimationGraphManagerHolder::SetGraphVariableFloat_1404F0720
@@ -7333,6 +7336,8 @@ sseid,aeid,confidence,name
 55715,56246,1,
 55945,56489,3,SPID:Distribute::DeathItemManager::Detail::Add_item
 56476,56833,3,DialogueMovementEnabler::isInMenuMode
+58602,59252,3,
+58604,59254,3,
 60097,60850,3,void hkpEntity::Deactivate()
 60100,60853,3,void hkpEntity::IsActive(bool* a_out)
 60502,61314,3,RE::hkpWorld::AddPhantom
@@ -7390,6 +7395,7 @@ sseid,aeid,confidence,name
 69442,70819,3,RE::NiTimeController::SetTarget
 69447,70824,3,RE::NiTimeController::ComputeScaledTime
 69449,70826,3,RE::NiTimeController::ProcessClone
+69459,70836,3,
 69528,70912,2,"void BSGeometry::CopyMembers(BSGeometry* a_target, NiCloningProcess* a_cloning)"
 69557,70941,3,void BSDynamicTriShape::LoadBinary(NiStream* a_stream)
 69563,70947,3,"BSDynamicTriShape* BSDynamicTriShape::ctor(std::uint64_t a_vertexDesc, std::uint16_t a_vertexCount, std::uint16_t a_triangleCount, std::uint32_t a_dataSize)"
