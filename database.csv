@@ -515,6 +515,9 @@
 19666,0x1402a2070,0x1402b37e0,3,RE::ScriptEventSourceHolder::SendActivateEvent
 19725,0x1402a3e10,0x1402b5580,4,"void TESObjectREFR::UpdateAnimation(TESObjectREFR* a_this, float a_delta)"
 19729,0x1402a40d0,0x1402b5840,4,"void TESObjectREFR::sub_1402A40D0(TESObjectREFR* a_this, float a_delta)"
+19750,0x1402a4b50,0x1402b62c0,2,bool REFREventCallbacks::IEventCallback::Save(BSStorage* a_storage)
+19751,0x1402a4c60,0x1402b63d0,2,"bool LoadEventCallback(BSStorage* a_storage, BSTSmartPointer<REFREventCallbacks::IEventCallback>& a_out)"
+19752,0x1402a4e30,0x1402b65a0,2,bool REFREventCallbacks::IEventCallback::Load(BSStorage* a_storage)
 19760,0x1402a50e0,0x1402b6850,4,"BSResource::ErrorCode SaveStorageWrapper::EnsureCapacity (SaveStorageWrapper * a_this, uint64_t size)"
 19789,0x1402a6670,0x1402b7de0,3,RE::TESObjectREFR::GetOwner
 19793,0x1402a6960,0x1402b80d0,4,void TESObjectREFR::SetOwner(TESForm* a_owner)
@@ -2058,6 +2061,7 @@
 52835,0x14090e820,0x140948fa0,2,"void SkyrimScript::Profiler::StackFramePushed(std::uint32_t a_stackID, std::uint32_t a_stackFrame, const BSScript::Variable& a_selfObject, const BSFixedString& a_objectTypeName, const BSFixedString& a_stateName, const BSFixedString& a_fnName)"
 52836,0x14090e950,0x1409490d0,2,"void SkyrimScript::Profiler::StackFramePopQueued(std::uint32_t a_stackID, std::uint32_t a_stackFrame, const BSScript::Variable& a_selfObject, const BSFixedString& a_objectTypeName, const BSFixedString& a_stateName, const BSFixedString& a_fnName)"
 52837,0x14090ea80,0x140949200,2,"void SkyrimScript::Profiler::StackFramePopped(std::uint32_t a_stackID, std::uint32_t a_stackFrame, const BSScript::Variable& a_selfObject, const BSFixedString& a_objectTypeName, const BSFixedString& a_stateName, const BSFixedString& a_fnName)"
+52838,0x14090ec30,0x1409493b0,2,"void SkyrimScript::Profiler::RecordStackEvent(const char* a_event, std::uint32_t a_stackID, std::uint32_t a_stackFrame, void* a_frameInfo)"
 52933,0x140915790,0x14094ff10,3,YesImSure::
 53024,0x14091a490,0x140954c10,4,"void WritePapyrusLog_14091A490 (longlong param_1, char * param_2, longlong * param_3, undefined4 param_4, undefined4 param_5)"
 53029,0x14091c620,0x140956da0,3,"bool Actor::HasLineOfSight(TESObjectREFR* a_ref, bool& a_arg2)"
@@ -2074,7 +2078,9 @@
 53207,0x14092b800,0x140965f00,3,"SkyrimVM::LoadGame(SkyrimVM* this, LoadStorageWrapper* a_wrapper)"
 53209,0x14092b8e0,0x140965fe0,3,RE::SkyrimVM::DumpStacks
 53221,0x14092d130,0x140967780,4,"void SkyrimVM::RelayEvent(VMHandle a_handle, BSFixedString* a_event, BSScript::IFunctionArguments* a_args, SkyrimVM::ISendEventFilter* a_optionalFilter)"
+53581,0x14093aef0,0x140975590,2,"bool EventCallbackAdapter::Load(std::int32_t a_flags, BSStorage* a_storage, BSScript::IVMSaveLoadInterface* a_loader, BSScript::IVirtualMachine* a_vm, bool* a_ok)"
 53604,0x14093bff0,0x140976690,4,BSTEventSource::AddEventSink
+53698,0x140941050,0x14097b5f0,2,"bool EventCallbackAdapter::Save(SaveStorageWrapper* a_storage, BSScript::IVMSaveLoadInterface* a_saveLoad)"
 53705,0x140941760,0x14097bd00,4,BSTEventSource::RemoveEventSink
 53861,0x14094a5d0,0x1409849c0,3,papyrus::Actor::EquipItem
 53948,0x14094d850,0x140987ab0,3,papyrus::Actor::TrapSoul
@@ -2982,6 +2988,7 @@
 97468,0x141234360,0x14126c810,3,void Object::IncRef()
 97469,0x141234410,0x14126c8c0,3,std::uint32_t Object::DecRef()
 97500,0x141235d50,0x14126e200,2,void BSScript::Variable::SetObject(BSScript::Object** a_obj)
+97501,0x141235e10,0x14126e2c0,2,"void BSScript::Variable::SetObject(BSScript::Object** a_obj, BSScript::TypeInfo* a_type)"
 97505,0x141236190,0x14126e640,2,"bool BSScript::Variable::Save(SaveStorageWrapper* a_storage, BSScript::IVMSaveLoadInterface* a_saveLoad)"
 97506,0x141236490,0x14126e940,2,"bool BSScript::Variable::Load(BSStorage* a_storage, BSScript::IVMSaveLoadInterface* a_loader, BSScript::IVirtualMachine* a_vm, bool* a_ok)"
 97507,0x141236a10,0x14126eec0,2,"void BSScript::Variable::ToString(char* a_buffer, std::uint32_t a_size, bool a_quoteStrings, bool a_handleOnly)"
@@ -2990,6 +2997,7 @@
 97538,0x1412386d0,0x141270b80,3,void ObjectTypeInfo::ReleaseData()
 97723,0x141241e40,0x1412a28a0,4,void BSScript::Array::DestroyElements()
 97724,0x141241e90,0x1412a28f0,2,"void BSScript::Array::ToString(char* a_buffer, std::uint32_t a_bufferSize, bool a_handleOnly)"
+97734,0x141242840,0x141298590,2,bool BSScript::IStackCallbackFunctor::CanSave()
 97742,0x1412444c0,0x14129a210,3,void Stack::Dtor()
 97745,0x141244970,0x14129a6c0,4,BSScript::Stack::GetPageForFrame
 97746,0x1412449d0,0x14129a720,3,RE::BSScript::Stack::GetStackFrameVariable

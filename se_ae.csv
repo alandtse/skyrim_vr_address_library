@@ -3008,6 +3008,8 @@ sseid,aeid,confidence,name
 19520,19946,3,BGSWaterCollisionManager::bhkPlaceableWater::dtor
 19528,19954,3,BGSWaterCollisionManager::bhkWaterfall::dtor
 19617,20019,3,BGSWaterCollisionManager::bhkWaterfall::GetTransform
+19750,20144,2,
+19752,20146,2,
 19805,20210,3,RE::TESObjectREFR::IsAnOwner
 19811,20216,3,void* TESObjectREFR::GetTeleportData()
 19857,20264,3,RE::TESObjectREFR::InitChildActivates
@@ -6817,6 +6819,7 @@ sseid,aeid,confidence,name
 52750,53593,1,
 52753,53594,1,
 52757,53600,1,
+52838,53670,2,
 52856,53685,1,SkyrimScript::ProfileCallQueryTranslator::Func3_*
 52857,53686,1,SkyrimScript::RawProfileCallQuery::Func3_*
 52861,53687,1,SkyrimScript::ProfileCallQueryTranslator::Func1_*
@@ -8447,6 +8450,7 @@ sseid,aeid,confidence,name
 97484,104268,1,
 97485,104269,1,
 97500,104288,2,
+97501,104289,2,
 97504,104292,1,
 97505,104293,1,
 97506,104294,1,
