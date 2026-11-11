@@ -2981,14 +2981,15 @@
 97463,0x141233720,0x14126bbd0,3,VMHandle Object::GetHandle()
 97468,0x141234360,0x14126c810,3,void Object::IncRef()
 97469,0x141234410,0x14126c8c0,3,std::uint32_t Object::DecRef()
+97500,0x141235d50,0x14126e200,2,void BSScript::Variable::SetObject(BSScript::Object** a_obj)
 97505,0x141236190,0x14126e640,2,"bool BSScript::Variable::Save(SaveStorageWrapper* a_storage, BSScript::IVMSaveLoadInterface* a_saveLoad)"
 97506,0x141236490,0x14126e940,2,"bool BSScript::Variable::Load(BSStorage* a_storage, BSScript::IVMSaveLoadInterface* a_loader, BSScript::IVirtualMachine* a_vm, bool* a_ok)"
-97507,0x141236a10,0x14126eec0,2,"void BSScript::Variable::ToString(char* a_buffer, std::uint32_t a_size, bool a_flag1, bool a_flag2)"
+97507,0x141236a10,0x14126eec0,2,"void BSScript::Variable::ToString(char* a_buffer, std::uint32_t a_size, bool a_quoteStrings, bool a_handleOnly)"
 97508,0x141236d10,0x14126f1c0,4,void BSScript::Variable::Cleanup()
 97509,0x141236e50,0x14126f300,2,void BSScript::Variable::Assign(const BSScript::Variable& a_src)
 97538,0x1412386d0,0x141270b80,3,void ObjectTypeInfo::ReleaseData()
 97723,0x141241e40,0x1412a28a0,4,void BSScript::Array::DestroyElements()
-97724,0x141241e90,0x1412a28f0,2,"void BSScript::Array::ToString(char* a_buffer, std::uint32_t a_bufferSize, bool a_flag)"
+97724,0x141241e90,0x1412a28f0,2,"void BSScript::Array::ToString(char* a_buffer, std::uint32_t a_bufferSize, bool a_handleOnly)"
 97742,0x1412444c0,0x14129a210,3,void Stack::Dtor()
 97745,0x141244970,0x14129a6c0,4,BSScript::Stack::GetPageForFrame
 97746,0x1412449d0,0x14129a720,3,RE::BSScript::Stack::GetStackFrameVariable
