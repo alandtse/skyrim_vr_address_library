@@ -2938,6 +2938,7 @@ sseid,aeid,confidence,name
 19277,19703,3,RE::TESObjectREFR::GetWeightInContainer
 19301,19728,1,TESObjectREFR::Release3DRelatedData_*
 19302,19729,1,TESObjectREFR::Set3D_*
+19304,19731,3,
 19305,19732,1,
 19306,19733,1,TESObjectREFR::ShouldBackgroundClone_*
 19309,19736,3,TESObjectREFR::sub_1402917F0
@@ -4953,6 +4954,7 @@ sseid,aeid,confidence,name
 37824,38773,1,
 37825,38774,1,TESObjectREFR::sub_*
 37828,38782,3,RE::Actor::HasSpell
+37830,38784,3,
 37832,38786,3,RE::MagicTarget::Func1_140633090
 37833,38787,1,Character::sub_*
 37838,38792,1,Actor::SetMaximumWardPower_*
@@ -5756,6 +5758,7 @@ sseid,aeid,confidence,name
 42903,44083,1,
 42904,44084,1,
 42906,44086,1,
+42983,44166,3,
 42993,44176,1,
 42997,44183,1,Projectile::GetLinearVelocity_*
 42998,44184,1,Projectile::sub_*
@@ -8689,9 +8692,12 @@ sseid,aeid,confidence,name
 99043,105694,1,
 99044,105695,1,
 99045,105696,1,
+99714,106351,3,
 99736,106380,3,ShadowSceneNode::UpdateSunOcclusionPlanes
 99750,106398,3,AppendRoomToAccumList
 99752,106400,3,ShadowSceneNode::AccumulateLight
+99773,106419,3,
+99774,106420,3,
 99938,106583,3,RE::BSShaderAccumulator::FinishAccumulatingCommonPasses
 99963,106609,3,RE::BSShaderAccumulator::RenderBatches
 100004,106711,3,RE::BSLightingShaderMaterial::Ctor
