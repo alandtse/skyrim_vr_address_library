@@ -6820,6 +6820,7 @@ sseid,aeid,confidence,name
 52753,53594,1,
 52757,53600,1,
 52838,53670,2,
+52839,53671,2,
 52856,53685,1,SkyrimScript::ProfileCallQueryTranslator::Func3_*
 52857,53686,1,SkyrimScript::RawProfileCallQuery::Func3_*
 52861,53687,1,SkyrimScript::ProfileCallQueryTranslator::Func1_*
