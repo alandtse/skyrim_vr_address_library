@@ -2321,11 +2321,26 @@ sseid,aeid,confidence,name
 14704,14875,3,RE::TESHarvestedEvent::GetEventSource
 14809,14988,3,RE::TESForm::GetWeight
 15156,15329,3,BGSDynamicPersistenceManager::DemoteReferences
+15492,15657,3,BipedAnim::SetRoot
 15495,15660,3,FEC::UpdateCollision::RemoveNodeFromScene
 15501,15678,3,FEC::ProcessObject::attachArmorAddon
+15503,15680,2,BipedAnim::CreateEmptySlotAnimationGraphs
+15504,15681,2,BipedAnim::CollectSlotBehaviorGraphData
+15518,15695,3,BipedAnim::GetShieldObject
+15519,15696,3,BipedAnim::GetBodyObject
+15522,15699,2,BipedAnim::QueueHelmetLoadForSlot
+15529,15706,2,BipedAnim::IsSlotDefaultObject
+15530,15707,2,NiAVObject::GetLightingShaderProperty
 15534,15711,3,BipedAnim::AttachObjectNode
 15535,15712,3,FEC::ProcessGeometry::processAttachedGeometry
+15537,15714,2,BipedAnim::UpdateDismemberPartitionsRecursive
+15540,15717,2,BipedAnim::DisableDismemberPartitionsRecursive
+15541,15718,2,BipedAnim::CreateSlotAnimationGraph
+15542,15719,2,BipedAnim::RetrieveSlotBehaviorGraphData
+15544,15720,2,BSTDeque_ModelHandle_Reset
 15547,15723,3,RE::NiAVObject::ClearDecals
+15553,15729,2,BSTDeque_ModelHandle_Clear
+15561,15739,2,BipedAnim::ApplySlotTextureSetToGeometry
 15569,15746,1,VampiresCastNoShadow::attach_weapon
 15576,15753,3,RE::BSDismemberSkinInstance::UpdateDismemberPartion
 15757,15995,3,RE::InventoryEntryData::GetValue
@@ -2929,6 +2944,8 @@ sseid,aeid,confidence,name
 19141,19543,1,
 19143,19545,1,TESObjectREFR::GetSavedFormType_*
 19201,19627,3,RE::TESObjectREFR::HasQuestObject
+19204,19630,3,Actor::GetShieldObjectSlot
+19205,19631,3,Actor::GetBodyObject
 19206,19632,3,bool NiNode::AttachAddonNode()
 19207,19633,3,bool NiNode::DetachFemaleAddonNode()
 19209,19635,3,bool NiNode::ActivateAddonNode()
@@ -4245,6 +4262,7 @@ sseid,aeid,confidence,name
 32143,32887,3,RE::IAnimationGraphManagerHolder::SetGraphVariableFloat_1404F0720
 32144,32888,3,RE::IAnimationGraphManagerHolder::SetGraphVariableNiPoint3_1404F0740
 32192,32884,3,RE::IAnimationGraphManagerHolder::GetGraphVariableNiPoint3
+32468,33215,3,CombatController::Dtor
 32519,33271,1,
 32521,33273,1,
 32522,33274,1,
@@ -5867,7 +5885,15 @@ sseid,aeid,confidence,name
 43457,44639,1,
 43458,44665,1,
 43459,44666,1,
+43482,44704,3,CombatGroup::AddTarget
+43483,44705,3,CombatGroup::RemoveTargetByRef
+43484,44706,3,CombatGroup::IsTarget
+43485,44707,3,CombatGroup::IsTargetHandle
+43486,44708,3,CombatGroup::CanAllMembersAttackActor
+43489,44711,3,CombatGroup::AddMember
 43490,44712,3,
+43491,44713,3,CombatGroup::IsMember
+43493,44715,3,CombatGroup::CanActorAttackAllTargets
 43543,44769,1,
 43545,44771,1,
 43547,44773,1,

@@ -244,6 +244,7 @@
 15486,0x1401c5cd0,0x1401d5e40,4,void BIPOBJECT::Clear()
 15487,0x1401c5e60,0x1401d5fd0,4,void BIPOBJECT::Assign(BIPOBJECT* a_other)
 15491,0x1401c60a0,0x1401d6200,3,RE::BipedAnim::Dtor
+15492,0x1401c6100,0x1401d6260,3,"void BipedAnim::SetRoot(BipedAnim* a_this, NiAVObject* a_skeleton)"
 15493,0x1401c6140,0x1401d64d0,4,void BipedAnim::RemoveAllObjects()
 15494,0x1401c61a0,0x1401d6530,3,RE::BipedAnim::RemoveAllParts
 15495,0x1401c6270,0x1401d6600,4,void BipedAnim::DetachNode(NiAVObject* a_node)
@@ -253,14 +254,28 @@
 15499,0x1401c6a30,0x1401D6E90,4,"void BipedAnim::InitSkin(TESRace* a_race, TESObjectARMO* a_skin, bool a_isFemale)"
 15500,0x1401c6c50,0x1401d70b0,3,"void BipedAnim::RemoveConflictingObjects(TESObjectARMO* a_armor, TESObjectARMA* a_addon, bool a_flag)"
 15501,0x1401c6f90,0x1401d7450,3,"void BipedAnim::AttachBufferedObjects(float a_unk, char* a_flag, Actor* a_actor)"
+15503,0x1401C82E0,0x1401D88F0,2,void BipedAnim::CreateEmptySlotAnimationGraphs()
+15504,0x1401C8380,0x1401D8990,2,void BipedAnim::CollectSlotBehaviorGraphData()
 15505,0x1401c8470,0x1401d8a80,4,"void BipedAnim::SetWeaponObject(TESObjectWEAP* a_weapon, bool a_useActorSlot)"
 15510,0x1401c8ce0,0x1401d9440,4,void BipedAnim::SetAmmoObject(TESAmmo* a_ammo)
 15513,0x1401c8fc0,0x1401d9720,4,"void BipedAnim::SetLightObject(TESObjectLIGH* a_light, bool a_useActorSlot)"
 15518,0x1401c9840,0x1401d9fb0,3,BIPOBJECT* BipedAnim::GetShieldObject()
+15519,0x1401c98f0,0x1401da060,3,BIPOBJECT* BipedAnim::GetBodyObject()
+15522,0x1401C9BD0,0x1401DA340,2,void BipedAnim::QueueHelmetLoadForSlot()
 15527,0x1401ca8d0,0x1401db060,3,"void BipedAnim::AddAddonNodes(RE::NiAVObject* a_clonedNode, RE::NiAVObject* a_node, std::int32_t a_slot, RE::TESObjectREFR* a_actor, RE::BSTSmartPointer<RE::BipedAnim>& a_bipedAnim)"
+15529,0x1401CA9F0,0x1401DB180,2,bool BipedAnim::IsSlotDefaultObject(int a_slot)
+15530,0x1401CAA40,0x1401DB1D0,2,BSLightingShaderProperty* NiAVObject::GetLightingShaderProperty()
 15534,0x1401cac70,0x1401db680,3,BipedAnim::AttachObjectNode
 15535,0x1401cafb0,0x1401db9e0,3,BipedAnim::AttachNodeToRoot
+15537,0x1401CB8A0,0x1401DC310,2,void BipedAnim::UpdateDismemberPartitionsRecursive()
+15540,0x1401CBD10,0x1401DC760,2,void BipedAnim::DisableDismemberPartitionsRecursive()
+15541,0x1401CBE70,0x1401DC8C0,2,bool BipedAnim::CreateSlotAnimationGraph()
+15542,0x1401CC240,0x1401DCC90,2,bool BipedAnim::RetrieveSlotBehaviorGraphData()
+15544,0x1401CC3E0,0x1401DCE30,2,void BSTDeque_ModelHandle_Reset()
+15545,0x1401CC5B0,0x1401DD000,2,void ModelHandle_Assign()
 15547,0x1401cc7c0,0x1401dd210,3,void NiAVObject::RemoveDecals()
+15553,0x1401CC9F0,0x1401DD440,2,void BSTDeque_ModelHandle_Clear()
+15561,0x1401CCD50,0x1401DD7E0,2,bool BipedAnim::ApplySlotTextureSetToGeometry(NiAVObject* a_geometry)
 15569,0x1401cd350,0x1401ddde0,3,RE::NiNode::AttachWeapon
 15576,0x1401cdd40,0x1401de820,2,"void BSDismemberSkinInstance::UpdateDismemberPartion(std::uint16_t a_slot, bool a_enable)"
 15644,0x1401d1530,0x1401e1ff0,4,NiAVObject * TESHavokUtilities::FindCollidableObject_1401d1530 (hkpCollidable * a_linkedCollidable)
@@ -430,6 +445,8 @@
 19133,0x140287d30,0x140299460,4,"void TESObjectREFR::ReadFromSaveGame (TESObjectREFR * a_this, BGSLoadFormBuffer * a_buffer)"
 19142,0x1402896f0,0x14029ae20,4,"ObjectRefHandle TESObjectREFR::CreateReference(ObjectRefHandle& a_handleOut, FormType a_formType, bool a_addActorToProcessList)"
 19201,0x14028b940,0x14029d070,3,bool TESObjectREFR::HasQuestObject()
+19204,0x14028ba70,0x14029d1a0,3,std::int32_t Actor::GetShieldObjectSlot()
+19205,0x14028baa0,0x14029d1d0,3,std::int32_t Actor::GetBodyObject()
 19206,0x14028bad0,0x14029d200,3,bool NiNode::AttachAddonNode()
 19207,0x14028bce0,0x14029d410,3,bool NiNode::DetachFemaleAddonNode()
 19209,0x14028beb0,0x14029d5e0,3,bool NiNode::ActivateAddonNode()
@@ -906,6 +923,7 @@
 32426,0x1404fbcc0,0x14050c160,3,void CombatBehaviorStack::CheckBuffer(std::uint32_t a_size)
 32436,0x1404fc010,0x14050c4b0,3,void CombatBehaviorIdle::Update()
 32458,0x1404fc700,0x14050cba0,3,NiPointer<CombatInventoryItem> const& CombatBehaviorEquipContext::GetCombatItem()
+32468,0x1404fcde0,0x14050d280,3,void CombatController::Dtor()
 32469,0x1404FD1C0,0x14050D660,4,bool __fastcall CombatAIHook::sub_1404FD1C0(RE::Actor* a1)
 32488,0x1404fdfe0,0x14050e480,3,CombatController::SetTarget
 32489,0x1404fe300,0x14050e7a0,4,CombatController::UpdateTarget
@@ -1556,7 +1574,15 @@
 43319,0x1407625f0,0x14078d940,3,void CombatBlackboardManager::AddFlag(const CombatBlackboardFlag* val)
 43340,0x140762e60,0x14078e1b0,3,CombatBlackboardManager* CombatBlackboardManager::GetSingleton()
 43466,0x140768c10,0x140793f60,4,"bool SayCombatDialogueResolveHandles(void* a_arg1, CombatController* a_combatController, std::int32_t a_type, std::int32_t a_subtype, bool a_flag)"
+43482,0x14076A450,0x1407957A0,3,bool CombatGroup::AddTarget(TESObjectREFR* a_target)
+43483,0x14076A560,0x1407958B0,3,void CombatGroup::RemoveTargetByRef(TESObjectREFR* a_ref)
+43484,0x14076A5E0,0x140795930,3,bool CombatGroup::IsTarget(TESObjectREFR* a_ref)
+43485,0x14076A690,0x1407959E0,3,bool CombatGroup::IsTargetHandle(const std::uint32_t* a_handle)
+43486,0x14076A720,0x140795A70,3,bool CombatGroup::CanAllMembersAttackActor(Actor* a_target)
+43489,0x14076A890,0x140795BE0,3,bool CombatGroup::AddMember(Character* a_member)
 43490,0x14076AA00,0x140795D50,3,void CombatGroup::RemoveMember(Actor* a_member)
+43491,0x14076AB60,0x140795EB0,3,bool CombatGroup::IsMember(TESObjectREFR* a_ref)
+43493,0x14076ACA0,0x140795FF0,3,bool CombatGroup::CanActorAttackAllTargets(Character* a_actor)
 43566,0x140772520,0x14079D870,3,void CombatGroup::RemoveTarget(std::uint32_t a_index)
 43571,0x140772a60,0x14079ddb0,3,po3tweaks::CombatDialogue::SayCombatDialogue
 43628,0x140775550,0x1407a08a0,3,bool CombatBehaviorEquipContext::CanEquipItem()
