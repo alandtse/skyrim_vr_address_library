@@ -3005,6 +3005,7 @@
 98295,0x141270710,0x1412908a0,3,RE::SaveFileHandleReaderWriter::SaveHandle
 98441,0x141274320,0x1412946b0,2,std::uint32_t BSScript::TypeInfo::GetRawType()
 98520,0x141278110,0x1412b1380,3,BSScript::Internal::CodeTasklet::VMProcess
+98525,0x141278db0,0x1412b2020,2,void BSScript::Internal::CodeTasklet::CompleteCall()
 98526,0x141279000,0x1412b2270,2,void BSScript::Internal::CodeTasklet::HandleIAdd()
 98527,0x1412792c0,0x1412b2530,2,void BSScript::Internal::CodeTasklet::HandleFAdd()
 98528,0x141279580,0x1412b27f0,2,void BSScript::Internal::CodeTasklet::HandleISub()
@@ -3030,6 +3031,9 @@
 98552,0x14127ca30,0x1412b5ca0,2,void BSScript::Internal::CodeTasklet::HandleArrayLength()
 98553,0x14127cc50,0x1412b5ec0,2,void BSScript::Internal::CodeTasklet::HandleArrayGetElement()
 98554,0x14127cfc0,0x1412b6230,2,void BSScript::Internal::CodeTasklet::HandleArraySetElement()
+98558,0x14127dec0,0x1412b7130,2,bool BSScript::Internal::CodeTasklet::StoreResultToArgument(BSScript::Argument*)
+98560,0x14127e630,0x1412b78a0,2,"bool BSScript::Internal::CodeTasklet::EvaluateArgument(BSScript::Argument*, BSScript::Variable*)"
+98563,0x14127ee20,0x1412b8090,2,bool BSScript::Internal::CodeTasklet::ConvertToBool(BSScript::Variable*)
 98571,0x14127f630,0x1412b88a0,2,bool BSScript::Variable::IsNoneValue()
 98576,0x14127f7e0,0x1412b8a50,2,bool BSScript::Variable::IsObject()
 98654,0x141284ae0,0x1412c5b30,3,void BSScript::UnlinkedTypes::Object::Dtor()
