@@ -3003,8 +3003,35 @@
 98217,0x14126d230,0x14128d1f0,4,BSScript::Internal::VirtualMachine::ProcessArrayCleanup
 98218,0x14126d3c0,0x14128d380,4,BSScript::Internal::VirtualMachine::ProcessObjectCleanup
 98295,0x141270710,0x1412908a0,3,RE::SaveFileHandleReaderWriter::SaveHandle
+98441,0x141274320,0x1412946b0,2,std::uint32_t BSScript::TypeInfo::GetRawType()
 98520,0x141278110,0x1412b1380,3,BSScript::Internal::CodeTasklet::VMProcess
+98526,0x141279000,0x1412b2270,2,void BSScript::Internal::CodeTasklet::HandleIAdd()
+98527,0x1412792c0,0x1412b2530,2,void BSScript::Internal::CodeTasklet::HandleFAdd()
+98528,0x141279580,0x1412b27f0,2,void BSScript::Internal::CodeTasklet::HandleISub()
+98529,0x141279840,0x1412b2ab0,2,void BSScript::Internal::CodeTasklet::HandleFSub()
+98530,0x141279b00,0x1412b2d70,2,void BSScript::Internal::CodeTasklet::HandleIMul()
+98531,0x141279dc0,0x1412b3030,2,void BSScript::Internal::CodeTasklet::HandleFMul()
+98533,0x14127a350,0x1412b35c0,2,void BSScript::Internal::CodeTasklet::HandleFDiv()
+98535,0x14127a8f0,0x1412b3b60,2,void BSScript::Internal::CodeTasklet::HandleNot()
+98537,0x14127ac20,0x1412b3e90,2,void BSScript::Internal::CodeTasklet::HandleFNeg()
+98538,0x14127ae10,0x1412b4080,2,void BSScript::Internal::CodeTasklet::HandleAssign()
+98539,0x14127af30,0x1412b41a0,2,void BSScript::Internal::CodeTasklet::HandleCast()
+98540,0x14127b060,0x1412b42d0,2,void BSScript::Internal::CodeTasklet::HandleCmpEq()
+98541,0x14127b320,0x1412b4590,2,void BSScript::Internal::CodeTasklet::HandleCmpLt()
+98542,0x14127b600,0x1412b4870,2,void BSScript::Internal::CodeTasklet::HandleCmpLte()
+98543,0x14127b8e0,0x1412b4b50,2,void BSScript::Internal::CodeTasklet::HandleCmpGt()
+98544,0x14127bbc0,0x1412b4e30,2,void BSScript::Internal::CodeTasklet::HandleCmpGte()
+98545,0x14127bea0,0x1412b5110,2,void BSScript::Internal::CodeTasklet::HandleJmp()
+98546,0x14127bf30,0x1412b51a0,2,void BSScript::Internal::CodeTasklet::HandleJmpT()
+98547,0x14127c070,0x1412b52e0,2,void BSScript::Internal::CodeTasklet::HandleJmpF()
 98548,0x14127c1b0,0x1412b5420,3,BSScript::Internal::CodeTasklet::HandleCall
+98549,0x14127c2a0,0x1412b5510,2,void BSScript::Internal::CodeTasklet::HandleReturn()
+98550,0x14127c360,0x1412b55d0,2,void BSScript::Internal::CodeTasklet::HandleStrCat()
+98552,0x14127ca30,0x1412b5ca0,2,void BSScript::Internal::CodeTasklet::HandleArrayLength()
+98553,0x14127cc50,0x1412b5ec0,2,void BSScript::Internal::CodeTasklet::HandleArrayGetElement()
+98554,0x14127cfc0,0x1412b6230,2,void BSScript::Internal::CodeTasklet::HandleArraySetElement()
+98571,0x14127f630,0x1412b88a0,2,bool BSScript::Variable::IsNoneValue()
+98576,0x14127f7e0,0x1412b8a50,2,bool BSScript::Variable::IsObject()
 98654,0x141284ae0,0x1412c5b30,3,void BSScript::UnlinkedTypes::Object::Dtor()
 98721,0x141288890,0x1412ba8b0,3,BSScript::LinkerProcessor::ConvertVariables
 98722,0x1412896e0,0x1412bb700,3,BSScript::LinkerProcessor::ConvertProperties
