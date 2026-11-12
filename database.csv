@@ -2988,6 +2988,10 @@
 97463,0x141233720,0x14126bbd0,3,VMHandle Object::GetHandle()
 97468,0x141234360,0x14126c810,3,void Object::IncRef()
 97469,0x141234410,0x14126c8c0,3,std::uint32_t Object::DecRef()
+97496,0x141235960,0x14126de10,2,void BSScript::Variable::SetDefault()
+97497,0x141235b10,0x14126dfc0,2,BSFixedString* BSScript::Variable::GetString()
+97498,0x141235be0,0x14126e090,2,void BSScript::Variable::SetString(BSFixedString* a_str)
+97499,0x141235c90,0x14126e140,2,BSScript::Object** BSScript::Variable::GetObject()
 97500,0x141235d50,0x14126e200,2,void BSScript::Variable::SetObject(BSScript::Object** a_obj)
 97501,0x141235e10,0x14126e2c0,2,"void BSScript::Variable::SetObject(BSScript::Object** a_obj, BSScript::TypeInfo* a_type)"
 97502,0x141235ec0,0x14126e370,2,BSScript::Array** BSScript::Variable::GetArray()
@@ -3031,6 +3035,8 @@
 98377,0x141272d00,0x141292fb0,2,void BSTFreeList<BSScript::Internal::FunctionMessage>::Free(BSTFreeListElem<BSScript::Internal::FunctionMessage>*& a_node)
 98520,0x141278110,0x1412b1380,3,BSScript::Internal::CodeTasklet::VMProcess
 98548,0x14127c1b0,0x1412b5420,3,BSScript::Internal::CodeTasklet::HandleCall
+98566,0x14127f4f0,0x1412b8760,2,void BSScript::Array::UnlockIfHeld(BSScript::Array** a_ref)
+98577,0x14127f810,0x1412b8a80,2,void BSScript::Array::Unlock()
 98654,0x141284ae0,0x1412c5b30,3,void BSScript::UnlinkedTypes::Object::Dtor()
 98721,0x141288890,0x1412ba8b0,3,BSScript::LinkerProcessor::ConvertVariables
 98722,0x1412896e0,0x1412bb700,3,BSScript::LinkerProcessor::ConvertProperties

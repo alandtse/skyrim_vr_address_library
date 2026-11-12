@@ -8450,6 +8450,10 @@ sseid,aeid,confidence,name
 97483,104267,1,SkyrimScript::DataFileHandleReaderWriter::sub_*
 97484,104268,1,
 97485,104269,1,
+97496,104279,2,
+97497,104285,2,
+97498,104286,2,
+97499,104287,2,
 97500,104288,2,
 97501,104289,2,
 97502,104290,2,
@@ -8615,6 +8619,8 @@ sseid,aeid,confidence,name
 98526,105182,1,BSScript::Internal::CodeTasklet::sub_*
 98528,105184,1,BSScript::Internal::CodeTasklet::sub_*
 98529,105185,1,BSScript::Internal::CodeTasklet::sub_*
+98566,105222,2,
+98577,105231,2,
 98613,105267,1,
 98614,105268,1,BSScript::Internal::AutoPropSetFunction::Call_*
 98616,105270,1,BSScript::Internal::AutoPropSetFunction::TranslateIPToLineNumber_*
