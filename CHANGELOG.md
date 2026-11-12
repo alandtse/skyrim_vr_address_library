@@ -1,3 +1,10 @@
+# [0.303.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.302.0...v0.303.0) (2026-11-12)
+
+
+### Features
+
+* add Papyrus opcode handler ids ([#349](https://github.com/alandtse/skyrim_vr_address_library/issues/349)) ([212993d](https://github.com/alandtse/skyrim_vr_address_library/commit/212993d8df370e437cf7760a5ce255e8b17eeaba))
+
 # [0.302.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.301.0...v0.302.0) (2026-11-11)
 
 
