@@ -3008,6 +3008,8 @@ sseid,aeid,confidence,name
 19520,19946,3,BGSWaterCollisionManager::bhkPlaceableWater::dtor
 19528,19954,3,BGSWaterCollisionManager::bhkWaterfall::dtor
 19617,20019,3,BGSWaterCollisionManager::bhkWaterfall::GetTransform
+19750,20144,2,
+19752,20146,2,
 19805,20210,3,RE::TESObjectREFR::IsAnOwner
 19811,20216,3,void* TESObjectREFR::GetTeleportData()
 19857,20264,3,RE::TESObjectREFR::InitChildActivates
@@ -6817,6 +6819,8 @@ sseid,aeid,confidence,name
 52750,53593,1,
 52753,53594,1,
 52757,53600,1,
+52838,53670,2,
+52839,53671,2,
 52856,53685,1,SkyrimScript::ProfileCallQueryTranslator::Func3_*
 52857,53686,1,SkyrimScript::RawProfileCallQuery::Func3_*
 52861,53687,1,SkyrimScript::ProfileCallQueryTranslator::Func1_*
@@ -8446,9 +8450,19 @@ sseid,aeid,confidence,name
 97483,104267,1,SkyrimScript::DataFileHandleReaderWriter::sub_*
 97484,104268,1,
 97485,104269,1,
+97496,104279,2,
+97497,104285,2,
+97498,104286,2,
+97499,104287,2,
+97500,104288,2,
+97501,104289,2,
+97502,104290,2,
+97503,104291,2,
 97504,104292,1,
 97505,104293,1,
 97506,104294,1,
+97507,104295,2,
+97509,104297,2,
 97514,104299,1,
 97515,104300,1,
 97517,104302,1,
@@ -8467,6 +8481,7 @@ sseid,aeid,confidence,name
 97709,104454,1,BSScript::ErrorLogger::Func0_*
 97710,105035,1,
 97717,104456,1,
+97724,104463,2,
 97726,104465,1,
 97727,104466,1,
 97728,104467,1,
@@ -8567,6 +8582,7 @@ sseid,aeid,confidence,name
 98166,104890,1,BSScript::Internal::VirtualMachine::sub_*
 98172,104896,1,BSScript::Internal::VirtualMachine::sub_*
 98173,104897,1,BSScript::Internal::VirtualMachine::sub_*
+98290,105011,2,
 98291,105012,1,
 98294,105014,1,BSScript::Internal::OneVariableArgument::Func1_*
 98295,105016,3,RE::SaveFileHandleReaderWriter::SaveHandle
@@ -8603,6 +8619,8 @@ sseid,aeid,confidence,name
 98526,105182,1,BSScript::Internal::CodeTasklet::sub_*
 98528,105184,1,BSScript::Internal::CodeTasklet::sub_*
 98529,105185,1,BSScript::Internal::CodeTasklet::sub_*
+98566,105222,2,
+98577,105231,2,
 98613,105267,1,
 98614,105268,1,BSScript::Internal::AutoPropSetFunction::Call_*
 98616,105270,1,BSScript::Internal::AutoPropSetFunction::TranslateIPToLineNumber_*
