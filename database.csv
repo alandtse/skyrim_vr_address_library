@@ -3008,8 +3008,18 @@
 97742,0x1412444c0,0x14129a210,3,void Stack::Dtor()
 97745,0x141244970,0x14129a6c0,4,BSScript::Stack::GetPageForFrame
 97746,0x1412449d0,0x14129a720,3,RE::BSScript::Stack::GetStackFrameVariable
+97795,0x1412481d0,0x1412a35f0,2,"bool BSScript::ByteCode::Argument::ReadFromBitStream(BSScript::BSBitReader* a_reader, std::uint32_t a_localVarBitCount, std::uint32_t a_memberVarBitCount)"
+97796,0x141248400,0x1412a3820,2,"void BSScript::ByteCode::Argument::WriteToBitStream(BSScript::BSBitWriter* a_writer, const BSScript::ByteCode::Argument* a_arg, std::uint32_t a_localVarBitCount, std::uint32_t a_memberVarBitCount)"
+97797,0x141248560,0x1412a3980,2,"void BSScript::ByteCode::Argument::ReleaseFromBitStream(BSScript::BSBitReader* a_reader, std::uint32_t a_localVarBitCount, std::uint32_t a_memberVarBitCount)"
 97798,0x1412486f0,0x1412a3b10,2,"void BSScript::SkipArgument(BSScript::BSBitReader*, std::uint32_t, std::uint32_t)"
+97804,0x141248e60,0x1412a4280,2,void BSScript::ByteCode::PackedInstructionStream::MoveAssign(BSScript::ByteCode::PackedInstructionStream* a_rhs)
+97806,0x141248ed0,0x1412a42f0,2,std::uint32_t BSScript::ByteCode::PackedInstructionStream::GetBitOffsetForInstructionNumber(std::uint32_t a_instructionNumber)
+97807,0x141248fa0,0x1412a43c0,2,std::int32_t BSScript::ByteCode::PackedInstructionStream::GetInstructionNumberForOffset(std::uint32_t a_bitOffset)
+97809,0x141249060,0x1412a4480,2,void BSScript::ByteCode::PackedInstructionStream::ForEachInstruction(BSScript::ByteCode::PackedInstructionStream::InstructionFunctor* a_functor)
+97812,0x141249440,0x1412a4860,2,"bool BSScript::ByteCode::PackedInstructionStream::VisitNextInstructionOperands(BSScript::BSBitReader* a_reader, void (*a_visitArgument)(BSScript::BSBitReader*, std::uint32_t, std::uint32_t))"
+97813,0x141249640,0x1412a4a60,2,void BSScript::ByteCode::PackedInstructionStream::Release()
 97817,0x141249780,0x1412a4ba0,2,std::uint64_t BSScript::BSBitReader::ReadRawBits(std::size_t)
+97818,0x1412497e0,0x1412a4c00,2,"void BSScript::BSBitWriter::WriteRawBits(std::uint64_t a_value, std::size_t a_count)"
 97831,0x141249f60,0x1412a5380,3,RE::BSScript::CompiledScriptLoader::GetClass
 97923,0x1412507f0,0x14129dd90,3,RE::BSScript::NF_util::NativeFunctionBase::Call
 97925,0x141250c80,0x14129e220,4,BSScript__NF_util__NativeFunctionBase::ctor_141250C80
@@ -3070,6 +3080,8 @@
 98571,0x14127f630,0x1412b88a0,2,bool BSScript::Variable::IsNoneValue()
 98576,0x14127f7e0,0x1412b8a50,2,bool BSScript::Variable::IsObject()
 98577,0x14127f810,0x1412b8a80,2,void BSScript::Array::Unlock()
+98578,0x14127f850,0x1412b8ac0,2,void BSScript::PropertyTypeInfo::GetGetFunction(BSTSmartPointer<BSScript::IFunction>& a_outFunction)
+98579,0x14127f9d0,0x1412b8c40,2,void BSScript::PropertyTypeInfo::GetSetFunction(BSTSmartPointer<BSScript::IFunction>& a_outFunction)
 98654,0x141284ae0,0x1412c5b30,3,void BSScript::UnlinkedTypes::Object::Dtor()
 98721,0x141288890,0x1412ba8b0,3,BSScript::LinkerProcessor::ConvertVariables
 98722,0x1412896e0,0x1412bb700,3,BSScript::LinkerProcessor::ConvertProperties
