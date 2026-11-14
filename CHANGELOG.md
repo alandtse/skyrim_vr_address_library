@@ -1,3 +1,10 @@
+# [0.304.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.303.0...v0.304.0) (2026-11-14)
+
+
+### Features
+
+* add instruction stream and property ids ([#350](https://github.com/alandtse/skyrim_vr_address_library/issues/350)) ([e23bed3](https://github.com/alandtse/skyrim_vr_address_library/commit/e23bed3930d7431e00ee6c5f779098f71d345bc5))
+
 # [0.303.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.302.0...v0.303.0) (2026-11-12)
 
 
