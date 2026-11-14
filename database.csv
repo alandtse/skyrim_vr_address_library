@@ -3005,13 +3005,29 @@
 97723,0x141241e40,0x1412a28a0,4,void BSScript::Array::DestroyElements()
 97724,0x141241e90,0x1412a28f0,2,"void BSScript::Array::ToString(char* a_buffer, std::uint32_t a_bufferSize, bool a_handleOnly)"
 97734,0x141242840,0x141298590,2,bool BSScript::IStackCallbackFunctor::CanSave()
+97739,0x1412430c0,0x141298e10,2,BSScript::Stack::SaveFrame
+97740,0x141243650,0x1412993a0,2,BSScript::Stack::LoadFrame
 97742,0x1412444c0,0x14129a210,3,void Stack::Dtor()
 97745,0x141244970,0x14129a6c0,4,BSScript::Stack::GetPageForFrame
 97746,0x1412449d0,0x14129a720,3,RE::BSScript::Stack::GetStackFrameVariable
+97750,0x141244fc0,0x14129ad10,2,BSScript::Stack::Save
+97752,0x141245650,0x14129b3a0,2,BSScript::Stack::Load
+97780,0x141247e60,0x1412a3280,2,BSScript::ByteCode::Argument::Assign
+97781,0x141247f20,0x1412a3340,2,BSScript::ByteCode::Argument::GetIdentifier
+97782,0x141247f60,0x1412a3380,2,BSScript::ByteCode::Argument::GetString
+97788,0x141248040,0x1412a3460,2,BSScript::ByteCode::Argument::InitIdentifier
+97789,0x141248090,0x1412a34b0,2,BSScript::ByteCode::Argument::InitString
+97790,0x1412480e0,0x1412a3500,2,BSScript::ByteCode::Argument::InitInt
+97791,0x141248110,0x1412a3530,2,BSScript::ByteCode::Argument::InitFloat
+97792,0x141248140,0x1412a3560,2,BSScript::ByteCode::Argument::InitBool
+97793,0x141248170,0x1412a3590,2,BSScript::ByteCode::Argument::InitLocalVar
+97794,0x1412481a0,0x1412a35c0,2,BSScript::ByteCode::Argument::InitMemberVar
 97795,0x1412481d0,0x1412a35f0,2,"bool BSScript::ByteCode::Argument::ReadFromBitStream(BSScript::BSBitReader* a_reader, std::uint32_t a_localVarBitCount, std::uint32_t a_memberVarBitCount)"
 97796,0x141248400,0x1412a3820,2,"void BSScript::ByteCode::Argument::WriteToBitStream(BSScript::BSBitWriter* a_writer, const BSScript::ByteCode::Argument* a_arg, std::uint32_t a_localVarBitCount, std::uint32_t a_memberVarBitCount)"
 97797,0x141248560,0x1412a3980,2,"void BSScript::ByteCode::Argument::ReleaseFromBitStream(BSScript::BSBitReader* a_reader, std::uint32_t a_localVarBitCount, std::uint32_t a_memberVarBitCount)"
 97798,0x1412486f0,0x1412a3b10,2,"void BSScript::SkipArgument(BSScript::BSBitReader*, std::uint32_t, std::uint32_t)"
+97800,0x141248990,0x1412a3db0,2,BSScript::ByteCode::Argument::Save
+97801,0x141248b70,0x1412a3f90,2,BSScript::ByteCode::Argument::Load
 97804,0x141248e60,0x1412a4280,2,void BSScript::ByteCode::PackedInstructionStream::MoveAssign(BSScript::ByteCode::PackedInstructionStream* a_rhs)
 97806,0x141248ed0,0x1412a42f0,2,std::uint32_t BSScript::ByteCode::PackedInstructionStream::GetBitOffsetForInstructionNumber(std::uint32_t a_instructionNumber)
 97807,0x141248fa0,0x1412a43c0,2,std::int32_t BSScript::ByteCode::PackedInstructionStream::GetInstructionNumberForOffset(std::uint32_t a_bitOffset)
@@ -3039,11 +3055,14 @@
 98155,0x141265170,0x141284c40,3,bool BSScript::Internal::VirtualMachine::PopFunctionMessage(FunctionMessage* a_out)
 98158,0x1412658d0,0x1412853a0,4,void ResetState (BSScript__Internal__VirtualMachine * a_this)
 98160,0x141266030,0x141285b00,3,RE::SaveFileHandleReaderWriter::LoadHandle
+98169,0x141268d80,0x141288850,2,BSScript::Internal::VirtualMachine::SaveStacks
+98170,0x141268e80,0x141288950,2,BSScript::Internal::VirtualMachine::LoadStacks
 98182,0x14126a4f0,0x141289fd0,2,"bool BSTFreeList<BSScript::Internal::FunctionMessage>::Allocate(BSTFreeListElem<BSScript::Internal::FunctionMessage>*& a_out, const BSScript::Internal::FunctionMessage& a_value)"
 98217,0x14126d230,0x14128d1f0,4,BSScript::Internal::VirtualMachine::ProcessArrayCleanup
 98218,0x14126d3c0,0x14128d380,4,BSScript::Internal::VirtualMachine::ProcessObjectCleanup
 98290,0x14126ff80,0x141290110,2,BSScript::Internal::FunctionMessage& BSScript::Internal::FunctionMessage::Assign(const BSScript::Internal::FunctionMessage& a_src)
 98295,0x141270710,0x1412908a0,3,RE::SaveFileHandleReaderWriter::SaveHandle
+98297,0x141270ab0,0x141290c40,2,BSScript::Internal::VirtualMachine::SaveStack
 98377,0x141272d00,0x141292fb0,2,void BSTFreeList<BSScript::Internal::FunctionMessage>::Free(BSTFreeListElem<BSScript::Internal::FunctionMessage>*& a_node)
 98441,0x141274320,0x1412946b0,2,std::uint32_t BSScript::TypeInfo::GetRawType()
 98520,0x141278110,0x1412b1380,3,BSScript::Internal::CodeTasklet::VMProcess
