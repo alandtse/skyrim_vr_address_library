@@ -3005,11 +3005,38 @@
 97723,0x141241e40,0x1412a28a0,4,void BSScript::Array::DestroyElements()
 97724,0x141241e90,0x1412a28f0,2,"void BSScript::Array::ToString(char* a_buffer, std::uint32_t a_bufferSize, bool a_handleOnly)"
 97734,0x141242840,0x141298590,2,bool BSScript::IStackCallbackFunctor::CanSave()
+97739,0x1412430c0,0x141298e10,2,BSScript::Stack::SaveFrame
+97740,0x141243650,0x1412993a0,2,BSScript::Stack::LoadFrame
 97742,0x1412444c0,0x14129a210,3,void Stack::Dtor()
 97745,0x141244970,0x14129a6c0,4,BSScript::Stack::GetPageForFrame
 97746,0x1412449d0,0x14129a720,3,RE::BSScript::Stack::GetStackFrameVariable
+97750,0x141244fc0,0x14129ad10,2,BSScript::Stack::Save
+97752,0x141245650,0x14129b3a0,2,BSScript::Stack::Load
+97753,0x141245b40,0x14129b890,2,void BSScript::Stack::DumpFrames(SkyrimScript::Logger& a_logger)
+97780,0x141247e60,0x1412a3280,2,BSScript::ByteCode::Argument::Assign
+97781,0x141247f20,0x1412a3340,2,BSScript::ByteCode::Argument::GetIdentifier
+97782,0x141247f60,0x1412a3380,2,BSScript::ByteCode::Argument::GetString
+97788,0x141248040,0x1412a3460,2,BSScript::ByteCode::Argument::InitIdentifier
+97789,0x141248090,0x1412a34b0,2,BSScript::ByteCode::Argument::InitString
+97790,0x1412480e0,0x1412a3500,2,BSScript::ByteCode::Argument::InitInt
+97791,0x141248110,0x1412a3530,2,BSScript::ByteCode::Argument::InitFloat
+97792,0x141248140,0x1412a3560,2,BSScript::ByteCode::Argument::InitBool
+97793,0x141248170,0x1412a3590,2,BSScript::ByteCode::Argument::InitLocalVar
+97794,0x1412481a0,0x1412a35c0,2,BSScript::ByteCode::Argument::InitMemberVar
+97795,0x1412481d0,0x1412a35f0,2,"bool BSScript::ByteCode::Argument::ReadFromBitStream(BSScript::BSBitReader* a_reader, std::uint32_t a_localVarBitCount, std::uint32_t a_memberVarBitCount)"
+97796,0x141248400,0x1412a3820,2,"void BSScript::ByteCode::Argument::WriteToBitStream(BSScript::BSBitWriter* a_writer, const BSScript::ByteCode::Argument* a_arg, std::uint32_t a_localVarBitCount, std::uint32_t a_memberVarBitCount)"
+97797,0x141248560,0x1412a3980,2,"void BSScript::ByteCode::Argument::ReleaseFromBitStream(BSScript::BSBitReader* a_reader, std::uint32_t a_localVarBitCount, std::uint32_t a_memberVarBitCount)"
 97798,0x1412486f0,0x1412a3b10,2,"void BSScript::SkipArgument(BSScript::BSBitReader*, std::uint32_t, std::uint32_t)"
+97800,0x141248990,0x1412a3db0,2,BSScript::ByteCode::Argument::Save
+97801,0x141248b70,0x1412a3f90,2,BSScript::ByteCode::Argument::Load
+97804,0x141248e60,0x1412a4280,2,void BSScript::ByteCode::PackedInstructionStream::MoveAssign(BSScript::ByteCode::PackedInstructionStream* a_rhs)
+97806,0x141248ed0,0x1412a42f0,2,std::uint32_t BSScript::ByteCode::PackedInstructionStream::GetBitOffsetForInstructionNumber(std::uint32_t a_instructionNumber)
+97807,0x141248fa0,0x1412a43c0,2,std::int32_t BSScript::ByteCode::PackedInstructionStream::GetInstructionNumberForOffset(std::uint32_t a_bitOffset)
+97809,0x141249060,0x1412a4480,2,void BSScript::ByteCode::PackedInstructionStream::ForEachInstruction(BSScript::ByteCode::PackedInstructionStream::InstructionFunctor* a_functor)
+97812,0x141249440,0x1412a4860,2,"bool BSScript::ByteCode::PackedInstructionStream::VisitNextInstructionOperands(BSScript::BSBitReader* a_reader, void (*a_visitArgument)(BSScript::BSBitReader*, std::uint32_t, std::uint32_t))"
+97813,0x141249640,0x1412a4a60,2,void BSScript::ByteCode::PackedInstructionStream::Release()
 97817,0x141249780,0x1412a4ba0,2,std::uint64_t BSScript::BSBitReader::ReadRawBits(std::size_t)
+97818,0x1412497e0,0x1412a4c00,2,"void BSScript::BSBitWriter::WriteRawBits(std::uint64_t a_value, std::size_t a_count)"
 97831,0x141249f60,0x1412a5380,3,RE::BSScript::CompiledScriptLoader::GetClass
 97923,0x1412507f0,0x14129dd90,3,RE::BSScript::NF_util::NativeFunctionBase::Call
 97925,0x141250c80,0x14129e220,4,BSScript__NF_util__NativeFunctionBase::ctor_141250C80
@@ -3029,14 +3056,20 @@
 98155,0x141265170,0x141284c40,3,bool BSScript::Internal::VirtualMachine::PopFunctionMessage(FunctionMessage* a_out)
 98158,0x1412658d0,0x1412853a0,4,void ResetState (BSScript__Internal__VirtualMachine * a_this)
 98160,0x141266030,0x141285b00,3,RE::SaveFileHandleReaderWriter::LoadHandle
+98169,0x141268d80,0x141288850,2,BSScript::Internal::VirtualMachine::SaveStacks
+98170,0x141268e80,0x141288950,2,BSScript::Internal::VirtualMachine::LoadStacks
 98182,0x14126a4f0,0x141289fd0,2,"bool BSTFreeList<BSScript::Internal::FunctionMessage>::Allocate(BSTFreeListElem<BSScript::Internal::FunctionMessage>*& a_out, const BSScript::Internal::FunctionMessage& a_value)"
+98203,0x14126c160,0x14128bd30,2,void BSScript::Internal::VirtualMachine::DumpStacks(void* a_context)
 98217,0x14126d230,0x14128d1f0,4,BSScript::Internal::VirtualMachine::ProcessArrayCleanup
 98218,0x14126d3c0,0x14128d380,4,BSScript::Internal::VirtualMachine::ProcessObjectCleanup
 98290,0x14126ff80,0x141290110,2,BSScript::Internal::FunctionMessage& BSScript::Internal::FunctionMessage::Assign(const BSScript::Internal::FunctionMessage& a_src)
 98295,0x141270710,0x1412908a0,3,RE::SaveFileHandleReaderWriter::SaveHandle
+98297,0x141270ab0,0x141290c40,2,BSScript::Internal::VirtualMachine::SaveStack
 98377,0x141272d00,0x141292fb0,2,void BSTFreeList<BSScript::Internal::FunctionMessage>::Free(BSTFreeListElem<BSScript::Internal::FunctionMessage>*& a_node)
 98441,0x141274320,0x1412946b0,2,std::uint32_t BSScript::TypeInfo::GetRawType()
 98520,0x141278110,0x1412b1380,3,BSScript::Internal::CodeTasklet::VMProcess
+98521,0x1412786c0,0x1412b1930,2,bool BSScript::Internal::CodeTasklet::SaveResumeReason(SaveStorageWrapper& a_storage)
+98522,0x141278740,0x1412b19b0,2,bool BSScript::Internal::CodeTasklet::LoadResumeReason(LoadStorageWrapper& a_storage)
 98525,0x141278db0,0x1412b2020,2,void BSScript::Internal::CodeTasklet::CompleteCall()
 98526,0x141279000,0x1412b2270,2,void BSScript::Internal::CodeTasklet::HandleIAdd()
 98527,0x1412792c0,0x1412b2530,2,void BSScript::Internal::CodeTasklet::HandleFAdd()
@@ -3070,6 +3103,11 @@
 98571,0x14127f630,0x1412b88a0,2,bool BSScript::Variable::IsNoneValue()
 98576,0x14127f7e0,0x1412b8a50,2,bool BSScript::Variable::IsObject()
 98577,0x14127f810,0x1412b8a80,2,void BSScript::Array::Unlock()
+98578,0x14127f850,0x1412b8ac0,2,void BSScript::PropertyTypeInfo::GetGetFunction(BSTSmartPointer<BSScript::IFunction>& a_outFunction)
+98579,0x14127f9d0,0x1412b8c40,2,void BSScript::PropertyTypeInfo::GetSetFunction(BSTSmartPointer<BSScript::IFunction>& a_outFunction)
+98629,0x141280e80,0x1412c1ed0,2,void BSScript::ByteCode::UnpackedInstructionList::Pack(BSScript::ByteCode::PackedInstructionStream& a_stream)
+98630,0x1412815d0,0x1412c2620,2,void BSScript::ByteCode::UnpackedInstructionList::Unpack(BSScript::ByteCode::PackedInstructionStream& a_stream)
+98631,0x1412817a0,0x1412c27f0,2,void BSScript::ByteCode::UnpackedInstructionList::ForEachInstruction(BSScript::ByteCode::PackedInstructionStream::InstructionFunctor& a_functor)
 98654,0x141284ae0,0x1412c5b30,3,void BSScript::UnlinkedTypes::Object::Dtor()
 98721,0x141288890,0x1412ba8b0,3,BSScript::LinkerProcessor::ConvertVariables
 98722,0x1412896e0,0x1412bb700,3,BSScript::LinkerProcessor::ConvertProperties
