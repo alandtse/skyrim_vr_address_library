@@ -8583,6 +8583,8 @@ sseid,aeid,confidence,name
 98049,104772,1,BSScript__Internal__VirtualMachine::Func2_141257760
 98058,104781,1,BSScript::Internal::VirtualMachine::Func16_*
 98070,104793,1,BSScript__Internal__VirtualMachine::Func29_141259580
+98103,104826,2,
+98104,104827,2,
 98112,104835,1,BSScript__IVMSaveLoadInterface::Func8_141260430
 98113,104836,1,
 98114,104837,1,BSScript__IVMSaveLoadInterface::Func10_141260450

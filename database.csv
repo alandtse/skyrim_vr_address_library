@@ -3049,6 +3049,8 @@
 97950,0x141251cb0,0x1412ac710,4,"bool WritableStringTable::WriteString2 (BSScript::WritableStringTable * a_this, SaveStorageWrapper * a_save, char * a_scriptName)"
 98044,0x141256f30,0x1412765b0,3,void BSScript::Internal::VirtualMachine::Update(float a_budget)
 98077,0x14125a700,0x14127a190,2,SendEvent
+98103,0x14125da20,0x14127d4b0,2,"bool BSScript::IVMObjectBindInterface::CreateObjectWithProperties(const BSFixedString& a_className, std::uint32_t a_numProperties, BSTSmartPointer<BSScript::Object>& a_objPtr)"
+98104,0x14125dbd0,0x14127d660,2,"bool BSScript::IVMObjectBindInterface::InitObjectProperties(BSTSmartPointer<BSScript::Object>& a_objPtr, void* a_property, bool a_arg3)"
 98105,0x14125e550,0x14127dfe0,3,"void BSScript__IVMSaveLoadInterface::SaveGame (BSScript__IVMSaveLoadInterface * a_this, SaveStorageWrapper * a_save, SkyrimScript::SaveFileHandleReaderWriter * a_handle, bool a_bForceResetState)"
 98106,0x14125ea80,0x14127e560,3,"void BSScript__IVMSaveLoadInterface::LoadGame (BSScript__IVMSaveLoadInterface * a_this, LoadStorageWrapper * a_wrapper, SkyrimScript::SaveFileHandleReaderWriter * a_handle)"
 98130,0x141261cb0,0x141281790,3,BSScript::Internal::VirtualMachine::AttemptFunctionCall
