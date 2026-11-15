@@ -3227,6 +3227,7 @@ sseid,aeid,confidence,name
 22804,23285,1,TESObjectREFRDef__IAliasFunctor::Func0_*
 22805,23286,1,BSScript::IFunctionArguments::Func0_*
 22844,23301,1,
+22847,23303,2,
 22848,23304,1,
 22850,23306,1,OutputInfoStream::seek_*
 22879,23329,1,
@@ -8605,6 +8606,7 @@ sseid,aeid,confidence,name
 98170,104894,2,
 98172,104896,1,BSScript::Internal::VirtualMachine::sub_*
 98173,104897,1,BSScript::Internal::VirtualMachine::sub_*
+98288,105009,2,
 98290,105011,2,
 98291,105012,1,
 98294,105014,1,BSScript::Internal::OneVariableArgument::Func1_*

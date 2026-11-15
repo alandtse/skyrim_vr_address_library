@@ -586,6 +586,7 @@
 22825,0x140325f00,0x140335740,4,void * SKSE::CreateUIMessageData_140325f00 (BSFixedString * param_1)
 22843,0x140326460,0x140335ca0,3,RE::MessageDataFactoryManager::GetSingleton
 22845,0x140326510,0x140335d50,3,RE::INISettingCollection::ReadFromFile
+22847,0x1403266e0,0x140335f20,2,void BSScript::Internal::Object::Release()
 22879,0x140328110,0x140337A00,2,"char Script::ExecuteCommand(TESObjectREFR** a_context, Script* a_script, uint32_t a_opcodeType, TESObjectREFR* a_targetRef, int32_t* a_offset, uint32_t a_scriptDataOffset, int32_t* a_opcodeOffset, uint32_t a_unk8, char a_partial, char a_skip)"
 23073,0x14032ece0,0x14033e5a0,3,RE::ApplyPerkEntries
 23150,0x1403315f0,0x140340eb0,3,TESForm* BGSDefaultObjectManager::GetLeftHandEquip()
@@ -3003,6 +3004,7 @@
 97507,0x141236a10,0x14126eec0,2,"void BSScript::Variable::ToString(char* a_buffer, std::uint32_t a_size, bool a_quoteStrings, bool a_handleOnly)"
 97508,0x141236d10,0x14126f1c0,4,void BSScript::Variable::Cleanup()
 97509,0x141236e50,0x14126f300,2,void BSScript::Variable::Assign(const BSScript::Variable& a_src)
+97514,0x141237240,0x14126f6f0,2,void BSScript::ObjectTypeInfo::Dtor()
 97538,0x1412386d0,0x141270b80,3,void ObjectTypeInfo::ReleaseData()
 97723,0x141241e40,0x1412a28a0,4,void BSScript::Array::DestroyElements()
 97724,0x141241e90,0x1412a28f0,2,"void BSScript::Array::ToString(char* a_buffer, std::uint32_t a_bufferSize, bool a_handleOnly)"
@@ -3050,7 +3052,7 @@
 98044,0x141256f30,0x1412765b0,3,void BSScript::Internal::VirtualMachine::Update(float a_budget)
 98077,0x14125a700,0x14127a190,2,SendEvent
 98103,0x14125da20,0x14127d4b0,2,"bool BSScript::IVMObjectBindInterface::CreateObjectWithProperties(const BSFixedString& a_className, std::uint32_t a_numProperties, BSTSmartPointer<BSScript::Object>& a_objPtr)"
-98104,0x14125dbd0,0x14127d660,2,"bool BSScript::IVMObjectBindInterface::InitObjectProperties(BSTSmartPointer<BSScript::Object>& a_objPtr, void* a_property, bool a_arg3)"
+98104,0x14125dbd0,0x14127d660,2,"bool BSScript::IVMObjectBindInterface::InitObjectProperties(BSTSmartPointer<BSScript::Object>& a_objPtr, void* a_property, std::uint32_t a_arg3)"
 98105,0x14125e550,0x14127dfe0,3,"void BSScript__IVMSaveLoadInterface::SaveGame (BSScript__IVMSaveLoadInterface * a_this, SaveStorageWrapper * a_save, SkyrimScript::SaveFileHandleReaderWriter * a_handle, bool a_bForceResetState)"
 98106,0x14125ea80,0x14127e560,3,"void BSScript__IVMSaveLoadInterface::LoadGame (BSScript__IVMSaveLoadInterface * a_this, LoadStorageWrapper * a_wrapper, SkyrimScript::SaveFileHandleReaderWriter * a_handle)"
 98130,0x141261cb0,0x141281790,3,BSScript::Internal::VirtualMachine::AttemptFunctionCall
@@ -3064,10 +3066,16 @@
 98170,0x141268e80,0x141288950,2,BSScript::Internal::VirtualMachine::LoadStacks
 98180,0x14126a2f0,0x141289dd0,2,void BSTSmallSharedArray<BSScript::Internal::AttachedScript>::PushBack(const BSScript::Internal::AttachedScript& a_value)
 98182,0x14126a4f0,0x141289fd0,2,"bool BSTFreeList<BSScript::Internal::FunctionMessage>::Allocate(BSTFreeListElem<BSScript::Internal::FunctionMessage>*& a_out, const BSScript::Internal::FunctionMessage& a_value)"
+98187,0x14126ab70,0x14128a740,2,"bool BSTHashMap<VMHandle, BSTSmallSharedArray<AttachedScript>>::EraseAndGet(void* a_entries, std::uint32_t a_hash, std::uint64_t* a_key, BSTSmallSharedArray<AttachedScript>** a_outValue)"
+98190,0x14126afa0,0x14128ab70,2,"bool BSTHashMap<VMHandle, BSTSmallSharedArray<AttachedScript>>::Erase(void* a_entries, std::uint32_t a_hash, std::uint64_t* a_key)"
 98203,0x14126c160,0x14128bd30,2,void BSScript::Internal::VirtualMachine::DumpStacks(void* a_context)
 98217,0x14126d230,0x14128d1f0,4,BSScript::Internal::VirtualMachine::ProcessArrayCleanup
 98218,0x14126d3c0,0x14128d380,4,BSScript::Internal::VirtualMachine::ProcessObjectCleanup
+98225,0x14126df10,0x14128ded0,2,"bool BSTHashMap<VMHandle, BSTSmallSharedArray<AttachedScript>>::InsertOrAssign(void* a_entries, std::uint32_t a_hash, std::uint64_t* a_key, BSTSmallSharedArray<AttachedScript>* a_value)"
 98234,0x14126e900,0x14128e8c0,2,BSScript::Internal::AttachedScript::AttachedScript(const BSScript::Internal::AttachedScript& a_rhs)
+98265,0x14126f610,0x14128f760,2,void BSTSmallSharedArray<AttachedScript>::ReleaseInline()
+98288,0x14126fe90,0x141290020,2,BSTSmallSharedArray<AttachedScript>* BSTSmallSharedArray<AttachedScript>::MoveAssign(BSTSmallSharedArray<AttachedScript>* a_rhs)
+98289,0x14126ff10,0x1412900a0,2,BSScript::Internal::AttachedScript* BSScript::Internal::AttachedScript::operator=(BSScript::Internal::AttachedScript* a_rhs)
 98290,0x14126ff80,0x141290110,2,BSScript::Internal::FunctionMessage& BSScript::Internal::FunctionMessage::Assign(const BSScript::Internal::FunctionMessage& a_src)
 98295,0x141270710,0x1412908a0,3,RE::SaveFileHandleReaderWriter::SaveHandle
 98297,0x141270ab0,0x141290c40,2,BSScript::Internal::VirtualMachine::SaveStack
