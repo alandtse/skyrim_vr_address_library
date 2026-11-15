@@ -1315,6 +1315,7 @@
 37637,0x1406274a0,0x140630340,4,bool Actor::IsAttacking()
 37639,0x140627500,0x1406303a0,4,bool Actor::IsPowerAttacking (Actor * a_this)
 37650,0x140627930,0x1406307d0,3,StaminaNPC::apply_meleeBash_cost
+37659,0x1406280d0,0x140630fa0,3,
 37666,0x1406282e0,0x1406311b0,4,RE::Actor::DoCombatSpellApply_1406282E0
 37672,0x1406285a0,0x140631470,3,SimpleOffenceSuppression::IgnoreFriendlyFire::GetFactionRank
 37673,0x140628c20,0x140631af0,4,Character::HitData_140628C20
