@@ -8448,6 +8448,7 @@ sseid,aeid,confidence,name
 97474,104258,1,
 97477,104261,1,
 97481,104265,2,
+97482,104266,2,
 97483,104267,1,SkyrimScript::DataFileHandleReaderWriter::sub_*
 97484,104268,1,
 97485,104269,1,
@@ -8611,6 +8612,7 @@ sseid,aeid,confidence,name
 98315,105033,1,BSScript::Internal::VirtualMachine::Func0_*
 98318,105037,1,
 98367,105060,1,
+98368,105131,2,
 98383,105069,1,
 98384,105070,1,
 98385,105071,1,BSTCommonStaticMessageQueue_gs_T1_T2_ge_::sub_141273050

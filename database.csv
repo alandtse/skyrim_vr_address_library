@@ -2989,6 +2989,7 @@
 97468,0x141234360,0x14126c810,3,void Object::IncRef()
 97469,0x141234410,0x14126c8c0,3,std::uint32_t Object::DecRef()
 97481,0x141234e10,0x14126d2c0,2,void BSScript::Internal::Object::ClearVariableReferences()
+97482,0x141234f90,0x14126d440,2,void BSScript::Internal::Object::SetHandle(std::uint64_t a_handle)
 97496,0x141235960,0x14126de10,2,void BSScript::Variable::SetDefault()
 97497,0x141235b10,0x14126dfc0,2,BSFixedString* BSScript::Variable::GetString()
 97498,0x141235be0,0x14126e090,2,void BSScript::Variable::SetString(BSFixedString* a_str)
@@ -3069,6 +3070,7 @@
 98295,0x141270710,0x1412908a0,3,RE::SaveFileHandleReaderWriter::SaveHandle
 98297,0x141270ab0,0x141290c40,2,BSScript::Internal::VirtualMachine::SaveStack
 98310,0x141270ed0,0x141291060,2,BSScript::Internal::AttachedScript* BSScript::Internal::AttachedScript::DeletingDtor(std::uint32_t a_flags)
+98368,0x1412728f0,0x141292ba0,2,void BSTSmallSharedArray<BSScript::Internal::AttachedScript>::Clear()
 98377,0x141272d00,0x141292fb0,2,void BSTFreeList<BSScript::Internal::FunctionMessage>::Free(BSTFreeListElem<BSScript::Internal::FunctionMessage>*& a_node)
 98441,0x141274320,0x1412946b0,2,std::uint32_t BSScript::TypeInfo::GetRawType()
 98465,0x141275680,0x141295a10,2,void BSTSmallSharedArray<BSScript::Internal::AttachedScript>::EraseAt(std::uint32_t a_index)
