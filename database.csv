@@ -3101,10 +3101,12 @@
 98108,0x14125f630,0x14127f110,2,std::uint16_t BSScript::IVMSaveLoadInterface::GetSaveGameVersion()
 98109,0x14125f640,0x14127f120,2,void BSScript::IVMSaveLoadInterface::CleanupSave()
 98110,0x14125f6c0,0x14127f1a0,2,void BSScript::IVMSaveLoadInterface::ClearObjectAndArrayTables()
+98111,0x14125f7c0,0x14127f2a0,2,void BSScript::IVMSaveLoadInterface::DropAllRunningData()
 98114,0x141260450,0x14127ff30,2,"bool BSScript::IVMSaveLoadInterface::GetLoadedObject(std::uint64_t a_handle, void** a_out)"
 98117,0x141260540,0x141280020,2,"bool BSScript::IVMSaveLoadInterface::GetLoadedArray(std::uint64_t a_handle, void** a_out)"
 98118,0x141260610,0x1412800f0,2,"bool BSScript::IVMSaveLoadInterface::ReadHandle(void* a_storage, std::uint64_t* a_out)"
 98119,0x1412606c0,0x1412801a0,2,"bool BSScript::IVMSaveLoadInterface::GetStackByID(std::uint32_t a_stackID, void** a_stack)"
+98120,0x1412607b0,0x141280290,2,"bool BSScript::IVMSaveLoadInterface::CreateEmptyTasklet(void* a_stack, void** a_out)"
 98130,0x141261cb0,0x141281790,3,BSScript::Internal::VirtualMachine::AttemptFunctionCall
 98132,0x141262ae0,0x1412825c0,2,void BSScript::Internal::VirtualMachine::TasksToJobs(void* a_jobList)
 98134,0x141262ee0,0x1412829b0,3,BSScript::Internal::VirtualMachine::ProcessMessageQueue
@@ -3113,7 +3115,7 @@
 98155,0x141265170,0x141284c40,3,bool BSScript::Internal::VirtualMachine::PopFunctionMessage(FunctionMessage* a_out)
 98156,0x141265260,0x141284d30,2,"bool BSScript::Internal::VirtualMachine::FindBoundObjectInternal(std::uint64_t a_handle, const char* a_className, std::uint8_t a_flag, BSScript::Internal::Object** a_result)"
 98158,0x1412658d0,0x1412853a0,4,void ResetState (BSScript__Internal__VirtualMachine * a_this)
-98160,0x141266030,0x141285b00,3,RE::SaveFileHandleReaderWriter::LoadHandle
+98160,0x141266030,0x141285b00,3,void BSScript::Internal::VirtualMachine::LoadObjectTable()
 98169,0x141268d80,0x141288850,2,BSScript::Internal::VirtualMachine::SaveStacks
 98170,0x141268e80,0x141288950,2,BSScript::Internal::VirtualMachine::LoadStacks
 98179,0x14126a250,0x141289d30,2,std::uint32_t BSTArray<BSTSmartPointer<BSScript::Internal::Object>>::PushBack(BSScript::Internal::Object* a_obj)
