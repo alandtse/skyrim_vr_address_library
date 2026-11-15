@@ -3072,6 +3072,7 @@
 98217,0x14126d230,0x14128d1f0,4,BSScript::Internal::VirtualMachine::ProcessArrayCleanup
 98218,0x14126d3c0,0x14128d380,4,BSScript::Internal::VirtualMachine::ProcessObjectCleanup
 98225,0x14126df10,0x14128ded0,2,"bool BSTHashMap<VMHandle, BSTSmallSharedArray<AttachedScript>>::InsertOrAssign(void* a_entries, std::uint32_t a_hash, std::uint64_t* a_key, BSTSmallSharedArray<AttachedScript>* a_value)"
+98232,0x14126e7c0,0x14128e780,2,"BSTHashMap<VMHandle, BSTSmallSharedArray<AttachedScript>>::Entry* BSTHashMap<VMHandle, BSTSmallSharedArray<AttachedScript>>::Entry::ConstructValue(std::uint64_t* a_key, BSTSmallSharedArray<AttachedScript>* a_value)"
 98234,0x14126e900,0x14128e8c0,2,BSScript::Internal::AttachedScript::AttachedScript(const BSScript::Internal::AttachedScript& a_rhs)
 98265,0x14126f610,0x14128f760,2,void BSTSmallSharedArray<AttachedScript>::ReleaseInline()
 98288,0x14126fe90,0x141290020,2,BSTSmallSharedArray<AttachedScript>* BSTSmallSharedArray<AttachedScript>::MoveAssign(BSTSmallSharedArray<AttachedScript>* a_rhs)
@@ -3081,7 +3082,9 @@
 98297,0x141270ab0,0x141290c40,2,BSScript::Internal::VirtualMachine::SaveStack
 98310,0x141270ed0,0x141291060,2,BSScript::Internal::AttachedScript* BSScript::Internal::AttachedScript::DeletingDtor(std::uint32_t a_flags)
 98368,0x1412728f0,0x141292ba0,2,void BSTSmallSharedArray<BSScript::Internal::AttachedScript>::Clear()
+98375,0x141272c50,0x141292f00,2,"void BSTHashMap<VMHandle, BSTSmallSharedArray<AttachedScript>>::Entry::Emplace(void* a_next, std::uint64_t* a_key, BSTSmallSharedArray<AttachedScript>* a_value)"
 98377,0x141272d00,0x141292fb0,2,void BSTFreeList<BSScript::Internal::FunctionMessage>::Free(BSTFreeListElem<BSScript::Internal::FunctionMessage>*& a_node)
+98411,0x141273800,0x141293ab0,2,"BSTHashMap<VMHandle, BSTSmallSharedArray<AttachedScript>>::Entry* BSTHashMap<VMHandle, BSTSmallSharedArray<AttachedScript>>::GetFreeEntry(void* a_entries)"
 98441,0x141274320,0x1412946b0,2,std::uint32_t BSScript::TypeInfo::GetRawType()
 98465,0x141275680,0x141295a10,2,void BSTSmallSharedArray<BSScript::Internal::AttachedScript>::EraseAt(std::uint32_t a_index)
 98520,0x141278110,0x1412b1380,3,BSScript::Internal::CodeTasklet::VMProcess
