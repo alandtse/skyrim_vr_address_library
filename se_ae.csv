@@ -8444,9 +8444,11 @@ sseid,aeid,confidence,name
 97465,104249,1,
 97468,104252,3,RE::BSScript::Object::IncRef
 97469,104253,3,RE::BSScript::Object::DecRef
+97470,104254,2,
 97471,104255,1,
 97473,104257,1,
 97474,104258,1,
+97475,104259,2,
 97477,104261,1,
 97481,104265,2,
 97482,104266,2,
@@ -8583,7 +8585,10 @@ sseid,aeid,confidence,name
 98048,104771,1,BSScript::Internal::VirtualMachine::Func3_*
 98049,104772,1,BSScript__Internal__VirtualMachine::Func2_141257760
 98058,104781,1,BSScript::Internal::VirtualMachine::Func16_*
-98070,104793,1,BSScript__Internal__VirtualMachine::Func29_141259580
+98068,104791,2,
+98069,104792,2,
+98070,104793,2,
+98071,104794,2,
 98103,104826,2,
 98104,104827,2,
 98112,104835,1,BSScript__IVMSaveLoadInterface::Func8_141260430
@@ -8606,6 +8611,7 @@ sseid,aeid,confidence,name
 98170,104894,2,
 98172,104896,1,BSScript::Internal::VirtualMachine::sub_*
 98173,104897,1,BSScript::Internal::VirtualMachine::sub_*
+98179,104902,2,
 98288,105009,2,
 98290,105011,2,
 98291,105012,1,

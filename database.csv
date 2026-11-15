@@ -2989,6 +2989,8 @@
 97463,0x141233720,0x14126bbd0,3,VMHandle Object::GetHandle()
 97468,0x141234360,0x14126c810,3,void Object::IncRef()
 97469,0x141234410,0x14126c8c0,3,std::uint32_t Object::DecRef()
+97470,0x1412344c0,0x14126c970,2,bool BSScript::Internal::Object::HasMultipleReferences()
+97475,0x1412348b0,0x14126cd60,2,std::uint32_t BSScript::Internal::Object::SetLockStructureFlag()
 97481,0x141234e10,0x14126d2c0,2,void BSScript::Internal::Object::ClearVariableReferences()
 97482,0x141234f90,0x14126d440,2,void BSScript::Internal::Object::SetHandle(std::uint64_t a_handle)
 97496,0x141235960,0x14126de10,2,void BSScript::Variable::SetDefault()
@@ -3050,6 +3052,10 @@
 97949,0x141251c50,0x1412ac6b0,4,"bool WritableStringTable::WriteString (BSScript::WritableStringTable * a_this, SaveStorageWrapper * a_save, char * a_scriptName)"
 97950,0x141251cb0,0x1412ac710,4,"bool WritableStringTable::WriteString2 (BSScript::WritableStringTable * a_this, SaveStorageWrapper * a_save, char * a_scriptName)"
 98044,0x141256f30,0x1412765b0,3,void BSScript::Internal::VirtualMachine::Update(float a_budget)
+98068,0x1412592e0,0x141278a40,2,"void BSScript::Internal::VirtualMachine::ForEachBoundObject(std::uint64_t a_handle, void* a_functor)"
+98069,0x1412594d0,0x141278f60,2,"bool BSScript::Internal::VirtualMachine::FindBoundObject(std::uint64_t a_handle, const char* a_className, BSScript::Internal::Object** a_result)"
+98070,0x141259580,0x141279010,2,"void BSScript::Internal::VirtualMachine::MoveBoundObjects(std::uint64_t a_from, std::uint64_t a_to)"
+98071,0x1412598c0,0x141279350,2,void BSScript::Internal::VirtualMachine::ResetAllBoundObjects(std::uint64_t a_handle)
 98077,0x14125a700,0x14127a190,2,SendEvent
 98103,0x14125da20,0x14127d4b0,2,"bool BSScript::IVMObjectBindInterface::CreateObjectWithProperties(const BSFixedString& a_className, std::uint32_t a_numProperties, BSTSmartPointer<BSScript::Object>& a_objPtr)"
 98104,0x14125dbd0,0x14127d660,2,"bool BSScript::IVMObjectBindInterface::InitObjectProperties(BSTSmartPointer<BSScript::Object>& a_objPtr, void* a_property, std::uint32_t a_arg3)"
@@ -3060,10 +3066,12 @@
 98146,0x1412641f0,0x141283cc0,4,"int * CreateStack_1412641F0 (longlong param_1, undefined4 param_2, undefined8 param_3, undefined8 param_4)"
 98149,0x1412646f0,0x1412841c0,4,"void BSScript__Internal__VirtualMachine::CleanUpStack_1412646F0(longlong param_1,longlong param_2)"
 98155,0x141265170,0x141284c40,3,bool BSScript::Internal::VirtualMachine::PopFunctionMessage(FunctionMessage* a_out)
+98156,0x141265260,0x141284d30,2,"bool BSScript::Internal::VirtualMachine::FindBoundObjectInternal(std::uint64_t a_handle, const char* a_className, std::uint8_t a_flag, BSScript::Internal::Object** a_result)"
 98158,0x1412658d0,0x1412853a0,4,void ResetState (BSScript__Internal__VirtualMachine * a_this)
 98160,0x141266030,0x141285b00,3,RE::SaveFileHandleReaderWriter::LoadHandle
 98169,0x141268d80,0x141288850,2,BSScript::Internal::VirtualMachine::SaveStacks
 98170,0x141268e80,0x141288950,2,BSScript::Internal::VirtualMachine::LoadStacks
+98179,0x14126a250,0x141289d30,2,std::uint32_t BSTArray<BSTSmartPointer<BSScript::Internal::Object>>::PushBack(BSScript::Internal::Object* a_obj)
 98180,0x14126a2f0,0x141289dd0,2,void BSTSmallSharedArray<BSScript::Internal::AttachedScript>::PushBack(const BSScript::Internal::AttachedScript& a_value)
 98182,0x14126a4f0,0x141289fd0,2,"bool BSTFreeList<BSScript::Internal::FunctionMessage>::Allocate(BSTFreeListElem<BSScript::Internal::FunctionMessage>*& a_out, const BSScript::Internal::FunctionMessage& a_value)"
 98187,0x14126ab70,0x14128a740,2,"bool BSTHashMap<VMHandle, BSTSmallSharedArray<AttachedScript>>::EraseAndGet(void* a_entries, std::uint32_t a_hash, std::uint64_t* a_key, BSTSmallSharedArray<AttachedScript>** a_outValue)"
@@ -3072,12 +3080,14 @@
 98217,0x14126d230,0x14128d1f0,4,BSScript::Internal::VirtualMachine::ProcessArrayCleanup
 98218,0x14126d3c0,0x14128d380,4,BSScript::Internal::VirtualMachine::ProcessObjectCleanup
 98225,0x14126df10,0x14128ded0,2,"bool BSTHashMap<VMHandle, BSTSmallSharedArray<AttachedScript>>::InsertOrAssign(void* a_entries, std::uint32_t a_hash, std::uint64_t* a_key, BSTSmallSharedArray<AttachedScript>* a_value)"
+98228,0x14126e3f0,0x14128e3b0,2,"bool BSTHashMap<VMHandle, BSTSmallSharedArray<AttachedScript>>::InsertOrSwap(void* a_entries, std::uint32_t a_hash, std::uint64_t* a_key, BSTSmallSharedArray<AttachedScript>* a_value, BSTSmallSharedArray<AttachedScript>* a_oldValue)"
 98232,0x14126e7c0,0x14128e780,2,"BSTHashMap<VMHandle, BSTSmallSharedArray<AttachedScript>>::Entry* BSTHashMap<VMHandle, BSTSmallSharedArray<AttachedScript>>::Entry::ConstructValue(std::uint64_t* a_key, BSTSmallSharedArray<AttachedScript>* a_value)"
 98234,0x14126e900,0x14128e8c0,2,BSScript::Internal::AttachedScript::AttachedScript(const BSScript::Internal::AttachedScript& a_rhs)
 98265,0x14126f610,0x14128f760,2,void BSTSmallSharedArray<AttachedScript>::ReleaseInline()
 98288,0x14126fe90,0x141290020,2,BSTSmallSharedArray<AttachedScript>* BSTSmallSharedArray<AttachedScript>::MoveAssign(BSTSmallSharedArray<AttachedScript>* a_rhs)
 98289,0x14126ff10,0x1412900a0,2,BSScript::Internal::AttachedScript* BSScript::Internal::AttachedScript::operator=(BSScript::Internal::AttachedScript* a_rhs)
 98290,0x14126ff80,0x141290110,2,BSScript::Internal::FunctionMessage& BSScript::Internal::FunctionMessage::Assign(const BSScript::Internal::FunctionMessage& a_src)
+98293,0x1412704c0,0x141290650,2,"bool BSScript::Internal::VirtualMachine::MatchObjectTypeChain(void* a_state, std::uint64_t* a_script, void* a_arg3, std::uint64_t a_arg4)"
 98295,0x141270710,0x1412908a0,3,RE::SaveFileHandleReaderWriter::SaveHandle
 98297,0x141270ab0,0x141290c40,2,BSScript::Internal::VirtualMachine::SaveStack
 98310,0x141270ed0,0x141291060,2,BSScript::Internal::AttachedScript* BSScript::Internal::AttachedScript::DeletingDtor(std::uint32_t a_flags)
@@ -3086,7 +3096,9 @@
 98377,0x141272d00,0x141292fb0,2,void BSTFreeList<BSScript::Internal::FunctionMessage>::Free(BSTFreeListElem<BSScript::Internal::FunctionMessage>*& a_node)
 98411,0x141273800,0x141293ab0,2,"BSTHashMap<VMHandle, BSTSmallSharedArray<AttachedScript>>::Entry* BSTHashMap<VMHandle, BSTSmallSharedArray<AttachedScript>>::GetFreeEntry(void* a_entries)"
 98441,0x141274320,0x1412946b0,2,std::uint32_t BSScript::TypeInfo::GetRawType()
+98450,0x141274ca0,0x141295030,2,"void BSTHashMap<VMHandle, BSTSmallSharedArray<AttachedScript>>::Grow()"
 98465,0x141275680,0x141295a10,2,void BSTSmallSharedArray<BSScript::Internal::AttachedScript>::EraseAt(std::uint32_t a_index)
+98476,0x1412766c0,0x141296a50,2,"bool BSTHashMap<VMHandle, BSTSmallSharedArray<AttachedScript>>::ReinsertEntry(void* a_entries, std::uint32_t a_hash, BSTHashMap<VMHandle, BSTSmallSharedArray<AttachedScript>>::Entry* a_entry)"
 98520,0x141278110,0x1412b1380,3,BSScript::Internal::CodeTasklet::VMProcess
 98521,0x1412786c0,0x1412b1930,2,bool BSScript::Internal::CodeTasklet::SaveResumeReason(SaveStorageWrapper& a_storage)
 98522,0x141278740,0x1412b19b0,2,bool BSScript::Internal::CodeTasklet::LoadResumeReason(LoadStorageWrapper& a_storage)
