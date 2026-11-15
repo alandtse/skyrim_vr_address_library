@@ -3097,6 +3097,14 @@
 98104,0x14125dbd0,0x14127d660,2,"bool BSScript::IVMObjectBindInterface::InitObjectProperties(BSTSmartPointer<BSScript::Object>& a_objPtr, void* a_property, std::uint32_t a_arg3)"
 98105,0x14125e550,0x14127dfe0,3,"void BSScript__IVMSaveLoadInterface::SaveGame (BSScript__IVMSaveLoadInterface * a_this, SaveStorageWrapper * a_save, SkyrimScript::SaveFileHandleReaderWriter * a_handle, bool a_bForceResetState)"
 98106,0x14125ea80,0x14127e560,3,"void BSScript__IVMSaveLoadInterface::LoadGame (BSScript__IVMSaveLoadInterface * a_this, LoadStorageWrapper * a_wrapper, SkyrimScript::SaveFileHandleReaderWriter * a_handle)"
+98107,0x14125f5b0,0x14127f090,2,void BSScript::IVMSaveLoadInterface::MarkSaveInvalid(void* a_storage)
+98108,0x14125f630,0x14127f110,2,std::uint16_t BSScript::IVMSaveLoadInterface::GetSaveGameVersion()
+98109,0x14125f640,0x14127f120,2,void BSScript::IVMSaveLoadInterface::CleanupSave()
+98110,0x14125f6c0,0x14127f1a0,2,void BSScript::IVMSaveLoadInterface::ClearObjectAndArrayTables()
+98114,0x141260450,0x14127ff30,2,"bool BSScript::IVMSaveLoadInterface::GetLoadedObject(std::uint64_t a_handle, void** a_out)"
+98117,0x141260540,0x141280020,2,"bool BSScript::IVMSaveLoadInterface::GetLoadedArray(std::uint64_t a_handle, void** a_out)"
+98118,0x141260610,0x1412800f0,2,"bool BSScript::IVMSaveLoadInterface::ReadHandle(void* a_storage, std::uint64_t* a_out)"
+98119,0x1412606c0,0x1412801a0,2,"bool BSScript::IVMSaveLoadInterface::GetStackByID(std::uint32_t a_stackID, void** a_stack)"
 98130,0x141261cb0,0x141281790,3,BSScript::Internal::VirtualMachine::AttemptFunctionCall
 98132,0x141262ae0,0x1412825c0,2,void BSScript::Internal::VirtualMachine::TasksToJobs(void* a_jobList)
 98134,0x141262ee0,0x1412829b0,3,BSScript::Internal::VirtualMachine::ProcessMessageQueue
@@ -3132,6 +3140,12 @@
 98375,0x141272c50,0x141292f00,2,"void BSTHashMap<VMHandle, BSTSmallSharedArray<AttachedScript>>::Entry::Emplace(void* a_next, std::uint64_t* a_key, BSTSmallSharedArray<AttachedScript>* a_value)"
 98377,0x141272d00,0x141292fb0,2,void BSTFreeList<BSScript::Internal::FunctionMessage>::Free(BSTFreeListElem<BSScript::Internal::FunctionMessage>*& a_node)
 98411,0x141273800,0x141293ab0,2,"BSTHashMap<VMHandle, BSTSmallSharedArray<AttachedScript>>::Entry* BSTHashMap<VMHandle, BSTSmallSharedArray<AttachedScript>>::GetFreeEntry(void* a_entries)"
+98414,0x141273910,0x141293bc0,2,void* BSScript::IVMSaveLoadInterface::GetReadableStringTable()
+98415,0x141273920,0x141293bd0,2,void* BSScript::IVMSaveLoadInterface::GetReadableTypeTable()
+98416,0x141273930,0x141293be0,2,void* BSScript::IVMSaveLoadInterface::GetWritableStringTable2()
+98417,0x141273940,0x141293bf0,2,void* BSScript::IVMSaveLoadInterface::GetWritableStringTable1()
+98418,0x141273950,0x141293c00,2,void* BSScript::IVMSaveLoadInterface::GetWritableTypeTable2()
+98419,0x141273960,0x141293c10,2,void* BSScript::IVMSaveLoadInterface::GetWritableTypeTable1()
 98441,0x141274320,0x1412946b0,2,std::uint32_t BSScript::TypeInfo::GetRawType()
 98450,0x141274ca0,0x141295030,2,"void BSTHashMap<VMHandle, BSTSmallSharedArray<AttachedScript>>::Grow()"
 98465,0x141275680,0x141295a10,2,void BSTSmallSharedArray<BSScript::Internal::AttachedScript>::EraseAt(std::uint32_t a_index)
