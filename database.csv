@@ -582,6 +582,7 @@
 22350,0x140311250,0x140322760,3,powerof3tweaks::ToggleCollisionFix::ToggleCollision
 22465,0x140316e60,0x140328370,3,Cmd_SaveGame_Execute
 22754,0x1403232e0,0x140332a90,3,void TESQuest::CompleteAllStages()
+22779,0x140324a60,0x140334240,2,"void BSTSmartPointer<BSScript::Object, BSTSmartPointerIntrusiveRefCount>::Dtor()"
 22790,0x140324e90,0x1402af140,4,BGSStoryEventManager* BGSStoryEvent::BGSStoryEventManager::GetSingleton() include\RE\B/BGSStoryEventManager.h:20
 22825,0x140325f00,0x140335740,4,void * SKSE::CreateUIMessageData_140325f00 (BSFixedString * param_1)
 22843,0x140326460,0x140335ca0,3,RE::MessageDataFactoryManager::GetSingleton
@@ -2056,7 +2057,15 @@
 52655,0x140902860,0x14093cfe0,3,RE::SkyrimScript::HandlePolicy::GetHandleForObject
 52659,0x140902b00,0x14093d280,3,RE::SkyrimScript::HandlePolicy::GetObjectForHandle
 52662,0x1409032c0,0x14093da40,3,RE::SkyrimScript::HandlePolicy::ConvertHandleToString
-52730,0x140906fe0,0x140941760,3,SkyrimScript__ObjectBindPolicy::
+52723,0x1409065e0,0x140940d60,2,void SkyrimScript::ObjectBindPolicy::ClearAll()
+52724,0x1409066c0,0x140940e40,2,"void SkyrimScript::ObjectBindPolicy::ReadFragmentScripts(std::uint64_t a_handle, void* a_arg3, void* a_arg4, BSMemStorage* a_stream, std::uint64_t a_extra)"
+52730,0x140906fe0,0x140941760,3,"void SkyrimScript::ObjectBindPolicy::BindMergedScripts(std::uint64_t a_handle, void* a_scripts, std::uint64_t a_arg4)"
+52731,0x140907810,0x140941f90,2,"void SkyrimScript::ObjectBindPolicy::ReadQuestFragments(std::uint32_t a_param, BSMemStorage* a_stream)"
+52732,0x140907ac0,0x140942240,2,"void SkyrimScript::ObjectBindPolicy::ReadQuestAliasScripts(std::uint32_t a_arg2, void* a_arg3, BSMemStorage* a_stream)"
+52733,0x140907b90,0x140942310,2,"void SkyrimScript::ObjectBindPolicy::ReadInfoFragments(std::uint32_t a_param, BSMemStorage* a_stream, std::uint64_t a_extra)"
+52734,0x140907f50,0x1409426d0,2,"void SkyrimScript::ObjectBindPolicy::ReadSceneFragments(std::uint32_t a_param, BSMemStorage* a_stream)"
+52735,0x140908450,0x140942bd0,2,"void SkyrimScript::ObjectBindPolicy::ReadPackageFragments(std::uint32_t a_param, BSMemStorage* a_stream)"
+52736,0x1409087e0,0x140942f60,2,"void SkyrimScript::ObjectBindPolicy::ReadPerkFragments(std::uint32_t a_param, BSMemStorage* a_stream)"
 52767,0x140909f30,0x1409446b0,3,PapyrusTweaks::
 52834,0x14090e6c0,0x140948e40,2,"void SkyrimScript::Profiler::StackFramePushQueued(std::uint32_t a_stackID, std::uint32_t a_stackFrames, const BSTSmartPointer<BSScript::Internal::IFuncCallQuery>& a_query)"
 52835,0x14090e820,0x140948fa0,2,"void SkyrimScript::Profiler::StackFramePushed(std::uint32_t a_stackID, std::uint32_t a_stackFrame, const BSScript::Variable& a_selfObject, const BSFixedString& a_objectTypeName, const BSFixedString& a_stateName, const BSFixedString& a_fnName)"
@@ -2983,8 +2992,14 @@
 88674,0x1410cf350,0x14112c080,3,NiPoint3 BSNavmesh::GetNormal(std::uint16_t a_tri) const
 89364,0x1410fc9e0,0x141159720,3,void ProcessAvoidBoxChecks()
 89365,0x1410fcbf0,0x141159930,3,std::uint64_t CheckAvoidBox()
+97369,0x14122c060,0x141264510,2,"void ObjectBindPolicy::GetAttachedScripts(std::uint64_t a_handle, void* a_out)"
+97370,0x14122c230,0x1412646e0,2,"void* ObjectBindPolicy::FindAttachedScript(void* a_out, std::uint64_t a_handle, void* a_name)"
 97371,0x14122c6f0,0x141264ba0,4,"void ObjectBindPolicy::GetInitialPropertyValues(VMHandle a_handle, const BSFixedString& a_className, BSTScrapHashMap<BSFixedString, Variable>& a_propertyValues, std::uint32_t& a_nonConvertedProperties)"
+97374,0x14122ce90,0x141265340,2,"void ObjectBindPolicy::MergeAttachedScripts(std::uint64_t a_handle, void* a_scripts)"
+97376,0x14122d5d0,0x141265a80,2,void ObjectBindPolicy::RemoveAllAttachedScripts()
+97378,0x14122d8e0,0x141265d90,2,void ObjectBindPolicy::RemoveAttachedScripts(std::uint64_t a_handle)
 97379,0x14122dad0,0x141265f80,3,RE::BSScript::ObjectBindPolicy::BindObject
+97389,0x14122edc0,0x141267270,2,"void ObjectBindPolicy::CollectMergedScripts(std::uint64_t a_handle, void* a_arg3, void* a_out)"
 97462,0x141233670,0x14126bb20,3,void Object::Dtor()
 97463,0x141233720,0x14126bbd0,3,VMHandle Object::GetHandle()
 97468,0x141234360,0x14126c810,3,void Object::IncRef()
@@ -3057,6 +3072,7 @@
 98047,0x141257680,0x141276de0,2,bool BSScript::Internal::VirtualMachine::IsCompletelyFrozen()
 98048,0x141257700,0x141276e60,2,"void BSScript::Internal::VirtualMachine::FormatAndPostMessage(const char* a_message, std::int32_t a_severity)"
 98049,0x141257760,0x141276ec0,2,"void BSScript::Internal::VirtualMachine::TraceStack(const char* a_str, std::uint32_t a_stackID, std::int32_t a_severity)"
+98050,0x1412578d0,0x141277030,2,"bool BSScript::Internal::VirtualMachine::RegisterObjectType(std::uint32_t a_typeID, void* a_className)"
 98051,0x141257b70,0x1412772d0,2,"bool BSScript::Internal::VirtualMachine::GetScriptObjectType2(std::uint32_t a_typeID, void* a_outTypeInfoPtr)"
 98052,0x141257ca0,0x141277400,2,"bool BSScript::Internal::VirtualMachine::GetScriptObjectType1(void* a_className, void* a_outTypeInfoPtr)"
 98053,0x141257d70,0x1412774d0,2,"bool BSScript::Internal::VirtualMachine::GetScriptObjectTypeNoLoad2(std::uint32_t a_typeID, void* a_outTypeInfoPtr)"
@@ -3066,6 +3082,7 @@
 98057,0x1412582c0,0x141277a20,2,"bool BSScript::Internal::VirtualMachine::GetParentNativeType(void* a_className, void* a_typeInfoPtr)"
 98058,0x141258550,0x141277cb0,2,bool BSScript::Internal::VirtualMachine::TypeIsValid(void* a_className)
 98059,0x1412585e0,0x141277d40,2,bool BSScript::Internal::VirtualMachine::ReloadType(const char* a_className)
+98060,0x1412587e0,0x141277f40,2,"void BSScript::Internal::VirtualMachine::CalculateFullReloadList(void* a_classes, void* a_arg3)"
 98062,0x141258a00,0x141278160,2,"bool BSScript::Internal::VirtualMachine::CreateObject1(void* a_className, void* a_property, void* a_objPtr)"
 98063,0x141258ab0,0x141278210,2,"bool BSScript::Internal::VirtualMachine::CreateArray2(std::int32_t a_typeID, void* a_className, std::uint32_t a_size, void* a_arrayPtr)"
 98064,0x141258bd0,0x141278330,2,"bool BSScript::Internal::VirtualMachine::CreateArray1(void* a_typeInfo, std::uint32_t a_size, void* a_arrayPtr)"
@@ -3093,6 +3110,12 @@
 98088,0x14125be40,0x14127b8d0,2,void* BSScript::Internal::VirtualMachine::GetObjectBindPolicy2()
 98089,0x14125be50,0x14127b8e0,2,void* BSScript::Internal::VirtualMachine::GetObjectBindPolicy1()
 98090,0x14125be60,0x14127b8f0,2,void* BSScript::Internal::VirtualMachine::GetSavePatcherInterface()
+98091,0x14125be70,0x14127b900,2,void BSScript::Internal::VirtualMachine::RegisterForLogEvent(void* a_sink)
+98092,0x14125bee0,0x14127b970,2,void BSScript::Internal::VirtualMachine::UnregisterForLogEvent(void* a_sink)
+98093,0x14125bf50,0x14127b9e0,2,void BSScript::Internal::VirtualMachine::RegisterForStatsEvent(void* a_sink)
+98094,0x14125bfb0,0x14127ba40,2,void BSScript::Internal::VirtualMachine::UnregisterForStatsEvent(void* a_sink)
+98095,0x14125c010,0x14127baa0,2,std::uint64_t BSScript::IVMObjectBindInterface::GetBoundHandle(void** a_objPtr)
+98096,0x14125c040,0x14127bad0,2,"bool BSScript::IVMObjectBindInterface::TypeCanBeBound(void* a_className, std::uint64_t a_handle)"
 98103,0x14125da20,0x14127d4b0,2,"bool BSScript::IVMObjectBindInterface::CreateObjectWithProperties(const BSFixedString& a_className, std::uint32_t a_numProperties, BSTSmartPointer<BSScript::Object>& a_objPtr)"
 98104,0x14125dbd0,0x14127d660,2,"bool BSScript::IVMObjectBindInterface::InitObjectProperties(BSTSmartPointer<BSScript::Object>& a_objPtr, void* a_property, std::uint32_t a_arg3)"
 98105,0x14125e550,0x14127dfe0,3,"void BSScript__IVMSaveLoadInterface::SaveGame (BSScript__IVMSaveLoadInterface * a_this, SaveStorageWrapper * a_save, SkyrimScript::SaveFileHandleReaderWriter * a_handle, bool a_bForceResetState)"
@@ -3112,6 +3135,7 @@
 98134,0x141262ee0,0x1412829b0,3,BSScript::Internal::VirtualMachine::ProcessMessageQueue
 98146,0x1412641f0,0x141283cc0,4,"int * CreateStack_1412641F0 (longlong param_1, undefined4 param_2, undefined8 param_3, undefined8 param_4)"
 98149,0x1412646f0,0x1412841c0,4,"void BSScript__Internal__VirtualMachine::CleanUpStack_1412646F0(longlong param_1,longlong param_2)"
+98152,0x141264d30,0x141284800,2,"bool BSScript::Internal::VirtualMachine::CreateObjectByName(void* a_className, void** a_objPtr)"
 98155,0x141265170,0x141284c40,3,bool BSScript::Internal::VirtualMachine::PopFunctionMessage(FunctionMessage* a_out)
 98156,0x141265260,0x141284d30,2,"bool BSScript::Internal::VirtualMachine::FindBoundObjectInternal(std::uint64_t a_handle, const char* a_className, std::uint8_t a_flag, BSScript::Internal::Object** a_result)"
 98158,0x1412658d0,0x1412853a0,4,void ResetState (BSScript__Internal__VirtualMachine * a_this)
@@ -3151,6 +3175,7 @@
 98441,0x141274320,0x1412946b0,2,std::uint32_t BSScript::TypeInfo::GetRawType()
 98450,0x141274ca0,0x141295030,2,"void BSTHashMap<VMHandle, BSTSmallSharedArray<AttachedScript>>::Grow()"
 98465,0x141275680,0x141295a10,2,void BSTSmallSharedArray<BSScript::Internal::AttachedScript>::EraseAt(std::uint32_t a_index)
+98469,0x1412759a0,0x141295d30,2,"void ScatterTableInitialReserve24(void* a_table, std::uint32_t a_count)"
 98476,0x1412766c0,0x141296a50,2,"bool BSTHashMap<VMHandle, BSTSmallSharedArray<AttachedScript>>::ReinsertEntry(void* a_entries, std::uint32_t a_hash, BSTHashMap<VMHandle, BSTSmallSharedArray<AttachedScript>>::Entry* a_entry)"
 98480,0x141276e50,0x141297270,2,void BSScript::Internal::VirtualMachine::SetLinkedCallback(void* a_callback)
 98520,0x141278110,0x1412b1380,3,BSScript::Internal::CodeTasklet::VMProcess

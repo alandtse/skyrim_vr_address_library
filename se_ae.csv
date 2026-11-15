@@ -3219,6 +3219,7 @@ sseid,aeid,confidence,name
 22773,23245,1,
 22774,23247,1,
 22777,23251,1,
+22779,23255,2,
 22795,23276,1,OutputInfoStream::good_*
 22799,23280,1,
 22800,23281,1,std__basic_ios_gs_T1_T2_ge_::sub_*
@@ -6814,9 +6815,15 @@ sseid,aeid,confidence,name
 52714,53558,1,SkyrimScript__ObjectBindPolicy::sub_*
 52721,53565,1,SkyrimScript__ObjectBindPolicy::Func2_*
 52722,53566,1,SkyrimScript__ObjectBindPolicy::Func3_*
+52723,53567,2,
+52724,53568,2,
 52725,53569,1,SkyrimScript__ObjectBindPolicy::Func8_*
+52730,53574,2,
 52731,53575,1,SkyrimScript__ObjectBindPolicy::sub_*
+52733,53577,2,
+52734,53578,2,
 52735,53579,1,SkyrimScript::ObjectBindPolicy::sub_*
+52736,53580,2,
 52750,53593,1,
 52753,53594,1,
 52757,53600,1,
@@ -8439,6 +8446,12 @@ sseid,aeid,confidence,name
 96724,103505,1,bnet__HttpRequest_bnet__Callback_bnet__UniquePtr_bnet__CdpAuthenticationResult__bnet__HttpResponseInfo__::Func1_141227230
 96727,103508,1,bnet__HttpRequest_bnet__Callback_bnet__UniquePtr_bnet__CdpAuthenticationResult__bnet__HttpResponseInfo__::Func4_141227280
 96739,103420,1,bnet__SessionTokenRequest::Func0_141225070
+97369,104174,2,
+97370,104175,2,
+97374,104179,2,
+97376,104181,2,
+97378,104183,2,
+97389,104197,2,
 97462,104246,3,RE::BSScript::Object::Dtor
 97463,104247,3,RE::BSScript::Object::GetHandle
 97465,104249,1,
@@ -8587,6 +8600,7 @@ sseid,aeid,confidence,name
 98047,104770,2,
 98048,104771,1,BSScript::Internal::VirtualMachine::Func3_*
 98049,104772,1,BSScript__Internal__VirtualMachine::Func2_141257760
+98050,104773,2,
 98051,104774,2,
 98052,104775,2,
 98053,104776,2,
@@ -8596,6 +8610,7 @@ sseid,aeid,confidence,name
 98057,104780,2,
 98058,104781,1,BSScript::Internal::VirtualMachine::Func16_*
 98059,104782,2,
+98060,104783,2,
 98062,104785,2,
 98063,104786,2,
 98064,104787,2,
@@ -8622,6 +8637,12 @@ sseid,aeid,confidence,name
 98088,104811,2,
 98089,104812,2,
 98090,104813,2,
+98091,104814,2,
+98092,104815,2,
+98093,104816,2,
+98094,104817,2,
+98095,104818,2,
+98096,104819,2,
 98103,104826,2,
 98104,104827,2,
 98107,104830,2,
