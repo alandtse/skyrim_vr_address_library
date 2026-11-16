@@ -1552,6 +1552,7 @@
 41661,0x14071a190,0x140744b30,4,"bool IsLightAffectingActor(void* detectionGlobal, BSShadowLight*, Actor*, NiPoint3*)"
 41694,0x14071B670,0x140746010,2,"unk_14071B670(__m128 *a1, int64 a2, int64 a3, Actor *a4, float *a5)"
 41778,0x1407220b0,0x14074ca60,3,RE::ArrowReleaseHandler::Handle_1407220B0
+41824,0x1407236c0,0x14074e0d0,3,"std::uint64_t Actor::SetSitSleepStateChoosingFurniture(SIT_SLEEP_STATE* a_state, bool a_keepFurniture)"
 42411,0x14072c300,0x140756d10,3,"bool SendActionAnimEvent(void* a_manager, BGSActionData* a_action)"
 42420,0x14072cc80,0x140757690,4,AnimObjectSwapper::AnimObjectSwapHook
 42547,0x140732400,0x14075ce60,4,ArrowProjectile::GetImpactData
