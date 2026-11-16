@@ -1605,8 +1605,13 @@
 43566,0x140772520,0x14079D870,3,void CombatGroup::RemoveTarget(std::uint32_t a_index)
 43571,0x140772a60,0x14079ddb0,3,po3tweaks::CombatDialogue::SayCombatDialogue
 43628,0x140775550,0x1407a08a0,3,bool CombatBehaviorEquipContext::CanEquipItem()
+43657,0x1407784a0,0x1407a37f0,4,
+43665,0x140778e80,0x1407a41d0,4,
+43813,0x14077e570,0x1407a98c0,4,
+43864,0x14077f760,0x1407aaab0,4,
 43952,0x140781f00,0x1407ad250,4,RE::CombatMagicCaster::StaticCheckTargetValid
 43956,0x140782330,0x1407ad680,4,RE::CombatMagicCaster::CheckTargetValid
+44019,0x140785350,0x1407b06a0,4,
 44036,0x140785f80,0x1407b12d0,4,enhanced_reanimation::CombatMagicCasterReanimate::CheckShouldEquip
 45660,0x1407aad70,0x1407d60c0,3,bool CombatState::CheckShouldFlee()
 45661,0x1407aae90,0x1407d61e0,3,bool CombatState::CheckShouldHide()
@@ -1616,6 +1621,7 @@
 46039,0x1407bcb40,0x1407e7e90,4,Character::sub_1407BCB40
 46043,0x1407bccd0,0x1407e8020,4,CombatUtilities::CanActorExistInSpace
 46050,0x1407bd150,0x1407e84a0,4,"bool Actor::UpdateNavPos(const NiPoint3& a_pos, const NiPoint3& a_new_pos, float a_speed, float a_distance)"
+46068,0x1407beb90,0x1407e9ee0,3,"void TESObjectREFR::GetCombatRange(TESObjectREFR* a_this, TESForm* a_form, float* a_optimal, float* a_max, TESAmmo* a_ammo)"
 46074,0x1407bf260,0x1407ea5b0,4,float TESObjectREFR::GetCombatReach (TESObjectREFR * a_this)
 46089,0x1407c1200,0x1407ec550,3,bool CombatBehavior::CheckTargetChanged()
 46090,0x1407c1270,0x1407ec5c0,3,"CombatBehaviorThread* CombatBehavior::CreateChildThread(uint32_t child_ind, bool isControlChild)"
