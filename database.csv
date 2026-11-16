@@ -840,6 +840,7 @@
 27665,0x1404025b0,0x140412100,3,ProcedureNameEntryCleanup_DialogueActivate
 27690,0x140402dd0,0x140412920,3,RegisterProcedureName_Eat
 27701,0x140403550,0x1404130a0,3,ProcedureNameEntryCleanup_Eat
+27723,0x140403b20,0x140413670,3,BGSProcedureEscort::InitActorAnimPose
 27726,0x140403bf0,0x140413740,3,RegisterProcedureName_Escort
 27727,0x140403d60,0x1404138b0,3,BGSProcedureEscort::UpdateHighProcess
 27728,0x140404870,0x1404143c0,3,BGSProcedureEscort::UpdateReducedProcess
@@ -851,6 +852,7 @@
 27805,0x140407d20,0x140417870,3,RegisterProcedureName_Flee
 27832,0x14040b1b0,0x14041ad00,3,ProcedureNameEntryCleanup_Flee
 27857,0x14040b980,0x14041b4d0,3,RegisterProcedureName_FlightGrab
+27890,0x14040ceb0,0x14041ca00,3,BGSProcedureFollow::InitActorAnimPose
 27894,0x14040d110,0x14041cc60,3,RegisterProcedureName_Follow
 27902,0x14040d770,0x14041d2c0,3,RegisterProcedureName_FollowTo
 27907,0x14040dbd0,0x14041d720,4,"void BGSProcedureFollowExecState::FollowWrapper(BGSProcedureFollowExecState* a_this, void* a_state, undefined1 a_param3)"
@@ -869,6 +871,7 @@
 28102,0x1404150f0,0x140424c40,3,RegisterProcedureName_UnlockDoors
 28110,0x140415750,0x1404252a0,3,ProcedureNameEntryCleanup_LockDoors
 28151,0x1404163d0,0x140425f20,3,RegisterProcedureName_Orbit
+28180,0x1404178e0,0x140427430,3,BGSProcedurePatrol::InitActorAnimPose
 28182,0x140417c20,0x140427770,3,RegisterProcedureName_Patrol
 28233,0x14041b380,0x14042aed0,3,RegisterProcedureName_Pursue
 28234,0x14041b4f0,0x14042b040,3,ProcedureNameEntryCleanup_Pursue
