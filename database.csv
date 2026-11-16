@@ -1407,8 +1407,16 @@
 38201,0x1406447b0,0x14064db00,3,AIProcess::UpdatePackageFlee
 38203,0x140644a60,0x14064ddb0,3,AIProcess::UpdatePackageTravel
 38249,0x1406469b0,0x14064fd00,3,AIProcess::UpdatePackageMiddleLow
+38250,0x1406473d0,0x140650720,3,AIProcess::UpdatePackageFollowMiddleLow
+38254,0x140647e40,0x140651190,3,AIProcess::UpdatePackageFleeNonCombatMiddleLow
+38256,0x140647f70,0x1406512c0,3,AIProcess::UpdatePackagePathToTargetAndActivate
+38257,0x140648420,0x140651770,3,AIProcess::UpdatePackageUseWeaponMiddleLow
+38258,0x140648490,0x1406517e0,3,AIProcess::UpdatePackageAcquireMiddleLow
+38259,0x140648700,0x140651a50,3,AIProcess::UpdatePackageAlarmMiddleLow
+38260,0x140648a60,0x140651db0,3,AIProcess::UpdatePackageSandboxMiddleLow
 38261,0x140648d20,0x140652070,3,AIProcess::UpdatePackageWaitAmbushMiddleHigh
 38262,0x140648e80,0x1406521d0,3,AIProcess::UpdatePackageProcedures
+38263,0x140649110,0x140652460,3,AIProcess::UpdatePackageEscortMiddleLow
 38290,0x14064b140,0x140654490,4,"bool AIProcess::SetupSpecialIdle(Actor* a_actor, DEFAULT_OBJECT a_object, TESIdleForm* a_idle, bool a_unk, bool a_unk2, TESObjectREFR* a_unk5)"
 38291,0x14064b570,0x1406548c0,4,"void AIProcess::StopCurrentIdle(Actor* a_actor, bool a_forceIdleStop)"
 38300,0x14064c420,0x140655770,3,AIProcess::UpdatePackageSandmanHigh
@@ -1483,6 +1491,7 @@
 38967,0x140682020,0x14068b490,4,void FUN_140682020 (longlong param_1)
 39005,0x140685360,0x14068e7d0,3,AIProcess::UpdatePackageMiddleHigh
 39007,0x140686780,0x14068fbf0,3,AIProcess::UpdatePackageAccompanyMiddleHigh
+39009,0x140686db0,0x140690220,3,AIProcess::UpdatePackagePursueMiddleLow
 39014,0x140688820,0x140691c80,3,AIProcess::UpdatePackageFleeNonCombatMiddleHigh
 39015,0x140688a70,0x140691ed0,3,AIProcess::UpdatePackageTravelTargetMiddleHigh
 39016,0x1406890b0,0x140692510,3,AIProcess::UpdatePackageAcquireMiddleHigh
