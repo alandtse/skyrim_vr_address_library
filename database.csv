@@ -1435,6 +1435,7 @@
 38560,0x14065be00,0x140665140,3,AIProcess::UpdatePackageGuardHigh
 38568,0x14065c880,0x140665bd0,3,RE::AIProcess::SetBaseScale
 38606,0x14065f040,0x140668390,3,AIProcess::UpdatePackageHigh
+38610,0x140663230,0x14066c580,3,AIProcess::UpdatePackageFleeHigh
 38612,0x140664a00,0x14066dd50,4,sub_140664A00
 38613,0x140664c80,0x14066dfd0,3,AIProcess::UpdatePackageTravelBody
 38614,0x140666e20,0x1406702d0,3,AIProcess::EvaluatePackageIfDue
@@ -1498,6 +1499,7 @@
 39005,0x140685360,0x14068e7d0,3,AIProcess::UpdatePackageMiddleHigh
 39007,0x140686780,0x14068fbf0,3,AIProcess::UpdatePackageAccompanyMiddleHigh
 39009,0x140686db0,0x140690220,3,AIProcess::UpdatePackagePursueMiddleLow
+39010,0x140687320,0x140690780,3,AIProcess::UpdatePackageFleeMiddleHigh
 39013,0x140688540,0x1406919a0,3,AIProcess::EvaluatePackageAndReset
 39014,0x140688820,0x140691c80,3,AIProcess::UpdatePackageFleeNonCombatMiddleHigh
 39015,0x140688a70,0x140691ed0,3,AIProcess::UpdatePackageTravelTargetMiddleHigh
