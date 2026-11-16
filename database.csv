@@ -1399,18 +1399,52 @@
 38090,0x14063fd50,0x140649060,3,void Job_TES_animation()
 38118,0x140640600,0x140649910,2,PapyrusTweaks::Job_VM_Update
 38141,0x140640f80,0x14064a2b0,4,void Job_Update_grass_140640F80 (void)
+38150,0x140641460,0x14064a7b0,3,AIProcess::UpdatePackage
 38156,0x140642e20,0x14064c170,4,AIProcess::CheckForNewPackage
 38158,0x140642f50,0x14064c2a0,4,void AIProcess::ComputeLastTimeProcessed()
 38198,0x140644600,0x14064d950,4,"void AIProcess::AddToProcedureIndexRunning(Actor* a_actor, std::uint32_t a_num)"
+38201,0x1406447b0,0x14064db00,3,AIProcess::UpdatePackageFlee
+38203,0x140644a60,0x14064ddb0,3,AIProcess::UpdatePackageTravel
+38249,0x1406469b0,0x14064fd00,3,AIProcess::UpdatePackageMiddleLow
+38261,0x140648d20,0x140652070,3,AIProcess::UpdatePackageWaitAmbushMiddleHigh
 38290,0x14064b140,0x140654490,4,"bool AIProcess::SetupSpecialIdle(Actor* a_actor, DEFAULT_OBJECT a_object, TESIdleForm* a_idle, bool a_unk, bool a_unk2, TESObjectREFR* a_unk5)"
 38291,0x14064b570,0x1406548c0,4,"void AIProcess::StopCurrentIdle(Actor* a_actor, bool a_forceIdleStop)"
+38300,0x14064c420,0x140655770,3,AIProcess::UpdatePackageSandmanHigh
+38302,0x14064c810,0x140655b60,3,AIProcess::UpdatePackageCannibalFeedHigh
 38308,0x14064cb30,0x140655e80,4,void AIProcess::RandomlyPlaySpecialIdles(Actor* a_actor)
 38311,0x14064cdf0,0x140656140,4,"void AIProcess::SetActorsDetectionEvent(Actor* a_actor, const NiPoint3& a_location, std::int32_t a_soundLevel, TESObjectREFR* a_ref)"
+38359,0x14064f4b0,0x140658800,3,AIProcess::UpdatePackageObserveCombatHigh
 38404,0x140650df0,0x14065a140,3,RE::AIProcess::Update3DModel
 38483,0x1406598d0,0x140662c10,3,ObjectRefHandle AIProcess::GetHeadtrackTarget()
 38495,0x140659c00,0x140662f40,3,void AIProcess::ClearMuzzleFlashes()
+38560,0x14065be00,0x140665140,3,AIProcess::UpdatePackageGuardHigh
 38568,0x14065c880,0x140665bd0,3,RE::AIProcess::SetBaseScale
+38606,0x14065f040,0x140668390,3,AIProcess::UpdatePackageHigh
 38612,0x140664a00,0x14066dd50,4,sub_140664A00
+38615,0x1406670b0,0x140670560,3,AIProcess::UpdatePackageFleeNonCombatHigh
+38616,0x140667380,0x140670830,3,AIProcess::UpdatePackageUnnumbered53High
+38618,0x140669210,0x1406726c0,3,AIProcess::UpdatePackageUseItemAtHigh
+38619,0x14066a040,0x1406734f0,3,AIProcess::UpdatePackageUseWeaponHigh
+38620,0x14066b270,0x140674720,3,AIProcess::UpdatePackageAlarmHigh
+38621,0x14066b7b0,0x140674c60,3,AIProcess::UpdatePackageWaitAmbushHigh
+38622,0x14066bcc0,0x140675170,3,AIProcess::UpdatePackageEscortHigh
+38624,0x14066d0b0,0x140676560,3,AIProcess::UpdatePackageEatHigh
+38627,0x14066e1b0,0x140677660,3,AIProcess::UpdatePackageDialogueActivateHigh
+38629,0x14066e9f0,0x140677ea0,3,AIProcess::UpdatePackageSurfaceHigh
+38631,0x14066eda0,0x140678250,3,AIProcess::UpdatePackageClearMountPositionHigh
+38632,0x14066f250,0x140678700,3,AIProcess::UpdatePackageAvoidAreaHigh
+38633,0x14066f620,0x140678ad0,3,AIProcess::UpdatePackageUnnumbered44High
+38634,0x14066fd10,0x1406791c0,3,AIProcess::UpdatePackageGreetDeadHigh
+38637,0x1406704e0,0x140679990,3,AIProcess::UpdatePackageUseIdleMarkerHigh
+38638,0x1406707f0,0x140679ca0,3,AIProcess::UpdatePackageMountHorseHigh
+38639,0x1406708f0,0x140679db0,3,AIProcess::UpdatePackageDismountHorseHigh
+38640,0x140670f90,0x14067a460,3,AIProcess::UpdatePackageAcquireHigh
+38641,0x140671590,0x14067aa60,3,AIProcess::UpdatePackageAccompanyHigh
+38642,0x1406719f0,0x14067aec0,3,AIProcess::UpdatePackageTakeBackItemHigh
+38643,0x140671ed0,0x14067b3a0,3,AIProcess::UpdatePackageUnnumbered20High
+38644,0x140672100,0x14067b5d0,3,AIProcess::UpdatePackageCreateFollowHigh
+38645,0x140672470,0x14067b940,3,AIProcess::UpdatePackageWanderHigh
+38647,0x140673090,0x14067c560,3,AIProcess::UpdatePackageSleepHigh
 38677,0x1406759E0,0x14067EEB0,4,"bhkBoxShape * bhkBoxShape::bhkBoxShape(bhkBoxShape * a_this, RE::NiPoint3* a_halfExtents)"
 38726,0x1406777c0,0x140680c40,4,"void HighProcessData::ClearHeadtrackTarget(HEAD_TRACK_TYPE a_headtrackType, bool a_defaultHold)"
 38752,0x140679000,0x140682480,3,BSTArray_EraseRange_RefCountedPairs
@@ -1421,6 +1455,7 @@
 38787,0x14067a940,0x140683dc0,3,"std::uint64_t ActorProcess::SetEquippedHandItemEntry(ExtraContainerChanges::ItemEntry* a_item, bool a_left)"
 38799,0x14067b1d0,0x140684650,4,"static NiAVObject * GetTorchNode (ActorProcess * a_this, BSTSmartPointer_BipedAnim_ * a_biped)"
 38819,0x14067bc70,0x1406850f0,4,"void AIProcess::SetRunOncePackage(TESPackage* a_package, Actor* a_actor)"
+38835,0x14067ca00,0x140685e80,3,AIProcess::UpdatePackageGetUp
 38850,0x14067d120,0x1406865a0,3,"void AIProcess::SetHeadtrackTarget(Actor* a_owner, NiPoint3& a_targetPosition)"
 38856,0x14067d210,0x140686690,4,bool AIProcess::IsFleeing()
 38857,0x14067d230,0x1406866b0,4,void AIProcess::KnockParalyze(Actor* a_actor)
@@ -1437,7 +1472,17 @@
 38900,0x14067fe60,0x1406892e0,4,LLF::AIProcess_CalculateLightValue_GetLuminance
 38966,0x140681fd0,0x14068b440,4,"void FUN_140681fd0 (undefined8 param_1, Actor * a_actor)"
 38967,0x140682020,0x14068b490,4,void FUN_140682020 (longlong param_1)
-39017,0x1406894b0,0x140692910,3,FUN_1406894b0
+39005,0x140685360,0x14068e7d0,3,AIProcess::UpdatePackageMiddleHigh
+39007,0x140686780,0x14068fbf0,3,AIProcess::UpdatePackageAccompanyMiddleHigh
+39014,0x140688820,0x140691c80,3,AIProcess::UpdatePackageFleeNonCombatMiddleHigh
+39015,0x140688a70,0x140691ed0,3,AIProcess::UpdatePackageTravelTargetMiddleHigh
+39016,0x1406890b0,0x140692510,3,AIProcess::UpdatePackageAcquireMiddleHigh
+39017,0x1406894b0,0x140692910,3,AIProcess::UpdatePackageAlarmMiddleHigh
+39018,0x1406896b0,0x140692b10,3,AIProcess::UpdatePackageSandboxHigh
+39019,0x140689f00,0x140693360,3,AIProcess::UpdatePackageMovementBlocked
+39022,0x14068afb0,0x140694410,3,AIProcess::UpdatePackageEatMiddleHigh
+39025,0x14068b970,0x140694dd0,3,AIProcess::UpdatePackageDialogue
+39026,0x14068bc10,0x140695070,3,AIProcess::UpdatePackageDialogueActivateMiddleHigh
 39044,0x14068d6f0,0x140696b40,3,std::uint64_t QueuedItem::PreloadModels(Character* a_actor)
 39159,0x140692390,0x14069B990,2,"void ResetCachedBaseValue(CachedValues*, ActorValue)"
 39171,0x1406928c0,0x14069bec0,4,Character * Character::ctor (Character * a_this)
