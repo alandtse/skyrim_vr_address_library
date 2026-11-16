@@ -1507,7 +1507,9 @@
 37829,0x140632d50,0x14063bc20,4,bool Actor::HasShout(TESShout* a_shout)
 37830,0x140632D70,0x14063BC40,3,Character::SetHandCastingArt
 37832,0x140633090,0x14063bf60,4,RE::MagicTarget::Func1_140633090
+37843,0x140633ae0,0x14063c9b0,3,Actor::ReapplyCommanderFollow
 37844,0x140633b70,0x14063ca40,3,Actor::SetCommanderAndFollow
+37845,0x140633c60,0x14063cb30,3,Character::OnCommandEffectStart
 37854,0x1406345f0,0x14063d4c0,4,float Actor::GetVoiceRecoveryTime()
 37858,0x140634680,0x14063d550,4,bool Actor::IsCurrentShout(SpellItem* a_spell)
 37861,0x140634830,0x14063d700,1,RE::Actor::GetSoulLevelValue
