@@ -2069,8 +2069,8 @@
 52458,0x1408f6430,0x140930bb0,3,void SkyrimScript::Internal::AnimationCallbacks::RemoveHandleFromAllEvents(VMHandle* a_handle)
 52465,0x1408f6d90,0x140931510,3,"void SkyrimScript::Internal::AnimationCallbackRegistry::RemoveHandleFromEvent(void* a_key, VMHandle a_handle)"
 52466,0x1408f6f00,0x140931680,3,void SkyrimScript::Internal::AnimationCallbackRegistry::RemoveCallbacksForHandle(VMHandle a_handle)
-52467,0x1408f6f90,0x140931710,3,"bool SkyrimScript::Internal::AnimationCallbackRegistry::Save(std::uint64_t a_arg2, void* a_storage, std::uint64_t a_arg4)"
-52468,0x1408f70b0,0x140931830,3,"bool SkyrimScript::Internal::AnimationCallbackRegistry::Load(std::uint64_t a_arg2, void* a_storage, void* a_arg4)"
+52467,0x1408f6f90,0x140931710,3,"bool SkyrimScript::Internal::AnimationCallbackRegistry::Save(void* a_context, void* a_storage)"
+52468,0x1408f70b0,0x140931830,3,"bool SkyrimScript::Internal::AnimationCallbackRegistry::Load(void* a_context, void* a_storage, bool* a_success)"
 52469,0x1408f7340,0x140931ac0,3,void SkyrimScript::Internal::AnimationCallbackRegistry::Revert()
 52475,0x1408f7c40,0x1409323c0,3,"void SkyrimScript::Internal::AnimationCallbackRegistry::RemoveHandleFromAllCallbackLists(void* a_entries, VMHandle a_handle)"
 52476,0x1408f7dd0,0x140932550,3,"void SkyrimScript::Internal::AnimationCallbacks::RemoveHandleFromEventTable(void* a_events, VMHandle* a_handle)"
