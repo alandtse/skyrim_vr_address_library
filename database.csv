@@ -1406,6 +1406,7 @@
 38198,0x140644600,0x14064d950,4,"void AIProcess::AddToProcedureIndexRunning(Actor* a_actor, std::uint32_t a_num)"
 38201,0x1406447b0,0x14064db00,3,AIProcess::UpdatePackageFlee
 38203,0x140644a60,0x14064ddb0,3,AIProcess::UpdatePackageTravel
+38227,0x140645680,0x14064e9d0,3,AIProcess::RefreshForcedPackage
 38249,0x1406469b0,0x14064fd00,3,AIProcess::UpdatePackageMiddleLow
 38250,0x1406473d0,0x140650720,3,AIProcess::UpdatePackageFollowMiddleLow
 38253,0x140647780,0x140650ad0,3,AIProcess::SelectNewPackage
