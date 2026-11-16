@@ -884,6 +884,9 @@
 28751,0x1404353f0,0x140444f40,4,void TESPackage::SetPackType(PACKAGE_PROCEDURE_TYPE a_type)
 28752,0x1404359c0,0x140445510,4,void TESPackage::SetHasPackageLocation(const PackageLocation* a_location)
 28754,0x140435e60,0x1404459b0,4,void TESPackage::SetPackageTarget(const PackageTarget* a_target)
+28866,0x14043c8f0,0x14044c440,3,CreatePursueProcedureTree_FourParams
+28868,0x14043cc70,0x14044c7c0,3,CreatePursueProcedureTree_ThreeParams
+28870,0x14043cf80,0x14044cad0,3,CreateWaitTravelProcedureTree
 28994,0x140441130,0x140450c80,4,PackageLocation* PackageLocation::PackageLocation()
 28998,0x140441250,0x140450da0,4,void PackageLocation::SetLocationType(std::int32_t a_type)
 29007,0x140441540,0x140451090,4,"void PackageLocation::Assign(const PackageLocation* a_other, bool a_allowNone)"
