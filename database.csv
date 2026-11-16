@@ -2134,6 +2134,7 @@
 53214,0x14092bde0,0x1409664e0,3,void SkyrimVM::ReloadScripts()
 53221,0x14092d130,0x140967780,4,"void SkyrimVM::RelayEvent(VMHandle a_handle, BSFixedString* a_event, BSScript::IFunctionArguments* a_args, SkyrimVM::ISendEventFilter* a_optionalFilter)"
 53228,0x14092dae0,0x140968130,3,void SkyrimVM::ResetRuntimeState()
+53229,0x14092e290,0x1409688e0,3,"std::uint64_t SkyrimVM::SaveGame(SaveStorageWrapper* a_wrapper, bool a_test)"
 53230,0x14092e460,0x140968ab0,3,bool SkyrimVM::SaveWaitCalls(void* a_storage)
 53231,0x14092e750,0x140968da0,3,bool SkyrimVM::SaveUserLogs(void* a_storage)
 53232,0x14092e8f0,0x140968f40,3,bool SkyrimVM::SaveRenderCallQueues(void* a_storage)
@@ -2141,6 +2142,7 @@
 53234,0x14092eb50,0x1409691a0,3,bool SkyrimVM::SaveSleepEvents(void* a_storage)
 53235,0x14092ec80,0x1409692d0,3,bool SkyrimVM::SaveTrackedStatsEvents(void* a_storage)
 53236,0x14092edb0,0x140969400,3,bool SkyrimVM::SaveInventoryEventFilters(void* a_storage)
+53237,0x14092f030,0x140969680,3,void SkyrimVM::LoadGameRestore()
 53238,0x14092f380,0x1409699d0,3,bool SkyrimVM::LoadWaitCalls(void* a_storage)
 53239,0x14092f760,0x140969db0,3,bool SkyrimVM::LoadUserLogs(void* a_storage)
 53240,0x14092f990,0x140969fe0,3,bool SkyrimVM::LoadRenderCallQueues(void* a_storage)

@@ -6871,6 +6871,8 @@ sseid,aeid,confidence,name
 52963,53774,1,
 52980,53784,1,SkyrimScript::SavePatcher::Func0_*
 52983,53785,1,
+52986,53788,2,
+52987,53789,2,
 52988,53790,1,SkyrimScript::SoundCallbackMgr::sub_*
 52989,53791,1,
 52995,53797,1,
@@ -6907,6 +6909,8 @@ sseid,aeid,confidence,name
 53208,54019,2,
 53214,54025,2,
 53228,54040,2,
+53229,54041,2,
+53237,54049,2,
 53243,54055,1,SkyrimVM::sub_*
 53245,54057,1,
 53246,54058,1,SkyrimVM::sub_*
