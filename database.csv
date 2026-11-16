@@ -925,14 +925,18 @@
 27814,0x140408e20,0x140418970,3,BGSProcedureFleeExecState::SaveGame
 27815,0x140409190,0x140418ce0,3,BGSProcedureFleeExecState::LoadGame
 27832,0x14040b1b0,0x14041ad00,3,ProcedureNameEntryCleanup_Flee
+27841,0x14040b4b0,0x14041b000,3,BGSProcedureFleeExecState::dtor_deleting
 27843,0x14040b530,0x14041b080,3,BSTDerivedCreator_BGSProcedureFlee::Create
 27845,0x14040b620,0x14041b170,3,BSTDerivedCreator_BGSProcedureFlee::Destroy
 27851,0x14040b6d0,0x14041b220,3,BGSProcedureFleeExecState::GetPoolKey
 27854,0x14040b790,0x14041b2e0,3,BGSProcedureFlightGrab::InitActorLocation
 27855,0x14040b920,0x14041b470,3,BGSProcedureFlightGrab::InitActorAnimPose
 27857,0x14040b980,0x14041b4d0,3,RegisterProcedureName_FlightGrab
+27861,0x14040c4d0,0x14041c020,3,BGSProcedureFlightGrabExecState::BGSProcedureFlightGrabExecState
+27862,0x14040c500,0x14041c050,3,BGSProcedureFlightGrabExecState::~BGSProcedureFlightGrabExecState
 27865,0x14040c5e0,0x14041c130,3,BGSProcedureFlightGrabExecState::SaveGame
 27866,0x14040c700,0x14041c250,3,BGSProcedureFlightGrabExecState::LoadGame
+27876,0x14040ca40,0x14041c590,3,BGSProcedureFlightGrabExecState::dtor_deleting
 27877,0x14040cab0,0x14041c600,3,BSTDerivedCreator_BGSProcedureFlightGrab::Create
 27878,0x14040cb20,0x14041c670,3,BSTDerivedCreator_BGSProcedureFlightGrab::Destroy
 27884,0x14040cbd0,0x14041c720,3,BGSProcedureFlightGrabExecState::GetPoolKey
@@ -1053,6 +1057,7 @@
 28276,0x14041fb00,0x14042f650,3,BGSProcedureSandboxExecState::SaveGame
 28277,0x14041ffd0,0x14042fb20,3,BGSProcedureSandboxExecState::LoadGame
 28281,0x140420d00,0x140430850,3,ProcedureNameEntryCleanup_Sandbox
+28291,0x140421050,0x140430ba0,3,BGSProcedureSandboxExecState::dtor_deleting
 28295,0x140421190,0x140430ce0,3,BSTDerivedCreator_BGSProcedureSandbox::Create
 28296,0x140421200,0x140430d50,3,BSTDerivedCreator_BGSProcedureSandbox::Destroy
 28303,0x1404212c0,0x140430e10,3,BGSProcedureSandboxExecState::GetPoolKey
