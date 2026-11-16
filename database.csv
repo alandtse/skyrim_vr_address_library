@@ -1291,6 +1291,9 @@
 37016,0x14060f0c0,0x140617cd0,4,float Actor::CalcEquippedWeight_14060F0C0 (Actor * a_this)
 37020,0x14060f240,0x140501530,2,SendAnimation
 37086,0x140612250,0x14061ae60,3,"void FindAvailableHorseFromHandles(void* a_handleSource, void* a_result)"
+37096,0x140612de0,0x14061b9f0,3,PostMovementMessageNewPath
+37097,0x140612f40,0x14061bb50,3,PostMovementMessagePathComplete
+37098,0x1406130a0,0x14061bcb0,3,PostMovementMessagePathFailed
 37356,0x140619ab0,0x1406226a0,3,sub_140619AB0
 37390,0x14061c880,0x140625470,3,BSTEventSource<ActorKill::Event>* ActorKill::GetEventSource()
 37392,0x14061ca60,0x140625650,3,BSTEventSource<DisarmedEvent::Event>* DisarmedEvent::GetEventSource()
@@ -1387,6 +1390,7 @@
 37996,0x14063af10,0x140643f20,4,ActorMediator::PerformAction
 37999,0x14063b0f0,0x140644160,4,ActorMediator::PerformComplexAction
 38005,0x14063b4a0,0x140644510,3,sub_14063B4A0
+38013,0x14063bc20,0x140644c90,3,LogPackageTypeChange
 38023,0x14063c1d0,0x140645240,4,ActorState::SetWeaponDrawn
 38044,0x14063c9d0,0x140645a40,3,void Actor::SetSitSleepState(SIT_SLEEP_STATE a_state)
 38046,0x14063caa0,0x140645b10,3,sub_14063CAA0
@@ -1565,8 +1569,10 @@
 39475,0x1406aa260,0x1406cc000,3,RE::PlayerCharacter::StartGrabObject
 39479,0x1406abf00,0x1406CDFD0,3,PlayerCharacter::sub_1406ABF00(PlayerCharacter *a1)
 39480,0x1406acaf0,0x1406cf050,3,void PlayerCharacter::DestroyMouseSprings() src\RE\P/PlayerCharacter.cpp:54
+39483,0x1406acf40,0x1406cf7c0,3,ShowCannotGoThatWayMessage
 39486,0x1406ad1f0,0x1406cfa70,4,void PlayerCharacter::PlayMagicFailureSound(MagicSystem::SpellType a_spellType)
 39507,0x1406ae310,0x1406d0b90,4,void PlayerCharacter::SetAIDriven(bool a_enable)
+39531,0x1406aff60,0x1406d27b0,3,ShowNoteAddedMessage
 39534,0x1406b01e0,0x1406D2A30,3,PlayerCharacter::PickCrosshairReference(PlayerCharacter *a1)
 39535,0x1406b0570,0x1406d3770,3,RE::PlayerCharacter::OnUpdateCrosshairText
 39568,0x1406b2530,0x1406d58a0,3,"bool PlayerCharacter::AttemptPickpocket(TESObjectREFR* a_containerRef, InventoryEntryData* a_entry, std::int32_t a_number, bool a_fromContainer)"
@@ -1579,6 +1585,7 @@
 39657,0x1406b6eb0,0x1406da3d0,3,"void PlayerCharacter::MoveToPositionInCell(float* a_position, float* a_rotation, TESObjectCELL* a_cell, int a_arg4)"
 39658,0x1406b7670,0x1406dac20,4,"void PlayerCharacter::MoveToPositionInWorldSpace(float* a_position, float* a_rotation, TESWorldSpace* a_world, bool a_arg4)"
 39663,0x1406b8340,0x1406db930,4,PlayerCharacter::DiscoveryCheck
+39709,0x1406ba7f0,0x1406de150,3,ShowDragonLandStatusMessage
 40056,0x1406c7d60,0x1406ee380,3,BSTEventSource<LocationDiscovery::Event>* LocationDiscovery::GetEventSource()
 40060,0x1406c8120,0x1406ee740,3,BSTEventSource<ShoutAttack::Event>* ShoutAttack::GetEventSource()
 40230,0x1406ce720,0x1406f5bf0,3,"void Actor::ProcessVATSAttack(MagicCaster* a_caster, bool a_hasTargetAnim, TESObjectREFR* a_target, bool a_leftHand)"
