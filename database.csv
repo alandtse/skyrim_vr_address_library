@@ -1425,6 +1425,7 @@
 38302,0x14064c810,0x140655b60,3,AIProcess::UpdatePackageCannibalFeedHigh
 38308,0x14064cb30,0x140655e80,4,void AIProcess::RandomlyPlaySpecialIdles(Actor* a_actor)
 38311,0x14064cdf0,0x140656140,4,"void AIProcess::SetActorsDetectionEvent(Actor* a_actor, const NiPoint3& a_location, std::int32_t a_soundLevel, TESObjectREFR* a_ref)"
+38339,0x14064e6d0,0x140657a20,3,AIProcess::ResetPackageState
 38359,0x14064f4b0,0x140658800,3,AIProcess::UpdatePackageObserveCombatHigh
 38404,0x140650df0,0x14065a140,3,RE::AIProcess::Update3DModel
 38483,0x1406598d0,0x140662c10,3,ObjectRefHandle AIProcess::GetHeadtrackTarget()
