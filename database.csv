@@ -1351,6 +1351,7 @@
 36404,0x1405db180,0x1405e3800,3,Actor::CheckForCurrentAliasPackage
 36407,0x1405db310,0x1405e3990,3,"void Actor::EvaluatePackage(bool a_immediate, bool a_resetAI)"
 36408,0x1405db7a0,0x1405e3e20,4,void Actor::InitiateDoNothingPackage()
+36410,0x1405dba80,0x1405e4100,3,Character::StartFollowingCommander
 36419,0x1405dcc30,0x1405e5280,3,Character::CreateWaitForDialoguePackage
 36420,0x1405dcdb0,0x1405e5400,3,Actor::CreateKeepAnEyeOnPackage_ThreeParams
 36421,0x1405dcef0,0x1405e5540,3,Actor::CreateKeepAnEyeOnPackage_FourParams
@@ -1506,6 +1507,7 @@
 37829,0x140632d50,0x14063bc20,4,bool Actor::HasShout(TESShout* a_shout)
 37830,0x140632D70,0x14063BC40,3,Character::SetHandCastingArt
 37832,0x140633090,0x14063bf60,4,RE::MagicTarget::Func1_140633090
+37844,0x140633b70,0x14063ca40,3,Actor::SetCommanderAndFollow
 37854,0x1406345f0,0x14063d4c0,4,float Actor::GetVoiceRecoveryTime()
 37858,0x140634680,0x14063d550,4,bool Actor::IsCurrentShout(SpellItem* a_spell)
 37861,0x140634830,0x14063d700,1,RE::Actor::GetSoulLevelValue
