@@ -582,6 +582,7 @@
 22350,0x140311250,0x140322760,3,powerof3tweaks::ToggleCollisionFix::ToggleCollision
 22465,0x140316e60,0x140328370,3,Cmd_SaveGame_Execute
 22754,0x1403232e0,0x140332a90,3,void TESQuest::CompleteAllStages()
+22764,0x140323ca0,0x140333450,3,DumpSaveGameState
 22790,0x140324e90,0x1402af140,4,BGSStoryEventManager* BGSStoryEvent::BGSStoryEventManager::GetSingleton() include\RE\B/BGSStoryEventManager.h:20
 22825,0x140325f00,0x140335740,4,void * SKSE::CreateUIMessageData_140325f00 (BSFixedString * param_1)
 22843,0x140326460,0x140335ca0,3,RE::MessageDataFactoryManager::GetSingleton
@@ -602,6 +603,7 @@
 23486,0x14033cdc0,0x14034c680,2,BSTEventSource<ObjectiveState::Event>* ObjectiveState::GetEventSource()
 23626,0x140345f50,0x140355810,3,powerof3tweaks::FactionStealing::GetFavorCost
 23632,0x140346470,0x140355d30,3,"BGSRelationship* BGSRelationship::GetRelationship(TESNPC* a_npc1, TESNPC* a_npc2)"
+23677,0x140348d50,0x140358610,3,BGSScene::StartRandomScene
 24012,0x140355940,0x140365200,3,"void TESFaction::SetFactionFightReaction(TESFaction* a_faction, FIGHT_REACTION a_fightReaction)"
 24065,0x1403580c0,0x140367980,4,TESIdleForm::sub_1403580C0
 24069,0x140358300,0x140367bc0,4,"bool TESIdleForm::CheckConditions(Actor* a_actor, TESObjectREFR* a_target, bool a_checkParentIdle) bool TESIdleForm::CheckConditions(Actor* a_actor, TESObjectREFR* a_target, bool a_checkParentIdle)"
@@ -894,6 +896,8 @@
 31410,0x1404c8880,0x1404d8a40,3,"void TESWaterSystem::AddRipple(const NiPoint3& a_pos, float a_scale)"
 31451,0x1404ca620,0x1404da7c0,4,void TESWaterReflections::Dtor()
 31576,0x1404d06c0,0x1404e0860,4,"uint32_t BGSStoryEventManager::AddEvent_Impl1404d06c0(longlong a_this,uint32_t a_index,void *a_event)"
+31593,0x1404d10f0,0x1404e1290,3,ProcessStoryManagerEvent
+31595,0x1404d1600,0x1404e17a0,3,ProcessStoryManagerNode
 31717,0x1404d7f80,0x1404e8120,3,RE::BGSStoryTeller::BeginStartUpQuest
 31718,0x1404d80a0,0x1404e8240,3,RE::BGSStoryTeller::BeginShutDownQuest
 31752,0x1404da790,0x1404ea900,3,void MenuTopicManager::AddBlockingBranch(BGSDialogueBranch* a_branch)
@@ -922,8 +926,10 @@
 31971,0x1404e7ae0,0x1404f7d50,4,NiQuaternion* NiQuaternion::MultiplyAssign(const NiQuaternion& a_rhs)
 31973,0x1404e7c60,0x1404f7ed0,4,void* BSScrapArray_32B::begin(void* a_out)
 31974,0x1404e7c80,0x1404f7ef0,4,void* BSScrapArray_32B::end(void* a_out)
+32034,0x1404eb0e0,0x1404fb350,3,DumpSynchronizedAnimationClip
 32048,0x1404ecf50,0x1404fd1c0,4,sub_1404ECF50
 32049,0x1404ed090,0x1404fd300,3,"bool sub_1404ED090(void* a_manager, BGSActionData& a_actionData)"
+32053,0x1404ed7b0,0x1404fda20,3,DumpSynchronizedAnimations
 32105,0x1404ef320,0x1404ff590,4,"NiTransform& hkQsTransformToNiTransform(NiTransform& a_out, const hkQsTransform& a_in)"
 32133,0x1404f0280,0x1405004f0,4,bool IAnimationGraphManagerHolder::HasAnimationGraphManager()
 32139,0x1404f0620,0x140500890,4,IAnimationGraphManagerHolder::RevertAnimationGraphManager
@@ -1178,6 +1184,7 @@
 36012,0x1405c6bf0,0x1405cf190,3,"uint32_t TaskQueueInterface::SetNiGeometryTexture(NiAVObject* a_geometry, BSTextureSet* a_textureSet)"
 36016,0x1405c6ee0,0x1405cf480,3,BSTaskPool_HandleTask_1405C6EE0
 36174,0x1405ccb20,0x1405d5120,4,"bool EnsureActionAnimEvent(void* a_manager, BGSActionData* a_action)"
+36190,0x1405cce70,0x1405d5470,3,Character::UpdateWarHorseMode
 36195,0x1405CDBF0,0x1405D61F0,2,"Actor* Actor::ctor(Actor *a1, uint8 a2)"
 36196,0x1405cdda0,0x1405d63a0,4,Actor::~Actor
 36198,0x1405ce240,0x1405d6840,4,po3tweaks::Spell::ReapplyOnDeath::Load3d
