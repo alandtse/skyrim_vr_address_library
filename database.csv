@@ -1093,8 +1093,6 @@
 32525,0x140500680,0x140510b20,3,sub_140500680
 32528,0x1405007f0,0x140510c90,4,sub_1405007F0
 32551,0x140501440,0x1405118e0,3,CombatBehaviorTreeManager* CombatBehaviorTree::CombatBehaviorTreeManager::GetSingleton()
-32681,0x14050d820,0x0,3,CreationClubMenu::RegisterCodeObjCallbacks
-32690,0x14050e750,0x0,3,CreationClubMenu::LoadBackgroundTextures
 32867,0x14051e7f0,0x14052ede0,2,void IMenu::PostDisplay(IMenu* a_this)
 33257,0x14053d370,0x1405400f0,4,AccumulatingValueModifierEffect::Allocate(AccumulatingValueModifierEffect* accumulatingValueModifierEffect
 33277,0x14053DEB0,0x140540C30,4,"ActiveEffect::Adjust(Skyrim::ActiveEffect* activeEffect, float effectiveness, bool requiresHostility)"
