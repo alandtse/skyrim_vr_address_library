@@ -3562,6 +3562,7 @@ sseid,aeid,confidence,name
 25977,26586,3,RE::BSFaceGenAnimationData::Reset
 25980,26594,3,RE::BSFaceGenAnimationData::SetExpressionOverride
 26259,26838,3,RE::BSFaceGenManager::PrepareHeadPartForShaders
+26674,27350,2,
 26753,27429,2,void* BGSPackageDataList::GetByUID(std::uint8_t a_uid)
 27464,28181,2,"void* BGSProcedureBase::EvaluatePackageDataTarget(void** a_context, std::uint32_t a_index, void** a_outTarget)"
 27467,28187,2,"void* GetBoundPackageData(void* a_bindings, std::uint32_t a_index, BGSPackageDataList* a_dataList)"
@@ -4741,6 +4742,7 @@ sseid,aeid,confidence,name
 35871,36842,3,SceneGraph::SetFarDistance
 35978,36953,3,RE::TaskQueueInterface::QueueBulletWaterDisplacementTask
 35987,36962,3,RE::TaskQueueInterface::QueueRemoveSpellTask
+36174,37147,2,
 36248,37230,3,RE::Actor::SetRotationZ
 36259,37243,3,RE::Actor::IsInMidair
 36392,37383,3,RE::Actor::CalculateCurrentVendorFaction
@@ -4950,6 +4952,7 @@ sseid,aeid,confidence,name
 37752,38697,3,RE::Actor::StopInteractingQuick
 37757,38702,3,RE::Actor::GetMount
 37758,38703,3,RE::Actor::GetRider
+37763,38708,2,
 37772,38717,3,RE::Actor::RemoveSpell
 37785,38734,1,Character::sub_*
 37786,38735,1,
@@ -5022,6 +5025,7 @@ sseid,aeid,confidence,name
 37964,38920,1,
 37965,38921,1,
 37968,38924,1,
+38044,39000,2,
 38071,39026,3,ClearModifiers
 38079,39033,3,RE::TaskQueueInterface::ShouldUseTaskQueue
 38090,39045,3,Job_TES_animation
@@ -5187,6 +5191,15 @@ sseid,aeid,confidence,name
 38760,39783,3,RE::HighProcessData::SetHeadtrackTarget
 38761,39784,1,
 38850,39887,3,RE::ActorProcess::SetHeadTrackTarget_14067D120
+38871,39912,2,
+38872,39913,2,
+38873,39914,2,
+38874,39915,2,
+38875,39916,2,
+38876,39917,2,
+38877,39918,2,
+38878,39919,2,
+38879,39920,2,
 38903,39949,1,
 38904,39950,1,
 38926,39973,1,
@@ -5670,6 +5683,7 @@ sseid,aeid,confidence,name
 42240,43398,1,
 42242,43400,1,
 42243,43401,1,
+42411,43567,2,
 42502,43664,1,BSPassByTargetTriggerModifierInterface::Func0_*
 42505,43667,1,
 42506,43668,1,
@@ -6811,6 +6825,10 @@ sseid,aeid,confidence,name
 52712,53556,1,SkyrimScript::ObjectBindPolicy::sub_*
 52713,53557,1,SkyrimScript__ObjectBindPolicy::sub_*
 52714,53558,1,SkyrimScript__ObjectBindPolicy::sub_*
+52715,53559,2,
+52716,53560,2,
+52718,53562,2,
+52719,53563,2,
 52721,53565,1,SkyrimScript__ObjectBindPolicy::Func2_*
 52722,53566,1,SkyrimScript__ObjectBindPolicy::Func3_*
 52725,53569,1,SkyrimScript__ObjectBindPolicy::Func8_*
@@ -6859,6 +6877,7 @@ sseid,aeid,confidence,name
 53029,53829,3,RE::Actor::HasLOS
 53105,53915,1,
 53109,53920,1,SkyrimVM::sub_*
+53114,53925,2,
 53122,53933,1,
 53123,53934,1,SkyrimVM::sub_*
 53125,53936,1,
@@ -6880,6 +6899,10 @@ sseid,aeid,confidence,name
 53182,53993,1,BSTEventSink_TESSellEvent_::Handle_*
 53183,53994,1,BSTEventSink_TESSleepStartEvent_::Handle_*
 53186,53997,1,BSTEventSink_TESTopicInfoEvent_::Handle_*
+53205,54016,2,
+53208,54019,2,
+53214,54025,2,
+53228,54040,2,
 53243,54055,1,SkyrimVM::sub_*
 53245,54057,1,
 53246,54058,1,SkyrimVM::sub_*
@@ -6897,6 +6920,7 @@ sseid,aeid,confidence,name
 53328,54170,1,
 53331,54175,1,
 53332,54176,1,
+53355,54208,2,
 53359,54214,1,
 53360,54216,1,
 53363,54220,1,

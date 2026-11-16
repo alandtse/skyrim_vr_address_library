@@ -605,6 +605,7 @@
 24012,0x140355940,0x140365200,3,"void TESFaction::SetFactionFightReaction(TESFaction* a_faction, FIGHT_REACTION a_fightReaction)"
 24065,0x1403580c0,0x140367980,4,TESIdleForm::sub_1403580C0
 24069,0x140358300,0x140367bc0,4,"bool TESIdleForm::CheckConditions(Actor* a_actor, TESObjectREFR* a_target, bool a_checkParentIdle) bool TESIdleForm::CheckConditions(Actor* a_actor, TESObjectREFR* a_target, bool a_checkParentIdle)"
+24104,0x140359760,0x140369020,3,"TESIdleForm* SelectIdleForAction(void* a_idleManager, BGSActionData* a_action)"
 24159,0x14035C890,0x14036C150,3,"bool TESNPC__ReadFromFileStream(RE::TESNPC *a_npc, RE::TESFile *a_file)"
 24180,0x14035f6c0,0x14036ef80,3,Actor* TESNPC::GetUniqueActor()
 24183,0x14035f800,0x14036f0c0,3,"void TESNPC::SetFaceMorph(std::int32_t a_index, float a_value)"
@@ -772,6 +773,7 @@
 26576,0x1403e3640,0x1403f2ff0,4,sub_1403E3640
 26592,0x1403e48d0,0x1403f4420,4,"BGSSkillPerkTreeNode * BGSSkillPerkTreeNode::ctor_1403e48d0 (BGSSkillPerkTreeNode * a_this, int32_t a_index, ActorValueInfo * a_avInfo)"
 26616,0x1403e5250,0x1403f4da0,4,RE::ActorValueOwner::GetClampedActorValue
+26674,0x1403e6d90,0x1403f68e0,3,"BGSAIWorldLocationPointRadius* BGSAIWorldLocationPointRadius::Create(NiPoint3* a_position, TESObjectCELL* a_cell, TESWorldSpace* a_worldSpace, float a_radius, float a_facing)"
 26718,0x1403e7c20,0x1403f7770,3,BGSAttackData* BGSAttackData::Ctor()
 26753,0x1403e9ae0,0x1403f9630,3,void* BGSPackageDataList::GetByUID(std::uint8_t a_uid)
 27464,0x1403fa640,0x14040a190,3,"void* BGSProcedureBase::EvaluatePackageDataTarget(void** a_context, std::uint32_t a_index, void** a_outTarget)"
@@ -1174,7 +1176,7 @@
 36010,0x1405c69b0,0x1405cef50,4,"void TaskQueueInterface::QueueActorDisarm(ActorHandle& a_target, ActorHandle& a_caster)"
 36012,0x1405c6bf0,0x1405cf190,3,"uint32_t TaskQueueInterface::SetNiGeometryTexture(NiAVObject* a_geometry, BSTextureSet* a_textureSet)"
 36016,0x1405c6ee0,0x1405cf480,3,BSTaskPool_HandleTask_1405C6EE0
-36174,0x1405ccb20,0x1405d5120,4,sub_1405CCB20
+36174,0x1405ccb20,0x1405d5120,4,"bool EnsureActionAnimEvent(void* a_manager, BGSActionData* a_action)"
 36195,0x1405CDBF0,0x1405D61F0,2,"Actor* Actor::ctor(Actor *a1, uint8 a2)"
 36196,0x1405cdda0,0x1405d63a0,4,Actor::~Actor
 36198,0x1405ce240,0x1405d6840,4,po3tweaks::Spell::ReapplyOnDeath::Load3d
@@ -1325,6 +1327,7 @@
 37758,0x14062ecd0,0x140637ba0,4,bool Actor::GetRider(NiPointer<Actor>& a_outRider)
 37761,0x14062f000,0x140637ed0,3,bool Character::CanMountHorse(Actor* a_mount)
 37762,0x14062f170,0x140638040,4,bool Actor::GetControllingActor(NiPointer<Actor>& controllingActor)
+37763,0x14062f1c0,0x140638090,3,void Actor::GetOccupiedFurnitureOrMountHandle(ObjectRefHandle* a_out)
 37767,0x14062f420,0x1406382f0,3,void SpellsLearned::AddEventSink(BSTEventSink<SpellsLearned::Event>* a_eventSink)
 37768,0x14062f450,0x140638320,3,void SpellsLearned::RemoveEventSink(BSTEventSink<SpellsLearned::Event>* a_eventSink)
 37771,0x14062f560,0x140638430,3,RE::Actor::AddSpell
@@ -1382,6 +1385,7 @@
 37999,0x14063b0f0,0x140644160,4,ActorMediator::PerformComplexAction
 38005,0x14063b4a0,0x140644510,3,sub_14063B4A0
 38023,0x14063c1d0,0x140645240,4,ActorState::SetWeaponDrawn
+38044,0x14063c9d0,0x140645a40,3,void Actor::SetSitSleepState(SIT_SLEEP_STATE a_state)
 38046,0x14063caa0,0x140645b10,3,sub_14063CAA0
 38047,0x14063cfb0,0x140646020,3,StaminaNPC::apply_deny_player_attack_or_bash
 38048,0x14063d0f0,0x140646160,3,HandleAction
@@ -1421,6 +1425,15 @@
 38856,0x14067d210,0x140686690,4,bool AIProcess::IsFleeing()
 38857,0x14067d230,0x1406866b0,4,void AIProcess::KnockParalyze(Actor* a_actor)
 38858,0x14067d4a0,0x140686920,4,"void AIProcess::KnockExplosion(Actor* a_actor, const NiPoint3& a_location, float a_magnitude)"
+38871,0x14067e450,0x1406878d0,3,"void AIProcess::ChangeSitSleepState(Actor* a_actor, SIT_SLEEP_STATE a_state, ObjectRefHandle* a_furniture, std::uint32_t a_markerID)"
+38872,0x14067ee90,0x140688310,3,TESIdleForm* AIProcess::GetFurnitureIdle()
+38873,0x14067eeb0,0x140688330,3,std::uint32_t AIProcess::GetCurrentFurnitureMarkerID()
+38874,0x14067eed0,0x140688350,3,void AIProcess::SetCurrentFurnitureMarkerID(std::uint32_t a_markerID)
+38875,0x14067eef0,0x140688370,3,ObjectRefHandle* AIProcess::GetOccupiedFurnitureHandle(ObjectRefHandle* a_out)
+38876,0x14067ef20,0x1406883a0,3,NiPoint3* AIProcess::GetFurniturePathPoint()
+38877,0x14067ef40,0x1406883c0,3,void AIProcess::SetFurniturePathPoint(NiPoint3* a_point)
+38878,0x14067ef70,0x1406883f0,3,float AIProcess::GetFurnitureFacing()
+38879,0x14067ef90,0x140688410,3,void AIProcess::SetFurnitureFacing(float a_facing)
 38900,0x14067fe60,0x1406892e0,4,LLF::AIProcess_CalculateLightValue_GetLuminance
 38966,0x140681fd0,0x14068b440,4,"void FUN_140681fd0 (undefined8 param_1, Actor * a_actor)"
 38967,0x140682020,0x14068b490,4,void FUN_140682020 (longlong param_1)
@@ -1539,6 +1552,7 @@
 41661,0x14071a190,0x140744b30,4,"bool IsLightAffectingActor(void* detectionGlobal, BSShadowLight*, Actor*, NiPoint3*)"
 41694,0x14071B670,0x140746010,2,"unk_14071B670(__m128 *a1, int64 a2, int64 a3, Actor *a4, float *a5)"
 41778,0x1407220b0,0x14074ca60,3,RE::ArrowReleaseHandler::Handle_1407220B0
+42411,0x14072c300,0x140756d10,3,"bool SendActionAnimEvent(void* a_manager, BGSActionData* a_action)"
 42420,0x14072cc80,0x140757690,4,AnimObjectSwapper::AnimObjectSwapHook
 42547,0x140732400,0x14075ce60,4,ArrowProjectile::GetImpactData
 42586,0x140733cc0,0x14075e720,3,RE::BeamProjectile::UpdateImpl_*
@@ -2050,11 +2064,20 @@
 52368,0x1408ee900,0x140923570,4,QuitToMainMenuCallback
 52374,0x1408ef500,0x140924430,4,QuickLoot::
 52400,0x1408f03c0,0x1409254b0,4,QuickLoot::
+52466,0x1408f6f00,0x140931680,3,void SkyrimScript::Internal::AnimationCallbacks::RemoveCallbacksForHandle(VMHandle a_handle)
 52652,0x140902560,0x14093cce0,3,RE::SkyrimScript::HandlePolicy::HandleIsType
 52653,0x140902770,0x14093cef0,3,RE::SkyrimScript::HandlePolicy::IsHandleObjectAvailable
 52655,0x140902860,0x14093cfe0,3,RE::SkyrimScript::HandlePolicy::GetHandleForObject
 52659,0x140902b00,0x14093d280,3,RE::SkyrimScript::HandlePolicy::GetObjectForHandle
 52662,0x1409032c0,0x14093da40,3,RE::SkyrimScript::HandlePolicy::ConvertHandleToString
+52711,0x140905650,0x14093fdd0,3,void ObjectBindPolicy::CollectAndBindMergedScripts(VMHandle a_handle)
+52712,0x140905740,0x14093fec0,3,"void ObjectBindPolicy::CollectAndBindMergedScriptsFrom(VMHandle a_targetHandle, VMHandle a_sourceHandle)"
+52713,0x140905820,0x14093ffa0,3,void ObjectBindPolicy::BindPendingHandles()
+52714,0x140905980,0x140940100,3,void ObjectBindPolicy::Freeze()
+52715,0x1409059f0,0x140940170,3,void ObjectBindPolicy::Unfreeze()
+52716,0x140905a70,0x1409401f0,3,void ObjectBindPolicy::RebindTrackedHandles()
+52718,0x140905c40,0x1409403c0,3,void ObjectBindPolicy::MergeActorTemplateScripts(VMHandle a_handle)
+52719,0x140905de0,0x140940560,3,void ObjectBindPolicy::ForgetHandle(VMHandle a_handle)
 52730,0x140906fe0,0x140941760,3,SkyrimScript__ObjectBindPolicy::
 52767,0x140909f30,0x1409446b0,3,PapyrusTweaks::
 52834,0x14090e6c0,0x140948e40,2,"void SkyrimScript::Profiler::StackFramePushQueued(std::uint32_t a_stackID, std::uint32_t a_stackFrames, const BSTSmartPointer<BSScript::Internal::IFuncCallQuery>& a_query)"
@@ -2070,15 +2093,28 @@
 53108,0x1409204a0,0x14095aba0,3,SkyrimVM::SkyrimVM
 53112,0x140921cd0,0x14095c430,2,"bool SkyrimVM::SaveCallback(BSStorage* a_storage, BSTSmartPointer<BSScript::IStackCallbackFunctor>& a_callback)"
 53113,0x140921da0,0x14095c500,2,"bool SkyrimVM::LoadCallback(BSStorage* a_storage, bool* a_ok, BSTSmartPointer<BSScript::IStackCallbackFunctor>& a_outCallback)"
+53114,0x140921ef0,0x14095c650,3,void SkyrimVM::BindPendingHandles()
 53115,0x140921f10,0x14095c670,2,"SkyrimVM::ProcessRegisteredUpdates(SkyrimVM* a_vm, float a_budget)"
 53116,0x140922a90,0x14095d1f0,4,"SkyrimVM::ProcessTasklets(SkyrimVM* a_vm, float a_budget)"
+53127,0x1409239d0,0x14095e130,3,void SkyrimVM::UnregisterForUpdate(VMHandle a_handle)
+53129,0x140923dc0,0x14095e810,3,void SkyrimVM::UnregisterForUpdateGameTime(VMHandle a_handle)
+53134,0x1409243d0,0x14095ee20,3,void SkyrimVM::RemoveLOSEventChecksForHandle(VMHandle a_handle)
+53136,0x1409247e0,0x14095f230,3,void SkyrimVM::UnregisterForSleep(VMHandle a_handle)
+53138,0x140924b80,0x14095f5d0,3,void SkyrimVM::UnregisterForTrackedStatsEvent(VMHandle a_handle)
+53141,0x1409250d0,0x14095fb20,3,void SkyrimVM::RemoveAllInventoryEventFilters(VMHandle a_handle)
+53142,0x140925180,0x14095fbd0,3,void SkyrimVM::UnregisterAllForHandle(VMHandle a_handle)
 53144,0x1409252c0,0x14095fd10,3,RE::SkyrimVM::QueuePostRenderCall
+53145,0x140925390,0x14095fde0,3,void SkyrimVM::SetFrozen(bool a_isFrozen)
 53195,0x14092a9c0,0x140965410,3,SkyrimVM::HandleEvent(BSScript::StatsEvent* stats)
 53204,0x14092b5e0,0x140965c90,3,void SkyrimVM::Freeze()
-53205,0x14092b6c0,0x140965d80,2,PapyrusTweaks::
+53205,0x14092b6c0,0x140965d80,3,void SkyrimVM::FinishReload()
 53207,0x14092b800,0x140965f00,3,"SkyrimVM::LoadGame(SkyrimVM* this, LoadStorageWrapper* a_wrapper)"
+53208,0x14092b8a0,0x140965fa0,3,void SkyrimVM::RevertGame()
 53209,0x14092b8e0,0x140965fe0,3,RE::SkyrimVM::DumpStacks
+53214,0x14092bde0,0x1409664e0,3,void SkyrimVM::ReloadScripts()
 53221,0x14092d130,0x140967780,4,"void SkyrimVM::RelayEvent(VMHandle a_handle, BSFixedString* a_event, BSScript::IFunctionArguments* a_args, SkyrimVM::ISendEventFilter* a_optionalFilter)"
+53228,0x14092dae0,0x140968130,3,void SkyrimVM::ResetRuntimeState()
+53355,0x140936ee0,0x1409715c0,3,void ObjectBindPolicy::~ObjectBindPolicy()
 53581,0x14093aef0,0x140975590,2,"bool EventCallbackAdapter::Load(std::int32_t a_flags, BSStorage* a_storage, BSScript::IVMSaveLoadInterface* a_loader, BSScript::IVirtualMachine* a_vm, bool* a_ok)"
 53604,0x14093bff0,0x140976690,4,BSTEventSource::AddEventSink
 53698,0x140941050,0x14097b5f0,2,"bool EventCallbackAdapter::Save(SaveStorageWrapper* a_storage, BSScript::IVMSaveLoadInterface* a_saveLoad)"
@@ -2983,6 +3019,7 @@
 89364,0x1410fc9e0,0x141159720,3,void ProcessAvoidBoxChecks()
 89365,0x1410fcbf0,0x141159930,3,std::uint64_t CheckAvoidBox()
 97371,0x14122c6f0,0x141264ba0,4,"void ObjectBindPolicy::GetInitialPropertyValues(VMHandle a_handle, const BSFixedString& a_className, BSTScrapHashMap<BSFixedString, Variable>& a_propertyValues, std::uint32_t& a_nonConvertedProperties)"
+97375,0x14122d480,0x141265930,3,void ObjectBindPolicy::EraseBoundHandle(VMHandle a_handle)
 97379,0x14122dad0,0x141265f80,3,RE::BSScript::ObjectBindPolicy::BindObject
 97462,0x141233670,0x14126bb20,3,void Object::Dtor()
 97463,0x141233720,0x14126bbd0,3,VMHandle Object::GetHandle()
