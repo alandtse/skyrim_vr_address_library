@@ -1,4 +1,35 @@
 ﻿id,sse,vr,status,name
+5115,0x14008a4d0,0x140089dc0,3,RegisterAssaultActorStoryEvent
+5116,0x14008a550,0x140089e40,3,RegisterKillActorStoryEvent
+5146,0x14008ad10,0x14008a600,3,RegisterPlayerAddItemStoryEvent
+5147,0x14008ad90,0x14008a680,3,RegisterArrestStoryEvent
+5148,0x14008ae10,0x14008a700,3,RegisterBribeStoryEvent
+5149,0x14008ae90,0x14008a780,3,RegisterCastMagicStoryEvent
+5150,0x14008af10,0x14008a800,3,RegisterChangeLocationStoryEvent
+5151,0x14008af90,0x14008a880,3,RegisterCraftItemStoryEvent
+5152,0x14008b010,0x14008a900,3,RegisterCrimeGoldStoryEvent
+5153,0x14008b090,0x14008a980,3,RegisterPlayerCuredStoryEvent
+5154,0x14008b110,0x14008aa00,3,RegisterActorDialogueStoryEvent
+5155,0x14008b190,0x14008aa80,3,RegisterDeadBodyStoryEvent
+5156,0x14008b210,0x14008ab00,3,RegisterEscapeJailStoryEvent
+5157,0x14008b290,0x14008ab80,3,RegisterPlayerActivateActorStoryEvent
+5158,0x14008b310,0x14008ac00,3,RegisterFlatterStoryEvent
+5159,0x14008b390,0x14008ac80,3,RegisterActorHelloStoryEvent
+5160,0x14008b410,0x14008ad00,3,RegisterIncreaseLevelStoryEvent
+5161,0x14008b490,0x14008ad80,3,RegisterSkillIncreaseStoryEvent
+5162,0x14008b510,0x14008ae00,3,RegisterPlayerInfectedStoryEvent
+5163,0x14008b590,0x14008ae80,3,RegisterIntimidateStoryEvent
+5164,0x14008b610,0x14008af00,3,RegisterJailStoryEvent
+5165,0x14008b690,0x14008af80,3,RegisterNewVoicePowerStoryEvent
+5166,0x14008b710,0x14008b000,3,RegisterPayFineStoryEvent
+5167,0x14008b790,0x14008b080,3,RegisterLockPickStoryEvent
+5168,0x14008b810,0x14008b100,3,RegisterPlayerReceivesFavorStoryEvent
+5169,0x14008b890,0x14008b180,3,RegisterChangeRelationshipRankStoryEvent
+5170,0x14008b910,0x14008b200,3,RegisterPlayerRemoveItemStoryEvent
+5171,0x14008b990,0x14008b280,3,RegisterScriptStoryEvent
+5172,0x14008ba10,0x14008b300,3,RegisterServedTimeStoryEvent
+5173,0x14008ba90,0x14008b380,3,RegisterQuestStartStoryEvent
+5174,0x14008bb10,0x14008b400,3,RegisterTrespassActorStoryEvent
 10207,0x1400eb2d0,0x1400fc720,4,void SetFocusShadowDisplay1()
 10209,0x1400eb2f0,0x1400fc740,4,void SetFocusShadowDisplay2()
 10827,0x1400f6e80,0x140107430,3,RE::TESForm::GetFormEditorID
@@ -895,7 +926,40 @@
 31409,0x1404c8810,0x1404d89d0,4,RE::TESWaterSystem::UpdateUnderWaterVariables
 31410,0x1404c8880,0x1404d8a40,3,"void TESWaterSystem::AddRipple(const NiPoint3& a_pos, float a_scale)"
 31451,0x1404ca620,0x1404da7c0,4,void TESWaterReflections::Dtor()
+31487,0x1404cb7f0,0x1404db990,3,BuildAssaultActorStoryEventParams
+31488,0x1404cba00,0x1404dbba0,3,BuildKillActorStoryEventParams
+31518,0x1404cc890,0x1404dca30,3,BuildPlayerAddItemStoryEventParams
+31519,0x1404ccb10,0x1404dccb0,3,BuildArrestStoryEventParams
+31520,0x1404ccd20,0x1404dcec0,3,BuildBribeStoryEventParams
+31521,0x1404cce50,0x1404dcff0,3,BuildCastMagicStoryEventParams
+31522,0x1404cd060,0x1404dd200,3,BuildChangeLocationStoryEventParams
+31523,0x1404cd200,0x1404dd3a0,3,BuildCraftItemStoryEventParams
+31524,0x1404cd3a0,0x1404dd540,3,BuildCrimeGoldStoryEventParams
+31525,0x1404cd620,0x1404dd7c0,3,BuildPlayerCuredStoryEventParams
+31526,0x1404cd6d0,0x1404dd870,3,BuildActorDialogueStoryEventParams
+31527,0x1404cd870,0x1404dda10,3,BuildDeadBodyStoryEventParams
+31528,0x1404cda10,0x1404ddbb0,3,BuildEscapeJailStoryEventParams
+31529,0x1404cdb40,0x1404ddce0,3,BuildPlayerActivateActorStoryEventParams
+31530,0x1404cdc70,0x1404dde10,3,BuildFlatterStoryEventParams
+31531,0x1404cdd10,0x1404ddeb0,3,BuildActorHelloStoryEventParams
+31532,0x1404cdeb0,0x1404de050,3,BuildIncreaseLevelStoryEventParams
+31533,0x1404cdf60,0x1404de100,3,BuildSkillIncreaseStoryEventParams
+31534,0x1404ce010,0x1404de1b0,3,BuildPlayerInfectedStoryEventParams
+31535,0x1404ce140,0x1404de2e0,3,BuildIntimidateStoryEventParams
+31536,0x1404ce1e0,0x1404de380,3,BuildJailStoryEventParams
+31537,0x1404ce3f0,0x1404de590,3,BuildNewVoicePowerStoryEventParams
+31538,0x1404ce520,0x1404de6c0,3,BuildPayFineStoryEventParams
+31539,0x1404ce730,0x1404de8d0,3,BuildLockPickStoryEventParams
+31540,0x1404ce860,0x1404dea00,3,BuildPlayerReceivesFavorStoryEventParams
+31541,0x1404ce900,0x1404deaa0,3,BuildChangeRelationshipRankStoryEventParams
+31542,0x1404ceb10,0x1404decb0,3,BuildPlayerRemoveItemStoryEventParams
+31543,0x1404ced90,0x1404def30,3,BuildScriptStoryEventParams
+31544,0x1404cf080,0x1404df220,3,BuildServedTimeStoryEventParams
+31545,0x1404cf290,0x1404df430,3,BuildQuestStartStoryEventParams
+31546,0x1404cf340,0x1404df4e0,3,BuildTrespassActorStoryEventParams
+31565,0x1404cfde0,0x1404dff80,3,BGSStoryEventManager::RegisterEventType
 31576,0x1404d06c0,0x1404e0860,4,"uint32_t BGSStoryEventManager::AddEvent_Impl1404d06c0(longlong a_this,uint32_t a_index,void *a_event)"
+31587,0x1404d0cb0,0x1404e0e50,3,InitStoryEventParam
 31593,0x1404d10f0,0x1404e1290,3,ProcessStoryManagerEvent
 31595,0x1404d1600,0x1404e17a0,3,ProcessStoryManagerNode
 31717,0x1404d7f80,0x1404e8120,3,RE::BGSStoryTeller::BeginStartUpQuest
