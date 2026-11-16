@@ -1454,6 +1454,7 @@
 38752,0x140679000,0x140682480,3,BSTArray_EraseRange_RefCountedPairs
 38760,0x1406797d0,0x140682c50,3,"void HighProcessData::SetHeadtrackTarget(HEAD_TRACK_TYPE a_headtrackType, TESObjectREFR* a_target)"
 38773,0x140679c10,0x140683090,3,void AIProcess::ClearFurniture()
+38775,0x14067a080,0x1406834f0,3,AIProcess::UpdatePackageRemoveWornItems
 38781,0x14067a3e0,0x140683850,4,InventoryEntryData* AIProcess::GetCurrentWeapon(bool a_leftHand)
 38786,0x14067a4c0,0x140683930,3,"std::uint64_t ActorProcess::SetEquippedHandItem(ExtraContainerChanges::ItemEntry* a_item, bool a_left, NiAVObject* a_3d)"
 38787,0x14067a940,0x140683dc0,3,"std::uint64_t ActorProcess::SetEquippedHandItemEntry(ExtraContainerChanges::ItemEntry* a_item, bool a_left)"
