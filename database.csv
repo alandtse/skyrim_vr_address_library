@@ -823,6 +823,8 @@
 26753,0x1403e9ae0,0x1403f9630,3,void* BGSPackageDataList::GetByUID(std::uint8_t a_uid)
 27117,0x1403f2040,0x140401b90,3,RegisterProcedureName_Topic
 27126,0x1403f2430,0x140401f80,3,InitPackageDataAndProcedureNames
+27440,0x1403f9680,0x1404091d0,3,BGSProcedureTreeOneChildExecState::RecycleChildren
+27441,0x1403f9700,0x140409250,3,BGSProcedureTreeSimultaneousExecState::RecycleChildren
 27464,0x1403fa640,0x14040a190,3,"void* BGSProcedureBase::EvaluatePackageDataTarget(void** a_context, std::uint32_t a_index, void** a_outTarget)"
 27467,0x1403fa870,0x14040a3c0,3,"void* GetBoundPackageData(void* a_bindings, std::uint32_t a_index, BGSPackageDataList* a_dataList)"
 27475,0x1403fabd0,0x14040a720,3,BGSProcedureDone::Process
@@ -840,6 +842,7 @@
 27582,0x1403fd6c0,0x14040d210,3,BGSProcedureActivate::InitActorLocation
 27583,0x1403fd740,0x14040d290,3,BGSProcedureActivate::Process
 27584,0x1403fd7b0,0x14040d300,3,RegisterProcedureName_Activate
+27588,0x1403fda20,0x14040d570,3,BGSProcedureActivateExecState::RecycleChildren
 27592,0x1403fdb90,0x14040d6e0,3,BGSProcedureActivateExecState::SaveGame
 27593,0x1403fdd40,0x14040d890,3,BGSProcedureActivateExecState::LoadGame
 27599,0x1403ffc40,0x14040f790,3,ProcedureNameEntryCleanup_Activate
@@ -870,6 +873,7 @@
 27773,0x1404067f0,0x140416340,3,BGSProcedureFind::InitActorAnimPose
 27774,0x140406840,0x140416390,3,BGSProcedureFind::Process
 27775,0x140406d60,0x1404168b0,3,RegisterProcedureName_Find
+27780,0x1404075e0,0x140417130,3,BGSProcedureFindExecState::RecycleChildren
 27781,0x140407660,0x1404171b0,3,BGSProcedureFindExecState::SaveGame
 27782,0x140407700,0x140417250,3,BGSProcedureFindExecState::LoadGame
 27784,0x140407810,0x140417360,3,ProcedureNameEntryCleanup_Find
@@ -886,6 +890,7 @@
 27898,0x14040d350,0x14041cea0,3,BGSProcedureFollowTo::InitActorLocation
 27900,0x14040d580,0x14041d0d0,3,BGSProcedureFollowTo::Process
 27902,0x14040d770,0x14041d2c0,3,RegisterProcedureName_FollowTo
+27906,0x14040dae0,0x14041d630,3,BGSProcedureFollowExecState::RecycleChildren
 27907,0x14040dbd0,0x14041d720,4,"void BGSProcedureFollowExecState::FollowWrapper(BGSProcedureFollowExecState* a_this, void* a_state, undefined1 a_param3)"
 27908,0x14040dca0,0x14041d7f0,3,BGSProcedureFollowExecState::SaveGame
 27909,0x14040df70,0x14041dac0,3,BGSProcedureFollowExecState::LoadGame
@@ -899,11 +904,13 @@
 27984,0x1404113c0,0x140420f10,3,BGSProcedureGuard::Process
 27985,0x140411450,0x140420fa0,3,BGSProcedureGuard::CheckGuardWarnTarget
 27986,0x140411560,0x1404210b0,3,RegisterProcedureName_Guard
+27989,0x140411b40,0x140421690,3,BGSProcedureGuardExecState::RecycleChildren
 27991,0x140411be0,0x140421730,3,BGSProcedureGuardExecState::SaveGame
 27992,0x140411c60,0x1404217b0,3,BGSProcedureGuardExecState::LoadGame
 27994,0x140411d70,0x1404218c0,3,ProcedureNameEntryCleanup_Guard
 28011,0x140412190,0x140421ce0,3,BGSProcedureHoldPosition::Process
 28012,0x140412240,0x140421d90,3,RegisterProcedureName_HoldPosition
+28015,0x140412420,0x140421f70,3,BGSProcedureHoldPositionExecState::RecycleChildren
 28016,0x1404124a0,0x140421ff0,3,BGSProcedureHoldPositionExecState::SaveGame
 28017,0x140412520,0x140422070,3,BGSProcedureHoldPositionExecState::LoadGame
 28019,0x140412630,0x140422180,3,ProcedureNameEntryCleanup_HoldPosition
@@ -911,11 +918,13 @@
 28038,0x140412c20,0x140422770,3,BGSProcedureHover::InitActorAnimPose
 28040,0x140412cb0,0x140422800,3,BGSProcedureHover::Process
 28041,0x140412d80,0x1404228d0,3,RegisterProcedureName_Hover
+28047,0x140413840,0x140423390,3,BGSProcedureHoverExecState::RecycleChildren
 28048,0x1404138c0,0x140423410,3,BGSProcedureHoverExecState::SaveGame
 28049,0x140413970,0x1404234c0,3,BGSProcedureHoverExecState::LoadGame
 28050,0x140413aa0,0x1404235f0,3,BGSProcedureHoverExecState::InitLoadGame
 28068,0x140413f20,0x140423a70,3,BGSProcedureKeepAnEyeOn::Process
 28069,0x140413fd0,0x140423b20,3,RegisterProcedureName_KeepAnEyeOn
+28073,0x1404144f0,0x140424040,3,BGSProcedureKeepAnEyeOnExecState::RecycleChildren
 28074,0x1404145a0,0x1404240f0,3,BGSProcedureKeepAnEyeOnExecState::SaveGame
 28075,0x140414680,0x1404241d0,3,BGSProcedureKeepAnEyeOnExecState::LoadGame
 28077,0x1404148a0,0x1404243f0,3,ProcedureNameEntryCleanup_KeepAnEyeOn
@@ -924,6 +933,7 @@
 28097,0x140414e30,0x140424980,3,RegisterProcedureName_LockDoors
 28100,0x140414fe0,0x140424b30,3,BGSProcedureUnlock::Process
 28102,0x1404150f0,0x140424c40,3,RegisterProcedureName_UnlockDoors
+28105,0x1404152d0,0x140424e20,3,BGSProcedureLockUnlockExecState::RecycleChildren
 28107,0x140415560,0x1404250b0,3,BGSProcedureLockUnlockExecState::SaveGame
 28108,0x140415620,0x140425170,3,BGSProcedureLockUnlockExecState::LoadGame
 28110,0x140415750,0x1404252a0,3,ProcedureNameEntryCleanup_LockDoors
@@ -931,6 +941,7 @@
 28148,0x1404162f0,0x140425e40,3,BGSProcedureOrbit::InitActorAnimPose
 28150,0x140416330,0x140425e80,3,BGSProcedureOrbit::Process
 28151,0x1404163d0,0x140425f20,3,RegisterProcedureName_Orbit
+28156,0x140416ec0,0x140426a10,3,BGSProcedureOrbitExecState::RecycleChildren
 28157,0x140416f40,0x140426a90,3,BGSProcedureOrbitExecState::SaveGame
 28158,0x140417000,0x140426b50,3,BGSProcedureOrbitExecState::LoadGame
 28159,0x140417150,0x140426ca0,3,BGSProcedureOrbitExecState::InitLoadGame
@@ -958,6 +969,7 @@
 28330,0x140421d70,0x1404318c0,3,BGSProcedureShout::InitActorLocation
 28332,0x140421e00,0x140431950,3,BGSProcedureShout::Process
 28333,0x140421e70,0x1404319c0,3,RegisterProcedureName_Shout
+28340,0x140422fb0,0x140432b00,3,BGSProcedureShoutExecState::RecycleChildren
 28341,0x140423060,0x140432bb0,3,BGSProcedureShoutExecState::SaveGame
 28342,0x140423260,0x140432db0,3,BGSProcedureShoutExecState::LoadGame
 28344,0x1404234d0,0x140433020,3,ProcedureNameEntryCleanup_Shout
@@ -969,6 +981,7 @@
 28384,0x140424810,0x140434360,3,BGSProcedureSleep::InitActorLocation
 28386,0x140424870,0x1404343c0,3,BGSProcedureSleep::Process
 28387,0x140424900,0x140434450,3,RegisterProcedureName_Sleep
+28393,0x140424cd0,0x140434820,3,BGSProcedureSitSleepExecState::RecycleChildren
 28395,0x140424dd0,0x140434920,3,BGSProcedureSitSleepExecState::SaveGame
 28396,0x140424ea0,0x1404349f0,3,BGSProcedureSitSleepExecState::LoadGame
 28401,0x140425ba0,0x1404356f0,3,ProcedureNameEntryCleanup_Sit_Sleep
@@ -976,6 +989,7 @@
 28434,0x140426460,0x140435fb0,3,BGSProcedureTravel::InitActorLocation
 28435,0x140426520,0x140436070,3,BGSProcedureTravel::InitActorAnimPose
 28437,0x1404265c0,0x140436110,3,RegisterProcedureName_Travel
+28440,0x1404267c0,0x140436310,3,BGSProcedureTravelExecState::RecycleChildren
 28443,0x140426920,0x140436470,3,BGSProcedureTravelExecState::SaveGame
 28444,0x140426ab0,0x140436600,3,BGSProcedureTravelExecState::LoadGame
 28450,0x140428150,0x140437ca0,3,ProcedureNameEntryCleanup_Travel
@@ -1004,6 +1018,7 @@
 28512,0x140429f90,0x140439ae0,3,BGSProcedureTreeSimultaneous::Load
 28517,0x14042a380,0x140439ed0,3,BGSProcedureTreeSimultaneousExecState::SaveGame
 28518,0x14042a460,0x140439fb0,3,BGSProcedureTreeSimultaneousExecState::LoadGame
+28519,0x14042a4e0,0x14043a030,3,BGSProcedureTreeSimultaneousExecState::InitLoadGame
 28520,0x14042a560,0x14043a0b0,3,BGSProcedureTreeRandom::Execute
 28523,0x14042a950,0x14043a4a0,3,BGSProcedureTreeRandomExecState::SaveGame
 28524,0x14042aa10,0x14043a560,3,BGSProcedureTreeRandomExecState::LoadGame
@@ -1016,12 +1031,14 @@
 28590,0x14042d0d0,0x14043cc20,3,BGSProcedureUseMagic::InitActorLocation
 28591,0x14042d150,0x14043cca0,3,BGSProcedureUseMagic::Process
 28592,0x14042d1c0,0x14043cd10,3,RegisterProcedureName_UseMagic
+28599,0x14042e7e0,0x14043e330,3,BGSProcedureUseMagicExecState::RecycleChildren
 28600,0x14042e8d0,0x14043e420,3,BGSProcedureUseMagicExecState::SaveGame
 28601,0x14042eb70,0x14043e6c0,3,BGSProcedureUseMagicExecState::LoadGame
 28603,0x14042eee0,0x14043ea30,3,ProcedureNameEntryCleanup_UseMagic
 28626,0x14042f5b0,0x14043f100,3,BGSProcedureUseWeapon::InitActorLocation
 28627,0x14042f630,0x14043f180,3,BGSProcedureUseWeapon::Process
 28628,0x14042f6a0,0x14043f1f0,3,RegisterProcedureName_UseWeapon
+28634,0x140431670,0x1404411c0,3,BGSProcedureUseWeaponExecState::RecycleChildren
 28635,0x140431760,0x1404412b0,3,BGSProcedureUseWeaponExecState::SaveGame
 28636,0x140431960,0x1404414b0,3,BGSProcedureUseWeaponExecState::LoadGame
 28638,0x140431c70,0x1404417c0,3,ProcedureNameEntryCleanup_UseWeapon
@@ -1033,6 +1050,7 @@
 28684,0x1404329a0,0x1404424f0,3,BGSProcedureWander::Process
 28685,0x140432a80,0x1404425d0,3,BGSProcedureWander::InitActorLocation
 28687,0x140432bd0,0x140442720,3,RegisterProcedureName_Wander
+28693,0x140432ee0,0x140442a30,3,BGSProcedureWanderExecState::RecycleChildren
 28694,0x140432f80,0x140442ad0,3,BGSProcedureWanderExecState::SaveGame
 28695,0x1404330c0,0x140442c10,3,BGSProcedureWanderExecState::LoadGame
 28699,0x140433e70,0x1404439c0,3,ProcedureNameEntryCleanup_Wander
