@@ -1455,6 +1455,8 @@
 38787,0x14067a940,0x140683dc0,3,"std::uint64_t ActorProcess::SetEquippedHandItemEntry(ExtraContainerChanges::ItemEntry* a_item, bool a_left)"
 38799,0x14067b1d0,0x140684650,4,"static NiAVObject * GetTorchNode (ActorProcess * a_this, BSTSmartPointer_BipedAnim_ * a_biped)"
 38819,0x14067bc70,0x1406850f0,4,"void AIProcess::SetRunOncePackage(TESPackage* a_package, Actor* a_actor)"
+38831,0x14067bfa0,0x140685420,3,AIProcess::ResumeOccupiedFurniture
+38832,0x14067c7a0,0x140685c20,3,AIProcess::UpdateOccupiedFurniture
 38835,0x14067ca00,0x140685e80,3,AIProcess::UpdatePackageGetUp
 38850,0x14067d120,0x1406865a0,3,"void AIProcess::SetHeadtrackTarget(Actor* a_owner, NiPoint3& a_targetPosition)"
 38856,0x14067d210,0x140686690,4,bool AIProcess::IsFleeing()

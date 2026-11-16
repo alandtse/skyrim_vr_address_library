@@ -5215,6 +5215,8 @@ sseid,aeid,confidence,name
 38759,39782,1,
 38760,39783,3,RE::HighProcessData::SetHeadtrackTarget
 38761,39784,1,
+38831,39861,2,
+38832,39862,2,
 38835,39865,2,
 38850,39887,3,RE::ActorProcess::SetHeadTrackTarget_14067D120
 38871,39912,2,
