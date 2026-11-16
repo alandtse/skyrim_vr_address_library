@@ -887,6 +887,7 @@
 28866,0x14043c8f0,0x14044c440,3,CreatePursueProcedureTree_FourParams
 28868,0x14043cc70,0x14044c7c0,3,CreatePursueProcedureTree_ThreeParams
 28870,0x14043cf80,0x14044cad0,3,CreateWaitTravelProcedureTree
+28872,0x14043d460,0x14044cfb0,3,TESCustomPackageData::CreateFollowToProcedureTree
 28994,0x140441130,0x140450c80,4,PackageLocation* PackageLocation::PackageLocation()
 28998,0x140441250,0x140450da0,4,void PackageLocation::SetLocationType(std::int32_t a_type)
 29007,0x140441540,0x140451090,4,"void PackageLocation::Assign(const PackageLocation* a_other, bool a_allowNone)"
@@ -1353,6 +1354,7 @@
 36419,0x1405dcc30,0x1405e5280,3,Character::CreateWaitForDialoguePackage
 36420,0x1405dcdb0,0x1405e5400,3,Actor::CreateKeepAnEyeOnPackage_ThreeParams
 36421,0x1405dcef0,0x1405e5540,3,Actor::CreateKeepAnEyeOnPackage_FourParams
+36422,0x1405dd030,0x1405e5680,3,Character::CreateFollowToPackage
 36424,0x1405dd480,0x1405e5ad0,3,void Character::SetTravelPackage(TESObjectREFR* a_destination)
 36427,0x1405dd770,0x1405e5dc0,3,"void Actor::StealAlarm(TESObjectREFR* a_ref, TESForm* a_object, std::int32_t a_num, std::int32_t a_total, TESForm* a_owner, bool a_allowWarning)"
 36432,0x1405df630,0x1405e7c80,4,"void Actor::TrespassAlarm(TESObjectREFR* a_ref, TESForm* a_ownership, std::int32_t a_crime)"
