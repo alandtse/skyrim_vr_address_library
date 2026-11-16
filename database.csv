@@ -814,6 +814,9 @@
 27464,0x1403fa640,0x14040a190,3,"void* BGSProcedureBase::EvaluatePackageDataTarget(void** a_context, std::uint32_t a_index, void** a_outTarget)"
 27467,0x1403fa870,0x14040a3c0,3,"void* GetBoundPackageData(void* a_bindings, std::uint32_t a_index, BGSPackageDataList* a_dataList)"
 27476,0x1403fac00,0x14040a750,3,RegisterProcedureName_Done
+27481,0x1403fafa0,0x14040aaf0,3,ProcedureNameMap_Insert
+27524,0x1403fb830,0x14040b380,3,GetProcedureNameMap
+27526,0x1403fb8e0,0x14040b430,3,ProcedureNameMap_Grow
 27536,0x1403fbf40,0x14040ba90,3,RegisterProcedureName_Acquire
 27584,0x1403fd7b0,0x14040d300,3,RegisterProcedureName_Activate
 27621,0x140400190,0x14040fce0,3,RegisterProcedureName_Dialogue
