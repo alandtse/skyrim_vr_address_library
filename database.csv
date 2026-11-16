@@ -1400,6 +1400,7 @@
 38118,0x140640600,0x140649910,2,PapyrusTweaks::Job_VM_Update
 38141,0x140640f80,0x14064a2b0,4,void Job_Update_grass_140640F80 (void)
 38150,0x140641460,0x14064a7b0,3,AIProcess::UpdatePackage
+38153,0x1406429d0,0x14064bd20,3,AIProcess::RunPackageProcedureTree
 38156,0x140642e20,0x14064c170,4,AIProcess::CheckForNewPackage
 38158,0x140642f50,0x14064c2a0,4,void AIProcess::ComputeLastTimeProcessed()
 38198,0x140644600,0x14064d950,4,"void AIProcess::AddToProcedureIndexRunning(Actor* a_actor, std::uint32_t a_num)"
@@ -1407,6 +1408,7 @@
 38203,0x140644a60,0x14064ddb0,3,AIProcess::UpdatePackageTravel
 38249,0x1406469b0,0x14064fd00,3,AIProcess::UpdatePackageMiddleLow
 38261,0x140648d20,0x140652070,3,AIProcess::UpdatePackageWaitAmbushMiddleHigh
+38262,0x140648e80,0x1406521d0,3,AIProcess::UpdatePackageProcedures
 38290,0x14064b140,0x140654490,4,"bool AIProcess::SetupSpecialIdle(Actor* a_actor, DEFAULT_OBJECT a_object, TESIdleForm* a_idle, bool a_unk, bool a_unk2, TESObjectREFR* a_unk5)"
 38291,0x14064b570,0x1406548c0,4,"void AIProcess::StopCurrentIdle(Actor* a_actor, bool a_forceIdleStop)"
 38300,0x14064c420,0x140655770,3,AIProcess::UpdatePackageSandmanHigh
