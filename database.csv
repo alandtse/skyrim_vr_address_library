@@ -807,6 +807,7 @@
 26592,0x1403e48d0,0x1403f4420,4,"BGSSkillPerkTreeNode * BGSSkillPerkTreeNode::ctor_1403e48d0 (BGSSkillPerkTreeNode * a_this, int32_t a_index, ActorValueInfo * a_avInfo)"
 26616,0x1403e5250,0x1403f4da0,4,RE::ActorValueOwner::GetClampedActorValue
 26674,0x1403e6d90,0x1403f68e0,3,"BGSAIWorldLocationPointRadius* BGSAIWorldLocationPointRadius::Create(NiPoint3* a_position, TESObjectCELL* a_cell, TESWorldSpace* a_worldSpace, float a_radius, float a_facing)"
+26711,0x1403e7700,0x1403f7250,3,GetPackageDataLocationMap
 26718,0x1403e7c20,0x1403f7770,3,BGSAttackData* BGSAttackData::Ctor()
 26753,0x1403e9ae0,0x1403f9630,3,void* BGSPackageDataList::GetByUID(std::uint8_t a_uid)
 27117,0x1403f2040,0x140401b90,3,RegisterProcedureName_Topic
@@ -868,6 +869,7 @@
 28437,0x1404265c0,0x140436110,3,RegisterProcedureName_Travel
 28450,0x140428150,0x140437ca0,3,ProcedureNameEntryCleanup_Travel
 28479,0x140428a10,0x140438560,4,void BGSProcedureTreeProcedure::ExecuteProcedure(BGSProcedureTreeProcedure* a_this)
+28541,0x14042b370,0x14043aec0,3,ProcedureNameMap_Find
 28554,0x14042b930,0x14043b480,3,RegisterProcedureName_UseIdleMarker
 28569,0x14042caf0,0x14043c640,3,ProcedureNameEntryCleanup_UseIdleMarker
 28592,0x14042d1c0,0x14043cd10,3,RegisterProcedureName_UseMagic
