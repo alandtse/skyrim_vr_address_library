@@ -821,8 +821,12 @@
 26711,0x1403e7700,0x1403f7250,3,GetPackageDataLocationMap
 26718,0x1403e7c20,0x1403f7770,3,BGSAttackData* BGSAttackData::Ctor()
 26753,0x1403e9ae0,0x1403f9630,3,void* BGSPackageDataList::GetByUID(std::uint8_t a_uid)
+26952,0x1403ee1f0,0x1403fdd40,3,FindInPackageDataLocationMap
 27117,0x1403f2040,0x140401b90,3,RegisterProcedureName_Topic
 27126,0x1403f2430,0x140401f80,3,InitPackageDataAndProcedureNames
+27402,0x1403f9100,0x140408c50,3,FindExecStatePool
+27417,0x1403f93f0,0x140408f40,3,GetExecStatePoolMap
+27418,0x1403f9490,0x140408fe0,3,GetTreeItemPoolMap
 27440,0x1403f9680,0x1404091d0,3,BGSProcedureTreeOneChildExecState::RecycleChildren
 27441,0x1403f9700,0x140409250,3,BGSProcedureTreeSimultaneousExecState::RecycleChildren
 27464,0x1403fa640,0x14040a190,3,"void* BGSProcedureBase::EvaluatePackageDataTarget(void** a_context, std::uint32_t a_index, void** a_outTarget)"
