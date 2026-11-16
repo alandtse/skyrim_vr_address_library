@@ -1417,6 +1417,8 @@
 38404,0x140650df0,0x14065a140,3,RE::AIProcess::Update3DModel
 38483,0x1406598d0,0x140662c10,3,ObjectRefHandle AIProcess::GetHeadtrackTarget()
 38495,0x140659c00,0x140662f40,3,void AIProcess::ClearMuzzleFlashes()
+38509,0x14065a3b0,0x1406636f0,3,AIProcess::AimWeaponAtTarget
+38529,0x14065aa20,0x140663d60,3,AIProcess::RequestFollowPathing
 38560,0x14065be00,0x140665140,3,AIProcess::UpdatePackageGuardHigh
 38568,0x14065c880,0x140665bd0,3,RE::AIProcess::SetBaseScale
 38606,0x14065f040,0x140668390,3,AIProcess::UpdatePackageHigh
@@ -1430,6 +1432,7 @@
 38622,0x14066bcc0,0x140675170,3,AIProcess::UpdatePackageEscortHigh
 38624,0x14066d0b0,0x140676560,3,AIProcess::UpdatePackageEatHigh
 38627,0x14066e1b0,0x140677660,3,AIProcess::UpdatePackageDialogueActivateHigh
+38628,0x14066e750,0x140677c00,3,AIProcess::FindPackageTarget
 38629,0x14066e9f0,0x140677ea0,3,AIProcess::UpdatePackageSurfaceHigh
 38631,0x14066eda0,0x140678250,3,AIProcess::UpdatePackageClearMountPositionHigh
 38632,0x14066f250,0x140678700,3,AIProcess::UpdatePackageAvoidAreaHigh
@@ -1445,6 +1448,7 @@
 38644,0x140672100,0x14067b5d0,3,AIProcess::UpdatePackageCreateFollowHigh
 38645,0x140672470,0x14067b940,3,AIProcess::UpdatePackageWanderHigh
 38647,0x140673090,0x14067c560,3,AIProcess::UpdatePackageSleepHigh
+38652,0x140673850,0x14067cd20,3,AIProcess::FinishUseWeaponPackage
 38677,0x1406759E0,0x14067EEB0,4,"bhkBoxShape * bhkBoxShape::bhkBoxShape(bhkBoxShape * a_this, RE::NiPoint3* a_halfExtents)"
 38726,0x1406777c0,0x140680c40,4,"void HighProcessData::ClearHeadtrackTarget(HEAD_TRACK_TYPE a_headtrackType, bool a_defaultHold)"
 38752,0x140679000,0x140682480,3,BSTArray_EraseRange_RefCountedPairs
