@@ -841,6 +841,8 @@
 27690,0x140402dd0,0x140412920,3,RegisterProcedureName_Eat
 27701,0x140403550,0x1404130a0,3,ProcedureNameEntryCleanup_Eat
 27726,0x140403bf0,0x140413740,3,RegisterProcedureName_Escort
+27727,0x140403d60,0x1404138b0,3,BGSProcedureEscort::UpdateHighProcess
+27728,0x140404870,0x1404143c0,3,BGSProcedureEscort::UpdateReducedProcess
 27730,0x1404055a0,0x1404150f0,3,BGSProcedureEscort::StartFollowToPackage
 27738,0x140405e00,0x140415950,3,ProcedureNameEntryCleanup_Escort
 27775,0x140406d60,0x1404168b0,3,RegisterProcedureName_Find
@@ -1353,6 +1355,7 @@
 36331,0x1405d5290,0x1405dd850,3,Actor::Resurrect
 36332,0x1405d56b0,0x1405ddc70,4,"void Actor::ResetInventory(Actor * a_this, bool a_leveledOnly)"
 36333,0x1405d57b0,0x1405ddd70,4,undefined Character::sub_1405D57B0(Character* a_this)
+36339,0x1405d5f80,0x1405de5b0,3,Character::IsSittingOrSleeping
 36344,0x1405d62e0,0x1405de910,3,RE::Actor::GetLevel
 36345,0x1405d6300,0x1405de930,3,Actor::DamageHealth
 36346,0x1405d6490,0x1405deac0,3,RE::GameEventHandler::FallLongDistance::CalcDoDamage
