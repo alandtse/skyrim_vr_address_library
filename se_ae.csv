@@ -6808,12 +6808,14 @@ sseid,aeid,confidence,name
 52260,53150,3,GetMapWorldSpace
 52374,53270,3,QuickLoot::
 52400,53299,3,QuickLoot::
+52469,53371,2,
 52653,53506,3,RE::SkyrimScript::HandlePolicy::IsHandleObjectAvailable
 52654,53507,1,SkyrimScript::HandlePolicy::Func3_*
 52655,53508,3,RE::SkyrimScript::HandlePolicy::GetHandleForObject
 52656,53509,1,SkyrimScript::HandlePolicy::Func5_*
 52663,53516,1,
 52664,53517,1,
+52667,53520,2,
 52682,53535,1,
 52683,53539,1,SkyrimScript::FindActiveEffectFunctor::Visit_*
 52685,53540,1,SkyrimScript::FindActiveEffectFunctor::dtor_*
@@ -6837,6 +6839,7 @@ sseid,aeid,confidence,name
 52750,53593,1,
 52753,53594,1,
 52757,53600,1,
+52806,53639,2,
 52838,53670,2,
 52839,53671,2,
 52856,53685,1,SkyrimScript::ProfileCallQueryTranslator::Func3_*
@@ -6846,6 +6849,7 @@ sseid,aeid,confidence,name
 52863,53689,1,SkyrimScript::ProfileCallQueryTranslator::Func0_*
 52868,53694,1,
 52869,53695,1,
+52885,53710,2,
 52907,53730,1,
 52910,53732,1,
 52917,53738,1,

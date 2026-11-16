@@ -2064,12 +2064,18 @@
 52368,0x1408ee900,0x140923570,4,QuitToMainMenuCallback
 52374,0x1408ef500,0x140924430,4,QuickLoot::
 52400,0x1408f03c0,0x1409254b0,4,QuickLoot::
-52466,0x1408f6f00,0x140931680,3,void SkyrimScript::Internal::AnimationCallbacks::RemoveCallbacksForHandle(VMHandle a_handle)
+52466,0x1408f6f00,0x140931680,3,void SkyrimScript::Internal::AnimationCallbackRegistry::RemoveCallbacksForHandle(VMHandle a_handle)
+52467,0x1408f6f90,0x140931710,3,"bool SkyrimScript::Internal::AnimationCallbackRegistry::Save(std::uint64_t a_arg2, void* a_storage, std::uint64_t a_arg4)"
+52468,0x1408f70b0,0x140931830,3,"bool SkyrimScript::Internal::AnimationCallbackRegistry::Load(std::uint64_t a_arg2, void* a_storage, void* a_arg4)"
+52469,0x1408f7340,0x140931ac0,3,void SkyrimScript::Internal::AnimationCallbackRegistry::Revert()
+52475,0x1408f7c40,0x1409323c0,3,"void SkyrimScript::Internal::AnimationCallbackRegistry::RemoveHandleFromAllCallbackLists(void* a_entries, VMHandle a_handle)"
+52533,0x1408f9f50,0x1409346d0,3,void SkyrimScript::Internal::CallbackList::RemoveHandle(VMHandle a_handle)
 52652,0x140902560,0x14093cce0,3,RE::SkyrimScript::HandlePolicy::HandleIsType
 52653,0x140902770,0x14093cef0,3,RE::SkyrimScript::HandlePolicy::IsHandleObjectAvailable
 52655,0x140902860,0x14093cfe0,3,RE::SkyrimScript::HandlePolicy::GetHandleForObject
 52659,0x140902b00,0x14093d280,3,RE::SkyrimScript::HandlePolicy::GetObjectForHandle
 52662,0x1409032c0,0x14093da40,3,RE::SkyrimScript::HandlePolicy::ConvertHandleToString
+52667,0x1409039c0,0x14093e140,3,void SkyrimScript::HandlePolicy::Revert()
 52711,0x140905650,0x14093fdd0,3,void ObjectBindPolicy::CollectAndBindMergedScripts(VMHandle a_handle)
 52712,0x140905740,0x14093fec0,3,"void ObjectBindPolicy::CollectAndBindMergedScriptsFrom(VMHandle a_targetHandle, VMHandle a_sourceHandle)"
 52713,0x140905820,0x14093ffa0,3,void ObjectBindPolicy::BindPendingHandles()
@@ -2080,13 +2086,22 @@
 52719,0x140905de0,0x140940560,3,void ObjectBindPolicy::ForgetHandle(VMHandle a_handle)
 52730,0x140906fe0,0x140941760,3,SkyrimScript__ObjectBindPolicy::
 52767,0x140909f30,0x1409446b0,3,PapyrusTweaks::
+52804,0x14090c1d0,0x140946950,3,bool SkyrimScript::PathingCallbackMgr::Save(SaveStorageWrapper* a_storage)
+52805,0x14090c2e0,0x140946a60,3,bool SkyrimScript::PathingCallbackMgr::Load(void* a_storage)
+52806,0x14090c4f0,0x140946c70,3,void SkyrimScript::PathingCallbackMgr::Revert()
 52834,0x14090e6c0,0x140948e40,2,"void SkyrimScript::Profiler::StackFramePushQueued(std::uint32_t a_stackID, std::uint32_t a_stackFrames, const BSTSmartPointer<BSScript::Internal::IFuncCallQuery>& a_query)"
 52835,0x14090e820,0x140948fa0,2,"void SkyrimScript::Profiler::StackFramePushed(std::uint32_t a_stackID, std::uint32_t a_stackFrame, const BSScript::Variable& a_selfObject, const BSFixedString& a_objectTypeName, const BSFixedString& a_stateName, const BSFixedString& a_fnName)"
 52836,0x14090e950,0x1409490d0,2,"void SkyrimScript::Profiler::StackFramePopQueued(std::uint32_t a_stackID, std::uint32_t a_stackFrame, const BSScript::Variable& a_selfObject, const BSFixedString& a_objectTypeName, const BSFixedString& a_stateName, const BSFixedString& a_fnName)"
 52837,0x14090ea80,0x140949200,2,"void SkyrimScript::Profiler::StackFramePopped(std::uint32_t a_stackID, std::uint32_t a_stackFrame, const BSScript::Variable& a_selfObject, const BSFixedString& a_objectTypeName, const BSFixedString& a_stateName, const BSFixedString& a_fnName)"
 52838,0x14090ec30,0x1409493b0,2,"void SkyrimScript::Profiler::RecordStackEvent(const char* a_event, std::uint32_t a_stackID, std::uint32_t a_stackFrame, void* a_frameInfo)"
 52839,0x14090f090,0x140949810,2,"void SkyrimScript::Profiler::FormatStackEvent(const char* a_event, std::uint32_t a_stackID, std::uint32_t a_stackFrame, BSScript::Variable* a_self, BSFixedString* a_objectTypeName, BSFixedString* a_stateName, BSFixedString* a_functionName, char** a_out)"
+52883,0x140911910,0x14094c090,3,bool SkyrimScript::QuestCallbackMgr::Save(SaveStorageWrapper* a_storage)
+52884,0x140911b20,0x14094c2a0,3,bool SkyrimScript::QuestCallbackMgr::Load(void* a_storage)
+52885,0x140912290,0x14094ca10,3,void SkyrimScript::QuestCallbackMgr::Revert()
 52933,0x140915790,0x14094ff10,3,YesImSure::
+52986,0x1409184d0,0x140952c50,3,bool SkyrimScript::SoundCallbackMgr::Save(SaveStorageWrapper* a_storage)
+52987,0x1409185e0,0x140952d60,3,bool SkyrimScript::SoundCallbackMgr::Load(void* a_storage)
+52988,0x140918820,0x140952fa0,3,void SkyrimScript::SoundCallbackMgr::Revert()
 53024,0x14091a490,0x140954c10,4,"void WritePapyrusLog_14091A490 (longlong param_1, char * param_2, longlong * param_3, undefined4 param_4, undefined4 param_5)"
 53029,0x14091c620,0x140956da0,3,"bool Actor::HasLineOfSight(TESObjectREFR* a_ref, bool& a_arg2)"
 53105,0x140920360,0x14095aa60,4,BSScrapArray<BSScript::Variable>::SetSize
@@ -2156,6 +2171,7 @@
 55693,0x140996dd0,0x1409d18f0,3,papyrus::ObjectReference::SetAngle
 55706,0x140997a50,0x1409d2570,3,papyrus::ObjectReference::TranslateTo
 55712,0x140998620,0x1409d3140,3,papyrus::ObjectReference::StopTranslation
+55716,0x14099c090,0x1409d6bb0,3,void DestroyAnimationCallbacks()
 55945,0x1409a4050,0x1409deb70,3,SPID:Distribute::DeathItemManager::Detail::Add_item
 56038,0x1409a95e0,0x1409E4103,3,TESObjectREFR::Enable
 56227,0x1409ae5c0,0x1409e90e0,3,RE::TESObjectREFR::MoveTo
