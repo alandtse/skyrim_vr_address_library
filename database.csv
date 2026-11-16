@@ -1338,6 +1338,7 @@
 37787,0x140630410,0x1406392e0,4,void Actor::AddCastPower(SpellItem* a_power)
 37792,0x140630850,0x140639720,4,MagicTarget::CheckAbsorb_14063085
 37793,0x140630990,0x140639860,4,bool Actor::IsInCastPowerList(SpellItem* a_power)
+37796,0x140630b40,0x140639a10,3,PlayerCharacter::LearnIngredientEffects
 37798,0x140630f40,0x140639e10,4,"void Actor::RemoveCastScroll(SpellItem* a_spell, MagicSystem::CastingSource a_source)"
 37799,0x1406310a0,0x140639f70,4,"void Actor::ApplyAllCombatSpellsFromAttack_1406310A0 (ExtraContainerChanges__ItemEntry* param_2, bool param_3, undefined param_4)"
 37802,0x140631360,0x14063a230,3,RE::Actor::UpdateArmorAbility
