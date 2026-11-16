@@ -871,6 +871,7 @@
 27583,0x1403fd740,0x14040d290,3,BGSProcedureActivate::Process
 27584,0x1403fd7b0,0x14040d300,3,RegisterProcedureName_Activate
 27588,0x1403fda20,0x14040d570,3,BGSProcedureActivateExecState::RecycleChildren
+27589,0x1403fdab0,0x14040d600,3,BGSProcedureActivateExecState::Process
 27592,0x1403fdb90,0x14040d6e0,3,BGSProcedureActivateExecState::SaveGame
 27593,0x1403fdd40,0x14040d890,3,BGSProcedureActivateExecState::LoadGame
 27599,0x1403ffc40,0x14040f790,3,ProcedureNameEntryCleanup_Activate
@@ -1048,6 +1049,7 @@
 28255,0x14041bfe0,0x14042bb30,3,BGSProcedureSandbox::Process
 28256,0x14041c090,0x14042bbe0,3,RegisterProcedureName_Sandbox
 28260,0x14041c430,0x14042bf80,3,BGSProcedureSandboxExecState::RecycleChildren
+28261,0x14041c500,0x14042c050,3,BGSProcedureSandboxExecState::Process
 28276,0x14041fb00,0x14042f650,3,BGSProcedureSandboxExecState::SaveGame
 28277,0x14041ffd0,0x14042fb20,3,BGSProcedureSandboxExecState::LoadGame
 28281,0x140420d00,0x140430850,3,ProcedureNameEntryCleanup_Sandbox
@@ -1095,6 +1097,7 @@
 28435,0x140426520,0x140436070,3,BGSProcedureTravel::InitActorAnimPose
 28437,0x1404265c0,0x140436110,3,RegisterProcedureName_Travel
 28440,0x1404267c0,0x140436310,3,BGSProcedureTravelExecState::RecycleChildren
+28442,0x140426880,0x1404363d0,3,BGSProcedureTravelExecState::Process
 28443,0x140426920,0x140436470,3,BGSProcedureTravelExecState::SaveGame
 28444,0x140426ab0,0x140436600,3,BGSProcedureTravelExecState::LoadGame
 28450,0x140428150,0x140437ca0,3,ProcedureNameEntryCleanup_Travel
