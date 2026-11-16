@@ -1436,9 +1436,11 @@
 38568,0x14065c880,0x140665bd0,3,RE::AIProcess::SetBaseScale
 38606,0x14065f040,0x140668390,3,AIProcess::UpdatePackageHigh
 38612,0x140664a00,0x14066dd50,4,sub_140664A00
+38613,0x140664c80,0x14066dfd0,3,AIProcess::UpdatePackageTravelBody
 38614,0x140666e20,0x1406702d0,3,AIProcess::EvaluatePackageIfDue
 38615,0x1406670b0,0x140670560,3,AIProcess::UpdatePackageFleeNonCombatHigh
 38616,0x140667380,0x140670830,3,AIProcess::UpdatePackageUnnumbered53High
+38617,0x140667990,0x140670e40,3,AIProcess::PathToAndUseFurniture
 38618,0x140669210,0x1406726c0,3,AIProcess::UpdatePackageUseItemAtHigh
 38619,0x14066a040,0x1406734f0,3,AIProcess::UpdatePackageUseWeaponHigh
 38620,0x14066b270,0x140674720,3,AIProcess::UpdatePackageAlarmHigh
