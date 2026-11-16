@@ -1399,6 +1399,7 @@
 36541,0x1405e8700,0x1405f0e20,3,po3tweaks::VoiceModulation::SetObjectToFollow
 36543,0x1405e9270,0x1405f1980,4,"void Actor::UpdateSoundCallBack_1405E9270 (Actor * param_1, undefined8 param_2, undefined1 param_3)"
 36559,0x1405ebd90,0x1405f44a0,4,uint32_t Actor::GetCollisionFilterInfo(uint32_t& a_outCollisionFilterInfo)
+36568,0x1405ec540,0x1405f4c50,3,Actor::InitiateGetUpPackage
 36575,0x1405ecb70,0x1405f5280,4,Actor::IsFleeing
 36602,0x1405edd50,0x1405f6460,3,void Actor::SetRotationX(float a_angle)
 36604,0x1405edef0,0x1405f6600,4,void Actor::SetLifeState(ACTOR_LIFE_STATE a_lifeState)
