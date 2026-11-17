@@ -1606,8 +1606,8 @@
 31565,0x1404cfde0,0x1404dff80,3,BGSStoryEventManager::RegisterEventType
 31576,0x1404d06c0,0x1404e0860,4,"uint32_t BGSStoryEventManager::AddEvent_Impl1404d06c0(longlong a_this,uint32_t a_index,void *a_event)"
 31587,0x1404d0cb0,0x1404e0e50,3,InitStoryEventParam
-31593,0x1404d10f0,0x1404e1290,3,ProcessStoryManagerEvent
-31595,0x1404d1600,0x1404e17a0,3,ProcessStoryManagerNode
+31593,0x1404d10f0,0x1404e1290,3,BGSStoryManager::ProcessStoryManagerEvent
+31595,0x1404d1600,0x1404e17a0,3,BGSStoryManager::ProcessStoryManagerNode
 31717,0x1404d7f80,0x1404e8120,3,RE::BGSStoryTeller::BeginStartUpQuest
 31718,0x1404d80a0,0x1404e8240,3,RE::BGSStoryTeller::BeginShutDownQuest
 31752,0x1404da790,0x1404ea900,3,void MenuTopicManager::AddBlockingBranch(BGSDialogueBranch* a_branch)
@@ -2302,7 +2302,7 @@
 39475,0x1406aa260,0x1406cc000,3,RE::PlayerCharacter::StartGrabObject
 39479,0x1406abf00,0x1406CDFD0,3,PlayerCharacter::sub_1406ABF00(PlayerCharacter *a1)
 39480,0x1406acaf0,0x1406cf050,3,void PlayerCharacter::DestroyMouseSprings() src\RE\P/PlayerCharacter.cpp:54
-39483,0x1406acf40,0x1406cf7c0,3,ShowCannotGoThatWayMessage
+39483,0x1406acf40,0x1406cf7c0,3,PlayerCharacter::ShowCannotGoThatWayMessage
 39486,0x1406ad1f0,0x1406cfa70,4,void PlayerCharacter::PlayMagicFailureSound(MagicSystem::SpellType a_spellType)
 39507,0x1406ae310,0x1406d0b90,4,void PlayerCharacter::SetAIDriven(bool a_enable)
 39531,0x1406aff60,0x1406d27b0,3,ShowNoteAddedMessage
@@ -2899,14 +2899,14 @@
 52659,0x140902b00,0x14093d280,3,RE::SkyrimScript::HandlePolicy::GetObjectForHandle
 52662,0x1409032c0,0x14093da40,3,RE::SkyrimScript::HandlePolicy::ConvertHandleToString
 52667,0x1409039c0,0x14093e140,3,void SkyrimScript::HandlePolicy::Revert()
-52711,0x140905650,0x14093fdd0,3,void ObjectBindPolicy::CollectAndBindMergedScripts(VMHandle a_handle)
-52712,0x140905740,0x14093fec0,3,"void ObjectBindPolicy::CollectAndBindMergedScriptsFrom(VMHandle a_targetHandle, VMHandle a_sourceHandle)"
-52713,0x140905820,0x14093ffa0,3,void ObjectBindPolicy::BindPendingHandles()
-52714,0x140905980,0x140940100,3,void ObjectBindPolicy::Freeze()
-52715,0x1409059f0,0x140940170,3,void ObjectBindPolicy::Unfreeze()
-52716,0x140905a70,0x1409401f0,3,void ObjectBindPolicy::RebindTrackedHandles()
-52718,0x140905c40,0x1409403c0,3,void ObjectBindPolicy::MergeActorTemplateScripts(VMHandle a_handle)
-52719,0x140905de0,0x140940560,3,void ObjectBindPolicy::ForgetHandle(VMHandle a_handle)
+52711,0x140905650,0x14093fdd0,3,void SkyrimScript::ObjectBindPolicy::CollectAndBindMergedScripts(VMHandle a_handle)
+52712,0x140905740,0x14093fec0,3,"void SkyrimScript::ObjectBindPolicy::CollectAndBindMergedScriptsFrom(VMHandle a_targetHandle, VMHandle a_sourceHandle)"
+52713,0x140905820,0x14093ffa0,3,void SkyrimScript::ObjectBindPolicy::BindPendingHandles()
+52714,0x140905980,0x140940100,3,void SkyrimScript::ObjectBindPolicy::Freeze()
+52715,0x1409059f0,0x140940170,3,void SkyrimScript::ObjectBindPolicy::Unfreeze()
+52716,0x140905a70,0x1409401f0,3,void SkyrimScript::ObjectBindPolicy::RebindTrackedHandles()
+52718,0x140905c40,0x1409403c0,3,void SkyrimScript::ObjectBindPolicy::MergeActorTemplateScripts(VMHandle a_handle)
+52719,0x140905de0,0x140940560,3,void SkyrimScript::ObjectBindPolicy::ForgetHandle(VMHandle a_handle)
 52730,0x140906fe0,0x140941760,3,SkyrimScript__ObjectBindPolicy::
 52767,0x140909f30,0x1409446b0,3,PapyrusTweaks::
 52804,0x14090c1d0,0x140946950,3,bool SkyrimScript::PathingCallbackMgr::Save(SaveStorageWrapper* a_storage)
@@ -2969,7 +2969,7 @@
 53242,0x14092fd80,0x14096a3d0,3,bool SkyrimVM::LoadSleepEvents(void* a_storage)
 53243,0x140930020,0x14096a670,3,bool SkyrimVM::LoadTrackedStatsEvents(void* a_storage)
 53244,0x1409302c0,0x14096a910,3,bool SkyrimVM::LoadInventoryEventFilters(void* a_storage)
-53355,0x140936ee0,0x1409715c0,3,void ObjectBindPolicy::~ObjectBindPolicy()
+53355,0x140936ee0,0x1409715c0,3,void SkyrimScript::ObjectBindPolicy::~ObjectBindPolicy()
 53581,0x14093aef0,0x140975590,2,"bool EventCallbackAdapter::Load(std::int32_t a_flags, BSStorage* a_storage, BSScript::IVMSaveLoadInterface* a_loader, BSScript::IVirtualMachine* a_vm, bool* a_ok)"
 53604,0x14093bff0,0x140976690,4,BSTEventSource::AddEventSink
 53698,0x140941050,0x14097b5f0,2,"bool EventCallbackAdapter::Save(SaveStorageWrapper* a_storage, BSScript::IVMSaveLoadInterface* a_saveLoad)"
@@ -3875,7 +3875,7 @@
 89364,0x1410fc9e0,0x141159720,3,void ProcessAvoidBoxChecks()
 89365,0x1410fcbf0,0x141159930,3,std::uint64_t CheckAvoidBox()
 97371,0x14122c6f0,0x141264ba0,4,"void ObjectBindPolicy::GetInitialPropertyValues(VMHandle a_handle, const BSFixedString& a_className, BSTScrapHashMap<BSFixedString, Variable>& a_propertyValues, std::uint32_t& a_nonConvertedProperties)"
-97375,0x14122d480,0x141265930,3,void ObjectBindPolicy::EraseBoundHandle(VMHandle a_handle)
+97375,0x14122d480,0x141265930,3,void SkyrimScript::ObjectBindPolicy::EraseBoundHandle(VMHandle a_handle)
 97379,0x14122dad0,0x141265f80,3,RE::BSScript::ObjectBindPolicy::BindObject
 97462,0x141233670,0x14126bb20,3,void Object::Dtor()
 97463,0x141233720,0x14126bbd0,3,VMHandle Object::GetHandle()
