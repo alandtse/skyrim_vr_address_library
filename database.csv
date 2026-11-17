@@ -960,7 +960,9 @@
 27462,0x1403fa5b0,0x14040a100,3,BGSProcedureBase::MatchesExecState
 27464,0x1403fa640,0x14040a190,3,"void* BGSProcedureBase::EvaluatePackageDataTarget(void** a_context, std::uint32_t a_index, void** a_outTarget)"
 27467,0x1403fa870,0x14040a3c0,3,"void* GetBoundPackageData(void* a_bindings, std::uint32_t a_index, BGSPackageDataList* a_dataList)"
-27468,0x1403fa8a0,0x14040a3f0,3,LoadPackageDataIndices
+27468,0x1403fa8a0,0x14040a3f0,3,LoadPackageDataUIDs
+27469,0x1403fa9d0,0x14040a520,3,ResolveDataSlots
+27470,0x1403faa50,0x14040a5a0,3,UnresolveDataSlots
 27473,0x1403fab70,0x14040a6c0,3,BGSProcessContext::UpdateMountState
 27474,0x1403fabc0,0x14040a710,3,BGSProcedureDone::GetParamCount
 27475,0x1403fabd0,0x14040a720,3,BGSProcedureDone::Process
