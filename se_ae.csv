@@ -5996,8 +5996,12 @@ sseid,aeid,confidence,name
 43642,44873,1,
 43644,44875,1,
 43656,44889,1,
+43657,44890,3,
 43658,44891,1,
 43659,44892,1,
+43665,44898,3,
+43813,45032,3,
+43864,45083,3,
 43886,45112,1,AutoRegisterCombatObject_gs_T1_ge_::sub_*
 43887,45130,1,AutoRegisterCombatObject_gs_T1_ge_::sub_*
 43888,45118,1,AutoRegisterCombatObject_gs_T1_ge_::sub_*
@@ -6264,6 +6268,7 @@ sseid,aeid,confidence,name
 44873,45909,1,CombatInventoryItemMagicT_gs_T1_T2_ge_::sub_*
 44875,46131,1,CombatInventoryItemMagicT_gs_T1_T2_ge_::sub_*
 44876,45966,1,CombatInventoryItemMagicT_gs_T1_T2_ge_::sub_*
+46068,47332,3,
 47741,48842,1,
 47742,48843,1,
 47744,48845,1,
