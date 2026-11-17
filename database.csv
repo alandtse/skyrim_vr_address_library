@@ -927,9 +927,7 @@
 27392,0x1403f8f80,0x140408ad0,3,BSTDerivedCreator_BGSProcedureUseWeaponExecState::Destroy
 27393,0x1403f8fa0,0x140408af0,3,BSTDerivedCreator_BGSProcedureWaitExecState::Destroy
 27394,0x1403f8fc0,0x140408b10,3,BSTDerivedCreator_BGSProcedureWanderExecState::Destroy
-27402,0x1403f9100,0x140408c50,3,FindExecStatePool
 27402,0x1403f9100,0x140408c50,4,"void* FindExecStatePool(void* a_map, BSFixedString* a_key)"
-27417,0x1403f93f0,0x140408f40,3,GetExecStatePoolMap
 27417,0x1403f93f0,0x140408f40,3,GetExecStatePoolMap
 27418,0x1403f9490,0x140408fe0,3,GetTreeItemPoolMap
 27422,0x1403f9560,0x1404090b0,3,BGSProcedureDialogueExecState::GetPoolKey
