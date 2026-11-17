@@ -976,7 +976,7 @@
 27512,0x1403fb740,0x14040b290,4,bool BGSProcedureBase::GetSuccessCompletesPackage(BGSProcedureBase* a_this)
 27521,0x1403fb7d0,0x14040b320,3,BGSProcedureDone::GetParamName
 27524,0x1403fb830,0x14040b380,3,GetProcedureNameMap
-27525,0x1403fb8d0,0x14040b420,3,BGSProcedureDone::GetParamTypes
+27525,0x1403fb8d0,0x14040b420,3,BGSProcedureDone::GetProcedureName
 27526,0x1403fb8e0,0x14040b430,3,ProcedureNameMap_Grow
 27533,0x1403fbca0,0x14040b7f0,3,BGSProcedureAcquire::GetParamCount
 27534,0x1403fbcb0,0x14040b800,3,BGSProcedureAcquire::InitExecState
@@ -992,7 +992,7 @@
 27562,0x1403fd260,0x14040cdb0,3,BSTDerivedCreator_BGSProcedureAcquire::Create
 27563,0x1403fd2d0,0x14040ce20,3,BSTDerivedCreator_BGSProcedureAcquire::Destroy
 27571,0x1403fd370,0x14040cec0,3,BGSProcedureAcquire::GetParamName
-27577,0x1403fd520,0x14040d070,3,BGSProcedureAcquire::GetParamTypes
+27577,0x1403fd520,0x14040d070,3,BGSProcedureAcquire::GetProcedureName
 27578,0x1403fd530,0x14040d080,3,BGSProcedureAcquireExecState::GetPoolKey
 27580,0x1403fd5d0,0x14040d120,3,BGSProcedureActivate::GetParamCount
 27581,0x1403fd5e0,0x14040d130,3,BGSProcedureActivate::InitExecState
@@ -1010,7 +1010,7 @@
 27610,0x1403fffa0,0x14040faf0,3,BSTDerivedCreator_BGSProcedureActivate::Create
 27611,0x140400010,0x14040fb60,3,BSTDerivedCreator_BGSProcedureActivate::Destroy
 27614,0x1404000a0,0x14040fbf0,3,BGSProcedureActivate::GetParamName
-27617,0x140400100,0x14040fc50,3,BGSProcedureActivate::GetParamTypes
+27617,0x140400100,0x14040fc50,3,BGSProcedureActivate::GetProcedureName
 27618,0x140400110,0x14040fc60,3,BGSProcedureActivateExecState::GetPoolKey
 27619,0x140400120,0x14040fc70,3,BGSProcedureDialogue::GetParamCount
 27620,0x140400130,0x14040fc80,3,BGSProcedureDialogue::Process
@@ -1021,7 +1021,7 @@
 27638,0x140400b20,0x140410670,3,BSTDerivedCreator_BGSProcedureDialogue::Create
 27639,0x140400b90,0x1404106e0,3,BSTDerivedCreator_BGSProcedureDialogue::Destroy
 27644,0x140400c20,0x140410770,3,BGSProcedureDialogue::GetParamName
-27648,0x140400cf0,0x140410840,3,BGSProcedureDialogue::GetParamTypes
+27648,0x140400cf0,0x140410840,3,BGSProcedureDialogue::GetProcedureName
 27649,0x140400d00,0x140410850,3,BGSProcedureDialogueActivate::GetParamCount
 27650,0x140400d10,0x140410860,3,BGSProcedureDialogueActivate::InitExecState
 27651,0x140400f40,0x140410a90,3,BGSProcedureDialogueActivate::InitActorLocation
@@ -1031,7 +1031,7 @@
 27675,0x140402900,0x140412450,3,BSTDerivedCreator_BGSProcedureDialogueActivate::Create
 27676,0x140402970,0x1404124c0,3,BSTDerivedCreator_BGSProcedureDialogueActivate::Destroy
 27681,0x1404029e0,0x140412530,3,BGSProcedureDialogueActivate::GetParamName
-27685,0x140402ab0,0x140412600,3,BGSProcedureDialogueActivate::GetParamTypes
+27685,0x140402ab0,0x140412600,3,BGSProcedureDialogueActivate::GetProcedureName
 27688,0x140402b60,0x1404126b0,3,BGSProcedureEat::GetParamCount
 27689,0x140402b70,0x1404126c0,3,BGSProcedureEat::Process
 27690,0x140402dd0,0x140412920,3,RegisterProcedureName_Eat
@@ -1041,7 +1041,7 @@
 27709,0x1404037c0,0x140413310,3,BSTDerivedCreator_BGSProcedureEat::Create
 27710,0x140403830,0x140413380,3,BSTDerivedCreator_BGSProcedureEat::Destroy
 27715,0x1404038a0,0x1404133f0,3,BGSProcedureEat::GetParamName
-27719,0x140403970,0x1404134c0,3,BGSProcedureEat::GetParamTypes
+27719,0x140403970,0x1404134c0,3,BGSProcedureEat::GetProcedureName
 27720,0x140403980,0x1404134d0,3,BGSProcedureEscort::GetParamCount
 27721,0x140403990,0x1404134e0,3,BGSProcedureEscort::InitExecState
 27722,0x140403aa0,0x1404135f0,3,BGSProcedureEscort::InitActorLocation
@@ -1056,7 +1056,7 @@
 27753,0x140406300,0x140415e50,3,BSTDerivedCreator_BGSProcedureEscort::Create
 27754,0x140406370,0x140415ec0,3,BSTDerivedCreator_BGSProcedureEscort::Destroy
 27760,0x1404063f0,0x140415f40,3,BGSProcedureEscort::GetParamName
-27765,0x140406530,0x140416080,3,BGSProcedureEscort::GetParamTypes
+27765,0x140406530,0x140416080,3,BGSProcedureEscort::GetProcedureName
 27770,0x140406740,0x140416290,3,BGSProcedureFind::GetParamCount
 27771,0x140406750,0x1404162a0,3,BGSProcedureFind::InitExecState
 27772,0x140406770,0x1404162c0,3,BGSProcedureFind::InitActorLocation
@@ -1070,7 +1070,7 @@
 27792,0x140407a90,0x1404175e0,3,BSTDerivedCreator_BGSProcedureFind::Create
 27793,0x140407b00,0x140417650,3,BSTDerivedCreator_BGSProcedureFind::Destroy
 27798,0x140407b70,0x1404176c0,3,BGSProcedureFind::GetParamName
-27802,0x140407c40,0x140417790,3,BGSProcedureFind::GetParamTypes
+27802,0x140407c40,0x140417790,3,BGSProcedureFind::GetProcedureName
 27803,0x140407c50,0x1404177a0,3,BGSProcedureFlee::GetParamCount
 27804,0x140407c60,0x1404177b0,3,BGSProcedureFlee::Process
 27805,0x140407d20,0x140417870,3,RegisterProcedureName_Flee
@@ -1084,7 +1084,7 @@
 27843,0x14040b530,0x14041b080,3,BSTDerivedCreator_BGSProcedureFlee::Create
 27845,0x14040b620,0x14041b170,3,BSTDerivedCreator_BGSProcedureFlee::Destroy
 27847,0x14040b660,0x14041b1b0,3,BGSProcedureFlee::GetParamName
-27850,0x14040b6c0,0x14041b210,3,BGSProcedureFlee::GetParamTypes
+27850,0x14040b6c0,0x14041b210,3,BGSProcedureFlee::GetProcedureName
 27851,0x14040b6d0,0x14041b220,3,BGSProcedureFleeExecState::GetPoolKey
 27853,0x14040b780,0x14041b2d0,3,BGSProcedureFlightGrab::GetParamCount
 27854,0x14040b790,0x14041b2e0,3,BGSProcedureFlightGrab::InitActorLocation
@@ -1099,7 +1099,7 @@
 27877,0x14040cab0,0x14041c600,3,BSTDerivedCreator_BGSProcedureFlightGrab::Create
 27878,0x14040cb20,0x14041c670,3,BSTDerivedCreator_BGSProcedureFlightGrab::Destroy
 27880,0x14040cb60,0x14041c6b0,3,BGSProcedureFlightGrab::GetParamName
-27883,0x14040cbc0,0x14041c710,3,BGSProcedureFlightGrab::GetParamTypes
+27883,0x14040cbc0,0x14041c710,3,BGSProcedureFlightGrab::GetProcedureName
 27884,0x14040cbd0,0x14041c720,3,BGSProcedureFlightGrabExecState::GetPoolKey
 27885,0x14040cbe0,0x14041c730,3,BGSProcedureFollow::GetParamCount
 27886,0x14040cbf0,0x14041c740,3,BGSProcedureFollow::CreateExecState
@@ -1130,8 +1130,8 @@
 27934,0x140410810,0x140420360,3,BSTDerivedCreator_BGSProcedureFollowTo::Destroy
 27948,0x140410990,0x1404204e0,3,BGSProcedureFollow::GetParamName
 27949,0x1404109b0,0x140420500,3,BGSProcedureFollowTo::GetParamName
-27955,0x140410ac0,0x140420610,3,BGSProcedureFollow::GetParamTypes
-27956,0x140410ad0,0x140420620,3,BGSProcedureFollowTo::GetParamTypes
+27955,0x140410ac0,0x140420610,3,BGSProcedureFollow::GetProcedureName
+27956,0x140410ad0,0x140420620,3,BGSProcedureFollowTo::GetProcedureName
 27957,0x140410ae0,0x140420630,3,BGSProcedureFollowExecState::GetPoolKey
 27960,0x140410bc0,0x140420710,3,BGSProcedureForceGreet::GetParamCount
 27961,0x140410bd0,0x140420720,3,BGSProcedureForceGreet::CreateExecState
@@ -1143,7 +1143,7 @@
 27974,0x140411260,0x140420db0,3,BSTDerivedCreator_BGSProcedureForceGreet::Create
 27975,0x1404112d0,0x140420e20,3,BSTDerivedCreator_BGSProcedureForceGreet::Destroy
 27978,0x140411320,0x140420e70,3,BGSProcedureForceGreet::GetParamName
-27981,0x140411380,0x140420ed0,3,BGSProcedureForceGreet::GetParamTypes
+27981,0x140411380,0x140420ed0,3,BGSProcedureForceGreet::GetProcedureName
 27982,0x140411390,0x140420ee0,3,BGSProcedureGuard::GetParamCount
 27983,0x1404113a0,0x140420ef0,3,BGSProcedureGuard::InitExecState
 27984,0x1404113c0,0x140420f10,3,BGSProcedureGuard::Process
@@ -1156,7 +1156,7 @@
 28002,0x140412050,0x140421ba0,3,BSTDerivedCreator_BGSProcedureGuard::Create
 28003,0x1404120c0,0x140421c10,3,BSTDerivedCreator_BGSProcedureGuard::Destroy
 28006,0x140412110,0x140421c60,3,BGSProcedureGuard::GetParamName
-28009,0x140412170,0x140421cc0,3,BGSProcedureGuard::GetParamTypes
+28009,0x140412170,0x140421cc0,3,BGSProcedureGuard::GetProcedureName
 28010,0x140412180,0x140421cd0,3,BGSProcedureHoldPosition::GetParamCount
 28011,0x140412190,0x140421ce0,3,BGSProcedureHoldPosition::Process
 28012,0x140412240,0x140421d90,3,RegisterProcedureName_HoldPosition
@@ -1167,7 +1167,7 @@
 28026,0x140412860,0x1404223b0,3,BSTDerivedCreator_BGSProcedureHoldPosition::Create
 28027,0x1404128d0,0x140422420,3,BSTDerivedCreator_BGSProcedureHoldPosition::Destroy
 28031,0x140412930,0x140422480,3,BGSProcedureHoldPosition::GetParamName
-28034,0x140412990,0x1404224e0,3,BGSProcedureHoldPosition::GetParamTypes
+28034,0x140412990,0x1404224e0,3,BGSProcedureHoldPosition::GetProcedureName
 28035,0x1404129a0,0x1404224f0,3,BGSProcedureHover::GetParamCount
 28036,0x1404129b0,0x140422500,3,BGSProcedureHover::InitExecState
 28037,0x140412a30,0x140422580,3,BGSProcedureHover::InitActorLocation
@@ -1184,7 +1184,7 @@
 28059,0x140413de0,0x140423930,3,BSTDerivedCreator_BGSProcedureHover::Create
 28060,0x140413e50,0x1404239a0,3,BSTDerivedCreator_BGSProcedureHover::Destroy
 28062,0x140413e90,0x1404239e0,3,BGSProcedureHover::GetParamName
-28065,0x140413ef0,0x140423a40,3,BGSProcedureHover::GetParamTypes
+28065,0x140413ef0,0x140423a40,3,BGSProcedureHover::GetProcedureName
 28066,0x140413f00,0x140423a50,3,BGSProcedureHoverExecState::GetPoolKey
 28067,0x140413f10,0x140423a60,3,BGSProcedureKeepAnEyeOn::GetParamCount
 28068,0x140413f20,0x140423a70,3,BGSProcedureKeepAnEyeOn::Process
@@ -1196,7 +1196,7 @@
 28084,0x140414ad0,0x140424620,3,BSTDerivedCreator_BGSProcedureKeepAnEyeOn::Create
 28085,0x140414b40,0x140424690,3,BSTDerivedCreator_BGSProcedureKeepAnEyeOn::Destroy
 28088,0x140414b90,0x1404246e0,3,BGSProcedureKeepAnEyeOn::GetParamName
-28091,0x140414bf0,0x140424740,3,BGSProcedureKeepAnEyeOn::GetParamTypes
+28091,0x140414bf0,0x140424740,3,BGSProcedureKeepAnEyeOn::GetProcedureName
 28092,0x140414c00,0x140424750,3,BGSProcedureLock::GetParamCount
 28093,0x140414c10,0x140424760,3,BGSProcedureLock::InitActorLocation
 28094,0x140414ca0,0x1404247f0,3,BGSProcedureLock::InitExecState
@@ -1221,8 +1221,8 @@
 28131,0x140415f10,0x140425a60,3,BSTDerivedCreator_BGSProcedureUnlock::Destroy
 28136,0x140415f90,0x140425ae0,3,BGSProcedureLock::GetParamName
 28137,0x140415fb0,0x140425b00,3,BGSProcedureUnlock::GetParamName
-28142,0x140416050,0x140425ba0,3,BGSProcedureLock::GetParamTypes
-28143,0x140416060,0x140425bb0,3,BGSProcedureUnlock::GetParamTypes
+28142,0x140416050,0x140425ba0,3,BGSProcedureLock::GetProcedureName
+28143,0x140416060,0x140425bb0,3,BGSProcedureUnlock::GetProcedureName
 28144,0x140416070,0x140425bc0,3,BGSProcedureLockUnlockExecState::GetPoolKey
 28145,0x140416080,0x140425bd0,3,BGSProcedureOrbit::GetParamCount
 28146,0x140416090,0x140425be0,3,BGSProcedureOrbit::InitExecState
@@ -1240,7 +1240,7 @@
 28169,0x140417520,0x140427070,3,BSTDerivedCreator_BGSProcedureOrbit::Create
 28170,0x140417590,0x1404270e0,3,BSTDerivedCreator_BGSProcedureOrbit::Destroy
 28172,0x1404175d0,0x140427120,3,BGSProcedureOrbit::GetParamName
-28175,0x140417630,0x140427180,3,BGSProcedureOrbit::GetParamTypes
+28175,0x140417630,0x140427180,3,BGSProcedureOrbit::GetProcedureName
 28176,0x140417640,0x140427190,3,BGSProcedureOrbitExecState::GetPoolKey
 28177,0x140417650,0x1404271a0,3,BGSProcedurePatrol::GetParamCount
 28178,0x140417660,0x1404271b0,3,BGSProcedurePatrol::InitExecState
@@ -1257,7 +1257,7 @@
 28219,0x14041ae70,0x14042a9c0,3,BSTDerivedCreator_BGSProcedurePatrol::Create
 28220,0x14041aee0,0x14042aa30,3,BSTDerivedCreator_BGSProcedurePatrol::Destroy
 28223,0x14041af70,0x14042aac0,3,BGSProcedurePatrol::GetParamName
-28226,0x14041afd0,0x14042ab20,3,BGSProcedurePatrol::GetParamTypes
+28226,0x14041afd0,0x14042ab20,3,BGSProcedurePatrol::GetProcedureName
 28227,0x14041afe0,0x14042ab30,3,BGSProcedurePatrolExecState::GetPoolKey
 28228,0x14041aff0,0x14042ab40,3,BGSProcedurePursue::GetParamCount
 28229,0x14041b000,0x14042ab50,3,BGSProcedurePursue::CreateExecState
@@ -1269,7 +1269,7 @@
 28241,0x14041b710,0x14042b260,3,BSTDerivedCreator_BGSProcedurePursue::Create
 28242,0x14041b780,0x14042b2d0,3,BSTDerivedCreator_BGSProcedurePursue::Destroy
 28244,0x14041b7c0,0x14042b310,3,BGSProcedurePursue::GetParamName
-28247,0x14041b820,0x14042b370,3,BGSProcedurePursue::GetParamTypes
+28247,0x14041b820,0x14042b370,3,BGSProcedurePursue::GetProcedureName
 28251,0x14041ba30,0x14042b580,3,BGSProcedureSandbox::GetParamCount
 28252,0x14041ba40,0x14042b590,3,BGSProcedureSandbox::InitExecState
 28253,0x14041bd30,0x14042b880,3,BGSProcedureSandbox::InitActorAnimPose
@@ -1287,7 +1287,7 @@
 28295,0x140421190,0x140430ce0,3,BSTDerivedCreator_BGSProcedureSandbox::Create
 28296,0x140421200,0x140430d50,3,BSTDerivedCreator_BGSProcedureSandbox::Destroy
 28299,0x140421250,0x140430da0,3,BGSProcedureSandbox::GetParamName
-28302,0x1404212b0,0x140430e00,3,BGSProcedureSandbox::GetParamTypes
+28302,0x1404212b0,0x140430e00,3,BGSProcedureSandbox::GetProcedureName
 28303,0x1404212c0,0x140430e10,3,BGSProcedureSandboxExecState::GetPoolKey
 28305,0x140421370,0x140430ec0,3,BGSProcedureSay::GetParamCount
 28306,0x140421380,0x140430ed0,3,BGSProcedureSay::Process
@@ -1298,7 +1298,7 @@
 28320,0x140421b70,0x1404316c0,3,BSTDerivedCreator_BGSProcedureSay::Create
 28321,0x140421be0,0x140431730,3,BSTDerivedCreator_BGSProcedureSay::Destroy
 28324,0x140421c30,0x140431780,3,BGSProcedureSay::GetParamName
-28327,0x140421c90,0x1404317e0,3,BGSProcedureSay::GetParamTypes
+28327,0x140421c90,0x1404317e0,3,BGSProcedureSay::GetProcedureName
 28328,0x140421ca0,0x1404317f0,3,BGSProcedureShout::GetParamCount
 28329,0x140421cb0,0x140431800,3,BGSProcedureShout::InitExecState
 28330,0x140421d70,0x1404318c0,3,BGSProcedureShout::InitActorLocation
@@ -1313,7 +1313,7 @@
 28357,0x140423880,0x1404333d0,3,BSTDerivedCreator_BGSProcedureShout::Create
 28358,0x1404238f0,0x140433440,3,BSTDerivedCreator_BGSProcedureShout::Destroy
 28360,0x140423930,0x140433480,3,BGSProcedureShout::GetParamName
-28363,0x140423990,0x1404334e0,3,BGSProcedureShout::GetParamTypes
+28363,0x140423990,0x1404334e0,3,BGSProcedureShout::GetProcedureName
 28364,0x1404239a0,0x1404334f0,3,BGSProcedureShoutExecState::GetPoolKey
 28368,0x140423ce0,0x140433830,3,BGSProcedureSit::GetParamCount
 28370,0x140423d00,0x140433850,3,BGSProcedureSit::CreateExecState
@@ -1342,8 +1342,8 @@
 28419,0x1404261d0,0x140435d20,3,BSTDerivedCreator_BGSProcedureSleep::Destroy
 28422,0x140426230,0x140435d80,3,BGSProcedureSit::GetParamName
 28423,0x140426250,0x140435da0,3,BGSProcedureSleep::GetParamName
-28428,0x1404262f0,0x140435e40,3,BGSProcedureSit::GetParamTypes
-28429,0x140426300,0x140435e50,3,BGSProcedureSleep::GetParamTypes
+28428,0x1404262f0,0x140435e40,3,BGSProcedureSit::GetProcedureName
+28429,0x140426300,0x140435e50,3,BGSProcedureSleep::GetProcedureName
 28430,0x140426310,0x140435e60,3,BGSProcedureSitSleepExecState::GetPoolKey
 28431,0x140426320,0x140435e70,3,BGSProcedureTravel::GetParamCount
 28432,0x140426330,0x140435e80,3,BGSProcedureTravel::Process
@@ -1362,7 +1362,7 @@
 28459,0x140428430,0x140437f80,3,BSTDerivedCreator_BGSProcedureTravel::Create
 28460,0x1404284a0,0x140437ff0,3,BSTDerivedCreator_BGSProcedureTravel::Destroy
 28462,0x1404284e0,0x140438030,3,BGSProcedureTravel::GetParamName
-28465,0x140428540,0x140438090,3,BGSProcedureTravel::GetParamTypes
+28465,0x140428540,0x140438090,3,BGSProcedureTravel::GetProcedureName
 28466,0x140428550,0x1404380a0,3,BGSProcedureTravelExecState::GetPoolKey
 28468,0x140428670,0x1404381c0,3,BGSProcedureTreeConditionalItem::Copy
 28469,0x140428690,0x1404381e0,3,BGSProcedureTreeConditionalItem::InitItem
@@ -1412,7 +1412,7 @@
 28580,0x14042ce60,0x14043c9b0,3,BSTDerivedCreator_BGSProcedureUseIdleMarker::Create
 28581,0x14042ced0,0x14043ca20,3,BSTDerivedCreator_BGSProcedureUseIdleMarker::Destroy
 28583,0x14042cf10,0x14043ca60,3,BGSProcedureUseIdleMarker::GetParamName
-28586,0x14042cf70,0x14043cac0,3,BGSProcedureUseIdleMarker::GetParamTypes
+28586,0x14042cf70,0x14043cac0,3,BGSProcedureUseIdleMarker::GetProcedureName
 28588,0x14042cf90,0x14043cae0,3,BGSProcedureUseMagic::GetParamCount
 28589,0x14042cfa0,0x14043caf0,3,BGSProcedureUseMagic::InitExecState
 28590,0x14042d0d0,0x14043cc20,3,BGSProcedureUseMagic::InitActorLocation
@@ -1427,7 +1427,7 @@
 28614,0x14042f200,0x14043ed50,3,BSTDerivedCreator_BGSProcedureUseMagic::Create
 28615,0x14042f270,0x14043edc0,3,BSTDerivedCreator_BGSProcedureUseMagic::Destroy
 28619,0x14042f320,0x14043ee70,3,BGSProcedureUseMagic::GetParamName
-28622,0x14042f380,0x14043eed0,3,BGSProcedureUseMagic::GetParamTypes
+28622,0x14042f380,0x14043eed0,3,BGSProcedureUseMagic::GetProcedureName
 28623,0x14042f390,0x14043eee0,3,BGSProcedureUseMagicExecState::GetPoolKey
 28624,0x14042f3a0,0x14043eef0,3,BGSProcedureUseWeapon::GetParamCount
 28625,0x14042f3b0,0x14043ef00,3,BGSProcedureUseWeapon::InitExecState
@@ -1444,7 +1444,7 @@
 28650,0x1404320e0,0x140441c30,3,BSTDerivedCreator_BGSProcedureUseWeapon::Create
 28651,0x140432150,0x140441ca0,3,BSTDerivedCreator_BGSProcedureUseWeapon::Destroy
 28653,0x140432190,0x140441ce0,3,BGSProcedureUseWeapon::GetParamName
-28656,0x1404321f0,0x140441d40,3,BGSProcedureUseWeapon::GetParamTypes
+28656,0x1404321f0,0x140441d40,3,BGSProcedureUseWeapon::GetProcedureName
 28657,0x140432200,0x140441d50,3,BGSProcedureUseWeaponExecState::GetPoolKey
 28660,0x140432300,0x140441e50,3,BGSProcedureWait::GetParamCount
 28661,0x140432310,0x140441e60,3,BGSProcedureWait::Process
@@ -1455,7 +1455,7 @@
 28675,0x140432860,0x1404423b0,3,BSTDerivedCreator_BGSProcedureWait::Create
 28676,0x1404328d0,0x140442420,3,BSTDerivedCreator_BGSProcedureWait::Destroy
 28679,0x140432920,0x140442470,3,BGSProcedureWait::GetParamName
-28682,0x140432980,0x1404424d0,3,BGSProcedureWait::GetParamTypes
+28682,0x140432980,0x1404424d0,3,BGSProcedureWait::GetProcedureName
 28683,0x140432990,0x1404424e0,3,BGSProcedureWander::GetParamCount
 28684,0x1404329a0,0x1404424f0,3,BGSProcedureWander::Process
 28685,0x140432a80,0x1404425d0,3,BGSProcedureWander::InitActorLocation
@@ -1471,7 +1471,7 @@
 28708,0x140434180,0x140443cd0,3,BSTDerivedCreator_BGSProcedureWander::Create
 28709,0x1404341f0,0x140443d40,3,BSTDerivedCreator_BGSProcedureWander::Destroy
 28711,0x140434230,0x140443d80,3,BGSProcedureWander::GetParamName
-28714,0x140434290,0x140443de0,3,BGSProcedureWander::GetParamTypes
+28714,0x140434290,0x140443de0,3,BGSProcedureWander::GetProcedureName
 28715,0x1404342a0,0x140443df0,3,BGSProcedureWanderExecState::GetPoolKey
 28717,0x1404342f0,0x140443e40,4,"void BGSVisitProceduresProcess::VisitProcedure(BGSVisitProceduresProcess* a_this, BGSProcedureBase* a_procedure, IProcedureTreeItem::ExecStateContext* a_execState)"
 28726,0x140434590,0x1404440e0,3,BGSProcessContext::MarkComplete
