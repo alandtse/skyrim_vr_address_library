@@ -1357,6 +1357,7 @@
 28475,0x1404287f0,0x140438340,3,BGSProcedureTreeProcedure::Copy
 28476,0x140428890,0x1404383e0,3,BGSProcedureTreeProcedure::Load
 28477,0x1404289b0,0x140438500,3,BGSProcedureTreeProcedure::InitItem
+28478,0x1404289f0,0x140438540,4,"void BGSProcedureTreeProcedure::Execute(BGSProcedureTreeProcedure* a_this, IProcedureTreeItem::ExecStateContext* a_execState)"
 28479,0x140428a10,0x140438560,4,"bool BGSProcedureTreeProcedure::CheckPackageData(BGSProcedureTreeProcedure* a_this, BGSProcessContext* a_context)"
 28480,0x140428a30,0x140438580,4,"bool BGSProcedureTreeProcedure::MatchesExecState(BGSProcedureTreeProcedure* a_this, IProcedureTreeExecState* a_execState)"
 28481,0x140428a50,0x1404385a0,4,"void BGSProcedureTreeProcedure::ResolveParameterData(BGSProcedureTreeProcedure* a_this, BGSPackageDataList* a_dataList, bool a_resolve)"
