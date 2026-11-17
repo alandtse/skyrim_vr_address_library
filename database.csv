@@ -966,6 +966,7 @@
 27481,0x1403fafa0,0x14040aaf0,3,ProcedureNameMap_Insert
 27499,0x1403fb590,0x14040b0e0,3,BSTDerivedCreator_BGSProcedureDone::Create
 27500,0x1403fb600,0x14040b150,3,BSTDerivedCreator_BGSProcedureDone::Destroy
+27512,0x1403fb740,0x14040b290,4,"bool BGSProcedureBase::GetSuccessCompletesPackage(BGSProcedureBase* a_this)"
 27521,0x1403fb7d0,0x14040b320,3,BGSProcedureDone::GetParamName
 27524,0x1403fb830,0x14040b380,3,GetProcedureNameMap
 27525,0x1403fb8d0,0x14040b420,3,BGSProcedureDone::GetParamTypes
