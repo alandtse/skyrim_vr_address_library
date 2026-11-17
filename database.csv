@@ -1368,6 +1368,7 @@
 28480,0x140428a30,0x140438580,4,"bool BGSProcedureTreeProcedure::MatchesExecState(BGSProcedureTreeProcedure* a_this, IProcedureTreeExecState* a_execState)"
 28481,0x140428a50,0x1404385a0,4,"void BGSProcedureTreeProcedure::ResolveParameterData(BGSProcedureTreeProcedure* a_this, BGSPackageDataList* a_dataList, bool a_resolve)"
 28482,0x140428a70,0x1404385c0,4,"void* BGSProcedureTreeProcedure::CreateExecState(BGSProcedureTreeProcedure* a_this)"
+28484,0x140428ac0,0x140438610,3,BGSProcedureTreeProcedure::Process
 28491,0x140428cd0,0x140438820,3,BGSProcedureTreeBranch::Copy
 28492,0x140428f40,0x140438a90,3,BGSProcedureTreeBranch::Load
 28493,0x140429090,0x140438be0,3,BGSProcedureTreeBranch::InitItem
