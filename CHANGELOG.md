@@ -1,3 +1,13 @@
+# [0.305.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.304.0...v0.305.0) (2026-11-17)
+
+
+### Features
+
+* add actor, bind policy and VM ids ([#353](https://github.com/alandtse/skyrim_vr_address_library/issues/353)) ([ee0ac3b](https://github.com/alandtse/skyrim_vr_address_library/commit/ee0ac3b43a1b7b98e46a1161f0263f4d42d3d3b0))
+* add bind policy and helper ids ([#351](https://github.com/alandtse/skyrim_vr_address_library/issues/351)) ([8b1b6ad](https://github.com/alandtse/skyrim_vr_address_library/commit/8b1b6ad60077dcf2ccc5e87be7264dc1800ef832))
+* add combat magic range function ids ([#355](https://github.com/alandtse/skyrim_vr_address_library/issues/355)) ([49b953d](https://github.com/alandtse/skyrim_vr_address_library/commit/49b953d0c09a10b17899bfa8434747e035e73bb8))
+* add id 37659 (kill-move process gate) ([#352](https://github.com/alandtse/skyrim_vr_address_library/issues/352)) ([0d3a296](https://github.com/alandtse/skyrim_vr_address_library/commit/0d3a296b7d3746be9b69055546798d69e8e196e2))
+
 # [0.304.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.303.0...v0.304.0) (2026-11-14)
 
 
