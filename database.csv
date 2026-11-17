@@ -860,6 +860,7 @@
 27274,0x1403f7120,0x140406c70,3,BSTDerivedCreator_BGSProcedureUseWeaponExecState::dtor_deleting
 27275,0x1403f7150,0x140406ca0,3,BSTDerivedCreator_BGSProcedureWaitExecState::dtor_deleting
 27276,0x1403f7180,0x140406cd0,3,BSTDerivedCreator_BGSProcedureWanderExecState::dtor_deleting
+27302,0x1403f77e0,0x140407330,3,BGSProcedureTreeBranch::AddConditionalItem
 27318,0x1403f7be0,0x140407730,3,BSTDerivedCreator_BGSProcedureAcquireExecState::Create
 27319,0x1403f7c40,0x140407790,3,BSTDerivedCreator_BGSProcedureActivateExecState::Create
 27320,0x1403f7ca0,0x1404077f0,3,BSTDerivedCreator_BGSProcedureDialogueActivateExecState::Create
@@ -945,6 +946,9 @@
 27443,0x1403f9880,0x1404093d0,3,ExecStatePoolMap_Grow
 27444,0x1403f9930,0x140409480,3,TreeItemPoolMap_Grow
 27449,0x1403fa020,0x140409b70,3,ExecStatePoolMap_InsertGrowing
+27458,0x1403fa320,0x140409e70,3,BGSProcedureBase::Load
+27461,0x1403fa4f0,0x14040a040,3,BGSProcedureBase::CheckPackageData
+27462,0x1403fa5b0,0x14040a100,3,BGSProcedureBase::MatchesExecState
 27464,0x1403fa640,0x14040a190,3,"void* BGSProcedureBase::EvaluatePackageDataTarget(void** a_context, std::uint32_t a_index, void** a_outTarget)"
 27467,0x1403fa870,0x14040a3c0,3,"void* GetBoundPackageData(void* a_bindings, std::uint32_t a_index, BGSPackageDataList* a_dataList)"
 27475,0x1403fabd0,0x14040a720,3,BGSProcedureDone::Process
@@ -1249,6 +1253,8 @@
 28491,0x140428cd0,0x140438820,3,BGSProcedureTreeBranch::Copy
 28492,0x140428f40,0x140438a90,3,BGSProcedureTreeBranch::Load
 28493,0x140429090,0x140438be0,3,BGSProcedureTreeBranch::InitItem
+28495,0x140429170,0x140438cc0,3,BGSProcedureTreeBranch::InitActorAnimPose
+28497,0x140429280,0x140438dd0,3,BGSProcedureTreeBranch::Process
 28499,0x1404293b0,0x140438f00,3,BGSProcedureTreeOneChildExecState::SaveGame
 28500,0x140429430,0x140438f80,3,BGSProcedureTreeOneChildExecState::LoadGame
 28501,0x140429510,0x140439060,3,BGSProcedureTreeOneChildExecState::InitLoadGame
