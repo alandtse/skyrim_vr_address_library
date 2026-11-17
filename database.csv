@@ -951,6 +951,7 @@
 27462,0x1403fa5b0,0x14040a100,3,BGSProcedureBase::MatchesExecState
 27464,0x1403fa640,0x14040a190,3,"void* BGSProcedureBase::EvaluatePackageDataTarget(void** a_context, std::uint32_t a_index, void** a_outTarget)"
 27467,0x1403fa870,0x14040a3c0,3,"void* GetBoundPackageData(void* a_bindings, std::uint32_t a_index, BGSPackageDataList* a_dataList)"
+27473,0x1403fab70,0x14040a6c0,3,BGSProcessContext::UpdateMountState
 27475,0x1403fabd0,0x14040a720,3,BGSProcedureDone::Process
 27476,0x1403fac00,0x14040a750,3,RegisterProcedureName_Done
 27477,0x1403fad70,0x14040a8c0,3,ProcedureNameEntryCleanup_Done
@@ -1351,6 +1352,8 @@
 28708,0x140434180,0x140443cd0,3,BSTDerivedCreator_BGSProcedureWander::Create
 28709,0x1404341f0,0x140443d40,3,BSTDerivedCreator_BGSProcedureWander::Destroy
 28715,0x1404342a0,0x140443df0,3,BGSProcedureWanderExecState::GetPoolKey
+28726,0x140434590,0x1404440e0,3,BGSProcessContext::MarkComplete
+28727,0x1404345b0,0x140444100,3,BGSProcessContext::SetComplete
 28732,0x1404348c0,0x140444410,4,TESPackage* TESPackage::CreatePackage(PACKAGE_PROCEDURE_TYPE a_type)
 28751,0x1404353f0,0x140444f40,4,void TESPackage::SetPackType(PACKAGE_PROCEDURE_TYPE a_type)
 28752,0x1404359c0,0x140445510,4,void TESPackage::SetHasPackageLocation(const PackageLocation* a_location)
