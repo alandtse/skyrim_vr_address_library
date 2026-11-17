@@ -1463,6 +1463,7 @@
 28711,0x140434230,0x140443d80,3,BGSProcedureWander::GetParamName
 28714,0x140434290,0x140443de0,3,BGSProcedureWander::GetParamTypes
 28715,0x1404342a0,0x140443df0,3,BGSProcedureWanderExecState::GetPoolKey
+28717,0x1404342f0,0x140443e40,4,"void BGSVisitProceduresProcess::VisitProcedure(BGSVisitProceduresProcess* a_this, BGSProcedureBase* a_procedure, IProcedureTreeItem::ExecStateContext* a_execState)"
 28726,0x140434590,0x1404440e0,3,BGSProcessContext::MarkComplete
 28727,0x1404345b0,0x140444100,3,BGSProcessContext::SetComplete
 28732,0x1404348c0,0x140444410,4,TESPackage* TESPackage::CreatePackage(PACKAGE_PROCEDURE_TYPE a_type)
