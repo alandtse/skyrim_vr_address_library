@@ -937,13 +937,13 @@
 27427,0x1403f95b0,0x140409100,3,BGSProcedureHoldPositionExecState::GetPoolKey
 27428,0x1403f95c0,0x140409110,3,BGSProcedureKeepAnEyeOnExecState::GetPoolKey
 27429,0x1403f95d0,0x140409120,3,BGSProcedureSayExecState::GetPoolKey
-27430,0x1403f95e0,0x140409130,4,"BSFixedString* BGSProcedureTreeRandom::GetPoolKey(BGSProcedureTreeRandom* a_this)"
+27430,0x1403f95e0,0x140409130,4,BSFixedString* BGSProcedureTreeRandom::GetPoolKey(BGSProcedureTreeRandom* a_this)
 27431,0x1403f95f0,0x140409140,3,BGSProcedureTreeRandomExecState::GetPoolKey
-27432,0x1403f9600,0x140409150,4,"BSFixedString* BGSProcedureTreeSequence::GetPoolKey(BGSProcedureTreeSequence* a_this)"
+27432,0x1403f9600,0x140409150,4,BSFixedString* BGSProcedureTreeSequence::GetPoolKey(BGSProcedureTreeSequence* a_this)
 27433,0x1403f9610,0x140409160,3,BGSProcedureTreeSequenceExecState::GetPoolKey
-27434,0x1403f9620,0x140409170,4,"BSFixedString* BGSProcedureTreeSimultaneous::GetPoolKey(BGSProcedureTreeSimultaneous* a_this)"
+27434,0x1403f9620,0x140409170,4,BSFixedString* BGSProcedureTreeSimultaneous::GetPoolKey(BGSProcedureTreeSimultaneous* a_this)
 27435,0x1403f9630,0x140409180,3,BGSProcedureTreeSimultaneousExecState::GetPoolKey
-27436,0x1403f9640,0x140409190,4,"BSFixedString* BGSProcedureTreeStacked::GetPoolKey(BGSProcedureTreeStacked* a_this)"
+27436,0x1403f9640,0x140409190,4,BSFixedString* BGSProcedureTreeStacked::GetPoolKey(BGSProcedureTreeStacked* a_this)
 27437,0x1403f9650,0x1404091a0,3,BGSProcedureTreeStackedExecState::GetPoolKey
 27438,0x1403f9660,0x1404091b0,3,BGSProcedureWaitExecState::GetPoolKey
 27440,0x1403f9680,0x1404091d0,3,BGSProcedureTreeOneChildExecState::RecycleChildren
@@ -966,7 +966,7 @@
 27481,0x1403fafa0,0x14040aaf0,3,ProcedureNameMap_Insert
 27499,0x1403fb590,0x14040b0e0,3,BSTDerivedCreator_BGSProcedureDone::Create
 27500,0x1403fb600,0x14040b150,3,BSTDerivedCreator_BGSProcedureDone::Destroy
-27512,0x1403fb740,0x14040b290,4,"bool BGSProcedureBase::GetSuccessCompletesPackage(BGSProcedureBase* a_this)"
+27512,0x1403fb740,0x14040b290,4,bool BGSProcedureBase::GetSuccessCompletesPackage(BGSProcedureBase* a_this)
 27521,0x1403fb7d0,0x14040b320,3,BGSProcedureDone::GetParamName
 27524,0x1403fb830,0x14040b380,3,GetProcedureNameMap
 27525,0x1403fb8d0,0x14040b420,3,BGSProcedureDone::GetParamTypes
@@ -1367,7 +1367,7 @@
 28479,0x140428a10,0x140438560,4,"bool BGSProcedureTreeProcedure::CheckPackageData(BGSProcedureTreeProcedure* a_this, BGSProcessContext* a_context)"
 28480,0x140428a30,0x140438580,4,"bool BGSProcedureTreeProcedure::MatchesExecState(BGSProcedureTreeProcedure* a_this, IProcedureTreeExecState* a_execState)"
 28481,0x140428a50,0x1404385a0,4,"void BGSProcedureTreeProcedure::ResolveParameterData(BGSProcedureTreeProcedure* a_this, BGSPackageDataList* a_dataList, bool a_resolve)"
-28482,0x140428a70,0x1404385c0,4,"void* BGSProcedureTreeProcedure::CreateExecState(BGSProcedureTreeProcedure* a_this)"
+28482,0x140428a70,0x1404385c0,4,void* BGSProcedureTreeProcedure::CreateExecState(BGSProcedureTreeProcedure* a_this)
 28484,0x140428ac0,0x140438610,3,BGSProcedureTreeProcedure::Process
 28491,0x140428cd0,0x140438820,3,BGSProcedureTreeBranch::Copy
 28492,0x140428f40,0x140438a90,3,BGSProcedureTreeBranch::Load
@@ -1395,7 +1395,7 @@
 28524,0x14042aa10,0x14043a560,3,BGSProcedureTreeRandomExecState::LoadGame
 28525,0x14042aab0,0x14043a600,3,BGSProcedureTreeRandomExecState::InitLoadGame
 28541,0x14042b370,0x14043aec0,3,ProcedureNameMap_Find
-28544,0x14042b4d0,0x14043b020,4,"BSFixedString* BGSProcedureTreeProcedure::GetPoolKey(BGSProcedureTreeProcedure* a_this)"
+28544,0x14042b4d0,0x14043b020,4,BSFixedString* BGSProcedureTreeProcedure::GetPoolKey(BGSProcedureTreeProcedure* a_this)
 28550,0x14042b6c0,0x14043b210,3,BGSProcedureUseIdleMarker::GetParamCount
 28551,0x14042b6d0,0x14043b220,3,BGSProcedureUseIdleMarker::InitExecState
 28552,0x14042b7a0,0x14043b2f0,3,BGSProcedureUseIdleMarker::InitActorLocation
