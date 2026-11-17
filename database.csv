@@ -2454,7 +2454,7 @@
 46039,0x1407bcb40,0x1407e7e90,4,Character::sub_1407BCB40
 46043,0x1407bccd0,0x1407e8020,4,CombatUtilities::CanActorExistInSpace
 46050,0x1407bd150,0x1407e84a0,4,"bool Actor::UpdateNavPos(const NiPoint3& a_pos, const NiPoint3& a_new_pos, float a_speed, float a_distance)"
-46068,0x1407beb90,0x1407e9ee0,3,"void TESObjectREFR::GetCombatRange(TESObjectREFR* a_this, TESForm* a_form, float* a_optimal, float* a_max, TESAmmo* a_ammo)"
+46068,0x1407beb90,0x1407e9ee0,3,"void TESObjectREFR::GetCombatRange(TESObjectREFR* a_this, TESForm* a_form, float* a_min, float* a_max, TESAmmo* a_ammo)"
 46074,0x1407bf260,0x1407ea5b0,4,float TESObjectREFR::GetCombatReach (TESObjectREFR * a_this)
 46089,0x1407c1200,0x1407ec550,3,bool CombatBehavior::CheckTargetChanged()
 46090,0x1407c1270,0x1407ec5c0,3,"CombatBehaviorThread* CombatBehavior::CreateChildThread(uint32_t child_ind, bool isControlChild)"
