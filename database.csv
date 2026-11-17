@@ -1081,6 +1081,7 @@
 27853,0x14040b780,0x14041b2d0,3,BGSProcedureFlightGrab::GetParamCount
 27854,0x14040b790,0x14041b2e0,3,BGSProcedureFlightGrab::InitActorLocation
 27855,0x14040b920,0x14041b470,3,BGSProcedureFlightGrab::InitActorAnimPose
+27856,0x14040b950,0x14041b4a0,3,BGSProcedureFlightGrab::Process
 27857,0x14040b980,0x14041b4d0,3,RegisterProcedureName_FlightGrab
 27861,0x14040c4d0,0x14041c020,3,BGSProcedureFlightGrabExecState::BGSProcedureFlightGrabExecState
 27862,0x14040c500,0x14041c050,3,BGSProcedureFlightGrabExecState::~BGSProcedureFlightGrabExecState
