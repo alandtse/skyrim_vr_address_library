@@ -1365,7 +1365,9 @@
 28994,0x140441130,0x140450c80,4,PackageLocation* PackageLocation::PackageLocation()
 28998,0x140441250,0x140450da0,4,void PackageLocation::SetLocationType(std::int32_t a_type)
 29007,0x140441540,0x140451090,4,"void PackageLocation::Assign(const PackageLocation* a_other, bool a_allowNone)"
+29036,0x1404434f0,0x140453040,3,PackageTarget::ResolveRefHandle
 29044,0x140443690,0x1404531e0,4,void PackageTarget::SetType(std::uint32_t a_type)
+29046,0x140443750,0x1404532a0,3,PackageTarget::SetRefHandle
 29050,0x1404437d0,0x140453320,4,void PackageTarget::Copy(const PackageTarget* a_other)
 29065,0x140444370,0x140453EC0,4,void TESCondition::InitItem(TESForm* a_owner)
 29067,0x140444440,0x140453f90,4,"void TESCondition::Copy(const TESCondition* a_other, TESForm* a_arg2)"
