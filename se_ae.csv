@@ -4738,8 +4738,10 @@ sseid,aeid,confidence,name
 35551,36544,3,RE::Main::MainLoop
 35560,36559,3,RE::Main::Draw
 35571,36574,3,Main::UpdateCullingFrustum
+35583,36589,3,
 35593,36601,3,RE::Main::ReloadFormData
 35620,36630,3,RE::Main::SetupPlayerBaseForm
+35754,36755,3,
 35869,36840,3,SceneGraph::SetNearDistance
 35871,36842,3,SceneGraph::SetFarDistance
 35978,36953,3,RE::TaskQueueInterface::QueueBulletWaterDisplacementTask
@@ -19766,6 +19768,7 @@ sseid,aeid,confidence,name
 513236,390976,3,gTESLODBlendFromOrigin_141e0df78
 513238,390978,3,gTESLODBlendToOrigin_141e0df80
 513239,390980,3,gTESLODBlendStartTime_141e0df88
+513758,391729,3,
 514139,400267,3,RE::ActorValueList::GetSingleton
 514167,400315,3,RE::ProcessLists::GetSingleton
 514182,400331,3,RE::BSFaceGenManager::GetSingleton
@@ -20554,6 +20557,8 @@ sseid,aeid,confidence,name
 527338,414289,1,
 527641,414593,3,gTESLODBlendInProgress_1431d0e0c
 527644,414596,3,gTESGridsToLoadCopy_1431d0e10
+527699,414621,3,
+527700,414622,3,
 527970,414916,1,
 527971,414917,1,
 527972,414918,1,
