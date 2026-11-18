@@ -937,13 +937,13 @@
 27427,0x1403f95b0,0x140409100,3,BGSProcedureHoldPositionExecState::GetPoolKey
 27428,0x1403f95c0,0x140409110,3,BGSProcedureKeepAnEyeOnExecState::GetPoolKey
 27429,0x1403f95d0,0x140409120,3,BGSProcedureSayExecState::GetPoolKey
-27430,0x1403f95e0,0x140409130,4,BSFixedString* BGSProcedureTreeRandom::GetPoolKey(BGSProcedureTreeRandom* a_this)
+27430,0x1403f95e0,0x140409130,4,BSFixedString* BGSProcedureTreeRandom::GetPoolKey()
 27431,0x1403f95f0,0x140409140,3,BGSProcedureTreeRandomExecState::GetPoolKey
-27432,0x1403f9600,0x140409150,4,BSFixedString* BGSProcedureTreeSequence::GetPoolKey(BGSProcedureTreeSequence* a_this)
+27432,0x1403f9600,0x140409150,4,BSFixedString* BGSProcedureTreeSequence::GetPoolKey()
 27433,0x1403f9610,0x140409160,3,BGSProcedureTreeSequenceExecState::GetPoolKey
-27434,0x1403f9620,0x140409170,4,BSFixedString* BGSProcedureTreeSimultaneous::GetPoolKey(BGSProcedureTreeSimultaneous* a_this)
+27434,0x1403f9620,0x140409170,4,BSFixedString* BGSProcedureTreeSimultaneous::GetPoolKey()
 27435,0x1403f9630,0x140409180,3,BGSProcedureTreeSimultaneousExecState::GetPoolKey
-27436,0x1403f9640,0x140409190,4,BSFixedString* BGSProcedureTreeStacked::GetPoolKey(BGSProcedureTreeStacked* a_this)
+27436,0x1403f9640,0x140409190,4,BSFixedString* BGSProcedureTreeStacked::GetPoolKey()
 27437,0x1403f9650,0x1404091a0,3,BGSProcedureTreeStackedExecState::GetPoolKey
 27438,0x1403f9660,0x1404091b0,3,BGSProcedureWaitExecState::GetPoolKey
 27440,0x1403f9680,0x1404091d0,3,BGSProcedureTreeOneChildExecState::RecycleChildren
@@ -952,18 +952,18 @@
 27443,0x1403f9880,0x1404093d0,3,ExecStatePoolMap_Grow
 27444,0x1403f9930,0x140409480,3,TreeItemPoolMap_Grow
 27449,0x1403fa020,0x140409b70,3,ExecStatePoolMap_InsertGrowing
-27456,0x1403fa150,0x140409ca0,3,PackageFlagsOverride::LoadPFO2
-27457,0x1403fa230,0x140409d80,3,PackageFlagsOverride::LoadPFOR
+27456,0x1403fa150,0x140409ca0,3,void PackageFlagsOverride::LoadPFO2(TESFile* a_file)
+27457,0x1403fa230,0x140409d80,3,void PackageFlagsOverride::LoadPFOR(TESFile* a_file)
 27458,0x1403fa320,0x140409e70,3,BGSProcedureBase::Load
 27460,0x1403fa4d0,0x14040a020,3,BGSProcedureBase::ResolveParameterData
 27461,0x1403fa4f0,0x14040a040,3,BGSProcedureBase::CheckPackageData
 27462,0x1403fa5b0,0x14040a100,3,BGSProcedureBase::MatchesExecState
 27464,0x1403fa640,0x14040a190,3,"void* BGSProcedureBase::EvaluatePackageDataTarget(void** a_context, std::uint32_t a_index, void** a_outTarget)"
-27465,0x1403fa730,0x14040a280,3,BGSProcedureBase::SetFlagsOverride
+27465,0x1403fa730,0x14040a280,3,void BGSProcedureBase::SetFlagsOverride(PackageFlagsOverride* a_override)
 27467,0x1403fa870,0x14040a3c0,3,"void* GetBoundPackageData(void* a_bindings, std::uint32_t a_index, BGSPackageDataList* a_dataList)"
-27468,0x1403fa8a0,0x14040a3f0,3,LoadPackageDataUIDs
-27469,0x1403fa9d0,0x14040a520,3,ResolveDataSlots
-27470,0x1403faa50,0x14040a5a0,3,UnresolveDataSlots
+27468,0x1403fa8a0,0x14040a3f0,3,"void LoadPackageDataUIDs(void* a_slots, TESFile* a_file, std::uint32_t a_count)"
+27469,0x1403fa9d0,0x14040a520,3,"void ResolveDataSlots(void* a_slots, BGSPackageDataList* a_dataList)"
+27470,0x1403faa50,0x14040a5a0,3,"void UnresolveDataSlots(void* a_slots, BGSPackageDataList* a_dataList)"
 27473,0x1403fab70,0x14040a6c0,3,BGSProcessContext::UpdateMountState
 27474,0x1403fabc0,0x14040a710,3,BGSProcedureDone::GetParamCount
 27475,0x1403fabd0,0x14040a720,3,BGSProcedureDone::Process
@@ -972,12 +972,12 @@
 27481,0x1403fafa0,0x14040aaf0,3,ProcedureNameMap_Insert
 27499,0x1403fb590,0x14040b0e0,3,BSTDerivedCreator_BGSProcedureDone::Create
 27500,0x1403fb600,0x14040b150,3,BSTDerivedCreator_BGSProcedureDone::Destroy
-27506,0x1403fb680,0x14040b1d0,3,BGSProcedureBase::GetFlagsOverride
-27512,0x1403fb740,0x14040b290,4,bool BGSProcedureBase::GetSuccessCompletesPackage(BGSProcedureBase* a_this)
-27518,0x1403fb7a0,0x14040b2f0,3,BGSProcedureBase::IsForceGreet
+27506,0x1403fb680,0x14040b1d0,3,PackageFlagsOverride* BGSProcedureBase::GetFlagsOverride()
+27512,0x1403fb740,0x14040b290,4,bool BGSProcedureBase::GetSuccessCompletesPackage()
+27518,0x1403fb7a0,0x14040b2f0,3,bool BGSProcedureBase::IsForceGreet()
 27521,0x1403fb7d0,0x14040b320,3,BGSProcedureDone::GetParamName
 27524,0x1403fb830,0x14040b380,3,GetProcedureNameMap
-27525,0x1403fb8d0,0x14040b420,3,BGSProcedureDone::GetProcedureName
+27525,0x1403fb8d0,0x14040b420,3,BSFixedString* BGSProcedureDone::GetProcedureName()
 27526,0x1403fb8e0,0x14040b430,3,ProcedureNameMap_Grow
 27533,0x1403fbca0,0x14040b7f0,3,BGSProcedureAcquire::GetParamCount
 27534,0x1403fbcb0,0x14040b800,3,BGSProcedureAcquire::InitExecState
@@ -992,11 +992,11 @@
 27560,0x1403fd1d0,0x14040cd20,3,BGSProcedureAcquireExecState::dtor_deleting
 27562,0x1403fd260,0x14040cdb0,3,BSTDerivedCreator_BGSProcedureAcquire::Create
 27563,0x1403fd2d0,0x14040ce20,3,BSTDerivedCreator_BGSProcedureAcquire::Destroy
-27567,0x1403fd320,0x14040ce70,3,BGSProcedureAcquire::GetParamIsRequired
+27567,0x1403fd320,0x14040ce70,3,bool BGSProcedureAcquire::GetParamIsRequired(std::uint32_t a_index)
 27571,0x1403fd370,0x14040cec0,3,BGSProcedureAcquire::GetParamName
-27572,0x1403fd390,0x14040cee0,3,BGSProcedureAcquire::GetParamTypeCheck
-27573,0x1403fd3b0,0x14040cf00,3,BGSProcedureAcquire::GetParamCheckTypeName
-27577,0x1403fd520,0x14040d070,3,BGSProcedureAcquire::GetProcedureName
+27572,0x1403fd390,0x14040cee0,3,void* BGSProcedureAcquire::GetParamTypeCheck(std::uint32_t a_index)
+27573,0x1403fd3b0,0x14040cf00,3,void* BGSProcedureAcquire::GetParamCheckTypeName(std::uint32_t a_index)
+27577,0x1403fd520,0x14040d070,3,BSFixedString* BGSProcedureAcquire::GetProcedureName()
 27578,0x1403fd530,0x14040d080,3,BGSProcedureAcquireExecState::GetPoolKey
 27580,0x1403fd5d0,0x14040d120,3,BGSProcedureActivate::GetParamCount
 27581,0x1403fd5e0,0x14040d130,3,BGSProcedureActivate::InitExecState
@@ -1013,11 +1013,11 @@
 27609,0x1403fff20,0x14040fa70,3,BGSProcedureActivateExecState::dtor_deleting
 27610,0x1403fffa0,0x14040faf0,3,BSTDerivedCreator_BGSProcedureActivate::Create
 27611,0x140400010,0x14040fb60,3,BSTDerivedCreator_BGSProcedureActivate::Destroy
-27613,0x140400080,0x14040fbd0,3,BGSProcedureActivate::GetParamIsRequired
+27613,0x140400080,0x14040fbd0,3,bool BGSProcedureActivate::GetParamIsRequired(std::uint32_t a_index)
 27614,0x1404000a0,0x14040fbf0,3,BGSProcedureActivate::GetParamName
-27615,0x1404000c0,0x14040fc10,3,BGSProcedureActivate::GetParamTypeCheck
-27616,0x1404000e0,0x14040fc30,3,BGSProcedureActivate::GetParamCheckTypeName
-27617,0x140400100,0x14040fc50,3,BGSProcedureActivate::GetProcedureName
+27615,0x1404000c0,0x14040fc10,3,void* BGSProcedureActivate::GetParamTypeCheck(std::uint32_t a_index)
+27616,0x1404000e0,0x14040fc30,3,void* BGSProcedureActivate::GetParamCheckTypeName(std::uint32_t a_index)
+27617,0x140400100,0x14040fc50,3,BSFixedString* BGSProcedureActivate::GetProcedureName()
 27618,0x140400110,0x14040fc60,3,BGSProcedureActivateExecState::GetPoolKey
 27619,0x140400120,0x14040fc70,3,BGSProcedureDialogue::GetParamCount
 27620,0x140400130,0x14040fc80,3,BGSProcedureDialogue::Process
@@ -1027,11 +1027,11 @@
 27630,0x1404008c0,0x140410410,3,ProcedureNameEntryCleanup_Dialogue
 27638,0x140400b20,0x140410670,3,BSTDerivedCreator_BGSProcedureDialogue::Create
 27639,0x140400b90,0x1404106e0,3,BSTDerivedCreator_BGSProcedureDialogue::Destroy
-27641,0x140400bc0,0x140410710,3,BGSProcedureDialogue::GetParamIsRequired
+27641,0x140400bc0,0x140410710,3,bool BGSProcedureDialogue::GetParamIsRequired(std::uint32_t a_index)
 27644,0x140400c20,0x140410770,3,BGSProcedureDialogue::GetParamName
-27645,0x140400c40,0x140410790,3,BGSProcedureDialogue::GetParamTypeCheck
-27646,0x140400c60,0x1404107b0,3,BGSProcedureDialogue::GetParamCheckTypeName
-27648,0x140400cf0,0x140410840,3,BGSProcedureDialogue::GetProcedureName
+27645,0x140400c40,0x140410790,3,void* BGSProcedureDialogue::GetParamTypeCheck(std::uint32_t a_index)
+27646,0x140400c60,0x1404107b0,3,void* BGSProcedureDialogue::GetParamCheckTypeName(std::uint32_t a_index)
+27648,0x140400cf0,0x140410840,3,BSFixedString* BGSProcedureDialogue::GetProcedureName()
 27649,0x140400d00,0x140410850,3,BGSProcedureDialogueActivate::GetParamCount
 27650,0x140400d10,0x140410860,3,BGSProcedureDialogueActivate::InitExecState
 27651,0x140400f40,0x140410a90,3,BGSProcedureDialogueActivate::InitActorLocation
@@ -1040,11 +1040,11 @@
 27665,0x1404025b0,0x140412100,3,ProcedureNameEntryCleanup_DialogueActivate
 27675,0x140402900,0x140412450,3,BSTDerivedCreator_BGSProcedureDialogueActivate::Create
 27676,0x140402970,0x1404124c0,3,BSTDerivedCreator_BGSProcedureDialogueActivate::Destroy
-27679,0x1404029b0,0x140412500,3,BGSProcedureDialogueActivate::GetParamIsRequired
+27679,0x1404029b0,0x140412500,3,bool BGSProcedureDialogueActivate::GetParamIsRequired(std::uint32_t a_index)
 27681,0x1404029e0,0x140412530,3,BGSProcedureDialogueActivate::GetParamName
-27682,0x140402a00,0x140412550,3,BGSProcedureDialogueActivate::GetParamTypeCheck
-27683,0x140402a20,0x140412570,3,BGSProcedureDialogueActivate::GetParamCheckTypeName
-27685,0x140402ab0,0x140412600,3,BGSProcedureDialogueActivate::GetProcedureName
+27682,0x140402a00,0x140412550,3,void* BGSProcedureDialogueActivate::GetParamTypeCheck(std::uint32_t a_index)
+27683,0x140402a20,0x140412570,3,void* BGSProcedureDialogueActivate::GetParamCheckTypeName(std::uint32_t a_index)
+27685,0x140402ab0,0x140412600,3,BSFixedString* BGSProcedureDialogueActivate::GetProcedureName()
 27688,0x140402b60,0x1404126b0,3,BGSProcedureEat::GetParamCount
 27689,0x140402b70,0x1404126c0,3,BGSProcedureEat::Process
 27690,0x140402dd0,0x140412920,3,RegisterProcedureName_Eat
@@ -1053,11 +1053,11 @@
 27701,0x140403550,0x1404130a0,3,ProcedureNameEntryCleanup_Eat
 27709,0x1404037c0,0x140413310,3,BSTDerivedCreator_BGSProcedureEat::Create
 27710,0x140403830,0x140413380,3,BSTDerivedCreator_BGSProcedureEat::Destroy
-27713,0x140403870,0x1404133c0,3,BGSProcedureEat::GetParamIsRequired
+27713,0x140403870,0x1404133c0,3,bool BGSProcedureEat::GetParamIsRequired(std::uint32_t a_index)
 27715,0x1404038a0,0x1404133f0,3,BGSProcedureEat::GetParamName
-27716,0x1404038c0,0x140413410,3,BGSProcedureEat::GetParamTypeCheck
-27717,0x1404038e0,0x140413430,3,BGSProcedureEat::GetParamCheckTypeName
-27719,0x140403970,0x1404134c0,3,BGSProcedureEat::GetProcedureName
+27716,0x1404038c0,0x140413410,3,void* BGSProcedureEat::GetParamTypeCheck(std::uint32_t a_index)
+27717,0x1404038e0,0x140413430,3,void* BGSProcedureEat::GetParamCheckTypeName(std::uint32_t a_index)
+27719,0x140403970,0x1404134c0,3,BSFixedString* BGSProcedureEat::GetProcedureName()
 27720,0x140403980,0x1404134d0,3,BGSProcedureEscort::GetParamCount
 27721,0x140403990,0x1404134e0,3,BGSProcedureEscort::InitExecState
 27722,0x140403aa0,0x1404135f0,3,BGSProcedureEscort::InitActorLocation
@@ -1071,11 +1071,11 @@
 27738,0x140405e00,0x140415950,3,ProcedureNameEntryCleanup_Escort
 27753,0x140406300,0x140415e50,3,BSTDerivedCreator_BGSProcedureEscort::Create
 27754,0x140406370,0x140415ec0,3,BSTDerivedCreator_BGSProcedureEscort::Destroy
-27757,0x1404063b0,0x140415f00,3,BGSProcedureEscort::GetParamIsRequired
+27757,0x1404063b0,0x140415f00,3,bool BGSProcedureEscort::GetParamIsRequired(std::uint32_t a_index)
 27760,0x1404063f0,0x140415f40,3,BGSProcedureEscort::GetParamName
-27761,0x140406410,0x140415f60,3,BGSProcedureEscort::GetParamTypeCheck
-27762,0x140406430,0x140415f80,3,BGSProcedureEscort::GetParamCheckTypeName
-27765,0x140406530,0x140416080,3,BGSProcedureEscort::GetProcedureName
+27761,0x140406410,0x140415f60,3,void* BGSProcedureEscort::GetParamTypeCheck(std::uint32_t a_index)
+27762,0x140406430,0x140415f80,3,void* BGSProcedureEscort::GetParamCheckTypeName(std::uint32_t a_index)
+27765,0x140406530,0x140416080,3,BSFixedString* BGSProcedureEscort::GetProcedureName()
 27770,0x140406740,0x140416290,3,BGSProcedureFind::GetParamCount
 27771,0x140406750,0x1404162a0,3,BGSProcedureFind::InitExecState
 27772,0x140406770,0x1404162c0,3,BGSProcedureFind::InitActorLocation
@@ -1088,11 +1088,11 @@
 27784,0x140407810,0x140417360,3,ProcedureNameEntryCleanup_Find
 27792,0x140407a90,0x1404175e0,3,BSTDerivedCreator_BGSProcedureFind::Create
 27793,0x140407b00,0x140417650,3,BSTDerivedCreator_BGSProcedureFind::Destroy
-27796,0x140407b40,0x140417690,3,BGSProcedureFind::GetParamIsRequired
+27796,0x140407b40,0x140417690,3,bool BGSProcedureFind::GetParamIsRequired(std::uint32_t a_index)
 27798,0x140407b70,0x1404176c0,3,BGSProcedureFind::GetParamName
-27799,0x140407b90,0x1404176e0,3,BGSProcedureFind::GetParamTypeCheck
-27800,0x140407bb0,0x140417700,3,BGSProcedureFind::GetParamCheckTypeName
-27802,0x140407c40,0x140417790,3,BGSProcedureFind::GetProcedureName
+27799,0x140407b90,0x1404176e0,3,void* BGSProcedureFind::GetParamTypeCheck(std::uint32_t a_index)
+27800,0x140407bb0,0x140417700,3,void* BGSProcedureFind::GetParamCheckTypeName(std::uint32_t a_index)
+27802,0x140407c40,0x140417790,3,BSFixedString* BGSProcedureFind::GetProcedureName()
 27803,0x140407c50,0x1404177a0,3,BGSProcedureFlee::GetParamCount
 27804,0x140407c60,0x1404177b0,3,BGSProcedureFlee::Process
 27805,0x140407d20,0x140417870,3,RegisterProcedureName_Flee
@@ -1105,16 +1105,16 @@
 27841,0x14040b4b0,0x14041b000,3,BGSProcedureFleeExecState::dtor_deleting
 27843,0x14040b530,0x14041b080,3,BSTDerivedCreator_BGSProcedureFlee::Create
 27845,0x14040b620,0x14041b170,3,BSTDerivedCreator_BGSProcedureFlee::Destroy
-27846,0x14040b640,0x14041b190,3,BGSProcedureFlee::GetParamIsRequired
+27846,0x14040b640,0x14041b190,3,bool BGSProcedureFlee::GetParamIsRequired(std::uint32_t a_index)
 27847,0x14040b660,0x14041b1b0,3,BGSProcedureFlee::GetParamName
-27848,0x14040b680,0x14041b1d0,3,BGSProcedureFlee::GetParamTypeCheck
-27849,0x14040b6a0,0x14041b1f0,3,BGSProcedureFlee::GetParamCheckTypeName
-27850,0x14040b6c0,0x14041b210,3,BGSProcedureFlee::GetProcedureName
+27848,0x14040b680,0x14041b1d0,3,void* BGSProcedureFlee::GetParamTypeCheck(std::uint32_t a_index)
+27849,0x14040b6a0,0x14041b1f0,3,void* BGSProcedureFlee::GetParamCheckTypeName(std::uint32_t a_index)
+27850,0x14040b6c0,0x14041b210,3,BSFixedString* BGSProcedureFlee::GetProcedureName()
 27851,0x14040b6d0,0x14041b220,3,BGSProcedureFleeExecState::GetPoolKey
 27853,0x14040b780,0x14041b2d0,3,BGSProcedureFlightGrab::GetParamCount
 27854,0x14040b790,0x14041b2e0,3,BGSProcedureFlightGrab::InitActorLocation
 27855,0x14040b920,0x14041b470,3,BGSProcedureFlightGrab::InitActorAnimPose
-27856,0x14040b950,0x14041b4a0,3,BGSProcedureFlightGrab::Process
+27856,0x14040b950,0x14041b4a0,3,void BGSProcedureFlightGrab::Process(IProcedureTreeItem::ExecStateContext* a_execState)
 27857,0x14040b980,0x14041b4d0,3,RegisterProcedureName_FlightGrab
 27861,0x14040c4d0,0x14041c020,3,BGSProcedureFlightGrabExecState::BGSProcedureFlightGrabExecState
 27862,0x14040c500,0x14041c050,3,BGSProcedureFlightGrabExecState::~BGSProcedureFlightGrabExecState
@@ -1123,11 +1123,11 @@
 27876,0x14040ca40,0x14041c590,3,BGSProcedureFlightGrabExecState::dtor_deleting
 27877,0x14040cab0,0x14041c600,3,BSTDerivedCreator_BGSProcedureFlightGrab::Create
 27878,0x14040cb20,0x14041c670,3,BSTDerivedCreator_BGSProcedureFlightGrab::Destroy
-27879,0x14040cb40,0x14041c690,3,BGSProcedureFlightGrab::GetParamIsRequired
+27879,0x14040cb40,0x14041c690,3,bool BGSProcedureFlightGrab::GetParamIsRequired(std::uint32_t a_index)
 27880,0x14040cb60,0x14041c6b0,3,BGSProcedureFlightGrab::GetParamName
-27881,0x14040cb80,0x14041c6d0,3,BGSProcedureFlightGrab::GetParamTypeCheck
-27882,0x14040cba0,0x14041c6f0,3,BGSProcedureFlightGrab::GetParamCheckTypeName
-27883,0x14040cbc0,0x14041c710,3,BGSProcedureFlightGrab::GetProcedureName
+27881,0x14040cb80,0x14041c6d0,3,void* BGSProcedureFlightGrab::GetParamTypeCheck(std::uint32_t a_index)
+27882,0x14040cba0,0x14041c6f0,3,void* BGSProcedureFlightGrab::GetParamCheckTypeName(std::uint32_t a_index)
+27883,0x14040cbc0,0x14041c710,3,BSFixedString* BGSProcedureFlightGrab::GetProcedureName()
 27884,0x14040cbd0,0x14041c720,3,BGSProcedureFlightGrabExecState::GetPoolKey
 27885,0x14040cbe0,0x14041c730,3,BGSProcedureFollow::GetParamCount
 27886,0x14040cbf0,0x14041c740,3,BGSProcedureFollow::CreateExecState
@@ -1156,16 +1156,16 @@
 27932,0x140410770,0x1404202c0,3,BSTDerivedCreator_BGSProcedureFollowTo::Create
 27933,0x1404107f0,0x140420340,3,BSTDerivedCreator_BGSProcedureFollow::Destroy
 27934,0x140410810,0x140420360,3,BSTDerivedCreator_BGSProcedureFollowTo::Destroy
-27944,0x140410910,0x140420460,3,BGSProcedureFollow::GetParamIsRequired
-27945,0x140410930,0x140420480,3,BGSProcedureFollowTo::GetParamIsRequired
+27944,0x140410910,0x140420460,3,bool BGSProcedureFollow::GetParamIsRequired(std::uint32_t a_index)
+27945,0x140410930,0x140420480,3,bool BGSProcedureFollowTo::GetParamIsRequired(std::uint32_t a_index)
 27948,0x140410990,0x1404204e0,3,BGSProcedureFollow::GetParamName
 27949,0x1404109b0,0x140420500,3,BGSProcedureFollowTo::GetParamName
-27950,0x1404109d0,0x140420520,3,BGSProcedureFollow::GetParamTypeCheck
-27951,0x1404109f0,0x140420540,3,BGSProcedureFollowTo::GetParamTypeCheck
-27952,0x140410a10,0x140420560,3,BGSProcedureFollow::GetParamCheckTypeName
-27953,0x140410a30,0x140420580,3,BGSProcedureFollowTo::GetParamCheckTypeName
-27955,0x140410ac0,0x140420610,3,BGSProcedureFollow::GetProcedureName
-27956,0x140410ad0,0x140420620,3,BGSProcedureFollowTo::GetProcedureName
+27950,0x1404109d0,0x140420520,3,void* BGSProcedureFollow::GetParamTypeCheck(std::uint32_t a_index)
+27951,0x1404109f0,0x140420540,3,void* BGSProcedureFollowTo::GetParamTypeCheck(std::uint32_t a_index)
+27952,0x140410a10,0x140420560,3,void* BGSProcedureFollow::GetParamCheckTypeName(std::uint32_t a_index)
+27953,0x140410a30,0x140420580,3,void* BGSProcedureFollowTo::GetParamCheckTypeName(std::uint32_t a_index)
+27955,0x140410ac0,0x140420610,3,BSFixedString* BGSProcedureFollow::GetProcedureName()
+27956,0x140410ad0,0x140420620,3,BSFixedString* BGSProcedureFollowTo::GetProcedureName()
 27957,0x140410ae0,0x140420630,3,BGSProcedureFollowExecState::GetPoolKey
 27960,0x140410bc0,0x140420710,3,BGSProcedureForceGreet::GetParamCount
 27961,0x140410bd0,0x140420720,3,BGSProcedureForceGreet::CreateExecState
@@ -1176,12 +1176,12 @@
 27967,0x140411020,0x140420b70,3,ProcedureNameEntryCleanup_ForceGreet
 27974,0x140411260,0x140420db0,3,BSTDerivedCreator_BGSProcedureForceGreet::Create
 27975,0x1404112d0,0x140420e20,3,BSTDerivedCreator_BGSProcedureForceGreet::Destroy
-27976,0x1404112f0,0x140420e40,3,BGSProcedureForceGreet::GetParamIsRequired
-27977,0x140411310,0x140420e60,3,BGSProcedureForceGreet::IsForceGreet
+27976,0x1404112f0,0x140420e40,3,bool BGSProcedureForceGreet::GetParamIsRequired(std::uint32_t a_index)
+27977,0x140411310,0x140420e60,3,bool BGSProcedureForceGreet::IsForceGreet()
 27978,0x140411320,0x140420e70,3,BGSProcedureForceGreet::GetParamName
-27979,0x140411340,0x140420e90,3,BGSProcedureForceGreet::GetParamTypeCheck
-27980,0x140411360,0x140420eb0,3,BGSProcedureForceGreet::GetParamCheckTypeName
-27981,0x140411380,0x140420ed0,3,BGSProcedureForceGreet::GetProcedureName
+27979,0x140411340,0x140420e90,3,void* BGSProcedureForceGreet::GetParamTypeCheck(std::uint32_t a_index)
+27980,0x140411360,0x140420eb0,3,void* BGSProcedureForceGreet::GetParamCheckTypeName(std::uint32_t a_index)
+27981,0x140411380,0x140420ed0,3,BSFixedString* BGSProcedureForceGreet::GetProcedureName()
 27982,0x140411390,0x140420ee0,3,BGSProcedureGuard::GetParamCount
 27983,0x1404113a0,0x140420ef0,3,BGSProcedureGuard::InitExecState
 27984,0x1404113c0,0x140420f10,3,BGSProcedureGuard::Process
@@ -1193,11 +1193,11 @@
 27994,0x140411d70,0x1404218c0,3,ProcedureNameEntryCleanup_Guard
 28002,0x140412050,0x140421ba0,3,BSTDerivedCreator_BGSProcedureGuard::Create
 28003,0x1404120c0,0x140421c10,3,BSTDerivedCreator_BGSProcedureGuard::Destroy
-28005,0x1404120f0,0x140421c40,3,BGSProcedureGuard::GetParamIsRequired
+28005,0x1404120f0,0x140421c40,3,bool BGSProcedureGuard::GetParamIsRequired(std::uint32_t a_index)
 28006,0x140412110,0x140421c60,3,BGSProcedureGuard::GetParamName
-28007,0x140412130,0x140421c80,3,BGSProcedureGuard::GetParamTypeCheck
-28008,0x140412150,0x140421ca0,3,BGSProcedureGuard::GetParamCheckTypeName
-28009,0x140412170,0x140421cc0,3,BGSProcedureGuard::GetProcedureName
+28007,0x140412130,0x140421c80,3,void* BGSProcedureGuard::GetParamTypeCheck(std::uint32_t a_index)
+28008,0x140412150,0x140421ca0,3,void* BGSProcedureGuard::GetParamCheckTypeName(std::uint32_t a_index)
+28009,0x140412170,0x140421cc0,3,BSFixedString* BGSProcedureGuard::GetProcedureName()
 28010,0x140412180,0x140421cd0,3,BGSProcedureHoldPosition::GetParamCount
 28011,0x140412190,0x140421ce0,3,BGSProcedureHoldPosition::Process
 28012,0x140412240,0x140421d90,3,RegisterProcedureName_HoldPosition
@@ -1207,11 +1207,11 @@
 28019,0x140412630,0x140422180,3,ProcedureNameEntryCleanup_HoldPosition
 28026,0x140412860,0x1404223b0,3,BSTDerivedCreator_BGSProcedureHoldPosition::Create
 28027,0x1404128d0,0x140422420,3,BSTDerivedCreator_BGSProcedureHoldPosition::Destroy
-28030,0x140412910,0x140422460,3,BGSProcedureHoldPosition::GetParamIsRequired
+28030,0x140412910,0x140422460,3,bool BGSProcedureHoldPosition::GetParamIsRequired(std::uint32_t a_index)
 28031,0x140412930,0x140422480,3,BGSProcedureHoldPosition::GetParamName
-28032,0x140412950,0x1404224a0,3,BGSProcedureHoldPosition::GetParamTypeCheck
-28033,0x140412970,0x1404224c0,3,BGSProcedureHoldPosition::GetParamCheckTypeName
-28034,0x140412990,0x1404224e0,3,BGSProcedureHoldPosition::GetProcedureName
+28032,0x140412950,0x1404224a0,3,void* BGSProcedureHoldPosition::GetParamTypeCheck(std::uint32_t a_index)
+28033,0x140412970,0x1404224c0,3,void* BGSProcedureHoldPosition::GetParamCheckTypeName(std::uint32_t a_index)
+28034,0x140412990,0x1404224e0,3,BSFixedString* BGSProcedureHoldPosition::GetProcedureName()
 28035,0x1404129a0,0x1404224f0,3,BGSProcedureHover::GetParamCount
 28036,0x1404129b0,0x140422500,3,BGSProcedureHover::InitExecState
 28037,0x140412a30,0x140422580,3,BGSProcedureHover::InitActorLocation
@@ -1227,11 +1227,11 @@
 28058,0x140413d60,0x1404238b0,3,BGSProcedureHoverExecState::dtor_deleting
 28059,0x140413de0,0x140423930,3,BSTDerivedCreator_BGSProcedureHover::Create
 28060,0x140413e50,0x1404239a0,3,BSTDerivedCreator_BGSProcedureHover::Destroy
-28061,0x140413e70,0x1404239c0,3,BGSProcedureHover::GetParamIsRequired
+28061,0x140413e70,0x1404239c0,3,bool BGSProcedureHover::GetParamIsRequired(std::uint32_t a_index)
 28062,0x140413e90,0x1404239e0,3,BGSProcedureHover::GetParamName
-28063,0x140413eb0,0x140423a00,3,BGSProcedureHover::GetParamTypeCheck
-28064,0x140413ed0,0x140423a20,3,BGSProcedureHover::GetParamCheckTypeName
-28065,0x140413ef0,0x140423a40,3,BGSProcedureHover::GetProcedureName
+28063,0x140413eb0,0x140423a00,3,void* BGSProcedureHover::GetParamTypeCheck(std::uint32_t a_index)
+28064,0x140413ed0,0x140423a20,3,void* BGSProcedureHover::GetParamCheckTypeName(std::uint32_t a_index)
+28065,0x140413ef0,0x140423a40,3,BSFixedString* BGSProcedureHover::GetProcedureName()
 28066,0x140413f00,0x140423a50,3,BGSProcedureHoverExecState::GetPoolKey
 28067,0x140413f10,0x140423a60,3,BGSProcedureKeepAnEyeOn::GetParamCount
 28068,0x140413f20,0x140423a70,3,BGSProcedureKeepAnEyeOn::Process
@@ -1242,11 +1242,11 @@
 28077,0x1404148a0,0x1404243f0,3,ProcedureNameEntryCleanup_KeepAnEyeOn
 28084,0x140414ad0,0x140424620,3,BSTDerivedCreator_BGSProcedureKeepAnEyeOn::Create
 28085,0x140414b40,0x140424690,3,BSTDerivedCreator_BGSProcedureKeepAnEyeOn::Destroy
-28087,0x140414b70,0x1404246c0,3,BGSProcedureKeepAnEyeOn::GetParamIsRequired
+28087,0x140414b70,0x1404246c0,3,bool BGSProcedureKeepAnEyeOn::GetParamIsRequired(std::uint32_t a_index)
 28088,0x140414b90,0x1404246e0,3,BGSProcedureKeepAnEyeOn::GetParamName
-28089,0x140414bb0,0x140424700,3,BGSProcedureKeepAnEyeOn::GetParamTypeCheck
-28090,0x140414bd0,0x140424720,3,BGSProcedureKeepAnEyeOn::GetParamCheckTypeName
-28091,0x140414bf0,0x140424740,3,BGSProcedureKeepAnEyeOn::GetProcedureName
+28089,0x140414bb0,0x140424700,3,void* BGSProcedureKeepAnEyeOn::GetParamTypeCheck(std::uint32_t a_index)
+28090,0x140414bd0,0x140424720,3,void* BGSProcedureKeepAnEyeOn::GetParamCheckTypeName(std::uint32_t a_index)
+28091,0x140414bf0,0x140424740,3,BSFixedString* BGSProcedureKeepAnEyeOn::GetProcedureName()
 28092,0x140414c00,0x140424750,3,BGSProcedureLock::GetParamCount
 28093,0x140414c10,0x140424760,3,BGSProcedureLock::InitActorLocation
 28094,0x140414ca0,0x1404247f0,3,BGSProcedureLock::InitExecState
@@ -1269,16 +1269,16 @@
 28129,0x140415e80,0x1404259d0,3,BSTDerivedCreator_BGSProcedureUnlock::Create
 28130,0x140415ef0,0x140425a40,3,BSTDerivedCreator_BGSProcedureLock::Destroy
 28131,0x140415f10,0x140425a60,3,BSTDerivedCreator_BGSProcedureUnlock::Destroy
-28134,0x140415f50,0x140425aa0,3,BGSProcedureLock::GetParamIsRequired
-28135,0x140415f70,0x140425ac0,3,BGSProcedureUnlock::GetParamIsRequired
+28134,0x140415f50,0x140425aa0,3,bool BGSProcedureLock::GetParamIsRequired(std::uint32_t a_index)
+28135,0x140415f70,0x140425ac0,3,bool BGSProcedureUnlock::GetParamIsRequired(std::uint32_t a_index)
 28136,0x140415f90,0x140425ae0,3,BGSProcedureLock::GetParamName
 28137,0x140415fb0,0x140425b00,3,BGSProcedureUnlock::GetParamName
-28138,0x140415fd0,0x140425b20,3,BGSProcedureLock::GetParamTypeCheck
-28139,0x140415ff0,0x140425b40,3,BGSProcedureUnlock::GetParamTypeCheck
-28140,0x140416010,0x140425b60,3,BGSProcedureLock::GetParamCheckTypeName
-28141,0x140416030,0x140425b80,3,BGSProcedureUnlock::GetParamCheckTypeName
-28142,0x140416050,0x140425ba0,3,BGSProcedureLock::GetProcedureName
-28143,0x140416060,0x140425bb0,3,BGSProcedureUnlock::GetProcedureName
+28138,0x140415fd0,0x140425b20,3,void* BGSProcedureLock::GetParamTypeCheck(std::uint32_t a_index)
+28139,0x140415ff0,0x140425b40,3,void* BGSProcedureUnlock::GetParamTypeCheck(std::uint32_t a_index)
+28140,0x140416010,0x140425b60,3,void* BGSProcedureLock::GetParamCheckTypeName(std::uint32_t a_index)
+28141,0x140416030,0x140425b80,3,void* BGSProcedureUnlock::GetParamCheckTypeName(std::uint32_t a_index)
+28142,0x140416050,0x140425ba0,3,BSFixedString* BGSProcedureLock::GetProcedureName()
+28143,0x140416060,0x140425bb0,3,BSFixedString* BGSProcedureUnlock::GetProcedureName()
 28144,0x140416070,0x140425bc0,3,BGSProcedureLockUnlockExecState::GetPoolKey
 28145,0x140416080,0x140425bd0,3,BGSProcedureOrbit::GetParamCount
 28146,0x140416090,0x140425be0,3,BGSProcedureOrbit::InitExecState
@@ -1295,11 +1295,11 @@
 28168,0x1404174a0,0x140426ff0,3,BGSProcedureOrbitExecState::dtor_deleting
 28169,0x140417520,0x140427070,3,BSTDerivedCreator_BGSProcedureOrbit::Create
 28170,0x140417590,0x1404270e0,3,BSTDerivedCreator_BGSProcedureOrbit::Destroy
-28171,0x1404175b0,0x140427100,3,BGSProcedureOrbit::GetParamIsRequired
+28171,0x1404175b0,0x140427100,3,bool BGSProcedureOrbit::GetParamIsRequired(std::uint32_t a_index)
 28172,0x1404175d0,0x140427120,3,BGSProcedureOrbit::GetParamName
-28173,0x1404175f0,0x140427140,3,BGSProcedureOrbit::GetParamTypeCheck
-28174,0x140417610,0x140427160,3,BGSProcedureOrbit::GetParamCheckTypeName
-28175,0x140417630,0x140427180,3,BGSProcedureOrbit::GetProcedureName
+28173,0x1404175f0,0x140427140,3,void* BGSProcedureOrbit::GetParamTypeCheck(std::uint32_t a_index)
+28174,0x140417610,0x140427160,3,void* BGSProcedureOrbit::GetParamCheckTypeName(std::uint32_t a_index)
+28175,0x140417630,0x140427180,3,BSFixedString* BGSProcedureOrbit::GetProcedureName()
 28176,0x140417640,0x140427190,3,BGSProcedureOrbitExecState::GetPoolKey
 28177,0x140417650,0x1404271a0,3,BGSProcedurePatrol::GetParamCount
 28178,0x140417660,0x1404271b0,3,BGSProcedurePatrol::InitExecState
@@ -1315,11 +1315,11 @@
 28215,0x14041acf0,0x14042a840,3,BGSProcedurePatrolExecState::dtor_deleting
 28219,0x14041ae70,0x14042a9c0,3,BSTDerivedCreator_BGSProcedurePatrol::Create
 28220,0x14041aee0,0x14042aa30,3,BSTDerivedCreator_BGSProcedurePatrol::Destroy
-28222,0x14041af50,0x14042aaa0,3,BGSProcedurePatrol::GetParamIsRequired
+28222,0x14041af50,0x14042aaa0,3,bool BGSProcedurePatrol::GetParamIsRequired(std::uint32_t a_index)
 28223,0x14041af70,0x14042aac0,3,BGSProcedurePatrol::GetParamName
-28224,0x14041af90,0x14042aae0,3,BGSProcedurePatrol::GetParamTypeCheck
-28225,0x14041afb0,0x14042ab00,3,BGSProcedurePatrol::GetParamCheckTypeName
-28226,0x14041afd0,0x14042ab20,3,BGSProcedurePatrol::GetProcedureName
+28224,0x14041af90,0x14042aae0,3,void* BGSProcedurePatrol::GetParamTypeCheck(std::uint32_t a_index)
+28225,0x14041afb0,0x14042ab00,3,void* BGSProcedurePatrol::GetParamCheckTypeName(std::uint32_t a_index)
+28226,0x14041afd0,0x14042ab20,3,BSFixedString* BGSProcedurePatrol::GetProcedureName()
 28227,0x14041afe0,0x14042ab30,3,BGSProcedurePatrolExecState::GetPoolKey
 28228,0x14041aff0,0x14042ab40,3,BGSProcedurePursue::GetParamCount
 28229,0x14041b000,0x14042ab50,3,BGSProcedurePursue::CreateExecState
@@ -1330,11 +1330,11 @@
 28234,0x14041b4f0,0x14042b040,3,ProcedureNameEntryCleanup_Pursue
 28241,0x14041b710,0x14042b260,3,BSTDerivedCreator_BGSProcedurePursue::Create
 28242,0x14041b780,0x14042b2d0,3,BSTDerivedCreator_BGSProcedurePursue::Destroy
-28243,0x14041b7a0,0x14042b2f0,3,BGSProcedurePursue::GetParamIsRequired
+28243,0x14041b7a0,0x14042b2f0,3,bool BGSProcedurePursue::GetParamIsRequired(std::uint32_t a_index)
 28244,0x14041b7c0,0x14042b310,3,BGSProcedurePursue::GetParamName
-28245,0x14041b7e0,0x14042b330,3,BGSProcedurePursue::GetParamTypeCheck
-28246,0x14041b800,0x14042b350,3,BGSProcedurePursue::GetParamCheckTypeName
-28247,0x14041b820,0x14042b370,3,BGSProcedurePursue::GetProcedureName
+28245,0x14041b7e0,0x14042b330,3,void* BGSProcedurePursue::GetParamTypeCheck(std::uint32_t a_index)
+28246,0x14041b800,0x14042b350,3,void* BGSProcedurePursue::GetParamCheckTypeName(std::uint32_t a_index)
+28247,0x14041b820,0x14042b370,3,BSFixedString* BGSProcedurePursue::GetProcedureName()
 28251,0x14041ba30,0x14042b580,3,BGSProcedureSandbox::GetParamCount
 28252,0x14041ba40,0x14042b590,3,BGSProcedureSandbox::InitExecState
 28253,0x14041bd30,0x14042b880,3,BGSProcedureSandbox::InitActorAnimPose
@@ -1351,11 +1351,11 @@
 28291,0x140421050,0x140430ba0,3,BGSProcedureSandboxExecState::dtor_deleting
 28295,0x140421190,0x140430ce0,3,BSTDerivedCreator_BGSProcedureSandbox::Create
 28296,0x140421200,0x140430d50,3,BSTDerivedCreator_BGSProcedureSandbox::Destroy
-28297,0x140421220,0x140430d70,3,BGSProcedureSandbox::GetParamIsRequired
+28297,0x140421220,0x140430d70,3,bool BGSProcedureSandbox::GetParamIsRequired(std::uint32_t a_index)
 28299,0x140421250,0x140430da0,3,BGSProcedureSandbox::GetParamName
-28300,0x140421270,0x140430dc0,3,BGSProcedureSandbox::GetParamTypeCheck
-28301,0x140421290,0x140430de0,3,BGSProcedureSandbox::GetParamCheckTypeName
-28302,0x1404212b0,0x140430e00,3,BGSProcedureSandbox::GetProcedureName
+28300,0x140421270,0x140430dc0,3,void* BGSProcedureSandbox::GetParamTypeCheck(std::uint32_t a_index)
+28301,0x140421290,0x140430de0,3,void* BGSProcedureSandbox::GetParamCheckTypeName(std::uint32_t a_index)
+28302,0x1404212b0,0x140430e00,3,BSFixedString* BGSProcedureSandbox::GetProcedureName()
 28303,0x1404212c0,0x140430e10,3,BGSProcedureSandboxExecState::GetPoolKey
 28305,0x140421370,0x140430ec0,3,BGSProcedureSay::GetParamCount
 28306,0x140421380,0x140430ed0,3,BGSProcedureSay::Process
@@ -1365,11 +1365,11 @@
 28313,0x140421940,0x140431490,3,ProcedureNameEntryCleanup_Say
 28320,0x140421b70,0x1404316c0,3,BSTDerivedCreator_BGSProcedureSay::Create
 28321,0x140421be0,0x140431730,3,BSTDerivedCreator_BGSProcedureSay::Destroy
-28323,0x140421c10,0x140431760,3,BGSProcedureSay::GetParamIsRequired
+28323,0x140421c10,0x140431760,3,bool BGSProcedureSay::GetParamIsRequired(std::uint32_t a_index)
 28324,0x140421c30,0x140431780,3,BGSProcedureSay::GetParamName
-28325,0x140421c50,0x1404317a0,3,BGSProcedureSay::GetParamTypeCheck
-28326,0x140421c70,0x1404317c0,3,BGSProcedureSay::GetParamCheckTypeName
-28327,0x140421c90,0x1404317e0,3,BGSProcedureSay::GetProcedureName
+28325,0x140421c50,0x1404317a0,3,void* BGSProcedureSay::GetParamTypeCheck(std::uint32_t a_index)
+28326,0x140421c70,0x1404317c0,3,void* BGSProcedureSay::GetParamCheckTypeName(std::uint32_t a_index)
+28327,0x140421c90,0x1404317e0,3,BSFixedString* BGSProcedureSay::GetProcedureName()
 28328,0x140421ca0,0x1404317f0,3,BGSProcedureShout::GetParamCount
 28329,0x140421cb0,0x140431800,3,BGSProcedureShout::InitExecState
 28330,0x140421d70,0x1404318c0,3,BGSProcedureShout::InitActorLocation
@@ -1383,11 +1383,11 @@
 28344,0x1404234d0,0x140433020,3,ProcedureNameEntryCleanup_Shout
 28357,0x140423880,0x1404333d0,3,BSTDerivedCreator_BGSProcedureShout::Create
 28358,0x1404238f0,0x140433440,3,BSTDerivedCreator_BGSProcedureShout::Destroy
-28359,0x140423910,0x140433460,3,BGSProcedureShout::GetParamIsRequired
+28359,0x140423910,0x140433460,3,bool BGSProcedureShout::GetParamIsRequired(std::uint32_t a_index)
 28360,0x140423930,0x140433480,3,BGSProcedureShout::GetParamName
-28361,0x140423950,0x1404334a0,3,BGSProcedureShout::GetParamTypeCheck
-28362,0x140423970,0x1404334c0,3,BGSProcedureShout::GetParamCheckTypeName
-28363,0x140423990,0x1404334e0,3,BGSProcedureShout::GetProcedureName
+28361,0x140423950,0x1404334a0,3,void* BGSProcedureShout::GetParamTypeCheck(std::uint32_t a_index)
+28362,0x140423970,0x1404334c0,3,void* BGSProcedureShout::GetParamCheckTypeName(std::uint32_t a_index)
+28363,0x140423990,0x1404334e0,3,BSFixedString* BGSProcedureShout::GetProcedureName()
 28364,0x1404239a0,0x1404334f0,3,BGSProcedureShoutExecState::GetPoolKey
 28368,0x140423ce0,0x140433830,3,BGSProcedureSit::GetParamCount
 28370,0x140423d00,0x140433850,3,BGSProcedureSit::CreateExecState
@@ -1414,16 +1414,16 @@
 28417,0x140426140,0x140435c90,3,BSTDerivedCreator_BGSProcedureSleep::Create
 28418,0x1404261b0,0x140435d00,3,BSTDerivedCreator_BGSProcedureSit::Destroy
 28419,0x1404261d0,0x140435d20,3,BSTDerivedCreator_BGSProcedureSleep::Destroy
-28420,0x1404261f0,0x140435d40,3,BGSProcedureSit::GetParamIsRequired
-28421,0x140426210,0x140435d60,3,BGSProcedureSleep::GetParamIsRequired
+28420,0x1404261f0,0x140435d40,3,bool BGSProcedureSit::GetParamIsRequired(std::uint32_t a_index)
+28421,0x140426210,0x140435d60,3,bool BGSProcedureSleep::GetParamIsRequired(std::uint32_t a_index)
 28422,0x140426230,0x140435d80,3,BGSProcedureSit::GetParamName
 28423,0x140426250,0x140435da0,3,BGSProcedureSleep::GetParamName
-28424,0x140426270,0x140435dc0,3,BGSProcedureSit::GetParamTypeCheck
-28425,0x140426290,0x140435de0,3,BGSProcedureSleep::GetParamTypeCheck
-28426,0x1404262b0,0x140435e00,3,BGSProcedureSit::GetParamCheckTypeName
-28427,0x1404262d0,0x140435e20,3,BGSProcedureSleep::GetParamCheckTypeName
-28428,0x1404262f0,0x140435e40,3,BGSProcedureSit::GetProcedureName
-28429,0x140426300,0x140435e50,3,BGSProcedureSleep::GetProcedureName
+28424,0x140426270,0x140435dc0,3,void* BGSProcedureSit::GetParamTypeCheck(std::uint32_t a_index)
+28425,0x140426290,0x140435de0,3,void* BGSProcedureSleep::GetParamTypeCheck(std::uint32_t a_index)
+28426,0x1404262b0,0x140435e00,3,void* BGSProcedureSit::GetParamCheckTypeName(std::uint32_t a_index)
+28427,0x1404262d0,0x140435e20,3,void* BGSProcedureSleep::GetParamCheckTypeName(std::uint32_t a_index)
+28428,0x1404262f0,0x140435e40,3,BSFixedString* BGSProcedureSit::GetProcedureName()
+28429,0x140426300,0x140435e50,3,BSFixedString* BGSProcedureSleep::GetProcedureName()
 28430,0x140426310,0x140435e60,3,BGSProcedureSitSleepExecState::GetPoolKey
 28431,0x140426320,0x140435e70,3,BGSProcedureTravel::GetParamCount
 28432,0x140426330,0x140435e80,3,BGSProcedureTravel::Process
@@ -1441,11 +1441,11 @@
 28458,0x1404283b0,0x140437f00,3,BGSProcedureTravelExecState::dtor_deleting
 28459,0x140428430,0x140437f80,3,BSTDerivedCreator_BGSProcedureTravel::Create
 28460,0x1404284a0,0x140437ff0,3,BSTDerivedCreator_BGSProcedureTravel::Destroy
-28461,0x1404284c0,0x140438010,3,BGSProcedureTravel::GetParamIsRequired
+28461,0x1404284c0,0x140438010,3,bool BGSProcedureTravel::GetParamIsRequired(std::uint32_t a_index)
 28462,0x1404284e0,0x140438030,3,BGSProcedureTravel::GetParamName
-28463,0x140428500,0x140438050,3,BGSProcedureTravel::GetParamTypeCheck
-28464,0x140428520,0x140438070,3,BGSProcedureTravel::GetParamCheckTypeName
-28465,0x140428540,0x140438090,3,BGSProcedureTravel::GetProcedureName
+28463,0x140428500,0x140438050,3,void* BGSProcedureTravel::GetParamTypeCheck(std::uint32_t a_index)
+28464,0x140428520,0x140438070,3,void* BGSProcedureTravel::GetParamCheckTypeName(std::uint32_t a_index)
+28465,0x140428540,0x140438090,3,BSFixedString* BGSProcedureTravel::GetProcedureName()
 28466,0x140428550,0x1404380a0,3,BGSProcedureTravelExecState::GetPoolKey
 28468,0x140428670,0x1404381c0,3,BGSProcedureTreeConditionalItem::Copy
 28469,0x140428690,0x1404381e0,3,BGSProcedureTreeConditionalItem::InitItem
@@ -1453,12 +1453,12 @@
 28475,0x1404287f0,0x140438340,3,BGSProcedureTreeProcedure::Copy
 28476,0x140428890,0x1404383e0,3,BGSProcedureTreeProcedure::Load
 28477,0x1404289b0,0x140438500,3,BGSProcedureTreeProcedure::InitItem
-28478,0x1404289f0,0x140438540,4,"void BGSProcedureTreeProcedure::Execute(BGSProcedureTreeProcedure* a_this, IProcedureTreeItem::ExecStateContext* a_execState)"
-28479,0x140428a10,0x140438560,4,"bool BGSProcedureTreeProcedure::CheckPackageData(BGSProcedureTreeProcedure* a_this, BGSProcessContext* a_context)"
-28480,0x140428a30,0x140438580,4,"bool BGSProcedureTreeProcedure::MatchesExecState(BGSProcedureTreeProcedure* a_this, IProcedureTreeExecState* a_execState)"
-28481,0x140428a50,0x1404385a0,4,"void BGSProcedureTreeProcedure::ResolveParameterData(BGSProcedureTreeProcedure* a_this, BGSPackageDataList* a_dataList, bool a_resolve)"
-28482,0x140428a70,0x1404385c0,4,void* BGSProcedureTreeProcedure::CreateExecState(BGSProcedureTreeProcedure* a_this)
-28484,0x140428ac0,0x140438610,3,BGSProcedureTreeProcedure::Process
+28478,0x1404289f0,0x140438540,4,void BGSProcedureTreeProcedure::Execute(IProcedureTreeItem::ExecStateContext* a_execState)
+28479,0x140428a10,0x140438560,4,bool BGSProcedureTreeProcedure::CheckPackageData(IProcedureTreeItem::ExecStateContext* a_execState)
+28480,0x140428a30,0x140438580,4,bool BGSProcedureTreeProcedure::MatchesExecState(IProcedureTreeExecState* a_execState)
+28481,0x140428a50,0x1404385a0,4,"void BGSProcedureTreeProcedure::ResolveParameterData(BGSPackageDataList* a_dataList, bool a_resolve)"
+28482,0x140428a70,0x1404385c0,4,void* BGSProcedureTreeProcedure::CreateExecState()
+28484,0x140428ac0,0x140438610,3,void BGSProcedureTreeProcedure::Process(IProcedureTreeVisitor* a_visitor)
 28491,0x140428cd0,0x140438820,3,BGSProcedureTreeBranch::Copy
 28492,0x140428f40,0x140438a90,3,BGSProcedureTreeBranch::Load
 28493,0x140429090,0x140438be0,3,BGSProcedureTreeBranch::InitItem
@@ -1485,7 +1485,7 @@
 28524,0x14042aa10,0x14043a560,3,BGSProcedureTreeRandomExecState::LoadGame
 28525,0x14042aab0,0x14043a600,3,BGSProcedureTreeRandomExecState::InitLoadGame
 28541,0x14042b370,0x14043aec0,3,ProcedureNameMap_Find
-28544,0x14042b4d0,0x14043b020,4,BSFixedString* BGSProcedureTreeProcedure::GetPoolKey(BGSProcedureTreeProcedure* a_this)
+28544,0x14042b4d0,0x14043b020,4,BSFixedString* BGSProcedureTreeProcedure::GetPoolKey()
 28550,0x14042b6c0,0x14043b210,3,BGSProcedureUseIdleMarker::GetParamCount
 28551,0x14042b6d0,0x14043b220,3,BGSProcedureUseIdleMarker::InitExecState
 28552,0x14042b7a0,0x14043b2f0,3,BGSProcedureUseIdleMarker::InitActorLocation
@@ -1494,11 +1494,11 @@
 28569,0x14042caf0,0x14043c640,3,ProcedureNameEntryCleanup_UseIdleMarker
 28580,0x14042ce60,0x14043c9b0,3,BSTDerivedCreator_BGSProcedureUseIdleMarker::Create
 28581,0x14042ced0,0x14043ca20,3,BSTDerivedCreator_BGSProcedureUseIdleMarker::Destroy
-28582,0x14042cef0,0x14043ca40,3,BGSProcedureUseIdleMarker::GetParamIsRequired
+28582,0x14042cef0,0x14043ca40,3,bool BGSProcedureUseIdleMarker::GetParamIsRequired(std::uint32_t a_index)
 28583,0x14042cf10,0x14043ca60,3,BGSProcedureUseIdleMarker::GetParamName
-28584,0x14042cf30,0x14043ca80,3,BGSProcedureUseIdleMarker::GetParamTypeCheck
-28585,0x14042cf50,0x14043caa0,3,BGSProcedureUseIdleMarker::GetParamCheckTypeName
-28586,0x14042cf70,0x14043cac0,3,BGSProcedureUseIdleMarker::GetProcedureName
+28584,0x14042cf30,0x14043ca80,3,void* BGSProcedureUseIdleMarker::GetParamTypeCheck(std::uint32_t a_index)
+28585,0x14042cf50,0x14043caa0,3,void* BGSProcedureUseIdleMarker::GetParamCheckTypeName(std::uint32_t a_index)
+28586,0x14042cf70,0x14043cac0,3,BSFixedString* BGSProcedureUseIdleMarker::GetProcedureName()
 28588,0x14042cf90,0x14043cae0,3,BGSProcedureUseMagic::GetParamCount
 28589,0x14042cfa0,0x14043caf0,3,BGSProcedureUseMagic::InitExecState
 28590,0x14042d0d0,0x14043cc20,3,BGSProcedureUseMagic::InitActorLocation
@@ -1512,11 +1512,11 @@
 28603,0x14042eee0,0x14043ea30,3,ProcedureNameEntryCleanup_UseMagic
 28614,0x14042f200,0x14043ed50,3,BSTDerivedCreator_BGSProcedureUseMagic::Create
 28615,0x14042f270,0x14043edc0,3,BSTDerivedCreator_BGSProcedureUseMagic::Destroy
-28618,0x14042f300,0x14043ee50,3,BGSProcedureUseMagic::GetParamIsRequired
+28618,0x14042f300,0x14043ee50,3,bool BGSProcedureUseMagic::GetParamIsRequired(std::uint32_t a_index)
 28619,0x14042f320,0x14043ee70,3,BGSProcedureUseMagic::GetParamName
-28620,0x14042f340,0x14043ee90,3,BGSProcedureUseMagic::GetParamTypeCheck
-28621,0x14042f360,0x14043eeb0,3,BGSProcedureUseMagic::GetParamCheckTypeName
-28622,0x14042f380,0x14043eed0,3,BGSProcedureUseMagic::GetProcedureName
+28620,0x14042f340,0x14043ee90,3,void* BGSProcedureUseMagic::GetParamTypeCheck(std::uint32_t a_index)
+28621,0x14042f360,0x14043eeb0,3,void* BGSProcedureUseMagic::GetParamCheckTypeName(std::uint32_t a_index)
+28622,0x14042f380,0x14043eed0,3,BSFixedString* BGSProcedureUseMagic::GetProcedureName()
 28623,0x14042f390,0x14043eee0,3,BGSProcedureUseMagicExecState::GetPoolKey
 28624,0x14042f3a0,0x14043eef0,3,BGSProcedureUseWeapon::GetParamCount
 28625,0x14042f3b0,0x14043ef00,3,BGSProcedureUseWeapon::InitExecState
@@ -1532,11 +1532,11 @@
 28648,0x140432040,0x140441b90,3,BGSProcedureUseWeaponExecState::dtor_deleting
 28650,0x1404320e0,0x140441c30,3,BSTDerivedCreator_BGSProcedureUseWeapon::Create
 28651,0x140432150,0x140441ca0,3,BSTDerivedCreator_BGSProcedureUseWeapon::Destroy
-28652,0x140432170,0x140441cc0,3,BGSProcedureUseWeapon::GetParamIsRequired
+28652,0x140432170,0x140441cc0,3,bool BGSProcedureUseWeapon::GetParamIsRequired(std::uint32_t a_index)
 28653,0x140432190,0x140441ce0,3,BGSProcedureUseWeapon::GetParamName
-28654,0x1404321b0,0x140441d00,3,BGSProcedureUseWeapon::GetParamTypeCheck
-28655,0x1404321d0,0x140441d20,3,BGSProcedureUseWeapon::GetParamCheckTypeName
-28656,0x1404321f0,0x140441d40,3,BGSProcedureUseWeapon::GetProcedureName
+28654,0x1404321b0,0x140441d00,3,void* BGSProcedureUseWeapon::GetParamTypeCheck(std::uint32_t a_index)
+28655,0x1404321d0,0x140441d20,3,void* BGSProcedureUseWeapon::GetParamCheckTypeName(std::uint32_t a_index)
+28656,0x1404321f0,0x140441d40,3,BSFixedString* BGSProcedureUseWeapon::GetProcedureName()
 28657,0x140432200,0x140441d50,3,BGSProcedureUseWeaponExecState::GetPoolKey
 28660,0x140432300,0x140441e50,3,BGSProcedureWait::GetParamCount
 28661,0x140432310,0x140441e60,3,BGSProcedureWait::Process
@@ -1546,11 +1546,11 @@
 28668,0x140432630,0x140442180,3,ProcedureNameEntryCleanup_Wait
 28675,0x140432860,0x1404423b0,3,BSTDerivedCreator_BGSProcedureWait::Create
 28676,0x1404328d0,0x140442420,3,BSTDerivedCreator_BGSProcedureWait::Destroy
-28678,0x140432900,0x140442450,3,BGSProcedureWait::GetParamIsRequired
+28678,0x140432900,0x140442450,3,bool BGSProcedureWait::GetParamIsRequired(std::uint32_t a_index)
 28679,0x140432920,0x140442470,3,BGSProcedureWait::GetParamName
-28680,0x140432940,0x140442490,3,BGSProcedureWait::GetParamTypeCheck
-28681,0x140432960,0x1404424b0,3,BGSProcedureWait::GetParamCheckTypeName
-28682,0x140432980,0x1404424d0,3,BGSProcedureWait::GetProcedureName
+28680,0x140432940,0x140442490,3,void* BGSProcedureWait::GetParamTypeCheck(std::uint32_t a_index)
+28681,0x140432960,0x1404424b0,3,void* BGSProcedureWait::GetParamCheckTypeName(std::uint32_t a_index)
+28682,0x140432980,0x1404424d0,3,BSFixedString* BGSProcedureWait::GetProcedureName()
 28683,0x140432990,0x1404424e0,3,BGSProcedureWander::GetParamCount
 28684,0x1404329a0,0x1404424f0,3,BGSProcedureWander::Process
 28685,0x140432a80,0x1404425d0,3,BGSProcedureWander::InitActorLocation
@@ -1565,13 +1565,13 @@
 28707,0x140434100,0x140443c50,3,BGSProcedureWanderExecState::dtor_deleting
 28708,0x140434180,0x140443cd0,3,BSTDerivedCreator_BGSProcedureWander::Create
 28709,0x1404341f0,0x140443d40,3,BSTDerivedCreator_BGSProcedureWander::Destroy
-28710,0x140434210,0x140443d60,3,BGSProcedureWander::GetParamIsRequired
+28710,0x140434210,0x140443d60,3,bool BGSProcedureWander::GetParamIsRequired(std::uint32_t a_index)
 28711,0x140434230,0x140443d80,3,BGSProcedureWander::GetParamName
-28712,0x140434250,0x140443da0,3,BGSProcedureWander::GetParamTypeCheck
-28713,0x140434270,0x140443dc0,3,BGSProcedureWander::GetParamCheckTypeName
-28714,0x140434290,0x140443de0,3,BGSProcedureWander::GetProcedureName
+28712,0x140434250,0x140443da0,3,void* BGSProcedureWander::GetParamTypeCheck(std::uint32_t a_index)
+28713,0x140434270,0x140443dc0,3,void* BGSProcedureWander::GetParamCheckTypeName(std::uint32_t a_index)
+28714,0x140434290,0x140443de0,3,BSFixedString* BGSProcedureWander::GetProcedureName()
 28715,0x1404342a0,0x140443df0,3,BGSProcedureWanderExecState::GetPoolKey
-28717,0x1404342f0,0x140443e40,4,"void BGSVisitProceduresProcess::VisitProcedure(BGSVisitProceduresProcess* a_this, BGSProcedureBase* a_procedure, IProcedureTreeItem::ExecStateContext* a_execState)"
+28717,0x1404342f0,0x140443e40,4,"void BGSVisitProceduresProcess::VisitProcedure(IProcedure* a_procedure, IProcedureTreeItem::ExecStateContext* a_execState)"
 28726,0x140434590,0x1404440e0,3,BGSProcessContext::MarkComplete
 28727,0x1404345b0,0x140444100,3,BGSProcessContext::SetComplete
 28732,0x1404348c0,0x140444410,4,TESPackage* TESPackage::CreatePackage(PACKAGE_PROCEDURE_TYPE a_type)
@@ -1582,11 +1582,11 @@
 28868,0x14043cc70,0x14044c7c0,3,CreatePursueProcedureTree_ThreeParams
 28870,0x14043cf80,0x14044cad0,3,CreateWaitTravelProcedureTree
 28872,0x14043d460,0x14044cfb0,3,TESCustomPackageData::CreateFollowToProcedureTree
-28881,0x14043dd80,0x14044d8d0,3,CustomUtils::HasForceGreetVisitor::ShouldStop
-28882,0x14043dd90,0x14044d8e0,3,IProcedureTreeVisitor::ShouldStop
-28883,0x14043dda0,0x14044d8f0,3,CustomUtils::HasForceGreetVisitor::VisitProcedure
-28884,0x14043ddc0,0x14044d910,3,IProcedureTreeVisitor::VisitProcedure
-28885,0x14043ddd0,0x14044d920,3,IProcedureTreeVisitor::VisitItem
+28881,0x14043dd80,0x14044d8d0,3,bool CustomUtils::HasForceGreetVisitor::ShouldStop()
+28882,0x14043dd90,0x14044d8e0,3,bool IProcedureTreeVisitor::ShouldStop()
+28883,0x14043dda0,0x14044d8f0,3,void CustomUtils::HasForceGreetVisitor::VisitProcedure(IProcedure* a_procedure)
+28884,0x14043ddc0,0x14044d910,3,void IProcedureTreeVisitor::VisitProcedure(IProcedure* a_procedure)
+28885,0x14043ddd0,0x14044d920,3,void IProcedureTreeVisitor::VisitItem(IProcedureTreeItem* a_item)
 28994,0x140441130,0x140450c80,4,PackageLocation* PackageLocation::PackageLocation()
 28998,0x140441250,0x140450da0,4,void PackageLocation::SetLocationType(std::int32_t a_type)
 29007,0x140441540,0x140451090,4,"void PackageLocation::Assign(const PackageLocation* a_other, bool a_allowNone)"
