@@ -3074,7 +3074,7 @@
 59405,0x140a4dfa0,0x140a88950,4,hkbBehaviorGraph::doUpdateActiveNodes
 59603,0x140a58c00,0x140A93600,4,"RE::hkpBoxShape* hkpBoxShape::createBoxShape(RE::hkpBoxShape*, RE::hkVector4&, float)"
 59653,0x140a5be20,0x140a96820,4,"void hkpClosestRayHitCollector::AddRayHit(const hkpCdBody& a_body, const hkpShapeRayCastCollectorOutput& a_hitInfo)"
-59887,0x140a60fa0,0x140a9b9a0,3,hkpShapeCollectionFilter::NumShapeKeyHitsLimitBreached
+59887,0x140a60fa0,0x140a9b9a0,3,"std::int32_t hkpShapeCollectionFilter::NumShapeKeyHitsLimitBreached(const hkpCollisionInput& a_input, const hkpCdBody& a_bodyA, const hkpCdBody& a_bodyB, const hkpBvTreeShape* a_shapeB, hkAabb& a_AABB, hkpShapeKey* a_shapeKeysInOut, std::int32_t a_shapeKeysCapacity)"
 59971,0x140a640c0,0x140A9EAC0,4,"RE::hkpCylinderShape* hkpCylinderShape::createCylinderShape(RE::hkpCylinderShape*, RE::hkVector4&, RE::hkVector4&, float, int)"
 60094,0x140a6c5e0,0x140aa6fe0,4,void hkpEntity::AddContactListener(hkpContactListener* a_listener)
 60095,0x140a6c680,0x140aa7080,4,void hkpEntity::RemoveContactListener(hkpContactListener* a_listener)
@@ -3599,12 +3599,12 @@
 76426,0x140dbef90,0x140e13f10,2,float bhkCharRigidBodyController::GetSupportMass()
 76456,0x140dc1380,0x140e16300,4,bool bhkCharacterController::IsHurtfulBody(hkpRigidBody* a_body)
 76460,0x140dc16c0,0x140e16650,4,"void bhkCharacterController::ProcessHurtfulBody(hkpRigidBody* a_body, const hkContactPoint* a_contactPoint)"
-76676,0x140dd6780,0x140e2b710,3,hkpCollidableCollidableFilter::IsCollisionEnabled
-76677,0x140dd67b0,0x140e2b740,3,hkpShapeCollectionFilter::IsCollisionEnabled1
-76678,0x140dd68a0,0x140e2b830,3,hkpRayShapeCollectionFilter::IsCollisionEnabled
-76679,0x140dd6900,0x140e2b890,3,hkpRayCollidableFilter::IsCollisionEnabled
-76680,0x140dd6930,0x140e2b8c0,3,hkpShapeCollectionFilter::IsCollisionEnabled2
-76681,0x140dd6a80,0x140e2ba10,3,bhkCollisionFilter::CheckCollisionFilterInfo
+76676,0x140dd6780,0x140e2b710,3,"hkBool hkpCollidableCollidableFilter::IsCollisionEnabled(const hkpCollidable& a_collidableA, const hkpCollidable& a_collidableB)"
+76677,0x140dd67b0,0x140e2b740,3,"hkBool hkpShapeCollectionFilter::IsCollisionEnabled1(const hkpCollisionInput& a_input, const hkpCdBody& a_bodyA, const hkpCdBody& a_bodyB, const hkpShapeContainer& a_shapeB, hkpShapeKey a_key)"
+76678,0x140dd68a0,0x140e2b830,3,"hkBool hkpRayShapeCollectionFilter::IsCollisionEnabled(const hkpShapeRayCastInput& a_input, const hkpShape& a_shape, const hkpShapeContainer& a_container, hkpShapeKey a_key)"
+76679,0x140dd6900,0x140e2b890,3,"hkBool hkpRayCollidableFilter::IsCollisionEnabled(const hkpWorldRayCastInput& a_input, const hkpCollidable& a_collidable)"
+76680,0x140dd6930,0x140e2b8c0,3,"hkBool hkpShapeCollectionFilter::IsCollisionEnabled2(const hkpCollisionInput& a_input, const hkpCdBody& a_bodyA, const hkpCdBody& a_bodyB, const hkpShapeContainer& a_shapeA, const hkpShapeContainer& a_shapeB, hkpShapeKey a_keyA, hkpShapeKey a_keyB)"
+76681,0x140dd6a80,0x140e2ba10,3,"bool bhkCollisionFilter::CheckCollisionFilterInfo(std::uint32_t a_filterInfoA, std::uint32_t a_filterInfoB)"
 76683,0x140dd6d10,0x140e2bce0,4,"void bhkCollisionFilter::SetLayerPairCollisionEnabled(COL_LAYER a_layerA, COL_LAYER a_layerB, bool a_enabled)"
 76684,0x140dd6d90,0x140e2bd60,4,"void bhkCollisionFilter::SetLayerBitfield(COL_LAYER a_layer, std::uint64_t a_mask)"
 76693,0x140dd94e0,0x140e2e4b0,4,"void hkpAllRayHitTempCollector::AddRayHit(const hkpCdBody& a_body, const hkpShapeRayCastCollectorOutput& a_hitInfo)"
