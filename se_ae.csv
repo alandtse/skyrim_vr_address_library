@@ -7536,6 +7536,7 @@ sseid,aeid,confidence,name
 56476,56833,3,DialogueMovementEnabler::isInMenuMode
 58602,59252,3,
 58604,59254,3,
+59887,60624,3,
 60097,60850,3,void hkpEntity::Deactivate()
 60100,60853,3,void hkpEntity::IsActive(bool* a_out)
 60502,61314,3,RE::hkpWorld::AddPhantom
@@ -7644,6 +7645,12 @@ sseid,aeid,confidence,name
 76171,77999,3,RE::NiAVObject::UpdateRigidBodySettings
 76247,78077,3,bool bhkRigidBody::SetMotionType(std::uint32_t a_motionType)
 76271,78103,3,RE::NiAVObject::SetRigidConstraints
+76676,78548,3,
+76677,78549,3,
+76678,78550,3,
+76679,78551,3,
+76680,78552,3,
+76681,78553,3,
 80087,82411,3,RE::BSScaleformManager::FileExists
 80176,82196,3,GRefCountNTSImpl::GetWeakProxy
 80200,82223,3,GFxMovieRoot::CreateArray
