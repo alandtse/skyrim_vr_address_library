@@ -1,3 +1,17 @@
+# [0.306.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.305.0...v0.306.0) (2026-11-19)
+
+
+### Bug Fixes
+
+* correct GetCombatRange param name ([#356](https://github.com/alandtse/skyrim_vr_address_library/issues/356)) ([1b38453](https://github.com/alandtse/skyrim_vr_address_library/commit/1b38453a380420f19b0719446d91455516f60c87))
+
+
+### Features
+
+* add focus shadow actor ids ([#359](https://github.com/alandtse/skyrim_vr_address_library/issues/359)) ([302def7](https://github.com/alandtse/skyrim_vr_address_library/commit/302def7bbaf2904f76cc1a1823aa0d9e7083b954))
+* add Havok collision filter virtual ids ([#358](https://github.com/alandtse/skyrim_vr_address_library/issues/358)) ([037e8c2](https://github.com/alandtse/skyrim_vr_address_library/commit/037e8c2125e0df8e54d11ca749c049c6227a3bd6))
+* name BGSProcedure accessors and tree slots ([#357](https://github.com/alandtse/skyrim_vr_address_library/issues/357)) ([89c38a8](https://github.com/alandtse/skyrim_vr_address_library/commit/89c38a826c99e2188dcf5529cec12d8925ede198))
+
 # [0.305.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.304.0...v0.305.0) (2026-11-17)
 
 
