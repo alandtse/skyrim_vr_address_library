@@ -1995,6 +1995,7 @@
 35565,0x1405b2ff0,0x1405bab10,3,Main::OnIdle_1405B2FF0
 35567,0x1405b3830,0x1405bb440,4,FUN_1405b3830
 35571,0x1405b3c00,0x1405bb810,3,void Main::UpdateCullingFrustum()
+35583,0x1405b4500,0x1405bc140,3,void EnrollFocusShadowActors()
 35589,0x1405b5280,0x1405bcef0,3,void Main::FUN_1405b5280 (Main * a_this)
 35593,0x1405b5490,0x1405bd0f0,2,void Main::ReloadFormData()
 35596,0x1405b5bd0,0x1405bd860,3,void Main::PostReloadInit()
@@ -2004,6 +2005,8 @@
 35620,0x1405b6dc0,0x1405bee40,3,void Main::SetupPlayerBaseForm()
 35632,0x1405b8620,0x1405c0630,3,void InitTESThread::WaitForInitialization()
 35642,0x1405b8f00,0x1405c0f70,3,SettingsOfSkyrim::
+35754,0x1405bc350,0x1405c4770,3,void BSFadeNode::RegisterFocusShadowActor()
+35771,0x1405bc830,0x1405c4c10,3,void ClearFocusShadowActors()
 35825,0x1405beb00,0x1405c6f70,3,void StartVMInitThread()
 35869,0x1405c0090,0x1405c85b0,3,void SceneGraph::SetNearDistance(float* a_distance)
 35871,0x1405c00c0,0x1405c85e0,3,void SceneGraph::SetFarDistance(float a_distance)
@@ -11803,6 +11806,7 @@
 513510,0x141e0f390,0x141ed5210,4,bIBLFEnable:Display
 513748,0x141e10538,0x141ed62f0,4,g_shadowLightIndexMask
 513755,0x141e10578,0x141ed6338,4,fInteriorShadowDistance:Display
+513758,0x141e105a0,0x141ed6360,3,Setting gIniPref_iNumFocusShadow_Display
 513786,0x141e10750,0x141ed6650,4,Skyrim-Upscaler::GetVerticalFOVRad
 513793,0x141e10978,0x141ed6530,4,fShadowDistance:Display
 513805,0x141e10a08,0x141ed65c0,4,fSplitOverlap:Display
@@ -12597,6 +12601,8 @@
 527668,0x1431d0e70,0x143422fe4,4,f_lightFadeStart
 527669,0x1431d0e74,0x143422fe8,4,f_lightFadeEnd
 527694,0x1431d0f80,0x143423298,4,gFlowMapSourceTex
+527699,0x1431d0f9c,0x1434232b4,3,std::int32_t g_focusShadowRuntime_1
+527700,0x1431d0fa0,0x1434232b8,3,std::int32_t g_focusShadowRuntime_2
 527703,0x1431d0fb8,0x1434232d0,4,static int FocusShadowActors.size
 527719,0x1431d1020,0x143423340,4,RE::BSVolumetricLightingRenderData_red
 527731,0x1431d11a0,0x1434234c0,4,TESImagespaceManager* GetSingleton()
