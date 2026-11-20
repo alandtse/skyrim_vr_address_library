@@ -2825,8 +2825,10 @@
 50228,0x140860750,0x14088bae0,4,ItemList_FilterInventoryItems2
 50257,0x140862160,0x14088d4e0,3,BSTEventSource<ChestsLooted::Event>* ChestsLooted::GetEventSource()
 50258,0x140862250,0x14088d5d0,3,RE::ItemsPickpocketed::GetEventSource
+50273,0x140862c00,0x14088dfe0,3,void CraftingMenu::~CraftingMenu()
 50297,0x140863f90,0x14088F4F0,3,DescriptionFramework::
 50298,0x1408640d0,0x14088F630,3,DescriptionFramework::
+50388,0x140869350,0x1408948f0,3,CraftingMenu* CraftingMenu::dtor_deleting(std::uint32_t a_flags)
 50440,0x14086b200,0x1408967a0,3,YesImSure::EnchantmentLearned
 50447,0x14086b810,0x140896db0,3,CraftingMenu::QuitMenu
 50449,0x14086b980,0x140896f10,4,papyrus_extender::event::alchemy_craft
@@ -3756,7 +3758,9 @@
 80087,0x140ec4420,0x140f20ef0,3,bool BSScaleformManager::FileExists(const char* a_fileName)
 80176,0x140ec7930,0x140f24480,4,void * GRefCountNTSImpl::GetWeakProxy (GRefCountNTSImpl * a_this)
 80178,0x140ec79c0,0x140f24510,4,GRefCountNTSImpl::Release
+80196,0x140ec8210,0x140f24d60,4,void GASRefCountCollector::AddRoot(GRefCountBaseGC<323>* a_obj)
 80197,0x140ec83a0,0x140f24ef0,3,RE::GFxValue::ObjectInterface::AttachMovie
+80199,0x140ec8750,0x140f252a0,4,bool GASRefCountCollector::Collect(std::uint32_t* a_outCounts)
 80200,0x140ec8a60,0x140f255b0,4,"void GFxMovieRoot::CreateArray (GFxMovieRoot * a_this, GFxValue * a_value)"
 80201,0x140ec8b10,0x140f25660,4,"bool GFxValue::ObjectInterface::CreateEmptyMovieClip (void * a_this, void * a_data, GFxValue * a_movieClip, char * a_instanceName, int32_t a_depth)"
 80202,0x140ec8d30,0x140f25880,4,"void GFxMovieRoot::CreateFunction (GFxMovieRoot * a_this, GFxValue * a_value, GFxFunctionHandler * a_fc, void * a_userData)"
@@ -3778,6 +3782,7 @@
 80244,0x140ecb080,0x140f27bd0,3,RE::GFxValue::ObjectInterface::ObjectAddRef
 80245,0x140ecb0e0,0x140f27c30,3,RE::GFxValue::ObjectInterface::ObjectRelease
 80248,0x140ecb300,0x140f27e50,3,RE::GFxValue::ObjectInterface::PushBack
+80251,0x140ecb4e0,0x140f28030,4,void GRefCountBaseGC<323>::ReleaseFunc()
 80252,0x140ecb6c0,0x140f28210,3,RE::GFxValue::ObjectInterface::RemoveElements
 80261,0x140ecbd20,0x140f28870,3,RE::GFxValue::ObjectInterface::SetArraySize
 80262,0x140ecbd50,0x140f288a0,4,"bool GFxValue::ObjectInterface::SetCxform(void* a_data, const GRenderer::Cxform& a_cx)"

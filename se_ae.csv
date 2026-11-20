@@ -7661,6 +7661,8 @@ sseid,aeid,confidence,name
 76681,78553,3,
 80087,82411,3,RE::BSScaleformManager::FileExists
 80176,82196,3,GRefCountNTSImpl::GetWeakProxy
+80196,82216,3,GASRefCountCollector::AddRoot
+80199,82221,3,GASRefCountCollector::Collect
 80200,82223,3,GFxMovieRoot::CreateArray
 80202,82225,3,GFxMovieRoot::CreateFunction
 80204,82227,3,GFxMovieRoot::CreateObject
@@ -7668,6 +7670,7 @@ sseid,aeid,confidence,name
 80206,82229,3,GFxMovieRoot::CreateStringW
 80225,82248,3,GFxValue::ObjectInterface::GetText
 80229,82252,3,GFxValue::ObjectInterface::GotoAndPlay
+80251,82278,3,GRefCountBaseGC<323>::ReleaseFunc
 80274,82297,3,GFxValue::ToString
 80275,82298,3,GFxValue::ObjectInterface::ObjectToString
 80278,82301,3,GFxValue::ObjectInterface::RemoveElements
