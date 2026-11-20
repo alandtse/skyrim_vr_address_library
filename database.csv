@@ -3756,7 +3756,7 @@
 80178,0x140ec79c0,0x140f24510,4,GRefCountNTSImpl::Release
 80196,0x140ec8210,0x140f24d60,4,void GASRefCountCollector::AddRoot(GRefCountBaseGC<323>* a_obj)
 80197,0x140ec83a0,0x140f24ef0,3,RE::GFxValue::ObjectInterface::AttachMovie
-80199,0x140ec8750,0x140f252a0,4,void GASRefCountCollector::Collect(std::uint32_t* a_outCounts)
+80199,0x140ec8750,0x140f252a0,4,bool GASRefCountCollector::Collect(std::uint32_t* a_outCounts)
 80200,0x140ec8a60,0x140f255b0,4,"void GFxMovieRoot::CreateArray (GFxMovieRoot * a_this, GFxValue * a_value)"
 80201,0x140ec8b10,0x140f25660,4,"bool GFxValue::ObjectInterface::CreateEmptyMovieClip (void * a_this, void * a_data, GFxValue * a_movieClip, char * a_instanceName, int32_t a_depth)"
 80202,0x140ec8d30,0x140f25880,4,"void GFxMovieRoot::CreateFunction (GFxMovieRoot * a_this, GFxValue * a_value, GFxFunctionHandler * a_fc, void * a_userData)"
