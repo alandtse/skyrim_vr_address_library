@@ -8724,6 +8724,7 @@ sseid,aeid,confidence,name
 97753,104491,2,
 97754,104492,1,
 97756,104495,1,
+97760,104500,3,
 97763,104505,1,
 97765,104507,1,
 97766,104508,1,
@@ -8757,6 +8758,8 @@ sseid,aeid,confidence,name
 97817,104560,1,
 97818,104561,2,
 97819,104563,1,
+97843,104587,3,
+97902,104631,3,
 97904,104632,1,BSScript::NF_util::NativeFunctionBase::GetName_*
 97905,104633,1,BSScript::NF_util::NativeFunctionBase::GetObjectTypeName_*
 97906,104634,1,BSScript::NF_util::NativeFunctionBase::GetStateName_*

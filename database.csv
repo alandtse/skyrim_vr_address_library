@@ -4064,7 +4064,7 @@
 97538,0x1412386d0,0x141270b80,3,void ObjectTypeInfo::ReleaseData()
 97551,0x14123b1b0,0x141273660,3,"std::uint64_t AppendObjectTypeVariableNames(BSScript::ObjectTypeInfo* a_type, void* a_out, std::int32_t a_mode)"
 97559,0x14123bc10,0x1412740c0,3,"void* ScrapArrayBSFixedString_Init(void* a_array, std::int32_t a_reserve)"
-97691,0x141240060,0x1412a0b70,3,"void LogLoaderMessage(void* a_logger, const char* a_context, const char* a_message, std::int32_t a_severity)"
+97691,0x141240060,0x1412a0b70,3,"void LogLoaderMessage(SkyrimScript::Logger* a_logger, const char* a_context, const char* a_message, std::int32_t a_severity)"
 97700,0x141240810,0x1412a1320,3,"void GetSeverityName(std::int32_t a_severity, BSFixedString* a_out)"
 97703,0x141241020,0x1412a1b30,3,"void FormatNamePrefixedMessage(const char* a_text, std::int32_t a_severity, char* a_buffer, std::uint32_t a_bufferSize)"
 97723,0x141241e40,0x1412a28a0,4,void BSScript::Array::DestroyElements()
@@ -4079,6 +4079,7 @@
 97750,0x141244fc0,0x14129ad10,2,BSScript::Stack::Save
 97752,0x141245650,0x14129b3a0,2,BSScript::Stack::Load
 97753,0x141245b40,0x14129b890,2,void BSScript::Stack::DumpFrames(SkyrimScript::Logger& a_logger)
+97760,0x141246fb0,0x14129cd00,3,BSScript::UnlinkedTypes::Function* FunctionInfo_Init(BSScript::UnlinkedTypes::Function* a_function)
 97776,0x141247c50,0x14129d9a0,3,BSFixedString* GetStaticEmptyVarNameAndType()
 97780,0x141247e60,0x1412a3280,2,BSScript::ByteCode::Argument::Assign
 97781,0x141247f20,0x1412a3340,2,BSScript::ByteCode::Argument::GetIdentifier
@@ -4106,14 +4107,16 @@
 97817,0x141249780,0x1412a4ba0,2,std::uint64_t BSScript::BSBitReader::ReadRawBits(std::size_t)
 97818,0x1412497e0,0x1412a4c00,2,"void BSScript::BSBitWriter::WriteRawBits(std::uint64_t a_value, std::size_t a_count)"
 97831,0x141249f60,0x1412a5380,3,RE::BSScript::CompiledScriptLoader::GetClass
+97843,0x14124cfd0,0x1412a83f0,3,"bool BSScript::CompiledScriptLoader::CreateFunctionInfo(BSFixedString* a_name, BSScript::UnlinkedTypes::Function** a_out)"
+97902,0x1412502f0,0x1412ab710,3,"void FunctionInfo_Swap(BSScript::UnlinkedTypes::Function* a_dest, BSScript::UnlinkedTypes::Function* a_source)"
 97923,0x1412507f0,0x14129dd90,3,RE::BSScript::NF_util::NativeFunctionBase::Call
 97925,0x141250c80,0x14129e220,4,BSScript__NF_util__NativeFunctionBase::ctor_141250C80
 97927,0x141250ed0,0x14129e470,4,BSScript__NativeFunction1_Actor_TESObjectARMO__uint32_::dtor_141250ED0
-97933,0x141251240,0x1412abca0,3,"bool ReadStringTableString(void* a_table, void* a_stream, BSFixedString* a_out)"
-97934,0x1412512c0,0x1412abd20,3,"bool ReadStringTableStringCopy(void* a_table, void* a_stream, BSFixedString* a_out)"
-97935,0x141251380,0x1412abde0,3,"void SkipStringTableIndex(void* a_table, void* a_stream)"
-97936,0x1412513b0,0x1412abe10,3,"bool ReadStringTableIndex(void* a_table, void* a_stream, std::uint32_t* a_out)"
-97937,0x1412514a0,0x1412abf00,3,BSFixedString* StringTableEntry_GetFixedString(char** a_entry)
+97933,0x141251240,0x1412abca0,3,"bool ReadStringTableString(BSScript::ReadableStringTable* a_table, BSScript::IStore* a_store, BSFixedString* a_out)"
+97934,0x1412512c0,0x1412abd20,3,"bool ReadStringTableStringCopy(BSScript::ReadableStringTable* a_table, BSScript::IStore* a_store, BSFixedString* a_out)"
+97935,0x141251380,0x1412abde0,3,"void SkipStringTableIndex(BSScript::ReadableStringTable* a_table, BSScript::IStore* a_store)"
+97936,0x1412513b0,0x1412abe10,3,"bool ReadStringTableIndex(BSScript::ReadableStringTable* a_table, BSScript::IStore* a_store, std::uint32_t* a_out)"
+97937,0x1412514a0,0x1412abf00,3,BSFixedString* StringTableEntry_GetFixedString(BSScript::ReadableStringTable::StringEntry* a_entry)
 97947,0x141251a50,0x1412ac4b0,4,"bool WritableStringTable::SaveGame (BSScript::WritableStringTable * a_this, SaveStorageWrapper * a_save)"
 97948,0x141251b80,0x1412ac5e0,4,"bool WritableStringTable::WriteFixedString (BSScript::WritableStringTable * a_this, SaveStorageWrapper * a_save, BSFixedString * a_scriptName)"
 97949,0x141251c50,0x1412ac6b0,4,"bool WritableStringTable::WriteString (BSScript::WritableStringTable * a_this, SaveStorageWrapper * a_save, char * a_scriptName)"
@@ -4291,22 +4294,23 @@
 98577,0x14127f810,0x1412b8a80,2,void BSScript::Array::Unlock()
 98578,0x14127f850,0x1412b8ac0,2,void BSScript::PropertyTypeInfo::GetGetFunction(BSTSmartPointer<BSScript::IFunction>& a_outFunction)
 98579,0x14127f9d0,0x1412b8c40,2,void BSScript::PropertyTypeInfo::GetSetFunction(BSTSmartPointer<BSScript::IFunction>& a_outFunction)
-98622,0x141280330,0x1412c1380,3,"void* ArgumentBlocks_Init(void* a_blocks, std::uint32_t a_capacity)"
-98626,0x141280670,0x1412c16c0,3,void ArgumentBlocks_Reset(void* a_blocks)
+98622,0x141280330,0x1412c1380,3,"BSScript::UnlinkedTypes::InstructionStream* ArgumentBlocks_Init(BSScript::UnlinkedTypes::InstructionStream* a_blocks, std::uint32_t a_capacity)"
+98624,0x141280500,0x1412c1550,3,void ArgumentBlocks_Destroy(BSScript::UnlinkedTypes::InstructionStream* a_blocks)
+98626,0x141280670,0x1412c16c0,3,void ArgumentBlocks_Reset(BSScript::UnlinkedTypes::InstructionStream* a_blocks)
 98629,0x141280e80,0x1412c1ed0,2,void BSScript::ByteCode::UnpackedInstructionList::Pack(BSScript::ByteCode::PackedInstructionStream& a_stream)
 98630,0x1412815d0,0x1412c2620,2,void BSScript::ByteCode::UnpackedInstructionList::Unpack(BSScript::ByteCode::PackedInstructionStream& a_stream)
 98631,0x1412817a0,0x1412c27f0,2,void BSScript::ByteCode::UnpackedInstructionList::ForEachInstruction(BSScript::ByteCode::PackedInstructionStream::InstructionFunctor& a_functor)
-98634,0x141281930,0x1412c2980,3,"bool LoadInstructions(void* a_instructions, void* a_stringTable, void* a_store, std::uint8_t a_major, std::uint8_t a_minor, bool a_flag, const char* a_context, SkyrimScript::Logger* a_logger)"
-98635,0x141282110,0x1412c3160,3,"void ArgumentList_AppendEntry(void* a_list, void* a_argument)"
+98634,0x141281930,0x1412c2980,3,"bool LoadInstructions(BSScript::UnlinkedTypes::InstructionStream* a_list, BSScript::ReadableStringTable* a_stringTable, BSScript::IStore* a_store, std::uint8_t a_major, std::uint8_t a_minor, bool a_flag, const char* a_context, SkyrimScript::Logger* a_logger)"
+98635,0x141282110,0x1412c3160,3,"void ArgumentList_AppendEntry(BSScript::UnlinkedTypes::InstructionStream* a_list, BSScript::ByteCode::Argument* a_argument)"
 98637,0x141282290,0x1412c32e0,3,void RewritePropertyAccessorInstruction(void* a_instruction)
 98638,0x141282480,0x1412c34d0,3,"void ArgumentList_AppendCopy(void* a_list, void* a_argument)"
 98639,0x1412824c0,0x1412c3510,3,void ArgumentList_ReleaseQueued(void* a_list)
-98651,0x141283fe0,0x1412c5030,3,"bool ParseFunctionInfo(void* a_function, void* a_stringTable, void* a_store, std::uint8_t a_major, std::uint8_t a_minor, bool a_flag1, bool a_flag2, const char* a_context, SkyrimScript::Logger* a_logger)"
+98651,0x141283fe0,0x1412c5030,3,"bool ParseFunctionInfo(BSScript::UnlinkedTypes::Function* a_function, BSScript::ReadableStringTable* a_stringTable, BSScript::IStore* a_store, std::uint8_t a_major, std::uint8_t a_minor, bool a_flag, bool a_loadDocStrings, const char* a_context, SkyrimScript::Logger* a_logger)"
 98654,0x141284ae0,0x1412c5b30,3,void BSScript::UnlinkedTypes::Object::Dtor()
-98668,0x1412855f0,0x1412c6600,3,"void ArgumentArray_ConstructRange(void* a_array, std::uint64_t a_index, std::uint32_t a_count, void* a_source)"
-98672,0x141285970,0x1412c68a0,3,"void* Argument_CopyConstruct(void* a_dest, void* a_source)"
+98668,0x1412855f0,0x1412c6600,3,"void ArgumentArray_ConstructRange(void* a_array, std::uint64_t a_index, std::uint32_t a_count, BSScript::ByteCode::Argument* a_source)"
+98672,0x141285970,0x1412c68a0,3,"BSScript::ByteCode::Argument* Argument_CopyConstruct(BSScript::ByteCode::Argument* a_dest, BSScript::ByteCode::Argument* a_source)"
 98674,0x141285ac0,0x1412c69f0,3,void ArgumentArray_Destroy(void* a_array)
-98688,0x141286070,0x1412c6d40,3,"std::uint32_t ArgumentArray_Push(void* a_array, void* a_argument)"
+98688,0x141286070,0x1412c6d40,3,"std::uint32_t ArgumentArray_Push(void* a_array, BSScript::ByteCode::Argument* a_argument)"
 98721,0x141288890,0x1412ba8b0,3,BSScript::LinkerProcessor::ConvertVariables
 98722,0x1412896e0,0x1412bb700,3,BSScript::LinkerProcessor::ConvertProperties
 98759,0x14128cce0,0x1412bee20,3,Object* BSScript::UnlinkedTypes::Object::Ctor()
