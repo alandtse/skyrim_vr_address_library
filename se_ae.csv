@@ -2319,6 +2319,7 @@ sseid,aeid,confidence,name
 14611,14786,1,
 14612,14787,1,TESObjectLIGH::sub_*
 14613,14788,1,TESForm::GetMeshNameWithoutPrefix_*
+14635,32667,3,
 14704,14875,3,RE::TESHarvestedEvent::GetEventSource
 14809,14988,3,RE::TESForm::GetWeight
 15156,15329,3,BGSDynamicPersistenceManager::DemoteReferences
@@ -3011,6 +3012,7 @@ sseid,aeid,confidence,name
 19617,20019,3,BGSWaterCollisionManager::bhkWaterfall::GetTransform
 19750,20144,2,
 19752,20146,2,
+19757,53381,3,
 19760,20154,3,
 19805,20210,3,RE::TESObjectREFR::IsAnOwner
 19811,20216,3,void* TESObjectREFR::GetTeleportData()
@@ -8691,6 +8693,7 @@ sseid,aeid,confidence,name
 97536,104321,1,
 97551,104333,3,
 97559,104342,3,
+97690,104432,3,
 97691,104433,3,
 97692,104434,1,
 97696,104438,1,
@@ -8699,11 +8702,14 @@ sseid,aeid,confidence,name
 97699,104441,1,
 97700,104442,3,
 97703,104446,3,
+97704,104447,3,
 97707,104451,1,
 97708,104452,1,
 97709,104454,1,BSScript::ErrorLogger::Func0_*
 97710,105035,1,
 97717,104456,1,
+97718,104457,3,
+97719,104458,3,
 97724,104463,2,
 97726,104465,1,
 97727,104466,1,
