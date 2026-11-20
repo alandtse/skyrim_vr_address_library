@@ -550,7 +550,7 @@
 19750,0x1402a4b50,0x1402b62c0,2,bool REFREventCallbacks::IEventCallback::Save(BSStorage* a_storage)
 19751,0x1402a4c60,0x1402b63d0,2,"bool LoadEventCallback(BSStorage* a_storage, BSTSmartPointer<REFREventCallbacks::IEventCallback>& a_out)"
 19752,0x1402a4e30,0x1402b65a0,2,bool REFREventCallbacks::IEventCallback::Load(BSStorage* a_storage)
-19757,0x1402a5010,0x1402b6780,3,void SaveStorageWrapper::WriteUInt32(std::uint32_t a_value)
+19757,0x1402a5010,0x1402b6780,4,void SaveStorageWrapper::WriteUInt32(std::uint32_t a_value)
 19760,0x1402a50e0,0x1402b6850,4,"BSResource::ErrorCode SaveStorageWrapper::EnsureCapacity (SaveStorageWrapper * a_this, uint64_t size)"
 19789,0x1402a6670,0x1402b7de0,3,RE::TESObjectREFR::GetOwner
 19793,0x1402a6960,0x1402b80d0,4,void TESObjectREFR::SetOwner(TESForm* a_owner)
@@ -4070,14 +4070,14 @@
 97703,0x141241020,0x1412a1b30,3,"void FormatNamePrefixedMessage(const char* a_text, std::int32_t a_severity, char* a_buffer, std::uint32_t a_bufferSize)"
 97704,0x1412411c0,0x1412a1cd0,3,"bool MessageCountMap_InsertOrAssign(BSTHashMap<std::uint32_t, BSScript::ErrorLogger::PerThreadErrorCounts>* a_map, void* a_entries, std::uint32_t a_hash, std::uint32_t* a_key, void* a_counts)"
 97710,0x141241650,0x141291270,3,"void LogSinkArray_Push(BSTArray<BSTEventSink<BSScript::LogEvent>*>* a_array, BSTEventSink<BSScript::LogEvent>** a_sink)"
-97712,0x141241700,0x1412a2160,3,"BSTEventSink<BSScript::LogEvent>*** LogSinkArray_Begin(BSTArray<BSTEventSink<BSScript::LogEvent>*>* a_array, BSTEventSink<BSScript::LogEvent>*** a_out)"
-97714,0x141241760,0x1412a21c0,3,"BSTEventSink<BSScript::LogEvent>*** LogSinkArray_End(BSTArray<BSTEventSink<BSScript::LogEvent>*>* a_array, BSTEventSink<BSScript::LogEvent>*** a_out)"
-97716,0x1412417b0,0x1412a2210,3,"void* MessageCountMap_FindFreeSlot(BSTHashMap<std::uint32_t, BSScript::ErrorLogger::PerThreadErrorCounts>* a_map, void* a_entries)"
+97712,0x141241700,0x1412a2160,4,"BSTEventSink<BSScript::LogEvent>*** LogSinkArray_Begin(BSTArray<BSTEventSink<BSScript::LogEvent>*>* a_array, BSTEventSink<BSScript::LogEvent>*** a_out)"
+97714,0x141241760,0x1412a21c0,4,"BSTEventSink<BSScript::LogEvent>*** LogSinkArray_End(BSTArray<BSTEventSink<BSScript::LogEvent>*>* a_array, BSTEventSink<BSScript::LogEvent>*** a_out)"
+97716,0x1412417b0,0x1412a2210,4,"void* MessageCountMap_FindFreeSlot(BSTHashMap<std::uint32_t, BSScript::ErrorLogger::PerThreadErrorCounts>* a_map, void* a_entries)"
 97718,0x141241820,0x1412a2280,3,"void SendLogEvent(BSTEventSource<BSScript::LogEvent>* a_source, BSScript::LogEvent* a_event)"
 97719,0x141241ac0,0x1412a2520,3,"void MessageCountMap_Grow(BSTHashMap<std::uint32_t, BSScript::ErrorLogger::PerThreadErrorCounts>* a_map)"
 97720,0x141241be0,0x1412a2640,3,"bool MessageCountMap_InsertRehashed(BSTHashMap<std::uint32_t, BSScript::ErrorLogger::PerThreadErrorCounts>* a_map, void* a_entries, std::uint32_t a_hash, void* a_entry)"
-97721,0x141241df0,0x1412a2850,3,"BSTEventSink<BSScript::LogEvent>*** LogSinkArray_BeginImpl(BSTArray<BSTEventSink<BSScript::LogEvent>*>* a_array, BSTEventSink<BSScript::LogEvent>*** a_out)"
-97722,0x141241e10,0x1412a2870,3,"BSTEventSink<BSScript::LogEvent>*** LogSinkArray_EndImpl(BSTArray<BSTEventSink<BSScript::LogEvent>*>* a_array, BSTEventSink<BSScript::LogEvent>*** a_out)"
+97721,0x141241df0,0x1412a2850,4,"BSTEventSink<BSScript::LogEvent>*** LogSinkArray_BeginImpl(BSTArray<BSTEventSink<BSScript::LogEvent>*>* a_array, BSTEventSink<BSScript::LogEvent>*** a_out)"
+97722,0x141241e10,0x1412a2870,4,"BSTEventSink<BSScript::LogEvent>*** LogSinkArray_EndImpl(BSTArray<BSTEventSink<BSScript::LogEvent>*>* a_array, BSTEventSink<BSScript::LogEvent>*** a_out)"
 97723,0x141241e40,0x1412a28a0,4,void BSScript::Array::DestroyElements()
 97724,0x141241e90,0x1412a28f0,2,"void BSScript::Array::ToString(char* a_buffer, std::uint32_t a_bufferSize, bool a_handleOnly)"
 97726,0x141242130,0x1412a2b90,3,BSScript::Internal::VirtualMachine::WriteArrayElement
@@ -4109,7 +4109,7 @@
 97800,0x141248990,0x1412a3db0,2,BSScript::ByteCode::Argument::Save
 97801,0x141248b70,0x1412a3f90,2,BSScript::ByteCode::Argument::Load
 97804,0x141248e60,0x1412a4280,2,void BSScript::ByteCode::PackedInstructionStream::MoveAssign(BSScript::ByteCode::PackedInstructionStream* a_rhs)
-97805,0x141248ec0,0x1412a42e0,3,std::int32_t GetInstructionNumberForOwnOffset(PackedInstructionStream* a_stream)
+97805,0x141248ec0,0x1412a42e0,4,std::int32_t GetInstructionNumberForOwnOffset(PackedInstructionStream* a_stream)
 97806,0x141248ed0,0x1412a42f0,2,std::uint32_t BSScript::ByteCode::PackedInstructionStream::GetBitOffsetForInstructionNumber(std::uint32_t a_instructionNumber)
 97807,0x141248fa0,0x1412a43c0,2,std::int32_t BSScript::ByteCode::PackedInstructionStream::GetInstructionNumberForOffset(std::uint32_t a_bitOffset)
 97809,0x141249060,0x1412a4480,2,void BSScript::ByteCode::PackedInstructionStream::ForEachInstruction(BSScript::ByteCode::PackedInstructionStream::InstructionFunctor* a_functor)
@@ -4125,8 +4125,8 @@
 97927,0x141250ed0,0x14129e470,4,BSScript__NativeFunction1_Actor_TESObjectARMO__uint32_::dtor_141250ED0
 97933,0x141251240,0x1412abca0,3,"bool ReadStringTableString(BSScript::ReadableStringTable* a_table, BSScript::IStore* a_store, BSFixedString* a_out)"
 97934,0x1412512c0,0x1412abd20,3,"bool ReadStringTableStringCopy(BSScript::ReadableStringTable* a_table, BSScript::IStore* a_store, BSFixedString* a_out)"
-97935,0x141251380,0x1412abde0,3,"void SkipStringTableIndex(BSScript::ReadableStringTable* a_table, BSScript::IStore* a_store)"
-97936,0x1412513b0,0x1412abe10,3,"bool ReadStringTableIndex(BSScript::ReadableStringTable* a_table, BSScript::IStore* a_store, std::uint32_t* a_out)"
+97935,0x141251380,0x1412abde0,4,"void SkipStringTableIndex(BSScript::ReadableStringTable* a_table, BSScript::IStore* a_store)"
+97936,0x1412513b0,0x1412abe10,4,"bool ReadStringTableIndex(BSScript::ReadableStringTable* a_table, BSScript::IStore* a_store, std::uint32_t* a_out)"
 97937,0x1412514a0,0x1412abf00,3,BSFixedString* StringTableEntry_GetFixedString(BSScript::ReadableStringTable::StringEntry* a_entry)
 97944,0x141251950,0x1412ac3b0,3,void BSScript::WritableStringTable::InternCString(const char* a_string)
 97945,0x141251990,0x1412ac3f0,3,void BSScript::WritableStringTable::InternCString(const char* a_string)
