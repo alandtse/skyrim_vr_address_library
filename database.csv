@@ -4128,6 +4128,8 @@
 97935,0x141251380,0x1412abde0,3,"void SkipStringTableIndex(BSScript::ReadableStringTable* a_table, BSScript::IStore* a_store)"
 97936,0x1412513b0,0x1412abe10,3,"bool ReadStringTableIndex(BSScript::ReadableStringTable* a_table, BSScript::IStore* a_store, std::uint32_t* a_out)"
 97937,0x1412514a0,0x1412abf00,3,BSFixedString* StringTableEntry_GetFixedString(BSScript::ReadableStringTable::StringEntry* a_entry)
+97944,0x141251950,0x1412ac3b0,3,void BSScript::WritableStringTable::InternCString(const char* a_string)
+97945,0x141251990,0x1412ac3f0,3,void BSScript::WritableStringTable::InternCString(const char* a_string)
 97947,0x141251a50,0x1412ac4b0,4,"bool WritableStringTable::SaveGame (BSScript::WritableStringTable * a_this, SaveStorageWrapper * a_save)"
 97948,0x141251b80,0x1412ac5e0,4,"bool WritableStringTable::WriteFixedString (BSScript::WritableStringTable * a_this, SaveStorageWrapper * a_save, BSFixedString * a_scriptName)"
 97949,0x141251c50,0x1412ac6b0,4,"bool WritableStringTable::WriteString (BSScript::WritableStringTable * a_this, SaveStorageWrapper * a_save, char * a_scriptName)"
