@@ -248,6 +248,7 @@
 14546,0x140196D80,0x1401A6AB0,4,"void TESFullName__ReadFULLFromFileStream(RE::TESFullName* a_fullname, RE::TESFile* a_file)"
 14577,0x1401973c0,0x1401A70F0,3,"TESLeveledList::AddEntry(TESLeveledList *a1, std::uint16_t a2, std::int16_t a3, TESObjectMISC *a4, longlong a5)"
 14579,0x140197a30,0x1401a7760,4,"void TESLeveledList::CalculateCurrentFormList(std::uint16_t a_level, std::int16_t a_count, BSScrapArray<CALCED_OBJECT>& a_calcedObjects, std::uint32_t a_arg5, bool a_usePlayerLevel)"
+14635,0x14019a900,0x1401aa630,3,BSFixedString* GetCachedEmptyBSFixedString()
 14653,0x14019b290,0x1401aafc0,4,void TESModelTextureSwap::sub_14019B290 (TESModelTextureSwap * a_this)
 14704,0x14019d510,0x1401ad250,3,BSTEventSource<TESHarvestedEvent::ItemHarvested>* TESHarvestedEvent::GetEventSource()
 14775,0x1401a0bc0,0x1401b0900,4,TESTexture::TESTexture
@@ -549,6 +550,7 @@
 19750,0x1402a4b50,0x1402b62c0,2,bool REFREventCallbacks::IEventCallback::Save(BSStorage* a_storage)
 19751,0x1402a4c60,0x1402b63d0,2,"bool LoadEventCallback(BSStorage* a_storage, BSTSmartPointer<REFREventCallbacks::IEventCallback>& a_out)"
 19752,0x1402a4e30,0x1402b65a0,2,bool REFREventCallbacks::IEventCallback::Load(BSStorage* a_storage)
+19757,0x1402a5010,0x1402b6780,3,void SaveStorageWrapper::WriteUInt32(std::uint32_t a_value)
 19760,0x1402a50e0,0x1402b6850,4,"BSResource::ErrorCode SaveStorageWrapper::EnsureCapacity (SaveStorageWrapper * a_this, uint64_t size)"
 19789,0x1402a6670,0x1402b7de0,3,RE::TESObjectREFR::GetOwner
 19793,0x1402a6960,0x1402b80d0,4,void TESObjectREFR::SetOwner(TESForm* a_owner)
@@ -652,6 +654,7 @@
 24065,0x1403580c0,0x140367980,4,TESIdleForm::sub_1403580C0
 24069,0x140358300,0x140367bc0,4,"bool TESIdleForm::CheckConditions(Actor* a_actor, TESObjectREFR* a_target, bool a_checkParentIdle) bool TESIdleForm::CheckConditions(Actor* a_actor, TESObjectREFR* a_target, bool a_checkParentIdle)"
 24104,0x140359760,0x140369020,3,"TESIdleForm* SelectIdleForAction(void* a_idleManager, BGSActionData* a_action)"
+24129,0x14035b130,0x14036a9f0,3,void ScrapArrayBSFixedString_Destroy(void* a_array)
 24159,0x14035C890,0x14036C150,3,"bool TESNPC__ReadFromFileStream(RE::TESNPC *a_npc, RE::TESFile *a_file)"
 24180,0x14035f6c0,0x14036ef80,3,Actor* TESNPC::GetUniqueActor()
 24183,0x14035f800,0x14036f0c0,3,"void TESNPC::SetFaceMorph(std::int32_t a_index, float a_value)"
@@ -3247,6 +3250,7 @@
 62708,0x140af7190,0x140b31f70,3,"bool BShkbAnimationGraph::SetGraphVariableInt(const BSFixedString& a_variableName, const int a_in)"
 62709,0x140af7250,0x140b32030,3,"bool BShkbAnimationGraph::SetGraphVariableFloat(const BSFixedString& a_variableName, const float a_in)"
 62710,0x140af7310,0x140b320f0,3,"bool BShkbAnimationGraph::SetGraphVariableBool(const BSFixedString& a_variableName, const bool a_in)"
+62805,0x140afa330,0x140b35110,3,"std::uint32_t ScrapArrayBSFixedString_Push(void* a_array, BSFixedString* a_string)"
 62923,0x140b00650,0x140b3b430,4,"undefined4 bshkbAnimationGraphHook2_140b00650 (undefined8 param_1, hkbCharacter * param_2, char param_3, undefined8 param_4, undefined8 param_5)"
 62927,0x140b00ce0,0x140b3bac0,4,"void FUN_140b00ce0 (undefined8 param_1, longlong param_2, longlong * param_3, undefined8 param_4)"
 62935,0x140b01670,0x140b3c450,4,"bool hkbCharacter::QueryClips_fromTime(float a_fromTime, BSScrapArray<ClipData>& a_clips)"
@@ -4056,7 +4060,13 @@
 97508,0x141236d10,0x14126f1c0,4,void BSScript::Variable::Cleanup()
 97509,0x141236e50,0x14126f300,2,void BSScript::Variable::Assign(const BSScript::Variable& a_src)
 97514,0x141237240,0x14126f6f0,2,void BSScript::ObjectTypeInfo::Dtor()
+97534,0x1412381b0,0x141270660,3,"void CollectObjectTypeVariableNames(BSScript::ObjectTypeInfo* a_type, void* a_out)"
 97538,0x1412386d0,0x141270b80,3,void ObjectTypeInfo::ReleaseData()
+97551,0x14123b1b0,0x141273660,3,"std::uint64_t AppendObjectTypeVariableNames(BSScript::ObjectTypeInfo* a_type, void* a_out, std::int32_t a_mode)"
+97559,0x14123bc10,0x1412740c0,3,"void* ScrapArrayBSFixedString_Init(void* a_array, std::int32_t a_reserve)"
+97691,0x141240060,0x1412a0b70,3,"void LogLoaderMessage(void* a_logger, const char* a_context, const char* a_message, std::int32_t a_severity)"
+97700,0x141240810,0x1412a1320,3,"void GetSeverityName(std::int32_t a_severity, BSFixedString* a_out)"
+97703,0x141241020,0x1412a1b30,3,"void FormatNamePrefixedMessage(const char* a_text, std::int32_t a_severity, char* a_buffer, std::uint32_t a_bufferSize)"
 97723,0x141241e40,0x1412a28a0,4,void BSScript::Array::DestroyElements()
 97724,0x141241e90,0x1412a28f0,2,"void BSScript::Array::ToString(char* a_buffer, std::uint32_t a_bufferSize, bool a_handleOnly)"
 97726,0x141242130,0x1412a2b90,3,BSScript::Internal::VirtualMachine::WriteArrayElement
@@ -4069,6 +4079,7 @@
 97750,0x141244fc0,0x14129ad10,2,BSScript::Stack::Save
 97752,0x141245650,0x14129b3a0,2,BSScript::Stack::Load
 97753,0x141245b40,0x14129b890,2,void BSScript::Stack::DumpFrames(SkyrimScript::Logger& a_logger)
+97776,0x141247c50,0x14129d9a0,3,BSFixedString* GetStaticEmptyVarNameAndType()
 97780,0x141247e60,0x1412a3280,2,BSScript::ByteCode::Argument::Assign
 97781,0x141247f20,0x1412a3340,2,BSScript::ByteCode::Argument::GetIdentifier
 97782,0x141247f60,0x1412a3380,2,BSScript::ByteCode::Argument::GetString
@@ -4086,6 +4097,7 @@
 97800,0x141248990,0x1412a3db0,2,BSScript::ByteCode::Argument::Save
 97801,0x141248b70,0x1412a3f90,2,BSScript::ByteCode::Argument::Load
 97804,0x141248e60,0x1412a4280,2,void BSScript::ByteCode::PackedInstructionStream::MoveAssign(BSScript::ByteCode::PackedInstructionStream* a_rhs)
+97805,0x141248ec0,0x1412a42e0,3,std::int32_t GetInstructionNumberForOwnOffset(PackedInstructionStream* a_stream)
 97806,0x141248ed0,0x1412a42f0,2,std::uint32_t BSScript::ByteCode::PackedInstructionStream::GetBitOffsetForInstructionNumber(std::uint32_t a_instructionNumber)
 97807,0x141248fa0,0x1412a43c0,2,std::int32_t BSScript::ByteCode::PackedInstructionStream::GetInstructionNumberForOffset(std::uint32_t a_bitOffset)
 97809,0x141249060,0x1412a4480,2,void BSScript::ByteCode::PackedInstructionStream::ForEachInstruction(BSScript::ByteCode::PackedInstructionStream::InstructionFunctor* a_functor)
@@ -4097,6 +4109,11 @@
 97923,0x1412507f0,0x14129dd90,3,RE::BSScript::NF_util::NativeFunctionBase::Call
 97925,0x141250c80,0x14129e220,4,BSScript__NF_util__NativeFunctionBase::ctor_141250C80
 97927,0x141250ed0,0x14129e470,4,BSScript__NativeFunction1_Actor_TESObjectARMO__uint32_::dtor_141250ED0
+97933,0x141251240,0x1412abca0,3,"bool ReadStringTableString(void* a_table, void* a_stream, BSFixedString* a_out)"
+97934,0x1412512c0,0x1412abd20,3,"bool ReadStringTableStringCopy(void* a_table, void* a_stream, BSFixedString* a_out)"
+97935,0x141251380,0x1412abde0,3,"void SkipStringTableIndex(void* a_table, void* a_stream)"
+97936,0x1412513b0,0x1412abe10,3,"bool ReadStringTableIndex(void* a_table, void* a_stream, std::uint32_t* a_out)"
+97937,0x1412514a0,0x1412abf00,3,BSFixedString* StringTableEntry_GetFixedString(char** a_entry)
 97947,0x141251a50,0x1412ac4b0,4,"bool WritableStringTable::SaveGame (BSScript::WritableStringTable * a_this, SaveStorageWrapper * a_save)"
 97948,0x141251b80,0x1412ac5e0,4,"bool WritableStringTable::WriteFixedString (BSScript::WritableStringTable * a_this, SaveStorageWrapper * a_save, BSFixedString * a_scriptName)"
 97949,0x141251c50,0x1412ac6b0,4,"bool WritableStringTable::WriteString (BSScript::WritableStringTable * a_this, SaveStorageWrapper * a_save, char * a_scriptName)"
@@ -4217,8 +4234,10 @@
 98297,0x141270ab0,0x141290c40,2,BSScript::Internal::VirtualMachine::SaveStack
 98310,0x141270ed0,0x141291060,2,BSScript::Internal::AttachedScript* BSScript::Internal::AttachedScript::DeletingDtor(std::uint32_t a_flags)
 98368,0x1412728f0,0x141292ba0,2,void BSTSmallSharedArray<BSScript::Internal::AttachedScript>::Clear()
+98370,0x141272a70,0x141292d20,3,"void ScrapArrayBSFixedString_InitEmptyRange(void* a_array, std::uint64_t a_start, std::uint32_t a_count)"
 98375,0x141272c50,0x141292f00,2,"void BSTHashMap<VMHandle, BSTSmallSharedArray<AttachedScript>>::Entry::Emplace(void* a_next, std::uint64_t* a_key, BSTSmallSharedArray<AttachedScript>* a_value)"
 98377,0x141272d00,0x141292fb0,2,void BSTFreeList<BSScript::Internal::FunctionMessage>::Free(BSTFreeListElem<BSScript::Internal::FunctionMessage>*& a_node)
+98381,0x141272f90,0x141293240,3,"void ScrapArrayBSFixedString_ReleaseRange(void* a_array, std::uint32_t a_start, std::uint32_t a_count)"
 98411,0x141273800,0x141293ab0,2,"BSTHashMap<VMHandle, BSTSmallSharedArray<AttachedScript>>::Entry* BSTHashMap<VMHandle, BSTSmallSharedArray<AttachedScript>>::GetFreeEntry(void* a_entries)"
 98414,0x141273910,0x141293bc0,2,void* BSScript::IVMSaveLoadInterface::GetReadableStringTable()
 98415,0x141273920,0x141293bd0,2,void* BSScript::IVMSaveLoadInterface::GetReadableTypeTable()
@@ -4232,6 +4251,7 @@
 98469,0x1412759a0,0x141295d30,2,"void ScatterTableInitialReserve24(void* a_table, std::uint32_t a_count)"
 98476,0x1412766c0,0x141296a50,2,"bool BSTHashMap<VMHandle, BSTSmallSharedArray<AttachedScript>>::ReinsertEntry(void* a_entries, std::uint32_t a_hash, BSTHashMap<VMHandle, BSTSmallSharedArray<AttachedScript>>::Entry* a_entry)"
 98480,0x141276e50,0x141297270,2,void BSScript::Internal::VirtualMachine::SetLinkedCallback(void* a_callback)
+98482,0x141277020,0x141297440,3,"bool ScrapArrayBSFixedString_Resize(void* a_array, std::uint32_t a_newSize)"
 98493,0x141277a40,0x141297f10,3,BSScript::Internal::VirtualMachine::WriteObject
 98520,0x141278110,0x1412b1380,3,BSScript::Internal::CodeTasklet::VMProcess
 98521,0x1412786c0,0x1412b1930,2,bool BSScript::Internal::CodeTasklet::SaveResumeReason(SaveStorageWrapper& a_storage)
@@ -4271,10 +4291,22 @@
 98577,0x14127f810,0x1412b8a80,2,void BSScript::Array::Unlock()
 98578,0x14127f850,0x1412b8ac0,2,void BSScript::PropertyTypeInfo::GetGetFunction(BSTSmartPointer<BSScript::IFunction>& a_outFunction)
 98579,0x14127f9d0,0x1412b8c40,2,void BSScript::PropertyTypeInfo::GetSetFunction(BSTSmartPointer<BSScript::IFunction>& a_outFunction)
+98622,0x141280330,0x1412c1380,3,"void* ArgumentBlocks_Init(void* a_blocks, std::uint32_t a_capacity)"
+98626,0x141280670,0x1412c16c0,3,void ArgumentBlocks_Reset(void* a_blocks)
 98629,0x141280e80,0x1412c1ed0,2,void BSScript::ByteCode::UnpackedInstructionList::Pack(BSScript::ByteCode::PackedInstructionStream& a_stream)
 98630,0x1412815d0,0x1412c2620,2,void BSScript::ByteCode::UnpackedInstructionList::Unpack(BSScript::ByteCode::PackedInstructionStream& a_stream)
 98631,0x1412817a0,0x1412c27f0,2,void BSScript::ByteCode::UnpackedInstructionList::ForEachInstruction(BSScript::ByteCode::PackedInstructionStream::InstructionFunctor& a_functor)
+98634,0x141281930,0x1412c2980,3,"bool LoadInstructions(void* a_instructions, void* a_stringTable, void* a_store, std::uint8_t a_major, std::uint8_t a_minor, bool a_flag, const char* a_context, SkyrimScript::Logger* a_logger)"
+98635,0x141282110,0x1412c3160,3,"void ArgumentList_AppendEntry(void* a_list, void* a_argument)"
+98637,0x141282290,0x1412c32e0,3,void RewritePropertyAccessorInstruction(void* a_instruction)
+98638,0x141282480,0x1412c34d0,3,"void ArgumentList_AppendCopy(void* a_list, void* a_argument)"
+98639,0x1412824c0,0x1412c3510,3,void ArgumentList_ReleaseQueued(void* a_list)
+98651,0x141283fe0,0x1412c5030,3,"bool ParseFunctionInfo(void* a_function, void* a_stringTable, void* a_store, std::uint8_t a_major, std::uint8_t a_minor, bool a_flag1, bool a_flag2, const char* a_context, SkyrimScript::Logger* a_logger)"
 98654,0x141284ae0,0x1412c5b30,3,void BSScript::UnlinkedTypes::Object::Dtor()
+98668,0x1412855f0,0x1412c6600,3,"void ArgumentArray_ConstructRange(void* a_array, std::uint64_t a_index, std::uint32_t a_count, void* a_source)"
+98672,0x141285970,0x1412c68a0,3,"void* Argument_CopyConstruct(void* a_dest, void* a_source)"
+98674,0x141285ac0,0x1412c69f0,3,void ArgumentArray_Destroy(void* a_array)
+98688,0x141286070,0x1412c6d40,3,"std::uint32_t ArgumentArray_Push(void* a_array, void* a_argument)"
 98721,0x141288890,0x1412ba8b0,3,BSScript::LinkerProcessor::ConvertVariables
 98722,0x1412896e0,0x1412bb700,3,BSScript::LinkerProcessor::ConvertProperties
 98759,0x14128cce0,0x1412bee20,3,Object* BSScript::UnlinkedTypes::Object::Ctor()

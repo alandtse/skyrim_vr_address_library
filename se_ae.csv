@@ -1797,6 +1797,7 @@ sseid,aeid,confidence,name
 12194,12327,1,BSTArrayAllocatorFunctor_BSTSmallArrayHeapAllocator_16__::Free_*
 12203,12331,3,"bool BSPointerHandleManagerInterface::GetSmartPointer(RefHandle* a_handle, NiPointer<TESObjectREFR>* a_refrOut)"
 12204,12332,3,RE::LookupReferenceByHandle
+12215,12340,3,
 12220,12345,1,
 12221,12346,1,
 12222,12347,1,
@@ -3010,6 +3011,7 @@ sseid,aeid,confidence,name
 19617,20019,3,BGSWaterCollisionManager::bhkWaterfall::GetTransform
 19750,20144,2,
 19752,20146,2,
+19760,20154,3,
 19805,20210,3,RE::TESObjectREFR::IsAnOwner
 19811,20216,3,void* TESObjectREFR::GetTeleportData()
 19857,20264,3,RE::TESObjectREFR::InitChildActivates
@@ -3416,6 +3418,7 @@ sseid,aeid,confidence,name
 24105,24603,1,
 24106,24604,1,
 24107,24605,1,Character::sub_*
+24129,24628,3,
 24183,24687,3,"void TESNPC::SetFaceMorph(std::int32_t a_index, float a_value)"
 24184,24688,3,float TESNPC::GetFaceMorph(std::int32_t a_index)
 24185,24689,3,"void TESNPC::SetFacePart(std::int32_t a_index, std::int32_t a_value)"
@@ -4798,6 +4801,7 @@ sseid,aeid,confidence,name
 35151,36041,1,BGSSaveFormBuffer::Func0_*
 35155,36045,1,BGSSaveGameBuffer::sub_*
 35157,36047,1,BGSSaveGameBuffer::sub_*
+35166,36056,3,
 35199,36091,3,RE::MemoryManager::RegisterMemoryManager
 35317,36212,3,RE::BGSImpactManager::PlayImpactSound
 35320,36215,3,RE::BGSImpactManager::PlayImpactEffect
@@ -8682,13 +8686,19 @@ sseid,aeid,confidence,name
 97519,104304,1,
 97522,104307,1,
 97525,104310,1,
+97534,104319,3,
 97535,104320,1,
 97536,104321,1,
+97551,104333,3,
+97559,104342,3,
+97691,104433,3,
 97692,104434,1,
 97696,104438,1,
 97697,104439,1,
 97698,104440,1,
 97699,104441,1,
+97700,104442,3,
+97703,104446,3,
 97707,104451,1,
 97708,104452,1,
 97709,104454,1,BSScript::ErrorLogger::Func0_*
@@ -8761,7 +8771,10 @@ sseid,aeid,confidence,name
 97918,104646,1,BSScript::NF_util::NativeFunctionBase::GetSourceFilename_*
 97919,104647,1,BSScript::NF_util::NativeFunctionBase::TranslateIPToLineNumber_*
 97920,104648,1,BSScript__NF_util__NativeFunctionBase::GetVarNameForStackIndex_141250770
+97933,104663,3,
+97934,104664,3,
 97935,104665,1,
+97936,104666,3,
 97938,104669,1,
 97944,104676,1,
 97945,104677,1,
@@ -8882,6 +8895,8 @@ sseid,aeid,confidence,name
 98318,105037,1,
 98367,105060,1,
 98368,105131,2,
+98370,105062,3,
+98381,105067,3,
 98383,105069,1,
 98384,105070,1,
 98385,105071,1,BSTCommonStaticMessageQueue_gs_T1_T2_ge_::sub_141273050
@@ -8962,12 +8977,14 @@ sseid,aeid,confidence,name
 98636,105291,1,
 98637,105292,1,
 98638,105293,1,
+98639,105294,3,
 98641,105296,1,
 98642,105297,1,
 98643,105298,1,
 98644,105299,1,
 98645,105300,1,
 98649,105304,1,
+98651,105306,3,
 98652,105307,1,
 98660,105317,1,BSScript__UnlinkedTypes__anonymous_namespace__BuildInstructionOffsetMapFunctor::Func2_141285190
 98661,105318,1,BSScript::UnlinkedTypes::BuildInstructionOffsetMapFunctor::Func1_*
@@ -8975,6 +8992,7 @@ sseid,aeid,confidence,name
 98665,105323,1,BSScript::UnlinkedTypes::CollectStringsFunctor::Func2_*
 98666,105324,1,BSScript::UnlinkedTypes::CollectStringsFunctor::Func1_*
 98672,105329,1,
+98674,105330,3,
 98687,105349,1,BSScript::UnlinkedTypes::WriteInstructionsFunctor::Func0_*
 98692,105352,1,
 98695,105355,1,
