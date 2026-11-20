@@ -4064,6 +4064,8 @@
 97538,0x1412386d0,0x141270b80,3,void ObjectTypeInfo::ReleaseData()
 97551,0x14123b1b0,0x141273660,3,"std::uint64_t AppendObjectTypeVariableNames(BSScript::ObjectTypeInfo* a_type, void* a_out, std::int32_t a_mode)"
 97559,0x14123bc10,0x1412740c0,3,"void* ScrapArrayBSFixedString_Init(void* a_array, std::int32_t a_reserve)"
+97688,0x14123fe10,0x1412a0920,3,BSScript::ErrorLogger* BSScript::ErrorLogger::ctor()
+97689,0x14123fe60,0x1412a0970,3,void BSScript::ErrorLogger::dtor()
 97690,0x14123fe90,0x1412a09a0,3,"void SkyrimScript::Logger::PostMessageBySeverity(BSString* a_message, std::int32_t a_severity)"
 97691,0x141240060,0x1412a0b70,3,"void LogLoaderMessage(SkyrimScript::Logger* a_logger, const char* a_context, const char* a_message, std::int32_t a_severity)"
 97692,0x141240140,0x1412a0c50,3,"void LogLoaderMessageAtLine(SkyrimScript::Logger* a_logger, const char* a_file, std::uint32_t a_line, const char* a_message, std::int32_t a_severity)"
@@ -4076,8 +4078,11 @@
 97699,0x141240700,0x1412a1210,3,void BSScript::ErrorLogger::Reset()
 97700,0x141240810,0x1412a1320,3,"void GetSeverityName(std::int32_t a_severity, BSFixedString* a_out)"
 97701,0x141240a50,0x1412a1560,3,"void BSScript::FormatTruncatedStackTrace(void* a_context, const char* a_format, std::int32_t a_formatArg, char* a_buffer, std::uint32_t a_bufferSize)"
+97702,0x141240e10,0x1412a1920,3,"void FormatStackFrameMessage(const char* a_part1, const char* a_part2, const char* a_part3, const char* a_message, std::int32_t a_severity, char* a_buffer, std::uint32_t a_bufferSize)"
 97703,0x141241020,0x1412a1b30,3,"void FormatNamePrefixedMessage(const char* a_text, std::int32_t a_severity, char* a_buffer, std::uint32_t a_bufferSize)"
 97704,0x1412411c0,0x1412a1cd0,3,"bool MessageCountMap_InsertOrAssign(BSTHashMap<std::uint32_t, BSScript::ErrorLogger::PerThreadErrorCounts>* a_map, void* a_entries, std::uint32_t a_hash, std::uint32_t* a_key, void* a_counts)"
+97705,0x141241370,0x1412a1e80,3,BSTEventSource<BSScript::LogEvent>* BSTEventSource<BSScript::LogEvent>::ctor()
+97707,0x141241450,0x1412a1f60,3,void BSTEventSource<BSScript::LogEvent>::dtor()
 97708,0x141241500,0x1412a2010,3,"void MessageCountMap_Destroy(BSTHashMap<std::uint32_t, BSScript::ErrorLogger::PerThreadErrorCounts>* a_map)"
 97709,0x141241600,0x1412a2110,3,BSScript::ErrorLogger* BSScript::ErrorLogger::dtor_deleting(std::uint32_t a_flags)
 97710,0x141241650,0x141291270,3,"void LogSinkArray_Push(BSTArray<BSTEventSink<BSScript::LogEvent>*>* a_array, BSTEventSink<BSScript::LogEvent>** a_sink)"
@@ -4086,6 +4091,7 @@
 97714,0x141241760,0x1412a21c0,4,"BSTEventSink<BSScript::LogEvent>*** LogSinkArray_End(BSTArray<BSTEventSink<BSScript::LogEvent>*>* a_array, BSTEventSink<BSScript::LogEvent>*** a_out)"
 97715,0x141241780,0x1412a21e0,4,"void** MessageCountMap_End(BSTHashMap<std::uint32_t, BSScript::ErrorLogger::PerThreadErrorCounts>* a_map, void** a_out)"
 97716,0x1412417b0,0x1412a2210,4,"void* MessageCountMap_FindFreeSlot(BSTHashMap<std::uint32_t, BSScript::ErrorLogger::PerThreadErrorCounts>* a_map, void* a_entries)"
+97717,0x141241810,0x1412a2270,4,void BSScript::ErrorLogger::PerThreadErrorCounts::dtor()
 97718,0x141241820,0x1412a2280,3,"void SendLogEvent(BSTEventSource<BSScript::LogEvent>* a_source, BSScript::LogEvent* a_event)"
 97719,0x141241ac0,0x1412a2520,3,"void MessageCountMap_Grow(BSTHashMap<std::uint32_t, BSScript::ErrorLogger::PerThreadErrorCounts>* a_map)"
 97720,0x141241be0,0x1412a2640,3,"bool MessageCountMap_InsertRehashed(BSTHashMap<std::uint32_t, BSScript::ErrorLogger::PerThreadErrorCounts>* a_map, void* a_entries, std::uint32_t a_hash, void* a_entry)"
