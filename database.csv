@@ -4101,6 +4101,7 @@
 97948,0x141251b80,0x1412ac5e0,4,"bool WritableStringTable::WriteFixedString (BSScript::WritableStringTable * a_this, SaveStorageWrapper * a_save, BSFixedString * a_scriptName)"
 97949,0x141251c50,0x1412ac6b0,4,"bool WritableStringTable::WriteString (BSScript::WritableStringTable * a_this, SaveStorageWrapper * a_save, char * a_scriptName)"
 97950,0x141251cb0,0x1412ac710,4,"bool WritableStringTable::WriteString2 (BSScript::WritableStringTable * a_this, SaveStorageWrapper * a_save, char * a_scriptName)"
+97987,0x141253750,0x1412ae1b0,3,bool BSScript::TypeInfo::GetDisplayName(BSFixedString* a_out)
 98044,0x141256f30,0x1412765b0,3,void BSScript::Internal::VirtualMachine::Update(float a_budget)
 98045,0x1412575b0,0x141276c30,2,void BSScript::Internal::VirtualMachine::UpdateTasklets(float a_budget)
 98046,0x141257670,0x141276dd0,2,void BSScript::Internal::VirtualMachine::SetOverstressed(bool a_set)
@@ -4123,7 +4124,7 @@
 98064,0x141258bd0,0x141278330,2,"bool BSScript::Internal::VirtualMachine::CreateArray1(void* a_typeInfo, std::uint32_t a_size, void* a_arrayPtr)"
 98065,0x141258cb0,0x141278410,2,bool BSScript::Internal::VirtualMachine::BindNativeMethod(void* a_fn)
 98067,0x141258f60,0x1412786c0,2,"void BSScript::Internal::VirtualMachine::SetCallableFromTasklets1(const char* a_className, const char* a_stateName, const char* a_fnName, bool a_callable)"
-98068,0x1412592e0,0x141278a40,2,"void BSScript::Internal::VirtualMachine::ForEachBoundObject(std::uint64_t a_handle, void* a_functor)"
+98068,0x1412592e0,0x141278a40,3,"void BSScript::Internal::VirtualMachine::ForEachBoundObject(std::uint64_t a_handle, BSScript::IForEachScriptObjectFunctor* a_functor)"
 98069,0x1412594d0,0x141278f60,2,"bool BSScript::Internal::VirtualMachine::FindBoundObject(std::uint64_t a_handle, const char* a_className, BSScript::Internal::Object** a_result)"
 98070,0x141259580,0x141279010,2,"void BSScript::Internal::VirtualMachine::MoveBoundObjects(std::uint64_t a_from, std::uint64_t a_to)"
 98071,0x1412598c0,0x141279350,2,void BSScript::Internal::VirtualMachine::ResetAllBoundObjects(std::uint64_t a_handle)
