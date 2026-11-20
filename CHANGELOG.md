@@ -1,3 +1,13 @@
+# [0.307.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.306.0...v0.307.0) (2026-11-20)
+
+
+### Features
+
+* add GC collector and CraftingMenu dtor ids ([#360](https://github.com/alandtse/skyrim_vr_address_library/issues/360)) ([a0d52bd](https://github.com/alandtse/skyrim_vr_address_library/commit/a0d52bd97602c87ae428704710afec6c3ead6116))
+* add geometry group append ids ([#361](https://github.com/alandtse/skyrim_vr_address_library/issues/361)) ([4e9de5c](https://github.com/alandtse/skyrim_vr_address_library/commit/4e9de5ca6e0512f1fa6b972ca06131677f1d706e))
+* add script loader and save string ids ([#362](https://github.com/alandtse/skyrim_vr_address_library/issues/362)) ([71b117a](https://github.com/alandtse/skyrim_vr_address_library/commit/71b117ae970d24242b4706fc749c1b604bea5c58))
+* add TypeInfo display name id ([#363](https://github.com/alandtse/skyrim_vr_address_library/issues/363)) ([a207134](https://github.com/alandtse/skyrim_vr_address_library/commit/a2071345fca84ef108c3329e7f83ddf5f595229e))
+
 # [0.306.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.305.0...v0.306.0) (2026-11-19)
 
 
