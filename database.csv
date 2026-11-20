@@ -4438,6 +4438,7 @@
 100833,0x141305ee0,0x14134d140,3,bool BSShadowLight::GetNeedsClipPlanes()
 100834,0x141305ef0,0x14134d150,3,std::uint32_t BSShadowLight::GetPassExtraParam(std::uint32_t a_accumFlag)
 100836,0x141306020,0x14134d310,3,"void BSShadowLight::TransformClipSpacePlanes(REX::W32::D3DXMatrix* a_matrix1, REX::W32::D3DXMatrix* a_matrix2)"
+100838,0x141306070,0x141347150,3,"void BSBatchRenderer::GeometryGroup::AppendPass(RE::BSRenderPass* a_pass, bool a_front)"
 100839,0x1413061b0,0x141347290,4,void BSBatchRenderer::ClearGeometryGroupPasses(BSBatchRenderer::GeometryGroup * a_group)
 100840,0x141306240,0x141347320,4,"void BSShaderAccumulator::RenderPersistentPassList (longlong * * passList, uint32_t renderFlags)"
 100843,0x141306db0,0x141347fe0,4,void BSBatchRenderer::ClearAllRenderPasses(BSBatchRenderer * a_this)
@@ -4451,6 +4452,8 @@
 100857,0x141308560,0x1413497b0,4,void BSBatchRenderer::SortAlphaGeometryGroups()
 100860,0x141308760,0x1413499b0,4,void ClearBSShaders()
 100871,0x1413090c0,0x14134a310,4,"LLF::void FUN_1413090c0 (BSBatchRenderer * * param_1, uint param_2)"
+100872,0x141309230,0x14134a480,4,"void BSBatchRenderer::AppendPassToGeometryGroup(RE::BSRenderPass* a_pass, std::int32_t a_groupIndex, bool a_front)"
+100873,0x141309250,0x14134a4a0,3,"void BSBatchRenderer::AppendPassToAlphaGroup(RE::BSRenderPass* a_pass, BSBatchRenderer::GeometryGroup* a_group)"
 100874,0x141309280,0x14134a4d0,4,"BSBatchRenderer::GeometryGroup * BSBatchRenderer::StartGroupingAlphas(BSBatchRenderer * a_this, NiBound * a_bound, NiCamera * a_camera, bool a_sortByClosestPoint)"
 100877,0x1413094a0,0x14134a6f0,4,BSBatchRenderer::sub_*
 100934,0x14130bb80,0x14134edc0,4,BSShaderMaterialHashMap::Link

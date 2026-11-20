@@ -9117,7 +9117,7 @@ sseid,aeid,confidence,name
 100820,107604,1,BSShadowParabolicLight::sub_*
 100836,107624,1,
 100837,107625,1,
-100838,107626,1,
+100838,107626,3,"void BSBatchRenderer::GeometryGroup::AppendPass(RE::BSRenderPass* a_pass, bool a_front)"
 100840,107630,1,
 100841,107631,1,
 100847,107637,1,
@@ -9132,8 +9132,8 @@ sseid,aeid,confidence,name
 100860,107653,1,
 100862,107656,1,
 100864,107659,1,
-100872,107668,1,BSBatchRenderer::sub_*
-100873,107669,1,BSBatchRenderer::sub_*
+100872,107668,3,"void BSBatchRenderer::AppendPassToGeometryGroup(RE::BSRenderPass* a_pass, std::int32_t a_groupIndex, bool a_front)"
+100873,107669,3,"void BSBatchRenderer::AppendPassToAlphaGroup(RE::BSRenderPass* a_pass, BSBatchRenderer::GeometryGroup* a_group)"
 100874,107670,1,
 100879,107675,1,
 100880,107677,1,
