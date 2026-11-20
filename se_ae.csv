@@ -8785,7 +8785,7 @@ sseid,aeid,confidence,name
 97982,104716,1,BSScript__Internal__NativeFunctionStub::GetSourceFilename_141253630
 97985,104719,1,BSScript::Internal::NativeFunctionStub::CanBeCalledFromTasklets_*
 97986,104720,1,BSScript::Internal::NativeFunctionStub::SetCallableFromTasklets_*
-97987,104721,1,
+97987,104721,3,
 97988,104722,1,
 98016,104746,1,
 98030,104755,1,
@@ -8811,7 +8811,7 @@ sseid,aeid,confidence,name
 98064,104787,2,
 98065,104788,2,
 98067,104790,2,
-98068,104791,2,
+98068,104791,3,
 98069,104792,2,
 98070,104793,2,
 98071,104794,2,
