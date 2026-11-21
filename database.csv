@@ -4067,6 +4067,7 @@
 97514,0x141237240,0x14126f6f0,2,void BSScript::ObjectTypeInfo::Dtor()
 97534,0x1412381b0,0x141270660,3,"void CollectObjectTypeVariableNames(BSScript::ObjectTypeInfo* a_type, void* a_out)"
 97538,0x1412386d0,0x141270b80,3,void ObjectTypeInfo::ReleaseData()
+97539,0x141238e00,0x1412712b0,3,"bool PapyrusFinishLinking(RE::BSScript::ObjectTypeInfo* type, void* ctx, RE::BSScript::ErrorLogger* logger)"
 97551,0x14123b1b0,0x141273660,3,"std::uint64_t AppendObjectTypeVariableNames(BSScript::ObjectTypeInfo* a_type, void* a_out, std::int32_t a_mode)"
 97559,0x14123bc10,0x1412740c0,3,"void* ScrapArrayBSFixedString_Init(void* a_array, std::int32_t a_reserve)"
 97688,0x14123fe10,0x1412a0920,3,BSScript::ErrorLogger* BSScript::ErrorLogger::ctor()
@@ -4349,6 +4350,7 @@
 98672,0x141285970,0x1412c68a0,3,"BSScript::ByteCode::Argument* Argument_CopyConstruct(BSScript::ByteCode::Argument* a_dest, BSScript::ByteCode::Argument* a_source)"
 98674,0x141285ac0,0x1412c69f0,3,void ArgumentArray_Destroy(void* a_array)
 98688,0x141286070,0x1412c6d40,3,"std::uint32_t ArgumentArray_Push(void* a_array, BSScript::ByteCode::Argument* a_argument)"
+98719,0x141288080,0x1412ba0a0,3,"void BSScript::LinkerProcessor::LinkClass(BSFixedString& className, bool relink)"
 98721,0x141288890,0x1412ba8b0,3,BSScript::LinkerProcessor::ConvertVariables
 98722,0x1412896e0,0x1412bb700,3,BSScript::LinkerProcessor::ConvertProperties
 98759,0x14128cce0,0x1412bee20,3,Object* BSScript::UnlinkedTypes::Object::Ctor()
