@@ -4356,8 +4356,11 @@
 98674,0x141285ac0,0x1412c69f0,3,void ArgumentArray_Destroy(void* a_array)
 98688,0x141286070,0x1412c6d40,3,"std::uint32_t ArgumentArray_Push(void* a_array, BSScript::ByteCode::Argument* a_argument)"
 98714,0x141287580,0x1412b95a0,2,void LinkContext_Dtor(void* a_this)
+98720,0x1412885b0,0x1412ba5d0,2,bool BSScript::LinkerProcessor::LinkParentClass()
 98721,0x141288890,0x1412ba8b0,3,BSScript::LinkerProcessor::ConvertVariables
 98722,0x1412896e0,0x1412bb700,3,BSScript::LinkerProcessor::ConvertProperties
+98723,0x141289ec0,0x1412bbee0,2,bool BSScript::LinkerProcessor::ConvertStaticFunctions()
+98724,0x14128a250,0x1412bc270,2,bool BSScript::LinkerProcessor::ConvertStates()
 98758,0x14128cbd0,0x1412bed10,2,void* LinkContext_Ctor(void* a_this)
 98759,0x14128cce0,0x1412bee20,3,Object* BSScript::UnlinkedTypes::Object::Ctor()
 98844,0x14128f900,0x1412c8230,3,BSFadeNode* BSFadeNode::BSFadeNode()
