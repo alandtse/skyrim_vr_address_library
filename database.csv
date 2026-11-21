@@ -374,6 +374,7 @@
 16081,0x1401f4f20,0x140205a80,4,"bool RE::BSResource::EntryDB<RE::LipSynchAnimDB::DBTraits>::Func3(RE::BSResource::EntryDBBase* a_dbBase, std::uint64_t* a_taskData, std::uint64_t a_arg3, std::uint64_t* a_arg4, std::uint32_t a_flags)"
 16084,0x1401f5390,0x140205ef0,3,RE::LocalMapCamera::Ctor
 16089,0x1401f5750,0x1402062b0,3,RE::LocalMapCamera::SetNorthRotation
+16171,0x1401f9f40,0x14020b880,2,ScreenSplatter* ScreenSplatter::ctor()
 16173,0x1401fa360,0x14020bcb0,2,void ScreenSplatter::Update()
 16174,0x1401fa540,0x14020be90,2,"void ScreenSplatter::Trigger(void* a_unk1, float a_unk2)"
 16175,0x1401fa6c0,0x14020c010,3,void NiCamera::ScreenSplatter::Clear()
