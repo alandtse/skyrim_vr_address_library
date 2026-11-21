@@ -4461,6 +4461,8 @@
 100299,0x1412dbb80,0x14131ad70,3,"void VolumetricLightingDescriptor::SetQuality(VolumetricLightingDescriptor& this, uint32_t quality)"
 100306,0x1412dc050,0x14131b240,4,"void VolumetricLightingDescriptor::Render (longlong param_1, undefined8 param_2, bool param_3)"
 100309,0x1412dc3a0,0x14131b590,4,void VolumetricLightingDescriptor::Raymarch (VolumetricLightingDescriptor* this)
+100405,0x1412e1af0,0x141321090,2,void Main::EnterFirstPersonCamera()
+100406,0x1412e1d40,0x1413213f0,2,void Main::RestoreWorldCamera()
 100408,0x1412e1fe0,0x141321700,3,void UpdateWorldCameraProjection()
 100411,0x1412e21a0,0x1413244e0,2,"void Main::RenderFirstPersonView(bool a_gamePaused, bool a_controlDrivenDepthRange)"
 100414,0x1412e2660,0x141321d80,3,void Main::QueueListAccumulationJobs(NiCamera* a_camera)
@@ -4482,6 +4484,7 @@
 100480,0x1412e82f0,0x141329460,4,"ImageSpaceEffect * BSImageSpace::Init::IBLF (ImageSpaceEffect * param_1, undefined8 param_2, undefined8 param_3, undefined8 param_4, undefined8 param_5, undefined8 param_6, undefined8 param_7)"
 100496,0x1412eabf0,0x14132bd50,3,void BSImagespaceShader::DispatchCopySubRegion()
 100520,0x1412ebd70,0x14132da70,3,"RENDER_TARGET BSImagespaceShader::RenderSSAO(RENDER_TARGET a_inputRenderTarget, RENDER_TARGET a_outputRenderTarget)"
+100526,0x1412ed610,0x14132f420,2,"void RenderSAOCameraZMips(void* a_this, void* a_camera)"
 100537,0x1412ee8d0,0x141330780,3,"RENDER_TARGET BSImagespaceShader::RenderSnowSSS(RENDER_TARGET a_inputRenderTarget, RENDER_TARGET a_outputRenderTarget)"
 100540,0x1412eeb90,0x141330a40,3,"RENDER_TARGET FUN_1412eeb90 (BSImagespaceShader * * param_1, RENDER_TARGET param_2, RENDER_TARGET param_3)"
 100563,0x1412f2020,0x141338400,3,"void BSLightingShader::Func4_1412F2020 (BSLightingShader * a_this, undefined8 param_2, undefined8 param_3)"

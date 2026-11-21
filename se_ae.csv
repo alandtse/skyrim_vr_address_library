@@ -9127,8 +9127,11 @@ sseid,aeid,confidence,name
 100110,106817,3,RE::BSLightingShaderMaterialLODLandscape::Ctor
 100118,106825,3,RE::BSLightingShaderMaterialSnow::Ctor
 100125,106832,3,RE::BSLightingShaderMaterialMultiLayerParallax::Ctor
+100405,107123,2,
+100406,107124,2,
 100421,107139,3,RE::Main::RenderDepth
 100427,107145,2,
+100526,107252,2,
 100583,107323,3,SetLODBlendOffsetConstant
 100747,107528,1,BSEffectShader::Func7_*
 100748,107529,1,BSEffectShader::sub_*
