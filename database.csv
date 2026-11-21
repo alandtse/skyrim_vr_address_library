@@ -3060,6 +3060,7 @@
 52735,0x140908450,0x140942bd0,2,"void SkyrimScript::ObjectBindPolicy::ReadPackageFragments(std::uint32_t a_param, BSMemStorage* a_stream)"
 52736,0x1409087e0,0x140942f60,2,"void SkyrimScript::ObjectBindPolicy::ReadPerkFragments(std::uint32_t a_param, BSMemStorage* a_stream)"
 52767,0x140909f30,0x1409446b0,3,PapyrusTweaks::
+52801,0x14090bf50,0x1409466d0,2,SkyrimScript::PathingCallbackMgr* SkyrimScript::PathingCallbackMgr::ctor()
 52804,0x14090c1d0,0x140946950,3,bool SkyrimScript::PathingCallbackMgr::Save(SaveStorageWrapper* a_storage)
 52805,0x14090c2e0,0x140946a60,3,bool SkyrimScript::PathingCallbackMgr::Load(void* a_storage)
 52806,0x14090c4f0,0x140946c70,3,void SkyrimScript::PathingCallbackMgr::Revert()
@@ -3128,6 +3129,7 @@
 53861,0x14094a5d0,0x1409849c0,3,papyrus::Actor::EquipItem
 53948,0x14094d850,0x140987ab0,3,papyrus::Actor::TrapSoul
 53950,0x14094d890,0x140987af0,3,payprus::Actor::UnequipItem
+53959,0x14094def0,0x140988150,2,void SkyrimScript::PathingCallbackMgr::CreateSingleton()
 53960,0x14094df30,0x140988190,3,papyrus__Actor__Bind
 54741,0x14096de60,0x1409a7f40,4,papyrus__Debug::SendAnimationEvent
 54817,0x1409721c0,0x1409abfd0,4,"undefined papyrus::Game::AdvanceSkill_1409721C0(longlong* param_1, undefined4 param_2, undefined8 param_3, char** param_4, float param_5)"

@@ -6995,6 +6995,7 @@ sseid,aeid,confidence,name
 52750,53593,1,
 52753,53594,1,
 52757,53600,1,
+52801,53634,2,
 52804,53637,2,
 52805,53638,2,
 52806,53639,2,
@@ -7202,6 +7203,7 @@ sseid,aeid,confidence,name
 53814,54618,1,BSScript::NativeFunction0_ActiveEffect_Actor__::HasStub_*
 53815,54619,1,BSScript::NativeFunction0_ActiveEffect_EffectSetting__::HasStub_*
 53840,54638,1,SkyrimScript::AttachAshPileFunctor::LoadImpl_*
+53959,54783,2,
 53961,54785,1,
 53984,54818,1,
 54006,54824,1,
