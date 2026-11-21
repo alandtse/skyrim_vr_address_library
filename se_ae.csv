@@ -8226,6 +8226,7 @@ sseid,aeid,confidence,name
 87805,90173,1,
 87806,90174,1,
 87807,90175,1,
+87919,90292,3,RE::BGSMoviePlayer::OpenMovie
 87936,90319,2,
 89421,91892,1,IMovementInterface::sub_*
 89422,91893,1,IPipelineStageInterface::sub_*

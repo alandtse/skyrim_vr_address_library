@@ -4074,6 +4074,7 @@
 86470,0x1410336c0,0x1410903c0,4,Scaleform::Render::Text::DocView::SetVScrollOffset
 86942,0x14104ef30,0x1410abc30,4,Scaleform::Render::Text::LineBuffer::IsLineVisible
 87907,0x1410a2370,0x1410fefa0,4,Skyrim-upscaler
+87919,0x1410a2dc0,0x1410ff9f0,2,"bool BGSMoviePlayer::OpenMovie(const char* a_path, bool a_flag)"
 87936,0x1410a3790,0x1411003c0,2,void BSMusicManager::Update()
 87965,0x1410a5740,0x141102370,3,"BSPathingLocation* BSPathingLocation::ctor(const NiPoint3& a_location, const BSTSmartPointer<BSPathingCell>& a_cell)"
 87978,0x1410a5e50,0x141102a80,3,"bool BSPathingLocation::GetNavMeshAndTriangle(BSTSmartPointer<BSNavmesh>& a_navMeshOut, std::uint16_t& a_triOut) const"
