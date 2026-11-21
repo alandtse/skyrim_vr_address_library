@@ -2323,7 +2323,9 @@ sseid,aeid,confidence,name
 14635,32667,3,
 14704,14875,3,RE::TESHarvestedEvent::GetEventSource
 14809,14988,3,RE::TESForm::GetWeight
+15033,15207,2,
 15041,15215,2,
+15045,15220,2,
 15156,15329,3,BGSDynamicPersistenceManager::DemoteReferences
 15159,15332,2,
 15492,15657,3,BipedAnim::SetRoot
@@ -3009,6 +3011,7 @@ sseid,aeid,confidence,name
 19405,19832,3,"void TESObjectREFR::UpdateAddonNodeSounds(NiAVObject* a_node, bool a_stop)"
 19409,19837,3,void TESObjectREFR::AddToWaterSystem()
 19410,19838,3,void TESObjectREFR::RemoveFromWaterSystem()
+19437,19865,2,
 19446,19872,3,RE::TESObjectREFR::InstantiateHitShader
 19457,19457,3,FUN_14029d510
 19503,19930,3,BGSWaterCollisionManager::BGSWaterUpdateI::`scalar_deleting_destructor'
@@ -3021,6 +3024,7 @@ sseid,aeid,confidence,name
 19760,20154,3,
 19805,20210,3,RE::TESObjectREFR::IsAnOwner
 19811,20216,3,void* TESObjectREFR::GetTeleportData()
+19839,20244,2,
 19857,20264,3,RE::TESObjectREFR::InitChildActivates
 20089,20536,3,TESWorldSpace::CollectMapMarkerHandles
 20095,20543,3,RE::TESWorldSpace::GetSkyCell
@@ -3577,6 +3581,7 @@ sseid,aeid,confidence,name
 25980,26594,3,RE::BSFaceGenAnimationData::SetExpressionOverride
 26259,26838,3,RE::BSFaceGenManager::PrepareHeadPartForShaders
 26407,26988,2,
+26497,27093,2,
 26674,27350,2,
 26753,27429,2,void* BGSPackageDataList::GetByUID(std::uint8_t a_uid)
 27430,28151,3,
@@ -4817,6 +4822,7 @@ sseid,aeid,confidence,name
 35199,36091,3,RE::MemoryManager::RegisterMemoryManager
 35208,36104,2,
 35317,36212,3,RE::BGSImpactManager::PlayImpactSound
+35318,36213,2,
 35320,36215,3,RE::BGSImpactManager::PlayImpactEffect
 35413,36311,3,RE::Calendar::GetTimeDateString
 35493,36460,3,
@@ -4841,15 +4847,23 @@ sseid,aeid,confidence,name
 35516,36483,3,
 35551,36544,3,RE::Main::MainLoop
 35560,36559,3,RE::Main::Draw
+35566,36565,2,
+35569,36571,2,
+35570,36573,2,
 35571,36574,3,Main::UpdateCullingFrustum
+35572,36575,2,
+35578,36581,2,
+35581,36587,2,
 35583,36589,3,
 35593,36601,3,RE::Main::ReloadFormData
+35605,36615,2,
 35620,36630,3,RE::Main::SetupPlayerBaseForm
 35754,36755,3,
 35869,36840,3,SceneGraph::SetNearDistance
 35871,36842,3,SceneGraph::SetFarDistance
 35912,36887,2,
 35914,36889,2,
+35916,36891,2,
 35978,36953,3,RE::TaskQueueInterface::QueueBulletWaterDisplacementTask
 35987,36962,3,RE::TaskQueueInterface::QueueRemoveSpellTask
 36174,37147,2,
@@ -5918,6 +5932,7 @@ sseid,aeid,confidence,name
 42784,43952,1,Hazard::sub_*
 42785,43953,1,Hazard::sub_*
 42786,43954,1,
+42791,43959,2,
 42796,43964,1,Hazard::Revert_*
 42797,43965,1,BSTEventSink_BSAnimationGraphEvent_::Handle_*
 42799,43967,1,Hazard::sub_*
@@ -5956,6 +5971,8 @@ sseid,aeid,confidence,name
 42903,44083,1,
 42904,44084,1,
 42906,44086,1,
+42911,44091,2,
+42913,44093,2,
 42914,44094,2,
 42983,44166,3,
 42993,44176,1,
@@ -6384,6 +6401,7 @@ sseid,aeid,confidence,name
 44873,45909,1,CombatInventoryItemMagicT_gs_T1_T2_ge_::sub_*
 44875,46131,1,CombatInventoryItemMagicT_gs_T1_T2_ge_::sub_*
 44876,45966,1,CombatInventoryItemMagicT_gs_T1_T2_ge_::sub_*
+45570,46870,2,
 46068,47332,3,
 47741,48842,1,
 47742,48843,1,
@@ -7613,6 +7631,7 @@ sseid,aeid,confidence,name
 68839,70191,3,RE::NiObject::CreateDeepCopy
 68893,70244,2,"void NiAVObject::CopyTransformAndCollision(NiAVObject* a_target, NiCloningProcess* a_cloning)"
 69139,70500,2,"void NiObjectNET::CopyMembers(NiObjectNET* a_target, NiCloningProcess* a_cloning)"
+69181,70545,2,
 69278,70649,2,"void BSTriShape::CopyMembers(BSTriShape* a_target, NiCloningProcess* a_cloning)"
 69433,70810,3,RE::NiTimeController::LoadBinary
 69434,70811,3,RE::NiTimeController::LinkObject
@@ -8206,6 +8225,7 @@ sseid,aeid,confidence,name
 87805,90173,1,
 87806,90174,1,
 87807,90175,1,
+87936,90319,2,
 89421,91892,1,IMovementInterface::sub_*
 89422,91893,1,IPipelineStageInterface::sub_*
 89424,91895,1,MovementArbiter::sub_*
