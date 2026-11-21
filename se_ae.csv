@@ -5138,6 +5138,9 @@ sseid,aeid,confidence,name
 38044,39000,2,
 38071,39026,3,ClearModifiers
 38079,39033,3,RE::TaskQueueInterface::ShouldUseTaskQueue
+38080,39034,2,
+38082,39036,2,
+38083,39037,2,
 38090,39045,3,Job_TES_animation
 38101,39057,1,Job_Destructible_*
 38102,39058,1,Job_Pick_reference_*
@@ -6957,6 +6960,7 @@ sseid,aeid,confidence,name
 51529,52404,3,"void RaceSexMenu::ApplyMaskSliderValue(float a_value, std::uint32_t a_sliderIndex)"
 51530,52405,3,"void RaceSexMenu::ApplyMaskColorSliderValue(std::uint32_t a_value, std::uint32_t a_sliderIndex)"
 51531,52406,3,"void RaceSexMenu::ApplyFaceDetailsSliderValue(float a_value, std::uint32_t a_sliderIndex)"
+52063,52950,2,
 52081,52971,2,LocalMapMenu::UpdateMarkers
 52181,53073,3,AppendQuestMarkers
 52182,53074,3,TryAddRoutedMarker
@@ -7682,6 +7686,7 @@ sseid,aeid,confidence,name
 76679,78551,3,
 76680,78552,3,
 76681,78553,3,
+79946,82083,2,
 80087,82411,3,RE::BSScaleformManager::FileExists
 80176,82196,3,GRefCountNTSImpl::GetWeakProxy
 80196,82216,3,GASRefCountCollector::AddRoot

@@ -374,7 +374,8 @@
 16081,0x1401f4f20,0x140205a80,4,"bool RE::BSResource::EntryDB<RE::LipSynchAnimDB::DBTraits>::Func3(RE::BSResource::EntryDBBase* a_dbBase, std::uint64_t* a_taskData, std::uint64_t a_arg3, std::uint64_t* a_arg4, std::uint32_t a_flags)"
 16084,0x1401f5390,0x140205ef0,3,RE::LocalMapCamera::Ctor
 16089,0x1401f5750,0x1402062b0,3,RE::LocalMapCamera::SetNorthRotation
-16173,0x1401fa360,0x14020bcb0,2,void UpdateBloodSplatters(void* a_manager)
+16173,0x1401fa360,0x14020bcb0,2,void ScreenSplatter::Update()
+16174,0x1401fa540,0x14020be90,2,"void ScreenSplatter::Trigger(void* a_unk1, float a_unk2)"
 16175,0x1401fa6c0,0x14020c010,3,void NiCamera::ScreenSplatter::Clear()
 16188,0x1401fbaf0,0x14020d440,2,void SleepFrameThrottle()
 16202,0x1401fd350,0x14020eca0,4,void TESRegion::SetCurrentWeather(TESWeather* a_weather)
@@ -3798,6 +3799,7 @@
 79937,0x140ebe150,0x140f1a3b0,4,UI::IsMenuOpen
 79944,0x140ebe510,0x140F1A680,3,"void UI::GetTopMostMenu(RE::UI this, RE::IMenu** a_result, std::uint32_t a_depthLimit)"
 79945,0x140ebe630,0x140f1a770,3,UI::ProcessMessages
+79946,0x140ebf260,0x140f1b430,2,void UI::AdvanceMenuMovies()
 79947,0x140ebf510,0x140f1b750,3,void UI::DrawInterface(UI* a_this)
 80059,0x140ec30f0,0x140f1fbc0,3,RE::UIMessageQueue::ProcessCommands
 80061,0x140ec31d0,0x140f1fca0,4,RE::UIMessageQueue::CreateUIMessageData
