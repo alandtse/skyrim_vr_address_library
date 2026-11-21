@@ -7608,6 +7608,7 @@ sseid,aeid,confidence,name
 66861,68117,3,RE::MemoryManager::Deallocate
 66884,68144,3,RE::ScrapHeap::Allocate
 66885,68146,3,RE::ScrapHeap::Deallocate
+66889,68150,3,RE::ScrapHeap::SetKeepPages
 67151,68449,3,RE::BSThreadEvent::InitSDM
 67234,68534,3,QuickLoot::
 67240,68540,3,QuickLoot::
