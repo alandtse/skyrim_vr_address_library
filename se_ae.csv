@@ -4834,6 +4834,7 @@ sseid,aeid,confidence,name
 35583,36589,3,
 35593,36601,3,RE::Main::ReloadFormData
 35620,36630,3,RE::Main::SetupPlayerBaseForm
+35622,36632,2,
 35754,36755,3,
 35869,36840,3,SceneGraph::SetNearDistance
 35871,36842,3,SceneGraph::SetFarDistance
@@ -9127,6 +9128,7 @@ sseid,aeid,confidence,name
 100118,106825,3,RE::BSLightingShaderMaterialSnow::Ctor
 100125,106832,3,RE::BSLightingShaderMaterialMultiLayerParallax::Ctor
 100421,107139,3,RE::Main::RenderDepth
+100427,107145,2,
 100583,107323,3,SetLODBlendOffsetConstant
 100747,107528,1,BSEffectShader::Func7_*
 100748,107529,1,BSEffectShader::sub_*

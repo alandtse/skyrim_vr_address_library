@@ -1616,6 +1616,7 @@
 29328,0x1404538b0,0x140463860,3,void BSTerrainEffect::UpdateEffectTransform()
 29336,0x1404541b0,0x140464160,4,void BSTerrainEffect::UpdateInstanceTransforms(void* a_instances)
 29531,0x140460350,0x140470310,4,"void NavMeshInfoMap::InitializeAfterAllFormsAreReadFromFile_140460350 (NavMeshInfoMap * a_this, undefined8 param_2, ulonglong param_3, char * param_4)"
+29609,0x140465140,0x140475100,2,NavMeshObstacleManager* NavMeshObstacleManager::ctor()
 29819,0x140473120,0x140483100,4,"void* Pathing::BuildFollowPath(Pathing* a_this, void* a_pathOut, Character* a_actor, void* a_reserved)"
 29832,0x1404737a0,0x140483780,4,"bool FindClosestPointOnNavmesh(const BSTSmartPointer<BSPathingCell>& a_cell, const NiPoint3& a_location, FindTriangleForLocationFilter& a_filter, NiPoint3& a_pointOut)"
 29839,0x1404749e0,0x1404849c0,3,AIProcess::FindAmbushCoverLocation
@@ -1761,6 +1762,7 @@
 31949,0x1404e6360,0x1404f64d0,4,Character::ProcessMotionData
 31950,0x1404e69d0,0x1404f6b40,3,"void GetTranslationFromClipData(const ClipInfo& clipInfo, float time, NiPoint3& translation)"
 31951,0x1404e6b30,0x1404f6ca0,3,"bool GetAnimationEndpoint(TESObjectREFR* refr, const ClipInfo& clipInfo, NiPoint3& translation, NiPoint3& rotation_angles, float& end_time, NiPoint3& translation_start, NiPoint3& translation_delta, NiPoint3& rotation_start_angles, NiPoint3& rotate_from_before_angles)"
+31963,0x1404e74d0,0x1404f7740,2,void InitAnimationSingletons()
 31971,0x1404e7ae0,0x1404f7d50,4,NiQuaternion* NiQuaternion::MultiplyAssign(const NiQuaternion& a_rhs)
 31973,0x1404e7c60,0x1404f7ed0,4,void* BSScrapArray_32B::begin(void* a_out)
 31974,0x1404e7c80,0x1404f7ef0,4,void* BSScrapArray_32B::end(void* a_out)
@@ -2006,6 +2008,7 @@
 35601,0x1405b6060,0x1405bdcf0,4,NiCamera* Main::WorldRootCamera()
 35608,0x1405b6470,0x1405be100,4,bool Main::IsRoomVisible(NiNode* a_room) src\RE\M/Main.cpp:17
 35620,0x1405b6dc0,0x1405bee40,3,void Main::SetupPlayerBaseForm()
+35622,0x1405b7050,0x1405befa0,2,void Main::RegisterEventSinks()
 35632,0x1405b8620,0x1405c0630,3,void InitTESThread::WaitForInitialization()
 35642,0x1405b8f00,0x1405c0f70,3,SettingsOfSkyrim::
 35754,0x1405bc350,0x1405c4770,3,void BSFadeNode::RegisterFocusShadowActor()
@@ -4471,6 +4474,7 @@
 100423,0x1412e3b80,0x141323740,3,void RenderShadowLightsWithUtilityShader()
 100424,0x1412e3e70,0x141323b10,3,void Main::RenderWorld (bool param_1)
 100425,0x1412e4370,0x141323ef0,3,void Main::PostRenderCleanup()
+100427,0x1412e4400,0x141323f90,2,void Main::RenderFirstPersonViewPasses()
 100430,0x1412e49a0,0x141324e80,3,void RenderEOFImageSpaceEffects (RENDER_TARGET a_rendertarget)
 100440,0x1412e50a0,0x0,0,void BSLight::QueueLensFlare()
 100458,0x1412e5570,0x141325d10,3,void BSShaderRenderTargets::Create()
