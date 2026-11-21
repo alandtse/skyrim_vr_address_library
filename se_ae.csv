@@ -4859,6 +4859,7 @@ sseid,aeid,confidence,name
 35593,36601,3,RE::Main::ReloadFormData
 35605,36615,2,
 35620,36630,3,RE::Main::SetupPlayerBaseForm
+35658,36663,3,RE::MovementControllerActiveSets::ctor
 35754,36755,3,
 35869,36840,3,SceneGraph::SetNearDistance
 35871,36842,3,SceneGraph::SetFarDistance
@@ -8229,6 +8230,9 @@ sseid,aeid,confidence,name
 87807,90175,1,
 87919,90292,3,RE::BGSMoviePlayer::OpenMovie
 87936,90319,2,
+89391,91859,3,RE::ObstacleBuildQueue::ctor
+89392,91860,3,RE::ObstacleBuildQueue::dtor
+89395,91863,3,RE::ObstacleBuildQueue::Process
 89421,91892,1,IMovementInterface::sub_*
 89422,91893,1,IPipelineStageInterface::sub_*
 89424,91895,1,MovementArbiter::sub_*

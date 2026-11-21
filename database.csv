@@ -2036,6 +2036,7 @@
 35620,0x1405b6dc0,0x1405bee40,3,void Main::SetupPlayerBaseForm()
 35632,0x1405b8620,0x1405c0630,3,void InitTESThread::WaitForInitialization()
 35642,0x1405b8f00,0x1405c0f70,3,SettingsOfSkyrim::
+35658,0x1405b9bb0,0x1405c1de0,3,MovementControllerActiveSets* MovementControllerActiveSets::ctor()
 35754,0x1405bc350,0x1405c4770,3,void BSFadeNode::RegisterFocusShadowActor()
 35771,0x1405bc830,0x1405c4c10,3,void ClearFocusShadowActors()
 35825,0x1405beb00,0x1405c6f70,3,void StartVMInitThread()
@@ -4085,6 +4086,9 @@
 88674,0x1410cf350,0x14112c080,3,NiPoint3 BSNavmesh::GetNormal(std::uint16_t a_tri) const
 89364,0x1410fc9e0,0x141159720,3,void ProcessAvoidBoxChecks()
 89365,0x1410fcbf0,0x141159930,3,std::uint64_t CheckAvoidBox()
+89391,0x1410fe270,0x14115afb0,3,void ObstacleBuildQueue::ctor()
+89392,0x1410fe2d0,0x14115b010,3,void ObstacleBuildQueue::dtor()
+89395,0x1410fe4c0,0x14115b200,3,void ObstacleBuildQueue::Process()
 97369,0x14122c060,0x141264510,2,"void ObjectBindPolicy::GetAttachedScripts(std::uint64_t a_handle, void* a_out)"
 97370,0x14122c230,0x1412646e0,2,"void* ObjectBindPolicy::FindAttachedScript(void* a_out, std::uint64_t a_handle, void* a_name)"
 97371,0x14122c6f0,0x141264ba0,4,"void ObjectBindPolicy::GetInitialPropertyValues(VMHandle a_handle, const BSFixedString& a_className, BSTScrapHashMap<BSFixedString, Variable>& a_propertyValues, std::uint32_t& a_nonConvertedProperties)"
