@@ -4069,6 +4069,7 @@
 97514,0x141237240,0x14126f6f0,2,void BSScript::ObjectTypeInfo::Dtor()
 97534,0x1412381b0,0x141270660,3,"void CollectObjectTypeVariableNames(BSScript::ObjectTypeInfo* a_type, void* a_out)"
 97538,0x1412386d0,0x141270b80,3,void BSScript::ObjectTypeInfo::ReleaseData(bool a_keepNativeFunctions)
+97540,0x14123a6c0,0x141272b70,3,"bool BSScript::ObjectTypeInfo::BindNativeFunction(BSScript::IFunction* a_func, SkyrimScript::Logger* a_logger)"
 97551,0x14123b1b0,0x141273660,3,"std::uint64_t AppendObjectTypeVariableNames(BSScript::ObjectTypeInfo* a_type, void* a_out, std::int32_t a_mode)"
 97559,0x14123bc10,0x1412740c0,3,"void* ScrapArrayBSFixedString_Init(void* a_array, std::int32_t a_reserve)"
 97568,0x14123beb0,0x141274360,3,"BSScript::ObjectTypeInfo** ObjectTypeInfoPtr_Assign(BSScript::ObjectTypeInfo** a_dest, BSScript::ObjectTypeInfo** a_source)"
