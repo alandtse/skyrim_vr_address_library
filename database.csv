@@ -4051,6 +4051,7 @@
 97475,0x1412348b0,0x14126cd60,2,std::uint32_t BSScript::Internal::Object::SetLockStructureFlag()
 97481,0x141234e10,0x14126d2c0,2,void BSScript::Internal::Object::ClearVariableReferences()
 97482,0x141234f90,0x14126d440,2,void BSScript::Internal::Object::SetHandle(std::uint64_t a_handle)
+97492,0x141235630,0x14126dae0,3,BSFixedString* BSScript::ObjectTypeInfo::GetInitialStateName()
 97496,0x141235960,0x14126de10,2,void BSScript::Variable::SetDefault()
 97497,0x141235b10,0x14126dfc0,2,BSFixedString* BSScript::Variable::GetString()
 97498,0x141235be0,0x14126e090,2,void BSScript::Variable::SetString(BSFixedString* a_str)
