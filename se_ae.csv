@@ -4167,6 +4167,7 @@ sseid,aeid,confidence,name
 29762,30581,1,
 29763,30582,1,
 29764,30583,1,
+29765,30584,2,
 29795,30612,1,ObstacleTaskData::Func2_*
 29797,30614,1,ObstacleTaskData::sub_*
 29799,30616,1,
@@ -4834,6 +4835,7 @@ sseid,aeid,confidence,name
 35583,36589,3,
 35593,36601,3,RE::Main::ReloadFormData
 35620,36630,3,RE::Main::SetupPlayerBaseForm
+35622,36632,2,
 35754,36755,3,
 35869,36840,3,SceneGraph::SetNearDistance
 35871,36842,3,SceneGraph::SetFarDistance
@@ -6939,6 +6941,7 @@ sseid,aeid,confidence,name
 51529,52404,3,"void RaceSexMenu::ApplyMaskSliderValue(float a_value, std::uint32_t a_sliderIndex)"
 51530,52405,3,"void RaceSexMenu::ApplyMaskColorSliderValue(std::uint32_t a_value, std::uint32_t a_sliderIndex)"
 51531,52406,3,"void RaceSexMenu::ApplyFaceDetailsSliderValue(float a_value, std::uint32_t a_sliderIndex)"
+51909,52847,2,
 52081,52971,2,LocalMapMenu::UpdateMarkers
 52181,53073,3,AppendQuestMarkers
 52182,53074,3,TryAddRoutedMarker
@@ -6993,6 +6996,7 @@ sseid,aeid,confidence,name
 52750,53593,1,
 52753,53594,1,
 52757,53600,1,
+52801,53634,2,
 52804,53637,2,
 52805,53638,2,
 52806,53639,2,
@@ -7200,6 +7204,7 @@ sseid,aeid,confidence,name
 53814,54618,1,BSScript::NativeFunction0_ActiveEffect_Actor__::HasStub_*
 53815,54619,1,BSScript::NativeFunction0_ActiveEffect_EffectSetting__::HasStub_*
 53840,54638,1,SkyrimScript::AttachAshPileFunctor::LoadImpl_*
+53959,54783,2,
 53961,54785,1,
 53984,54818,1,
 54006,54824,1,
@@ -8178,6 +8183,8 @@ sseid,aeid,confidence,name
 87805,90173,1,
 87806,90174,1,
 87807,90175,1,
+88939,91393,2,
+89413,91884,2,
 89421,91892,1,IMovementInterface::sub_*
 89422,91893,1,IPipelineStageInterface::sub_*
 89424,91895,1,MovementArbiter::sub_*
@@ -8445,6 +8452,7 @@ sseid,aeid,confidence,name
 90847,93413,1,
 90848,93414,1,
 90850,93416,1,
+90938,93512,2,
 90970,93613,1,
 90971,93616,1,
 90972,93619,1,
@@ -9126,7 +9134,11 @@ sseid,aeid,confidence,name
 100110,106817,3,RE::BSLightingShaderMaterialLODLandscape::Ctor
 100118,106825,3,RE::BSLightingShaderMaterialSnow::Ctor
 100125,106832,3,RE::BSLightingShaderMaterialMultiLayerParallax::Ctor
+100405,107123,2,
+100406,107124,2,
 100421,107139,3,RE::Main::RenderDepth
+100427,107145,2,
+100526,107252,2,
 100583,107323,3,SetLODBlendOffsetConstant
 100747,107528,1,BSEffectShader::Func7_*
 100748,107529,1,BSEffectShader::sub_*
