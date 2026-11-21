@@ -2005,6 +2005,7 @@ sseid,aeid,confidence,name
 13140,13280,1,TES::sub_*
 13147,13287,3,TES::SetGridFromPosition
 13148,13288,3,TES::UpdateGridForPosition
+13152,13292,2,
 13153,13293,1,TES::sub_*
 13155,13295,1,TES::sub_*
 13156,13296,1,
@@ -2322,7 +2323,9 @@ sseid,aeid,confidence,name
 14635,32667,3,
 14704,14875,3,RE::TESHarvestedEvent::GetEventSource
 14809,14988,3,RE::TESForm::GetWeight
+15041,15215,2,
 15156,15329,3,BGSDynamicPersistenceManager::DemoteReferences
+15159,15332,2,
 15492,15657,3,BipedAnim::SetRoot
 15495,15660,3,FEC::UpdateCollision::RemoveNodeFromScene
 15501,15678,3,FEC::ProcessObject::attachArmorAddon
@@ -2362,7 +2365,9 @@ sseid,aeid,confidence,name
 15890,16130,3,RE::InventoryChanges::InitFromContainerExtra
 15916,41558,3,RE::TESActionData::Ctor
 15967,16212,3,RE::BSPointerHandleManagerInterface::GetHandle
+16173,16405,2,
 16175,16407,3,RE::ScreenSplatter::Clear
+16188,16421,2,
 16293,16537,1,TESRegionDataObjects::ConstructSelf_*
 16296,16540,1,TESRegionDataObjects::IsLoaded_*
 16297,16541,1,TESRegionDataObjects::dtor_*
@@ -3021,6 +3026,8 @@ sseid,aeid,confidence,name
 20095,20543,3,RE::TESWorldSpace::GetSkyCell
 20110,20559,3,TESWorldSpace::GetOffsetData
 20529,20968,3,RE::BGSMaterialType::GetMaterialType
+21400,21873,2,
+21434,21919,2,
 21886,22368,1,GameFunc::handler::IncrementPCSkill_*
 21887,22369,1,GameFunc::handler::UpdateLevel_*
 21889,22371,1,GameFunc::handler::IsOwner_*
@@ -3569,6 +3576,7 @@ sseid,aeid,confidence,name
 25977,26586,3,RE::BSFaceGenAnimationData::Reset
 25980,26594,3,RE::BSFaceGenAnimationData::SetExpressionOverride
 26259,26838,3,RE::BSFaceGenManager::PrepareHeadPartForShaders
+26407,26988,2,
 26674,27350,2,
 26753,27429,2,void* BGSPackageDataList::GetByUID(std::uint8_t a_uid)
 27430,28151,3,
@@ -4354,6 +4362,7 @@ sseid,aeid,confidence,name
 31341,32126,3,BGSWaterCollisionManager::bshkAutoWater::GetTransform
 31342,32127,3,BGSWaterCollisionManager::bshkAutoWater::IsActive
 31410,32217,3,RE::TESWaterSystem::AddRipple
+31719,32487,2,
 31812,32582,3,
 31813,32583,3,
 31949,32703,3,
@@ -4682,6 +4691,7 @@ sseid,aeid,confidence,name
 34549,35404,1,GetJobListByIndex_*
 34552,35407,1,
 34553,35408,1,
+34554,35409,2,
 34555,35410,1,
 34556,35411,1,
 34557,35412,1,JobListManager__ServingThread::sub_*
@@ -4805,6 +4815,7 @@ sseid,aeid,confidence,name
 35157,36047,1,BGSSaveGameBuffer::sub_*
 35166,36056,3,
 35199,36091,3,RE::MemoryManager::RegisterMemoryManager
+35208,36104,2,
 35317,36212,3,RE::BGSImpactManager::PlayImpactSound
 35320,36215,3,RE::BGSImpactManager::PlayImpactEffect
 35413,36311,3,RE::Calendar::GetTimeDateString
@@ -4837,6 +4848,8 @@ sseid,aeid,confidence,name
 35754,36755,3,
 35869,36840,3,SceneGraph::SetNearDistance
 35871,36842,3,SceneGraph::SetFarDistance
+35912,36887,2,
+35914,36889,2,
 35978,36953,3,RE::TaskQueueInterface::QueueBulletWaterDisplacementTask
 35987,36962,3,RE::TaskQueueInterface::QueueRemoveSpellTask
 36174,37147,2,
@@ -5459,7 +5472,9 @@ sseid,aeid,confidence,name
 39428,40504,3,bool PlayerCharacter::IsInvulnerable()
 39507,40586,3,RE::PlayerCharacter::SetAIDriven
 39568,40654,3,RE::PlayerCharacter::AttemptPickpocket
+39572,40658,2,
 39612,40698,3,"TintMask* PlayerCharacter::GetTintMask(std::int32_t a_type, std::int32_t a_index)"
+39637,40724,2,
 40056,41067,3,RE::LocationDiscovery::GetEventSource
 40060,41071,3,RE::ShoutAttack::GetEventSource
 40287,41296,3,ProcessLists::Update
@@ -5471,6 +5486,8 @@ sseid,aeid,confidence,name
 40297,41307,3,ProcessLists::UpdateHighActorMovement
 40330,41340,3,RE::ProcessLists::StopCombatAndAlarmOnActor
 40354,41367,3,ProcessLists::UpdateHighActors
+40376,41390,2,
+40377,41391,2,
 40396,41410,3,RE::ProcessLists::ClearCachedFactionFightReactions
 40459,41476,3,BeginLowActorUpdate
 40478,41497,3,LockFreeRing2048Push
@@ -5936,6 +5953,7 @@ sseid,aeid,confidence,name
 42903,44083,1,
 42904,44084,1,
 42906,44086,1,
+42914,44094,2,
 42983,44166,3,
 42993,44176,1,
 42997,44183,1,Projectile::GetLinearVelocity_*
@@ -7042,6 +7060,7 @@ sseid,aeid,confidence,name
 53105,53915,1,
 53109,53920,1,SkyrimVM::sub_*
 53114,53925,2,
+53118,53929,2,
 53122,53933,1,
 53123,53934,1,SkyrimVM::sub_*
 53125,53936,1,
@@ -7585,6 +7604,7 @@ sseid,aeid,confidence,name
 68017,69359,3,FinishAllJobLists
 68022,69383,3,JobList::ctor
 68054,69404,3,JobList::Clear
+68163,69510,2,
 68838,70190,3,RE::NiObject::ProcessClone
 68839,70191,3,RE::NiObject::CreateDeepCopy
 68893,70244,2,"void NiAVObject::CopyTransformAndCollision(NiAVObject* a_target, NiCloningProcess* a_cloning)"
@@ -7647,6 +7667,9 @@ sseid,aeid,confidence,name
 75460,77245,3,void Renderer::Begin(std::uint32_t a_windowID)
 75507,77299,3,RE::RendererData::CreateRenderTexture
 76017,77850,3,"void ComputePhysicsStepTimes(float a_frameDelta, bool a_complex)"
+76071,77905,2,
+76072,77906,2,
+76084,77918,2,
 76094,77928,3,void bhkWorld::HavokWorldEnterWrite()
 76095,77929,3,void bhkWorld::HavokWorldExitWrite()
 76170,77998,3,RE::NiAVObject::SetCollisionLayer
@@ -9126,6 +9149,7 @@ sseid,aeid,confidence,name
 100110,106817,3,RE::BSLightingShaderMaterialLODLandscape::Ctor
 100118,106825,3,RE::BSLightingShaderMaterialSnow::Ctor
 100125,106832,3,RE::BSLightingShaderMaterialMultiLayerParallax::Ctor
+100403,107121,2,
 100421,107139,3,RE::Main::RenderDepth
 100583,107323,3,SetLODBlendOffsetConstant
 100747,107528,1,BSEffectShader::Func7_*
