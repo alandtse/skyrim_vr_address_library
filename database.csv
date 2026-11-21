@@ -4038,6 +4038,7 @@
 88674,0x1410cf350,0x14112c080,3,NiPoint3 BSNavmesh::GetNormal(std::uint16_t a_tri) const
 89364,0x1410fc9e0,0x141159720,3,void ProcessAvoidBoxChecks()
 89365,0x1410fcbf0,0x141159930,3,std::uint64_t CheckAvoidBox()
+89413,0x1410ff250,0x14115c160,2,bool MovementControllerNPC::AddAgentsAndArbiters(void* a_set)
 90938,0x14113df60,0x1411983b0,2,void EnsureMemoryHeap()
 97369,0x14122c060,0x141264510,2,"void ObjectBindPolicy::GetAttachedScripts(std::uint64_t a_handle, void* a_out)"
 97370,0x14122c230,0x1412646e0,2,"void* ObjectBindPolicy::FindAttachedScript(void* a_out, std::uint64_t a_handle, void* a_name)"
