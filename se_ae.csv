@@ -4772,6 +4772,7 @@ sseid,aeid,confidence,name
 34857,35767,1,BGSSaveLoadManager::sub_*
 34860,35770,1,BGSSaveLoadManager::sub_*
 34861,35771,1,BGSSaveLoadManager::sub_*
+34862,35772,3,RE::BGSSaveLoadManager::ProcessEvents
 34874,35785,1,RegionalSaveNames::DoNameSave
 34968,35877,1,
 34984,35890,1,
