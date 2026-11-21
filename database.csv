@@ -4654,6 +4654,7 @@
 101884,0x14133f0c0,0x14137c200,3,RE::BSWin32SaveDataSystemUtility::GetSingleton
 101962,0x141340ff0,0x14137e180,4,"longlong **BSWin32SaveDataSystemUtility::Ctor_141340FF0(longlong param_1,longlong **param_2,char *param_3,int param_4)"
 101985,0x1413420c0,0x14137f330,4,"ulonglong anonymous_namespace__Win32FileType::CopyToBuffer_1413420C0(longlong param_1,undefined8 param_2,uint param_3)"
+101995,0x141342600,0x14137f870,2,BSStreamSystemUtility* BSStreamSystemUtility::GetSingleton()
 102158,0x14134a498,0x14138a1ac,3,void NiMemFree(void* a_ptr)
 102177,0x14134ab54,0x14138a868,3,void _Init_thread_footer(int* a_pOnce)
 102178,0x14134abb4,0x14138a8c8,3,void _Init_thread_header(int* a_pOnce)
