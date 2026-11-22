@@ -3024,6 +3024,7 @@ sseid,aeid,confidence,name
 19752,20146,2,
 19757,53381,3,
 19760,20154,3,
+19762,20157,2,
 19771,20166,2,
 19805,20210,3,RE::TESObjectREFR::IsAnOwner
 19811,20216,3,void* TESObjectREFR::GetTeleportData()

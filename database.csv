@@ -565,6 +565,7 @@
 19752,0x1402a4e30,0x1402b65a0,2,bool REFREventCallbacks::IEventCallback::Load(BSStorage* a_storage)
 19757,0x1402a5010,0x1402b6780,4,void SaveStorageWrapper::WriteUInt32(std::uint32_t a_value)
 19760,0x1402a50e0,0x1402b6850,4,"BSResource::ErrorCode SaveStorageWrapper::EnsureCapacity (SaveStorageWrapper * a_this, uint64_t size)"
+19762,0x1402a5230,0x1402b69a0,2,"bool TESObjectREFR::IsFurnitureMarkerInUse(std::uint32_t a_markerIndex, bool a_ignoreReserved)"
 19771,0x1402a5cb0,0x1402b7420,2,bool TESObjectREFR::HasFurnitureBase()
 19789,0x1402a6670,0x1402b7de0,3,RE::TESObjectREFR::GetOwner
 19793,0x1402a6960,0x1402b80d0,4,void TESObjectREFR::SetOwner(TESForm* a_owner)
