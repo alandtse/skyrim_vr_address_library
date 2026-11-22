@@ -4279,6 +4279,7 @@
 98375,0x141272c50,0x141292f00,2,"void BSTHashMap<VMHandle, BSTSmallSharedArray<AttachedScript>>::Entry::Emplace(void* a_next, std::uint64_t* a_key, BSTSmallSharedArray<AttachedScript>* a_value)"
 98377,0x141272d00,0x141292fb0,2,void BSTFreeList<BSScript::Internal::FunctionMessage>::Free(BSTFreeListElem<BSScript::Internal::FunctionMessage>*& a_node)
 98381,0x141272f90,0x141293240,3,"void ScrapArrayBSFixedString_ReleaseRange(void* a_array, std::uint32_t a_start, std::uint32_t a_count)"
+98404,0x141273520,0x1412937d0,2,"bool BSScript::Internal::RawFuncCallQuery::GetFunctionCallInfo(CallType& a_callType, BSTSmartPointer<ObjectTypeInfo>& a_objType, BSFixedString& a_name, Variable& a_obj, BSScrapArray<Variable>& a_args)"
 98411,0x141273800,0x141293ab0,2,"BSTHashMap<VMHandle, BSTSmallSharedArray<AttachedScript>>::Entry* BSTHashMap<VMHandle, BSTSmallSharedArray<AttachedScript>>::GetFreeEntry(void* a_entries)"
 98414,0x141273910,0x141293bc0,2,void* BSScript::IVMSaveLoadInterface::GetReadableStringTable()
 98415,0x141273920,0x141293bd0,2,void* BSScript::IVMSaveLoadInterface::GetReadableTypeTable()
@@ -4297,6 +4298,7 @@
 98520,0x141278110,0x1412b1380,3,BSScript::Internal::CodeTasklet::VMProcess
 98521,0x1412786c0,0x1412b1930,2,bool BSScript::Internal::CodeTasklet::SaveResumeReason(SaveStorageWrapper& a_storage)
 98522,0x141278740,0x1412b19b0,2,bool BSScript::Internal::CodeTasklet::LoadResumeReason(LoadStorageWrapper& a_storage)
+98523,0x1412787a0,0x1412b1a10,2,"bool BSScript::Internal::CodeTasklet::GetFunctionCallInfo(CallType& a_callType, BSTSmartPointer<ObjectTypeInfo>& a_objType, BSFixedString& a_name, Variable& a_obj, BSScrapArray<Variable>& a_args)"
 98525,0x141278db0,0x1412b2020,2,void BSScript::Internal::CodeTasklet::CompleteCall()
 98526,0x141279000,0x1412b2270,2,void BSScript::Internal::CodeTasklet::HandleIAdd()
 98527,0x1412792c0,0x1412b2530,2,void BSScript::Internal::CodeTasklet::HandleFAdd()
