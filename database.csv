@@ -495,6 +495,7 @@
 19209,0x14028beb0,0x14029d5e0,3,bool NiNode::ActivateAddonNode()
 19212,0x14028c120,0x14029d850,3,bool NiNode::HasAddonNodes()
 19220,0x14028c440,0x14029db70,3,RE::TESObjectREFR::HasEffectKeyword?
+19222,0x14028c4d0,0x14029dc00,2,bool TESObjectREFR::IsDragonCrashZoneMarker()
 19238,0x14028cc60,0x14029e390,4,float TESObjectREFR::GetScale()
 19239,0x14028ccb0,0x14029e3e0,3,TESObjectREFR::SetScale()
 19244,0x14028d0b0,0x14029e7e0,4,bool TESObjectREFR::CanBeMoved_14028D0B0 (TESObjectREFR * param_1)
@@ -2192,6 +2193,7 @@
 36775,0x1405ff4b0,0x140607cc0,3,void Actor::InitItemImpl()
 36776,0x1405ff590,0x140607da0,2,BSTSmartPointer<MovementControllerNPC>* Actor::GetMovementControllerNPC()
 36794,0x1405fff70,0x140608780,2,bool Actor::GetPathRequest(void** a_out)
+36796,0x140600070,0x140608880,2,"bool Actor::RequestTurnToAngle(float a_angle, float a_tolerance)"
 36801,0x140600400,0x140608c10,3,void Actor::StopMoving(float a_delta)
 36802,0x140600590,0x140608da0,4,RE::Actor::StopMovement
 36807,0x140600a90,0x1406092a0,2,void Actor::BuildMovementParameters(void** a_out)
@@ -2578,6 +2580,7 @@
 40565,0x1406e69a0,0x14070d890,3,PlayerSkills::InitSkills
 40566,0x1406e6ad0,0x14070d9c0,3,PlayerSkills::EvaluateSkillData
 40575,0x1406e7320,0x14070e210,4,RE::ProcessLists::HandlePlayerLevelUpdate(ProcessLists *param_1)
+40590,0x1406e8400,0x14070f2f0,2,"bool ActorMover::RequestTurnToAngle(float a_angle, float a_tolerance)"
 40594,0x1406e8f70,0x14070fe60,2,bool ActorMover::IsPathRequestIdle()
 40595,0x1406e9010,0x14070ff00,2,bool ActorMover::IsPathComplete()
 40596,0x1406e90b0,0x14070ffa0,2,"bool ActorMover::QueryPathRequestState(void* a_request, std::uint8_t* a_outNotStarted)"
