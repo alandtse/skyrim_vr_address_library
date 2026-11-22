@@ -1,3 +1,14 @@
+# [0.308.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.307.0...v0.308.0) (2026-11-22)
+
+
+### Features
+
+* add GetFunctionCallInfo ids ([#366](https://github.com/alandtse/skyrim_vr_address_library/issues/366)) ([4c31a3c](https://github.com/alandtse/skyrim_vr_address_library/commit/4c31a3c14a42290282fb19e1177153298fa75279))
+* add main init and draw helper ids ([#368](https://github.com/alandtse/skyrim_vr_address_library/issues/368)) ([b7bb3e7](https://github.com/alandtse/skyrim_vr_address_library/commit/b7bb3e7161be10d2a39990ce20086b3e87ca5af1))
+* add main loop callee ids ([#367](https://github.com/alandtse/skyrim_vr_address_library/issues/367)) ([875d4ea](https://github.com/alandtse/skyrim_vr_address_library/commit/875d4eab4aca2f12add39fc4dcb199428d3c151d))
+* add Papyrus linker and stack ids ([#369](https://github.com/alandtse/skyrim_vr_address_library/issues/369)) ([5fd6adc](https://github.com/alandtse/skyrim_vr_address_library/commit/5fd6adc6788ffe9d1414f95b6e117d0d17bdb878))
+* add type info and linker ids ([#364](https://github.com/alandtse/skyrim_vr_address_library/issues/364)) ([fe2fa32](https://github.com/alandtse/skyrim_vr_address_library/commit/fe2fa3221f3c0f5381920e35f63293fe81d2dbc6))
+
 # [0.307.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.306.0...v0.307.0) (2026-11-20)
 
 
