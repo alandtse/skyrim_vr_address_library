@@ -2193,6 +2193,7 @@
 36810,0x140600c80,0x140609490,2,bool Actor::IsPathComplete()
 36811,0x140600ca0,0x1406094b0,2,bool Actor::IsPathRequestPending()
 36812,0x140600cc0,0x1406094d0,4,bool Actor::IsPathing()
+36815,0x140600d20,0x140609530,2,bool Actor::IsPathRequestIdle()
 36817,0x140600d80,0x140609590,3,bool Actor::IsOnWaterTriangle()
 36872,0x140603b30,0x14060c340,2,Actor::Kill
 36877,0x1406057c0,0x14060dfd0,3,RE::Actor::IsOnFlyingMount
@@ -2561,6 +2562,7 @@
 40565,0x1406e69a0,0x14070d890,3,PlayerSkills::InitSkills
 40566,0x1406e6ad0,0x14070d9c0,3,PlayerSkills::EvaluateSkillData
 40575,0x1406e7320,0x14070e210,4,RE::ProcessLists::HandlePlayerLevelUpdate(ProcessLists *param_1)
+40594,0x1406e8f70,0x14070fe60,2,bool ActorMover::IsPathRequestIdle()
 40595,0x1406e9010,0x14070ff00,2,bool ActorMover::IsPathComplete()
 40598,0x1406e9350,0x140710240,2,bool ActorMover::IsPathRequestPending()
 41257,0x140704970,0x14072b900,3,RE::PlayerControls::Ctor
