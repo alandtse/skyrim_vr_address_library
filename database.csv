@@ -76,6 +76,7 @@
 11483,0x14010f5c0,0x14011fba0,3,RE::ExtraDataList::SetInventoryChanges
 11530,0x140112700,0x140122ce0,3,void ExtraDataList::SetHeadingTargetRefHandle(ObjectRefHandle& a_handle)
 11565,0x140113ac0,0x1401240a0,3,void ExtraDataList::GetSoundHandle(BSSoundHandle* a_out)
+11632,0x1401171a0,0x140127780,2,TESObjectREFR* BSExtraDataList::GetLinkedRef(BGSKeyword* a_keyword)
 11633,0x1401172f0,0x1401278d0,3,"void ExtraDataList::SetLinkedRef(TESObjectREFR* a_targetRef, BGSKeyword* a_keyword)"
 11647,0x1401185c0,0x140128ba0,3,"void ExtraDataList::SetActivateParent(TESObjectREFR* a_parentRef, float a_delay)"
 11651,0x140118a30,0x140129010,4,void ExtraDataList::AddActivateRefChild(TESObjectREFR* a_childRef)
@@ -578,6 +579,7 @@
 19826,0x1402a77a0,0x1402b8f10,4,TESObjectREFR::SetLeveledCreature
 19839,0x1402a7e80,0x1402b95f0,2,void TESObjectREFR::SetMultiBoundRefIfMarker(TESObjectREFR* a_marker)
 19843,0x1402a8020,0x1402b9790,4,BGSLocationRefType * TESObjectREFR::GetLocationRefType_1402A8020 (TESObjectREFR * a_this)
+19847,0x1402a8110,0x1402b9880,2,TESObjectREFR* TESObjectREFR::GetLinkedRef(BGSKeyword* a_keyword)
 19857,0x1402a8cc0,0x1402ba430,3,void TESObjectREFR::InitChildActivates(TESObjectREFR* a_actionRef)
 19870,0x1402a9a90,0x1402bb200,2,TESWorldSpace* TESObjectREFR::GetPackageStartWorldSpace()
 19871,0x1402a9ac0,0x1402bb230,2,TESObjectCELL* TESObjectREFR::GetPackageStartCell()
