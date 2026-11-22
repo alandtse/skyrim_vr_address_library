@@ -8277,6 +8277,7 @@ sseid,aeid,confidence,name
 87807,90175,1,
 87919,90292,3,RE::BGSMoviePlayer::OpenMovie
 87936,90319,2,
+87970,90351,2,
 88939,91393,2,
 89391,91859,3,RE::ObstacleBuildQueue::ctor
 89392,91860,3,RE::ObstacleBuildQueue::dtor

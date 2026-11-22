@@ -4145,6 +4145,7 @@
 87919,0x1410a2dc0,0x1410ff9f0,2,"bool BGSMoviePlayer::OpenMovie(const char* a_path, bool a_flag)"
 87936,0x1410a3790,0x1411003c0,2,void BSMusicManager::Update()
 87965,0x1410a5740,0x141102370,3,"BSPathingLocation* BSPathingLocation::ctor(const NiPoint3& a_location, const BSTSmartPointer<BSPathingCell>& a_cell)"
+87970,0x1410a5a20,0x141102650,2,BSPathingLocation* BSPathingLocation::CopyFrom(const BSPathingLocation* a_other)
 87978,0x1410a5e50,0x141102a80,3,"bool BSPathingLocation::GetNavMeshAndTriangle(BSTSmartPointer<BSNavmesh>& a_navMeshOut, std::uint16_t& a_triOut) const"
 87985,0x1410a64c0,0x1411030f0,3,bool BSPathingLocation::ResolveToClosestNavmeshAndTriangle(FindTriangleForLocationFilter& a_filter)
 88004,0x1410a7e10,0x141104a40,4,"bool FindTriangleForLocationFilterCheckDeltaZ::IsValidTri(NiPoint3* a_location, BSNavmesh* a_navMesh, std::uint16_t a_tri, NiPoint3* a_pointOnTri)"
