@@ -579,6 +579,9 @@
 19839,0x1402a7e80,0x1402b95f0,2,void TESObjectREFR::SetMultiBoundRefIfMarker(TESObjectREFR* a_marker)
 19843,0x1402a8020,0x1402b9790,4,BGSLocationRefType * TESObjectREFR::GetLocationRefType_1402A8020 (TESObjectREFR * a_this)
 19857,0x1402a8cc0,0x1402ba430,3,void TESObjectREFR::InitChildActivates(TESObjectREFR* a_actionRef)
+19870,0x1402a9a90,0x1402bb200,2,TESWorldSpace* TESObjectREFR::GetPackageStartWorldSpace()
+19871,0x1402a9ac0,0x1402bb230,2,TESObjectCELL* TESObjectREFR::GetPackageStartCell()
+19872,0x1402a9af0,0x1402bb260,2,NiPoint3* TESObjectREFR::GetPackageStartPosition()
 20022,0x1402b1b60,0x1402c32d0,3,"bool TESFile::SeekCell(TESWorldSpace* a_worldSpace, TESFile* a_file, int32_t a_x, int32_t a_y)"
 20023,0x1402b1df0,0x1402c3560,3,"std::int32_t TESWorldSpace::GetIndexForCellCoord(TESFile* a_file, std::int32_t a_cellX, std::int32_t a_cellY)"
 20026,0x1402b20e0,0x1402c3850,4,"TESObjectCELL* TESWorldSpace::GetOrCreateCell(int a_x, int a_y)"
@@ -1621,7 +1624,10 @@
 28997,0x140441240,0x140450d90,2,std::int32_t PackageLocation::GetLocType()
 28998,0x140441250,0x140450da0,4,void PackageLocation::SetLocationType(std::int32_t a_type)
 29000,0x140441300,0x140450e50,2,TESObjectREFR* PackageLocation::GetNearReference()
+29001,0x140441390,0x140450ee0,2,TESForm* PackageLocation::GetInCell()
 29007,0x140441540,0x140451090,4,"void PackageLocation::Assign(const PackageLocation* a_other, bool a_allowNone)"
+29015,0x140442890,0x1404523e0,2,TESObjectREFR* PackageLocation::ResolveReference(Actor* a_actor)
+29020,0x140443030,0x140452b80,2,std::uint32_t PackageLocation::GetRadius()
 29036,0x1404434f0,0x140453040,3,PackageTarget::ResolveRefHandle
 29044,0x140443690,0x1404531e0,4,void PackageTarget::SetType(std::uint32_t a_type)
 29046,0x140443750,0x1404532a0,3,PackageTarget::SetRefHandle
@@ -2331,6 +2337,8 @@
 38198,0x140644600,0x14064d950,4,"void AIProcess::AddToProcedureIndexRunning(Actor* a_actor, std::uint32_t a_num)"
 38201,0x1406447b0,0x14064db00,3,AIProcess::UpdatePackageFlee
 38203,0x140644a60,0x14064ddb0,3,AIProcess::UpdatePackageTravel
+38217,0x140645390,0x14064e6e0,2,std::uint32_t* AIProcess::GetPackageObjectHandle(std::uint32_t* a_out)
+38219,0x140645400,0x14064e750,2,std::uint32_t* AIProcess::GetSecondPackageObjectHandle(std::uint32_t* a_out)
 38227,0x140645680,0x14064e9d0,3,AIProcess::RefreshForcedPackage
 38249,0x1406469b0,0x14064fd00,3,AIProcess::UpdatePackageMiddleLow
 38250,0x1406473d0,0x140650720,3,AIProcess::UpdatePackageFollowMiddleLow

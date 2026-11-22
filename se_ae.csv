@@ -3027,6 +3027,9 @@ sseid,aeid,confidence,name
 19811,20216,3,void* TESObjectREFR::GetTeleportData()
 19839,20244,2,
 19857,20264,3,RE::TESObjectREFR::InitChildActivates
+19870,20277,2,
+19871,20278,2,
+19872,20279,2,
 20089,20536,3,TESWorldSpace::CollectMapMarkerHandles
 20095,20543,3,RE::TESWorldSpace::GetSkyCell
 20110,20559,3,TESWorldSpace::GetOffsetData
