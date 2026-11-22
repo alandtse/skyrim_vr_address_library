@@ -4908,6 +4908,8 @@ sseid,aeid,confidence,name
 36800,37816,1,Character::sub_*
 36801,37817,3,RE::Actor::StopMoving
 36802,37818,3,RE::Actor::StopMovement
+36810,37826,2,
+36811,37827,2,
 36825,37841,1,Character::sub_*
 36826,37842,1,Actor::sub_*
 36828,37844,1,Actor::sub_*
@@ -5529,6 +5531,7 @@ sseid,aeid,confidence,name
 40478,41497,3,LockFreeRing2048Push
 40499,41507,3,LockFreeRing2048Pop
 40595,41624,2,
+40598,41627,2,
 41104,42183,1,
 41105,42184,1,IMovementSetKeepOffsetFromActor::Func0_*
 41106,42185,1,MovementPlannerAgentKeepOffset::Func11_*
