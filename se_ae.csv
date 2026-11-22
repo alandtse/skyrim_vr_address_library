@@ -2005,6 +2005,7 @@ sseid,aeid,confidence,name
 13140,13280,1,TES::sub_*
 13147,13287,3,TES::SetGridFromPosition
 13148,13288,3,TES::UpdateGridForPosition
+13152,13292,2,
 13153,13293,1,TES::sub_*
 13155,13295,1,TES::sub_*
 13156,13296,1,
@@ -2322,7 +2323,11 @@ sseid,aeid,confidence,name
 14635,32667,3,
 14704,14875,3,RE::TESHarvestedEvent::GetEventSource
 14809,14988,3,RE::TESForm::GetWeight
+15033,15207,2,
+15041,15215,2,
+15045,15220,2,
 15156,15329,3,BGSDynamicPersistenceManager::DemoteReferences
+15159,15332,2,
 15492,15657,3,BipedAnim::SetRoot
 15495,15660,3,FEC::UpdateCollision::RemoveNodeFromScene
 15501,15678,3,FEC::ProcessObject::attachArmorAddon
@@ -2362,7 +2367,9 @@ sseid,aeid,confidence,name
 15890,16130,3,RE::InventoryChanges::InitFromContainerExtra
 15916,41558,3,RE::TESActionData::Ctor
 15967,16212,3,RE::BSPointerHandleManagerInterface::GetHandle
+16173,16405,2,
 16175,16407,3,RE::ScreenSplatter::Clear
+16188,16421,2,
 16293,16537,1,TESRegionDataObjects::ConstructSelf_*
 16296,16540,1,TESRegionDataObjects::IsLoaded_*
 16297,16541,1,TESRegionDataObjects::dtor_*
@@ -3004,6 +3011,7 @@ sseid,aeid,confidence,name
 19405,19832,3,"void TESObjectREFR::UpdateAddonNodeSounds(NiAVObject* a_node, bool a_stop)"
 19409,19837,3,void TESObjectREFR::AddToWaterSystem()
 19410,19838,3,void TESObjectREFR::RemoveFromWaterSystem()
+19437,19865,2,
 19446,19872,3,RE::TESObjectREFR::InstantiateHitShader
 19457,19457,3,FUN_14029d510
 19503,19930,3,BGSWaterCollisionManager::BGSWaterUpdateI::`scalar_deleting_destructor'
@@ -3016,11 +3024,14 @@ sseid,aeid,confidence,name
 19760,20154,3,
 19805,20210,3,RE::TESObjectREFR::IsAnOwner
 19811,20216,3,void* TESObjectREFR::GetTeleportData()
+19839,20244,2,
 19857,20264,3,RE::TESObjectREFR::InitChildActivates
 20089,20536,3,TESWorldSpace::CollectMapMarkerHandles
 20095,20543,3,RE::TESWorldSpace::GetSkyCell
 20110,20559,3,TESWorldSpace::GetOffsetData
 20529,20968,3,RE::BGSMaterialType::GetMaterialType
+21400,21873,2,
+21434,21919,2,
 21886,22368,1,GameFunc::handler::IncrementPCSkill_*
 21887,22369,1,GameFunc::handler::UpdateLevel_*
 21889,22371,1,GameFunc::handler::IsOwner_*
@@ -3569,6 +3580,8 @@ sseid,aeid,confidence,name
 25977,26586,3,RE::BSFaceGenAnimationData::Reset
 25980,26594,3,RE::BSFaceGenAnimationData::SetExpressionOverride
 26259,26838,3,RE::BSFaceGenManager::PrepareHeadPartForShaders
+26407,26988,2,
+26497,27093,2,
 26674,27350,2,
 26753,27429,2,void* BGSPackageDataList::GetByUID(std::uint8_t a_uid)
 27430,28151,3,
@@ -4167,6 +4180,7 @@ sseid,aeid,confidence,name
 29762,30581,1,
 29763,30582,1,
 29764,30583,1,
+29765,30584,2,
 29795,30612,1,ObstacleTaskData::Func2_*
 29797,30614,1,ObstacleTaskData::sub_*
 29799,30616,1,
@@ -4354,6 +4368,7 @@ sseid,aeid,confidence,name
 31341,32126,3,BGSWaterCollisionManager::bshkAutoWater::GetTransform
 31342,32127,3,BGSWaterCollisionManager::bshkAutoWater::IsActive
 31410,32217,3,RE::TESWaterSystem::AddRipple
+31719,32487,2,
 31812,32582,3,
 31813,32583,3,
 31949,32703,3,
@@ -4682,6 +4697,7 @@ sseid,aeid,confidence,name
 34549,35404,1,GetJobListByIndex_*
 34552,35407,1,
 34553,35408,1,
+34554,35409,2,
 34555,35410,1,
 34556,35411,1,
 34557,35412,1,JobListManager__ServingThread::sub_*
@@ -4757,6 +4773,7 @@ sseid,aeid,confidence,name
 34857,35767,1,BGSSaveLoadManager::sub_*
 34860,35770,1,BGSSaveLoadManager::sub_*
 34861,35771,1,BGSSaveLoadManager::sub_*
+34862,35772,3,RE::BGSSaveLoadManager::ProcessEvents
 34874,35785,1,RegionalSaveNames::DoNameSave
 34968,35877,1,
 34984,35890,1,
@@ -4805,7 +4822,9 @@ sseid,aeid,confidence,name
 35157,36047,1,BGSSaveGameBuffer::sub_*
 35166,36056,3,
 35199,36091,3,RE::MemoryManager::RegisterMemoryManager
+35208,36104,2,
 35317,36212,3,RE::BGSImpactManager::PlayImpactSound
+35318,36213,2,
 35320,36215,3,RE::BGSImpactManager::PlayImpactEffect
 35413,36311,3,RE::Calendar::GetTimeDateString
 35493,36460,3,
@@ -4830,13 +4849,25 @@ sseid,aeid,confidence,name
 35516,36483,3,
 35551,36544,3,RE::Main::MainLoop
 35560,36559,3,RE::Main::Draw
+35566,36565,2,
+35569,36571,2,
+35570,36573,2,
 35571,36574,3,Main::UpdateCullingFrustum
+35572,36575,2,
+35578,36581,2,
+35581,36587,2,
 35583,36589,3,
 35593,36601,3,RE::Main::ReloadFormData
+35605,36615,2,
 35620,36630,3,RE::Main::SetupPlayerBaseForm
+35622,36632,2,
+35658,36663,3,RE::MovementControllerActiveSets::ctor
 35754,36755,3,
 35869,36840,3,SceneGraph::SetNearDistance
 35871,36842,3,SceneGraph::SetFarDistance
+35912,36887,2,
+35914,36889,2,
+35916,36891,2,
 35978,36953,3,RE::TaskQueueInterface::QueueBulletWaterDisplacementTask
 35987,36962,3,RE::TaskQueueInterface::QueueRemoveSpellTask
 36174,37147,2,
@@ -5125,6 +5156,9 @@ sseid,aeid,confidence,name
 38044,39000,2,
 38071,39026,3,ClearModifiers
 38079,39033,3,RE::TaskQueueInterface::ShouldUseTaskQueue
+38080,39034,2,
+38082,39036,2,
+38083,39037,2,
 38090,39045,3,Job_TES_animation
 38101,39057,1,Job_Destructible_*
 38102,39058,1,Job_Pick_reference_*
@@ -5459,7 +5493,9 @@ sseid,aeid,confidence,name
 39428,40504,3,bool PlayerCharacter::IsInvulnerable()
 39507,40586,3,RE::PlayerCharacter::SetAIDriven
 39568,40654,3,RE::PlayerCharacter::AttemptPickpocket
+39572,40658,2,
 39612,40698,3,"TintMask* PlayerCharacter::GetTintMask(std::int32_t a_type, std::int32_t a_index)"
+39637,40724,2,
 40056,41067,3,RE::LocationDiscovery::GetEventSource
 40060,41071,3,RE::ShoutAttack::GetEventSource
 40287,41296,3,ProcessLists::Update
@@ -5471,6 +5507,8 @@ sseid,aeid,confidence,name
 40297,41307,3,ProcessLists::UpdateHighActorMovement
 40330,41340,3,RE::ProcessLists::StopCombatAndAlarmOnActor
 40354,41367,3,ProcessLists::UpdateHighActors
+40376,41390,2,
+40377,41391,2,
 40396,41410,3,RE::ProcessLists::ClearCachedFactionFightReactions
 40459,41476,3,BeginLowActorUpdate
 40478,41497,3,LockFreeRing2048Push
@@ -5898,6 +5936,7 @@ sseid,aeid,confidence,name
 42784,43952,1,Hazard::sub_*
 42785,43953,1,Hazard::sub_*
 42786,43954,1,
+42791,43959,2,
 42796,43964,1,Hazard::Revert_*
 42797,43965,1,BSTEventSink_BSAnimationGraphEvent_::Handle_*
 42799,43967,1,Hazard::sub_*
@@ -5936,6 +5975,9 @@ sseid,aeid,confidence,name
 42903,44083,1,
 42904,44084,1,
 42906,44086,1,
+42911,44091,2,
+42913,44093,2,
+42914,44094,2,
 42983,44166,3,
 42993,44176,1,
 42997,44183,1,Projectile::GetLinearVelocity_*
@@ -6363,6 +6405,7 @@ sseid,aeid,confidence,name
 44873,45909,1,CombatInventoryItemMagicT_gs_T1_T2_ge_::sub_*
 44875,46131,1,CombatInventoryItemMagicT_gs_T1_T2_ge_::sub_*
 44876,45966,1,CombatInventoryItemMagicT_gs_T1_T2_ge_::sub_*
+45570,46870,2,
 46068,47332,3,
 47741,48842,1,
 47742,48843,1,
@@ -6939,6 +6982,8 @@ sseid,aeid,confidence,name
 51529,52404,3,"void RaceSexMenu::ApplyMaskSliderValue(float a_value, std::uint32_t a_sliderIndex)"
 51530,52405,3,"void RaceSexMenu::ApplyMaskColorSliderValue(std::uint32_t a_value, std::uint32_t a_sliderIndex)"
 51531,52406,3,"void RaceSexMenu::ApplyFaceDetailsSliderValue(float a_value, std::uint32_t a_sliderIndex)"
+51909,52847,2,
+52063,52950,2,
 52081,52971,2,LocalMapMenu::UpdateMarkers
 52181,53073,3,AppendQuestMarkers
 52182,53074,3,TryAddRoutedMarker
@@ -6993,6 +7038,7 @@ sseid,aeid,confidence,name
 52750,53593,1,
 52753,53594,1,
 52757,53600,1,
+52801,53634,2,
 52804,53637,2,
 52805,53638,2,
 52806,53639,2,
@@ -7042,6 +7088,7 @@ sseid,aeid,confidence,name
 53105,53915,1,
 53109,53920,1,SkyrimVM::sub_*
 53114,53925,2,
+53118,53929,2,
 53122,53933,1,
 53123,53934,1,SkyrimVM::sub_*
 53125,53936,1,
@@ -7200,6 +7247,7 @@ sseid,aeid,confidence,name
 53814,54618,1,BSScript::NativeFunction0_ActiveEffect_Actor__::HasStub_*
 53815,54619,1,BSScript::NativeFunction0_ActiveEffect_EffectSetting__::HasStub_*
 53840,54638,1,SkyrimScript::AttachAshPileFunctor::LoadImpl_*
+53959,54783,2,
 53961,54785,1,
 53984,54818,1,
 54006,54824,1,
@@ -7567,6 +7615,7 @@ sseid,aeid,confidence,name
 66861,68117,3,RE::MemoryManager::Deallocate
 66884,68144,3,RE::ScrapHeap::Allocate
 66885,68146,3,RE::ScrapHeap::Deallocate
+66889,68150,3,RE::ScrapHeap::SetKeepPages
 67151,68449,3,RE::BSThreadEvent::InitSDM
 67234,68534,3,QuickLoot::
 67240,68540,3,QuickLoot::
@@ -7585,10 +7634,12 @@ sseid,aeid,confidence,name
 68017,69359,3,FinishAllJobLists
 68022,69383,3,JobList::ctor
 68054,69404,3,JobList::Clear
+68163,69510,2,
 68838,70190,3,RE::NiObject::ProcessClone
 68839,70191,3,RE::NiObject::CreateDeepCopy
 68893,70244,2,"void NiAVObject::CopyTransformAndCollision(NiAVObject* a_target, NiCloningProcess* a_cloning)"
 69139,70500,2,"void NiObjectNET::CopyMembers(NiObjectNET* a_target, NiCloningProcess* a_cloning)"
+69181,70545,2,
 69278,70649,2,"void BSTriShape::CopyMembers(BSTriShape* a_target, NiCloningProcess* a_cloning)"
 69433,70810,3,RE::NiTimeController::LoadBinary
 69434,70811,3,RE::NiTimeController::LinkObject
@@ -7647,6 +7698,9 @@ sseid,aeid,confidence,name
 75460,77245,3,void Renderer::Begin(std::uint32_t a_windowID)
 75507,77299,3,RE::RendererData::CreateRenderTexture
 76017,77850,3,"void ComputePhysicsStepTimes(float a_frameDelta, bool a_complex)"
+76071,77905,2,
+76072,77906,2,
+76084,77918,2,
 76094,77928,3,void bhkWorld::HavokWorldEnterWrite()
 76095,77929,3,void bhkWorld::HavokWorldExitWrite()
 76170,77998,3,RE::NiAVObject::SetCollisionLayer
@@ -7659,6 +7713,7 @@ sseid,aeid,confidence,name
 76679,78551,3,
 76680,78552,3,
 76681,78553,3,
+79946,82083,2,
 80087,82411,3,RE::BSScaleformManager::FileExists
 80176,82196,3,GRefCountNTSImpl::GetWeakProxy
 80196,82216,3,GASRefCountCollector::AddRoot
@@ -8178,6 +8233,13 @@ sseid,aeid,confidence,name
 87805,90173,1,
 87806,90174,1,
 87807,90175,1,
+87919,90292,3,RE::BGSMoviePlayer::OpenMovie
+87936,90319,2,
+88939,91393,2,
+89391,91859,3,RE::ObstacleBuildQueue::ctor
+89392,91860,3,RE::ObstacleBuildQueue::dtor
+89395,91863,3,RE::ObstacleBuildQueue::Process
+89413,91884,2,
 89421,91892,1,IMovementInterface::sub_*
 89422,91893,1,IPipelineStageInterface::sub_*
 89424,91895,1,MovementArbiter::sub_*
@@ -8445,6 +8507,7 @@ sseid,aeid,confidence,name
 90847,93413,1,
 90848,93414,1,
 90850,93416,1,
+90938,93512,2,
 90970,93613,1,
 90971,93616,1,
 90972,93619,1,
@@ -8695,6 +8758,9 @@ sseid,aeid,confidence,name
 97534,104319,3,
 97535,104320,1,
 97536,104321,1,
+97538,104323,2,
+97539,104324,2,
+97540,104325,2,
 97549,104331,2,
 97551,104333,3,
 97559,104342,3,
@@ -8961,6 +9027,7 @@ sseid,aeid,confidence,name
 98492,105148,1,
 98520,105176,1,BSScript__Internal__CodeTasklet::VMProcess_141278110
 98522,105178,1,BSScript__Internal__CodeTasklet::sub_141278740
+98523,105179,2,
 98525,105181,2,
 98526,105182,1,BSScript::Internal::CodeTasklet::sub_*
 98527,105183,2,
@@ -9012,6 +9079,7 @@ sseid,aeid,confidence,name
 98643,105298,1,
 98644,105299,1,
 98645,105300,1,
+98647,105302,2,
 98649,105304,1,
 98651,105306,3,
 98652,105307,1,
@@ -9033,12 +9101,18 @@ sseid,aeid,confidence,name
 98705,105366,1,
 98714,105377,1,
 98715,105378,1,
+98716,105379,2,
 98717,105380,2,
 98719,105382,1,BSScript__LinkerProcessor::sub_141288080
+98720,105383,2,
 98721,105384,1,BSScript__LinkerProcessor::sub_141288890
+98722,105385,2,
+98723,105386,2,
+98724,105387,2,
 98726,105389,2,
 98727,105390,2,
 98728,105391,2,
+98729,105392,2,
 98732,105394,2,
 98734,105396,2,
 98735,105397,2,
@@ -9151,7 +9225,12 @@ sseid,aeid,confidence,name
 100110,106817,3,RE::BSLightingShaderMaterialLODLandscape::Ctor
 100118,106825,3,RE::BSLightingShaderMaterialSnow::Ctor
 100125,106832,3,RE::BSLightingShaderMaterialMultiLayerParallax::Ctor
+100403,107121,2,
+100405,107123,2,
+100406,107124,2,
 100421,107139,3,RE::Main::RenderDepth
+100427,107145,2,
+100526,107252,2,
 100583,107323,3,SetLODBlendOffsetConstant
 100747,107528,1,BSEffectShader::Func7_*
 100748,107529,1,BSEffectShader::sub_*
