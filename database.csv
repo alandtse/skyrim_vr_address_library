@@ -1659,6 +1659,9 @@
 29866,0x140476ba0,0x140486b80,4,"bool Pathing::GetPathingCell(const NiPoint3& a_location, TESObjectCELL* a_cell, TESWorldSpace* a_worldSpace, BSTSmartPointer<BSPathingCell>& a_cellOut)"
 30030,0x14047e6d0,0x14048e670,4,"PathingLockData* PathingLockData::PathingLockData(const ObjectRefHandle& a_handle, bool a_flag)"
 30031,0x14047e7a0,0x14048e740,4,void PathingLockData::~PathingLockData()
+30433,0x140490360,0x1404a0300,2,PathingRequestFly* PathingRequestFly::ctor()
+30493,0x140491fa0,0x1404a1f40,2,PathingRequestFlyLand* PathingRequestFlyLand::ctor()
+30498,0x140492170,0x1404a2110,2,std::uint32_t PathingRequestFlyLand::GetTypeHash()
 30737,0x1404a1430,0x1404b13d0,3,"BGSDistantObjectBlock* BGSDistantObjectBlock::Ctor(BGSTerrainNode* a_node, BSStream& a_stream)"
 30739,0x1404a17c0,0x1404b1760,3,void BGSDistantObjectBlock::Detach()
 30741,0x1404a18d0,0x1404b1870,3,void BGSDistantObjectBlock::Attach()
@@ -2090,6 +2093,7 @@
 36198,0x1405ce240,0x1405d6840,4,po3tweaks::Spell::ReapplyOnDeath::Load3d
 36218,0x1405cfac0,0x1405d80a0,4,void Actor::AddDeathItems()
 36224,0x1405d0680,0x1405d8c60,4,bool Actor::CanUseIdle(TESIdleForm* a_idle)
+36235,0x1405d0a60,0x1405d9040,2,bool Actor::RaceFlies()
 36236,0x1405d0a80,0x1405d9060,4,bool Actor::FightsInWater()
 36238,0x1405d0ad0,0x1405d90b0,4,bool Actor::CanFly()
 36247,0x1405d0f40,0x1405d9520,4,bool Actor::CanBeKilledBy(Actor* a_attacker)
@@ -2406,6 +2410,7 @@
 38773,0x140679c10,0x140683090,3,void AIProcess::ClearFurniture()
 38775,0x14067a080,0x1406834f0,3,AIProcess::UpdatePackageRemoveWornItems
 38781,0x14067a3e0,0x140683850,4,InventoryEntryData* AIProcess::GetCurrentWeapon(bool a_leftHand)
+38782,0x14067a420,0x140683890,2,InventoryEntryData* AIProcess::GetBothHands()
 38786,0x14067a4c0,0x140683930,3,"std::uint64_t ActorProcess::SetEquippedHandItem(ExtraContainerChanges::ItemEntry* a_item, bool a_left, NiAVObject* a_3d)"
 38787,0x14067a940,0x140683dc0,3,"std::uint64_t ActorProcess::SetEquippedHandItemEntry(ExtraContainerChanges::ItemEntry* a_item, bool a_left)"
 38799,0x14067b1d0,0x140684650,4,"static NiAVObject * GetTorchNode (ActorProcess * a_this, BSTSmartPointer_BipedAnim_ * a_biped)"
