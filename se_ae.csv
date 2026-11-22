@@ -4907,6 +4907,7 @@ sseid,aeid,confidence,name
 36715,37725,3,bool MagicTarget::IsInvulnerable()
 36723,37735,3,RE::Actor::KillImmediate
 36775,37791,3,RE::Actor::InitItemImpl
+36776,37792,2,
 36794,37810,2,
 36796,37812,1,Character::sub_*
 36797,37813,1,Character::sub_*
@@ -5555,6 +5556,7 @@ sseid,aeid,confidence,name
 40602,41631,2,
 40603,41632,2,
 40604,41633,2,
+40605,41634,2,
 41104,42183,1,
 41105,42184,1,IMovementSetKeepOffsetFromActor::Func0_*
 41106,42185,1,MovementPlannerAgentKeepOffset::Func11_*
@@ -8278,6 +8280,7 @@ sseid,aeid,confidence,name
 87919,90292,3,RE::BGSMoviePlayer::OpenMovie
 87936,90319,2,
 87970,90351,2,
+88558,90994,2,
 88939,91393,2,
 89391,91859,3,RE::ObstacleBuildQueue::ctor
 89392,91860,3,RE::ObstacleBuildQueue::dtor
