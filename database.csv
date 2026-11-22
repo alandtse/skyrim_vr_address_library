@@ -2696,6 +2696,7 @@
 45660,0x1407aad70,0x1407d60c0,3,bool CombatState::CheckShouldFlee()
 45661,0x1407aae90,0x1407d61e0,3,bool CombatState::CheckShouldHide()
 45702,0x1407ac9f0,0x1407d7d40,3,"CombatTargetLocationSearch::CombatTargetLocationSearch(Actor* actor, Actor* target, float R)"
+45738,0x1407b0040,0x1407db390,2,CombatPathingGoalPolicyFindTargetLocation::CombatPathingGoalPolicyFindTargetLocation(CombatNavmeshSearch* a_search)
 45923,0x1407b6770,0x1407e1ac0,4,sub_1407B6770
 46022,0x1407baed0,0x1407e6220,4,"static NiPoint3 * GetAngleToProjectedTarget (NiPoint3 * a_origin, TESObjectREFR * a_target, float a_speed, float a_gravity, uint a_location)"
 46039,0x1407bcb40,0x1407e7e90,4,Character::sub_1407BCB40
