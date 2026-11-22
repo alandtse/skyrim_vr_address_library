@@ -518,6 +518,7 @@
 19309,0x1402917f0,0x1402a2f00,4,void TESObjectREFR::sub_1402917F0 (TESObjectREFR * a_this)
 19315,0x140294000,0x1402a5710,3,TESObjectREFR::UpdateReference3D
 19316,0x1402943b0,0x1402a5ac0,4,bool Actor::Update3D()
+19320,0x1402944b0,0x1402a5bc0,2,float TESObjectREFR::GetBoundRadius()
 19322,0x1402944F0,0x1402A5C00,3,TESModel* TESObjectREFR::GetSkeletonModel(TESObjectREFR* a_this)
 19323,0x1402945e0,0x1402a5cf0,3,RE::TESObjectREFR::FindReferenceFor3D
 19325,0x1402946d0,0x1402a5dd0,3,NiMatrix3* TESObjectREFR::GetRotationMatrix(NiMatrix3* a_out)

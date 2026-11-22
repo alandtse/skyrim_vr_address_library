@@ -2974,6 +2974,7 @@ sseid,aeid,confidence,name
 19317,19744,1,TESObjectREFR::sub_*
 19318,19745,1,TESObjectREFR::sub_*
 19319,19746,1,TESObjectREFR::sub_*
+19320,19747,2,
 19326,19753,3,RE::TESObjectREFR::GetTransform
 19337,19764,1,
 19338,19765,3,RE::Actor::IsLimbGone
