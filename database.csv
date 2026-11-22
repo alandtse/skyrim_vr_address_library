@@ -2427,6 +2427,8 @@
 38645,0x140672470,0x14067b940,3,AIProcess::UpdatePackageWanderHigh
 38647,0x140673090,0x14067c560,3,AIProcess::UpdatePackageSleepHigh
 38652,0x140673850,0x14067cd20,3,AIProcess::FinishUseWeaponPackage
+38659,0x140673eb0,0x14067d380,2,"std::uint32_t BSPathingAvoidNode::AppendNode(BSTArray<BSPathingAvoidNode>* a_array, NiPoint3* a_point, float a_radius, float a_cost, std::uint32_t a_type)"
+38660,0x140673f60,0x14067d430,2,"void BSPathingAvoidNode::AppendSphereNode(BSTArray<BSPathingAvoidNode>* a_array, NiPoint3* a_point, float a_radius, float a_cost)"
 38677,0x1406759E0,0x14067EEB0,4,"bhkBoxShape * bhkBoxShape::bhkBoxShape(bhkBoxShape * a_this, RE::NiPoint3* a_halfExtents)"
 38726,0x1406777c0,0x140680c40,4,"void HighProcessData::ClearHeadtrackTarget(HEAD_TRACK_TYPE a_headtrackType, bool a_defaultHold)"
 38752,0x140679000,0x140682480,3,BSTArray_EraseRange_RefCountedPairs
