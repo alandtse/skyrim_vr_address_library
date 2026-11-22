@@ -2326,6 +2326,9 @@
 38005,0x14063b4a0,0x140644510,3,sub_14063B4A0
 38013,0x14063bc20,0x140644c90,3,LogPackageTypeChange
 38023,0x14063c1d0,0x140645240,4,ActorState::SetWeaponDrawn
+38024,0x14063c220,0x140645290,2,std::uint16_t ActorState::GetMoveFlagsForMode(std::uint8_t a_mode)
+38026,0x14063c2a0,0x140645310,2,"bool ActorState::DoSetMoveMode(std::uint32_t a_moveFlags, std::uint16_t a_unk)"
+38029,0x14063c300,0x140645370,2,std::uint32_t ActorState::GetMoveFlags()
 38044,0x14063c9d0,0x140645a40,3,void Actor::SetSitSleepState(SIT_SLEEP_STATE a_state)
 38046,0x14063caa0,0x140645b10,3,sub_14063CAA0
 38047,0x14063cfb0,0x140646020,3,StaminaNPC::apply_deny_player_attack_or_bash

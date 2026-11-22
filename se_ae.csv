@@ -5174,6 +5174,9 @@ sseid,aeid,confidence,name
 37964,38920,1,
 37965,38921,1,
 37968,38924,1,
+38024,38980,2,
+38026,38982,2,
+38029,38985,2,
 38044,39000,2,
 38071,39026,3,ClearModifiers
 38079,39033,3,RE::TaskQueueInterface::ShouldUseTaskQueue
