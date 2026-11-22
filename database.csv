@@ -1668,6 +1668,7 @@
 30433,0x140490360,0x1404a0300,2,PathingRequestFly* PathingRequestFly::ctor()
 30493,0x140491fa0,0x1404a1f40,2,PathingRequestFlyLand* PathingRequestFlyLand::ctor()
 30498,0x140492170,0x1404a2110,2,std::uint32_t PathingRequestFlyLand::GetTypeHash()
+30633,0x140494e40,0x1404a4de0,2,std::uint32_t GetPathingRequestStopMovingType()
 30737,0x1404a1430,0x1404b13d0,3,"BGSDistantObjectBlock* BGSDistantObjectBlock::Ctor(BGSTerrainNode* a_node, BSStream& a_stream)"
 30739,0x1404a17c0,0x1404b1760,3,void BGSDistantObjectBlock::Detach()
 30741,0x1404a18d0,0x1404b1870,3,void BGSDistantObjectBlock::Attach()
@@ -2577,6 +2578,7 @@
 40595,0x1406e9010,0x14070ff00,2,bool ActorMover::IsPathComplete()
 40598,0x1406e9350,0x140710240,2,bool ActorMover::IsPathRequestPending()
 40599,0x1406e93f0,0x1407102e0,2,bool ActorMover::IsPathing()
+40600,0x1406e9490,0x140710380,2,bool ActorMover::IsStopMovingRequest()
 40601,0x1406e9590,0x140710480,2,bool ActorMover::IsPathValid()
 40604,0x1406e9810,0x140710700,2,bool ActorMover::GetPathRequest(void** a_out)
 41257,0x140704970,0x14072b900,3,RE::PlayerControls::Ctor
