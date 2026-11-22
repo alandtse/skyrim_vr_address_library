@@ -4921,6 +4921,7 @@ sseid,aeid,confidence,name
 36825,37841,1,Character::sub_*
 36826,37842,1,Actor::sub_*
 36828,37844,1,Actor::sub_*
+36829,37845,2,
 36831,37847,1,Actor::sub_*
 36832,37848,1,Actor::sub_*
 36833,37849,1,Actor::sub_*
@@ -5551,6 +5552,8 @@ sseid,aeid,confidence,name
 40599,41628,2,
 40600,41629,2,
 40601,41630,2,
+40602,41631,2,
+40603,41632,2,
 40604,41633,2,
 41104,42183,1,
 41105,42184,1,IMovementSetKeepOffsetFromActor::Func0_*
