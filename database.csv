@@ -1613,6 +1613,8 @@
 28788,0x140438310,0x140447e60,2,TESObjectCELL* TESPackage::GetSecondLocationCell(Actor* a_actor)
 28789,0x140438500,0x140448050,2,"void TESPackage::GetSecondLocationPosition(NiPoint3* a_out, Actor* a_actor, void* a_unk)"
 28790,0x1404387d0,0x140448320,2,TESObjectREFR* TESPackage::GetSecondLocationReference(Actor* a_actor)
+28817,0x14043ae40,0x14044a990,2,bool TESPackage::IsScheduleAndConditionsMet(Actor* a_actor)
+28822,0x14043b7b0,0x14044b300,2,"float TESPackage::GetLocationAcceptRadius(Actor* a_actor, bool a_useSecondLocation)"
 28866,0x14043c8f0,0x14044c440,3,CreatePursueProcedureTree_FourParams
 28868,0x14043cc70,0x14044c7c0,3,CreatePursueProcedureTree_ThreeParams
 28870,0x14043cf80,0x14044cad0,3,CreateWaitTravelProcedureTree
