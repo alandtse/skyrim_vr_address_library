@@ -2374,6 +2374,7 @@
 38311,0x14064cdf0,0x140656140,4,"void AIProcess::SetActorsDetectionEvent(Actor* a_actor, const NiPoint3& a_location, std::int32_t a_soundLevel, TESObjectREFR* a_ref)"
 38339,0x14064e6d0,0x140657a20,3,AIProcess::ResetPackageState
 38359,0x14064f4b0,0x140658800,3,AIProcess::UpdatePackageObserveCombatHigh
+38379,0x140650230,0x140659580,2,"void AIProcess::SetMoveMode(Actor* a_actor, std::int32_t a_moveFlags, bool a_usePackageFlags)"
 38404,0x140650df0,0x14065a140,3,RE::AIProcess::Update3DModel
 38483,0x1406598d0,0x140662c10,3,ObjectRefHandle AIProcess::GetHeadtrackTarget()
 38495,0x140659c00,0x140662f40,3,void AIProcess::ClearMuzzleFlashes()
