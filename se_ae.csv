@@ -4907,6 +4907,7 @@ sseid,aeid,confidence,name
 36715,37725,3,bool MagicTarget::IsInvulnerable()
 36723,37735,3,RE::Actor::KillImmediate
 36775,37791,3,RE::Actor::InitItemImpl
+36794,37810,2,
 36796,37812,1,Character::sub_*
 36797,37813,1,Character::sub_*
 36799,37815,1,Character::sub_*

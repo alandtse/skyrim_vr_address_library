@@ -2190,6 +2190,7 @@
 36755,0x1405fd5b0,0x140605e00,4,RE::Actor::GetEyePos
 36759,0x1405fe370,0x140606b80,3,Actor::GetLightLevel
 36775,0x1405ff4b0,0x140607cc0,3,void Actor::InitItemImpl()
+36794,0x1405fff70,0x140608780,2,bool Actor::GetPathRequest(void** a_out)
 36801,0x140600400,0x140608c10,3,void Actor::StopMoving(float a_delta)
 36802,0x140600590,0x140608da0,4,RE::Actor::StopMovement
 36807,0x140600a90,0x1406092a0,2,void Actor::BuildMovementParameters(void** a_out)
