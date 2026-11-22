@@ -2580,6 +2580,8 @@
 40575,0x1406e7320,0x14070e210,4,RE::ProcessLists::HandlePlayerLevelUpdate(ProcessLists *param_1)
 40594,0x1406e8f70,0x14070fe60,2,bool ActorMover::IsPathRequestIdle()
 40595,0x1406e9010,0x14070ff00,2,bool ActorMover::IsPathComplete()
+40596,0x1406e90b0,0x14070ffa0,2,"bool ActorMover::QueryPathRequestState(void* a_request, std::uint8_t* a_outNotStarted)"
+40597,0x1406e91f0,0x1407100e0,2,"bool ActorMover::QueryOrSubmitPathRequest(void* a_request, std::uint8_t* a_outNotStarted)"
 40598,0x1406e9350,0x140710240,2,bool ActorMover::IsPathRequestPending()
 40599,0x1406e93f0,0x1407102e0,2,bool ActorMover::IsPathing()
 40600,0x1406e9490,0x140710380,2,bool ActorMover::IsStopMovingRequest()
