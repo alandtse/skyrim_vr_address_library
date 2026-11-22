@@ -2384,7 +2384,7 @@
 38613,0x140664c80,0x14066dfd0,3,AIProcess::UpdatePackageTravelBody
 38614,0x140666e20,0x1406702d0,3,AIProcess::EvaluatePackageIfDue
 38615,0x1406670b0,0x140670560,3,AIProcess::UpdatePackageFleeNonCombatHigh
-38616,0x140667380,0x140670830,3,AIProcess::UpdatePackageUnnumbered53High
+38616,0x140667380,0x140670830,3,AIProcess::UpdatePackageLandingHigh
 38617,0x140667990,0x140670e40,3,AIProcess::PathToAndUseFurniture
 38618,0x140669210,0x1406726c0,3,AIProcess::UpdatePackageUseItemAtHigh
 38619,0x14066a040,0x1406734f0,3,AIProcess::UpdatePackageUseWeaponHigh
@@ -2397,7 +2397,7 @@
 38629,0x14066e9f0,0x140677ea0,3,AIProcess::UpdatePackageSurfaceHigh
 38631,0x14066eda0,0x140678250,3,AIProcess::UpdatePackageClearMountPositionHigh
 38632,0x14066f250,0x140678700,3,AIProcess::UpdatePackageAvoidAreaHigh
-38633,0x14066f620,0x140678ad0,3,AIProcess::UpdatePackageUnnumbered44High
+38633,0x14066f620,0x140678ad0,3,AIProcess::UpdatePackageReactToDestroyedObjectHigh
 38634,0x14066fd10,0x1406791c0,3,AIProcess::UpdatePackageGreetDeadHigh
 38637,0x1406704e0,0x140679990,3,AIProcess::UpdatePackageUseIdleMarkerHigh
 38638,0x1406707f0,0x140679ca0,3,AIProcess::UpdatePackageMountHorseHigh
@@ -2405,7 +2405,7 @@
 38640,0x140670f90,0x14067a460,3,AIProcess::UpdatePackageAcquireHigh
 38641,0x140671590,0x14067aa60,3,AIProcess::UpdatePackageAccompanyHigh
 38642,0x1406719f0,0x14067aec0,3,AIProcess::UpdatePackageTakeBackItemHigh
-38643,0x140671ed0,0x14067b3a0,3,AIProcess::UpdatePackageUnnumbered20High
+38643,0x140671ed0,0x14067b3a0,3,AIProcess::UpdatePackageWarningHigh
 38644,0x140672100,0x14067b5d0,3,AIProcess::UpdatePackageCreateFollowHigh
 38645,0x140672470,0x14067b940,3,AIProcess::UpdatePackageWanderHigh
 38647,0x140673090,0x14067c560,3,AIProcess::UpdatePackageSleepHigh
