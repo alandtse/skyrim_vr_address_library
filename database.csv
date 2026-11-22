@@ -2314,6 +2314,7 @@
 37940,0x140637c30,0x140640c40,4,ActorEquipManager::EquipSpellToSlot
 37941,0x140637ca0,0x140640cb0,2,"void ActorEquipManager::EquipShout(Actor* a_actor, TESShout* a_shout)"
 37943,0x140637f20,0x140640f30,4,"void FUN_140637f20 (undefined8 param_1, PlayerCharacter * param_2)"
+37944,0x140638000,0x140641010,2,"void ActorEquipManager::UnequipEntry(Actor* a_actor, InventoryEntryData* a_entry, BGSEquipSlot* a_slot)"
 37945,0x140638190,0x1406411a0,4,RE::ActorEquipManager::UnequipObject
 37947,0x1406383b0,0x1406413c0,4,ActorEquipManager::UnequipSpellFromSlot
 37973,0x140639b70,0x140642b80,3,sub_140639B70
