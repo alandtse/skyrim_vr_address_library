@@ -2457,6 +2457,8 @@
 38878,0x14067ef70,0x1406883f0,3,float AIProcess::GetFurnitureFacing()
 38879,0x14067ef90,0x140688410,3,void AIProcess::SetFurnitureFacing(float a_facing)
 38882,0x14067eff0,0x140688470,2,bool AIProcess::SelectFurnitureMarker(Actor* a_actor)
+38889,0x14067f790,0x140688c10,2,bool AIProcess::GetWeaponDrawnFlag()
+38890,0x14067f7b0,0x140688c30,2,void AIProcess::SetWeaponDrawnFlag(bool a_drawn)
 38900,0x14067fe60,0x1406892e0,4,LLF::AIProcess_CalculateLightValue_GetLuminance
 38966,0x140681fd0,0x14068b440,4,"void FUN_140681fd0 (undefined8 param_1, Actor * a_actor)"
 38967,0x140682020,0x14068b490,4,void FUN_140682020 (longlong param_1)
