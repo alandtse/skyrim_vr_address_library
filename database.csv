@@ -2349,6 +2349,7 @@
 38198,0x140644600,0x14064d950,4,"void AIProcess::AddToProcedureIndexRunning(Actor* a_actor, std::uint32_t a_num)"
 38201,0x1406447b0,0x14064db00,3,AIProcess::UpdatePackageFlee
 38203,0x140644a60,0x14064ddb0,3,AIProcess::UpdatePackageTravel
+38206,0x140644ad0,0x14064de20,2,bool AIProcess::IsPackageIdleDone()
 38217,0x140645390,0x14064e6e0,2,std::uint32_t* AIProcess::GetPackageObjectHandle(std::uint32_t* a_out)
 38219,0x140645400,0x14064e750,2,std::uint32_t* AIProcess::GetSecondPackageObjectHandle(std::uint32_t* a_out)
 38227,0x140645680,0x14064e9d0,3,AIProcess::RefreshForcedPackage
@@ -2422,6 +2423,7 @@
 38786,0x14067a4c0,0x140683930,3,"std::uint64_t ActorProcess::SetEquippedHandItem(ExtraContainerChanges::ItemEntry* a_item, bool a_left, NiAVObject* a_3d)"
 38787,0x14067a940,0x140683dc0,3,"std::uint64_t ActorProcess::SetEquippedHandItemEntry(ExtraContainerChanges::ItemEntry* a_item, bool a_left)"
 38799,0x14067b1d0,0x140684650,4,"static NiAVObject * GetTorchNode (ActorProcess * a_this, BSTSmartPointer_BipedAnim_ * a_biped)"
+38818,0x14067bc50,0x1406850d0,2,TESPackage* AIProcess::GetRunOncePackage()
 38819,0x14067bc70,0x1406850f0,4,"void AIProcess::SetRunOncePackage(TESPackage* a_package, Actor* a_actor)"
 38831,0x14067bfa0,0x140685420,3,AIProcess::ResumeOccupiedFurniture
 38832,0x14067c7a0,0x140685c20,3,AIProcess::UpdateOccupiedFurniture
