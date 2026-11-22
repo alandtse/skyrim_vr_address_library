@@ -3022,6 +3022,7 @@ sseid,aeid,confidence,name
 19752,20146,2,
 19757,53381,3,
 19760,20154,3,
+19771,20166,2,
 19805,20210,3,RE::TESObjectREFR::IsAnOwner
 19811,20216,3,void* TESObjectREFR::GetTeleportData()
 19839,20244,2,
@@ -3974,6 +3975,7 @@ sseid,aeid,confidence,name
 28726,29479,1,
 28729,29482,1,BGSVisitProceduresCheckGuardWarnTarget::Func0_*
 28731,29487,1,
+28739,29503,2,
 28742,29506,1,TESPackage::sub_*
 28743,29507,1,
 28744,29508,1,TESPackage::sub_*
@@ -3987,14 +3989,20 @@ sseid,aeid,confidence,name
 28763,29537,1,TESPackage::sub_*
 28764,29538,1,TESPackage::sub_*
 28765,29539,1,TESPackage::sub_*
+28769,29543,2,
 28771,29545,1,TESPackage::InitializeData_*
 28773,29547,1,TESPackage::Load_*
 28774,29548,1,TESPackage::InitItemImpl_*
 28776,29552,1,
 28778,29554,1,
 28781,29557,1,TESPackage::sub_*
+28782,29558,2,
+28783,29559,2,
+28786,29562,2,
+28787,29563,2,
 28788,29564,1,TESPackage::sub_140438310
 28789,29565,1,TESPackage::sub_140438500
+28790,29566,2,
 28791,29567,1,TESPackage::sub_*
 28792,29568,1,TESPackage::sub_*
 28801,29577,1,TESPackage::IsActorAtRefTarget_*
