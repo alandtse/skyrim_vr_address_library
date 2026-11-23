@@ -586,6 +586,7 @@
 20089,0x1402B5CF0,0x1402C7460,3,"void TESWorldSpace::CollectMapMarkerHandles(BSTArray<ObjectRefHandle>* a_out, bool a_localOnly)"
 20095,0x1402b63b0,0x1402c7b20,3,TESObjectCELL* TESWorldSpace::GetSkyCell()
 20103,0x1402b6eb0,0x1402c8620,4,"bool TESWorldSpace::GetMaxHeightAt(const NiPoint3& xy, float& outHeight)"
+20109,0x1402b79b0,0x1402c9120,3,bool TESWorldSpace::IsPositionWithinBorders(const NiPoint3* a_position)
 20110,0x1402b7aa0,0x1402c9210,3,OFFSET_DATA* TESWorldSpace::GetOffsetData(TESFile* a_file)
 20262,0x1402bdec0,0x1402cf630,3,"void BGSCameraShot::Play(TESObjectREFR* a_target, std::int32_t a_mode)"
 20263,0x1402be2d0,0x1402cfa40,3,bool BGSCameraShot::IsValid()
@@ -2488,6 +2489,7 @@
 39614,0x1406b5450,0x1406d8730,3,RE::PlayerCharacter::GetNumTints
 39630,0x1406b5dc0,0x1406d90e0,3,bool TESObjectREFR::IsInMountBlockedWorldspace()
 39637,0x1406b6090,0x1406d93b0,2,NiPoint2 PlayerCharacter::GetGridUpdatePosition()
+39641,0x1406b63c0,0x1406d9690,3,bool IsFlyingMountFastTravelCruiseEnabled()
 39657,0x1406b6eb0,0x1406da3d0,3,"void PlayerCharacter::MoveToPositionInCell(float* a_position, float* a_rotation, TESObjectCELL* a_cell, int a_arg4)"
 39658,0x1406b7670,0x1406dac20,4,"void PlayerCharacter::MoveToPositionInWorldSpace(float* a_position, float* a_rotation, TESWorldSpace* a_world, bool a_arg4)"
 39663,0x1406b8340,0x1406db930,4,PlayerCharacter::DiscoveryCheck
@@ -3056,9 +3058,12 @@
 52184,0x1408E21E0,0x140913910,2,"void AddCurrentLocationMarker(BSTArray<MapMenuMarker>* a_markers, NiPoint3* a_position)"
 52186,0x1408E2360,0x140913AB0,3,"std::uint32_t* BindCustomDestinationMarker(std::uint32_t* a_out, BSTArray<MapMenuMarker>* a_markers)"
 52188,0x1408e2850,0x140913fa0,3,bool MapMenu::CreateTempMarkerRef()
+52190,0x1408e2950,0x1409140a0,3,std::uint32_t MapMenuMarker::GetDisplayType()
+52191,0x1408e2a30,0x140914180,4,const char** MapMenuMarker::GetDisplayName()
 52193,0x1408E2B00,0x140914250,3,bool CompareRouteRootWorldSpaces(TeleportPath* a_path)
 52195,0x1408e2c60,0x1409143b0,3,"std::uint32_t AddMarkerEntry_1408E2C60(BSTArray<MapMenuMarker>* a_markers, std::uint32_t* a_ref, TESFullName* a_name, std::uint32_t a_param4)"
 52208,0x1408e3d70,0x140915f50,2,RE::MapMenu::MarkerClick
+52213,0x1408e4360,0x140916830,3,"void MapMenu::SetInputHandlersEnabled(bool a_enabled, std::uint32_t a_mask)"
 52225,0x1408e6cf0,0x140919330,3,void MapMenu::SetFreezeFrameBackground(bool a_enable)
 52226,0x1408e6ea0,0x140919520,3,void MapMenu::PlaceMarker()
 52228,0x1408e7380,0x140919910,2,bool MapMenu::UpdateCamera()
@@ -11964,6 +11969,10 @@
 506194,0x141de4da8,0x141EA1F28,4,fMagicGrabActorMinDistance
 506196,0x141de4dc0,0x141EA1F40,4,fMagicGrabActorDrawSpeed
 506199,0x141de4df0,0x141EA1F70,4,fMagicGrabActorThrowForce
+506336,0x141de5650,0x141ea27d0,3,const char* YesButtonText
+506338,0x141de5668,0x141ea27e8,3,const char* NoButtonText
+506680,0x141de6d78,0x141ea3ef8,3,const char* FastTravelPromptText
+507160,0x141de8a40,0x141ea5c98,3,const char* PlaceMarkerText
 508313,0x141decb18,0x141ea9c98,4,fBlockLevel0Distance:TerrainManager
 508315,0x141decb30,0x141ea9cb0,4,fBlockLevel1Distance:TerrainManager
 508319,0x141decb60,0x141ea9ce0,4,fTreeLoadDistance:TerrainManager
