@@ -3160,7 +3160,11 @@
 52533,0x1408f9f50,0x1409346d0,3,void SkyrimScript::Internal::CallbackList::RemoveHandle(VMHandle a_handle)
 52652,0x140902560,0x14093cce0,3,RE::SkyrimScript::HandlePolicy::HandleIsType
 52653,0x140902770,0x14093cef0,3,RE::SkyrimScript::HandlePolicy::IsHandleObjectAvailable
+52654,0x140902840,0x14093cfc0,3,std::uint64_t SkyrimScript::HandlePolicy::EmptyHandle()
 52655,0x140902860,0x14093cfe0,3,RE::SkyrimScript::HandlePolicy::GetHandleForObject
+52656,0x140902990,0x14093d110,3,bool SkyrimScript::HandlePolicy::HasParent(std::uint64_t a_handle)
+52657,0x1409029b0,0x14093d130,3,std::uint64_t SkyrimScript::HandlePolicy::GetParentHandle(std::uint64_t a_handle)
+52658,0x140902a90,0x14093d210,3,std::uint64_t SkyrimScript::HandlePolicy::GetHandleScriptsMovedFrom(std::uint64_t a_handle)
 52659,0x140902b00,0x14093d280,3,RE::SkyrimScript::HandlePolicy::GetObjectForHandle
 52660,0x140902cb0,0x14093d430,3,void SkyrimScript::HandlePolicy::PersistHandle(std::uint64_t a_handle)
 52661,0x140902f30,0x14093d6b0,3,void SkyrimScript::HandlePolicy::ReleaseHandle(std::uint64_t a_handle)
@@ -3248,6 +3252,7 @@
 53243,0x140930020,0x14096a670,3,bool SkyrimVM::LoadTrackedStatsEvents(void* a_storage)
 53244,0x1409302c0,0x14096a910,3,bool SkyrimVM::LoadInventoryEventFilters(void* a_storage)
 53355,0x140936ee0,0x1409715c0,3,void SkyrimScript::ObjectBindPolicy::~ObjectBindPolicy()
+53512,0x140939e20,0x1409743d0,3,SkyrimScript::HandlePolicy* SkyrimScript::HandlePolicy::dtor_deleting(std::uint32_t a_flags)
 53567,0x14093aae0,0x140975110,2,"BSScript::Variable* MakeStringVariable(BSScript::Variable* a_out, const char* a_string)"
 53581,0x14093aef0,0x140975590,2,"bool EventCallbackAdapter::Load(std::int32_t a_flags, BSStorage* a_storage, BSScript::IVMSaveLoadInterface* a_loader, BSScript::IVirtualMachine* a_vm, bool* a_ok)"
 53604,0x14093bff0,0x140976690,4,BSTEventSource::AddEventSink
