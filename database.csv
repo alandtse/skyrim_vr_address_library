@@ -4218,7 +4218,7 @@
 97534,0x1412381b0,0x141270660,3,"void CollectObjectTypeVariableNames(BSScript::ObjectTypeInfo* a_type, void* a_out)"
 97536,0x141238410,0x1412708c0,2,void BSScript::ObjectTypeInfo::CopyInitialValues(Variable* a_dest)
 97538,0x1412386d0,0x141270b80,3,void BSScript::ObjectTypeInfo::ReleaseData(bool a_keepNativeFunctions)
-97539,0x141238e00,0x1412712b0,3,"bool PapyrusFinishLinking(BSScript::ObjectTypeInfo* a_type, void* a_ctx, BSScript::ErrorLogger* a_logger)"
+97539,0x141238e00,0x1412712b0,3,"bool BSScript::ObjectTypeInfo::FinishLinking(BSScript::ObjectTypeInfo* a_type, void* a_ctx, SkyrimScript::Logger* a_logger)"
 97540,0x14123a6c0,0x141272b70,3,"bool BSScript::ObjectTypeInfo::BindNativeFunction(BSScript::IFunction* a_func, SkyrimScript::Logger* a_logger)"
 97546,0x14123ae90,0x141273340,2,"void* BSScript::ObjectTypeInfo::FindNamedStateInRange(void* a_states, std::uint32_t a_count, BSFixedString a_stateName)"
 97549,0x14123b040,0x1412734f0,2,"void* BSScript::ObjectTypeInfo::FindFunctionByNameInRange(void* a_functions, std::uint32_t a_count, BSFixedString a_fnName)"
