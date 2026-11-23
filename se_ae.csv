@@ -1667,6 +1667,7 @@ sseid,aeid,confidence,name
 11622,11768,1,
 11623,11769,1,
 11631,11777,1,
+11632,11778,2,
 11633,11779,3,RE::RE:ExtradataList::setLinkedRef
 11634,11780,1,
 11635,11781,1,
@@ -2959,6 +2960,7 @@ sseid,aeid,confidence,name
 19207,19633,3,bool NiNode::DetachFemaleAddonNode()
 19209,19635,3,bool NiNode::ActivateAddonNode()
 19212,19638,3,bool NiNode::HasAddonNodes()
+19222,19648,2,
 19238,19664,3,RE::TESObjectREFR::GetScale_14028CC60
 19254,19680,3,TESObjectREFR::ClearLight
 19277,19703,3,RE::TESObjectREFR::GetWeightInContainer
@@ -2974,6 +2976,7 @@ sseid,aeid,confidence,name
 19317,19744,1,TESObjectREFR::sub_*
 19318,19745,1,TESObjectREFR::sub_*
 19319,19746,1,TESObjectREFR::sub_*
+19320,19747,2,
 19326,19753,3,RE::TESObjectREFR::GetTransform
 19337,19764,1,
 19338,19765,3,RE::Actor::IsLimbGone
@@ -3022,10 +3025,16 @@ sseid,aeid,confidence,name
 19752,20146,2,
 19757,53381,3,
 19760,20154,3,
+19762,20157,2,
+19771,20166,2,
 19805,20210,3,RE::TESObjectREFR::IsAnOwner
 19811,20216,3,void* TESObjectREFR::GetTeleportData()
 19839,20244,2,
+19847,20254,2,
 19857,20264,3,RE::TESObjectREFR::InitChildActivates
+19870,20277,2,
+19871,20278,2,
+19872,20279,2,
 20089,20536,3,TESWorldSpace::CollectMapMarkerHandles
 20095,20543,3,RE::TESWorldSpace::GetSkyCell
 20110,20559,3,TESWorldSpace::GetOffsetData
@@ -3974,6 +3983,7 @@ sseid,aeid,confidence,name
 28726,29479,1,
 28729,29482,1,BGSVisitProceduresCheckGuardWarnTarget::Func0_*
 28731,29487,1,
+28739,29503,2,
 28742,29506,1,TESPackage::sub_*
 28743,29507,1,
 28744,29508,1,TESPackage::sub_*
@@ -3987,17 +3997,25 @@ sseid,aeid,confidence,name
 28763,29537,1,TESPackage::sub_*
 28764,29538,1,TESPackage::sub_*
 28765,29539,1,TESPackage::sub_*
+28769,29543,2,
 28771,29545,1,TESPackage::InitializeData_*
 28773,29547,1,TESPackage::Load_*
 28774,29548,1,TESPackage::InitItemImpl_*
 28776,29552,1,
 28778,29554,1,
 28781,29557,1,TESPackage::sub_*
+28782,29558,2,
+28783,29559,2,
+28786,29562,2,
+28787,29563,2,
 28788,29564,1,TESPackage::sub_140438310
 28789,29565,1,TESPackage::sub_140438500
+28790,29566,2,
 28791,29567,1,TESPackage::sub_*
 28792,29568,1,TESPackage::sub_*
 28801,29577,1,TESPackage::IsActorAtRefTarget_*
+28817,29619,2,
+28822,29624,2,
 28881,29677,3,
 28882,29678,3,
 28883,29679,3,
@@ -4305,6 +4323,7 @@ sseid,aeid,confidence,name
 30467,31307,1,
 30468,31308,1,PathingRequestFlyHover::Func2_*
 30471,31311,1,PathingRequestFlyHover::Func3_*
+30493,31334,2,
 30494,31335,1,
 30497,31338,1,PathingRequestFlyLand::Func1_*
 30498,31339,1,
@@ -4348,6 +4367,7 @@ sseid,aeid,confidence,name
 30611,31440,1,
 30614,31439,1,
 30615,31457,1,
+30633,31475,2,
 30639,31477,1,PathingRequestStopMoving::Func0_*
 30640,31467,1,
 30645,31481,1,
@@ -4888,15 +4908,22 @@ sseid,aeid,confidence,name
 36715,37725,3,bool MagicTarget::IsInvulnerable()
 36723,37735,3,RE::Actor::KillImmediate
 36775,37791,3,RE::Actor::InitItemImpl
+36776,37792,2,
+36794,37810,2,
 36796,37812,1,Character::sub_*
 36797,37813,1,Character::sub_*
 36799,37815,1,Character::sub_*
 36800,37816,1,Character::sub_*
 36801,37817,3,RE::Actor::StopMoving
 36802,37818,3,RE::Actor::StopMovement
+36807,37823,2,
+36810,37826,2,
+36811,37827,2,
+36815,37831,2,
 36825,37841,1,Character::sub_*
 36826,37842,1,Actor::sub_*
 36828,37844,1,Actor::sub_*
+36829,37845,2,
 36831,37847,1,Actor::sub_*
 36832,37848,1,Actor::sub_*
 36833,37849,1,Actor::sub_*
@@ -5153,6 +5180,9 @@ sseid,aeid,confidence,name
 37964,38920,1,
 37965,38921,1,
 37968,38924,1,
+38024,38980,2,
+38026,38982,2,
+38029,38985,2,
 38044,39000,2,
 38071,39026,3,ClearModifiers
 38079,39033,3,RE::TaskQueueInterface::ShouldUseTaskQueue
@@ -5215,6 +5245,7 @@ sseid,aeid,confidence,name
 38200,39160,1,
 38201,39161,2,
 38202,39162,1,
+38206,39166,2,
 38212,39172,1,
 38213,39173,1,
 38214,39174,1,
@@ -5249,7 +5280,9 @@ sseid,aeid,confidence,name
 38264,39224,1,
 38300,39268,2,
 38302,39270,2,
+38343,39322,2,
 38359,39342,2,
+38378,39362,2,
 38379,39363,1,
 38380,39364,1,
 38381,39365,1,
@@ -5335,6 +5368,7 @@ sseid,aeid,confidence,name
 38647,39678,1,
 38649,39680,1,
 38652,39683,1,
+38659,39690,2,
 38673,39701,1,
 38676,39704,1,
 38691,39726,1,
@@ -5353,6 +5387,8 @@ sseid,aeid,confidence,name
 38760,39783,3,RE::HighProcessData::SetHeadtrackTarget
 38761,39784,1,
 38775,39800,2,
+38782,39807,2,
+38818,39848,2,
 38831,39861,2,
 38832,39862,2,
 38835,39865,2,
@@ -5366,6 +5402,9 @@ sseid,aeid,confidence,name
 38877,39918,2,
 38878,39919,2,
 38879,39920,2,
+38882,39923,2,
+38889,39930,2,
+38890,39931,2,
 38903,39949,1,
 38904,39950,1,
 38926,39973,1,
@@ -5513,6 +5552,19 @@ sseid,aeid,confidence,name
 40459,41476,3,BeginLowActorUpdate
 40478,41497,3,LockFreeRing2048Push
 40499,41507,3,LockFreeRing2048Pop
+40590,41619,2,
+40594,41623,2,
+40595,41624,2,
+40596,41625,2,
+40597,41626,2,
+40598,41627,2,
+40599,41628,2,
+40600,41629,2,
+40601,41630,2,
+40602,41631,2,
+40603,41632,2,
+40604,41633,2,
+40605,41634,2,
 41104,42183,1,
 41105,42184,1,IMovementSetKeepOffsetFromActor::Func0_*
 41106,42185,1,MovementPlannerAgentKeepOffset::Func11_*
@@ -6406,6 +6458,7 @@ sseid,aeid,confidence,name
 44875,46131,1,CombatInventoryItemMagicT_gs_T1_T2_ge_::sub_*
 44876,45966,1,CombatInventoryItemMagicT_gs_T1_T2_ge_::sub_*
 45570,46870,2,
+45738,47051,2,
 46068,47332,3,
 47741,48842,1,
 47742,48843,1,
@@ -8235,6 +8288,8 @@ sseid,aeid,confidence,name
 87807,90175,1,
 87919,90292,3,RE::BGSMoviePlayer::OpenMovie
 87936,90319,2,
+87970,90351,2,
+88558,90994,2,
 88939,91393,2,
 89391,91859,3,RE::ObstacleBuildQueue::ctor
 89392,91860,3,RE::ObstacleBuildQueue::dtor
