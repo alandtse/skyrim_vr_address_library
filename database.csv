@@ -4194,6 +4194,7 @@
 97468,0x141234360,0x14126c810,3,void Object::IncRef()
 97469,0x141234410,0x14126c8c0,3,std::uint32_t Object::DecRef()
 97470,0x1412344c0,0x14126c970,2,bool BSScript::Internal::Object::HasMultipleReferences()
+97471,0x141234510,0x14126c9c0,3,"BSScript::Object* BSScript::Object::ctor(const BSTSmartPointer<BSScript::ObjectTypeInfo>& a_type, BSScript::IObjectHandlePolicy* a_policy, std::uint32_t a_numProperties)"
 97475,0x1412348b0,0x14126cd60,2,std::uint32_t BSScript::Internal::Object::SetLockStructureFlag()
 97477,0x141234910,0x14126cdc0,2,void ObjectCreateInfo_Resolve(void* a_info)
 97481,0x141234e10,0x14126d2c0,2,void BSScript::Internal::Object::ClearVariableReferences()
@@ -4218,8 +4219,8 @@
 97534,0x1412381b0,0x141270660,3,"void CollectObjectTypeVariableNames(BSScript::ObjectTypeInfo* a_type, void* a_out)"
 97536,0x141238410,0x1412708c0,2,void BSScript::ObjectTypeInfo::CopyInitialValues(Variable* a_dest)
 97538,0x1412386d0,0x141270b80,3,void BSScript::ObjectTypeInfo::ReleaseData(bool a_keepNativeFunctions)
-97539,0x141238e00,0x1412712b0,3,"bool BSScript::ObjectTypeInfo::FinishLinking(BSScript::ObjectTypeInfo* a_type, void* a_ctx, SkyrimScript::Logger* a_logger)"
-97540,0x14123a6c0,0x141272b70,3,"bool BSScript::ObjectTypeInfo::BindNativeFunction(BSScript::IFunction* a_func, SkyrimScript::Logger* a_logger)"
+97539,0x141238e00,0x1412712b0,3,"bool BSScript::ObjectTypeInfo::FinishLinking(void* a_ctx, BSScript::ErrorLogger* a_logger)"
+97540,0x14123a6c0,0x141272b70,3,"bool BSScript::ObjectTypeInfo::BindNativeFunction(BSScript::IFunction* a_func, BSScript::ErrorLogger* a_logger)"
 97546,0x14123ae90,0x141273340,2,"void* BSScript::ObjectTypeInfo::FindNamedStateInRange(void* a_states, std::uint32_t a_count, BSFixedString a_stateName)"
 97549,0x14123b040,0x1412734f0,2,"void* BSScript::ObjectTypeInfo::FindFunctionByNameInRange(void* a_functions, std::uint32_t a_count, BSFixedString a_fnName)"
 97551,0x14123b1b0,0x141273660,3,"std::uint64_t AppendObjectTypeVariableNames(BSScript::ObjectTypeInfo* a_type, void* a_out, std::int32_t a_mode)"
@@ -4230,9 +4231,9 @@
 97611,0x14123c9f0,0x141274ea0,3,void ObjectTypeInfo_DecRef(BSScript::ObjectTypeInfo* a_type)
 97688,0x14123fe10,0x1412a0920,3,BSScript::ErrorLogger* BSScript::ErrorLogger::ctor()
 97689,0x14123fe60,0x1412a0970,3,void BSScript::ErrorLogger::dtor()
-97690,0x14123fe90,0x1412a09a0,3,"void SkyrimScript::Logger::PostMessageBySeverity(BSString* a_message, std::int32_t a_severity)"
-97691,0x141240060,0x1412a0b70,3,"void LogLoaderMessage(SkyrimScript::Logger* a_logger, const char* a_context, const char* a_message, std::int32_t a_severity)"
-97692,0x141240140,0x1412a0c50,3,"void LogLoaderMessageAtLine(SkyrimScript::Logger* a_logger, const char* a_file, std::uint32_t a_line, const char* a_message, std::int32_t a_severity)"
+97690,0x14123fe90,0x1412a09a0,3,"void BSScript::ErrorLogger::PostMessageBySeverity(const char* a_message, std::int32_t a_severity)"
+97691,0x141240060,0x1412a0b70,3,"void LogLoaderMessage(BSScript::ErrorLogger* a_logger, const char* a_context, const char* a_message, std::int32_t a_severity)"
+97692,0x141240140,0x1412a0c50,3,"void LogLoaderMessageAtLine(BSScript::ErrorLogger* a_logger, const char* a_file, std::uint32_t a_line, const char* a_message, std::int32_t a_severity)"
 97693,0x1412401f0,0x1412a0d00,3,std::uint32_t BSScript::ErrorLogger::GetCurrentThreadFatalCount()
 97694,0x1412402d0,0x1412a0de0,3,std::uint64_t BSScript::ErrorLogger::GetCurrentThreadFatalAndErrorCounts()
 97695,0x1412403b0,0x1412a0ec0,3,std::uint32_t BSScript::ErrorLogger::GetCurrentThreadWarningCount()
