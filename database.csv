@@ -3058,12 +3058,12 @@
 52184,0x1408E21E0,0x140913910,2,"void AddCurrentLocationMarker(BSTArray<MapMenuMarker>* a_markers, NiPoint3* a_position)"
 52186,0x1408E2360,0x140913AB0,3,"std::uint32_t* BindCustomDestinationMarker(std::uint32_t* a_out, BSTArray<MapMenuMarker>* a_markers)"
 52188,0x1408e2850,0x140913fa0,3,bool MapMenu::CreateTempMarkerRef()
-52190,0x1408e2950,0x1409140a0,3,std::uint32_t GetMapMarkerDisplayType(const MapMenuMarker* a_marker)
-52191,0x1408e2a30,0x140914180,4,const char* GetMapMarkerDisplayName(const MapMenuMarker* a_marker)
+52190,0x1408e2950,0x1409140a0,3,std::uint32_t MapMenuMarker::GetDisplayType()
+52191,0x1408e2a30,0x140914180,4,const char** MapMenuMarker::GetDisplayName()
 52193,0x1408E2B00,0x140914250,3,bool CompareRouteRootWorldSpaces(TeleportPath* a_path)
 52195,0x1408e2c60,0x1409143b0,3,"std::uint32_t AddMarkerEntry_1408E2C60(BSTArray<MapMenuMarker>* a_markers, std::uint32_t* a_ref, TESFullName* a_name, std::uint32_t a_param4)"
 52208,0x1408e3d70,0x140915f50,2,RE::MapMenu::MarkerClick
-52213,0x1408e4360,0x140916830,3,"void SetMapInputHandlersEnabled(MapMenu* a_menu, bool a_enabled, std::uint32_t a_mask)"
+52213,0x1408e4360,0x140916830,3,"void MapMenu::SetInputHandlersEnabled(bool a_enabled, std::uint32_t a_mask)"
 52225,0x1408e6cf0,0x140919330,3,void MapMenu::SetFreezeFrameBackground(bool a_enable)
 52226,0x1408e6ea0,0x140919520,3,void MapMenu::PlaceMarker()
 52228,0x1408e7380,0x140919910,2,bool MapMenu::UpdateCamera()
