@@ -4218,6 +4218,7 @@
 97534,0x1412381b0,0x141270660,3,"void CollectObjectTypeVariableNames(BSScript::ObjectTypeInfo* a_type, void* a_out)"
 97536,0x141238410,0x1412708c0,2,void BSScript::ObjectTypeInfo::CopyInitialValues(Variable* a_dest)
 97538,0x1412386d0,0x141270b80,3,void BSScript::ObjectTypeInfo::ReleaseData(bool a_keepNativeFunctions)
+97539,0x141238e00,0x1412712b0,3,"bool PapyrusFinishLinking(BSScript::ObjectTypeInfo* a_type, void* a_ctx, BSScript::ErrorLogger* a_logger)"
 97540,0x14123a6c0,0x141272b70,3,"bool BSScript::ObjectTypeInfo::BindNativeFunction(BSScript::IFunction* a_func, SkyrimScript::Logger* a_logger)"
 97546,0x14123ae90,0x141273340,2,"void* BSScript::ObjectTypeInfo::FindNamedStateInRange(void* a_states, std::uint32_t a_count, BSFixedString a_stateName)"
 97549,0x14123b040,0x1412734f0,2,"void* BSScript::ObjectTypeInfo::FindFunctionByNameInRange(void* a_functions, std::uint32_t a_count, BSFixedString a_fnName)"
@@ -4521,6 +4522,7 @@
 98715,0x141287700,0x1412b9720,2,"void* BSScript::LinkerProcessor::ctor(void* a_context, void* a_owner)"
 98716,0x1412877c0,0x1412b97e0,2,"bool BSScript::LinkerProcessor::ResolveTypeInfo(void* a_unk1, void* a_unk2)"
 98717,0x141287c90,0x1412b9cb0,2,void* BSScript::LinkerProcessor::Clone()
+98719,0x141288080,0x1412ba0a0,3,"void BSScript::LinkerProcessor::LinkClass(BSFixedString* a_className, bool a_relink)"
 98720,0x1412885b0,0x1412ba5d0,2,bool BSScript::LinkerProcessor::LinkParentClass()
 98721,0x141288890,0x1412ba8b0,3,BSScript::LinkerProcessor::ConvertVariables
 98722,0x1412896e0,0x1412bb700,3,BSScript::LinkerProcessor::ConvertProperties
