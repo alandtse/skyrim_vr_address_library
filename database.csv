@@ -3162,6 +3162,8 @@
 52653,0x140902770,0x14093cef0,3,RE::SkyrimScript::HandlePolicy::IsHandleObjectAvailable
 52655,0x140902860,0x14093cfe0,3,RE::SkyrimScript::HandlePolicy::GetHandleForObject
 52659,0x140902b00,0x14093d280,3,RE::SkyrimScript::HandlePolicy::GetObjectForHandle
+52660,0x140902cb0,0x14093d430,3,void SkyrimScript::HandlePolicy::PersistHandle(std::uint64_t a_handle)
+52661,0x140902f30,0x14093d6b0,3,void SkyrimScript::HandlePolicy::ReleaseHandle(std::uint64_t a_handle)
 52662,0x1409032c0,0x14093da40,3,RE::SkyrimScript::HandlePolicy::ConvertHandleToString
 52667,0x1409039c0,0x14093e140,3,void SkyrimScript::HandlePolicy::Revert()
 52711,0x140905650,0x14093fdd0,3,void SkyrimScript::ObjectBindPolicy::CollectAndBindMergedScripts(VMHandle a_handle)
