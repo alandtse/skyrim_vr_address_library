@@ -1666,8 +1666,8 @@
 29866,0x140476ba0,0x140486b80,4,"bool Pathing::GetPathingCell(const NiPoint3& a_location, TESObjectCELL* a_cell, TESWorldSpace* a_worldSpace, BSTSmartPointer<BSPathingCell>& a_cellOut)"
 30030,0x14047e6d0,0x14048e670,4,"PathingLockData* PathingLockData::PathingLockData(const ObjectRefHandle& a_handle, bool a_flag)"
 30031,0x14047e7a0,0x14048e740,4,void PathingLockData::~PathingLockData()
-30433,0x140490360,0x1404a0300,2,PathingRequestFly* PathingRequestFly::ctor()
-30493,0x140491fa0,0x1404a1f40,2,PathingRequestFlyLand* PathingRequestFlyLand::ctor()
+30433,0x140490360,0x1404a0300,2,PathingRequestFly* PathingRequestFly::PathingRequestFly()
+30493,0x140491fa0,0x1404a1f40,2,PathingRequestFlyLand* PathingRequestFlyLand::PathingRequestFlyLand()
 30498,0x140492170,0x1404a2110,2,std::uint32_t PathingRequestFlyLand::GetTypeHash()
 30633,0x140494e40,0x1404a4de0,2,std::uint32_t GetPathingRequestStopMovingType()
 30737,0x1404a1430,0x1404b13d0,3,"BGSDistantObjectBlock* BGSDistantObjectBlock::Ctor(BGSTerrainNode* a_node, BSStream& a_stream)"
@@ -2402,7 +2402,7 @@
 38613,0x140664c80,0x14066dfd0,3,AIProcess::UpdatePackageTravelBody
 38614,0x140666e20,0x1406702d0,3,AIProcess::EvaluatePackageIfDue
 38615,0x1406670b0,0x140670560,3,AIProcess::UpdatePackageFleeNonCombatHigh
-38616,0x140667380,0x140670830,3,AIProcess::UpdatePackageLandingHigh
+38616,0x140667380,0x140670830,3,void AIProcess::UpdatePackageLandingHigh(Actor* a_actor)
 38617,0x140667990,0x140670e40,3,AIProcess::PathToAndUseFurniture
 38618,0x140669210,0x1406726c0,3,AIProcess::UpdatePackageUseItemAtHigh
 38619,0x14066a040,0x1406734f0,3,AIProcess::UpdatePackageUseWeaponHigh
@@ -2415,7 +2415,7 @@
 38629,0x14066e9f0,0x140677ea0,3,AIProcess::UpdatePackageSurfaceHigh
 38631,0x14066eda0,0x140678250,3,AIProcess::UpdatePackageClearMountPositionHigh
 38632,0x14066f250,0x140678700,3,AIProcess::UpdatePackageAvoidAreaHigh
-38633,0x14066f620,0x140678ad0,3,AIProcess::UpdatePackageReactToDestroyedObjectHigh
+38633,0x14066f620,0x140678ad0,3,void AIProcess::UpdatePackageReactToDestroyedObjectHigh(Actor* a_actor)
 38634,0x14066fd10,0x1406791c0,3,AIProcess::UpdatePackageGreetDeadHigh
 38637,0x1406704e0,0x140679990,3,AIProcess::UpdatePackageUseIdleMarkerHigh
 38638,0x1406707f0,0x140679ca0,3,AIProcess::UpdatePackageMountHorseHigh
@@ -2423,7 +2423,7 @@
 38640,0x140670f90,0x14067a460,3,AIProcess::UpdatePackageAcquireHigh
 38641,0x140671590,0x14067aa60,3,AIProcess::UpdatePackageAccompanyHigh
 38642,0x1406719f0,0x14067aec0,3,AIProcess::UpdatePackageTakeBackItemHigh
-38643,0x140671ed0,0x14067b3a0,3,AIProcess::UpdatePackageWarningHigh
+38643,0x140671ed0,0x14067b3a0,3,void AIProcess::UpdatePackageWarningHigh(Actor* a_actor)
 38644,0x140672100,0x14067b5d0,3,AIProcess::UpdatePackageCreateFollowHigh
 38645,0x140672470,0x14067b940,3,AIProcess::UpdatePackageWanderHigh
 38647,0x140673090,0x14067c560,3,AIProcess::UpdatePackageSleepHigh
@@ -2696,7 +2696,7 @@
 45660,0x1407aad70,0x1407d60c0,3,bool CombatState::CheckShouldFlee()
 45661,0x1407aae90,0x1407d61e0,3,bool CombatState::CheckShouldHide()
 45702,0x1407ac9f0,0x1407d7d40,3,"CombatTargetLocationSearch::CombatTargetLocationSearch(Actor* actor, Actor* target, float R)"
-45738,0x1407b0040,0x1407db390,2,CombatPathingGoalPolicyFindTargetLocation::CombatPathingGoalPolicyFindTargetLocation(CombatNavmeshSearch* a_search)
+45738,0x1407b0040,0x1407db390,2,CombatPathingGoalPolicyFindTargetLocation* CombatPathingGoalPolicyFindTargetLocation::CombatPathingGoalPolicyFindTargetLocation(CombatNavmeshSearch* a_search)
 45923,0x1407b6770,0x1407e1ac0,4,sub_1407B6770
 46022,0x1407baed0,0x1407e6220,4,"static NiPoint3 * GetAngleToProjectedTarget (NiPoint3 * a_origin, TESObjectREFR * a_target, float a_speed, float a_gravity, uint a_location)"
 46039,0x1407bcb40,0x1407e7e90,4,Character::sub_1407BCB40
