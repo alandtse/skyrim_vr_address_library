@@ -1,3 +1,13 @@
+# [0.309.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.308.0...v0.309.0) (2026-11-23)
+
+
+### Features
+
+* add alpha sort and peek ids ([#372](https://github.com/alandtse/skyrim_vr_address_library/issues/372)) ([4b38d73](https://github.com/alandtse/skyrim_vr_address_library/commit/4b38d731c9502ad495eb1c4620ee05cf1be9fedc))
+* add LinkerProcessor::LinkClass and PapyrusFinishLinking addresses ([#365](https://github.com/alandtse/skyrim_vr_address_library/issues/365)) ([7418834](https://github.com/alandtse/skyrim_vr_address_library/commit/74188344312f03cd3f614479d6faccd74853c737))
+* add map travel helper and text mappings ([#371](https://github.com/alandtse/skyrim_vr_address_library/issues/371)) ([096f584](https://github.com/alandtse/skyrim_vr_address_library/commit/096f58477dc659058a00127b83e9531d65a9af59))
+* add travel package ids ([#370](https://github.com/alandtse/skyrim_vr_address_library/issues/370)) ([10cc062](https://github.com/alandtse/skyrim_vr_address_library/commit/10cc062e282fe1116e209421d58d07be04d5e740))
+
 # [0.308.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.307.0...v0.308.0) (2026-11-22)
 
 
