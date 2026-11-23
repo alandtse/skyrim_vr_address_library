@@ -21196,6 +21196,10 @@
 5375507952,0x14067bdf0,0x140685270,4,bhkCharacterController* AIProcess::GetCharacterController()
 5375528368,0x140680db0,0x14068a230,3,RE::AIProcess::SetActorRefraction
 5375529184,0x1406810e0,0x14068a550,4,NiAVObject* AIProcess::GetHeadNode()
+5378160592,0x1409037d0,0x14093df50,3,void SkyrimScript::HandlePolicy::ProcessPromotionRequests()
+5378163104,0x1409041a0,0x14093e920,3,void HandlePolicy_ReconcilePromotionRequests(void* a_requests)
+5378165568,0x140904b40,0x14093f2c0,3,bool HandlePolicy_TryPromoteHandle(std::uint64_t a_handle)
+5378166352,0x140904e50,0x14093f5d0,3,bool HandlePolicy_TryDemoteHandle(std::uint64_t a_handle)
 5382627248,0x140d45fb0,0x140d8eee0,3,"uint32_t BSMultiStreamInstanceTriShape::AddGroupGIDBuffer(BSMultiStreamInstanceTriShape* this, void* a2, uint16_t* a3)"
 5382629008,0x140d46690,0x140d8f5c0,3,"void BSMultiStreamInstanceTriShape::AddQueuedGroupGIDBuffer(BSMultiStreamInstanceTriShape* this, void* a2, uint16_t* a3, void* a4)"
 5388393136,0x1412c5ab0,0x141303ea0,3,RE::BSLightingShaderProperty::InvalidateTextures
