@@ -4773,6 +4773,7 @@ sseid,aeid,confidence,name
 34630,35550,1,
 34645,35567,2,void BGSSaveLoadGame::InitAndFinishLoadForms(bool a_flushIO)
 34647,35569,2,"bool BGSSaveLoadGame::QueueReferenceLoad(TESObjectREFR* a_ref, BGSLoadGameBuffer* a_buffer)"
+34657,35579,1,
 34685,35608,1,
 34725,35634,1,
 34732,35638,1,Win32FileType::sub_*
@@ -4939,6 +4940,7 @@ sseid,aeid,confidence,name
 36739,37753,1,
 36740,37754,1,
 36743,37759,1,
+36760,37776,1,
 36775,37791,3,RE::Actor::InitItemImpl
 36776,37792,2,
 36785,37801,1,
@@ -5660,6 +5662,11 @@ sseid,aeid,confidence,name
 40459,41476,3,BeginLowActorUpdate
 40478,41497,3,LockFreeRing2048Push
 40499,41507,3,LockFreeRing2048Pop
+40578,41607,1,
+40579,41608,1,
+40580,41609,1,
+40584,41613,1,
+40585,41614,1,
 40590,41619,2,
 40591,41620,1,
 40594,41623,2,

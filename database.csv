@@ -2003,6 +2003,7 @@
 34645,0x14057a950,0x140582120,3,void BGSSaveLoadGame::InitAndFinishLoadForms(bool a_flushIO)
 34647,0x14057aea0,0x140582670,3,"bool BGSSaveLoadGame::QueueReferenceLoad(TESObjectREFR* a_ref, BGSLoadGameBuffer* a_buffer)"
 34655,0x14057b920,0x1405830f0,4,"bool BGSSaveLoadGame::GetChange(TESForm* a_form, std::uint32_t a_changes)"
+34657,0x14057b970,0x140583140,2,"void* BGSSaveLoadGame::FindChangesEntryForForm(void* a_outIterator, TESForm* a_form)"
 34670,0x14057cb90,0x140584360,3,bool BGSSaveLoadGame::IsFormIDInUse(FormID a_formID)
 34676,0x14057ccc0,0x140584420,3,"void BGSSaveLoadGame::SaveGame (BGSSaveGameBuffer * a_this, anonymous_namespace__Win32FileType * a_Win32FileType)"
 34677,0x14057d1a0,0x140584910,2,bool BGSSaveLoadGame::LoadGame(Win32FileType* a_file)
@@ -2241,6 +2242,7 @@
 36754,0x1405fd2c0,0x140605b10,4,"NiAVObject* Actor::CalculateLOS(NiPoint3* a_targetPos, NiPoint3* a_hitPosOut, float a_viewCone)"
 36755,0x1405fd5b0,0x140605e00,4,RE::Actor::GetEyePos
 36759,0x1405fe370,0x140606b80,3,Actor::GetLightLevel
+36760,0x1405fe4b0,0x140606cc0,3,float Character::GetLookAtHeadingMaxAngle()
 36762,0x1405fe650,0x140606e60,2,void Actor::RequestFollowPath()
 36763,0x1405fe7d0,0x140606fe0,2,bool Actor::IsFollowPathRequestActive()
 36775,0x1405ff4b0,0x140607cc0,3,void Actor::InitItemImpl()
@@ -2742,6 +2744,12 @@
 40565,0x1406e69a0,0x14070d890,3,PlayerSkills::InitSkills
 40566,0x1406e6ad0,0x14070d9c0,3,PlayerSkills::EvaluateSkillData
 40575,0x1406e7320,0x14070e210,4,RE::ProcessLists::HandlePlayerLevelUpdate(ProcessLists *param_1)
+40578,0x1406e7500,0x14070e3f0,2,bool ActorMover::SetGoal(void* a_request)
+40579,0x1406e75b0,0x14070e4a0,2,"bool ActorMover::PathToLocation(NiPoint3* a_pos, TESObjectCELL* a_cell, TESWorldSpace* a_worldSpace, float a_unkFloat, void* a_unk)"
+40580,0x1406e7860,0x14070e750,2,void ActorMover::PathToReference(TESObjectREFR* a_ref)
+40584,0x1406e7c00,0x14070eaf0,3,void ActorMover::StopMoving()
+40585,0x1406e7f90,0x14070ee80,2,void ActorMover::ClearGoal()
+40589,0x1406e8320,0x14070f210,2,void ActorMover::ResetMovementState()
 40590,0x1406e8400,0x14070f2f0,2,"bool ActorMover::RequestTurnToAngle(float a_angle, float a_tolerance)"
 40591,0x1406e86d0,0x14070f5c0,2,"bool ActorMover::TurnToFace(NiPoint3* a_target, float a_tolerance)"
 40594,0x1406e8f70,0x14070fe60,2,bool ActorMover::IsPathRequestIdle()
