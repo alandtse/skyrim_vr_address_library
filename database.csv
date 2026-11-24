@@ -163,6 +163,8 @@
 13286,0x14015c7e0,0x14016d2a0,3,void TES::UpdateLandLODBlendFlags(TES* a_this)
 13530,0x1401652d0,0x140175a10,3,"void UIMessageQueue::AddMessage (UIMessageQueue * a_this, BSFixedString * a_menuName, UIMessageTypes a_type, IUIMessageData * a_data)"
 13541,0x140165660,0x140175da0,3,
+13542,0x140165680,0x140175dc0,3,void* BSTDefaultScatterTable::GetBegin_140165680(void* a_outRange)
+13547,0x140165730,0x140175e70,3,void* BSTDefaultScatterTable::GetEnd_140165730(void* a_outRange)
 13549,0x140165770,0x140175eb0,4,longlong TESWorldSpace::GetCellByCoordinateMask_140165770 (TESWorldSpace * a_this)
 13594,0x140167220,0x140177940,3,FDGE::Skyrim::LoadWorldData
 13597,0x140167400,0x140177b20,4,bool TESDataHandler::AddFormToDataHandler(TESForm* a_form)
@@ -1660,13 +1662,63 @@
 29325,0x1404533a0,0x140463350,3,"void BSTerrainEffect::AlignInstanceToLandNormal(float* a_instance, float* a_rotation)"
 29328,0x1404538b0,0x140463860,3,void BSTerrainEffect::UpdateEffectTransform()
 29336,0x1404541b0,0x140464160,4,void BSTerrainEffect::UpdateInstanceTransforms(void* a_instances)
+29394,0x1404584b0,0x140468460,2,void NavMesh::CloneInto(NavMesh** a_clone)
 29531,0x140460350,0x140470310,4,"void NavMeshInfoMap::InitializeAfterAllFormsAreReadFromFile_140460350 (NavMeshInfoMap * a_this, undefined8 param_2, ulonglong param_3, char * param_4)"
 29609,0x140465140,0x140475100,2,NavMeshObstacleManager* NavMeshObstacleManager::ctor()
+29619,0x1404664d0,0x140476490,3,void NavMeshObstacleManager::Flush()
+29621,0x140466cc0,0x140476c80,2,void NavMeshObstacleManager::QueueActivatedEntity(void* a_entity)
+29624,0x140466fe0,0x140476fa0,3,void NavMeshObstacleManager::AddCompletedTask(ObstacleTaskData* a_task)
+29627,0x1404671d0,0x140477190,2,void NavMeshObstacleManager::AddObstaclesForPendingRefs()
+29628,0x140467390,0x140477350,2,void NavMeshObstacleManager::RemoveObstaclesForRemovedRefs()
+29629,0x1404675b0,0x140477570,2,void NavMeshObstacleManager::TrackActivatedObstacles()
+29630,0x1404677c0,0x140477780,2,void NavMeshObstacleManager::FinishDeactivatedObstacles()
+29631,0x140467990,0x140477950,2,void NavMeshObstacleManager::UpdateAllObstacles()
+29632,0x140467af0,0x140477ab0,2,void NavMeshObstacleManager::UpdateMovedObstacles()
+29633,0x140467df0,0x140477db0,3,void NavMeshObstacleManager::DispatchTasks()
+29634,0x140468170,0x140478130,3,bool NavMeshObstacleManager::CommitTasks()
+29636,0x1404694c0,0x140479480,2,void NavMeshObstacleManager::CompactCompletedTaskNavmeshes()
+29637,0x140469570,0x140479530,3,void NavMeshObstacleManager::DestroyTasks()
+29638,0x140469620,0x1404795e0,2,void NavMeshObstacleManager::ProcessDoorOpenRequests_140469620()
+29639,0x140469890,0x140479850,2,void NavMeshObstacleManager::ProcessDoorCloseRequests()
+29640,0x140469d30,0x140479cf0,2,void NavMeshObstacleManager::ProcessDoorOpenRequests_140469D30()
+29643,0x14046a0c0,0x14047a080,2,void NavMeshObstacleManager::UpdateObstacle(BSNavmeshObstacleData** a_obstacle)
+29644,0x14046a360,0x14047a320,2,"void NavMeshObstacleManager::ReplaceObstaclesForRef(std::uint32_t a_formID, TESObjectREFR* a_ref)"
+29646,0x14046a9c0,0x14047a980,3,bool NavMeshObstacleManager::AttachTaskToTaskletManager(ObstacleTaskData* a_task)
+29647,0x14046ab80,0x14047ab40,2,void NavMeshObstacleManager::AddObstaclesForRef(TESObjectREFR* a_ref)
+29648,0x14046b120,0x14047b0e0,2,void NavMeshObstacleManager::RemoveObstaclesForRef(std::uint32_t a_formID)
+29673,0x14046d590,0x14047d550,2,"void NavMeshObstacleManager::GatherTaskPortalEdges(BSTArray<ObstacleTaskData*>* a_tasks, void* a_context)"
+29674,0x14046d960,0x14047d920,2,"void NavMeshObstacleManager::ExpandRelinkInputs(void* a_edgeSet, BSTArray<NavmeshTriangleRef>* a_outInputs)"
+29684,0x14046e260,0x14047e220,3,"bool ScatterTable::SetEntry_14046E260(void* a_table, void* a_entries, std::uint32_t a_hash, std::uint32_t* a_key, void** a_value)"
+29685,0x14046e3d0,0x14047e390,3,"bool ScatterTable::SetEntry_14046E3D0(void* a_table, void* a_entries, std::uint32_t a_hash, std::uint32_t* a_key, void** a_value)"
+29686,0x14046e540,0x14047e500,3,"bool ScatterTable::SetEntryRefCounted_14046E540(void* a_table, void* a_entries, std::uint32_t a_hash, std::uint32_t* a_key, void** a_value)"
+29688,0x14046e9e0,0x14047e9a0,3,"void ScatterTable::InitScrapAllocated(void* a_table, std::uint32_t a_count)"
+29730,0x14046fb80,0x14047fb40,2,"void* NavMeshObstacleManager::CellSetBegin(void* a_set, void* a_outIter)"
+29732,0x14046fbc0,0x14047fb80,2,"void* NavMeshObstacleManager::GetArrayBeginThunk(void* a_array, void** a_outIter)"
+29741,0x14046fd80,0x14047fd40,2,"bool NavMeshObstacleManager::CollectLinkedEdges(NavmeshTriangleRef* a_triangle, void* a_edgesA, void* a_edgesB)"
+29742,0x14046ff60,0x14047ff20,2,"void* NavMeshObstacleManager::CellSetEnd(void* a_set, void* a_outIter)"
+29744,0x14046ffa0,0x14047ff60,2,"void* NavMeshObstacleManager::GetArrayEndThunk(void* a_array, void** a_outIter)"
+29753,0x140470110,0x1404800d0,3,std::uint32_t NavMeshObstacleManager::GetQueuedTaskCount()
+29754,0x140470180,0x140480140,2,"void NavMeshObstacleManager::GatherOverlappingCells(void* a_obstacleRef, void* a_outCells)"
+29755,0x1404703f0,0x1404803b0,2,"void NavMeshObstacleManager::GatherOverlappingNavmeshes(void* a_obstacleRef, void* a_outNavmeshes)"
+29760,0x1404707b0,0x140480770,3,std::uint32_t NavMeshObstacleManager::GetCompletedTaskCount()
 29765,0x140470860,0x140480820,2,void* GetTaskletGroupHandle()
+29781,0x1404717b0,0x140481770,2,"void* NavMeshObstacleManager::GetArrayBegin(void* a_array, void** a_outIter)"
+29787,0x1404718b0,0x140481870,2,"void* NavMeshObstacleManager::GetArrayEnd(void* a_array, void** a_outIter)"
+29793,0x140471de0,0x140481da0,2,"std::int32_t ObstacleTaskData::CompareOperations(void* a_lhs, void* a_rhs)"
+29794,0x140472080,0x140482040,3,void ObstacleTaskData::SortOperations()
+29796,0x1404724d0,0x140482490,2,bool ObstacleTaskData::Commit()
+29800,0x1404727d0,0x140482790,3,"std::uint32_t ObstacleTaskData::PartitionOperations(BSTArray<void*>* a_array, void* a_compare, std::uint32_t a_low, std::uint32_t a_high)"
+29801,0x1404728c0,0x140482880,3,"void ObstacleTaskData::QuickSortOperations(BSTArray<void*>* a_array, void* a_compare, std::uint32_t a_low, std::uint32_t a_high)"
+29804,0x1404729f0,0x1404829b0,3,void ObstacleTaskData::FreeEdgeArrays(BSTArray<NavmeshEdgeRef>* a_arrays)
+29806,0x140472ab0,0x140482a70,3,"std::uint32_t ObstacleTaskData::AppendOperation(BSTArray<ObstacleTaskOperation>* a_array, ObstacleTaskOperation* a_operation)"
+29808,0x140472ba0,0x140482b60,3,"void ObstacleTaskData::ClearOperations(BSTArray<ObstacleTaskOperation>* a_array, bool a_freeStorage)"
+29809,0x140472c50,0x140482c10,3,"void ObstacleTaskData::ReleaseOperationRange(BSTArray<ObstacleTaskOperation>* a_array, std::uint32_t a_index, std::uint32_t a_count)"
+29810,0x140472ce0,0x140482ca0,3,"void ObstacleTaskData::RemoveOperations(BSTArray<ObstacleTaskOperation>* a_array, std::uint32_t a_index, std::uint32_t a_count)"
 29819,0x140473120,0x140483100,4,"void* Pathing::BuildFollowPath(Pathing* a_this, void* a_pathOut, Character* a_actor, void* a_reserved)"
 29832,0x1404737a0,0x140483780,4,"bool FindClosestPointOnNavmesh(const BSTSmartPointer<BSPathingCell>& a_cell, const NiPoint3& a_location, FindTriangleForLocationFilter& a_filter, NiPoint3& a_pointOut)"
 29839,0x1404749e0,0x1404849c0,3,AIProcess::FindAmbushCoverLocation
 29866,0x140476ba0,0x140486b80,4,"bool Pathing::GetPathingCell(const NiPoint3& a_location, TESObjectCELL* a_cell, TESWorldSpace* a_worldSpace, BSTSmartPointer<BSPathingCell>& a_cellOut)"
+29873,0x140477230,0x1404871f0,2,BSPathingDoor* Pathing::CreatePathingDoor(std::uint32_t a_id)
 30030,0x14047e6d0,0x14048e670,4,"PathingLockData* PathingLockData::PathingLockData(const ObjectRefHandle& a_handle, bool a_flag)"
 30031,0x14047e7a0,0x14048e740,4,void PathingLockData::~PathingLockData()
 30433,0x140490360,0x1404a0300,2,PathingRequestFly* PathingRequestFly::PathingRequestFly()
@@ -4194,8 +4246,23 @@
 88498,0x1410c3ce0,0x141120930,3,bool IMovementState::CanStrafe()
 88499,0x1410c3d40,0x141120aa0,3,RE::ActorState::Sub_1410C3D40
 88558,0x1410c6ea0,0x141123bd0,2,"bool BSPathingSolution::GetClosestPointOnPath(NiPoint3* a_pos, void* a_out)"
+88631,0x1410cbe70,0x141128ba0,3,BSNavmeshInfo* BSNavmesh::GetNavmeshInfo()
 88674,0x1410cf350,0x14112c080,3,NiPoint3 BSNavmesh::GetNormal(std::uint16_t a_tri) const
+88706,0x1410d2e00,0x14112fb30,2,"bool BSNavmesh::AddObstacle(BSNavmeshObstacleData** a_obstacle, BSTArray<void*>* a_outEdges)"
+88707,0x1410d2eb0,0x14112fbe0,2,"bool BSNavmesh::RemoveObstacle(BSNavmeshObstacleData** a_obstacle, BSTArray<void*>* a_outEdges)"
+88716,0x1410d3770,0x1411304a0,2,"bool BSNavmesh::CloseDoor(BSPathingDoor** a_door, void* a_operation)"
+88717,0x1410d3a40,0x141130770,2,bool BSNavmesh::OpenDoor(std::uint32_t a_doorID)
+88724,0x1410d42a0,0x141130fd0,2,void BSNavmesh::CompactEdgeExtraInfo()
+88778,0x1410d7cf0,0x141134a20,3,void BSNavmeshInfo::SetNavmesh(BSNavmesh* a_navmesh)
 88939,0x1410dff00,0x14113cc30,2,void DestroyTaskletGroup(void** a_group)
+88946,0x1410e05e0,0x14113d310,3,void TaskletGroup::OpenViaHandle(void** a_handle)
+88947,0x1410e0630,0x14113d360,3,void TaskletGroup::BeginAndWaitViaHandle(void** a_handle)
+88948,0x1410e0690,0x14113d3c0,3,bool TaskletGroup::IsDoneViaHandle(void** a_handle)
+88949,0x1410e06b0,0x14113d3e0,3,void TaskletGroup::EndViaHandle(void** a_handle)
+88974,0x1410e2110,0x14113ee40,3,"std::uint32_t TaskletGroup::RunQueuedPathTasks(void* a_group, JobList* a_jobList)"
+88980,0x1410e2810,0x14113f550,3,std::uint32_t TaskletGroup::Begin(void* a_group)
+88981,0x1410e28b0,0x14113f5f0,3,void TaskletGroup::BeginAndWait(void* a_group)
+88982,0x1410e2990,0x14113f6d0,3,bool TaskletGroup::End(void* a_group)
 89364,0x1410fc9e0,0x141159720,3,void ProcessAvoidBoxChecks()
 89365,0x1410fcbf0,0x141159930,3,std::uint64_t CheckAvoidBox()
 89391,0x1410fe270,0x14115afb0,3,void ObstacleBuildQueue::ctor()
@@ -4262,6 +4329,38 @@
 97551,0x14123b1b0,0x141273660,3,"std::uint64_t AppendObjectTypeVariableNames(BSScript::ObjectTypeInfo* a_type, void* a_out, std::int32_t a_mode)"
 97559,0x14123bc10,0x1412740c0,3,"void* ScrapArrayBSFixedString_Init(void* a_array, std::int32_t a_reserve)"
 97568,0x14123beb0,0x141274360,3,"BSScript::ObjectTypeInfo** ObjectTypeInfoPtr_Assign(BSScript::ObjectTypeInfo** a_dest, BSScript::ObjectTypeInfo** a_source)"
+97570,0x14123bff0,0x1412744a0,3,"void* ScatterTable::GetRangeThunk_14123BFF0(void* a_owner, void* a_outRange)"
+97571,0x14123c010,0x1412744c0,3,"void* ScatterTable::GetRangeThunk_14123C010(void* a_owner, void* a_outRange)"
+97572,0x14123c030,0x1412744e0,3,"void* ScatterTable::GetRangeThunk_14123C030(void* a_owner, void* a_outRange)"
+97573,0x14123c050,0x141274500,3,"void* ScatterTable::GetRangeThunk_14123C050(void* a_owner, void* a_outRange)"
+97574,0x14123c070,0x141274520,3,"void* ScatterTable::GetRangeThunk_14123C070(void* a_owner, void* a_outRange)"
+97575,0x14123c090,0x141274540,3,"void* ScatterTable::GetRangeThunk_14123C090(void* a_owner, void* a_outRange)"
+97576,0x14123c0b0,0x141274560,3,"void* ScatterTable::GetRangeThunk_14123C0B0(void* a_owner, void* a_outRange)"
+97577,0x14123c0d0,0x141274580,3,"void* ScatterTable::GetRangeThunk_14123C0D0(void* a_owner, void* a_outRange)"
+97578,0x14123c0f0,0x1412745a0,3,"void* ScatterTable::GetRange_14123C0F0(void* a_table, void* a_outRange)"
+97579,0x14123c130,0x1412745e0,3,"void* ScatterTable::GetRange_14123C130(void* a_table, void* a_outRange)"
+97580,0x14123c170,0x141274620,3,"void* ScatterTable::GetRange_14123C170(void* a_table, void* a_outRange)"
+97581,0x14123c1b0,0x141274660,3,"void* ScatterTable::GetRange_14123C1B0(void* a_table, void* a_outRange)"
+97582,0x14123c1f0,0x1412746a0,3,"void* ScatterTable::GetRange_14123C1F0(void* a_table, void* a_outRange)"
+97583,0x14123c230,0x1412746e0,3,"void* ScatterTable::GetRange_14123C230(void* a_table, void* a_outRange)"
+97584,0x14123c270,0x141274720,3,"void* ScatterTable::GetRange_14123C270(void* a_table, void* a_outRange)"
+97585,0x14123c2b0,0x141274760,3,"void* ScatterTable::GetRange_14123C2B0(void* a_table, void* a_outRange)"
+97587,0x14123c350,0x141274800,3,"void* ScatterTable::GetEndRangeThunk_14123C350(void* a_owner, void* a_outRange)"
+97588,0x14123c370,0x141274820,3,"void* ScatterTable::GetEndRangeThunk_14123C370(void* a_owner, void* a_outRange)"
+97589,0x14123c390,0x141274840,3,"void* ScatterTable::GetEndRangeThunk_14123C390(void* a_owner, void* a_outRange)"
+97590,0x14123c3b0,0x141274860,3,"void* ScatterTable::GetEndRangeThunk_14123C3B0(void* a_owner, void* a_outRange)"
+97591,0x14123c3d0,0x141274880,3,"void* ScatterTable::GetEndRangeThunk_14123C3D0(void* a_owner, void* a_outRange)"
+97592,0x14123c3f0,0x1412748a0,3,"void* ScatterTable::GetEndRangeThunk_14123C3F0(void* a_owner, void* a_outRange)"
+97593,0x14123c410,0x1412748c0,3,"void* ScatterTable::GetEndRangeThunk_14123C410(void* a_owner, void* a_outRange)"
+97594,0x14123c430,0x1412748e0,3,"void* ScatterTable::GetEndRangeThunk_14123C430(void* a_owner, void* a_outRange)"
+97595,0x14123c450,0x141274900,3,"void* ScatterTable::GetEndRange_14123C450(void* a_table, void* a_outRange)"
+97596,0x14123c480,0x141274930,3,"void* ScatterTable::GetEndRange_14123C480(void* a_table, void* a_outRange)"
+97597,0x14123c4b0,0x141274960,3,"void* ScatterTable::GetEndRange_14123C4B0(void* a_table, void* a_outRange)"
+97598,0x14123c4e0,0x141274990,3,"void* ScatterTable::GetEndRange_14123C4E0(void* a_table, void* a_outRange)"
+97599,0x14123c510,0x1412749c0,3,"void* ScatterTable::GetEndRange_14123C510(void* a_table, void* a_outRange)"
+97600,0x14123c540,0x1412749f0,3,"void* ScatterTable::GetEndRange_14123C540(void* a_table, void* a_outRange)"
+97601,0x14123c570,0x141274a20,3,"void* ScatterTable::GetEndRange_14123C570(void* a_table, void* a_outRange)"
+97602,0x14123c5a0,0x141274a50,3,"void* ScatterTable::GetEndRange_14123C5A0(void* a_table, void* a_outRange)"
 97604,0x14123c650,0x141274b00,2,void* BSScript::ObjectTypeInfo::FindMemberFunction(BSFixedString a_fnName)
 97605,0x14123c6d0,0x141274b80,2,void* BSScript::ObjectTypeInfo::FindNamedState(BSFixedString a_stateName)
 97611,0x14123c9f0,0x141274ea0,3,void ObjectTypeInfo_DecRef(BSScript::ObjectTypeInfo* a_type)
@@ -4319,12 +4418,13 @@
 97744,0x1412447e0,0x14129a530,2,"void* BSScript::Stack::PushFrame(void* a_unk1, void* a_unk2, void* a_unk3, void* a_unk4)"
 97745,0x141244970,0x14129a6c0,4,BSScript::Stack::GetPageForFrame
 97746,0x1412449d0,0x14129a720,3,RE::BSScript::Stack::GetStackFrameVariable
+97748,0x141244a90,0x14129a7e0,2,void BSScript::Stack::BuildStackTraceLines(void* a_outLines)
 97750,0x141244fc0,0x14129ad10,2,BSScript::Stack::Save
 97752,0x141245650,0x14129b3a0,2,BSScript::Stack::Load
 97753,0x141245b40,0x14129b890,2,void BSScript::Stack::DumpFrames(SkyrimScript::Logger& a_logger)
 97755,0x1412463b0,0x14129c100,2,"void BSScript::Stack::GetVariablePageAndOffset(void* a_variable, std::int32_t a_index, std::uint32_t* a_page, std::uint32_t* a_offset)"
 97756,0x141246500,0x14129c250,2,"void* BSScript::Stack::PushBlankFrame(std::uint32_t a_unk1, bool a_unk2)"
-97760,0x141246fb0,0x14129cd00,3,BSScript::UnlinkedTypes::Function* FunctionInfo_Init(BSScript::UnlinkedTypes::Function* a_function)
+97760,0x141246fb0,0x14129cd00,3,BSScript::UnlinkedTypes::Function* FunctionInfo::Init(BSScript::UnlinkedTypes::Function* a_function)
 97769,0x141247310,0x14129d060,2,"std::uint32_t BSScript::Stack::AppendPage(BSTArray<BSScript::MemoryPageData, BSTSmallArrayHeapAllocator<48>>* a_pages, BSScript::MemoryPageData* a_page)"
 97771,0x1412473e0,0x14129d130,2,"bool AreFunctionsEquivalent(void* a_lhs, void* a_rhs)"
 97773,0x141247890,0x14129d5e0,2,"void BSScript::Stack::ClearPages(BSTArray<BSScript::MemoryPageData, BSTSmallArrayHeapAllocator<48>>* a_pages, bool a_freeStorage)"
@@ -4367,7 +4467,7 @@
 97820,0x1412498c0,0x1412a4ce0,2,void BSScript::IMemoryPagePolicy::~IMemoryPagePolicy()
 97831,0x141249f60,0x1412a5380,3,RE::BSScript::CompiledScriptLoader::GetClass
 97843,0x14124cfd0,0x1412a83f0,3,"bool BSScript::CompiledScriptLoader::CreateFunctionInfo(BSFixedString* a_name, BSScript::UnlinkedTypes::Function** a_out)"
-97902,0x1412502f0,0x1412ab710,3,"void FunctionInfo_Swap(BSScript::UnlinkedTypes::Function* a_dest, BSScript::UnlinkedTypes::Function* a_source)"
+97902,0x1412502f0,0x1412ab710,3,"void FunctionInfo::Swap(BSScript::UnlinkedTypes::Function* a_dest, BSScript::UnlinkedTypes::Function* a_source)"
 97923,0x1412507f0,0x14129dd90,3,RE::BSScript::NF_util::NativeFunctionBase::Call
 97925,0x141250c80,0x14129e220,4,BSScript__NF_util__NativeFunctionBase::ctor_141250C80
 97927,0x141250ed0,0x14129e470,4,BSScript__NativeFunction1_Actor_TESObjectARMO__uint32_::dtor_141250ED0
@@ -4570,7 +4670,9 @@
 98637,0x141282290,0x1412c32e0,3,void RewritePropertyAccessorInstruction(void* a_builder)
 98638,0x141282480,0x1412c34d0,3,"void ArgumentList_AppendCopy(void* a_builder, BSScript::ByteCode::Argument* a_argument)"
 98639,0x1412824c0,0x1412c3510,3,void ArgumentList_ReleaseQueued(void* a_builder)
+98640,0x1412825b0,0x1412c3600,3,void FunctionInfo::Clear(BSScript::UnlinkedTypes::Function* a_function)
 98647,0x141282a30,0x1412c3a80,2,"bool BSScript::LinkerProcessor::ConvertFunction(void* a_unk1, void* a_unk2, void* a_unk3, void* a_unk4, void* a_unk5, void* a_unk6, void* a_unk7, void* a_unk8, void* a_unk9)"
+98649,0x141283710,0x1412c4760,3,"void FunctionInfo::CollectSaveStrings(BSScript::UnlinkedTypes::Function* a_function, WritableStringTable* a_stringTable)"
 98651,0x141283fe0,0x1412c5030,3,"bool ParseFunctionInfo(BSScript::UnlinkedTypes::Function* a_function, BSScript::ReadableStringTable* a_stringTable, BSScript::IStore* a_store, std::uint8_t a_major, std::uint8_t a_minor, bool a_flag, bool a_loadDocStrings, const char* a_context, SkyrimScript::Logger* a_logger)"
 98654,0x141284ae0,0x1412c5b30,3,void BSScript::UnlinkedTypes::Object::Dtor()
 98668,0x1412855f0,0x1412c6600,3,"void ArgumentArray_ConstructRange(void* a_array, std::uint64_t a_index, std::uint32_t a_count, BSScript::ByteCode::Argument* a_source)"
@@ -4579,6 +4681,8 @@
 98674,0x141285ac0,0x1412c69f0,3,void ArgumentArray_Destroy(void* a_array)
 98680,0x141285dc0,0x1412c6b30,2,void FunctionInfo::Dtor()
 98688,0x141286070,0x1412c6d40,3,"std::uint32_t ArgumentArray_Push(void* a_array, BSScript::ByteCode::Argument* a_argument)"
+98695,0x141286290,0x1412c6f40,3,"void FunctionInfo::ResizeParams(BSScript::UnlinkedTypes::Function* a_function, std::uint32_t a_count)"
+98697,0x141286510,0x1412c71c0,3,"void FunctionInfo::ResizeLocals(BSScript::UnlinkedTypes::Function* a_function, std::uint32_t a_count)"
 98700,0x1412865e0,0x1412c7240,2,void BSScript::VarNameAndTypeArray::Ctor()
 98701,0x141286600,0x1412c7260,2,"void BSScript::VarNameAndTypeArray::Ctor(std::uint16_t a_numParams, std::uint16_t a_numLocals)"
 98702,0x1412866e0,0x1412c7340,2,void BSScript::VarNameAndTypeArray::Clear()
