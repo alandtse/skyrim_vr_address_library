@@ -1109,6 +1109,7 @@
 27761,0x140406410,0x140415f60,3,void* BGSProcedureEscort::GetParamTypeCheck(std::uint32_t a_index)
 27762,0x140406430,0x140415f80,3,void* BGSProcedureEscort::GetParamCheckTypeName(std::uint32_t a_index)
 27765,0x140406530,0x140416080,3,BSFixedString* BGSProcedureEscort::GetProcedureName()
+27768,0x1404065b0,0x140416100,2,"void* BSTArray::EraseAtIterator4(void* a_outIterator, void* a_iterator)"
 27770,0x140406740,0x140416290,3,BGSProcedureFind::GetParamCount
 27771,0x140406750,0x1404162a0,3,BGSProcedureFind::InitExecState
 27772,0x140406770,0x1404162c0,3,BGSProcedureFind::InitActorLocation
@@ -1690,6 +1691,7 @@
 29647,0x14046ab80,0x14047ab40,2,void NavMeshObstacleManager::AddObstaclesForRef(TESObjectREFR* a_ref)
 29648,0x14046b120,0x14047b0e0,2,void NavMeshObstacleManager::RemoveObstaclesForRef(std::uint32_t a_formID)
 29649,0x14046b340,0x14047b300,2,void NavMeshObstacleManager::AddBodyListeners(bhkRigidBody* a_body)
+29650,0x14046b3f0,0x14047b3b0,2,"bool NavMeshObstacleManager::RemoveBodyListenersCallback(void* a_unused, bhkRigidBody* a_body)"
 29651,0x14046b420,0x14047b3e0,2,void NavMeshObstacleManager::RemoveBodyListeners(bhkRigidBody* a_body)
 29671,0x14046d330,0x14047d2f0,2,"bool ScatterTable::EraseEntryRefCounted(void* a_table, void* a_entries, std::uint32_t a_hash, std::uint32_t* a_key)"
 29672,0x14046d460,0x14047d420,2,"bool ScatterTable::EraseEntryRefCounted64(void* a_table, void* a_entries, std::uint32_t a_hash, std::uint64_t* a_key)"
@@ -2647,8 +2649,11 @@
 40396,0x1406dec50,0x140705b00,3,void ProcessLists::ClearCachedFactionFightReactions()
 40456,0x1406e3020,0x140709e50,4,"void PlayerCharacter::AddPlayerAddItemEvent(TESObject* a_object, TESForm* a_owner, TESObjectREFR* a_container, AQUIRE_TYPE a_type) src\RE\P/PlayerCharacter.cpp:32"
 40459,0x1406e33e0,0x14070a210,3,"void* BeginLowActorUpdate(void*, float, float, std::uint8_t, float, std::uint32_t)"
+40467,0x1406e38b0,0x14070a6e0,2,void BSTArray::DestructElement24()
+40475,0x1406e3d40,0x14070ab70,2,bool BSTArray::PushBack24(void* a_element)
 40478,0x1406e3ee0,0x14070ad10,3,"std::uint64_t LockFreeRing2048Push(void*, void*)"
 40499,0x1406e4540,0x14070b370,3,void* LockFreeRing2048Pop(void*)
+40503,0x1406e47e0,0x14070b610,2,"void* BSTArray::EraseAtIterator24(void* a_outIterator, void* a_iterator, void* a_unk)"
 40552,0x1406e6130,0x14070d020,3,PlayerSkills::GetSkillData
 40553,0x1406e6180,0x14070d070,3,PlayerSkills::GetLevelData
 40554,0x1406e61d0,0x14070d0c0,4,PlayerSkills::ModSkillPoints
