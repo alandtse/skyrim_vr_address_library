@@ -2623,6 +2623,7 @@
 38659,0x140673eb0,0x14067d380,2,"std::uint32_t BSPathingAvoidNode::AppendNode(BSTArray<BSPathingAvoidNode>* a_array, NiPoint3* a_point, float a_radius, float a_cost, std::uint32_t a_type)"
 38660,0x140673f60,0x14067d430,2,"void BSPathingAvoidNode::AppendSphereNode(BSTArray<BSPathingAvoidNode>* a_array, NiPoint3* a_point, float a_radius, float a_cost)"
 38677,0x1406759E0,0x14067EEB0,4,"bhkBoxShape * bhkBoxShape::bhkBoxShape(bhkBoxShape * a_this, RE::NiPoint3* a_halfExtents)"
+38695,0x140676730,0x14067fc00,2,"PathingSolutionQueue** AssignPathingSolutionQueuePtr(PathingSolutionQueue** a_ptr, PathingSolutionQueue* a_new)"
 38724,0x1406776a0,0x140680b20,2,void BSPathingSolutionArray::Destruct(char a_free)
 38726,0x1406777c0,0x140680c40,4,"void HighProcessData::ClearHeadtrackTarget(HEAD_TRACK_TYPE a_headtrackType, bool a_defaultHold)"
 38752,0x140679000,0x140682480,3,BSTArray_EraseRange_RefCountedPairs
@@ -2820,6 +2821,8 @@
 40605,0x1406e9930,0x140710820,2,"bool ActorMover::GetClosestPathPoint(NiPoint3* a_pos, void* a_out)"
 40606,0x1406e9a30,0x140710920,2,"bool ActorMover::GetPathingDoor(std::uint32_t* a_outDoorHandle, BSPathingLocation* a_outLocation)"
 40612,0x1406e9fc0,0x140710eb0,2,"void Character::SubmitPathRequest(void* a_request, void* a_location, float a_unkFloat, void* a_unk)"
+40748,0x1406f0ad0,0x1407179c0,2,void IMovementMessageInterface::PostMessage(MovementMessage** a_message)
+41128,0x1407009a0,0x140727910,2,"void IMovementPlannerAgent::Update(float* a_deltaTime, void* a_plan)"
 41130,0x140700f70,0x140727f00,2,"void IMovementSetWarp::HandlePathingFailure(void* a_request, void* a_p2)"
 41131,0x1407011e0,0x140728170,2,void IMovementSetWarp::AdvanceWarpState(void* a_request)
 41132,0x140701290,0x140728220,2,void IMovementSetWarp::ResetWarpState(void* a_request)
@@ -4475,6 +4478,7 @@
 87978,0x1410a5e50,0x141102a80,3,"bool BSPathingLocation::GetNavMeshAndTriangle(BSTSmartPointer<BSNavmesh>& a_navMeshOut, std::uint16_t& a_triOut) const"
 87985,0x1410a64c0,0x1411030f0,3,bool BSPathingLocation::ResolveToClosestNavmeshAndTriangle(FindTriangleForLocationFilter& a_filter)
 88004,0x1410a7e10,0x141104a40,4,"bool FindTriangleForLocationFilterCheckDeltaZ::IsValidTri(NiPoint3* a_location, BSNavmesh* a_navMesh, std::uint16_t a_tri, NiPoint3* a_pointOnTri)"
+88200,0x1410b8ae0,0x141115710,2,"void IMovementPlannerAgent::Update(float* a_deltaTime, void* a_plan)"
 88202,0x1410b8e00,0x141115a30,2,void IMovementSetState::SetStateForward(void* a_state)
 88203,0x1410b8e20,0x141115a50,2,void IMovementSetState::SetState(void* a_state)
 88417,0x1410c0b30,0x14111d760,2,BSFixedString* MovementPathManagerArbiter::GetStageName()
@@ -4508,10 +4512,16 @@
 88453,0x1410c2390,0x14111efc0,2,void MovementPathManagerArbiter::PostSetStaticPathMessage(bool a_staticPath)
 88454,0x1410c24a0,0x14111f0d0,3,void MovementPathManagerArbiter::CompletePath()
 88455,0x1410c2600,0x14111f230,2,void MovementPathManagerArbiter::ClearPath(bool a_failed)
+88486,0x1410c3220,0x14111fe50,3,MovementPathManagerNullTracker* MovementPathManagerNullTracker::GetSingleton()
 88498,0x1410c3ce0,0x141120930,3,bool IMovementState::CanStrafe()
 88499,0x1410c3d40,0x141120aa0,3,RE::ActorState::Sub_1410C3D40
+88535,0x1410c48e0,0x141121640,2,bool BSPathingSolution::IsNodeChainValid()
 88558,0x1410c6ea0,0x141123bd0,2,"bool BSPathingSolution::GetClosestPointOnPath(NiPoint3* a_pos, void* a_out)"
 88674,0x1410cf350,0x14112c080,3,NiPoint3 BSNavmesh::GetNormal(std::uint16_t a_tri) const
+88930,0x1410df940,0x14113c670,2,PathingSolutionEntry* PathingSolutionEntry::PathingSolutionEntry()
+88931,0x1410df9b0,0x14113c6e0,2,PathingSolutionEntry* PathingSolutionEntry::Assign(PathingSolutionEntry* a_other)
+88932,0x1410dfa20,0x14113c750,2,bool PathingSolutionQueue::PushBack(PathingSolutionEntry* a_entry)
+88935,0x1410dfc60,0x14113c990,2,bool PathingSolutionQueue::TryPopFront(PathingSolutionEntry* a_out)
 88939,0x1410dff00,0x14113cc30,2,void DestroyTaskletGroup(void** a_group)
 89364,0x1410fc9e0,0x141159720,3,void ProcessAvoidBoxChecks()
 89365,0x1410fcbf0,0x141159930,3,std::uint64_t CheckAvoidBox()

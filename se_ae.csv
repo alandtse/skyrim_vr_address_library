@@ -5513,6 +5513,7 @@ sseid,aeid,confidence,name
 38718,39750,1,Character::sub_*
 38719,39751,1,Character::sub_*
 38723,39754,1,Character::sub_*
+38724,39710,1,
 38741,39767,1,
 38752,39776,1,
 38753,39777,1,
@@ -5722,6 +5723,7 @@ sseid,aeid,confidence,name
 40605,41634,2,
 40606,41635,1,
 40612,41642,1,
+40748,41762,1,
 41104,42183,1,
 41105,42184,1,IMovementSetKeepOffsetFromActor::Func0_*
 41106,42185,1,MovementPlannerAgentKeepOffset::Func11_*
@@ -8522,6 +8524,8 @@ sseid,aeid,confidence,name
 88454,90879,1,
 88455,90880,1,
 88558,90994,2,
+88930,91382,1,
+88935,91389,1,
 88939,91393,2,
 89391,91859,3,RE::ObstacleBuildQueue::ctor
 89392,91860,3,RE::ObstacleBuildQueue::dtor
