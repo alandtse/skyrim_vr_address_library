@@ -3534,6 +3534,7 @@ sseid,aeid,confidence,name
 24850,25372,1,
 24860,25383,1,TESRace::sub_*
 24862,25385,1,TESRace::SetEditorId_*
+24863,25386,1,
 24985,25491,3,RE::TESTopicInfo::ResponseData::PopulateResponseText
 25018,25545,1,TESTopic::sub_*
 25020,25548,1,TESTopic::GetFormEditorID_*
@@ -4901,6 +4902,7 @@ sseid,aeid,confidence,name
 36427,37422,3,RE::Actor::StealAlarm
 36457,37453,3,RE::Actor::IsOverEncumbered
 36492,37491,3,RE::Actor::IsInRagdollState
+36531,37531,1,
 36532,37532,3,RE::Actor::CanAttackActor
 36559,37560,3,RE::Actor::GetCollisionFilterInfo
 36602,37610,3,RE::Actor::SetRotationX
@@ -5337,6 +5339,7 @@ sseid,aeid,confidence,name
 38389,39375,1,
 38390,39376,1,
 38391,39377,1,
+38402,39393,1,
 38405,39398,1,
 38406,39399,1,
 38410,39405,1,ActorProcess::ClearMovementStopped_*
@@ -5381,6 +5384,7 @@ sseid,aeid,confidence,name
 38495,39504,3,RE::AIProcess::ClearMuzzleFlashes
 38509,39519,2,
 38529,39539,2,
+38530,39540,1,
 38560,39578,2,
 38606,39637,2,
 38610,39641,1,
@@ -5433,6 +5437,7 @@ sseid,aeid,confidence,name
 38761,39784,1,
 38775,39800,2,
 38782,39807,2,
+38800,39830,1,
 38818,39848,2,
 38831,39861,2,
 38832,39862,2,
@@ -5458,6 +5463,7 @@ sseid,aeid,confidence,name
 38931,39979,1,
 38933,39984,1,
 38935,39987,1,ActorProcess::SetLastHitDamage_*
+38936,39988,1,
 38937,39989,1,
 38941,39993,1,
 38942,39994,1,ActorProcess::sub_140681920
@@ -6053,6 +6059,7 @@ sseid,aeid,confidence,name
 42830,43999,1,
 42832,44001,3,RE::HitData::Populate
 42837,44006,1,
+42841,44013,1,
 42842,44014,1,HitData::sub_*
 42845,44017,1,
 42854,44029,1,ArrowProjectile::sub_*
@@ -6193,6 +6200,7 @@ sseid,aeid,confidence,name
 43490,44712,3,
 43491,44713,3,CombatGroup::IsMember
 43493,44715,3,CombatGroup::CanActorAttackAllTargets
+43531,44757,1,
 43543,44769,1,
 43545,44771,1,
 43547,44773,1,

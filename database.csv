@@ -753,6 +753,7 @@
 24778,0x140382720,0x140391F90,4,"void JournalMenuQuestDescriptionStrings (int64 a1, TESQuest *a2)"
 24815,0x140383c40,0x1403934b0,4,"RefHandle& TESQuestTarget::GetTargetReference(RefHandle& a_out, bool a_useExtraList, TESQuest* a_quest)"
 24816,0x140383d40,0x1403935b0,4,"ObjectRefHandle& TESQuestTarget::GetTrackingRef(ObjectRefHandle& a_out, const TESQuest* a_quest)"
+24863,0x1403891f0,0x140398a60,3,"void* TESRace::GetAttackAnimationArray(std::int32_t a_sex, std::int32_t a_equippedTypes)"
 24985,0x14038d990,0x14039d1c0,3,RE::TESTopicInfo::ResponseData::PopulateResponseText
 25083,0x140393780,0x1403a3000,4,TESTopicInfo::TESResponseList* TESTopicInfo::GetResponseList(TESResponseList* a_list)
 25154,0x140396a80,0x1403a6300,4,void BGSAcousticSpaceListener::EntityRemovedCallback(hkpEntity* a_entity)
@@ -2157,6 +2158,7 @@
 36523,0x1405e6b50,0x1405ef270,3,EssentialFavorites::Disarm::IsQuestObject
 36525,0x1405e6f20,0x1405ef640,3,Actor::AddObjectToContainer
 36527,0x1405e72f0,0x1405efa10,4,Actor::GetGoldAmount
+36531,0x1405e74c0,0x1405efbe0,3,float Actor::GetDPS()
 36532,0x1405e7500,0x1405efc20,3,bool Actor::CanAttackActor(Actor* a_actor)
 36537,0x1405e7e40,0x1405f0560,3,RE::Actor::GetHostileToActor
 36541,0x1405e8700,0x1405f0e20,3,po3tweaks::VoiceModulation::SetObjectToFollow
@@ -2250,11 +2252,11 @@
 37583,0x140623ba0,0x14062c950,3,Actor::SetNoBleedoutRecovery
 37586,0x140623e60,0x14062cc10,3,RE::Character::sub_140623E60
 37588,0x140623f10,0x14062ccc0,4,RE::PlayerCharacter::GetReach_140623F10
-37600,0x140624e20,0x14062dc90,2,Actor* Actor::IsInCombatWithGuard()
+37600,0x140624e20,0x14062dc90,2,Actor* Actor::GetGuardCombatTarget()
 37601,0x140624e50,0x14062dcc0,2,CombatGroup* Actor::GetCombatGroup()
 37602,0x140624e70,0x14062dce0,2,void Actor::SetCombatGroup(CombatGroup* a_group)
 37603,0x140624e90,0x14062dd00,3,ACTOR_COMBAT_STATE Actor::GetCombatState()
-37604,0x140624ef0,0x14062dd60,2,void Actor::sub_140624EF0()
+37604,0x140624ef0,0x14062dd60,2,void Actor::InvalidateCachedDPS()
 37605,0x140624f20,0x14062dd90,4,float Actor::sub_140624F20(float a_factor)
 37606,0x140625000,0x14062de70,2,bool Actor::sub_140625000(Actor* a_target)
 37607,0x140625140,0x14062dfb0,2,bool Actor::CheckValidTarget(TESObjectREFR* a_target)
@@ -2269,56 +2271,56 @@
 37616,0x140625c90,0x14062eb00,2,float CalcArmorRatingFromActorValueOwner(ActorValueOwner* a_avo)
 37617,0x140625cc0,0x14062eb30,2,float Actor::CalcUnarmedDamage()
 37618,0x140625cd0,0x14062eb40,3,bool Actor::IsCombatTarget(Actor* a_other)
-37619,0x140625d10,0x14062eb80,2,NiPoint3* Actor::sub_140625D10(bool a_flag)
-37620,0x140625dd0,0x14062ec40,4,"bool Actor::sub_140625DD0(bool a_flag, NiPoint3* a_out)"
+37619,0x140625d10,0x14062eb80,2,NiPoint3* Actor::GetWeaponNodePosition(bool a_leftHand)
+37620,0x140625dd0,0x14062ec40,4,"bool Actor::GetWeaponSwingDirection(bool a_leftHand, NiPoint3* a_out)"
 37621,0x140625eb0,0x14062ed20,4,TESBoundObject* Actor::GetWeapon()
 37622,0x140625ee0,0x14062ed50,2,EnchantmentItem* Actor::GetEquippedWeaponEnchantment()
 37623,0x140625f30,0x14062eda0,2,std::uint32_t Actor::Func117_140625F30()
 37624,0x140625fa0,0x14062ee10,3,TESForm* Actor::GetEquippedShield()
 37625,0x140625fe0,0x14062ee50,3,BGSAttackDataPtr* Actor::GetCurrentAttackData()
 37626,0x140626000,0x14062ee70,2,std::uint32_t Actor::GetEquippedItemTypes()
-37627,0x140626060,0x14062eed0,2,void* Actor::sub_140626060(std::uint32_t a_equippedTypes)
+37627,0x140626060,0x14062eed0,2,void* Actor::GetAttackAnimationArray(std::uint32_t a_equippedTypes)
 37628,0x1406260f0,0x14062ef60,4,void Actor::WeaponSwingCallback()
 37629,0x1406261f0,0x14062f060,2,bool Actor::HasBeenAttacked()
 37630,0x140626210,0x14062f080,2,void Actor::SetBeenAttacked(bool a_set)
 37631,0x140626230,0x14062f0a0,2,void Actor::sub_140626230()
 37632,0x1406262a0,0x14062f110,2,void Actor::sub_1406262A0(Actor* a_other)
-37633,0x140626400,0x14062f270,2,void TESObjectREFR::ProcessHitEvent(HitData* a_hitData)
+37633,0x140626400,0x14062f270,2,void Actor::ProcessHitEvent(HitData* a_hitData)
 37634,0x1406273a0,0x140630240,3,HitData* Actor::GetLastHitData()
 37635,0x1406273c0,0x140630260,3,void Actor::SetLastHitData(HitData* a_hitData)
-37636,0x140627430,0x1406302d0,2,void Actor::sub_140627430()
+37636,0x140627430,0x1406302d0,2,void Actor::ResetLastHitData()
 37637,0x1406274a0,0x140630340,4,bool Actor::IsAttacking()
 37638,0x1406274c0,0x140630360,3,bool Actor::sub_1406274C0()
 37639,0x140627500,0x1406303a0,4,bool Actor::IsPowerAttacking()
-37640,0x140627550,0x1406303f0,3,bool Character::IsMeleeAttackState()
-37641,0x140627570,0x140630410,3,bool Character::IsRangedAttackState()
-37642,0x140627590,0x140630430,3,bool PlayerCharacter::IsBashing()
+37640,0x140627550,0x1406303f0,3,bool Actor::IsMeleeAttackState()
+37641,0x140627570,0x140630410,3,bool Actor::IsRangedAttackState()
+37642,0x140627590,0x140630430,3,bool Actor::IsBashing()
 37643,0x1406275b0,0x140630450,2,bool Actor::IsBusy()
-37644,0x140627630,0x1406304d0,2,bool Actor::sub_140627630()
-37645,0x1406276f0,0x140630590,2,bool Actor::sub_1406276F0()
+37644,0x140627630,0x1406304d0,2,bool Actor::IsReadyToAttack()
+37645,0x1406276f0,0x140630590,2,bool Actor::IsIdleAndReadyToAttack()
 37646,0x140627770,0x140630610,2,bool Actor::IsVoiceReady()
 37647,0x1406277e0,0x140630680,2,bool Actor::IsMagicCasterReady(std::int32_t a_slot)
 37648,0x140627890,0x140630730,2,bool Actor::IsEquipOk()
-37649,0x1406278d0,0x140630770,2,void Actor::sub_1406278D0(bool a_flag)
+37649,0x1406278d0,0x140630770,2,void Actor::HandleAnticipateAttack(bool a_leftHand)
 37650,0x140627930,0x1406307d0,3,"void Actor::sub_140627930(bool a_leftHand, bool a_flag)"
 37651,0x140627d30,0x140630bd0,2,void Actor::StartPowerAttackCoolDown()
 37652,0x140627d40,0x140630be0,2,bool Actor::IsPowerAttackCoolingDown()
 37653,0x140627d50,0x140630bf0,2,"void Actor::HandleHealthDamage(Actor* a_attacker, float a_damage)"
 37654,0x140627de0,0x140630c80,2,void Actor::Func261_140627DE0(TESBoundObject* a_object)
 37655,0x140627e10,0x140630ce0,2,Actor* Actor::sub_140627E10()
-37656,0x140627ef0,0x140630dc0,2,float Actor::sub_140627EF0()
-37657,0x140628010,0x140630ee0,2,bool Actor::sub_140628010(float a_damage)
+37656,0x140627ef0,0x140630dc0,2,float Actor::CalcDPS()
+37657,0x140628010,0x140630ee0,2,bool Actor::IsDamageLethal(float a_damage)
 37658,0x140628090,0x140630f60,2,TESAmmo* Actor::GetCurrentAmmo()
 37659,0x1406280d0,0x140630fa0,3,void Actor::EnterKillMove(TESObjectREFR* a_killer)
-37660,0x140628190,0x140631060,2,void Actor::sub_140628190()
+37660,0x140628190,0x140631060,2,void Actor::ExitKillMove()
 37661,0x140628240,0x140631110,3,bool Actor::IsInKillMove()
-37662,0x140628260,0x140631130,2,void Actor::StartDeferredKill_140628260(bool a_set)
-37663,0x140628280,0x140631150,2,void Actor::sub_140628280()
-37664,0x1406282a0,0x140631170,2,void Actor::EndDeferredKill_1406282A0(bool a_flag)
-37665,0x1406282c0,0x140631190,2,bool Actor::sub_1406282C0()
+37662,0x140628260,0x140631130,2,void Actor::StartDeferredKill(bool a_set)
+37663,0x140628280,0x140631150,2,void Actor::RequestDeferredKill()
+37664,0x1406282a0,0x140631170,2,void Actor::EndDeferredKill(bool a_flag)
+37665,0x1406282c0,0x140631190,2,bool Actor::IsDeferredKillActive()
 37666,0x1406282e0,0x1406311b0,4,"void Actor::DoCombatSpellApply_1406282E0(MagicItem* a_spell, TESObjectREFR* a_target)"
-37667,0x140628460,0x140631330,3,bool Actor::sub_140628460()
-37668,0x1406284a0,0x140631370,3,bool Actor::sub_1406284A0()
+37667,0x140628460,0x140631330,3,bool Actor::IsAttackReady()
+37668,0x1406284a0,0x140631370,3,bool Actor::IsVoiceGraphReady()
 37669,0x1406284e0,0x1406313b0,2,bool Actor::IsMagicLeftHandReady()
 37670,0x140628520,0x1406313f0,2,bool Actor::IsMagicRightHandReady()
 37672,0x1406285a0,0x140631470,3,SimpleOffenceSuppression::IgnoreFriendlyFire::GetFactionRank
@@ -2449,11 +2451,13 @@
 38359,0x14064f4b0,0x140658800,3,AIProcess::UpdatePackageObserveCombatHigh
 38378,0x1406500d0,0x140659420,2,"std::uint16_t AIProcess::GetDesiredMoveFlags(Actor* a_actor, float a_distance, float a_stopRunDistance, float a_startRunDistance, bool a_forceRun, bool a_unk)"
 38379,0x140650230,0x140659580,2,"void AIProcess::SetMoveMode(Actor* a_actor, std::int32_t a_moveFlags, bool a_usePackageFlags)"
+38402,0x140650d60,0x14065a0b0,3,"void AIProcess::SetWeaponLastPos(bool a_leftHand, NiPoint3* a_pos)"
 38404,0x140650df0,0x14065a140,3,RE::AIProcess::Update3DModel
 38483,0x1406598d0,0x140662c10,3,ObjectRefHandle AIProcess::GetHeadtrackTarget()
 38495,0x140659c00,0x140662f40,3,void AIProcess::ClearMuzzleFlashes()
 38509,0x14065a3b0,0x1406636f0,3,AIProcess::AimWeaponAtTarget
 38529,0x14065aa20,0x140663d60,3,AIProcess::RequestFollowPathing
+38530,0x14065b310,0x140664650,3,NiPointer<BGSAttackData>* AIProcess::GetAttackData()
 38560,0x14065be00,0x140665140,3,AIProcess::UpdatePackageGuardHigh
 38568,0x14065c880,0x140665bd0,3,RE::AIProcess::SetBaseScale
 38606,0x14065f040,0x140668390,3,AIProcess::UpdatePackageHigh
@@ -2501,6 +2505,7 @@
 38786,0x14067a4c0,0x140683930,3,"std::uint64_t ActorProcess::SetEquippedHandItem(ExtraContainerChanges::ItemEntry* a_item, bool a_left, NiAVObject* a_3d)"
 38787,0x14067a940,0x140683dc0,3,"std::uint64_t ActorProcess::SetEquippedHandItemEntry(ExtraContainerChanges::ItemEntry* a_item, bool a_left)"
 38799,0x14067b1d0,0x140684650,4,"static NiAVObject * GetTorchNode (ActorProcess * a_this, BSTSmartPointer_BipedAnim_ * a_biped)"
+38800,0x14067b230,0x1406846b0,3,NiAVObject* AIProcess::GetShieldNode(BipedAnim** a_biped)
 38818,0x14067bc50,0x1406850d0,2,TESPackage* AIProcess::GetRunOncePackage()
 38819,0x14067bc70,0x1406850f0,4,"void AIProcess::SetRunOncePackage(TESPackage* a_package, Actor* a_actor)"
 38831,0x14067bfa0,0x140685420,3,AIProcess::ResumeOccupiedFurniture
@@ -2523,8 +2528,11 @@
 38889,0x14067f790,0x140688c10,2,bool AIProcess::GetWeaponDrawnFlag()
 38890,0x14067f7b0,0x140688c30,2,void AIProcess::SetWeaponDrawnFlag(bool a_drawn)
 38900,0x14067fe60,0x1406892e0,4,LLF::AIProcess_CalculateLightValue_GetLuminance
+38935,0x140681640,0x14068aab0,3,void AIProcess::SetLastHitData(HitData* a_hitData)
+38936,0x1406816f0,0x14068ab60,3,void AIProcess::ResetLastHitData()
 38966,0x140681fd0,0x14068b440,4,"void FUN_140681fd0 (undefined8 param_1, Actor * a_actor)"
 38967,0x140682020,0x14068b490,4,void FUN_140682020 (longlong param_1)
+38974,0x140682160,0x14068b5d0,3,"void AIProcess::EndDeferredKill(bool a_flag, Actor* a_actor)"
 39005,0x140685360,0x14068e7d0,3,AIProcess::UpdatePackageMiddleHigh
 39007,0x140686780,0x14068fbf0,3,AIProcess::UpdatePackageAccompanyMiddleHigh
 39009,0x140686db0,0x140690220,3,AIProcess::UpdatePackagePursueMiddleLow
@@ -2689,8 +2697,11 @@
 42791,0x140740cb0,0x14076b960,3,"void Hazard::Update(Hazard *a_this, float a_delta)"
 42810,0x1407416f0,0x14076c3a0,3,bool Hazard::CheckInit3D(Hazard *a_this)
 42826,0x140742450,0x14076d000,3,HitData* HitData::Ctor()
+42827,0x140742500,0x14076d0b0,3,HitData* HitData::CopyCtor(HitData* a_other)
+42829,0x140742580,0x14076d130,3,void HitData::ResetValues()
 42832,0x140742850,0x14076d400,3,RE::HitData::Populate
 42833,0x140742c00,0x14076d800,4,RE::HitData::init_hitdata_proj_ID
+42841,0x1407433e0,0x14076dfe0,3,void HitData::Copy(HitData* a_other)
 42842,0x140743510,0x14076e110,3,RE::HitData::sub_*
 42852,0x140744dd0,0x14076fd10,4,void MissileProjectile::UpdateImpl_140744DD0 (MissileProjectile * a_this)
 42856,0x140746d60,0x140771ca0,3,EnhancedInvisibility::MissileProjectile::sub_140746D60
@@ -2742,6 +2753,7 @@
 43490,0x14076AA00,0x140795D50,3,void CombatGroup::RemoveMember(Actor* a_member)
 43491,0x14076AB60,0x140795EB0,3,bool CombatGroup::IsMember(TESObjectREFR* a_ref)
 43493,0x14076ACA0,0x140795FF0,3,bool CombatGroup::CanActorAttackAllTargets(Character* a_actor)
+43531,0x14076e2b0,0x140799600,3,Actor* CombatGroup::GetGuardTarget()
 43566,0x140772520,0x14079D870,3,void CombatGroup::RemoveTarget(std::uint32_t a_index)
 43571,0x140772a60,0x14079ddb0,3,po3tweaks::CombatDialogue::SayCombatDialogue
 43628,0x140775550,0x1407a08a0,3,bool CombatBehaviorEquipContext::CanEquipItem()
