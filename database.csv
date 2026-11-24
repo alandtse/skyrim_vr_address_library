@@ -1645,12 +1645,14 @@
 28781,0x140437690,0x1404471e0,2,TESWorldSpace* TESPackage::GetLocationWorldSpace(Actor* a_actor)
 28782,0x1404378c0,0x140447410,2,TESObjectCELL* TESPackage::GetLocationCell(Actor* a_actor)
 28783,0x140437ac0,0x140447610,2,"void TESPackage::GetLocationPosition(NiPoint3* a_out, Actor* a_actor, void* a_unk)"
+28784,0x140437d80,0x1404478d0,2,std::uint32_t TESPackage::GetEffectiveLocationRadius(Actor* a_actor)
 28785,0x140437de0,0x140447930,2,float TESPackage::GetLocationRadius(Actor* a_actor)
 28786,0x140437ec0,0x140447a10,2,TESObjectREFR* TESPackage::GetLocationReference(Actor* a_actor)
 28787,0x1404380f0,0x140447c40,2,TESWorldSpace* TESPackage::GetSecondLocationWorldSpace(Actor* a_actor)
 28788,0x140438310,0x140447e60,2,TESObjectCELL* TESPackage::GetSecondLocationCell(Actor* a_actor)
 28789,0x140438500,0x140448050,2,"void TESPackage::GetSecondLocationPosition(NiPoint3* a_out, Actor* a_actor, void* a_unk)"
 28790,0x1404387d0,0x140448320,2,TESObjectREFR* TESPackage::GetSecondLocationReference(Actor* a_actor)
+28803,0x1404398d0,0x140449420,2,"bool TESPackage::IsCurrentTargetAtSecondLocation(Actor* a_actor, float a_radius, bool* a_outFlag)"
 28817,0x14043ae40,0x14044a990,2,bool TESPackage::IsScheduleAndConditionsMet(Actor* a_actor)
 28822,0x14043b7b0,0x14044b300,2,"float TESPackage::GetLocationAcceptRadius(Actor* a_actor, bool a_useSecondLocation)"
 28826,0x14043bbd0,0x14044b720,3,std::uint32_t TESPackage::GetSecondLocationRadius(Actor* a_actor)
@@ -1673,6 +1675,8 @@
 29008,0x1404416f0,0x140451240,3,bool PackageLocation::Equals(PackageLocation* a_other)
 29009,0x140441850,0x1404513a0,2,void PackageLocation::InitializeAfterAllFormsAreRead(TESPackage* a_package)
 29015,0x140442890,0x1404523e0,2,TESObjectREFR* PackageLocation::ResolveReference(Actor* a_actor)
+29016,0x140442a10,0x140452560,2,"bool PackageLocation::TestActivatorTrigger(Actor* a_actor, TESObjectREFR* a_other, bool* a_outInside)"
+29017,0x140442ac0,0x140452610,2,"bool PackageLocation::IsRefWithinRadius(TESObjectREFR* a_ref, std::uint32_t a_radius)"
 29018,0x140442e10,0x140452960,3,void PackageLocation::SaveGame(BGSSaveGameBuffer* a_buffer)
 29019,0x140442f20,0x140452a70,3,void PackageLocation::LoadGame(BGSLoadGameBuffer* a_buffer)
 29020,0x140443030,0x140452b80,2,std::uint32_t PackageLocation::GetRadius()
@@ -2289,6 +2293,7 @@
 36829,0x1406012b0,0x140609ac0,2,bool Actor::GetPathGoalLocation(BSPathingLocation* a_out)
 36841,0x140601b50,0x14060a360,2,float Character::CalculateRadius()
 36853,0x140602200,0x14060aa10,2,"void Actor::WarpToRecord(void* a_record, void* a_loc)"
+36854,0x140602410,0x14060ac20,2,void Character::ActivatePathingDoor(void* a_doorInfo)
 36872,0x140603b30,0x14060c340,2,Actor::Kill
 36877,0x1406057c0,0x14060dfd0,3,RE::Actor::IsOnFlyingMount
 36880,0x140605940,0x14060e130,3,Actor::StartMountInteraction
@@ -2795,6 +2800,9 @@
 40605,0x1406e9930,0x140710820,2,"bool ActorMover::GetClosestPathPoint(NiPoint3* a_pos, void* a_out)"
 40606,0x1406e9a30,0x140710920,2,"bool ActorMover::GetPathingDoor(std::uint32_t* a_outDoorHandle, BSPathingLocation* a_outLocation)"
 40612,0x1406e9fc0,0x140710eb0,2,"void Character::SubmitPathRequest(void* a_request, void* a_location, float a_unkFloat, void* a_unk)"
+41130,0x140700f70,0x140727f00,2,"void IMovementSetWarp::HandlePathingFailure(void* a_request, void* a_p2)"
+41131,0x1407011e0,0x140728170,2,void IMovementSetWarp::AdvanceWarpState(void* a_request)
+41132,0x140701290,0x140728220,2,void IMovementSetWarp::ResetWarpState(void* a_request)
 41257,0x140704970,0x14072b900,3,RE::PlayerControls::Ctor
 41266,0x140705250,0x14072c0a0,3,RE::PlayerControls::SetActivateHandlerBlocked
 41271,0x140705530,0x14072c380,3,RE::PlayerControls::SendActionToInterestedActors
@@ -4447,6 +4455,13 @@
 87978,0x1410a5e50,0x141102a80,3,"bool BSPathingLocation::GetNavMeshAndTriangle(BSTSmartPointer<BSNavmesh>& a_navMeshOut, std::uint16_t& a_triOut) const"
 87985,0x1410a64c0,0x1411030f0,3,bool BSPathingLocation::ResolveToClosestNavmeshAndTriangle(FindTriangleForLocationFilter& a_filter)
 88004,0x1410a7e10,0x141104a40,4,"bool FindTriangleForLocationFilterCheckDeltaZ::IsValidTri(NiPoint3* a_location, BSNavmesh* a_navMesh, std::uint16_t a_tri, NiPoint3* a_pointOnTri)"
+88202,0x1410b8e00,0x141115a30,2,void IMovementSetState::SetStateForward(void* a_state)
+88203,0x1410b8e20,0x141115a50,2,void IMovementSetState::SetState(void* a_state)
+88422,0x1410c0c30,0x14111d860,2,void MovementPathManagerArbiter::AttachToController(void* a_controller)
+88423,0x1410c0c80,0x14111d8b0,2,void MovementPathManagerArbiter::DetachFromController()
+88426,0x1410c0d20,0x14111d950,2,bool MovementPathManagerArbiter::RegisterAgent(void* a_agent)
+88427,0x1410c0e30,0x14111da60,2,bool MovementPathManagerArbiter::UnregisterAgent(void* a_agent)
+88428,0x1410c0f20,0x14111db50,2,void MovementPathManagerArbiter::ClearAgents()
 88429,0x1410c0f80,0x14111dbb0,3,bool IMovementSetGoal::SetGoal(void* a_request)
 88430,0x1410c1140,0x14111dd70,3,void IMovementSetGoal::ClearGoal()
 88431,0x1410c1250,0x14111de80,2,void IMovementSetGoal::RepathFromCurrentLocation()
@@ -4465,6 +4480,8 @@
 88447,0x1410c1bd0,0x14111e800,3,bool IMovementQueryPathingState::IsPending()
 88448,0x1410c1c30,0x14111e860,2,void MovementPathManagerArbiter::UpdatePathing()
 88449,0x1410c1d00,0x14111e930,2,void MovementPathManagerArbiter::PollPendingSolution()
+88450,0x1410c1dc0,0x14111e9f0,2,void MovementPathManagerArbiter::ProcessFollowerEvents()
+88451,0x1410c1fd0,0x14111ec00,2,void MovementPathManagerArbiter::StartPathFollowing(void* a_solution)
 88452,0x1410c2180,0x14111edb0,2,"void MovementPathManagerArbiter::HandlePathFollowerEvent(std::int32_t a_event, char* a_outFlag)"
 88454,0x1410c24a0,0x14111f0d0,3,void MovementPathManagerArbiter::CompletePath()
 88455,0x1410c2600,0x14111f230,2,void MovementPathManagerArbiter::ClearPath(bool a_failed)
