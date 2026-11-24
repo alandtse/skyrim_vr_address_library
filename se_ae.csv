@@ -3767,6 +3767,7 @@ sseid,aeid,confidence,name
 28032,28767,1,BGSProcedureTyped_BGSProcedureBase_BGSProcedureParamInfo___kProcedureHoldPositionParamTypes_::Func18_*
 28033,28768,1,BGSProcedureTyped_BGSProcedureBase_BGSProcedureParamInfo___kProcedureHoldPositionParamTypes_::Func34_*
 28034,28769,1,BGSProcedureTyped_BGSProcedureBase_BGSProcedureParamInfo___kProcedureHoldPositionParamTypes_::Func30_*
+28042,28777,1,
 28043,28778,1,
 28046,28781,1,
 28047,28782,1,BGSProcedureHoverExecState::sub_*
@@ -4010,6 +4011,7 @@ sseid,aeid,confidence,name
 28774,29548,1,TESPackage::InitItemImpl_*
 28776,29552,1,
 28778,29554,1,
+28780,29556,1,
 28781,29557,1,TESPackage::sub_*
 28782,29558,2,
 28783,29559,2,
@@ -4524,6 +4526,7 @@ sseid,aeid,confidence,name
 33497,34276,1,
 33499,34278,1,DarknessEffect::Func20_*
 33500,34279,1,DarknessEffect::Func21_*
+33516,34295,1,
 33517,34296,1,DisguiseEffect::Allocate_*
 33518,34297,1,DisguiseEffect::ShouldApply_*
 33520,34299,1,DisguiseEffect::DetectionChecker::sub_*
@@ -4760,6 +4763,7 @@ sseid,aeid,confidence,name
 34630,35550,1,
 34645,35567,2,void BGSSaveLoadGame::InitAndFinishLoadForms(bool a_flushIO)
 34647,35569,2,"bool BGSSaveLoadGame::QueueReferenceLoad(TESObjectREFR* a_ref, BGSLoadGameBuffer* a_buffer)"
+34685,35608,1,
 34725,35634,1,
 34732,35638,1,Win32FileType::sub_*
 34736,35642,1,
@@ -4903,9 +4907,12 @@ sseid,aeid,confidence,name
 36355,37346,1,
 36392,37383,3,RE::Actor::CalculateCurrentVendorFaction
 36407,37401,3,RE::Actor::EvaluatePackage
+36423,37417,1,
 36424,37418,3,Character::SetTravelPackage
 36427,37422,3,RE::Actor::StealAlarm
 36457,37453,3,RE::Actor::IsOverEncumbered
+36472,37471,1,
+36473,37472,1,
 36492,37491,3,RE::Actor::IsInRagdollState
 36531,37531,1,
 36532,37532,3,RE::Actor::CanAttackActor
@@ -5077,6 +5084,8 @@ sseid,aeid,confidence,name
 37571,38520,3,RE::DragonSoulsGained::GetEventSource()
 37572,38521,1,
 37573,38522,1,
+37577,38527,1,
+37578,38528,1,
 37590,38540,1,Actor::AttachArrow_*
 37591,38541,1,Actor::DetachArrow_*
 37592,38542,1,Character::sub_*
@@ -5156,7 +5165,11 @@ sseid,aeid,confidence,name
 37670,38624,1,
 37671,38625,1,
 37674,38628,3,papyrus_extender::events::game::weaponhit::static::target_0x6C7
+37677,38631,1,
+37685,38640,1,
 37726,38671,3,RE::CriticalHit::GetEventSource
+37727,38672,1,
+37736,38681,1,
 37752,38697,3,RE::Actor::StopInteractingQuick
 37757,38702,3,RE::Actor::GetMount
 37758,38703,3,RE::Actor::GetRider
@@ -5233,6 +5246,7 @@ sseid,aeid,confidence,name
 37964,38920,1,
 37965,38921,1,
 37968,38924,1,
+38003,38957,1,
 38005,38959,1,
 38017,38972,1,
 38018,38973,1,
@@ -5614,6 +5628,7 @@ sseid,aeid,confidence,name
 40294,41304,3,ProcessLists::UpdateMiddleLowActors
 40295,41305,3,ProcessLists::UpdateMiddleHighActors
 40297,41307,3,ProcessLists::UpdateHighActorMovement
+40301,41311,1,
 40330,41340,3,RE::ProcessLists::StopCombatAndAlarmOnActor
 40354,41367,3,ProcessLists::UpdateHighActors
 40376,41390,2,
@@ -5786,6 +5801,7 @@ sseid,aeid,confidence,name
 41624,42702,1,
 41625,42703,1,
 41627,42705,1,ActorKnowledge::sub_*
+41631,42709,1,
 41632,42710,1,
 41633,42712,1,
 41636,42716,1,
@@ -6541,6 +6557,10 @@ sseid,aeid,confidence,name
 45738,47051,2,
 46011,47272,1,
 46068,47332,3,
+46638,47841,1,
+46639,47881,1,
+47719,49018,1,
+47727,49024,1,
 47741,48842,1,
 47742,48843,1,
 47744,48845,1,
@@ -6615,11 +6635,21 @@ sseid,aeid,confidence,name
 48035,49081,1,
 48036,49082,1,
 48038,49085,1,
+48040,49087,1,
+48041,49088,1,
 48044,49091,1,
+48046,49093,1,
+48049,49096,1,
+48050,49097,1,
 48051,49098,1,
+48053,49100,1,
 48054,49101,1,
 48056,49103,1,
 48057,49104,1,
+48058,49105,1,
+48059,49158,1,
+48063,49110,1,
+48064,49111,1,
 48220,49246,1,
 48221,49247,1,
 48223,49251,1,
@@ -6697,6 +6727,8 @@ sseid,aeid,confidence,name
 48780,49628,1,CombatPathingRequestGeneric_CombatPathingGoalPolicySearch_CombatPathingSearchPolicyStandard_::Func7_140824470
 48786,49748,1,CombatBehaviorTreeNodeUpdateFunction_CombatBehaviorExpression_CombatBehaviorMemberFunc_CombatBehaviorContextSearch_bool__CombatBehaviorContextSearch_________::Func4_*
 48808,49763,1,
+48809,49764,1,
+48810,49786,1,
 48834,49784,1,
 48835,49785,1,
 48842,49801,1,
@@ -7097,6 +7129,7 @@ sseid,aeid,confidence,name
 51246,36604,1,Start-on-Save::DoBeforeNewOrLoad
 51253,52125,3,RE::LoadNewDLCContent
 51422,52271,3,RE::MessageBoxData::QueueMessage
+51473,52335,1,
 51491,52353,3,void RaceSexMenu::CommitWeightSliderChange(const FxDelegateArgs& a_params)
 51492,52354,3,void RaceSexMenu::CommitFaceDetailsSliderChange(const FxDelegateArgs& a_params)
 51493,52355,3,void RaceSexMenu::CommitMorphSliderChange(const FxDelegateArgs& a_params)
@@ -8962,6 +8995,7 @@ sseid,aeid,confidence,name
 97744,104482,2,
 97745,104483,1,
 97746,104484,3,RE::BSScript::Stack::GetStackFrameVariable
+97748,104486,1,
 97750,104488,2,
 97752,104490,1,
 97753,104491,2,

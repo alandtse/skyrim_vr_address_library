@@ -1256,6 +1256,8 @@
 28038,0x140412c20,0x140422770,3,BGSProcedureHover::InitActorAnimPose
 28040,0x140412cb0,0x140422800,3,BGSProcedureHover::Process
 28041,0x140412d80,0x1404228d0,3,RegisterProcedureName_Hover
+28042,0x140412ef0,0x140422a40,2,void BGSProcedureHover::ProcessHighActor(BGSProcessContext* a_context)
+28043,0x140413390,0x140422ee0,2,void BGSProcedureHover::ProcessLowActor(BGSProcessContext* a_context)
 28044,0x1404137a0,0x1404232f0,3,BGSProcedureHoverExecState::BGSProcedureHoverExecState
 28045,0x1404137d0,0x140423320,3,BGSProcedureHoverExecState::~BGSProcedureHoverExecState
 28047,0x140413840,0x140423390,3,BGSProcedureHoverExecState::RecycleChildren
@@ -1980,6 +1982,7 @@
 34554,0x1405765d0,0x14057cba0,2,void WaitForBSThreadEvent()
 34555,0x140576620,0x14057cbf0,2,void ClearDynamicPreRenderJobLists()
 34582,0x140577ef0,0x14057f650,4,BGSSaveLoadChangesMap::Find
+34583,0x140577f60,0x14057f6c0,2,"void* BGSSaveLoadChanges::FindEntry(void* a_out, std::uint32_t a_formID)"
 34627,0x140579880,0x140580fe0,3,bool BGSSaveLoadFileEntry::PopulateFileEntryData()
 34634,0x140579b90,0x1405812f0,4,"uint BGSSaveLoadFormIDMap::InsertFormID (BGSSaveLoadFormIDMap * a_this, uint a_formID)"
 34645,0x14057a950,0x140582120,3,void BGSSaveLoadGame::InitAndFinishLoadForms(bool a_flushIO)
@@ -1988,10 +1991,12 @@
 34670,0x14057cb90,0x140584360,3,bool BGSSaveLoadGame::IsFormIDInUse(FormID a_formID)
 34676,0x14057ccc0,0x140584420,3,"void BGSSaveLoadGame::SaveGame (BGSSaveGameBuffer * a_this, anonymous_namespace__Win32FileType * a_Win32FileType)"
 34677,0x14057d1a0,0x140584910,2,bool BGSSaveLoadGame::LoadGame(Win32FileType* a_file)
+34685,0x14057ebe0,0x1405860f0,2,void BGSSaveLoadGame::MoveLoadedActorsToPackageLocation()
 34732,0x140580920,0x140587e30,4,"int SaveGlobalDataChunks (anonymous_namespace__Win32FileType * a_this, uint32_t a_start, uint32_t a_end, uint64_t a_size)"
 34736,0x140581030,0x140588540,3,"undefined8 LoadGlobalData (uint a_datatype, BGSLoadFormBuffer * a_buffer, float * param_3, undefined8 param_4)"
 34738,0x140581430,0x140588940,3,"void InitGlobalData(std::uint32_t a_firstType, std::uint32_t a_lastType)"
 34740,0x1405816a0,0x140588bb0,3,"void FinishLoadGlobalData(std::uint32_t a_firstType, std::uint32_t a_lastType)"
+34799,0x140585000,0x14058c530,2,int Character::GetInitialDataType()
 34808,0x140585a70,0x14058cfa0,4,"ulonglong BGSLoadGameBuffer::sub_140585A70(BGSLoadGameBuffer *param_1,PlayerCharacter *param_2,undefined *param_3,char *param_4)"
 34811,0x1405864c0,0x14058d9f0,3,BGSSaveLoadManager::StartSaveLoadThread
 34818,0x140586de0,0x14058e310,3,RE::BGSSaveLoadManager::Save
@@ -2164,7 +2169,8 @@
 36452,0x1405e1510,0x1405e9b60,3,"float TESObjectREFR::GetSubmergeLevel_1405E1510 (TESObjectREFR * a_this, float a_zPos, TESObjectCELL * a_parentCell)"
 36456,0x1405e1860,0x1405e9ee0,3,RE::Actor::GetTotalCarryWeight_1405E1860
 36457,0x1405e18b0,0x1405e9f30,3,bool Actor::IsOverEncumbered()
-36472,0x1405e20c0,0x1405ea760,4,Character::MoveToPackageLocation_1405E20C0
+36472,0x1405e20c0,0x1405ea760,4,void Character::MoveToPackageLocation()
+36473,0x1405e20d0,0x1405ea770,2,"void Character::MoveToPackageLocationEx(std::uint8_t a_unk1, void* a_out, void* a_unk3)"
 36475,0x1405e27f0,0x1405eae90,4,void Actor::EndInterruptPackage(bool a_skipDialogue)
 36487,0x1405e3250,0x1405eb8f0,3,bool Actor::IsMovementAnimationDriven() const
 36489,0x1405e32d0,0x1405eb970,3,Actor::SetRestrained
@@ -2675,6 +2681,8 @@
 40294,0x1406d4b80,0x1406fba20,3,"void ProcessLists::UpdateMiddleLowActors(std::int64_t*, bool*, float, bool)"
 40295,0x1406d4e00,0x1406fbca0,3,"void ProcessLists::UpdateMiddleHighActors(std::int64_t*, bool*, float, bool)"
 40297,0x1406d53f0,0x1406fc290,3,void ProcessLists::UpdateHighActorMovement()
+40301,0x1406d5780,0x1406fc620,2,void ProcessLists::MoveAllActorsToPackageLocations()
+40303,0x1406d5e50,0x1406fccf0,2,void ProcessLists::ProcessPackageLocationQueue()
 40317,0x1406d71c0,0x1406fe060,4,po3tweaks::ToggleAI
 40327,0x1406d9380,0x140700220,4,float ProcessLists::GetSystemTimeClock()
 40330,0x1406d9490,0x140700330,3,"void ProcessLists::StopCombatAndAlarmOnActor(Actor* a_actor, bool a_notAlarm)"
@@ -2961,7 +2969,8 @@
 46633,0x1407d3c00,0x1407fef50,3,void CombatBehaviorBlock::Enter()
 46634,0x1407d3ee0,0x1407ff230,3,void CombatBehaviorBlock::Update()
 46635,0x1407d41a0,0x1407ff4f0,3,void CombatBehaviorBlock::Exit()
-46638,0x1407d4300,0x1407ff650,2,void CombatBehaviorBash::Update(void* a_node)
+46638,0x1407d4300,0x1407ff650,2,void CombatBehaviorBash::Enter(void* a_node)
+46639,0x1407d4520,0x1407ff870,2,void CombatBehaviorBash::Update()
 46641,0x1407d4a80,0x1407ffdd0,4,"NodeArray* WrapToRandomNode_1407d4a80 (NodeArray& a_array, const char* a_name, RE::TreeCtors_extradata* a_extradata, RE::CombatBehaviorTreeNode* a_node)"
 46695,0x1407d5ba0,0x140800ef0,3,void CombatBehaviorContextCloseMovement::Enter()
 46696,0x1407d5c80,0x140800fd0,3,bool CombatBehaviorContextCloseMovement::CheckOutOfRange()
@@ -3002,14 +3011,37 @@
 47118,0x1407e6b10,0x140811e60,3,bool CombatBehaviorContextFlankingMovement::CheckShouldStalk()
 47404,0x1407f27e0,0x14081db30,3,bool CombatBehaviorContextFlee::CheckShouldFlee()
 47405,0x1407f29a0,0x14081dcf0,3,bool CombatBehaviorContextFlee::StartFlee()
-47727,0x1407fe740,0x140829a90,2,void CombatBehaviorOrbit::UpdatePath(void* a_node)
+47717,0x1407fd340,0x140828690,2,void CombatBehaviorTakeoff::Update()
+47719,0x1407fd860,0x140828bb0,2,void CombatBehaviorDiveBomb::Update()
+47722,0x1407fe180,0x1408294d0,2,void CombatBehaviorHover::Update()
+47727,0x1407fe740,0x140829a90,2,void CombatBehaviorOrbit::UpdatePath()
+47731,0x1407fee50,0x14082a1a0,2,void CombatBehaviorGroundAttack::Update()
+47735,0x1407ff6a0,0x14082a9f0,2,void CombatBehaviorLand::Update()
+47740,0x1408001b0,0x14082b500,2,void CombatBehaviorPerchAttack::Update()
+47746,0x140800b60,0x14082beb0,2,void CombatBehaviorFlyingAttack::Update()
 48023,0x140808020,0x140833370,3,bool CombatGroup::IsSearching()
 48026,0x1408080d0,0x140833420,3,bool CombatState::QTargetLost()
 48035,0x140808260,0x1408335b0,3,CombatBehaviorContextMagic::CombatBehaviorContextMagic(CombatInventoryItemMagic* citem)
+48036,0x140808570,0x1408338c0,2,void CombatBehaviorContextMagic::ReleaseMembers()
+48037,0x1408085e0,0x140833930,2,bool CombatBehaviorContextMagic::StartCast(bool a_atPlayer)
+48038,0x140808840,0x140833b90,2,void CombatBehaviorContextMagic::PrepareCastAnimation()
+48040,0x140808a60,0x140833db0,2,void CombatBehaviorContextMagic::InterruptCast()
+48041,0x140808ad0,0x140833e20,2,void* CombatBehaviorContextMagic::GetCastTarget(void* a_out)
 48043,0x140808b40,0x140833e90,2,bool CombatBehaviorContextMagic::CanCastNow(void* a_ctx)
 48044,0x140808ce0,0x140834030,2,bool CombatBehaviorContextMagic::IsWithinCastRange(void* a_ctx)
+48045,0x140808d00,0x140834050,2,bool CombatBehaviorContextMagic::IsCastTargetUsable()
+48046,0x140808e00,0x140834150,2,bool CombatBehaviorContextMagic::IsAimReady()
 48047,0x140808ef0,0x140834240,3,float CombatBehaviorContextMagic::CalcCastMagicChance()
 48048,0x140808f30,0x140834280,3,float CombatBehaviorContextMagic::CalcDualCastMagicChance()
+48049,0x140808ff0,0x140834340,2,bool CombatBehaviorContextMagic::IsMagicItemSelected()
+48050,0x1408090e0,0x140834430,2,bool CombatBehaviorContextMagic::CanAffordCast()
+48051,0x140809270,0x1408345c0,2,void CombatBehaviorContextMagic::SaveGame(BGSSaveGameBuffer* a_buffer)
+48052,0x1408092f0,0x140834640,2,void CombatBehaviorContextMagic::LoadGame(BGSLoadGameBuffer* a_buffer)
+48053,0x1408094d0,0x140834820,2,void CombatBehaviorCastImmediateSpell::Enter()
+48058,0x1408097d0,0x140834b20,2,void CombatBehaviorCastConcentrationSpell::Enter()
+48059,0x1408098c0,0x140834c10,2,void CombatBehaviorCastConcentrationSpell::Update()
+48063,0x140809ab0,0x140834e00,2,void CombatBehaviorPrepareDualCast::Enter()
+48064,0x140809c10,0x140834f60,2,void CombatBehaviorPrepareDualCast::Update()
 48139,0x14080c020,0x140837370,4,SCAR::AttackDistanceBase src/Hook_AttackStart.h:99
 48140,0x14080c6f0,0x140837a40,4,SCAR::Hook_AttackStart.h:20
 48141,0x14080cd10,0x140838060,3,bool CombatBehaviorContextMelee::CheckAttackRange()
@@ -3020,9 +3052,12 @@
 48461,0x140817c80,0x140842fd0,4,bool Actor::IsInBleedout()
 48463,0x140817cb0,0x140843000,3,float CombatInventory::QRawMaxRange()
 48467,0x140817ec0,0x140843210,3,bool CombatBehaviorContextRangedMovement::CheckOutOfRange()
+48803,0x140824d00,0x140850050,2,bool CombatBehaviorContextShout::TryCastShout()
 48804,0x140824ec0,0x140850210,2,bool CombatBehaviorContextShout::CanShoutNow(void* a_ctx)
+48805,0x140824fd0,0x140850320,2,bool CombatBehaviorCastShout::IsVoiceStateNone()
 48806,0x1408250c0,0x140850410,3,float CombatBehaviorContextShout::CalcCastMagicChance()
-48809,0x140825290,0x1408505e0,2,void CombatBehaviorCastShout::Update(void* a_node)
+48809,0x140825290,0x1408505e0,2,void CombatBehaviorCastShout::Enter(void* a_node)
+48810,0x140825490,0x1408507e0,2,void CombatBehaviorCastShout::Update()
 49011,0x14082c540,0x140857890,3,void CombatPath::Update()
 49013,0x14082c790,0x140857ae0,3,void CombatPath::Start()
 49022,0x14082d030,0x140858380,3,"void CombatPath::SetAccelerationDecelerationMult(float accelerationMult, float DecelerationMult)"
@@ -3188,6 +3223,7 @@
 51449,0x1408ad6f0,0x1408da710,2,void MistMenu::PostDisplay(MistMenu* a_this)
 51454,0x1408ad9f0,0x1408dad50,3,TESModelTextureSwap::sub_*
 51455,0x1408adc70,0x1408db0d0,3,void ShowMistMenu(bool a_flag)
+51473,0x1408aee40,0x1408dc6d0,2,void BottomBar::UpdatePlayerInfo()
 51491,0x1408b1800,0x1408df120,3,void RaceSexMenu::CommitWeightSliderChange(const FxDelegateArgs& a_params)
 51492,0x1408b1aa0,0x1408df3c0,3,void RaceSexMenu::CommitFaceDetailsSliderChange(const FxDelegateArgs& a_params)
 51493,0x1408b1b30,0x1408df450,3,void RaceSexMenu::CommitMorphSliderChange(const FxDelegateArgs& a_params)
@@ -4453,6 +4489,7 @@
 97744,0x1412447e0,0x14129a530,2,"void* BSScript::Stack::PushFrame(void* a_unk1, void* a_unk2, void* a_unk3, void* a_unk4)"
 97745,0x141244970,0x14129a6c0,4,BSScript::Stack::GetPageForFrame
 97746,0x1412449d0,0x14129a720,3,RE::BSScript::Stack::GetStackFrameVariable
+97748,0x141244a90,0x14129a7e0,2,void BSScript::Stack::BuildStackTraceLines(void* a_outLines)
 97750,0x141244fc0,0x14129ad10,2,BSScript::Stack::Save
 97752,0x141245650,0x14129b3a0,2,BSScript::Stack::Load
 97753,0x141245b40,0x14129b890,2,void BSScript::Stack::DumpFrames(SkyrimScript::Logger& a_logger)
