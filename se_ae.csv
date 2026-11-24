@@ -7663,6 +7663,7 @@ sseid,aeid,confidence,name
 66385,67646,3,RE::BSSoundHandle::FadeOutAndRelease
 66403,67665,3,RE::BSAudioManager::BuildSoundDataFromEditorID
 66841,68088,3,RE::MemoryManager::GetThreadScrapHeap
+66853,68108,1,
 66859,68115,3,RE::MemoryManager::Allocate
 66860,68116,3,RE::MemoryManager::Reallocate
 66861,68117,3,RE::MemoryManager::Deallocate
@@ -8813,6 +8814,7 @@ sseid,aeid,confidence,name
 97522,104307,1,
 97525,104310,1,
 97530,104315,2,
+97532,104317,1,
 97534,104319,3,
 97535,104320,1,
 97536,104321,1,
@@ -9031,6 +9033,7 @@ sseid,aeid,confidence,name
 98137,104860,1,BSScript__Internal__VirtualMachine::sub_141263940
 98148,104872,1,
 98150,104874,1,
+98152,104876,1,
 98166,104890,1,BSScript::Internal::VirtualMachine::sub_*
 98169,104893,2,
 98170,104894,2,
