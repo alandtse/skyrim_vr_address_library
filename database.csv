@@ -4289,6 +4289,8 @@
 97760,0x141246fb0,0x14129cd00,3,BSScript::UnlinkedTypes::Function* FunctionInfo_Init(BSScript::UnlinkedTypes::Function* a_function)
 97774,0x141247960,0x14129d6b0,2,void BSScript::StackFrame::Dtor()
 97776,0x141247c50,0x14129d9a0,3,BSFixedString* GetStaticEmptyVarNameAndType()
+97777,0x141247cf0,0x14129da40,2,void BSScript::Stack::DecRef()
+97778,0x141247d30,0x14129da80,2,"void BSScript::Stack::PopLastPage(BSTArray<BSScript::MemoryPageData, BSTSmallArrayHeapAllocator<48>>* a_pages)"
 97780,0x141247e60,0x1412a3280,2,BSScript::ByteCode::Argument::Assign
 97781,0x141247f20,0x1412a3340,2,BSScript::ByteCode::Argument::GetIdentifier
 97782,0x141247f60,0x1412a3380,2,BSScript::ByteCode::Argument::GetString

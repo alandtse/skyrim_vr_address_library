@@ -7664,6 +7664,7 @@ sseid,aeid,confidence,name
 66403,67665,3,RE::BSAudioManager::BuildSoundDataFromEditorID
 66841,68088,3,RE::MemoryManager::GetThreadScrapHeap
 66853,68108,1,
+66854,68109,1,
 66859,68115,3,RE::MemoryManager::Allocate
 66860,68116,3,RE::MemoryManager::Reallocate
 66861,68117,3,RE::MemoryManager::Deallocate
@@ -8881,6 +8882,8 @@ sseid,aeid,confidence,name
 97767,104509,1,BSScript::UnlinkedTypes::Function::ConvertTypeFunctor::Func0_*
 97769,104511,1,
 97774,104515,2,
+97777,104517,1,
+97778,104518,1,
 97780,104519,2,
 97781,104520,2,
 97782,104521,2,
