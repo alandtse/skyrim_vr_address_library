@@ -1,3 +1,11 @@
+# [0.310.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.309.0...v0.310.0) (2026-11-24)
+
+
+### Features
+
+* add HandlePolicy promotion helper ids ([#374](https://github.com/alandtse/skyrim_vr_address_library/issues/374)) ([8302672](https://github.com/alandtse/skyrim_vr_address_library/commit/830267267e039bf6c61b8f7ae1262b5575173f6e))
+* add Papyrus Object and Stack ids ([#377](https://github.com/alandtse/skyrim_vr_address_library/issues/377)) ([01c180d](https://github.com/alandtse/skyrim_vr_address_library/commit/01c180d240d1740df92232f888a0521f7e2440f6))
+
 # [0.309.0](https://github.com/alandtse/skyrim_vr_address_library/compare/v0.308.0...v0.309.0) (2026-11-23)
 
 
