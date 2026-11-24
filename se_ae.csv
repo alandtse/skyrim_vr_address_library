@@ -3443,6 +3443,7 @@ sseid,aeid,confidence,name
 24106,24604,1,
 24107,24605,1,Character::sub_*
 24129,24628,3,
+24169,24673,1,
 24183,24687,3,"void TESNPC::SetFaceMorph(std::int32_t a_index, float a_value)"
 24184,24688,3,float TESNPC::GetFaceMorph(std::int32_t a_index)
 24185,24689,3,"void TESNPC::SetFacePart(std::int32_t a_index, std::int32_t a_value)"
@@ -5329,6 +5330,7 @@ sseid,aeid,confidence,name
 38264,39224,1,
 38300,39268,2,
 38302,39270,2,
+38305,39275,1,
 38343,39322,2,
 38359,39342,2,
 38376,39360,1,
@@ -5773,10 +5775,15 @@ sseid,aeid,confidence,name
 41617,42694,1,
 41620,42698,1,
 41623,42701,1,ActorKnowledge::sub_*
+41624,42702,1,
 41625,42703,1,
 41627,42705,1,ActorKnowledge::sub_*
+41632,42710,1,
+41633,42712,1,
+41636,42716,1,
 41640,42722,1,ActorKnowledge::dtor_*
 41645,42358,1,
+41650,42730,1,
 41651,42731,1,
 41652,42732,1,
 41653,42735,1,DetectionCollector::sub_140719710
@@ -6201,6 +6208,7 @@ sseid,aeid,confidence,name
 43457,44639,1,
 43458,44665,1,
 43459,44666,1,
+43477,44699,1,
 43482,44704,3,CombatGroup::AddTarget
 43483,44705,3,CombatGroup::RemoveTargetByRef
 43484,44706,3,CombatGroup::IsTarget
@@ -6210,6 +6218,7 @@ sseid,aeid,confidence,name
 43490,44712,3,
 43491,44713,3,CombatGroup::IsMember
 43493,44715,3,CombatGroup::CanActorAttackAllTargets
+43501,44725,1,
 43531,44757,1,
 43543,44769,1,
 43545,44771,1,

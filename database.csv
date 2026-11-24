@@ -682,6 +682,7 @@
 24104,0x140359760,0x140369020,3,"TESIdleForm* SelectIdleForAction(void* a_idleManager, BGSActionData* a_action)"
 24129,0x14035b130,0x14036a9f0,3,void ScrapArrayBSFixedString_Destroy(void* a_array)
 24159,0x14035C890,0x14036C150,3,"bool TESNPC__ReadFromFileStream(RE::TESNPC *a_npc, RE::TESFile *a_file)"
+24169,0x14035ee70,0x14036e730,2,TESPackage* TESNPC::GetEnterCombatOverridePackage(Actor* a_actor)
 24180,0x14035f6c0,0x14036ef80,3,Actor* TESNPC::GetUniqueActor()
 24183,0x14035f800,0x14036f0c0,3,"void TESNPC::SetFaceMorph(std::int32_t a_index, float a_value)"
 24184,0x14035f8e0,0x14036f1a0,3,float TESNPC::GetFaceMorph(std::int32_t a_index)
@@ -1872,6 +1873,10 @@
 33403,0x140544490,0x1405484c0,3,void ActorMagicCaster::CheckAttachCastingArt()
 33423,0x140544ea0,0x140548f70,4,"bool SourceActionMap::DoAction(Actor* a_actor, DEFAULT_OBJECT a_action)"
 33426,0x140544ff0,0x1405490c0,4,float MagicCaster::GetCurrentSpellCost()
+33516,0x140547f10,0x14054bfe0,2,void DisguiseEffect::StartDetectionCheck()
+33519,0x1405481f0,0x14054c2c0,3,DisguiseEffect::DetectionChecker* DisguiseEffect::DetectionChecker::DetectionChecker(DisguiseEffect* a_effect)
+33520,0x140548280,0x14054c350,2,void DisguiseEffect::DetectionChecker::OnComplete()
+33524,0x1405484c0,0x14054c590,2,void ProcessLists::RefreshHighActorsKnowledgeOfPlayer(DetectionListener** a_listener)
 33559,0x140549540,0x14054D680,3,GrabActorEffect::Func21(GrabActorEffect *a1)
 33564,0x140549950,0x14054DB40,3,GrabActorEffect::Func20(GrabActorEffect *a1)
 33594,0x14054b2f0,0x14054f500,3,InvisibilityEffect::Finish
@@ -2408,8 +2413,12 @@
 37980,0x14063a900,0x140643910,3,sub_14063A900
 37996,0x14063af10,0x140643f20,4,ActorMediator::PerformAction
 37999,0x14063b0f0,0x140644160,4,ActorMediator::PerformComplexAction
-38005,0x14063b4a0,0x140644510,3,sub_14063B4A0
+38003,0x14063b2a0,0x140644310,2,void ActorPackage::Reset(Actor* a_actor)
+38005,0x14063b4a0,0x140644510,3,"void ActorPackage::SetPackage(TESPackage* a_package, TESObjectREFR* a_target, Actor* a_actor)"
 38013,0x14063bc20,0x140644c90,3,LogPackageTypeChange
+38017,0x14063bdf0,0x140644e60,2,"void ActorPackage::ReleasePackage(void* a_handler, void* a_args)"
+38018,0x14063bed0,0x140644f40,3,void ActorPackage::SetData(ActorPackageData* a_data)
+38020,0x14063bf70,0x140644fe0,2,ActorPackageData* TESPackage::CreateActorPackageData()
 38023,0x14063c1d0,0x140645240,4,ActorState::SetWeaponDrawn
 38024,0x14063c220,0x140645290,2,std::uint16_t ActorState::GetMoveFlagsForMode(std::uint8_t a_mode)
 38026,0x14063c2a0,0x140645310,2,"bool ActorState::DoSetMoveMode(std::uint32_t a_moveFlags, std::uint16_t a_unk)"
@@ -2459,6 +2468,7 @@
 38291,0x14064b570,0x1406548c0,4,"void AIProcess::StopCurrentIdle(Actor* a_actor, bool a_forceIdleStop)"
 38300,0x14064c420,0x140655770,3,AIProcess::UpdatePackageSandmanHigh
 38302,0x14064c810,0x140655b60,3,AIProcess::UpdatePackageCannibalFeedHigh
+38305,0x14064ca70,0x140655dc0,2,void AIProcess::SetHighUnk028(std::uint64_t a_value)
 38308,0x14064cb30,0x140655e80,4,void AIProcess::RandomlyPlaySpecialIdles(Actor* a_actor)
 38311,0x14064cdf0,0x140656140,4,"void AIProcess::SetActorsDetectionEvent(Actor* a_actor, const NiPoint3& a_location, std::int32_t a_soundLevel, TESObjectREFR* a_ref)"
 38339,0x14064e6d0,0x140657a20,3,AIProcess::ResetPackageState
@@ -2560,6 +2570,7 @@
 39007,0x140686780,0x14068fbf0,3,AIProcess::UpdatePackageAccompanyMiddleHigh
 39009,0x140686db0,0x140690220,3,AIProcess::UpdatePackagePursueMiddleLow
 39010,0x140687320,0x140690780,3,AIProcess::UpdatePackageFleeMiddleHigh
+39012,0x140688270,0x1406916d0,2,"bool AIProcess::EnterCombat(Actor* a_actor, Actor* a_target, CombatGroup* a_group)"
 39013,0x140688540,0x1406919a0,3,AIProcess::EvaluatePackageAndReset
 39014,0x140688820,0x140691c80,3,AIProcess::UpdatePackageFleeNonCombatMiddleHigh
 39015,0x140688a70,0x140691ed0,3,AIProcess::UpdatePackageTravelTargetMiddleHigh
@@ -2702,7 +2713,15 @@
 41349,0x1407090a0,0x1407310b0,3,RE::JumpHandler::ProcessButton_1407090A0
 41361,0x1407096b0,0x140732b00,3,StaminaNPC::apply_PlayerControls__sub_140705530
 41622,0x1407184c0,0x140742e60,2,"void ActorKnowledge::AddListener(DetectionListener* a_listener, std::int32_t a_level)"
+41624,0x1407186c0,0x140743060,2,DetectionState* ActorKnowledge::GetFreshDetectionState(std::int32_t a_level)
 41626,0x1407187d0,0x140743170,4,ActorKnowledge::SetDetectionState
+41631,0x140718b40,0x1407434e0,2,void ActorKnowledge::AddListenerNoNotify(DetectionListener* a_listener)
+41632,0x140718b50,0x1407434f0,2,void ActorKnowledge::UpdateListeners()
+41633,0x140718d30,0x1407436d0,2,void ActorKnowledge::QueueDetectionUpdate(float a_time)
+41636,0x140718fb0,0x140743950,2,"void ActorKnowledge::PushBackListener(void* a_listeners, DetectionListener* a_listener)"
+41650,0x1407195c0,0x140743f60,2,DetectionCollector* DetectionCollector::DetectionCollector(std::uint32_t a_flags)
+41652,0x140719690,0x140744030,2,void DetectionCollector::FinishQueueing()
+41653,0x140719710,0x1407440b0,2,std::int32_t DetectionCollector::UpdateKnowledge(ActorKnowledge* a_knowledge)
 41659,0x140719990,0x140744330,2,papyrus_extender::detection::calculatedetection_0x526
 41661,0x14071a190,0x140744b30,4,"bool IsLightAffectingActor(void* detectionGlobal, BSShadowLight*, Actor*, NiPoint3*)"
 41694,0x14071B670,0x140746010,2,"unk_14071B670(__m128 *a1, int64 a2, int64 a3, Actor *a4, float *a5)"
@@ -2769,6 +2788,7 @@
 43319,0x1407625f0,0x14078d940,3,void CombatBlackboardManager::AddFlag(const CombatBlackboardFlag* val)
 43340,0x140762e60,0x14078e1b0,3,CombatBlackboardManager* CombatBlackboardManager::GetSingleton()
 43466,0x140768c10,0x140793f60,4,"bool SayCombatDialogueResolveHandles(void* a_arg1, CombatController* a_combatController, std::int32_t a_type, std::int32_t a_subtype, bool a_flag)"
+43477,0x140769cf0,0x140795040,2,std::int32_t CombatGroupDetectionListener::UpdateKnowledge(ActorKnowledge* a_knowledge)
 43482,0x14076A450,0x1407957A0,3,bool CombatGroup::AddTarget(TESObjectREFR* a_target)
 43483,0x14076A560,0x1407958B0,3,void CombatGroup::RemoveTargetByRef(TESObjectREFR* a_ref)
 43484,0x14076A5E0,0x140795930,3,bool CombatGroup::IsTarget(TESObjectREFR* a_ref)
@@ -2778,6 +2798,7 @@
 43490,0x14076AA00,0x140795D50,3,void CombatGroup::RemoveMember(Actor* a_member)
 43491,0x14076AB60,0x140795EB0,3,bool CombatGroup::IsMember(TESObjectREFR* a_ref)
 43493,0x14076ACA0,0x140795FF0,3,bool CombatGroup::CanActorAttackAllTargets(Character* a_actor)
+43501,0x14076b5d0,0x140796920,2,"bool CombatGroup::UpdateTargetFromDetection(Actor* a_member, Actor* a_target, DetectionState* a_state)"
 43531,0x14076e2b0,0x140799600,3,Actor* CombatGroup::GetGuardTarget()
 43556,0x140770f30,0x14079c280,2,"void CombatGroup::OnMemberProcessChange(Character* a_member, std::uint64_t a_unused, std::int32_t a_mode)"
 43562,0x140772230,0x14079d580,2,void CombatGroup::RefreshMemberKnowledge(Character* a_member)
