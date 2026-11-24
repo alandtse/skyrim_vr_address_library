@@ -2851,7 +2851,7 @@
 41132,0x140701290,0x140728220,2,void IMovementSetWarp::ResetWarpState(void* a_request)
 41199,0x140702f60,0x140729ef0,2,bool PathingStreamLoadGame::ReadBool(bool* a_out)
 41201,0x140702fc0,0x140729f50,2,bool PathingStreamLoadGame::ReadUInt8(std::uint8_t* a_out)
-41203,0x140703020,0x140729fb0,2,bool PathingStreamLoadGame::ReadUInt16(ushort* a_out)
+41203,0x140703020,0x140729fb0,2,bool PathingStreamLoadGame::ReadUInt16(std::uint16_t* a_out)
 41205,0x140703080,0x14072a010,2,bool PathingStreamLoadGame::ReadUInt32(std::uint32_t* a_out)
 41208,0x140703110,0x14072a0a0,2,bool PathingStreamLoadGame::ReadFloat(float* a_out)
 41209,0x140703140,0x14072a0d0,2,bool PathingStreamLoadGame::ReadFormID(std::uint32_t* a_formID)
