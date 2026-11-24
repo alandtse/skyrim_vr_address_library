@@ -2257,6 +2257,7 @@
 37618,0x140625cd0,0x14062EB40,3,Actor::IsCombatTarget
 37620,0x140625dd0,0x14062ec40,4,RE::Character::get_weapon_vector_625DD0
 37621,0x140625eb0,0x14062ed20,4,RE::Actor::Actor__GetWeapon_140625EB0
+37624,0x140625fa0,0x14062ee10,3,TESForm* Actor::GetEquippedShield()
 37628,0x1406260f0,0x14062ef60,4,void Actor::WeaponSwingCallback ()
 37633,0x140626400,0x14062f270,2,papyrus_extender::events::game::weaponhit::actor::target_0x16a
 37637,0x1406274a0,0x140630340,4,bool Actor::IsAttacking()

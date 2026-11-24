@@ -5081,6 +5081,8 @@ sseid,aeid,confidence,name
 37610,38563,1,Actor::EngagingInCombat_*
 37612,38565,1,Actor::UpdateCombat_*
 37613,38566,1,Actor::StopCombat_*
+37621,38574,1,
+37624,38577,1,
 37626,38579,1,Character::sub_*
 37627,38580,1,Character::sub_*
 37630,38583,1,Actor::SetBeenAttacked_*
