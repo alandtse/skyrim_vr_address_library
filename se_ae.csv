@@ -7062,6 +7062,8 @@ sseid,aeid,confidence,name
 52663,53516,1,
 52664,53517,1,
 52667,53520,2,
+52680,53531,1,
+52681,53532,1,
 52682,53535,1,
 52683,53539,1,SkyrimScript::FindActiveEffectFunctor::Visit_*
 52685,53540,1,SkyrimScript::FindActiveEffectFunctor::dtor_*
