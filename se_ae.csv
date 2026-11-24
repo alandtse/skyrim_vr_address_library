@@ -4186,6 +4186,8 @@ sseid,aeid,confidence,name
 29606,30286,1,
 29609,30441,1,
 29611,30443,1,NavMeshObstacleManager::sub_*
+29612,30444,1,
+29613,30445,1,
 29616,30448,1,NavMeshObstacleManager::sub_*
 29618,30450,1,NavMeshObstacleManager::sub_*
 29619,30451,1,
@@ -4213,9 +4215,11 @@ sseid,aeid,confidence,name
 29648,30481,1,
 29673,30556,1,
 29674,30557,1,
+29681,30519,1,
 29684,30522,1,
 29685,30523,1,
 29686,30524,1,
+29689,30527,1,
 29741,30575,1,
 29753,30576,1,NavMeshObstacleManager::sub_*
 29754,30577,1,
