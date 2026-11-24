@@ -1663,6 +1663,7 @@
 29328,0x1404538b0,0x140463860,3,void BSTerrainEffect::UpdateEffectTransform()
 29336,0x1404541b0,0x140464160,4,void BSTerrainEffect::UpdateInstanceTransforms(void* a_instances)
 29394,0x1404584b0,0x140468460,2,void NavMesh::CloneInto(NavMesh** a_clone)
+29430,0x14045c370,0x14046c320,2,void BSNavmeshEdgeExtraInfoArray::PushBack(void* a_element)
 29531,0x140460350,0x140470310,4,"void NavMeshInfoMap::InitializeAfterAllFormsAreReadFromFile_140460350 (NavMeshInfoMap * a_this, undefined8 param_2, ulonglong param_3, char * param_4)"
 29609,0x140465140,0x140475100,2,NavMeshObstacleManager* NavMeshObstacleManager::ctor()
 29619,0x1404664d0,0x140476490,3,void NavMeshObstacleManager::Flush()

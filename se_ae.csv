@@ -4172,6 +4172,7 @@ sseid,aeid,confidence,name
 29394,30245,1,
 29395,30246,1,
 29396,30247,1,
+29430,30288,1,
 29530,30379,1,NavMeshInfoMap::SetAltered_*
 29531,30380,1,NavMeshInfoMap::InitItemImpl_*
 29536,30385,1,BSNavmeshInfoMap::GetAllNavMeshInfo_*
