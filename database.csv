@@ -396,6 +396,7 @@
 17485,0x14022b6d0,0x14023ca20,3,TESObjectCONT::Activate
 17521,0x14022cb50,0x14023dea0,3,TESObjectDOOR::Activate
 17522,0x14022d1d0,0x14023e530,2,po3tweaks::LoadDoorPrompt
+17523,0x14022d410,0x14023e770,2,void TESObjectDOOR::CompleteDoorTeleport(std::uint32_t* a_doorHandle)
 17539,0x14022e8d0,0x14023fc40,4,"void TESObjectDOOR::LinkRandomTeleportDoors (TESObjectREFR * a_door, TESObjectREFR * a_linkedDoor)"
 17689,0x140235070,0x1402463e0,4,"NiAVObject * TESObjectWEAP::GetFireNode (TESObjectWEAP * a_this, NiAVObject * a_root)"
 17693,0x140235240,0x1402465b0,3,RE::TESObjectWEAP::Fire_140235240
@@ -1279,6 +1280,7 @@
 28043,0x140413390,0x140422ee0,2,void BGSProcedureHover::ProcessLowActor(BGSProcessContext* a_context)
 28044,0x1404137a0,0x1404232f0,3,BGSProcedureHoverExecState::BGSProcedureHoverExecState
 28045,0x1404137d0,0x140423320,3,BGSProcedureHoverExecState::~BGSProcedureHoverExecState
+28046,0x140413830,0x140423380,3,"void BGSProcedureHoverExecState::Cleanup(void* a_ctx, void* a_p2)"
 28047,0x140413840,0x140423390,3,BGSProcedureHoverExecState::RecycleChildren
 28048,0x1404138c0,0x140423410,3,BGSProcedureHoverExecState::SaveGame
 28049,0x140413970,0x1404234c0,3,BGSProcedureHoverExecState::LoadGame
@@ -2316,13 +2318,20 @@
 36950,0x140609860,0x140612420,4,Actor::UnequipItem
 36973,0x14060b620,0x140614210,3,RE::GameEventHandler::FallLongDistance::CalcDoDamage::process_movefinish_event
 36979,0x14060ca30,0x1406155f0,3,Actor::EquipConflictCheck
+36993,0x14060e800,0x1406173c0,2,float ActorState::GetYawRotationSpeed()
 36994,0x14060e820,0x1406173e0,3,TrueHUD::FlashHUDStaminaMountHook
 36995,0x14060ea70,0x140617680,3,std::uint32_t ActorState::GetFormID()
 36996,0x14060ea80,0x140617690,3,void ActorState::GetPathingLocation(BSPathingLocation* a_out)
 36997,0x14060ead0,0x1406176e0,3,void ActorState::GetPosition(NiPoint3* a_out)
 36998,0x14060eaf0,0x140617700,3,void ActorState::GetAngle(NiPoint3* a_out)
+36999,0x14060eb20,0x140617730,2,void ActorState::GetProcessRotation(NiPoint3* a_out)
+37000,0x14060eb60,0x140617770,3,float ActorState::GetCurrentMovementSpeed()
 37002,0x14060ebd0,0x1406177e0,2,float ActorState::GetScaledBoundSize()
+37006,0x14060ece0,0x1406178f0,3,float ActorState::GetRadius()
+37007,0x14060ed30,0x140617940,3,float ActorState::GetWidth()
+37008,0x14060ed80,0x140617990,3,float ActorState::GetLength()
 37010,0x14060ee00,0x140617a10,2,std::int32_t ActorState::GetCharacterState()
+37011,0x14060ee40,0x140617a50,3,bool ActorState::IsMountedByPlayer()
 37013,0x14060eef0,0x140617b00,4,TESObjectREFR::sub_14060EEF0
 37016,0x14060f0c0,0x140617cd0,4,float Actor::CalcEquippedWeight_14060F0C0 (Actor * a_this)
 37020,0x14060f240,0x140501530,2,SendAnimation
@@ -2533,6 +2542,7 @@
 38158,0x140642f50,0x14064c2a0,4,void AIProcess::ComputeLastTimeProcessed()
 38189,0x140644400,0x14064d750,2,"void AIProcess::SetCurrentPackage(TESPackage* a_package, Actor* a_actor)"
 38198,0x140644600,0x14064d950,4,"void AIProcess::AddToProcedureIndexRunning(Actor* a_actor, std::uint32_t a_num)"
+38199,0x140644760,0x14064dab0,2,"void AIProcess::ProcessFollow(Actor* a_actor, bool a_advanceProcedure, std::int32_t a_moveMode, bool a_pursue)"
 38201,0x1406447b0,0x14064db00,3,AIProcess::UpdatePackageFlee
 38203,0x140644a60,0x14064ddb0,3,AIProcess::UpdatePackageTravel
 38206,0x140644ad0,0x14064de20,2,bool AIProcess::IsPackageIdleDone()
@@ -2613,6 +2623,7 @@
 38659,0x140673eb0,0x14067d380,2,"std::uint32_t BSPathingAvoidNode::AppendNode(BSTArray<BSPathingAvoidNode>* a_array, NiPoint3* a_point, float a_radius, float a_cost, std::uint32_t a_type)"
 38660,0x140673f60,0x14067d430,2,"void BSPathingAvoidNode::AppendSphereNode(BSTArray<BSPathingAvoidNode>* a_array, NiPoint3* a_point, float a_radius, float a_cost)"
 38677,0x1406759E0,0x14067EEB0,4,"bhkBoxShape * bhkBoxShape::bhkBoxShape(bhkBoxShape * a_this, RE::NiPoint3* a_halfExtents)"
+38724,0x1406776a0,0x140680b20,2,void BSPathingSolutionArray::Destruct(char a_free)
 38726,0x1406777c0,0x140680c40,4,"void HighProcessData::ClearHeadtrackTarget(HEAD_TRACK_TYPE a_headtrackType, bool a_defaultHold)"
 38752,0x140679000,0x140682480,3,BSTArray_EraseRange_RefCountedPairs
 38760,0x1406797d0,0x140682c50,3,"void HighProcessData::SetHeadtrackTarget(HEAD_TRACK_TYPE a_headtrackType, TESObjectREFR* a_target)"
@@ -4494,6 +4505,7 @@
 88450,0x1410c1dc0,0x14111e9f0,2,void MovementPathManagerArbiter::ProcessFollowerEvents()
 88451,0x1410c1fd0,0x14111ec00,2,void MovementPathManagerArbiter::StartPathFollowing(void* a_solution)
 88452,0x1410c2180,0x14111edb0,2,"void MovementPathManagerArbiter::HandlePathFollowerEvent(std::int32_t a_event, char* a_outFlag)"
+88453,0x1410c2390,0x14111efc0,2,void MovementPathManagerArbiter::PostSetStaticPathMessage(bool a_staticPath)
 88454,0x1410c24a0,0x14111f0d0,3,void MovementPathManagerArbiter::CompletePath()
 88455,0x1410c2600,0x14111f230,2,void MovementPathManagerArbiter::ClearPath(bool a_failed)
 88498,0x1410c3ce0,0x141120930,3,bool IMovementState::CanStrafe()
@@ -4507,6 +4519,19 @@
 89392,0x1410fe2d0,0x14115b010,3,void ObstacleBuildQueue::dtor()
 89395,0x1410fe4c0,0x14115b200,3,void ObstacleBuildQueue::Process()
 89413,0x1410ff250,0x14115c160,2,bool MovementControllerNPC::AddAgentsAndArbiters(void* a_set)
+89473,0x141102ca0,0x14115fbc0,3,NullMovementState* NullMovementState::GetSingleton()
+89781,0x14110bf30,0x141168e50,2,MovementArbiter* MovementArbiter::MovementArbiter()
+89782,0x14110bf70,0x141168e90,2,void MovementArbiter::~MovementArbiter()
+90331,0x14111cb60,0x141179a30,2,void MovementStateTweener::GetPosition(NiPoint3* a_out)
+90332,0x14111cd10,0x141179be0,2,void MovementStateTweener::GetAngle(NiPoint3* a_out)
+90333,0x14111ce40,0x141179d10,2,float MovementStateTweener::GetCurrentMovementSpeed()
+90334,0x14111d030,0x141179f00,2,float MovementStateTweener::GetYawRotationSpeed()
+90335,0x14111d0d0,0x141179fa0,2,void MovementStateTweener::GetProcessRotation(NiPoint3* a_out)
+90367,0x14111d7e0,0x14117a6b0,2,void MovementStateFollowPath::GetPosition(NiPoint3* a_out)
+90368,0x14111d880,0x14117a750,2,void MovementStateFollowPath::GetAngle(NiPoint3* a_out)
+90369,0x14111d9f0,0x14117a8c0,2,float MovementStateFollowPath::GetCurrentMovementSpeed()
+90370,0x14111dbe0,0x14117aab0,2,float MovementStateFollowPath::GetYawRotationSpeed()
+90371,0x14111dc80,0x14117ab50,2,void MovementStateFollowPath::GetProcessRotation(NiPoint3* a_out)
 90938,0x14113df60,0x1411983b0,2,void EnsureMemoryHeap()
 97369,0x14122c060,0x141264510,2,"void ObjectBindPolicy::GetAttachedScripts(std::uint64_t a_handle, void* a_out)"
 97370,0x14122c230,0x1412646e0,2,"void* ObjectBindPolicy::FindAttachedScript(void* a_out, std::uint64_t a_handle, void* a_name)"
