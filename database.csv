@@ -2292,8 +2292,10 @@
 36828,0x140601280,0x140609a90,2,bool Actor::GetPathGoalPosition(NiPoint3* a_out)
 36829,0x1406012b0,0x140609ac0,2,bool Actor::GetPathGoalLocation(BSPathingLocation* a_out)
 36841,0x140601b50,0x14060a360,2,float Character::CalculateRadius()
+36850,0x140602040,0x14060a850,2,void Character::RefreshCachedValues()
 36853,0x140602200,0x14060aa10,2,"void Actor::WarpToRecord(void* a_record, void* a_loc)"
 36854,0x140602410,0x14060ac20,2,void Character::ActivatePathingDoor(void* a_doorInfo)
+36869,0x140603660,0x14060be70,2,"std::int32_t Actor::StartPathToReference(TESObjectREFR* a_target, float a_walkRunPercent)"
 36872,0x140603b30,0x14060c340,2,Actor::Kill
 36877,0x1406057c0,0x14060dfd0,3,RE::Actor::IsOnFlyingMount
 36880,0x140605940,0x14060e130,3,Actor::StartMountInteraction
@@ -2315,6 +2317,12 @@
 36973,0x14060b620,0x140614210,3,RE::GameEventHandler::FallLongDistance::CalcDoDamage::process_movefinish_event
 36979,0x14060ca30,0x1406155f0,3,Actor::EquipConflictCheck
 36994,0x14060e820,0x1406173e0,3,TrueHUD::FlashHUDStaminaMountHook
+36995,0x14060ea70,0x140617680,3,std::uint32_t ActorState::GetFormID()
+36996,0x14060ea80,0x140617690,3,void ActorState::GetPathingLocation(BSPathingLocation* a_out)
+36997,0x14060ead0,0x1406176e0,3,void ActorState::GetPosition(NiPoint3* a_out)
+36998,0x14060eaf0,0x140617700,3,void ActorState::GetAngle(NiPoint3* a_out)
+37002,0x14060ebd0,0x1406177e0,2,float ActorState::GetScaledBoundSize()
+37010,0x14060ee00,0x140617a10,2,std::int32_t ActorState::GetCharacterState()
 37013,0x14060eef0,0x140617b00,4,TESObjectREFR::sub_14060EEF0
 37016,0x14060f0c0,0x140617cd0,4,float Actor::CalcEquippedWeight_14060F0C0 (Actor * a_this)
 37020,0x14060f240,0x140501530,2,SendAnimation
@@ -2570,6 +2578,7 @@
 38560,0x14065be00,0x140665140,3,AIProcess::UpdatePackageGuardHigh
 38568,0x14065c880,0x140665bd0,3,RE::AIProcess::SetBaseScale
 38606,0x14065f040,0x140668390,3,AIProcess::UpdatePackageHigh
+38608,0x140661be0,0x14066af30,2,"void AIProcess::ProcessFollowHigh(Actor* a_actor, bool a_advanceProcedure, std::int32_t a_moveMode, bool a_pursue)"
 38610,0x140663230,0x14066c580,3,AIProcess::UpdatePackageFleeHigh
 38612,0x140664a00,0x14066dd50,4,sub_140664A00
 38613,0x140664c80,0x14066dfd0,3,AIProcess::UpdatePackageTravelBody
@@ -4457,6 +4466,8 @@
 88004,0x1410a7e10,0x141104a40,4,"bool FindTriangleForLocationFilterCheckDeltaZ::IsValidTri(NiPoint3* a_location, BSNavmesh* a_navMesh, std::uint16_t a_tri, NiPoint3* a_pointOnTri)"
 88202,0x1410b8e00,0x141115a30,2,void IMovementSetState::SetStateForward(void* a_state)
 88203,0x1410b8e20,0x141115a50,2,void IMovementSetState::SetState(void* a_state)
+88417,0x1410c0b30,0x14111d760,2,BSFixedString* MovementPathManagerArbiter::GetStageName()
+88418,0x1410c0b40,0x14111d770,2,BSFixedString* MovementPathManagerArbiter::GetArbiterName()
 88422,0x1410c0c30,0x14111d860,2,void MovementPathManagerArbiter::AttachToController(void* a_controller)
 88423,0x1410c0c80,0x14111d8b0,2,void MovementPathManagerArbiter::DetachFromController()
 88426,0x1410c0d20,0x14111d950,2,bool MovementPathManagerArbiter::RegisterAgent(void* a_agent)

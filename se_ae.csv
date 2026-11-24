@@ -5029,6 +5029,12 @@ sseid,aeid,confidence,name
 36948,37973,1,
 36950,37975,1,Actor::UnequipItem_*
 36973,37998,3,RE::GameEventHandler::FallLongDistance::CalcDoDamage::process_movefinish_event
+36995,38023,1,
+36996,38024,1,
+36997,38025,1,
+36998,38026,1,
+37002,38030,1,
+37010,38038,1,
 37038,38066,1,TESBoundObject::SendActorItemEquippedEvent_*
 37039,38067,1,
 37040,38068,1,
@@ -8482,6 +8488,8 @@ sseid,aeid,confidence,name
 87970,90351,2,
 88202,90607,1,
 88203,90608,1,
+88417,90841,1,
+88418,90842,1,
 88423,90847,1,
 88426,90850,1,
 88427,90851,1,
