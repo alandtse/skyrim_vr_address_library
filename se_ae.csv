@@ -4023,6 +4023,7 @@ sseid,aeid,confidence,name
 28781,29557,1,TESPackage::sub_*
 28782,29558,2,
 28783,29559,2,
+28785,29561,1,
 28786,29562,2,
 28787,29563,2,
 28788,29564,1,TESPackage::sub_140438310
@@ -4913,6 +4914,7 @@ sseid,aeid,confidence,name
 36174,37147,2,
 36248,37230,3,RE::Actor::SetRotationZ
 36259,37243,3,RE::Actor::IsInMidair
+36323,37313,1,
 36342,37332,1,
 36355,37346,1,
 36392,37383,3,RE::Actor::CalculateCurrentVendorFaction
@@ -4941,6 +4943,7 @@ sseid,aeid,confidence,name
 36776,37792,2,
 36785,37801,1,
 36794,37810,2,
+36795,37811,1,
 36796,37812,1,Character::sub_*
 36797,37813,1,Character::sub_*
 36799,37815,1,Character::sub_*
@@ -5658,6 +5661,7 @@ sseid,aeid,confidence,name
 40478,41497,3,LockFreeRing2048Push
 40499,41507,3,LockFreeRing2048Pop
 40590,41619,2,
+40591,41620,1,
 40594,41623,2,
 40595,41624,2,
 40596,41625,2,

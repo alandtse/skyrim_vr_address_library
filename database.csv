@@ -1636,6 +1636,7 @@
 28781,0x140437690,0x1404471e0,2,TESWorldSpace* TESPackage::GetLocationWorldSpace(Actor* a_actor)
 28782,0x1404378c0,0x140447410,2,TESObjectCELL* TESPackage::GetLocationCell(Actor* a_actor)
 28783,0x140437ac0,0x140447610,2,"void TESPackage::GetLocationPosition(NiPoint3* a_out, Actor* a_actor, void* a_unk)"
+28785,0x140437de0,0x140447930,2,float TESPackage::GetLocationRadius(Actor* a_actor)
 28786,0x140437ec0,0x140447a10,2,TESObjectREFR* TESPackage::GetLocationReference(Actor* a_actor)
 28787,0x1404380f0,0x140447c40,2,TESWorldSpace* TESPackage::GetSecondLocationWorldSpace(Actor* a_actor)
 28788,0x140438310,0x140447e60,2,TESObjectCELL* TESPackage::GetSecondLocationCell(Actor* a_actor)
@@ -2151,6 +2152,7 @@
 36286,0x1405d2520,0x1405daae0,3,RE::Actor::GetGhost
 36287,0x1405d25e0,0x1405daba0,4,RE::Actor::SetGhost
 36289,0x1405d27a0,0x1405dad60,2,DrawSheatheWeaponActor
+36323,0x1405d4090,0x1405dc650,2,"std::uint64_t TESObjectREFR::MoveToPosition(NiPoint3* a_pos, float a_rotZ, float a_rotX, TESObjectCELL* a_cell, TESWorldSpace* a_worldSpace, bool a_unk)"
 36331,0x1405d5290,0x1405dd850,3,Actor::Resurrect
 36332,0x1405d56b0,0x1405ddc70,4,"void Actor::ResetInventory(Actor * a_this, bool a_leveledOnly)"
 36333,0x1405d57b0,0x1405ddd70,4,undefined Character::sub_1405D57B0(Character* a_this)
@@ -2187,6 +2189,7 @@
 36457,0x1405e18b0,0x1405e9f30,3,bool Actor::IsOverEncumbered()
 36472,0x1405e20c0,0x1405ea760,4,void Character::MoveToPackageLocation()
 36473,0x1405e20d0,0x1405ea770,2,"void Character::MoveToPackageLocationEx(bool a_useSavedPackage, PathingRequestClosePoint** a_outRequest, void* a_packageContext)"
+36474,0x1405e2730,0x1405eadd0,2,"void Character::TeleportToPackageLocation(NiPoint3* a_pos, TESObjectCELL* a_cell, TESWorldSpace* a_worldSpace)"
 36475,0x1405e27f0,0x1405eae90,4,void Actor::EndInterruptPackage(bool a_skipDialogue)
 36487,0x1405e3250,0x1405eb8f0,3,bool Actor::IsMovementAnimationDriven() const
 36489,0x1405e32d0,0x1405eb970,3,Actor::SetRestrained
@@ -2244,6 +2247,7 @@
 36776,0x1405ff590,0x140607da0,2,BSTSmartPointer<MovementControllerNPC>* Actor::GetMovementControllerNPC()
 36785,0x1405ffa90,0x1406082a0,2,void Character::AppendSpeakerAvoidNodeToRequest(void* a_request)
 36794,0x1405fff70,0x140608780,2,bool Actor::GetPathRequest(void** a_out)
+36795,0x1405fffa0,0x1406087b0,2,"bool Character::TurnToFace(NiPoint3* a_target, float a_tolerance)"
 36796,0x140600070,0x140608880,2,"bool Actor::RequestTurnToAngle(float a_angle, float a_tolerance)"
 36801,0x140600400,0x140608c10,3,void Actor::StopMoving(float a_delta)
 36802,0x140600590,0x140608da0,4,RE::Actor::StopMovement
@@ -2739,6 +2743,7 @@
 40566,0x1406e6ad0,0x14070d9c0,3,PlayerSkills::EvaluateSkillData
 40575,0x1406e7320,0x14070e210,4,RE::ProcessLists::HandlePlayerLevelUpdate(ProcessLists *param_1)
 40590,0x1406e8400,0x14070f2f0,2,"bool ActorMover::RequestTurnToAngle(float a_angle, float a_tolerance)"
+40591,0x1406e86d0,0x14070f5c0,2,"bool ActorMover::TurnToFace(NiPoint3* a_target, float a_tolerance)"
 40594,0x1406e8f70,0x14070fe60,2,bool ActorMover::IsPathRequestIdle()
 40595,0x1406e9010,0x14070ff00,2,bool ActorMover::IsPathComplete()
 40596,0x1406e90b0,0x14070ffa0,2,"bool ActorMover::QueryPathRequestState(void* a_request, std::uint8_t* a_outNotStarted)"
