@@ -4194,8 +4194,14 @@
 97468,0x141234360,0x14126c810,3,void Object::IncRef()
 97469,0x141234410,0x14126c8c0,3,std::uint32_t Object::DecRef()
 97470,0x1412344c0,0x14126c970,2,bool BSScript::Internal::Object::HasMultipleReferences()
+97471,0x141234510,0x14126c9c0,3,"BSScript::Object* BSScript::Object::ctor(BSScript::ObjectTypeInfo** a_type, BSScript::IObjectHandlePolicy* a_policy, std::uint32_t a_numProperties)"
+97473,0x141234840,0x14126ccf0,2,bool BSScript::Object::TryLockForRunning(BSScript::Stack* a_stack)
+97474,0x141234870,0x14126cd20,2,void BSScript::Object::UnlockForRunning(BSScript::Stack* a_stack)
 97475,0x1412348b0,0x14126cd60,2,std::uint32_t BSScript::Internal::Object::SetLockStructureFlag()
+97476,0x1412348e0,0x14126cd90,2,std::uint32_t BSScript::Object::UnlockPendingReset()
 97477,0x141234910,0x14126cdc0,2,void ObjectCreateInfo_Resolve(void* a_info)
+97478,0x141234a50,0x14126cf00,2,void BSScript::Object::Initialize(std::uint32_t a_numProperties)
+97479,0x141234ae0,0x14126cf90,2,void BSScript::Object::ReleaseProperties()
 97481,0x141234e10,0x14126d2c0,2,void BSScript::Internal::Object::ClearVariableReferences()
 97482,0x141234f90,0x14126d440,2,void BSScript::Internal::Object::SetHandle(std::uint64_t a_handle)
 97492,0x141235630,0x14126dae0,3,BSFixedString* BSScript::ObjectTypeInfo::GetInitialStateName()
@@ -4214,6 +4220,7 @@
 97509,0x141236e50,0x14126f300,2,void BSScript::Variable::Assign(const BSScript::Variable& a_src)
 97514,0x141237240,0x14126f6f0,2,void BSScript::ObjectTypeInfo::Dtor()
 97530,0x141237e10,0x1412702c0,2,"bool BSScript::ObjectTypeInfo::FindFunction(BSFixedString* a_stateName, BSFixedString* a_fnName, void* a_out, bool a_linkedOnly)"
+97532,0x1412380a0,0x141270550,2,std::int32_t BSScript::ObjectTypeInfo::GetVariableCount()
 97533,0x1412380e0,0x141270590,2,"void BSScript::ObjectTypeInfo::GatherVariables(void* a_out, bool a_flag)"
 97534,0x1412381b0,0x141270660,3,"void CollectObjectTypeVariableNames(BSScript::ObjectTypeInfo* a_type, void* a_out)"
 97536,0x141238410,0x1412708c0,2,void BSScript::ObjectTypeInfo::CopyInitialValues(Variable* a_dest)
@@ -4268,6 +4275,7 @@
 97737,0x141242b00,0x141298850,2,"bool BSScript::StackFrame::InitFrame(void* a_unk1, void* a_unk2, void* a_unk3, void* a_unk4)"
 97739,0x1412430c0,0x141298e10,2,BSScript::Stack::SaveFrame
 97740,0x141243650,0x1412993a0,2,BSScript::Stack::LoadFrame
+97741,0x141244410,0x14129a160,3,"BSScript::Stack* BSScript::Stack::Ctor(BSScript::IMemoryPagePolicy* a_policy, BSScript::IProfilePolicy* a_profilePolicy, std::uint32_t a_stackID, BSScript::Stack::StackType a_stackType, BSTSmartPointer<BSScript::IStackCallbackFunctor>* a_callback)"
 97742,0x1412444c0,0x14129a210,3,void Stack::Dtor()
 97743,0x1412445a0,0x14129a2f0,2,void BSScript::Stack::PopFrame()
 97744,0x1412447e0,0x14129a530,2,"void* BSScript::Stack::PushFrame(void* a_unk1, void* a_unk2, void* a_unk3, void* a_unk4)"
