@@ -3443,6 +3443,9 @@ sseid,aeid,confidence,name
 24106,24604,1,
 24107,24605,1,Character::sub_*
 24129,24628,3,
+24166,24670,1,
+24167,24671,1,
+24168,24672,1,
 24169,24673,1,
 24183,24687,3,"void TESNPC::SetFaceMorph(std::int32_t a_index, float a_value)"
 24184,24688,3,float TESNPC::GetFaceMorph(std::int32_t a_index)

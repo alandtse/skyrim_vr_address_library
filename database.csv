@@ -676,12 +676,17 @@
 23626,0x140345f50,0x140355810,3,powerof3tweaks::FactionStealing::GetFavorCost
 23632,0x140346470,0x140355d30,3,"BGSRelationship* BGSRelationship::GetRelationship(TESNPC* a_npc1, TESNPC* a_npc2)"
 23677,0x140348d50,0x140358610,3,BGSScene::StartRandomScene
+23801,0x14034d8e0,0x14035d1a0,2,"bool BGSSceneActionPackage::TryStartPackage(void* a_context, TESPackage* a_package)"
+23802,0x14034da00,0x14035d2c0,2,"bool BGSSceneActionPackage::StartFirstValidPackage(void* a_packages, void* a_context)"
 24012,0x140355940,0x140365200,3,"void TESFaction::SetFactionFightReaction(TESFaction* a_faction, FIGHT_REACTION a_fightReaction)"
 24065,0x1403580c0,0x140367980,4,TESIdleForm::sub_1403580C0
 24069,0x140358300,0x140367bc0,4,"bool TESIdleForm::CheckConditions(Actor* a_actor, TESObjectREFR* a_target, bool a_checkParentIdle) bool TESIdleForm::CheckConditions(Actor* a_actor, TESObjectREFR* a_target, bool a_checkParentIdle)"
 24104,0x140359760,0x140369020,3,"TESIdleForm* SelectIdleForAction(void* a_idleManager, BGSActionData* a_action)"
 24129,0x14035b130,0x14036a9f0,3,void ScrapArrayBSFixedString_Destroy(void* a_array)
 24159,0x14035C890,0x14036C150,3,"bool TESNPC__ReadFromFileStream(RE::TESNPC *a_npc, RE::TESFile *a_file)"
+24166,0x14035ed50,0x14036e610,2,TESPackage* TESNPC::GetSpectatorOverridePackage(Actor* a_actor)
+24167,0x14035edb0,0x14036e670,2,TESPackage* TESNPC::GetObserveCorpseOverridePackage(Actor* a_actor)
+24168,0x14035ee10,0x14036e6d0,2,TESPackage* TESNPC::GetGuardWarnOverridePackage(Actor* a_actor)
 24169,0x14035ee70,0x14036e730,2,TESPackage* TESNPC::GetEnterCombatOverridePackage(Actor* a_actor)
 24180,0x14035f6c0,0x14036ef80,3,Actor* TESNPC::GetUniqueActor()
 24183,0x14035f800,0x14036f0c0,3,"void TESNPC::SetFaceMorph(std::int32_t a_index, float a_value)"
@@ -1615,6 +1620,7 @@
 28767,0x1404363c0,0x140445f10,3,std::uint8_t TESPackage::GetInterruptOverrideType()
 28768,0x1404363d0,0x140445f20,3,void TESPackage::SetInterruptOverrideType(std::uint8_t a_type)
 28769,0x1404363e0,0x140445f30,2,std::uint8_t TESPackage::GetMaxSpeed()
+28780,0x1404375e0,0x140447130,2,TESObjectREFR* TESPackage::GetTargetReference(TESObjectREFR* a_actor)
 28781,0x140437690,0x1404471e0,2,TESWorldSpace* TESPackage::GetLocationWorldSpace(Actor* a_actor)
 28782,0x1404378c0,0x140447410,2,TESObjectCELL* TESPackage::GetLocationCell(Actor* a_actor)
 28783,0x140437ac0,0x140447610,2,"void TESPackage::GetLocationPosition(NiPoint3* a_out, Actor* a_actor, void* a_unk)"
@@ -1876,6 +1882,7 @@
 33516,0x140547f10,0x14054bfe0,2,void DisguiseEffect::StartDetectionCheck()
 33519,0x1405481f0,0x14054c2c0,3,DisguiseEffect::DetectionChecker* DisguiseEffect::DetectionChecker::DetectionChecker(DisguiseEffect* a_effect)
 33520,0x140548280,0x14054c350,2,void DisguiseEffect::DetectionChecker::OnComplete()
+33521,0x140548370,0x14054c440,2,"bool DisguiseEffect::RefreshActorKnowledgeOfPlayer(DetectionListener** a_listener, std::uint32_t* a_handle)"
 33524,0x1405484c0,0x14054c590,2,void ProcessLists::RefreshHighActorsKnowledgeOfPlayer(DetectionListener** a_listener)
 33559,0x140549540,0x14054D680,3,GrabActorEffect::Func21(GrabActorEffect *a1)
 33564,0x140549950,0x14054DB40,3,GrabActorEffect::Func20(GrabActorEffect *a1)
@@ -2144,10 +2151,12 @@
 36407,0x1405db310,0x1405e3990,3,"void Actor::EvaluatePackage(bool a_immediate, bool a_resetAI)"
 36408,0x1405db7a0,0x1405e3e20,4,void Actor::InitiateDoNothingPackage()
 36410,0x1405dba80,0x1405e4100,3,Character::StartFollowingCommander
+36412,0x1405dbe60,0x1405e44e0,2,"void Character::StartGuardWarnPackage(Character* a_target, void* a_location, std::uint32_t* a_handle, std::uint32_t a_unk5, std::uint32_t a_unk6, std::uint32_t a_unk7, std::uint8_t* a_unk8)"
 36419,0x1405dcc30,0x1405e5280,3,Character::CreateWaitForDialoguePackage
 36420,0x1405dcdb0,0x1405e5400,3,Actor::CreateKeepAnEyeOnPackage_ThreeParams
 36421,0x1405dcef0,0x1405e5540,3,Actor::CreateKeepAnEyeOnPackage_FourParams
 36422,0x1405dd030,0x1405e5680,3,Character::CreateFollowToPackage
+36423,0x1405dd230,0x1405e5880,2,void Character::ObserveCorpse(TESObjectREFR* a_corpse)
 36424,0x1405dd480,0x1405e5ad0,3,void Character::SetTravelPackage(TESObjectREFR* a_destination)
 36427,0x1405dd770,0x1405e5dc0,3,"void Actor::StealAlarm(TESObjectREFR* a_ref, TESForm* a_object, std::int32_t a_num, std::int32_t a_total, TESForm* a_owner, bool a_allowWarning)"
 36432,0x1405df630,0x1405e7c80,4,"void Actor::TrespassAlarm(TESObjectREFR* a_ref, TESForm* a_ownership, std::int32_t a_crime)"
