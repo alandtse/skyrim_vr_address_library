@@ -3162,10 +3162,28 @@
 52533,0x1408f9f50,0x1409346d0,3,void SkyrimScript::Internal::CallbackList::RemoveHandle(VMHandle a_handle)
 52652,0x140902560,0x14093cce0,3,RE::SkyrimScript::HandlePolicy::HandleIsType
 52653,0x140902770,0x14093cef0,3,RE::SkyrimScript::HandlePolicy::IsHandleObjectAvailable
+52654,0x140902840,0x14093cfc0,3,std::uint64_t SkyrimScript::HandlePolicy::EmptyHandle()
 52655,0x140902860,0x14093cfe0,3,RE::SkyrimScript::HandlePolicy::GetHandleForObject
+52656,0x140902990,0x14093d110,3,bool SkyrimScript::HandlePolicy::HasParent(std::uint64_t a_handle)
+52657,0x1409029b0,0x14093d130,3,std::uint64_t SkyrimScript::HandlePolicy::GetParentHandle(std::uint64_t a_handle)
+52658,0x140902a90,0x14093d210,3,std::uint64_t SkyrimScript::HandlePolicy::GetHandleScriptsMovedFrom(std::uint64_t a_handle)
 52659,0x140902b00,0x14093d280,3,RE::SkyrimScript::HandlePolicy::GetObjectForHandle
+52660,0x140902cb0,0x14093d430,3,void SkyrimScript::HandlePolicy::PersistHandle(std::uint64_t a_handle)
+52661,0x140902f30,0x14093d6b0,3,void SkyrimScript::HandlePolicy::ReleaseHandle(std::uint64_t a_handle)
 52662,0x1409032c0,0x14093da40,3,RE::SkyrimScript::HandlePolicy::ConvertHandleToString
+52666,0x1409037d0,0x14093df50,3,void SkyrimScript::HandlePolicy::ProcessPromotionRequests()
 52667,0x1409039c0,0x14093e140,3,void SkyrimScript::HandlePolicy::Revert()
+52678,0x1409040b0,0x14093e830,3,"bool ScatterTable_EraseKey(void* a_table, void* a_buckets, std::uint32_t a_hash, std::uint64_t* a_key)"
+52679,0x1409041a0,0x14093e920,3,void HandlePolicy_ReconcilePromotionRequests(void* a_requests)
+52680,0x140904250,0x14093e9d0,3,"bool HandlePolicy_RefCountMapInsert(void* a_table, void* a_buckets, std::uint32_t a_hash, std::uint64_t* a_key, std::uint32_t* a_value)"
+52681,0x1409043c0,0x14093eb40,3,"bool HandlePolicy_RequestMapInsert(void* a_table, void* a_buckets, std::uint32_t a_hash, std::uint64_t* a_key, bool* a_value)"
+52682,0x140904540,0x14093ecc0,3,void HandlePolicy_RequestMapDestroy(void* a_table)
+52684,0x140904650,0x14093edd0,3,"bool HandlePolicy_MergePromotionRequest(void* a_policy, std::uint64_t a_handle, bool a_promote)"
+52688,0x140904810,0x14093ef90,3,"void* ScatterTable_Begin(void* a_table, void* a_result)"
+52689,0x140904850,0x14093efd0,3,"void* ScatterTable_End(void* a_table, void* a_result)"
+52699,0x140904b40,0x14093f2c0,3,bool HandlePolicy_TryPromoteHandle(std::uint64_t a_handle)
+52701,0x140904d30,0x14093f4b0,3,void ScatterTable_Grow(void* a_table)
+52702,0x140904e50,0x14093f5d0,3,bool HandlePolicy_TryDemoteHandle(std::uint64_t a_handle)
 52703,0x140904f20,0x14093f6a0,2,"void* ScatterTable_EraseAtIterator(void* a_table, void* a_result, void* a_iter)"
 52711,0x140905650,0x14093fdd0,3,void SkyrimScript::ObjectBindPolicy::CollectAndBindMergedScripts(VMHandle a_handle)
 52712,0x140905740,0x14093fec0,3,"void SkyrimScript::ObjectBindPolicy::CollectAndBindMergedScriptsFrom(VMHandle a_targetHandle, VMHandle a_sourceHandle)"
@@ -3248,7 +3266,9 @@
 53242,0x14092fd80,0x14096a3d0,3,bool SkyrimVM::LoadSleepEvents(void* a_storage)
 53243,0x140930020,0x14096a670,3,bool SkyrimVM::LoadTrackedStatsEvents(void* a_storage)
 53244,0x1409302c0,0x14096a910,3,bool SkyrimVM::LoadInventoryEventFilters(void* a_storage)
+53331,0x140936870,0x140970f50,3,void HandlePolicy_RefCountMapDestroy(void* a_table)
 53355,0x140936ee0,0x1409715c0,3,void SkyrimScript::ObjectBindPolicy::~ObjectBindPolicy()
+53512,0x140939e20,0x1409743d0,3,SkyrimScript::HandlePolicy* SkyrimScript::HandlePolicy::dtor_deleting(std::uint32_t a_flags)
 53567,0x14093aae0,0x140975110,2,"BSScript::Variable* MakeStringVariable(BSScript::Variable* a_out, const char* a_string)"
 53581,0x14093aef0,0x140975590,2,"bool EventCallbackAdapter::Load(std::int32_t a_flags, BSStorage* a_storage, BSScript::IVMSaveLoadInterface* a_loader, BSScript::IVirtualMachine* a_vm, bool* a_ok)"
 53604,0x14093bff0,0x140976690,4,BSTEventSource::AddEventSink
@@ -4234,8 +4254,8 @@
 97534,0x1412381b0,0x141270660,3,"void CollectObjectTypeVariableNames(BSScript::ObjectTypeInfo* a_type, void* a_out)"
 97536,0x141238410,0x1412708c0,2,void BSScript::ObjectTypeInfo::CopyInitialValues(Variable* a_dest)
 97538,0x1412386d0,0x141270b80,3,void BSScript::ObjectTypeInfo::ReleaseData(bool a_keepNativeFunctions)
-97539,0x141238e00,0x1412712b0,3,"bool PapyrusFinishLinking(BSScript::ObjectTypeInfo* a_type, void* a_ctx, BSScript::ErrorLogger* a_logger)"
-97540,0x14123a6c0,0x141272b70,3,"bool BSScript::ObjectTypeInfo::BindNativeFunction(BSScript::IFunction* a_func, SkyrimScript::Logger* a_logger)"
+97539,0x141238e00,0x1412712b0,3,"bool BSScript::ObjectTypeInfo::FinishLinking(void* a_ctx, BSScript::ErrorLogger* a_logger)"
+97540,0x14123a6c0,0x141272b70,3,"bool BSScript::ObjectTypeInfo::BindNativeFunction(BSScript::IFunction* a_func, BSScript::ErrorLogger* a_logger)"
 97546,0x14123ae90,0x141273340,2,"void* BSScript::ObjectTypeInfo::FindNamedStateInRange(void* a_states, std::uint32_t a_count, BSFixedString a_stateName)"
 97549,0x14123b040,0x1412734f0,2,"void* BSScript::ObjectTypeInfo::FindFunctionByNameInRange(void* a_functions, std::uint32_t a_count, BSFixedString a_fnName)"
 97550,0x14123b0d0,0x141273580,2,"std::int32_t BSScript::ObjectTypeInfo::InitVariableTypes(BSScript::Variable** a_cursor, std::int32_t a_mode)"
@@ -4247,9 +4267,9 @@
 97611,0x14123c9f0,0x141274ea0,3,void ObjectTypeInfo_DecRef(BSScript::ObjectTypeInfo* a_type)
 97688,0x14123fe10,0x1412a0920,3,BSScript::ErrorLogger* BSScript::ErrorLogger::ctor()
 97689,0x14123fe60,0x1412a0970,3,void BSScript::ErrorLogger::dtor()
-97690,0x14123fe90,0x1412a09a0,3,"void SkyrimScript::Logger::PostMessageBySeverity(BSString* a_message, std::int32_t a_severity)"
-97691,0x141240060,0x1412a0b70,3,"void LogLoaderMessage(SkyrimScript::Logger* a_logger, const char* a_context, const char* a_message, std::int32_t a_severity)"
-97692,0x141240140,0x1412a0c50,3,"void LogLoaderMessageAtLine(SkyrimScript::Logger* a_logger, const char* a_file, std::uint32_t a_line, const char* a_message, std::int32_t a_severity)"
+97690,0x14123fe90,0x1412a09a0,3,"void BSScript::ErrorLogger::PostMessageBySeverity(const char* a_message, std::int32_t a_severity)"
+97691,0x141240060,0x1412a0b70,3,"void LogLoaderMessage(BSScript::ErrorLogger* a_logger, const char* a_context, const char* a_message, std::int32_t a_severity)"
+97692,0x141240140,0x1412a0c50,3,"void LogLoaderMessageAtLine(BSScript::ErrorLogger* a_logger, const char* a_file, std::uint32_t a_line, const char* a_message, std::int32_t a_severity)"
 97693,0x1412401f0,0x1412a0d00,3,std::uint32_t BSScript::ErrorLogger::GetCurrentThreadFatalCount()
 97694,0x1412402d0,0x1412a0de0,3,std::uint64_t BSScript::ErrorLogger::GetCurrentThreadFatalAndErrorCounts()
 97695,0x1412403b0,0x1412a0ec0,3,std::uint32_t BSScript::ErrorLogger::GetCurrentThreadWarningCount()
