@@ -5115,6 +5115,7 @@ sseid,aeid,confidence,name
 37351,38300,1,Actor::Func215_*
 37352,38301,1,Actor::InitiateVampireFeedPackage_*
 37353,38302,1,
+37388,37892,1,
 37390,38338,3,RE::ActorKill::GetEventSource
 37392,38340,3,RE::DisarmedEvent::GetEventSource
 37500,38447,1,BSResponse_gs_T1_T2_T3_T4_ge_::sub_140620070
@@ -5739,6 +5740,7 @@ sseid,aeid,confidence,name
 40704,41715,1,
 40705,41716,1,
 40748,41762,1,
+40749,41763,1,
 41104,42183,1,
 41105,42184,1,IMovementSetKeepOffsetFromActor::Func0_*
 41106,42185,1,MovementPlannerAgentKeepOffset::Func11_*
@@ -5769,6 +5771,8 @@ sseid,aeid,confidence,name
 41173,42261,1,MovementTweenerAgentNodeFollower::Func6_*
 41176,42264,1,MovementTweenerAgentNodeFollower::Func1_*
 41177,42265,1,
+41199,42284,1,
+41201,42286,1,
 41203,42288,1,PathingStreamLoadGame::Func6_*
 41204,42289,1,PathingStreamLoadGame::Func5_*
 41205,42290,1,PathingStreamLoadGame::Func4_*
@@ -5780,10 +5784,13 @@ sseid,aeid,confidence,name
 41213,42301,1,PathingStreamSaveGame::sub_*
 41216,42304,1,PathingStreamSaveGame::Func10_*
 41217,42305,1,PathingStreamSaveGame::Func9_*
+41218,42306,1,
 41220,42308,1,PathingStreamSaveGame::Func6_*
 41221,42309,1,PathingStreamSaveGame::Func5_*
+41222,42310,1,
 41224,42312,1,PathingStreamSaveGame::Func2_*
 41225,42313,1,PathingStreamSaveGame::Func1_*
+41226,42314,1,
 41255,42334,1,
 41256,42335,1,
 41257,42336,3,RE::PlayerControls::Ctor
@@ -8510,8 +8517,11 @@ sseid,aeid,confidence,name
 87919,90292,3,RE::BGSMoviePlayer::OpenMovie
 87936,90319,2,
 87970,90351,2,
+87992,90376,1,
+87993,90377,1,
 88202,90607,1,
 88203,90608,1,
+88237,90646,1,
 88417,90841,1,
 88418,90842,1,
 88423,90847,1,
@@ -8538,6 +8548,8 @@ sseid,aeid,confidence,name
 88453,90878,1,
 88454,90879,1,
 88455,90880,1,
+88499,90925,1,
+88500,90926,1,
 88540,90974,1,
 88558,90994,2,
 88930,91382,1,
@@ -8549,6 +8561,8 @@ sseid,aeid,confidence,name
 89007,91470,1,
 89018,91479,1,
 89030,91489,1,
+89343,91809,1,
+89344,91810,1,
 89391,91859,3,RE::ObstacleBuildQueue::ctor
 89392,91860,3,RE::ObstacleBuildQueue::dtor
 89395,91863,3,RE::ObstacleBuildQueue::Process
@@ -21471,7 +21485,11 @@ sseid,aeid,confidence,name
 529569,42200,1,
 529573,42249,1,
 529574,42250,1,
+529578,42297,1,
+529579,42298,1,
 529580,42299,1,
+529581,42316,1,
+529582,42317,1,
 529691,43815,1,
 529693,44194,1,
 529708,44508,1,

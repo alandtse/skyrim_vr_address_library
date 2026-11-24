@@ -1211,11 +1211,11 @@
 27932,0x140410770,0x1404202c0,3,BSTDerivedCreator_BGSProcedureFollowTo::Create
 27933,0x1404107f0,0x140420340,3,BSTDerivedCreator_BGSProcedureFollow::Destroy
 27934,0x140410810,0x140420360,3,BSTDerivedCreator_BGSProcedureFollowTo::Destroy
-27935,0x140410830,0x140420380,3,float MovementParameters::GetParam14()
-27936,0x140410840,0x140420390,3,float MovementParameters::GetParam20()
-27940,0x1404108d0,0x140420420,3,float MovementParameters::GetParam18()
+27935,0x140410830,0x140420380,3,float MovementParameters::GetInverseAcceleration()
+27936,0x140410840,0x140420390,3,float MovementParameters::GetInverseAngleAcceleration()
+27940,0x1404108d0,0x140420420,3,float MovementParameters::GetInverseDeceleration()
 27942,0x1404108f0,0x140420440,3,float MovementParameters::GetParam1C()
-27943,0x140410900,0x140420450,3,float MovementParameters::GetParam10()
+27943,0x140410900,0x140420450,3,float MovementParameters::GetSpeed()
 27944,0x140410910,0x140420460,3,bool BGSProcedureFollow::GetParamIsRequired(std::uint32_t a_index)
 27945,0x140410930,0x140420480,3,bool BGSProcedureFollowTo::GetParamIsRequired(std::uint32_t a_index)
 27948,0x140410990,0x1404204e0,3,BGSProcedureFollow::GetParamName
@@ -2293,7 +2293,8 @@
 36802,0x140600590,0x140608da0,4,RE::Actor::StopMovement
 36803,0x1406005f0,0x140608e00,2,"void Actor::SubmitPathRequest(void* a_request, void* a_location, float a_unkFloat, void* a_unk)"
 36804,0x1406006d0,0x140608ee0,2,"void Actor::SubmitPathRequestToRefLocation(void* a_request, void* a_ref, std::uint32_t a_unk1, void* a_unk2, float a_unkFloat, void* a_unk3)"
-36807,0x140600a90,0x1406092a0,2,void Actor::BuildMovementParameters(void** a_out)
+36806,0x1406008f0,0x140609100,2,void Actor::BuildMovementParametersNormalSpeed(IMovementParameters** a_out)
+36807,0x140600a90,0x1406092a0,2,void Actor::BuildMovementParameters(IMovementParameters** a_out)
 36810,0x140600c80,0x140609490,2,bool Actor::IsPathComplete()
 36811,0x140600ca0,0x1406094b0,2,bool Actor::IsPathRequestPending()
 36812,0x140600cc0,0x1406094d0,4,bool Actor::IsPathing()
@@ -2305,6 +2306,7 @@
 36850,0x140602040,0x14060a850,2,void Character::RefreshCachedValues()
 36853,0x140602200,0x14060aa10,2,"void Actor::WarpToRecord(void* a_record, void* a_loc)"
 36854,0x140602410,0x14060ac20,2,void Character::ActivatePathingDoor(void* a_doorInfo)
+36868,0x140603640,0x14060be50,2,bool Character::DispatchMovementMessage(MovementMessage* a_message)
 36869,0x140603660,0x14060be70,2,"std::int32_t Actor::StartPathToReference(TESObjectREFR* a_target, float a_walkRunPercent)"
 36872,0x140603b30,0x14060c340,2,Actor::Kill
 36877,0x1406057c0,0x14060dfd0,3,RE::Actor::IsOnFlyingMount
@@ -2348,6 +2350,7 @@
 37097,0x140612f40,0x14061bb50,3,PostMovementMessagePathComplete
 37098,0x1406130a0,0x14061bcb0,3,PostMovementMessagePathFailed
 37356,0x140619ab0,0x1406226a0,3,sub_140619AB0
+37388,0x14061c6e0,0x1406252d0,2,"bool MovementMessagePool::Dispatch(Character* a_character, MovementMessage* a_message)"
 37390,0x14061c880,0x140625470,3,BSTEventSource<ActorKill::Event>* ActorKill::GetEventSource()
 37392,0x14061ca60,0x140625650,3,BSTEventSource<DisarmedEvent::Event>* DisarmedEvent::GetEventSource()
 37509,0x140620610,0x1406293c0,4,undefined Actor::sub_140620610(Actor* a_this)
@@ -2830,21 +2833,35 @@
 40606,0x1406e9a30,0x140710920,2,"bool ActorMover::GetPathingDoor(std::uint32_t* a_outDoorHandle, BSPathingLocation* a_outLocation)"
 40612,0x1406e9fc0,0x140710eb0,2,"void Character::SubmitPathRequest(void* a_request, void* a_location, float a_unkFloat, void* a_unk)"
 40627,0x1406eaa80,0x140711970,3,MovementParametersFixed* MovementParametersFixed::dtor_deleting(std::uint32_t a_flags)
-40632,0x1406eac00,0x140711af0,2,float MovementParametersFixed::GetParam14()
-40633,0x1406eac90,0x140711b80,2,float MovementParametersFixed::GetParam20()
-40634,0x1406ead20,0x140711c10,2,float MovementParametersFixed::GetParam18()
+40632,0x1406eac00,0x140711af0,2,float MovementParametersFixed::GetInverseAcceleration()
+40633,0x1406eac90,0x140711b80,2,float MovementParametersFixed::GetInverseAngleAcceleration()
+40634,0x1406ead20,0x140711c10,2,float MovementParametersFixed::GetInverseDeceleration()
 40635,0x1406eadb0,0x140711ca0,2,float MovementParametersFixed::GetParam1C()
-40636,0x1406eae40,0x140711d30,2,float MovementParametersFixed::GetParam10()
+40636,0x1406eae40,0x140711d30,2,float MovementParametersFixed::GetSpeed()
 40643,0x1406eb030,0x140711f20,2,void MovementParametersFixed::LoadGame(PathingStreamLoadGame* a_stream)
 40647,0x1406eb360,0x140712250,2,void MovementParametersFixed::SaveGame(PathingStreamSaveGame* a_stream)
 40704,0x1406ee620,0x140715510,2,void MovementControllerNPC::SaveGame(void* a_buffer)
 40705,0x1406eed90,0x140715c80,2,void MovementControllerNPC::LoadGame(void* a_buffer)
 40747,0x1406f0a30,0x140717920,2,"void IMovementMessageInterface::QueueLocationEvent(BSPathingLocation* a_location, NiPoint3* a_direction)"
 40748,0x1406f0ad0,0x1407179c0,2,void IMovementMessageInterface::PostMessage(MovementMessage** a_message)
+40749,0x1406f0b60,0x140717a50,2,void IMovementMessageInterface::DispatchMessage(MovementMessage* a_message)
 41128,0x1407009a0,0x140727910,2,"void IMovementPlannerAgent::Update(float* a_deltaTime, void* a_plan)"
 41130,0x140700f70,0x140727f00,2,"void IMovementSetWarp::HandlePathingFailure(void* a_request, void* a_p2)"
 41131,0x1407011e0,0x140728170,2,void IMovementSetWarp::AdvanceWarpState(void* a_request)
 41132,0x140701290,0x140728220,2,void IMovementSetWarp::ResetWarpState(void* a_request)
+41199,0x140702f60,0x140729ef0,2,bool PathingStreamLoadGame::ReadBool(bool* a_out)
+41201,0x140702fc0,0x140729f50,2,bool PathingStreamLoadGame::ReadUInt8(std::uint8_t* a_out)
+41203,0x140703020,0x140729fb0,2,bool PathingStreamLoadGame::ReadUInt16(ushort* a_out)
+41205,0x140703080,0x14072a010,2,bool PathingStreamLoadGame::ReadUInt32(std::uint32_t* a_out)
+41208,0x140703110,0x14072a0a0,2,bool PathingStreamLoadGame::ReadFloat(float* a_out)
+41209,0x140703140,0x14072a0d0,2,bool PathingStreamLoadGame::ReadFormID(std::uint32_t* a_formID)
+41210,0x140703160,0x14072a0f0,2,"bool PathingStreamLoadGame::ReadFormIDWithResult(std::uint32_t* a_formID, bool* a_outSuccess)"
+41216,0x140703320,0x14072a2b0,2,bool PathingStreamSaveGame::WriteBool(bool a_value)
+41218,0x1407033a0,0x14072a330,2,bool PathingStreamSaveGame::WriteUInt8(std::uint8_t a_value)
+41220,0x140703420,0x14072a3b0,2,bool PathingStreamSaveGame::WriteUInt16(std::uint16_t a_value)
+41222,0x1407034a0,0x14072a430,2,bool PathingStreamSaveGame::WriteUInt32(std::uint32_t a_value)
+41225,0x140703560,0x14072a4f0,2,bool PathingStreamSaveGame::WriteFloat(float a_value)
+41226,0x1407035a0,0x14072a530,2,bool PathingStreamSaveGame::WriteFormID(std::uint32_t a_formID)
 41257,0x140704970,0x14072b900,3,RE::PlayerControls::Ctor
 41266,0x140705250,0x14072c0a0,3,RE::PlayerControls::SetActivateHandlerBlocked
 41271,0x140705530,0x14072c380,3,RE::PlayerControls::SendActionToInterestedActors
@@ -4496,10 +4513,13 @@
 87970,0x1410a5a20,0x141102650,2,BSPathingLocation* BSPathingLocation::CopyFrom(const BSPathingLocation* a_other)
 87978,0x1410a5e50,0x141102a80,3,"bool BSPathingLocation::GetNavMeshAndTriangle(BSTSmartPointer<BSNavmesh>& a_navMeshOut, std::uint16_t& a_triOut) const"
 87985,0x1410a64c0,0x1411030f0,3,bool BSPathingLocation::ResolveToClosestNavmeshAndTriangle(FindTriangleForLocationFilter& a_filter)
+87992,0x1410a7150,0x141103d80,2,void BSPathingLocation::Read(BSPathingStreamRead* a_stream)
+87993,0x1410a7290,0x141103ec0,2,void BSPathingLocation::Write(BSPathingStreamWrite* a_stream)
 88004,0x1410a7e10,0x141104a40,4,"bool FindTriangleForLocationFilterCheckDeltaZ::IsValidTri(NiPoint3* a_location, BSNavmesh* a_navMesh, std::uint16_t a_tri, NiPoint3* a_pointOnTri)"
 88200,0x1410b8ae0,0x141115710,2,"void IMovementPlannerAgent::Update(float* a_deltaTime, void* a_plan)"
 88202,0x1410b8e00,0x141115a30,2,void IMovementSetState::SetStateForward(void* a_state)
 88203,0x1410b8e20,0x141115a50,2,void IMovementSetState::SetState(void* a_state)
+88237,0x1410b9d30,0x141116960,2,void PathingRequest::SetLockData(PathingLockData** a_lockData)
 88417,0x1410c0b30,0x14111d760,2,BSFixedString* MovementPathManagerArbiter::GetStageName()
 88418,0x1410c0b40,0x14111d770,2,BSFixedString* MovementPathManagerArbiter::GetArbiterName()
 88422,0x1410c0c30,0x14111d860,2,void MovementPathManagerArbiter::AttachToController(void* a_controller)
@@ -4533,7 +4553,8 @@
 88455,0x1410c2600,0x14111f230,2,void MovementPathManagerArbiter::ClearPath(bool a_failed)
 88486,0x1410c3220,0x14111fe50,3,MovementPathManagerNullTracker* MovementPathManagerNullTracker::GetSingleton()
 88498,0x1410c3ce0,0x141120930,3,bool IMovementState::CanStrafe()
-88499,0x1410c3d40,0x141120aa0,3,RE::ActorState::Sub_1410C3D40
+88499,0x1410c3d40,0x141120aa0,3,float ActorState::SpeedToNormalized(float a_speed)
+88500,0x1410c3db0,0x141120b10,2,float ActorState::NormalizedToSpeed(float a_normalized)
 88535,0x1410c48e0,0x141121640,2,bool BSPathingSolution::IsNodeChainValid()
 88538,0x1410c4b80,0x1411218e0,2,"float BSPathingSolution::GetNodeRangeLength(float a_first, float a_last)"
 88539,0x1410c4f80,0x141121ce0,2,float BSPathingSolution::GetCurrentPathingNodesLength()
@@ -4550,6 +4571,8 @@
 89007,0x1410e3ec0,0x141140c00,2,std::uint32_t PathingSolutionEntryArray::PushBack(PathingSolutionEntry* a_entry)
 89018,0x1410e42e0,0x141141020,2,"void PathingSolutionEntryArray::ReleaseRange(std::uint32_t a_index, std::uint32_t a_count)"
 89030,0x1410e4750,0x141141490,2,"void PathingSolutionEntryArray::RemoveElements(std::uint32_t a_index, std::uint32_t a_count)"
+89343,0x1410fb2c0,0x141158000,2,"float NormalizeMovementSpeed(float a_speed, void* a_speedData)"
+89344,0x1410fb330,0x141158070,2,"float DenormalizeMovementSpeed(float a_normalized, void* a_speedData)"
 89364,0x1410fc9e0,0x141159720,3,void ProcessAvoidBoxChecks()
 89365,0x1410fcbf0,0x141159930,3,std::uint64_t CheckAvoidBox()
 89391,0x1410fe270,0x14115afb0,3,void ObstacleBuildQueue::ctor()
@@ -4557,6 +4580,8 @@
 89395,0x1410fe4c0,0x14115b200,3,void ObstacleBuildQueue::Process()
 89413,0x1410ff250,0x14115c160,2,bool MovementControllerNPC::AddAgentsAndArbiters(void* a_set)
 89473,0x141102ca0,0x14115fbc0,3,NullMovementState* NullMovementState::GetSingleton()
+89510,0x141103c10,0x141160b30,3,std::int32_t MovementMessageWarpToLocation::GetStaticType()
+89579,0x141106870,0x141163790,3,std::int32_t MovementMessagePlayIdle::GetStaticType()
 89781,0x14110bf30,0x141168e50,2,MovementArbiter* MovementArbiter::MovementArbiter()
 89782,0x14110bf70,0x141168e90,2,void MovementArbiter::~MovementArbiter()
 90331,0x14111cb60,0x141179a30,2,void MovementStateTweener::GetPosition(NiPoint3* a_out)
@@ -13403,6 +13428,10 @@
 528538,0x1434963d0,0x1436f1ee0,3,RE::NiRTTI_BSSubIndexLandTriShape
 528600,0x143497408,0x1436f2f58,4,RE::TlsIndex
 528751,0x1401b69f0,0x1401c6a00,4,void BGSGrassManager::UpdateGrassRadius (GrassManager * param_1)
+529578,0x1407031b0,0x14072a140,2,bool PathingStreamLoadGame::ReadRequest(BSPathingRequest** a_out)
+529579,0x1407031e0,0x14072a170,2,bool PathingStreamLoadGame::ReadSolution(BSPathingSolution** a_out)
+529581,0x1407035e0,0x14072a570,2,bool PathingStreamSaveGame::WriteRequest(BSPathingRequest** a_ref)
+529582,0x140703610,0x14072a5a0,2,bool PathingStreamSaveGame::WriteSolution(BSPathingSolution** a_ref)
 529913,0x1407c1420,0x1407ec770,4,bool CombatBehaviorAction::Validate(CombatBehaviorTreeNode* node)
 529915,0x1407c6a00,0x1407f1d50,4,void CombatBehaviorThread::Ascend(CombatBehaviorTreeNode* a_node)
 529964,0x1407dff20,0x14080b270,4,CombatPathingRevolution::src/Advanced_Hook.h:90
