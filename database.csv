@@ -4282,6 +4282,7 @@
 88724,0x1410d42a0,0x141130fd0,2,void BSNavmesh::CompactEdgeExtraInfo()
 88778,0x1410d7cf0,0x141134a20,3,void BSNavmeshInfo::SetNavmesh(BSNavmesh* a_navmesh)
 88939,0x1410dff00,0x14113cc30,2,void DestroyTaskletGroup(void** a_group)
+88940,0x1410dfff0,0x14113cd20,2,"char Pathing::SolveRequest(void* a_request, void* a_outSolution, bool a_allowBackground)"
 88946,0x1410e05e0,0x14113d310,3,void TaskletGroup::OpenViaHandle(void** a_handle)
 88947,0x1410e0630,0x14113d360,3,void TaskletGroup::BeginAndWaitViaHandle(void** a_handle)
 88948,0x1410e0690,0x14113d3c0,3,bool TaskletGroup::IsDoneViaHandle(void** a_handle)
