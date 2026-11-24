@@ -1114,7 +1114,13 @@
 27728,0x140404870,0x1404143c0,3,BGSProcedureEscort::UpdateReducedProcess
 27729,0x140405130,0x140414c80,3,BGSProcedureEscort::BeginEscort
 27730,0x1404055a0,0x1404150f0,3,BGSProcedureEscort::StartFollowToPackage
+27733,0x140405750,0x1404152a0,3,void BGSProcedureEscortExecState::RecycleChildren()
+27734,0x1404057d0,0x140415320,3,void BGSProcedureEscortExecState::SaveGame(BGSSaveGameBuffer* a_buffer)
+27735,0x140405a00,0x140415550,3,void BGSProcedureEscortExecState::LoadGame(BGSLoadFormBuffer* a_buffer)
+27736,0x140405c40,0x140415790,2,void BGSProcedureEscortExecState::InitLoadGame(BGSLoadFormBuffer* a_buffer)
+27737,0x140405cc0,0x140415810,2,"void BGSProcedureEscortExecState::Cleanup(void* a_ctx, void* a_p2)"
 27738,0x140405e00,0x140415950,3,ProcedureNameEntryCleanup_Escort
+27750,0x140406210,0x140415d60,3,void* BGSProcedureEscortExecState::dtor_deleting(std::uint32_t a_flags)
 27753,0x140406300,0x140415e50,3,BSTDerivedCreator_BGSProcedureEscort::Create
 27754,0x140406370,0x140415ec0,3,BSTDerivedCreator_BGSProcedureEscort::Destroy
 27757,0x1404063b0,0x140415f00,3,bool BGSProcedureEscort::GetParamIsRequired(std::uint32_t a_index)
@@ -1122,6 +1128,7 @@
 27761,0x140406410,0x140415f60,3,void* BGSProcedureEscort::GetParamTypeCheck(std::uint32_t a_index)
 27762,0x140406430,0x140415f80,3,void* BGSProcedureEscort::GetParamCheckTypeName(std::uint32_t a_index)
 27765,0x140406530,0x140416080,3,BSFixedString* BGSProcedureEscort::GetProcedureName()
+27766,0x140406540,0x14052f650,3,void* BGSProcedureEscortExecState::GetPoolKey()
 27770,0x140406740,0x140416290,3,BGSProcedureFind::GetParamCount
 27771,0x140406750,0x1404162a0,3,BGSProcedureFind::InitExecState
 27772,0x140406770,0x1404162c0,3,BGSProcedureFind::InitActorLocation
@@ -1235,8 +1242,10 @@
 27986,0x140411560,0x1404210b0,3,RegisterProcedureName_Guard
 27987,0x1404116d0,0x140421220,2,void BGSProcedureGuard::ProcessHighActor(BGSProcessContext* a_context)
 27989,0x140411b40,0x140421690,3,BGSProcedureGuardExecState::RecycleChildren
+27990,0x140411bc0,0x140421710,3,"void BGSProcedureGuardExecState::Cleanup(void* a_ctx, void* a_p2)"
 27991,0x140411be0,0x140421730,3,BGSProcedureGuardExecState::SaveGame
 27992,0x140411c60,0x1404217b0,3,BGSProcedureGuardExecState::LoadGame
+27993,0x140411d60,0x1404218b0,3,void BGSProcedureGuardExecState::InitLoadGame(BGSLoadFormBuffer* a_buffer)
 27994,0x140411d70,0x1404218c0,3,ProcedureNameEntryCleanup_Guard
 27995,0x140411e00,0x140421950,2,void AIProcess::VisitKnowledgeEntries(void* a_visitor)
 28002,0x140412050,0x140421ba0,3,BSTDerivedCreator_BGSProcedureGuard::Create
@@ -1644,6 +1653,7 @@
 28790,0x1404387d0,0x140448320,2,TESObjectREFR* TESPackage::GetSecondLocationReference(Actor* a_actor)
 28817,0x14043ae40,0x14044a990,2,bool TESPackage::IsScheduleAndConditionsMet(Actor* a_actor)
 28822,0x14043b7b0,0x14044b300,2,"float TESPackage::GetLocationAcceptRadius(Actor* a_actor, bool a_useSecondLocation)"
+28826,0x14043bbd0,0x14044b720,3,std::uint32_t TESPackage::GetSecondLocationRadius(Actor* a_actor)
 28866,0x14043c8f0,0x14044c440,3,CreatePursueProcedureTree_FourParams
 28868,0x14043cc70,0x14044c7c0,3,CreatePursueProcedureTree_ThreeParams
 28870,0x14043cf80,0x14044cad0,3,CreateWaitTravelProcedureTree
@@ -1656,10 +1666,15 @@
 28994,0x140441130,0x140450c80,4,PackageLocation* PackageLocation::PackageLocation()
 28997,0x140441240,0x140450d90,2,std::int32_t PackageLocation::GetLocType()
 28998,0x140441250,0x140450da0,4,void PackageLocation::SetLocationType(std::int32_t a_type)
+28999,0x1404412e0,0x140450e30,3,void PackageLocation::SetRadius(std::uint32_t a_rad)
 29000,0x140441300,0x140450e50,2,TESObjectREFR* PackageLocation::GetNearReference()
 29001,0x140441390,0x140450ee0,2,TESForm* PackageLocation::GetInCell()
 29007,0x140441540,0x140451090,4,"void PackageLocation::Assign(const PackageLocation* a_other, bool a_allowNone)"
+29008,0x1404416f0,0x140451240,3,bool PackageLocation::Equals(PackageLocation* a_other)
+29009,0x140441850,0x1404513a0,2,void PackageLocation::InitializeAfterAllFormsAreRead(TESPackage* a_package)
 29015,0x140442890,0x1404523e0,2,TESObjectREFR* PackageLocation::ResolveReference(Actor* a_actor)
+29018,0x140442e10,0x140452960,3,void PackageLocation::SaveGame(BGSSaveGameBuffer* a_buffer)
+29019,0x140442f20,0x140452a70,3,void PackageLocation::LoadGame(BGSLoadGameBuffer* a_buffer)
 29020,0x140443030,0x140452b80,2,std::uint32_t PackageLocation::GetRadius()
 29036,0x1404434f0,0x140453040,3,PackageTarget::ResolveRefHandle
 29044,0x140443690,0x1404531e0,4,void PackageTarget::SetType(std::uint32_t a_type)
@@ -2184,6 +2199,12 @@
 36424,0x1405dd480,0x1405e5ad0,3,void Character::SetTravelPackage(TESObjectREFR* a_destination)
 36427,0x1405dd770,0x1405e5dc0,3,"void Actor::StealAlarm(TESObjectREFR* a_ref, TESForm* a_object, std::int32_t a_num, std::int32_t a_total, TESForm* a_owner, bool a_allowWarning)"
 36432,0x1405df630,0x1405e7c80,4,"void Actor::TrespassAlarm(TESObjectREFR* a_ref, TESForm* a_ownership, std::int32_t a_crime)"
+36437,0x1405e0020,0x1405e8670,3,"void TESObjectREFR::MoveToPositionWithFollowers(NiPoint3* a_pos, float a_rotZ, float a_rotX, TESObjectCELL* a_cell, TESWorldSpace* a_worldSpace, bool a_atDoor, bool a_ignoreSleep, bool a_p9)"
+36438,0x1405e00e0,0x1405e8730,3,"void TESObjectREFR::MoveToRefPositionWithFollowers(TESObjectREFR* a_ref, bool a_atDoor, bool a_ignoreSleep, bool a_p4)"
+36439,0x1405e0170,0x1405e87c0,2,"void Character::MoveFollowersToPosition(NiPoint3* a_pos, float a_rotZ, float a_rotX, TESObjectCELL* a_cell, TESWorldSpace* a_worldSpace, bool a_atDoor, bool a_ignoreSleep)"
+36440,0x1405e0900,0x1405e8f50,2,bool Character::CollectFollowers(void* a_out)
+36441,0x1405e0af0,0x1405e9140,3,float Character::GetFollowersSpacing()
+36442,0x1405e0bd0,0x1405e9220,2,float Character::GetFollowersTotalSpacing(void* a_followers)
 36444,0x1405e11c0,0x1405e9810,4,float Actor::GetBoundRadius() float Actor::GetBoundRadius()
 36452,0x1405e1510,0x1405e9b60,3,"float TESObjectREFR::GetSubmergeLevel_1405E1510 (TESObjectREFR * a_this, float a_zPos, TESObjectCELL * a_parentCell)"
 36456,0x1405e1860,0x1405e9ee0,3,RE::Actor::GetTotalCarryWeight_1405E1860
@@ -2266,6 +2287,8 @@
 36817,0x140600d80,0x140609590,3,bool Actor::IsOnWaterTriangle()
 36828,0x140601280,0x140609a90,2,bool Actor::GetPathGoalPosition(NiPoint3* a_out)
 36829,0x1406012b0,0x140609ac0,2,bool Actor::GetPathGoalLocation(BSPathingLocation* a_out)
+36841,0x140601b50,0x14060a360,2,float Character::CalculateRadius()
+36853,0x140602200,0x14060aa10,2,"void Actor::WarpToRecord(void* a_record, void* a_loc)"
 36872,0x140603b30,0x14060c340,2,Actor::Kill
 36877,0x1406057c0,0x14060dfd0,3,RE::Actor::IsOnFlyingMount
 36880,0x140605940,0x14060e130,3,Actor::StartMountInteraction
@@ -2531,6 +2554,7 @@
 38379,0x140650230,0x140659580,2,"void AIProcess::SetMoveMode(Actor* a_actor, std::int32_t a_moveFlags, bool a_usePackageFlags)"
 38402,0x140650d60,0x14065a0b0,3,"void AIProcess::SetWeaponLastPos(bool a_leftHand, NiPoint3* a_pos)"
 38404,0x140650df0,0x14065a140,3,RE::AIProcess::Update3DModel
+38412,0x1406514e0,0x14065a830,2,"void AIProcess::SetLastActivatedDoor(std::uint32_t* a_handle, bool a_flag)"
 38483,0x1406598d0,0x140662c10,3,ObjectRefHandle AIProcess::GetHeadtrackTarget()
 38495,0x140659c00,0x140662f40,3,void AIProcess::ClearMuzzleFlashes()
 38505,0x140659dd0,0x140663110,2,"ActorKnowledge* AIProcess::GetOrCreateActorKnowledge(Actor* a_owner, TESObjectREFR* a_target)"
@@ -4425,6 +4449,8 @@
 88004,0x1410a7e10,0x141104a40,4,"bool FindTriangleForLocationFilterCheckDeltaZ::IsValidTri(NiPoint3* a_location, BSNavmesh* a_navMesh, std::uint16_t a_tri, NiPoint3* a_pointOnTri)"
 88429,0x1410c0f80,0x14111dbb0,3,bool IMovementSetGoal::SetGoal(void* a_request)
 88430,0x1410c1140,0x14111dd70,3,void IMovementSetGoal::ClearGoal()
+88431,0x1410c1250,0x14111de80,2,void IMovementSetGoal::RepathFromCurrentLocation()
+88432,0x1410c13f0,0x14111e020,2,"void IMovementSetGoal::SetGoalWithoutSolving(void* a_p1, void* a_request, void* a_p3)"
 88433,0x1410c1550,0x14111e180,2,bool IMovementQueryPathingState::GetRequest(void* a_out)
 88434,0x1410c15e0,0x14111e210,2,bool IMovementQueryPathingState::GetSolution(void* a_out)
 88435,0x1410c1690,0x14111e2c0,3,std::uint32_t IMovementQueryPathingState::QueryRequestComplete(void* a_request)
@@ -4437,6 +4463,11 @@
 88445,0x1410c1b10,0x14111e740,3,bool IMovementQueryPathingState::IsPathing()
 88446,0x1410c1b70,0x14111e7a0,3,bool IMovementQueryPathingState::IsValid()
 88447,0x1410c1bd0,0x14111e800,3,bool IMovementQueryPathingState::IsPending()
+88448,0x1410c1c30,0x14111e860,2,void MovementPathManagerArbiter::UpdatePathing()
+88449,0x1410c1d00,0x14111e930,2,void MovementPathManagerArbiter::PollPendingSolution()
+88452,0x1410c2180,0x14111edb0,2,"void MovementPathManagerArbiter::HandlePathFollowerEvent(std::int32_t a_event, char* a_outFlag)"
+88454,0x1410c24a0,0x14111f0d0,3,void MovementPathManagerArbiter::CompletePath()
+88455,0x1410c2600,0x14111f230,2,void MovementPathManagerArbiter::ClearPath(bool a_failed)
 88498,0x1410c3ce0,0x141120930,3,bool IMovementState::CanStrafe()
 88499,0x1410c3d40,0x141120aa0,3,RE::ActorState::Sub_1410C3D40
 88558,0x1410c6ea0,0x141123bd0,2,"bool BSPathingSolution::GetClosestPointOnPath(NiPoint3* a_pos, void* a_out)"
