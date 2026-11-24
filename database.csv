@@ -2247,10 +2247,13 @@
 36763,0x1405fe7d0,0x140606fe0,2,bool Actor::IsFollowPathRequestActive()
 36775,0x1405ff4b0,0x140607cc0,3,void Actor::InitItemImpl()
 36776,0x1405ff590,0x140607da0,2,BSTSmartPointer<MovementControllerNPC>* Actor::GetMovementControllerNPC()
+36784,0x1405ff9a0,0x1406081b0,2,"void Character::PathToPathingLocation(BSPathingLocation* a_location, float a_distance, void* a_avoid)"
 36785,0x1405ffa90,0x1406082a0,2,void Character::AppendSpeakerAvoidNodeToRequest(void* a_request)
+36786,0x1405ffb90,0x1406083a0,2,"void Character::PathToLocation(NiPoint3* a_point, TESObjectCELL* a_cell, TESWorldSpace* a_worldSpace, float a_distance, void* a_avoid)"
 36794,0x1405fff70,0x140608780,2,bool Actor::GetPathRequest(void** a_out)
 36795,0x1405fffa0,0x1406087b0,2,"bool Character::TurnToFace(NiPoint3* a_target, float a_tolerance)"
 36796,0x140600070,0x140608880,2,"bool Actor::RequestTurnToAngle(float a_angle, float a_tolerance)"
+36797,0x140600110,0x140608920,2,bool Character::PathToFollowPoint(NiPoint3* a_point)
 36801,0x140600400,0x140608c10,3,void Actor::StopMoving(float a_delta)
 36802,0x140600590,0x140608da0,4,RE::Actor::StopMovement
 36803,0x1406005f0,0x140608e00,2,"void Actor::SubmitPathRequest(void* a_request, void* a_location, float a_unkFloat, void* a_unk)"
@@ -2730,6 +2733,7 @@
 40388,0x1406de1a0,0x140705050,4,bool ProcessLists::AreHostileActorsNear(BSScrapArray<ActorHandle>* a_arrayOut)
 40394,0x1406de9a0,0x140705850,4,"std::int16_t ProcessLists::RequestHighestDetectionLevelAgainstActor(Actor* a_actor, std::uint32_t& a_LOSCount)"
 40396,0x1406dec50,0x140705b00,3,void ProcessLists::ClearCachedFactionFightReactions()
+40398,0x1406dedb0,0x140705c60,2,"void BGSOpenCloseForm::NotifyActorsOfOpenedDoor(void* a_handleList, TESObjectREFR* a_door)"
 40456,0x1406e3020,0x140709e50,4,"void PlayerCharacter::AddPlayerAddItemEvent(TESObject* a_object, TESForm* a_owner, TESObjectREFR* a_container, AQUIRE_TYPE a_type) src\RE\P/PlayerCharacter.cpp:32"
 40459,0x1406e33e0,0x14070a210,3,"void* BeginLowActorUpdate(void*, float, float, std::uint8_t, float, std::uint32_t)"
 40478,0x1406e3ee0,0x14070ad10,3,"std::uint64_t LockFreeRing2048Push(void*, void*)"
@@ -2752,6 +2756,7 @@
 40589,0x1406e8320,0x14070f210,2,void ActorMover::ResetMovementState()
 40590,0x1406e8400,0x14070f2f0,2,"bool ActorMover::RequestTurnToAngle(float a_angle, float a_tolerance)"
 40591,0x1406e86d0,0x14070f5c0,2,"bool ActorMover::TurnToFace(NiPoint3* a_target, float a_tolerance)"
+40593,0x1406e8cb0,0x14070fba0,2,bool ActorMover::PathToFollowPoint(NiPoint3* a_point)
 40594,0x1406e8f70,0x14070fe60,2,bool ActorMover::IsPathRequestIdle()
 40595,0x1406e9010,0x14070ff00,2,bool ActorMover::IsPathComplete()
 40596,0x1406e90b0,0x14070ffa0,2,"bool ActorMover::QueryPathRequestState(void* a_request, std::uint8_t* a_outNotStarted)"
@@ -2764,6 +2769,7 @@
 40603,0x1406e9720,0x140710610,2,bool ActorMover::GetPathGoalLocation(BSPathingLocation* a_out)
 40604,0x1406e9810,0x140710700,2,bool ActorMover::GetPathRequest(void** a_out)
 40605,0x1406e9930,0x140710820,2,"bool ActorMover::GetClosestPathPoint(NiPoint3* a_pos, void* a_out)"
+40606,0x1406e9a30,0x140710920,2,"bool ActorMover::GetPathingDoor(std::uint32_t* a_outDoorHandle, BSPathingLocation* a_outLocation)"
 40612,0x1406e9fc0,0x140710eb0,2,"void Character::SubmitPathRequest(void* a_request, void* a_location, float a_unkFloat, void* a_unk)"
 41257,0x140704970,0x14072b900,3,RE::PlayerControls::Ctor
 41266,0x140705250,0x14072c0a0,3,RE::PlayerControls::SetActivateHandlerBlocked
@@ -3112,6 +3118,7 @@
 49011,0x14082c540,0x140857890,3,void CombatPath::Update()
 49013,0x14082c790,0x140857ae0,3,void CombatPath::Start()
 49022,0x14082d030,0x140858380,3,"void CombatPath::SetAccelerationDecelerationMult(float accelerationMult, float DecelerationMult)"
+49074,0x14082f990,0x14085ace0,2,"bool CombatPath::SolveAndStoreRequest(void* a_key, void* a_request)"
 49311,0x14083c870,0x140867b70,3,RE::CombatApproachTargetSpeedController::sub_14083C870
 49711,0x140844d00,0x14086ffb0,3,RE::Character::sub_140844D00
 49716,0x140844e40,0x1408700f0,4,CombatPathingRevolution::src/Advanced_Hook.h:13
@@ -4416,6 +4423,20 @@
 87978,0x1410a5e50,0x141102a80,3,"bool BSPathingLocation::GetNavMeshAndTriangle(BSTSmartPointer<BSNavmesh>& a_navMeshOut, std::uint16_t& a_triOut) const"
 87985,0x1410a64c0,0x1411030f0,3,bool BSPathingLocation::ResolveToClosestNavmeshAndTriangle(FindTriangleForLocationFilter& a_filter)
 88004,0x1410a7e10,0x141104a40,4,"bool FindTriangleForLocationFilterCheckDeltaZ::IsValidTri(NiPoint3* a_location, BSNavmesh* a_navMesh, std::uint16_t a_tri, NiPoint3* a_pointOnTri)"
+88429,0x1410c0f80,0x14111dbb0,3,bool IMovementSetGoal::SetGoal(void* a_request)
+88430,0x1410c1140,0x14111dd70,3,void IMovementSetGoal::ClearGoal()
+88433,0x1410c1550,0x14111e180,2,bool IMovementQueryPathingState::GetRequest(void* a_out)
+88434,0x1410c15e0,0x14111e210,2,bool IMovementQueryPathingState::GetSolution(void* a_out)
+88435,0x1410c1690,0x14111e2c0,3,std::uint32_t IMovementQueryPathingState::QueryRequestComplete(void* a_request)
+88436,0x1410c1720,0x14111e350,3,std::uint32_t IMovementQueryPathingState::QueryRequestIdle(void* a_request)
+88437,0x1410c17a0,0x14111e3d0,3,std::uint32_t IMovementQueryPathingState::QueryRequestPathing(void* a_request)
+88438,0x1410c1820,0x14111e450,3,std::uint32_t IMovementQueryPathingState::QueryRequestPending(void* a_request)
+88442,0x1410c1920,0x14111e550,2,"void MovementPathManagerArbiter::SyncPathingStateAndSolve(void* a_source, void* a_p2, void* a_p3)"
+88443,0x1410c1a50,0x14111e680,3,bool IMovementQueryPathingState::IsIdle()
+88444,0x1410c1ab0,0x14111e6e0,3,bool IMovementQueryPathingState::IsComplete()
+88445,0x1410c1b10,0x14111e740,3,bool IMovementQueryPathingState::IsPathing()
+88446,0x1410c1b70,0x14111e7a0,3,bool IMovementQueryPathingState::IsValid()
+88447,0x1410c1bd0,0x14111e800,3,bool IMovementQueryPathingState::IsPending()
 88498,0x1410c3ce0,0x141120930,3,bool IMovementState::CanStrafe()
 88499,0x1410c3d40,0x141120aa0,3,RE::ActorState::Sub_1410C3D40
 88558,0x1410c6ea0,0x141123bd0,2,"bool BSPathingSolution::GetClosestPointOnPath(NiPoint3* a_pos, void* a_out)"
