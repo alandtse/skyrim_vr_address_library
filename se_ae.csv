@@ -5054,6 +5054,7 @@ sseid,aeid,confidence,name
 37044,38072,1,
 37045,38073,1,Character::sub_*
 37047,38075,1,
+37128,38103,1,
 37131,38107,1,
 37132,38109,1,
 37135,38112,1,
@@ -5741,6 +5742,8 @@ sseid,aeid,confidence,name
 40705,41716,1,
 40748,41762,1,
 40749,41763,1,
+41022,42093,1,
+41044,42115,1,
 41104,42183,1,
 41105,42184,1,IMovementSetKeepOffsetFromActor::Func0_*
 41106,42185,1,MovementPlannerAgentKeepOffset::Func11_*
@@ -5771,17 +5774,21 @@ sseid,aeid,confidence,name
 41173,42261,1,MovementTweenerAgentNodeFollower::Func6_*
 41176,42264,1,MovementTweenerAgentNodeFollower::Func1_*
 41177,42265,1,
+41195,42280,1,
+41197,42282,1,
 41199,42284,1,
 41201,42286,1,
 41203,42288,1,PathingStreamLoadGame::Func6_*
 41204,42289,1,PathingStreamLoadGame::Func5_*
 41205,42290,1,PathingStreamLoadGame::Func4_*
+41207,42292,1,
 41208,42293,1,PathingStreamLoadGame::Func1_*
 41209,42294,1,PathingStreamLoadGame::Func12_*
 41210,42295,1,PathingStreamLoadGame::Func11_*
 41211,42296,1,PathingStreamLoadGame::Func0_*
 41212,42300,1,
 41213,42301,1,PathingStreamSaveGame::sub_*
+41214,42302,1,
 41216,42304,1,PathingStreamSaveGame::Func10_*
 41217,42305,1,PathingStreamSaveGame::Func9_*
 41218,42306,1,
@@ -5791,6 +5798,9 @@ sseid,aeid,confidence,name
 41224,42312,1,PathingStreamSaveGame::Func2_*
 41225,42313,1,PathingStreamSaveGame::Func1_*
 41226,42314,1,
+41227,42315,1,
+41234,42322,1,
+41235,42323,1,
 41255,42334,1,
 41256,42335,1,
 41257,42336,3,RE::PlayerControls::Ctor
@@ -8550,6 +8560,11 @@ sseid,aeid,confidence,name
 88455,90880,1,
 88499,90925,1,
 88500,90926,1,
+88501,90927,1,
+88502,90928,1,
+88503,90929,1,
+88504,90930,1,
+88505,90931,1,
 88540,90974,1,
 88558,90994,2,
 88930,91382,1,
@@ -8563,6 +8578,11 @@ sseid,aeid,confidence,name
 89030,91489,1,
 89343,91809,1,
 89344,91810,1,
+89345,91811,1,
+89346,91812,1,
+89347,91813,1,
+89348,91814,1,
+89349,91815,1,
 89391,91859,3,RE::ObstacleBuildQueue::ctor
 89392,91860,3,RE::ObstacleBuildQueue::dtor
 89395,91863,3,RE::ObstacleBuildQueue::Process
@@ -8581,6 +8601,7 @@ sseid,aeid,confidence,name
 89482,91951,1,MovementMessageDoor::Func4_*
 89483,91953,1,
 89484,91954,1,
+89486,91956,1,
 89487,91958,1,
 89489,91960,1,MovementMessageActivateDoor::Func1_*
 89490,91961,1,
@@ -8590,6 +8611,7 @@ sseid,aeid,confidence,name
 89498,91945,1,AutoRegisterFactory_gs_T1_T2_ge_::sub_*
 89499,91947,1,AutoRegisterPathing_gs_T1_T2_ge_::sub_*
 89502,91970,1,MovementMessageApproachingDoor::Func0_*
+89510,91982,1,
 89524,91996,1,MovementMessageWarpToMultiple::Func1_*
 89525,91997,1,
 89527,92000,1,MovementMessageWarpToMultiple::Func3_141104120
@@ -8599,6 +8621,7 @@ sseid,aeid,confidence,name
 89536,92004,1,MovementMessageWarpToMultiple::Func0_*
 89539,91988,1,
 89544,92015,1,
+89546,92017,1,
 89547,92018,1,
 89548,92019,1,
 89549,92020,1,
@@ -8611,6 +8634,7 @@ sseid,aeid,confidence,name
 89578,92049,1,MovementMessagePlayIdle::Func1_*
 89579,92050,1,
 89581,92052,1,MovementMessagePlayIdle::Func3_*
+89594,92066,1,
 89605,92078,1,
 89606,92079,1,MovementMessageSetStaticPath::Func1_*
 89607,92080,1,
@@ -21490,6 +21514,7 @@ sseid,aeid,confidence,name
 529580,42299,1,
 529581,42316,1,
 529582,42317,1,
+529583,42318,1,
 529691,43815,1,
 529693,44194,1,
 529708,44508,1,

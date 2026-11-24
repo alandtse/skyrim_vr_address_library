@@ -663,7 +663,7 @@
 22845,0x140326510,0x140335d50,3,RE::INISettingCollection::ReadFromFile
 22847,0x1403266e0,0x140335f20,2,void BSScript::Internal::Object::Release()
 22879,0x140328110,0x140337A00,2,"char Script::ExecuteCommand(TESObjectREFR** a_context, Script* a_script, uint32_t a_opcodeType, TESObjectREFR* a_targetRef, int32_t* a_offset, uint32_t a_scriptDataOffset, int32_t* a_opcodeOffset, uint32_t a_unk8, char a_partial, char a_skip)"
-22902,0x140329af0,0x1403393e0,2,int TESShout::GetLastValidWordIndex()
+22902,0x140329af0,0x1403393e0,2,std::int32_t TESShout::GetLastValidWordIndex()
 23073,0x14032ece0,0x14033e5a0,3,RE::ApplyPerkEntries
 23150,0x1403315f0,0x140340eb0,3,TESForm* BGSDefaultObjectManager::GetLeftHandEquip()
 23153,0x140331680,0x140340f40,3,TESForm* BGSDefaultObjectManager::GetVoiceEquip()
@@ -2041,7 +2041,7 @@
 34736,0x140581030,0x140588540,3,"undefined8 LoadGlobalData (uint a_datatype, BGSLoadFormBuffer * a_buffer, float * param_3, undefined8 param_4)"
 34738,0x140581430,0x140588940,3,"void InitGlobalData(std::uint32_t a_firstType, std::uint32_t a_lastType)"
 34740,0x1405816a0,0x140588bb0,3,"void FinishLoadGlobalData(std::uint32_t a_firstType, std::uint32_t a_lastType)"
-34799,0x140585000,0x14058c530,2,int Character::GetInitialDataType()
+34799,0x140585000,0x14058c530,2,std::int32_t Character::GetInitialDataType()
 34808,0x140585a70,0x14058cfa0,4,"ulonglong BGSLoadGameBuffer::sub_140585A70(BGSLoadGameBuffer *param_1,PlayerCharacter *param_2,undefined *param_3,char *param_4)"
 34811,0x1405864c0,0x14058d9f0,3,BGSSaveLoadManager::StartSaveLoadThread
 34818,0x140586de0,0x14058e310,3,RE::BGSSaveLoadManager::Save
@@ -2318,6 +2318,7 @@
 36899,0x1406071a0,0x14060fb20,3,void Actor::PreloadRaceModels(TESRace* a_race)
 36901,0x140607680,0x140610000,3,RE::Actor::SwitchRace
 36910,0x140607c70,0x1406106f0,4,void Character::SetAnimationDrivenMotion(bool a_active)
+36920,0x1406082b0,0x140610e10,2,bool Character::GetDefaultMaxSpeeds(MaxSpeeds* a_out)
 36922,0x140608560,0x1406110f0,2,void Actor::SetFlyState(std::uint32_t a_flyState)
 36925,0x140608850,0x1406113e0,4,"bool Actor::SetWantCasting (Actor * a_actor, CastingSource a_source, bool a_enable)"
 36926,0x1406089e0,0x140611570,4,void PlayerCharacter::SetSneaking (bool a_sneaking)
@@ -2336,6 +2337,7 @@
 36998,0x14060eaf0,0x140617700,3,void ActorState::GetAngle(NiPoint3* a_out)
 36999,0x14060eb20,0x140617730,2,void ActorState::GetProcessRotation(NiPoint3* a_out)
 37000,0x14060eb60,0x140617770,3,float ActorState::GetCurrentMovementSpeed()
+37001,0x14060eb80,0x140617790,3,bool ActorState::GetMaxSpeeds(MaxSpeeds* a_out)
 37002,0x14060ebd0,0x1406177e0,2,float ActorState::GetScaledBoundSize()
 37006,0x14060ece0,0x1406178f0,3,float ActorState::GetRadius()
 37007,0x14060ed30,0x140617940,3,float ActorState::GetWidth()
@@ -2346,9 +2348,36 @@
 37016,0x14060f0c0,0x140617cd0,4,float Actor::CalcEquippedWeight_14060F0C0 (Actor * a_this)
 37020,0x14060f240,0x140501530,2,SendAnimation
 37086,0x140612250,0x14061ae60,3,"void FindAvailableHorseFromHandles(void* a_handleSource, void* a_result)"
-37096,0x140612de0,0x14061b9f0,3,PostMovementMessageNewPath
-37097,0x140612f40,0x14061bb50,3,PostMovementMessagePathComplete
-37098,0x1406130a0,0x14061bcb0,3,PostMovementMessagePathFailed
+37089,0x140612520,0x14061b130,2,bool MovementMessagePool::SetActivateDoorHandler(void* a_handler)
+37090,0x140612660,0x14061b270,2,bool MovementMessagePool::SetActorCollisionHandler(void* a_handler)
+37091,0x1406127a0,0x14061b3b0,2,bool MovementMessagePool::SetApproachingDoorHandler(void* a_handler)
+37092,0x1406128e0,0x14061b4f0,2,bool MovementMessagePool::SetBlockedHandler(void* a_handler)
+37093,0x140612a20,0x14061b630,2,bool MovementMessagePool::SetFreezeDirectionHandler(void* a_handler)
+37094,0x140612b60,0x14061b770,2,bool MovementMessagePool::SetJumpHandler(void* a_handler)
+37095,0x140612ca0,0x14061b8b0,2,bool MovementMessagePool::SetMovementTypeChangeHandler(void* a_handler)
+37096,0x140612de0,0x14061b9f0,3,bool MovementMessagePool::SetNewPathHandler(void* a_handler)
+37097,0x140612f40,0x14061bb50,3,bool MovementMessagePool::SetPathCompleteHandler(void* a_handler)
+37098,0x1406130a0,0x14061bcb0,3,bool MovementMessagePool::SetPathFailedHandler(void* a_handler)
+37099,0x140613200,0x14061be10,2,bool MovementMessagePool::SetPlayIdleHandler(void* a_handler)
+37100,0x140613340,0x14061bf50,2,bool MovementMessagePool::SetSetStaticPathHandler(void* a_handler)
+37101,0x140613480,0x14061c090,2,bool MovementMessagePool::SetWarpToLocationHandler(void* a_handler)
+37102,0x1406135c0,0x14061c1d0,2,bool MovementMessagePool::SetWarpToMultipleHandler(void* a_handler)
+37108,0x140613c90,0x14061c8a0,2,bool MovementMessagePool::ClearActivateDoorHandler()
+37109,0x140613d40,0x14061c950,2,bool MovementMessagePool::ClearActorCollisionHandler()
+37110,0x140613df0,0x14061ca00,2,bool MovementMessagePool::ClearApproachingDoorHandler()
+37111,0x140613ea0,0x14061cab0,2,bool MovementMessagePool::ClearBlockedHandler()
+37112,0x140613f50,0x14061cb60,2,bool MovementMessagePool::ClearFreezeDirectionHandler()
+37113,0x140614000,0x14061cc10,2,bool MovementMessagePool::ClearJumpHandler()
+37114,0x1406140b0,0x14061ccc0,2,bool MovementMessagePool::ClearMovementTypeChangeHandler()
+37115,0x140614160,0x14061cd70,2,bool MovementMessagePool::ClearNewPathHandler()
+37116,0x140614230,0x14061ce40,2,bool MovementMessagePool::ClearPathCompleteHandler()
+37117,0x140614300,0x14061cf10,2,bool MovementMessagePool::ClearPathFailedHandler()
+37118,0x1406143d0,0x14061cfe0,2,bool MovementMessagePool::ClearPlayIdleHandler()
+37119,0x140614480,0x14061d090,2,bool MovementMessagePool::ClearSetStaticPathHandler()
+37120,0x140614530,0x14061d140,2,bool MovementMessagePool::ClearWarpToLocationHandler()
+37121,0x1406145e0,0x14061d1f0,2,bool MovementMessagePool::ClearWarpToMultipleHandler()
+37127,0x140614ce0,0x14061d8f0,2,void MovementMessagePool::InitFreeList()
+37128,0x140614da0,0x14061d9b0,3,MovementMessagePool* MovementMessagePool::MovementMessagePool()
 37356,0x140619ab0,0x1406226a0,3,sub_140619AB0
 37388,0x14061c6e0,0x1406252d0,2,"bool MovementMessagePool::Dispatch(Character* a_character, MovementMessage* a_message)"
 37390,0x14061c880,0x140625470,3,BSTEventSource<ActorKill::Event>* ActorKill::GetEventSource()
@@ -2596,6 +2625,7 @@
 38526,0x14065a940,0x140663c80,2,"void AIProcess::SetRegenDelay(std::uint32_t a_actorValue, float a_delay)"
 38529,0x14065aa20,0x140663d60,3,"bool AIProcess::RequestFollowPathing(Character* a_follower, Character* a_leader, BSPathingLocation* a_goal, float a_followDistance, bool* a_outBeyondHysteresis, std::uint8_t* a_outGoalClientData, float* a_outFollowerPathLength, float* a_outLeaderPathLength)"
 38530,0x14065b310,0x140664650,3,NiPointer<BGSAttackData>* AIProcess::GetAttackData()
+38544,0x14065b940,0x140664c80,3,bool AIProcess::GetCurrentMaxSpeeds(MaxSpeeds* a_out)
 38560,0x14065be00,0x140665140,3,AIProcess::UpdatePackageGuardHigh
 38568,0x14065c880,0x140665bd0,3,RE::AIProcess::SetBaseScale
 38606,0x14065f040,0x140668390,3,AIProcess::UpdatePackageHigh
@@ -2845,23 +2875,42 @@
 40747,0x1406f0a30,0x140717920,2,"void IMovementMessageInterface::QueueLocationEvent(BSPathingLocation* a_location, NiPoint3* a_direction)"
 40748,0x1406f0ad0,0x1407179c0,2,void IMovementMessageInterface::PostMessage(MovementMessage** a_message)
 40749,0x1406f0b60,0x140717a50,2,void IMovementMessageInterface::DispatchMessage(MovementMessage* a_message)
+41022,0x1406fe160,0x1407250e0,3,std::int32_t MovementMessageActorCollision::GetStaticType()
+41044,0x1406fead0,0x140725a50,3,std::int32_t MovementMessageMovementTypeChange::GetStaticType()
 41128,0x1407009a0,0x140727910,2,"void IMovementPlannerAgent::Update(float* a_deltaTime, void* a_plan)"
 41130,0x140700f70,0x140727f00,2,"void IMovementSetWarp::HandlePathingFailure(void* a_request, void* a_p2)"
 41131,0x1407011e0,0x140728170,2,void IMovementSetWarp::AdvanceWarpState(void* a_request)
 41132,0x140701290,0x140728220,2,void IMovementSetWarp::ResetWarpState(void* a_request)
+41195,0x140702eb0,0x140729e40,3,std::uint32_t PathingStreamLoadGame::GetType()
+41197,0x140702f30,0x140729ec0,2,std::uint16_t PathingStreamLoadGame::GetFormVersion()
 41199,0x140702f60,0x140729ef0,2,bool PathingStreamLoadGame::ReadBool(bool* a_out)
+41200,0x140702f90,0x140729f20,2,bool PathingStreamLoadGame::ReadInt8(std::int8_t* a_out)
 41201,0x140702fc0,0x140729f50,2,bool PathingStreamLoadGame::ReadUInt8(std::uint8_t* a_out)
+41202,0x140702ff0,0x140729f80,2,bool PathingStreamLoadGame::ReadInt16(std::int16_t* a_out)
 41203,0x140703020,0x140729fb0,2,bool PathingStreamLoadGame::ReadUInt16(std::uint16_t* a_out)
+41204,0x140703050,0x140729fe0,2,bool PathingStreamLoadGame::ReadInt32(std::int32_t* a_out)
 41205,0x140703080,0x14072a010,2,bool PathingStreamLoadGame::ReadUInt32(std::uint32_t* a_out)
+41206,0x1407030b0,0x14072a040,2,bool PathingStreamLoadGame::ReadInt64(std::int64_t* a_out)
+41207,0x1407030e0,0x14072a070,2,bool PathingStreamLoadGame::ReadUInt64(std::uint64_t* a_out)
 41208,0x140703110,0x14072a0a0,2,bool PathingStreamLoadGame::ReadFloat(float* a_out)
 41209,0x140703140,0x14072a0d0,2,bool PathingStreamLoadGame::ReadFormID(std::uint32_t* a_formID)
 41210,0x140703160,0x14072a0f0,2,"bool PathingStreamLoadGame::ReadFormIDWithResult(std::uint32_t* a_formID, bool* a_outSuccess)"
+41211,0x140703190,0x14072a120,2,bool PathingStreamLoadGame::ReadString(BSFixedString* a_out)
+41214,0x1407032a0,0x14072a230,3,std::uint32_t PathingStreamSaveGame::GetType()
 41216,0x140703320,0x14072a2b0,2,bool PathingStreamSaveGame::WriteBool(bool a_value)
+41217,0x140703360,0x14072a2f0,2,bool PathingStreamSaveGame::WriteInt8(std::int8_t a_value)
 41218,0x1407033a0,0x14072a330,2,bool PathingStreamSaveGame::WriteUInt8(std::uint8_t a_value)
+41219,0x1407033e0,0x14072a370,2,bool PathingStreamSaveGame::WriteInt16(std::int16_t a_value)
 41220,0x140703420,0x14072a3b0,2,bool PathingStreamSaveGame::WriteUInt16(std::uint16_t a_value)
+41221,0x140703460,0x14072a3f0,2,bool PathingStreamSaveGame::WriteInt32(std::int32_t a_value)
 41222,0x1407034a0,0x14072a430,2,bool PathingStreamSaveGame::WriteUInt32(std::uint32_t a_value)
+41223,0x1407034e0,0x14072a470,2,bool PathingStreamSaveGame::WriteInt64(std::int64_t a_value)
+41224,0x140703520,0x14072a4b0,2,bool PathingStreamSaveGame::WriteUInt64(std::uint64_t a_value)
 41225,0x140703560,0x14072a4f0,2,bool PathingStreamSaveGame::WriteFloat(float a_value)
 41226,0x1407035a0,0x14072a530,2,bool PathingStreamSaveGame::WriteFormID(std::uint32_t a_formID)
+41227,0x1407035c0,0x14072a550,2,bool PathingStreamSaveGame::WriteString(BSFixedString* a_string)
+41234,0x140703aa0,0x14072aa30,3,PathingStreamLoadGame* PathingStreamLoadGame::dtor_deleting(std::uint8_t a_flags)
+41235,0x140703ad0,0x14072aa60,3,PathingStreamSaveGame* PathingStreamSaveGame::dtor_deleting(std::uint8_t a_flags)
 41257,0x140704970,0x14072b900,3,RE::PlayerControls::Ctor
 41266,0x140705250,0x14072c0a0,3,RE::PlayerControls::SetActivateHandlerBlocked
 41271,0x140705530,0x14072c380,3,RE::PlayerControls::SendActionToInterestedActors
@@ -4555,6 +4604,11 @@
 88498,0x1410c3ce0,0x141120930,3,bool IMovementState::CanStrafe()
 88499,0x1410c3d40,0x141120aa0,3,float ActorState::SpeedToNormalized(float a_speed)
 88500,0x1410c3db0,0x141120b10,2,float ActorState::NormalizedToSpeed(float a_normalized)
+88501,0x1410c3e20,0x141120b80,2,float ActorState::RotationSpeedToNormalized(float a_rotationSpeed)
+88502,0x1410c3e90,0x141120bf0,2,float ActorState::NormalizedToRotationSpeed(float a_normalized)
+88503,0x1410c3f00,0x141120c60,2,float ActorState::AccelerationToNormalized(float a_acceleration)
+88504,0x1410c3f70,0x141120cd0,2,float ActorState::NormalizedToAcceleration(float a_normalized)
+88505,0x1410c3fe0,0x141120d40,2,float ActorState::AngularAccelerationToNormalized(float a_angularAcceleration)
 88535,0x1410c48e0,0x141121640,2,bool BSPathingSolution::IsNodeChainValid()
 88538,0x1410c4b80,0x1411218e0,2,"float BSPathingSolution::GetNodeRangeLength(float a_first, float a_last)"
 88539,0x1410c4f80,0x141121ce0,2,float BSPathingSolution::GetCurrentPathingNodesLength()
@@ -4571,8 +4625,13 @@
 89007,0x1410e3ec0,0x141140c00,2,std::uint32_t PathingSolutionEntryArray::PushBack(PathingSolutionEntry* a_entry)
 89018,0x1410e42e0,0x141141020,2,"void PathingSolutionEntryArray::ReleaseRange(std::uint32_t a_index, std::uint32_t a_count)"
 89030,0x1410e4750,0x141141490,2,"void PathingSolutionEntryArray::RemoveElements(std::uint32_t a_index, std::uint32_t a_count)"
-89343,0x1410fb2c0,0x141158000,2,"float NormalizeMovementSpeed(float a_speed, void* a_speedData)"
-89344,0x1410fb330,0x141158070,2,"float DenormalizeMovementSpeed(float a_normalized, void* a_speedData)"
+89343,0x1410fb2c0,0x141158000,2,"float NormalizeForwardSpeed(float a_speed, MaxSpeeds* a_speeds)"
+89344,0x1410fb330,0x141158070,2,"float DenormalizeForwardSpeed(float a_normalized, MaxSpeeds* a_speeds)"
+89345,0x1410fb380,0x1411580c0,3,"float NormalizeRotationSpeed(float a_speed, MaxSpeeds* a_speeds)"
+89346,0x1410fb410,0x141158150,2,"float DenormalizeRotationSpeed(float a_normalized, MaxSpeeds* a_speeds)"
+89347,0x1410fb490,0x1411581d0,3,"float AccelerationToNormalized(float a_acceleration, MaxSpeeds* a_speeds)"
+89348,0x1410fb4a0,0x1411581e0,3,"float NormalizedToAcceleration(float a_normalized, MaxSpeeds* a_speeds)"
+89349,0x1410fb4b0,0x1411581f0,2,"float AngularAccelerationToNormalized(float a_angularAcceleration, MaxSpeeds* a_speeds)"
 89364,0x1410fc9e0,0x141159720,3,void ProcessAvoidBoxChecks()
 89365,0x1410fcbf0,0x141159930,3,std::uint64_t CheckAvoidBox()
 89391,0x1410fe270,0x14115afb0,3,void ObstacleBuildQueue::ctor()
@@ -4580,8 +4639,15 @@
 89395,0x1410fe4c0,0x14115b200,3,void ObstacleBuildQueue::Process()
 89413,0x1410ff250,0x14115c160,2,bool MovementControllerNPC::AddAgentsAndArbiters(void* a_set)
 89473,0x141102ca0,0x14115fbc0,3,NullMovementState* NullMovementState::GetSingleton()
+89486,0x1411032f0,0x141160210,3,std::int32_t MovementMessageApproachingDoor::GetStaticType()
+89490,0x141103460,0x141160380,3,std::int32_t MovementMessageActivateDoor::GetStaticType()
 89510,0x141103c10,0x141160b30,3,std::int32_t MovementMessageWarpToLocation::GetStaticType()
+89525,0x141104060,0x141160f80,3,std::int32_t MovementMessageWarpToMultiple::GetStaticType()
+89546,0x1411047f0,0x141161710,3,std::int32_t MovementMessageBlocked::GetStaticType()
 89579,0x141106870,0x141163790,3,std::int32_t MovementMessagePlayIdle::GetStaticType()
+89594,0x141106ce0,0x141163c00,3,std::int32_t MovementMessageFreezeDirection::GetStaticType()
+89607,0x141107080,0x141163fa0,3,std::int32_t MovementMessageSetStaticPath::GetStaticType()
+89621,0x141107410,0x141164330,3,std::int32_t MovementMessageJump::GetStaticType()
 89781,0x14110bf30,0x141168e50,2,MovementArbiter* MovementArbiter::MovementArbiter()
 89782,0x14110bf70,0x141168e90,2,void MovementArbiter::~MovementArbiter()
 90331,0x14111cb60,0x141179a30,2,void MovementStateTweener::GetPosition(NiPoint3* a_out)
@@ -13430,8 +13496,10 @@
 528751,0x1401b69f0,0x1401c6a00,4,void BGSGrassManager::UpdateGrassRadius (GrassManager * param_1)
 529578,0x1407031b0,0x14072a140,2,bool PathingStreamLoadGame::ReadRequest(BSPathingRequest** a_out)
 529579,0x1407031e0,0x14072a170,2,bool PathingStreamLoadGame::ReadSolution(BSPathingSolution** a_out)
+529580,0x140703220,0x14072a1b0,2,bool PathingStreamLoadGame::ReadPlayIdleResult(IMovementPlayIdleResult** a_out)
 529581,0x1407035e0,0x14072a570,2,bool PathingStreamSaveGame::WriteRequest(BSPathingRequest** a_ref)
 529582,0x140703610,0x14072a5a0,2,bool PathingStreamSaveGame::WriteSolution(BSPathingSolution** a_ref)
+529583,0x140703650,0x14072a5e0,2,bool PathingStreamSaveGame::WritePlayIdleResult(IMovementPlayIdleResult** a_ref)
 529913,0x1407c1420,0x1407ec770,4,bool CombatBehaviorAction::Validate(CombatBehaviorTreeNode* node)
 529915,0x1407c6a00,0x1407f1d50,4,void CombatBehaviorThread::Ascend(CombatBehaviorTreeNode* a_node)
 529964,0x1407dff20,0x14080b270,4,CombatPathingRevolution::src/Advanced_Hook.h:90
