@@ -4229,6 +4229,7 @@
 97540,0x14123a6c0,0x141272b70,3,"bool BSScript::ObjectTypeInfo::BindNativeFunction(BSScript::IFunction* a_func, SkyrimScript::Logger* a_logger)"
 97546,0x14123ae90,0x141273340,2,"void* BSScript::ObjectTypeInfo::FindNamedStateInRange(void* a_states, std::uint32_t a_count, BSFixedString a_stateName)"
 97549,0x14123b040,0x1412734f0,2,"void* BSScript::ObjectTypeInfo::FindFunctionByNameInRange(void* a_functions, std::uint32_t a_count, BSFixedString a_fnName)"
+97550,0x14123b0d0,0x141273580,2,"std::int32_t BSScript::ObjectTypeInfo::InitVariableTypes(BSScript::Variable** a_cursor, std::int32_t a_mode)"
 97551,0x14123b1b0,0x141273660,3,"std::uint64_t AppendObjectTypeVariableNames(BSScript::ObjectTypeInfo* a_type, void* a_out, std::int32_t a_mode)"
 97559,0x14123bc10,0x1412740c0,3,"void* ScrapArrayBSFixedString_Init(void* a_array, std::int32_t a_reserve)"
 97568,0x14123beb0,0x141274360,3,"BSScript::ObjectTypeInfo** ObjectTypeInfoPtr_Assign(BSScript::ObjectTypeInfo** a_dest, BSScript::ObjectTypeInfo** a_source)"
@@ -4272,6 +4273,7 @@
 97724,0x141241e90,0x1412a28f0,2,"void BSScript::Array::ToString(char* a_buffer, std::uint32_t a_bufferSize, bool a_handleOnly)"
 97726,0x141242130,0x1412a2b90,3,BSScript::Internal::VirtualMachine::WriteArrayElement
 97734,0x141242840,0x141298590,2,bool BSScript::IStackCallbackFunctor::CanSave()
+97736,0x141242870,0x1412985c0,2,"BSScript::StackFrame* BSScript::StackFrame::Ctor(BSScript::Stack* a_stack, std::uint32_t a_size)"
 97737,0x141242b00,0x141298850,2,"bool BSScript::StackFrame::InitFrame(void* a_unk1, void* a_unk2, void* a_unk3, void* a_unk4)"
 97739,0x1412430c0,0x141298e10,2,BSScript::Stack::SaveFrame
 97740,0x141243650,0x1412993a0,2,BSScript::Stack::LoadFrame
@@ -4287,6 +4289,8 @@
 97755,0x1412463b0,0x14129c100,2,"void BSScript::Stack::GetVariablePageAndOffset(void* a_variable, std::int32_t a_index, std::uint32_t* a_page, std::uint32_t* a_offset)"
 97756,0x141246500,0x14129c250,2,"void* BSScript::Stack::PushBlankFrame(std::uint32_t a_unk1, bool a_unk2)"
 97760,0x141246fb0,0x14129cd00,3,BSScript::UnlinkedTypes::Function* FunctionInfo_Init(BSScript::UnlinkedTypes::Function* a_function)
+97769,0x141247310,0x14129d060,2,"std::uint32_t BSScript::Stack::AppendPage(BSTArray<BSScript::MemoryPageData, BSTSmallArrayHeapAllocator<48>>* a_pages, BSScript::MemoryPageData* a_page)"
+97773,0x141247890,0x14129d5e0,2,"void BSScript::Stack::ClearPages(BSTArray<BSScript::MemoryPageData, BSTSmallArrayHeapAllocator<48>>* a_pages, bool a_freeStorage)"
 97774,0x141247960,0x14129d6b0,2,void BSScript::StackFrame::Dtor()
 97776,0x141247c50,0x14129d9a0,3,BSFixedString* GetStaticEmptyVarNameAndType()
 97777,0x141247cf0,0x14129da40,2,void BSScript::Stack::DecRef()
@@ -4307,11 +4311,14 @@
 97798,0x1412486f0,0x1412a3b10,2,"void BSScript::SkipArgument(BSScript::BSBitReader*, std::uint32_t, std::uint32_t)"
 97800,0x141248990,0x1412a3db0,2,BSScript::ByteCode::Argument::Save
 97801,0x141248b70,0x1412a3f90,2,BSScript::ByteCode::Argument::Load
+97802,0x141248e20,0x1412a4240,2,BSScript::ByteCode::PackedInstructionStream* BSScript::ByteCode::PackedInstructionStream::Ctor()
+97803,0x141248e40,0x1412a4260,2,void BSScript::ByteCode::PackedInstructionStream::Dtor()
 97804,0x141248e60,0x1412a4280,2,void BSScript::ByteCode::PackedInstructionStream::MoveAssign(BSScript::ByteCode::PackedInstructionStream* a_rhs)
 97805,0x141248ec0,0x1412a42e0,4,std::int32_t GetInstructionNumberForOwnOffset(PackedInstructionStream* a_stream)
 97806,0x141248ed0,0x1412a42f0,2,std::uint32_t BSScript::ByteCode::PackedInstructionStream::GetBitOffsetForInstructionNumber(std::uint32_t a_instructionNumber)
 97807,0x141248fa0,0x1412a43c0,2,std::int32_t BSScript::ByteCode::PackedInstructionStream::GetInstructionNumberForOffset(std::uint32_t a_bitOffset)
 97809,0x141249060,0x1412a4480,2,void BSScript::ByteCode::PackedInstructionStream::ForEachInstruction(BSScript::ByteCode::PackedInstructionStream::InstructionFunctor* a_functor)
+97811,0x141249410,0x1412a4830,2,"BSScript::ByteCode::PackedInstructionStream* BSScript::ByteCode::PackedInstructionStream::Ctor(void* a_instructions, std::uint32_t a_numInstructionBits, std::uint16_t a_jumpTargetBitCount, std::uint8_t a_localVariableBitCount, std::uint8_t a_memberVariableBitCount)"
 97812,0x141249440,0x1412a4860,2,"bool BSScript::ByteCode::PackedInstructionStream::VisitNextInstructionOperands(BSScript::BSBitReader* a_reader, void (*a_visitArgument)(BSScript::BSBitReader*, std::uint32_t, std::uint32_t))"
 97813,0x141249640,0x1412a4a60,2,void BSScript::ByteCode::PackedInstructionStream::Release()
 97817,0x141249780,0x1412a4ba0,2,std::uint64_t BSScript::BSBitReader::ReadRawBits(std::size_t)
@@ -4527,6 +4534,7 @@
 98668,0x1412855f0,0x1412c6600,3,"void ArgumentArray_ConstructRange(void* a_array, std::uint64_t a_index, std::uint32_t a_count, BSScript::ByteCode::Argument* a_source)"
 98672,0x141285970,0x1412c68a0,3,"BSScript::ByteCode::Argument* Argument_CopyConstruct(BSScript::ByteCode::Argument* a_dest, BSScript::ByteCode::Argument* a_source)"
 98674,0x141285ac0,0x1412c69f0,3,void ArgumentArray_Destroy(void* a_array)
+98680,0x141285dc0,0x1412c6b30,2,void FunctionInfo_Dtor(void* a_this)
 98688,0x141286070,0x1412c6d40,3,"std::uint32_t ArgumentArray_Push(void* a_array, BSScript::ByteCode::Argument* a_argument)"
 98714,0x141287580,0x1412b95a0,2,void LinkContext::Dtor()
 98715,0x141287700,0x1412b9720,2,"void* BSScript::LinkerProcessor::ctor(void* a_context, void* a_owner)"
