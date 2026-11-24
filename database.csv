@@ -481,6 +481,8 @@
 18949,0x14027b6d0,0x14028ccd0,4,BSTEventSource::SendEvent
 19002,0x14027ddc0,0x14028f390,3,void TESObjectCELL::AttachReference3D(TESObjectREFR* a_ref)
 19024,0x140280160,0x140291770,3,"BSMultiBoundNode* TESObjectCELL::sub_140280160(const ObjectRefHandle& a_handle, bool a_flag)"
+19076,0x1402829a0,0x1402940d0,2,void* GetQueuedAttachMap()
+19078,0x140282bb0,0x1402942e0,2,void QueuedAttachMap_RemoveAll(void* a_map)
 19102,0x140283f90,0x1402956c0,3,TESObjectREFR::ClearData
 19105,0x1402850e0,0x140296810,3,void TESObjectREFR::InitItemImpl()
 19110,0x140285be0,0x140297310,3,void TESObjectREFR::AddLockChange()
@@ -3182,6 +3184,7 @@
 52699,0x140904b40,0x14093f2c0,3,bool HandlePolicy_TryPromoteHandle(std::uint64_t a_handle)
 52701,0x140904d30,0x14093f4b0,3,void ScatterTable_Grow(void* a_table)
 52702,0x140904e50,0x14093f5d0,3,bool HandlePolicy_TryDemoteHandle(std::uint64_t a_handle)
+52703,0x140904f20,0x14093f6a0,2,"void* ScatterTable_EraseAtIterator(void* a_table, void* a_result, void* a_iter)"
 52711,0x140905650,0x14093fdd0,3,void SkyrimScript::ObjectBindPolicy::CollectAndBindMergedScripts(VMHandle a_handle)
 52712,0x140905740,0x14093fec0,3,"void SkyrimScript::ObjectBindPolicy::CollectAndBindMergedScriptsFrom(VMHandle a_targetHandle, VMHandle a_sourceHandle)"
 52713,0x140905820,0x14093ffa0,3,void SkyrimScript::ObjectBindPolicy::BindPendingHandles()
@@ -3474,6 +3477,7 @@
 66894,0x140c03db0,0x140c3ec30,4,"void InsertFreeBlock (ScrapHeap * a_this, undefined param_2)"
 66895,0x140c03eb0,0x140c3ed30,4,"void RemoveFreeBlock (ScrapHeap * a_this, undefined * param_2)"
 66906,0x140c04980,0x140c3f800,3,"void BSTArray::RemoveElements(BSTArray* this, void* a_data, uint32_t a_dstIndex, uint32_t a_srcIndex, uint32_t a_count, uint32_t a_elemSize)"
+66911,0x140c04c90,0x140c3fb10,2,void NoOp()
 66962,0x140c06490,0x140c41310,3,RE::CRC32Calculator::SizeOfSize
 66963,0x140c064f0,0x140c41370,3,RE::CRC32Calculator::SizeOf32
 66964,0x140c06570,0x140c413f0,3,RE::CRC32Calculator::SizeOf64
@@ -4215,11 +4219,21 @@
 97469,0x141234410,0x14126c8c0,3,std::uint32_t Object::DecRef()
 97470,0x1412344c0,0x14126c970,2,bool BSScript::Internal::Object::HasMultipleReferences()
 97471,0x141234510,0x14126c9c0,3,"BSScript::Object* BSScript::Object::ctor(const BSTSmartPointer<BSScript::ObjectTypeInfo>& a_type, BSScript::IObjectHandlePolicy* a_policy, std::uint32_t a_numProperties)"
+97472,0x1412345b0,0x14126ca60,2,"std::int32_t BSScript::Object::CountReferencesToObject(void* a_target, void* a_visited, std::int32_t a_recurse)"
+97473,0x141234840,0x14126ccf0,2,bool BSScript::Object::TryLockForRunning(BSScript::Stack* a_stack)
+97474,0x141234870,0x14126cd20,2,void BSScript::Object::UnlockForRunning(BSScript::Stack* a_stack)
 97475,0x1412348b0,0x14126cd60,2,std::uint32_t BSScript::Internal::Object::SetLockStructureFlag()
+97476,0x1412348e0,0x14126cd90,2,std::uint32_t BSScript::Object::UnlockPendingReset()
 97477,0x141234910,0x14126cdc0,2,void ObjectCreateInfo_Resolve(void* a_info)
+97478,0x141234a50,0x14126cf00,2,void BSScript::Object::Initialize(std::uint32_t a_numProperties)
+97479,0x141234ae0,0x14126cf90,2,void BSScript::Object::ReleaseProperties()
+97480,0x141234b40,0x14126cff0,2,void BSScript::Object::ClearVariablesReferencingSelf()
 97481,0x141234e10,0x14126d2c0,2,void BSScript::Internal::Object::ClearVariableReferences()
 97482,0x141234f90,0x14126d440,2,void BSScript::Internal::Object::SetHandle(std::uint64_t a_handle)
+97484,0x141235050,0x14126d500,2,void ScrapBTreeSet_FreeSubtree(void* a_node)
+97486,0x1412353d0,0x14126d880,2,void ScrapBTreeSet_Destroy(void* a_this)
 97492,0x141235630,0x14126dae0,3,BSFixedString* BSScript::ObjectTypeInfo::GetInitialStateName()
+97493,0x1412356e0,0x14126db90,2,"bool ScrapBTreeSet_Insert(void* a_this, void* a_key, void* a_keyAlias)"
 97496,0x141235960,0x14126de10,2,void BSScript::Variable::SetDefault()
 97497,0x141235b10,0x14126dfc0,2,BSFixedString* BSScript::Variable::GetString()
 97498,0x141235be0,0x14126e090,2,void BSScript::Variable::SetString(BSFixedString* a_str)
@@ -4235,6 +4249,7 @@
 97509,0x141236e50,0x14126f300,2,void BSScript::Variable::Assign(const BSScript::Variable& a_src)
 97514,0x141237240,0x14126f6f0,2,void BSScript::ObjectTypeInfo::Dtor()
 97530,0x141237e10,0x1412702c0,2,"bool BSScript::ObjectTypeInfo::FindFunction(BSFixedString* a_stateName, BSFixedString* a_fnName, void* a_out, bool a_linkedOnly)"
+97532,0x1412380a0,0x141270550,2,std::int32_t BSScript::ObjectTypeInfo::GetVariableCount()
 97533,0x1412380e0,0x141270590,2,"void BSScript::ObjectTypeInfo::GatherVariables(void* a_out, bool a_flag)"
 97534,0x1412381b0,0x141270660,3,"void CollectObjectTypeVariableNames(BSScript::ObjectTypeInfo* a_type, void* a_out)"
 97536,0x141238410,0x1412708c0,2,void BSScript::ObjectTypeInfo::CopyInitialValues(Variable* a_dest)
@@ -4243,6 +4258,7 @@
 97540,0x14123a6c0,0x141272b70,3,"bool BSScript::ObjectTypeInfo::BindNativeFunction(BSScript::IFunction* a_func, BSScript::ErrorLogger* a_logger)"
 97546,0x14123ae90,0x141273340,2,"void* BSScript::ObjectTypeInfo::FindNamedStateInRange(void* a_states, std::uint32_t a_count, BSFixedString a_stateName)"
 97549,0x14123b040,0x1412734f0,2,"void* BSScript::ObjectTypeInfo::FindFunctionByNameInRange(void* a_functions, std::uint32_t a_count, BSFixedString a_fnName)"
+97550,0x14123b0d0,0x141273580,2,"std::int32_t BSScript::ObjectTypeInfo::InitVariableTypes(BSScript::Variable** a_cursor, std::int32_t a_mode)"
 97551,0x14123b1b0,0x141273660,3,"std::uint64_t AppendObjectTypeVariableNames(BSScript::ObjectTypeInfo* a_type, void* a_out, std::int32_t a_mode)"
 97559,0x14123bc10,0x1412740c0,3,"void* ScrapArrayBSFixedString_Init(void* a_array, std::int32_t a_reserve)"
 97568,0x14123beb0,0x141274360,3,"BSScript::ObjectTypeInfo** ObjectTypeInfoPtr_Assign(BSScript::ObjectTypeInfo** a_dest, BSScript::ObjectTypeInfo** a_source)"
@@ -4284,11 +4300,20 @@
 97722,0x141241e10,0x1412a2870,4,"BSTEventSink<BSScript::LogEvent>*** LogSinkArray_EndImpl(BSTArray<BSTEventSink<BSScript::LogEvent>*>* a_array, BSTEventSink<BSScript::LogEvent>*** a_out)"
 97723,0x141241e40,0x1412a28a0,4,void BSScript::Array::DestroyElements()
 97724,0x141241e90,0x1412a28f0,2,"void BSScript::Array::ToString(char* a_buffer, std::uint32_t a_bufferSize, bool a_handleOnly)"
+97725,0x141242060,0x1412a2ac0,2,void BSScript::Array::CollectSaveStrings()
 97726,0x141242130,0x1412a2b90,3,BSScript::Internal::VirtualMachine::WriteArrayElement
+97728,0x141242210,0x1412a2c70,2,bool BSScript::Internal::VirtualMachine::ReadArrayElement()
+97729,0x141242370,0x1412a2dd0,2,"void BSScript::Array::Ctor(BSScript::TypeInfo* a_elementType, std::uint32_t a_length)"
+97730,0x141242410,0x1412a2e70,2,void BSScript::Array::ClearObjectReferences()
+97731,0x1412425a0,0x1412a3000,2,"void BSScript::Array::CountReferencesToObject(void* a_target, void* a_visited, std::int32_t a_recurse)"
+97733,0x141242820,0x141298570,2,void BSScript::IStackCallbackFunctor::~IStackCallbackFunctor()
 97734,0x141242840,0x141298590,2,bool BSScript::IStackCallbackFunctor::CanSave()
+97735,0x141242850,0x1412985a0,2,void BSScript::IProfilePolicy::~IProfilePolicy()
+97736,0x141242870,0x1412985c0,2,"BSScript::StackFrame* BSScript::StackFrame::Ctor(BSScript::Stack* a_stack, std::uint32_t a_size)"
 97737,0x141242b00,0x141298850,2,"bool BSScript::StackFrame::InitFrame(void* a_unk1, void* a_unk2, void* a_unk3, void* a_unk4)"
 97739,0x1412430c0,0x141298e10,2,BSScript::Stack::SaveFrame
 97740,0x141243650,0x1412993a0,2,BSScript::Stack::LoadFrame
+97741,0x141244410,0x14129a160,3,"BSScript::Stack* BSScript::Stack::Ctor(BSScript::IMemoryPagePolicy* a_policy, BSScript::IProfilePolicy* a_profilePolicy, std::uint32_t a_stackID, BSScript::Stack::StackType a_stackType, BSTSmartPointer<BSScript::IStackCallbackFunctor>* a_callback)"
 97742,0x1412444c0,0x14129a210,3,void Stack::Dtor()
 97743,0x1412445a0,0x14129a2f0,2,void BSScript::Stack::PopFrame()
 97744,0x1412447e0,0x14129a530,2,"void* BSScript::Stack::PushFrame(void* a_unk1, void* a_unk2, void* a_unk3, void* a_unk4)"
@@ -4300,8 +4325,13 @@
 97755,0x1412463b0,0x14129c100,2,"void BSScript::Stack::GetVariablePageAndOffset(void* a_variable, std::int32_t a_index, std::uint32_t* a_page, std::uint32_t* a_offset)"
 97756,0x141246500,0x14129c250,2,"void* BSScript::Stack::PushBlankFrame(std::uint32_t a_unk1, bool a_unk2)"
 97760,0x141246fb0,0x14129cd00,3,BSScript::UnlinkedTypes::Function* FunctionInfo_Init(BSScript::UnlinkedTypes::Function* a_function)
+97769,0x141247310,0x14129d060,2,"std::uint32_t BSScript::Stack::AppendPage(BSTArray<BSScript::MemoryPageData, BSTSmallArrayHeapAllocator<48>>* a_pages, BSScript::MemoryPageData* a_page)"
+97771,0x1412473e0,0x14129d130,2,"bool AreFunctionsEquivalent(void* a_lhs, void* a_rhs)"
+97773,0x141247890,0x14129d5e0,2,"void BSScript::Stack::ClearPages(BSTArray<BSScript::MemoryPageData, BSTSmallArrayHeapAllocator<48>>* a_pages, bool a_freeStorage)"
 97774,0x141247960,0x14129d6b0,2,void BSScript::StackFrame::Dtor()
 97776,0x141247c50,0x14129d9a0,3,BSFixedString* GetStaticEmptyVarNameAndType()
+97777,0x141247cf0,0x14129da40,2,void BSScript::Stack::DecRef()
+97778,0x141247d30,0x14129da80,2,"void BSScript::Stack::PopLastPage(BSTArray<BSScript::MemoryPageData, BSTSmallArrayHeapAllocator<48>>* a_pages)"
 97780,0x141247e60,0x1412a3280,2,BSScript::ByteCode::Argument::Assign
 97781,0x141247f20,0x1412a3340,2,BSScript::ByteCode::Argument::GetIdentifier
 97782,0x141247f60,0x1412a3380,2,BSScript::ByteCode::Argument::GetString
@@ -4318,15 +4348,23 @@
 97798,0x1412486f0,0x1412a3b10,2,"void BSScript::SkipArgument(BSScript::BSBitReader*, std::uint32_t, std::uint32_t)"
 97800,0x141248990,0x1412a3db0,2,BSScript::ByteCode::Argument::Save
 97801,0x141248b70,0x1412a3f90,2,BSScript::ByteCode::Argument::Load
+97802,0x141248e20,0x1412a4240,2,BSScript::ByteCode::PackedInstructionStream* BSScript::ByteCode::PackedInstructionStream::Ctor()
+97803,0x141248e40,0x1412a4260,2,void BSScript::ByteCode::PackedInstructionStream::Dtor()
 97804,0x141248e60,0x1412a4280,2,void BSScript::ByteCode::PackedInstructionStream::MoveAssign(BSScript::ByteCode::PackedInstructionStream* a_rhs)
 97805,0x141248ec0,0x1412a42e0,4,std::int32_t GetInstructionNumberForOwnOffset(PackedInstructionStream* a_stream)
 97806,0x141248ed0,0x1412a42f0,2,std::uint32_t BSScript::ByteCode::PackedInstructionStream::GetBitOffsetForInstructionNumber(std::uint32_t a_instructionNumber)
 97807,0x141248fa0,0x1412a43c0,2,std::int32_t BSScript::ByteCode::PackedInstructionStream::GetInstructionNumberForOffset(std::uint32_t a_bitOffset)
 97809,0x141249060,0x1412a4480,2,void BSScript::ByteCode::PackedInstructionStream::ForEachInstruction(BSScript::ByteCode::PackedInstructionStream::InstructionFunctor* a_functor)
+97810,0x1412493c0,0x1412a47e0,2,std::uint32_t BSScript::ByteCode::PackedInstructionStream::GetCRC32()
+97811,0x141249410,0x1412a4830,2,"BSScript::ByteCode::PackedInstructionStream* BSScript::ByteCode::PackedInstructionStream::Ctor(void* a_instructions, std::uint32_t a_numInstructionBits, std::uint16_t a_jumpTargetBitCount, std::uint8_t a_localVariableBitCount, std::uint8_t a_memberVariableBitCount)"
 97812,0x141249440,0x1412a4860,2,"bool BSScript::ByteCode::PackedInstructionStream::VisitNextInstructionOperands(BSScript::BSBitReader* a_reader, void (*a_visitArgument)(BSScript::BSBitReader*, std::uint32_t, std::uint32_t))"
 97813,0x141249640,0x1412a4a60,2,void BSScript::ByteCode::PackedInstructionStream::Release()
+97814,0x1412496e0,0x1412a4b00,2,void BSScript::ByteCode::Argument::Dtor()
+97816,0x141249730,0x1412a4b50,2,std::uint32_t BSScript::BSBitReader::ReadRaw32Bits()
 97817,0x141249780,0x1412a4ba0,2,std::uint64_t BSScript::BSBitReader::ReadRawBits(std::size_t)
 97818,0x1412497e0,0x1412a4c00,2,"void BSScript::BSBitWriter::WriteRawBits(std::uint64_t a_value, std::size_t a_count)"
+97819,0x141249890,0x1412a4cb0,2,"void BSScript::SimpleAllocMemoryPagePolicy::Ctor(std::uint32_t a_minPageSize, std::uint32_t a_maxPageSize, std::uint32_t a_maxAllocatedMemory)"
+97820,0x1412498c0,0x1412a4ce0,2,void BSScript::IMemoryPagePolicy::~IMemoryPagePolicy()
 97831,0x141249f60,0x1412a5380,3,RE::BSScript::CompiledScriptLoader::GetClass
 97843,0x14124cfd0,0x1412a83f0,3,"bool BSScript::CompiledScriptLoader::CreateFunctionInfo(BSFixedString* a_name, BSScript::UnlinkedTypes::Function** a_out)"
 97902,0x1412502f0,0x1412ab710,3,"void FunctionInfo_Swap(BSScript::UnlinkedTypes::Function* a_dest, BSScript::UnlinkedTypes::Function* a_source)"
@@ -4537,8 +4575,19 @@
 98654,0x141284ae0,0x1412c5b30,3,void BSScript::UnlinkedTypes::Object::Dtor()
 98668,0x1412855f0,0x1412c6600,3,"void ArgumentArray_ConstructRange(void* a_array, std::uint64_t a_index, std::uint32_t a_count, BSScript::ByteCode::Argument* a_source)"
 98672,0x141285970,0x1412c68a0,3,"BSScript::ByteCode::Argument* Argument_CopyConstruct(BSScript::ByteCode::Argument* a_dest, BSScript::ByteCode::Argument* a_source)"
+98673,0x141285a00,0x1412c6930,2,void BSScript::Internal::NativeFunctionStub::Ctor(void* a_params)
 98674,0x141285ac0,0x1412c69f0,3,void ArgumentArray_Destroy(void* a_array)
+98680,0x141285dc0,0x1412c6b30,2,void FunctionInfo_Dtor(void* a_this)
 98688,0x141286070,0x1412c6d40,3,"std::uint32_t ArgumentArray_Push(void* a_array, BSScript::ByteCode::Argument* a_argument)"
+98700,0x1412865e0,0x1412c7240,2,void BSScript::VarNameAndTypeArray::Ctor()
+98701,0x141286600,0x1412c7260,2,"void BSScript::VarNameAndTypeArray::Ctor(std::uint16_t a_numParams, std::uint16_t a_numLocals)"
+98702,0x1412866e0,0x1412c7340,2,void BSScript::VarNameAndTypeArray::Clear()
+98703,0x141286750,0x1412c73b0,2,void BSScript::VarNameAndTypeArray::MoveAssign(BSScript::VarNameAndTypeArray* a_other)
+98704,0x1412867f0,0x1412c7450,2,void VarNameAndType_DeleteArray(void* a_array)
+98705,0x141286880,0x1412c74e0,2,"void VarNameCRCIndex_Build(void* a_index, BSScript::VarNameAndTypeArray* a_array)"
+98706,0x141286a00,0x1412c7660,2,void VarNameCRCIndex_Free(void* a_index)
+98707,0x141286a60,0x1412c76c0,2,"bool VarNameCRCIndex_Find(void* a_index, BSScript::VarNameAndTypeArray* a_array, BSFixedString* a_name, std::uint32_t* a_outIndex)"
+98708,0x141286b70,0x1412c77d0,2,void BSScript::VarNameAndType::Ctor()
 98714,0x141287580,0x1412b95a0,2,void LinkContext::Dtor()
 98715,0x141287700,0x1412b9720,2,"void* BSScript::LinkerProcessor::ctor(void* a_context, void* a_owner)"
 98716,0x1412877c0,0x1412b97e0,2,"bool BSScript::LinkerProcessor::ResolveTypeInfo(void* a_unk1, void* a_unk2)"
@@ -4559,6 +4608,7 @@
 98735,0x14128b880,0x1412bd9a0,2,"bool BSScript::LinkerProcessor::CheckStatesInHierarchy(void* a_type, void* a_context, std::int32_t a_mode)"
 98736,0x14128b9d0,0x1412bdaf0,2,"bool BSScript::LinkerProcessor::CheckFunctionsInHierarchy(void* a_type, void* a_state, void* a_context, std::int32_t a_mode)"
 98738,0x14128bb80,0x1412bdca0,2,"bool BSScript::LinkerProcessor::CheckStateAgainstEmptyState(void* a_type, void* a_state, void* a_context, std::int32_t a_mode)"
+98757,0x14128cb30,0x1412bec70,2,void BSScript::Internal::NativeFunctionStub::CreationParameters::Ctor()
 98758,0x14128cbd0,0x1412bed10,2,LinkContext* LinkContext::ctor()
 98759,0x14128cce0,0x1412bee20,3,Object* BSScript::UnlinkedTypes::Object::Ctor()
 98769,0x14128d280,0x1412bf5b0,2,"bool BSScript::LinkerProcessor::CheckOverriddenFunctionSignature(void* a_context, void* a_fnName)"
@@ -4566,8 +4616,11 @@
 98771,0x14128d820,0x1412bfb50,2,"bool BSScript::LinkerProcessor::CheckStateFunctionAgainstEmptyState(void* a_context, void* a_fnName)"
 98773,0x14128d960,0x1412bfc90,2,BSScript::LinkerProcessor* BSScript::LinkerProcessor::dtor_deleting(std::uint32_t a_flags)
 98810,0x14128ef60,0x1412c1320,2,void BSScript::LinkerProcessor::SetLoader(BSScript::ILoader* a_loader)
+98811,0x14128ef70,0x1412c78a0,2,BSFixedString* GetStaticUnknownBSFixedString()
 98812,0x14128f000,0x1412c7930,2,BSScript::UnlinkedTypes::Function* FunctionInfo_Ctor(BSScript::UnlinkedTypes::Function* a_function)
 98813,0x14128f0d0,0x1412c7a00,2,BSScript::Internal::ScriptFunction* BSScript::Internal::ScriptFunction::ctor(const BSScript::UnlinkedTypes::Function* a_function)
+98814,0x14128f260,0x1412c7b90,2,void BSScript::Internal::ScriptFunction::~ScriptFunction()
+98835,0x14128f690,0x1412c7fc0,2,void BSScript::Internal::ScriptFunction::dtor_deleting()
 98844,0x14128f900,0x1412c8230,3,BSFadeNode* BSFadeNode::BSFadeNode()
 98893,0x141291c30,0x1412ca540,3,"void BSShaderProperty::SetFlags(EShaderPropertyFlag8 a_flag, bool a_set)"
 98897,0x141291d40,0x1412ca650,3,"void BSShaderProperty::SetMaterial(BSShaderMaterial* a_material, bool a_unk1)"
