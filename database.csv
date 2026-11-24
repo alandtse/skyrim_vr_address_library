@@ -3173,18 +3173,18 @@
 52662,0x1409032c0,0x14093da40,3,RE::SkyrimScript::HandlePolicy::ConvertHandleToString
 52666,0x1409037d0,0x14093df50,3,void SkyrimScript::HandlePolicy::ProcessPromotionRequests()
 52667,0x1409039c0,0x14093e140,3,void SkyrimScript::HandlePolicy::Revert()
-52678,0x1409040b0,0x14093e830,3,"bool ScatterTable_EraseKey(void* a_table, void* a_buckets, std::uint32_t a_hash, std::uint64_t* a_key)"
-52679,0x1409041a0,0x14093e920,3,void HandlePolicy_ReconcilePromotionRequests(void* a_requests)
-52680,0x140904250,0x14093e9d0,3,"bool HandlePolicy_RefCountMapInsert(void* a_table, void* a_buckets, std::uint32_t a_hash, std::uint64_t* a_key, std::uint32_t* a_value)"
-52681,0x1409043c0,0x14093eb40,3,"bool HandlePolicy_RequestMapInsert(void* a_table, void* a_buckets, std::uint32_t a_hash, std::uint64_t* a_key, bool* a_value)"
-52682,0x140904540,0x14093ecc0,3,void HandlePolicy_RequestMapDestroy(void* a_table)
-52684,0x140904650,0x14093edd0,3,"bool HandlePolicy_MergePromotionRequest(void* a_policy, std::uint64_t a_handle, bool a_promote)"
-52688,0x140904810,0x14093ef90,3,"void* ScatterTable_Begin(void* a_table, void* a_result)"
-52689,0x140904850,0x14093efd0,3,"void* ScatterTable_End(void* a_table, void* a_result)"
-52699,0x140904b40,0x14093f2c0,3,bool HandlePolicy_TryPromoteHandle(std::uint64_t a_handle)
-52701,0x140904d30,0x14093f4b0,3,void ScatterTable_Grow(void* a_table)
-52702,0x140904e50,0x14093f5d0,3,bool HandlePolicy_TryDemoteHandle(std::uint64_t a_handle)
-52703,0x140904f20,0x14093f6a0,2,"void* ScatterTable_EraseAtIterator(void* a_table, void* a_result, void* a_iter)"
+52678,0x1409040b0,0x14093e830,3,"bool ScatterTable::EraseKey(void* a_buckets, std::uint32_t a_hash, std::uint64_t* a_key)"
+52679,0x1409041a0,0x14093e920,3,void SkyrimScript::HandlePolicy::ReconcilePromotionRequests(void* a_requests)
+52680,0x140904250,0x14093e9d0,3,"bool SkyrimScript::HandlePolicy::RefCountMapInsert(void* a_table, void* a_buckets, std::uint32_t a_hash, std::uint64_t* a_key, std::uint32_t* a_value)"
+52681,0x1409043c0,0x14093eb40,3,"bool SkyrimScript::HandlePolicy::RequestMapInsert(void* a_table, void* a_buckets, std::uint32_t a_hash, std::uint64_t* a_key, bool* a_value)"
+52682,0x140904540,0x14093ecc0,3,void SkyrimScript::HandlePolicy::RequestMapDestroy(void* a_table)
+52684,0x140904650,0x14093edd0,3,"bool SkyrimScript::HandlePolicy::MergePromotionRequest(void* a_policy, std::uint64_t a_handle, bool a_promote)"
+52688,0x140904810,0x14093ef90,3,void* ScatterTable::Begin(void* a_result)
+52689,0x140904850,0x14093efd0,3,void* ScatterTable::End(void* a_result)
+52699,0x140904b40,0x14093f2c0,3,bool SkyrimScript::HandlePolicy::TryPromoteHandle(std::uint64_t a_handle)
+52701,0x140904d30,0x14093f4b0,3,void ScatterTable::Grow()
+52702,0x140904e50,0x14093f5d0,3,bool SkyrimScript::HandlePolicy::TryDemoteHandle(std::uint64_t a_handle)
+52703,0x140904f20,0x14093f6a0,2,"void* ScatterTable::EraseAtIterator(void* a_result, void* a_iter)"
 52711,0x140905650,0x14093fdd0,3,void SkyrimScript::ObjectBindPolicy::CollectAndBindMergedScripts(VMHandle a_handle)
 52712,0x140905740,0x14093fec0,3,"void SkyrimScript::ObjectBindPolicy::CollectAndBindMergedScriptsFrom(VMHandle a_targetHandle, VMHandle a_sourceHandle)"
 52713,0x140905820,0x14093ffa0,3,void SkyrimScript::ObjectBindPolicy::BindPendingHandles()
@@ -3266,7 +3266,7 @@
 53242,0x14092fd80,0x14096a3d0,3,bool SkyrimVM::LoadSleepEvents(void* a_storage)
 53243,0x140930020,0x14096a670,3,bool SkyrimVM::LoadTrackedStatsEvents(void* a_storage)
 53244,0x1409302c0,0x14096a910,3,bool SkyrimVM::LoadInventoryEventFilters(void* a_storage)
-53331,0x140936870,0x140970f50,3,void HandlePolicy_RefCountMapDestroy(void* a_table)
+53331,0x140936870,0x140970f50,3,void SkyrimScript::HandlePolicy::RefCountMapDestroy(void* a_table)
 53355,0x140936ee0,0x1409715c0,3,void SkyrimScript::ObjectBindPolicy::~ObjectBindPolicy()
 53512,0x140939e20,0x1409743d0,3,SkyrimScript::HandlePolicy* SkyrimScript::HandlePolicy::dtor_deleting(std::uint32_t a_flags)
 53567,0x14093aae0,0x140975110,2,"BSScript::Variable* MakeStringVariable(BSScript::Variable* a_out, const char* a_string)"
@@ -4230,10 +4230,10 @@
 97480,0x141234b40,0x14126cff0,2,void BSScript::Object::ClearVariablesReferencingSelf()
 97481,0x141234e10,0x14126d2c0,2,void BSScript::Internal::Object::ClearVariableReferences()
 97482,0x141234f90,0x14126d440,2,void BSScript::Internal::Object::SetHandle(std::uint64_t a_handle)
-97484,0x141235050,0x14126d500,2,void ScrapBTreeSet_FreeSubtree(void* a_node)
-97486,0x1412353d0,0x14126d880,2,void ScrapBTreeSet_Destroy(void* a_this)
+97484,0x141235050,0x14126d500,2,void ScrapBTreeSet::FreeSubtree(void* a_node)
+97486,0x1412353d0,0x14126d880,2,void ScrapBTreeSet::Destroy()
 97492,0x141235630,0x14126dae0,3,BSFixedString* BSScript::ObjectTypeInfo::GetInitialStateName()
-97493,0x1412356e0,0x14126db90,2,"bool ScrapBTreeSet_Insert(void* a_this, void* a_key, void* a_keyAlias)"
+97493,0x1412356e0,0x14126db90,2,"bool ScrapBTreeSet::Insert(void* a_key, void* a_keyAlias)"
 97496,0x141235960,0x14126de10,2,void BSScript::Variable::SetDefault()
 97497,0x141235b10,0x14126dfc0,2,BSFixedString* BSScript::Variable::GetString()
 97498,0x141235be0,0x14126e090,2,void BSScript::Variable::SetString(BSFixedString* a_str)
@@ -4577,16 +4577,16 @@
 98672,0x141285970,0x1412c68a0,3,"BSScript::ByteCode::Argument* Argument_CopyConstruct(BSScript::ByteCode::Argument* a_dest, BSScript::ByteCode::Argument* a_source)"
 98673,0x141285a00,0x1412c6930,2,void BSScript::Internal::NativeFunctionStub::Ctor(void* a_params)
 98674,0x141285ac0,0x1412c69f0,3,void ArgumentArray_Destroy(void* a_array)
-98680,0x141285dc0,0x1412c6b30,2,void FunctionInfo_Dtor(void* a_this)
+98680,0x141285dc0,0x1412c6b30,2,void FunctionInfo::Dtor()
 98688,0x141286070,0x1412c6d40,3,"std::uint32_t ArgumentArray_Push(void* a_array, BSScript::ByteCode::Argument* a_argument)"
 98700,0x1412865e0,0x1412c7240,2,void BSScript::VarNameAndTypeArray::Ctor()
 98701,0x141286600,0x1412c7260,2,"void BSScript::VarNameAndTypeArray::Ctor(std::uint16_t a_numParams, std::uint16_t a_numLocals)"
 98702,0x1412866e0,0x1412c7340,2,void BSScript::VarNameAndTypeArray::Clear()
 98703,0x141286750,0x1412c73b0,2,void BSScript::VarNameAndTypeArray::MoveAssign(BSScript::VarNameAndTypeArray* a_other)
-98704,0x1412867f0,0x1412c7450,2,void VarNameAndType_DeleteArray(void* a_array)
-98705,0x141286880,0x1412c74e0,2,"void VarNameCRCIndex_Build(void* a_index, BSScript::VarNameAndTypeArray* a_array)"
-98706,0x141286a00,0x1412c7660,2,void VarNameCRCIndex_Free(void* a_index)
-98707,0x141286a60,0x1412c76c0,2,"bool VarNameCRCIndex_Find(void* a_index, BSScript::VarNameAndTypeArray* a_array, BSFixedString* a_name, std::uint32_t* a_outIndex)"
+98704,0x1412867f0,0x1412c7450,2,void VarNameAndType::DeleteArray(void* a_array)
+98705,0x141286880,0x1412c74e0,2,void VarNameCRCIndex::Build(BSScript::VarNameAndTypeArray* a_array)
+98706,0x141286a00,0x1412c7660,2,void VarNameCRCIndex::Free()
+98707,0x141286a60,0x1412c76c0,2,"bool VarNameCRCIndex::Find(BSScript::VarNameAndTypeArray* a_array, BSFixedString* a_name, std::uint32_t* a_outIndex)"
 98708,0x141286b70,0x1412c77d0,2,void BSScript::VarNameAndType::Ctor()
 98714,0x141287580,0x1412b95a0,2,void LinkContext::Dtor()
 98715,0x141287700,0x1412b9720,2,"void* BSScript::LinkerProcessor::ctor(void* a_context, void* a_owner)"
@@ -4617,7 +4617,7 @@
 98773,0x14128d960,0x1412bfc90,2,BSScript::LinkerProcessor* BSScript::LinkerProcessor::dtor_deleting(std::uint32_t a_flags)
 98810,0x14128ef60,0x1412c1320,2,void BSScript::LinkerProcessor::SetLoader(BSScript::ILoader* a_loader)
 98811,0x14128ef70,0x1412c78a0,2,BSFixedString* GetStaticUnknownBSFixedString()
-98812,0x14128f000,0x1412c7930,2,BSScript::UnlinkedTypes::Function* FunctionInfo_Ctor(BSScript::UnlinkedTypes::Function* a_function)
+98812,0x14128f000,0x1412c7930,2,BSScript::UnlinkedTypes::Function* FunctionInfo::Ctor(BSScript::UnlinkedTypes::Function* a_function)
 98813,0x14128f0d0,0x1412c7a00,2,BSScript::Internal::ScriptFunction* BSScript::Internal::ScriptFunction::ctor(const BSScript::UnlinkedTypes::Function* a_function)
 98814,0x14128f260,0x1412c7b90,2,void BSScript::Internal::ScriptFunction::~ScriptFunction()
 98835,0x14128f690,0x1412c7fc0,2,void BSScript::Internal::ScriptFunction::dtor_deleting()
