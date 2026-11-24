@@ -1689,19 +1689,25 @@
 29646,0x14046a9c0,0x14047a980,3,bool NavMeshObstacleManager::AttachTaskToTaskletManager(ObstacleTaskData* a_task)
 29647,0x14046ab80,0x14047ab40,2,void NavMeshObstacleManager::AddObstaclesForRef(TESObjectREFR* a_ref)
 29648,0x14046b120,0x14047b0e0,2,void NavMeshObstacleManager::RemoveObstaclesForRef(std::uint32_t a_formID)
+29649,0x14046b340,0x14047b300,2,void NavMeshObstacleManager::AddBodyListeners(bhkRigidBody* a_body)
+29651,0x14046b420,0x14047b3e0,2,void NavMeshObstacleManager::RemoveBodyListeners(bhkRigidBody* a_body)
 29671,0x14046d330,0x14047d2f0,2,"bool ScatterTable::EraseEntryRefCounted(void* a_table, void* a_entries, std::uint32_t a_hash, std::uint32_t* a_key)"
+29672,0x14046d460,0x14047d420,2,"bool ScatterTable::EraseEntryRefCounted64(void* a_table, void* a_entries, std::uint32_t a_hash, std::uint64_t* a_key)"
 29673,0x14046d590,0x14047d550,2,"void NavMeshObstacleManager::GatherTaskPortalEdges(BSTArray<ObstacleTaskData*>* a_tasks, void* a_context)"
 29674,0x14046d960,0x14047d920,2,"void NavMeshObstacleManager::ExpandRelinkInputs(void* a_edgeSet, BSTArray<NavmeshTriangleRef>* a_outInputs)"
 29681,0x14046e0e0,0x14047e0a0,3,"bool NavMeshObstacleManager::RemovePendingRef(void* a_pendingRefs, TESObjectREFR** a_ref)"
 29684,0x14046e260,0x14047e220,3,"bool ScatterTable::SetEntry_14046E260(void* a_table, void* a_entries, std::uint32_t a_hash, std::uint32_t* a_key, void** a_value)"
 29685,0x14046e3d0,0x14047e390,3,"bool ScatterTable::SetEntry_14046E3D0(void* a_table, void* a_entries, std::uint32_t a_hash, std::uint32_t* a_key, void** a_value)"
 29686,0x14046e540,0x14047e500,3,"bool ScatterTable::SetEntryRefCounted_14046E540(void* a_table, void* a_entries, std::uint32_t a_hash, std::uint32_t* a_key, void** a_value)"
+29687,0x14046e710,0x14047e6d0,2,"bool ScatterTable::SetEntryRefCounted64(void* a_table, void* a_entries, std::uint32_t a_hash, std::uint64_t* a_key, void** a_value)"
 29688,0x14046e9e0,0x14047e9a0,3,"void ScatterTable::InitScrapAllocated(void* a_table, std::uint32_t a_count)"
 29689,0x14046ead0,0x14047ea90,3,BSNavmeshReferenceObstacleArray* BSNavmeshReferenceObstacleArray::BSNavmeshReferenceObstacleArray()
 29730,0x14046fb80,0x14047fb40,2,"void* NavMeshObstacleManager::CellSetBegin(void* a_set, void* a_outIter)"
+29731,0x14046fba0,0x14047fb60,3,void* BSTArray::begin_thunk(void* a_out)
 29732,0x14046fbc0,0x14047fb80,2,"void* NavMeshObstacleManager::GetArrayBeginThunk(void* a_array, void** a_outIter)"
 29741,0x14046fd80,0x14047fd40,2,"bool NavMeshObstacleManager::CollectLinkedEdges(NavmeshTriangleRef* a_triangle, void* a_edgesA, void* a_edgesB)"
 29742,0x14046ff60,0x14047ff20,2,"void* NavMeshObstacleManager::CellSetEnd(void* a_set, void* a_outIter)"
+29743,0x14046ff80,0x14047ff40,3,void* BSTArray::end_thunk(void* a_out)
 29744,0x14046ffa0,0x14047ff60,2,"void* NavMeshObstacleManager::GetArrayEndThunk(void* a_array, void** a_outIter)"
 29753,0x140470110,0x1404800d0,3,std::uint32_t NavMeshObstacleManager::GetQueuedTaskCount()
 29754,0x140470180,0x140480140,2,"void NavMeshObstacleManager::GatherOverlappingCells(void* a_obstacleRef, void* a_outCells)"
@@ -1709,8 +1715,12 @@
 29760,0x1404707b0,0x140480770,3,std::uint32_t NavMeshObstacleManager::GetCompletedTaskCount()
 29765,0x140470860,0x140480820,2,void* GetTaskletGroupHandle()
 29768,0x140470af0,0x140480ab0,2,void ScatterTable::Grow(void* a_table)
+29769,0x140470c10,0x140480bd0,2,void ScatterTable::Grow64(void* a_table)
 29771,0x140470d90,0x140480d50,2,"void* BSTArray::EraseAtIterator(void* a_array, void* a_outIterator, void* a_iterator)"
+29772,0x140470e30,0x140480df0,2,"void BSTArray::EraseRangeRefCounted(std::uint32_t a_index, std::uint32_t a_count)"
+29779,0x140471770,0x140481730,3,void* BSTArray::begin(void* a_out)
 29781,0x1404717b0,0x140481770,2,"void* NavMeshObstacleManager::GetArrayBegin(void* a_array, void** a_outIter)"
+29785,0x140471850,0x140481810,3,void* BSTArray::end(void* a_out)
 29787,0x1404718b0,0x140481870,2,"void* NavMeshObstacleManager::GetArrayEnd(void* a_array, void** a_outIter)"
 29793,0x140471de0,0x140481da0,2,"std::int32_t ObstacleTaskData::CompareOperations(void* a_lhs, void* a_rhs)"
 29794,0x140472080,0x140482040,3,void ObstacleTaskData::SortOperations()
@@ -3420,6 +3430,10 @@
 59653,0x140a5be20,0x140a96820,4,"void hkpClosestRayHitCollector::AddRayHit(const hkpCdBody& a_body, const hkpShapeRayCastCollectorOutput& a_hitInfo)"
 59887,0x140a60fa0,0x140a9b9a0,3,"std::int32_t hkpShapeCollectionFilter::NumShapeKeyHitsLimitBreached(const hkpCollisionInput& a_input, const hkpCdBody& a_bodyA, const hkpCdBody& a_bodyB, const hkpBvTreeShape* a_shapeB, hkAabb& a_AABB, hkpShapeKey* a_shapeKeysInOut, std::int32_t a_shapeKeysCapacity)"
 59971,0x140a640c0,0x140A9EAC0,4,"RE::hkpCylinderShape* hkpCylinderShape::createCylinderShape(RE::hkpCylinderShape*, RE::hkVector4&, RE::hkVector4&, float, int)"
+60090,0x140a6c2f0,0x140aa6cf0,2,void hkpRigidBody::AddEntityListener(void* a_listener)
+60091,0x140a6c3e0,0x140aa6de0,2,void hkpRigidBody::RemoveEntityListener(void* a_listener)
+60092,0x140a6c4a0,0x140aa6ea0,2,void hkpRigidBody::AddEntityActivationListener(void* a_listener)
+60093,0x140a6c590,0x140aa6f90,2,void hkpRigidBody::RemoveEntityActivationListener(void* a_listener)
 60094,0x140a6c5e0,0x140aa6fe0,4,void hkpEntity::AddContactListener(hkpContactListener* a_listener)
 60095,0x140a6c680,0x140aa7080,4,void hkpEntity::RemoveContactListener(hkpContactListener* a_listener)
 60096,0x140a6c730,0x140aa7130,4,void hkpEntity::Activate
