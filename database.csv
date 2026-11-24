@@ -1611,6 +1611,8 @@
 28751,0x1404353f0,0x140444f40,4,void TESPackage::SetPackType(PACKAGE_PROCEDURE_TYPE a_type)
 28752,0x1404359c0,0x140445510,4,void TESPackage::SetHasPackageLocation(const PackageLocation* a_location)
 28754,0x140435e60,0x1404459b0,4,void TESPackage::SetPackageTarget(const PackageTarget* a_target)
+28767,0x1404363c0,0x140445f10,3,std::uint8_t TESPackage::GetInterruptOverrideType()
+28768,0x1404363d0,0x140445f20,3,void TESPackage::SetInterruptOverrideType(std::uint8_t a_type)
 28769,0x1404363e0,0x140445f30,2,std::uint8_t TESPackage::GetMaxSpeed()
 28781,0x140437690,0x1404471e0,2,TESWorldSpace* TESPackage::GetLocationWorldSpace(Actor* a_actor)
 28782,0x1404378c0,0x140447410,2,TESObjectCELL* TESPackage::GetLocationCell(Actor* a_actor)
@@ -2090,6 +2092,7 @@
 35923,0x1405c2740,0x1405cac20,4,void TaskQueueInterface::QueueNodeDetach(NiAVObject* a_obj) src\RE\T/TaskQueueInterface.cpp:28
 35929,0x1405c2ad0,0x1405cafb0,3,void TaskQueueInterface::QueueUpdateNiObject(NiAVObject* a_obj)
 35934,0x1405c3010,0x1405cb5b0,4,"void TaskQueueInterface::QueueUpdateDestructibleObject(TESObjectREFR* a_refr, float a_damage, bool a_arg3, TESObjectREFR* a_cause)"
+35940,0x1405c34b0,0x1405cba50,2,"void BSTaskPool::QueueApplyAttackStaminaCost(Actor* a_actor, bool a_leftHand, bool a_flag)"
 35941,0x1405c3570,0x1405cbb10,3,void TaskQueueInterface::QueueActorKnockParalyze(Actor* a_actor)
 35978,0x1405c5220,0x1405cd7c0,3,"void TaskQueueInterface::QueueAddRipple(float a_scale, const NiPoint3& a_pos)"
 35987,0x1405c58c0,0x1405cde60,2,"void TaskQueueInterface::QueueRemoveSpell(ActorHandle& a_actorHandle, SpellItem* a_spellItem)"
@@ -2127,6 +2130,7 @@
 36347,0x1405D6500,0x1405DEB30,4,Character::GetAVPercent
 36348,0x1405d6570,0x1405deba0,4,Character::GetStaminaPercentage
 36349,0x1405d6640,0x1405dec70,4,Character::GetHealthPercentage
+36355,0x1405d67f0,0x1405dee20,2,float Character::GetSpeedMultScale()
 36357,0x1405d6fb0,0x1405df5e0,3,FEC::UpdateAVs
 36359,0x1405d8170,0x1405e07a0,3,po3tweaks::ToggleCollisionFix::ApplyMovementDelta
 36372,0x1405d9990,0x1405e2010,3,Character::sub_1405D9990
@@ -2190,6 +2194,7 @@
 36723,0x1405fb640,0x140603e30,3,void Actor::KillImmediate()
 36730,0x1405fc040,0x140604830,4,"void Actor::PlayASound(BSSoundHandle& a_result, FormID a_formID, bool a_arg3, std::uint32_t a_flags)"
 36741,0x1405fc740,0x140604f30,4,Actor::GetDetectionState
+36743,0x1405fc7c0,0x140604fb0,2,"bool Character::RefreshKnowledgeOf(TESObjectREFR* a_target, DetectionListener* a_listener, std::int32_t a_level)"
 36748,0x1405fc9a0,0x140605190,3,RE::Actor::RequestDetectionLevel
 36752,0x1405fccb0,0x1406054a0,3,"std::int32_t Actor::RequestLOS(Actor* a_target, float a_viewCone)"
 36754,0x1405fd2c0,0x140605b10,4,"NiAVObject* Actor::CalculateLOS(NiPoint3* a_targetPos, NiPoint3* a_hitPosOut, float a_viewCone)"
@@ -2249,6 +2254,8 @@
 37525,0x1406213d0,0x14062a180,4,"void Actor::HandleActorValueModified(ActorValue actorValue, float oldValue, float deltaValue, Actor* source)"
 37527,0x140621590,0x14062a340,4,void Actor::RemoveActorValueModifiers(ActorValue actorValue)
 37571,0x140623610,0x14062c3c0,3,BSTEventSource<DragonSoulsGained::Event>* DragonSoulsGained::GetEventSource()
+37577,0x140623a80,0x14062c830,2,void ActorListenerSet::AddToSingleton(void* a_listener)
+37578,0x140623ab0,0x14062c860,2,void ActorListenerSet::RemoveFromSingleton(void* a_listener)
 37583,0x140623ba0,0x14062c950,3,Actor::SetNoBleedoutRecovery
 37586,0x140623e60,0x14062cc10,3,RE::Character::sub_140623E60
 37588,0x140623f10,0x14062ccc0,4,RE::PlayerCharacter::GetReach_140623F10
@@ -2257,8 +2264,8 @@
 37602,0x140624e70,0x14062dce0,2,void Actor::SetCombatGroup(CombatGroup* a_group)
 37603,0x140624e90,0x14062dd00,3,ACTOR_COMBAT_STATE Actor::GetCombatState()
 37604,0x140624ef0,0x14062dd60,2,void Actor::InvalidateCachedDPS()
-37605,0x140624f20,0x14062dd90,4,float Actor::sub_140624F20(float a_factor)
-37606,0x140625000,0x14062de70,2,bool Actor::sub_140625000(Actor* a_target)
+37605,0x140624f20,0x14062dd90,4,float Actor::CalcArmorAdjustedHealth(float a_factor)
+37606,0x140625000,0x14062de70,2,bool Actor::WouldTargetBlock(Actor* a_target)
 37607,0x140625140,0x14062dfb0,2,bool Actor::CheckValidTarget(TESObjectREFR* a_target)
 37608,0x1406251b0,0x14062e020,3,"bool Actor::StartCombat(Actor* a_target, CombatGroup* a_combatGroup)"
 37609,0x140625660,0x14062e4d0,2,bool Actor::IsInCombat()
@@ -2266,9 +2273,9 @@
 37611,0x1406256d0,0x14062e540,2,bool Actor::IsIgnoringCombat()
 37612,0x140625700,0x14062e570,2,void Actor::UpdateCombat()
 37613,0x140625920,0x14062e790,2,void Actor::StopCombat()
-37614,0x140625c30,0x14062eaa0,2,void Actor::sub_140625C30()
+37614,0x140625c30,0x14062eaa0,2,"void Actor::RefreshCombatOnProcessChange(std::uint32_t a_arg1, std::int32_t a_arg2)"
 37615,0x140625c70,0x14062eae0,2,float Actor::GetDamageResist()
-37616,0x140625c90,0x14062eb00,2,float CalcArmorRatingFromActorValueOwner(ActorValueOwner* a_avo)
+37616,0x140625c90,0x14062eb00,2,float Actor::CalcArmorRatingFromActorValueOwner(ActorValueOwner* a_avo)
 37617,0x140625cc0,0x14062eb30,2,float Actor::CalcUnarmedDamage()
 37618,0x140625cd0,0x14062eb40,3,bool Actor::IsCombatTarget(Actor* a_other)
 37619,0x140625d10,0x14062eb80,2,NiPoint3* Actor::GetWeaponNodePosition(bool a_leftHand)
@@ -2283,14 +2290,14 @@
 37628,0x1406260f0,0x14062ef60,4,void Actor::WeaponSwingCallback()
 37629,0x1406261f0,0x14062f060,2,bool Actor::HasBeenAttacked()
 37630,0x140626210,0x14062f080,2,void Actor::SetBeenAttacked(bool a_set)
-37631,0x140626230,0x14062f0a0,2,void Actor::sub_140626230()
-37632,0x1406262a0,0x14062f110,2,void Actor::sub_1406262A0(Actor* a_other)
+37631,0x140626230,0x14062f0a0,2,void Actor::UpdateControllerNoMoveFlag()
+37632,0x1406262a0,0x14062f110,2,void Actor::TriggerBlockAnticipateAction(Actor* a_other)
 37633,0x140626400,0x14062f270,2,void Actor::ProcessHitEvent(HitData* a_hitData)
 37634,0x1406273a0,0x140630240,3,HitData* Actor::GetLastHitData()
 37635,0x1406273c0,0x140630260,3,void Actor::SetLastHitData(HitData* a_hitData)
 37636,0x140627430,0x1406302d0,2,void Actor::ResetLastHitData()
 37637,0x1406274a0,0x140630340,4,bool Actor::IsAttacking()
-37638,0x1406274c0,0x140630360,3,bool Actor::sub_1406274C0()
+37638,0x1406274c0,0x140630360,3,bool Actor::IsAttackStateActive()
 37639,0x140627500,0x1406303a0,4,bool Actor::IsPowerAttacking()
 37640,0x140627550,0x1406303f0,3,bool Actor::IsMeleeAttackState()
 37641,0x140627570,0x140630410,3,bool Actor::IsRangedAttackState()
@@ -2302,12 +2309,12 @@
 37647,0x1406277e0,0x140630680,2,bool Actor::IsMagicCasterReady(std::int32_t a_slot)
 37648,0x140627890,0x140630730,2,bool Actor::IsEquipOk()
 37649,0x1406278d0,0x140630770,2,void Actor::HandleAnticipateAttack(bool a_leftHand)
-37650,0x140627930,0x1406307d0,3,"void Actor::sub_140627930(bool a_leftHand, bool a_flag)"
+37650,0x140627930,0x1406307d0,3,"void Actor::ApplyAttackStaminaCost(bool a_leftHand, bool a_flag)"
 37651,0x140627d30,0x140630bd0,2,void Actor::StartPowerAttackCoolDown()
 37652,0x140627d40,0x140630be0,2,bool Actor::IsPowerAttackCoolingDown()
 37653,0x140627d50,0x140630bf0,2,"void Actor::HandleHealthDamage(Actor* a_attacker, float a_damage)"
 37654,0x140627de0,0x140630c80,2,void Actor::Func261_140627DE0(TESBoundObject* a_object)
-37655,0x140627e10,0x140630ce0,2,Actor* Actor::sub_140627E10()
+37655,0x140627e10,0x140630ce0,2,Actor* Actor::GetAttackTargetRef()
 37656,0x140627ef0,0x140630dc0,2,float Actor::CalcDPS()
 37657,0x140628010,0x140630ee0,2,bool Actor::IsDamageLethal(float a_damage)
 37658,0x140628090,0x140630f60,2,TESAmmo* Actor::GetCurrentAmmo()
@@ -2326,7 +2333,14 @@
 37672,0x1406285a0,0x140631470,3,SimpleOffenceSuppression::IgnoreFriendlyFire::GetFactionRank
 37673,0x140628c20,0x140631af0,4,Character::HitData_140628C20
 37674,0x140629090,0x140631f60,2,papyrus_extender::events::game::weaponhit::static::target_0x6C7
+37677,0x14062a530,0x140633400,2,"bool Character::UpdateBleedoutOrKill(TESObjectREFR* a_attacker, float a_health)"
+37685,0x14062b720,0x1406345f0,2,void ActorListenerSet::NotifySingleton(void* a_event)
+37689,0x14062b870,0x140634740,2,"void Character::HitTargetsInReach(void* a_targets, void* a_ctx)"
+37720,0x14062c3f0,0x1406352c0,2,"void ActorListenerSet::Notify(void* a_set, void* a_event)"
+37724,0x14062ce70,0x140635d40,2,void* ActorListenerSet::GetSingleton()
 37726,0x14062d050,0x140635f20,3,BSTEventSource<CriticalHit::Event>* CriticalHit::GetEventSource()
+37727,0x14062d140,0x140636010,2,"void ActorListenerSet::Add(void* a_set, void* a_listener)"
+37736,0x14062d8d0,0x1406367a0,2,"void ActorListenerSet::Remove(void* a_set, void* a_listener)"
 37752,0x14062e390,0x140637260,3,void Actor::StopInteractingQuick(bool a_unk02)
 37757,0x14062ebc0,0x140637a90,3,bool Actor::GetMount(NiPointer<Actor>& a_outMount)
 37758,0x14062ecd0,0x140637ba0,4,bool Actor::GetRider(NiPointer<Actor>& a_outRider)
@@ -2421,6 +2435,7 @@
 38153,0x1406429d0,0x14064bd20,3,AIProcess::RunPackageProcedureTree
 38156,0x140642e20,0x14064c170,4,AIProcess::CheckForNewPackage
 38158,0x140642f50,0x14064c2a0,4,void AIProcess::ComputeLastTimeProcessed()
+38189,0x140644400,0x14064d750,2,"void AIProcess::SetCurrentPackage(TESPackage* a_package, Actor* a_actor)"
 38198,0x140644600,0x14064d950,4,"void AIProcess::AddToProcedureIndexRunning(Actor* a_actor, std::uint32_t a_num)"
 38201,0x1406447b0,0x14064db00,3,AIProcess::UpdatePackageFlee
 38203,0x140644a60,0x14064ddb0,3,AIProcess::UpdatePackageTravel
@@ -2449,13 +2464,16 @@
 38339,0x14064e6d0,0x140657a20,3,AIProcess::ResetPackageState
 38343,0x14064e9c0,0x140657d10,2,"void AIProcess::AppendDialogueSpeakerAvoidNode(Actor* a_actor, NiPointer<BSTArray<BSPathingAvoidNode>>* a_avoidNodes)"
 38359,0x14064f4b0,0x140658800,3,AIProcess::UpdatePackageObserveCombatHigh
+38376,0x14064fe60,0x1406591b0,2,"void AIProcess::StartFleeFrom(Actor* a_actor, TESObjectREFR* a_threat)"
 38378,0x1406500d0,0x140659420,2,"std::uint16_t AIProcess::GetDesiredMoveFlags(Actor* a_actor, float a_distance, float a_stopRunDistance, float a_startRunDistance, bool a_forceRun, bool a_unk)"
 38379,0x140650230,0x140659580,2,"void AIProcess::SetMoveMode(Actor* a_actor, std::int32_t a_moveFlags, bool a_usePackageFlags)"
 38402,0x140650d60,0x14065a0b0,3,"void AIProcess::SetWeaponLastPos(bool a_leftHand, NiPoint3* a_pos)"
 38404,0x140650df0,0x14065a140,3,RE::AIProcess::Update3DModel
 38483,0x1406598d0,0x140662c10,3,ObjectRefHandle AIProcess::GetHeadtrackTarget()
 38495,0x140659c00,0x140662f40,3,void AIProcess::ClearMuzzleFlashes()
+38505,0x140659dd0,0x140663110,2,"ActorKnowledge* AIProcess::GetOrCreateActorKnowledge(Actor* a_owner, TESObjectREFR* a_target)"
 38509,0x14065a3b0,0x1406636f0,3,AIProcess::AimWeaponAtTarget
+38526,0x14065a940,0x140663c80,2,"void AIProcess::SetRegenDelay(std::uint32_t a_actorValue, float a_delay)"
 38529,0x14065aa20,0x140663d60,3,AIProcess::RequestFollowPathing
 38530,0x14065b310,0x140664650,3,NiPointer<BGSAttackData>* AIProcess::GetAttackData()
 38560,0x14065be00,0x140665140,3,AIProcess::UpdatePackageGuardHigh
@@ -2530,6 +2548,11 @@
 38900,0x14067fe60,0x1406892e0,4,LLF::AIProcess_CalculateLightValue_GetLuminance
 38935,0x140681640,0x14068aab0,3,void AIProcess::SetLastHitData(HitData* a_hitData)
 38936,0x1406816f0,0x14068ab60,3,void AIProcess::ResetLastHitData()
+38949,0x140681a20,0x14068ae90,2,void AIProcess::SetBleedoutRate(float a_rate)
+38951,0x140681a60,0x14068aed0,2,void AIProcess::SetBleedoutParam2B0(float a_value)
+38953,0x140681aa0,0x14068af10,2,void AIProcess::SetBleedoutParam2B8(float a_value)
+38954,0x140681ac0,0x14068af30,2,void AIProcess::SetBleedoutAttacker(std::uint32_t* a_handle)
+38955,0x140681ae0,0x14068af50,2,std::uint32_t* AIProcess::GetBleedoutAttacker(std::uint32_t* a_outHandle)
 38966,0x140681fd0,0x14068b440,4,"void FUN_140681fd0 (undefined8 param_1, Actor * a_actor)"
 38967,0x140682020,0x14068b490,4,void FUN_140682020 (longlong param_1)
 38974,0x140682160,0x14068b5d0,3,"void AIProcess::EndDeferredKill(bool a_flag, Actor* a_actor)"
@@ -2547,6 +2570,7 @@
 39022,0x14068afb0,0x140694410,3,AIProcess::UpdatePackageEatMiddleHigh
 39025,0x14068b970,0x140694dd0,3,AIProcess::UpdatePackageDialogue
 39026,0x14068bc10,0x140695070,3,AIProcess::UpdatePackageDialogueActivateMiddleHigh
+39029,0x14068c190,0x1406955f0,2,"void AIProcess::StartInterruptPackage(Actor* a_actor, TESPackage* a_package, TESObjectREFR* a_target)"
 39044,0x14068d6f0,0x140696b40,3,std::uint64_t QueuedItem::PreloadModels(Character* a_actor)
 39159,0x140692390,0x14069B990,2,"void ResetCachedBaseValue(CachedValues*, ActorValue)"
 39171,0x1406928c0,0x14069bec0,4,Character * Character::ctor (Character * a_this)
@@ -2677,6 +2701,7 @@
 41346,0x140708bf0,0x14072FF80,3,"ActivateHandler::sub_140708BF0(ActivateHandler *a1, longlong a2, longlong a3)"
 41349,0x1407090a0,0x1407310b0,3,RE::JumpHandler::ProcessButton_1407090A0
 41361,0x1407096b0,0x140732b00,3,StaminaNPC::apply_PlayerControls__sub_140705530
+41622,0x1407184c0,0x140742e60,2,"void ActorKnowledge::AddListener(DetectionListener* a_listener, std::int32_t a_level)"
 41626,0x1407187d0,0x140743170,4,ActorKnowledge::SetDetectionState
 41659,0x140719990,0x140744330,2,papyrus_extender::detection::calculatedetection_0x526
 41661,0x14071a190,0x140744b30,4,"bool IsLightAffectingActor(void* detectionGlobal, BSShadowLight*, Actor*, NiPoint3*)"
@@ -2754,6 +2779,9 @@
 43491,0x14076AB60,0x140795EB0,3,bool CombatGroup::IsMember(TESObjectREFR* a_ref)
 43493,0x14076ACA0,0x140795FF0,3,bool CombatGroup::CanActorAttackAllTargets(Character* a_actor)
 43531,0x14076e2b0,0x140799600,3,Actor* CombatGroup::GetGuardTarget()
+43556,0x140770f30,0x14079c280,2,"void CombatGroup::OnMemberProcessChange(Character* a_member, std::uint64_t a_unused, std::int32_t a_mode)"
+43562,0x140772230,0x14079d580,2,void CombatGroup::RefreshMemberKnowledge(Character* a_member)
+43563,0x140772300,0x14079d650,2,void CombatGroup::RefreshMembersKnowledgeOfTarget(TESObjectREFR* a_target)
 43566,0x140772520,0x14079D870,3,void CombatGroup::RemoveTarget(std::uint32_t a_index)
 43571,0x140772a60,0x14079ddb0,3,po3tweaks::CombatDialogue::SayCombatDialogue
 43628,0x140775550,0x1407a08a0,3,bool CombatBehaviorEquipContext::CanEquipItem()
@@ -2771,6 +2799,7 @@
 45702,0x1407ac9f0,0x1407d7d40,3,"CombatTargetLocationSearch::CombatTargetLocationSearch(Actor* actor, Actor* target, float R)"
 45738,0x1407b0040,0x1407db390,2,CombatPathingGoalPolicyFindTargetLocation* CombatPathingGoalPolicyFindTargetLocation::CombatPathingGoalPolicyFindTargetLocation(CombatNavmeshSearch* a_search)
 45923,0x1407b6770,0x1407e1ac0,4,sub_1407B6770
+46011,0x1407ba290,0x1407e55e0,2,Actor* Actor::FindAttackTargetInReach()
 46022,0x1407baed0,0x1407e6220,4,"static NiPoint3 * GetAngleToProjectedTarget (NiPoint3 * a_origin, TESObjectREFR * a_target, float a_speed, float a_gravity, uint a_location)"
 46039,0x1407bcb40,0x1407e7e90,4,Character::sub_1407BCB40
 46043,0x1407bccd0,0x1407e8020,4,CombatUtilities::CanActorExistInSpace
@@ -2902,6 +2931,7 @@
 46633,0x1407d3c00,0x1407fef50,3,void CombatBehaviorBlock::Enter()
 46634,0x1407d3ee0,0x1407ff230,3,void CombatBehaviorBlock::Update()
 46635,0x1407d41a0,0x1407ff4f0,3,void CombatBehaviorBlock::Exit()
+46638,0x1407d4300,0x1407ff650,2,void CombatBehaviorBash::Update(void* a_node)
 46641,0x1407d4a80,0x1407ffdd0,4,"NodeArray* WrapToRandomNode_1407d4a80 (NodeArray& a_array, const char* a_name, RE::TreeCtors_extradata* a_extradata, RE::CombatBehaviorTreeNode* a_node)"
 46695,0x1407d5ba0,0x140800ef0,3,void CombatBehaviorContextCloseMovement::Enter()
 46696,0x1407d5c80,0x140800fd0,3,bool CombatBehaviorContextCloseMovement::CheckOutOfRange()
@@ -2942,9 +2972,12 @@
 47118,0x1407e6b10,0x140811e60,3,bool CombatBehaviorContextFlankingMovement::CheckShouldStalk()
 47404,0x1407f27e0,0x14081db30,3,bool CombatBehaviorContextFlee::CheckShouldFlee()
 47405,0x1407f29a0,0x14081dcf0,3,bool CombatBehaviorContextFlee::StartFlee()
+47727,0x1407fe740,0x140829a90,2,void CombatBehaviorOrbit::UpdatePath(void* a_node)
 48023,0x140808020,0x140833370,3,bool CombatGroup::IsSearching()
 48026,0x1408080d0,0x140833420,3,bool CombatState::QTargetLost()
 48035,0x140808260,0x1408335b0,3,CombatBehaviorContextMagic::CombatBehaviorContextMagic(CombatInventoryItemMagic* citem)
+48043,0x140808b40,0x140833e90,2,bool CombatBehaviorContextMagic::CanCastNow(void* a_ctx)
+48044,0x140808ce0,0x140834030,2,bool CombatBehaviorContextMagic::IsWithinCastRange(void* a_ctx)
 48047,0x140808ef0,0x140834240,3,float CombatBehaviorContextMagic::CalcCastMagicChance()
 48048,0x140808f30,0x140834280,3,float CombatBehaviorContextMagic::CalcDualCastMagicChance()
 48139,0x14080c020,0x140837370,4,SCAR::AttackDistanceBase src/Hook_AttackStart.h:99
@@ -2957,7 +2990,9 @@
 48461,0x140817c80,0x140842fd0,4,bool Actor::IsInBleedout()
 48463,0x140817cb0,0x140843000,3,float CombatInventory::QRawMaxRange()
 48467,0x140817ec0,0x140843210,3,bool CombatBehaviorContextRangedMovement::CheckOutOfRange()
+48804,0x140824ec0,0x140850210,2,bool CombatBehaviorContextShout::CanShoutNow(void* a_ctx)
 48806,0x1408250c0,0x140850410,3,float CombatBehaviorContextShout::CalcCastMagicChance()
+48809,0x140825290,0x1408505e0,2,void CombatBehaviorCastShout::Update(void* a_node)
 49011,0x14082c540,0x140857890,3,void CombatPath::Update()
 49013,0x14082c790,0x140857ae0,3,void CombatPath::Start()
 49022,0x14082d030,0x140858380,3,"void CombatPath::SetAccelerationDecelerationMult(float accelerationMult, float DecelerationMult)"

@@ -4896,6 +4896,7 @@ sseid,aeid,confidence,name
 36174,37147,2,
 36248,37230,3,RE::Actor::SetRotationZ
 36259,37243,3,RE::Actor::IsInMidair
+36355,37346,1,
 36392,37383,3,RE::Actor::CalculateCurrentVendorFaction
 36407,37401,3,RE::Actor::EvaluatePackage
 36424,37418,3,Character::SetTravelPackage
@@ -4911,6 +4912,7 @@ sseid,aeid,confidence,name
 36678,37686,3,RE::Actor::AddToFaction
 36715,37725,3,bool MagicTarget::IsInvulnerable()
 36723,37735,3,RE::Actor::KillImmediate
+36743,37759,1,
 36775,37791,3,RE::Actor::InitItemImpl
 36776,37792,2,
 36794,37810,2,
@@ -5329,6 +5331,7 @@ sseid,aeid,confidence,name
 38302,39270,2,
 38343,39322,2,
 38359,39342,2,
+38376,39360,1,
 38378,39362,2,
 38379,39363,1,
 38380,39364,1,
@@ -5382,6 +5385,7 @@ sseid,aeid,confidence,name
 38484,39485,1,
 38485,39486,1,
 38495,39504,3,RE::AIProcess::ClearMuzzleFlashes
+38505,39515,1,
 38509,39519,2,
 38529,39539,2,
 38530,39540,1,
@@ -5470,6 +5474,11 @@ sseid,aeid,confidence,name
 38943,39995,1,
 38944,39996,1,ActorProcess::sub_*
 38945,39997,1,ActorProcess::sub_*
+38949,40002,1,
+38951,40004,1,
+38953,40006,1,
+38954,40007,1,
+38955,40008,1,
 38967,40027,1,
 38968,40028,1,
 38969,40029,1,
@@ -5503,6 +5512,7 @@ sseid,aeid,confidence,name
 39022,40089,2,
 39025,40092,2,
 39026,40093,2,
+39029,40096,1,
 39094,40157,1,
 39095,40158,1,
 39098,40160,1,UpdateArmorWornVisitor::Visit_*
@@ -6512,6 +6522,7 @@ sseid,aeid,confidence,name
 44876,45966,1,CombatInventoryItemMagicT_gs_T1_T2_ge_::sub_*
 45570,46870,2,
 45738,47051,2,
+46011,47272,1,
 46068,47332,3,
 47741,48842,1,
 47742,48843,1,
@@ -6587,6 +6598,7 @@ sseid,aeid,confidence,name
 48035,49081,1,
 48036,49082,1,
 48038,49085,1,
+48044,49091,1,
 48051,49098,1,
 48054,49101,1,
 48056,49103,1,
