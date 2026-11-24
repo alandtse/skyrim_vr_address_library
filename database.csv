@@ -4195,7 +4195,7 @@
 97468,0x141234360,0x14126c810,3,void Object::IncRef()
 97469,0x141234410,0x14126c8c0,3,std::uint32_t Object::DecRef()
 97470,0x1412344c0,0x14126c970,2,bool BSScript::Internal::Object::HasMultipleReferences()
-97471,0x141234510,0x14126c9c0,3,"BSScript::Object* BSScript::Object::ctor(BSScript::ObjectTypeInfo** a_type, BSScript::IObjectHandlePolicy* a_policy, std::uint32_t a_numProperties)"
+97471,0x141234510,0x14126c9c0,3,"BSScript::Object* BSScript::Object::ctor(const BSTSmartPointer<BSScript::ObjectTypeInfo>& a_type, BSScript::IObjectHandlePolicy* a_policy, std::uint32_t a_numProperties)"
 97473,0x141234840,0x14126ccf0,2,bool BSScript::Object::TryLockForRunning(BSScript::Stack* a_stack)
 97474,0x141234870,0x14126cd20,2,void BSScript::Object::UnlockForRunning(BSScript::Stack* a_stack)
 97475,0x1412348b0,0x14126cd60,2,std::uint32_t BSScript::Internal::Object::SetLockStructureFlag()
