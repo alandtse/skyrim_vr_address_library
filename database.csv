@@ -481,6 +481,8 @@
 18949,0x14027b6d0,0x14028ccd0,4,BSTEventSource::SendEvent
 19002,0x14027ddc0,0x14028f390,3,void TESObjectCELL::AttachReference3D(TESObjectREFR* a_ref)
 19024,0x140280160,0x140291770,3,"BSMultiBoundNode* TESObjectCELL::sub_140280160(const ObjectRefHandle& a_handle, bool a_flag)"
+19076,0x1402829a0,0x1402940d0,2,void* GetQueuedAttachMap()
+19078,0x140282bb0,0x1402942e0,2,void QueuedAttachMap_RemoveAll(void* a_map)
 19102,0x140283f90,0x1402956c0,3,TESObjectREFR::ClearData
 19105,0x1402850e0,0x140296810,3,void TESObjectREFR::InitItemImpl()
 19110,0x140285be0,0x140297310,3,void TESObjectREFR::AddLockChange()
@@ -3164,6 +3166,7 @@
 52659,0x140902b00,0x14093d280,3,RE::SkyrimScript::HandlePolicy::GetObjectForHandle
 52662,0x1409032c0,0x14093da40,3,RE::SkyrimScript::HandlePolicy::ConvertHandleToString
 52667,0x1409039c0,0x14093e140,3,void SkyrimScript::HandlePolicy::Revert()
+52703,0x140904f20,0x14093f6a0,2,"void* ScatterTable_EraseAtIterator(void* a_table, void* a_result, void* a_iter)"
 52711,0x140905650,0x14093fdd0,3,void SkyrimScript::ObjectBindPolicy::CollectAndBindMergedScripts(VMHandle a_handle)
 52712,0x140905740,0x14093fec0,3,"void SkyrimScript::ObjectBindPolicy::CollectAndBindMergedScriptsFrom(VMHandle a_targetHandle, VMHandle a_sourceHandle)"
 52713,0x140905820,0x14093ffa0,3,void SkyrimScript::ObjectBindPolicy::BindPendingHandles()
@@ -4196,6 +4199,7 @@
 97469,0x141234410,0x14126c8c0,3,std::uint32_t Object::DecRef()
 97470,0x1412344c0,0x14126c970,2,bool BSScript::Internal::Object::HasMultipleReferences()
 97471,0x141234510,0x14126c9c0,3,"BSScript::Object* BSScript::Object::ctor(const BSTSmartPointer<BSScript::ObjectTypeInfo>& a_type, BSScript::IObjectHandlePolicy* a_policy, std::uint32_t a_numProperties)"
+97472,0x1412345b0,0x14126ca60,2,"std::int32_t BSScript::Object::CountReferencesToObject(void* a_target, void* a_visited, std::int32_t a_recurse)"
 97473,0x141234840,0x14126ccf0,2,bool BSScript::Object::TryLockForRunning(BSScript::Stack* a_stack)
 97474,0x141234870,0x14126cd20,2,void BSScript::Object::UnlockForRunning(BSScript::Stack* a_stack)
 97475,0x1412348b0,0x14126cd60,2,std::uint32_t BSScript::Internal::Object::SetLockStructureFlag()
@@ -4203,9 +4207,13 @@
 97477,0x141234910,0x14126cdc0,2,void ObjectCreateInfo_Resolve(void* a_info)
 97478,0x141234a50,0x14126cf00,2,void BSScript::Object::Initialize(std::uint32_t a_numProperties)
 97479,0x141234ae0,0x14126cf90,2,void BSScript::Object::ReleaseProperties()
+97480,0x141234b40,0x14126cff0,2,void BSScript::Object::ClearVariablesReferencingSelf()
 97481,0x141234e10,0x14126d2c0,2,void BSScript::Internal::Object::ClearVariableReferences()
 97482,0x141234f90,0x14126d440,2,void BSScript::Internal::Object::SetHandle(std::uint64_t a_handle)
+97484,0x141235050,0x14126d500,2,void ScrapBTreeSet_FreeSubtree(void* a_node)
+97486,0x1412353d0,0x14126d880,2,void ScrapBTreeSet_Destroy(void* a_this)
 97492,0x141235630,0x14126dae0,3,BSFixedString* BSScript::ObjectTypeInfo::GetInitialStateName()
+97493,0x1412356e0,0x14126db90,2,"bool ScrapBTreeSet_Insert(void* a_this, void* a_key, void* a_keyAlias)"
 97496,0x141235960,0x14126de10,2,void BSScript::Variable::SetDefault()
 97497,0x141235b10,0x14126dfc0,2,BSFixedString* BSScript::Variable::GetString()
 97498,0x141235be0,0x14126e090,2,void BSScript::Variable::SetString(BSFixedString* a_str)
@@ -4298,6 +4306,7 @@
 97756,0x141246500,0x14129c250,2,"void* BSScript::Stack::PushBlankFrame(std::uint32_t a_unk1, bool a_unk2)"
 97760,0x141246fb0,0x14129cd00,3,BSScript::UnlinkedTypes::Function* FunctionInfo_Init(BSScript::UnlinkedTypes::Function* a_function)
 97769,0x141247310,0x14129d060,2,"std::uint32_t BSScript::Stack::AppendPage(BSTArray<BSScript::MemoryPageData, BSTSmallArrayHeapAllocator<48>>* a_pages, BSScript::MemoryPageData* a_page)"
+97771,0x1412473e0,0x14129d130,2,"bool AreFunctionsEquivalent(void* a_lhs, void* a_rhs)"
 97773,0x141247890,0x14129d5e0,2,"void BSScript::Stack::ClearPages(BSTArray<BSScript::MemoryPageData, BSTSmallArrayHeapAllocator<48>>* a_pages, bool a_freeStorage)"
 97774,0x141247960,0x14129d6b0,2,void BSScript::StackFrame::Dtor()
 97776,0x141247c50,0x14129d9a0,3,BSFixedString* GetStaticEmptyVarNameAndType()
@@ -4546,6 +4555,7 @@
 98654,0x141284ae0,0x1412c5b30,3,void BSScript::UnlinkedTypes::Object::Dtor()
 98668,0x1412855f0,0x1412c6600,3,"void ArgumentArray_ConstructRange(void* a_array, std::uint64_t a_index, std::uint32_t a_count, BSScript::ByteCode::Argument* a_source)"
 98672,0x141285970,0x1412c68a0,3,"BSScript::ByteCode::Argument* Argument_CopyConstruct(BSScript::ByteCode::Argument* a_dest, BSScript::ByteCode::Argument* a_source)"
+98673,0x141285a00,0x1412c6930,2,void BSScript::Internal::NativeFunctionStub::Ctor(void* a_params)
 98674,0x141285ac0,0x1412c69f0,3,void ArgumentArray_Destroy(void* a_array)
 98680,0x141285dc0,0x1412c6b30,2,void FunctionInfo_Dtor(void* a_this)
 98688,0x141286070,0x1412c6d40,3,"std::uint32_t ArgumentArray_Push(void* a_array, BSScript::ByteCode::Argument* a_argument)"
@@ -4553,6 +4563,10 @@
 98701,0x141286600,0x1412c7260,2,"void BSScript::VarNameAndTypeArray::Ctor(std::uint16_t a_numParams, std::uint16_t a_numLocals)"
 98702,0x1412866e0,0x1412c7340,2,void BSScript::VarNameAndTypeArray::Clear()
 98703,0x141286750,0x1412c73b0,2,void BSScript::VarNameAndTypeArray::MoveAssign(BSScript::VarNameAndTypeArray* a_other)
+98704,0x1412867f0,0x1412c7450,2,void VarNameAndType_DeleteArray(void* a_array)
+98705,0x141286880,0x1412c74e0,2,"void VarNameCRCIndex_Build(void* a_index, BSScript::VarNameAndTypeArray* a_array)"
+98706,0x141286a00,0x1412c7660,2,void VarNameCRCIndex_Free(void* a_index)
+98707,0x141286a60,0x1412c76c0,2,"bool VarNameCRCIndex_Find(void* a_index, BSScript::VarNameAndTypeArray* a_array, BSFixedString* a_name, std::uint32_t* a_outIndex)"
 98708,0x141286b70,0x1412c77d0,2,void BSScript::VarNameAndType::Ctor()
 98714,0x141287580,0x1412b95a0,2,void LinkContext::Dtor()
 98715,0x141287700,0x1412b9720,2,"void* BSScript::LinkerProcessor::ctor(void* a_context, void* a_owner)"
@@ -4574,6 +4588,7 @@
 98735,0x14128b880,0x1412bd9a0,2,"bool BSScript::LinkerProcessor::CheckStatesInHierarchy(void* a_type, void* a_context, std::int32_t a_mode)"
 98736,0x14128b9d0,0x1412bdaf0,2,"bool BSScript::LinkerProcessor::CheckFunctionsInHierarchy(void* a_type, void* a_state, void* a_context, std::int32_t a_mode)"
 98738,0x14128bb80,0x1412bdca0,2,"bool BSScript::LinkerProcessor::CheckStateAgainstEmptyState(void* a_type, void* a_state, void* a_context, std::int32_t a_mode)"
+98757,0x14128cb30,0x1412bec70,2,void BSScript::Internal::NativeFunctionStub::CreationParameters::Ctor()
 98758,0x14128cbd0,0x1412bed10,2,LinkContext* LinkContext::ctor()
 98759,0x14128cce0,0x1412bee20,3,Object* BSScript::UnlinkedTypes::Object::Ctor()
 98769,0x14128d280,0x1412bf5b0,2,"bool BSScript::LinkerProcessor::CheckOverriddenFunctionSignature(void* a_context, void* a_fnName)"
