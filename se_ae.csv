@@ -3602,6 +3602,8 @@ sseid,aeid,confidence,name
 26259,26838,3,RE::BSFaceGenManager::PrepareHeadPartForShaders
 26407,26988,2,
 26497,27093,2,
+26620,27293,1,
+26621,27294,1,
 26674,27350,2,
 26753,27429,2,void* BGSPackageDataList::GetByUID(std::uint8_t a_uid)
 27430,28151,3,
@@ -4334,6 +4336,7 @@ sseid,aeid,confidence,name
 30458,31287,1,
 30461,31285,1,
 30462,31298,1,PathingRequestFlyAction::Func0_*
+30465,31305,1,
 30466,31306,1,
 30467,31307,1,
 30468,31308,1,PathingRequestFlyHover::Func2_*
@@ -4936,6 +4939,7 @@ sseid,aeid,confidence,name
 36743,37759,1,
 36775,37791,3,RE::Actor::InitItemImpl
 36776,37792,2,
+36785,37801,1,
 36794,37810,2,
 36796,37812,1,Character::sub_*
 36797,37813,1,Character::sub_*
@@ -4943,6 +4947,7 @@ sseid,aeid,confidence,name
 36800,37816,1,Character::sub_*
 36801,37817,3,RE::Actor::StopMoving
 36802,37818,3,RE::Actor::StopMovement
+36803,37819,1,
 36807,37823,2,
 36810,37826,2,
 36811,37827,2,
@@ -5623,6 +5628,7 @@ sseid,aeid,confidence,name
 39336,40407,1,
 39339,40410,1,
 39340,40411,1,PlayerCharacter::ctor_140699040
+39362,40434,1,
 39365,40437,3,RE::PlayerCharacter::CenterOnCell_Impl
 39425,40501,3,papyrus_extender::papyrus::detail::get_god_mode_impl
 39428,40504,3,bool PlayerCharacter::IsInvulnerable()
@@ -5662,6 +5668,7 @@ sseid,aeid,confidence,name
 40603,41632,2,
 40604,41633,2,
 40605,41634,2,
+40612,41642,1,
 41104,42183,1,
 41105,42184,1,IMovementSetKeepOffsetFromActor::Func0_*
 41106,42185,1,MovementPlannerAgentKeepOffset::Func11_*
@@ -7173,6 +7180,7 @@ sseid,aeid,confidence,name
 51530,52405,3,"void RaceSexMenu::ApplyMaskColorSliderValue(std::uint32_t a_value, std::uint32_t a_sliderIndex)"
 51531,52406,3,"void RaceSexMenu::ApplyFaceDetailsSliderValue(float a_value, std::uint32_t a_sliderIndex)"
 51909,52847,2,
+52059,52945,1,
 52063,52950,2,
 52081,52971,2,LocalMapMenu::UpdateMarkers
 52181,53073,3,AppendQuestMarkers
