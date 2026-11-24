@@ -5188,6 +5188,7 @@ sseid,aeid,confidence,name
 37752,38697,3,RE::Actor::StopInteractingQuick
 37757,38702,3,RE::Actor::GetMount
 37758,38703,3,RE::Actor::GetRider
+37762,38707,1,
 37763,38708,2,
 37772,38717,3,RE::Actor::RemoveSpell
 37785,38734,1,Character::sub_*
@@ -5354,6 +5355,7 @@ sseid,aeid,confidence,name
 38244,39204,1,
 38245,39205,1,
 38246,39206,1,
+38247,39207,1,
 38249,39209,2,
 38250,39210,2,
 38252,39212,1,
