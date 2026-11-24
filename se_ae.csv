@@ -1611,6 +1611,7 @@ sseid,aeid,confidence,name
 11448,11594,1,
 11449,11595,1,
 11477,11623,3,void ExtraDataList::SetSoundHandle(const BSSoundHandle* a_handle)
+11484,11630,1,
 11491,11637,1,
 11492,11638,1,
 11493,11639,1,
@@ -3037,6 +3038,7 @@ sseid,aeid,confidence,name
 19870,20277,2,
 19871,20278,2,
 19872,20279,2,
+19873,20280,1,
 20089,20536,3,TESWorldSpace::CollectMapMarkerHandles
 20095,20543,3,RE::TESWorldSpace::GetSkyCell
 20110,20559,3,TESWorldSpace::GetOffsetData
@@ -3263,6 +3265,7 @@ sseid,aeid,confidence,name
 22893,23344,1,
 22897,23354,1,
 22899,23356,1,TESShout::InitItemImpl_*
+22902,23359,1,
 23073,23526,3,RE::ApplyPerkEntries
 23102,23555,1,BGSEntryPointFunctionDataSpellItem::ResolveForms_*
 23104,23557,1,BGSEntryPointFunctionDataBooleanGraphVariable::Func4_*
@@ -3593,6 +3596,7 @@ sseid,aeid,confidence,name
 25684,26231,3,papyrus_extender::events::game::weatherevent::target_0x416
 25686,26233,3,RE::Sky::GetFog
 25822,26379,3,RE::AIForumulas::ComputePickpocketSuccess
+25932,26519,1,
 25977,26586,3,RE::BSFaceGenAnimationData::Reset
 25980,26594,3,RE::BSFaceGenAnimationData::SetExpressionOverride
 26259,26838,3,RE::BSFaceGenManager::PrepareHeadPartForShaders
@@ -3744,6 +3748,8 @@ sseid,aeid,confidence,name
 27980,28714,3,
 27985,28720,1,BGSProcedureGuard::Func15_140411450
 27986,28721,1,
+27987,28722,1,
+27995,27292,1,
 28001,28736,1,BGSProcedureGuard::Func0_*
 28002,28737,1,
 28005,28740,3,
@@ -4904,9 +4910,11 @@ sseid,aeid,confidence,name
 36174,37147,2,
 36248,37230,3,RE::Actor::SetRotationZ
 36259,37243,3,RE::Actor::IsInMidair
+36342,37332,1,
 36355,37346,1,
 36392,37383,3,RE::Actor::CalculateCurrentVendorFaction
 36407,37401,3,RE::Actor::EvaluatePackage
+36412,37406,1,
 36423,37417,1,
 36424,37418,3,Character::SetTravelPackage
 36427,37422,3,RE::Actor::StealAlarm
@@ -4923,6 +4931,8 @@ sseid,aeid,confidence,name
 36678,37686,3,RE::Actor::AddToFaction
 36715,37725,3,bool MagicTarget::IsInvulnerable()
 36723,37735,3,RE::Actor::KillImmediate
+36739,37753,1,
+36740,37754,1,
 36743,37759,1,
 36775,37791,3,RE::Actor::InitItemImpl
 36776,37792,2,
@@ -5480,6 +5490,8 @@ sseid,aeid,confidence,name
 38878,39919,2,
 38879,39920,2,
 38882,39923,2,
+38887,39928,1,
+38888,39929,1,
 38889,39930,2,
 38890,39931,2,
 38903,39949,1,
@@ -6556,15 +6568,23 @@ sseid,aeid,confidence,name
 45570,46870,2,
 45738,47051,2,
 46011,47272,1,
+46012,47273,1,
+46015,47276,1,
 46068,47332,3,
 46638,47841,1,
 46639,47881,1,
+47717,49027,1,
 47719,49018,1,
+47722,48822,1,
 47727,49024,1,
+47731,48831,1,
+47735,48835,1,
+47740,48841,1,
 47741,48842,1,
 47742,48843,1,
 47744,48845,1,
 47745,48846,1,
+47746,48847,1,
 47750,48851,1,
 47752,48854,1,CombatBehaviorTreeFlight::Func0_*
 47793,48869,1,
@@ -6634,6 +6654,7 @@ sseid,aeid,confidence,name
 48032,49079,1,
 48035,49081,1,
 48036,49082,1,
+48037,49083,1,
 48038,49085,1,
 48040,49087,1,
 48041,49088,1,
@@ -6850,6 +6871,7 @@ sseid,aeid,confidence,name
 49731,50658,1,Character::sub_*
 49734,50661,1,
 49735,50662,1,
+49736,50663,1,
 49737,50664,1,
 49738,50665,1,Character::sub_*
 49740,50667,1,Character::sub_*

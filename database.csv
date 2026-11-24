@@ -74,6 +74,7 @@
 11474,0x14010e960,0x14011ef40,3,RE::BSExtraDataList::SetSoul
 11477,0x14010ed20,0x14011f300,3,void ExtraDataList::SetSoundHandle(const BSSoundHandle* a_handle)
 11483,0x14010f5c0,0x14011fba0,3,RE::ExtraDataList::SetInventoryChanges
+11484,0x14010f6e0,0x14011fcc0,2,"void ExtraDataList::SetPackageStartLocation(TESWorldSpace* a_worldSpace, TESObjectCELL* a_cell, NiPoint3* a_position, float a_rotationZ)"
 11530,0x140112700,0x140122ce0,3,void ExtraDataList::SetHeadingTargetRefHandle(ObjectRefHandle& a_handle)
 11565,0x140113ac0,0x1401240a0,3,void ExtraDataList::GetSoundHandle(BSSoundHandle* a_out)
 11632,0x1401171a0,0x140127780,2,TESObjectREFR* BSExtraDataList::GetLinkedRef(BGSKeyword* a_keyword)
@@ -589,6 +590,7 @@
 19870,0x1402a9a90,0x1402bb200,2,TESWorldSpace* TESObjectREFR::GetPackageStartWorldSpace()
 19871,0x1402a9ac0,0x1402bb230,2,TESObjectCELL* TESObjectREFR::GetPackageStartCell()
 19872,0x1402a9af0,0x1402bb260,2,NiPoint3* TESObjectREFR::GetPackageStartPosition()
+19873,0x1402a9b30,0x1402bb2a0,2,"void TESObjectREFR::SetPackageStartLocation(TESWorldSpace* a_worldSpace, TESObjectCELL* a_cell, NiPoint3* a_position, float a_rotationZ)"
 20022,0x1402b1b60,0x1402c32d0,3,"bool TESFile::SeekCell(TESWorldSpace* a_worldSpace, TESFile* a_file, int32_t a_x, int32_t a_y)"
 20023,0x1402b1df0,0x1402c3560,3,"std::int32_t TESWorldSpace::GetIndexForCellCoord(TESFile* a_file, std::int32_t a_cellX, std::int32_t a_cellY)"
 20026,0x1402b20e0,0x1402c3850,4,"TESObjectCELL* TESWorldSpace::GetOrCreateCell(int a_x, int a_y)"
@@ -660,6 +662,7 @@
 22845,0x140326510,0x140335d50,3,RE::INISettingCollection::ReadFromFile
 22847,0x1403266e0,0x140335f20,2,void BSScript::Internal::Object::Release()
 22879,0x140328110,0x140337A00,2,"char Script::ExecuteCommand(TESObjectREFR** a_context, Script* a_script, uint32_t a_opcodeType, TESObjectREFR* a_targetRef, int32_t* a_offset, uint32_t a_scriptDataOffset, int32_t* a_opcodeOffset, uint32_t a_unk8, char a_partial, char a_skip)"
+22902,0x140329af0,0x1403393e0,2,int TESShout::GetLastValidWordIndex()
 23073,0x14032ece0,0x14033e5a0,3,RE::ApplyPerkEntries
 23150,0x1403315f0,0x140340eb0,3,TESForm* BGSDefaultObjectManager::GetLeftHandEquip()
 23153,0x140331680,0x140340f40,3,TESForm* BGSDefaultObjectManager::GetVoiceEquip()
@@ -682,6 +685,7 @@
 24065,0x1403580c0,0x140367980,4,TESIdleForm::sub_1403580C0
 24069,0x140358300,0x140367bc0,4,"bool TESIdleForm::CheckConditions(Actor* a_actor, TESObjectREFR* a_target, bool a_checkParentIdle) bool TESIdleForm::CheckConditions(Actor* a_actor, TESObjectREFR* a_target, bool a_checkParentIdle)"
 24104,0x140359760,0x140369020,3,"TESIdleForm* SelectIdleForAction(void* a_idleManager, BGSActionData* a_action)"
+24128,0x14035b0c0,0x14036a980,2,void AnimationSystemUtils::ClearClipDataArray()
 24129,0x14035b130,0x14036a9f0,3,void ScrapArrayBSFixedString_Destroy(void* a_array)
 24159,0x14035C890,0x14036C150,3,"bool TESNPC__ReadFromFileStream(RE::TESNPC *a_npc, RE::TESFile *a_file)"
 24166,0x14035ed50,0x14036e610,2,TESPackage* TESNPC::GetSpectatorOverridePackage(Actor* a_actor)
@@ -821,6 +825,7 @@
 25915,0x1403c0fd0,0x1403d0850,4,LimbInjuries::smth_smithed
 25920,0x1403c1200,0x1403d0a80,4,"float GetDifficultyMultiplier(uint32_t a_difficulty, ActorValue a_actorValue, bool isPlayer)"
 25931,0x1403c1700,0x1403d0f80,4,"float GetDualCastingEffectiveness(RE::ActorValueOwner* a_actorValueOwner, float a_cost)"
+25932,0x1403c1720,0x1403d0fa0,3,"float GetDualCastCost(void* a_unused, float a_cost)"
 25933,0x1403c1740,0x1403d0fc0,3,TrueHUD::GetSoulType
 25977,0x1403c38e0,0x1403d3160,3,"void BSFaceGenAnimationData::Reset(float a_timer, bool a_resetExpression, bool a_resetModifierAndPhoneme, bool a_resetCustom, bool a_closeEyes)"
 25980,0x1403c3f00,0x1403d3780,3,"void BSFaceGenAnimationData::SetExpressionOverride(std::int32_t a_idx, float a_value)"
@@ -1225,10 +1230,12 @@
 27984,0x1404113c0,0x140420f10,3,BGSProcedureGuard::Process
 27985,0x140411450,0x140420fa0,3,BGSProcedureGuard::CheckGuardWarnTarget
 27986,0x140411560,0x1404210b0,3,RegisterProcedureName_Guard
+27987,0x1404116d0,0x140421220,2,void BGSProcedureGuard::ProcessHighActor(BGSProcessContext* a_context)
 27989,0x140411b40,0x140421690,3,BGSProcedureGuardExecState::RecycleChildren
 27991,0x140411be0,0x140421730,3,BGSProcedureGuardExecState::SaveGame
 27992,0x140411c60,0x1404217b0,3,BGSProcedureGuardExecState::LoadGame
 27994,0x140411d70,0x1404218c0,3,ProcedureNameEntryCleanup_Guard
+27995,0x140411e00,0x140421950,2,void AIProcess::VisitKnowledgeEntries(void* a_visitor)
 28002,0x140412050,0x140421ba0,3,BSTDerivedCreator_BGSProcedureGuard::Create
 28003,0x1404120c0,0x140421c10,3,BSTDerivedCreator_BGSProcedureGuard::Destroy
 28005,0x1404120f0,0x140421c40,3,bool BGSProcedureGuard::GetParamIsRequired(std::uint32_t a_index)
@@ -1851,6 +1858,7 @@
 32370,0x1404f96c0,0x140509850,4,void DragonCameraState::HandleLookInput_1404F96C0 (DragonCameraState * a_this)
 32426,0x1404fbcc0,0x14050c160,3,void CombatBehaviorStack::CheckBuffer(std::uint32_t a_size)
 32436,0x1404fc010,0x14050c4b0,3,void CombatBehaviorIdle::Update()
+32446,0x1404fc450,0x14050c8f0,2,void* GetCombatTargetHandle(void* a_out)
 32458,0x1404fc700,0x14050cba0,3,NiPointer<CombatInventoryItem> const& CombatBehaviorEquipContext::GetCombatItem()
 32468,0x1404fcde0,0x14050d280,3,void CombatController::Dtor()
 32469,0x1404FD1C0,0x14050D660,4,bool __fastcall CombatAIHook::sub_1404FD1C0(RE::Actor* a1)
@@ -1878,6 +1886,8 @@
 33371,0x140542fe0,0x140546DD0,3,ActorMagicCaster::sub_*
 33373,0x140543110,0x140546F90,3,ActorMagicCaster::sub_*
 33375,0x1405433b0,0x140547230,3,ActorMagicCaster::ResetNodes
+33380,0x140543630,0x1405474b0,2,void* ActorMagicCaster::GetCastingSourceDefaultObject()
+33381,0x140543680,0x140547500,2,void* ActorMagicCaster::GetCastingSourceNodeName()
 33403,0x140544490,0x1405484c0,3,void ActorMagicCaster::CheckAttachCastingArt()
 33423,0x140544ea0,0x140548f70,4,"bool SourceActionMap::DoAction(Actor* a_actor, DEFAULT_OBJECT a_action)"
 33426,0x140544ff0,0x1405490c0,4,float MagicCaster::GetCurrentSpellCost()
@@ -2141,6 +2151,8 @@
 36332,0x1405d56b0,0x1405ddc70,4,"void Actor::ResetInventory(Actor * a_this, bool a_leveledOnly)"
 36333,0x1405d57b0,0x1405ddd70,4,undefined Character::sub_1405D57B0(Character* a_this)
 36339,0x1405d5f80,0x1405de5b0,3,Character::IsSittingOrSleeping
+36341,0x1405d60d0,0x1405de700,2,void Character::ReleaseOccupiedFurniture()
+36342,0x1405d6190,0x1405de7c0,2,void Character::ResumeOccupiedFurniture()
 36344,0x1405d62e0,0x1405de910,3,RE::Actor::GetLevel
 36345,0x1405d6300,0x1405de930,3,Actor::DamageHealth
 36346,0x1405d6490,0x1405deac0,3,RE::GameEventHandler::FallLongDistance::CalcDoDamage
@@ -2156,7 +2168,7 @@
 36407,0x1405db310,0x1405e3990,3,"void Actor::EvaluatePackage(bool a_immediate, bool a_resetAI)"
 36408,0x1405db7a0,0x1405e3e20,4,void Actor::InitiateDoNothingPackage()
 36410,0x1405dba80,0x1405e4100,3,Character::StartFollowingCommander
-36412,0x1405dbe60,0x1405e44e0,2,"void Character::StartGuardWarnPackage(Character* a_target, void* a_location, std::uint32_t* a_handle, std::uint32_t a_unk5, std::uint32_t a_unk6, std::uint32_t a_unk7, std::uint8_t* a_unk8)"
+36412,0x1405dbe60,0x1405e44e0,2,"void Character::StartGuardWarnPackage(void* a_targetInfo, BGSAIWorldLocation* a_location, std::uint32_t* a_handle, float a_radiusSlot2, float a_locationRadius, float a_radiusSlot3, PackageTarget* a_packageTarget)"
 36419,0x1405dcc30,0x1405e5280,3,Character::CreateWaitForDialoguePackage
 36420,0x1405dcdb0,0x1405e5400,3,Actor::CreateKeepAnEyeOnPackage_ThreeParams
 36421,0x1405dcef0,0x1405e5540,3,Actor::CreateKeepAnEyeOnPackage_FourParams
@@ -2170,7 +2182,7 @@
 36456,0x1405e1860,0x1405e9ee0,3,RE::Actor::GetTotalCarryWeight_1405E1860
 36457,0x1405e18b0,0x1405e9f30,3,bool Actor::IsOverEncumbered()
 36472,0x1405e20c0,0x1405ea760,4,void Character::MoveToPackageLocation()
-36473,0x1405e20d0,0x1405ea770,2,"void Character::MoveToPackageLocationEx(std::uint8_t a_unk1, void* a_out, void* a_unk3)"
+36473,0x1405e20d0,0x1405ea770,2,"void Character::MoveToPackageLocationEx(bool a_useSavedPackage, PathingRequestClosePoint** a_outRequest, void* a_packageContext)"
 36475,0x1405e27f0,0x1405eae90,4,void Actor::EndInterruptPackage(bool a_skipDialogue)
 36487,0x1405e3250,0x1405eb8f0,3,bool Actor::IsMovementAnimationDriven() const
 36489,0x1405e32d0,0x1405eb970,3,Actor::SetRestrained
@@ -2213,6 +2225,8 @@
 36720,0x1405fb450,0x140603c40,3,po3tweaks::IsFurnitureAnimeTypeFix::GetEquippedFurnitureType
 36723,0x1405fb640,0x140603e30,3,void Actor::KillImmediate()
 36730,0x1405fc040,0x140604830,4,"void Actor::PlayASound(BSSoundHandle& a_result, FormID a_formID, bool a_arg3, std::uint32_t a_flags)"
+36739,0x1405fc5c0,0x140604db0,2,void Character::UpdatePackageStartLocationIfCurrentLoc()
+36740,0x1405fc670,0x140604e60,2,void Character::RefreshPackageStartLocation()
 36741,0x1405fc740,0x140604f30,4,Actor::GetDetectionState
 36743,0x1405fc7c0,0x140604fb0,2,"bool Character::RefreshKnowledgeOf(TESObjectREFR* a_target, DetectionListener* a_listener, std::int32_t a_level)"
 36748,0x1405fc9a0,0x140605190,3,RE::Actor::RequestDetectionLevel
@@ -2220,6 +2234,8 @@
 36754,0x1405fd2c0,0x140605b10,4,"NiAVObject* Actor::CalculateLOS(NiPoint3* a_targetPos, NiPoint3* a_hitPosOut, float a_viewCone)"
 36755,0x1405fd5b0,0x140605e00,4,RE::Actor::GetEyePos
 36759,0x1405fe370,0x140606b80,3,Actor::GetLightLevel
+36762,0x1405fe650,0x140606e60,2,void Actor::RequestFollowPath()
+36763,0x1405fe7d0,0x140606fe0,2,bool Actor::IsFollowPathRequestActive()
 36775,0x1405ff4b0,0x140607cc0,3,void Actor::InitItemImpl()
 36776,0x1405ff590,0x140607da0,2,BSTSmartPointer<MovementControllerNPC>* Actor::GetMovementControllerNPC()
 36794,0x1405fff70,0x140608780,2,bool Actor::GetPathRequest(void** a_out)
@@ -2384,7 +2400,9 @@
 37805,0x1406316b0,0x14063a580,3,po3tweaks::Spells::DispelAdded::GetAliasInstanceArray
 37808,0x140631c80,0x14063ab50,3,void Actor::InterruptCast(bool a_restoreMagicka)
 37810,0x140631d70,0x14063ac40,4,bool Actor::IsCasting(MagicItem* a_spell)
+37813,0x140631f20,0x14063adf0,2,bool Actor::TryDualCast()
 37814,0x140632000,0x14063aed0,4,"void Actor::SetWantDualCasting(RE::Actor* a_actor, bool a_enable)"
+37816,0x140632080,0x14063af50,2,bool Actor::CanDualCast()
 37819,0x140632270,0x14063b140,4,"void Actor::SetSelectedSpell(RE::MagicSystem::CastingSource castingSource, MagicItem* selectedSpell)"
 37820,0x1406322f0,0x14063b1c0,3,void Actor::DeselectSpell(SpellItem* a_spell)
 37821,0x1406323c0,0x14063b290,4,"void Character::sub_1406323C0 (Character * a_this, undefined8 param_2)"
@@ -2399,6 +2417,7 @@
 37843,0x140633ae0,0x14063c9b0,3,Actor::ReapplyCommanderFollow
 37844,0x140633b70,0x14063ca40,3,Actor::SetCommanderAndFollow
 37845,0x140633c60,0x14063cb30,3,Character::OnCommandEffectStart
+37850,0x140634110,0x14063cfe0,2,"bool Character::CastShoutWord(TESShout* a_shout, std::uint32_t a_wordIndex, TESObjectREFR* a_target)"
 37854,0x1406345f0,0x14063d4c0,4,float Actor::GetVoiceRecoveryTime()
 37858,0x140634680,0x14063d550,4,bool Actor::IsCurrentShout(SpellItem* a_spell)
 37861,0x140634830,0x14063d700,1,RE::Actor::GetSoulLevelValue
@@ -2568,6 +2587,8 @@
 38878,0x14067ef70,0x1406883f0,3,float AIProcess::GetFurnitureFacing()
 38879,0x14067ef90,0x140688410,3,void AIProcess::SetFurnitureFacing(float a_facing)
 38882,0x14067eff0,0x140688470,2,bool AIProcess::SelectFurnitureMarker(Actor* a_actor)
+38887,0x14067f750,0x140688bd0,2,bool AIProcess::GetMiddleHighFlag32D()
+38888,0x14067f770,0x140688bf0,2,void AIProcess::SetMiddleHighFlag32D(bool a_value)
 38889,0x14067f790,0x140688c10,2,bool AIProcess::GetWeaponDrawnFlag()
 38890,0x14067f7b0,0x140688c30,2,void AIProcess::SetWeaponDrawnFlag(bool a_drawn)
 38900,0x14067fe60,0x1406892e0,4,LLF::AIProcess_CalculateLightValue_GetLuminance
@@ -2785,6 +2806,8 @@
 43098,0x1407581f0,0x140783580,3,"void VATS::UpdateKillCam(PlayerCharacter* a_player, void* a_arg2, std::uint32_t* a_arg3)"
 43103,0x140759360,0x1407846b0,3,"void VATS::SetMagicTimeSlowdown(float a_magicTimeSlowdown, float a_playerMagicTimeSlowdown)"
 43162,0x14075c760,0x140787AB0,3,CombatProjectileAimController::Update
+43163,0x14075c8f0,0x140787c40,2,bool CombatProjectileAimController::IsAimWithinRadius()
+43168,0x14075d1b0,0x140788500,2,void CombatProjectileAimController::OnProjectileCast()
 43174,0x14075d7b0,0x140788B00,3,void CombatProjectileAimController::UpdateAimSolution(CombatProjectileAimController* a_this)
 43235,0x14075fd20,0x14078b070,4,"CombatAnimation* CombatAnimation::Ctor0(Actor* a_actor, ANIM a_anim)"
 43236,0x14075fdd0,0x14078b120,4,"CombatAnimation* CombatAnimation::Ctor1(Actor* a_actor, TESObjectREFR* a_target, ANIM a_anim)"
@@ -2838,6 +2861,8 @@
 45738,0x1407b0040,0x1407db390,2,CombatPathingGoalPolicyFindTargetLocation* CombatPathingGoalPolicyFindTargetLocation::CombatPathingGoalPolicyFindTargetLocation(CombatNavmeshSearch* a_search)
 45923,0x1407b6770,0x1407e1ac0,4,sub_1407B6770
 46011,0x1407ba290,0x1407e55e0,2,Actor* Actor::FindAttackTargetInReach()
+46012,0x1407ba630,0x1407e5980,2,"float TESObjectREFR::GetDistanceToEdge(TESObjectREFR* a_target, bool a_checkSlope, TESObjectREFR* a_origin)"
+46015,0x1407ba9c0,0x1407e5d10,2,float TESObjectREFR::GetCombinedBoundLength(TESObjectREFR* a_other)
 46022,0x1407baed0,0x1407e6220,4,"static NiPoint3 * GetAngleToProjectedTarget (NiPoint3 * a_origin, TESObjectREFR * a_target, float a_speed, float a_gravity, uint a_location)"
 46039,0x1407bcb40,0x1407e7e90,4,Character::sub_1407BCB40
 46043,0x1407bccd0,0x1407e8020,4,CombatUtilities::CanActorExistInSpace
@@ -3018,12 +3043,13 @@
 47731,0x1407fee50,0x14082a1a0,2,void CombatBehaviorGroundAttack::Update()
 47735,0x1407ff6a0,0x14082a9f0,2,void CombatBehaviorLand::Update()
 47740,0x1408001b0,0x14082b500,2,void CombatBehaviorPerchAttack::Update()
+47744,0x140800760,0x14082bab0,2,"bool CombatBehaviorPerchAttack::IsTargetWithinPerchAngle(TESObjectREFR* a_actor, TESObjectREFR* a_target)"
 47746,0x140800b60,0x14082beb0,2,void CombatBehaviorFlyingAttack::Update()
 48023,0x140808020,0x140833370,3,bool CombatGroup::IsSearching()
 48026,0x1408080d0,0x140833420,3,bool CombatState::QTargetLost()
 48035,0x140808260,0x1408335b0,3,CombatBehaviorContextMagic::CombatBehaviorContextMagic(CombatInventoryItemMagic* citem)
 48036,0x140808570,0x1408338c0,2,void CombatBehaviorContextMagic::ReleaseMembers()
-48037,0x1408085e0,0x140833930,2,bool CombatBehaviorContextMagic::StartCast(bool a_atPlayer)
+48037,0x1408085e0,0x140833930,2,bool CombatBehaviorContextMagic::StartCast(bool a_isDualCast)
 48038,0x140808840,0x140833b90,2,void CombatBehaviorContextMagic::PrepareCastAnimation()
 48040,0x140808a60,0x140833db0,2,void CombatBehaviorContextMagic::InterruptCast()
 48041,0x140808ad0,0x140833e20,2,void* CombatBehaviorContextMagic::GetCastTarget(void* a_out)
@@ -3066,6 +3092,9 @@
 49716,0x140844e40,0x1408700f0,4,CombatPathingRevolution::src/Advanced_Hook.h:13
 49720,0x140845070,0x140870320,4,float Character::GetCircleChanceMult_140845070(Character *param_1)
 49721,0x1408450a0,0x140870350,4,CombatPathingRevolution::src/Circling_Hook.h:61
+49734,0x140845500,0x1408707b0,2,float Character::GetCombatHoverDuration()
+49736,0x1408455b0,0x140870860,2,float Character::GetCombatGroundAttackDuration()
+49738,0x140845660,0x140870910,2,float Character::GetCombatPerchAttackDuration()
 49747,0x140845a10,0x140870cc0,3,StaminaNPC::apply_another_get_chance
 49748,0x140845b30,0x140870de0,4,"float Actor::GetAttackChance(Actor* a_targ, RE::BGSAttackData* a_atkData)"
 49749,0x140845c00,0x140870eb0,3,StaminaNPC::apply_get_CombatSpecialAttackChance
