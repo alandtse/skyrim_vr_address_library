@@ -103,6 +103,8 @@
 11696,0x14011b2b0,0x14012b890,3,void* ExtraDataList::GetOcclusionShape()
 11718,0x14011c990,0x14012cf70,3,BGSLightingTemplate* BSExtraDataList::GetRoomLightingTemplate()
 11719,0x14011ca00,0x14012cfe0,3,TESImageSpace* BSExtraDataList::GetRoomImageSpace()
+11766,0x14011f790,0x14012fd70,2,DialogueItem* ExtraDataList::GetSayToTopicInfoItem()
+11808,0x140120fb0,0x140131590,2,void ExtraDataList::RemoveSayToTopicInfo()
 11851,0x140123220,0x140133800,3,"void ExtraDataList::SetStartingPosition(TESObjectREFR* a_refr, const NiPoint3& a_position, const NiPoint3& a_rotation, BGSLocation* a_location)"
 11865,0x140123bf0,0x1401341d0,3,float ExtraDataList::GetObjectHealth()
 11868,0x140123e20,0x140134400,4,void ExtraDataList::AddExtraFactionChangesIfMissing()
@@ -128,6 +130,7 @@
 12448,0x1401384d0,0x140148e80,4,uint32_t RE::TESLeveledList::GetAllBelowForce(RE::ExtraLevCreaModifier* extraLeveledCreatureModifier)
 12512,0x140139180,0x140149b30,4,"void ExtraFactionChanges::UpdateFactionRank(TESFaction* a_faction, std::int8_t a_rank)"
 12513,0x140139270,0x140149c20,4,"bool ExtraFactionChanges::SetFactionRank(TESFaction* a_faction, std::int8_t a_rank)"
+12570,0x14013a7e0,0x14014b190,2,DialogueItem* ExtraSayToTopicInfo::GetItem()
 12626,0x14013c740,0x14014d130,3,"char* ExtraTextDisplayData::GetDisplayName(TESBoundObject* a_baseObject, float a_temperFactor)"
 12633,0x14013cc20,0x14014d610,3,ExtraTextDisplayData::sub_14013CC20
 12710,0x140140000,0x1401509f0,4,"void BSTArray<FACTION_RANK>::push_back(TESFaction* a_faction, std::int8_t a_rank)"
@@ -523,6 +526,7 @@
 19157,0x140289e40,0x14029b570,2,bool TESForm::IsWater()
 19166,0x14028a640,0x14029bd70,2,void TESObjectREFR::SetOnLocalMap(bool a_set)
 19186,0x14028ae10,0x14029c540,2,bool TESObjectREFR::GetAllowPromoteToPersistent()
+19200,0x14028b930,0x14029d060,2,bool Character::HasQuestObjectAlias()
 19201,0x14028b940,0x14029d070,3,bool TESObjectREFR::HasQuestObject()
 19204,0x14028ba70,0x14029d1a0,3,std::int32_t Actor::GetShieldObjectSlot()
 19205,0x14028baa0,0x14029d1d0,3,std::int32_t Actor::GetBodyObject()
@@ -2267,6 +2271,7 @@
 36196,0x1405cdda0,0x1405d63a0,4,Actor::~Actor
 36198,0x1405ce240,0x1405d6840,4,po3tweaks::Spell::ReapplyOnDeath::Load3d
 36218,0x1405cfac0,0x1405d80a0,4,void Actor::AddDeathItems()
+36219,0x1405cfd30,0x1405d8310,2,bool Character::IsTalkingToPC()
 36224,0x1405d0680,0x1405d8c60,4,bool Actor::CanUseIdle(TESIdleForm* a_idle)
 36235,0x1405d0a60,0x1405d9040,2,bool Actor::RaceFlies()
 36236,0x1405d0a80,0x1405d9060,4,bool Actor::FightsInWater()
@@ -2728,6 +2733,7 @@
 38339,0x14064e6d0,0x140657a20,3,AIProcess::ResetPackageState
 38343,0x14064e9c0,0x140657d10,2,"void AIProcess::AppendDialogueSpeakerAvoidNode(Actor* a_actor, NiPointer<BSTArray<BSPathingAvoidNode>>* a_avoidNodes)"
 38359,0x14064f4b0,0x140658800,3,AIProcess::UpdatePackageObserveCombatHigh
+38364,0x14064f8b0,0x140658c00,2,bool AIProcess::IsTalkingToPC()
 38376,0x14064fe60,0x1406591b0,2,"void AIProcess::StartFleeFrom(Actor* a_actor, TESObjectREFR* a_threat)"
 38378,0x1406500d0,0x140659420,2,"std::uint16_t AIProcess::GetDesiredMoveFlags(Actor* a_actor, float a_distance, float a_stopRunDistance, float a_startRunDistance, bool a_forceRun, bool a_unk)"
 38379,0x140650230,0x140659580,2,"void AIProcess::SetMoveMode(Actor* a_actor, std::int32_t a_moveFlags, bool a_usePackageFlags)"
@@ -4312,6 +4318,7 @@
 74237,0x140d38310,0x14053c550,3,RE::INISettingCollection::ReadSetting
 74239,0x140d38710,0x140d80bb0,3,RE::INISettingCollection::OpenHandle
 74240,0x140d38720,0x140d80bc0,3,RE::INISettingCollection::CloseHandle
+74250,0x140d38940,0x140d80de0,2,BSXFlags* BSXFlags::BSXFlags()
 74377,0x140d3d3d0,0x140d86360,4,BSWindModifier* BSWindModifier::Ctor()
 74378,0x140d3d410,0x140d863a0,4,"void UpdateWindVectorForBSWindModifier(float strength, float angle)"
 74387,0x140d3d6b0,0x140d86640,3,void BSTempNodeManager::UpdateTempNodeTimers(float a_elapsedTime)

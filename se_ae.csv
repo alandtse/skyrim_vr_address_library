@@ -1707,6 +1707,8 @@ sseid,aeid,confidence,name
 11696,11842,3,void* ExtraDataList::GetOcclusionShape()
 11718,11864,3,BSExtraDataList::GetRoomLightingTemplate
 11719,11865,3,BSExtraDataList::GetRoomImageSpace
+11766,11912,1,
+11808,11948,1,
 11813,11953,1,
 11814,11954,1,ExtraDataList::GetHavokWorld_*
 11815,11955,1,
@@ -1957,6 +1959,7 @@ sseid,aeid,confidence,name
 12528,12662,1,
 12529,12663,1,ExtraAnimNoteReceiver::GetType_*
 12530,12664,1,ExtraPatrolRefData::sub_*
+12570,12704,1,
 12626,12768,3,RE::ExtraTextDisplayData::GetDisplayName
 12713,12853,1,
 12735,12875,1,
