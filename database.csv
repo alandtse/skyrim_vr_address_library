@@ -2100,8 +2100,10 @@
 34308,0x1405692b0,0x14056f8a0,3,void BGSAcousticSpace::Activate()
 34309,0x1405693b0,0x14056f9a0,2,void BGSAcousticSpace::Deactivate()
 34413,0x14056c9d0,0x140572fd0,3,"DialogueItem* DialogueItem::Ctor(TESQuest* a_quest, TESTopic* a_topic, TESTopicInfo* a_topicInfo, Actor* a_speaker)"
+34417,0x14056cce0,0x1405732e0,2,DialogueResponse* DialogueItem::GetCurrentResponse()
 34429,0x14056D570,0x140573B70,4,"void DialogueSubtitleStrings (char **a1, TESTopic *a2, TESTopicInfo *a3, Character *a4, void *a5)"
 34434,0x14056DA60,0x140574060,4,"void DialogueMenuStrings (void *a1, TESQuest *a2, TESTopic *a3, TESTopicInfo *a4, TESObjectREFR *a5, void *a6)"
+34437,0x14056df90,0x140574590,2,DialogueResponse* MenuTopicManager::Dialogue::GetCurrentResponse()
 34442,0x14056e540,0x140574b40,3,bool MenuTopicManager::SelectFirstResponse(bool a_skipHidden)
 34443,0x14056e5c0,0x140574bc0,3,bool MenuTopicManager::SelectNextResponse()
 34444,0x14056e5f0,0x140574bf0,3,bool MenuTopicManager::SelectResponseAt(std::int32_t a_index)
@@ -2753,6 +2755,7 @@
 38376,0x14064fe60,0x1406591b0,2,"void AIProcess::StartFleeFrom(Actor* a_actor, TESObjectREFR* a_threat)"
 38378,0x1406500d0,0x140659420,2,"std::uint16_t AIProcess::GetDesiredMoveFlags(Actor* a_actor, float a_distance, float a_stopRunDistance, float a_startRunDistance, bool a_forceRun, bool a_unk)"
 38379,0x140650230,0x140659580,2,"void AIProcess::SetMoveMode(Actor* a_actor, std::int32_t a_moveFlags, bool a_usePackageFlags)"
+38390,0x140650890,0x140659be0,2,void AIProcess::ClearSpeech(Actor* a_actor)
 38402,0x140650d60,0x14065a0b0,3,"void AIProcess::SetWeaponLastPos(bool a_leftHand, NiPoint3* a_pos)"
 38404,0x140650df0,0x14065a140,3,RE::AIProcess::Update3DModel
 38405,0x140651250,0x14065a5a0,2,void AIProcess::SetGreetActor(ActorHandle* a_handle)
@@ -3281,6 +3284,7 @@
 43087,0x1407570f0,0x1407822f0,3,void VATS::SetMode(std::uint32_t a_mode)
 43090,0x140757960,0x140782cf0,4,void VATS::QueueCommand()
 43094,0x140757dd0,0x140783160,4,"void VATS::AdvanceCommand(bool a_arg1, bool a_last, bool a_arg3)"
+43096,0x140757ff0,0x140783380,2,VATSCommand* VATS::GetFrontCommand()
 43098,0x1407581f0,0x140783580,3,"void VATS::UpdateKillCam(PlayerCharacter* a_player, void* a_arg2, std::uint32_t* a_arg3)"
 43103,0x140759360,0x1407846b0,3,"void VATS::SetMagicTimeSlowdown(float a_magicTimeSlowdown, float a_playerMagicTimeSlowdown)"
 43162,0x14075c760,0x140787AB0,3,CombatProjectileAimController::Update
