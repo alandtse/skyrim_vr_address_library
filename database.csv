@@ -5133,8 +5133,12 @@
 89329,0x1410fa500,0x141157240,2,"float MovementUtils::ComputeHeadingDelta(const NiPoint3& a_from, const NiPoint3& a_to)"
 89330,0x1410fa570,0x1411572b0,2,"float MovementUtils::ComputePitchDelta(const NiPoint3& a_from, const NiPoint3& a_to)"
 89331,0x1410fa630,0x141157370,2,"float MovementUtils::ComputeAngleBetweenVectors(const NiPoint3& a_a, const NiPoint3& a_b)"
+89334,0x1410fa840,0x141157580,2,"float MovementUtils::ComputeQuadrantWeightedLimit(const NiPoint3& a_direction, const float* a_limits)"
+89335,0x1410fa940,0x141157680,2,"float MovementUtils::ComputeQuadrantWeightedLimitScaled(const NiPoint3& a_direction, float a_scale, const float* a_limits)"
 89336,0x1410faa20,0x141157760,2,bool MovementUtils::HasPositiveLimits(const float* a_limits)
 89339,0x1410fae00,0x141157b40,2,"void MovementUtils::GetStoppingDistanceAndTime(float a_speed, float a_maxSpeed, float a_accel, float a_decel, float* a_outDistance, float* a_outTime)"
+89341,0x1410faed0,0x141157c10,2,"bool MovementUtils::SolveTimeAndSpeedForDistance(float a_acceleration, float a_speed, float a_unused, float a_distance, float a_limit, float& a_timeOut, float& a_speedOut)"
+89342,0x1410faf60,0x141157ca0,2,"void MovementUtils::ComputeRotationBetweenDirections(const NiPoint3& a_from, const NiPoint3& a_to, NiMatrix3& a_out)"
 89343,0x1410fb2c0,0x141158000,2,"float MovementUtils::NormalizeForwardSpeed(float a_speed, Movement::MaxSpeeds* a_speeds)"
 89344,0x1410fb330,0x141158070,2,"float MovementUtils::DenormalizeForwardSpeed(float a_normalized, Movement::MaxSpeeds* a_speeds)"
 89345,0x1410fb380,0x1411580c0,3,"float MovementUtils::NormalizeRotationSpeed(float a_speed, Movement::MaxSpeeds* a_speeds)"
@@ -5146,6 +5150,8 @@
 89351,0x1410fb4f0,0x141158230,2,"float MovementUtils::AngleAccelerationToNormalized(float a_value, Movement::MaxSpeeds* a_speeds)"
 89352,0x1410fb500,0x141158240,2,"float MovementUtils::NormalizedToAngleAcceleration(float a_value, Movement::MaxSpeeds* a_speeds)"
 89355,0x1410fbca0,0x1411589e0,2,"void MovementUtils::GetStoppingTimeAndDistance(float a_speed, float a_deceleration, float* a_outTime, float* a_outDistance)"
+89356,0x1410fbcf0,0x141158a30,2,"float MovementUtils::ComputeCurvatureSpeedLimit(float a_speed, float a_p2, float a_p3, float a_p4, float a_acceleration, float a_distance, float a_radius)"
+89357,0x1410fbe40,0x141158b80,2,"float MovementUtils::ComputePathCurvatureSpeedLimit(float a_speed, float a_p2, float a_p3, float a_p4, float a_p5, float a_p6, const NiPoint3& a_tangent, const NiPoint3& a_nextTangent)"
 89364,0x1410fc9e0,0x141159720,3,void ProcessAvoidBoxChecks()
 89365,0x1410fcbf0,0x141159930,3,std::uint64_t CheckAvoidBox()
 89391,0x1410fe270,0x14115afb0,3,void ObstacleBuildQueue::ctor()
