@@ -2767,9 +2767,10 @@
 39159,0x140692390,0x14069B990,2,"void ResetCachedBaseValue(CachedValues*, ActorValue)"
 39171,0x1406928c0,0x14069bec0,4,Character * Character::ctor (Character * a_this)
 39172,0x1406929c0,0x14069bfc0,4,BSTask::sub_1406929C0
-39174,0x140692b30,0x14069c130,2,float Character::GetArmorRating()
+39174,0x140692b30,0x14069c130,2,float Character::CalcArmorRating()
 39175,0x140692cd0,0x14069c2d0,3,RE::PlayerCharacter::GetArmorValue
 39176,0x140692e10,0x14069c410,2,float Character::GetArmorBaseFactorSum()
+39177,0x140692e60,0x14069c460,2,std::int32_t Character::CalcUnarmedDamage()
 39178,0x140692eb0,0x14069c4b0,2,float PlayerCharacter::GetEquippedWeaponsDamage()
 39179,0x140693050,0x14069c650,3,RE::PlayerCharacter::GetDamage
 39181,0x140693110,0x14069c710,3,RE::Actor::DoReset3D
@@ -4796,6 +4797,8 @@
 88420,0x1410c0be0,0x14111d810,2,std::uint8_t MovementPathManagerArbiter::GetTypeId()
 88422,0x1410c0c30,0x14111d860,2,void MovementPathManagerArbiter::AttachToController(void* a_controller)
 88423,0x1410c0c80,0x14111d8b0,2,void MovementPathManagerArbiter::DetachFromController()
+88424,0x1410c0d00,0x14111d930,2,void MovementPathManagerArbiter::UpdatePathing()
+88425,0x1410c0d10,0x14111d940,2,void MovementPathManagerArbiter::UpdatePathing()
 88426,0x1410c0d20,0x14111d950,2,bool MovementPathManagerArbiter::RegisterAgent(void* a_agent)
 88427,0x1410c0e30,0x14111da60,2,bool MovementPathManagerArbiter::UnregisterAgent(void* a_agent)
 88428,0x1410c0f20,0x14111db50,2,void MovementPathManagerArbiter::ClearAgents()
