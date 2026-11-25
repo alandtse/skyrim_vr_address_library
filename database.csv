@@ -2684,6 +2684,7 @@
 37863,0x140634900,0x14063d7d0,3,RE::Actor::TrapSoul
 37864,0x140634b80,0x14063da50,3,Actor::RemoveMagicEffectsDueToAction_140634B80
 37865,0x140634bf0,0x14063dac0,4,Actor::ReanimateEffect::GetUp
+37866,0x140634d20,0x14063dbf0,2,void ActorState::DoSetWeaponDrawn(bool a_drawn)
 37873,0x1406355c0,0x14063e5d0,3,void SpellsLearned::SendEvent()
 37913,0x140636680,0x14063f690,3,void BSTEventSource<SpellsLearned::Event>::SendEvent(const SpellsLearned::Event* a_event)
 37916,0x140636c40,0x14063fc50,3,BSTEventSource<SoulsTrapped::Event>* SoulsTrapped::GetEventSource()
