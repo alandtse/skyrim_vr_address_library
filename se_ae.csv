@@ -4945,6 +4945,7 @@ sseid,aeid,confidence,name
 36248,37230,3,RE::Actor::SetRotationZ
 36259,37243,3,RE::Actor::IsInMidair
 36315,37305,1,
+36316,37306,1,
 36323,37313,1,
 36342,37332,1,
 36355,37346,1,

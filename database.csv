@@ -2204,7 +2204,7 @@
 36287,0x1405d25e0,0x1405daba0,4,RE::Actor::SetGhost
 36289,0x1405d27a0,0x1405dad60,2,DrawSheatheWeaponActor
 36315,0x1405d3b50,0x1405dc110,2,bool Actor::DetachCharController()
-36316,0x1405d3bb0,0x1405dc170,2,void Actor::RemoveCharController()
+36316,0x1405d3bb0,0x1405dc170,2,bool Actor::RemoveCharController()
 36323,0x1405d4090,0x1405dc650,2,"std::uint64_t TESObjectREFR::MoveToPosition(NiPoint3* a_pos, float a_rotZ, float a_rotX, TESObjectCELL* a_cell, TESWorldSpace* a_worldSpace, bool a_unk)"
 36331,0x1405d5290,0x1405dd850,3,Actor::Resurrect
 36332,0x1405d56b0,0x1405ddc70,4,"void Actor::ResetInventory(Actor * a_this, bool a_leveledOnly)"
@@ -2256,7 +2256,7 @@
 36490,0x1405e3330,0x1405eb9d0,3,Actor::SetDontMove
 36492,0x1405e33b0,0x1405eba50,4,bool Actor::IsInRagdollState()
 36506,0x1405e4800,0x1405ecea0,3,"float Actor::AdjustHealthDamageToDifficulty(Actor a_actor, float a_damage, float onlyReduceDamage)"
-36507,0x1405e4880,0x1405ecf20,2,"bhkCharacterController* Actor::Move(float a_arg2, const NiPoint3& a_position)"
+36507,0x1405e4880,0x1405ecf20,2,"bhkCharacterController* Actor::Move(float a_delta, const NiPoint3& a_position)"
 36511,0x1405e5dd0,0x1405ee4f0,4,TESObjectREFR::PayGoldToContainer
 36521,0x1405e6580,0x1405eeca0,3,Actor::PickUpObject
 36523,0x1405e6b50,0x1405ef270,3,EssentialFavorites::Disarm::IsQuestObject
@@ -4797,8 +4797,8 @@
 88420,0x1410c0be0,0x14111d810,2,std::uint8_t MovementPathManagerArbiter::GetTypeId()
 88422,0x1410c0c30,0x14111d860,2,void MovementPathManagerArbiter::AttachToController(void* a_controller)
 88423,0x1410c0c80,0x14111d8b0,2,void MovementPathManagerArbiter::DetachFromController()
-88424,0x1410c0d00,0x14111d930,2,void MovementPathManagerArbiter::UpdatePathing()
-88425,0x1410c0d10,0x14111d940,2,void MovementPathManagerArbiter::UpdatePathing()
+88424,0x1410c0d00,0x14111d930,2,void MovementPathManagerArbiter::UpdateSmallDelta()
+88425,0x1410c0d10,0x14111d940,2,void MovementPathManagerArbiter::UpdateLargeDelta()
 88426,0x1410c0d20,0x14111d950,2,bool MovementPathManagerArbiter::RegisterAgent(void* a_agent)
 88427,0x1410c0e30,0x14111da60,2,bool MovementPathManagerArbiter::UnregisterAgent(void* a_agent)
 88428,0x1410c0f20,0x14111db50,2,void MovementPathManagerArbiter::ClearAgents()
