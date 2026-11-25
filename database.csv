@@ -4774,7 +4774,7 @@
 88366,0x1410bfe60,0x14111ca90,3,MovementPlayIdleHolder* MovementPlayIdleHolder::MovementPlayIdleHolder()
 88375,0x1410c00b0,0x14111cce0,3,"MovementPlayIdleHolder** AssignPlayIdleHolder(MovementPlayIdleHolder** a_slot, MovementPlayIdleHolder* a_holder)"
 88398,0x1410c0550,0x14111d180,3,IPathFollowerAction* IPathFollowerAction::dtor_deleting(std::uint8_t a_flags)
-88417,0x1410c0b30,0x14111d760,2,BSFixedString* MovementPathManagerArbiter::GetStageName()
+88417,0x1410c0b30,0x14111d760,2,const char* MovementPathManagerArbiter::GetStageName()
 88418,0x1410c0b40,0x14111d770,2,BSFixedString* MovementPathManagerArbiter::GetArbiterName()
 88420,0x1410c0be0,0x14111d810,2,std::uint8_t MovementPathManagerArbiter::GetTypeId()
 88422,0x1410c0c30,0x14111d860,2,void MovementPathManagerArbiter::AttachToController(void* a_controller)
@@ -4949,12 +4949,14 @@
 89812,0x14110c9a0,0x1411698c0,2,std::uint8_t MovementHandlerAgentTranslationController::GetTypeId()
 89815,0x14110ca30,0x141169950,2,void MovementHandlerAgentTranslationController::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
 89840,0x14110d8d0,0x14116a7f0,2,std::uint8_t MovementTweenerAgentFixedDelta::GetTypeId()
+89860,0x14110e970,0x14116b890,2,const char* MovementHandlerArbiter::GetStageName()
 89863,0x14110ea20,0x14116b940,2,std::uint8_t MovementHandlerArbiter::GetTypeId()
 89865,0x14110ea50,0x14116b970,2,void MovementHandlerArbiter::UnregisterInterface()
 89872,0x14110ee40,0x14116bd60,3,void MovementHandlerArbiter::ClearAgents(void* a_unused)
 89873,0x14110ee60,0x14116bd80,2,void MovementHandlerArbiter::SaveGame(PathingStreamSaveGame* a_stream)
 89874,0x14110ee70,0x14116bd90,2,void MovementHandlerArbiter::LoadGame(PathingStreamLoadGame* a_stream)
 89875,0x14110eea0,0x14116bdc0,2,"void MovementHandlerArbiter::UpdateHandlers(MovementHandlerUpdateDataSmallDelta* a_updateData, MovementHandlerOutputDataSmallDelta* a_outputData)"
+89906,0x14110f8a0,0x14116c7c0,2,const char* MovementPlannerArbiter::GetStageName()
 89909,0x14110f950,0x14116c870,2,std::uint8_t MovementPlannerArbiter::GetTypeId()
 89913,0x14110fad0,0x14116c9f0,3,void MovementPlannerArbiter::UnregisterInterface()
 89918,0x14110fce0,0x14116cc30,3,void MovementPlannerArbiter::ClearAgents(void* a_unused)
@@ -4995,6 +4997,7 @@
 90244,0x141119690,0x141176560,2,std::uint8_t MovementPathManagerAgentAvoidBox::GetTypeId()
 90246,0x1411197b0,0x141176680,2,"void MovementPathManagerAgentAvoidBox::CheckBlockedByAvoidBox(void* a_arg1, std::uint32_t* a_outStatus)"
 90251,0x141119ad0,0x1411769a0,2,int MovementPathManagerAgentAvoidBox::EvaluateAvoidBox()
+90271,0x14111a8d0,0x1411777a0,2,const char* MovementTweenerArbiter::GetStageName()
 90274,0x14111a980,0x141177850,2,std::uint8_t MovementTweenerArbiter::GetTypeId()
 90276,0x14111a9f0,0x1411778c0,3,void MovementTweenerArbiter::UnregisterInterface()
 90287,0x14111ad40,0x141177c10,2,void MovementTweenerArbiter::RegisterAgent(void* a_agent)
