@@ -9110,6 +9110,8 @@ sseid,aeid,confidence,name
 89840,92312,1,
 89841,92313,1,
 89844,92316,1,
+89856,92813,1,
+89857,92814,1,
 89860,92332,1,
 89861,92333,1,
 89862,92334,1,
@@ -9199,6 +9201,7 @@ sseid,aeid,confidence,name
 90032,92479,1,AutoRegisterMovementAgentCreator_gs_T1_ge_::sub_*
 90033,92476,1,
 90037,92475,1,
+90038,92520,1,
 90039,92521,1,PathingStreamSaveGame::sub_*
 90042,92530,1,MovementAgentPathFollowerVirtual::Func3_*
 90045,92533,1,

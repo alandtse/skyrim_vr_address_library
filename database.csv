@@ -5049,6 +5049,9 @@
 88554,0x1410c6510,0x141123270,2,"void BSPathingSolution::GetPredictedPoint(float a_from, float a_distance, float* a_outPathPosition, NiPoint3* a_outPoint)"
 88558,0x1410c6ea0,0x141123bd0,2,"bool BSPathingSolution::GetClosestPointOnPath(NiPoint3* a_pos, void* a_out)"
 88559,0x1410c6ff0,0x141123d20,2,"float BSPathingSolution::FindMaxSpeedAlongPath(float a_arg1, float a_arg2, float a_arg3, float a_arg4, float a_arg5, float a_arg6)"
+88596,0x1410c9b10,0x141126840,2,bool PathingStreamLoadGame::ReadBSPathingNodeArray(BSTArray<BSPathingNode>& a_nodes)
+88597,0x1410c9b80,0x1411268b0,2,bool PathingStreamLoadGame::ReadBSVirtualPathingNodeArray(BSTArray<BSVirtualPathingNode>& a_nodes)
+88603,0x1410ca1c0,0x141126ef0,2,bool PathingStreamSaveGame::WriteBSVirtualPathingNodeArray(const BSTArray<BSVirtualPathingNode>& a_nodes)
 88674,0x1410cf350,0x14112c080,3,NiPoint3 BSNavmesh::GetNormal(std::uint16_t a_tri) const
 88930,0x1410df940,0x14113c670,2,PathingSolutionEntry* PathingSolutionEntry::PathingSolutionEntry()
 88931,0x1410df9b0,0x14113c6e0,2,PathingSolutionEntry* PathingSolutionEntry::Assign(PathingSolutionEntry* a_other)
@@ -5218,6 +5221,8 @@
 89841,0x14110d8f0,0x14116a810,2,"void MovementTweenerAgentFixedDelta::GetMotionTransform(void* a_context, NiTransform* a_out)"
 89844,0x14110e0a0,0x14116afc0,2,void MovementTweenerAgentFixedDelta::SetCorrectionData(const MovementCorrectionData* a_data)
 89845,0x14110e130,0x14116b050,2,"void MovementTweenerAgentFixedDelta::SetCorrectionParameters(const NiPoint3* a_translationDelta, const NiPoint3* a_rotationDelta, const NiPoint3* a_translationStartVelocity, const NiPoint3* a_translationEndVelocity, const NiPoint3* a_rotationStartVelocity, const NiPoint3* a_rotationEndVelocity, float a_startTime, float a_endTime, float a_tailEndTime)"
+89856,0x14110e680,0x14116b5a0,2,bool PathingStreamLoadGame::ReadNiMatrix3(NiMatrix3& a_matrix)
+89857,0x14110e780,0x14116b6a0,2,bool PathingStreamSaveGame::WriteNiMatrix3(const NiMatrix3& a_matrix)
 89860,0x14110e970,0x14116b890,2,const BSFixedString& MovementHandlerArbiter::GetPipelineStage()
 89861,0x14110e980,0x14116b8a0,2,const BSFixedString& MovementHandlerArbiter::GetArbiterType()
 89862,0x14110e990,0x14116b8b0,2,BSFixedString& MovementHandlerArbiter::GetStaticArbiterType()
@@ -5278,6 +5283,8 @@
 90014,0x141113220,0x141170170,2,bool MovementAgentPathFollowerFlight::IsFollowingPath()
 90017,0x1411132a0,0x1411701f0,2,"bool MovementAgentPathFollowerFlight::GetPredictedPoint(float a_distance, NiPoint3& a_point)"
 90018,0x1411133a0,0x1411702f0,2,"bool MovementAgentPathFollowerFlight::GetPredictedPointAndTangent(float a_distance, NiPoint3& a_point, NiPoint3& a_tangent)"
+90038,0x1411144b0,0x141171380,2,"bool PathingStreamLoadGame::ReadNiPoint3ArrayAndIndex(BSTArray<NiPoint3>& a_points, std::uint32_t& a_index)"
+90039,0x141114600,0x1411714d0,2,"bool PathingStreamSaveGame::WriteNiPoint3ArrayAndIndex(const BSTArray<NiPoint3>& a_points, std::uint32_t a_index)"
 90045,0x1411148d0,0x1411717a0,2,void MovementAgentPathFollowerVirtual::RegisterWithController(IMovementControllerRegisterInterface& a_controller)
 90046,0x141114920,0x1411717f0,2,void MovementAgentPathFollowerVirtual::UnregisterWithController()
 90047,0x141114970,0x141171840,2,const BSFixedString& MovementAgentPathFollowerVirtual::GetAgentType()
@@ -5338,6 +5345,7 @@
 90207,0x141118280,0x141175150,2,bool MovementPlannerAgentNavmeshBounds::IsPathClear()
 90209,0x1411186f0,0x1411755c0,2,"void MovementPlannerAgentNavmeshBounds::CopyObstaclesToAvoidShapes(BSScrapArray<VelocityObstacle::ObstaclePolygon>& a_out, const BSTArray<VelocityObstacle::ObstaclePolygon>& a_in)"
 90214,0x141118b70,0x141175a40,2,ObstacleBuildRequest* ObstacleBuildRequest::ObstacleBuildRequest()
+90233,0x1411192c0,0x141176190,2,bool PathingStreamSaveGame::WriteObstaclePolygonArray(const BSTArray<VelocityObstacle::ObstaclePolygon>& a_polygons)
 90238,0x141119540,0x141176410,2,void MovementPathManagerAgentAvoidBox::RegisterWithController(IMovementControllerRegisterInterface& a_controller)
 90239,0x141119550,0x141176420,2,void MovementPathManagerAgentAvoidBox::UnregisterWithController()
 90242,0x1411195f0,0x1411764c0,2,const BSFixedString& MovementPathManagerAgentAvoidBox::GetAgentType()
@@ -5389,11 +5397,13 @@
 90431,0x141120060,0x14117cf30,2,"void* MovementMessageAutoRegister::RegisterPathComplete(void* a_registrar, int a_typeId)"
 90432,0x141120130,0x14117d000,2,"void* MovementMessageAutoRegister::RegisterPathFailed(void* a_registrar, int a_typeId)"
 90623,0x14112c840,0x141189710,2,"void PathFollowerTurnTarget::GetFacingAngles(NiPoint3* a_position, float* a_current, float a_zOffset, float* a_outFacing)"
+90646,0x14112d670,0x14118a540,2,bool PathingStreamSaveGame::WriteFormIDArray(const BSTArray<FormID>& a_ids)
 90653,0x14112d870,0x14118a740,2,"PathFollowerStateUpdateData* PathFollowerStateUpdateData::PathFollowerStateUpdateData(BSPathingRequest** a_request, BSPathingSolution** a_solution, ActorState* a_actorState, void* a_messageInterface, NiPoint3* a_pPathPoint, float a_pathPosition, float a_deltaTime)"
 90677,0x14112e410,0x14118b2e0,2,"bool BSPathingSolution::GetDirectionToPathPoint(float* a_delta, float a_pathPosition, float* a_position, NiPoint3* a_outDirection)"
 90704,0x14112f3e0,0x14118c2b0,2,"bool VelocityObstacle::ObstaclePolygon::IntersectSegment(const NiPoint3& a_start, const NiPoint3& a_end, float& a_outT)"
 90713,0x14112fc90,0x14118cb60,2,VelocityObstacle::ObstaclePolygon* VelocityObstacle::ObstaclePolygon::ObstaclePolygon()
 90714,0x14112fd00,0x14118cbd0,2,void VelocityObstacle::ObstaclePolygon::~ObstaclePolygon()
+90718,0x14112ffe0,0x14118ceb0,2,bool VelocityObstacle::ObstaclePolygon::Write(PathingStreamSaveGame& a_stream)
 90732,0x141131010,0x14118dee0,2,"void VelocityObstacle::BuildObstaclePolygons(const BSPathingLocation& a_location, float a_radius, BSTArray<VelocityObstacle::ObstaclePolygon>& a_out)"
 90938,0x14113df60,0x1411983b0,2,void EnsureMemoryHeap()
 97369,0x14122c060,0x141264510,2,"void ObjectBindPolicy::GetAttachedScripts(std::uint64_t a_handle, void* a_out)"
