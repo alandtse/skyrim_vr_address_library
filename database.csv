@@ -4604,7 +4604,7 @@
 88312,0x1410bc1d0,0x141118e00,2,bool IMovementQueryPathFollowing::HasPendingNodeAction()
 88313,0x1410bc2c0,0x141118ef0,2,"bool IMovementQueryPathFollowing::GetPredictedPoint(float a_time, NiPoint3* a_outPoint)"
 88314,0x1410bc390,0x141118fc0,2,"bool IMovementQueryPathFollowing::GetPredictedPointAndTangent(float a_time, NiPoint3* a_outPoint, NiPoint3* a_outTangent)"
-88315,0x1410bc480,0x1411190b0,2,"bool IMovementQueryPathFollowing::ComputeLookAheadPathPosition(float a_arg1, float a_arg2, float a_arg3, float a_arg4, float* a_outPathPosition)"
+88315,0x1410bc480,0x1411190b0,2,"bool IMovementQueryPathFollowing::GetMaxSpeedAlongPath(float a_arg1, float a_arg2, float a_arg3, float a_arg4, float* a_outMaxSpeed)"
 88316,0x1410bc5b0,0x1411191e0,2,"bool IMovementQueryPathFollowing::GetLookAheadPoint(float a_distance, NiPoint3* a_outPoint)"
 88317,0x1410bc690,0x1411192c0,2,"bool IMovementQueryPathFollowing::GetLookAheadPointAndTangent(float a_distance, NiPoint3* a_outPoint, NiPoint3* a_outTangent)"
 88318,0x1410bc7b0,0x1411193e0,2,"bool IMovementQueryPathFollowing::ProjectOntoPath(NiPoint3* a_position, float* a_outPathPosition, NiPoint3* a_outPoint, NiPoint3* a_outDirection)"
@@ -4700,12 +4700,13 @@
 88541,0x1410c52d0,0x141122030,2,"float BSPathingSolution::GetPathLengthBetween(float a_from, float a_to)"
 88544,0x1410c5970,0x1411226d0,2,"bool BSPathingSolution::GetPointAtPathPosition(float a_position, float* a_out)"
 88545,0x1410c5af0,0x141122850,2,"void BSPathingSolution::GetPointAtDistance(float a_from, float a_distance, bool a_forward, float* a_outPathPosition, NiPoint3* a_outPoint, float a_scale)"
+88546,0x1410c5ba0,0x141122900,2,"void BSPathingSolution::FindPathPositionNearPoint(float* a_position, float a_startPathPosition, float a_zTolerance, float a_endPathPosition, char a_flag, float* a_outPathPosition, NiPoint3* a_outPoint, float a_scale)"
 88547,0x1410c5c40,0x1411229a0,2,"bool BSPathingSolution::GetTangentAtPathPosition(float a_pathPosition, NiPoint3* a_out)"
 88549,0x1410c5ee0,0x141122c40,2,"void BSPathingSolution::ProjectPointOntoPath3D(NiPoint3* a_position, float a_pathPosition, float* a_outPathPosition, NiPoint3* a_outPoint)"
 88550,0x1410c5f10,0x141122c70,2,"void BSPathingSolution::ProjectPointOntoPathHorizontal(NiPoint3* a_position, float a_pathPosition, float* a_outPathPosition, NiPoint3* a_outPoint)"
 88554,0x1410c6510,0x141123270,2,"void BSPathingSolution::GetPredictedPoint(float a_from, float a_distance, float* a_outPathPosition, NiPoint3* a_outPoint)"
 88558,0x1410c6ea0,0x141123bd0,2,"bool BSPathingSolution::GetClosestPointOnPath(NiPoint3* a_pos, void* a_out)"
-88559,0x1410c6ff0,0x141123d20,2,"float BSPathingSolution::ComputeLookAheadPathPosition(float a_arg1, float a_arg2, float a_arg3, float a_arg4, float a_arg5, float a_arg6)"
+88559,0x1410c6ff0,0x141123d20,2,"float BSPathingSolution::FindMaxSpeedAlongPath(float a_arg1, float a_arg2, float a_arg3, float a_arg4, float a_arg5, float a_arg6)"
 88674,0x1410cf350,0x14112c080,3,NiPoint3 BSNavmesh::GetNormal(std::uint16_t a_tri) const
 88930,0x1410df940,0x14113c670,2,PathingSolutionEntry* PathingSolutionEntry::PathingSolutionEntry()
 88931,0x1410df9b0,0x14113c6e0,2,PathingSolutionEntry* PathingSolutionEntry::Assign(PathingSolutionEntry* a_other)
