@@ -3029,6 +3029,8 @@
 40578,0x1406e7500,0x14070e3f0,2,bool ActorMover::SetGoal(void* a_request)
 40579,0x1406e75b0,0x14070e4a0,2,"bool ActorMover::PathToLocation(NiPoint3* a_pos, TESObjectCELL* a_cell, TESWorldSpace* a_worldSpace, float a_unkFloat, void* a_unk)"
 40580,0x1406e7860,0x14070e750,2,void ActorMover::PathToReference(TESObjectREFR* a_ref)
+40581,0x1406e78d0,0x14070e7c0,2,"bool ActorMover::PathToPosition(const NiPoint3& a_position, float a_speed)"
+40583,0x1406e7b20,0x14070ea10,2,"bool ActorMover::SubmitBSPathingRequest(BSPathingRequest** a_request, BSPathingLocation* a_location)"
 40584,0x1406e7c00,0x14070eaf0,3,void ActorMover::StopMoving()
 40585,0x1406e7f90,0x14070ee80,2,void ActorMover::ClearGoal()
 40589,0x1406e8320,0x14070f210,2,void ActorMover::ResetMovementState()
@@ -3285,6 +3287,7 @@
 41346,0x140708bf0,0x14072FF80,3,"ActivateHandler::sub_140708BF0(ActivateHandler *a1, longlong a2, longlong a3)"
 41349,0x1407090a0,0x1407310b0,3,RE::JumpHandler::ProcessButton_1407090A0
 41361,0x1407096b0,0x140732b00,3,StaminaNPC::apply_PlayerControls__sub_140705530
+41501,0x14070ff30,0x14073a8d0,2,"bool Pathing::CanActorPathThroughTeleportDoor(TESObjectREFR* a_door, Character* a_actor)"
 41622,0x1407184c0,0x140742e60,2,"void ActorKnowledge::AddListener(DetectionListener* a_listener, std::int32_t a_level)"
 41624,0x1407186c0,0x140743060,2,DetectionState* ActorKnowledge::GetFreshDetectionState(std::int32_t a_level)
 41626,0x1407187d0,0x140743170,4,ActorKnowledge::SetDetectionState
@@ -5113,7 +5116,14 @@
 89210,0x1410efb20,0x14114c860,3,bool BSVirtualPathingNode::HasActivateDoorAction()
 89222,0x1410effc0,0x14114cd00,2,bool BSPathingNode::HasActivateDoorAction()
 89224,0x1410f00f0,0x14114ce30,2,bool BSPathingNode::GetActionAtNode(MovementMessage** a_out)
+89323,0x1410fa1c0,0x141156f00,2,"float MovementUtils::ComputeAngularVelocityToTarget(float a_current, float a_target, float a_deltaTime)"
+89325,0x1410fa2f0,0x141157030,2,"void MovementUtils::ComputeDirectionFromEuler(const NiPoint3& a_euler, NiPoint3& a_out)"
 89326,0x1410fa340,0x141157080,2,"void MakeRotationMatrixFromEuler(NiMatrix3& a_out, const NiPoint3& a_euler)"
+89328,0x1410fa4d0,0x141157210,2,float MovementUtils::ComputePitchFromVector(const NiPoint3& a_vector)
+89329,0x1410fa500,0x141157240,2,"float MovementUtils::ComputeHeadingDelta(const NiPoint3& a_from, const NiPoint3& a_to)"
+89330,0x1410fa570,0x1411572b0,2,"float MovementUtils::ComputePitchDelta(const NiPoint3& a_from, const NiPoint3& a_to)"
+89331,0x1410fa630,0x141157370,2,"float MovementUtils::ComputeAngleBetweenVectors(const NiPoint3& a_a, const NiPoint3& a_b)"
+89336,0x1410faa20,0x141157760,2,bool MovementUtils::HasPositiveLimits(const float* a_limits)
 89339,0x1410fae00,0x141157b40,2,"void MovementUtils::GetStoppingDistanceAndTime(float a_speed, float a_maxSpeed, float a_accel, float a_decel, float* a_outDistance, float* a_outTime)"
 89343,0x1410fb2c0,0x141158000,2,"float MovementUtils::NormalizeForwardSpeed(float a_speed, Movement::MaxSpeeds* a_speeds)"
 89344,0x1410fb330,0x141158070,2,"float MovementUtils::DenormalizeForwardSpeed(float a_normalized, Movement::MaxSpeeds* a_speeds)"
@@ -5441,6 +5451,22 @@
 90371,0x14111dc80,0x14117ab50,2,void MovementStateFollowPath::GetProcessRotation(NiPoint3* a_out)
 90394,0x14111e100,0x14117afd0,3,void IMovementPlayIdleResult::AddRef()
 90395,0x14111e110,0x14117afe0,2,std::int32_t IMovementPlayIdleResult::Release()
+90398,0x14111e180,0x14117b050,2,"bool MovementSelectIdleUtils::SelectIdleStationary(IMovementState* a_state, IMovementSelectIdle* a_selector, MovementPlayIdleData* a_data, float* a_out)"
+90399,0x14111e250,0x14117b120,2,"bool MovementSelectIdleUtils::SelectIdleMoving(IMovementState* a_state, IMovementSelectIdle* a_selector, const NiPoint3& a_velocity, float a_a, float a_b, float a_c, float a_d, const NiPoint3& a_dir, MovementPlayIdleData* a_data)"
+90400,0x14111e390,0x14117b260,2,"void MovementSelectIdleUtils::SelectIdleTurnCorrectionDefault(IMovementState* a_state, IMovementSelectIdle* a_selector)"
+90401,0x14111e3e0,0x14117b2b0,2,"bool MovementSelectIdleUtils::SelectIdleTransformCorrectionDefault(IMovementState* a_state, IMovementSelectIdle* a_selector)"
+90402,0x14111e420,0x14117b2f0,2,"bool MovementSelectIdleUtils::SelectIdleTurnCorrection(IMovementState* a_state, IMovementSelectIdle* a_selector, ISelectIdleFilter* a_filter)"
+90403,0x14111e530,0x14117b400,2,"bool MovementSelectIdleUtils::SelectIdleTransformCorrection(IMovementState* a_state, IMovementSelectIdle* a_selector, ISelectIdleFilter* a_filter)"
+90404,0x14111e630,0x14117b500,2,"bool MovementSelectIdleUtils::TrySelectIdleTurnCorrection(IMovementState* a_state, IMovementSelectIdle* a_selector, MovementPlayIdleData* a_data, MovementPlayIdleData* a_out)"
+90405,0x14111e6d0,0x14117b5a0,2,"bool MovementSelectIdleUtils::TrySelectIdleTransformCorrection(IMovementState* a_state, IMovementSelectIdle* a_selector, MovementPlayIdleData* a_data, MovementPlayIdleData* a_out)"
+90406,0x14111e760,0x14117b630,2,"bool MovementSelectIdleUtils::TrySelectIdleStationary(IMovementState* a_state, IMovementSelectIdle* a_selector, MovementPlayIdleData* a_data, MovementPlayIdleData* a_out)"
+90409,0x14111ec80,0x14117bb50,2,"bool MovementSelectIdleUtils::BuildPlayIdleDataTurnCorrection(IMovementState* a_state, MovementPlayIdleData* a_data, MovementPlayIdleData* a_out)"
+90410,0x14111eef0,0x14117bdc0,2,"bool MovementSelectIdleUtils::BuildPlayIdleDataMoving(IMovementState* a_state, const NiPoint3& a_velocity, MovementPlayIdleData* a_out)"
+90411,0x14111f0b0,0x14117bf80,2,"bool MovementSelectIdleUtils::BuildPlayIdleDataStationary(IMovementState* a_state, const NiPoint3& a_offset, MovementPlayIdleData* a_out)"
+90412,0x14111f270,0x14117c140,2,"bool MovementSelectIdleUtils::BuildQueryTurnCorrection(IMovementState* a_state, MovementSelectIdleQuery* a_out)"
+90413,0x14111f4e0,0x14117c3b0,2,"bool MovementSelectIdleUtils::BuildQueryTransformCorrection(IMovementState* a_state, MovementSelectIdleQuery* a_out)"
+90414,0x14111f7b0,0x14117c680,2,"bool MovementSelectIdleUtils::BuildQueryMoving(IMovementState* a_state, MovementSelectIdleQuery* a_out)"
+90415,0x14111f990,0x14117c860,2,"bool MovementSelectIdleUtils::BuildQueryStationary(IMovementState* a_state, MovementSelectIdleQuery* a_out)"
 90420,0x14111fbc0,0x14117ca90,2,void MovementMessagePathEvent::SaveGame(PathingStreamSaveGame* a_stream)
 90421,0x14111fbe0,0x14117cab0,2,void MovementMessagePathEvent::LoadGame(PathingStreamLoadGame* a_stream)
 90424,0x14111fc90,0x14117cb60,2,"MovementMessagePathComplete* MovementMessagePathComplete::MovementMessagePathComplete(void* a_request, void* a_solution, void* a_unused)"
