@@ -3180,7 +3180,7 @@
 41156,0x140701f90,0x140728f20,2,const BSFixedString& MovementTweenerAgentAnimationDriven::GetAgentType()
 41157,0x140701fa0,0x140728f30,2,BSFixedString& MovementTweenerAgentAnimationDriven::GetStaticAgentType()
 41158,0x140702030,0x140728fc0,2,std::uint8_t MovementTweenerAgentAnimationDriven::GetAgentSaveType()
-41159,0x140702050,0x140728fe0,2,"void MovementTweenerAgentAnimationDriven::AdjustActorTransform(const NiMatrix3* a_in, NiTransform* a_out)"
+41159,0x140702050,0x140728fe0,2,"void MovementTweenerAgentAnimationDriven::AdjustActorTransform(const NiTransform* a_actorTransform, NiTransform* a_outAdjusted)"
 41174,0x1407028b0,0x140729840,2,void MovementTweenerAgentNodeFollower::RegisterWithController(IMovementControllerRegisterInterface& a_controller)
 41175,0x1407028e0,0x140729870,2,void MovementTweenerAgentNodeFollower::UnregisterWithController()
 41176,0x140702920,0x1407298b0,2,const BSFixedString& MovementTweenerAgentNodeFollower::GetAgentType()
@@ -5048,6 +5048,7 @@
 89391,0x1410fe270,0x14115afb0,3,void ObstacleBuildQueue::ctor()
 89392,0x1410fe2d0,0x14115b010,3,void ObstacleBuildQueue::dtor()
 89395,0x1410fe4c0,0x14115b200,3,void ObstacleBuildQueue::Process()
+89396,0x1410fe750,0x14115b490,2,void ObstacleBuildRequest::DestroyObstacles()
 89405,0x1410fec20,0x14115b960,2,IMovementState* MovementControllerAI::QCurrentState()
 89407,0x1410fec60,0x14115b9a0,2,"void MovementControllerAI::UpdateSmallDelta(float a_deltaTime, MovementUpdateDeltas* a_output)"
 89408,0x1410fee20,0x14115bb60,2,"void MovementControllerAI::UpdateLargeDelta(float a_deltaTime, void* a_output)"
@@ -5117,7 +5118,7 @@
 89670,0x141108520,0x141165440,2,void MovementPathManagerAgentStaticAvoider::RegisterWithController(IMovementControllerRegisterInterface& a_controller)
 89671,0x141108570,0x141165490,2,void MovementPathManagerAgentStaticAvoider::UnregisterWithController()
 89672,0x1411085c0,0x1411654e0,2,"void MovementPathManagerAgentStaticAvoider::SetPathingData(BSPathingRequest** a_request, BSPathingSolution** a_solution)"
-89673,0x141108790,0x1411656b0,2,"void MovementPathManagerAgentStaticAvoider::CheckPathBlocked(void* a_context, std::uint32_t* a_outStatus)"
+89673,0x141108790,0x1411656b0,2,"void MovementPathManagerAgentStaticAvoider::PollPathEvent(MovementUpdateDataSmallDelta* a_updateData, MovementPathManagerAgentEvent* a_outEvent)"
 89674,0x141108a80,0x1411659a0,2,void MovementPathManagerAgentStaticAvoider::ModifyPathingRequest(BSPathingRequest** a_request)
 89675,0x141108c50,0x141165b70,2,void MovementPathManagerAgentStaticAvoider::ResetPathingState()
 89703,0x1411095b0,0x1411664d0,2,void MovementAgentActorAvoider::RegisterWithController(IMovementControllerRegisterInterface& a_controller)
@@ -5159,6 +5160,8 @@
 89839,0x14110d840,0x14116a760,2,BSFixedString& MovementTweenerAgentFixedDelta::GetStaticAgentType()
 89840,0x14110d8d0,0x14116a7f0,2,std::uint8_t MovementTweenerAgentFixedDelta::GetAgentSaveType()
 89841,0x14110d8f0,0x14116a810,2,"void MovementTweenerAgentFixedDelta::GetMotionTransform(void* a_context, NiTransform* a_out)"
+89844,0x14110e0a0,0x14116afc0,2,void MovementTweenerAgentFixedDelta::SetCorrectionData(const MovementCorrectionData* a_data)
+89845,0x14110e130,0x14116b050,2,"void MovementTweenerAgentFixedDelta::SetCorrectionParameters(const NiPoint3* a_translationDelta, const NiPoint3* a_rotationDelta, const NiPoint3* a_translationStartVelocity, const NiPoint3* a_translationEndVelocity, const NiPoint3* a_rotationStartVelocity, const NiPoint3* a_rotationEndVelocity, float a_startTime, float a_endTime, float a_tailEndTime)"
 89860,0x14110e970,0x14116b890,2,const BSFixedString& MovementHandlerArbiter::GetPipelineStage()
 89861,0x14110e980,0x14116b8a0,2,const BSFixedString& MovementHandlerArbiter::GetArbiterType()
 89862,0x14110e990,0x14116b8b0,2,BSFixedString& MovementHandlerArbiter::GetStaticArbiterType()
@@ -5201,7 +5204,7 @@
 89980,0x141112430,0x14116f380,2,std::uint8_t MovementPathManagerAgentLoadedAreaMonitor::GetAgentSaveType()
 89981,0x141112450,0x14116f3a0,2,"void MovementPathManagerAgentLoadedAreaMonitor::SetPathingData(BSPathingRequest** a_request, BSPathingSolution** a_solution)"
 89982,0x1411124b0,0x14116f400,2,void MovementPathManagerAgentLoadedAreaMonitor::ModifyPathingRequest(BSPathingRequest** a_request)
-89983,0x141112510,0x14116f460,2,"void MovementPathManagerAgentLoadedAreaMonitor::CheckPathBlocked(void* a_context, std::uint32_t* a_outStatus)"
+89983,0x141112510,0x14116f460,2,"void MovementPathManagerAgentLoadedAreaMonitor::PollPathEvent(MovementUpdateDataSmallDelta* a_updateData, MovementPathManagerAgentEvent* a_outEvent)"
 89984,0x1411126f0,0x14116f640,2,void MovementPathManagerAgentLoadedAreaMonitor::ResetPathingState()
 89985,0x141112740,0x14116f690,2,void MovementPathManagerAgentLoadedAreaMonitor::SaveGame(PathingStreamSaveGame* a_stream)
 89986,0x141112760,0x14116f6b0,2,void MovementPathManagerAgentLoadedAreaMonitor::LoadGame(PathingStreamLoadGame* a_stream)
@@ -5311,6 +5314,10 @@
 90623,0x14112c840,0x141189710,2,"void PathFollowerTurnTarget::GetFacingAngles(NiPoint3* a_position, float* a_current, float a_zOffset, float* a_outFacing)"
 90653,0x14112d870,0x14118a740,2,"PathFollowerStateUpdateData* PathFollowerStateUpdateData::PathFollowerStateUpdateData(BSPathingRequest** a_request, BSPathingSolution** a_solution, ActorState* a_actorState, void* a_messageInterface, NiPoint3* a_pPathPoint, float a_pathPosition, float a_deltaTime)"
 90677,0x14112e410,0x14118b2e0,2,"bool BSPathingSolution::GetDirectionToPathPoint(float* a_delta, float a_pathPosition, float* a_position, NiPoint3* a_outDirection)"
+90704,0x14112f3e0,0x14118c2b0,2,"std::int32_t VelocityObstacle::ObstaclePolygon::IntersectSegment(const NiPoint3* a_start, const NiPoint3* a_end, bool a_clampToStart, void* a_outHit)"
+90713,0x14112fc90,0x14118cb60,2,VelocityObstacle::ObstaclePolygon* VelocityObstacle::ObstaclePolygon::ObstaclePolygon()
+90714,0x14112fd00,0x14118cbd0,2,void VelocityObstacle::ObstaclePolygon::~ObstaclePolygon()
+90732,0x141131010,0x14118dee0,2,"bool VelocityObstacle::BuildObstaclePolygons(const BSPathingLocation* a_location, float a_radius, void* a_unused, void* a_outPolygons)"
 90938,0x14113df60,0x1411983b0,2,void EnsureMemoryHeap()
 97369,0x14122c060,0x141264510,2,"void ObjectBindPolicy::GetAttachedScripts(std::uint64_t a_handle, void* a_out)"
 97370,0x14122c230,0x1412646e0,2,"void* ObjectBindPolicy::FindAttachedScript(void* a_out, std::uint64_t a_handle, void* a_name)"
