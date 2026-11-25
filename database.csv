@@ -2953,9 +2953,15 @@
 40750,0x1406f0c10,0x140717b00,3,void MovementControllerNPC::OnMessageDispatched(MovementMessage* a_message)
 40751,0x1406f0cb0,0x140717ba0,2,bool MovementControllerNPC::DispatchAndNotify(MovementMessage* a_message)
 40752,0x1406f0d00,0x140717bf0,2,"bool MovementControllerNPC::DispatchAndNotifyForLevel(MovementMessage* a_message, std::int32_t a_expectedLevel)"
+40759,0x1406f1440,0x140718330,2,"void MovementControllerNPC::LoadAgents(PathingStreamLoadGame* a_stream)"
+40760,0x1406f1610,0x140718500,2,"void MovementControllerNPC::LoadArbiters(PathingStreamLoadGame* a_stream)"
 40762,0x1406f1860,0x140718750,3,"bool RemoveMessagesByTypeUnlocked(void* a_messages, std::int32_t a_messageType, void* a_events)"
 40809,0x1406f29a0,0x140719890,2,void* GetMovementMessageFactory()
+40810,0x1406f2a40,0x140719930,2,void* GetMovementAgentFactory()
+40811,0x1406f2ae0,0x1407199d0,2,void* GetMovementArbiterFactory()
 40812,0x1406f2b80,0x140719a70,3,bool PathingStreamLoadGame::ReadMovementMessage(MovementMessage** a_message)
+40816,0x1406f2f70,0x140719e60,2,bool LocationEventArray::SetSize(std::uint32_t a_size)
+40818,0x1406f3160,0x14071a050,2,bool MovementMessageArray::SetSize(std::uint32_t a_size)
 40901,0x1406fa6e0,0x1407215d0,2,void MovementHandlerAgentDirectControl::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
 40937,0x1406fba80,0x140722970,2,void MovementHandlerAgentPlayerControls::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
 40967,0x1406fcf60,0x140723ee0,2,void MovementHandlerAgentPlayerControlsActionTrigger::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
@@ -4881,9 +4887,11 @@
 89720,0x141109fa0,0x141166ec0,2,bool IMovementQueryActorAvoidance::UpdateObstacles(MovementHandlerUpdateDataSmallDelta* a_updateData)
 89723,0x14110a260,0x141167180,2,void MovementAgentActorAvoider::FindActorsToAvoid()
 89724,0x14110a730,0x141167650,2,bool MovementAgentActorAvoider::IsActorNearPath(void* a_actorInfo)
+89769,0x14110b770,0x141168690,2,"void MovementControllerNPC::GetAgentNameById(char a_id, BSFixedString* a_name)"
 89781,0x14110bf30,0x141168e50,2,MovementArbiter* MovementArbiter::MovementArbiter()
 89782,0x14110bf70,0x141168e90,2,void MovementArbiter::~MovementArbiter()
 89787,0x14110bfd0,0x141168ef0,2,void MovementArbiter::OnKillArbiter()
+89796,0x14110c080,0x141168fa0,2,"void MovementControllerNPC::GetArbiterNameById(char a_id, BSFixedString* a_name)"
 89815,0x14110ca30,0x141169950,2,void MovementHandlerAgentTranslationController::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
 89865,0x14110ea50,0x14116b970,2,void MovementHandlerArbiter::UnregisterInterface()
 89872,0x14110ee40,0x14116bd60,3,void MovementHandlerArbiter::ClearAgents(void* a_unused)
