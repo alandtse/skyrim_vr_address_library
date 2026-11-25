@@ -7696,6 +7696,7 @@ sseid,aeid,confidence,name
 68022,69383,3,JobList::ctor
 68054,69404,3,JobList::Clear
 68163,69510,2,
+68471,69822,1,
 68838,70190,3,RE::NiObject::ProcessClone
 68839,70191,3,RE::NiObject::CreateDeepCopy
 68893,70244,2,"void NiAVObject::CopyTransformAndCollision(NiAVObject* a_target, NiCloningProcess* a_cloning)"
