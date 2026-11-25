@@ -2292,7 +2292,7 @@
 36682,0x1405f87f0,0x140600f60,3,RE::Actor::CreateBlood
 36683,0x1405f9a20,0x140602190,3,WashThatBloodOff::Decal::Weapon::CreateBloodOnWeapon
 36690,0x1405f9e30,0x1406025a0,3,RE::Actor::HasPerk
-36693,0x1405f9ee0,0x140602650,2,void Actor::ForEachPerkEntry(EntryPoint a_entryType, PerkEntryVisitor& a_visitor)
+36693,0x1405f9ee0,0x140602650,2,"void Actor::ForEachPerkEntry(EntryPoint a_entryType, PerkEntryVisitor& a_visitor)"
 36695,0x1405f9f20,0x140602690,4,inline void Actor::RemoveBasePerks(Actor* a_actor)
 36700,0x1405fa1b0,0x140602920,3,"void Character::PerformStagger(float a_staggerMult, Actor* a_aggressor)"
 36707,0x1405fa750,0x140602f40,4,Actor::SetPlayerTeammate
