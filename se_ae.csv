@@ -5041,6 +5041,8 @@ sseid,aeid,confidence,name
 36532,37532,3,RE::Actor::CanAttackActor
 36548,37549,1,
 36559,37560,3,RE::Actor::GetCollisionFilterInfo
+36581,37585,1,
+36583,37587,1,
 36602,37610,3,RE::Actor::SetRotationX
 36604,37612,3,RE::Actor::SetLifeState
 36613,37621,1,

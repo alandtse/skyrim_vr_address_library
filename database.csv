@@ -2348,6 +2348,8 @@
 36559,0x1405ebd90,0x1405f44a0,4,uint32_t Actor::GetCollisionFilterInfo(uint32_t& a_outCollisionFilterInfo)
 36568,0x1405ec540,0x1405f4c50,3,Actor::InitiateGetUpPackage
 36575,0x1405ecb70,0x1405f5280,4,Actor::IsFleeing
+36581,0x1405ed250,0x1405f5960,2,NiNode* Actor::GetFireNode()
+36583,0x1405ed340,0x1405f5a50,2,void Actor::SetFireNode(NiNode* a_fireNode)
 36589,0x1405ed510,0x1405f5c20,2,float Actor::GetJogSpeed()
 36590,0x1405ed5a0,0x1405f5cb0,2,float Actor::GetFastWalkSpeed()
 36602,0x1405edd50,0x1405f6460,3,void Actor::SetRotationX(float a_angle)
