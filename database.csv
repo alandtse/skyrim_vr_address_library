@@ -573,6 +573,7 @@
 19327,0x1402947d0,0x1402a5ed0,2,NiPoint3 TESObjectREFR::GetBoundMin()
 19328,0x1402948d0,0x1402a5fd0,2,NiPoint3 TESObjectREFR::GetBoundMax()
 19338,0x140295060,0x1402a6760,3,bool Actor::IsLimbGone(std::uint32_t a_limb)
+19343,0x1402952d0,0x1402a69d0,2,void TESObjectREFR::RemoveWeapon(BIPED_OBJECT a_equipIndex)
 19354,0x1402961f0,0x1402a78f0,3,RE::TESObjectREFR::GetDisplayFullName
 19357,0x1402964a0,0x1402a7ba0,4,TESObjectREFR::GetWorldLocation
 19359,0x140296550,0x1402a7c50,3,void TESObjectREFR::SetAngle(const NiPoint3& a_angle)
@@ -584,8 +585,10 @@
 19372,0x1402977d0,0x1402a8ed0,3,"void TESObjectREFR::MoveRefToNewSpace(TESObjectCELL* a_interior, TESWorldSpace* a_world)"
 19373,0x140298190,0x1402a9890,4,void TESObjectREFR::Enable(bool a_resetInventory)
 19375,0x140298c80,0x1402aa380,3,void TESObjectREFR::ResetInventory_140298C80(TESObjectREFR * param_1)
+19381,0x140299360,0x1402aaa60,2,bool TESObjectREFR::OnAddCellPerformQueueReference(TESObjectCELL& a_cell)
 19385,0x1402994f0,0x1402aabf0,3,BGSLocation* TESObjectREFR::GetCurrentLocation()
 19390,0x140299790,0x1402aae90,3,TESObjectCELL* TESObjectREFR::GetSaveParentCell() const
+19393,0x1402999c0,0x1402ab0c0,2,bool TESObjectREFR::IsDead(bool a_notEssential)
 19395,0x140299a40,0x1402ab140,2,float TESObjectREFR::GetSquaredDistanceToPoint(const NiPoint3* a_point)
 19396,0x140299a80,0x1402ab180,4,"float TESObjectREFR::GetDistance(TESObjectREFR* a_other, bool a_disabledRefs, bool a_ignoreWorldspace)"
 19400,0x14029a330,0x1402aba40,3,bool TESObjectREFR::IsCrimeToActivate()
@@ -595,7 +598,10 @@
 19405,0x14029ab70,0x1402ac280,3,"void TESObjectREFR::UpdateAddonNodeSounds(NiAVObject* a_node, bool a_stop)"
 19409,0x14029b010,0x1402ac720,3,void TESObjectREFR::AddToWaterSystem()
 19410,0x14029b120,0x1402ac830,3,void TESObjectREFR::RemoveFromWaterSystem()
+19412,0x14029b1d0,0x1402ac8e0,2,"bool TESObjectREFR::ProcessInWater(hkpCollidable* a_collidable, float a_waterHeight, float a_deltaTime)"
+19413,0x14029b250,0x1402ac960,2,"bool TESObjectREFR::ApplyCurrent(float a_velocityTime, const hkVector4& a_velocity)"
 19418,0x14029b980,0x1402ad090,4,TESObjectREFR::GetHandle
+19423,0x14029bb90,0x1402ad2a0,2,"bool TESObjectREFR::Unk_A0(NiAVObject* a_node, float& a_angleX, float& a_angleZ, NiPoint3& a_pos)"
 19437,0x14029c440,0x1402adb50,2,void ProcessPendingMultiBoundRefs()
 19446,0x14029cb80,0x1402ae290,3,"ShaderReferenceEffect* TESObjectREFR::InstantiateHitShader(TESEffectShader* a_shader, float a_dur, TESObjectREFR* a_facingRef, bool a_faceTarget, bool a_attachToCamera, NiAVObject* a_attachNode, bool a_interfaceEffect)"
 19453,0x14029d2e0,0x1402ae9f0,4,BGSWaterCollisionManager::BGSWaterUpdateI * BGSWaterCollisionManager::BGSWaterUpdateI::ctor (BGSWaterCollisionManager::BGSWaterUpdateI * a_this)
@@ -606,19 +612,30 @@
 19520,0x14029ed90,0x1402b0500,4,BGSWaterCollisionManager::bhkPlaceableWater * BGSWaterCollisionManager::bhkPlaceableWater::dtor (BGSWaterCollisionManager::bhkPlaceableWater * a_this)
 19528,0x14029efe0,0x1402b0750,4,BGSWaterCollisionManager::bhkWaterfall * BGSWaterCollisionManager::bhkWaterfall::dtor (BGSWaterCollisionManager::bhkWaterfall * a_this)
 19564,0x14029fac0,0x1402b1230,2,TESPackage* TESObjectREFR::CheckForCurrentAliasPackage()
+19571,0x14029fbf0,0x1402b1360,2,void TESObjectREFR::DoMoveToHigh()
 19582,0x14029fd20,0x1402b1490,2,NiAVObject* TESObjectREFR::Get3D1(bool a_firstPerson)
+19584,0x14029fd40,0x1402b14b0,2,NiAVObject* TESObjectREFR::GetCurrent3D()
 19588,0x14029fd80,0x1402b14f0,2,BSFaceGenAnimationData* TESObjectREFR::GetFaceGenAnimationData()
 19589,0x14029fd90,0x1402b1500,2,BSFaceGenNiNode* TESObjectREFR::GetFaceNode()
 19590,0x14029fda0,0x1402b1510,2,BSFaceGenNiNode* TESObjectREFR::GetFaceNodeSkinned()
+19591,0x14029fdb0,0x1402b1520,2,NiNode* TESObjectREFR::GetFireNode()
 19597,0x14029fe70,0x1402b15e0,2,bool TESForm::GetMustUpdate()
 19615,0x1402a0060,0x1402b17d0,2,TESActorBase* TESObjectREFR::GetTemplateActorBase()
 19617,0x1402a00a0,0x1402b1810,4,"void BGSWaterCollisionManager::bhkWaterfall::GetTransform (BGSWaterCollisionManager::BGSWaterUpdateI * a_this, hkTransform * a_outTransform)"
 19623,0x1402a01b0,0x1402b1920,2,bool TESObjectREFR::Is3rdPersonVisible()
+19627,0x1402a0200,0x1402b1970,2,Explosion* TESObjectREFR::AsExplosion()
+19629,0x1402a0220,0x1402b1990,2,Projectile* TESObjectREFR::AsProjectile()
 19630,0x1402a0230,0x1402b19a0,2,const TESObjectREFR* TESForm::AsReference2()
 19631,0x1402a0240,0x1402b19b0,2,TESObjectREFR* TESForm::AsReference1()
 19646,0x1402a19e0,0x1402b3150,2,bool TESObjectREFR::QCanUpdateSync()
 19666,0x1402a2070,0x1402b37e0,3,RE::ScriptEventSourceHolder::SendActivateEvent
+19669,0x1402a21e0,0x1402b3950,2,void TESObjectREFR::SetActionComplete(bool a_set)
+19672,0x1402a22d0,0x1402b3a40,2,void TESObjectREFR::SetFireNode(NiNode* a_fireNode)
+19673,0x1402a22e0,0x1402b3a50,2,void TESObjectREFR::SetMovementComplete(bool a_set)
 19677,0x1402a2420,0x1402b3b90,2,void TESObjectREFR::SetTemplateActorBase(TESActorBase* a_template)
+19680,0x1402a2510,0x1402b3c80,2,bool TESObjectREFR::TryChangeSkyCellActorsProcessLevel()
+19681,0x1402a2520,0x1402b3c90,2,void TESObjectREFR::TryMoveToMiddleLow()
+19682,0x1402a2530,0x1402b3ca0,2,void TESObjectREFR::TryUpdateActorLastSeenTime()
 19706,0x1402a2fa0,0x1402b4710,2,"void TESObjectREFR::PopulateGraphProjectsToLoad(void* a_arg1, void* a_arg2)"
 19720,0x1402a3c80,0x1402b53f0,2,void TESObjectREFR::ModifyAnimationUpdateData(BSAnimationUpdateData& a_data)
 19723,0x1402a3d50,0x1402b54c0,2,bool TESObjectREFR::ShouldPerformRevert()
