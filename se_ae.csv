@@ -5708,6 +5708,7 @@ sseid,aeid,confidence,name
 39397,40472,1,
 39425,40501,3,papyrus_extender::papyrus::detail::get_god_mode_impl
 39428,40504,3,bool PlayerCharacter::IsInvulnerable()
+39451,40528,1,
 39507,40586,3,RE::PlayerCharacter::SetAIDriven
 39568,40654,3,RE::PlayerCharacter::AttemptPickpocket
 39572,40658,2,

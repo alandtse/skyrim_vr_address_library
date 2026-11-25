@@ -2277,9 +2277,9 @@
 36604,0x1405edef0,0x1405f6600,4,void Actor::SetLifeState(ACTOR_LIFE_STATE a_lifeState)
 36605,0x1405ee410,0x1405f6b20,4,void Actor::ClearDeathState()
 36610,0x1405ee910,0x1405f7020,3,Actor::InitActorLocationFromPackage
-36613,0x1405ef4b0,0x1405f7bc0,2,void Actor::MoveToHigh()
-36614,0x1405efd70,0x1405f8480,2,void Actor::MovetoLow()
-36615,0x1405f04e0,0x1405f8bf0,2,void Actor::MovetoMiddleLow()
+36613,0x1405ef4b0,0x1405f7bc0,2,bool Actor::MoveToHigh()
+36614,0x1405efd70,0x1405f8480,2,bool Actor::MovetoLow()
+36615,0x1405f04e0,0x1405f8bf0,2,bool Actor::MovetoMiddleLow()
 36621,0x1405f1530,0x1405f9c40,4,RE::Actor::Func156_*
 36631,0x1405f2530,0x1405fac70,3,bool Actor::Decapitate()
 36642,0x1405f4150,0x1405fc880,4,"void ReadFromSaveGame_1405F4150 (Actor * a_this, undefined8 param_2)"
@@ -2814,6 +2814,7 @@
 39441,0x1406a4540,0x1406c4d30,4,"void PlayerCharacter::BuildPlayerMarkerPath(TESObjectREFR* a_target, void* a_outPath, std::uint64_t a_arg3)"
 39444,0x1406a4a00,0x1406c51f0,3,PlayerCharacter::HasLOS_impl
 39445,0x1406a4d90,0x1406c55c0,3,"void PlayerCharacter::UpdateAnimation(PlayerCharacter* a_this, float a_delta)"
+39451,0x1406a5220,0x1406c6d30,2,float Actor::GetHeading(bool a_ignoreRaceSettings)
 39456,0x1406a5300,0x1406c6e00,3,PlayerCharacter::PickUpObject
 39458,0x1406a59d0,0x1406c74d0,3,"void PlayerCharacter::SetWaypoint(PlayerCharacter* a_this, NiPoint3* a_position, TESForm* a_worldSpaceOrCell)"
 39459,0x1406a5b30,0x1406c7630,3,void PlayerCharacter::RemoveWaypoint(PlayerCharacter* a_this)
