@@ -1,4 +1,4 @@
-id,sse,vr,status,name
+﻿id,sse,vr,status,name
 5115,0x14008a4d0,0x140089dc0,3,RegisterAssaultActorStoryEvent
 5116,0x14008a550,0x140089e40,3,RegisterKillActorStoryEvent
 5146,0x14008ad10,0x14008a600,3,RegisterPlayerAddItemStoryEvent
@@ -2894,10 +2894,29 @@ id,sse,vr,status,name
 40636,0x1406eae40,0x140711d30,2,float MovementParametersFixed::GetSpeed()
 40643,0x1406eb030,0x140711f20,2,void MovementParametersFixed::LoadGame(PathingStreamLoadGame* a_stream)
 40647,0x1406eb360,0x140712250,2,void MovementParametersFixed::SaveGame(PathingStreamSaveGame* a_stream)
+40684,0x1406ed7d0,0x1407146c0,3,"void MovementControllerNPC::QueuePlayIdle(void* a_idleName, void* a_idleData, void* a_arg)"
+40685,0x1406ed910,0x140714800,3,void MovementControllerNPC::ReleaseIdle()
+40690,0x1406edf30,0x140714e20,3,void MovementControllerNPC::PrepareAnimationDrivenAgents()
+40691,0x1406edfa0,0x140714e90,3,void MovementControllerNPC::PrepareMotionDrivenAgents()
+40692,0x1406ee020,0x140714f10,3,void MovementControllerNPC::SetMotionDriven()
+40693,0x1406ee1a0,0x140715090,3,void MovementControllerNPC::SetAnimationDriven()
 40704,0x1406ee620,0x140715510,2,void MovementControllerNPC::SaveGame(void* a_buffer)
 40705,0x1406eed90,0x140715c80,2,void MovementControllerNPC::LoadGame(void* a_buffer)
 40706,0x1406ef230,0x140716120,3,void MovementControllerNPC::ProcessQueuedMessages()
 40708,0x1406ef720,0x140716610,3,bool MovementControllerNPC::RemoveMessagesByType(std::int32_t a_messageType)
+40709,0x1406ef7c0,0x1407166b0,3,void MovementControllerNPC::EnableDirectControl()
+40710,0x1406ef850,0x140716740,3,void MovementControllerNPC::SetDirection(NiPoint3* a_direction)
+40711,0x1406ef8e0,0x1407167d0,3,void MovementControllerNPC::SetSpeed(float a_speed)
+40712,0x1406ef970,0x140716860,3,void MovementControllerNPC::SetRotation(NiPoint3* a_rotation)
+40713,0x1406efa00,0x1407168f0,2,"void MovementControllerNPC::BlendDirection(NiPoint3* a_direction, float a_time)"
+40714,0x1406efaa0,0x140716990,2,"void MovementControllerNPC::BlendSpeed(float a_speed, float a_time)"
+40715,0x1406efb40,0x140716a30,2,"void MovementControllerNPC::BlendRotation(NiPoint3* a_rotation, float a_time)"
+40716,0x1406efbe0,0x140716ad0,3,void MovementControllerNPC::DisableDirectControl()
+40717,0x1406efcb0,0x140716ba0,3,void MovementControllerNPC::EnablePlannerDirectControl()
+40718,0x1406efd40,0x140716c30,2,void MovementControllerNPC::SetPlannerDirection(NiPoint3* a_direction)
+40719,0x1406efdd0,0x140716cc0,2,void MovementControllerNPC::SetPlannerSpeed(float a_speed)
+40720,0x1406efe60,0x140716d50,2,void MovementControllerNPC::SetPlannerRotation(NiPoint3* a_rotation)
+40721,0x1406efef0,0x140716de0,3,void MovementControllerNPC::DisablePlannerDirectControl()
 40723,0x1406f0050,0x140716f40,3,void MovementControllerNPC::SetKeepingOffset(bool a_keeping)
 40741,0x1406f0660,0x140717550,3,void MovementControllerNPC::ApplyMovementMode(std::int32_t a_mode)
 40743,0x1406f0890,0x140717780,2,TESForm* MovementControllerNPC::GetDefaultObjectByIndex(std::int32_t a_index)
@@ -4764,7 +4783,7 @@ id,sse,vr,status,name
 89392,0x1410fe2d0,0x14115b010,3,void ObstacleBuildQueue::dtor()
 89395,0x1410fe4c0,0x14115b200,3,void ObstacleBuildQueue::Process()
 89405,0x1410fec20,0x14115b960,2,IMovementState* MovementControllerAI::QCurrentState()
-89407,0x1410fec60,0x14115b9a0,2,"void MovementControllerAI::UpdateSmallDelta(float a_deltaTime, void* a_output)"
+89407,0x1410fec60,0x14115b9a0,2,"void MovementControllerAI::UpdateSmallDelta(float a_deltaTime, MovementUpdateDeltas* a_output)"
 89408,0x1410fee20,0x14115bb60,2,"void MovementControllerAI::UpdateLargeDelta(float a_deltaTime, void* a_output)"
 89409,0x1410fef70,0x14115be80,2,"bool MovementControllerAI::RegisterInterface(BSFixedString* a_name, IMovementInterface* a_interface)"
 89410,0x1410feff0,0x14115bf00,2,IMovementInterface* MovementControllerAI::GetInterface2(BSFixedString* a_name)
