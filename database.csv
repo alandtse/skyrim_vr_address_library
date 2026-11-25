@@ -512,6 +512,7 @@
 19110,0x140285be0,0x140297310,3,void TESObjectREFR::AddLockChange()
 19113,0x140285f90,0x1402976c0,2,void TESObjectREFR::ForceEditorLocation(BGSLocation* a_location)
 19119,0x1402866d0,0x140297e00,4,void TESObjectREFR::UpdateSoundCallBack_1402866D0 (Character * a_this)
+19124,0x140286d40,0x140298470,2,"void TESObjectREFR::DamageObject(float a_objectHealth, bool a_arg3)"
 19133,0x140287d30,0x140299460,4,"void TESObjectREFR::ReadFromSaveGame (TESObjectREFR * a_this, BGSLoadFormBuffer * a_buffer)"
 19142,0x1402896f0,0x14029ae20,4,"ObjectRefHandle TESObjectREFR::CreateReference(ObjectRefHandle& a_handleOut, FormType a_formType, bool a_addActorToProcessList)"
 19143,0x140289940,0x14029b070,2,FormType TESForm::GetSavedFormType()
