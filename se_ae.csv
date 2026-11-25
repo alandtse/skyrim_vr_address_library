@@ -3502,6 +3502,7 @@ sseid,aeid,confidence,name
 24478,25000,1,TESQuest::sub_*
 24479,25001,1,TESQuest::sub_*
 24481,25003,3,RE::TESQuest::EnsureQuestStarted
+24482,25004,1,
 24490,25018,1,TESQuest::sub_*
 24491,25019,1,
 24499,25027,1,TESQuest::SetFormEditorID_*
@@ -4433,6 +4434,7 @@ sseid,aeid,confidence,name
 31340,32125,3,BGSWaterCollisionManager::bshkAutoWater::RemoveOverlappingCollidable
 31341,32126,3,BGSWaterCollisionManager::bshkAutoWater::GetTransform
 31342,32127,3,BGSWaterCollisionManager::bshkAutoWater::IsActive
+31371,32158,1,
 31410,32217,3,RE::TESWaterSystem::AddRipple
 31719,32487,2,
 31812,32582,3,
@@ -4969,6 +4971,7 @@ sseid,aeid,confidence,name
 36604,37612,3,RE::Actor::SetLifeState
 36631,37639,3,RE::Actor::Decapitate
 36678,37686,3,RE::Actor::AddToFaction
+36700,37710,1,
 36715,37725,3,bool MagicTarget::IsInvulnerable()
 36723,37735,3,RE::Actor::KillImmediate
 36739,37753,1,
@@ -5851,6 +5854,8 @@ sseid,aeid,confidence,name
 41173,42261,1,MovementTweenerAgentNodeFollower::Func6_*
 41176,42264,1,MovementTweenerAgentNodeFollower::Func1_*
 41177,42265,1,
+41181,42269,1,
+41182,42270,1,
 41195,42280,1,
 41197,42282,1,
 41199,42284,1,
@@ -6742,6 +6747,7 @@ sseid,aeid,confidence,name
 46012,47273,1,
 46015,47276,1,
 46045,47309,1,
+46050,47314,1,
 46068,47332,3,
 46638,47841,1,
 46639,47881,1,
@@ -8870,14 +8876,22 @@ sseid,aeid,confidence,name
 89720,92197,1,
 89723,92200,1,
 89724,92201,1,
+89766,92238,1,
+89767,92239,1,
 89782,92249,1,
 89787,92254,1,
+89790,92257,1,
+89791,92258,1,
 89815,92284,1,
 89865,92337,1,
 89872,92344,1,
+89873,92345,1,
+89874,92346,1,
 89875,92340,1,
 89913,92385,1,
 89918,92390,1,
+89925,92397,1,
+89926,92398,1,
 89927,92400,1,
 89928,92401,1,
 89929,92402,1,
@@ -8942,6 +8956,8 @@ sseid,aeid,confidence,name
 90083,92573,1,
 90084,92574,1,MovementHandlerAgentAngleController::Func2_*
 90085,92575,1,IMovementHandlerAgent::Func1_*
+90087,92577,1,
+90088,92578,1,
 90101,92593,1,
 90102,92594,1,
 90106,92588,1,AutoRegisterMovementAgentCreator_gs_T1_ge_::sub_*
@@ -8977,6 +8993,7 @@ sseid,aeid,confidence,name
 90175,92676,1,IMovementHandlerAgent::Func1_*
 90176,92677,1,
 90177,92678,1,MovementHandlerAgentLargeDeltaIdle::Func11_*
+90178,92679,1,
 90180,92667,1,
 90181,92666,1,AutoRegisterFactory_gs_T1_T2_ge_::sub_*
 90182,92668,1,AutoRegisterMovementAgentCreator_gs_T1_ge_::sub_*
@@ -9005,6 +9022,8 @@ sseid,aeid,confidence,name
 90287,92798,1,
 90288,92799,1,
 90289,92800,1,
+90290,92801,1,
+90291,92802,1,
 90331,92847,1,
 90332,92848,1,
 90333,92850,1,

@@ -740,7 +740,7 @@
 24479,0x140370800,0x1403801a0,3,void TESQuest::RunShutDownStages()
 24480,0x140370890,0x140380230,3,void TESQuest::StopPlayingScenes()
 24481,0x140370910,0x1403802b0,3,RE::TESQuest::EnsureQuestStarted
-24482,0x140370a30,0x1403803d0,3,bool TESQuest::SetStage(std::uint16_t a_stage)
+24482,0x140370a30,0x1403803d0,3,bool TESQuest::SetStage(std::uint16_t a_index)
 24483,0x140370b20,0x1403804c0,3,bool TESQuest::IsStageDone(std::uint16_t a_stage)
 24485,0x140370e80,0x140380820,3,std::uint16_t TESQuest::GetCurrentStage()
 24486,0x140370e90,0x140380830,3,RE::TESQuest::ResetQuest
@@ -1813,7 +1813,7 @@
 31343,0x1404c2f60,0x1404d30c0,4,void BGSWaterCollisionManager::bshkAutoWater::Update (BGSWaterCollisionManager::BGSWaterUpdateI * a_this)
 31353,0x1404c3520,0x1404d3680,4,void BGSWaterCollisionManager::bhkAutoWater::`scalar_deleting_destructor' (BGSWaterCollisionManager::bhkAutoWater * a_this)
 31354,0x1404c3560,0x1404d36c0,4,BGSWaterCollisionManager::bshkAutoWater * BGSWaterCollisionManager::bshkAutoWater::dtor (BGSWaterCollisionManager::bshkAutoWater * a_this)
-31371,0x1404c3b60,0x1404d3cc0,3,TESWaterReflections::TESWaterReflections
+31371,0x1404c3b60,0x1404d3cc0,3,"TESWaterReflections* TESWaterReflections::TESWaterReflections(NiPlane* a_plane, BSWaterShaderMaterial* a_mat, std::uint16_t a_flags, const char* a_texture)"
 31373,0x1404c3e20,0x1404d3f80,3,char TESWaterReflections::UpdateActor (TESWaterReflections * a_this)
 31383,0x1404c5660,0x1404d5820,3,TESWaterSystem::Update
 31384,0x1404c6160,0x1404d6310,3,void TESWaterSystem::UpdateDisplacementMeshPosition(TESWaterSystem* a_waterSystem)
@@ -2283,7 +2283,7 @@
 36683,0x1405f9a20,0x140602190,3,WashThatBloodOff::Decal::Weapon::CreateBloodOnWeapon
 36690,0x1405f9e30,0x1406025a0,3,RE::Actor::HasPerk
 36695,0x1405f9f20,0x140602690,4,inline void Actor::RemoveBasePerks(Actor* a_actor)
-36700,0x1405fa1b0,0x140602920,3,"void Character::PerformStagger_1405FA1B0 (Actor * a_target, float a_staggerMult, Actor * a_aggressor)"
+36700,0x1405fa1b0,0x140602920,3,"void Character::PerformStagger(float a_staggerMult, Actor* a_aggressor)"
 36707,0x1405fa750,0x140602f40,4,Actor::SetPlayerTeammate
 36715,0x1405fa910,0x140603100,3,bool MagicTarget::IsInvulnerable()
 36720,0x1405fb450,0x140603c40,3,po3tweaks::IsFurnitureAnimeTypeFix::GetEquippedFurnitureType
@@ -2779,16 +2779,18 @@
 39372,0x14069d6e0,0x1406bde50,2,RE::Actor::CanFastTravel
 39373,0x14069d9a0,0x1406be070,3,void PlayerCharacter::ExecuteCellTransition()
 39375,0x14069e580,0x1406BEC10,3,"PlayerCharacter::Update(PlayerCharacter *a1, float* a2, float a3)"
+39379,0x14069f730,0x1406bff10,2,"void PlayerCharacter::ModifyMovementData(float a_delta, NiPoint3& a_arg3, NiPoint3& a_arg4)"
 39382,0x14069f910,0x1406c00f0,3,Actor::DropObject
 39384,0x14069fe60,0x1406c0640,3,"void PlayerCharacter::AddPlayerAddItemEvent(TESObject* a_object, TESForm* a_owner, TESObjectREFR* a_container, AQUIRE_TYPE a_type)"
 39391,0x1406a0870,0x1406c11a0,3,void PlayerCharacter::SetParentCell(TESObjectCELL* a_cell)
 39401,0x1406a1820,0x1406c2160,3,splashes_of_skyrim::RainManager::ToggleWaterRipples
+39402,0x1406a1b10,0x1406b0380,2,void PlayerCharacter::RemoveWeapon(BIPED_OBJECT a_equipIndex)
 39406,0x1406a1cc0,0x1406c2730,3,po3tweaks::NoPoisonPrompt::PoisonPrompt
 39407,0x1406a1e30,0x1406c28a0,3,YesImSure::NoPoisonPrompt::PoisonPromptLeftHand
 39409,0x1406a2060,0x1406c2ad0,3,"bool PlayerCharacter::CheckCast(MagicItem* a_spell, Effect* a_effect, MagicSystem::CannotCastReason& a_reason)"
 39410,0x1406a20b0,0x1406c2c00,3,po3tweaks::GameTimers::detail::UpdateTimers
 39413,0x1406a2540,0x1406c30b0,3,RE::PlayerCharacter::AddSkillExperience
-39415,0x1406a25a0,0x1406c3110,3,PlayerCharacter::InitActorValues
+39415,0x1406a25a0,0x1406c3110,3,void PlayerCharacter::InitValues()
 39424,0x1406a2fb0,0x1406c3890,4,void PlayerCharacter::SetGodMode(bool a_enable)
 39425,0x1406a2fc0,0x1406c38a0,3,papyrus_extender::papyrus::detail::get_god_mode_impl
 39428,0x1406a2ff0,0x1406c38f0,3,bool PlayerCharacter::IsInvulnerable()
@@ -2811,11 +2813,15 @@
 39531,0x1406aff60,0x1406d27b0,3,ShowNoteAddedMessage
 39534,0x1406b01e0,0x1406D2A30,3,PlayerCharacter::PickCrosshairReference(PlayerCharacter *a1)
 39535,0x1406b0570,0x1406d3770,3,RE::PlayerCharacter::OnUpdateCrosshairText
+39544,0x1406b0df0,0x1406d3fc0,2,void PlayerCharacter::UnlockWord(TESWordOfPower* a_power)
 39568,0x1406b2530,0x1406d58a0,3,"bool PlayerCharacter::AttemptPickpocket(TESObjectREFR* a_containerRef, InventoryEntryData* a_entry, std::int32_t a_number, bool a_fromContainer)"
 39572,0x1406b2e90,0x1406d6200,2,bool PlayerCharacter::IsServingJailTime()
 39574,0x1406b3110,0x1406d6480,4,"void PlayerCharacter::SetEscaping(bool a_flag, bool a_escaped)"
 39577,0x1406b34e0,0x1406d6850,4,RE::PlayerCharacter::WeaponSwingCallBack_1406B34E0
 39584,0x1406b3a50,0x1406d6dc0,3,RE::PlayerCharacter::IsAllowedToTakeItemWithValue
+39597,0x1406b4290,0x1406d75e0,2,void PlayerCharacter::ApplyTemporaryPerk(BGSPerk* a_perk)
+39598,0x1406b4370,0x1406d76e0,2,void PlayerCharacter::RemoveTemporaryPerk(BGSPerk* a_perk)
+39604,0x1406b4820,0x1406d7b00,2,"bool PlayerCharacter::DrinkPotion(AlchemyItem* a_potion, ExtraDataList* a_extralist)"
 39612,0x1406b52a0,0x1406d8580,3,"TintMask* PlayerCharacter::GetTintMask(std::int32_t a_type, std::int32_t a_index)"
 39614,0x1406b5450,0x1406d8730,3,RE::PlayerCharacter::GetNumTints
 39630,0x1406b5dc0,0x1406d90e0,3,bool TESObjectREFR::IsInMountBlockedWorldspace()
@@ -2853,6 +2859,8 @@
 40459,0x1406e33e0,0x14070a210,3,"void* BeginLowActorUpdate(void*, float, float, std::uint8_t, float, std::uint32_t)"
 40478,0x1406e3ee0,0x14070ad10,3,"std::uint64_t LockFreeRing2048Push(void*, void*)"
 40499,0x1406e4540,0x14070b370,3,void* LockFreeRing2048Pop(void*)
+40548,0x1406e60c0,0x14070cfb0,2,ActorState* TESActionData::GetSourceActorState()
+40550,0x1406e6100,0x14070cff0,2,BGSAnimationSequencer* TESActionData::GetAnimationSequencer()
 40552,0x1406e6130,0x14070d020,3,PlayerSkills::GetSkillData
 40553,0x1406e6180,0x14070d070,3,PlayerSkills::GetLevelData
 40554,0x1406e61d0,0x14070d0c0,4,PlayerSkills::ModSkillPoints
@@ -2960,7 +2968,7 @@
 40810,0x1406f2a40,0x140719930,2,void* GetMovementAgentFactory()
 40811,0x1406f2ae0,0x1407199d0,2,void* GetMovementArbiterFactory()
 40812,0x1406f2b80,0x140719a70,3,bool PathingStreamLoadGame::ReadMovementMessage(MovementMessage** a_message)
-40816,0x1406f2f70,0x140719e60,2,bool LocationEventArray::SetSize(std::uint32_t a_size)
+40816,0x1406f2f70,0x140719e60,2,bool MovementLocationEventArray::SetSize(std::uint32_t a_size)
 40818,0x1406f3160,0x14071a050,2,bool MovementMessageArray::SetSize(std::uint32_t a_size)
 40901,0x1406fa6e0,0x1407215d0,2,void MovementHandlerAgentDirectControl::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
 40937,0x1406fba80,0x140722970,2,void MovementHandlerAgentPlayerControls::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
@@ -2980,6 +2988,8 @@
 41130,0x140700f70,0x140727f00,2,"void IMovementSetWarp::HandlePathingFailure(void* a_request, void* a_p2)"
 41131,0x1407011e0,0x140728170,2,void IMovementSetWarp::AdvanceWarpState(void* a_request)
 41132,0x140701290,0x140728220,2,void IMovementSetWarp::ResetWarpState(void* a_request)
+41181,0x140702c40,0x140729bd0,2,void MovementTweenerAgentNodeFollower::SaveGame(PathingStreamSaveGame* a_stream)
+41182,0x140702c50,0x140729be0,2,void MovementTweenerAgentNodeFollower::LoadGame(PathingStreamLoadGame* a_stream)
 41195,0x140702eb0,0x140729e40,3,std::uint32_t PathingStreamLoadGame::GetType()
 41197,0x140702f30,0x140729ec0,2,std::uint16_t PathingStreamLoadGame::GetFormVersion()
 41199,0x140702f60,0x140729ef0,2,bool PathingStreamLoadGame::ReadBool(bool* a_out)
@@ -4887,31 +4897,49 @@
 89720,0x141109fa0,0x141166ec0,2,bool IMovementQueryActorAvoidance::UpdateObstacles(MovementHandlerUpdateDataSmallDelta* a_updateData)
 89723,0x14110a260,0x141167180,2,void MovementAgentActorAvoider::FindActorsToAvoid()
 89724,0x14110a730,0x141167650,2,bool MovementAgentActorAvoider::IsActorNearPath(void* a_actorInfo)
-89769,0x14110b770,0x141168690,2,"void MovementControllerNPC::GetAgentNameById(char a_id, BSFixedString* a_name)"
+89766,0x14110b720,0x141168640,2,void MovementAgent::SaveGame(PathingStreamSaveGame* a_stream)
+89767,0x14110b730,0x141168650,2,void MovementAgent::LoadGame(PathingStreamLoadGame* a_stream)
+89768,0x14110b740,0x141168660,2,"void RegisterAgentIdName(char a_id, BSFixedString* a_name)"
+89769,0x14110b770,0x141168690,2,"bool GetAgentNameById(char a_id, BSFixedString* a_name)"
+89777,0x14110bb40,0x141168a60,2,void* GetAgentIdNameMap()
 89781,0x14110bf30,0x141168e50,2,MovementArbiter* MovementArbiter::MovementArbiter()
 89782,0x14110bf70,0x141168e90,2,void MovementArbiter::~MovementArbiter()
 89787,0x14110bfd0,0x141168ef0,2,void MovementArbiter::OnKillArbiter()
-89796,0x14110c080,0x141168fa0,2,"void MovementControllerNPC::GetArbiterNameById(char a_id, BSFixedString* a_name)"
+89790,0x14110c000,0x141168f20,2,void MovementArbiter::SaveGame(PathingStreamSaveGame* a_stream)
+89791,0x14110c010,0x141168f30,2,void MovementArbiter::LoadGame(PathingStreamLoadGame* a_stream)
+89795,0x14110c050,0x141168f70,2,"void RegisterArbiterIdName(char a_id, BSFixedString* a_name)"
+89796,0x14110c080,0x141168fa0,2,"bool GetArbiterNameById(char a_id, BSFixedString* a_name)"
+89804,0x14110c450,0x141169370,2,void* GetArbiterIdNameMap()
 89815,0x14110ca30,0x141169950,2,void MovementHandlerAgentTranslationController::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
 89865,0x14110ea50,0x14116b970,2,void MovementHandlerArbiter::UnregisterInterface()
 89872,0x14110ee40,0x14116bd60,3,void MovementHandlerArbiter::ClearAgents(void* a_unused)
+89873,0x14110ee60,0x14116bd80,2,void MovementHandlerArbiter::SaveGame(PathingStreamSaveGame* a_stream)
+89874,0x14110ee70,0x14116bd90,2,void MovementHandlerArbiter::LoadGame(PathingStreamLoadGame* a_stream)
 89875,0x14110eea0,0x14116bdc0,2,"void MovementHandlerArbiter::UpdateHandlers(MovementHandlerUpdateDataSmallDelta* a_updateData, MovementHandlerOutputDataSmallDelta* a_outputData)"
 89913,0x14110fad0,0x14116c9f0,3,void MovementPlannerArbiter::UnregisterInterface()
 89918,0x14110fce0,0x14116cc30,3,void MovementPlannerArbiter::ClearAgents(void* a_unused)
+89925,0x14110fdf0,0x14116cd40,3,void MovementPlannerArbiter::SaveGame(PathingStreamSaveGame* a_stream)
+89926,0x14110fe10,0x14116cd60,3,void MovementPlannerArbiter::LoadGame(PathingStreamLoadGame* a_stream)
 89927,0x14110fe50,0x14116cda0,2,"bool MovementUtils::FindEarliestObstacleCollision(void* a_obstacles, float* a_position, float* a_velocity, bool a_skipSlowObstacles, float* a_outTime)"
 89928,0x14110fff0,0x14116cf40,2,"void MovementPlannerArbiter::ProcessPlannerOutput(MovementUpdateDataSmallDelta* a_updateData, MovementHandlerUpdateDataSmallDelta* a_handlerUpdateData)"
 89930,0x141110a80,0x14116d9d0,2,void MovementPlannerArbiter::LimitSpeedForPredictedCollisions(MovementHandlerUpdateDataSmallDelta* a_updateData)
 89961,0x141111cb0,0x14116ec00,2,"void ActorState::CalculateTranslationLimits(IMovementParameters* a_params, IMovementInterface* a_interface, NiPoint3* a_targetDirection, float* a_outAcceleration, float* a_outDeceleration, float* a_outLimit)"
 89962,0x141111e40,0x14116ed90,2,"void ActorState::CalculateRotationLimits(IMovementParameters* a_params, IMovementInterface* a_interface, NiPoint3* a_targetDirection, float* a_outLimitA, float* a_outLimitB)"
+89985,0x141112740,0x14116f690,2,void MovementPathManagerAgentLoadedAreaMonitor::SaveGame(PathingStreamSaveGame* a_stream)
+89986,0x141112760,0x14116f6b0,2,void MovementPathManagerAgentLoadedAreaMonitor::LoadGame(PathingStreamLoadGame* a_stream)
 90006,0x141112dc0,0x14116fd10,2,"void MovementAgentPathFollowerFlight::UpdateSmallDelta(MovementPlannerUpdateDataSmallDelta* a_updateData, MovementPlannerAgentReturnDataSmallDelta* a_returnData)"
 90052,0x141114a70,0x141171940,2,"void MovementAgentPathFollowerVirtual::UpdateSmallDelta(MovementPlannerUpdateDataSmallDelta* a_updateData, MovementPlannerAgentReturnDataSmallDelta* a_returnData)"
 90085,0x141115920,0x1411727f0,2,void MovementHandlerAgentAngleController::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
+90087,0x141115cd0,0x141172ba0,2,void MovementHandlerAgentAngleController::SaveGame(PathingStreamSaveGame* a_stream)
+90088,0x141115ce0,0x141172bb0,2,void MovementHandlerAgentAngleController::LoadGame(PathingStreamLoadGame* a_stream)
 90101,0x141115fc0,0x141172e90,2,void MovementHandlerAgentAngleGain::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
 90116,0x1411166f0,0x1411735c0,2,void MovementHandlerAgentSpeedPassThrough::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
 90130,0x1411169f0,0x1411738c0,2,void MovementHandlerAgentAnglePassThrough::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
 90144,0x141116d40,0x141173c10,2,void MovementHandlerAgentDirectionPassThrough::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
 90158,0x141117110,0x141173fe0,2,void MovementHandlerAgentStrafing::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
 90175,0x141117580,0x141174450,2,void MovementHandlerAgentLargeDeltaIdle::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
+90177,0x141117690,0x141174560,3,void MovementHandlerAgentLargeDeltaIdle::SaveGame(PathingStreamSaveGame* a_stream)
+90178,0x1411176b0,0x141174580,3,void MovementHandlerAgentLargeDeltaIdle::LoadGame(PathingStreamLoadGame* a_stream)
 90198,0x141117ca0,0x141174b70,2,"void MovementPlannerAgentNavmeshBounds::UpdateSmallDelta(MovementPlannerUpdateDataSmallDelta* a_updateData, MovementPlannerAgentReturnDataSmallDelta* a_returnData)"
 90246,0x1411197b0,0x141176680,2,"void MovementPathManagerAgentAvoidBox::CheckBlockedByAvoidBox(void* a_arg1, std::uint32_t* a_outStatus)"
 90251,0x141119ad0,0x1411769a0,2,int MovementPathManagerAgentAvoidBox::EvaluateAvoidBox()
@@ -4919,6 +4947,8 @@
 90287,0x14111ad40,0x141177c10,2,void MovementTweenerArbiter::RegisterAgent(void* a_agent)
 90288,0x14111ae30,0x141177d00,2,void MovementTweenerArbiter::UnregisterAgent(void* a_agent)
 90289,0x14111af30,0x141177e00,3,void MovementTweenerArbiter::ClearAgents(void* a_unused)
+90290,0x14111af50,0x141177e20,3,void MovementTweenerArbiter::SaveGame(PathingStreamSaveGame* a_stream)
+90291,0x14111b140,0x141178010,3,void MovementTweenerArbiter::LoadGame(PathingStreamLoadGame* a_stream)
 90331,0x14111cb60,0x141179a30,2,void MovementStateTweener::GetPosition(NiPoint3* a_out)
 90332,0x14111cd10,0x141179be0,2,void MovementStateTweener::GetAngle(NiPoint3* a_out)
 90333,0x14111ce40,0x141179d10,2,float MovementStateTweener::GetCurrentMovementSpeed()
