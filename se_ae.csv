@@ -5135,6 +5135,7 @@ sseid,aeid,confidence,name
 36945,37970,1,
 36948,37973,1,
 36950,37975,1,Actor::UnequipItem_*
+36953,37978,1,
 36973,37998,3,RE::GameEventHandler::FallLongDistance::CalcDoDamage::process_movefinish_event
 36993,38021,1,
 36995,38023,1,
@@ -5150,6 +5151,7 @@ sseid,aeid,confidence,name
 37008,38036,1,
 37010,38038,1,
 37011,38039,1,
+37034,38062,1,
 37038,38066,1,TESBoundObject::SendActorItemEquippedEvent_*
 37039,38067,1,
 37040,38068,1,
@@ -5354,7 +5356,9 @@ sseid,aeid,confidence,name
 37800,38749,1,
 37801,38750,1,Actor::CanCastWornEnchantment_*
 37802,38751,3,RE::Actor::UpdateArmorAbility
+37805,38754,1,
 37806,38755,1,Character::sub_*
+37807,38756,1,
 37808,38757,3,RE::Actor::InterruptCast
 37810,38759,3,RE::Actor::IsCasting
 37814,38763,1,Character::sub_*
@@ -5524,6 +5528,7 @@ sseid,aeid,confidence,name
 38328,39303,1,
 38340,39319,1,
 38343,39322,2,
+38356,39339,1,
 38359,39342,2,
 38364,39347,1,
 38376,39360,1,
@@ -5920,16 +5925,20 @@ sseid,aeid,confidence,name
 40762,41774,1,
 40812,41825,1,
 40898,41960,1,
+40899,41961,1,
 40900,41962,1,
 40901,41963,1,
 40934,41993,1,
+40935,41994,1,
 40936,41995,1,
 40937,41996,1,
 40967,42029,1,
 40979,42043,1,
+40980,42044,1,
 40981,42045,1,
 40986,42050,1,
 41004,42071,1,
+41005,42072,1,
 41006,42073,1,
 41010,42077,1,
 41022,42093,1,
@@ -5937,12 +5946,15 @@ sseid,aeid,confidence,name
 41045,42116,1,
 41046,42117,1,
 41059,42132,1,
+41060,42133,1,
 41061,42134,1,
 41062,42135,1,
 41082,42159,1,
+41083,42160,1,
 41084,42161,1,
 41085,42162,1,
 41100,42179,1,
+41101,42180,1,
 41102,42181,1,
 41103,42182,1,
 41104,42183,1,
@@ -5961,11 +5973,13 @@ sseid,aeid,confidence,name
 41122,42204,1,MovementPlannerAgentWarp::Func10_*
 41123,42205,1,MovementPlannerAgentWarp::Func7_*
 41125,42207,1,
+41126,42208,1,
 41127,42209,1,MovementPlannerAgentWarp::Func2_*
 41132,42214,1,IMovementSetWarp::Func3_*
 41133,42215,1,MovementPlannerAgentWarp::Func11_*
 41135,42217,1,MovementPlannerAgentWarp::sub_*
 41156,42242,1,
+41157,42243,1,
 41158,42244,1,MovementTweenerAgentAnimationDriven::Func2_*
 41159,42245,1,IMovementTweenerAgent::Func1_*
 41161,42247,1,MovementTweenerAgentAnimationDriven::Func11_*
@@ -8741,6 +8755,7 @@ sseid,aeid,confidence,name
 87992,90376,1,
 87993,90377,1,
 88197,90602,1,
+88198,90603,1,
 88199,90604,1,
 88202,90607,1,
 88203,90608,1,
@@ -8810,6 +8825,7 @@ sseid,aeid,confidence,name
 88398,90818,1,
 88417,90841,1,
 88418,90842,1,
+88419,90843,1,
 88420,90844,1,
 88423,90847,1,
 88424,90848,1,
@@ -8977,6 +8993,7 @@ sseid,aeid,confidence,name
 89634,92085,1,
 89638,92112,1,
 89639,92113,1,
+89640,92114,1,
 89641,92115,1,MovementPostUpdateArbiter::Func3_*
 89642,92116,1,
 89643,92117,1,
@@ -9021,12 +9038,15 @@ sseid,aeid,confidence,name
 89790,92257,1,
 89791,92258,1,
 89810,92279,1,
+89811,92280,1,
 89812,92281,1,
 89815,92284,1,
 89838,92310,1,
+89839,92311,1,
 89840,92312,1,
 89860,92332,1,
 89861,92333,1,
+89862,92334,1,
 89863,92335,1,
 89865,92337,1,
 89872,92344,1,
@@ -9035,6 +9055,7 @@ sseid,aeid,confidence,name
 89875,92340,1,
 89906,92378,1,
 89907,92379,1,
+89908,92380,1,
 89909,92381,1,
 89913,92385,1,
 89918,92390,1,
@@ -9062,6 +9083,7 @@ sseid,aeid,confidence,name
 89973,92450,1,BSTArrayAllocatorFunctor_BSTSmallArrayHeapAllocator_120__::Resize_*
 89977,92460,1,MovementPathManagerAgentLoadedAreaMonitor::Func6_*
 89978,92461,1,MovementPathManagerAgentLoadedAreaMonitor::Func1_*
+89979,92462,1,
 89980,92463,1,MovementPathManagerAgentLoadedAreaMonitor::Func2_*
 89981,92464,1,IMovementPathManagerAgent::Func1_*
 89983,92466,1,IMovementPathManagerAgent::Func2_*
@@ -9073,6 +9095,7 @@ sseid,aeid,confidence,name
 89993,92452,1,
 89994,92453,1,
 90001,92486,1,
+90002,92487,1,
 90003,92488,1,
 90006,92491,1,
 90009,92494,1,IMovementPathManagerAgent::Func2_*
@@ -9110,6 +9133,7 @@ sseid,aeid,confidence,name
 90087,92577,1,
 90088,92578,1,
 90098,92590,1,
+90099,92591,1,
 90100,92592,1,
 90101,92593,1,
 90102,92594,1,
@@ -9131,6 +9155,7 @@ sseid,aeid,confidence,name
 90129,92624,1,
 90130,92625,1,
 90141,92638,1,
+90142,92639,1,
 90143,92640,1,
 90144,92641,1,
 90154,92653,1,
@@ -9148,6 +9173,7 @@ sseid,aeid,confidence,name
 90170,92671,1,MovementHandlerAgentLargeDeltaIdle::Func10_*
 90171,92672,1,MovementHandlerAgentLargeDeltaIdle::Func6_*
 90172,92673,1,
+90173,92674,1,
 90174,92675,1,MovementHandlerAgentLargeDeltaIdle::Func2_*
 90175,92676,1,IMovementHandlerAgent::Func1_*
 90176,92677,1,
@@ -9158,6 +9184,7 @@ sseid,aeid,confidence,name
 90182,92668,1,AutoRegisterMovementAgentCreator_gs_T1_ge_::sub_*
 90185,92663,1,
 90193,92696,1,
+90194,92697,1,
 90195,92698,1,
 90198,92701,1,
 90202,92705,1,
@@ -9182,6 +9209,7 @@ sseid,aeid,confidence,name
 90251,92758,1,
 90271,92782,1,
 90272,92783,1,
+90273,92784,1,
 90274,92785,1,
 90276,92787,1,
 90287,92798,1,
