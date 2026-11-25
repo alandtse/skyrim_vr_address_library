@@ -138,6 +138,7 @@
 12710,0x140140000,0x1401509f0,4,"void BSTArray<FACTION_RANK>::push_back(TESFaction* a_faction, std::int8_t a_rank)"
 12784,0x1401424f0,0x140152ee0,3,bhkRigidBody* bhkCollisionObject::GetRigidBody()
 12785,0x140142550,0x140152f40,4,"bool GetHandleValidatedSmartPointer (undefined8 * a_refHandle, undefined8 * a_out)"
+12801,0x140142ea0,0x140153890,2,"void BSPathingSpline::BuildHermiteSegment(BSPathingHermiteSegment* a_out, const NiPoint3& a_p0, const NiPoint3& a_m0, const NiPoint3& a_p1, const NiPoint3& a_m1)"
 12910,0x140147bb0,0x1401585e0,3,SeasonsofSkyrim::FormSwap::model_loader_queue_ref
 13054,0x14014dc60,0x14015e690,3,RE::INISettingCollection::InsertSetting
 13113,0x14014f700,0x140160130,3,RE::INISettingCollection::Unk_09
@@ -1835,6 +1836,7 @@
 30099,0x1404806c0,0x140490660,2,"bool PathingStreamMasterFileRead::ReadFormIDWithResult(std::uint32_t* a_formID, bool* a_outSuccess)"
 30100,0x1404806d0,0x140490670,2,bool PathingStreamMasterFileRead::ReadString(BSFixedString* a_out)
 30101,0x140480800,0x1404907a0,2,std::uint16_t PathingStreamMasterFileRead::GetFormVersion()
+30359,0x14048e4f0,0x14049e490,2,void BSPathingLocationArray::Clear()
 30433,0x140490360,0x1404a0300,2,PathingRequestFly* PathingRequestFly::PathingRequestFly()
 30465,0x1404912f0,0x1404a1290,3,void* PathingRequestFlyHover::ctor()
 30493,0x140491fa0,0x1404a1f40,2,PathingRequestFlyLand* PathingRequestFlyLand::PathingRequestFlyLand()
@@ -2536,6 +2538,7 @@
 37388,0x14061c6e0,0x1406252d0,2,"bool MovementMessagePool::Dispatch(Character* a_character, MovementMessage* a_message)"
 37390,0x14061c880,0x140625470,3,BSTEventSource<ActorKill::Event>* ActorKill::GetEventSource()
 37392,0x14061ca60,0x140625650,3,BSTEventSource<DisarmedEvent::Event>* DisarmedEvent::GetEventSource()
+37408,0x14061dad0,0x1406266c0,2,void MovementMessagePool::GrowHashMap()
 37448,0x14061ea00,0x1406277b0,2,bool ActorState::DoSetSitSleepState(SIT_SLEEP_STATE a_state)
 37509,0x140620610,0x1406293c0,4,undefined Actor::sub_140620610(Actor* a_this)
 37510,0x140620690,0x140629440,3,RE::Actor::sub_140620690
@@ -3207,6 +3210,7 @@
 41010,0x1406fde10,0x140724d90,2,void MovementHandlerAgentStairsHelper::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
 41022,0x1406fe160,0x1407250e0,3,std::int32_t MovementMessageActorCollision::GetStaticType()
 41027,0x1406fe380,0x140725300,2,"void* MovementMessageAutoRegister::RegisterActorCollision(void* a_registrar, int a_typeId)"
+41038,0x1406fe6d0,0x140725650,2,void MovementMessageAutoRegister::GrowHashMap()
 41044,0x1406fead0,0x140725a50,3,std::int32_t MovementMessageMovementTypeChange::GetStaticType()
 41045,0x1406feb50,0x140725ad0,3,void MovementMessageMovementTypeChange::SaveGame(PathingStreamSaveGame* a_stream)
 41046,0x1406feb90,0x140725b10,3,void MovementMessageMovementTypeChange::LoadGame(PathingStreamLoadGame* a_stream)
@@ -3237,6 +3241,7 @@
 41130,0x140700f70,0x140727f00,2,"void IMovementSetWarp::HandlePathingFailure(void* a_request, void* a_p2)"
 41131,0x1407011e0,0x140728170,2,void IMovementSetWarp::AdvanceWarpState(void* a_request)
 41132,0x140701290,0x140728220,2,void IMovementSetWarp::ResetWarpState(void* a_request)
+41137,0x140701a00,0x140728990,2,void MovementPlannerAgentWarp::ResetSolutionQueues()
 41154,0x140701f60,0x140728ef0,2,void MovementTweenerAgentAnimationDriven::RegisterWithController(IMovementControllerRegisterInterface& a_controller)
 41155,0x140701f70,0x140728f00,2,void MovementTweenerAgentAnimationDriven::UnregisterWithController()
 41156,0x140701f90,0x140728f20,2,const BSFixedString& MovementTweenerAgentAnimationDriven::GetAgentType()
@@ -3288,6 +3293,7 @@
 41243,0x140703eb0,0x14072ae40,2,bool PathingStreamLoadGame::ReadBSPathingRequestPtrArray()
 41244,0x140704020,0x14072afb0,2,bool PathingStreamLoadGame::ReadBSPathingSolutionPtrArray()
 41257,0x140704970,0x14072b900,3,RE::PlayerControls::Ctor
+41264,0x1407051f0,0x14072c040,2,bool PlayerControls::ShouldRun()
 41266,0x140705250,0x14072c0a0,3,RE::PlayerControls::SetActivateHandlerBlocked
 41271,0x140705530,0x14072c380,3,RE::PlayerControls::SendActionToInterestedActors
 41272,0x140705940,0x14072c790,3,RE::PlayerControls::SendSprintStopToInterestedActors
@@ -3417,6 +3423,8 @@
 46043,0x1407bccd0,0x1407e8020,4,CombatUtilities::CanActorExistInSpace
 46045,0x1407bcd80,0x1407e80d0,2,"void Character::GetAnticipatedLocation(float a_time, NiPoint3* a_outLocation)"
 46050,0x1407bd150,0x1407e84a0,4,"bool Actor::UpdateNavPos(const NiPoint3& a_pos, const NiPoint3& a_new_pos, float a_speed, float a_distance)"
+46062,0x1407be7e0,0x1407e9b30,2,bool Character::IsMovingAwayFromPoint(const NiPoint3& a_point)
+46063,0x1407be890,0x1407e9be0,2,bool Character::IsMovingTowardPoint(const NiPoint3& a_point)
 46068,0x1407beb90,0x1407e9ee0,3,"void TESObjectREFR::GetCombatRange(TESObjectREFR* a_this, TESForm* a_form, float* a_min, float* a_max, TESAmmo* a_ammo)"
 46074,0x1407bf260,0x1407ea5b0,4,float TESObjectREFR::GetCombatReach (TESObjectREFR * a_this)
 46089,0x1407c1200,0x1407ec550,3,bool CombatBehavior::CheckTargetChanged()
@@ -3636,6 +3644,7 @@
 48810,0x140825490,0x1408507e0,2,void CombatBehaviorCastShout::Update()
 49011,0x14082c540,0x140857890,3,void CombatPath::Update()
 49013,0x14082c790,0x140857ae0,3,void CombatPath::Start()
+49014,0x14082c950,0x140857ca0,2,void CombatPath::Stop()
 49022,0x14082d030,0x140858380,3,"void CombatPath::SetAccelerationDecelerationMult(float accelerationMult, float DecelerationMult)"
 49074,0x14082f990,0x14085ace0,2,"bool CombatPath::SolveAndStoreRequest(void* a_key, void* a_request)"
 49311,0x14083c870,0x140867b70,3,void CombatApproachTargetSpeedController::UpdateApproachTargetSpeed(CombatPath* a_combatPath)
@@ -4942,6 +4951,8 @@
 87907,0x1410a2370,0x1410fefa0,4,Skyrim-upscaler
 87919,0x1410a2dc0,0x1410ff9f0,2,"bool BGSMoviePlayer::OpenMovie(const char* a_path, bool a_flag)"
 87936,0x1410a3790,0x1411003c0,2,void BSMusicManager::Update()
+87957,0x1410a4490,0x1411010c0,2,"float BSPathingSpline::ComputeHermiteSegmentLength(const BSPathingHermiteSegment* a_segment, float a_t0, float a_t1, std::uint32_t a_samples)"
+87960,0x1410a5430,0x141102060,2,"void BSPathingSpline::EvaluateHermiteSegment(const BSPathingHermiteSegment* a_segment, float a_t, NiPoint3& a_out)"
 87965,0x1410a5740,0x141102370,3,"BSPathingLocation* BSPathingLocation::ctor(const NiPoint3& a_location, const BSTSmartPointer<BSPathingCell>& a_cell)"
 87970,0x1410a5a20,0x141102650,2,BSPathingLocation* BSPathingLocation::CopyFrom(const BSPathingLocation* a_other)
 87978,0x1410a5e50,0x141102a80,3,"bool BSPathingLocation::GetNavMeshAndTriangle(BSTSmartPointer<BSNavmesh>& a_navMeshOut, std::uint16_t& a_triOut) const"
@@ -5069,6 +5080,8 @@
 88492,0x1410c3910,0x141120560,2,float ActorState::GetCombinedHeading()
 88493,0x1410c39c0,0x141120610,2,void ActorState::GetRotationMatrix(NiMatrix3& a_out)
 88494,0x1410c3a00,0x141120650,2,void ActorState::GetTransform(NiTransform* a_out)
+88495,0x1410c3a60,0x1411206b0,2,float ActorState::GetForwardWalkSpeed()
+88496,0x1410c3ab0,0x141120700,2,float ActorState::GetForwardRunSpeed()
 88498,0x1410c3ce0,0x141120930,3,bool IMovementState::CanStrafe()
 88499,0x1410c3d40,0x141120aa0,3,float ActorState::SpeedToNormalized(float a_speed)
 88500,0x1410c3db0,0x141120b10,2,float ActorState::NormalizedToSpeed(float a_normalized)
@@ -5196,6 +5209,7 @@
 89493,0x1411035a0,0x1411604c0,2,"bool IPathFollowerAction::ActivateDoor_Prepare(PathFollowerStateUpdateData* a_updateData, float* a_out)"
 89494,0x141103700,0x141160620,2,"bool IPathFollowerAction::ActivateDoor_GetTargetSpeed(PathFollowerStateUpdateData* a_updateData, float* a_out)"
 89495,0x141103710,0x141160630,2,"void* MovementMessageAutoRegister::RegisterActivateDoor(void* a_registrar, int a_typeId)"
+89507,0x141103b40,0x141160a60,2,"MovementMessageWarpToLocation* MovementMessageWarpToLocation::ctor(const BSPathingLocation& a_location, const NiPoint3& a_position)"
 89510,0x141103c10,0x141160b30,3,std::int32_t MovementMessageWarpToLocation::GetStaticType()
 89511,0x141103c50,0x141160b70,3,void MovementMessageWarpToLocation::SaveGame(PathingStreamSaveGame* a_stream)
 89512,0x141103cb0,0x141160bd0,3,void MovementMessageWarpToLocation::LoadGame(PathingStreamLoadGame* a_stream)

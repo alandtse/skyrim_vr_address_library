@@ -6083,6 +6083,7 @@ sseid,aeid,confidence,name
 41260,42339,1,BSTEventSink_MenuOpenCloseEvent_::Handle_*
 41261,42340,1,BSTEventSink_MenuModeChangeEvent_::Handle_*
 41262,42341,1,BSTEventSink_TESFurnitureEvent_::Handle_*
+41264,42343,1,
 41265,42344,1,PlayerControls::sub_*
 41266,42345,1,PlayerControls::sub_*
 41267,42346,1,PlayerControls::sub_*
@@ -8808,6 +8809,8 @@ sseid,aeid,confidence,name
 87807,90175,1,
 87919,90292,3,RE::BGSMoviePlayer::OpenMovie
 87936,90319,2,
+87957,90337,1,
+87960,90340,1,
 87970,90351,2,
 87992,90376,1,
 87993,90377,1,
@@ -9027,6 +9030,7 @@ sseid,aeid,confidence,name
 89498,91945,1,AutoRegisterFactory_gs_T1_T2_ge_::sub_*
 89499,91947,1,AutoRegisterPathing_gs_T1_T2_ge_::sub_*
 89502,91970,1,MovementMessageApproachingDoor::Func0_*
+89507,91979,1,
 89510,91982,1,
 89511,91983,1,
 89512,91984,1,
