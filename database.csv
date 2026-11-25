@@ -602,6 +602,7 @@
 19413,0x14029b250,0x1402ac960,2,"bool TESObjectREFR::ApplyCurrent(float a_velocityTime, const hkVector4& a_velocity)"
 19418,0x14029b980,0x1402ad090,4,TESObjectREFR::GetHandle
 19423,0x14029bb90,0x1402ad2a0,2,"bool TESObjectREFR::Unk_A0(NiAVObject* a_node, float& a_angleX, float& a_angleZ, NiPoint3& a_pos)"
+19427,0x14029bcc0,0x1402ad3d0,2,"void TESObjectREFR::UnequipItem(std::uint64_t a_arg1, TESBoundObject* a_object, std::uint32_t a_count, ExtraDataList* a_extraList)"
 19437,0x14029c440,0x1402adb50,2,void ProcessPendingMultiBoundRefs()
 19446,0x14029cb80,0x1402ae290,3,"ShaderReferenceEffect* TESObjectREFR::InstantiateHitShader(TESEffectShader* a_shader, float a_dur, TESObjectREFR* a_facingRef, bool a_faceTarget, bool a_attachToCamera, NiAVObject* a_attachNode, bool a_interfaceEffect)"
 19453,0x14029d2e0,0x1402ae9f0,4,BGSWaterCollisionManager::BGSWaterUpdateI * BGSWaterCollisionManager::BGSWaterUpdateI::ctor (BGSWaterCollisionManager::BGSWaterUpdateI * a_this)
