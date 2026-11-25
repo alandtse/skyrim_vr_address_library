@@ -3046,8 +3046,10 @@
 40643,0x1406eb030,0x140711f20,2,void MovementParametersFixed::LoadGame(PathingStreamLoadGame* a_stream)
 40647,0x1406eb360,0x140712250,2,void MovementParametersFixed::SaveGame(PathingStreamSaveGame* a_stream)
 40682,0x1406ecfb0,0x140713ea0,2,void MovementControllerNPC::RegisterInterfaces()
+40683,0x1406ed1e0,0x1407140d0,2,bool MovementControllerNPC::SelectPlayIdle()
 40684,0x1406ed7d0,0x1407146c0,3,"void MovementControllerNPC::QueuePlayIdle(void* a_idleName, void* a_idleData, void* a_arg)"
 40685,0x1406ed910,0x140714800,3,void MovementControllerNPC::ReleaseIdle()
+40687,0x1406eda80,0x140714970,2,bool MovementControllerNPC::SelectPlayIdleFromEvent()
 40688,0x1406ede90,0x140714d80,3,void MovementControllerNPC::SetSprinting(bool a_sprinting)
 40689,0x1406edee0,0x140714dd0,3,bool MovementControllerNPC::GetSprinting()
 40690,0x1406edf30,0x140714e20,3,void MovementControllerNPC::PrepareAnimationDrivenAgents()
@@ -3064,6 +3066,7 @@
 40704,0x1406ee620,0x140715510,2,void MovementControllerNPC::SaveGame(void* a_buffer)
 40705,0x1406eed90,0x140715c80,2,void MovementControllerNPC::LoadGame(void* a_buffer)
 40706,0x1406ef230,0x140716120,3,void MovementControllerNPC::ProcessQueuedMessages()
+40707,0x1406ef630,0x140716520,2,bool MovementControllerNPC::HasNewPathMessage()
 40708,0x1406ef720,0x140716610,3,bool MovementControllerNPC::RemoveMessagesByType(std::int32_t a_messageType)
 40709,0x1406ef7c0,0x1407166b0,3,void MovementControllerNPC::EnableDirectControl()
 40710,0x1406ef850,0x140716740,3,void MovementControllerNPC::SetDirection(NiPoint3* a_direction)
@@ -5089,7 +5092,9 @@
 89412,0x1410ff190,0x14115c0a0,2,void MovementControllerAI::UnregisterInterface(BSFixedString* a_name)
 89413,0x1410ff250,0x14115c160,2,bool MovementControllerNPC::AddAgentsAndArbiters(void* a_set)
 89414,0x1410ffc70,0x14115cb80,3,bool MovementControllerNPC::ApplyAgentConfig(MovementAgentConfig* a_config)
+89416,0x141100b00,0x14115da20,2,"bool MovementControllerAI::FindArbiterByName(const BSFixedString& a_name, BSTSmartPointer<MovementArbiter>& a_out)"
 89417,0x141100be0,0x14115db00,2,MovementAgent* MovementControllerNPC::GetDirectControlAgent()
+89418,0x141100cc0,0x14115dbe0,2,void MovementControllerAI::ShutdownArbiters()
 89419,0x141100ee0,0x14115bcb0,2,bool MovementControllerAI::Unk_09()
 89420,0x141100ef0,0x14115de10,3,"bool MovementControllerNPC::DiffAgentConfig(MovementAgentConfig* a_config, MovementScrapArray* a_extraArbiterIdxTagSet, MovementScrapArray* a_extraAgentIdxTagSet, MovementScrapArray* a_keptArbiterPairsTagSet, MovementScrapArray* a_keptAgentPairsTagSet, MovementScrapArray* a_extraArbiterIdxTagClear, MovementScrapArray* a_extraAgentIdxTagClear, MovementScrapArray* a_keptArbiterPairsTagClear, MovementScrapArray* a_keptAgentPairsTagClear)"
 89426,0x141101780,0x14115e6a0,2,bool MovementAgent::IsAgentType(const BSFixedString& a_type)
@@ -5173,9 +5178,11 @@
 89708,0x141109690,0x1411665b0,2,BSFixedString& MovementAgentActorAvoider::GetStaticAgentType()
 89709,0x141109720,0x141166640,2,std::uint8_t MovementAgentActorAvoider::GetAgentSaveType()
 89712,0x141109760,0x141166680,2,"void MovementAgentActorAvoider::UpdateSmallDelta(MovementPlannerUpdateDataSmallDelta* a_updateData, MovementPlannerAgentReturnDataSmallDelta* a_returnData)"
+89714,0x1411097c0,0x1411666e0,2,"void MovementAgentActorAvoider::SetPathingData(BSPathingRequest** a_request, BSPathingSolution** a_solution)"
 89715,0x1411098c0,0x1411667e0,2,"void MovementAgentActorAvoider::CheckBlockedByActors(void* a_arg1, std::uint32_t* a_outStatus)"
 89716,0x141109a60,0x141166980,2,void MovementAgentActorAvoider::AddActorAvoidNodes(BSPathingRequest** a_request)
 89717,0x141109e30,0x141166d50,2,void MovementAgentActorAvoider::ClearAvoidedActors()
+89718,0x141109e50,0x141166d70,2,void MovementAgentActorAvoider::ResetPathingState()
 89719,0x141109ea0,0x141166dc0,2,bool IMovementQueryActorAvoidance::IsNearAvoidedActor(float a_extraRadius)
 89720,0x141109fa0,0x141166ec0,2,bool IMovementQueryActorAvoidance::UpdateObstacles(MovementHandlerUpdateDataSmallDelta* a_updateData)
 89723,0x14110a260,0x141167180,2,void MovementAgentActorAvoider::FindActorsToAvoid()
@@ -5261,6 +5268,8 @@
 90003,0x141112d60,0x14116fcb0,2,std::uint8_t MovementAgentPathFollowerFlight::GetAgentSaveType()
 90006,0x141112dc0,0x14116fd10,2,"void MovementAgentPathFollowerFlight::UpdateSmallDelta(MovementPlannerUpdateDataSmallDelta* a_updateData, MovementPlannerAgentReturnDataSmallDelta* a_returnData)"
 90007,0x141112e40,0x14116fd90,2,"void MovementAgentPathFollowerFlight::UpdateLargeDelta(void* a_updateData, void* a_returnData)"
+90008,0x141112e60,0x14116fdb0,2,"void MovementAgentPathFollowerFlight::SetPathingData(BSPathingRequest** a_request, BSPathingSolution** a_solution)"
+90010,0x1411130a0,0x14116fff0,2,void MovementAgentPathFollowerFlight::ResetPathingState()
 90045,0x1411148d0,0x1411717a0,2,void MovementAgentPathFollowerVirtual::RegisterWithController(IMovementControllerRegisterInterface& a_controller)
 90046,0x141114920,0x1411717f0,2,void MovementAgentPathFollowerVirtual::UnregisterWithController()
 90047,0x141114970,0x141171840,2,const BSFixedString& MovementAgentPathFollowerVirtual::GetAgentType()
@@ -5268,6 +5277,9 @@
 90049,0x141114a10,0x1411718e0,2,std::uint8_t MovementAgentPathFollowerVirtual::GetAgentSaveType()
 90052,0x141114a70,0x141171940,2,"void MovementAgentPathFollowerVirtual::UpdateSmallDelta(MovementPlannerUpdateDataSmallDelta* a_updateData, MovementPlannerAgentReturnDataSmallDelta* a_returnData)"
 90053,0x141114a80,0x141171950,2,"void MovementAgentPathFollowerVirtual::UpdateLargeDelta(void* a_updateData, void* a_returnData)"
+90054,0x141114af0,0x1411719c0,2,"void MovementAgentPathFollowerVirtual::SetPathingData(BSPathingRequest** a_request, BSPathingSolution** a_solution)"
+90055,0x141114c60,0x141171b30,2,"void MovementAgentPathFollowerVirtual::PollPathEvent(MovementUpdateDataSmallDelta* a_updateData, MovementPathManagerAgentEvent* a_outEvent)"
+90057,0x141114ce0,0x141171bb0,2,void MovementAgentPathFollowerVirtual::ResetPathingState()
 90082,0x141115860,0x141172730,2,const BSFixedString& MovementHandlerAgentAngleController::GetAgentType()
 90083,0x141115870,0x141172740,2,BSFixedString& MovementHandlerAgentAngleController::GetStaticAgentType()
 90084,0x141115900,0x1411727d0,2,std::uint8_t MovementHandlerAgentAngleController::GetAgentSaveType()
