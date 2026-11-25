@@ -2954,6 +2954,8 @@
 40751,0x1406f0cb0,0x140717ba0,2,bool MovementControllerNPC::DispatchAndNotify(MovementMessage* a_message)
 40752,0x1406f0d00,0x140717bf0,2,"bool MovementControllerNPC::DispatchAndNotifyForLevel(MovementMessage* a_message, std::int32_t a_expectedLevel)"
 40762,0x1406f1860,0x140718750,3,"bool RemoveMessagesByTypeUnlocked(void* a_messages, std::int32_t a_messageType, void* a_events)"
+40809,0x1406f29a0,0x140719890,2,void* GetMovementMessageFactory()
+40812,0x1406f2b80,0x140719a70,3,bool PathingStreamLoadGame::ReadMovementMessage(MovementMessage** a_message)
 40901,0x1406fa6e0,0x1407215d0,2,void MovementHandlerAgentDirectControl::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
 40937,0x1406fba80,0x140722970,2,void MovementHandlerAgentPlayerControls::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
 40967,0x1406fcf60,0x140723ee0,2,void MovementHandlerAgentPlayerControlsActionTrigger::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
