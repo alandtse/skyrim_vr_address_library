@@ -4751,6 +4751,12 @@
 89391,0x1410fe270,0x14115afb0,3,void ObstacleBuildQueue::ctor()
 89392,0x1410fe2d0,0x14115b010,3,void ObstacleBuildQueue::dtor()
 89395,0x1410fe4c0,0x14115b200,3,void ObstacleBuildQueue::Process()
+89407,0x1410fec60,0x14115b9a0,2,"void MovementControllerAI::UpdateSmallDelta(float a_deltaTime, void* a_output)"
+89408,0x1410fee20,0x14115bb60,2,"void MovementControllerAI::UpdateLargeDelta(float a_deltaTime, void* a_output)"
+89409,0x1410fef70,0x14115be80,2,"bool MovementControllerAI::RegisterInterface(BSFixedString* a_name, IMovementInterface* a_interface)"
+89410,0x1410feff0,0x14115bf00,2,IMovementInterface* MovementControllerAI::GetInterface2(BSFixedString* a_name)
+89411,0x1410ff0c0,0x14115bfd0,2,IMovementInterface* MovementControllerAI::GetInterface1(BSFixedString* a_name)
+89412,0x1410ff190,0x14115c0a0,2,void MovementControllerAI::UnregisterInterface(BSFixedString* a_name)
 89413,0x1410ff250,0x14115c160,2,bool MovementControllerNPC::AddAgentsAndArbiters(void* a_set)
 89473,0x141102ca0,0x14115fbc0,3,NullMovementState* NullMovementState::GetSingleton()
 89486,0x1411032f0,0x141160210,3,std::int32_t MovementMessageApproachingDoor::GetStaticType()
@@ -4775,6 +4781,7 @@
 89621,0x141107410,0x141164330,3,std::int32_t MovementMessageJump::GetStaticType()
 89625,0x1411074f0,0x141164410,2,"bool MovementMessageJump::Prepare(PathFollowerStateUpdateData* a_updateData, float* a_out)"
 89626,0x141107540,0x141164460,2,"bool IPathFollowerAction::Jump_GetTargetSpeed(PathFollowerStateUpdateData* a_updateData, float* a_out)"
+89712,0x141109760,0x141166680,2,"void MovementAgentActorAvoider::UpdateSmallDelta(MovementPlannerUpdateDataSmallDelta* a_updateData, MovementPlannerAgentReturnDataSmallDelta* a_returnData)"
 89715,0x1411098c0,0x1411667e0,2,"void MovementAgentActorAvoider::CheckBlockedByActors(void* a_arg1, std::uint32_t* a_outStatus)"
 89716,0x141109a60,0x141166980,2,void MovementAgentActorAvoider::AddActorAvoidNodes(BSPathingRequest** a_request)
 89717,0x141109e30,0x141166d50,2,void MovementAgentActorAvoider::ClearAvoidedActors()

@@ -8685,6 +8685,12 @@ sseid,aeid,confidence,name
 89391,91859,3,RE::ObstacleBuildQueue::ctor
 89392,91860,3,RE::ObstacleBuildQueue::dtor
 89395,91863,3,RE::ObstacleBuildQueue::Process
+89407,91877,1,
+89408,91878,1,
+89409,91879,1,
+89410,91880,1,
+89411,91881,1,
+89412,91882,1,
 89413,91884,2,
 89421,91892,1,IMovementInterface::sub_*
 89422,91893,1,IPipelineStageInterface::sub_*
