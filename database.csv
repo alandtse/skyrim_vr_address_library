@@ -2318,6 +2318,7 @@
 36817,0x140600d80,0x140609590,3,bool Actor::IsOnWaterTriangle()
 36828,0x140601280,0x140609a90,2,bool Actor::GetPathGoalPosition(NiPoint3* a_out)
 36829,0x1406012b0,0x140609ac0,2,bool Actor::GetPathGoalLocation(BSPathingLocation* a_out)
+36835,0x140601580,0x140609d90,2,"bool Actor::GetPathLookAheadPoint(float a_minDistance, float a_maxDistance, float a_lookAheadTime, NiPoint3* a_outPoint)"
 36841,0x140601b50,0x14060a360,2,float Character::CalculateRadius()
 36850,0x140602040,0x14060a850,2,void Character::RefreshCachedValues()
 36853,0x140602200,0x14060aa10,2,"void Actor::WarpToRecord(void* a_record, void* a_loc)"
