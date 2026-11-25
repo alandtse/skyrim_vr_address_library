@@ -2250,6 +2250,8 @@
 35632,0x1405b8620,0x1405c0630,3,void InitTESThread::WaitForInitialization()
 35642,0x1405b8f00,0x1405c0f70,3,SettingsOfSkyrim::
 35658,0x1405b9bb0,0x1405c1de0,3,MovementControllerActiveSets* MovementControllerActiveSets::ctor()
+35664,0x1405b9ee0,0x1405c2110,2,"void ClearBSFixedString_SmallArray32(BSTSmallArray<BSFixedString, 32>& a_array)"
+35665,0x1405b9f70,0x1405c21a0,2,"void ClearBSFixedString_SmallArray8(BSTSmallArray<BSFixedString, 8>& a_array)"
 35696,0x1405bad50,0x1405c2fc0,2,void MovementAgentNameSet::StaticDtor_AllAgentsNoKeepOffset()
 35697,0x1405bad80,0x1405c2ff0,2,void MovementAgentNameSet::StaticDtor_PathFollowerVirtualSet()
 35698,0x1405badb0,0x1405c3020,2,void MovementAgentNameSet::StaticDtor_PathFollowerFlightSet()
@@ -3048,6 +3050,9 @@
 40647,0x1406eb360,0x140712250,2,void MovementParametersFixed::SaveGame(PathingStreamSaveGame* a_stream)
 40655,0x1406eb860,0x140712750,2,void MovementAvoidanceManager::UpdateAvoidanceEntries()
 40656,0x1406eb9a0,0x140712890,2,void MovementAvoidanceManager::GetNearbyAvoidanceEntries()
+40657,0x1406ebe80,0x140712d70,2,"void MovementAvoidanceManager::GetAvoidancePriority(std::uint32_t a_actorId, AvoidancePriority& a_out)"
+40659,0x1406ebfd0,0x140712ec0,2,"bool MovementAvoidanceManager::CanAvoidActor(std::uint32_t a_actorId, std::uint32_t a_otherId)"
+40660,0x1406ec020,0x140712f10,2,"void MovementAvoidanceManager::ComputeAvoidancePriority(Actor* a_actor, std::uint32_t a_actorId, float a_value1, float a_value2, AvoidancePriority& a_out)"
 40682,0x1406ecfb0,0x140713ea0,2,void MovementControllerNPC::RegisterInterfaces()
 40683,0x1406ed1e0,0x1407140d0,2,bool MovementControllerNPC::SelectPlayIdle()
 40684,0x1406ed7d0,0x1407146c0,3,"void MovementControllerNPC::QueuePlayIdle(void* a_idleName, void* a_idleData, void* a_arg)"
@@ -3147,6 +3152,8 @@
 40848,0x1406f95a0,0x140720490,2,"void MovementControllerActiveSetDescription::AddAgentWithDependency(const char* a_agentName, const char* a_dependencyName, void* a_tagSet)"
 40868,0x1406f9d60,0x140720c50,2,std::uint32_t MovementControllerActiveSetDescription::AddArbiter(const MovementAgentConfigEntry& a_entry)
 40869,0x1406f9e20,0x140720d10,2,std::uint32_t MovementControllerActiveSetDescription::AddAgent(const MovementAgentConfigEntry& a_entry)
+40870,0x1406f9ee0,0x140720dd0,2,"std::uint32_t PushBackBSFixedString_SmallArray32(BSTSmallArray<BSFixedString, 32>& a_array, const char* a_name)"
+40871,0x1406f9f90,0x140720e80,2,"std::uint32_t PushBackBSFixedString_SmallArray8(BSTSmallArray<BSFixedString, 8>& a_array, const char* a_name)"
 40895,0x1406fa570,0x140721460,2,void MovementHandlerAgentDirectControl::RegisterWithController(IMovementControllerRegisterInterface& a_controller)
 40896,0x1406fa580,0x140721470,2,void MovementHandlerAgentDirectControl::UnregisterWithController()
 40898,0x1406fa620,0x140721510,2,const BSFixedString& MovementHandlerAgentDirectControl::GetAgentType()
@@ -5064,6 +5071,10 @@
 88762,0x1410d6ad0,0x141133800,2,bool PathingStreamMasterFileRead::ReadBSNavmeshEdgeExtraInfoArray(BSTArray<BSNavmeshEdgeExtraInfo>& a_array)
 88763,0x1410d6b40,0x141133870,2,bool PathingStreamMasterFileRead::ReadBSNavmeshVertexArray(BSTArray<BSNavmeshVertex>& a_array)
 88787,0x1410d8140,0x141134e70,2,bool PathingStreamMasterFileRead::ReadBSPathingDoorPtr(BSTSmartPointer<BSPathingDoor>& a_ptr)
+88830,0x1410d8c80,0x1411359b0,2,void PathingStreamMasterFileRead::ReadBSNavmeshTriangleDoorPortal(BSNavmeshTriangleDoorPortal& a_portal)
+88896,0x1410dd7f0,0x14113a520,2,void NavMeshInfoMap::ReadAllPaths(PathingStreamMasterFileRead& a_stream)
+88914,0x1410deb00,0x14113b830,2,bool PathingStreamMasterFileRead::ReadBSNavmeshInfoArray(BSTArray<BSNavmeshInfo*>*& a_array)
+88915,0x1410dec50,0x14113b980,2,bool PathingStreamMasterFileRead::ReadBSNavmeshInfoPtrArray(BSTArray<BSNavmeshInfo*>& a_array)
 88930,0x1410df940,0x14113c670,2,PathingSolutionEntry* PathingSolutionEntry::PathingSolutionEntry()
 88931,0x1410df9b0,0x14113c6e0,2,PathingSolutionEntry* PathingSolutionEntry::Assign(PathingSolutionEntry* a_other)
 88932,0x1410dfa20,0x14113c750,2,bool PathingSolutionQueue::PushBack(PathingSolutionEntry* a_entry)
@@ -5076,6 +5087,9 @@
 89030,0x1410e4750,0x141141490,2,"void PathingSolutionEntryArray::RemoveElements(std::uint32_t a_index, std::uint32_t a_count)"
 89079,0x1410e92d0,0x141146010,2,"bool MovementUtils::IntersectRayWithCircle(NiPoint3* a_origin, NiPoint3* a_direction, NiPoint3* a_offset, NiPoint3* a_center, float a_radius, NiPoint3* a_out)"
 89102,0x1410ea4c0,0x141147200,2,void NullMovementSelectIdleResult::Reset()
+89179,0x1410ee240,0x14114af80,2,bool PathingStreamLoadGame::ReadBSPathingLOSGridCellArray(BSTArray<BSPathingLOSGridCell*>& a_cells)
+89180,0x1410ee350,0x14114b090,2,"bool PathingStreamLoadGame::ReadBSPathingLOSGridTable(BSTHashMap<std::uint32_t, BSPathingLOSGrid*>& a_table)"
+89185,0x1410eea30,0x14114b770,2,"bool PathingStreamSaveGame::WriteBSPathingLOSGridTable(const BSTHashMap<std::uint32_t, BSPathingLOSGrid*>& a_table)"
 89210,0x1410efb20,0x14114c860,3,bool BSVirtualPathingNode::HasActivateDoorAction()
 89222,0x1410effc0,0x14114cd00,2,bool BSPathingNode::HasActivateDoorAction()
 89224,0x1410f00f0,0x14114ce30,2,bool BSPathingNode::GetActionAtNode(MovementMessage** a_out)
@@ -5356,6 +5370,7 @@
 90207,0x141118280,0x141175150,2,bool MovementPlannerAgentNavmeshBounds::IsPathClear()
 90209,0x1411186f0,0x1411755c0,2,"void MovementPlannerAgentNavmeshBounds::CopyObstaclesToAvoidShapes(BSScrapArray<VelocityObstacle::ObstaclePolygon>& a_out, const BSTArray<VelocityObstacle::ObstaclePolygon>& a_in)"
 90214,0x141118b70,0x141175a40,2,ObstacleBuildRequest* ObstacleBuildRequest::ObstacleBuildRequest()
+90227,0x141118fb0,0x141175e80,2,"void ConstructObstaclePolygonRange(BSTSmallArray<VelocityObstacle::ObstaclePolygon, 1>& a_array, std::uint32_t a_first, std::uint32_t a_count)"
 90233,0x1411192c0,0x141176190,2,bool PathingStreamSaveGame::WriteObstaclePolygonArray(const BSTArray<VelocityObstacle::ObstaclePolygon>& a_polygons)
 90238,0x141119540,0x141176410,2,void MovementPathManagerAgentAvoidBox::RegisterWithController(IMovementControllerRegisterInterface& a_controller)
 90239,0x141119550,0x141176420,2,void MovementPathManagerAgentAvoidBox::UnregisterWithController()
@@ -5409,6 +5424,8 @@
 90431,0x141120060,0x14117cf30,2,"void* MovementMessageAutoRegister::RegisterPathComplete(void* a_registrar, int a_typeId)"
 90432,0x141120130,0x14117d000,2,"void* MovementMessageAutoRegister::RegisterPathFailed(void* a_registrar, int a_typeId)"
 90623,0x14112c840,0x141189710,2,"void PathFollowerTurnTarget::GetFacingAngles(NiPoint3* a_position, float* a_current, float a_zOffset, float* a_outFacing)"
+90636,0x14112cff0,0x141189ec0,2,"bool MovementActorAvoidanceParameters::ShouldAvoidActorById(std::uint32_t a_actorId, std::uint32_t a_otherId)"
+90637,0x14112d140,0x14118a010,2,"bool MovementActorAvoidanceParameters::ShouldAvoidActor(std::uint32_t a_actorId, const AvoidancePriority& a_priority, std::uint32_t a_otherId, const AvoidancePriority& a_otherPriority)"
 90646,0x14112d670,0x14118a540,2,bool PathingStreamSaveGame::WriteFormIDArray(const BSTArray<FormID>& a_ids)
 90653,0x14112d870,0x14118a740,2,"PathFollowerStateUpdateData* PathFollowerStateUpdateData::PathFollowerStateUpdateData(BSPathingRequest** a_request, BSPathingSolution** a_solution, ActorState* a_actorState, void* a_messageInterface, NiPoint3* a_pPathPoint, float a_pathPosition, float a_deltaTime)"
 90677,0x14112e410,0x14118b2e0,2,"bool BSPathingSolution::GetDirectionToPathPoint(float* a_delta, float a_pathPosition, float* a_position, NiPoint3* a_outDirection)"
