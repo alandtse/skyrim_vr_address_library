@@ -2203,6 +2203,7 @@
 36286,0x1405d2520,0x1405daae0,3,RE::Actor::GetGhost
 36287,0x1405d25e0,0x1405daba0,4,RE::Actor::SetGhost
 36289,0x1405d27a0,0x1405dad60,2,DrawSheatheWeaponActor
+36316,0x1405d3bb0,0x1405dc170,2,void Actor::RemoveCharController()
 36323,0x1405d4090,0x1405dc650,2,"std::uint64_t TESObjectREFR::MoveToPosition(NiPoint3* a_pos, float a_rotZ, float a_rotX, TESObjectCELL* a_cell, TESWorldSpace* a_worldSpace, bool a_unk)"
 36331,0x1405d5290,0x1405dd850,3,Actor::Resurrect
 36332,0x1405d56b0,0x1405ddc70,4,"void Actor::ResetInventory(Actor * a_this, bool a_leveledOnly)"
@@ -2218,6 +2219,7 @@
 36349,0x1405d6640,0x1405dec70,4,Character::GetHealthPercentage
 36355,0x1405d67f0,0x1405dee20,2,float Character::GetSpeedMultScale()
 36357,0x1405d6fb0,0x1405df5e0,3,FEC::UpdateAVs
+36358,0x1405d8160,0x1405e0790,2,void Actor::UpdateNoAI()
 36359,0x1405d8170,0x1405e07a0,3,po3tweaks::ToggleCollisionFix::ApplyMovementDelta
 36372,0x1405d9990,0x1405e2010,3,Character::sub_1405D9990
 36392,0x1405da840,0x1405e2ec0,3,void Actor::CalculateCurrentVendorFaction()
@@ -2266,10 +2268,15 @@
 36559,0x1405ebd90,0x1405f44a0,4,uint32_t Actor::GetCollisionFilterInfo(uint32_t& a_outCollisionFilterInfo)
 36568,0x1405ec540,0x1405f4c50,3,Actor::InitiateGetUpPackage
 36575,0x1405ecb70,0x1405f5280,4,Actor::IsFleeing
+36589,0x1405ed510,0x1405f5c20,2,float Actor::GetJogSpeed()
+36590,0x1405ed5a0,0x1405f5cb0,2,float Actor::GetFastWalkSpeed()
 36602,0x1405edd50,0x1405f6460,3,void Actor::SetRotationX(float a_angle)
 36604,0x1405edef0,0x1405f6600,4,void Actor::SetLifeState(ACTOR_LIFE_STATE a_lifeState)
 36605,0x1405ee410,0x1405f6b20,4,void Actor::ClearDeathState()
 36610,0x1405ee910,0x1405f7020,3,Actor::InitActorLocationFromPackage
+36613,0x1405ef4b0,0x1405f7bc0,2,void Actor::MoveToHigh()
+36614,0x1405efd70,0x1405f8480,2,void Actor::MovetoLow()
+36615,0x1405f04e0,0x1405f8bf0,2,void Actor::MovetoMiddleLow()
 36621,0x1405f1530,0x1405f9c40,4,RE::Actor::Func156_*
 36631,0x1405f2530,0x1405fac70,3,bool Actor::Decapitate()
 36642,0x1405f4150,0x1405fc880,4,"void ReadFromSaveGame_1405F4150 (Actor * a_this, undefined8 param_2)"
@@ -2282,6 +2289,7 @@
 36682,0x1405f87f0,0x140600f60,3,RE::Actor::CreateBlood
 36683,0x1405f9a20,0x140602190,3,WashThatBloodOff::Decal::Weapon::CreateBloodOnWeapon
 36690,0x1405f9e30,0x1406025a0,3,RE::Actor::HasPerk
+36693,0x1405f9ee0,0x140602650,2,void Actor::ForEachPerkEntry()
 36695,0x1405f9f20,0x140602690,4,inline void Actor::RemoveBasePerks(Actor* a_actor)
 36700,0x1405fa1b0,0x140602920,3,"void Character::PerformStagger(float a_staggerMult, Actor* a_aggressor)"
 36707,0x1405fa750,0x140602f40,4,Actor::SetPlayerTeammate
@@ -2961,6 +2969,7 @@
 40750,0x1406f0c10,0x140717b00,3,void MovementControllerNPC::OnMessageDispatched(MovementMessage* a_message)
 40751,0x1406f0cb0,0x140717ba0,2,bool MovementControllerNPC::DispatchAndNotify(MovementMessage* a_message)
 40752,0x1406f0d00,0x140717bf0,2,"bool MovementControllerNPC::DispatchAndNotifyForLevel(MovementMessage* a_message, std::int32_t a_expectedLevel)"
+40755,0x1406f0ed0,0x140717dc0,2,void MovementMessageScrapArray::ctor_CopyFrom(void* a_source)
 40759,0x1406f1440,0x140718330,2,"void MovementControllerNPC::LoadAgents(PathingStreamLoadGame* a_stream)"
 40760,0x1406f1610,0x140718500,2,"void MovementControllerNPC::LoadArbiters(PathingStreamLoadGame* a_stream)"
 40762,0x1406f1860,0x140718750,3,"bool RemoveMessagesByTypeUnlocked(void* a_messages, std::int32_t a_messageType, void* a_events)"
@@ -2970,6 +2979,8 @@
 40812,0x1406f2b80,0x140719a70,3,bool PathingStreamLoadGame::ReadMovementMessage(MovementMessage** a_message)
 40816,0x1406f2f70,0x140719e60,2,bool MovementLocationEventArray::SetSize(std::uint32_t a_size)
 40818,0x1406f3160,0x14071a050,2,bool MovementMessageArray::SetSize(std::uint32_t a_size)
+40819,0x1406f3260,0x14071a150,2,void MovementLocationEventArray::begin(void* a_out)
+40823,0x1406f3300,0x14071a1f0,2,void MovementLocationEventArray::end(void* a_out)
 40901,0x1406fa6e0,0x1407215d0,2,void MovementHandlerAgentDirectControl::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
 40937,0x1406fba80,0x140722970,2,void MovementHandlerAgentPlayerControls::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
 40967,0x1406fcf60,0x140723ee0,2,void MovementHandlerAgentPlayerControlsActionTrigger::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
@@ -2990,6 +3001,7 @@
 41132,0x140701290,0x140728220,2,void IMovementSetWarp::ResetWarpState(void* a_request)
 41181,0x140702c40,0x140729bd0,2,void MovementTweenerAgentNodeFollower::SaveGame(PathingStreamSaveGame* a_stream)
 41182,0x140702c50,0x140729be0,2,void MovementTweenerAgentNodeFollower::LoadGame(PathingStreamLoadGame* a_stream)
+41193,0x140702e70,0x140729e00,3,void PathingStreamLoadGame::ctor(void* a_buffer)
 41195,0x140702eb0,0x140729e40,3,std::uint32_t PathingStreamLoadGame::GetType()
 41197,0x140702f30,0x140729ec0,2,std::uint16_t PathingStreamLoadGame::GetFormVersion()
 41199,0x140702f60,0x140729ef0,2,bool PathingStreamLoadGame::ReadBool(bool* a_out)
@@ -3005,6 +3017,7 @@
 41209,0x140703140,0x14072a0d0,2,bool PathingStreamLoadGame::ReadFormID(std::uint32_t* a_formID)
 41210,0x140703160,0x14072a0f0,2,"bool PathingStreamLoadGame::ReadFormIDWithResult(std::uint32_t* a_formID, bool* a_outSuccess)"
 41211,0x140703190,0x14072a120,2,bool PathingStreamLoadGame::ReadString(BSFixedString* a_out)
+41212,0x140703260,0x14072a1f0,3,void PathingStreamSaveGame::ctor(void* a_buffer)
 41214,0x1407032a0,0x14072a230,3,std::uint32_t PathingStreamSaveGame::GetType()
 41216,0x140703320,0x14072a2b0,2,bool PathingStreamSaveGame::WriteBool(bool a_value)
 41217,0x140703360,0x14072a2f0,2,bool PathingStreamSaveGame::WriteInt8(std::int8_t a_value)
