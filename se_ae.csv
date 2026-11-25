@@ -4205,6 +4205,7 @@ sseid,aeid,confidence,name
 29391,30241,1,
 29395,30246,1,
 29396,30247,1,
+29495,30345,1,
 29530,30379,1,NavMeshInfoMap::SetAltered_*
 29531,30380,1,NavMeshInfoMap::InitItemImpl_*
 29536,30385,1,BSNavmeshInfoMap::GetAllNavMeshInfo_*
@@ -4284,12 +4285,17 @@ sseid,aeid,confidence,name
 30084,30894,1,PathingSpace::Func2_*
 30087,30898,1,PathingStreamMasterFileRead::Func17_*
 30088,30899,1,PathingStreamMasterFileRead::Func10_*
+30090,30901,1,
 30091,30902,1,PathingStreamMasterFileRead::Func7_*
+30092,30903,1,
 30093,30904,1,PathingStreamMasterFileRead::Func5_*
 30094,30905,1,PathingStreamMasterFileRead::Func4_*
 30095,30906,1,PathingStreamMasterFileRead::Func3_*
 30096,30907,1,PathingStreamMasterFileRead::Func2_*
+30097,30908,1,
 30098,30909,1,PathingStreamMasterFileRead::Func12_*
+30099,30910,1,
+30100,30911,1,
 30101,30912,1,PathingStreamMasterFileRead::Func18_*
 30102,30913,1,PathingStreamMasterFileRead::Func19_*
 30103,30914,1,
@@ -5740,8 +5746,11 @@ sseid,aeid,confidence,name
 40647,41590,1,
 40704,41715,1,
 40705,41716,1,
+40706,41717,1,
 40748,41762,1,
 40749,41763,1,
+40751,41765,1,
+40752,41766,1,
 41022,42093,1,
 41044,42115,1,
 41104,42183,1,
@@ -8532,6 +8541,10 @@ sseid,aeid,confidence,name
 88202,90607,1,
 88203,90608,1,
 88237,90646,1,
+88355,90772,1,
+88356,90773,1,
+88357,90774,1,
+88398,90818,1,
 88417,90841,1,
 88418,90842,1,
 88423,90847,1,
@@ -8565,6 +8578,7 @@ sseid,aeid,confidence,name
 88503,90929,1,
 88504,90930,1,
 88505,90931,1,
+88506,90932,1,
 88540,90974,1,
 88558,90994,2,
 88930,91382,1,
@@ -8576,6 +8590,7 @@ sseid,aeid,confidence,name
 89007,91470,1,
 89018,91479,1,
 89030,91489,1,
+89102,91584,1,
 89343,91809,1,
 89344,91810,1,
 89345,91811,1,
@@ -8583,6 +8598,7 @@ sseid,aeid,confidence,name
 89347,91813,1,
 89348,91814,1,
 89349,91815,1,
+89350,91816,1,
 89391,91859,3,RE::ObstacleBuildQueue::ctor
 89392,91860,3,RE::ObstacleBuildQueue::dtor
 89395,91863,3,RE::ObstacleBuildQueue::Process
@@ -8605,6 +8621,7 @@ sseid,aeid,confidence,name
 89487,91958,1,
 89489,91960,1,MovementMessageActivateDoor::Func1_*
 89490,91961,1,
+89493,91964,1,
 89494,91965,1,IPathFollowerAction::Func3_*
 89496,91968,1,IPathFollowerAction::Func0_*
 89497,91946,1,
@@ -8627,6 +8644,13 @@ sseid,aeid,confidence,name
 89549,92020,1,
 89551,92014,1,
 89552,92013,1,AutoRegisterFactory_gs_T1_T2_ge_::sub_*
+89558,92023,1,
+89559,92024,1,
+89560,92025,1,
+89563,92028,1,
+89564,92029,1,
+89568,92033,1,
+89569,92034,1,
 89570,92035,1,
 89573,92038,1,
 89574,92039,1,
@@ -8646,6 +8670,7 @@ sseid,aeid,confidence,name
 89620,92094,1,MovementMessageJump::Func1_*
 89621,92095,1,
 89622,92096,1,MovementMessageJump::Func2_*
+89625,92099,1,
 89626,92100,1,IPathFollowerAction::Func3_*
 89629,92089,1,
 89630,92088,1,AutoRegisterFactory_gs_T1_T2_ge_::sub_*
@@ -8794,6 +8819,8 @@ sseid,aeid,confidence,name
 90369,92888,1,
 90370,92889,1,
 90371,92890,1,
+90394,92909,1,
+90395,92910,1,
 90420,92953,1,
 90421,92954,1,
 90424,92957,1,
