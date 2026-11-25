@@ -3128,8 +3128,8 @@
 40751,0x1406f0cb0,0x140717ba0,2,bool MovementControllerNPC::DispatchAndNotify(MovementMessage* a_message)
 40752,0x1406f0d00,0x140717bf0,2,"bool MovementControllerNPC::DispatchAndNotifyForLevel(MovementMessage* a_message, std::int32_t a_expectedLevel)"
 40755,0x1406f0ed0,0x140717dc0,2,void MovementMessageScrapArray::ctor_CopyFrom(void* a_source)
-40759,0x1406f1440,0x140718330,2,"void MovementControllerNPC::LoadAgents(PathingStreamLoadGame* a_stream)"
-40760,0x1406f1610,0x140718500,2,"void MovementControllerNPC::LoadArbiters(PathingStreamLoadGame* a_stream)"
+40759,0x1406f1440,0x140718330,2,void MovementControllerNPC::LoadAgents(PathingStreamLoadGame* a_stream)
+40760,0x1406f1610,0x140718500,2,void MovementControllerNPC::LoadArbiters(PathingStreamLoadGame* a_stream)
 40762,0x1406f1860,0x140718750,3,"bool RemoveMessagesByTypeUnlocked(void* a_messages, std::int32_t a_messageType, void* a_events)"
 40809,0x1406f29a0,0x140719890,2,void* GetMovementMessageFactory()
 40810,0x1406f2a40,0x140719930,2,void* GetMovementAgentFactory()
