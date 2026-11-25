@@ -1810,6 +1810,14 @@
 29832,0x1404737a0,0x140483780,4,"bool FindClosestPointOnNavmesh(const BSTSmartPointer<BSPathingCell>& a_cell, const NiPoint3& a_location, FindTriangleForLocationFilter& a_filter, NiPoint3& a_pointOut)"
 29839,0x1404749e0,0x1404849c0,3,AIProcess::FindAmbushCoverLocation
 29866,0x140476ba0,0x140486b80,4,"bool Pathing::GetPathingCell(const NiPoint3& a_location, TESObjectCELL* a_cell, TESWorldSpace* a_worldSpace, BSTSmartPointer<BSPathingCell>& a_cellOut)"
+29898,0x1404795b0,0x140489540,2,"bool BSPathingCellManager::CollectNavmeshesInAABB_Scrap(BSNavmeshInfoTree* a_tree, const NiPoint3& a_min, const NiPoint3& a_max, BSTScrapArray<BSNavmesh*>& a_out)"
+29899,0x1404797b0,0x140489740,2,"bool BSPathingCellManager::CollectNavmeshesInAABB_Heap(BSNavmeshInfoTree* a_tree, const NiPoint3& a_min, const NiPoint3& a_max, BSTArray<BSNavmesh*>& a_out)"
+29900,0x1404799b0,0x140489940,2,"bool BSPathingCellManager::CollectNavmeshInfosInAABB_Scrap(BSNavmeshInfoTree* a_tree, const NiPoint3& a_min, const NiPoint3& a_max, BSTScrapArray<BSNavmeshInfo*>& a_out)"
+29901,0x140479bb0,0x140489b40,2,"bool BSPathingCellManager::CollectNavmeshInfosInAABB_Heap(BSNavmeshInfoTree* a_tree, const NiPoint3& a_min, const NiPoint3& a_max, BSTArray<BSNavmeshInfo*>& a_out)"
+29922,0x14047abd0,0x14048ab70,2,"bool BSPathingCellManager::AddUniqueNavmeshFromInfo_Scrap(BSTScrapArray<BSNavmesh*>& a_out, BSNavmeshInfo* a_info)"
+29923,0x14047ace0,0x14048ac80,2,"bool BSPathingCellManager::AddUniqueNavmeshFromInfo_Heap(BSTArray<BSNavmesh*>& a_out, BSNavmeshInfo* a_info)"
+29924,0x14047adf0,0x14048ad90,2,"bool BSPathingCellManager::AddUniqueNavmeshInfo_Scrap(BSTScrapArray<BSNavmeshInfo*>& a_out, BSNavmeshInfo* a_info)"
+29925,0x14047ae90,0x14048ae30,2,"bool BSPathingCellManager::AddUniqueNavmeshInfo_Heap(BSTArray<BSNavmeshInfo*>& a_out, BSNavmeshInfo* a_info)"
 30030,0x14047e6d0,0x14048e670,4,"PathingLockData* PathingLockData::PathingLockData(const ObjectRefHandle& a_handle, bool a_flag)"
 30031,0x14047e7a0,0x14048e740,4,void PathingLockData::~PathingLockData()
 30087,0x140480210,0x1404901b0,3,std::uint32_t PathingStreamMasterFileRead::GetType()
@@ -5383,6 +5391,7 @@
 90206,0x141118160,0x141175030,2,"void MovementPlannerAgentNavmeshBounds::SubmitObstacleBuild(const BSPathingLocation& a_location, float a_stoppingDistance)"
 90207,0x141118280,0x141175150,2,bool MovementPlannerAgentNavmeshBounds::IsPathClear()
 90209,0x1411186f0,0x1411755c0,2,"void MovementPlannerAgentNavmeshBounds::CopyObstaclesToAvoidShapes(BSScrapArray<VelocityObstacle::ObstaclePolygon>& a_out, const BSTArray<VelocityObstacle::ObstaclePolygon>& a_in)"
+90213,0x1411189d0,0x1411758a0,2,"MovementPlannerAgentNavmeshBounds::PathSampleList* MovementPlannerAgentNavmeshBounds::SamplePathPointsAtInterval(PathSampleList* a_out, BSPathingSolution* a_solution, float a_start, float a_length, float a_interval)"
 90214,0x141118b70,0x141175a40,2,ObstacleBuildRequest* ObstacleBuildRequest::ObstacleBuildRequest()
 90227,0x141118fb0,0x141175e80,2,"void ConstructObstaclePolygonRange(BSTSmallArray<VelocityObstacle::ObstaclePolygon, 1>& a_array, std::uint32_t a_first, std::uint32_t a_count)"
 90230,0x1411190a0,0x141175f70,2,"void DestructObstaclePolygonRange(BSTSmallArray<VelocityObstacle::ObstaclePolygon, 1>& a_array, std::uint32_t a_first, std::uint32_t a_count)"
@@ -5448,6 +5457,7 @@
 90704,0x14112f3e0,0x14118c2b0,2,"bool VelocityObstacle::ObstaclePolygon::IntersectSegment(const NiPoint3& a_start, const NiPoint3& a_end, float& a_outT)"
 90713,0x14112fc90,0x14118cb60,2,VelocityObstacle::ObstaclePolygon* VelocityObstacle::ObstaclePolygon::ObstaclePolygon()
 90714,0x14112fd00,0x14118cbd0,2,void VelocityObstacle::ObstaclePolygon::~ObstaclePolygon()
+90715,0x14112fd60,0x14118cc30,2,"bool VelocityObstacle::ObstaclePolygon::GetRayEntryExitDistances(const NiPoint3& a_origin, const NiPoint3& a_velocity, float& a_entry, float& a_exit)"
 90718,0x14112ffe0,0x14118ceb0,2,bool VelocityObstacle::ObstaclePolygon::Write(PathingStreamSaveGame& a_stream)
 90732,0x141131010,0x14118dee0,2,"void VelocityObstacle::BuildObstaclePolygons(const BSPathingLocation& a_location, float a_radius, BSTArray<VelocityObstacle::ObstaclePolygon>& a_out)"
 90938,0x14113df60,0x1411983b0,2,void EnsureMemoryHeap()

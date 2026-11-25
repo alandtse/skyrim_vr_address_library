@@ -4363,6 +4363,8 @@ sseid,aeid,confidence,name
 29894,30698,1,
 29895,30699,1,
 29896,30700,1,
+29922,30733,1,
+29923,30734,1,
 30081,30891,1,PathingSpace::Func0_*
 30084,30894,1,PathingSpace::Func2_*
 30087,30898,1,PathingStreamMasterFileRead::Func17_*
@@ -9315,6 +9317,7 @@ sseid,aeid,confidence,name
 90204,92707,1,MovementPlannerAgentNavmeshBounds::Func11_*
 90206,92709,1,MovementPlannerAgentNavmeshBounds::sub_*
 90207,92710,1,MovementPlannerAgentNavmeshBounds::sub_141118280
+90213,92717,1,
 90228,92684,1,
 90229,92685,1,
 90231,92730,1,PathingStreamLoadGame::sub_141119100
@@ -9419,6 +9422,7 @@ sseid,aeid,confidence,name
 90704,93238,1,
 90713,93251,1,
 90714,93252,1,
+90715,93253,1,
 90721,93262,1,
 90725,93266,1,
 90726,93267,1,
