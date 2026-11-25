@@ -5117,6 +5117,8 @@
 89670,0x141108520,0x141165440,2,void MovementPathManagerAgentStaticAvoider::RegisterWithController(IMovementControllerRegisterInterface& a_controller)
 89671,0x141108570,0x141165490,2,void MovementPathManagerAgentStaticAvoider::UnregisterWithController()
 89672,0x1411085c0,0x1411654e0,2,"void MovementPathManagerAgentStaticAvoider::SetPathingData(BSPathingRequest** a_request, BSPathingSolution** a_solution)"
+89673,0x141108790,0x1411656b0,2,"void MovementPathManagerAgentStaticAvoider::CheckPathBlocked(void* a_context, std::uint32_t* a_outStatus)"
+89674,0x141108a80,0x1411659a0,2,void MovementPathManagerAgentStaticAvoider::ModifyPathingRequest(BSPathingRequest** a_request)
 89675,0x141108c50,0x141165b70,2,void MovementPathManagerAgentStaticAvoider::ResetPathingState()
 89703,0x1411095b0,0x1411664d0,2,void MovementAgentActorAvoider::RegisterWithController(IMovementControllerRegisterInterface& a_controller)
 89704,0x1411095e0,0x141166500,2,void MovementAgentActorAvoider::UnregisterWithController()
@@ -5198,6 +5200,8 @@
 89979,0x1411123a0,0x14116f2f0,2,BSFixedString& MovementPathManagerAgentLoadedAreaMonitor::GetStaticAgentType()
 89980,0x141112430,0x14116f380,2,std::uint8_t MovementPathManagerAgentLoadedAreaMonitor::GetAgentSaveType()
 89981,0x141112450,0x14116f3a0,2,"void MovementPathManagerAgentLoadedAreaMonitor::SetPathingData(BSPathingRequest** a_request, BSPathingSolution** a_solution)"
+89982,0x1411124b0,0x14116f400,2,void MovementPathManagerAgentLoadedAreaMonitor::ModifyPathingRequest(BSPathingRequest** a_request)
+89983,0x141112510,0x14116f460,2,"void MovementPathManagerAgentLoadedAreaMonitor::CheckPathBlocked(void* a_context, std::uint32_t* a_outStatus)"
 89984,0x1411126f0,0x14116f640,2,void MovementPathManagerAgentLoadedAreaMonitor::ResetPathingState()
 89985,0x141112740,0x14116f690,2,void MovementPathManagerAgentLoadedAreaMonitor::SaveGame(PathingStreamSaveGame* a_stream)
 89986,0x141112760,0x14116f6b0,2,void MovementPathManagerAgentLoadedAreaMonitor::LoadGame(PathingStreamLoadGame* a_stream)

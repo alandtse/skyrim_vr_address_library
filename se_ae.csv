@@ -9031,6 +9031,7 @@ sseid,aeid,confidence,name
 89671,92148,1,MovementPathManagerAgentStaticAvoider::Func10_*
 89672,92149,1,
 89673,92150,1,IMovementPathManagerAgent::Func2_*
+89674,92151,1,
 89675,92152,1,
 89694,92168,1,
 89701,92178,1,MovementAgentActorAvoider::sub_141109460
@@ -9124,6 +9125,7 @@ sseid,aeid,confidence,name
 89979,92462,1,
 89980,92463,1,MovementPathManagerAgentLoadedAreaMonitor::Func2_*
 89981,92464,1,IMovementPathManagerAgent::Func1_*
+89982,92465,1,
 89983,92466,1,IMovementPathManagerAgent::Func2_*
 89984,92467,1,
 89985,92468,1,MovementPathManagerAgentLoadedAreaMonitor::Func11_*
