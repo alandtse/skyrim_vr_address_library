@@ -4596,6 +4596,7 @@ sseid,aeid,confidence,name
 33337,34122,1,FindAppropriateDisplaceEffect::dtor_*
 33340,34125,1,
 33348,34130,1,
+33355,34136,1,
 33363,34144,1,ActorMagicCaster::Func9_*
 33373,34154,1,ActorMagicCaster::sub_*
 33377,34158,1,ActorMagicCaster::Func18_140543540
@@ -5016,6 +5017,7 @@ sseid,aeid,confidence,name
 35978,36953,3,RE::TaskQueueInterface::QueueBulletWaterDisplacementTask
 35987,36962,3,RE::TaskQueueInterface::QueueRemoveSpellTask
 36174,37147,2,
+36219,37199,1,
 36248,37230,3,RE::Actor::SetRotationZ
 36259,37243,3,RE::Actor::IsInMidair
 36315,37305,1,
@@ -5057,6 +5059,7 @@ sseid,aeid,confidence,name
 36700,37710,1,
 36715,37725,3,bool MagicTarget::IsInvulnerable()
 36723,37735,3,RE::Actor::KillImmediate
+36738,37752,1,
 36739,37753,1,
 36740,37754,1,
 36743,37759,1,
@@ -5515,8 +5518,11 @@ sseid,aeid,confidence,name
 38300,39268,2,
 38302,39270,2,
 38305,39275,1,
+38328,39303,1,
+38340,39319,1,
 38343,39322,2,
 38359,39342,2,
+38364,39347,1,
 38376,39360,1,
 38378,39362,2,
 38379,39363,1,
@@ -5798,6 +5804,8 @@ sseid,aeid,confidence,name
 40056,41067,3,RE::LocationDiscovery::GetEventSource
 40060,41071,3,RE::ShoutAttack::GetEventSource
 40143,41145,1,
+40281,41290,1,
+40282,41291,1,
 40287,41296,3,ProcessLists::Update
 40291,41301,3,ProcessLists::UpdateNonHighActors
 40292,41302,3,ProcessLists::UpdateLowActorBatch
@@ -8166,6 +8174,7 @@ sseid,aeid,confidence,name
 74003,75742,3,QueuedFile::NotifyChildrenAndFinalize
 74005,75744,3,QueuedFile::AddChild
 74013,75755,3,QueuedFile::dtor_deleting
+74250,75979,1,
 74649,76380,3,BSMultiBoundAABB::TestOcclusionShape
 74682,76414,3,BSOcclusionBox::IsOcclusionPlane
 74683,76415,3,BSOcclusionBox::IsOcclusionBox
