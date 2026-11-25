@@ -3177,11 +3177,13 @@
 41156,0x140701f90,0x140728f20,2,const BSFixedString& MovementTweenerAgentAnimationDriven::GetAgentType()
 41157,0x140701fa0,0x140728f30,2,BSFixedString& MovementTweenerAgentAnimationDriven::GetStaticAgentType()
 41158,0x140702030,0x140728fc0,2,std::uint8_t MovementTweenerAgentAnimationDriven::GetAgentSaveType()
+41159,0x140702050,0x140728fe0,2,"void MovementTweenerAgentAnimationDriven::AdjustActorTransform(const NiMatrix3* a_in, NiTransform* a_out)"
 41174,0x1407028b0,0x140729840,2,void MovementTweenerAgentNodeFollower::RegisterWithController(IMovementControllerRegisterInterface& a_controller)
 41175,0x1407028e0,0x140729870,2,void MovementTweenerAgentNodeFollower::UnregisterWithController()
 41176,0x140702920,0x1407298b0,2,const BSFixedString& MovementTweenerAgentNodeFollower::GetAgentType()
 41177,0x140702930,0x1407298c0,2,BSFixedString& MovementTweenerAgentNodeFollower::GetStaticAgentType()
 41178,0x1407029c0,0x140729950,2,std::uint8_t MovementTweenerAgentNodeFollower::GetAgentSaveType()
+41179,0x1407029e0,0x140729970,2,"void MovementTweenerAgentNodeFollower::GetMotionTransform(void* a_context, NiTransform* a_out)"
 41181,0x140702c40,0x140729bd0,2,void MovementTweenerAgentNodeFollower::SaveGame(PathingStreamSaveGame* a_stream)
 41182,0x140702c50,0x140729be0,2,void MovementTweenerAgentNodeFollower::LoadGame(PathingStreamLoadGame* a_stream)
 41193,0x140702e70,0x140729e00,3,void PathingStreamLoadGame::ctor(void* a_buffer)
@@ -5110,6 +5112,8 @@
 89667,0x1411084b0,0x1411653d0,2,std::uint8_t MovementPathManagerAgentStaticAvoider::GetAgentSaveType()
 89670,0x141108520,0x141165440,2,void MovementPathManagerAgentStaticAvoider::RegisterWithController(IMovementControllerRegisterInterface& a_controller)
 89671,0x141108570,0x141165490,2,void MovementPathManagerAgentStaticAvoider::UnregisterWithController()
+89672,0x1411085c0,0x1411654e0,2,"void MovementPathManagerAgentStaticAvoider::SetPathingData(BSPathingRequest** a_request, BSPathingSolution** a_solution)"
+89675,0x141108c50,0x141165b70,2,void MovementPathManagerAgentStaticAvoider::ResetPathingState()
 89703,0x1411095b0,0x1411664d0,2,void MovementAgentActorAvoider::RegisterWithController(IMovementControllerRegisterInterface& a_controller)
 89704,0x1411095e0,0x141166500,2,void MovementAgentActorAvoider::UnregisterWithController()
 89707,0x141109680,0x1411665a0,2,const BSFixedString& MovementAgentActorAvoider::GetAgentType()
@@ -5148,6 +5152,7 @@
 89838,0x14110d830,0x14116a750,2,const BSFixedString& MovementTweenerAgentFixedDelta::GetAgentType()
 89839,0x14110d840,0x14116a760,2,BSFixedString& MovementTweenerAgentFixedDelta::GetStaticAgentType()
 89840,0x14110d8d0,0x14116a7f0,2,std::uint8_t MovementTweenerAgentFixedDelta::GetAgentSaveType()
+89841,0x14110d8f0,0x14116a810,2,"void MovementTweenerAgentFixedDelta::GetMotionTransform(void* a_context, NiTransform* a_out)"
 89860,0x14110e970,0x14116b890,2,const BSFixedString& MovementHandlerArbiter::GetPipelineStage()
 89861,0x14110e980,0x14116b8a0,2,const BSFixedString& MovementHandlerArbiter::GetArbiterType()
 89862,0x14110e990,0x14116b8b0,2,BSFixedString& MovementHandlerArbiter::GetStaticArbiterType()
@@ -5188,6 +5193,8 @@
 89978,0x141112390,0x14116f2e0,2,const BSFixedString& MovementPathManagerAgentLoadedAreaMonitor::GetAgentType()
 89979,0x1411123a0,0x14116f2f0,2,BSFixedString& MovementPathManagerAgentLoadedAreaMonitor::GetStaticAgentType()
 89980,0x141112430,0x14116f380,2,std::uint8_t MovementPathManagerAgentLoadedAreaMonitor::GetAgentSaveType()
+89981,0x141112450,0x14116f3a0,2,"void MovementPathManagerAgentLoadedAreaMonitor::SetPathingData(BSPathingRequest** a_request, BSPathingSolution** a_solution)"
+89984,0x1411126f0,0x14116f640,2,void MovementPathManagerAgentLoadedAreaMonitor::ResetPathingState()
 89985,0x141112740,0x14116f690,2,void MovementPathManagerAgentLoadedAreaMonitor::SaveGame(PathingStreamSaveGame* a_stream)
 89986,0x141112760,0x14116f6b0,2,void MovementPathManagerAgentLoadedAreaMonitor::LoadGame(PathingStreamLoadGame* a_stream)
 89998,0x141112bf0,0x14116fb40,2,void MovementAgentPathFollowerFlight::RegisterWithController(IMovementControllerRegisterInterface& a_controller)
@@ -5196,12 +5203,14 @@
 90002,0x141112cd0,0x14116fc20,2,BSFixedString& MovementAgentPathFollowerFlight::GetStaticAgentType()
 90003,0x141112d60,0x14116fcb0,2,std::uint8_t MovementAgentPathFollowerFlight::GetAgentSaveType()
 90006,0x141112dc0,0x14116fd10,2,"void MovementAgentPathFollowerFlight::UpdateSmallDelta(MovementPlannerUpdateDataSmallDelta* a_updateData, MovementPlannerAgentReturnDataSmallDelta* a_returnData)"
+90007,0x141112e40,0x14116fd90,2,"void MovementAgentPathFollowerFlight::UpdateLargeDelta(void* a_updateData, void* a_returnData)"
 90045,0x1411148d0,0x1411717a0,2,void MovementAgentPathFollowerVirtual::RegisterWithController(IMovementControllerRegisterInterface& a_controller)
 90046,0x141114920,0x1411717f0,2,void MovementAgentPathFollowerVirtual::UnregisterWithController()
 90047,0x141114970,0x141171840,2,const BSFixedString& MovementAgentPathFollowerVirtual::GetAgentType()
 90048,0x141114980,0x141171850,2,BSFixedString& MovementAgentPathFollowerVirtual::GetStaticAgentType()
 90049,0x141114a10,0x1411718e0,2,std::uint8_t MovementAgentPathFollowerVirtual::GetAgentSaveType()
 90052,0x141114a70,0x141171940,2,"void MovementAgentPathFollowerVirtual::UpdateSmallDelta(MovementPlannerUpdateDataSmallDelta* a_updateData, MovementPlannerAgentReturnDataSmallDelta* a_returnData)"
+90053,0x141114a80,0x141171950,2,"void MovementAgentPathFollowerVirtual::UpdateLargeDelta(void* a_updateData, void* a_returnData)"
 90082,0x141115860,0x141172730,2,const BSFixedString& MovementHandlerAgentAngleController::GetAgentType()
 90083,0x141115870,0x141172740,2,BSFixedString& MovementHandlerAgentAngleController::GetStaticAgentType()
 90084,0x141115900,0x1411727d0,2,std::uint8_t MovementHandlerAgentAngleController::GetAgentSaveType()
@@ -5246,7 +5255,9 @@
 90242,0x1411195f0,0x1411764c0,2,const BSFixedString& MovementPathManagerAgentAvoidBox::GetAgentType()
 90243,0x141119600,0x1411764d0,2,BSFixedString& MovementPathManagerAgentAvoidBox::GetStaticAgentType()
 90244,0x141119690,0x141176560,2,std::uint8_t MovementPathManagerAgentAvoidBox::GetAgentSaveType()
+90245,0x1411196b0,0x141176580,2,"void MovementPathManagerAgentAvoidBox::SetPathingData(BSPathingRequest** a_request, BSPathingSolution** a_solution)"
 90246,0x1411197b0,0x141176680,2,"void MovementPathManagerAgentAvoidBox::CheckBlockedByAvoidBox(void* a_arg1, std::uint32_t* a_outStatus)"
+90248,0x141119860,0x141176730,2,void MovementPathManagerAgentAvoidBox::ResetPathingState()
 90251,0x141119ad0,0x1411769a0,2,int MovementPathManagerAgentAvoidBox::EvaluateAvoidBox()
 90271,0x14111a8d0,0x1411777a0,2,const BSFixedString& MovementTweenerArbiter::GetPipelineStage()
 90272,0x14111a8e0,0x1411777b0,2,const BSFixedString& MovementTweenerArbiter::GetArbiterType()

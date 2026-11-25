@@ -6003,6 +6003,7 @@ sseid,aeid,confidence,name
 41176,42264,1,MovementTweenerAgentNodeFollower::Func1_*
 41177,42265,1,
 41178,42266,1,
+41179,42267,1,
 41181,42269,1,
 41182,42270,1,
 41193,42278,1,
@@ -9027,7 +9028,9 @@ sseid,aeid,confidence,name
 89669,92146,1,MovementPathManagerAgentStaticAvoider::Func7_*
 89670,92147,1,MovementPathManagerAgentStaticAvoider::Func4_*
 89671,92148,1,MovementPathManagerAgentStaticAvoider::Func10_*
+89672,92149,1,
 89673,92150,1,IMovementPathManagerAgent::Func2_*
+89675,92152,1,
 89694,92168,1,
 89701,92178,1,MovementAgentActorAvoider::sub_141109460
 89702,92179,1,MovementAgentActorAvoider::Func3_*
@@ -9064,6 +9067,7 @@ sseid,aeid,confidence,name
 89838,92310,1,
 89839,92311,1,
 89840,92312,1,
+89841,92313,1,
 89860,92332,1,
 89861,92333,1,
 89862,92334,1,
@@ -9120,6 +9124,7 @@ sseid,aeid,confidence,name
 89980,92463,1,MovementPathManagerAgentLoadedAreaMonitor::Func2_*
 89981,92464,1,IMovementPathManagerAgent::Func1_*
 89983,92466,1,IMovementPathManagerAgent::Func2_*
+89984,92467,1,
 89985,92468,1,MovementPathManagerAgentLoadedAreaMonitor::Func11_*
 89986,92469,1,MovementPathManagerAgentLoadedAreaMonitor::Func12_*
 89990,92457,1,AutoRegisterMovementAgentCreator_gs_T1_ge_::sub_*
@@ -9133,6 +9138,7 @@ sseid,aeid,confidence,name
 90002,92487,1,
 90003,92488,1,
 90006,92491,1,
+90007,92492,1,
 90009,92494,1,IMovementPathManagerAgent::Func2_*
 90011,92496,1,IMovementQueryPathFollowing::Func1_*
 90014,92499,1,IMovementQueryPathFollowing::Func4_*
@@ -9153,6 +9159,7 @@ sseid,aeid,confidence,name
 90048,92536,1,
 90049,92537,1,
 90052,92540,1,
+90053,92541,1,
 90067,92555,1,MovementAgentPathFollowerVirtual::Func12_*
 90068,92556,1,MovementAgentPathFollowerVirtual::sub_*
 90070,92560,1,IMovementPathManagerAgent::Func0_*
@@ -9238,6 +9245,7 @@ sseid,aeid,confidence,name
 90242,92749,1,
 90243,92750,1,
 90244,92751,1,MovementPathManagerAgentAvoidBox::Func2_*
+90245,92752,1,
 90246,92753,1,
 90247,92754,1,
 90248,92755,1,IMovementPathManagerAgent::Func5_*
