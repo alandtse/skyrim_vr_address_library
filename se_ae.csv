@@ -5647,6 +5647,8 @@ sseid,aeid,confidence,name
 39165,40239,1,
 39166,40240,1,BGSLoadGameBuffer::sub_*
 39170,40244,1,
+39174,40248,1,
+39176,40250,1,
 39179,40253,3,RE::PlayerCharacter::GetDamage
 39181,40255,3,RE::Actor::DoReset3D
 39186,40260,1,Character::GetFaceAnimationData_*
@@ -5697,6 +5699,7 @@ sseid,aeid,confidence,name
 39340,40411,1,PlayerCharacter::ctor_140699040
 39362,40434,1,
 39365,40437,3,RE::PlayerCharacter::CenterOnCell_Impl
+39397,40472,1,
 39425,40501,3,papyrus_extender::papyrus::detail::get_god_mode_impl
 39428,40504,3,bool PlayerCharacter::IsInvulnerable()
 39507,40586,3,RE::PlayerCharacter::SetAIDriven
@@ -5812,17 +5815,24 @@ sseid,aeid,confidence,name
 40760,41772,1,
 40762,41774,1,
 40812,41825,1,
+40900,41962,1,
 40901,41963,1,
+40936,41995,1,
 40937,41996,1,
 40967,42029,1,
+40981,42045,1,
 40986,42050,1,
+41006,42073,1,
 41010,42077,1,
 41022,42093,1,
 41044,42115,1,
 41045,42116,1,
 41046,42117,1,
+41061,42134,1,
 41062,42135,1,
+41084,42161,1,
 41085,42162,1,
+41102,42181,1,
 41103,42182,1,
 41104,42183,1,
 41105,42184,1,IMovementSetKeepOffsetFromActor::Func0_*
@@ -5854,6 +5864,7 @@ sseid,aeid,confidence,name
 41173,42261,1,MovementTweenerAgentNodeFollower::Func6_*
 41176,42264,1,MovementTweenerAgentNodeFollower::Func1_*
 41177,42265,1,
+41178,42266,1,
 41181,42269,1,
 41182,42270,1,
 41193,42278,1,
@@ -8615,11 +8626,13 @@ sseid,aeid,confidence,name
 87970,90351,2,
 87992,90376,1,
 87993,90377,1,
+88199,90604,1,
 88202,90607,1,
 88203,90608,1,
 88237,90646,1,
 88288,90699,1,
 88296,90707,1,
+88297,90708,1,
 88300,90711,1,
 88302,90713,1,
 88303,90714,1,
@@ -8681,6 +8694,7 @@ sseid,aeid,confidence,name
 88398,90818,1,
 88417,90841,1,
 88418,90842,1,
+88420,90844,1,
 88423,90847,1,
 88426,90850,1,
 88427,90851,1,
@@ -8855,6 +8869,7 @@ sseid,aeid,confidence,name
 89663,92140,1,
 89665,92142,1,MovementPathManagerAgentStaticAvoider::Func1_*
 89666,92143,1,
+89667,92144,1,
 89669,92146,1,MovementPathManagerAgentStaticAvoider::Func7_*
 89670,92147,1,MovementPathManagerAgentStaticAvoider::Func4_*
 89671,92148,1,MovementPathManagerAgentStaticAvoider::Func10_*
@@ -8883,12 +8898,16 @@ sseid,aeid,confidence,name
 89787,92254,1,
 89790,92257,1,
 89791,92258,1,
+89812,92281,1,
 89815,92284,1,
+89840,92312,1,
+89863,92335,1,
 89865,92337,1,
 89872,92344,1,
 89873,92345,1,
 89874,92346,1,
 89875,92340,1,
+89909,92381,1,
 89913,92385,1,
 89918,92390,1,
 89925,92397,1,
@@ -8925,6 +8944,7 @@ sseid,aeid,confidence,name
 89992,92473,1,MovementPathManagerAgentLoadedAreaMonitor::Func0_*
 89993,92452,1,
 89994,92453,1,
+90003,92488,1,
 90006,92491,1,
 90009,92494,1,IMovementPathManagerAgent::Func2_*
 90011,92496,1,IMovementQueryPathFollowing::Func1_*
@@ -8943,6 +8963,7 @@ sseid,aeid,confidence,name
 90046,92534,1,MovementAgentPathFollowerVirtual::Func10_*
 90047,92535,1,MovementAgentPathFollowerVirtual::Func1_*
 90048,92536,1,
+90049,92537,1,
 90052,92540,1,
 90067,92555,1,MovementAgentPathFollowerVirtual::Func12_*
 90068,92556,1,MovementAgentPathFollowerVirtual::sub_*
@@ -8959,6 +8980,7 @@ sseid,aeid,confidence,name
 90085,92575,1,IMovementHandlerAgent::Func1_*
 90087,92577,1,
 90088,92578,1,
+90100,92592,1,
 90101,92593,1,
 90102,92594,1,
 90106,92588,1,AutoRegisterMovementAgentCreator_gs_T1_ge_::sub_*
@@ -8967,6 +8989,7 @@ sseid,aeid,confidence,name
 90110,92584,1,
 90113,92606,1,MovementHandlerAgentSpeedPassThrough::Func1_*
 90114,92607,1,
+90115,92608,1,
 90116,92609,1,
 90117,92610,1,
 90119,92603,1,
@@ -8975,11 +8998,14 @@ sseid,aeid,confidence,name
 90124,92599,1,
 90127,92622,1,MovementHandlerAgentAnglePassThrough::Func1_*
 90128,92623,1,
+90129,92624,1,
 90130,92625,1,
+90143,92640,1,
 90144,92641,1,
 90154,92653,1,
 90155,92654,1,MovementHandlerAgentStrafing::Func1_*
 90156,92655,1,
+90157,92656,1,
 90158,92657,1,IMovementHandlerAgent::Func1_*
 90159,92658,1,
 90161,92651,1,
@@ -8999,6 +9025,7 @@ sseid,aeid,confidence,name
 90181,92666,1,AutoRegisterFactory_gs_T1_T2_ge_::sub_*
 90182,92668,1,AutoRegisterMovementAgentCreator_gs_T1_ge_::sub_*
 90185,92663,1,
+90195,92698,1,
 90198,92701,1,
 90202,92705,1,
 90203,92706,1,IMovementPathManagerAgent::Func5_*
@@ -9019,6 +9046,7 @@ sseid,aeid,confidence,name
 90248,92755,1,IMovementPathManagerAgent::Func5_*
 90249,92756,1,MovementPathManagerAgentAvoidBox::Func11_*
 90251,92758,1,
+90274,92785,1,
 90276,92787,1,
 90287,92798,1,
 90288,92799,1,
