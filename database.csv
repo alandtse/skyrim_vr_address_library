@@ -3051,6 +3051,7 @@
 40655,0x1406eb860,0x140712750,2,void MovementAvoidanceManager::UpdateAvoidanceEntries()
 40656,0x1406eb9a0,0x140712890,2,void MovementAvoidanceManager::GetNearbyAvoidanceEntries()
 40657,0x1406ebe80,0x140712d70,2,"void MovementAvoidanceManager::GetAvoidancePriority(std::uint32_t a_actorId, AvoidancePriority& a_out)"
+40658,0x1406ebf40,0x140712e30,2,"void MovementAvoidanceManager::GetAvoidancePriorityFromValues(std::uint32_t a_actorId, float a_radius, float a_speed, AvoidancePriority& a_out)"
 40659,0x1406ebfd0,0x140712ec0,2,"bool MovementAvoidanceManager::CanAvoidActor(std::uint32_t a_actorId, std::uint32_t a_otherId)"
 40660,0x1406ec020,0x140712f10,2,"void MovementAvoidanceManager::ComputeAvoidancePriority(Actor* a_actor, std::uint32_t a_actorId, float a_value1, float a_value2, AvoidancePriority& a_out)"
 40682,0x1406ecfb0,0x140713ea0,2,void MovementControllerNPC::RegisterInterfaces()
@@ -5049,6 +5050,8 @@
 88506,0x1410c4050,0x141120db0,2,float ActorState::NormalizedToAngularAcceleration(float a_normalized)
 88507,0x1410c40c0,0x141120e20,2,float ActorState::AngleAccelerationToNormalized(float a_value)
 88508,0x1410c4130,0x141120e90,2,float ActorState::NormalizedToAngleAcceleration(float a_normalized)
+88530,0x1410c4470,0x1411211d0,2,bool BSPathingSolution::Read(PathingStreamLoadGame& a_stream)
+88531,0x1410c45e0,0x141121340,2,bool BSPathingSolution::Write(PathingStreamSaveGame& a_stream)
 88535,0x1410c48e0,0x141121640,2,bool BSPathingSolution::IsNodeChainValid()
 88538,0x1410c4b80,0x1411218e0,2,"float BSPathingSolution::GetNodeRangeLength(float a_first, float a_last)"
 88539,0x1410c4f80,0x141121ce0,2,float BSPathingSolution::GetCurrentPathingNodesLength()
@@ -5066,8 +5069,10 @@
 88596,0x1410c9b10,0x141126840,2,bool PathingStreamLoadGame::ReadBSPathingNodeArray(BSTArray<BSPathingNode>& a_nodes)
 88597,0x1410c9b80,0x1411268b0,2,bool PathingStreamLoadGame::ReadBSVirtualPathingNodeArray(BSTArray<BSVirtualPathingNode>& a_nodes)
 88603,0x1410ca1c0,0x141126ef0,2,bool PathingStreamSaveGame::WriteBSVirtualPathingNodeArray(const BSTArray<BSVirtualPathingNode>& a_nodes)
+88641,0x1410cc4a0,0x1411291d0,2,void BSNavmesh::BuildCoverTriangleList()
 88662,0x1410cd390,0x14112a0c0,2,bool BSNavmesh::ReadFromStream(PathingStreamMasterFileRead& a_stream)
 88674,0x1410cf350,0x14112c080,3,NiPoint3 BSNavmesh::GetNormal(std::uint16_t a_tri) const
+88761,0x1410d6a60,0x141133790,2,bool PathingStreamMasterFileRead::ReadBSNavmeshCoverTriangleArray(BSTArray<std::uint16_t>& a_array)
 88762,0x1410d6ad0,0x141133800,2,bool PathingStreamMasterFileRead::ReadBSNavmeshEdgeExtraInfoArray(BSTArray<BSNavmeshEdgeExtraInfo>& a_array)
 88763,0x1410d6b40,0x141133870,2,bool PathingStreamMasterFileRead::ReadBSNavmeshVertexArray(BSTArray<BSNavmeshVertex>& a_array)
 88787,0x1410d8140,0x141134e70,2,bool PathingStreamMasterFileRead::ReadBSPathingDoorPtr(BSTSmartPointer<BSPathingDoor>& a_ptr)
@@ -5132,6 +5137,7 @@
 89430,0x1411018a0,0x14115e7c0,2,std::uint32_t MovementControllerAI::PushAgent(MovementAgent** a_agent)
 89431,0x1411019b0,0x14115e8d0,2,std::uint32_t MovementControllerAI::PushArbiter(MovementArbiter** a_arbiter)
 89432,0x141101ac0,0x14115e9e0,2,"bool BSTScrapArray::AppendArray(BSTScrapArray* a_src, BSTScrapArray* a_dest)"
+89452,0x1411025d0,0x14115f4f0,2,void ClearObstaclePolygonScrapArray(BSTScrapArray<VelocityObstacle::ObstaclePolygon>& a_array)
 89458,0x1411027d0,0x14115f6f0,2,"bool MovementControllerAI::AttachAgent(MovementAgent** a_agent, void* a_arbiterList)"
 89471,0x141102bc0,0x14115fae0,2,void* MovementArbiterFactory::FindCreator(const char** a_name)
 89473,0x141102ca0,0x14115fbc0,3,NullMovementState* NullMovementState::GetSingleton()
@@ -5371,6 +5377,7 @@
 90209,0x1411186f0,0x1411755c0,2,"void MovementPlannerAgentNavmeshBounds::CopyObstaclesToAvoidShapes(BSScrapArray<VelocityObstacle::ObstaclePolygon>& a_out, const BSTArray<VelocityObstacle::ObstaclePolygon>& a_in)"
 90214,0x141118b70,0x141175a40,2,ObstacleBuildRequest* ObstacleBuildRequest::ObstacleBuildRequest()
 90227,0x141118fb0,0x141175e80,2,"void ConstructObstaclePolygonRange(BSTSmallArray<VelocityObstacle::ObstaclePolygon, 1>& a_array, std::uint32_t a_first, std::uint32_t a_count)"
+90230,0x1411190a0,0x141175f70,2,"void DestructObstaclePolygonRange(BSTSmallArray<VelocityObstacle::ObstaclePolygon, 1>& a_array, std::uint32_t a_first, std::uint32_t a_count)"
 90233,0x1411192c0,0x141176190,2,bool PathingStreamSaveGame::WriteObstaclePolygonArray(const BSTArray<VelocityObstacle::ObstaclePolygon>& a_polygons)
 90238,0x141119540,0x141176410,2,void MovementPathManagerAgentAvoidBox::RegisterWithController(IMovementControllerRegisterInterface& a_controller)
 90239,0x141119550,0x141176420,2,void MovementPathManagerAgentAvoidBox::UnregisterWithController()
