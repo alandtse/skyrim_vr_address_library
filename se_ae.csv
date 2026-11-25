@@ -5959,6 +5959,8 @@ sseid,aeid,confidence,name
 40935,41994,1,
 40936,41995,1,
 40937,41996,1,
+40942,42001,1,
+40943,42002,1,
 40962,42024,1,
 40963,42025,1,
 40967,42029,1,
@@ -8796,6 +8798,7 @@ sseid,aeid,confidence,name
 88199,90604,1,
 88202,90607,1,
 88203,90608,1,
+88204,90609,1,
 88237,90646,1,
 88288,90699,1,
 88293,90704,1,
@@ -9183,9 +9186,12 @@ sseid,aeid,confidence,name
 90009,92494,1,IMovementPathManagerAgent::Func2_*
 90010,92495,1,
 90011,92496,1,IMovementQueryPathFollowing::Func1_*
+90013,92498,1,
 90014,92499,1,IMovementQueryPathFollowing::Func4_*
 90015,92500,1,MovementAgentPathFollowerFlight::Func13_*
 90016,92501,1,IMovementQueryPathFollowing::Func5_*
+90017,92502,1,
+90018,92503,1,
 90020,92505,1,MovementAgentPathFollowerFlight::Func11_*
 90022,92507,1,MovementAgentPathFollowerFlight::sub_*
 90025,92512,1,
@@ -9205,6 +9211,9 @@ sseid,aeid,confidence,name
 90054,92542,1,
 90055,92543,1,
 90057,92545,1,
+90058,92546,1,
+90060,92548,1,
+90065,92553,1,
 90067,92555,1,MovementAgentPathFollowerVirtual::Func12_*
 90068,92556,1,MovementAgentPathFollowerVirtual::sub_*
 90070,92560,1,IMovementPathManagerAgent::Func0_*

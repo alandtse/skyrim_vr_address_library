@@ -3156,6 +3156,8 @@
 40935,0x1406fb9d0,0x1407228c0,2,BSFixedString& MovementHandlerAgentPlayerControls::GetStaticAgentType()
 40936,0x1406fba60,0x140722950,2,std::uint8_t MovementHandlerAgentPlayerControls::GetAgentSaveType()
 40937,0x1406fba80,0x140722970,2,void MovementHandlerAgentPlayerControls::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
+40942,0x1406fc250,0x1407231d0,2,void MovementHandlerAgentPlayerControls::SetFreezeDirectionOnLargeDelta(bool a_freeze)
+40943,0x1406fc2b0,0x140723230,2,void MovementHandlerAgentPlayerControls::SetControlMode(std::uint32_t a_mode)
 40962,0x1406fce00,0x140723d80,2,const BSFixedString& MovementHandlerAgentPlayerControlsActionTrigger::GetAgentType()
 40963,0x1406fce10,0x140723d90,2,BSFixedString& MovementHandlerAgentPlayerControlsActionTrigger::GetStaticAgentType()
 40967,0x1406fcf60,0x140723ee0,2,void MovementHandlerAgentPlayerControlsActionTrigger::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
@@ -4917,6 +4919,7 @@
 88200,0x1410b8ae0,0x141115710,2,"void MovementAgentActorState::UpdateSmallDelta(MovementPlannerUpdateDataSmallDelta* a_updateData, MovementPlannerAgentReturnDataSmallDelta* a_returnData)"
 88202,0x1410b8e00,0x141115a30,2,void IMovementSetState::SetStateForward(void* a_state)
 88203,0x1410b8e20,0x141115a50,2,void IMovementSetState::SetState(void* a_state)
+88204,0x1410b8ee0,0x141115b10,2,IMovementState* MovementAgentActorState::GetMovementState()
 88237,0x1410b9d30,0x141116960,2,void PathingRequest::SetLockData(PathingLockData** a_lockData)
 88288,0x1410ba920,0x141117550,3,MovementAgentPathFollowerStandard* MovementAgentPathFollowerStandard::MovementAgentPathFollowerStandard()
 88293,0x1410baea0,0x141117ad0,2,void MovementAgentPathFollowerStandard::RegisterWithController(IMovementControllerRegisterInterface& a_controller)
@@ -5270,6 +5273,11 @@
 90007,0x141112e40,0x14116fd90,2,"void MovementAgentPathFollowerFlight::UpdateLargeDelta(void* a_updateData, void* a_returnData)"
 90008,0x141112e60,0x14116fdb0,2,"void MovementAgentPathFollowerFlight::SetPathingData(BSPathingRequest** a_request, BSPathingSolution** a_solution)"
 90010,0x1411130a0,0x14116fff0,2,void MovementAgentPathFollowerFlight::ResetPathingState()
+90011,0x141113160,0x1411700b0,2,bool MovementAgentPathFollowerFlight::IsPathFinished()
+90013,0x1411131d0,0x141170120,2,bool MovementAgentPathFollowerFlight::IsInMovingState()
+90014,0x141113220,0x141170170,2,bool MovementAgentPathFollowerFlight::IsFollowingPath()
+90017,0x1411132a0,0x1411701f0,2,"bool MovementAgentPathFollowerFlight::GetPredictedPoint(float a_distance, NiPoint3& a_point)"
+90018,0x1411133a0,0x1411702f0,2,"bool MovementAgentPathFollowerFlight::GetPredictedPointAndTangent(float a_distance, NiPoint3& a_point, NiPoint3& a_tangent)"
 90045,0x1411148d0,0x1411717a0,2,void MovementAgentPathFollowerVirtual::RegisterWithController(IMovementControllerRegisterInterface& a_controller)
 90046,0x141114920,0x1411717f0,2,void MovementAgentPathFollowerVirtual::UnregisterWithController()
 90047,0x141114970,0x141171840,2,const BSFixedString& MovementAgentPathFollowerVirtual::GetAgentType()
@@ -5280,6 +5288,9 @@
 90054,0x141114af0,0x1411719c0,2,"void MovementAgentPathFollowerVirtual::SetPathingData(BSPathingRequest** a_request, BSPathingSolution** a_solution)"
 90055,0x141114c60,0x141171b30,2,"void MovementAgentPathFollowerVirtual::PollPathEvent(MovementUpdateDataSmallDelta* a_updateData, MovementPathManagerAgentEvent* a_outEvent)"
 90057,0x141114ce0,0x141171bb0,2,void MovementAgentPathFollowerVirtual::ResetPathingState()
+90058,0x141114db0,0x141171c80,2,bool MovementAgentPathFollowerVirtual::IsPathFinished()
+90060,0x141114e60,0x141171d30,2,bool MovementAgentPathFollowerVirtual::IsInMovingState()
+90065,0x141114ef0,0x141171dc0,2,bool MovementAgentPathFollowerVirtual::SetPathFollowingMode(std::int32_t a_mode)
 90082,0x141115860,0x141172730,2,const BSFixedString& MovementHandlerAgentAngleController::GetAgentType()
 90083,0x141115870,0x141172740,2,BSFixedString& MovementHandlerAgentAngleController::GetStaticAgentType()
 90084,0x141115900,0x1411727d0,2,std::uint8_t MovementHandlerAgentAngleController::GetAgentSaveType()
