@@ -2203,6 +2203,7 @@
 36286,0x1405d2520,0x1405daae0,3,RE::Actor::GetGhost
 36287,0x1405d25e0,0x1405daba0,4,RE::Actor::SetGhost
 36289,0x1405d27a0,0x1405dad60,2,DrawSheatheWeaponActor
+36315,0x1405d3b50,0x1405dc110,2,bool Actor::DetachCharController()
 36316,0x1405d3bb0,0x1405dc170,2,void Actor::RemoveCharController()
 36323,0x1405d4090,0x1405dc650,2,"std::uint64_t TESObjectREFR::MoveToPosition(NiPoint3* a_pos, float a_rotZ, float a_rotX, TESObjectCELL* a_cell, TESWorldSpace* a_worldSpace, bool a_unk)"
 36331,0x1405d5290,0x1405dd850,3,Actor::Resurrect
@@ -2255,6 +2256,7 @@
 36490,0x1405e3330,0x1405eb9d0,3,Actor::SetDontMove
 36492,0x1405e33b0,0x1405eba50,4,bool Actor::IsInRagdollState()
 36506,0x1405e4800,0x1405ecea0,3,"float Actor::AdjustHealthDamageToDifficulty(Actor a_actor, float a_damage, float onlyReduceDamage)"
+36507,0x1405e4880,0x1405ecf20,2,"bhkCharacterController* Actor::Move(float a_arg2, const NiPoint3& a_position)"
 36511,0x1405e5dd0,0x1405ee4f0,4,TESObjectREFR::PayGoldToContainer
 36521,0x1405e6580,0x1405eeca0,3,Actor::PickUpObject
 36523,0x1405e6b50,0x1405ef270,3,EssentialFavorites::Disarm::IsQuestObject
@@ -2265,6 +2267,7 @@
 36537,0x1405e7e40,0x1405f0560,3,RE::Actor::GetHostileToActor
 36541,0x1405e8700,0x1405f0e20,3,po3tweaks::VoiceModulation::SetObjectToFollow
 36543,0x1405e9270,0x1405f1980,4,"void Actor::UpdateSoundCallBack_1405E9270 (Actor * param_1, undefined8 param_2, undefined1 param_3)"
+36548,0x1405ea350,0x1405f2a60,2,void Actor::SetSize(float a_size)
 36559,0x1405ebd90,0x1405f44a0,4,uint32_t Actor::GetCollisionFilterInfo(uint32_t& a_outCollisionFilterInfo)
 36568,0x1405ec540,0x1405f4c50,3,Actor::InitiateGetUpPackage
 36575,0x1405ecb70,0x1405f5280,4,Actor::IsFleeing
@@ -2410,6 +2413,7 @@
 37121,0x1406145e0,0x14061d1f0,2,bool MovementMessagePool::ClearWarpToMultipleHandler()
 37127,0x140614ce0,0x14061d8f0,2,void MovementMessagePool::InitFreeList()
 37128,0x140614da0,0x14061d9b0,3,MovementMessagePool* MovementMessagePool::MovementMessagePool()
+37351,0x140619970,0x140622560,2,bool Actor::InitiateTresPassPackage(TESPackage* a_package)
 37356,0x140619ab0,0x1406226a0,3,sub_140619AB0
 37388,0x14061c6e0,0x1406252d0,2,"bool MovementMessagePool::Dispatch(Character* a_character, MovementMessage* a_message)"
 37390,0x14061c880,0x140625470,3,BSTEventSource<ActorKill::Event>* ActorKill::GetEventSource()
@@ -2769,6 +2773,7 @@
 39178,0x140692eb0,0x14069c4b0,2,float PlayerCharacter::GetEquippedWeaponsDamage()
 39179,0x140693050,0x14069c650,3,RE::PlayerCharacter::GetDamage
 39181,0x140693110,0x14069c710,3,RE::Actor::DoReset3D
+39183,0x140693640,0x14069cc40,2,bool Character::InitiateTresPassPackage(TESPackage* a_package)
 39184,0x140693820,0x14069ce20,4,"void Character::SetFaceNodeSkinned(NiNode* a_root, BSFaceGenNiNode* a_faceNode)"
 39215,0x140694350,0x14069D950,4,PlayerCharacter::sub_140694350
 39217,0x140694400,0x14069da00,3,RE::ArmorRatingVisitor::VisitArmor
@@ -2988,13 +2993,17 @@
 40823,0x1406f3300,0x14071a1f0,2,void MovementLocationEventArray::end(void* a_out)
 40825,0x1406f3350,0x14071a240,2,void MovementAgentArray::end(void* a_out)
 40826,0x1406f3390,0x14071a280,2,void MovementArbiterArray::end(void* a_out)
+40898,0x1406fa620,0x140721510,2,const char* MovementHandlerAgentDirectControl::GetAgentName()
 40900,0x1406fa6c0,0x1407215b0,2,std::uint8_t MovementHandlerAgentDirectControl::GetTypeId()
 40901,0x1406fa6e0,0x1407215d0,2,void MovementHandlerAgentDirectControl::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
+40934,0x1406fb9c0,0x1407228b0,2,const char* MovementHandlerAgentPlayerControls::GetAgentName()
 40936,0x1406fba60,0x140722950,2,std::uint8_t MovementHandlerAgentPlayerControls::GetTypeId()
 40937,0x1406fba80,0x140722970,2,void MovementHandlerAgentPlayerControls::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
 40967,0x1406fcf60,0x140723ee0,2,void MovementHandlerAgentPlayerControlsActionTrigger::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
+40979,0x1406fd200,0x140724180,2,const char* MovementHandlerAgentSprintActionTrigger::GetAgentName()
 40981,0x1406fd2a0,0x140724220,2,std::uint8_t MovementHandlerAgentSprintActionTrigger::GetTypeId()
 40986,0x1406fd3e0,0x140724360,2,void MovementHandlerAgentSprintActionTrigger::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
+41004,0x1406fdce0,0x140724c60,2,const char* MovementHandlerAgentStairsHelper::GetAgentName()
 41006,0x1406fdd80,0x140724d00,2,std::uint8_t MovementHandlerAgentStairsHelper::GetTypeId()
 41010,0x1406fde10,0x140724d90,2,void MovementHandlerAgentStairsHelper::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
 41022,0x1406fe160,0x1407250e0,3,std::int32_t MovementMessageActorCollision::GetStaticType()
@@ -3003,18 +3012,24 @@
 41045,0x1406feb50,0x140725ad0,3,void MovementMessageMovementTypeChange::SaveGame(PathingStreamSaveGame* a_stream)
 41046,0x1406feb90,0x140725b10,3,void MovementMessageMovementTypeChange::LoadGame(PathingStreamLoadGame* a_stream)
 41047,0x1406febc0,0x140725b40,2,"void* MovementMessageAutoRegister::RegisterMovementTypeChange(void* a_registrar, int a_typeId)"
+41059,0x1406fefd0,0x140725f50,2,const char* MovementPlannerAgentDirectControl::GetAgentName()
 41061,0x1406ff070,0x140725ff0,2,std::uint8_t MovementPlannerAgentDirectControl::GetTypeId()
 41062,0x1406ff090,0x140726010,2,"void MovementPlannerAgentDirectControl::UpdateSmallDelta(MovementPlannerUpdateDataSmallDelta* a_updateData, MovementPlannerAgentReturnDataSmallDelta* a_returnData)"
+41082,0x1406ff660,0x1407265e0,2,const char* MovementPlannerAgentHorseControls::GetAgentName()
 41084,0x1406ff700,0x140726680,2,std::uint8_t MovementPlannerAgentHorseControls::GetTypeId()
 41085,0x1406ff720,0x1407266a0,2,"void MovementPlannerAgentHorseControls::UpdateSmallDelta(MovementPlannerUpdateDataSmallDelta* a_updateData, MovementPlannerAgentReturnDataSmallDelta* a_returnData)"
+41100,0x1406ffce0,0x140726c50,2,const char* MovementPlannerAgentKeepOffset::GetAgentName()
 41102,0x1406ffd80,0x140726cf0,2,std::uint8_t MovementPlannerAgentKeepOffset::GetTypeId()
 41103,0x1406ffda0,0x140726d10,2,"void MovementPlannerAgentKeepOffset::UpdateSmallDelta(MovementPlannerUpdateDataSmallDelta* a_updateData, MovementPlannerAgentReturnDataSmallDelta* a_returnData)"
+41125,0x1407008e0,0x140727850,2,const char* MovementPlannerAgentWarp::GetAgentName()
 41127,0x140700980,0x1407278f0,2,std::uint8_t MovementPlannerAgentWarp::GetTypeId()
 41128,0x1407009a0,0x140727910,2,"void MovementPlannerAgentWarp::UpdateSmallDelta(MovementPlannerUpdateDataSmallDelta* a_updateData, MovementPlannerAgentReturnDataSmallDelta* a_returnData)"
 41130,0x140700f70,0x140727f00,2,"void IMovementSetWarp::HandlePathingFailure(void* a_request, void* a_p2)"
 41131,0x1407011e0,0x140728170,2,void IMovementSetWarp::AdvanceWarpState(void* a_request)
 41132,0x140701290,0x140728220,2,void IMovementSetWarp::ResetWarpState(void* a_request)
+41156,0x140701f90,0x140728f20,2,const char* MovementTweenerAgentAnimationDriven::GetAgentName()
 41158,0x140702030,0x140728fc0,2,std::uint8_t MovementTweenerAgentAnimationDriven::GetTypeId()
+41176,0x140702920,0x1407298b0,2,const char* MovementTweenerAgentNodeFollower::GetAgentName()
 41178,0x1407029c0,0x140729950,2,std::uint8_t MovementTweenerAgentNodeFollower::GetTypeId()
 41181,0x140702c40,0x140729bd0,2,void MovementTweenerAgentNodeFollower::SaveGame(PathingStreamSaveGame* a_stream)
 41182,0x140702c50,0x140729be0,2,void MovementTweenerAgentNodeFollower::LoadGame(PathingStreamLoadGame* a_stream)
@@ -4706,12 +4721,14 @@
 87992,0x1410a7150,0x141103d80,2,void BSPathingLocation::Read(BSPathingStreamRead* a_stream)
 87993,0x1410a7290,0x141103ec0,2,void BSPathingLocation::Write(BSPathingStreamWrite* a_stream)
 88004,0x1410a7e10,0x141104a40,4,"bool FindTriangleForLocationFilterCheckDeltaZ::IsValidTri(NiPoint3* a_location, BSNavmesh* a_navMesh, std::uint16_t a_tri, NiPoint3* a_pointOnTri)"
+88197,0x1410b8a20,0x141115650,2,const char* MovementAgentActorState::GetAgentName()
 88199,0x1410b8ac0,0x1411156f0,2,std::uint8_t MovementAgentActorState::GetTypeId()
 88200,0x1410b8ae0,0x141115710,2,"void MovementAgentActorState::UpdateSmallDelta(MovementPlannerUpdateDataSmallDelta* a_updateData, MovementPlannerAgentReturnDataSmallDelta* a_returnData)"
 88202,0x1410b8e00,0x141115a30,2,void IMovementSetState::SetStateForward(void* a_state)
 88203,0x1410b8e20,0x141115a50,2,void IMovementSetState::SetState(void* a_state)
 88237,0x1410b9d30,0x141116960,2,void PathingRequest::SetLockData(PathingLockData** a_lockData)
 88288,0x1410ba920,0x141117550,3,MovementAgentPathFollowerStandard* MovementAgentPathFollowerStandard::MovementAgentPathFollowerStandard()
+88295,0x1410baf40,0x141117b70,2,const char* MovementAgentPathFollowerStandard::GetPathFollowerName()
 88296,0x1410baf50,0x141117b80,3,BSFixedString* GetPathFollowerName()
 88297,0x1410bafe0,0x141117c10,2,std::uint8_t MovementAgentPathFollowerStandard::GetTypeId()
 88300,0x1410bb040,0x141117c70,2,"void MovementAgentPathFollowerStandard::UpdateSmallDelta(MovementPlannerUpdateDataSmallDelta* a_updateData, MovementPlannerAgentReturnDataSmallDelta* a_returnData)"
@@ -4918,12 +4935,16 @@
 89625,0x1411074f0,0x141164410,2,"bool MovementMessageJump::Prepare(PathFollowerStateUpdateData* a_updateData, float* a_out)"
 89626,0x141107540,0x141164460,2,"bool IPathFollowerAction::Jump_GetTargetSpeed(PathFollowerStateUpdateData* a_updateData, float* a_out)"
 89627,0x141107560,0x141164480,2,"void* MovementMessageAutoRegister::RegisterJump(void* a_registrar, int a_typeId)"
+89638,0x1411078d0,0x1411647f0,2,const char* MovementPostUpdateArbiter::GetStageName()
+89639,0x1411078e0,0x141164800,2,const char* MovementPostUpdateArbiter::GetArbiterName()
 89641,0x141107980,0x1411648a0,2,std::uint8_t MovementPostUpdateArbiter::GetTypeId()
 89642,0x1411079a0,0x1411648c0,2,void MovementPostUpdateArbiter::RegisterInterface(IMovementControllerRegisterInterface* a_interface)
 89643,0x1411079d0,0x1411648f0,2,void MovementPostUpdateArbiter::UnregisterInterface()
 89647,0x141107b80,0x141164aa0,3,void MovementPostUpdateArbiter::Save(BSPathingStreamWrite* a_stream)
 89648,0x141107c70,0x141164b90,3,void MovementPostUpdateArbiter::Load(BSPathingStreamRead* a_stream)
+89665,0x141108410,0x141165330,2,const char* MovementPathManagerAgentStaticAvoider::GetAgentName()
 89667,0x1411084b0,0x1411653d0,2,std::uint8_t MovementPathManagerAgentStaticAvoider::GetTypeId()
+89707,0x141109680,0x1411665a0,2,const char* MovementAgentActorAvoider::GetAgentName()
 89709,0x141109720,0x141166640,2,std::uint8_t MovementAgentActorAvoider::GetTypeId()
 89712,0x141109760,0x141166680,2,"void MovementAgentActorAvoider::UpdateSmallDelta(MovementPlannerUpdateDataSmallDelta* a_updateData, MovementPlannerAgentReturnDataSmallDelta* a_returnData)"
 89715,0x1411098c0,0x1411667e0,2,"void MovementAgentActorAvoider::CheckBlockedByActors(void* a_arg1, std::uint32_t* a_outStatus)"
@@ -4933,6 +4954,7 @@
 89720,0x141109fa0,0x141166ec0,2,bool IMovementQueryActorAvoidance::UpdateObstacles(MovementHandlerUpdateDataSmallDelta* a_updateData)
 89723,0x14110a260,0x141167180,2,void MovementAgentActorAvoider::FindActorsToAvoid()
 89724,0x14110a730,0x141167650,2,bool MovementAgentActorAvoider::IsActorNearPath(void* a_actorInfo)
+89760,0x14110b6c0,0x1411685e0,2,void* MovementAgent::GetDebugRenderingInterface()
 89766,0x14110b720,0x141168640,2,void MovementAgent::SaveGame(PathingStreamSaveGame* a_stream)
 89767,0x14110b730,0x141168650,2,void MovementAgent::LoadGame(PathingStreamLoadGame* a_stream)
 89768,0x14110b740,0x141168660,2,"void RegisterAgentIdName(char a_id, BSFixedString* a_name)"
@@ -4940,16 +4962,20 @@
 89777,0x14110bb40,0x141168a60,2,void* GetAgentIdNameMap()
 89781,0x14110bf30,0x141168e50,2,MovementArbiter* MovementArbiter::MovementArbiter()
 89782,0x14110bf70,0x141168e90,2,void MovementArbiter::~MovementArbiter()
+89784,0x14110bfa0,0x141168ec0,2,void* MovementArbiter::GetDebugRenderingInterface()
 89787,0x14110bfd0,0x141168ef0,2,void MovementArbiter::OnKillArbiter()
 89790,0x14110c000,0x141168f20,2,void MovementArbiter::SaveGame(PathingStreamSaveGame* a_stream)
 89791,0x14110c010,0x141168f30,2,void MovementArbiter::LoadGame(PathingStreamLoadGame* a_stream)
 89795,0x14110c050,0x141168f70,2,"void RegisterArbiterIdName(char a_id, BSFixedString* a_name)"
 89796,0x14110c080,0x141168fa0,2,"bool GetArbiterNameById(char a_id, BSFixedString* a_name)"
 89804,0x14110c450,0x141169370,2,void* GetArbiterIdNameMap()
+89810,0x14110c900,0x141169820,2,const char* MovementHandlerAgentTranslationController::GetAgentName()
 89812,0x14110c9a0,0x1411698c0,2,std::uint8_t MovementHandlerAgentTranslationController::GetTypeId()
 89815,0x14110ca30,0x141169950,2,void MovementHandlerAgentTranslationController::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
+89838,0x14110d830,0x14116a750,2,const char* MovementTweenerAgentFixedDelta::GetAgentName()
 89840,0x14110d8d0,0x14116a7f0,2,std::uint8_t MovementTweenerAgentFixedDelta::GetTypeId()
 89860,0x14110e970,0x14116b890,2,const char* MovementHandlerArbiter::GetStageName()
+89861,0x14110e980,0x14116b8a0,2,const char* MovementHandlerArbiter::GetArbiterName()
 89863,0x14110ea20,0x14116b940,2,std::uint8_t MovementHandlerArbiter::GetTypeId()
 89865,0x14110ea50,0x14116b970,2,void MovementHandlerArbiter::UnregisterInterface()
 89872,0x14110ee40,0x14116bd60,3,void MovementHandlerArbiter::ClearAgents(void* a_unused)
@@ -4957,6 +4983,7 @@
 89874,0x14110ee70,0x14116bd90,2,void MovementHandlerArbiter::LoadGame(PathingStreamLoadGame* a_stream)
 89875,0x14110eea0,0x14116bdc0,2,"void MovementHandlerArbiter::UpdateHandlers(MovementHandlerUpdateDataSmallDelta* a_updateData, MovementHandlerOutputDataSmallDelta* a_outputData)"
 89906,0x14110f8a0,0x14116c7c0,2,const char* MovementPlannerArbiter::GetStageName()
+89907,0x14110f8b0,0x14116c7d0,2,const char* MovementPlannerArbiter::GetArbiterName()
 89909,0x14110f950,0x14116c870,2,std::uint8_t MovementPlannerArbiter::GetTypeId()
 89913,0x14110fad0,0x14116c9f0,3,void MovementPlannerArbiter::UnregisterInterface()
 89918,0x14110fce0,0x14116cc30,3,void MovementPlannerArbiter::ClearAgents(void* a_unused)
@@ -4967,37 +4994,50 @@
 89930,0x141110a80,0x14116d9d0,2,void MovementPlannerArbiter::LimitSpeedForPredictedCollisions(MovementHandlerUpdateDataSmallDelta* a_updateData)
 89961,0x141111cb0,0x14116ec00,2,"void ActorState::CalculateTranslationLimits(IMovementParameters* a_params, IMovementInterface* a_interface, NiPoint3* a_targetDirection, float* a_outAcceleration, float* a_outDeceleration, float* a_outLimit)"
 89962,0x141111e40,0x14116ed90,2,"void ActorState::CalculateRotationLimits(IMovementParameters* a_params, IMovementInterface* a_interface, NiPoint3* a_targetDirection, float* a_outLimitA, float* a_outLimitB)"
+89978,0x141112390,0x14116f2e0,2,const char* MovementPathManagerAgentLoadedAreaMonitor::GetAgentName()
 89980,0x141112430,0x14116f380,2,std::uint8_t MovementPathManagerAgentLoadedAreaMonitor::GetTypeId()
 89985,0x141112740,0x14116f690,2,void MovementPathManagerAgentLoadedAreaMonitor::SaveGame(PathingStreamSaveGame* a_stream)
 89986,0x141112760,0x14116f6b0,2,void MovementPathManagerAgentLoadedAreaMonitor::LoadGame(PathingStreamLoadGame* a_stream)
+90001,0x141112cc0,0x14116fc10,2,const char* MovementAgentPathFollowerFlight::GetAgentName()
 90003,0x141112d60,0x14116fcb0,2,std::uint8_t MovementAgentPathFollowerFlight::GetTypeId()
 90006,0x141112dc0,0x14116fd10,2,"void MovementAgentPathFollowerFlight::UpdateSmallDelta(MovementPlannerUpdateDataSmallDelta* a_updateData, MovementPlannerAgentReturnDataSmallDelta* a_returnData)"
+90047,0x141114970,0x141171840,2,const char* MovementAgentPathFollowerVirtual::GetAgentName()
 90049,0x141114a10,0x1411718e0,2,std::uint8_t MovementAgentPathFollowerVirtual::GetTypeId()
 90052,0x141114a70,0x141171940,2,"void MovementAgentPathFollowerVirtual::UpdateSmallDelta(MovementPlannerUpdateDataSmallDelta* a_updateData, MovementPlannerAgentReturnDataSmallDelta* a_returnData)"
+90082,0x141115860,0x141172730,2,const char* MovementHandlerAgentAngleController::GetAgentName()
 90084,0x141115900,0x1411727d0,2,std::uint8_t MovementHandlerAgentAngleController::GetTypeId()
 90085,0x141115920,0x1411727f0,2,void MovementHandlerAgentAngleController::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
 90087,0x141115cd0,0x141172ba0,2,void MovementHandlerAgentAngleController::SaveGame(PathingStreamSaveGame* a_stream)
 90088,0x141115ce0,0x141172bb0,2,void MovementHandlerAgentAngleController::LoadGame(PathingStreamLoadGame* a_stream)
+90098,0x141115f00,0x141172dd0,2,const char* MovementHandlerAgentAngleGain::GetAgentName()
 90100,0x141115fa0,0x141172e70,2,std::uint8_t MovementHandlerAgentAngleGain::GetTypeId()
 90101,0x141115fc0,0x141172e90,2,void MovementHandlerAgentAngleGain::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
+90113,0x141116630,0x141173500,2,const char* MovementHandlerAgentSpeedPassThrough::GetAgentName()
 90115,0x1411166d0,0x1411735a0,2,std::uint8_t MovementHandlerAgentSpeedPassThrough::GetTypeId()
 90116,0x1411166f0,0x1411735c0,2,void MovementHandlerAgentSpeedPassThrough::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
+90127,0x141116930,0x141173800,2,const char* MovementHandlerAgentAnglePassThrough::GetAgentName()
 90129,0x1411169d0,0x1411738a0,2,std::uint8_t MovementHandlerAgentAnglePassThrough::GetTypeId()
 90130,0x1411169f0,0x1411738c0,2,void MovementHandlerAgentAnglePassThrough::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
+90141,0x141116c80,0x141173b50,2,const char* MovementHandlerAgentDirectionPassThrough::GetAgentName()
 90143,0x141116d20,0x141173bf0,2,std::uint8_t MovementHandlerAgentDirectionPassThrough::GetTypeId()
 90144,0x141116d40,0x141173c10,2,void MovementHandlerAgentDirectionPassThrough::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
+90155,0x141117050,0x141173f20,2,const char* MovementHandlerAgentStrafing::GetAgentName()
 90157,0x1411170f0,0x141173fc0,2,std::uint8_t MovementHandlerAgentStrafing::GetTypeId()
 90158,0x141117110,0x141173fe0,2,void MovementHandlerAgentStrafing::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
+90172,0x1411174c0,0x141174390,2,const char* MovementHandlerAgentLargeDeltaIdle::GetAgentName()
 90174,0x141117560,0x141174430,2,std::uint8_t MovementHandlerAgentLargeDeltaIdle::GetTypeId()
 90175,0x141117580,0x141174450,2,void MovementHandlerAgentLargeDeltaIdle::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
 90177,0x141117690,0x141174560,3,void MovementHandlerAgentLargeDeltaIdle::SaveGame(PathingStreamSaveGame* a_stream)
 90178,0x1411176b0,0x141174580,3,void MovementHandlerAgentLargeDeltaIdle::LoadGame(PathingStreamLoadGame* a_stream)
+90193,0x141117ba0,0x141174a70,2,const char* MovementPlannerAgentNavmeshBounds::GetAgentName()
 90195,0x141117c40,0x141174b10,2,std::uint8_t MovementPlannerAgentNavmeshBounds::GetTypeId()
 90198,0x141117ca0,0x141174b70,2,"void MovementPlannerAgentNavmeshBounds::UpdateSmallDelta(MovementPlannerUpdateDataSmallDelta* a_updateData, MovementPlannerAgentReturnDataSmallDelta* a_returnData)"
+90242,0x1411195f0,0x1411764c0,2,const char* MovementPathManagerAgentAvoidBox::GetAgentName()
 90244,0x141119690,0x141176560,2,std::uint8_t MovementPathManagerAgentAvoidBox::GetTypeId()
 90246,0x1411197b0,0x141176680,2,"void MovementPathManagerAgentAvoidBox::CheckBlockedByAvoidBox(void* a_arg1, std::uint32_t* a_outStatus)"
 90251,0x141119ad0,0x1411769a0,2,int MovementPathManagerAgentAvoidBox::EvaluateAvoidBox()
 90271,0x14111a8d0,0x1411777a0,2,const char* MovementTweenerArbiter::GetStageName()
+90272,0x14111a8e0,0x1411777b0,2,const char* MovementTweenerArbiter::GetArbiterName()
 90274,0x14111a980,0x141177850,2,std::uint8_t MovementTweenerArbiter::GetTypeId()
 90276,0x14111a9f0,0x1411778c0,3,void MovementTweenerArbiter::UnregisterInterface()
 90287,0x14111ad40,0x141177c10,2,void MovementTweenerArbiter::RegisterAgent(void* a_agent)
