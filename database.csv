@@ -511,7 +511,7 @@
 19105,0x1402850e0,0x140296810,3,void TESObjectREFR::InitItemImpl()
 19110,0x140285be0,0x140297310,3,void TESObjectREFR::AddLockChange()
 19113,0x140285f90,0x1402976c0,2,void TESObjectREFR::ForceEditorLocation(BGSLocation* a_location)
-19119,0x1402866d0,0x140297e00,4,void TESObjectREFR::UpdateSoundCallBack_1402866D0 (Character * a_this)
+19119,0x1402866d0,0x140297e00,4,void TESObjectREFR::UpdateSoundCallBack()
 19124,0x140286d40,0x140298470,2,"void TESObjectREFR::DamageObject(float a_objectHealth, bool a_arg3)"
 19133,0x140287d30,0x140299460,4,"void TESObjectREFR::ReadFromSaveGame (TESObjectREFR * a_this, BGSLoadFormBuffer * a_buffer)"
 19142,0x1402896f0,0x14029ae20,4,"ObjectRefHandle TESObjectREFR::CreateReference(ObjectRefHandle& a_handleOut, FormType a_formType, bool a_addActorToProcessList)"
@@ -562,7 +562,7 @@
 19302,0x140290900,0x1402a2010,3,TESObjectREFR::Set3D
 19304,0x1402915F0,0x1402A2D00,3,TESObjectREFR::SendObjectLoadedEvent
 19306,0x140291780,0x1402a2e90,2,bool TESObjectREFR::ShouldBackgroundClone()
-19309,0x1402917f0,0x1402a2f00,4,void TESObjectREFR::sub_1402917F0 (TESObjectREFR * a_this)
+19309,0x1402917f0,0x1402a2f00,4,void TESObjectREFR::sub_1402917F0()
 19314,0x140293fe0,0x1402a56f0,2,bool TESForm::GetRandomAnim()
 19315,0x140294000,0x1402a5710,3,TESObjectREFR::UpdateReference3D
 19316,0x1402943b0,0x1402a5ac0,4,bool Actor::Update3D()
@@ -2284,7 +2284,7 @@
 36316,0x1405d3bb0,0x1405dc170,2,bool Actor::RemoveCharController()
 36323,0x1405d4090,0x1405dc650,2,"std::uint64_t TESObjectREFR::MoveToPosition(NiPoint3* a_pos, float a_rotZ, float a_rotX, TESObjectCELL* a_cell, TESWorldSpace* a_worldSpace, bool a_unk)"
 36331,0x1405d5290,0x1405dd850,3,Actor::Resurrect
-36332,0x1405d56b0,0x1405ddc70,4,"void Actor::ResetInventory(Actor * a_this, bool a_leveledOnly)"
+36332,0x1405d56b0,0x1405ddc70,4,void Actor::ResetInventory(bool a_leveledOnly)
 36333,0x1405d57b0,0x1405ddd70,4,undefined Character::sub_1405D57B0(Character* a_this)
 36339,0x1405d5f80,0x1405de5b0,3,Character::IsSittingOrSleeping
 36341,0x1405d60d0,0x1405de700,2,void Character::ReleaseOccupiedFurniture()
@@ -2604,7 +2604,7 @@
 37768,0x14062f450,0x140638320,3,void SpellsLearned::RemoveEventSink(BSTEventSink<SpellsLearned::Event>* a_eventSink)
 37771,0x14062f560,0x140638430,3,RE::Actor::AddSpell
 37772,0x14062f720,0x1406385f0,3,bool Actor::RemoveSpell(SpellItem* a_spell)
-37777,0x14062fad0,0x1406389a0,4,"void Actor::SetAlpha (Actor * a_this, float a_value)"
+37777,0x14062fad0,0x1406389a0,4,void Actor::SetAlpha(float a_value)
 37778,0x14062fb60,0x140638a30,3,float Actor::GetAlpha()
 37787,0x140630410,0x1406392e0,4,void Actor::AddCastPower(SpellItem* a_power)
 37792,0x140630850,0x140639720,4,MagicTarget::CheckAbsorb_14063085
