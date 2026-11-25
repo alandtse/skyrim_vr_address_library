@@ -5761,6 +5761,9 @@ sseid,aeid,confidence,name
 41010,42077,1,
 41022,42093,1,
 41044,42115,1,
+41062,42135,1,
+41085,42162,1,
+41103,42182,1,
 41104,42183,1,
 41105,42184,1,IMovementSetKeepOffsetFromActor::Func0_*
 41106,42185,1,MovementPlannerAgentKeepOffset::Func11_*
@@ -8552,6 +8555,7 @@ sseid,aeid,confidence,name
 88237,90646,1,
 88288,90699,1,
 88296,90707,1,
+88300,90711,1,
 88302,90713,1,
 88303,90714,1,
 88304,90715,1,
@@ -8817,6 +8821,7 @@ sseid,aeid,confidence,name
 89992,92473,1,MovementPathManagerAgentLoadedAreaMonitor::Func0_*
 89993,92452,1,
 89994,92453,1,
+90006,92491,1,
 90009,92494,1,IMovementPathManagerAgent::Func2_*
 90011,92496,1,IMovementQueryPathFollowing::Func1_*
 90014,92499,1,IMovementQueryPathFollowing::Func4_*
@@ -8834,6 +8839,7 @@ sseid,aeid,confidence,name
 90046,92534,1,MovementAgentPathFollowerVirtual::Func10_*
 90047,92535,1,MovementAgentPathFollowerVirtual::Func1_*
 90048,92536,1,
+90052,92540,1,
 90067,92555,1,MovementAgentPathFollowerVirtual::Func12_*
 90068,92556,1,MovementAgentPathFollowerVirtual::sub_*
 90070,92560,1,IMovementPathManagerAgent::Func0_*
@@ -8886,6 +8892,7 @@ sseid,aeid,confidence,name
 90181,92666,1,AutoRegisterFactory_gs_T1_T2_ge_::sub_*
 90182,92668,1,AutoRegisterMovementAgentCreator_gs_T1_ge_::sub_*
 90185,92663,1,
+90198,92701,1,
 90202,92705,1,
 90203,92706,1,IMovementPathManagerAgent::Func5_*
 90204,92707,1,MovementPlannerAgentNavmeshBounds::Func11_*

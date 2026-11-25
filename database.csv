@@ -2904,7 +2904,10 @@
 41010,0x1406fde10,0x140724d90,2,void MovementHandlerAgentStairsHelper::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
 41022,0x1406fe160,0x1407250e0,3,std::int32_t MovementMessageActorCollision::GetStaticType()
 41044,0x1406fead0,0x140725a50,3,std::int32_t MovementMessageMovementTypeChange::GetStaticType()
-41128,0x1407009a0,0x140727910,2,"void IMovementPlannerAgent::Update(float* a_deltaTime, void* a_plan)"
+41062,0x1406ff090,0x140726010,2,"void MovementPlannerAgentDirectControl::UpdateSmallDelta(MovementPlannerUpdateDataSmallDelta* a_updateData, MovementPlannerAgentReturnDataSmallDelta* a_returnData)"
+41085,0x1406ff720,0x1407266a0,2,"void MovementPlannerAgentHorseControls::UpdateSmallDelta(MovementPlannerUpdateDataSmallDelta* a_updateData, MovementPlannerAgentReturnDataSmallDelta* a_returnData)"
+41103,0x1406ffda0,0x140726d10,2,"void MovementPlannerAgentKeepOffset::UpdateSmallDelta(MovementPlannerUpdateDataSmallDelta* a_updateData, MovementPlannerAgentReturnDataSmallDelta* a_returnData)"
+41128,0x1407009a0,0x140727910,2,"void MovementPlannerAgentWarp::UpdateSmallDelta(MovementPlannerUpdateDataSmallDelta* a_updateData, MovementPlannerAgentReturnDataSmallDelta* a_returnData)"
 41130,0x140700f70,0x140727f00,2,"void IMovementSetWarp::HandlePathingFailure(void* a_request, void* a_p2)"
 41131,0x1407011e0,0x140728170,2,void IMovementSetWarp::AdvanceWarpState(void* a_request)
 41132,0x140701290,0x140728220,2,void IMovementSetWarp::ResetWarpState(void* a_request)
@@ -4593,12 +4596,13 @@
 87992,0x1410a7150,0x141103d80,2,void BSPathingLocation::Read(BSPathingStreamRead* a_stream)
 87993,0x1410a7290,0x141103ec0,2,void BSPathingLocation::Write(BSPathingStreamWrite* a_stream)
 88004,0x1410a7e10,0x141104a40,4,"bool FindTriangleForLocationFilterCheckDeltaZ::IsValidTri(NiPoint3* a_location, BSNavmesh* a_navMesh, std::uint16_t a_tri, NiPoint3* a_pointOnTri)"
-88200,0x1410b8ae0,0x141115710,2,"void IMovementPlannerAgent::Update(float* a_deltaTime, void* a_plan)"
+88200,0x1410b8ae0,0x141115710,2,"void MovementAgentActorState::UpdateSmallDelta(MovementPlannerUpdateDataSmallDelta* a_updateData, MovementPlannerAgentReturnDataSmallDelta* a_returnData)"
 88202,0x1410b8e00,0x141115a30,2,void IMovementSetState::SetStateForward(void* a_state)
 88203,0x1410b8e20,0x141115a50,2,void IMovementSetState::SetState(void* a_state)
 88237,0x1410b9d30,0x141116960,2,void PathingRequest::SetLockData(PathingLockData** a_lockData)
 88288,0x1410ba920,0x141117550,3,MovementAgentPathFollowerStandard* MovementAgentPathFollowerStandard::MovementAgentPathFollowerStandard()
 88296,0x1410baf50,0x141117b80,3,BSFixedString* GetPathFollowerName()
+88300,0x1410bb040,0x141117c70,2,"void MovementAgentPathFollowerStandard::UpdateSmallDelta(MovementPlannerUpdateDataSmallDelta* a_updateData, MovementPlannerAgentReturnDataSmallDelta* a_returnData)"
 88302,0x1410bb860,0x141118490,2,"void IMovementPathManagerAgent::SetPath(BSPathingRequest** a_request, BSPathingSolution** a_solution)"
 88303,0x1410bbb80,0x1411187b0,2,"void IMovementPathManagerAgent::CheckDeviationFromPath(void* a_arg1, std::uint32_t* a_outStatus)"
 88304,0x1410bbcb0,0x1411188e0,2,void IMovementPathManagerAgent::FilterRequest(BSPathingRequest** a_request)
@@ -4783,6 +4787,8 @@
 89927,0x14110fe50,0x14116cda0,2,"bool MovementUtils::FindEarliestObstacleCollision(void* a_obstacles, float* a_position, float* a_velocity, bool a_skipSlowObstacles, float* a_outTime)"
 89928,0x14110fff0,0x14116cf40,2,"void MovementPlannerArbiter::ProcessPlannerOutput(MovementUpdateDataSmallDelta* a_updateData, MovementHandlerUpdateDataSmallDelta* a_handlerUpdateData)"
 89930,0x141110a80,0x14116d9d0,2,void MovementPlannerArbiter::LimitSpeedForPredictedCollisions(MovementHandlerUpdateDataSmallDelta* a_updateData)
+90006,0x141112dc0,0x14116fd10,2,"void MovementAgentPathFollowerFlight::UpdateSmallDelta(MovementPlannerUpdateDataSmallDelta* a_updateData, MovementPlannerAgentReturnDataSmallDelta* a_returnData)"
+90052,0x141114a70,0x141171940,2,"void MovementAgentPathFollowerVirtual::UpdateSmallDelta(MovementPlannerUpdateDataSmallDelta* a_updateData, MovementPlannerAgentReturnDataSmallDelta* a_returnData)"
 90085,0x141115920,0x1411727f0,2,void MovementHandlerAgentAngleController::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
 90101,0x141115fc0,0x141172e90,2,void MovementHandlerAgentAngleGain::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
 90116,0x1411166f0,0x1411735c0,2,void MovementHandlerAgentSpeedPassThrough::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
@@ -4790,6 +4796,7 @@
 90144,0x141116d40,0x141173c10,2,void MovementHandlerAgentDirectionPassThrough::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
 90158,0x141117110,0x141173fe0,2,void MovementHandlerAgentStrafing::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
 90175,0x141117580,0x141174450,2,void MovementHandlerAgentLargeDeltaIdle::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
+90198,0x141117ca0,0x141174b70,2,"void MovementPlannerAgentNavmeshBounds::UpdateSmallDelta(MovementPlannerUpdateDataSmallDelta* a_updateData, MovementPlannerAgentReturnDataSmallDelta* a_returnData)"
 90246,0x1411197b0,0x141176680,2,"void MovementPathManagerAgentAvoidBox::CheckBlockedByAvoidBox(void* a_arg1, std::uint32_t* a_outStatus)"
 90251,0x141119ad0,0x1411769a0,2,int MovementPathManagerAgentAvoidBox::EvaluateAvoidBox()
 90331,0x14111cb60,0x141179a30,2,void MovementStateTweener::GetPosition(NiPoint3* a_out)
