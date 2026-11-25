@@ -2250,6 +2250,9 @@
 35632,0x1405b8620,0x1405c0630,3,void InitTESThread::WaitForInitialization()
 35642,0x1405b8f00,0x1405c0f70,3,SettingsOfSkyrim::
 35658,0x1405b9bb0,0x1405c1de0,3,MovementControllerActiveSets* MovementControllerActiveSets::ctor()
+35696,0x1405bad50,0x1405c2fc0,2,void MovementAgentNameSet::StaticDtor_AllAgentsNoKeepOffset()
+35697,0x1405bad80,0x1405c2ff0,2,void MovementAgentNameSet::StaticDtor_PathFollowerVirtualSet()
+35698,0x1405badb0,0x1405c3020,2,void MovementAgentNameSet::StaticDtor_PathFollowerFlightSet()
 35754,0x1405bc350,0x1405c4770,3,void BSFadeNode::RegisterFocusShadowActor()
 35771,0x1405bc830,0x1405c4c10,3,void ClearFocusShadowActors()
 35825,0x1405beb00,0x1405c6f70,3,void StartVMInitThread()
@@ -4183,11 +4186,13 @@
 66894,0x140c03db0,0x140c3ec30,4,"void InsertFreeBlock (ScrapHeap * a_this, undefined param_2)"
 66895,0x140c03eb0,0x140c3ed30,4,"void RemoveFreeBlock (ScrapHeap * a_this, undefined * param_2)"
 66906,0x140c04980,0x140c3f800,3,"void BSTArray::RemoveElements(BSTArray* this, void* a_data, uint32_t a_dstIndex, uint32_t a_srcIndex, uint32_t a_count, uint32_t a_elemSize)"
+66910,0x140c04c10,0x140c3fa90,2,"bool BSTArrayBase::SetCapacity(void* a_allocFunctor, std::uint32_t a_curCapacity, std::uint32_t a_newCapacity, std::uint32_t a_elemSize)"
 66911,0x140c04c90,0x140c3fb10,2,void NoOp()
 66962,0x140c06490,0x140c41310,3,RE::CRC32Calculator::SizeOfSize
 66963,0x140c064f0,0x140c41370,3,RE::CRC32Calculator::SizeOf32
 66964,0x140c06570,0x140c413f0,3,RE::CRC32Calculator::SizeOf64
 66967,0x140c06880,0x140c41700,4,void BSTSmallArrayHeapAllocator::Free()
+66968,0x140c068f0,0x140c41770,2,"void BSTSmallArrayHeapAllocator::MoveFrom(BSTSmallArrayHeapAllocator* a_src, std::uint32_t a_count, std::uint32_t a_elemSize, std::uint32_t a_inlineBytes)"
 66976,0x140c072d0,0x140c42150,3,RE::BSReadWriteLock::LockForRead
 66977,0x140c07350,0x140c421d0,3,RE::BSReadWriteLock::LockForWrite
 66982,0x140c07590,0x140c42410,3,RE::BSReadWriteLock::UnlockForRead
@@ -5085,10 +5090,12 @@
 89413,0x1410ff250,0x14115c160,2,bool MovementControllerNPC::AddAgentsAndArbiters(void* a_set)
 89414,0x1410ffc70,0x14115cb80,3,bool MovementControllerNPC::ApplyAgentConfig(MovementAgentConfig* a_config)
 89417,0x141100be0,0x14115db00,2,MovementAgent* MovementControllerNPC::GetDirectControlAgent()
+89419,0x141100ee0,0x14115bcb0,2,bool MovementControllerAI::Unk_09()
 89420,0x141100ef0,0x14115de10,3,"bool MovementControllerNPC::DiffAgentConfig(MovementAgentConfig* a_config, MovementScrapArray* a_extraArbiterIdxTagSet, MovementScrapArray* a_extraAgentIdxTagSet, MovementScrapArray* a_keptArbiterPairsTagSet, MovementScrapArray* a_keptAgentPairsTagSet, MovementScrapArray* a_extraArbiterIdxTagClear, MovementScrapArray* a_extraAgentIdxTagClear, MovementScrapArray* a_keptArbiterPairsTagClear, MovementScrapArray* a_keptAgentPairsTagClear)"
 89426,0x141101780,0x14115e6a0,2,bool MovementAgent::IsAgentType(const BSFixedString& a_type)
 89430,0x1411018a0,0x14115e7c0,2,std::uint32_t MovementControllerAI::PushAgent(MovementAgent** a_agent)
 89431,0x1411019b0,0x14115e8d0,2,std::uint32_t MovementControllerAI::PushArbiter(MovementArbiter** a_arbiter)
+89432,0x141101ac0,0x14115e9e0,2,"bool BSTScrapArray::AppendArray(BSTScrapArray* a_src, BSTScrapArray* a_dest)"
 89458,0x1411027d0,0x14115f6f0,2,"bool MovementControllerAI::AttachAgent(MovementAgent** a_agent, void* a_arbiterList)"
 89471,0x141102bc0,0x14115fae0,2,void* MovementArbiterFactory::FindCreator(const char** a_name)
 89473,0x141102ca0,0x14115fbc0,3,NullMovementState* NullMovementState::GetSingleton()
