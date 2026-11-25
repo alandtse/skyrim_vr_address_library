@@ -511,17 +511,17 @@
 19105,0x1402850e0,0x140296810,3,void TESObjectREFR::InitItemImpl()
 19110,0x140285be0,0x140297310,3,void TESObjectREFR::AddLockChange()
 19113,0x140285f90,0x1402976c0,2,void TESObjectREFR::ForceEditorLocation(BGSLocation* a_location)
-19119,0x1402866d0,0x140297e00,4,void TESObjectREFR::UpdateSoundCallBack()
+19119,0x1402866d0,0x140297e00,4,void TESObjectREFR::UpdateSoundCallBack(bool a_endSceneAction)
 19124,0x140286d40,0x140298470,2,"void TESObjectREFR::DamageObject(float a_objectHealth, bool a_arg3)"
 19133,0x140287d30,0x140299460,4,"void TESObjectREFR::ReadFromSaveGame (TESObjectREFR * a_this, BGSLoadFormBuffer * a_buffer)"
 19142,0x1402896f0,0x14029ae20,4,"ObjectRefHandle TESObjectREFR::CreateReference(ObjectRefHandle& a_handleOut, FormType a_formType, bool a_addActorToProcessList)"
 19143,0x140289940,0x14029b070,2,FormType TESForm::GetSavedFormType()
-19148,0x140289b60,0x14029b290,2,bool TESForm::IsHeadingMarker()
+19148,0x140289b60,0x14029b290,2,bool TESObjectREFR::IsHeadingMarker()
 19151,0x140289c50,0x14029b380,2,bool TESObjectREFR::GetFullLODRef()
 19153,0x140289d10,0x14029b440,2,bool TESForm::GetDangerous()
 19154,0x140289d30,0x14029b460,2,bool TESForm::GetObstacle()
 19157,0x140289e40,0x14029b570,2,bool TESForm::IsWater()
-19166,0x14028a640,0x14029bd70,2,void TESForm::SetOnLocalMap(bool a_set)
+19166,0x14028a640,0x14029bd70,2,void TESObjectREFR::SetOnLocalMap(bool a_set)
 19186,0x14028ae10,0x14029c540,2,bool TESObjectREFR::GetAllowPromoteToPersistent()
 19201,0x14028b940,0x14029d070,3,bool TESObjectREFR::HasQuestObject()
 19204,0x14028ba70,0x14029d1a0,3,std::int32_t Actor::GetShieldObjectSlot()
@@ -627,8 +627,8 @@
 19623,0x1402a01b0,0x1402b1920,2,bool TESObjectREFR::Is3rdPersonVisible()
 19627,0x1402a0200,0x1402b1970,2,Explosion* TESObjectREFR::AsExplosion()
 19629,0x1402a0220,0x1402b1990,2,Projectile* TESObjectREFR::AsProjectile()
-19630,0x1402a0230,0x1402b19a0,2,const TESObjectREFR* TESForm::AsReference2()
-19631,0x1402a0240,0x1402b19b0,2,TESObjectREFR* TESForm::AsReference1()
+19630,0x1402a0230,0x1402b19a0,2,const TESObjectREFR* TESObjectREFR::AsReference2()
+19631,0x1402a0240,0x1402b19b0,2,TESObjectREFR* TESObjectREFR::AsReference1()
 19646,0x1402a19e0,0x1402b3150,2,bool TESObjectREFR::QCanUpdateSync()
 19666,0x1402a2070,0x1402b37e0,3,RE::ScriptEventSourceHolder::SendActivateEvent
 19669,0x1402a21e0,0x1402b3950,2,void TESObjectREFR::SetActionComplete(bool a_set)
@@ -2343,7 +2343,7 @@
 36532,0x1405e7500,0x1405efc20,3,bool Actor::CanAttackActor(Actor* a_actor)
 36537,0x1405e7e40,0x1405f0560,3,RE::Actor::GetHostileToActor
 36541,0x1405e8700,0x1405f0e20,3,po3tweaks::VoiceModulation::SetObjectToFollow
-36543,0x1405e9270,0x1405f1980,4,"void Actor::UpdateSoundCallBack_1405E9270 (Actor * param_1, undefined8 param_2, undefined1 param_3)"
+36543,0x1405e9270,0x1405f1980,4,void Actor::UpdateSoundCallBack(bool a_endSceneAction)
 36548,0x1405ea350,0x1405f2a60,2,void Actor::SetSize(float a_size)
 36559,0x1405ebd90,0x1405f44a0,4,uint32_t Actor::GetCollisionFilterInfo(uint32_t& a_outCollisionFilterInfo)
 36568,0x1405ec540,0x1405f4c50,3,Actor::InitiateGetUpPackage
@@ -2434,12 +2434,12 @@
 36919,0x1406081e0,0x140610c60,2,bool Character::GetMaxSpeedsFromAnimGraph(MaxSpeeds* a_out)
 36920,0x1406082b0,0x140610e10,2,bool Character::GetDefaultMaxSpeeds(MaxSpeeds* a_out)
 36922,0x140608560,0x1406110f0,2,void Actor::SetFlyState(std::uint32_t a_flyState)
-36925,0x140608850,0x1406113e0,4,"bool Actor::SetWantCasting (Actor * a_actor, CastingSource a_source, bool a_enable)"
+36925,0x140608850,0x1406113e0,4,"bool Actor::SetWantCasting(CastingSource a_source, bool a_enable)"
 36926,0x1406089e0,0x140611570,4,void PlayerCharacter::SetSneaking (bool a_sneaking)
 36927,0x140608af0,0x140611680,3,bool Actor::IsBlocking()
 36928,0x140608b30,0x1406116c0,3,bool Actor::IsMoving()
 36935,0x140608d40,0x140611900,4,double Actor::GetMoveDirectionRelativeToFacing()
-36943,0x140609000,0x140611bc0,4,"void Actor::UpdateAwakeSound_140609000 (Actor * a_this, NiAVObject * a_obj3D)"
+36943,0x140609000,0x140611bc0,4,void Actor::UpdateAwakeSound(NiAVObject* a_obj3D)
 36950,0x140609860,0x140612420,4,Actor::UnequipItem
 36973,0x14060b620,0x140614210,3,RE::GameEventHandler::FallLongDistance::CalcDoDamage::process_movefinish_event
 36979,0x14060ca30,0x1406155f0,3,Actor::EquipConflictCheck
