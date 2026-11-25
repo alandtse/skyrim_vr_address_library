@@ -1152,6 +1152,7 @@
 27805,0x140407d20,0x140417870,3,RegisterProcedureName_Flee
 27809,0x1404084f0,0x140418040,3,BGSProcedureFleeExecState::BGSProcedureFleeExecState
 27810,0x1404085f0,0x140418140,3,BGSProcedureFleeExecState::~BGSProcedureFleeExecState
+27811,0x140408680,0x1404181d0,2,"void BGSProcedureFlee::UpdateFleeMovement(void** a_context, char a_arg3, void* a_arg4)"
 27812,0x140408d10,0x140418860,3,BGSProcedureFleeExecState::RecycleChildren
 27814,0x140408e20,0x140418970,3,BGSProcedureFleeExecState::SaveGame
 27815,0x140409190,0x140418ce0,3,BGSProcedureFleeExecState::LoadGame
@@ -3058,6 +3059,7 @@
 46022,0x1407baed0,0x1407e6220,4,"static NiPoint3 * GetAngleToProjectedTarget (NiPoint3 * a_origin, TESObjectREFR * a_target, float a_speed, float a_gravity, uint a_location)"
 46039,0x1407bcb40,0x1407e7e90,4,Character::sub_1407BCB40
 46043,0x1407bccd0,0x1407e8020,4,CombatUtilities::CanActorExistInSpace
+46045,0x1407bcd80,0x1407e80d0,2,"void Character::GetAnticipatedLocation(float a_time, NiPoint3* a_outLocation)"
 46050,0x1407bd150,0x1407e84a0,4,"bool Actor::UpdateNavPos(const NiPoint3& a_pos, const NiPoint3& a_new_pos, float a_speed, float a_distance)"
 46068,0x1407beb90,0x1407e9ee0,3,"void TESObjectREFR::GetCombatRange(TESObjectREFR* a_this, TESForm* a_form, float* a_min, float* a_max, TESAmmo* a_ammo)"
 46074,0x1407bf260,0x1407ea5b0,4,float TESObjectREFR::GetCombatReach (TESObjectREFR * a_this)
@@ -3280,7 +3282,7 @@
 49013,0x14082c790,0x140857ae0,3,void CombatPath::Start()
 49022,0x14082d030,0x140858380,3,"void CombatPath::SetAccelerationDecelerationMult(float accelerationMult, float DecelerationMult)"
 49074,0x14082f990,0x14085ace0,2,"bool CombatPath::SolveAndStoreRequest(void* a_key, void* a_request)"
-49311,0x14083c870,0x140867b70,3,RE::CombatApproachTargetSpeedController::sub_14083C870
+49311,0x14083c870,0x140867b70,3,void CombatApproachTargetSpeedController::UpdateApproachTargetSpeed(CombatPath* a_combatPath)
 49711,0x140844d00,0x14086ffb0,3,RE::Character::sub_140844D00
 49716,0x140844e40,0x1408700f0,4,CombatPathingRevolution::src/Advanced_Hook.h:13
 49720,0x140845070,0x140870320,4,float Character::GetCircleChanceMult_140845070(Character *param_1)
@@ -4617,7 +4619,7 @@
 88324,0x1410bcd60,0x141119990,2,bool IMovementQueryPathFollowing::GetCurrentSegment(void* a_visitor)
 88325,0x1410bcea0,0x141119ad0,2,bool IMovementQueryPathFollowing::GetPathDirectionToPoint(NiPoint3* a_outDirection)
 88326,0x1410bcf70,0x141119ba0,2,bool IMovementSetPathFollowing::SetPathFollowingMode(std::int32_t a_mode)
-88330,0x1410bd870,0x14111a4a0,2,void IMovementHandlerAgent::LimitSlowdownSpeed(void** a_outputData)
+88330,0x1410bd870,0x14111a4a0,2,void IMovementHandlerAgent::LimitSlowdownSpeed(MovementHandlerUpdateDataSmallDelta** a_updateData)
 88332,0x1410bd970,0x14111a5a0,2,void MovementAgentPathFollowerStandard::SetStatePlayIdle_6()
 88333,0x1410bda70,0x14111a6a0,2,void MovementAgentPathFollowerStandard::SetStateTurnToAngle_7()
 88334,0x1410bdb00,0x14111a730,2,void MovementAgentPathFollowerStandard::UpdateActionSpeed(PathFollowerStateUpdateData* a_updateData)
@@ -4766,10 +4768,13 @@
 89626,0x141107540,0x141164460,2,"bool IPathFollowerAction::Jump_GetTargetSpeed(PathFollowerStateUpdateData* a_updateData, float* a_out)"
 89715,0x1411098c0,0x1411667e0,2,"void MovementAgentActorAvoider::CheckBlockedByActors(void* a_arg1, std::uint32_t* a_outStatus)"
 89716,0x141109a60,0x141166980,2,void MovementAgentActorAvoider::AddActorAvoidNodes(BSPathingRequest** a_request)
+89717,0x141109e30,0x141166d50,2,void MovementAgentActorAvoider::ClearAvoidedActors()
 89723,0x14110a260,0x141167180,2,void MovementAgentActorAvoider::FindActorsToAvoid()
 89724,0x14110a730,0x141167650,2,bool MovementAgentActorAvoider::IsActorNearPath(void* a_actorInfo)
 89781,0x14110bf30,0x141168e50,2,MovementArbiter* MovementArbiter::MovementArbiter()
 89782,0x14110bf70,0x141168e90,2,void MovementArbiter::~MovementArbiter()
+89815,0x14110ca30,0x141169950,2,void MovementHandlerAgentTranslationController::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
+89875,0x14110eea0,0x14116bdc0,2,"void MovementHandlerArbiter::UpdateHandlers(MovementHandlerUpdateDataSmallDelta* a_updateData, MovementHandlerOutputDataSmallDelta* a_outputData)"
 89927,0x14110fe50,0x14116cda0,2,"bool MovementUtils::FindEarliestObstacleCollision(void* a_obstacles, float* a_position, float* a_velocity, bool a_skipSlowObstacles, float* a_outTime)"
 89928,0x14110fff0,0x14116cf40,2,"void MovementPlannerArbiter::ProcessPlannerOutput(void* a_plannerData, void* a_arg2)"
 89930,0x141110a80,0x14116d9d0,2,void MovementPlannerArbiter::LimitSpeedForPredictedCollisions(void* a_plannerData)
