@@ -3117,6 +3117,27 @@
 40823,0x1406f3300,0x14071a1f0,2,void MovementLocationEventArray::end(void* a_out)
 40825,0x1406f3350,0x14071a240,2,void MovementAgentArray::end(void* a_out)
 40826,0x1406f3390,0x14071a280,2,void MovementArbiterArray::end(void* a_out)
+40827,0x1406f33d0,0x14071a2c0,2,MovementAgentNameSet* MovementAgentNameSet::ctor_AllAgents()
+40828,0x1406f3670,0x14071a560,2,MovementAgentNameSet* MovementAgentNameSet::ctor_AllAgentsNoKeepOffset()
+40829,0x1406f3920,0x14071a810,2,MovementAgentNameSet* MovementAgentNameSet::ctor_PathFollowerVirtualSet()
+40830,0x1406f39e0,0x14071a8d0,2,MovementAgentNameSet* MovementAgentNameSet::ctor_PathFollowerFlightSet()
+40831,0x1406f3ab0,0x14071a9a0,2,MovementControllerActiveSetDescription* MovementControllerActiveSetDescription::ctor_Mode2()
+40832,0x1406f45e0,0x14071b4d0,2,MovementControllerActiveSetDescription* MovementControllerActiveSetDescription::ctor_Mode3()
+40833,0x1406f4b70,0x14071ba60,2,MovementControllerActiveSetDescription* MovementControllerActiveSetDescription::ctor_Mode0AIDriven()
+40834,0x1406f51e0,0x14071c0d0,2,MovementControllerActiveSetDescription* MovementControllerActiveSetDescription::ctor_Mode0ControlsDriven()
+40835,0x1406f5740,0x14071c630,2,MovementControllerActiveSetDescription* MovementControllerActiveSetDescription::ctor_Mode6()
+40836,0x1406f5a80,0x14071c970,2,MovementControllerActiveSetDescription* MovementControllerActiveSetDescription::ctor_Mode7()
+40837,0x1406f5e40,0x14071cd30,2,MovementControllerActiveSetDescription* MovementControllerActiveSetDescription::ctor_Mode8()
+40838,0x1406f6630,0x14071d520,2,MovementControllerActiveSetDescription* MovementControllerActiveSetDescription::ctor_Mode1()
+40839,0x1406f6ad0,0x14071d9c0,2,MovementControllerActiveSetDescription* MovementControllerActiveSetDescription::ctor_Mode14()
+40840,0x1406f7210,0x14071e100,2,MovementControllerActiveSetDescription* MovementControllerActiveSetDescription::ctor_Mode4()
+40841,0x1406f7a20,0x14071e910,2,MovementControllerActiveSetDescription* MovementControllerActiveSetDescription::ctor_Mode5()
+40842,0x1406f7f00,0x14071edf0,2,MovementControllerActiveSetDescription* MovementControllerActiveSetDescription::ctor_DirectControlAnimationDriven()
+40845,0x1406f8670,0x14071f560,2,MovementControllerActiveSetDescription* MovementControllerActiveSetDescription::ctor_FollowerHandlers()
+40846,0x1406f8d60,0x14071fc50,2,MovementControllerActiveSetDescription* MovementControllerActiveSetDescription::ctor_FollowerHandlersKeepOffset()
+40848,0x1406f95a0,0x140720490,2,"void MovementControllerActiveSetDescription::AddAgentWithDependency(const char* a_agentName, const char* a_dependencyName, void* a_tagSet)"
+40868,0x1406f9d60,0x140720c50,2,std::uint32_t MovementControllerActiveSetDescription::AddArbiter(const MovementAgentConfigEntry& a_entry)
+40869,0x1406f9e20,0x140720d10,2,std::uint32_t MovementControllerActiveSetDescription::AddAgent(const MovementAgentConfigEntry& a_entry)
 40895,0x1406fa570,0x140721460,2,void MovementHandlerAgentDirectControl::RegisterWithController(IMovementControllerRegisterInterface& a_controller)
 40896,0x1406fa580,0x140721470,2,void MovementHandlerAgentDirectControl::UnregisterWithController()
 40898,0x1406fa620,0x140721510,2,const BSFixedString& MovementHandlerAgentDirectControl::GetAgentType()
@@ -4991,6 +5012,7 @@
 88454,0x1410c24a0,0x14111f0d0,3,void MovementPathManagerArbiter::CompletePath()
 88455,0x1410c2600,0x14111f230,2,void MovementPathManagerArbiter::ClearPath(bool a_failed)
 88486,0x1410c3220,0x14111fe50,3,MovementPathManagerNullTracker* MovementPathManagerNullTracker::GetSingleton()
+88494,0x1410c3a00,0x141120650,2,void ActorState::GetTransform(NiTransform* a_out)
 88498,0x1410c3ce0,0x141120930,3,bool IMovementState::CanStrafe()
 88499,0x1410c3d40,0x141120aa0,3,float ActorState::SpeedToNormalized(float a_speed)
 88500,0x1410c3db0,0x141120b10,2,float ActorState::NormalizedToSpeed(float a_normalized)
@@ -5032,6 +5054,7 @@
 89210,0x1410efb20,0x14114c860,3,bool BSVirtualPathingNode::HasActivateDoorAction()
 89222,0x1410effc0,0x14114cd00,2,bool BSPathingNode::HasActivateDoorAction()
 89224,0x1410f00f0,0x14114ce30,2,bool BSPathingNode::GetActionAtNode(MovementMessage** a_out)
+89339,0x1410fae00,0x141157b40,2,"void MovementUtils::GetStoppingDistanceAndTime(float a_speed, float a_maxSpeed, float a_accel, float a_decel, float* a_outDistance, float* a_outTime)"
 89343,0x1410fb2c0,0x141158000,2,"float MovementUtils::NormalizeForwardSpeed(float a_speed, Movement::MaxSpeeds* a_speeds)"
 89344,0x1410fb330,0x141158070,2,"float MovementUtils::DenormalizeForwardSpeed(float a_normalized, Movement::MaxSpeeds* a_speeds)"
 89345,0x1410fb380,0x1411580c0,3,"float MovementUtils::NormalizeRotationSpeed(float a_speed, Movement::MaxSpeeds* a_speeds)"
@@ -5047,8 +5070,11 @@
 89365,0x1410fcbf0,0x141159930,3,std::uint64_t CheckAvoidBox()
 89391,0x1410fe270,0x14115afb0,3,void ObstacleBuildQueue::ctor()
 89392,0x1410fe2d0,0x14115b010,3,void ObstacleBuildQueue::dtor()
+89393,0x1410fe320,0x14115b060,2,bool ObstacleBuildQueue::Enqueue(ObstacleBuildRequest** a_request)
+89394,0x1410fe3b0,0x14115b0f0,2,void ObstacleBuildQueue::InvalidateAll()
 89395,0x1410fe4c0,0x14115b200,3,void ObstacleBuildQueue::Process()
 89396,0x1410fe750,0x14115b490,2,void ObstacleBuildRequest::DestroyObstacles()
+89398,0x1410fe840,0x14115b580,2,std::uint32_t ObstacleBuildQueue::PushRequest(ObstacleBuildRequest** a_request)
 89405,0x1410fec20,0x14115b960,2,IMovementState* MovementControllerAI::QCurrentState()
 89407,0x1410fec60,0x14115b9a0,2,"void MovementControllerAI::UpdateSmallDelta(float a_deltaTime, MovementUpdateDeltas* a_output)"
 89408,0x1410fee20,0x14115bb60,2,"void MovementControllerAI::UpdateLargeDelta(float a_deltaTime, void* a_output)"
@@ -5060,7 +5086,14 @@
 89414,0x1410ffc70,0x14115cb80,3,bool MovementControllerNPC::ApplyAgentConfig(MovementAgentConfig* a_config)
 89417,0x141100be0,0x14115db00,2,MovementAgent* MovementControllerNPC::GetDirectControlAgent()
 89420,0x141100ef0,0x14115de10,3,"bool MovementControllerNPC::DiffAgentConfig(MovementAgentConfig* a_config, MovementScrapArray* a_extraArbiterIdxTagSet, MovementScrapArray* a_extraAgentIdxTagSet, MovementScrapArray* a_keptArbiterPairsTagSet, MovementScrapArray* a_keptAgentPairsTagSet, MovementScrapArray* a_extraArbiterIdxTagClear, MovementScrapArray* a_extraAgentIdxTagClear, MovementScrapArray* a_keptArbiterPairsTagClear, MovementScrapArray* a_keptAgentPairsTagClear)"
+89426,0x141101780,0x14115e6a0,2,bool MovementAgent::IsAgentType(const BSFixedString& a_type)
+89430,0x1411018a0,0x14115e7c0,2,std::uint32_t MovementControllerAI::PushAgent(MovementAgent** a_agent)
+89431,0x1411019b0,0x14115e8d0,2,std::uint32_t MovementControllerAI::PushArbiter(MovementArbiter** a_arbiter)
+89458,0x1411027d0,0x14115f6f0,2,"bool MovementControllerAI::AttachAgent(MovementAgent** a_agent, void* a_arbiterList)"
+89471,0x141102bc0,0x14115fae0,2,void* MovementArbiterFactory::FindCreator(const char** a_name)
 89473,0x141102ca0,0x14115fbc0,3,NullMovementState* NullMovementState::GetSingleton()
+89476,0x141102e90,0x14115fdb0,2,"void MovementControllerAI::RemoveAgents(std::uint32_t a_index, std::uint32_t a_count)"
+89477,0x141102f70,0x14115fe90,2,"void MovementControllerAI::RemoveArbiters(std::uint32_t a_index, std::uint32_t a_count)"
 89480,0x1411030b0,0x14115ffd0,2,void MovementMessageDoor::SaveGame(PathingStreamSaveGame* a_stream)
 89486,0x1411032f0,0x141160210,3,std::int32_t MovementMessageApproachingDoor::GetStaticType()
 89490,0x141103460,0x141160380,3,std::int32_t MovementMessageActivateDoor::GetStaticType()
@@ -5083,11 +5116,17 @@
 89558,0x141104ac0,0x1411619e0,3,void MovementPlayIdleData::ctor()
 89559,0x141104ae0,0x141161a00,3,void MovementPlayIdleData::dtor()
 89560,0x141104af0,0x141161a10,3,MovementPlayIdleData* MovementPlayIdleData::CopyFrom(MovementPlayIdleData* a_other)
+89561,0x141104ba0,0x141161ac0,2,MovementPlayIdleData* MovementPlayIdleData::MovementPlayIdleData(const MovementPlayIdleData& a_other)
 89562,0x141104c50,0x141161b70,2,"void MovementPlayIdleData::InitFromSelection(float* a_selection, NiPoint3* a_vecA, NiPoint3* a_vecB, NiPoint3* a_vecC, NiPoint3* a_vecD)"
 89563,0x141104d60,0x141161c80,2,"void MovementPlayIdleData::InitType2(float* a_src, NiPoint3* a_vecA, NiPoint3* a_vecB)"
 89564,0x141104dd0,0x141161cf0,2,"void MovementPlayIdleData::InitType3(void* a_clip, NiPoint3* a_vecA, NiPoint3* a_vecB)"
+89565,0x141104e50,0x141161d70,2,"void MovementPlayIdleData::InitType4(const NiPoint3& a_translation, const NiPoint3& a_rotation, float a_startTime, float a_endTime, float a_tailEndTime)"
+89567,0x141104ec0,0x141161de0,2,"bool MovementPlayIdleData::BuildCorrectionData(ActorState* a_actorState, MovementCorrectionData* a_out)"
 89568,0x141104f00,0x141161e20,3,void MovementPlayIdleData::SaveGame(BSPathingStreamWrite* a_stream)
 89569,0x141104fc0,0x141161ee0,3,void MovementPlayIdleData::LoadGame(BSPathingStreamRead* a_stream)
+89571,0x1411050b0,0x141161fd0,2,"bool MovementPlayIdleData::BuildCorrectionDataType1(ActorState* a_actorState, MovementCorrectionData* a_out)"
+89572,0x1411059d0,0x1411628f0,2,"bool MovementPlayIdleData::BuildCorrectionDataType2(ActorState* a_actorState, MovementCorrectionData* a_out)"
+89573,0x141106030,0x141162f50,2,"bool MovementPlayIdleData::BuildCorrectionDataType3(ActorState* a_actorState, MovementCorrectionData* a_out)"
 89579,0x141106870,0x141163790,3,std::int32_t MovementMessagePlayIdle::GetStaticType()
 89580,0x1411068b0,0x1411637d0,3,void MovementMessagePlayIdle::SaveGame(PathingStreamSaveGame* a_stream)
 89581,0x141106920,0x141163840,3,void MovementMessagePlayIdle::LoadGame(PathingStreamLoadGame* a_stream)
@@ -5255,6 +5294,7 @@
 90175,0x141117580,0x141174450,2,void MovementHandlerAgentLargeDeltaIdle::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
 90177,0x141117690,0x141174560,3,void MovementHandlerAgentLargeDeltaIdle::SaveGame(PathingStreamSaveGame* a_stream)
 90178,0x1411176b0,0x141174580,3,void MovementHandlerAgentLargeDeltaIdle::LoadGame(PathingStreamLoadGame* a_stream)
+90187,0x1411178c0,0x141174790,2,MovementPlannerAgentNavmeshBounds* MovementPlannerAgentNavmeshBounds::MovementPlannerAgentNavmeshBounds()
 90190,0x141117b40,0x141174a10,2,void MovementPlannerAgentNavmeshBounds::RegisterWithController(IMovementControllerRegisterInterface& a_controller)
 90191,0x141117b50,0x141174a20,2,void MovementPlannerAgentNavmeshBounds::UnregisterWithController()
 90193,0x141117ba0,0x141174a70,2,const BSFixedString& MovementPlannerAgentNavmeshBounds::GetAgentType()
@@ -5264,6 +5304,10 @@
 90200,0x141117cf0,0x141174bc0,2,void MovementPlannerAgentNavmeshBounds::SetPathingData(BSPathingSolution* a_solution)
 90201,0x141117da0,0x141174c70,2,"void MovementPlannerAgentNavmeshBounds::PollPathEvent(MovementUpdateDataSmallDelta* a_updateData, MovementPathManagerAgentEvent* a_outEvent)"
 90203,0x141118010,0x141174ee0,2,void MovementPlannerAgentNavmeshBounds::ResetPathingState()
+90206,0x141118160,0x141175030,2,"void MovementPlannerAgentNavmeshBounds::SubmitObstacleBuild(const BSPathingLocation& a_location, float a_stoppingDistance)"
+90207,0x141118280,0x141175150,2,bool MovementPlannerAgentNavmeshBounds::IsPathClear()
+90209,0x1411186f0,0x1411755c0,2,"void MovementPlannerAgentNavmeshBounds::CopyObstaclesToAvoidShapes(BSScrapArray<VelocityObstacle::ObstaclePolygon>& a_out, const BSTArray<VelocityObstacle::ObstaclePolygon>& a_in)"
+90214,0x141118b70,0x141175a40,2,ObstacleBuildRequest* ObstacleBuildRequest::ObstacleBuildRequest()
 90238,0x141119540,0x141176410,2,void MovementPathManagerAgentAvoidBox::RegisterWithController(IMovementControllerRegisterInterface& a_controller)
 90239,0x141119550,0x141176420,2,void MovementPathManagerAgentAvoidBox::UnregisterWithController()
 90242,0x1411195f0,0x1411764c0,2,const BSFixedString& MovementPathManagerAgentAvoidBox::GetAgentType()
