@@ -4589,8 +4589,34 @@
 88202,0x1410b8e00,0x141115a30,2,void IMovementSetState::SetStateForward(void* a_state)
 88203,0x1410b8e20,0x141115a50,2,void IMovementSetState::SetState(void* a_state)
 88237,0x1410b9d30,0x141116960,2,void PathingRequest::SetLockData(PathingLockData** a_lockData)
-88288,0x1410ba920,0x141117550,3,MovementAgentPathFollowerStandard* MovementAgentPathFollowerStandard::MovementAgentPathFollowerStandard()
+88288,0x1410ba920,0x141117550,3,void MovementAgentPathFollowerStandard::ctor()
 88296,0x1410baf50,0x141117b80,3,BSFixedString* GetPathFollowerName()
+88302,0x1410bb860,0x141118490,2,void IMovementPathManagerAgent::SetPath()
+88303,0x1410bbb80,0x1411187b0,2,void IMovementPathManagerAgent::CheckDeviationFromPath()
+88304,0x1410bbcb0,0x1411188e0,2,void IMovementPathManagerAgent::FilterRequest()
+88305,0x1410bbce0,0x141118910,2,void IMovementPathManagerAgent::ClearPath()
+88306,0x1410bbe20,0x141118a50,2,std::uint64_t IMovementQueryPathFollowing::IsPathFinished()
+88307,0x1410bbec0,0x141118af0,2,bool IMovementQueryPathFollowing::IsInState9()
+88308,0x1410bbf20,0x141118b50,2,std::uint64_t IMovementQueryPathFollowing::IsInMovingState()
+88309,0x1410bbf90,0x141118bc0,2,std::uint64_t IMovementQueryPathFollowing::IsFollowingPath()
+88310,0x1410bc000,0x141118c30,2,"std::uint64_t IMovementQueryPathFollowing::GetTargetPoint(std::int64_t a_param1, std::uint32_t* a_out1, std::uint32_t* a_out2)"
+88311,0x1410bc150,0x141118d80,2,bool IMovementQueryPathFollowing::GetNodeFacingTarget()
+88312,0x1410bc1d0,0x141118e00,2,bool IMovementQueryPathFollowing::HasPendingNodeAction()
+88313,0x1410bc2c0,0x141118ef0,2,std::uint64_t IMovementQueryPathFollowing::GetPredictedPoint()
+88314,0x1410bc390,0x141118fc0,2,std::uint8_t IMovementQueryPathFollowing::GetPredictedPointAndTangent()
+88315,0x1410bc480,0x1411190b0,2,"std::uint64_t IMovementQueryPathFollowing::ComputeLookAheadPathPosition(std::uint32_t a_arg, float a_arg3, float a_arg4, float a_arg5, float* a_out)"
+88316,0x1410bc5b0,0x1411191e0,2,std::uint8_t IMovementQueryPathFollowing::GetLookAheadPoint()
+88317,0x1410bc690,0x1411192c0,2,std::uint64_t IMovementQueryPathFollowing::GetLookAheadPointAndTangent()
+88318,0x1410bc7b0,0x1411193e0,2,"char IMovementQueryPathFollowing::ProjectOntoPath(float* a_arg2, float* a_arg3, float* a_arg4, std::uint64_t a_arg5)"
+88319,0x1410bc910,0x141119540,2,std::uint64_t IMovementQueryPathFollowing::GetRemainingDistance()
+88320,0x1410bc9d0,0x141119600,2,"std::uint64_t IMovementQueryPathFollowing::GetPathLengthToTarget(std::int64_t a_arg1, float* a_out)"
+88321,0x1410bcac0,0x1411196f0,2,std::uint64_t IMovementQueryPathFollowing::GetTargetPointAndDistance()
+88322,0x1410bcbb0,0x1411197e0,2,"std::uint64_t IMovementQueryPathFollowing::GetPathLengthToPosition(std::int64_t a_arg1, float a_arg2, float* a_out)"
+88323,0x1410bcc80,0x1411198b0,2,std::uint64_t IMovementQueryPathFollowing::GetCurrentPointAction()
+88324,0x1410bcd60,0x141119990,2,std::uint64_t IMovementQueryPathFollowing::GetCurrentSegment()
+88325,0x1410bcea0,0x141119ad0,2,char IMovementQueryPathFollowing::GetPathDirectionToPoint()
+88326,0x1410bcf70,0x141119ba0,2,std::uint64_t IMovementSetPathFollowing::SetPathFollowingMode()
+88330,0x1410bd870,0x14111a4a0,2,void IMovementHandlerAgent::LimitSlowdownSpeed()
 88332,0x1410bd970,0x14111a5a0,2,void MovementAgentPathFollowerStandard::SetStatePlayIdle_6()
 88333,0x1410bda70,0x14111a6a0,2,void MovementAgentPathFollowerStandard::SetStateTurnToAngle_7()
 88334,0x1410bdb00,0x14111a730,2,void MovementAgentPathFollowerStandard::UpdateActionSpeed(PathFollowerStateUpdateData* a_updateData)
@@ -4608,17 +4634,20 @@
 88346,0x1410bebc0,0x14111b7f0,2,bool MovementAgentPathFollowerStandard::ShouldRunPlayIdle()
 88347,0x1410bec10,0x14111b840,2,bool MovementAgentPathFollowerStandard::NeedsTurnBeforeFollowing()
 88348,0x1410bf000,0x14111bc30,2,bool MovementAgentPathFollowerStandard::CanSelectPlayIdle()
+88350,0x1410bf1f0,0x14111be20,2,float MovementAgentPathFollowerStandard::ComputeRemainingDistance()
 88352,0x1410bf4e0,0x14111c110,2,float MovementAgentPathFollowerStandard::GetFinalApproachSpeed()
 88353,0x1410bf5c0,0x14111c1f0,2,"void MovementAgentPathFollowerStandard::PrepareActionAtPoint(PathFollowerStateUpdateData* a_updateData, std::int32_t a_pointIndex)"
 88354,0x1410bf6c0,0x14111c2f0,2,"void MovementAgentPathFollowerStandard::GetActionTargetPosition(PathFollowerStateUpdateData* a_updateData, std::int32_t a_pointIndex)"
 88355,0x1410bf820,0x14111c450,2,void IMovementPlayIdleResult::PathFollowerStandard_Reset()
 88356,0x1410bf830,0x14111c460,3,void IMovementPlayIdleResult::PathFollowerStandard_AddRef()
 88357,0x1410bf840,0x14111c470,3,std::int32_t IMovementPlayIdleResult::PathFollowerStandard_Release()
+88358,0x1410bf8a0,0x14111c4d0,2,bool MovementAgentPathFollowerStandard::GetEndNodeTurnTarget(PathFollowerTurnTarget* a_out)
+88359,0x1410bfa30,0x14111c660,2,"bool MovementAgentPathFollowerStandard::GetNodeFacingMotion(PathFollowerTurnTarget* a_turnTarget, void* a_arg2, void* a_arg3)"
 88360,0x1410bfaf0,0x14111c720,2,void MovementAgentPathFollowerStandard::FindNextActionPointIndex()
 88361,0x1410bfbd0,0x14111c800,2,void MovementAgentPathFollowerStandard::ReleasePlayIdle()
 88362,0x1410bfc60,0x14111c890,3,"bool MovementAgentPathFollowerStandard::GetPathDistanceToPosition(float a_position, float* a_out)"
 88364,0x1410bfd00,0x14111c930,2,"bool IPathFollowerAction::UpdateSpeed(PathFollowerStateUpdateData* a_updateData, float a_pathIndex, float* a_speed)"
-88366,0x1410bfe60,0x14111ca90,3,MovementPlayIdleHolder* MovementPlayIdleHolder::MovementPlayIdleHolder()
+88366,0x1410bfe60,0x14111ca90,3,MovementPlayIdleHolder* MovementPlayIdleHolder::ctor()
 88375,0x1410c00b0,0x14111cce0,3,"MovementPlayIdleHolder** AssignPlayIdleHolder(MovementPlayIdleHolder** a_slot, MovementPlayIdleHolder* a_holder)"
 88398,0x1410c0550,0x14111d180,3,IPathFollowerAction* IPathFollowerAction::dtor_deleting(std::uint8_t a_flags)
 88417,0x1410c0b30,0x14111d760,2,BSFixedString* MovementPathManagerArbiter::GetStageName()
@@ -4670,6 +4699,7 @@
 88540,0x1410c51a0,0x141121f00,2,float BSPathingSolution::GetPathLength()
 88541,0x1410c52d0,0x141122030,2,"float BSPathingSolution::GetPathLengthBetween(float a_from, float a_to)"
 88544,0x1410c5970,0x1411226d0,2,"bool BSPathingSolution::GetPointAtPathPosition(float a_position, float* a_out)"
+88545,0x1410c5af0,0x141122850,2,"void BSPathingSolution::GetPointAtDistance(float a_from, float a_distance, bool a_forward, float* a_outPosition, float* a_outPoint, float a_scale)"
 88558,0x1410c6ea0,0x141123bd0,2,"bool BSPathingSolution::GetClosestPointOnPath(NiPoint3* a_pos, void* a_out)"
 88674,0x1410cf350,0x14112c080,3,NiPoint3 BSNavmesh::GetNormal(std::uint16_t a_tri) const
 88930,0x1410df940,0x14113c670,2,PathingSolutionEntry* PathingSolutionEntry::PathingSolutionEntry()
@@ -4682,6 +4712,7 @@
 89007,0x1410e3ec0,0x141140c00,2,std::uint32_t PathingSolutionEntryArray::PushBack(PathingSolutionEntry* a_entry)
 89018,0x1410e42e0,0x141141020,2,"void PathingSolutionEntryArray::ReleaseRange(std::uint32_t a_index, std::uint32_t a_count)"
 89030,0x1410e4750,0x141141490,2,"void PathingSolutionEntryArray::RemoveElements(std::uint32_t a_index, std::uint32_t a_count)"
+89079,0x1410e92d0,0x141146010,2,"bool MovementUtils::IntersectRayWithCircle(NiPoint3* a_origin, NiPoint3* a_direction, NiPoint3* a_offset, NiPoint3* a_center, float a_radius, NiPoint3* a_out)"
 89102,0x1410ea4c0,0x141147200,2,void NullMovementSelectIdleResult::Reset()
 89210,0x1410efb20,0x14114c860,3,bool BSVirtualPathingNode::HasActivateDoorAction()
 89222,0x1410effc0,0x14114cd00,2,bool BSPathingNode::HasActivateDoorAction()
@@ -4714,6 +4745,7 @@
 89558,0x141104ac0,0x1411619e0,3,void MovementPlayIdleData::ctor()
 89559,0x141104ae0,0x141161a00,3,void MovementPlayIdleData::dtor()
 89560,0x141104af0,0x141161a10,3,MovementPlayIdleData* MovementPlayIdleData::CopyFrom(MovementPlayIdleData* a_other)
+89562,0x141104c50,0x141161b70,2,"void MovementPlayIdleData::InitFromSelection(float* a_selection, NiPoint3* a_vecA, NiPoint3* a_vecB, NiPoint3* a_vecC, NiPoint3* a_vecD)"
 89563,0x141104d60,0x141161c80,2,"void MovementPlayIdleData::InitType2(float* a_src, NiPoint3* a_vecA, NiPoint3* a_vecB)"
 89564,0x141104dd0,0x141161cf0,2,"void MovementPlayIdleData::InitType3(void* a_clip, NiPoint3* a_vecA, NiPoint3* a_vecB)"
 89568,0x141104f00,0x141161e20,3,void MovementPlayIdleData::SaveGame(BSPathingStreamWrite* a_stream)
@@ -4741,7 +4773,7 @@
 90420,0x14111fbc0,0x14117ca90,2,void MovementMessagePathEvent::SaveGame(PathingStreamSaveGame* a_stream)
 90421,0x14111fbe0,0x14117cab0,2,void MovementMessagePathEvent::LoadGame(PathingStreamLoadGame* a_stream)
 90424,0x14111fc90,0x14117cb60,2,"MovementMessagePathComplete* MovementMessagePathComplete::MovementMessagePathComplete(void* a_request, void* a_solution, void* a_unused)"
-90653,0x14112d870,0x14118a740,2,"PathFollowerStateUpdateData* PathFollowerStateUpdateData::PathFollowerStateUpdateData(BSPathingRequest** a_request, BSPathingSolution** a_solution, ActorState* a_actorState, void* a_messageInterface, NiPoint3* a_pPathPoint, float a_pathPosition, float a_deltaTime)"
+90653,0x14112d870,0x14118a740,2,"PathFollowerStateUpdateData* PathFollowerStateUpdateData::ctor(BSPathingRequest** a_request, BSPathingSolution** a_solution, ActorState* a_actorState, void* a_messageInterface, NiPoint3* a_pPathPoint, float a_pathPosition, float a_deltaTime)"
 90938,0x14113df60,0x1411983b0,2,void EnsureMemoryHeap()
 97369,0x14122c060,0x141264510,2,"void ObjectBindPolicy::GetAttachedScripts(std::uint64_t a_handle, void* a_out)"
 97370,0x14122c230,0x1412646e0,2,"void* ObjectBindPolicy::FindAttachedScript(void* a_out, std::uint64_t a_handle, void* a_name)"
