@@ -492,6 +492,7 @@
 19119,0x1402866d0,0x140297e00,4,void TESObjectREFR::UpdateSoundCallBack_1402866D0 (Character * a_this)
 19133,0x140287d30,0x140299460,4,"void TESObjectREFR::ReadFromSaveGame (TESObjectREFR * a_this, BGSLoadFormBuffer * a_buffer)"
 19142,0x1402896f0,0x14029ae20,4,"ObjectRefHandle TESObjectREFR::CreateReference(ObjectRefHandle& a_handleOut, FormType a_formType, bool a_addActorToProcessList)"
+19151,0x140289c50,0x14029b380,2,bool TESObjectREFR::GetFullLODRef()
 19201,0x14028b940,0x14029d070,3,bool TESObjectREFR::HasQuestObject()
 19204,0x14028ba70,0x14029d1a0,3,std::int32_t Actor::GetShieldObjectSlot()
 19205,0x14028baa0,0x14029d1d0,3,std::int32_t Actor::GetBodyObject()
@@ -564,6 +565,7 @@
 19528,0x14029efe0,0x1402b0750,4,BGSWaterCollisionManager::bhkWaterfall * BGSWaterCollisionManager::bhkWaterfall::dtor (BGSWaterCollisionManager::bhkWaterfall * a_this)
 19617,0x1402a00a0,0x1402b1810,4,"void BGSWaterCollisionManager::bhkWaterfall::GetTransform (BGSWaterCollisionManager::BGSWaterUpdateI * a_this, hkTransform * a_outTransform)"
 19666,0x1402a2070,0x1402b37e0,3,RE::ScriptEventSourceHolder::SendActivateEvent
+19706,0x1402a2fa0,0x1402b4710,2,"void TESObjectREFR::PopulateGraphProjectsToLoad(void* a_arg1, void* a_arg2)"
 19725,0x1402a3e10,0x1402b5580,4,"void TESObjectREFR::UpdateAnimation(TESObjectREFR* a_this, float a_delta)"
 19729,0x1402a40d0,0x1402b5840,4,"void TESObjectREFR::sub_1402A40D0(TESObjectREFR* a_this, float a_delta)"
 19750,0x1402a4b50,0x1402b62c0,2,bool REFREventCallbacks::IEventCallback::Save(BSStorage* a_storage)
@@ -2526,6 +2528,7 @@
 37771,0x14062f560,0x140638430,3,RE::Actor::AddSpell
 37772,0x14062f720,0x1406385f0,3,bool Actor::RemoveSpell(SpellItem* a_spell)
 37777,0x14062fad0,0x1406389a0,4,"void Actor::SetAlpha (Actor * a_this, float a_value)"
+37778,0x14062fb60,0x140638a30,3,float Actor::GetAlpha()
 37787,0x140630410,0x1406392e0,4,void Actor::AddCastPower(SpellItem* a_power)
 37792,0x140630850,0x140639720,4,MagicTarget::CheckAbsorb_14063085
 37793,0x140630990,0x140639860,4,bool Actor::IsInCastPowerList(SpellItem* a_power)
@@ -2802,6 +2805,7 @@
 39397,0x1406a1760,0x1406c20a0,2,const BSTSmartPointer<BipedAnim>& PlayerCharacter::GetBiped2()
 39401,0x1406a1820,0x1406c2160,3,splashes_of_skyrim::RainManager::ToggleWaterRipples
 39402,0x1406a1b10,0x1406b0380,2,void PlayerCharacter::RemoveWeapon(BIPED_OBJECT a_equipIndex)
+39404,0x1406a1bf0,0x1406c2660,2,"void Actor::Unk_B4(void* a_arg1, bool a_arg2, bool a_arg3)"
 39406,0x1406a1cc0,0x1406c2730,3,po3tweaks::NoPoisonPrompt::PoisonPrompt
 39407,0x1406a1e30,0x1406c28a0,3,YesImSure::NoPoisonPrompt::PoisonPromptLeftHand
 39409,0x1406a2060,0x1406c2ad0,3,"bool PlayerCharacter::CheckCast(MagicItem* a_spell, Effect* a_effect, MagicSystem::CannotCastReason& a_reason)"
@@ -2832,6 +2836,7 @@
 39534,0x1406b01e0,0x1406D2A30,3,PlayerCharacter::PickCrosshairReference(PlayerCharacter *a1)
 39535,0x1406b0570,0x1406d3770,3,RE::PlayerCharacter::OnUpdateCrosshairText
 39544,0x1406b0df0,0x1406d3fc0,2,void PlayerCharacter::UnlockWord(TESWordOfPower* a_power)
+39553,0x1406b1980,0x1406d4cf0,2,"std::int32_t Actor::ModCrimeGoldValue(TESFaction* a_faction, bool a_violent, std::int32_t a_amount)"
 39568,0x1406b2530,0x1406d58a0,3,"bool PlayerCharacter::AttemptPickpocket(TESObjectREFR* a_containerRef, InventoryEntryData* a_entry, std::int32_t a_number, bool a_fromContainer)"
 39572,0x1406b2e90,0x1406d6200,2,bool PlayerCharacter::IsServingJailTime()
 39574,0x1406b3110,0x1406d6480,4,"void PlayerCharacter::SetEscaping(bool a_flag, bool a_escaped)"
@@ -2849,10 +2854,14 @@
 39658,0x1406b7670,0x1406dac20,4,"void PlayerCharacter::MoveToPositionInWorldSpace(float* a_position, float* a_rotation, TESWorldSpace* a_world, bool a_arg4)"
 39663,0x1406b8340,0x1406db930,4,PlayerCharacter::DiscoveryCheck
 39709,0x1406ba7f0,0x1406de150,3,ShowDragonLandStatusMessage
+39991,0x1406c2f50,0x1406e9450,2,std::int32_t Actor::Unk_C6()
+40006,0x1406c35f0,0x1406e9de0,2,bool Actor::InitiateDialogue()
 40056,0x1406c7d60,0x1406ee380,3,BSTEventSource<LocationDiscovery::Event>* LocationDiscovery::GetEventSource()
 40060,0x1406c8120,0x1406ee740,3,BSTEventSource<ShoutAttack::Event>* ShoutAttack::GetEventSource()
+40143,0x1406cc370,0x1406f33d0,2,bool Actor::Unk_B3()
 40230,0x1406ce720,0x1406f5bf0,3,"void Actor::ProcessVATSAttack(MagicCaster* a_caster, bool a_hasTargetAnim, TESObjectREFR* a_target, bool a_leftHand)"
 40232,0x1406cf690,0x1406f6020,2,DrawSheatheWeaponPC
+40239,0x1406cfb70,0x1406f6560,2,bool Actor::Unk_D1()
 40287,0x1406d3ff0,0x1406fae90,3,void ProcessLists::Update()
 40288,0x1406d4530,0x1406fb3d0,3,void ProcessLists::ProcessLowMovementMessages()
 40291,0x1406d46d0,0x1406fb570,3,"void ProcessLists::UpdateNonHighActors(float, std::uint8_t, bool)"

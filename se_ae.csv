@@ -4973,6 +4973,9 @@ sseid,aeid,confidence,name
 36559,37560,3,RE::Actor::GetCollisionFilterInfo
 36602,37610,3,RE::Actor::SetRotationX
 36604,37612,3,RE::Actor::SetLifeState
+36613,37621,1,
+36614,37622,1,
+36615,37623,1,
 36631,37639,3,RE::Actor::Decapitate
 36678,37686,3,RE::Actor::AddToFaction
 36700,37710,1,
@@ -5257,6 +5260,7 @@ sseid,aeid,confidence,name
 37762,38707,1,
 37763,38708,2,
 37772,38717,3,RE::Actor::RemoveSpell
+37778,38723,1,
 37785,38734,1,Character::sub_*
 37786,38735,1,
 37787,38736,1,Actor::sub_*
@@ -5710,12 +5714,14 @@ sseid,aeid,confidence,name
 39428,40504,3,bool PlayerCharacter::IsInvulnerable()
 39451,40528,1,
 39507,40586,3,RE::PlayerCharacter::SetAIDriven
+39553,40639,1,
 39568,40654,3,RE::PlayerCharacter::AttemptPickpocket
 39572,40658,2,
 39612,40698,3,"TintMask* PlayerCharacter::GetTintMask(std::int32_t a_type, std::int32_t a_index)"
 39637,40724,2,
 40056,41067,3,RE::LocationDiscovery::GetEventSource
 40060,41071,3,RE::ShoutAttack::GetEventSource
+40143,41145,1,
 40287,41296,3,ProcessLists::Update
 40291,41301,3,ProcessLists::UpdateNonHighActors
 40292,41302,3,ProcessLists::UpdateLowActorBatch
