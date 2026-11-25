@@ -8685,6 +8685,7 @@ sseid,aeid,confidence,name
 89391,91859,3,RE::ObstacleBuildQueue::ctor
 89392,91860,3,RE::ObstacleBuildQueue::dtor
 89395,91863,3,RE::ObstacleBuildQueue::Process
+89405,91875,1,
 89407,91877,1,
 89408,91878,1,
 89409,91879,1,
@@ -8792,6 +8793,8 @@ sseid,aeid,confidence,name
 89715,92192,1,
 89716,92193,1,
 89717,92194,1,
+89719,92196,1,
+89720,92197,1,
 89723,92200,1,
 89724,92201,1,
 89782,92249,1,
@@ -8813,6 +8816,8 @@ sseid,aeid,confidence,name
 89944,92426,1,BSTArrayAllocatorFunctor_BSTSmallArrayHeapAllocator_120__::dtor_*
 89945,92372,1,
 89946,92427,1,IMovementAgentDataTracker_IMovementPlannerAgent_MovementPlannerAgentReturnDataSmallDelta_::Func0_*
+89961,92441,1,
+89962,92442,1,
 89967,92445,1,VisitReturnData_MovementVector_BSScrapArrayAllocator_::Func1_*
 89973,92450,1,BSTArrayAllocatorFunctor_BSTSmallArrayHeapAllocator_120__::Resize_*
 89977,92460,1,MovementPathManagerAgentLoadedAreaMonitor::Func6_*

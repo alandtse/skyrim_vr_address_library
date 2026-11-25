@@ -1,4 +1,4 @@
-﻿id,sse,vr,status,name
+id,sse,vr,status,name
 5115,0x14008a4d0,0x140089dc0,3,RegisterAssaultActorStoryEvent
 5116,0x14008a550,0x140089e40,3,RegisterKillActorStoryEvent
 5146,0x14008ad10,0x14008a600,3,RegisterPlayerAddItemStoryEvent
@@ -4751,6 +4751,7 @@
 89391,0x1410fe270,0x14115afb0,3,void ObstacleBuildQueue::ctor()
 89392,0x1410fe2d0,0x14115b010,3,void ObstacleBuildQueue::dtor()
 89395,0x1410fe4c0,0x14115b200,3,void ObstacleBuildQueue::Process()
+89405,0x1410fec20,0x14115b960,2,IMovementState* MovementControllerAI::QCurrentState()
 89407,0x1410fec60,0x14115b9a0,2,"void MovementControllerAI::UpdateSmallDelta(float a_deltaTime, void* a_output)"
 89408,0x1410fee20,0x14115bb60,2,"void MovementControllerAI::UpdateLargeDelta(float a_deltaTime, void* a_output)"
 89409,0x1410fef70,0x14115be80,2,"bool MovementControllerAI::RegisterInterface(BSFixedString* a_name, IMovementInterface* a_interface)"
@@ -4785,6 +4786,8 @@
 89715,0x1411098c0,0x1411667e0,2,"void MovementAgentActorAvoider::CheckBlockedByActors(void* a_arg1, std::uint32_t* a_outStatus)"
 89716,0x141109a60,0x141166980,2,void MovementAgentActorAvoider::AddActorAvoidNodes(BSPathingRequest** a_request)
 89717,0x141109e30,0x141166d50,2,void MovementAgentActorAvoider::ClearAvoidedActors()
+89719,0x141109ea0,0x141166dc0,2,bool IMovementQueryActorAvoidance::IsNearAvoidedActor(float a_extraRadius)
+89720,0x141109fa0,0x141166ec0,2,bool IMovementQueryActorAvoidance::UpdateObstacles(MovementHandlerUpdateDataSmallDelta* a_updateData)
 89723,0x14110a260,0x141167180,2,void MovementAgentActorAvoider::FindActorsToAvoid()
 89724,0x14110a730,0x141167650,2,bool MovementAgentActorAvoider::IsActorNearPath(void* a_actorInfo)
 89781,0x14110bf30,0x141168e50,2,MovementArbiter* MovementArbiter::MovementArbiter()
@@ -4794,6 +4797,8 @@
 89927,0x14110fe50,0x14116cda0,2,"bool MovementUtils::FindEarliestObstacleCollision(void* a_obstacles, float* a_position, float* a_velocity, bool a_skipSlowObstacles, float* a_outTime)"
 89928,0x14110fff0,0x14116cf40,2,"void MovementPlannerArbiter::ProcessPlannerOutput(MovementUpdateDataSmallDelta* a_updateData, MovementHandlerUpdateDataSmallDelta* a_handlerUpdateData)"
 89930,0x141110a80,0x14116d9d0,2,void MovementPlannerArbiter::LimitSpeedForPredictedCollisions(MovementHandlerUpdateDataSmallDelta* a_updateData)
+89961,0x141111cb0,0x14116ec00,2,"void ActorState::CalculateTranslationLimits(IMovementParameters* a_params, IMovementInterface* a_interface, NiPoint3* a_targetDirection, float* a_outAcceleration, float* a_outDeceleration, float* a_outLimit)"
+89962,0x141111e40,0x14116ed90,2,"void ActorState::CalculateRotationLimits(IMovementParameters* a_params, IMovementInterface* a_interface, NiPoint3* a_targetDirection, float* a_outLimitA, float* a_outLimitB)"
 90006,0x141112dc0,0x14116fd10,2,"void MovementAgentPathFollowerFlight::UpdateSmallDelta(MovementPlannerUpdateDataSmallDelta* a_updateData, MovementPlannerAgentReturnDataSmallDelta* a_returnData)"
 90052,0x141114a70,0x141171940,2,"void MovementAgentPathFollowerVirtual::UpdateSmallDelta(MovementPlannerUpdateDataSmallDelta* a_updateData, MovementPlannerAgentReturnDataSmallDelta* a_returnData)"
 90085,0x141115920,0x1411727f0,2,void MovementHandlerAgentAngleController::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
@@ -5182,14 +5187,14 @@
 98577,0x14127f810,0x1412b8a80,2,void BSScript::Array::Unlock()
 98578,0x14127f850,0x1412b8ac0,2,void BSScript::PropertyTypeInfo::GetGetFunction(BSTSmartPointer<BSScript::IFunction>& a_outFunction)
 98579,0x14127f9d0,0x1412b8c40,2,void BSScript::PropertyTypeInfo::GetSetFunction(BSTSmartPointer<BSScript::IFunction>& a_outFunction)
-98622,0x141280330,0x1412c1380,3,"BSScript::UnlinkedTypes::InstructionStream* ArgumentBlocks_Init(BSScript::UnlinkedTypes::InstructionStream* a_blocks, std::uint32_t a_capacity)"
-98624,0x141280500,0x1412c1550,3,void ArgumentBlocks_Destroy(BSScript::UnlinkedTypes::InstructionStream* a_blocks)
-98626,0x141280670,0x1412c16c0,3,void ArgumentBlocks_Reset(BSScript::UnlinkedTypes::InstructionStream* a_blocks)
-98629,0x141280e80,0x1412c1ed0,2,void BSScript::ByteCode::UnpackedInstructionList::Pack(BSScript::ByteCode::PackedInstructionStream& a_stream)
+98622,0x141280330,0x1412c1380,3,BSScript::UnlinkedTypes::InstructionStream* BSScript::UnlinkedTypes::InstructionStream::InstructionStream(std::uint32_t a_capacity)
+98624,0x141280500,0x1412c1550,3,void BSScript::UnlinkedTypes::InstructionStream::~InstructionStream()
+98626,0x141280670,0x1412c16c0,3,void BSScript::UnlinkedTypes::InstructionStream::Reset()
+98629,0x141280e80,0x1412c1ed0,2,void BSScript::UnlinkedTypes::InstructionStream::Pack(BSScript::ByteCode::PackedInstructionStream& a_out)
 98630,0x1412815d0,0x1412c2620,2,void BSScript::ByteCode::UnpackedInstructionList::Unpack(BSScript::ByteCode::PackedInstructionStream& a_stream)
-98631,0x1412817a0,0x1412c27f0,2,void BSScript::ByteCode::UnpackedInstructionList::ForEachInstruction(BSScript::ByteCode::PackedInstructionStream::InstructionFunctor& a_functor)
+98631,0x1412817a0,0x1412c27f0,2,void BSScript::UnlinkedTypes::InstructionStream::ForEachInstruction(BSScript::UnlinkedTypes::InstructionStream::InstructionFunctor& a_functor)
 98634,0x141281930,0x1412c2980,3,"bool LoadInstructions(BSScript::UnlinkedTypes::InstructionStream* a_list, BSScript::ReadableStringTable* a_stringTable, BSScript::IStore* a_store, std::uint8_t a_major, std::uint8_t a_minor, bool a_flag, const char* a_context, SkyrimScript::Logger* a_logger)"
-98635,0x141282110,0x1412c3160,3,"void ArgumentList_AppendEntry(BSScript::UnlinkedTypes::InstructionStream* a_list, BSScript::ByteCode::Argument* a_argument)"
+98635,0x141282110,0x1412c3160,3,void BSScript::UnlinkedTypes::InstructionStream::AddArgument(BSScript::ByteCode::Argument* a_argument)
 98637,0x141282290,0x1412c32e0,3,void RewritePropertyAccessorInstruction(void* a_builder)
 98638,0x141282480,0x1412c34d0,3,"void ArgumentList_AppendCopy(void* a_builder, BSScript::ByteCode::Argument* a_argument)"
 98639,0x1412824c0,0x1412c3510,3,void ArgumentList_ReleaseQueued(void* a_builder)
