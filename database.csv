@@ -623,6 +623,7 @@
 19571,0x14029fbf0,0x1402b1360,2,void TESObjectREFR::DoMoveToHigh()
 19582,0x14029fd20,0x1402b1490,2,NiAVObject* TESObjectREFR::Get3D1(bool a_firstPerson)
 19584,0x14029fd40,0x1402b14b0,2,NiAVObject* TESObjectREFR::GetCurrent3D()
+19586,0x14029fd60,0x1402b14d0,2,std::uint32_t TESObjectREFR::GetEquippedWeaponTypeValue()
 19588,0x14029fd80,0x1402b14f0,2,BSFaceGenAnimationData* TESObjectREFR::GetFaceGenAnimationData()
 19589,0x14029fd90,0x1402b1500,2,BSFaceGenNiNode* TESObjectREFR::GetFaceNode()
 19590,0x14029fda0,0x1402b1510,2,BSFaceGenNiNode* TESObjectREFR::GetFaceNodeSkinned()
@@ -645,6 +646,7 @@
 19681,0x1402a2520,0x1402b3c90,2,void TESObjectREFR::TryMoveToMiddleLow()
 19682,0x1402a2530,0x1402b3ca0,2,void TESObjectREFR::TryUpdateActorLastSeenTime()
 19706,0x1402a2fa0,0x1402b4710,2,"void TESObjectREFR::PopulateGraphProjectsToLoad(void* a_arg1, void* a_arg2)"
+19711,0x1402a38d0,0x1402b5040,2,bool TESObjectREFR::RefreshEquippedHandItems()
 19720,0x1402a3c80,0x1402b53f0,2,void TESObjectREFR::ModifyAnimationUpdateData(BSAnimationUpdateData& a_data)
 19723,0x1402a3d50,0x1402b54c0,2,bool TESObjectREFR::ShouldPerformRevert()
 19725,0x1402a3e10,0x1402b5580,4,"void TESObjectREFR::UpdateAnimation(TESObjectREFR* a_this, float a_delta)"
@@ -2549,7 +2551,7 @@
 37620,0x140625dd0,0x14062ec40,4,"bool Actor::GetWeaponSwingDirection(bool a_leftHand, NiPoint3* a_out)"
 37621,0x140625eb0,0x14062ed20,4,TESBoundObject* Actor::GetWeapon()
 37622,0x140625ee0,0x14062ed50,2,EnchantmentItem* Actor::GetEquippedWeaponEnchantment()
-37623,0x140625f30,0x14062eda0,2,std::uint32_t Actor::Func117_140625F30()
+37623,0x140625f30,0x14062eda0,2,std::uint32_t Actor::GetEquippedWeaponTypeValue()
 37624,0x140625fa0,0x14062ee10,3,TESForm* Actor::GetEquippedShield()
 37625,0x140625fe0,0x14062ee50,3,BGSAttackDataPtr* Actor::GetCurrentAttackData()
 37626,0x140626000,0x14062ee70,2,std::uint32_t Actor::GetEquippedItemTypes()
