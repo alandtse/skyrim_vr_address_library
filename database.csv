@@ -4770,6 +4770,11 @@
 89724,0x14110a730,0x141167650,2,bool MovementAgentActorAvoider::IsActorNearPath(void* a_actorInfo)
 89781,0x14110bf30,0x141168e50,2,MovementArbiter* MovementArbiter::MovementArbiter()
 89782,0x14110bf70,0x141168e90,2,void MovementArbiter::~MovementArbiter()
+89927,0x14110fe50,0x14116cda0,2,"bool MovementUtils::FindEarliestObstacleCollision(void* a_obstacles, float* a_position, float* a_velocity, bool a_skipSlowObstacles, float* a_outTime)"
+89928,0x14110fff0,0x14116cf40,2,"void MovementPlannerArbiter::ProcessPlannerOutput(void* a_plannerData, void* a_arg2)"
+89930,0x141110a80,0x14116d9d0,2,void MovementPlannerArbiter::LimitSpeedForPredictedCollisions(void* a_plannerData)
+90246,0x1411197b0,0x141176680,2,"void MovementPathManagerAgentAvoidBox::CheckBlockedByAvoidBox(void* a_arg1, std::uint32_t* a_outStatus)"
+90251,0x141119ad0,0x1411769a0,2,int MovementPathManagerAgentAvoidBox::EvaluateAvoidBox()
 90331,0x14111cb60,0x141179a30,2,void MovementStateTweener::GetPosition(NiPoint3* a_out)
 90332,0x14111cd10,0x141179be0,2,void MovementStateTweener::GetAngle(NiPoint3* a_out)
 90333,0x14111ce40,0x141179d10,2,float MovementStateTweener::GetCurrentMovementSpeed()
