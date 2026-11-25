@@ -5063,7 +5063,7 @@
 88547,0x1410c5c40,0x1411229a0,2,"bool BSPathingSolution::GetTangentAtPathPosition(float a_pathPosition, NiPoint3* a_out)"
 88549,0x1410c5ee0,0x141122c40,2,"void BSPathingSolution::ProjectPointOntoPath3D(NiPoint3* a_position, float a_pathPosition, float* a_outPathPosition, NiPoint3* a_outPoint)"
 88550,0x1410c5f10,0x141122c70,2,"void BSPathingSolution::ProjectPointOntoPathHorizontal(NiPoint3* a_position, float a_pathPosition, float* a_outPathPosition, NiPoint3* a_outPoint)"
-88553,0x1410c6470,0x1411231d0,2,uint32 GetVirtualPathSegmentIndices(BSPathingSolution* a_solution)
+88553,0x1410c6470,0x1411231d0,2,std::uint32_t GetVirtualPathSegmentIndices(BSPathingSolution* a_solution)
 88554,0x1410c6510,0x141123270,2,"void BSPathingSolution::GetPredictedPoint(float a_from, float a_distance, float* a_outPathPosition, NiPoint3* a_outPoint)"
 88558,0x1410c6ea0,0x141123bd0,2,"bool BSPathingSolution::GetClosestPointOnPath(NiPoint3* a_pos, void* a_out)"
 88559,0x1410c6ff0,0x141123d20,2,"float BSPathingSolution::FindMaxSpeedAlongPath(float a_arg1, float a_arg2, float a_arg3, float a_arg4, float a_arg5, float a_arg6)"
