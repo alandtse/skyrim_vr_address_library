@@ -8917,6 +8917,7 @@ sseid,aeid,confidence,name
 89391,91859,3,RE::ObstacleBuildQueue::ctor
 89392,91860,3,RE::ObstacleBuildQueue::dtor
 89395,91863,3,RE::ObstacleBuildQueue::Process
+89396,91865,1,
 89405,91875,1,
 89407,91877,1,
 89408,91878,1,
@@ -9234,6 +9235,8 @@ sseid,aeid,confidence,name
 90194,92697,1,
 90195,92698,1,
 90198,92701,1,
+90200,92703,1,
+90201,92704,1,
 90202,92705,1,
 90203,92706,1,IMovementPathManagerAgent::Func5_*
 90204,92707,1,MovementPlannerAgentNavmeshBounds::Func11_*
@@ -9338,6 +9341,9 @@ sseid,aeid,confidence,name
 90623,93153,1,
 90653,93185,1,
 90677,93209,1,
+90704,93238,1,
+90713,93251,1,
+90714,93252,1,
 90721,93262,1,
 90725,93266,1,
 90726,93267,1,

@@ -5261,6 +5261,9 @@
 90194,0x141117bb0,0x141174a80,2,BSFixedString& MovementPlannerAgentNavmeshBounds::GetStaticAgentType()
 90195,0x141117c40,0x141174b10,2,std::uint8_t MovementPlannerAgentNavmeshBounds::GetAgentSaveType()
 90198,0x141117ca0,0x141174b70,2,"void MovementPlannerAgentNavmeshBounds::UpdateSmallDelta(MovementPlannerUpdateDataSmallDelta* a_updateData, MovementPlannerAgentReturnDataSmallDelta* a_returnData)"
+90200,0x141117cf0,0x141174bc0,2,void MovementPlannerAgentNavmeshBounds::SetPathingData(BSPathingSolution* a_solution)
+90201,0x141117da0,0x141174c70,2,"void MovementPlannerAgentNavmeshBounds::PollPathEvent(MovementUpdateDataSmallDelta* a_updateData, MovementPathManagerAgentEvent* a_outEvent)"
+90203,0x141118010,0x141174ee0,2,void MovementPlannerAgentNavmeshBounds::ResetPathingState()
 90238,0x141119540,0x141176410,2,void MovementPathManagerAgentAvoidBox::RegisterWithController(IMovementControllerRegisterInterface& a_controller)
 90239,0x141119550,0x141176420,2,void MovementPathManagerAgentAvoidBox::UnregisterWithController()
 90242,0x1411195f0,0x1411764c0,2,const BSFixedString& MovementPathManagerAgentAvoidBox::GetAgentType()
@@ -5314,10 +5317,10 @@
 90623,0x14112c840,0x141189710,2,"void PathFollowerTurnTarget::GetFacingAngles(NiPoint3* a_position, float* a_current, float a_zOffset, float* a_outFacing)"
 90653,0x14112d870,0x14118a740,2,"PathFollowerStateUpdateData* PathFollowerStateUpdateData::PathFollowerStateUpdateData(BSPathingRequest** a_request, BSPathingSolution** a_solution, ActorState* a_actorState, void* a_messageInterface, NiPoint3* a_pPathPoint, float a_pathPosition, float a_deltaTime)"
 90677,0x14112e410,0x14118b2e0,2,"bool BSPathingSolution::GetDirectionToPathPoint(float* a_delta, float a_pathPosition, float* a_position, NiPoint3* a_outDirection)"
-90704,0x14112f3e0,0x14118c2b0,2,"std::int32_t VelocityObstacle::ObstaclePolygon::IntersectSegment(const NiPoint3* a_start, const NiPoint3* a_end, bool a_clampToStart, void* a_outHit)"
+90704,0x14112f3e0,0x14118c2b0,2,"bool VelocityObstacle::ObstaclePolygon::IntersectSegment(const NiPoint3& a_start, const NiPoint3& a_end, float& a_outT)"
 90713,0x14112fc90,0x14118cb60,2,VelocityObstacle::ObstaclePolygon* VelocityObstacle::ObstaclePolygon::ObstaclePolygon()
 90714,0x14112fd00,0x14118cbd0,2,void VelocityObstacle::ObstaclePolygon::~ObstaclePolygon()
-90732,0x141131010,0x14118dee0,2,"bool VelocityObstacle::BuildObstaclePolygons(const BSPathingLocation* a_location, float a_radius, void* a_unused, void* a_outPolygons)"
+90732,0x141131010,0x14118dee0,2,"void VelocityObstacle::BuildObstaclePolygons(const BSPathingLocation& a_location, float a_radius, BSTArray<VelocityObstacle::ObstaclePolygon>& a_out)"
 90938,0x14113df60,0x1411983b0,2,void EnsureMemoryHeap()
 97369,0x14122c060,0x141264510,2,"void ObjectBindPolicy::GetAttachedScripts(std::uint64_t a_handle, void* a_out)"
 97370,0x14122c230,0x1412646e0,2,"void* ObjectBindPolicy::FindAttachedScript(void* a_out, std::uint64_t a_handle, void* a_name)"
