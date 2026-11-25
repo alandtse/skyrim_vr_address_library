@@ -1,4 +1,4 @@
-﻿id,sse,vr,status,name
+id,sse,vr,status,name
 5115,0x14008a4d0,0x140089dc0,3,RegisterAssaultActorStoryEvent
 5116,0x14008a550,0x140089e40,3,RegisterKillActorStoryEvent
 5146,0x14008ad10,0x14008a600,3,RegisterPlayerAddItemStoryEvent
@@ -1669,6 +1669,7 @@
 29609,0x140465140,0x140475100,2,NavMeshObstacleManager* NavMeshObstacleManager::ctor()
 29612,0x140465ac0,0x140475a80,3,void NavMeshObstacleManager::AddPendingRef(TESObjectREFR* a_ref)
 29613,0x140465bc0,0x140475b80,2,void NavMeshObstacleManager::AddRemovedRef(TESObjectREFR* a_ref)
+29618,0x140466300,0x1404762c0,2,void NavMeshObstacleManager::Update()
 29619,0x1404664d0,0x140476490,3,void NavMeshObstacleManager::Flush()
 29621,0x140466cc0,0x140476c80,2,void NavMeshObstacleManager::QueueActivatedEntity(void* a_entity)
 29624,0x140466fe0,0x140476fa0,3,void NavMeshObstacleManager::AddCompletedTask(ObstacleTaskData* a_task)
@@ -1680,6 +1681,7 @@
 29632,0x140467af0,0x140477ab0,2,void NavMeshObstacleManager::UpdateMovedObstacles()
 29633,0x140467df0,0x140477db0,3,void NavMeshObstacleManager::DispatchTasks()
 29634,0x140468170,0x140478130,3,bool NavMeshObstacleManager::CommitTasks()
+29635,0x1404681f0,0x1404781b0,2,void NavMeshObstacleManager::RelinkPortalEdges()
 29636,0x1404694c0,0x140479480,2,void NavMeshObstacleManager::CompactCompletedTaskNavmeshes()
 29637,0x140469570,0x140479530,3,void NavMeshObstacleManager::DestroyTasks()
 29638,0x140469620,0x1404795e0,2,void NavMeshObstacleManager::ProcessDoorOpenRequests_140469620()
@@ -2429,6 +2431,7 @@
 38085,0x14063fa50,0x140648ae0,3,void RenderFrame()
 38090,0x14063fd50,0x140649060,3,void Job_TES_animation()
 38118,0x140640600,0x140649910,2,PapyrusTweaks::Job_VM_Update
+38123,0x140640820,0x140649b50,2,void Job_Path_update()
 38141,0x140640f80,0x14064a2b0,4,void Job_Update_grass_140640F80 (void)
 38150,0x140641460,0x14064a7b0,3,AIProcess::UpdatePackage
 38153,0x1406429d0,0x14064bd20,3,AIProcess::RunPackageProcedureTree
