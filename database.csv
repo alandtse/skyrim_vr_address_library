@@ -2950,6 +2950,7 @@
 40747,0x1406f0a30,0x140717920,2,"void IMovementMessageInterface::QueueLocationEvent(BSPathingLocation* a_location, NiPoint3* a_direction)"
 40748,0x1406f0ad0,0x1407179c0,2,void IMovementMessageInterface::PostMessage(MovementMessage** a_message)
 40749,0x1406f0b60,0x140717a50,2,void IMovementMessageInterface::DispatchMessage(MovementMessage* a_message)
+40750,0x1406f0c10,0x140717b00,3,void MovementControllerNPC::OnMessageDispatched(MovementMessage* a_message)
 40751,0x1406f0cb0,0x140717ba0,2,bool MovementControllerNPC::DispatchAndNotify(MovementMessage* a_message)
 40752,0x1406f0d00,0x140717bf0,2,"bool MovementControllerNPC::DispatchAndNotifyForLevel(MovementMessage* a_message, std::int32_t a_expectedLevel)"
 40762,0x1406f1860,0x140718750,3,"bool RemoveMessagesByTypeUnlocked(void* a_messages, std::int32_t a_messageType, void* a_events)"
@@ -4855,6 +4856,7 @@
 89724,0x14110a730,0x141167650,2,bool MovementAgentActorAvoider::IsActorNearPath(void* a_actorInfo)
 89781,0x14110bf30,0x141168e50,2,MovementArbiter* MovementArbiter::MovementArbiter()
 89782,0x14110bf70,0x141168e90,2,void MovementArbiter::~MovementArbiter()
+89787,0x14110bfd0,0x141120210,2,void MovementArbiter::Kill()
 89815,0x14110ca30,0x141169950,2,void MovementHandlerAgentTranslationController::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
 89875,0x14110eea0,0x14116bdc0,2,"void MovementHandlerArbiter::UpdateHandlers(MovementHandlerUpdateDataSmallDelta* a_updateData, MovementHandlerOutputDataSmallDelta* a_outputData)"
 89927,0x14110fe50,0x14116cda0,2,"bool MovementUtils::FindEarliestObstacleCollision(void* a_obstacles, float* a_position, float* a_velocity, bool a_skipSlowObstacles, float* a_outTime)"
@@ -4874,6 +4876,8 @@
 90198,0x141117ca0,0x141174b70,2,"void MovementPlannerAgentNavmeshBounds::UpdateSmallDelta(MovementPlannerUpdateDataSmallDelta* a_updateData, MovementPlannerAgentReturnDataSmallDelta* a_returnData)"
 90246,0x1411197b0,0x141176680,2,"void MovementPathManagerAgentAvoidBox::CheckBlockedByAvoidBox(void* a_arg1, std::uint32_t* a_outStatus)"
 90251,0x141119ad0,0x1411769a0,2,int MovementPathManagerAgentAvoidBox::EvaluateAvoidBox()
+90288,0x14111ae30,0x141177c10,2,void MovementTweenerArbiter::UnregisterAgent(void* a_agent)
+90289,0x14111af30,0x141177d00,3,void MovementTweenerArbiter::ClearAgents(void* a_unused)
 90331,0x14111cb60,0x141179a30,2,void MovementStateTweener::GetPosition(NiPoint3* a_out)
 90332,0x14111cd10,0x141179be0,2,void MovementStateTweener::GetAngle(NiPoint3* a_out)
 90333,0x14111ce40,0x141179d10,2,float MovementStateTweener::GetCurrentMovementSpeed()
