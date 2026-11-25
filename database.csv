@@ -63,6 +63,7 @@
 11171,0x1401004c0,0x140110a70,4,TESForm* FUN_1401004c0(TESForm* param_1)
 11183,0x1401007f0,0x140110da0,3,bool MagicItem::IsPermanent()
 11194,0x140100df0,0x1401113a0,4,EffectSetting* MagicItem::GetAVEffectSetting()
+11198,0x1401010e0,0x140111690,2,void SpellItem::ReleasePreload()
 11207,0x140101790,0x140111d40,4,bool MagicItem::HasEffect(EffectArchetype a_archetype)
 11213,0x140101a30,0x140111fe0,3,RE::MagicItem::CalculateCost
 11216,0x140101cc0,0x140112270,3,RE::MagicItem::GetCostliestEffectItem
@@ -124,6 +125,7 @@
 12204,0x1401329d0,0x140143180,3,RE::LookupReferenceByHandle
 12210,0x140132bd0,0x140143380,4,DWORD Lock1_140132BD0 (Mutex * a_this)
 12215,0x140132d60,0x140143510,3,BSFixedString** GetStaticEmptyBSFixedString()
+12233,0x1401337a0,0x140144040,2,void TESObjectREFR::Set3DLocked()
 12272,0x1401349d0,0x140145380,3,RE::ExtraLock::REFR_LOCK::GetLockLevel
 12274,0x140134af0,0x1401454a0,4,REFR_LOCK::SetLocked
 12405,0x1401368f0,0x1401472a0,4,bool ExtraLinkedRef::IsNotEqual(const BSExtraData* a_rhs)
@@ -2073,6 +2075,7 @@
 33825,0x140556ce0,0x14055ca70,3,enhanced_reanimation::Actor::CanBeReanimated
 33826,0x140556dc0,0x14055CB50,3,"EffectSetting::sub_1400FBC60(EffectSetting *a1, TESObjectREFR *a2, Actor *a3)"
 33828,0x140556f20,0x14055ccb0,3,RE::Actor::DispelWornItemEnchantments
+33830,0x140556fc0,0x14055cd50,2,void TESObjectREFR::UnloadWornItemEnchants()
 33834,0x140557120,0x14055ceb0,4,BSContainer::ForEachResult MagicItemDataCollector::operator()(Effect* a_effect)
 33869,0x140558c00,0x14055E990,3,ModelReferenceEffect::DetachImpl
 33873,0x140558fc0,0x14055ED50,3,ModelReferenceEffect::sub_*
@@ -2468,6 +2471,7 @@
 37013,0x14060eef0,0x140617b00,4,TESObjectREFR::sub_14060EEF0
 37016,0x14060f0c0,0x140617cd0,4,float Actor::CalcEquippedWeight_14060F0C0 (Actor * a_this)
 37020,0x14060f240,0x140501530,2,SendAnimation
+37034,0x14060fae0,0x1406186f0,2,void Actor::ResetFollowPathGoal()
 37086,0x140612250,0x14061ae60,3,"void FindAvailableHorseFromHandles(void* a_handleSource, void* a_result)"
 37089,0x140612520,0x14061b130,2,bool MovementMessagePool::SetActivateDoorHandler(void* a_handler)
 37090,0x140612660,0x14061b270,2,bool MovementMessagePool::SetActorCollisionHandler(void* a_handler)
@@ -2622,7 +2626,8 @@
 37802,0x140631360,0x14063a230,3,RE::Actor::UpdateArmorAbility
 37803,0x1406313d0,0x14063a2a0,3,"void Actor::UpdateWeaponAbility(const TESForm* a_object, const ExtraDataList* a_extraList, bool a_isLeft)"
 37804,0x1406314f0,0x14063a3c0,4,"void Actor::CastPermanentMagic_1406314F0 (Actor * a_this, bool a_wornItemEnchantments, bool a_baseSpells, bool a_raceSpells, bool a_everyActorAbility)"
-37805,0x1406316b0,0x14063a580,3,po3tweaks::Spells::DispelAdded::GetAliasInstanceArray
+37805,0x1406316b0,0x14063a580,3,"void Actor::DispelPersistentSpells(bool a_spells, bool a_raceSpells, bool a_defaultObjectSpell, bool a_enchantments)"
+37807,0x140631ab0,0x14063a980,2,void Actor::ReleaseSpellPreloads()
 37808,0x140631c80,0x14063ab50,3,void Actor::InterruptCast(bool a_restoreMagicka)
 37810,0x140631d70,0x14063ac40,4,bool Actor::IsCasting(MagicItem* a_spell)
 37813,0x140631f20,0x14063adf0,2,bool Actor::TryDualCast()
@@ -2736,6 +2741,7 @@
 38339,0x14064e6d0,0x140657a20,3,AIProcess::ResetPackageState
 38340,0x14064e810,0x140657b60,2,BSFixedString AIProcess::GetVoiceSubtitle()
 38343,0x14064e9c0,0x140657d10,2,"void AIProcess::AppendDialogueSpeakerAvoidNode(Actor* a_actor, NiPointer<BSTArray<BSPathingAvoidNode>>* a_avoidNodes)"
+38356,0x14064f2c0,0x140658610,2,void AIProcess::ClearQueueOfGreetings()
 38359,0x14064f4b0,0x140658800,3,AIProcess::UpdatePackageObserveCombatHigh
 38364,0x14064f8b0,0x140658c00,2,bool AIProcess::IsTalkingToPC()
 38376,0x14064fe60,0x1406591b0,2,"void AIProcess::StartFleeFrom(Actor* a_actor, TESObjectREFR* a_threat)"
@@ -2745,6 +2751,7 @@
 38404,0x140650df0,0x14065a140,3,RE::AIProcess::Update3DModel
 38405,0x140651250,0x14065a5a0,2,void AIProcess::SetGreetActor(ActorHandle* a_handle)
 38406,0x140651270,0x14065a5c0,2,BSSoundHandle* AIProcess::GetSoundHandle(std::int32_t a_index)
+38407,0x1406512a0,0x14065a5f0,2,"void AIProcess::SetSoundHandle(std::int32_t a_index, BSSoundHandle* a_handle)"
 38412,0x1406514e0,0x14065a830,2,"void AIProcess::SetLastActivatedDoor(std::uint32_t* a_handle, bool a_flag)"
 38424,0x140651840,0x14065ab90,2,bool AIProcess::GetHighUnk45A()
 38483,0x1406598d0,0x140662c10,3,ObjectRefHandle AIProcess::GetHeadtrackTarget()
@@ -2756,6 +2763,7 @@
 38530,0x14065b310,0x140664650,3,NiPointer<BGSAttackData>* AIProcess::GetAttackData()
 38544,0x14065b940,0x140664c80,3,bool AIProcess::GetCurrentMaxSpeeds(MaxSpeeds* a_out)
 38560,0x14065be00,0x140665140,3,AIProcess::UpdatePackageGuardHigh
+38563,0x14065c480,0x1406657d0,2,bool AIProcess::GetFarGeometry()
 38568,0x14065c880,0x140665bd0,3,RE::AIProcess::SetBaseScale
 38606,0x14065f040,0x140668390,3,AIProcess::UpdatePackageHigh
 38608,0x140661be0,0x14066af30,2,"void AIProcess::ProcessFollowHigh(Actor* a_actor, bool a_advanceProcedure, std::int32_t a_moveMode, bool a_pursue)"
@@ -2815,6 +2823,7 @@
 38856,0x14067d210,0x140686690,4,bool AIProcess::IsFleeing()
 38857,0x14067d230,0x1406866b0,4,void AIProcess::KnockParalyze(Actor* a_actor)
 38858,0x14067d4a0,0x140686920,4,"void AIProcess::KnockExplosion(Actor* a_actor, const NiPoint3& a_location, float a_magnitude)"
+38867,0x14067e3b0,0x140687830,2,void AIProcess::SetUpdate3DModelFlags(RESET_3D_FLAGS a_flags)
 38871,0x14067e450,0x1406878d0,3,"void AIProcess::ChangeSitSleepState(Actor* a_actor, SIT_SLEEP_STATE a_state, ObjectRefHandle* a_furniture, std::uint32_t a_markerID)"
 38872,0x14067ee90,0x140688310,3,TESIdleForm* AIProcess::GetFurnitureIdle()
 38873,0x14067eeb0,0x140688330,3,std::uint32_t AIProcess::GetCurrentFurnitureMarkerID()
@@ -2832,6 +2841,7 @@
 38900,0x14067fe60,0x1406892e0,4,LLF::AIProcess_CalculateLightValue_GetLuminance
 38935,0x140681640,0x14068aab0,3,void AIProcess::SetLastHitData(HitData* a_hitData)
 38936,0x1406816f0,0x14068ab60,3,void AIProcess::ResetLastHitData()
+38939,0x1406817d0,0x14068ac40,2,void AIProcess::UpdateCachedValuesFlags(Actor* a_actor)
 38949,0x140681a20,0x14068ae90,2,void AIProcess::SetBleedoutRate(float a_rate)
 38951,0x140681a60,0x14068aed0,2,void AIProcess::SetBleedoutParam2B0(float a_value)
 38953,0x140681aa0,0x14068af10,2,void AIProcess::SetBleedoutParam2B8(float a_value)

@@ -1532,6 +1532,7 @@ sseid,aeid,confidence,name
 11187,11294,1,MagicItem::GetNoAbsorb_140100850
 11188,11295,1,MagicItem::GetNoDualCastModifications_140100860
 11189,11296,1,MagicItem::ReadFromFileStream_140100870
+11198,11306,1,
 11199,11307,1,MagicItem::sub_*
 11201,11309,1,EnchantmentItem::sub_*
 11204,11312,1,
@@ -1826,6 +1827,7 @@ sseid,aeid,confidence,name
 12225,12350,1,
 12227,12352,1,
 12229,12354,1,BSExtraDataList::RemoveExtraDataByType_140133580
+12233,12358,1,
 12253,12380,1,
 12254,12381,1,ExtraAnimGraphManager::sub_*
 12258,12385,1,
@@ -4715,6 +4717,7 @@ sseid,aeid,confidence,name
 33820,34612,1,SpellItem::sub_*
 33821,34613,1,MagicItem::sub_*
 33825,34617,3,enhanced_reanimation::Actor::CanBeReanimated
+33830,34622,1,
 33831,34623,1,BGSDefaultObjectManager::GetEquipSlot_*
 33832,34624,1,
 33834,34626,1,MagicItemDataCollector::Func1_*
@@ -5537,6 +5540,7 @@ sseid,aeid,confidence,name
 38402,39393,1,
 38405,39398,1,
 38406,39399,1,
+38407,39400,1,
 38410,39405,1,ActorProcess::ClearMovementStopped_*
 38412,39407,1,
 38413,39408,1,
@@ -5584,6 +5588,7 @@ sseid,aeid,confidence,name
 38530,39540,1,
 38544,39555,1,
 38560,39578,2,
+38563,39583,1,
 38606,39637,2,
 38610,39641,1,
 38611,39642,1,
@@ -5642,6 +5647,7 @@ sseid,aeid,confidence,name
 38832,39862,2,
 38835,39865,2,
 38850,39887,3,RE::ActorProcess::SetHeadTrackTarget_14067D120
+38867,39907,1,
 38871,39912,2,
 38872,39913,2,
 38873,39914,2,
@@ -5666,6 +5672,7 @@ sseid,aeid,confidence,name
 38935,39987,1,ActorProcess::SetLastHitDamage_*
 38936,39988,1,
 38937,39989,1,
+38939,39991,1,
 38941,39993,1,
 38942,39994,1,ActorProcess::sub_140681920
 38943,39995,1,
