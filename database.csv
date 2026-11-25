@@ -4589,13 +4589,23 @@
 88202,0x1410b8e00,0x141115a30,2,void IMovementSetState::SetStateForward(void* a_state)
 88203,0x1410b8e20,0x141115a50,2,void IMovementSetState::SetState(void* a_state)
 88237,0x1410b9d30,0x141116960,2,void PathingRequest::SetLockData(PathingLockData** a_lockData)
+88288,0x1410ba920,0x141117550,3,MovementAgentPathFollowerStandard* MovementAgentPathFollowerStandard::MovementAgentPathFollowerStandard()
+88296,0x1410baf50,0x141117b80,3,BSFixedString* GetPathFollowerName()
 88332,0x1410bd970,0x14111a5a0,2,void MovementAgentPathFollowerStandard::SetStatePlayIdle_6()
 88333,0x1410bda70,0x14111a6a0,2,void MovementAgentPathFollowerStandard::SetStateTurnToAngle_7()
 88334,0x1410bdb00,0x14111a730,2,void MovementAgentPathFollowerStandard::UpdateActionSpeed(PathFollowerStateUpdateData* a_updateData)
+88335,0x1410bdc30,0x14111a860,2,void MovementAgentPathFollowerStandard::SetStateFollowPathToParameter_13(PathFollowerStateUpdateData* a_updateData)
+88336,0x1410bdca0,0x14111a8d0,2,void MovementAgentPathFollowerStandard::SetStateFollowPathToGoal_13(PathFollowerStateUpdateData* a_updateData)
 88337,0x1410bdd10,0x14111a940,2,void MovementAgentPathFollowerStandard::SetStateKeepLastDirection_10()
+88338,0x1410bdd90,0x14111a9c0,2,void MovementAgentPathFollowerStandard::SetStateKeepLastDirection_8(PathFollowerStateUpdateData* a_updateData)
 88339,0x1410bddf0,0x14111aa20,2,void MovementAgentPathFollowerStandard::SetStatePlayIdle_2()
 88340,0x1410bde90,0x14111aac0,2,void MovementAgentPathFollowerStandard::SetStateTurnToAngle_3(PathFollowerStateUpdateData* a_updateData)
+88341,0x1410bdf70,0x14111aba0,2,void MovementAgentPathFollowerStandard::SetStateKeepLastDirection_9(PathFollowerStateUpdateData* a_updateData)
+88342,0x1410bdfd0,0x14111ac00,2,void MovementAgentPathFollowerStandard::SetStateKeepLastDirection_11(PathFollowerStateUpdateData* a_updateData)
 88343,0x1410be070,0x14111aca0,2,bool MovementAgentPathFollowerStandard::TrySelectPlayIdle()
+88344,0x1410be730,0x14111b360,2,bool MovementAgentPathFollowerStandard::TrySelectPlayIdleStationary()
+88345,0x1410be8c0,0x14111b4f0,2,bool MovementAgentPathFollowerStandard::TrySelectPlayIdleMoving()
+88346,0x1410bebc0,0x14111b7f0,2,bool MovementAgentPathFollowerStandard::ShouldRunPlayIdle()
 88347,0x1410bec10,0x14111b840,2,bool MovementAgentPathFollowerStandard::NeedsTurnBeforeFollowing()
 88348,0x1410bf000,0x14111bc30,2,bool MovementAgentPathFollowerStandard::CanSelectPlayIdle()
 88352,0x1410bf4e0,0x14111c110,2,float MovementAgentPathFollowerStandard::GetFinalApproachSpeed()
@@ -4606,7 +4616,10 @@
 88357,0x1410bf840,0x14111c470,3,std::int32_t IMovementPlayIdleResult::PathFollowerStandard_Release()
 88360,0x1410bfaf0,0x14111c720,2,void MovementAgentPathFollowerStandard::FindNextActionPointIndex()
 88361,0x1410bfbd0,0x14111c800,2,void MovementAgentPathFollowerStandard::ReleasePlayIdle()
+88362,0x1410bfc60,0x14111c890,3,"bool MovementAgentPathFollowerStandard::GetPathDistanceToPosition(float a_position, float* a_out)"
 88364,0x1410bfd00,0x14111c930,2,"bool IPathFollowerAction::UpdateSpeed(PathFollowerStateUpdateData* a_updateData, float a_pathIndex, float* a_speed)"
+88366,0x1410bfe60,0x14111ca90,3,MovementPlayIdleHolder* MovementPlayIdleHolder::MovementPlayIdleHolder()
+88375,0x1410c00b0,0x14111cce0,3,"MovementPlayIdleHolder** AssignPlayIdleHolder(MovementPlayIdleHolder** a_slot, MovementPlayIdleHolder* a_holder)"
 88398,0x1410c0550,0x14111d180,3,IPathFollowerAction* IPathFollowerAction::dtor_deleting(std::uint8_t a_flags)
 88417,0x1410c0b30,0x14111d760,2,BSFixedString* MovementPathManagerArbiter::GetStageName()
 88418,0x1410c0b40,0x14111d770,2,BSFixedString* MovementPathManagerArbiter::GetArbiterName()
@@ -4655,6 +4668,8 @@
 88538,0x1410c4b80,0x1411218e0,2,"float BSPathingSolution::GetNodeRangeLength(float a_first, float a_last)"
 88539,0x1410c4f80,0x141121ce0,2,float BSPathingSolution::GetCurrentPathingNodesLength()
 88540,0x1410c51a0,0x141121f00,2,float BSPathingSolution::GetPathLength()
+88541,0x1410c52d0,0x141122030,2,"float BSPathingSolution::GetPathLengthBetween(float a_from, float a_to)"
+88544,0x1410c5970,0x1411226d0,2,"bool BSPathingSolution::GetPointAtPathPosition(float a_position, float* a_out)"
 88558,0x1410c6ea0,0x141123bd0,2,"bool BSPathingSolution::GetClosestPointOnPath(NiPoint3* a_pos, void* a_out)"
 88674,0x1410cf350,0x14112c080,3,NiPoint3 BSNavmesh::GetNormal(std::uint16_t a_tri) const
 88930,0x1410df940,0x14113c670,2,PathingSolutionEntry* PathingSolutionEntry::PathingSolutionEntry()
