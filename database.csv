@@ -2711,6 +2711,7 @@
 38153,0x1406429d0,0x14064bd20,3,AIProcess::RunPackageProcedureTree
 38156,0x140642e20,0x14064c170,4,AIProcess::CheckForNewPackage
 38158,0x140642f50,0x14064c2a0,4,void AIProcess::ComputeLastTimeProcessed()
+38176,0x1406441b0,0x14064d500,2,ObjectRefHandle* AIProcess::GetTarget(ObjectRefHandle* a_out)
 38189,0x140644400,0x14064d750,2,"void AIProcess::SetCurrentPackage(TESPackage* a_package, Actor* a_actor)"
 38198,0x140644600,0x14064d950,4,"void AIProcess::AddToProcedureIndexRunning(Actor* a_actor, std::uint32_t a_num)"
 38199,0x140644760,0x14064dab0,2,"void AIProcess::ProcessFollow(Actor* a_actor, bool a_advanceProcedure, std::int32_t a_moveMode, bool a_pursue)"
@@ -3123,6 +3124,8 @@
 40935,0x1406fb9d0,0x1407228c0,2,BSFixedString& MovementHandlerAgentPlayerControls::GetStaticAgentType()
 40936,0x1406fba60,0x140722950,2,std::uint8_t MovementHandlerAgentPlayerControls::GetAgentSaveType()
 40937,0x1406fba80,0x140722970,2,void MovementHandlerAgentPlayerControls::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
+40962,0x1406fce00,0x140723d80,2,const BSFixedString& MovementHandlerAgentPlayerControlsActionTrigger::GetAgentType()
+40963,0x1406fce10,0x140723d90,2,BSFixedString& MovementHandlerAgentPlayerControlsActionTrigger::GetStaticAgentType()
 40967,0x1406fcf60,0x140723ee0,2,void MovementHandlerAgentPlayerControlsActionTrigger::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
 40979,0x1406fd200,0x140724180,2,const BSFixedString& MovementHandlerAgentSprintActionTrigger::GetAgentType()
 40980,0x1406fd210,0x140724190,2,BSFixedString& MovementHandlerAgentSprintActionTrigger::GetStaticAgentType()
@@ -5262,11 +5265,15 @@
 90289,0x14111af30,0x141177e00,3,void MovementTweenerArbiter::RemoveAllAgents()
 90290,0x14111af50,0x141177e20,3,void MovementTweenerArbiter::SaveGame(PathingStreamSaveGame* a_stream)
 90291,0x14111b140,0x141178010,3,void MovementTweenerArbiter::LoadGame(PathingStreamLoadGame* a_stream)
+90323,0x14111c980,0x141179850,2,const BSFixedString& MovementStateTweener::GetAgentType()
+90324,0x14111c990,0x141179860,2,BSFixedString& MovementStateTweener::GetStaticAgentType()
 90331,0x14111cb60,0x141179a30,2,void MovementStateTweener::GetPosition(NiPoint3* a_out)
 90332,0x14111cd10,0x141179be0,2,void MovementStateTweener::GetAngle(NiPoint3* a_out)
 90333,0x14111ce40,0x141179d10,2,float MovementStateTweener::GetCurrentMovementSpeed()
 90334,0x14111d030,0x141179f00,2,float MovementStateTweener::GetYawRotationSpeed()
 90335,0x14111d0d0,0x141179fa0,2,void MovementStateTweener::GetProcessRotation(NiPoint3* a_out)
+90359,0x14111d600,0x14117a4d0,2,const BSFixedString& MovementStateFollowPath::GetAgentType()
+90360,0x14111d610,0x14117a4e0,2,BSFixedString& MovementStateFollowPath::GetStaticAgentType()
 90367,0x14111d7e0,0x14117a6b0,2,void MovementStateFollowPath::GetPosition(NiPoint3* a_out)
 90368,0x14111d880,0x14117a750,2,void MovementStateFollowPath::GetAngle(NiPoint3* a_out)
 90369,0x14111d9f0,0x14117a8c0,2,float MovementStateFollowPath::GetCurrentMovementSpeed()
