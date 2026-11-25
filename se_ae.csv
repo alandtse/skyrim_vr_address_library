@@ -8773,6 +8773,10 @@ sseid,aeid,confidence,name
 89710,92187,1,IMovementPlannerAgent::Func0_*
 89711,92188,1,IMovementPathManagerAgent::Func0_*
 89712,92189,1,IMovementPlannerAgent::Func1_*
+89715,92192,1,
+89716,92193,1,
+89723,92200,1,
+89724,92201,1,
 89782,92249,1,
 89929,92402,1,
 89931,92404,1,
