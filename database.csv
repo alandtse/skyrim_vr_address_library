@@ -2426,6 +2426,8 @@
 36784,0x1405ff9a0,0x1406081b0,2,"void Character::PathToPathingLocation(BSPathingLocation* a_location, float a_distance, void* a_avoid)"
 36785,0x1405ffa90,0x1406082a0,2,void Character::AppendSpeakerAvoidNodeToRequest(void* a_request)
 36786,0x1405ffb90,0x1406083a0,2,"void Character::PathToLocation(NiPoint3* a_point, TESObjectCELL* a_cell, TESWorldSpace* a_worldSpace, float a_distance, void* a_avoid)"
+36788,0x1405ffd10,0x140608520,2,"bool Actor::PathToPosition(const NiPoint3& a_position, TESObjectCELL* a_cell, TESWorldSpace* a_worldSpace, float a_rotationZ, float a_speed, std::uint32_t a_flags, void* a_param)"
+36789,0x1405ffdf0,0x140608600,2,"bool Actor::PathToPositionOfReference(TESObjectREFR* a_ref, float a_speed, std::uint32_t a_flags, void* a_param)"
 36794,0x1405fff70,0x140608780,2,bool Actor::GetPathRequest(void** a_out)
 36795,0x1405fffa0,0x1406087b0,2,"bool Character::TurnToFace(NiPoint3* a_target, float a_tolerance)"
 36796,0x140600070,0x140608880,2,"bool Actor::RequestTurnToAngle(float a_angle, float a_tolerance)"
@@ -2485,11 +2487,15 @@
 37000,0x14060eb60,0x140617770,3,float ActorState::GetCurrentMovementSpeed()
 37001,0x14060eb80,0x140617790,3,bool ActorState::GetMaxSpeeds(MaxSpeeds* a_out)
 37002,0x14060ebd0,0x1406177e0,2,float ActorState::GetScaledBoundSize()
+37003,0x14060ebf0,0x140617800,2,float ActorState::GetReducedScaledBoundSize()
+37004,0x14060ec20,0x140617830,2,bool ActorState::GetMovementParameters(BSTSmartPointer<IMovementParameters>& a_out)
 37006,0x14060ece0,0x1406178f0,3,float ActorState::GetRadius()
 37007,0x14060ed30,0x140617940,3,float ActorState::GetWidth()
 37008,0x14060ed80,0x140617990,3,float ActorState::GetLength()
+37009,0x14060edd0,0x1406179e0,2,bool ActorState::GetMovementTypeIdleThresholds(NiPoint3& a_out)
 37010,0x14060ee00,0x140617a10,2,std::int32_t ActorState::GetCharacterState()
 37011,0x14060ee40,0x140617a50,3,bool ActorState::IsMountedByPlayer()
+37012,0x14060eec0,0x140617ad0,2,bool ActorState::UsesVelocityObstacles()
 37013,0x14060eef0,0x140617b00,4,TESObjectREFR::sub_14060EEF0
 37016,0x14060f0c0,0x140617cd0,4,float Actor::CalcEquippedWeight_14060F0C0 (Actor * a_this)
 37020,0x14060f240,0x140501530,2,SendAnimation
@@ -2530,6 +2536,7 @@
 37388,0x14061c6e0,0x1406252d0,2,"bool MovementMessagePool::Dispatch(Character* a_character, MovementMessage* a_message)"
 37390,0x14061c880,0x140625470,3,BSTEventSource<ActorKill::Event>* ActorKill::GetEventSource()
 37392,0x14061ca60,0x140625650,3,BSTEventSource<DisarmedEvent::Event>* DisarmedEvent::GetEventSource()
+37448,0x14061ea00,0x1406277b0,2,bool ActorState::DoSetSitSleepState(SIT_SLEEP_STATE a_state)
 37509,0x140620610,0x1406293c0,4,undefined Actor::sub_140620610(Actor* a_this)
 37510,0x140620690,0x140629440,3,RE::Actor::sub_140620690
 37513,0x140620900,0x1406296b0,3,RE::Actor::RestoreActorValue_140620900
@@ -3029,7 +3036,8 @@
 40578,0x1406e7500,0x14070e3f0,2,bool ActorMover::SetGoal(void* a_request)
 40579,0x1406e75b0,0x14070e4a0,2,"bool ActorMover::PathToLocation(NiPoint3* a_pos, TESObjectCELL* a_cell, TESWorldSpace* a_worldSpace, float a_unkFloat, void* a_unk)"
 40580,0x1406e7860,0x14070e750,2,void ActorMover::PathToReference(TESObjectREFR* a_ref)
-40581,0x1406e78d0,0x14070e7c0,2,"bool ActorMover::PathToPosition(const NiPoint3& a_position, float a_speed)"
+40581,0x1406e78d0,0x14070e7c0,2,"bool ActorMover::PathToPosition(const NiPoint3& a_position, TESObjectCELL* a_cell, TESWorldSpace* a_worldSpace, float a_rotationZ, float a_speed, std::uint32_t a_flags, void* a_param)"
+40582,0x1406e7a90,0x14070e980,2,"bool ActorMover::PathToPositionOfReference(TESObjectREFR* a_ref, float a_speed, std::uint32_t a_flags, void* a_param)"
 40583,0x1406e7b20,0x14070ea10,2,"bool ActorMover::SubmitBSPathingRequest(BSPathingRequest** a_request, BSPathingLocation* a_location)"
 40584,0x1406e7c00,0x14070eaf0,3,void ActorMover::StopMoving()
 40585,0x1406e7f90,0x14070ee80,2,void ActorMover::ClearGoal()
@@ -4940,6 +4948,7 @@
 87993,0x1410a7290,0x141103ec0,2,void BSPathingLocation::Write(BSPathingStreamWrite* a_stream)
 87998,0x1410a79f0,0x141104620,2,bool PathingStreamMasterFileRead::ReadBSPathingCellPtr(BSTSmartPointer<BSPathingCell>& a_ptr)
 88004,0x1410a7e10,0x141104a40,4,"bool FindTriangleForLocationFilterCheckDeltaZ::IsValidTri(NiPoint3* a_location, BSNavmesh* a_navMesh, std::uint16_t a_tri, NiPoint3* a_pointOnTri)"
+88040,0x1410acf40,0x141109b70,2,"bool Pathing::CreateRequestFromSolution(const BSTSmartPointer<BSPathingSolution>& a_solution, BSTSmartPointer<BSPathingRequest>& a_out)"
 88193,0x1410b88f0,0x141115520,2,void MovementAgentActorState::RegisterWithController(IMovementControllerRegisterInterface& a_controller)
 88194,0x1410b8940,0x141115570,2,void MovementAgentActorState::UnregisterWithController()
 88197,0x1410b8a20,0x141115650,2,const BSFixedString& MovementAgentActorState::GetAgentType()
