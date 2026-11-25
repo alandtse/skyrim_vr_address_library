@@ -56,6 +56,7 @@
 11264,0x140102d00,0x1401132b0,3,"void* BSResource::EntryDB::FreeArgs(void* a_pool, void* a_args)"
 11269,0x140102fa0,0x140113550,3,"int BSResource::EntryDB::OpenStream(void* a_entryDB, void* a_entry, const char* a_name, void* a_rootLocation, void** a_streamOut)"
 11270,0x1401033e0,0x140113990,3,"int BSModelDB::LoadEntryStream(void* a_entryDB, void* a_entry, const char* a_name, void* a_args, int a_state)"
+11275,0x1401036a0,0x140113c50,3,"void BSModelDB::ReleaseEntry(void* a_entryDB, void* a_entry)"
 11286,0x140103b10,0x1401140c0,4,BGSSoundDescriptorForm* MagicSystem::GetMagicFailureSound(MagicSystem::SpellType a_type)
 11294,0x140103dd0,0x140114380,4,float MagicSystem::GetMagicCasterTargetUpdateInterval()
 11295,0x140103de0,0x140114390,4,char* MagicSystem::GetCannotCastString(MagicSystem::CannotCastReason a_reason)
@@ -274,6 +275,7 @@
 15212,0x1401b6af0,0x1401c6b00,3,std::uint32_t GrassManager::CreateGrassPatch(void* a_params)
 15214,0x1401b7640,0x1401c7750,4,"BSMultiStreamInstanceTriShape* GrassManager::LoadGrassType(GrassManager* this, void* a_param, uint32_t a_cellXDivided, uint32_t a_cellYDivided, uint64_t* a_typeKey, BSFixedString* a_modelPath)"
 15220,0x1401b81d0,0x1401c82e0,4,"ulonglong GrassManager::GrassTypeMapInsert(void* a_table, void* a_buckets, std::uint32_t a_hash, void* a_key, void* a_value)"
+15257,0x1401b9880,0x1401c9990,3,"BSResource::ErrorCode BSModelDB::Demand(const BSResource::ID* a_id, void** a_entry)"
 15259,0x1401b9ae0,0x1401c9bf0,3,"BSResource::ErrorCode BSModelDB::LoadEntry(void* a_entryDB, const char* a_name, void* a_entry, void* a_entryOut, const DBTraits::ArgsType& a_args)"
 15260,0x1401b9de0,0x1401c9f50,3,"bool BSResource::EntryDB::AllocArgs(void* a_pool, void** a_argsOut)"
 15274,0x1401ba000,0x1401ca170,3,"void BSResource::EntryDB::ProcessEntry(void* a_entryDB, void* a_entry)"
@@ -422,6 +424,7 @@
 18187,0x14024cad0,0x14025e1c0,4,"ImageSpaceModifierInstanceForm* TESImageSpaceModifier::TriggerIfNotActive(float a_strength, NiAVObject* a_target)"
 18188,0x14024ccd0,0x14025e3c0,4,void ImageSpaceModifierInstanceForm::Stop(TESImageSpaceModifier* a_imod)
 18192,0x14024d210,0x14025e900,4,void ImageSpaceModifierInstanceForm::StopCrossFade(float a_seconds)
+18310,0x1402536a0,0x140264a50,4,TESLandTexture* TESObjectLAND::GetLandTexture(const NiPoint3* a_position)
 18331,0x140255660,0x140266a10,4,"void TESObjectLAND::LoadLand(int a_arg1, int a_arg2)"
 18332,0x140255760,0x140266b10,3,void TESObjectLAND::ReadLandDataFromFile()
 18334,0x1402567f0,0x140267ba0,4,void TESObjectLAND::BuildLand3D(TESObjectLAND*)
@@ -3553,6 +3556,7 @@
 68203,0x140c39950,0x140c7ea00,4,BSWin32TaskletManager* BSWin32TaskletManager::GetSingleton()
 68207,0x140c39ac0,0x140c7eb70,4,bool BSTaskletManager::CreateTaskGroup(BSTaskletGroup& a_taskGroup)
 68296,0x140c3cb30,0x140c81be0,4,"std::uint32_t BSResource::ArchiveStream::DoRead(void* a_dst, std::uint64_t a_bytes, std::uint64_t* a_read)"
+68471,0x140c444c0,0x140c89570,3,"const char* BSResource::PrepareName(char* a_buffer, std::uint32_t a_bufferSize, const char* a_name, const char* a_prefix)"
 68476,0x140c448b0,0x140c89960,4,"void BSResource::RegisterLocation(Location* a_location, std::uint32_t a_priority)"
 68480,0x140c44a00,0x140c89ab0,4,void BSResource::RegisterGlobalPath (char * a_path)
 68631,0x140c4a420,0x140c8f4d0,3,BSResource::ID* BSResource::ID::ID(const char* a_path)
@@ -12381,6 +12385,7 @@
 514112,0x141ebd708,0x141f81d88,4,gMemoryManagerState_*
 514139,0x141ebe418,0x141f82ac8,4,ActorValueList* GetSingleton()
 514141,0x141ebe428,0x141f82ad8,3,RE::TESDataHandler::Singleton
+514145,0x141ebe448,0x141f82af8,3,BSModelDB::EntryDB
 514157,0x141ebea88,0x141f83168,2,GlobalStateCounter
 514164,0x141ebeabc,0x141f8319c,2,GetInvalidRefHandle
 514167,0x141ebead0,0x141f831b0,3,ProcessLists* GetSingleton()
@@ -12415,6 +12420,7 @@
 514414,0x141ec4320,0x141f89188,3,BGSDecalManager* GetSingleton()
 514415,0x141ec4328,0x141f89190,3,bhkCollisionFilter* GetSingleton()
 514417,0x141ec4338,0x141f891a0,3,RE::NiRTTI_BGSDecalNode
+514429,0x141ec4398,0x141f89200,3,BGSGrassManager::GrassDirectory
 514462,0x141ec44b0,0x141f89358,3,RE::NiRTTI_BSAnimGroupSequence
 514475,0x141ec47ac,0x141f8964c,3,gHandleFreeListHead_141EC47AC
 514476,0x141ec47b0,0x141f89650,3,gHandleFreeListTail_141EC47B0
@@ -12437,6 +12443,7 @@
 514923,0x142eff868,0x142fc4758,4,RE::ActorState::UnarmedWeap
 514959,0x142eff988,0x142fc4878,3,MenuTopicManager* GetSingleton()
 514966,0x142eff9c0,0x142fc48b0,3,RE::NiRTTI_REFRSyncController
+514977,0x142effa50,0x142fc4940,3,TESWorldSpace::CellMapLock
 515064,0x142f000f0,0x142fc4fe0,4,ConsoleLog* GetSingleton()
 515123,0x142f003f0,0x142fc52e0,3,BGSImpactManager* GetSingleton()
 515124,0x142f003f8,0x142fc52e8,2,RE::MenuControls::Singleton
