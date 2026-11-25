@@ -4589,7 +4589,7 @@
 88202,0x1410b8e00,0x141115a30,2,void IMovementSetState::SetStateForward(void* a_state)
 88203,0x1410b8e20,0x141115a50,2,void IMovementSetState::SetState(void* a_state)
 88237,0x1410b9d30,0x141116960,2,void PathingRequest::SetLockData(PathingLockData** a_lockData)
-88288,0x1410ba920,0x141117550,3,void MovementAgentPathFollowerStandard::ctor()
+88288,0x1410ba920,0x141117550,3,MovementAgentPathFollowerStandard* MovementAgentPathFollowerStandard::MovementAgentPathFollowerStandard()
 88296,0x1410baf50,0x141117b80,3,BSFixedString* GetPathFollowerName()
 88302,0x1410bb860,0x141118490,2,void IMovementPathManagerAgent::SetPath()
 88303,0x1410bbb80,0x1411187b0,2,void IMovementPathManagerAgent::CheckDeviationFromPath()
@@ -4647,7 +4647,7 @@
 88361,0x1410bfbd0,0x14111c800,2,void MovementAgentPathFollowerStandard::ReleasePlayIdle()
 88362,0x1410bfc60,0x14111c890,3,"bool MovementAgentPathFollowerStandard::GetPathDistanceToPosition(float a_position, float* a_out)"
 88364,0x1410bfd00,0x14111c930,2,"bool IPathFollowerAction::UpdateSpeed(PathFollowerStateUpdateData* a_updateData, float a_pathIndex, float* a_speed)"
-88366,0x1410bfe60,0x14111ca90,3,MovementPlayIdleHolder* MovementPlayIdleHolder::ctor()
+88366,0x1410bfe60,0x14111ca90,3,MovementPlayIdleHolder* MovementPlayIdleHolder::MovementPlayIdleHolder()
 88375,0x1410c00b0,0x14111cce0,3,"MovementPlayIdleHolder** AssignPlayIdleHolder(MovementPlayIdleHolder** a_slot, MovementPlayIdleHolder* a_holder)"
 88398,0x1410c0550,0x14111d180,3,IPathFollowerAction* IPathFollowerAction::dtor_deleting(std::uint8_t a_flags)
 88417,0x1410c0b30,0x14111d760,2,BSFixedString* MovementPathManagerArbiter::GetStageName()
@@ -4773,7 +4773,7 @@
 90420,0x14111fbc0,0x14117ca90,2,void MovementMessagePathEvent::SaveGame(PathingStreamSaveGame* a_stream)
 90421,0x14111fbe0,0x14117cab0,2,void MovementMessagePathEvent::LoadGame(PathingStreamLoadGame* a_stream)
 90424,0x14111fc90,0x14117cb60,2,"MovementMessagePathComplete* MovementMessagePathComplete::MovementMessagePathComplete(void* a_request, void* a_solution, void* a_unused)"
-90653,0x14112d870,0x14118a740,2,"PathFollowerStateUpdateData* PathFollowerStateUpdateData::ctor(BSPathingRequest** a_request, BSPathingSolution** a_solution, ActorState* a_actorState, void* a_messageInterface, NiPoint3* a_pPathPoint, float a_pathPosition, float a_deltaTime)"
+90653,0x14112d870,0x14118a740,2,"PathFollowerStateUpdateData* PathFollowerStateUpdateData::PathFollowerStateUpdateData(BSPathingRequest** a_request, BSPathingSolution** a_solution, ActorState* a_actorState, void* a_messageInterface, NiPoint3* a_pPathPoint, float a_pathPosition, float a_deltaTime)"
 90938,0x14113df60,0x1411983b0,2,void EnsureMemoryHeap()
 97369,0x14122c060,0x141264510,2,"void ObjectBindPolicy::GetAttachedScripts(std::uint64_t a_handle, void* a_out)"
 97370,0x14122c230,0x1412646e0,2,"void* ObjectBindPolicy::FindAttachedScript(void* a_out, std::uint64_t a_handle, void* a_name)"
