@@ -5813,6 +5813,8 @@ sseid,aeid,confidence,name
 41010,42077,1,
 41022,42093,1,
 41044,42115,1,
+41045,42116,1,
+41046,42117,1,
 41062,42135,1,
 41085,42162,1,
 41103,42182,1,
@@ -8758,6 +8760,7 @@ sseid,aeid,confidence,name
 89462,91930,1,MovementControllerAI::dtor_*
 89478,91941,1,
 89479,91948,1,
+89480,91949,1,
 89481,91950,1,MovementMessageDoor::Func3_*
 89482,91951,1,MovementMessageDoor::Func4_*
 89483,91953,1,
@@ -8774,8 +8777,11 @@ sseid,aeid,confidence,name
 89499,91947,1,AutoRegisterPathing_gs_T1_T2_ge_::sub_*
 89502,91970,1,MovementMessageApproachingDoor::Func0_*
 89510,91982,1,
+89511,91983,1,
+89512,91984,1,
 89524,91996,1,MovementMessageWarpToMultiple::Func1_*
 89525,91997,1,
+89526,91999,1,
 89527,92000,1,MovementMessageWarpToMultiple::Func3_141104120
 89528,92001,1,
 89532,91992,1,
@@ -8803,11 +8809,16 @@ sseid,aeid,confidence,name
 89576,92047,1,
 89578,92049,1,MovementMessagePlayIdle::Func1_*
 89579,92050,1,
+89580,92051,1,
 89581,92052,1,MovementMessagePlayIdle::Func3_*
 89594,92066,1,
+89595,92067,1,
+89596,92068,1,
 89605,92078,1,
 89606,92079,1,MovementMessageSetStaticPath::Func1_*
 89607,92080,1,
+89608,92081,1,
+89609,92082,1,
 89612,92074,1,AutoRegisterFactory_gs_T1_T2_ge_::sub_*
 89613,92076,1,AutoRegisterPathing_gs_T1_T2_ge_::sub_*
 89614,92073,1,
@@ -8859,7 +8870,11 @@ sseid,aeid,confidence,name
 89782,92249,1,
 89787,92254,1,
 89815,92284,1,
+89865,92337,1,
+89872,92344,1,
 89875,92340,1,
+89913,92385,1,
+89918,92390,1,
 89927,92400,1,
 89928,92401,1,
 89929,92402,1,
@@ -8983,6 +8998,8 @@ sseid,aeid,confidence,name
 90248,92755,1,IMovementPathManagerAgent::Func5_*
 90249,92756,1,MovementPathManagerAgentAvoidBox::Func11_*
 90251,92758,1,
+90276,92787,1,
+90287,92798,1,
 90288,92799,1,
 90289,92800,1,
 90331,92847,1,
