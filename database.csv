@@ -1,4 +1,4 @@
-﻿id,sse,vr,status,name
+id,sse,vr,status,name
 5115,0x14008a4d0,0x140089dc0,3,RegisterAssaultActorStoryEvent
 5116,0x14008a550,0x140089e40,3,RegisterKillActorStoryEvent
 5146,0x14008ad10,0x14008a600,3,RegisterPlayerAddItemStoryEvent
@@ -2330,6 +2330,7 @@
 36854,0x140602410,0x14060ac20,2,void Character::ActivatePathingDoor(void* a_doorInfo)
 36868,0x140603640,0x14060be50,2,bool Character::DispatchMovementMessage(MovementMessage* a_message)
 36869,0x140603660,0x14060be70,2,"std::int32_t Actor::StartPathToReference(TESObjectREFR* a_target, float a_walkRunPercent)"
+36870,0x140603990,0x14060c1a0,3,"void Actor::KeepOffsetFromActor(std::uint32_t* a_targetHandle, float* a_offset, float* a_angleOffset, float a_catchUpRadius, float a_followRadius)"
 36872,0x140603b30,0x14060c340,2,Actor::Kill
 36877,0x1406057c0,0x14060dfd0,3,RE::Actor::IsOnFlyingMount
 36880,0x140605940,0x14060e130,3,Actor::StartMountInteraction
@@ -2896,11 +2897,17 @@
 40704,0x1406ee620,0x140715510,2,void MovementControllerNPC::SaveGame(void* a_buffer)
 40705,0x1406eed90,0x140715c80,2,void MovementControllerNPC::LoadGame(void* a_buffer)
 40706,0x1406ef230,0x140716120,3,void MovementControllerNPC::ProcessQueuedMessages()
+40708,0x1406ef720,0x140716610,3,bool MovementControllerNPC::RemoveMessagesByType(std::int32_t a_messageType)
+40723,0x1406f0050,0x140716f40,3,void MovementControllerNPC::SetKeepingOffset(bool a_keeping)
+40741,0x1406f0660,0x140717550,3,void MovementControllerNPC::ApplyMovementMode(std::int32_t a_mode)
+40743,0x1406f0890,0x140717780,2,TESForm* MovementControllerNPC::GetDefaultObjectByIndex(std::int32_t a_index)
+40745,0x1406f0940,0x140717830,3,void MovementControllerNPC::PostPendingPlayIdle()
 40747,0x1406f0a30,0x140717920,2,"void IMovementMessageInterface::QueueLocationEvent(BSPathingLocation* a_location, NiPoint3* a_direction)"
 40748,0x1406f0ad0,0x1407179c0,2,void IMovementMessageInterface::PostMessage(MovementMessage** a_message)
 40749,0x1406f0b60,0x140717a50,2,void IMovementMessageInterface::DispatchMessage(MovementMessage* a_message)
 40751,0x1406f0cb0,0x140717ba0,2,bool MovementControllerNPC::DispatchAndNotify(MovementMessage* a_message)
 40752,0x1406f0d00,0x140717bf0,2,"bool MovementControllerNPC::DispatchAndNotifyForLevel(MovementMessage* a_message, std::int32_t a_expectedLevel)"
+40762,0x1406f1860,0x140718750,3,"bool RemoveMessagesByTypeUnlocked(void* a_messages, std::int32_t a_messageType, void* a_events)"
 40901,0x1406fa6e0,0x1407215d0,2,void MovementHandlerAgentDirectControl::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
 40937,0x1406fba80,0x140722970,2,void MovementHandlerAgentPlayerControls::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
 40967,0x1406fcf60,0x140723ee0,2,void MovementHandlerAgentPlayerControlsActionTrigger::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
@@ -4764,6 +4771,8 @@
 89411,0x1410ff0c0,0x14115bfd0,2,IMovementInterface* MovementControllerAI::GetInterface1(BSFixedString* a_name)
 89412,0x1410ff190,0x14115c0a0,2,void MovementControllerAI::UnregisterInterface(BSFixedString* a_name)
 89413,0x1410ff250,0x14115c160,2,bool MovementControllerNPC::AddAgentsAndArbiters(void* a_set)
+89414,0x1410ffc70,0x14115cb80,3,bool MovementControllerNPC::ApplyAgentConfig(MovementAgentConfig* a_config)
+89420,0x141100ef0,0x14115de10,3,"bool MovementControllerNPC::DiffAgentConfig(MovementAgentConfig* a_config, MovementScrapArray* a_extraArbiterIdxTagSet, MovementScrapArray* a_extraAgentIdxTagSet, MovementScrapArray* a_keptArbiterPairsTagSet, MovementScrapArray* a_keptAgentPairsTagSet, MovementScrapArray* a_extraArbiterIdxTagClear, MovementScrapArray* a_extraAgentIdxTagClear, MovementScrapArray* a_keptArbiterPairsTagClear, MovementScrapArray* a_keptAgentPairsTagClear)"
 89473,0x141102ca0,0x14115fbc0,3,NullMovementState* NullMovementState::GetSingleton()
 89486,0x1411032f0,0x141160210,3,std::int32_t MovementMessageApproachingDoor::GetStaticType()
 89490,0x141103460,0x141160380,3,std::int32_t MovementMessageActivateDoor::GetStaticType()
@@ -4787,6 +4796,10 @@
 89621,0x141107410,0x141164330,3,std::int32_t MovementMessageJump::GetStaticType()
 89625,0x1411074f0,0x141164410,2,"bool MovementMessageJump::Prepare(PathFollowerStateUpdateData* a_updateData, float* a_out)"
 89626,0x141107540,0x141164460,2,"bool IPathFollowerAction::Jump_GetTargetSpeed(PathFollowerStateUpdateData* a_updateData, float* a_out)"
+89642,0x1411079a0,0x1411648c0,2,void MovementPostUpdateArbiter::RegisterInterface(IMovementControllerRegisterInterface* a_interface)
+89643,0x1411079d0,0x1411648f0,2,void MovementPostUpdateArbiter::UnregisterInterface()
+89647,0x141107b80,0x141164aa0,3,void MovementPostUpdateArbiter::Save(BSPathingStreamWrite* a_stream)
+89648,0x141107c70,0x141164b90,3,void MovementPostUpdateArbiter::Load(BSPathingStreamRead* a_stream)
 89712,0x141109760,0x141166680,2,"void MovementAgentActorAvoider::UpdateSmallDelta(MovementPlannerUpdateDataSmallDelta* a_updateData, MovementPlannerAgentReturnDataSmallDelta* a_returnData)"
 89715,0x1411098c0,0x1411667e0,2,"void MovementAgentActorAvoider::CheckBlockedByActors(void* a_arg1, std::uint32_t* a_outStatus)"
 89716,0x141109a60,0x141166980,2,void MovementAgentActorAvoider::AddActorAvoidNodes(BSPathingRequest** a_request)
