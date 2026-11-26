@@ -907,6 +907,7 @@
 25703,0x1403b55e0,0x1403c5400,4,void Sky::UpdateLightingTransition_1403B55E0 (Sky * param_1)
 25704,0x1403b57b0,0x1403c55d0,3,void Sky::UpdateLightLODFadeDistances(Sky* this)
 25706,0x1403b5d20,0x1403c5b40,4,"void Sky::FillColorBlend(COLOR_BLEND& a_colorBlend, TESWeather* a_currentWeather, float a_weatherPct, TESWeather::ColorTime& a_time1, TESWeather::ColorTime& a_time2)"
+25729,0x1403b7ff0,0x1403c7e10,2,void Sky::PopulateWorldMapCloudTextures()
 25746,0x1403b8d30,0x1403c8b50,4,"void Sky::ResetModelHandle(ModelDBHandle* a_handle, ModelDBHandle::U_Entry* a_entry)"
 25761,0x1403b92d0,0x1403c90f0,3,TESImageSpace* Sky::GetCurrentRoomImageSpace()
 25762,0x1403b9340,0x1403c9160,3,BGSLightingTemplate* Sky::GetCurrentRoomLightingTemplate()
@@ -2259,6 +2260,7 @@
 32570,0x140502ed0,0x140513370,2,"bool IntersectSegmentSphere(const float* a_segment, const void* a_sphere, float* a_outTEnter, float* a_outTExit)"
 32867,0x14051e7f0,0x14052ede0,2,void IMenu::PostDisplay(IMenu* a_this)
 32979,0x1405249d0,0x14051f690,2,"void GetContentManifestPath(GFxValue* a_content, BSFixedString* a_out)"
+33016,0x14052b590,0x1405246d0,2,void ModManager::DeleteContentFromMenu(GFxFunctionHandler::Args* a_args)
 33019,0x14052bd40,0x140524e70,2,void ModManager::DeleteModFiles(const char* a_modFileName)
 33257,0x14053d370,0x1405400f0,4,AccumulatingValueModifierEffect::Allocate(AccumulatingValueModifierEffect* accumulatingValueModifierEffect
 33277,0x14053DEB0,0x140540C30,4,"ActiveEffect::Adjust(Skyrim::ActiveEffect* activeEffect, float effectiveness, bool requiresHostility)"
@@ -3968,6 +3970,7 @@
 50126,0x140858c70,0x140882f80,3,po3tweaks::CantTakeBook::Button::ButtonShowTakeButton
 50155,0x14085a1c0,0x1408848f0,3,UI_MESSAGE_RESULTS Console::ProcessMessage(UIMessage* a_message)
 50157,0x14085a760,0x140885100,3,Console::ExecuteCommand(FxDelegateArgs* args)
+50162,0x14085aad0,0x140885470,2,void Console::PickObjectUnderMouse()
 50164,0x14085bb30,0x1408864d0,3,RE::Console::SetSelectedRef
 50165,0x14085bc90,0x140886630,2,void Console::FlushLogToHistory()
 50180,0x14085c2c0,0x140886df0,4,RE::ConsoleLog::VPrint
@@ -6828,6 +6831,7 @@
 101779,0x14133a750,0x141377b30,3,void StartTimer(int a_index)
 101780,0x14133a7b0,0x141377b90,3,void StopTimer(int a_index)
 101821,0x14133e250,0x14137b630,3,BSWin32SystemUtility* BSWin32SystemUtility::GetSingleton()
+101862,0x14133ea10,0x14137be00,2,BSWin32GameDataSystemUtility* BSWin32GameDataSystemUtility::GetSingleton()
 101884,0x14133f0c0,0x14137c200,3,RE::BSWin32SaveDataSystemUtility::GetSingleton
 101962,0x141340ff0,0x14137e180,4,"longlong **BSWin32SaveDataSystemUtility::Ctor_141340FF0(longlong param_1,longlong **param_2,char *param_3,int param_4)"
 101985,0x1413420c0,0x14137f330,4,"ulonglong anonymous_namespace__Win32FileType::CopyToBuffer_1413420C0(longlong param_1,undefined8 param_2,uint param_3)"

@@ -3688,6 +3688,7 @@ sseid,aeid,confidence,name
 25482,26022,3,RE::NiAVObject::GetCollisionObject
 25684,26231,3,papyrus_extender::events::game::weatherevent::target_0x416
 25686,26233,3,RE::Sky::GetFog
+25729,26288,1,
 25822,26379,3,RE::AIForumulas::ComputePickpocketSuccess
 25932,26519,1,
 25977,26586,3,RE::BSFaceGenAnimationData::Reset
@@ -3695,6 +3696,7 @@ sseid,aeid,confidence,name
 26259,26838,3,RE::BSFaceGenManager::PrepareHeadPartForShaders
 26407,26988,2,
 26497,27093,2,
+26563,27195,1,
 26620,27293,1,
 26621,27294,1,
 26674,27350,2,
@@ -5175,6 +5177,7 @@ sseid,aeid,confidence,name
 36219,37199,1,
 36248,37230,3,RE::Actor::SetRotationZ
 36259,37243,3,RE::Actor::IsInMidair
+36260,37244,1,
 36315,37305,1,
 36316,37306,1,
 36323,37313,1,
@@ -7499,6 +7502,8 @@ sseid,aeid,confidence,name
 50130,51061,1,SimpleAnimationGraphManagerHolder::Func12_*
 50131,51062,1,SimpleAnimationGraphManagerHolder::Func19_*
 50138,51070,1,
+50162,51089,1,
+50165,51094,1,
 50223,51152,1,
 50224,51153,1,
 50227,51156,1,
@@ -10907,6 +10912,7 @@ sseid,aeid,confidence,name
 101758,109078,1,BSArrowConstructor::Func1_*
 101762,109082,1,BSFlatQuadConstructor::Func1_*
 101763,109083,1,BSDiskConstructor::Func1_*
+101862,109250,1,
 101942,109336,1,
 101943,109337,1,LZ4Compression::Func0_*
 101944,109338,1,ZLibCompression::Func0_*
