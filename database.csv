@@ -107,6 +107,7 @@
 11719,0x14011ca00,0x14012cfe0,3,TESImageSpace* BSExtraDataList::GetRoomImageSpace()
 11766,0x14011f790,0x14012fd70,2,DialogueItem* ExtraDataList::GetSayToTopicInfoItem()
 11808,0x140120fb0,0x140131590,2,void ExtraDataList::RemoveSayToTopicInfo()
+11816,0x1401216b0,0x140131c90,2,CellMopp* ExtraDataList::GetCellMopp()
 11851,0x140123220,0x140133800,3,"void ExtraDataList::SetStartingPosition(TESObjectREFR* a_refr, const NiPoint3& a_position, const NiPoint3& a_rotation, BGSLocation* a_location)"
 11865,0x140123bf0,0x1401341d0,3,float ExtraDataList::GetObjectHealth()
 11868,0x140123e20,0x140134400,4,void ExtraDataList::AddExtraFactionChangesIfMissing()
@@ -493,12 +494,13 @@
 18521,0x140264e50,0x140276420,3,NiNode* TESObjectCELL::GetCell3D()
 18523,0x140264f10,0x1402764e0,3,void TESObjectCELL::Unload()
 18536,0x1402654c0,0x140276a90,3,bhkWorld* TESObjectCELL::GetbhkWorld()
-18537,0x1402654e0,0x140276ab0,2,void TESObjectCELL::AddCellMoppToHavok()
+18537,0x1402654e0,0x140276ab0,2,void TESObjectCELL::DebugDrawCellMopp()
 18540,0x1402657a0,0x140276d70,4,TESRegionList* TESObjectCELL::GetRegionList(bool a_createIfMissing)
 18543,0x140265990,0x140276f60,3,"bool TESObjectCELL::GetWaterHeight(const NiPoint3& a_pos, float& a_waterHeight)"
 18548,0x140265dd0,0x1402773a0,3,ImageSpaceBaseData* TESObjectCELL::GetTESImageSpace()
 18568,0x1402665a0,0x140277b70,3,void TESObjectCELL::RemoveReference(TESObjectREFR* a_ref)
 18590,0x1402678c0,0x140278e90,3,void TESObjectCELL::SetReferenceLightsAttached(bool a_attach)
+18592,0x1402679e0,0x140278fb0,2,void TESObjectCELL::QueueReferenceLoads()
 18594,0x140267c80,0x140279250,3,void TESObjectCELL::sub_140267C80(bool a_flag)
 18606,0x140268ef0,0x14027a4c0,4,TESObjectCELL::GetCOCPlacementInfo
 18631,0x14026a3e0,0x14027b9b0,3,bool TESFile::SeekLandscapeForCurrentCell(TESFile* a_file)
@@ -586,7 +588,7 @@
 19306,0x140291780,0x1402a2e90,2,bool TESObjectREFR::ShouldBackgroundClone()
 19309,0x1402917f0,0x1402a2f00,4,void TESObjectREFR::sub_1402917F0()
 19314,0x140293fe0,0x1402a56f0,2,bool TESForm::GetRandomAnim()
-19315,0x140294000,0x1402a5710,3,TESObjectREFR::UpdateReference3D
+19315,0x140294000,0x1402a5710,2,void TESObjectREFR::QueueLoad3D()
 19316,0x1402943b0,0x1402a5ac0,4,bool Actor::Update3D()
 19320,0x1402944b0,0x1402a5bc0,2,float TESObjectREFR::GetBoundRadius()
 19322,0x1402944F0,0x1402A5C00,3,TESModel* TESObjectREFR::GetSkeletonModel(TESObjectREFR* a_this)
@@ -712,6 +714,8 @@
 20103,0x1402b6eb0,0x1402c8620,4,"bool TESWorldSpace::GetMaxHeightAt(const NiPoint3& xy, float& outHeight)"
 20109,0x1402b79b0,0x1402c9120,3,bool TESWorldSpace::IsPositionWithinBorders(const NiPoint3* a_position)
 20110,0x1402b7aa0,0x1402c9210,3,OFFSET_DATA* TESWorldSpace::GetOffsetData(TESFile* a_file)
+20212,0x1402bbd50,0x1402cd4c0,2,bool BGSCameraPath::ResolveParentPath()
+20215,0x1402bc2c0,0x1402cda30,2,NiFormArray* BGSCameraPath::GetOrCreateChildPaths()
 20247,0x1402bd3b0,0x1402ceb20,2,void NiFormArray::InitCameraPaths()
 20262,0x1402bdec0,0x1402cf630,3,"void BGSCameraShot::Play(TESObjectREFR* a_target, std::int32_t a_mode)"
 20263,0x1402be2d0,0x1402cfa40,3,bool BGSCameraShot::IsValid()
@@ -794,6 +798,7 @@
 23802,0x14034da00,0x14035d2c0,2,"bool BGSSceneActionPackage::StartFirstValidPackage(void* a_packages, void* a_context)"
 24012,0x140355940,0x140365200,3,"void TESFaction::SetFactionFightReaction(TESFaction* a_faction, FIGHT_REACTION a_fightReaction)"
 24022,0x140355fa0,0x140365860,2,void TESDataHandler::InitFactionReactions()
+24027,0x140356480,0x140365d40,2,std::int32_t TESFaction::InitReactions()
 24065,0x1403580c0,0x140367980,4,TESIdleForm::sub_1403580C0
 24069,0x140358300,0x140367bc0,4,"bool TESIdleForm::CheckConditions(Actor* a_actor, TESObjectREFR* a_target, bool a_checkParentIdle) bool TESIdleForm::CheckConditions(Actor* a_actor, TESObjectREFR* a_target, bool a_checkParentIdle)"
 24093,0x140358e30,0x1403686f0,2,void TESIdleManager::InitIdleForms()
@@ -883,6 +888,7 @@
 25154,0x140396a80,0x1403a6300,4,void BGSAcousticSpaceListener::EntityRemovedCallback(hkpEntity* a_entity)
 25155,0x140396b00,0x1403a6380,3,void BGSAcousticSpaceListener::ContactPointAddedCallback(hkpContactPointAddedEvent* a_event)
 25262,0x14039b080,0x1403aa900,4,"bool CellMopp::BuildLandCollision(CellMopp* a_mopp, const LandCollisionDesc* a_desc)"
+25266,0x14039b7e0,0x1403ab060,2,"void CellMopp::DebugDraw(bhkWorld* a_world, const NiPoint3& a_origin, ...)"
 25415,0x1403a0830,0x1403b03a0,4,void LoadedAreaBound::SetCurrentCell(RE::TESObjectCELL* a_cell)
 25416,0x1403a13d0,0x1403b0f40,4,void LoadedAreaBound::Clear()
 25466,0x1403a4dd0,0x1403b4940,3,TESObjectREFR* TESHavokUtilities::FindCollidableRef(const hkpCollidable& a_linkedCollidable)

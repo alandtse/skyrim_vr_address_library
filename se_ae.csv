@@ -1713,6 +1713,7 @@ sseid,aeid,confidence,name
 11813,11953,1,
 11814,11954,1,ExtraDataList::GetHavokWorld_*
 11815,11955,1,
+11816,11956,1,
 11818,11958,1,
 11819,11959,1,
 11827,11967,1,
@@ -2150,6 +2151,7 @@ sseid,aeid,confidence,name
 13659,13769,1,
 13660,13770,1,DataHandler::sub_140171590
 13661,13771,1,
+13664,13774,1,
 13665,13775,1,
 13666,13776,1,
 13667,13777,1,
@@ -2897,6 +2899,7 @@ sseid,aeid,confidence,name
 18588,19057,1,TESObjectCELL::sub_*
 18590,19059,3,void TESObjectCELL::SetReferenceLightsAttached(bool a_attach)
 18591,19060,1,
+18592,19061,1,
 18596,19065,1,TESObjectCELL::sub_*
 18597,19066,1,TESObjectCELL::sub_*
 18599,19068,1,TESObjectCELL::sub_*
@@ -3139,6 +3142,8 @@ sseid,aeid,confidence,name
 20095,20543,3,RE::TESWorldSpace::GetSkyCell
 20096,20544,1,
 20110,20559,3,TESWorldSpace::GetOffsetData
+20212,20640,1,
+20215,20643,1,
 20247,20683,1,
 20529,20968,3,RE::BGSMaterialType::GetMaterialType
 21400,21873,2,
@@ -3693,6 +3698,7 @@ sseid,aeid,confidence,name
 25211,25739,1,
 25212,25740,1,
 25213,25741,1,
+25266,25788,1,
 25482,26022,3,RE::NiAVObject::GetCollisionObject
 25684,26231,3,papyrus_extender::events::game::weatherevent::target_0x416
 25686,26233,3,RE::Sky::GetFog
