@@ -2110,6 +2110,7 @@
 30714,0x14049f200,0x1404af1a0,2,"bool PathBuilderLOSPath::Build(BSTSmartPointer<BSPathingRequest>* a_request, BSTSmartPointer<BSPathingSolution>* a_solution)"
 30718,0x14049fa80,0x1404afa20,2,"bool PathBuilderOptimalLocationPath::Build(BSTSmartPointer<BSPathingRequest>* a_request, BSTSmartPointer<BSPathingSolution>* a_solution)"
 30722,0x1404a0370,0x1404b0310,2,"bool PathBuilderSafeStraightLinePath::Build(BSTSmartPointer<BSPathingRequest>* a_request, BSTSmartPointer<BSPathingSolution>* a_solution)"
+30735,0x1404a1040,0x1404b0fe0,2,"static std::int32_t BGSObjectBlock::QueueLoad(void*& a_handle, BGSTerrainNode* a_node, std::uint32_t a_level, std::int16_t a_x, std::int16_t a_y)"
 30737,0x1404a1430,0x1404b13d0,3,"BGSDistantObjectBlock* BGSDistantObjectBlock::Ctor(BGSTerrainNode* a_node, BSStream& a_stream)"
 30739,0x1404a17c0,0x1404b1760,3,void BGSDistantObjectBlock::Detach()
 30741,0x1404a18d0,0x1404b1870,3,void BGSDistantObjectBlock::Attach()
@@ -2118,12 +2119,17 @@
 30830,0x1404a7480,0x1404b7490,3,void BGSDistantTreeBlock::Detach()
 30832,0x1404a76d0,0x1404b76e0,3,void BGSDistantTreeBlock::Attach()
 30839,0x1404a8090,0x1404b80a0,3,void BGSDistantTreeBlock::UpdateBlockVisibility (BGSDistantTreeBlock * a_this)
+30930,0x1404ad1a0,0x1404bd200,2,"static std::int32_t BGSTerrainBlock::QueueLoad(void*& a_handle, BGSTerrainNode* a_node, std::uint32_t a_level, std::int16_t a_x, std::int16_t a_y)"
 30932,0x1404ad510,0x1404bd570,3,"BGSTerrainChunk* BGSTerrainChunk::Ctor(BGSTerrainNode* a_node, BSStream& a_stream, std::int32_t a_cellX, std::int32_t a_cellY)"
 30933,0x1404ad820,0x1404bd880,3,void BGSTerrainChunk::Dtor()
 30934,0x1404ad940,0x1404bd9a0,3,void BGSTerrainBlock::Attach(BGSTerrainBlock* a_block)
 30935,0x1404adb20,0x1404bdb80,2,void BGSTerrainBlock::MarkLoadedAndQueueUpdate()
-30936,0x1404adb60,0x1404bdbc0,3,void BGSTerrainBlock::Detach(BGSTerrainBlock* a_block)
+30936,0x1404adb60,0x1404bdbc0,2,void BGSTerrainBlock::Detach()
 30939,0x1404add70,0x1404bddd0,3,void BGSTerrainChunk::AttachWater(bool a_attach)
+30942,0x1404adec0,0x1404bdf20,2,void BGSTerrainBlock::Hide()
+30943,0x1404adef0,0x1404bdf50,2,void BGSTerrainBlock::Show()
+30944,0x1404adf20,0x1404bdf80,2,static void BGSTerrainBlock::LoadNoiseTexture()
+30945,0x1404adf70,0x1404bdfd0,2,static void BGSTerrainBlock::ReleaseNoiseTexture(bool a_release)
 30947,0x1404ae090,0x1404be0f0,3,void BGSTerrainChunk::Prepare()
 30978,0x1404af910,0x1404bf970,4,"uint32_t AddOrRemoveLODWater(bool* a_add, void* a_object, void** a_objectHolder) src\Features/UnifiedWater.cpp:357"
 31017,0x1404b2960,0x1404c2a30,3,"void BGSTerrainManager::Update(const NiPoint3& a_viewPos, const std::int32_t& a_updateType)"
@@ -2133,12 +2139,27 @@
 31024,0x1404b3040,0x1404c3110,2,void BGSTerrainManager::QueueCellNodeUpdate(TESObjectCELL* a_cell)
 31026,0x1404b3190,0x1404c3260,3,"void BGSTerrainManager::UnloadAll(bool a_unloadStaticData, bool a_shutdown)"
 31030,0x1404b33f0,0x1404c34c0,2,static bool BGSTerrainManager::IsLODEnabledForCurrentWorldSpace()
+31032,0x1404b35e0,0x1404c36b0,2,"void BGSTerrainManager::SetMapMode(bool a_mapMode, bool a_flushUpdates)"
 31036,0x1404b38a0,0x1404c3980,3,void BGSTerrainManager::SetCullState(const CullState& a_state)
+31037,0x1404b3980,0x1404c3a60,2,void BGSTerrainManager::ApplyCachedCullState()
+31046,0x1404b3cf0,0x1404c3dd0,2,"BGSTerrainNode* BGSTerrainNode::ctor(BGSTerrainManager* a_manager, BGSTerrainNode* a_parent, std::int16_t a_baseCellX, std::int16_t a_baseCellY, std::uint32_t a_level)"
+31048,0x1404b3f60,0x1404c4040,2,"void BGSTerrainNode::UpdateRecurse(const NiPoint3& a_viewPos, TESObjectCELL* a_cell, std::uint32_t a_flags)"
+31049,0x1404b41a0,0x1404c4280,2,"bool BGSTerrainNode::UpdateTerrainLayer(const NiPoint3& a_viewPos, bool a_arg2, bool a_arg3)"
+31050,0x1404b43a0,0x1404c4480,2,"bool BGSTerrainNode::UpdateObjectLayer(const NiPoint3& a_viewPos, bool a_arg2, bool a_arg3, bool a_arg4, bool a_arg5)"
+31051,0x1404b4650,0x1404c4730,2,"bool BGSTerrainNode::UpdateTreeLayer(const NiPoint3& a_viewPos, bool a_arg2, bool a_arg3)"
+31052,0x1404b49b0,0x1404c4a90,2,void BGSTerrainNode::UnloadLayers(std::uint32_t a_layerMask)
 31054,0x1404b4ca0,0x1404c4d80,2,void BGSTerrainNode::UpdateGridFlags()
 31055,0x1404b4d90,0x1404c4e70,2,bool BGSTerrainNode::ContainsPoint(const NiPoint3& a_pos) const
 31059,0x1404b5090,0x1404c5170,3,"void BGSTerrainNode::UpdateWaterMeshSubVisibility(BGSTerrainNode* a_node, BSMultiBoundNode* a_waterParent)"
 31060,0x1404b5220,0x1404c5300,3,void BGSTerrainNode::UpdateBlockVisibility()
+31062,0x1404b5560,0x1404c5640,2,void BGSTerrainNode::SwitchToMapLayersRecurse()
+31063,0x1404b5750,0x1404c5830,2,void BGSTerrainNode::SwitchFromMapLayersRecurse()
+31064,0x1404b58c0,0x1404c59a0,2,void BGSTerrainNode::LoadMapLayersRecurse()
+31065,0x1404b5a30,0x1404c5b10,2,void BGSTerrainNode::SetVisibleRecurse(bool a_visible)
 31067,0x1404b5cc0,0x1404c5da0,2,static void BGSTerrainManager::CacheSettings()
+31068,0x1404b5d60,0x1404c5e40,2,void BGSTerrainNode::CreateChildren(std::uint32_t a_level)
+31069,0x1404b5e80,0x1404c5f60,2,bool BGSTerrainNode::ShouldSplitForTerrain(const NiPoint3& a_viewPos)
+31070,0x1404b5f60,0x1404c6040,2,bool BGSTerrainNode::ShouldSplitForObjects(const NiPoint3& a_viewPos)
 31079,0x1404b66a0,0x1404c6780,2,std::uint32_t BSSubIndexTriShape::GetNumSegments() const
 31080,0x1404b66c0,0x1404c67a0,2,float BGSTerrainNode::GetSquaredDistanceToPoint(const NiPoint3& a_pos) const
 31082,0x1404b6880,0x1404c6960,2,bool BGSQueuedTerrainUpgrade::IsReady()
@@ -2149,6 +2170,7 @@
 31088,0x1404b6bf0,0x1404c6cd0,2,void BGSQueuedTerrainDowngrade::Cancel()
 31089,0x1404b6c90,0x1404c6d70,2,bool BGSQueuedTerrainInitialLoad::IsReady()
 31090,0x1404b6cc0,0x1404c6da0,2,void BGSQueuedTerrainInitialLoad::Apply()
+31091,0x1404b6da0,0x1404c6e80,2,BGSQueuedObjectUpgrade* BGSQueuedObjectUpgrade::ctor(BGSTerrainNode* a_node)
 31092,0x1404b6ec0,0x1404c6fa0,2,bool BGSQueuedObjectUpgrade::IsReady()
 31093,0x1404b6f60,0x1404c7040,2,void BGSQueuedObjectUpgrade::Apply()
 31094,0x1404b7060,0x1404c7140,2,void BGSQueuedObjectUpgrade::Cancel()
@@ -2157,6 +2179,7 @@
 31098,0x1404b7270,0x1404c7350,2,void BGSQueuedObjectDowngrade::Cancel()
 31099,0x1404b7310,0x1404c73f0,2,bool BGSQueuedObjectInitialLoad::IsReady()
 31100,0x1404b7340,0x1404c7420,2,void BGSQueuedObjectInitialLoad::Apply()
+31101,0x1404b7430,0x1404c7510,2,"bool BGSTerrainUpdateManager::QueueNodeUpdate(BGSTerrainNode* a_node, const std::int32_t& a_contentType)"
 31102,0x1404b7450,0x1404c7530,2,void BGSTerrainUpdateManager::Update()
 31123,0x1404b8200,0x1404c82e0,2,void BGSQueuedObjectInitialLoad::Cancel()
 31124,0x1404b8230,0x1404c8310,2,void BGSQueuedTerrainInitialLoad::Cancel()
