@@ -2405,6 +2405,8 @@ sseid,aeid,confidence,name
 15890,16130,3,RE::InventoryChanges::InitFromContainerExtra
 15916,41558,3,RE::TESActionData::Ctor
 15967,16212,3,RE::BSPointerHandleManagerInterface::GetHandle
+16169,16401,1,
+16170,16402,1,
 16173,16405,2,
 16175,16407,3,RE::ScreenSplatter::Clear
 16185,16417,1,
@@ -2479,6 +2481,9 @@ sseid,aeid,confidence,name
 16462,16794,1,
 16464,16804,1,BGSAddonNode::sub_*
 16467,16807,1,BGSAddonNode::InitItemImpl_*
+16472,16827,1,
+16474,16829,1,
+16475,16830,1,
 16483,16836,1,BGSAddonNodeSoundHandleExtra::dtor_*
 16485,16797,1,ConcreteFormFactory_BGSAddonNode_94_::GetFormType_*
 16486,16796,1,ConcreteFormFactory_BGSAddonNode_94_::GetFormName_*
@@ -3718,9 +3723,16 @@ sseid,aeid,confidence,name
 25729,26288,1,
 25822,26379,3,RE::AIForumulas::ComputePickpocketSuccess
 25932,26519,1,
+25970,26560,1,
+25971,26561,1,
 25977,26586,3,RE::BSFaceGenAnimationData::Reset
 25980,26594,3,RE::BSFaceGenAnimationData::SetExpressionOverride
+26059,26667,1,
 26259,26838,3,RE::BSFaceGenManager::PrepareHeadPartForShaders
+26304,26887,1,
+26305,26888,1,
+26364,26942,1,
+26365,26943,1,
 26407,26988,2,
 26497,27093,2,
 26563,27195,1,
@@ -4677,6 +4689,8 @@ sseid,aeid,confidence,name
 30739,31577,1,
 30741,31581,1,
 30742,31583,1,
+30743,31584,1,
+30744,31585,1,
 30745,31586,1,
 30746,31587,1,
 30820,31641,1,
@@ -4725,6 +4739,7 @@ sseid,aeid,confidence,name
 31030,31816,1,
 31031,31817,1,
 31032,31818,1,
+31034,31820,1,
 31037,31823,1,
 31041,31828,1,
 31046,31833,1,
@@ -4788,6 +4803,8 @@ sseid,aeid,confidence,name
 31168,31980,1,
 31171,31983,1,
 31172,31984,1,
+31173,31985,1,
+31174,31986,1,
 31300,32084,3,BGSWaterCollisionManager::BGSWaterUpdateI::dtor
 31302,32086,3,BGSWaterCollisionManager::BGSWaterUpdateI::SetDisabled
 31303,32087,3,BGSWaterCollisionManager::BGSWaterUpdateI::Unlink

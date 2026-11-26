@@ -418,6 +418,8 @@
 16081,0x1401f4f20,0x140205a80,4,"bool RE::BSResource::EntryDB<RE::LipSynchAnimDB::DBTraits>::Func3(RE::BSResource::EntryDBBase* a_dbBase, std::uint64_t* a_taskData, std::uint64_t a_arg3, std::uint64_t* a_arg4, std::uint32_t a_flags)"
 16084,0x1401f5390,0x140205ef0,3,RE::LocalMapCamera::Ctor
 16089,0x1401f5750,0x1402062b0,3,RE::LocalMapCamera::SetNorthRotation
+16169,0x1401f9eb0,0x14020b7f0,2,static void ScreenSplatter::InitStaticName()
+16170,0x1401f9f00,0x14020b840,2,static void ScreenSplatter::ReleaseStaticName()
 16171,0x1401f9f40,0x14020b880,2,ScreenSplatter* ScreenSplatter::ctor()
 16173,0x1401fa360,0x14020bcb0,2,void ScreenSplatter::Update()
 16174,0x1401fa540,0x14020be90,2,"void ScreenSplatter::Trigger(void* a_unk1, float a_unk2)"
@@ -428,6 +430,9 @@
 16203,0x1401fd3d0,0x14020ed20,4,TESWeather* TESRegion::SelectWeather()
 16204,0x1401fd410,0x14020ed60,3,bool TESRegion::UsesWeather(TESWeather* a_weather)
 16240,0x1401fe230,0x14020fb80,2,TESRegionDataLandscape* TESRegionDataLandscape::ctor_from_region_data(TESRegionData* a_src)
+16472,0x140208c40,0x14021a590,2,BGSAddonNodeSoundHandleExtra* BGSAddonNodeSoundHandleExtra::Ctor()
+16474,0x140208cc0,0x14021a610,2,static void BGSAddonNodeSoundHandleExtra::InitStaticName()
+16475,0x140208d40,0x14021a690,2,static void BGSAddonNodeSoundHandleExtra::ReleaseStaticName()
 17034,0x14021a4b0,0x14022bdb0,3,TESFurniture::Activate_*
 17206,0x14021ecb0,0x1402305a0,4,NiAVObject* TESObjectLIGH::Clone3D(TESObjectREFR* a_ref)
 17208,0x14021efb0,0x1402308a0,4,"NiLight* TESObjectLIGH::GenDynamic(RE::TESObjectREFR* a_ref, RE::NiNode* a_node, char a_forceDynamic, char a_useLightRadius, char a_affectRefOnly)"
@@ -787,6 +792,7 @@
 22465,0x140316e60,0x140328370,3,Cmd_SaveGame_Execute
 22754,0x1403232e0,0x140332a90,3,void TESQuest::CompleteAllStages()
 22764,0x140323ca0,0x140333450,3,DumpSaveGameState
+22767,0x140324030,0x1403337e0,2,void BSFaceGenModelMap::DumpContents(void* a_printer)
 22779,0x140324a60,0x140334240,2,"void BSTSmartPointer<BSScript::Object, BSTSmartPointerIntrusiveRefCount>::Dtor()"
 22790,0x140324e90,0x1402af140,4,BGSStoryEventManager* BGSStoryEvent::BGSStoryEventManager::GetSingleton() include\RE\B/BGSStoryEventManager.h:20
 22825,0x140325f00,0x140335740,4,void * SKSE::CreateUIMessageData_140325f00 (BSFixedString * param_1)
@@ -969,9 +975,12 @@
 25931,0x1403c1700,0x1403d0f80,4,"float GetDualCastingEffectiveness(RE::ActorValueOwner* a_actorValueOwner, float a_cost)"
 25932,0x1403c1720,0x1403d0fa0,3,"float GetDualCastCost(void* a_unused, float a_cost)"
 25933,0x1403c1740,0x1403d0fc0,3,TrueHUD::GetSoulType
+25970,0x1403c3330,0x1403d2bb0,2,static void BSFaceGenAnimationData::InitStaticArray()
+25971,0x1403c3390,0x1403d2c10,2,static void BSFaceGenAnimationData::ReleaseStaticArray()
 25977,0x1403c38e0,0x1403d3160,3,"void BSFaceGenAnimationData::Reset(float a_timer, bool a_resetExpression, bool a_resetModifierAndPhoneme, bool a_resetCustom, bool a_closeEyes)"
 25980,0x1403c3f00,0x1403d3780,3,"void BSFaceGenAnimationData::SetExpressionOverride(std::int32_t a_idx, float a_value)"
 26009,0x1403c66a0,0x1403d5f20,4,RE::random
+26059,0x1403c8520,0x1403d7da0,2,static void BSFaceGenDB::DumpCache(NiBinaryStream* a_stream)
 26252,0x1403d2220,0x1403e1b80,3,"void BSFaceGenManager::ApplyMorph(BSFaceGenNiNode* a_faceNode, TESNPC* a_npc, const BSFixedString& a_morphName, float a_relative)"
 26254,0x1403d2380,0x1403e1ce0,3,"void BSFaceGenManager::ApplyMorphByPart(BSFaceGenNiNode* a_faceNode, BGSHeadPart* a_headPart, const BSFixedString& a_morphName, float a_relative)"
 26256,0x1403d24f0,0x1403e1e50,3,
@@ -980,7 +989,11 @@
 26299,0x1403d45b0,0x1403e3f20,3,
 26300,0x1403d4630,0x1403e3fa0,3,"uint8_t BSFaceGenModel::ApplyRaceMorph(BSFixedString* a_morphName, TESModelTri* a_modelMorph, NiAVObject** a_headNode, float a_relative, uint8_t a_unk1)"
 26303,0x1403d4b70,0x1403e44e0,4,"void BSFaceGenModelExtraData::SetBoneName (BSFaceGenModelExtraData * a_this, uint32_t a_index, BSFixedString * a_name)"
+26304,0x1403d4b90,0x1403e4500,2,static void BSFaceGenModelExtraData::InitStaticName()
+26305,0x1403d4be0,0x1403e4550,2,static void BSFaceGenModelExtraData::ReleaseStaticName()
 26343,0x1403d68e0,0x1403e6250,4,"void BSFaceGenMorphDataHead::ApplyMorphWeight (BSFaceGenMorphDataHead * a_this, NiAVObject * a_node, float a_weight)"
+26364,0x1403d8030,0x1403e79a0,2,static void BSFaceGenBaseMorphExtraData::InitStaticName()
+26365,0x1403d8080,0x1403e79f0,2,static void BSFaceGenBaseMorphExtraData::ReleaseStaticName()
 26406,0x1403d8840,0x1403e81b0,4,"void BSFaceGenNiNode::LoadAndProcessGeometryData(BSFaceGenNiNode * a_headNode, NiNode * a_skeleton, BSGeometry * a_geometry)"
 26407,0x1403d8980,0x1403e82f0,2,void BSFaceGenNiNode::UpdateMorphing(bool a_flag)
 26428,0x1403d9ca0,0x1403e9620,4,char* BSFaceGenKeyframeMultiple::GetExpressionName(std::uint32_t a_expression)
@@ -2123,6 +2136,8 @@
 30739,0x1404a17c0,0x1404b1760,3,void BGSDistantObjectBlock::Detach()
 30741,0x1404a18d0,0x1404b1870,3,void BGSDistantObjectBlock::Attach()
 30742,0x1404a19a0,0x1404b1940,2,"static void BGSBtoDB::UpdateMultiBoundVisibility(NiCamera* a_camera, BSCullingProcess* a_cullingProcess)"
+30743,0x1404a1a90,0x1404b1a30,2,static void BGSBtoDB::ClearAllNonSegmented()
+30744,0x1404a1ad0,0x1404b1a70,2,static void BGSBtoDB::SetAllNonSegmented()
 30745,0x1404a1b10,0x1404b1ab0,2,static void BGSObjectBlock::SetAllMenuScreenFlag(bool a_set)
 30746,0x1404a1b90,0x1404b1b30,3,void BGSDistantObjectBlock::Prepare()
 30820,0x1404a6c10,0x1404b6c20,2,static void BGSDistantTreeBlock::CreateFromStream()
@@ -2176,6 +2191,7 @@
 31030,0x1404b33f0,0x1404c34c0,2,static bool BGSTerrainManager::IsLODEnabledForCurrentWorldSpace()
 31031,0x1404b3440,0x1404c3510,2,static void BGSTerrainManager::ReleaseLODRoots()
 31032,0x1404b35e0,0x1404c36b0,2,"void BGSTerrainManager::SetMapMode(bool a_mapMode, bool a_flushUpdates)"
+31034,0x1404b3690,0x1404c3760,2,static void BGSTerrainManager::FlushResourceDBs()
 31036,0x1404b38a0,0x1404c3980,3,void BGSTerrainManager::SetCullState(const CullState& a_state)
 31037,0x1404b3980,0x1404c3a60,2,void BGSTerrainManager::ApplyCachedCullState()
 31041,0x1404b3b90,0x1404c3c70,2,"void BGSTerrainManager::UpdateRootNode(BGSTerrainNode* a_node, const NiPoint3& a_viewPos, TESObjectCELL* a_cell, bool a_arg4)"
@@ -2250,6 +2266,8 @@
 31168,0x1404b8fa0,0x1404c9080,2,"static void BGSTerrainVisibilityData::CreateFromStream(void* a_stream, void* a_arg2, void* a_arg3, BGSTerrainVisibilityData*& a_data)"
 31171,0x1404b9200,0x1404c92e0,2,static void BGSTerrainVisibilityDataDB::InitSingleton()
 31172,0x1404b9280,0x1404c9360,2,static void BGSTerrainVisibilityDataDB::ShutdownSingleton()
+31173,0x1404b9310,0x1404c93f0,2,"static std::int32_t BGSTerrainVisibilityDataDB::QueueLoad(const char* a_path, void* a_handle)"
+31174,0x1404b93e0,0x1404c94c0,2,"static std::int32_t BGSTerrainVisibilityDataDB::Demand(const char* a_path, void* a_handle, void* a_arg3)"
 31230,0x1404bca00,0x1404ccb50,3,"void BGSAutoWater::GeneratePlaceableWaterForCell(TESObjectCELL* a_cell, bool a_skipFlowMap)"
 31231,0x1404bcc20,0x1404ccd70,3,"void BGSAutoWater::LoadCellFlowMap(TESObjectCELL* a_cell, BSGeometry* a_geometry)"
 31235,0x1404bd330,0x1404cd480,4,void BGSAutoWater::GenerateMultibounds(TESObjectCELL* a_cell)
