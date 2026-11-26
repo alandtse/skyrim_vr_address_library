@@ -288,6 +288,7 @@
 14635,0x14019a900,0x1401aa630,3,BSFixedString* GetCachedEmptyBSFixedString()
 14653,0x14019b290,0x1401aafc0,4,void TESModelTextureSwap::sub_14019B290 (TESModelTextureSwap * a_this)
 14704,0x14019d510,0x1401ad250,3,BSTEventSource<TESHarvestedEvent::ItemHarvested>* TESHarvestedEvent::GetEventSource()
+14737,0x14019e6d0,0x1401ae410,2,"void TESReactionForm::SetFightReaction(TESForm* a_form, std::int32_t a_reaction)"
 14775,0x1401a0bc0,0x1401b0900,4,TESTexture::TESTexture
 14809,0x1401a1730,0x1401b1470,3,RE::TESForm::GetWeight
 15029,0x1401ad2f0,0x1401bd040,2,"void BGSDecalManager::ApplyDecal(DECAL_CREATION_DATA*, bool, BGSDecalGroup*)"
@@ -314,6 +315,7 @@
 15260,0x1401b9de0,0x1401c9f50,3,"bool BSResource::EntryDB::AllocArgs(void* a_pool, void** a_argsOut)"
 15274,0x1401ba000,0x1401ca170,3,"void BSResource::EntryDB::ProcessEntry(void* a_entryDB, void* a_entry)"
 15282,0x1401ba650,0x1401ca7c0,3,"bool BSResource::EntryDB::QueueEntry(void* a_entryDB, const char* a_name, void* a_entry, void** a_entryOut, int a_priority, void* a_args)"
+15344,0x1401be140,0x1401ce2b0,2,"void StringsFile::AddEntries(std::uint32_t a_fileId, const std::uint32_t* a_pairs, std::uint32_t a_count)"
 15356,0x1401becf0,0x1401cee60,2,"std::int32_t StringsFile::LoadStringTable(const BSFixedString& a_fileName, const char* a_ext)"
 15485,0x1401c5cc0,0x1401d5e30,4,char * GetGameVersion(void)
 15486,0x1401c5cd0,0x1401d5e40,4,void BIPOBJECT::Clear()
@@ -465,6 +467,8 @@
 18192,0x14024d210,0x14025e900,4,void ImageSpaceModifierInstanceForm::StopCrossFade(float a_seconds)
 18224,0x14024e740,0x14025fe30,2,void TESClimate::InitDefaults()
 18311,0x1402536f0,0x140264aa0,2,"void* TESObjectLAND::GetDominantTexture(std::uint32_t a_quad, std::uint32_t a_vertex)"
+18329,0x140255500,0x1402668b0,2,float TESObjectLAND::GetLandFade()
+18330,0x140255560,0x140266910,2,void TESObjectLAND::SetLandFade(float a_fade)
 18331,0x140255660,0x140266a10,4,"void TESObjectLAND::LoadLand(int a_arg1, int a_arg2)"
 18332,0x140255760,0x140266b10,3,void TESObjectLAND::ReadLandDataFromFile()
 18334,0x1402567f0,0x140267ba0,4,void TESObjectLAND::BuildLand3D(TESObjectLAND*)
@@ -526,6 +530,7 @@
 18949,0x14027b6d0,0x14028ccd0,4,BSTEventSource::SendEvent
 19002,0x14027ddc0,0x14028f390,3,void TESObjectCELL::AttachReference3D(TESObjectREFR* a_ref)
 19024,0x140280160,0x140291770,3,"BSMultiBoundNode* TESObjectCELL::sub_140280160(const ObjectRefHandle& a_handle, bool a_flag)"
+19036,0x1402811c0,0x140292830,2,BSFadeNode* TESObjectCELL::InitReferenceFade(TESObjectREFR* a_ref)
 19076,0x1402829a0,0x1402940d0,2,void* GetQueuedAttachMap()
 19078,0x140282bb0,0x1402942e0,2,void QueuedAttachMap_RemoveAll(void* a_map)
 19101,0x140283f10,0x140295640,2,void TESForm::InitializeData()
@@ -705,6 +710,7 @@
 20026,0x1402b20e0,0x1402c3850,4,"TESObjectCELL* TESWorldSpace::GetOrCreateCell(int a_x, int a_y)"
 20028,0x1402b2470,0x1402c3be0,3,"bool TESWorldSpace::GetCellCoordsFromFileByEditorID(const char* a_cellID, std::int32_t& a_outX, std::int32_t& a_outY)"
 20029,0x1402b27a0,0x1402c3f10,3,void TES::DestroySkyCell(TES* a_tes)
+20035,0x1402b2b50,0x1402c42c0,2,BGSTerrainManager* TESWorldSpace::GetTerrainManager()
 20070,0x1402b4600,0x1402c5d70,3,BSPortalGraph* TESWorldSpace::GetPortalGraph()
 20077,0x1402b4e90,0x1402c6600,3,void TESWorldSpace::AddPersistentRef(TESObjectREFR* a_ref)
 20078,0x1402b50b0,0x1402c6820,3,void TESWorldSpace::RemovePersistentRef(TESObjectREFR* a_ref)
@@ -799,6 +805,7 @@
 24012,0x140355940,0x140365200,3,"void TESFaction::SetFactionFightReaction(TESFaction* a_faction, FIGHT_REACTION a_fightReaction)"
 24022,0x140355fa0,0x140365860,2,void TESDataHandler::InitFactionReactions()
 24027,0x140356480,0x140365d40,2,std::int32_t TESFaction::InitReactions()
+24062,0x140357c80,0x140367540,2,bool TESIdleForm::LinkIntoIdleTree()
 24065,0x1403580c0,0x140367980,4,TESIdleForm::sub_1403580C0
 24069,0x140358300,0x140367bc0,4,"bool TESIdleForm::CheckConditions(Actor* a_actor, TESObjectREFR* a_target, bool a_checkParentIdle) bool TESIdleForm::CheckConditions(Actor* a_actor, TESObjectREFR* a_target, bool a_checkParentIdle)"
 24093,0x140358e30,0x1403686f0,2,void TESIdleManager::InitIdleForms()

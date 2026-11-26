@@ -2354,12 +2354,14 @@ sseid,aeid,confidence,name
 14613,14788,1,TESForm::GetMeshNameWithoutPrefix_*
 14635,32667,3,
 14704,14875,3,RE::TESHarvestedEvent::GetEventSource
+14737,14913,1,
 14809,14988,3,RE::TESForm::GetWeight
 15033,15207,2,
 15041,15215,2,
 15045,15220,2,
 15156,15329,3,BGSDynamicPersistenceManager::DemoteReferences
 15159,15332,2,
+15344,15497,1,
 15356,15507,1,
 15492,15657,3,BipedAnim::SetRoot
 15495,15660,3,FEC::UpdateCollision::RemoveNodeFromScene
@@ -2962,6 +2964,7 @@ sseid,aeid,confidence,name
 19027,19440,1,TESObjectCELL::sub_*
 19033,19446,1,TESObjectCELL::sub_*
 19035,19449,1,TESObjectCELL::sub_*
+19036,19450,1,
 19037,19451,1,
 19054,19465,1,
 19058,19467,1,ApplyAllDecalsRefFunctor::Func1_*
@@ -3136,6 +3139,7 @@ sseid,aeid,confidence,name
 19873,20280,1,
 19897,20302,1,
 19969,20400,1,
+20035,20469,1,
 20077,20520,1,
 20078,20521,1,
 20089,20536,3,TESWorldSpace::CollectMapMarkerHandles
@@ -3531,6 +3535,7 @@ sseid,aeid,confidence,name
 24058,24561,1,TESIdleForm::ClearData_*
 24059,24562,1,TESIdleForm::CreateDuplicateForm_*
 24060,24563,1,TESIdleForm::Load_*
+24062,24565,1,
 24066,24569,1,TESIdleForm::sub_*
 24067,24570,1,TESIdleForm::sub_*
 24068,24571,1,TESIdleForm::sub_*
