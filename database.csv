@@ -1871,9 +1871,23 @@
 30280,0x140488bb0,0x140498b50,2,"void NavMeshSearchFlee::SetNodeLocationAndHeuristic(AStarNode* a_node, BSNavmesh* a_navmesh, std::uint16_t a_triIndex)"
 30281,0x140488cb0,0x140498c50,2,"bool NavMeshSearchFlee::ExpandNode(AStarNode* a_node, BSTSmallArray<AStarNode*,3>* a_out)"
 30282,0x1404892b0,0x140499250,2,bool NavMeshSearchFlee::IsGoalNode(AStarNode* a_node)
+30284,0x140489500,0x1404994a0,2,"NavMeshSearchHide* NavMeshSearchHide::ctor(BSPathingRequest* a_request, BSTArray<void*>* a_loadedNavmeshes, BSTArray<void*>* a_secondary)"
+30285,0x140489570,0x140499510,2,void NavMeshSearchHide::dtor()
+30286,0x140489590,0x140499530,2,"bool NavMeshSearchHide::RunSearch(const BSFastNavmeshTriLocation* a_start, BSTArray<BSFastNavmeshTriLocation>* a_outLocations, BSTArray<BSFastNavmeshEdgeHandle>* a_outEdges)"
 30287,0x140489940,0x1404998e0,2,bool NavMeshSearchHide::IsGoalNode(AStarNode* a_node)
+30288,0x140489a80,0x140499a20,2,void BSNavmeshSearchFilters::dtor()
+30292,0x140489bb0,0x140499b50,2,"bool BSNavmeshSearchHideFilter::FilterEdge(const NavmeshEdgeStep* a_step, float* a_ioCost)"
+30293,0x140489c10,0x140499bb0,2,"bool BSNavmeshSearchHideFilter::AccumulateHideCost(const NavmeshEdgeStep* a_step, float* a_ioCost)"
+30296,0x140489e80,0x140499e20,2,"bool NavMeshSearchLOS::RunSearch(BSPathingRequest** a_request, const BSFastNavmeshTriLocation* a_start, BSTArray<BSFastNavmeshTriLocation>* a_outLocations, BSTArray<BSFastNavmeshEdgeHandle>* a_outEdges)"
 30298,0x14048a3c0,0x14049a360,2,"bool NavMeshSearchLOS::ExpandNode(AStarNode* a_node, BSTSmallArray<AStarNode*,3>* a_out)"
 30299,0x14048aa10,0x14049a9b0,2,bool NavMeshSearchLOS::IsGoalNode(AStarNode* a_node)
+30301,0x14048ac20,0x14049abc0,2,"void BSNavmeshSearch::ReconstructPathToNode(AStarNode* a_node, BSTArray<BSFastNavmeshTriLocation>* a_outLocations, BSTArray<BSFastNavmeshEdgeHandle>* a_outEdges)"
+30306,0x14048af80,0x14049af20,2,"NavMeshSearchMaxCost* NavMeshSearchMaxCost::ctor(BSPathingRequest* a_request, BSTArray<void*>* a_loadedNavmeshes, BSTArray<void*>* a_secondary)"
+30307,0x14048b000,0x14049afa0,2,void NavMeshSearchMaxCost::dtor()
+30308,0x14048b020,0x14049afc0,2,"bool NavMeshSearchMaxCost::RunSearch(const BSFastNavmeshTriLocation* a_start, const BSPathingLocation* a_avoid, BSTArray<BSFastNavmeshTriLocation>* a_outLocations, BSTArray<BSFastNavmeshEdgeHandle>* a_outEdges)"
+30316,0x14048b910,0x14049b8b0,2,void BSNavmeshSearch::ResetState()
+30322,0x14048c010,0x14049bfb0,2,"NavMeshSearchSLPoint* NavMeshSearchSLPoint::ctor(BSPathingRequest* a_request, BSTArray<void*>* a_loadedNavmeshes, BSTArray<void*>* a_secondary)"
+30323,0x14048c0b0,0x14049c050,2,void NavMeshSearchSLPoint::dtor()
 30327,0x14048cb10,0x14049cab0,2,bool NavMeshSearchSLPoint::IsGoalNode(AStarNode* a_node)
 30331,0x14048d140,0x14049d0e0,2,void PathingRequestClosePoint::CopyTo(BSPathingRequest* a_other)
 30333,0x14048d200,0x14049d1a0,2,std::uint32_t PathingRequestClosePoint::GetStaticType()
@@ -1937,6 +1951,7 @@
 30616,0x1404949c0,0x1404a4960,2,void PathingRequestSafeStraightLine::PathingRequestSafeStraightLine(const BSPathingRequest& a_other)
 30620,0x140494ac0,0x1404a4a60,2,std::uint32_t PathingRequestSafeStraightLine::GetStaticType()
 30633,0x140494e40,0x1404a4de0,2,std::uint32_t GetPathingRequestStopMovingType()
+30657,0x140495e90,0x1404a5e30,2,"bool PathBuilderStationaryPath::Build(BSPathingRequest** a_request, BSPathingSolution** a_solution)"
 30658,0x140495fa0,0x1404a5f40,2,"bool PathBuilderFlee::Build(BSPathingRequest** a_request, BSPathingSolution** a_solution)"
 30664,0x140496d90,0x1404a6d30,2,float NiPoint3::Unitize()
 30737,0x1404a1430,0x1404b13d0,3,"BGSDistantObjectBlock* BGSDistantObjectBlock::Ctor(BGSTerrainNode* a_node, BSStream& a_stream)"
@@ -5256,6 +5271,7 @@
 89210,0x1410efb20,0x14114c860,3,bool BSVirtualPathingNode::HasActivateDoorAction()
 89222,0x1410effc0,0x14114cd00,2,bool BSPathingNode::HasActivateDoorAction()
 89224,0x1410f00f0,0x14114ce30,2,bool BSPathingNode::GetActionAtNode(MovementMessage** a_out)
+89297,0x1410f6d50,0x141153a90,2,void PathSmootherRayCastUseTrianglePath::dtor()
 89323,0x1410fa1c0,0x141156f00,2,"float MovementUtils::ComputeAngularVelocityToTarget(float a_current, float a_target, float a_deltaTime)"
 89325,0x1410fa2f0,0x141157030,2,"void MovementUtils::ComputeDirectionFromEuler(const NiPoint3& a_euler, NiPoint3& a_out)"
 89326,0x1410fa340,0x141157080,2,"void MakeRotationMatrixFromEuler(NiMatrix3& a_out, const NiPoint3& a_euler)"
