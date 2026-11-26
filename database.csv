@@ -1822,6 +1822,9 @@
 29925,0x14047ae90,0x14048ae30,2,"bool BSPathingCellManager::AddUniqueNavmeshInfo_Heap(BSTArray<BSNavmeshInfo*>& a_out, BSNavmeshInfo* a_info)"
 30030,0x14047e6d0,0x14048e670,4,"PathingLockData* PathingLockData::PathingLockData(const ObjectRefHandle& a_handle, bool a_flag)"
 30031,0x14047e7a0,0x14048e740,4,void PathingLockData::~PathingLockData()
+30039,0x14047ece0,0x14048ec80,2,void BSPathingLockDataFactoryManager::Insert()
+30052,0x14047f200,0x14048f1a0,2,void BSPathingLockDataFactoryManager::Grow()
+30053,0x14047f2b0,0x14048f250,2,void BSPathingLockDataFactoryManager::InsertRehashed()
 30064,0x14047f740,0x14048f6e0,2,void BSPathingRequestFactoryManager::Insert()
 30078,0x14047fd00,0x14048fca0,2,void BSPathingRequestFactoryManager::Grow()
 30079,0x14047fdb0,0x14048fd50,2,void BSPathingRequestFactoryManager::InsertRehashed()
