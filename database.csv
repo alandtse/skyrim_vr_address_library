@@ -3830,6 +3830,8 @@
 49136,0x140834290,0x14085f590,2,void CombatPathBuilderOpen::Stage0_ValidateStart()
 49137,0x140834370,0x14085f670,2,void CombatPathBuilderOpen::Stage1_RunNavmeshSearch()
 49311,0x14083c870,0x140867b70,3,void CombatApproachTargetSpeedController::UpdateApproachTargetSpeed(CombatPath* a_combatPath)
+49315,0x14083ce90,0x140868190,2,bool CombatPathingSphere::IsOutside(BSFastNavmeshTriLocation* a_node)
+49316,0x14083cee0,0x1408681e0,2,float CombatPathingSphere::GetPenetrationDepth(BSFastNavmeshTriLocation* a_node)
 49711,0x140844d00,0x14086ffb0,3,RE::Character::sub_140844D00
 49716,0x140844e40,0x1408700f0,4,CombatPathingRevolution::src/Advanced_Hook.h:13
 49720,0x140845070,0x140870320,4,float Character::GetCircleChanceMult_140845070(Character *param_1)
