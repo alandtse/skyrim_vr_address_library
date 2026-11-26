@@ -2837,6 +2837,7 @@ sseid,aeid,confidence,name
 18347,18766,1,TESObjectLAND::sub_*
 18348,18767,1,TESObjectLAND::sub_*
 18349,18768,1,TESObjectLAND::sub_*
+18366,18789,1,
 18368,18791,3,SeasonsofSkyrim::TESObjectLAND::create_land_geometry
 18451,18882,1,TESObjectCELL::sub_*
 18453,18884,1,TESObjectCELL::CreateGroupData_*
@@ -4671,6 +4672,9 @@ sseid,aeid,confidence,name
 31023,31809,1,
 31024,31810,1,
 31030,31816,1,
+31054,31841,1,
+31055,31842,1,
+31067,31859,1,
 31079,31870,2,std::uint32_t BSSubIndexTriShape::GetNumSegments() const
 31300,32084,3,BGSWaterCollisionManager::BGSWaterUpdateI::dtor
 31302,32086,3,BGSWaterCollisionManager::BGSWaterUpdateI::SetDisabled
@@ -7764,6 +7768,8 @@ sseid,aeid,confidence,name
 52231,53118,3,MapMenu::Close
 52252,53142,3,LoadWorldMapOverlayTextures
 52260,53150,3,GetMapWorldSpace
+52262,53154,1,
+52263,53155,1,
 52374,53270,3,QuickLoot::
 52400,53299,3,QuickLoot::
 52467,53369,2,

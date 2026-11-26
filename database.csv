@@ -483,6 +483,7 @@
 18355,0x140259bd0,0x14026af80,3,"void TESObjectLAND::ComputeNormalAtPosition(const NiPoint3* a_position, NiPoint3* a_interpolatedNormal, NiPoint3* a_normal)"
 18359,0x14025a7c0,0x14026bb70,4,const std::uint16_t* GetLandIndexList()
 18365,0x14025aa40,0x14026be80,3,std::uint64_t TESObjectLAND::AllocateLoadedData()
+18366,0x14025ac20,0x14026c060,2,void TESObjectLAND::UpdateDistantTextureBlend()
 18368,0x14025b350,0x14026c790,4,SeasonsofSkyrim::TESObjectLAND::create_land_geometry
 18369,0x14025b710,0x14026cb50,4,TESLandTexture* TESObjectLAND::sub_14025B710(TESObjectLAND*)
 18380,0x14025cba0,0x14026e050,4,"BSTriShape* BuildQuadTriShape(TESObjectLAND::LoadedLandData*, std::uint32_t)"
@@ -727,6 +728,7 @@
 20212,0x1402bbd50,0x1402cd4c0,2,bool BGSCameraPath::ResolveParentPath()
 20215,0x1402bc2c0,0x1402cda30,2,NiFormArray* BGSCameraPath::GetOrCreateChildPaths()
 20222,0x1402bc5c0,0x1402cdd30,2,"void BGSCameraPath::InsertChildPath(std::uint32_t a_index, BGSCameraPath* a_child)"
+20224,0x1402bc770,0x1402cdee0,2,void BGSCameraPath::RemoveChildPathAt(std::uint32_t a_index)
 20225,0x1402bc850,0x1402cdfc0,2,void BGSCameraPath::RemoveChildPath(BGSCameraPath* a_child)
 20247,0x1402bd3b0,0x1402ceb20,2,void NiFormArray::InitCameraPaths()
 20262,0x1402bdec0,0x1402cf630,3,"void BGSCameraShot::Play(TESObjectREFR* a_target, std::int32_t a_mode)"
@@ -2119,6 +2121,7 @@
 30932,0x1404ad510,0x1404bd570,3,"BGSTerrainChunk* BGSTerrainChunk::Ctor(BGSTerrainNode* a_node, BSStream& a_stream, std::int32_t a_cellX, std::int32_t a_cellY)"
 30933,0x1404ad820,0x1404bd880,3,void BGSTerrainChunk::Dtor()
 30934,0x1404ad940,0x1404bd9a0,3,void BGSTerrainBlock::Attach(BGSTerrainBlock* a_block)
+30935,0x1404adb20,0x1404bdb80,2,void BGSTerrainBlock::MarkLoadedAndQueueUpdate()
 30936,0x1404adb60,0x1404bdbc0,3,void BGSTerrainBlock::Detach(BGSTerrainBlock* a_block)
 30939,0x1404add70,0x1404bddd0,3,void BGSTerrainChunk::AttachWater(bool a_attach)
 30947,0x1404ae090,0x1404be0f0,3,void BGSTerrainChunk::Prepare()
@@ -2131,9 +2134,13 @@
 31026,0x1404b3190,0x1404c3260,3,"void BGSTerrainManager::UnloadAll(bool a_unloadStaticData, bool a_shutdown)"
 31030,0x1404b33f0,0x1404c34c0,2,static bool BGSTerrainManager::IsLODEnabledForCurrentWorldSpace()
 31036,0x1404b38a0,0x1404c3980,3,void BGSTerrainManager::SetCullState(const CullState& a_state)
+31054,0x1404b4ca0,0x1404c4d80,2,void BGSTerrainNode::UpdateGridFlags()
+31055,0x1404b4d90,0x1404c4e70,2,bool BGSTerrainNode::ContainsPoint(const NiPoint3& a_pos) const
 31059,0x1404b5090,0x1404c5170,3,"void BGSTerrainNode::UpdateWaterMeshSubVisibility(BGSTerrainNode* a_node, BSMultiBoundNode* a_waterParent)"
 31060,0x1404b5220,0x1404c5300,3,void BGSTerrainNode::UpdateBlockVisibility()
+31067,0x1404b5cc0,0x1404c5da0,2,static void BGSTerrainManager::CacheSettings()
 31079,0x1404b66a0,0x1404c6780,2,std::uint32_t BSSubIndexTriShape::GetNumSegments() const
+31080,0x1404b66c0,0x1404c67a0,2,float BGSTerrainNode::GetSquaredDistanceToPoint(const NiPoint3& a_pos) const
 31140,0x1404b8580,0x1404c8660,3,SeasonsofSkyrim::LODSwap::Terrain::BuildMeshFileName
 31141,0x1404b85c0,0x1404c86a0,3,SeasonsofSkyrim::LODSwap::Terrain::BuildDiffuseTextureFileName
 31142,0x1404b8600,0x1404c86e0,3,SeasonsofSkyrim::LODSwap::Terrain::BuildNormalTextureFileName
@@ -4226,6 +4233,8 @@
 52236,0x1408e7c80,0x14091a4e0,3,anonymous_namespace__FastTravelConfirmCallback::Run_1408E7C80
 52252,0x1408e8270,0x14091af50,3,void LoadWorldMapOverlayTextures_1408E8270()
 52260,0x1408E8CA0,0x14091C0A0,3,TESWorldSpace* GetMapWorldSpace()
+52262,0x1408e8e10,0x14091c210,2,void MapMenu::EnterMapTerrain()
+52263,0x1408e9140,0x14091c540,2,void MapMenu::ExitMapTerrain()
 52276,0x1408EA320,0x14091EF90,3,DynamicStringDistributor::
 52368,0x1408ee900,0x140923570,4,QuitToMainMenuCallback
 52374,0x1408ef500,0x140924430,4,QuickLoot::
