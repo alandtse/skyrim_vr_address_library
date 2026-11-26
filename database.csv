@@ -1996,7 +1996,8 @@
 30394,0x14048f360,0x14049f300,2,std::uint32_t PathingRequestCover::GetStaticType()
 30400,0x14048f6b0,0x14049f650,2,void PathingCoverLocation::Read(BSPathingStreamRead* a_stream)
 30401,0x14048f7c0,0x14049f760,2,void PathingCoverLocation::Write(BSPathingStreamWrite* a_stream)
-30402,0x14048f8d0,0x14049f870,2,"void PathingCoverLocation::SetCoverData(std::uint16_t a_value, std::uint16_t a_lowerBound, std::uint16_t a_upperBound, std::uint8_t a_flag0, std::uint8_t a_flag1, std::uint8_t a_edgeIndex)"
+30402,0x14048f8d0,0x14049f870,2,"void SetCoverData(std::uint16_t a_value, std::uint16_t a_lowerBound, std::uint16_t a_upperBound, std::uint8_t a_flag0, std::uint8_t a_flag1, std::uint8_t a_edgeIndex)"
+30404,0x14048f9b0,0x14049f950,2,bool PathingCoverLocation::IsStartPointCloser(NiPoint3* a_point)
 30407,0x14048faf0,0x14049fa90,2,std::uint32_t PathingCoverLocation::GetObstacleUpdateTime()
 30408,0x14048fbc0,0x14049fb60,2,bool PathingCoverLocation::IsObstacleUpdateTime(std::uint32_t a_time)
 30417,0x14048ff00,0x14049fea0,2,void PathingRequestFlee::PathingRequestFlee()
@@ -3436,12 +3437,12 @@
 41007,0x1406fdda0,0x140724d20,2,void MovementHandlerAgentStairsHelper::RegisterWithController(IMovementControllerRegisterInterface& a_controller)
 41010,0x1406fde10,0x140724d90,2,void MovementHandlerAgentStairsHelper::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
 41022,0x1406fe160,0x1407250e0,3,std::int32_t MovementMessageActorCollision::GetStaticType()
-41027,0x1406fe380,0x140725300,2,"void* MovementMessageAutoRegister::RegisterActorCollision(void* a_registrar, int a_typeId)"
+41027,0x1406fe380,0x140725300,2,"void* MovementMessageAutoRegister::RegisterActorCollision(void* a_registrar, std::int32_t a_typeId)"
 41038,0x1406fe6d0,0x140725650,2,void MovementMessageAutoRegister::GrowHashMap()
 41044,0x1406fead0,0x140725a50,3,std::int32_t MovementMessageMovementTypeChange::GetStaticType()
 41045,0x1406feb50,0x140725ad0,3,void MovementMessageMovementTypeChange::SaveGame(PathingStreamSaveGame* a_stream)
 41046,0x1406feb90,0x140725b10,3,void MovementMessageMovementTypeChange::LoadGame(PathingStreamLoadGame* a_stream)
-41047,0x1406febc0,0x140725b40,2,"void* MovementMessageAutoRegister::RegisterMovementTypeChange(void* a_registrar, int a_typeId)"
+41047,0x1406febc0,0x140725b40,2,"void* MovementMessageAutoRegister::RegisterMovementTypeChange(void* a_registrar, std::int32_t a_typeId)"
 41057,0x1406fefa0,0x140725f20,2,void MovementPlannerAgentDirectControl::RegisterWithController(IMovementControllerRegisterInterface& a_controller)
 41058,0x1406fefb0,0x140725f30,2,void MovementPlannerAgentDirectControl::UnregisterWithController()
 41059,0x1406fefd0,0x140725f50,2,const BSFixedString& MovementPlannerAgentDirectControl::GetAgentType()
@@ -5229,6 +5230,8 @@
 88023,0x1410a9a20,0x141106650,2,"bool Pathing::RayCast(BSPathingLocation* a_start, NiPoint3* a_end, BSPathingLocation* a_outHit, void* a_options)"
 88024,0x1410a9c80,0x1411068b0,2,"bool Pathing::RayCastEndsInTriangle(BSPathingLocation* a_start, NiPoint3* a_end, BSNavmesh* a_navmesh, std::uint16_t a_triangle, BSPathingLocation* a_outHit, void* a_options)"
 88027,0x1410aa210,0x141106e40,2,"bool Pathing::UpdateLOSGridMap(BSPathingLOSGridMap** a_losMap, BSTArray<BSPathingLocation>* a_viewers, void* a_headings)"
+88032,0x1410ab360,0x141107f90,2,"bool RayCastAcrossNavmeshesRef(void* a_ctx, BSNavmesh** a_navmesh, std::uint16_t a_triangle, std::int32_t a_edge, float* a_origin, float* a_dir, BSNavmeshEdgeLocation* a_outBlocked, BSNavmeshEdgeLocation* a_outEnd)"
+88033,0x1410ab410,0x141108040,2,"bool RayCastAcrossNavmeshes(void* a_ctx, BSNavmesh* a_navmesh, std::uint16_t a_triangle, std::int32_t a_edge, float* a_origin, float* a_dir, BSNavmeshEdgeLocation* a_outBlocked, BSNavmeshEdgeLocation* a_outEnd)"
 88035,0x1410abc50,0x141108880,2,"NiPoint3* Pathing::ComputeStartTangent(NiPoint3* a_out, float a_heading, BSPathingNode* a_node, BSPathingNode* a_nextNode, float a_radius)"
 88036,0x1410ac620,0x141109250,2,"NiPoint3* Pathing::ComputeEndTangent(NiPoint3* a_out, float a_heading, BSPathingNode* a_node, float a_radius)"
 88039,0x1410accf0,0x141109920,2,"bool Pathing::BuildStaticPath(BSTArray<BSPathingLocation>* a_locations, BSPathingSolution** a_outSolution)"
@@ -5239,6 +5242,7 @@
 88046,0x1410ad360,0x141109f90,2,void Pathing::FitPathTangents(BSPathingSolution* a_solution)
 88047,0x1410ad480,0x14110a0b0,2,"bool Pathing::TryBuildStraightPath(BSPathingLocation* a_start, BSPathingLocation* a_end, PathingRequest* a_request, void* a_param5, BSPathingSolution* a_outSolution)"
 88048,0x1410ad8f0,0x14110a520,2,"bool Pathing::SmoothPathDefault(BSPathingRequest* a_request, BSPathingSolution* a_solution, const NiPoint3* a_start, const NiPoint3* a_goal, BSTArray<BSFastNavmeshTriLocation>* a_locations, BSTArray<BSFastNavmeshEdgeHandle>* a_edges)"
+88050,0x1410ada90,0x14110a6c0,2,"void Pathing::SmoothPathImpl(BSPathingSolution* a_solution, void* a_param2, void* a_param3, void* a_param4, void* a_param5, void* a_param6, void* a_param7, void* a_param8)"
 88072,0x1410b0190,0x14110cdc0,2,"bool Pathing::WalkNavmeshSegment(NavmeshSegment* a_segment, NavmeshVisitedArray** a_visited, NavmeshEdgePredicate* a_predicate, BSNavmeshEdgeLocation* a_outEnd)"
 88074,0x1410b0fc0,0x14110dbf0,2,"bool Pathing::WalkNavmeshSegmentByHandle(NavmeshSegment* a_segment, void* a_unused, NavmeshEdgePredicate* a_predicate, BSNavmeshEdgeLocation* a_outEnd)"
 88076,0x1410b1ea0,0x14110ead0,2,"bool NavmeshStraightLineWalk(NavmeshSegment* a_segment, void* a_unusedVisited, void* a_unusedPredicate, BSNavmeshEdgeLocation* a_outEnd)"
@@ -5408,6 +5412,7 @@
 88531,0x1410c45e0,0x141121340,2,bool BSPathingSolution::Write(PathingStreamSaveGame& a_stream)
 88532,0x1410c4740,0x1411214a0,2,std::uint32_t BSPathingSolution::GetStaticType()
 88535,0x1410c48e0,0x141121640,2,bool BSPathingSolution::IsNodeChainValid()
+88537,0x1410c4ac0,0x141121820,2,"float BSPathingSolution::SumNodeDistancesXY(std::int32_t a_from, std::uint32_t a_to)"
 88538,0x1410c4b80,0x1411218e0,2,"float BSPathingSolution::GetNodeRangeLength(float a_first, float a_last)"
 88539,0x1410c4f80,0x141121ce0,2,float BSPathingSolution::GetCurrentPathingNodesLength()
 88540,0x1410c51a0,0x141121f00,2,float BSPathingSolution::GetPathLength()
@@ -5518,7 +5523,18 @@
 88934,0x1410dfb60,0x14113c890,2,bool PathingSolutionQueue::PopFront(PathingSolutionEntry* a_out)
 88935,0x1410dfc60,0x14113c990,2,bool PathingSolutionQueue::TryPopFront(PathingSolutionEntry* a_out)
 88939,0x1410dff00,0x14113cc30,2,void DestroyTaskletGroup(void** a_group)
+88943,0x1410e0490,0x14113d1c0,2,void TaskletGroupHandle::QueryTaskDataByKey(char** a_key)
+88944,0x1410e0500,0x14113d230,2,void TaskletGroupHandle::SubmitTaskDataRequestByKey()
+88953,0x1410e07f0,0x14113d520,2,"void TaskletGroupHandle::SetTaskDataResultByKey(char** a_key, void* a_result)"
+88954,0x1410e0800,0x14113d530,2,"void* TaskletGroupHandle::GetTaskDataResultByKey(char** a_key, void* a_a, void* a_b)"
+88956,0x1410e08c0,0x14113d5f0,2,"PathingTaskData* PathingTaskData::ctor(void* a_request, BSFixedString** a_name)"
 88961,0x1410e10f0,0x14113de20,2,void PathingTaskData::ProcessRaycastRequests()
+88973,0x1410e1dd0,0x14113eb00,2,"bool TaskletGroup::QueueTaskData(char** a_request, BSFixedString** a_name)"
+88977,0x1410e24c0,0x14113f200,2,"bool TaskletGroup::MarkTaskDataByKey(char** a_key, void* a_a, void* a_b)"
+88978,0x1410e25c0,0x14113f300,2,std::uint32_t TaskletGroup::QueryTaskDataByKey(char** a_key)
+88979,0x1410e26e0,0x14113f420,2,"std::uint32_t TaskletGroup::SubmitTaskDataRequestByKey(void** a_key, void* a_a, void* a_b, void* a_c, std::uint8_t a_d)"
+88987,0x1410e2f70,0x14113fcb0,2,"void TaskletGroup::SetTaskDataResultByKey(char** a_key, void* a_result)"
+88988,0x1410e3070,0x14113fdb0,2,"void* TaskletGroup::GetTaskDataResultByKey(char** a_key, void* a_a, void* a_b)"
 89007,0x1410e3ec0,0x141140c00,2,std::uint32_t PathingSolutionEntryArray::PushBack(PathingSolutionEntry* a_entry)
 89018,0x1410e42e0,0x141141020,2,"void PathingSolutionEntryArray::ReleaseRange(std::uint32_t a_index, std::uint32_t a_count)"
 89030,0x1410e4750,0x141141490,2,"void PathingSolutionEntryArray::RemoveElements(std::uint32_t a_index, std::uint32_t a_count)"
@@ -5533,6 +5549,7 @@
 89051,0x1410e6730,0x141143470,2,"std::int32_t IntersectSegmentPlane3D(NiPoint3* a_p0, NiPoint3* a_p1, NiPoint3* a_planePoint, NiPoint3* a_planeNormal, NiPoint3* a_out)"
 89052,0x1410e6890,0x1411435d0,2,"void ClosestPointsBetweenLines3D(NiPoint3* a_a0, NiPoint3* a_a1, NiPoint3* a_b0, NiPoint3* a_b1, NiPoint3* a_outPointA, NiPoint3* a_outPointB)"
 89053,0x1410e6af0,0x141143830,2,"bool IntersectSegments2D(NiPoint2* a_a0, NiPoint2* a_a1, NiPoint2* a_b0, NiPoint2* a_b1, NiPoint2* a_out)"
+89055,0x1410e6e00,0x141143b40,2,"bool PointsStraddleLine2D(float* a_p1, float* a_p2, float* a_lineA, float* a_lineB)"
 89056,0x1410e6ec0,0x141143c00,2,"void ClipSegmentToLineCrossing2D(NiPoint2* a_a, NiPoint2* a_b, NiPoint2* a_c, NiPoint2* a_d, NiPoint2* a_out)"
 89057,0x1410e7080,0x141143dc0,2,"bool IntersectLineWithSegment2DInterpZ(NiPoint3* a_lineP0, NiPoint3* a_lineP1, NiPoint3* a_segP0, NiPoint3* a_segP1, NiPoint3* a_outPoint)"
 89058,0x1410e71c0,0x141143f00,2,"bool IntersectSegmentWithLine2DInterpZ(NiPoint3* a_segP0, NiPoint3* a_segP1, NiPoint3* a_lineP0, NiPoint3* a_lineP1, NiPoint3* a_outPoint)"
@@ -5543,8 +5560,10 @@
 89063,0x1410e78e0,0x141144620,2,"void ClosestPointsBetweenSegments3D(NiPoint3* a_a0, NiPoint3* a_a1, NiPoint3* a_b0, NiPoint3* a_b1, float* a_outS, NiPoint3* a_outPointA, float* a_outT, NiPoint3* a_outPointB)"
 89064,0x1410e7bc0,0x141144900,2,"bool IntersectSegments2DWithTolerance(NiPoint3* a_a0, NiPoint3* a_a1, NiPoint3* a_b0, NiPoint3* a_b1, float a_epsilon, NiPoint3* a_out, bool* a_outNearA, bool* a_outNearB)"
 89065,0x1410e7e80,0x141144bc0,2,"bool GetCircleTangentPoints2D(NiPoint3* a_center, float a_radius, NiPoint3* a_point, NiPoint3* a_outTangentA, NiPoint3* a_outTangentB)"
+89066,0x1410e7fa0,0x141144ce0,2,"bool GetCircleTangentDirections2D(float* a_circle, float* a_point, float* a_outLeft, float* a_outRight)"
 89067,0x1410e8070,0x141144db0,2,"bool IsPointNearSegment3D(NiPoint3* a_a, NiPoint3* a_b, NiPoint3* a_point, float a_distance)"
 89069,0x1410e8290,0x141144fd0,2,"void ComputeTriangleNormalAndAreaXY(NiPoint3* a_v0, NiPoint3* a_v1, NiPoint3* a_v2, NiPoint3* a_outNormal, float* a_outAreaXY)"
+89075,0x1410e8eb0,0x141145bf0,2,"bool IsAngleWithinArc(float a_angle, float a_arcStart, float a_arcEnd, bool a_reversed)"
 89076,0x1410e8f70,0x141145cb0,2,"void GetRandomPointInTriangle(const NiPoint3* a_v0, const NiPoint3* a_v1, const NiPoint3* a_v2, NiPoint3* a_out)"
 89079,0x1410e92d0,0x141146010,2,"bool MovementUtils::IntersectRayWithCircle(NiPoint3* a_origin, NiPoint3* a_direction, NiPoint3* a_offset, NiPoint3* a_center, float a_radius, NiPoint3* a_out)"
 89102,0x1410ea4c0,0x141147200,2,void NullMovementSelectIdleResult::Reset()
@@ -5554,10 +5573,13 @@
 89124,0x1410eb800,0x141148540,2,void BSNavmeshSearch::dtor()
 89140,0x1410ec340,0x141149080,2,bool BSPathingLOSGridMap::ApplyGridsToMap(void** a_map)
 89141,0x1410ec630,0x141149370,2,bool BSPathingLOSGridMap::CaptureGridsFromMap(void** a_map)
+89142,0x1410ec9c0,0x141149700,2,bool BSPathingLOSGridMap::IsLocationMarked(BSPathingLocation* a_location)
 89143,0x1410eca70,0x1411497b0,2,"bool BSPathingLOSGridMap::MarkLocation(BSPathingLocation* a_location, bool a_state, void* a_unused)"
 89149,0x1410ed120,0x141149e60,2,"bool BSPathingLOSGrid::ApplyCellsToMap(void** a_map, std::uint32_t a_arg)"
 89150,0x1410ed2a0,0x141149fe0,2,"bool BSPathingLOSGrid::CaptureCellsFromMap(void** a_map, std::uint32_t a_arg)"
+89151,0x1410ed400,0x14114a140,2,bool BSPathingLOSGrid::IsLocationMarked(BSPathingLocation* a_location)
 89152,0x1410ed4a0,0x14114a1e0,2,"bool BSPathingLOSGrid::MarkLocation(BSPathingLocation* a_location, bool a_state, void* a_unused)"
+89157,0x1410ed990,0x14114a6d0,2,bool BSPathingLOSGridCell::IsLocationMarked(BSPathingLocation* a_location)
 89158,0x1410eda50,0x14114a790,2,"bool BSPathingLOSGridCell::MarkLocation(BSPathingLocation* a_location, bool a_state, void* a_unused)"
 89179,0x1410ee240,0x14114af80,2,bool PathingStreamLoadGame::ReadBSPathingLOSGridCellArray(BSTArray<BSPathingLOSGridCell*>& a_cells)
 89180,0x1410ee350,0x14114b090,2,"bool PathingStreamLoadGame::ReadBSPathingLOSGridTable(BSTHashMap<std::uint32_t, BSPathingLOSGrid*>& a_table)"
@@ -5638,20 +5660,20 @@
 89492,0x1411034c0,0x1411603e0,2,"bool IPathFollowerAction::ActivateDoor_UpdateSpeed(PathFollowerStateUpdateData* a_updateData, float a_pathIndex, float* a_speed)"
 89493,0x1411035a0,0x1411604c0,2,"bool IPathFollowerAction::ActivateDoor_Prepare(PathFollowerStateUpdateData* a_updateData, float* a_out)"
 89494,0x141103700,0x141160620,2,"bool IPathFollowerAction::ActivateDoor_GetTargetSpeed(PathFollowerStateUpdateData* a_updateData, float* a_out)"
-89495,0x141103710,0x141160630,2,"void* MovementMessageAutoRegister::RegisterActivateDoor(void* a_registrar, int a_typeId)"
+89495,0x141103710,0x141160630,2,"void* MovementMessageAutoRegister::RegisterActivateDoor(void* a_registrar, std::int32_t a_typeId)"
 89507,0x141103b40,0x141160a60,2,"MovementMessageWarpToLocation* MovementMessageWarpToLocation::ctor(const BSPathingLocation& a_location, const NiPoint3& a_position)"
 89510,0x141103c10,0x141160b30,3,std::int32_t MovementMessageWarpToLocation::GetStaticType()
 89511,0x141103c50,0x141160b70,3,void MovementMessageWarpToLocation::SaveGame(PathingStreamSaveGame* a_stream)
 89512,0x141103cb0,0x141160bd0,3,void MovementMessageWarpToLocation::LoadGame(PathingStreamLoadGame* a_stream)
-89514,0x141103d20,0x141160c40,2,"void* MovementMessageAutoRegister::RegisterWarpToLocation(void* a_registrar, int a_typeId)"
+89514,0x141103d20,0x141160c40,2,"void* MovementMessageAutoRegister::RegisterWarpToLocation(void* a_registrar, std::int32_t a_typeId)"
 89525,0x141104060,0x141160f80,3,std::int32_t MovementMessageWarpToMultiple::GetStaticType()
 89526,0x1411040b0,0x141160fd0,3,void MovementMessageWarpToMultiple::SaveGame(PathingStreamSaveGame* a_stream)
 89527,0x141104120,0x141161040,3,void MovementMessageWarpToMultiple::LoadGame(PathingStreamLoadGame* a_stream)
-89530,0x141104200,0x141161120,2,"void* MovementMessageAutoRegister::RegisterWarpToMultiple(void* a_registrar, int a_typeId)"
+89530,0x141104200,0x141161120,2,"void* MovementMessageAutoRegister::RegisterWarpToMultiple(void* a_registrar, std::int32_t a_typeId)"
 89546,0x1411047f0,0x141161710,3,std::int32_t MovementMessageBlocked::GetStaticType()
 89547,0x141104830,0x141161750,2,void MovementMessageBlocked::SaveGame(PathingStreamSaveGame* a_stream)
 89548,0x141104840,0x141161760,2,void MovementMessageBlocked::LoadGame(PathingStreamLoadGame* a_stream)
-89550,0x141104860,0x141161780,2,"void* MovementMessageAutoRegister::RegisterBlocked(void* a_registrar, int a_typeId)"
+89550,0x141104860,0x141161780,2,"void* MovementMessageAutoRegister::RegisterBlocked(void* a_registrar, std::int32_t a_typeId)"
 89558,0x141104ac0,0x1411619e0,3,void MovementPlayIdleData::ctor()
 89559,0x141104ae0,0x141161a00,3,void MovementPlayIdleData::dtor()
 89560,0x141104af0,0x141161a10,3,MovementPlayIdleData* MovementPlayIdleData::CopyFrom(MovementPlayIdleData* a_other)
@@ -5669,19 +5691,19 @@
 89579,0x141106870,0x141163790,3,std::int32_t MovementMessagePlayIdle::GetStaticType()
 89580,0x1411068b0,0x1411637d0,3,void MovementMessagePlayIdle::SaveGame(PathingStreamSaveGame* a_stream)
 89581,0x141106920,0x141163840,3,void MovementMessagePlayIdle::LoadGame(PathingStreamLoadGame* a_stream)
-89583,0x1411069d0,0x1411638f0,2,"void* MovementMessageAutoRegister::RegisterPlayIdle(void* a_registrar, int a_typeId)"
+89583,0x1411069d0,0x1411638f0,2,"void* MovementMessageAutoRegister::RegisterPlayIdle(void* a_registrar, std::int32_t a_typeId)"
 89594,0x141106ce0,0x141163c00,3,std::int32_t MovementMessageFreezeDirection::GetStaticType()
 89595,0x141106d20,0x141163c40,2,void MovementMessageFreezeDirection::SaveGame(PathingStreamSaveGame* a_stream)
 89596,0x141106d40,0x141163c60,2,void MovementMessageFreezeDirection::LoadGame(PathingStreamLoadGame* a_stream)
-89597,0x141106d70,0x141163c90,2,"void* MovementMessageAutoRegister::RegisterFreezeDirection(void* a_registrar, int a_typeId)"
+89597,0x141106d70,0x141163c90,2,"void* MovementMessageAutoRegister::RegisterFreezeDirection(void* a_registrar, std::int32_t a_typeId)"
 89607,0x141107080,0x141163fa0,3,std::int32_t MovementMessageSetStaticPath::GetStaticType()
 89608,0x1411070c0,0x141163fe0,2,void MovementMessageSetStaticPath::SaveGame(PathingStreamSaveGame* a_stream)
 89609,0x1411070e0,0x141164000,2,void MovementMessageSetStaticPath::LoadGame(PathingStreamLoadGame* a_stream)
-89610,0x141107100,0x141164020,2,"void* MovementMessageAutoRegister::RegisterSetStaticPath(void* a_registrar, int a_typeId)"
+89610,0x141107100,0x141164020,2,"void* MovementMessageAutoRegister::RegisterSetStaticPath(void* a_registrar, std::int32_t a_typeId)"
 89621,0x141107410,0x141164330,3,std::int32_t MovementMessageJump::GetStaticType()
 89625,0x1411074f0,0x141164410,2,"bool MovementMessageJump::Prepare(PathFollowerStateUpdateData* a_updateData, float* a_out)"
 89626,0x141107540,0x141164460,2,"bool IPathFollowerAction::Jump_GetTargetSpeed(PathFollowerStateUpdateData* a_updateData, float* a_out)"
-89627,0x141107560,0x141164480,2,"void* MovementMessageAutoRegister::RegisterJump(void* a_registrar, int a_typeId)"
+89627,0x141107560,0x141164480,2,"void* MovementMessageAutoRegister::RegisterJump(void* a_registrar, std::int32_t a_typeId)"
 89638,0x1411078d0,0x1411647f0,2,const BSFixedString& MovementPostUpdateArbiter::GetPipelineStage()
 89639,0x1411078e0,0x141164800,2,const BSFixedString& MovementPostUpdateArbiter::GetArbiterType()
 89640,0x1411078f0,0x141164810,2,BSFixedString& MovementPostUpdateArbiter::GetStaticArbiterType()
@@ -5935,9 +5957,9 @@
 90420,0x14111fbc0,0x14117ca90,2,void MovementMessagePathEvent::SaveGame(PathingStreamSaveGame* a_stream)
 90421,0x14111fbe0,0x14117cab0,2,void MovementMessagePathEvent::LoadGame(PathingStreamLoadGame* a_stream)
 90424,0x14111fc90,0x14117cb60,2,"MovementMessagePathComplete* MovementMessagePathComplete::MovementMessagePathComplete(void* a_request, void* a_solution, void* a_unused)"
-90430,0x14111ff90,0x14117ce60,2,"void* MovementMessageAutoRegister::RegisterNewPath(void* a_registrar, int a_typeId)"
-90431,0x141120060,0x14117cf30,2,"void* MovementMessageAutoRegister::RegisterPathComplete(void* a_registrar, int a_typeId)"
-90432,0x141120130,0x14117d000,2,"void* MovementMessageAutoRegister::RegisterPathFailed(void* a_registrar, int a_typeId)"
+90430,0x14111ff90,0x14117ce60,2,"void* MovementMessageAutoRegister::RegisterNewPath(void* a_registrar, std::int32_t a_typeId)"
+90431,0x141120060,0x14117cf30,2,"void* MovementMessageAutoRegister::RegisterPathComplete(void* a_registrar, std::int32_t a_typeId)"
+90432,0x141120130,0x14117d000,2,"void* MovementMessageAutoRegister::RegisterPathFailed(void* a_registrar, std::int32_t a_typeId)"
 90623,0x14112c840,0x141189710,2,"void PathFollowerTurnTarget::GetFacingAngles(NiPoint3* a_position, float* a_current, float a_zOffset, float* a_outFacing)"
 90628,0x14112cc60,0x141189b30,2,std::uint32_t PathingStreamLoadGame::ReadBSPathingLockInfo()
 90636,0x14112cff0,0x141189ec0,2,"bool MovementActorAvoidanceParameters::ShouldAvoidActorById(std::uint32_t a_actorId, std::uint32_t a_otherId)"
@@ -14794,6 +14816,7 @@
 529964,0x1407dff20,0x14080b270,4,CombatPathingRevolution::src/Advanced_Hook.h:90
 530050,0x140808b20,0x140833e70,4,MagicSystem::CastingType CombatBehaviorContextMagic::GetCastingType()
 530687,0x140d40600,0x140d89590,3,"void CopyPlanesRebased(NiFrustumPlanes* a_src, NiFrustumPlanes* a_dest, NiPoint3* a_origin)"
+530915,0x1410d6990,0x1411336c0,2,std::int32_t BSNavmeshGrid::GetCellIndexForPoint(float* a_point)
 542544,0x141520ab0,0x141597e00,3,VTABLE_NiTStringMap_Setting__0
 542598,0x141522c28,0x141599f78,3,VTABLE_MagicItem__PreloadableVisitor_0
 542605,0x141523058,0x14159a3a8,3,VTABLE_MagicItemFindFunctor_0
