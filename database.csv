@@ -1874,6 +1874,7 @@
 29924,0x14047adf0,0x14048ad90,2,"bool BSPathingCellManager::AddUniqueNavmeshInfo_Scrap(BSTScrapArray<BSNavmeshInfo*>& a_out, BSNavmeshInfo* a_info)"
 29925,0x14047ae90,0x14048ae30,2,"bool BSPathingCellManager::AddUniqueNavmeshInfo_Heap(BSTArray<BSNavmeshInfo*>& a_out, BSNavmeshInfo* a_info)"
 29943,0x14047b400,0x14048b3a0,2,"bool AreNavmeshInfosConnectedRecursive(BSNavmeshInfo* a_info, const BSNavmeshInfo* a_goal, void* a_visited)"
+29992,0x14047ce60,0x14048ce00,2,PathingDoor* PathingDoor::ctor_default()
 29994,0x14047cf10,0x14048ceb0,2,PathingDoor* PathingDoor::ctor(std::uint32_t a_doorId)
 29995,0x14047cf80,0x14048cf20,2,std::uint32_t PathingDoor::GetTypeCRC()
 29997,0x14047cfe0,0x14048cf80,2,std::uint32_t PathingDoor::GetID()
@@ -1926,7 +1927,7 @@
 30131,0x140481c50,0x140491bf0,2,"bool TeleportDoorSearch::RunAndReconstructPath(void* a_outA, void* a_outB, bool a_usePartialPath)"
 30143,0x140482350,0x1404922f0,2,void AStarOpenList::InsertNode(AStarNode* a_node)
 30144,0x1404823d0,0x140492370,2,"AStarNode* TeleportDoorSearch::AddStartNode(std::uint64_t a_key, bool* a_isWorldspace, float a_g, float a_h)"
-30145,0x140482460,0x140492400,2,void TeleportDoorSearch::AddStartNodeIfNoBest()
+30145,0x140482460,0x140492400,2,"void TeleportDoorSearch::AddStartNodeIfNoBest(std::uint64_t a_key, bool* a_isWorldspace, float a_h)"
 30146,0x140482490,0x140492430,2,"void TeleportDoorSearch::AddStartNodeIfNoBest(std::uint64_t a_key, bool* a_isWorldspace, float a_g, float a_h)"
 30148,0x140482510,0x1404924b0,2,AStarNode* TeleportDoorSearch::RunToCompletion()
 30150,0x1404825f0,0x140492590,2,bool TeleportDoorSearch::Step()
@@ -1952,6 +1953,7 @@
 30232,0x140486330,0x1404962d0,2,void AStarClosedSet::Grow()
 30233,0x140486480,0x140496420,2,AStarNode* AStarNodePool::AllocNode()
 30260,0x140487d30,0x140497cd0,2,"void AStarOpenListInsert(void* a_openList, void* a_node)"
+30261,0x140487db0,0x140497d50,2,"float* NavMeshSearchFitSphere::AddStartNode(void* a_navmesh, std::uint32_t a_triangle, std::uint32_t a_arg4, float a_cost)"
 30279,0x140488940,0x1404988e0,2,"bool NavMeshSearchFlee::RunSearch(BSPathingRequest** a_request, BSFastNavmeshTriLocation* a_start, BSTArray<BSFastNavmeshTriLocation>* a_outLocations, BSTArray<BSFastNavmeshEdgeHandle>* a_outEdges)"
 30280,0x140488bb0,0x140498b50,2,"void NavMeshSearchFlee::SetNodeLocationAndHeuristic(AStarNode* a_node, BSNavmesh* a_navmesh, std::uint16_t a_triIndex)"
 30281,0x140488cb0,0x140498c50,2,"bool NavMeshSearchFlee::ExpandNode(AStarNode* a_node, BSTSmallArray<AStarNode*,3>* a_out)"
