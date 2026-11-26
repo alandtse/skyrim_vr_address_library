@@ -2124,7 +2124,7 @@
 30933,0x1404ad820,0x1404bd880,3,void BGSTerrainChunk::Dtor()
 30934,0x1404ad940,0x1404bd9a0,3,void BGSTerrainBlock::Attach(BGSTerrainBlock* a_block)
 30935,0x1404adb20,0x1404bdb80,2,void BGSTerrainBlock::MarkLoadedAndQueueUpdate()
-30936,0x1404adb60,0x1404bdbc0,2,void BGSTerrainBlock::Detach()
+30936,0x1404adb60,0x1404bdbc0,3,void BGSTerrainBlock::Detach(BGSTerrainBlock* a_block)
 30939,0x1404add70,0x1404bddd0,3,void BGSTerrainChunk::AttachWater(bool a_attach)
 30942,0x1404adec0,0x1404bdf20,2,void BGSTerrainBlock::Hide()
 30943,0x1404adef0,0x1404bdf50,2,void BGSTerrainBlock::Show()
