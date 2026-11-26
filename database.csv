@@ -5219,7 +5219,9 @@
 87992,0x1410a7150,0x141103d80,2,void BSPathingLocation::Read(BSPathingStreamRead* a_stream)
 87993,0x1410a7290,0x141103ec0,2,void BSPathingLocation::Write(BSPathingStreamWrite* a_stream)
 87994,0x1410a7350,0x141103f80,2,"void BSPathingLocation::SetPositionAndCell(const NiPoint3* a_pos, const NiPointer<BSPathingCell>* a_cell)"
+87995,0x1410a7420,0x141104050,2,bool BSPathingLocation::AreCandidateNavmeshInfosConnected()
 87998,0x1410a79f0,0x141104620,2,bool PathingStreamMasterFileRead::ReadBSPathingCellPtr(BSTSmartPointer<BSPathingCell>& a_ptr)
+88003,0x1410a7cd0,0x141104900,2,"bool BSNavmesh::AccumulateClosedDoorCostsForTriangle(std::uint16_t a_triangle, BSPathingLockData** a_lockData, float* a_inOutCost)"
 88004,0x1410a7e10,0x141104a40,4,"bool FindTriangleForLocationFilterCheckDeltaZ::IsValidTri(NiPoint3* a_location, BSNavmesh* a_navMesh, std::uint16_t a_tri, NiPoint3* a_pointOnTri)"
 88009,0x1410a7f90,0x141104bc0,2,"bool Pathing::BuildWithRegisteredPathBuilder(BSTSmartPointer<BSPathingRequest>* a_request, BSTSmartPointer<BSPathingSolution>* a_solution)"
 88014,0x1410a82d0,0x141104f00,2,std::uint8_t Pathing::ResolveOrSnapLocationToNavmesh(BSPathingLocation* a_location)
