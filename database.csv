@@ -1918,6 +1918,8 @@
 30122,0x140481220,0x1404911c0,2,"bool TeleportDoorSearch::ExpandNode(AStarNode* a_node, BSTSmallArray<AStarNode*,3>* a_out)"
 30126,0x140481730,0x1404916d0,2,"std::int32_t TeleportDoorSearch::FindOrAddStartNode(std::uint64_t a_key, float a_g, void* a_poolRef, AStarNode** a_outNode)"
 30127,0x140481860,0x140491800,2,"void* TeleportDoorSearch::FindOrAddNode(std::uint64_t a_key, float a_g, void* a_poolRef, AStarNode** a_outNode)"
+30128,0x0x1404819b0,0x0x140491950,2,"void ReconstructPath(AStarNode* a_goalNode, void* a_outA, void* a_outB)"
+30131,0x0x140481c50,0x0x140491bf0,2,"bool RunAndReconstructPath(void* a_outA, void* a_outB, bool a_usePartialPath)"
 30143,0x140482350,0x1404922f0,2,void AStarOpenList::InsertNode(AStarNode* a_node)
 30144,0x1404823d0,0x140492370,2,"AStarNode* TeleportDoorSearch::AddStartNode(std::uint64_t a_key, bool* a_isWorldspace, float a_g, float a_h)"
 30145,0x140482460,0x140492400,2,void TeleportDoorSearch::AddStartNodeIfNoBest()
@@ -1994,6 +1996,7 @@
 30394,0x14048f360,0x14049f300,2,std::uint32_t PathingRequestCover::GetStaticType()
 30400,0x14048f6b0,0x14049f650,2,void PathingCoverLocation::Read(BSPathingStreamRead* a_stream)
 30401,0x14048f7c0,0x14049f760,2,void PathingCoverLocation::Write(BSPathingStreamWrite* a_stream)
+30402,0x0x14048f8d0,0x0x14049f870,2,"void SetCoverData(std::uint16_t a_value, std::uint16_t a_lowerBound, std::uint16_t a_upperBound, std::uint8_t a_flag0, std::uint8_t a_flag1, std::uint8_t a_edgeIndex)"
 30407,0x14048faf0,0x14049fa90,2,std::uint32_t PathingCoverLocation::GetObstacleUpdateTime()
 30408,0x14048fbc0,0x14049fb60,2,bool PathingCoverLocation::IsObstacleUpdateTime(std::uint32_t a_time)
 30417,0x14048ff00,0x14049fea0,2,void PathingRequestFlee::PathingRequestFlee()
@@ -5242,6 +5245,11 @@
 88130,0x1410b5210,0x141111e40,2,"bool Pathing::ResolvePathNodeNavInfo(PathFitContext* a_ctx, PathNodeNavInfoArray* a_out)"
 88139,0x1410b5a20,0x141112650,2,bool Pathing::FitPathTangentsImpl(PathFitContext* a_ctx)
 88140,0x1410b5d30,0x141112960,2,bool Pathing::FitPathTangentsByHandleImpl(PathFitContext* a_ctx)
+88162,0x0x1410b7310,0x0x141113f40,2,"void ReconstructPath(void* a_goalNode, void* a_outA, void* a_outB)"
+88163,0x0x1410b7590,0x0x1411141c0,2,"bool RunAndReconstructPath(void* a_outA, void* a_outB, bool a_usePartialPath)"
+88177,0x0x1410b7d50,0x0x141114980,2,void AddStartNodeIfNoBest()
+88181,0x0x1410b7e20,0x0x141114a50,2,void* RunToCompletion()
+88183,0x0x1410b7f00,0x0x141114b30,2,bool Step()
 88193,0x1410b88f0,0x141115520,2,void MovementAgentActorState::RegisterWithController(IMovementControllerRegisterInterface& a_controller)
 88194,0x1410b8940,0x141115570,2,void MovementAgentActorState::UnregisterWithController()
 88197,0x1410b8a20,0x141115650,2,const BSFixedString& MovementAgentActorState::GetAgentType()
