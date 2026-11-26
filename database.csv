@@ -1816,7 +1816,9 @@
 29765,0x140470860,0x140480820,2,void* GetTaskletGroupHandle()
 29819,0x140473120,0x140483100,4,"void* Pathing::BuildFollowPath(Pathing* a_this, void* a_pathOut, Character* a_actor, void* a_reserved)"
 29822,0x140473300,0x1404832e0,2,"BSPathingLocation* Pathing::MakeLocationFromRef(BSPathingLocation* a_out, NiPoint3* a_pos, TESObjectREFR* a_ref)"
+29823,0x1404733b0,0x140483390,2,"BSPathingLocation* Pathing::MakeLocationForPosition(BSPathingLocation* a_out, const NiPoint3& a_pos, TESForm* a_worldSpace)"
 29824,0x140473490,0x140483470,2,"BSPathingLocation* Pathing::MakeLocation(BSPathingLocation* a_out, NiPoint3* a_pos, TESObjectCELL* a_cell, TESWorldSpace* a_worldSpace)"
+29825,0x140473520,0x140483500,2,"BSPathingLocation* Pathing::MakeLocationForWorldLocation(BSPathingLocation* a_out, const NiPoint3& a_pos)"
 29832,0x1404737a0,0x140483780,4,"bool FindClosestPointOnNavmesh(const BSTSmartPointer<BSPathingCell>& a_cell, const NiPoint3& a_location, FindTriangleForLocationFilter& a_filter, NiPoint3& a_pointOut)"
 29833,0x140473870,0x140483850,2,"bool Pathing::FindNearestNavmeshPoint(TESWorldSpace* a_worldSpace, TESObjectCELL* a_cell, NiPoint3* a_pos, float a_radius, NiPoint3* a_outPos)"
 29836,0x140473f40,0x140483f20,2,bool Pathing::RunSafeStraightLineSearch(PathingRequestSafeStraightLine** a_request)
@@ -1827,7 +1829,8 @@
 29843,0x140475c10,0x140485bf0,2,"bool Pathing::FindTeleportDoorBetweenRefs(TESObjectREFR* a_from, TESObjectREFR* a_to, BSPathingLockData* a_lockData, std::uint32_t* a_doorHandleOut, std::int32_t a_lockedDoorMode, float* a_lengthOut)"
 29845,0x140476120,0x140486100,2,"bool Pathing::GetPathLengthWithDoors(BSPathingLocation* a_start, BSPathingLocation* a_goal, float* a_lengthOut)"
 29866,0x140476ba0,0x140486b80,4,"bool Pathing::GetPathingCell(const NiPoint3& a_location, TESObjectCELL* a_cell, TESWorldSpace* a_worldSpace, BSTSmartPointer<BSPathingCell>& a_cellOut)"
-29875,0x1404772b0,0x140487270,2,"bool Pathing::GetPathingDoorForCollidable(hkpCollidable* a_collidable, BSTSmartPointer<BSPathingDoor>* a_out)"
+29872,0x1404771c0,0x140487180,2,BSPathingDoor* Pathing::CreatePathingDoorFromRef(TESObjectREFR* a_ref)
+29875,0x1404772b0,0x140487270,2,"bool Pathing::GetPathingDoorForCollidable(hkpCollidable* a_collidable, BSTSmartPointer<BSPathingDoor>& a_out)"
 29898,0x1404795b0,0x140489540,2,"bool BSPathingCellManager::CollectNavmeshesInAABB_Scrap(BSNavmeshInfoTree* a_tree, const NiPoint3& a_min, const NiPoint3& a_max, BSTScrapArray<BSNavmesh*>& a_out)"
 29899,0x1404797b0,0x140489740,2,"bool BSPathingCellManager::CollectNavmeshesInAABB_Heap(BSNavmeshInfoTree* a_tree, const NiPoint3& a_min, const NiPoint3& a_max, BSTArray<BSNavmesh*>& a_out)"
 29900,0x1404799b0,0x140489940,2,"bool BSPathingCellManager::CollectNavmeshInfosInAABB_Scrap(BSNavmeshInfoTree* a_tree, const NiPoint3& a_min, const NiPoint3& a_max, BSTScrapArray<BSNavmeshInfo*>& a_out)"
@@ -1849,6 +1852,7 @@
 30009,0x14047d9a0,0x14048d940,2,float PathingDoor::GetAutoLoadFadeDistance()
 30011,0x14047dca0,0x14048dc40,2,bool PathingDoor::IsSameDoor(PathingDoor** a_other)
 30012,0x14047dd20,0x14048dcc0,2,"void PathingDoor::GetDebugText(char* a_buf, std::int32_t a_size)"
+30022,0x14047e230,0x14048e1d0,2,BSPathingDoor* PathingDoorCreator::Create()
 30030,0x14047e6d0,0x14048e670,4,"PathingLockData* PathingLockData::PathingLockData(const ObjectRefHandle& a_handle, bool a_flag)"
 30031,0x14047e7a0,0x14048e740,4,void PathingLockData::~PathingLockData()
 30035,0x14047e8f0,0x14048e890,2,bool PathingLockData::CanPassDoor(BSPathingDoor** a_door)
@@ -5158,7 +5162,7 @@
 87965,0x1410a5740,0x141102370,3,"BSPathingLocation* BSPathingLocation::ctor(const NiPoint3& a_location, const BSTSmartPointer<BSPathingCell>& a_cell)"
 87968,0x1410a5880,0x1411024b0,2,"BSPathingLocation* BSPathingLocation::ctor_ResolveTriangle(const NiPoint3* a_point, const BSPathingCell* a_cell)"
 87970,0x1410a5a20,0x141102650,2,BSPathingLocation* BSPathingLocation::CopyFrom(const BSPathingLocation* a_other)
-87973,0x1410a5c20,0x141102850,2,"void BSPathingLocation::ctor_FromPositionAndCell(const NiPoint3* a_pos, BSPathingCell** a_cell)"
+87973,0x1410a5c20,0x141102850,2,"void BSPathingLocation::ctor_FromPositionAndCell(const NiPoint3& a_pos, BSTSmartPointer<BSPathingCell>& a_cell)"
 87976,0x1410a5d80,0x1411029b0,2,bool BSPathingLocation::GetNavmesh(BSNavmesh** a_out)
 87978,0x1410a5e50,0x141102a80,3,"bool BSPathingLocation::GetNavMeshAndTriangle(BSTSmartPointer<BSNavmesh>& a_navMeshOut, std::uint16_t& a_triOut) const"
 87985,0x1410a64c0,0x1411030f0,3,bool BSPathingLocation::ResolveToClosestNavmeshAndTriangle(FindTriangleForLocationFilter& a_filter)
@@ -5333,6 +5337,7 @@
 88641,0x1410cc4a0,0x1411291d0,2,void BSNavmesh::BuildCoverTriangleList()
 88662,0x1410cd390,0x14112a0c0,2,bool BSNavmesh::ReadFromStream(PathingStreamMasterFileRead& a_stream)
 88674,0x1410cf350,0x14112c080,3,NiPoint3 BSNavmesh::GetNormal(std::uint16_t a_tri) const
+88680,0x1410cfe60,0x14112cb90,2,std::uint16_t BSNavmesh::FindClosestTriangle(const NiPoint3& a_pos
 88761,0x1410d6a60,0x141133790,2,bool PathingStreamMasterFileRead::ReadBSNavmeshCoverTriangleArray(BSTArray<std::uint16_t>& a_array)
 88762,0x1410d6ad0,0x141133800,2,bool PathingStreamMasterFileRead::ReadBSNavmeshEdgeExtraInfoArray(BSTArray<BSNavmeshEdgeExtraInfo>& a_array)
 88763,0x1410d6b40,0x141133870,2,bool PathingStreamMasterFileRead::ReadBSNavmeshVertexArray(BSTArray<BSNavmeshVertex>& a_array)
