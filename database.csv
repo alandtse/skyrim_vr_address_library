@@ -5223,7 +5223,13 @@
 88041,0x1410ad0b0,0x141109ce0,2,"void Pathing::ApplyStartTangent(void* a_request, void* a_pathState)"
 88042,0x1410ad180,0x141109db0,2,"void Pathing::ApplyEndTangent(void* a_request, void* a_pathState)"
 88048,0x1410ad8f0,0x14110a520,2,"bool Pathing::SmoothPathDefault(BSPathingRequest* a_request, BSPathingSolution* a_solution, const NiPoint3* a_start, const NiPoint3* a_goal, BSTArray<BSFastNavmeshTriLocation>* a_locations, BSTArray<BSFastNavmeshEdgeHandle>* a_edges)"
+88072,0x1410b0190,0x14110cdc0,2,"bool Pathing::WalkNavmeshSegment(void* a_ctx, BSPathingLocation* a_start, void* a_edgePredicate, BSNavmeshEdgeLocation* a_outEnd)"
+88074,0x1410b0fc0,0x14110dbf0,2,"bool Pathing::WalkNavmeshSegmentByHandle(void* a_ctx, void* a_start, void* a_edgePredicate, BSNavmeshEdgeLocation* a_outEnd)"
 88076,0x1410b1ea0,0x14110ead0,2,"bool NavmeshStraightLineWalk(void* a_ctx, void* a_unused1, void* a_unused2, BSNavmeshEdgeLocation* a_inOutLocation)"
+88125,0x1410b3f70,0x141110ba0,2,"void Pathing::ShrinkTangentsToFitNavmesh(void* a_path, BSPathingLocation* a_locA, NiPoint3* a_dirA, float a_scaleA, BSPathingLocation* a_locB, NiPoint3* a_dirB, float a_scaleB, float* a_outLenA, float* a_outLenB)"
+88126,0x1410b4310,0x141110f40,2,"void Pathing::ShrinkTangentsToFitNavmeshByHandle(void* a_path, BSPathingLocation* a_locA, NiPoint3* a_dirA, float a_scaleA, BSPathingLocation* a_locB, NiPoint3* a_dirB, float a_scaleB, float* a_outLenA, float* a_outLenB)"
+88127,0x1410b46b0,0x1411112e0,2,"void Pathing::FitNodePairTangents(void* a_path, BSPathingLocation* a_locA, BSPathingLocation* a_locB)"
+88128,0x1410b4c40,0x141111870,2,"void Pathing::FitNodePairTangentsByHandle(void* a_path, BSPathingLocation* a_locA, BSPathingLocation* a_locB)"
 88193,0x1410b88f0,0x141115520,2,void MovementAgentActorState::RegisterWithController(IMovementControllerRegisterInterface& a_controller)
 88194,0x1410b8940,0x141115570,2,void MovementAgentActorState::UnregisterWithController()
 88197,0x1410b8a20,0x141115650,2,const BSFixedString& MovementAgentActorState::GetAgentType()
@@ -5381,7 +5387,9 @@
 88554,0x1410c6510,0x141123270,2,"void BSPathingSolution::GetPredictedPoint(float a_from, float a_distance, float* a_outPathPosition, NiPoint3* a_outPoint)"
 88558,0x1410c6ea0,0x141123bd0,2,"bool BSPathingSolution::GetClosestPointOnPath(NiPoint3* a_pos, void* a_out)"
 88559,0x1410c6ff0,0x141123d20,2,"float BSPathingSolution::FindMaxSpeedAlongPath(float a_arg1, float a_arg2, float a_arg3, float a_arg4, float a_arg5, float a_arg6)"
+88560,0x1410c7050,0x141123d80,2,"float BSPathingSolution::FindMaxSpeed(float a_distance, float a_param)"
 88568,0x1410c80f0,0x141124e20,2,"bool BSPathingSolution::FindPathPositionNearPointImpl(const NiPoint3& a_point, float a_startPosition, float a_distance, bool a_forward, float& a_outPosition, NiPoint3& a_outPoint, float a_tolerance)"
+88571,0x1410c8da0,0x141125ad0,2,"void BSPathingSolution::FindMaxSpeedImpl(float* a_inOutSpeed, float a_distance, float a_param)"
 88596,0x1410c9b10,0x141126840,2,bool PathingStreamLoadGame::ReadBSPathingNodeArray(BSTArray<BSPathingNode>& a_nodes)
 88597,0x1410c9b80,0x1411268b0,2,bool PathingStreamLoadGame::ReadBSVirtualPathingNodeArray(BSTArray<BSVirtualPathingNode>& a_nodes)
 88603,0x1410ca1c0,0x141126ef0,2,bool PathingStreamSaveGame::WriteBSVirtualPathingNodeArray(const BSTArray<BSVirtualPathingNode>& a_nodes)
