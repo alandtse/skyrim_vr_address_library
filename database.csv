@@ -5557,10 +5557,15 @@
 89065,0x1410e7e80,0x141144bc0,2,"bool GetCircleTangentPoints2D(NiPoint3* a_center, float a_radius, NiPoint3* a_point, NiPoint3* a_outTangentA, NiPoint3* a_outTangentB)"
 89066,0x1410e7fa0,0x141144ce0,2,"bool GetCircleTangentDirections2D(float* a_circle, float* a_point, float* a_outLeft, float* a_outRight)"
 89067,0x1410e8070,0x141144db0,2,"bool IsPointNearSegment3D(NiPoint3* a_a, NiPoint3* a_b, NiPoint3* a_point, float a_distance)"
+89068,0x1410e81f0,0x141144f30,2,"float TriangleArea2D(const NiPoint3* a_v0, const NiPoint3* a_v1, const NiPoint3* a_v2)"
 89069,0x1410e8290,0x141144fd0,2,"void ComputeTriangleNormalAndAreaXY(NiPoint3* a_v0, NiPoint3* a_v1, NiPoint3* a_v2, NiPoint3* a_outNormal, float* a_outAreaXY)"
 89075,0x1410e8eb0,0x141145bf0,2,"bool IsAngleWithinArc(float a_angle, float a_arcStart, float a_arcEnd, bool a_reversed)"
 89076,0x1410e8f70,0x141145cb0,2,"void GetRandomPointInTriangle(const NiPoint3* a_v0, const NiPoint3* a_v1, const NiPoint3* a_v2, NiPoint3* a_out)"
+89077,0x1410e90f0,0x141145e30,2,float GetHeadingFromXY(const float* a_xy)
 89079,0x1410e92d0,0x141146010,2,"bool MovementUtils::IntersectRayWithCircle(NiPoint3* a_origin, NiPoint3* a_direction, NiPoint3* a_offset, NiPoint3* a_center, float a_radius, NiPoint3* a_out)"
+89081,0x1410e94a0,0x1411461e0,2,"float DistanceSquaredToVerticalSegment(const NiPoint3* a_point, const NiPoint3* a_center, float a_halfHeight)"
+89082,0x1410e9540,0x141146280,2,"bool SelectTriangleIntersectionPivot(const NiPoint3* a_v0, const NiPoint3* a_v1, const NiPoint3* a_v2, float a_p0, float a_p1, float a_p2, float a_d0, float a_d1, float a_d2, float a_s0, float a_s1, float* a_isectA, float* a_isectB, NiPoint3* a_pointA, NiPoint3* a_pointB)"
+89083,0x1410e9830,0x141146570,2,"void ComputeTriangleIntersectionEndpoints(const NiPoint3* a_v0, const NiPoint3* a_v1, const NiPoint3* a_v2, float a_p0, float a_p1, float a_p2, float a_d0, float a_d1, float a_d2, float* a_isectA, float* a_isectB, NiPoint3* a_pointA, NiPoint3* a_pointB)"
 89102,0x1410ea4c0,0x141147200,2,void NullMovementSelectIdleResult::Reset()
 89113,0x1410eae10,0x141147b50,2,"float PathingAvoidNodeArray::ComputeWeightedCenter(const NiPoint3* a_from, NiPoint3* a_outCenter)"
 89115,0x1410eb100,0x141147e40,2,"BSNavmeshSearchFilters* BSNavmeshSearchFilters::ctor(BSPathingRequest* a_request, BSTArray<void*>* a_loadedNavmeshes, void* a_secondary)"
@@ -5574,6 +5579,8 @@
 89150,0x1410ed2a0,0x141149fe0,2,"bool BSPathingLOSGrid::CaptureCellsFromMap(BSPathingLOSMap** a_map, uint32_t a_arg)"
 89151,0x1410ed400,0x14114a140,2,bool BSPathingLOSGrid::IsLocationMarked(BSPathingLocation* a_location)
 89152,0x1410ed4a0,0x14114a1e0,2,"bool BSPathingLOSGrid::MarkLocation(BSPathingLocation* a_location, bool a_state, void* a_unused)"
+89155,0x1410ed720,0x14114a460,2,"int64_t BSPathingLOSGridCell::ApplyToMap(BSPathingLOSMap** a_map, uint32_t a_arg)"
+89156,0x1410ed860,0x14114a5a0,2,"int64_t BSPathingLOSGridCell::CaptureFromMap(BSPathingLOSMap** a_map, uint32_t a_arg)"
 89157,0x1410ed990,0x14114a6d0,2,bool BSPathingLOSGridCell::IsLocationMarked(BSPathingLocation* a_location)
 89158,0x1410eda50,0x14114a790,2,"bool BSPathingLOSGridCell::MarkLocation(BSPathingLocation* a_location, bool a_state, void* a_unused)"
 89179,0x1410ee240,0x14114af80,2,bool PathingStreamLoadGame::ReadBSPathingLOSGridCellArray(BSTArray<BSPathingLOSGridCell*>& a_cells)
