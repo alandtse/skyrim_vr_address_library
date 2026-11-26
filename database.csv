@@ -4444,7 +4444,7 @@
 66987,0x140c076a0,0x140c42520,3,void BSTimer::Update(std::int32_t a_currentTicks)
 66988,0x140c078b0,0x140c42730,4,"void BSTimer::SetGlobalTimeMultiplier(float a_multiplier, bool a_arg2)"
 66989,0x140c07900,0x140c42780,4,RE::UpdateGlobalTimeMultiplier_140C07900
-67018,0x140c081a0,0x140c43030,2,std::uint64_t Random::NextBelow(void* a_state
+67018,0x140c081a0,0x140c43030,2,"std::uint64_t Random::NextBelow(void* a_state, std::uint32_t a_max)"
 67151,0x140c0d7b0,0x140c485e0,3,void BSThreadEvent::InitSDM()
 67220,0x140c10610,0x140c4b460,3,ShakeController
 67223,0x140c10860,0x140c4b740,3,RE::Rumble::Update
