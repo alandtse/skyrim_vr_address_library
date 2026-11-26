@@ -4338,11 +4338,13 @@ sseid,aeid,confidence,name
 29829,30645,1,
 29831,30647,1,Pathing::sub_*
 29833,30649,1,Pathing::sub_*
+29836,30652,1,
 29837,30653,1,Pathing::sub_*
 29838,30654,1,
 29840,30656,1,Pathing::sub_*
 29841,30657,1,Pathing::sub_*
 29842,30658,1,Pathing::sub_*
+29843,30659,1,
 29844,30660,1,Pathing::sub_*
 29845,30661,1,Pathing::sub_*
 29847,30663,1,BSPathingCellManager::Func2_*
@@ -4365,6 +4367,8 @@ sseid,aeid,confidence,name
 29896,30700,1,
 29922,30733,1,
 29923,30734,1,
+30035,30850,1,
+30036,30851,1,
 30081,30891,1,PathingSpace::Func0_*
 30084,30894,1,PathingSpace::Func2_*
 30087,30898,1,PathingStreamMasterFileRead::Func17_*
@@ -4386,6 +4390,7 @@ sseid,aeid,confidence,name
 30104,30915,1,
 30106,30917,1,
 30107,30918,1,
+30121,30932,1,
 30122,30933,1,
 30123,30934,1,TeleportDoorSearch::Func2_*
 30127,30939,1,
@@ -4455,6 +4460,7 @@ sseid,aeid,confidence,name
 30308,31138,1,
 30322,31153,1,
 30323,31154,1,
+30326,31157,1,
 30327,31158,1,
 30331,31168,1,
 30333,31170,1,
@@ -7155,6 +7161,7 @@ sseid,aeid,confidence,name
 48469,49460,1,
 48471,49463,1,
 48472,49464,1,
+48549,49534,1,
 48623,49576,1,AutoRegisterFactory_gs_T1_T2_ge_::sub_*
 48624,49563,1,AutoRegisterPathBuilderFactory_CombatPathingRequestGeneric_CombatPathingGoalPolicySearch_CombatPathingSearchPolicyStandard__CombatPathingRequestBuilder_::Func0_*
 48625,49585,1,AutoRegisterPathBuilderFactory_CombatPathingRequestGeneric_CombatPathingGoalPolicySearchWander_CombatPathingSearchPolicyStandard__CombatPathingRequestBuilder_::Func0_*
