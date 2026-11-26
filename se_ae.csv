@@ -2978,6 +2978,7 @@ sseid,aeid,confidence,name
 19107,19509,1,
 19113,19515,1,
 19115,19517,1,TESObjectREFR::Update3DPosition_*
+19116,19518,1,
 19118,19520,1,
 19119,19521,1,
 19124,19526,1,
@@ -8346,6 +8347,7 @@ sseid,aeid,confidence,name
 67014,68272,1,
 67017,68275,1,
 67018,68276,1,
+67070,68344,1,
 67151,68449,3,RE::BSThreadEvent::InitSDM
 67234,68534,3,QuickLoot::
 67240,68540,3,QuickLoot::

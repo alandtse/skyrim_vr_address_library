@@ -520,6 +520,7 @@
 19105,0x1402850e0,0x140296810,3,void TESObjectREFR::InitItemImpl()
 19110,0x140285be0,0x140297310,3,void TESObjectREFR::AddLockChange()
 19113,0x140285f90,0x1402976c0,2,void TESObjectREFR::ForceEditorLocation(BGSLocation* a_location)
+19116,0x1402862e0,0x140297a10,2,"void TESObjectREFR::Say(void* a_result, TESTopic* a_topic, TESObjectREFR* a_speakAs, void* a_outputModel)"
 19119,0x1402866d0,0x140297e00,4,void TESObjectREFR::UpdateSoundCallBack(bool a_endSceneAction)
 19124,0x140286d40,0x140298470,2,"void TESObjectREFR::DamageObject(float a_objectHealth, bool a_arg3)"
 19133,0x140287d30,0x140299460,4,"void TESObjectREFR::ReadFromSaveGame (TESObjectREFR * a_this, BGSLoadFormBuffer * a_buffer)"
@@ -4518,6 +4519,7 @@
 67017,0x140c08120,0x140c42fb0,2,void RandomNumberGenerator::Seed(std::uint32_t a_seed)
 67018,0x140c081a0,0x140c43030,2,"std::uint32_t GetRandomNumber(RandomNumberGenerator* a_rng, std::uint32_t a_max)"
 67019,0x140c08290,0x140c43120,2,void RandomNumberGenerator::Regenerate()
+67070,0x140c0b120,0x140c45fb0,2,bool IsNullOrWhitespace(const char* a_str)
 67151,0x140c0d7b0,0x140c485e0,3,void BSThreadEvent::InitSDM()
 67220,0x140c10610,0x140c4b460,3,ShakeController
 67223,0x140c10860,0x140c4b740,3,RE::Rumble::Update
