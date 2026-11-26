@@ -1960,6 +1960,8 @@
 30665,0x140496e00,0x1404a6da0,2,"bool PathBuilderFlyPath::Build(BSTSmartPointer<BSPathingRequest>* a_request, BSTSmartPointer<BSPathingSolution>* a_solution)"
 30672,0x14049ba80,0x1404aba20,2,"void PathBuilderFlight::GenerateTurnLimitedFlightPoints(BSPathingRequest** a_request, BSPathingSolution** a_solution, float a_flyHeight, const float* a_eulerAngles)"
 30676,0x14049d2a0,0x1404ad240,2,"void PathBuilderFlight::SmoothFlightPointsZ(BSPathingRequest** a_request, BSPathingSolution* a_solution)"
+30677,0x14049d540,0x1404ad4e0,2,"void PathBuilderFlight::ExtendFlightPathEnd(BSPathingRequest** a_request, BSPathingSolution** a_solution, float a_dist)"
+30678,0x14049d7c0,0x1404ad760,2,void PathBuilderFlight::ComputeFlightPointTangents(BSPathingSolution** a_solution)
 30710,0x14049ebb0,0x1404aeb50,2,"bool PathBuilderHidePath::Build(BSTSmartPointer<BSPathingRequest>* a_request, BSTSmartPointer<BSPathingSolution>* a_solution)"
 30714,0x14049f200,0x1404af1a0,2,"bool PathBuilderLOSPath::Build(BSTSmartPointer<BSPathingRequest>* a_request, BSTSmartPointer<BSPathingSolution>* a_solution)"
 30718,0x14049fa80,0x1404afa20,2,"bool PathBuilderOptimalLocationPath::Build(BSTSmartPointer<BSPathingRequest>* a_request, BSTSmartPointer<BSPathingSolution>* a_solution)"
@@ -5082,7 +5084,9 @@
 87956,0x1410a4330,0x141100f60,2,"void BSPathingSpline::EvaluateDerivatives(const BSPathingHermiteSegment* a_segment, float a_t, NiPoint3& a_velocity, NiPoint3& a_acceleration)"
 87957,0x1410a4490,0x1411010c0,2,"float BSPathingSpline::ComputeHermiteSegmentLength(const BSPathingHermiteSegment* a_segment, float a_t0, float a_t1, std::uint32_t a_samples)"
 87960,0x1410a5430,0x141102060,2,"void BSPathingSpline::EvaluateHermiteSegment(const BSPathingHermiteSegment* a_segment, float a_t, NiPoint3& a_out)"
+87963,0x1410a55e0,0x141102210,2,BSPathingLocation* BSPathingLocation::ctor_FromTriLocation(const BSFastNavmeshTriLocation* a_loc)
 87965,0x1410a5740,0x141102370,3,"BSPathingLocation* BSPathingLocation::ctor(const NiPoint3& a_location, const BSTSmartPointer<BSPathingCell>& a_cell)"
+87968,0x1410a5880,0x1411024b0,2,"BSPathingLocation* BSPathingLocation::ctor_ResolveTriangle(const NiPoint3* a_point, const BSPathingCell* a_cell)"
 87970,0x1410a5a20,0x141102650,2,BSPathingLocation* BSPathingLocation::CopyFrom(const BSPathingLocation* a_other)
 87978,0x1410a5e50,0x141102a80,3,"bool BSPathingLocation::GetNavMeshAndTriangle(BSTSmartPointer<BSNavmesh>& a_navMeshOut, std::uint16_t& a_triOut) const"
 87985,0x1410a64c0,0x1411030f0,3,bool BSPathingLocation::ResolveToClosestNavmeshAndTriangle(FindTriangleForLocationFilter& a_filter)
@@ -5275,6 +5279,7 @@
 89007,0x1410e3ec0,0x141140c00,2,std::uint32_t PathingSolutionEntryArray::PushBack(PathingSolutionEntry* a_entry)
 89018,0x1410e42e0,0x141141020,2,"void PathingSolutionEntryArray::ReleaseRange(std::uint32_t a_index, std::uint32_t a_count)"
 89030,0x1410e4750,0x141141490,2,"void PathingSolutionEntryArray::RemoveElements(std::uint32_t a_index, std::uint32_t a_count)"
+89076,0x1410e8f70,0x141145cb0,2,"void GetRandomPointInTriangle(const NiPoint3* a_v0, const NiPoint3* a_v1, const NiPoint3* a_v2, NiPoint3* a_out)"
 89079,0x1410e92d0,0x141146010,2,"bool MovementUtils::IntersectRayWithCircle(NiPoint3* a_origin, NiPoint3* a_direction, NiPoint3* a_offset, NiPoint3* a_center, float a_radius, NiPoint3* a_out)"
 89102,0x1410ea4c0,0x141147200,2,void NullMovementSelectIdleResult::Reset()
 89113,0x1410eae10,0x141147b50,2,"float PathingAvoidNodeArray::ComputeWeightedCenter(const NiPoint3* a_from, NiPoint3* a_outCenter)"
