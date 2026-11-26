@@ -1991,6 +1991,8 @@ sseid,aeid,confidence,name
 12835,12967,1,MultiBoundMarkerData::GetType_*
 12836,12968,1,MultiBoundMarkerData::dtor_*
 12839,12971,1,
+12840,12972,1,
+12841,12973,1,
 12843,12975,1,
 12845,12977,1,
 12847,12979,1,
@@ -2120,6 +2122,7 @@ sseid,aeid,confidence,name
 13563,13654,1,NiObject::AsNiTriBasedGeom_*
 13564,13655,1,NiObject::AsNiTriShape_*
 13565,13656,1,NiNode::AsNode_*
+13576,14774,1,
 13578,13671,1,
 13580,13673,1,TESObjectCELL::sub_140166250
 13581,13674,1,
@@ -3111,6 +3114,8 @@ sseid,aeid,confidence,name
 19771,20166,2,
 19805,20210,3,RE::TESObjectREFR::IsAnOwner
 19811,20216,3,void* TESObjectREFR::GetTeleportData()
+19812,20217,1,
+19813,20218,1,
 19839,20244,2,
 19847,20254,2,
 19857,20264,3,RE::TESObjectREFR::InitChildActivates
@@ -3118,6 +3123,7 @@ sseid,aeid,confidence,name
 19871,20278,2,
 19872,20279,2,
 19873,20280,1,
+19897,20302,1,
 20077,20520,1,
 20078,20521,1,
 20089,20536,3,TESWorldSpace::CollectMapMarkerHandles
@@ -8289,6 +8295,9 @@ sseid,aeid,confidence,name
 66889,68150,3,RE::ScrapHeap::SetKeepPages
 66911,68166,1,
 66962,68219,1,
+67014,68272,1,
+67017,68275,1,
+67018,68276,1,
 67151,68449,3,RE::BSThreadEvent::InitSDM
 67234,68534,3,QuickLoot::
 67240,68540,3,QuickLoot::
@@ -8914,6 +8923,7 @@ sseid,aeid,confidence,name
 87963,90344,1,
 87968,90349,1,
 87970,90351,2,
+87976,90358,1,
 87992,90376,1,
 87993,90377,1,
 87998,90383,1,

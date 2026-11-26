@@ -140,6 +140,8 @@
 12784,0x1401424f0,0x140152ee0,3,bhkRigidBody* bhkCollisionObject::GetRigidBody()
 12785,0x140142550,0x140152f40,4,"bool GetHandleValidatedSmartPointer (undefined8 * a_refHandle, undefined8 * a_out)"
 12801,0x140142ea0,0x140153890,2,"void BSPathingSpline::BuildHermiteSegment(BSPathingHermiteSegment* a_out, const NiPoint3& a_p0, const NiPoint3& a_m0, const NiPoint3& a_p1, const NiPoint3& a_m1)"
+12840,0x1401443b0,0x140154da0,2,NiPoint3* ExtraTeleport::Data::GetPosition()
+12841,0x1401443c0,0x140154db0,2,NiPoint3* ExtraTeleport::Data::GetRotation()
 12910,0x140147bb0,0x1401585e0,3,SeasonsofSkyrim::FormSwap::model_loader_queue_ref
 13054,0x14014dc60,0x14015e690,3,RE::INISettingCollection::InsertSetting
 13113,0x14014f700,0x140160130,3,RE::INISettingCollection::Unk_09
@@ -189,7 +191,7 @@
 13530,0x1401652d0,0x140175a10,3,"void UIMessageQueue::AddMessage (UIMessageQueue * a_this, BSFixedString * a_menuName, UIMessageTypes a_type, IUIMessageData * a_data)"
 13541,0x140165660,0x140175da0,3,
 13549,0x140165770,0x140175eb0,4,longlong TESWorldSpace::GetCellByCoordinateMask_140165770 (TESWorldSpace * a_this)
-13576,0x140165f60,0x1401766a0,2,void* Random::GetThreadState()
+13576,0x140165f60,0x1401766a0,2,RandomNumberGenerator* GetRandomNumberGenerator()
 13594,0x140167220,0x140177940,3,FDGE::Skyrim::LoadWorldData
 13597,0x140167400,0x140177b20,4,bool TESDataHandler::AddFormToDataHandler(TESForm* a_form)
 13602,0x140167bc0,0x1401782e0,3,void TESDataHandler::CreateHardcodedForms()
@@ -669,8 +671,8 @@
 19805,0x1402a6ee0,0x1402b8650,3,"bool TESObjectREFR::IsAnOwner(const Actor* a_testOwner, bool a_useFaction, bool a_requiresOwner)"
 19809,0x1402a7090,0x1402b8800,3,DoorTeleportData* TESObjectREFR::AddTeleport()
 19811,0x1402a71a0,0x1402b8910,3,void* TESObjectREFR::GetTeleportData()
-19812,0x1402a71b0,0x1402b8920,2,NiPoint3* TESObjectREFR::GetTeleportPosition()
-19813,0x1402a71f0,0x1402b8960,2,NiPoint3* TESObjectREFR::GetTeleportRotation()
+19812,0x1402a71b0,0x1402b8920,2,NiPoint3* TESObjectREFR::GetLinkedTeleportPosition()
+19813,0x1402a71f0,0x1402b8960,2,NiPoint3* TESObjectREFR::GetLinkedTeleportRotation()
 19816,0x1402a7270,0x1402b89e0,3,REFR_LOCK* TESObjectREFR::AddLock()
 19818,0x1402a74c0,0x1402b8c30,3,RE::TESObjectREFR::GetLock
 19824,0x1402a76f0,0x1402b8e60,4,bool Actor::IsLeveled()
@@ -683,6 +685,7 @@
 19871,0x1402a9ac0,0x1402bb230,2,TESObjectCELL* TESObjectREFR::GetPackageStartCell()
 19872,0x1402a9af0,0x1402bb260,2,NiPoint3* TESObjectREFR::GetPackageStartPosition()
 19873,0x1402a9b30,0x1402bb2a0,2,"void TESObjectREFR::SetPackageStartLocation(TESWorldSpace* a_worldSpace, TESObjectCELL* a_cell, NiPoint3* a_position, float a_rotationZ)"
+19897,0x1402aa760,0x1402bbed0,2,ExtraTeleport::Data* ExtraTeleport::Data::GetLinkedDoorData()
 20022,0x1402b1b60,0x1402c32d0,3,"bool TESFile::SeekCell(TESWorldSpace* a_worldSpace, TESFile* a_file, int32_t a_x, int32_t a_y)"
 20023,0x1402b1df0,0x1402c3560,3,"std::int32_t TESWorldSpace::GetIndexForCellCoord(TESFile* a_file, std::int32_t a_cellX, std::int32_t a_cellY)"
 20026,0x1402b20e0,0x1402c3850,4,"TESObjectCELL* TESWorldSpace::GetOrCreateCell(int a_x, int a_y)"
@@ -1824,6 +1827,7 @@
 29843,0x140475c10,0x140485bf0,2,"bool Pathing::FindTeleportDoorBetweenRefs(TESObjectREFR* a_from, TESObjectREFR* a_to, BSPathingLockData* a_lockData, std::uint32_t* a_doorHandleOut, std::int32_t a_lockedDoorMode, float* a_lengthOut)"
 29845,0x140476120,0x140486100,2,"bool Pathing::GetPathLengthWithDoors(BSPathingLocation* a_start, BSPathingLocation* a_goal, float* a_lengthOut)"
 29866,0x140476ba0,0x140486b80,4,"bool Pathing::GetPathingCell(const NiPoint3& a_location, TESObjectCELL* a_cell, TESWorldSpace* a_worldSpace, BSTSmartPointer<BSPathingCell>& a_cellOut)"
+29875,0x1404772b0,0x140487270,2,"bool Pathing::GetPathingDoorForCollidable(hkpCollidable* a_collidable, BSTSmartPointer<BSPathingDoor>* a_out)"
 29898,0x1404795b0,0x140489540,2,"bool BSPathingCellManager::CollectNavmeshesInAABB_Scrap(BSNavmeshInfoTree* a_tree, const NiPoint3& a_min, const NiPoint3& a_max, BSTScrapArray<BSNavmesh*>& a_out)"
 29899,0x1404797b0,0x140489740,2,"bool BSPathingCellManager::CollectNavmeshesInAABB_Heap(BSNavmeshInfoTree* a_tree, const NiPoint3& a_min, const NiPoint3& a_max, BSTArray<BSNavmesh*>& a_out)"
 29900,0x1404799b0,0x140489940,2,"bool BSPathingCellManager::CollectNavmeshInfosInAABB_Scrap(BSNavmeshInfoTree* a_tree, const NiPoint3& a_min, const NiPoint3& a_max, BSTScrapArray<BSNavmeshInfo*>& a_out)"
@@ -4444,7 +4448,10 @@
 66987,0x140c076a0,0x140c42520,3,void BSTimer::Update(std::int32_t a_currentTicks)
 66988,0x140c078b0,0x140c42730,4,"void BSTimer::SetGlobalTimeMultiplier(float a_multiplier, bool a_arg2)"
 66989,0x140c07900,0x140c42780,4,RE::UpdateGlobalTimeMultiplier_140C07900
-67018,0x140c081a0,0x140c43030,2,"std::uint64_t Random::NextBelow(void* a_state, std::uint32_t a_max)"
+67014,0x140c080c0,0x140c42f50,2,void RandomNumberGenerator::ctor()
+67017,0x140c08120,0x140c42fb0,2,void RandomNumberGenerator::Seed(std::uint32_t a_seed)
+67018,0x140c081a0,0x140c43030,2,"std::uint32_t GetRandomNumber(RandomNumberGenerator* a_rng, std::uint32_t a_max)"
+67019,0x140c08290,0x140c43120,2,void RandomNumberGenerator::Regenerate()
 67151,0x140c0d7b0,0x140c485e0,3,void BSThreadEvent::InitSDM()
 67220,0x140c10610,0x140c4b460,3,ShakeController
 67223,0x140c10860,0x140c4b740,3,RE::Rumble::Update
