@@ -506,6 +506,7 @@
 18540,0x1402657a0,0x140276d70,4,TESRegionList* TESObjectCELL::GetRegionList(bool a_createIfMissing)
 18543,0x140265990,0x140276f60,3,"bool TESObjectCELL::GetWaterHeight(const NiPoint3& a_pos, float& a_waterHeight)"
 18548,0x140265dd0,0x1402773a0,3,ImageSpaceBaseData* TESObjectCELL::GetTESImageSpace()
+18563,0x140266340,0x140277910,2,void TESObjectCELL::QueueReferenceLoads(bool a_arg)
 18568,0x1402665a0,0x140277b70,3,void TESObjectCELL::RemoveReference(TESObjectREFR* a_ref)
 18577,0x140266ed0,0x1402784a0,2,"void TESObjectCELL::RefreshActors(bool a_arg1, bool a_arg2)"
 18590,0x1402678c0,0x140278e90,3,void TESObjectCELL::SetReferenceLightsAttached(bool a_attach)
@@ -2111,6 +2112,8 @@
 30714,0x14049f200,0x1404af1a0,2,"bool PathBuilderLOSPath::Build(BSTSmartPointer<BSPathingRequest>* a_request, BSTSmartPointer<BSPathingSolution>* a_solution)"
 30718,0x14049fa80,0x1404afa20,2,"bool PathBuilderOptimalLocationPath::Build(BSTSmartPointer<BSPathingRequest>* a_request, BSTSmartPointer<BSPathingSolution>* a_solution)"
 30722,0x1404a0370,0x1404b0310,2,"bool PathBuilderSafeStraightLinePath::Build(BSTSmartPointer<BSPathingRequest>* a_request, BSTSmartPointer<BSPathingSolution>* a_solution)"
+30732,0x1404a0e90,0x1404b0e30,2,static void BGSBtoDB::InitSingleton()
+30733,0x1404a0f30,0x1404b0ed0,2,static void BGSBtoDB::ShutdownSingleton()
 30735,0x1404a1040,0x1404b0fe0,2,"static std::int32_t BGSObjectBlock::QueueLoad(void*& a_handle, BGSTerrainNode* a_node, std::uint32_t a_level, std::int16_t a_x, std::int16_t a_y)"
 30736,0x1404a12c0,0x1404b1260,2,"static std::int32_t BGSObjectBlock::Load(void*& a_handle, BGSTerrainNode* a_node, std::uint32_t a_level, std::int16_t a_x, std::int16_t a_y)"
 30737,0x1404a1430,0x1404b13d0,3,"BGSDistantObjectBlock* BGSDistantObjectBlock::Ctor(BGSTerrainNode* a_node, BSStream& a_stream)"
@@ -2119,27 +2122,36 @@
 30745,0x1404a1b10,0x1404b1ab0,2,static void BGSObjectBlock::SetAllMenuScreenFlag(bool a_set)
 30746,0x1404a1b90,0x1404b1b30,3,void BGSDistantObjectBlock::Prepare()
 30820,0x1404a6c10,0x1404b6c20,2,static void BGSDistantTreeBlock::CreateFromStream()
+30823,0x1404a6db0,0x1404b6dc0,2,static void BGSBttDB::InitSingleton()
+30824,0x1404a6e20,0x1404b6e30,2,static void BGSBttDB::ShutdownSingleton()
 30825,0x1404a6ea0,0x1404b6eb0,2,"static std::int32_t BGSDistantTreeBlock::QueueLoad(void*& a_handle, BGSTerrainNode* a_node, std::uint32_t a_level, std::int16_t a_x, std::int16_t a_y)"
 30826,0x1404a7040,0x1404b7050,3,"BGSDistantTreeBlock* BGSDistantTreeBlock::Ctor(BGSTerrainNode* a_node, std::uint32_t a_LODLevel)"
 30828,0x1404a7140,0x1404b7150,2,"void BGSDistantTreeBlock::AddInstance(std::uint32_t a_treeType, const BGSDistantTreeBlock::InstanceData& a_instance)"
+30829,0x1404a7400,0x1404b7410,2,static void BGSDistantTreeBlock::AddTreeType(void* a_treeType)
 30830,0x1404a7480,0x1404b7490,3,void BGSDistantTreeBlock::Detach()
 30831,0x1404a7650,0x1404b7660,2,void BGSDistantTreeBlock::MarkLoadedAndQueueUpdate()
 30832,0x1404a76d0,0x1404b76e0,3,void BGSDistantTreeBlock::Attach()
 30836,0x1404a7a80,0x1404b7a90,2,void BGSDistantTreeBlock::Load(NiBinaryStream& a_stream)
+30837,0x1404a7ca0,0x1404b7cb0,2,static void BGSDistantTreeBlock::LoadTreeTypeList(NiBinaryStream* a_stream)
 30839,0x1404a8090,0x1404b80a0,3,void BGSDistantTreeBlock::UpdateBlockVisibility (BGSDistantTreeBlock * a_this)
 30840,0x1404a82e0,0x1404b8340,2,void BGSDistantTreeBlock::SetHidden(bool a_hidden)
 30841,0x1404a8330,0x1404b8390,2,static void BGSDistantTreeBlock::ReleaseTreeTypes()
+30842,0x1404a84a0,0x1404b8500,2,static void BGSDistantTreeBlock::LoadTreeTypes(TESWorldSpace* a_worldSpace)
+30843,0x1404a87a0,0x1404b8800,2,static void BGSDistantTreeBlock::CreateTreeModel(void* a_treeType)
+30844,0x1404a8a60,0x1404b8ac0,2,void BGSDistantTreeBlock::UpdateInstanceData(void* a_group)
+30928,0x1404ad0a0,0x1404bd100,2,static void BGSBtrDB::InitSingleton()
+30929,0x1404ad110,0x1404bd170,2,static void BGSBtrDB::ShutdownSingleton()
 30930,0x1404ad1a0,0x1404bd200,2,"static std::int32_t BGSTerrainBlock::QueueLoad(void*& a_handle, BGSTerrainNode* a_node, std::uint32_t a_level, std::int16_t a_x, std::int16_t a_y)"
 30931,0x1404ad390,0x1404bd3f0,2,"static std::int32_t BGSTerrainBlock::Load(void*& a_handle, BGSTerrainNode* a_node, std::uint32_t a_level, std::int16_t a_x, std::int16_t a_y)"
 30932,0x1404ad510,0x1404bd570,3,"BGSTerrainChunk* BGSTerrainChunk::Ctor(BGSTerrainNode* a_node, BSStream& a_stream, std::int32_t a_cellX, std::int32_t a_cellY)"
 30933,0x1404ad820,0x1404bd880,3,void BGSTerrainChunk::Dtor()
-30934,0x1404ad940,0x1404bd9a0,3,void BGSTerrainBlock::Attach(BGSTerrainBlock* a_block)
-30935,0x1404adb20,0x1404bdb80,2,void BGSTerrainBlock::MarkLoadedAndQueueUpdate()
-30936,0x1404adb60,0x1404bdbc0,3,void BGSTerrainBlock::Detach(BGSTerrainBlock* a_block)
+30934,0x1404ad940,0x1404bd9a0,3,void BGSTerrainChunk::Attach()
+30935,0x1404adb20,0x1404bdb80,2,void BGSTerrainChunk::MarkLoadedAndQueueUpdate()
+30936,0x1404adb60,0x1404bdbc0,3,void BGSTerrainChunk::Detach()
 30939,0x1404add70,0x1404bddd0,3,void BGSTerrainChunk::AttachWater(bool a_attach)
 30940,0x1404addf0,0x1404bde50,2,static void BGSTerrainBlock::SetAllMenuScreenFlag(bool a_set)
-30942,0x1404adec0,0x1404bdf20,2,void BGSTerrainBlock::Hide()
-30943,0x1404adef0,0x1404bdf50,2,void BGSTerrainBlock::Show()
+30942,0x1404adec0,0x1404bdf20,2,void BGSTerrainChunk::Hide()
+30943,0x1404adef0,0x1404bdf50,2,void BGSTerrainChunk::Show()
 30944,0x1404adf20,0x1404bdf80,2,static void BGSTerrainBlock::LoadNoiseTexture()
 30945,0x1404adf70,0x1404bdfd0,2,static void BGSTerrainBlock::ReleaseNoiseTexture(bool a_release)
 30947,0x1404ae090,0x1404be0f0,3,void BGSTerrainChunk::Prepare()
@@ -2221,6 +2233,7 @@
 31150,0x1404b87e0,0x1404c88c0,3,SeasonsofSkyrim::LODSwap::Tree::BuildMeshFileName
 31151,0x1404b8820,0x1404c8900,3,SeasonsofSkyrim::LODSwap::Tree::BuildTextureFileName
 31152,0x1404b8850,0x1404c8930,3,SeasonsofSkyrim::LODSwap::Tree::BuildTypeListFileName
+31162,0x1404b8bf0,0x1404c8cd0,2,bool BGSTerrainVisibilityData::IsNodeVisible(BGSTerrainNode* a_node)
 31230,0x1404bca00,0x1404ccb50,3,"void BGSAutoWater::GeneratePlaceableWaterForCell(TESObjectCELL* a_cell, bool a_skipFlowMap)"
 31231,0x1404bcc20,0x1404ccd70,3,"void BGSAutoWater::LoadCellFlowMap(TESObjectCELL* a_cell, BSGeometry* a_geometry)"
 31235,0x1404bd330,0x1404cd480,4,void BGSAutoWater::GenerateMultibounds(TESObjectCELL* a_cell)
