@@ -2641,7 +2641,7 @@
 36720,0x1405fb450,0x140603c40,3,po3tweaks::IsFurnitureAnimeTypeFix::GetEquippedFurnitureType
 36723,0x1405fb640,0x140603e30,3,void Actor::KillImmediate()
 36730,0x1405fc040,0x140604830,4,"void Actor::PlayASound(BSSoundHandle& a_result, FormID a_formID, bool a_arg3, std::uint32_t a_flags)"
-36738,0x1405fc490,0x140604c80,2,void Character::UpdateVoiceTimer(bool a_force)
+36738,0x1405fc490,0x140604c80,2,void Actor::UpdateVoiceTimer(bool a_forceEnd)
 36739,0x1405fc5c0,0x140604db0,2,void Character::UpdatePackageStartLocationIfCurrentLoc()
 36740,0x1405fc670,0x140604e60,2,void Character::RefreshPackageStartLocation()
 36741,0x1405fc740,0x140604f30,4,Actor::GetDetectionState
