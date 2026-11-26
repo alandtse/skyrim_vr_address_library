@@ -5482,15 +5482,18 @@
 88762,0x1410d6ad0,0x141133800,2,bool PathingStreamMasterFileRead::ReadBSNavmeshEdgeExtraInfoArray(BSTArray<BSNavmeshEdgeExtraInfo>& a_array)
 88763,0x1410d6b40,0x141133870,2,bool PathingStreamMasterFileRead::ReadBSNavmeshVertexArray(BSTArray<BSNavmeshVertex>& a_array)
 88773,0x1410d71f0,0x141133f20,2,void BSNavmeshInfo::ReadFromFileStream(PathingStreamMasterFileRead* a_stream)
+88774,0x1410d7710,0x141134440,2,void BSNavmeshInfo::WriteToFileStream(void* a_stream)
 88780,0x1410d7d30,0x141134a60,2,void BSNavmeshInfo::SetBounds(BSCompressedNavmeshBounds* a_bounds)
 88787,0x1410d8140,0x141134e70,2,bool PathingStreamMasterFileRead::ReadBSPathingDoorPtr(BSTSmartPointer<BSPathingDoor>& a_ptr)
 88830,0x1410d8c80,0x1411359b0,2,void PathingStreamMasterFileRead::ReadBSNavmeshTriangleDoorPortal(BSNavmeshTriangleDoorPortal& a_portal)
 88832,0x1410d8cf0,0x141135a20,2,void BSCompressedNavmeshBounds::InitEmpty()
 88833,0x1410d8d30,0x141135a60,2,void BSCompressedNavmeshBounds::FreeScrapArrays()
 88834,0x1410d8de0,0x141135b10,2,void BSCompressedNavmeshBounds::ReadFromFileStream(PathingStreamMasterFileRead* a_stream)
+88835,0x1410d9060,0x141135d90,2,void BSCompressedNavmeshBounds::WriteToFileStream(void* a_stream)
 88839,0x1410d97c0,0x1411364f0,2,void BSCompressedNavmeshBounds::CopyToScrap(BSCompressedNavmeshBounds* a_dst)
 88843,0x1410d9af0,0x141136820,2,void BSCompressedNavmeshBounds::FreeArrays()
 88844,0x1410d9b80,0x1411368b0,2,void BSCompressedNavmeshBounds::CopyFrom(BSCompressedNavmeshBounds* a_src)
+88845,0x1410d9dc0,0x141136af0,2,void BSCompressedNavmeshBounds::Expand(BSCompressedNavmeshBounds* a_dst)
 88896,0x1410dd7f0,0x14113a520,2,void NavMeshInfoMap::ReadAllPaths(PathingStreamMasterFileRead& a_stream)
 88914,0x1410deb00,0x14113b830,2,bool PathingStreamMasterFileRead::ReadBSNavmeshInfoArray(BSTArray<BSNavmeshInfo*>*& a_array)
 88915,0x1410dec50,0x14113b980,2,bool PathingStreamMasterFileRead::ReadBSNavmeshInfoPtrArray(BSTArray<BSNavmeshInfo*>& a_array)
@@ -5505,7 +5508,11 @@
 89007,0x1410e3ec0,0x141140c00,2,std::uint32_t PathingSolutionEntryArray::PushBack(PathingSolutionEntry* a_entry)
 89018,0x1410e42e0,0x141141020,2,"void PathingSolutionEntryArray::ReleaseRange(std::uint32_t a_index, std::uint32_t a_count)"
 89030,0x1410e4750,0x141141490,2,"void PathingSolutionEntryArray::RemoveElements(std::uint32_t a_index, std::uint32_t a_count)"
+89037,0x1410e4c50,0x141141990,2,"float DistancePointToLine3D(NiPoint3* a_point, NiPoint3* a_a, NiPoint3* a_b)"
 89038,0x1410e4d80,0x141141ac0,2,"float DistancePointToSegment3D(NiPoint3* a_point, NiPoint3* a_a, NiPoint3* a_b, bool* a_outOnInterior, NiPoint3* a_outClosest)"
+89041,0x1410e50e0,0x141141e20,2,"float GetAngleAtVertexXY(NiPoint3* a_vertex, NiPoint3* a_p1, NiPoint3* a_p2, bool a_flip)"
+89043,0x1410e52d0,0x141142010,2,"bool ComputeBarycentricXY(NiPoint3* a_a, NiPoint3* a_b, NiPoint3* a_c, NiPoint3* a_point, float* a_outBary)"
+89044,0x1410e5410,0x141142150,2,"bool ComputeBarycentricXY(NiPoint3* a_a, NiPoint3* a_b, NiPoint3* a_c, NiPoint3* a_point, float* a_outBary)"
 89046,0x1410e5690,0x1411423d0,2,"void ClosestPointOnSegment3D(NiPoint3* a_point, NiPoint3* a_a, NiPoint3* a_b, float* a_outT, NiPoint3* a_outClosest)"
 89049,0x1410e5a50,0x141142790,2,"std::int32_t IntersectTriangles3D(NiPoint3* a_t0v0, NiPoint3* a_t0v1, NiPoint3* a_t0v2, NiPoint3* a_t1v0, NiPoint3* a_t1v1, NiPoint3* a_t1v2, NiPoint3* a_outA, NiPoint3* a_outB)"
 89051,0x1410e6730,0x141143470,2,"std::int32_t IntersectSegmentPlane3D(NiPoint3* a_p0, NiPoint3* a_p1, NiPoint3* a_planePoint, NiPoint3* a_planeNormal, NiPoint3* a_out)"
@@ -5518,6 +5525,7 @@
 89062,0x1410e76c0,0x141144400,2,"void ClipSegmentToLineCrossing3D(NiPoint3* a_a, NiPoint3* a_b, NiPoint3* a_c, NiPoint3* a_d, NiPoint3* a_out)"
 89063,0x1410e78e0,0x141144620,2,"void ClosestPointsBetweenSegments3D(NiPoint3* a_a0, NiPoint3* a_a1, NiPoint3* a_b0, NiPoint3* a_b1, float* a_outS, NiPoint3* a_outPointA, float* a_outT, NiPoint3* a_outPointB)"
 89064,0x1410e7bc0,0x141144900,2,"bool IntersectSegments2DWithTolerance(NiPoint3* a_a0, NiPoint3* a_a1, NiPoint3* a_b0, NiPoint3* a_b1, float a_epsilon, NiPoint3* a_out, bool* a_outNearA, bool* a_outNearB)"
+89065,0x1410e7e80,0x141144bc0,2,"bool GetCircleTangentPoints2D(NiPoint3* a_center, float a_radius, NiPoint3* a_point, NiPoint3* a_outTangentA, NiPoint3* a_outTangentB)"
 89067,0x1410e8070,0x141144db0,2,"bool IsPointNearSegment3D(NiPoint3* a_a, NiPoint3* a_b, NiPoint3* a_point, float a_distance)"
 89069,0x1410e8290,0x141144fd0,2,"void ComputeTriangleNormalAndAreaXY(NiPoint3* a_v0, NiPoint3* a_v1, NiPoint3* a_v2, NiPoint3* a_outNormal, float* a_outAreaXY)"
 89076,0x1410e8f70,0x141145cb0,2,"void GetRandomPointInTriangle(const NiPoint3* a_v0, const NiPoint3* a_v1, const NiPoint3* a_v2, NiPoint3* a_out)"
@@ -5525,10 +5533,14 @@
 89102,0x1410ea4c0,0x141147200,2,void NullMovementSelectIdleResult::Reset()
 89113,0x1410eae10,0x141147b50,2,"float PathingAvoidNodeArray::ComputeWeightedCenter(const NiPoint3* a_from, NiPoint3* a_outCenter)"
 89115,0x1410eb100,0x141147e40,2,"BSNavmeshSearchFilters* BSNavmeshSearchFilters::ctor(BSPathingRequest* a_request, BSTArray<void*>* a_loadedNavmeshes, void* a_secondary)"
+89120,0x1410eb520,0x141148260,2,"bool ApplyEdgeListCostMultiplier(void* a_filter, void* a_edge, float* a_cost)"
 89124,0x1410eb800,0x141148540,2,void BSNavmeshSearch::dtor()
+89149,0x1410ed120,0x141149e60,2,"bool BSPathingLOSGrid::ApplyCellsToMap(void** a_map, std::uint32_t a_arg)"
+89150,0x1410ed2a0,0x141149fe0,2,"bool BSPathingLOSGrid::CaptureCellsFromMap(void** a_map, std::uint32_t a_arg)"
 89179,0x1410ee240,0x14114af80,2,bool PathingStreamLoadGame::ReadBSPathingLOSGridCellArray(BSTArray<BSPathingLOSGridCell*>& a_cells)
 89180,0x1410ee350,0x14114b090,2,"bool PathingStreamLoadGame::ReadBSPathingLOSGridTable(BSTHashMap<std::uint32_t, BSPathingLOSGrid*>& a_table)"
 89185,0x1410eea30,0x14114b770,2,"bool PathingStreamSaveGame::WriteBSPathingLOSGridTable(const BSTHashMap<std::uint32_t, BSPathingLOSGrid*>& a_table)"
+89191,0x1410ef010,0x14114bd50,2,"std::uint8_t* GetNavmeshLOSStates(void* a_map, std::int32_t a_navmeshID)"
 89210,0x1410efb20,0x14114c860,3,bool BSVirtualPathingNode::HasActivateDoorAction()
 89222,0x1410effc0,0x14114cd00,2,bool BSPathingNode::HasActivateDoorAction()
 89224,0x1410f00f0,0x14114ce30,2,bool BSPathingNode::GetActionAtNode(MovementMessage** a_out)
