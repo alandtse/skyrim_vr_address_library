@@ -1848,7 +1848,6 @@
 29871,0x1404771a0,0x140487160,2,TESWorldSpace* Pathing::GetWorldSpaceForPathingCell(const BSTSmartPointer<PathingCell>& a_cell)
 29872,0x1404771c0,0x140487180,2,BSPathingDoor* Pathing::CreatePathingDoorFromRef(TESObjectREFR* a_ref)
 29875,0x1404772b0,0x140487270,2,"bool Pathing::GetPathingDoorForCollidable(hkpCollidable* a_collidable, BSTSmartPointer<BSPathingDoor>& a_out)"
-29876,0x140477340,0x140487300,2,"bool Pathing::RunNavMeshSearchFitSphere(NiPoint3* a_center, float a_radius, float a_height, BSPathingLocation* a_outLocation, void* a_avoidList, bool a_flag)"
 29880,0x140477800,0x140487790,2,"std::uint32_t PushBackRecentPathingCell(BSTArray<BSTTuple<std::uint64_t, BSTSmartPointer<PathingCell>>>& a_array, std::uint32_t a_time, BSTSmartPointer<PathingCell>& a_cell)"
 29887,0x140477e30,0x140487dc0,2,"bool BSPathingCellManager::FindPotentialNavmeshesForLocationImpl_Scrap(BSPathingLocation* a_location, float a_radius, BSScrapArray<BSTSmartPointer<BSNavmesh>>& a_navMeshesOut, bool a_flag)"
 29888,0x140478510,0x1404884a0,2,"bool BSPathingCellManager::FindPotentialNavmeshesForLocationImpl_Heap(BSPathingLocation* a_location, float a_radius, BSTArray<BSTSmartPointer<BSNavmesh>>& a_navMeshesOut, bool a_flag)"
@@ -1874,6 +1873,7 @@
 29923,0x14047ace0,0x14048ac80,2,"bool BSPathingCellManager::AddUniqueNavmeshFromInfo_Heap(BSTArray<BSNavmesh*>& a_out, BSNavmeshInfo* a_info)"
 29924,0x14047adf0,0x14048ad90,2,"bool BSPathingCellManager::AddUniqueNavmeshInfo_Scrap(BSTScrapArray<BSNavmeshInfo*>& a_out, BSNavmeshInfo* a_info)"
 29925,0x14047ae90,0x14048ae30,2,"bool BSPathingCellManager::AddUniqueNavmeshInfo_Heap(BSTArray<BSNavmeshInfo*>& a_out, BSNavmeshInfo* a_info)"
+29943,0x14047b400,0x14048b3a0,2,"bool AreNavmeshInfosConnectedRecursive(BSNavmeshInfo* a_info, const BSNavmeshInfo* a_goal, void* a_visited)"
 29994,0x14047cf10,0x14048ceb0,2,PathingDoor* PathingDoor::ctor(std::uint32_t a_doorId)
 29995,0x14047cf80,0x14048cf20,2,std::uint32_t PathingDoor::GetTypeCRC()
 29997,0x14047cfe0,0x14048cf80,2,std::uint32_t PathingDoor::GetID()
@@ -1951,16 +1951,6 @@
 30228,0x140486200,0x1404961a0,2,AStarClosedSetEntry* AStarClosedSet::GetFreeSlot(AStarClosedSetEntry* a_entries)
 30232,0x140486330,0x1404962d0,2,void AStarClosedSet::Grow()
 30233,0x140486480,0x140496420,2,AStarNode* AStarNodePool::AllocNode()
-30237,0x140486820,0x1404967c0,2,"bool NavMeshSearchFitSphere::FindFitLocation(const BSPathingLocation* a_center, float a_minRadius, float a_clearRadius, BSPathingLocation* a_out, void* a_filter, bool a_allow, bool a_landingZone)"
-30238,0x140486b10,0x140496ab0,2,"bool NavMeshSearchFitSphere::ExpandNode(AStarNode* a_node, BSTSmallArray<AStarNode*,3>* a_out)"
-30239,0x140486ec0,0x140496e60,2,bool NavMeshSearchFitSphere::IsGoalNode(AStarNode* a_node)
-30242,0x140487090,0x140497030,2,"std::int32_t NavMeshSearchFitSphere::FindOrAddNode(const std::uint64_t* a_key, float a_cost, void* a_init, AStarNodeFitSphere** a_nodeOut)"
-30243,0x1404871c0,0x140497160,2,"AStarNodeFitSphere* NavMeshSearchFitSphere::FindOrAddNodeByKey(const std::uint64_t* a_key, float a_cost, void* a_init, AStarNodeFitSphere** a_nodeOut)"
-30244,0x140487310,0x1404972b0,2,"void NavMeshSearchFitSphere::ReconstructPath(AStarNodeFitSphere* a_goal, BSTArray<BSFastNavmeshTriLocation>* a_locations, BSTArray<void*>* a_edges)"
-30261,0x140487db0,0x140497d50,2,"float* NavMeshSearchFitSphere::AddStartNode(void* a_navmesh, std::uint32_t a_triangle, std::uint32_t a_arg4, float a_cost)"
-30268,0x140488000,0x140497fa0,2,AStarNodeFitSphere* NavMeshSearchFitSphere::RunToCompletion()
-30269,0x140488070,0x140498010,2,void NavMeshSearchFitSphere::PopBestOpenNode()
-30270,0x1404880e0,0x140498080,2,bool NavMeshSearchFitSphere::Step()
 30279,0x140488940,0x1404988e0,2,"bool NavMeshSearchFlee::RunSearch(BSPathingRequest** a_request, BSFastNavmeshTriLocation* a_start, BSTArray<BSFastNavmeshTriLocation>* a_outLocations, BSTArray<BSFastNavmeshEdgeHandle>* a_outEdges)"
 30280,0x140488bb0,0x140498b50,2,"void NavMeshSearchFlee::SetNodeLocationAndHeuristic(AStarNode* a_node, BSNavmesh* a_navmesh, std::uint16_t a_triIndex)"
 30281,0x140488cb0,0x140498c50,2,"bool NavMeshSearchFlee::ExpandNode(AStarNode* a_node, BSTSmallArray<AStarNode*,3>* a_out)"
@@ -2254,6 +2244,7 @@
 32528,0x1405007f0,0x140510c90,4,sub_1405007F0
 32551,0x140501440,0x1405118e0,3,CombatBehaviorTreeManager* CombatBehaviorTree::CombatBehaviorTreeManager::GetSingleton()
 32569,0x140502bf0,0x140513090,2,"float DistancePointToSegment3D(const float* a_segment, const float* a_point)"
+32570,0x140502ed0,0x140513370,2,"bool IntersectSegmentSphere(const float* a_segment, const void* a_sphere, float* a_outTEnter, float* a_outTExit)"
 32867,0x14051e7f0,0x14052ede0,2,void IMenu::PostDisplay(IMenu* a_this)
 33257,0x14053d370,0x1405400f0,4,AccumulatingValueModifierEffect::Allocate(AccumulatingValueModifierEffect* accumulatingValueModifierEffect
 33277,0x14053DEB0,0x140540C30,4,"ActiveEffect::Adjust(Skyrim::ActiveEffect* activeEffect, float effectiveness, bool requiresHostility)"
@@ -3663,6 +3654,7 @@
 46043,0x1407bccd0,0x1407e8020,4,CombatUtilities::CanActorExistInSpace
 46045,0x1407bcd80,0x1407e80d0,2,"void Character::GetAnticipatedLocation(float a_time, NiPoint3* a_outLocation)"
 46050,0x1407bd150,0x1407e84a0,4,"bool Actor::UpdateNavPos(const NiPoint3& a_pos, const NiPoint3& a_new_pos, float a_speed, float a_distance)"
+46054,0x1407be440,0x1407e9790,2,"bool ArePointsWithinRadiusAndHeight(const NiPoint3* a_a, const NiPoint3* a_b, float a_heightLimit, float a_radius)"
 46062,0x1407be7e0,0x1407e9b30,2,bool Character::IsMovingAwayFromPoint(const NiPoint3& a_point)
 46063,0x1407be890,0x1407e9be0,2,bool Character::IsMovingTowardPoint(const NiPoint3& a_point)
 46068,0x1407beb90,0x1407e9ee0,3,"void TESObjectREFR::GetCombatRange(TESObjectREFR* a_this, TESForm* a_form, float* a_min, float* a_max, TESAmmo* a_ammo)"
@@ -3889,7 +3881,9 @@
 49014,0x14082c950,0x140857ca0,2,void CombatPath::Stop()
 49022,0x14082d030,0x140858380,3,"void CombatPath::SetAccelerationDecelerationMult(float accelerationMult, float DecelerationMult)"
 49074,0x14082f990,0x14085ace0,2,"bool CombatPath::SolveAndStoreRequest(void* a_key, void* a_request)"
+49123,0x1408327d0,0x14085dad0,2,"bool CombatPathBuilderStandard::TryDirectPath(const NiPoint3* a_start, const NiPoint3* a_end)"
 49125,0x140832ab0,0x14085ddb0,2,bool CombatPathBuilder::SmoothPath()
+49126,0x140832f00,0x14085e200,2,"bool CombatPathBuilderStandard::AppendNavmeshInfoPathToSolution(const void* a_infoPath, const BSPathingLocation* a_goal)"
 49128,0x1408332a0,0x14085e5a0,2,void CombatPathBuilderStandard::BuildStep()
 49129,0x1408332e0,0x14085e5e0,2,void CombatPathBuilderStandard::Stage0_ResolveEndpoints()
 49130,0x1408336e0,0x14085e9e0,2,void CombatPathBuilderStandard::Stage1_CopyDirectPath()
@@ -3899,7 +3893,9 @@
 49135,0x140834270,0x14085f570,2,void CombatPathBuilderOpen::BuildStep()
 49136,0x140834290,0x14085f590,2,void CombatPathBuilderOpen::Stage0_ValidateStart()
 49137,0x140834370,0x14085f670,2,void CombatPathBuilderOpen::Stage1_RunNavmeshSearch()
+49142,0x140834dd0,0x1408600d0,2,"bool CombatPathBuilder::RunPathSmoother(void* a_context, void* a_pathNodes, void* a_arg4)"
 49149,0x1408359f0,0x140860cf0,2,bool BSPathingLocationEntryScrapArray::CopyTo(BSTArray<BSPathingLocationEntry>* a_out)
+49166,0x140836450,0x140861750,2,void BSNavmeshInfoSearch::ResetSearchState()
 49180,0x140836980,0x140861c80,2,"float CombatPathingSearchPolicyStandard::GetEdgeCost(BSFastNavmeshTriLocation* a_from, BSFastNavmeshTriLocation* a_to)"
 49311,0x14083c870,0x140867b70,3,void CombatApproachTargetSpeedController::UpdateApproachTargetSpeed(CombatPath* a_combatPath)
 49315,0x14083ce90,0x140868190,2,bool CombatPathingSphere::IsOutside(BSFastNavmeshTriLocation* a_node)
@@ -5688,6 +5684,12 @@
 89297,0x1410f6d50,0x141153a90,2,void PathSmootherRayCastUseTrianglePath::dtor()
 89298,0x1410f6d90,0x141153ad0,2,"void PathSmootherRayCastUseTrianglePath::CastRay(void* a_context, void* a_arg, BSNavmesh** a_navmesh, float* a_outResult)"
 89301,0x1410f7060,0x141153da0,2,"bool CastWidenedRay(void* a_context, const BSNavmeshEdgeLocation* a_start, const NiPoint3* a_end, void* a_outHit, bool a_extendStart, bool a_extendEnd, bool a_flag7, bool a_flag8, void* a_arg9)"
+89302,0x1410f7690,0x1411543d0,2,"void WalkRayUsingFlags(const void* a_flagsOwner, const BSNavmeshEdgeLocation* a_start, const NiPoint3* a_end, BSNavmeshEdgeLocation* a_outEnd)"
+89303,0x1410f76f0,0x141154430,2,"void WalkRayUsingFlagsIndirect(const void* const* a_flagsOwnerRef, const BSNavmeshEdgeLocation* a_start, const NiPoint3* a_end, BSNavmeshEdgeLocation* a_outEnd)"
+89306,0x1410f77a0,0x1411544e0,2,"bool WalkRayPreferringTriangles(const void* a_query, void* a_arg2, const bool** a_flags, BSNavmeshEdgeLocation* a_outEnd)"
+89307,0x1410f7f60,0x141154ca0,2,"bool WalkRayAlongTrianglePath(const void* a_query, void* a_arg2, const bool** a_flags, BSNavmeshEdgeLocation* a_outEnd)"
+89308,0x1410f8670,0x1411553b0,2,"bool WalkRayAcrossNavmesh(const void* a_query, void* a_arg2, const bool* a_flags, BSNavmeshEdgeLocation* a_outEnd)"
+89310,0x1410f9220,0x141155f60,2,"bool SweepArcRays(const void* a_self, const BSNavmeshEdgeLocation* a_start, const float* a_segment, const float* a_dir, BSNavmeshEdgeLocation* a_outEnd)"
 89311,0x1410f96d0,0x141156410,2,"bool RayCastUsingPreferredTriangles(const BSNavmeshEdgeLocation* a_start, void* a_arg2, BSNavmesh** a_navmesh, const float* a_params, void* a_preferredTriangles, float* a_outHit)"
 89312,0x1410f9850,0x141156590,2,"bool RayCastAlongTrianglePath(const BSNavmeshEdgeLocation* a_start, void* a_arg2, BSNavmesh** a_navmesh, const float* a_params, void* a_trianglePath, float* a_outHit)"
 89313,0x1410f99f0,0x141156730,2,void PathSmootherRayCastUseTrianglePath::ReserveTriangleIndexMap(std::uint32_t a_count)
