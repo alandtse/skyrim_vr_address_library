@@ -2254,7 +2254,6 @@
 32565,0x140501dc0,0x140512260,2,"float SquaredDistancePointToSegment3D(const float* a_segment, const float* a_point)"
 32569,0x140502bf0,0x140513090,2,"float DistancePointToSegment3D(const float* a_segment, const float* a_point)"
 32570,0x140502ed0,0x140513370,2,"bool IntersectSegmentSphere(const float* a_segment, const void* a_sphere, float* a_outTEnter, float* a_outTExit)"
-32691,0x14050ea80,0x0,2,"void GetCreationManifestPath(GFxValue* a_content, BSFixedString* a_out)"
 32867,0x14051e7f0,0x14052ede0,2,void IMenu::PostDisplay(IMenu* a_this)
 32979,0x1405249d0,0x14051f690,2,"void GetContentManifestPath(GFxValue* a_content, BSFixedString* a_out)"
 33257,0x14053d370,0x1405400f0,4,AccumulatingValueModifierEffect::Allocate(AccumulatingValueModifierEffect* accumulatingValueModifierEffect
