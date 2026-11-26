@@ -5230,6 +5230,7 @@
 88023,0x1410a9a20,0x141106650,2,"bool Pathing::RayCast(BSPathingLocation* a_start, NiPoint3* a_end, BSPathingLocation* a_outHit, void* a_options)"
 88024,0x1410a9c80,0x1411068b0,2,"bool Pathing::RayCastEndsInTriangle(BSPathingLocation* a_start, NiPoint3* a_end, BSNavmesh* a_navmesh, std::uint16_t a_triangle, BSPathingLocation* a_outHit, void* a_options)"
 88027,0x1410aa210,0x141106e40,2,"bool Pathing::UpdateLOSGridMap(BSPathingLOSGridMap** a_losMap, BSTArray<BSPathingLocation>* a_viewers, void* a_headings)"
+88028,0x1410aa450,0x141107080,2,"bool Pathing::MarkVisibleTrianglesInLOSMap(BSPathingLocation* a_viewer, BSPathingLOSMap* a_map, bool a_clearUnseen, float a_minDistance, float a_heading)"
 88032,0x1410ab360,0x141107f90,2,"bool RayCastAcrossNavmeshesRef(void* a_ctx, BSNavmesh** a_navmesh, std::uint16_t a_triangle, std::int32_t a_edge, float* a_origin, float* a_dir, BSNavmeshEdgeLocation* a_outBlocked, BSNavmeshEdgeLocation* a_outEnd)"
 88033,0x1410ab410,0x141108040,2,"bool RayCastAcrossNavmeshes(void* a_ctx, BSNavmesh* a_navmesh, std::uint16_t a_triangle, std::int32_t a_edge, float* a_origin, float* a_dir, BSNavmeshEdgeLocation* a_outBlocked, BSNavmeshEdgeLocation* a_outEnd)"
 88035,0x1410abc50,0x141108880,2,"NiPoint3* Pathing::ComputeStartTangent(NiPoint3* a_out, float a_heading, BSPathingNode* a_node, BSPathingNode* a_nextNode, float a_radius)"
@@ -5426,6 +5427,7 @@
 88550,0x1410c5f10,0x141122c70,2,"void BSPathingSolution::ProjectPointOntoPathHorizontal(NiPoint3* a_position, float a_pathPosition, float* a_outPathPosition, NiPoint3* a_outPoint)"
 88553,0x1410c6470,0x1411231d0,2,std::uint32_t GetVirtualPathSegmentIndices(BSPathingSolution* a_solution)
 88554,0x1410c6510,0x141123270,2,"void BSPathingSolution::GetPredictedPoint(float a_from, float a_distance, float* a_outPathPosition, NiPoint3* a_outPoint)"
+88557,0x1410c6de0,0x141123b10,2,void BSPathingSolution::CopyTo(BSPathingSolution* a_dest)
 88558,0x1410c6ea0,0x141123bd0,2,"bool BSPathingSolution::GetClosestPointOnPath(NiPoint3* a_pos, void* a_out)"
 88559,0x1410c6ff0,0x141123d20,2,"float BSPathingSolution::FindMaxSpeedAlongPath(float a_arg1, float a_arg2, float a_arg3, float a_arg4, float a_arg5, float a_arg6)"
 88560,0x1410c7050,0x141123d80,2,"float BSPathingSolution::FindMaxSpeed(float a_distance, float a_param)"
@@ -5523,18 +5525,11 @@
 88934,0x1410dfb60,0x14113c890,2,bool PathingSolutionQueue::PopFront(PathingSolutionEntry* a_out)
 88935,0x1410dfc60,0x14113c990,2,bool PathingSolutionQueue::TryPopFront(PathingSolutionEntry* a_out)
 88939,0x1410dff00,0x14113cc30,2,void DestroyTaskletGroup(void** a_group)
-88943,0x1410e0490,0x14113d1c0,2,void TaskletGroupHandle::QueryTaskDataByKey(char** a_key)
-88944,0x1410e0500,0x14113d230,2,void TaskletGroupHandle::SubmitTaskDataRequestByKey()
-88953,0x1410e07f0,0x14113d520,2,"void TaskletGroupHandle::SetTaskDataResultByKey(char** a_key, void* a_result)"
-88954,0x1410e0800,0x14113d530,2,"void* TaskletGroupHandle::GetTaskDataResultByKey(char** a_key, void* a_a, void* a_b)"
-88956,0x1410e08c0,0x14113d5f0,2,"PathingTaskData* PathingTaskData::ctor(void* a_request, BSFixedString** a_name)"
+88956,0x1410e08c0,0x14113d5f0,2,"PathingTaskData* PathingTaskData::ctorWithRequest(NiPointer<BSPathingRequest>* a_request, BSTSmartPointer<PathingSolutionQueue>* a_queue)"
+88959,0x1410e0c80,0x14113d9b0,2,void PathingTaskData::Process()
 88961,0x1410e10f0,0x14113de20,2,void PathingTaskData::ProcessRaycastRequests()
-88973,0x1410e1dd0,0x14113eb00,2,"bool TaskletGroup::QueueTaskData(char** a_request, BSFixedString** a_name)"
-88977,0x1410e24c0,0x14113f200,2,"bool TaskletGroup::MarkTaskDataByKey(char** a_key, void* a_a, void* a_b)"
-88978,0x1410e25c0,0x14113f300,2,std::uint32_t TaskletGroup::QueryTaskDataByKey(char** a_key)
-88979,0x1410e26e0,0x14113f420,2,"std::uint32_t TaskletGroup::SubmitTaskDataRequestByKey(void** a_key, void* a_a, void* a_b, void* a_c, std::uint8_t a_d)"
-88987,0x1410e2f70,0x14113fcb0,2,"void TaskletGroup::SetTaskDataResultByKey(char** a_key, void* a_result)"
-88988,0x1410e3070,0x14113fdb0,2,"void* TaskletGroup::GetTaskDataResultByKey(char** a_key, void* a_a, void* a_b)"
+88962,0x1410e1280,0x14113dfb0,2,"std::int32_t PathingTaskData::GetOrQueueRayCastRequest(BSPathingLocation* a_start, BSPathingLocation* a_goal, BSScrapArray<BSPathingLocation>* a_out)"
+88963,0x1410e1610,0x14113e340,2,"std::int32_t PathingTaskData::GetOrQueueLocationRequest(BSPathingLocation* a_location, BSScrapArray<BSPathingLocation>* a_out, bool a_flag)"
 89007,0x1410e3ec0,0x141140c00,2,std::uint32_t PathingSolutionEntryArray::PushBack(PathingSolutionEntry* a_entry)
 89018,0x1410e42e0,0x141141020,2,"void PathingSolutionEntryArray::ReleaseRange(std::uint32_t a_index, std::uint32_t a_count)"
 89030,0x1410e4750,0x141141490,2,"void PathingSolutionEntryArray::RemoveElements(std::uint32_t a_index, std::uint32_t a_count)"
@@ -5575,8 +5570,8 @@
 89141,0x1410ec630,0x141149370,2,bool BSPathingLOSGridMap::CaptureGridsFromMap(void** a_map)
 89142,0x1410ec9c0,0x141149700,2,bool BSPathingLOSGridMap::IsLocationMarked(BSPathingLocation* a_location)
 89143,0x1410eca70,0x1411497b0,2,"bool BSPathingLOSGridMap::MarkLocation(BSPathingLocation* a_location, bool a_state, void* a_unused)"
-89149,0x1410ed120,0x141149e60,2,"bool BSPathingLOSGrid::ApplyCellsToMap(void** a_map, std::uint32_t a_arg)"
-89150,0x1410ed2a0,0x141149fe0,2,"bool BSPathingLOSGrid::CaptureCellsFromMap(void** a_map, std::uint32_t a_arg)"
+89149,0x1410ed120,0x141149e60,2,"bool BSPathingLOSGrid::ApplyCellsToMap(BSPathingLOSMap** a_map, uint32_t a_arg)"
+89150,0x1410ed2a0,0x141149fe0,2,"bool BSPathingLOSGrid::CaptureCellsFromMap(BSPathingLOSMap** a_map, uint32_t a_arg)"
 89151,0x1410ed400,0x14114a140,2,bool BSPathingLOSGrid::IsLocationMarked(BSPathingLocation* a_location)
 89152,0x1410ed4a0,0x14114a1e0,2,"bool BSPathingLOSGrid::MarkLocation(BSPathingLocation* a_location, bool a_state, void* a_unused)"
 89157,0x1410ed990,0x14114a6d0,2,bool BSPathingLOSGridCell::IsLocationMarked(BSPathingLocation* a_location)
@@ -5584,7 +5579,7 @@
 89179,0x1410ee240,0x14114af80,2,bool PathingStreamLoadGame::ReadBSPathingLOSGridCellArray(BSTArray<BSPathingLOSGridCell*>& a_cells)
 89180,0x1410ee350,0x14114b090,2,"bool PathingStreamLoadGame::ReadBSPathingLOSGridTable(BSTHashMap<std::uint32_t, BSPathingLOSGrid*>& a_table)"
 89185,0x1410eea30,0x14114b770,2,"bool PathingStreamSaveGame::WriteBSPathingLOSGridTable(const BSTHashMap<std::uint32_t, BSPathingLOSGrid*>& a_table)"
-89191,0x1410ef010,0x14114bd50,2,"std::uint8_t* GetNavmeshLOSStates(void* a_map, std::int32_t a_navmeshID)"
+89191,0x1410ef010,0x14114bd50,2,"uint8_t* GetNavmeshLOSStates(BSPathingLOSMap* a_map, std::int32_t a_navmeshID)"
 89210,0x1410efb20,0x14114c860,3,bool BSVirtualPathingNode::HasActivateDoorAction()
 89222,0x1410effc0,0x14114cd00,2,bool BSPathingNode::HasActivateDoorAction()
 89224,0x1410f00f0,0x14114ce30,2,bool BSPathingNode::GetActionAtNode(MovementMessage** a_out)
