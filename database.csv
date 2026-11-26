@@ -1920,7 +1920,6 @@
 30306,0x14048af80,0x14049af20,2,"NavMeshSearchMaxCost* NavMeshSearchMaxCost::ctor(BSPathingRequest* a_request, BSTArray<void*>* a_loadedNavmeshes, BSTArray<void*>* a_secondary)"
 30307,0x14048b000,0x14049afa0,2,void NavMeshSearchMaxCost::dtor()
 30308,0x14048b020,0x14049afc0,2,"bool NavMeshSearchMaxCost::RunSearch(const BSFastNavmeshTriLocation* a_start, const BSPathingLocation* a_avoid, BSTArray<BSFastNavmeshTriLocation>* a_outLocations, BSTArray<BSFastNavmeshEdgeHandle>* a_outEdges)"
-30308,0x14048b020,0x14049afc0,2,"bool NavMeshSearchMaxCost::RunSearch(BSNavmeshSearchLocation* a_start, BSPathingLocation* a_goal, void* a_outTriangles, void* a_outEdges)"
 30316,0x14048b910,0x14049b8b0,2,void BSNavmeshSearch::ResetState()
 30322,0x14048c010,0x14049bfb0,2,"NavMeshSearchSLPoint* NavMeshSearchSLPoint::ctor(BSPathingRequest* a_request, BSTArray<void*>* a_loadedNavmeshes, BSTArray<void*>* a_secondary)"
 30323,0x14048c0b0,0x14049c050,2,void NavMeshSearchSLPoint::dtor()
