@@ -4358,6 +4358,7 @@ sseid,aeid,confidence,name
 29848,30664,1,BSPathingCellManager::Func4_*
 29849,30665,1,BSPathingCellManager::Func3_*
 29850,30666,1,BSPathingCellManager::Func8_*
+29851,30667,1,
 29852,30668,1,BSPathingCellManager::Func6_*
 29853,30669,1,BSPathingCellManager::Func5_*
 29854,30670,1,BSPathingCellManager::Func9_*
@@ -4373,10 +4374,15 @@ sseid,aeid,confidence,name
 29873,30689,1,Pathing::sub_*
 29875,30691,1,
 29876,30692,1,
+29887,30696,1,
 29888,30697,1,
 29894,30698,1,
 29895,30699,1,
 29896,30700,1,
+29898,30702,1,
+29899,30703,1,
+29900,30704,1,
+29901,30705,1,
 29922,30733,1,
 29923,30734,1,
 29995,30810,1,
