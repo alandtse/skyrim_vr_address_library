@@ -1560,6 +1560,7 @@ sseid,aeid,confidence,name
 11271,11397,1,FindEqualsFunctor::sub_*
 11272,11398,1,FindNonExcludedDeliveryFunctor::sub_*
 11273,11399,1,MagicItemFindKeywordFunctor::sub_*
+11275,15443,1,
 11279,11404,1,PreloadCountVisitor::sub_*
 11280,11405,1,PreloadModelsVisitor::sub_*
 11281,11406,1,BSResource__EntryDB_gs_T1_ge_::sub_140103890
@@ -2817,6 +2818,7 @@ sseid,aeid,confidence,name
 18289,18639,1,ConcreteFormFactory_TESImageSpaceModifier_90_::GetFormName_*
 18308,18709,1,
 18309,18710,1,TESObjectLAND::sub_*
+18310,18714,1,
 18320,18729,1,TESObjectLAND::sub_*
 18321,18730,1,TESObjectLAND::sub_*
 18326,18739,1,TESObjectLAND::sub_*
@@ -21460,6 +21462,7 @@ sseid,aeid,confidence,name
 513239,390980,3,gTESLODBlendStartTime_141e0df88
 513758,391729,3,
 514139,400267,3,RE::ActorValueList::GetSingleton
+514145,400273,1,
 514167,400315,3,RE::ProcessLists::GetSingleton
 514182,400331,3,RE::BSFaceGenManager::GetSingleton
 514185,400335,3,gTESLODBlendFlagsPending_141ebeb51
@@ -21475,12 +21478,14 @@ sseid,aeid,confidence,name
 514361,400518,3,RE::TESForm::allFormsEditorIDMapLock
 514414,400561,3,RE::BGSDecalManager::GetSingleton
 514415,400562,3,RE::bhkCollisionFilter::Singleton
+514429,400575,1,
 514478,400622,3,RE::BSPointerHandleManager::GetHandleEntries
 514512,400672,3,RE::ScreenSplatter::Singleton
 514725,400883,3,RE::VATS::GetSingleton
 514727,400885,3,LoadedReferenceCollection* GetSingleton()
 514738,400896,3,RE::BSMusicManager::GetSingleton
 514959,401099,3,RE::MenuTopicManager::GetSingleton
+514977,401119,1,
 515123,401262,3,RE::BGSImpactManager::Singleton
 515446,401585,3,RE::CrosshairPickData::GetSingleton
 516573,402775,3,RE::BSScaleformManager::Singleton
