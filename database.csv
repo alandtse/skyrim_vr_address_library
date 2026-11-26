@@ -5369,15 +5369,27 @@
 88597,0x1410c9b80,0x1411268b0,2,bool PathingStreamLoadGame::ReadBSVirtualPathingNodeArray(BSTArray<BSVirtualPathingNode>& a_nodes)
 88603,0x1410ca1c0,0x141126ef0,2,bool PathingStreamSaveGame::WriteBSVirtualPathingNodeArray(const BSTArray<BSVirtualPathingNode>& a_nodes)
 88630,0x1410cbe60,0x141128b90,2,BSTSmartPointer<BSPathingCell>* BSNavmesh::GetParentCell()
+88632,0x1410cbe80,0x141128bb0,2,void BSNavmesh::Clear()
+88633,0x1410cbff0,0x141128d20,2,void BSNavmesh::RemoveVertex(std::uint16_t a_index)
+88634,0x1410cc0e0,0x141128e10,2,void BSNavmesh::RemoveExtraEdgeInfo(std::uint16_t a_index)
 88635,0x1410cc230,0x141128f60,2,void BSNavmesh::AddVertex(const BSNavmeshVertex* a_vertex)
 88636,0x1410cc290,0x141128fc0,2,void BSNavmesh::AddTriangle(const BSNavmeshTriangle* a_triangle)
+88638,0x1410cc3a0,0x1411290d0,2,void BSNavmesh::AddDoorPortal(const BSNavmeshTriangleDoorPortal* a_portal)
 88640,0x1410cc440,0x141129170,2,"std::uint16_t BSNavmesh::GetEdgeTraversalInfo(std::uint16_t a_triangle, std::int8_t a_edge, std::uint8_t* a_outFlag10, std::uint8_t* a_outFlag20)"
 88641,0x1410cc4a0,0x1411291d0,2,void BSNavmesh::BuildCoverTriangleList()
 88642,0x1410cc580,0x1411292b0,2,"bool BSNavmesh::GetEdgeVertexIndices(std::uint16_t a_triangle, std::uint32_t a_edge, std::uint16_t* a_outStart, std::uint16_t* a_outEnd)"
 88643,0x1410cc5d0,0x141129300,2,"void BSNavmesh::GetEdgeVertexIndicesUnchecked(std::uint16_t* a_outIndices, std::uint16_t a_triangle, std::uint32_t a_edge)"
 88645,0x1410cc690,0x1411293c0,2,"bool BSNavmesh::GetEdgePoints(std::uint16_t a_triangle, std::uint32_t a_edge, NiPoint3* a_outStart, NiPoint3* a_outEnd)"
+88646,0x1410cc730,0x141129460,2,"void BSNavmesh::GetTriangleVertices(std::uint16_t a_triangle, NiPoint3** a_outV0, NiPoint3** a_outV1, NiPoint3** a_outV2)"
+88648,0x1410cc8c0,0x1411295f0,2,"bool BSNavmesh::GetEdgeNeighborTriangle(std::uint16_t a_triangle, std::uint32_t a_edge, BSNavmesh** a_outNavmesh, std::uint16_t* a_outTriangle)"
 88653,0x1410cccd0,0x141129a00,2,"bool BSNavmesh::GetEdgeNeighbor(std::uint16_t a_triangle, std::uint32_t a_edge, BSNavmesh** a_outNavmesh, std::uint16_t* a_outTriangle, std::uint32_t* a_outEdge)"
+88656,0x1410cd0a0,0x141129dd0,2,void* BSNavmesh::FindDoorPortalForTriangle(std::uint16_t a_triangle)
+88660,0x1410cd1d0,0x141129f00,2,std::uint32_t BSNavmesh::GetDoorPortalIndex(std::uint16_t a_triangle)
 88662,0x1410cd390,0x14112a0c0,2,bool BSNavmesh::ReadFromStream(PathingStreamMasterFileRead& a_stream)
+88663,0x1410cd4e0,0x14112a210,2,void BSNavmesh::FixupNumericIDs(void* a_stream)
+88664,0x1410cd590,0x14112a2c0,2,"void BSNavmesh::FindTrianglesLinkedToNavmesh(const std::uint32_t* a_otherNavmeshID, void* a_outTriangles)"
+88668,0x1410cd9e0,0x14112a710,2,void BSNavmesh::FlipTriangle(std::uint16_t a_triangle)
+88669,0x1410cdae0,0x14112a810,2,"void BSNavmesh::ComputeBounds(float* a_outMin, float* a_outMax)"
 88674,0x1410cf350,0x14112c080,3,NiPoint3 BSNavmesh::GetNormal(std::uint16_t a_tri) const
 88680,0x1410cfe60,0x14112cb90,2,"std::uint16_t BSNavmesh::FindClosestTriangle(const NiPoint3& a_pos, void* a_unused, float& a_outDistSq)"
 88681,0x1410cffe0,0x14112cd10,2,"bool BSNavmesh::FindContainingOrNearestTriangleDefault(const NiPoint3& a_pos, std::uint16_t& a_outTriangle, bool& a_outContains)"
@@ -5387,6 +5399,7 @@
 88688,0x1410d0980,0x14112d6b0,2,"bool BSNavmesh::GetTriangleHeightAtPoint(std::uint16_t a_triangle, const NiPoint3& a_pos, float& a_outZ)"
 88693,0x1410d1260,0x14112df90,2,"bool BSNavmesh::FindRandomPointNear(const NiPoint3& a_center, float a_radius, NiPoint3& a_out)"
 88694,0x1410d14a0,0x14112e1d0,2,"NiPoint3* BSNavmesh::OffsetPointFromEdges(NiPoint3* a_out, const NiPoint3& a_pos, float a_margin)"
+88711,0x1410d34b0,0x1411301e0,2,void BSNavmesh::AddObstacleUndoData(void* a_data)
 88761,0x1410d6a60,0x141133790,2,bool PathingStreamMasterFileRead::ReadBSNavmeshCoverTriangleArray(BSTArray<std::uint16_t>& a_array)
 88762,0x1410d6ad0,0x141133800,2,bool PathingStreamMasterFileRead::ReadBSNavmeshEdgeExtraInfoArray(BSTArray<BSNavmeshEdgeExtraInfo>& a_array)
 88763,0x1410d6b40,0x141133870,2,bool PathingStreamMasterFileRead::ReadBSNavmeshVertexArray(BSTArray<BSNavmeshVertex>& a_array)
