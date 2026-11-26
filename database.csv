@@ -1817,7 +1817,7 @@
 29837,0x140474420,0x140484400,2,"bool Pathing::HasSafeStraightLine(TESObjectREFR* a_from, TESObjectREFR* a_to, float a_extraRange)"
 29838,0x140474750,0x140484730,2,"BSPathingLocation* Pathing::FindClosestReachableLocation(BSPathingLocation* a_out, BSPathingLocation* a_start, BSPathingLocation* a_goal, float a_maxCost)"
 29839,0x1404749e0,0x1404849c0,3,AIProcess::FindAmbushCoverLocation
-29842,0x140475840,0x140485820,2,"bool Pathing::FindDoorsOnPath(BSPathingLocation* a_start, BSPathingLocation* a_goal, void* a_pathOut, BSPathingLockData* a_lockData, std::int32_t a_lockedDoorMode, bool a_allowTeleportFallback)"
+29842,0x140475840,0x140485820,2,"bool Pathing::FindDoorsOnPath(BSPathingLocation* a_start, BSPathingLocation* a_goal, PathingDoorPathResult* a_pathOut, BSPathingLockData* a_lockData, std::int32_t a_lockedDoorMode, bool a_allowTeleportFallback)"
 29843,0x140475c10,0x140485bf0,2,"bool Pathing::FindTeleportDoorBetweenRefs(TESObjectREFR* a_from, TESObjectREFR* a_to, BSPathingLockData* a_lockData, std::uint32_t* a_doorHandleOut, std::int32_t a_lockedDoorMode, float* a_lengthOut)"
 29845,0x140476120,0x140486100,2,"bool Pathing::GetPathLengthWithDoors(BSPathingLocation* a_start, BSPathingLocation* a_goal, float* a_lengthOut)"
 29866,0x140476ba0,0x140486b80,4,"bool Pathing::GetPathingCell(const NiPoint3& a_location, TESObjectCELL* a_cell, TESWorldSpace* a_worldSpace, BSTSmartPointer<BSPathingCell>& a_cellOut)"
@@ -1866,7 +1866,7 @@
 30099,0x1404806c0,0x140490660,2,"bool PathingStreamMasterFileRead::ReadFormIDWithResult(std::uint32_t* a_formID, bool* a_outSuccess)"
 30100,0x1404806d0,0x140490670,2,bool PathingStreamMasterFileRead::ReadString(BSFixedString* a_out)
 30101,0x140480800,0x1404907a0,2,std::uint16_t PathingStreamMasterFileRead::GetFormVersion()
-30121,0x140480fd0,0x140490f70,2,"bool TeleportDoorSearch::Run(BSPathingLocation* a_start, BSPathingLocation* a_goal, void* a_pathOut, int a_goalType, float a_maxDistance, BSPathingLockData* a_lockData, int a_lockedDoorMode)"
+30121,0x140480fd0,0x140490f70,2,"bool TeleportDoorSearch::Run(BSPathingLocation* a_start, BSPathingLocation* a_goal, PathingDoorPathResult* a_pathOut, std::int32_t a_goalType, float a_maxDistance, BSPathingLockData* a_lockData, std::int32_t a_lockedDoorMode)"
 30122,0x140481220,0x1404911c0,2,"bool TeleportDoorSearch::ExpandNode(AStarNode* a_node, BSTSmallArray<AStarNode*,3>* a_out)"
 30127,0x140481860,0x140491800,2,"std::int32_t TeleportDoorSearch::FindOrAddNode(const std::uint64_t* a_key, float a_cost, void* a_init, AStarNode** a_nodeOut)"
 30143,0x140482350,0x1404922f0,2,void AStarOpenList::InsertNode(AStarNode* a_node)
@@ -1920,6 +1920,7 @@
 30306,0x14048af80,0x14049af20,2,"NavMeshSearchMaxCost* NavMeshSearchMaxCost::ctor(BSPathingRequest* a_request, BSTArray<void*>* a_loadedNavmeshes, BSTArray<void*>* a_secondary)"
 30307,0x14048b000,0x14049afa0,2,void NavMeshSearchMaxCost::dtor()
 30308,0x14048b020,0x14049afc0,2,"bool NavMeshSearchMaxCost::RunSearch(const BSFastNavmeshTriLocation* a_start, const BSPathingLocation* a_avoid, BSTArray<BSFastNavmeshTriLocation>* a_outLocations, BSTArray<BSFastNavmeshEdgeHandle>* a_outEdges)"
+30308,0x14048b020,0x14049afc0,2,"bool NavMeshSearchMaxCost::RunSearch(BSNavmeshSearchLocation* a_start, BSPathingLocation* a_goal, void* a_outTriangles, void* a_outEdges)"
 30316,0x14048b910,0x14049b8b0,2,void BSNavmeshSearch::ResetState()
 30322,0x14048c010,0x14049bfb0,2,"NavMeshSearchSLPoint* NavMeshSearchSLPoint::ctor(BSPathingRequest* a_request, BSTArray<void*>* a_loadedNavmeshes, BSTArray<void*>* a_secondary)"
 30323,0x14048c0b0,0x14049c050,2,void NavMeshSearchSLPoint::dtor()
@@ -3830,6 +3831,7 @@
 49133,0x140833c80,0x14085ef80,2,void CombatPathBuilderStandard::Stage4_RunNavmeshSearch()
 49136,0x140834290,0x14085f590,2,void CombatPathBuilderOpen::Stage0_ValidateStart()
 49137,0x140834370,0x14085f670,2,void CombatPathBuilderOpen::Stage1_RunNavmeshSearch()
+49149,0x1408359f0,0x140860cf0,2,bool BSPathingLocationEntryScrapArray::CopyTo(BSTArray<BSPathingLocationEntry>* a_out)
 49180,0x140836980,0x140861c80,2,"float CombatPathingSearchPolicyStandard::GetEdgeCost(BSFastNavmeshTriLocation* a_from, BSFastNavmeshTriLocation* a_to)"
 49311,0x14083c870,0x140867b70,3,void CombatApproachTargetSpeedController::UpdateApproachTargetSpeed(CombatPath* a_combatPath)
 49315,0x14083ce90,0x140868190,2,bool CombatPathingSphere::IsOutside(BSFastNavmeshTriLocation* a_node)
