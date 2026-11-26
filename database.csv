@@ -1869,6 +1869,10 @@
 30121,0x140480fd0,0x140490f70,2,"bool TeleportDoorSearch::Run(BSPathingLocation* a_start, BSPathingLocation* a_goal, void* a_pathOut, int a_goalType, float a_maxDistance, BSPathingLockData* a_lockData, int a_lockedDoorMode)"
 30122,0x140481220,0x1404911c0,2,"bool TeleportDoorSearch::ExpandNode(AStarNode* a_node, BSTSmallArray<AStarNode*,3>* a_out)"
 30127,0x140481860,0x140491800,2,"std::int32_t TeleportDoorSearch::FindOrAddNode(const std::uint64_t* a_key, float a_cost, void* a_init, AStarNode** a_nodeOut)"
+30143,0x140482350,0x1404922f0,2,void AStarOpenList::InsertNode(AStarNode* a_node)
+30145,0x140482460,0x140492400,2,void TeleportDoorSearch::AddStartNodeIfNoBest()
+30148,0x140482510,0x1404924b0,2,AStarNode* TeleportDoorSearch::RunToCompletion()
+30150,0x1404825f0,0x140492590,2,bool TeleportDoorSearch::Step()
 30176,0x1404839b0,0x140493950,2,void NavMeshSearchClosePoint::dtor()
 30177,0x140483a00,0x1404939a0,2,"bool NavMeshSearchClosePoint::RunSearch(BSPathingRequest** a_request, const BSFastNavmeshTriLocation* a_start, BSTArray<BSFastNavmeshTriLocation>* a_outLocations, BSTArray<BSFastNavmeshEdgeHandle>* a_outEdges)"
 30179,0x140483fb0,0x140493f50,2,"bool NavMeshSearchClosePoint::ExpandNode(AStarNode* a_node, BSTSmallArray<AStarNode*,3>* a_out)"
@@ -3817,6 +3821,13 @@
 49014,0x14082c950,0x140857ca0,2,void CombatPath::Stop()
 49022,0x14082d030,0x140858380,3,"void CombatPath::SetAccelerationDecelerationMult(float accelerationMult, float DecelerationMult)"
 49074,0x14082f990,0x14085ace0,2,"bool CombatPath::SolveAndStoreRequest(void* a_key, void* a_request)"
+49129,0x1408332e0,0x14085e5e0,2,void CombatPathBuilderStandard::Stage0_ResolveEndpoints()
+49130,0x1408336e0,0x14085e9e0,2,void CombatPathBuilderStandard::Stage1_CopyDirectPath()
+49131,0x140833840,0x14085eb40,2,void CombatPathBuilderStandard::Stage2_ValidateEndpoints()
+49132,0x140833a80,0x14085ed80,2,void CombatPathBuilderStandard::Stage3_AppendFoundPath()
+49133,0x140833c80,0x14085ef80,2,void CombatPathBuilderStandard::Stage4_RunNavmeshSearch()
+49136,0x140834290,0x14085f590,2,void CombatPathBuilderOpen::Stage0_ValidateStart()
+49137,0x140834370,0x14085f670,2,void CombatPathBuilderOpen::Stage1_RunNavmeshSearch()
 49311,0x14083c870,0x140867b70,3,void CombatApproachTargetSpeedController::UpdateApproachTargetSpeed(CombatPath* a_combatPath)
 49711,0x140844d00,0x14086ffb0,3,RE::Character::sub_140844D00
 49716,0x140844e40,0x1408700f0,4,CombatPathingRevolution::src/Advanced_Hook.h:13
