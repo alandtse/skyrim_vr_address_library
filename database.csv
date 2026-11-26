@@ -4567,7 +4567,7 @@
 67677,0x140c249b0,0x140c698e0,3,
 67740,0x140c26240,0x140c6b170,4,SetThreadName
 67819,0x140c28bf0,0x140c6db20,3,BSFixedString* BSFixedString::ctor8(const char* a_data)
-67823,0x140c28d60,0x140c6dc90,3,FUN_140c28d60
+67823,0x140c28d60,0x140c6dc90,3,void BSFixedString::SetCString(const char* a_str)
 67834,0x140c29510,0x140c6e440,3,BSFixedString* BSFixedString::ctor16(const wchar_t* a_data)
 67844,0x140c29900,0x140c6e830,4,"void BSScaleformTranslator::GetCachedString_140c29900 (wchar_t * * a_pOut, wchar_t * a_bufIn, uint32_t a_unused)"
 67847,0x140c29e80,0x140c6edb0,3,void Entry::release8(const char*& a_entry)
@@ -4726,7 +4726,7 @@
 74040,0x140d2f220,0x140d775e0,4,"BSResource::ErrorCode BSModelDB::Demand(const char* a_modelPath, NiPointer<NiNode>& a_modelOut, const DBTraits::ArgsType& a_args)"
 74055,0x140d300f0,0x140d784b0,3,"void BSResource::EntryDB::ProcessLoadQueue(void* a_loadQueue, void* a_context)"
 74078,0x140d30c50,0x140d79010,3,"BSResource::ErrorCode BSModelDB::LoadByName(void* a_entryDB, const char* a_path, void* a_entryOut, bool a_unk, const DBTraits::ArgsType& a_args)"
-74084,0x140d30fe0,0x140d793a0,3,"bool BSModelDB::FindOrCreateEntry(void* a_entryDB, void* a_id, void** a_entryOut, bool a_unk)"
+74084,0x140d30fe0,0x140d793a0,3,"bool BSModelDB::FindOrCreateEntry(void* a_entryDB, const BSResource::ID* a_id, void** a_entryOut, bool a_skipLookup)"
 74207,0x140d36950,0x140d7edd0,3,"bool BSStream::Load(const char* a_path, NiBinaryStream* a_stream)"
 74236,0x140d38120,0x140d805b0,3,RE::INISettingCollection::WriteSetting
 74237,0x140d38310,0x14053c550,3,RE::INISettingCollection::ReadSetting
