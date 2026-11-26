@@ -5203,6 +5203,7 @@
 87907,0x1410a2370,0x1410fefa0,4,Skyrim-upscaler
 87919,0x1410a2dc0,0x1410ff9f0,2,"bool BGSMoviePlayer::OpenMovie(const char* a_path, bool a_flag)"
 87936,0x1410a3790,0x1411003c0,2,void BSMusicManager::Update()
+87955,0x1410a4270,0x141100ea0,2,"void BSPathingSpline::EvaluateSegmentDerivative(const float* a_coeffs /*16 floats*/, float a_t, NiPoint3* a_out)"
 87963,0x1410a55e0,0x141102210,2,BSPathingLocation* BSPathingLocation::ctor_FromTriLocation(const BSFastNavmeshTriLocation* a_loc)
 87965,0x1410a5740,0x141102370,3,"BSPathingLocation* BSPathingLocation::ctor(const NiPoint3& a_location, const BSTSmartPointer<BSPathingCell>& a_cell)"
 87968,0x1410a5880,0x1411024b0,2,"BSPathingLocation* BSPathingLocation::ctor_ResolveTriangle(const NiPoint3* a_point, const BSPathingCell* a_cell)"
@@ -5210,11 +5211,13 @@
 87973,0x1410a5c20,0x141102850,2,"void BSPathingLocation::ctor_FromPositionAndCell(const NiPoint3& a_pos, BSTSmartPointer<BSPathingCell>& a_cell)"
 87976,0x1410a5d80,0x1411029b0,2,bool BSPathingLocation::GetNavmesh(BSNavmesh** a_out)
 87978,0x1410a5e50,0x141102a80,3,"bool BSPathingLocation::GetNavMeshAndTriangle(BSTSmartPointer<BSNavmesh>& a_navMeshOut, std::uint16_t& a_triOut) const"
+87980,0x1410a5f90,0x141102bc0,2,NiPointer<BSPathingCell>* BSPathingLocation::GetPathingCellRef()
 87983,0x1410a5ff0,0x141102c20,2,bool BSPathingLocation::ResolveNavmeshAndTriangle()
 87985,0x1410a64c0,0x1411030f0,3,bool BSPathingLocation::ResolveToClosestNavmeshAndTriangle(FindTriangleForLocationFilter& a_filter)
 87989,0x1410a6cc0,0x1411038f0,2,"void BSPathingLocation::GetDebugText(char* a_buffer, std::int32_t a_size, const char* a_label)"
 87992,0x1410a7150,0x141103d80,2,void BSPathingLocation::Read(BSPathingStreamRead* a_stream)
 87993,0x1410a7290,0x141103ec0,2,void BSPathingLocation::Write(BSPathingStreamWrite* a_stream)
+87994,0x1410a7350,0x141103f80,2,"void BSPathingLocation::SetPositionAndCell(const NiPoint3* a_pos, const NiPointer<BSPathingCell>* a_cell)"
 87998,0x1410a79f0,0x141104620,2,bool PathingStreamMasterFileRead::ReadBSPathingCellPtr(BSTSmartPointer<BSPathingCell>& a_ptr)
 88004,0x1410a7e10,0x141104a40,4,"bool FindTriangleForLocationFilterCheckDeltaZ::IsValidTri(NiPoint3* a_location, BSNavmesh* a_navMesh, std::uint16_t a_tri, NiPoint3* a_pointOnTri)"
 88009,0x1410a7f90,0x141104bc0,2,"bool Pathing::BuildWithRegisteredPathBuilder(BSTSmartPointer<BSPathingRequest>* a_request, BSTSmartPointer<BSPathingSolution>* a_solution)"
@@ -5227,6 +5230,7 @@
 88024,0x1410a9c80,0x1411068b0,2,"bool Pathing::RayCastEndsInTriangle(BSPathingLocation* a_start, NiPoint3* a_end, BSNavmesh* a_navmesh, std::uint16_t a_triangle, BSPathingLocation* a_outHit, void* a_options)"
 88027,0x1410aa210,0x141106e40,2,"bool Pathing::UpdateLOSGridMap(BSPathingLOSGridMap** a_losMap, BSTArray<BSPathingLocation>* a_viewers, void* a_headings)"
 88028,0x1410aa450,0x141107080,2,"bool Pathing::MarkVisibleTrianglesInLOSMap(BSPathingLocation* a_viewer, BSPathingLOSMap* a_map, bool a_clearUnseen, float a_minDistance, float a_heading)"
+88029,0x1410aada0,0x1411079d0,2,"bool Pathing::GetTriangleNormalAtLocation(BSPathingLocation* a_location, NiPoint3* a_outNormal)"
 88032,0x1410ab360,0x141107f90,2,"bool RayCastAcrossNavmeshesRef(void* a_ctx, BSNavmesh** a_navmesh, std::uint16_t a_triangle, std::int32_t a_edge, float* a_origin, float* a_dir, BSNavmeshEdgeLocation* a_outBlocked, BSNavmeshEdgeLocation* a_outEnd)"
 88033,0x1410ab410,0x141108040,2,"bool RayCastAcrossNavmeshes(void* a_ctx, BSNavmesh* a_navmesh, std::uint16_t a_triangle, std::int32_t a_edge, float* a_origin, float* a_dir, BSNavmeshEdgeLocation* a_outBlocked, BSNavmeshEdgeLocation* a_outEnd)"
 88035,0x1410abc50,0x141108880,2,"NiPoint3* Pathing::ComputeStartTangent(NiPoint3* a_out, float a_heading, BSPathingNode* a_node, BSPathingNode* a_nextNode, float a_radius)"
@@ -5421,8 +5425,11 @@
 88548,0x1410c5db0,0x141122b10,2,"bool BSPathingSolution::GetDerivativesAtPathPosition(float a_pathPosition, NiPoint3& a_velocity, NiPoint3& a_acceleration)"
 88549,0x1410c5ee0,0x141122c40,2,"void BSPathingSolution::ProjectPointOntoPath3D(NiPoint3* a_position, float a_pathPosition, float* a_outPathPosition, NiPoint3* a_outPoint)"
 88550,0x1410c5f10,0x141122c70,2,"void BSPathingSolution::ProjectPointOntoPathHorizontal(NiPoint3* a_position, float a_pathPosition, float* a_outPathPosition, NiPoint3* a_outPoint)"
+88551,0x1410c5f40,0x141122ca0,2,"bool BSPathingSolution::FindClosestPointOnVirtualPath(const BSPathingLocation* a_pos, BSPathingLocation* a_outLocation, float* a_outPathPosition) const"
 88553,0x1410c6470,0x1411231d0,2,std::uint32_t GetVirtualPathSegmentIndices(BSPathingSolution* a_solution)
 88554,0x1410c6510,0x141123270,2,"void BSPathingSolution::GetPredictedPoint(float a_from, float a_distance, float* a_outPathPosition, NiPoint3* a_outPoint)"
+88555,0x1410c6810,0x141123570,2,"bool BSPathingSolution::GetVirtualLocationAtPathPosition(float a_pathPosition, BSPathingLocation* a_outLocation) const"
+88556,0x1410c6a20,0x141123780,2,"bool BSPathingSolution::FindVirtualPathPositionAtDistance(float a_pathPosition, float a_distance, bool a_forward, float* a_outPathPosition, BSPathingLocation* a_outLocation) const"
 88557,0x1410c6de0,0x141123b10,2,void BSPathingSolution::CopyTo(BSPathingSolution* a_dest)
 88558,0x1410c6ea0,0x141123bd0,2,"bool BSPathingSolution::GetClosestPointOnPath(NiPoint3* a_pos, void* a_out)"
 88559,0x1410c6ff0,0x141123d20,2,"float BSPathingSolution::FindMaxSpeedAlongPath(float a_arg1, float a_arg2, float a_arg3, float a_arg4, float a_arg5, float a_arg6)"
@@ -5516,6 +5523,9 @@
 88844,0x1410d9b80,0x1411368b0,2,void BSCompressedNavmeshBounds::CopyFrom(BSCompressedNavmeshBounds* a_src)
 88845,0x1410d9dc0,0x141136af0,2,void BSCompressedNavmeshBounds::Expand(BSCompressedNavmeshBounds* a_dst)
 88896,0x1410dd7f0,0x14113a520,2,void NavMeshInfoMap::ReadAllPaths(PathingStreamMasterFileRead& a_stream)
+88897,0x1410dd8e0,0x14113a610,2,"bool Pathing::ReverseNavmeshInfoPath(const NavmeshInfoPath* a_src, NavmeshInfoPath* a_dst)"
+88898,0x1410ddb50,0x14113a880,2,"bool Pathing::JoinForwardAndBackwardNavmeshInfoPaths(const NavmeshInfoPath* a_forward, const NavmeshInfoPath* a_backward, NavmeshInfoPath* a_out)"
+88899,0x1410ddea0,0x14113abd0,2,"bool Pathing::JoinForwardAndBackwardNavmeshInfoPathsViaMiddle(const NavmeshInfoPath* a_forward, const BSTArray<BSNavmeshInfo*>* a_middleInfos, const NavmeshInfoPath* a_backward, NavmeshInfoPath* a_out)"
 88914,0x1410deb00,0x14113b830,2,bool PathingStreamMasterFileRead::ReadBSNavmeshInfoArray(BSTArray<BSNavmeshInfo*>*& a_array)
 88915,0x1410dec50,0x14113b980,2,bool PathingStreamMasterFileRead::ReadBSNavmeshInfoPtrArray(BSTArray<BSNavmeshInfo*>& a_array)
 88930,0x1410df940,0x14113c670,2,PathingSolutionEntry* PathingSolutionEntry::PathingSolutionEntry()
