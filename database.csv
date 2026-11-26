@@ -5663,6 +5663,7 @@
 89084,0x1410e9940,0x141146680,2,"bool IsDirectionInsideCone2D(const float* a_cone, const float* a_dir)"
 89085,0x1410e9a20,0x141146760,2,void* InitMovementArbitrationSlots(void* a_slots)
 89102,0x1410ea4c0,0x141147200,2,void NullMovementSelectIdleResult::Reset()
+89109,0x1410eaa40,0x141147780,2,"float ComputeRadialInfluence(const void* a_source, const NiPoint3* a_point)"
 89113,0x1410eae10,0x141147b50,2,"float PathingAvoidNodeArray::ComputeWeightedCenter(const NiPoint3* a_from, NiPoint3* a_outCenter)"
 89115,0x1410eb100,0x141147e40,2,"BSNavmeshSearchFilters* BSNavmeshSearchFilters::ctor(BSPathingRequest* a_request, BSTArray<void*>* a_loadedNavmeshes, void* a_secondary)"
 89120,0x1410eb520,0x141148260,2,"bool ApplyEdgeListCostMultiplier(void* a_filter, void* a_edge, float* a_cost)"
@@ -6094,8 +6095,14 @@
 90476,0x1411210d0,0x14117dfa0,2,"bool BSPathSmootherPOVSearch::Run(const void* a_start, const void* a_goal)"
 90490,0x1411243a0,0x141181270,2,"bool BSPathSmootherPOVSearch::TryAddArcLink(const void* a_node, void* a_arg3, void* a_arg4)"
 90491,0x141124ac0,0x141181990,2,"void BSPathSmootherPOVSearch::ExpandListEntries(BSPathSmootherPOVList* a_list, std::uint32_t a_startIndex, void* a_arg4, void* a_arg5, std::uint32_t a_maxFailures)"
+90501,0x141125a30,0x141182900,2,"std::int32_t BSPathSmootherPOVSearch::AddOrUpdateOpenNode(char* a_node, float a_cost, void* a_pool, char** a_outNode)"
+90502,0x141125b70,0x141182a40,2,"void BSPathSmootherPOVSearch::ExtractPathFromGoalNode(void* a_goalNode, void* a_outEdges, void* a_outPoints)"
+90525,0x141126800,0x1411836d0,2,"void OpenListBucketInsert(float* a_openList, float* a_node)"
+90537,0x141126b60,0x141183a30,2,void* BSPathSmootherPOVSearch::RunAStarLoop()
 90556,0x141128380,0x141185250,2,BSPathingSearchRayCast* BSPathingSearchRayCast::ctor()
 90558,0x141128460,0x141185330,2,"std::uint32_t BSPathingSearchRayCast::Initialize(const void* a_request, std::uint32_t* a_outValue)"
+90563,0x141128e30,0x141185d00,2,"bool BSPathingSearchRayCast::CastSegmentInSteps(const NiPoint3* a_start, const NiPoint3* a_end)"
+90566,0x1411294f0,0x1411863c0,2,void BSPathingSearchRayCast::ResetResult()
 90581,0x141129ba0,0x141186a70,2,"void PushBackEdgeLocationWithHeight(void* a_array, const BSNavmeshEdgeLocation* a_location)"
 90623,0x14112c840,0x141189710,2,"void PathFollowerTurnTarget::GetFacingAngles(NiPoint3* a_position, float* a_current, float a_zOffset, float* a_outFacing)"
 90628,0x14112cc60,0x141189b30,2,std::uint32_t PathingStreamLoadGame::ReadBSPathingLockInfo()
