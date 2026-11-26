@@ -5270,6 +5270,8 @@
 88053,0x1410aef60,0x14110bb90,2,"bool Pathing::FindNavmeshInfoPathThroughDoors(BSPathingLockData* a_lockData, const NiPoint3* a_startPos, BSNavmeshInfo* a_startInfo, const NiPoint3* a_goalPos, BSNavmeshInfo* a_goalInfo, NavmeshInfoPath* a_outPath, std::uint32_t a_flags)"
 88054,0x1410af1f0,0x14110be20,2,bool LockPathingForWrite()
 88055,0x1410af210,0x14110be40,2,void UnlockPathingForWrite()
+88058,0x1410af440,0x14110c070,2,"bool TrianglePathWaterAndLedgeSplitter::SplitAtEdge(const void* a_fromTriangle, const BSNavmeshTriangleEdgeRef* a_edge, void* a_toTriangle, void* a_arg4, void* a_arg5)"
+88059,0x1410af8b0,0x14110c4e0,2,"bool TrianglePathWaterAndLedgeSplitter::CreateRayValidatorAndNodeGenerator(void* a_request, void* a_arg3, void** a_outRayValidator, void** a_arg5)"
 88070,0x1410b0020,0x14110cc50,2,"std::uint32_t PartitionNodeIndicesByCost(void* a_indices, void** a_nodes, std::uint32_t a_low, std::uint32_t a_high)"
 88072,0x1410b0190,0x14110cdc0,2,"bool Pathing::WalkNavmeshSegment(NavmeshSegment* a_segment, NavmeshVisitedArray** a_visited, NavmeshEdgePredicate* a_predicate, BSNavmeshEdgeLocation* a_outEnd)"
 88074,0x1410b0fc0,0x14110dbf0,2,"bool Pathing::WalkNavmeshSegmentByHandle(NavmeshSegment* a_segment, void* a_unused, NavmeshEdgePredicate* a_predicate, BSNavmeshEdgeLocation* a_outEnd)"
@@ -5678,6 +5680,7 @@
 89254,0x1410f3c40,0x141150980,2,"bool BSPathBuilder::ConnectPathNodes(void* a_from, void* a_to, void* a_out)"
 89256,0x1410f40f0,0x141150e30,2,"bool BSPathBuilder::TryFindEdgeGoalLocation(std::uint32_t a_nodeIndex, void* a_edgeRef, void* a_outLocations)"
 89259,0x1410f4e80,0x141151bc0,2,"bool BSPathBuilder::FindClosestOpenEdge(BSPathingLocation* a_location, BSPathingLocation* a_outLocation, bool a_param4)"
+89260,0x1410f52b0,0x141151ff0,2,"bool BSPathBuilder::FindClosestBoundaryEdgeLocation(const BSPathingLocation* a_source, const NiPoint3* a_point, BSPathingLocation* a_outLocation, bool a_flag)"
 89294,0x1410f6ae0,0x141153820,2,void PathSmootherRayCastUsePreferredTris::dtor()
 89295,0x1410f6b00,0x141153840,2,"void PathSmootherRayCastUsePreferredTris::CastRay(void* a_context, void* a_arg, BSNavmesh** a_navmesh, float* a_outResult)"
 89296,0x1410f6b50,0x141153890,2,"PathSmootherRayCastUseTrianglePath* PathSmootherRayCastUseTrianglePath::ctor(BSTArray<BSFastNavmeshTriLocation>* a_triPath, void* a_arg)"
@@ -6052,6 +6055,8 @@
 90430,0x14111ff90,0x14117ce60,2,"void* MovementMessageAutoRegister::RegisterNewPath(void* a_registrar, std::int32_t a_typeId)"
 90431,0x141120060,0x14117cf30,2,"void* MovementMessageAutoRegister::RegisterPathComplete(void* a_registrar, std::int32_t a_typeId)"
 90432,0x141120130,0x14117d000,2,"void* MovementMessageAutoRegister::RegisterPathFailed(void* a_registrar, std::int32_t a_typeId)"
+90476,0x1411210d0,0x14117dfa0,2,"bool BSPathSmootherPOVSearch::Run(const void* a_start, const void* a_goal)"
+90558,0x141128460,0x141185330,2,"std::uint32_t BSPathingSearchRayCast::Initialize(const void* a_request, std::uint32_t* a_outValue)"
 90623,0x14112c840,0x141189710,2,"void PathFollowerTurnTarget::GetFacingAngles(NiPoint3* a_position, float* a_current, float a_zOffset, float* a_outFacing)"
 90628,0x14112cc60,0x141189b30,2,std::uint32_t PathingStreamLoadGame::ReadBSPathingLockInfo()
 90636,0x14112cff0,0x141189ec0,2,"bool MovementActorAvoidanceParameters::ShouldAvoidActorById(std::uint32_t a_actorId, std::uint32_t a_otherId)"
@@ -6066,6 +6071,7 @@
 90715,0x14112fd60,0x14118cc30,2,"bool VelocityObstacle::ObstaclePolygon::GetRayEntryExitDistances(const NiPoint3& a_origin, const NiPoint3& a_velocity, float& a_entry, float& a_exit)"
 90718,0x14112ffe0,0x14118ceb0,2,bool VelocityObstacle::ObstaclePolygon::Write(PathingStreamSaveGame& a_stream)
 90732,0x141131010,0x14118dee0,2,"void VelocityObstacle::BuildObstaclePolygons(const BSPathingLocation& a_location, float a_radius, BSTArray<VelocityObstacle::ObstaclePolygon>& a_out)"
+90766,0x141133760,0x141190630,2,"std::uint64_t RestoreNavmeshFromObstacleUndoData(void* a_context, BSNavmesh* a_navmesh, void* a_undoData, void* a_arg4)"
 90938,0x14113df60,0x1411983b0,2,void EnsureMemoryHeap()
 97369,0x14122c060,0x141264510,2,"void ObjectBindPolicy::GetAttachedScripts(std::uint64_t a_handle, void* a_out)"
 97370,0x14122c230,0x1412646e0,2,"void* ObjectBindPolicy::FindAttachedScript(void* a_out, std::uint64_t a_handle, void* a_name)"
