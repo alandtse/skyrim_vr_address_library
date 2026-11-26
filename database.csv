@@ -154,6 +154,8 @@
 13148,0x140152030,0x140162a70,4,"bool TES::UpdateGridForPosition(TES* a_this, NiPoint3* a_position, bool a_flag, float a_unk)"
 13152,0x140152fc0,0x140163a10,2,void TES::UpdateTempNodeManager()
 13159,0x1401535d0,0x140164020,3,void TES::PurgeBufferedCells()
+13164,0x140153920,0x140164370,2,"bool TES::IsLandFadingAtGrid(std::int16_t a_x, std::int16_t a_y)"
+13167,0x140153a60,0x1401644b0,2,void TES::GetFadedInGridBounds(std::int32_t* a_out)
 13170,0x140153d00,0x140164750,3,void TES::SetWorldSpace(TES* a_tes)
 13171,0x140153f80,0x1401649d0,4,"RE::TES::SetCurrentCell(RE::TESObjectCELL* a_cell, const RE::NiPoint3& a_position, float a_unk4)"
 13172,0x1401545f0,0x140165040,3,void TES::ResetCellGrid(TES* a_this)
@@ -177,6 +179,7 @@
 13227,0x1401584c0,0x140168f70,3,void TES::PreloadInterior(TESObjectCELL* a_cell)
 13230,0x140158970,0x140169420,4,void TES::FinishLoad()
 13233,0x140158e70,0x140169920,3,void sub_140158E70 (TES * a_this)
+13238,0x140159130,0x140169bf0,2,void TES::UpdateTerrainForAttachedCells()
 13239,0x1401591f0,0x140169cb0,4,void TES::UpdateGrassFadeInGrid()
 13240,0x140159290,0x140169d50,4,"void TES::ClearGrassFadeAt(int a_x, int a_y)"
 13241,0x1401593b0,0x140169e70,3,void TES::PreloadEssentialAddonNodes()
@@ -550,6 +553,7 @@
 19154,0x140289d30,0x14029b460,2,bool TESForm::GetObstacle()
 19157,0x140289e40,0x14029b570,2,bool TESForm::IsWater()
 19166,0x14028a640,0x14029bd70,2,void TESObjectREFR::SetOnLocalMap(bool a_set)
+19172,0x14028a830,0x14029bf60,2,bool TESObjectREFR::IsVisibleWhenDistant() const
 19186,0x14028ae10,0x14029c540,2,bool TESObjectREFR::GetAllowPromoteToPersistent()
 19200,0x14028b930,0x14029d060,2,bool Character::HasQuestObjectAlias()
 19201,0x14028b940,0x14029d070,3,bool TESObjectREFR::HasQuestObject()
@@ -808,6 +812,7 @@
 24062,0x140357c80,0x140367540,2,bool TESIdleForm::LinkIntoIdleTree()
 24065,0x1403580c0,0x140367980,4,TESIdleForm::sub_1403580C0
 24069,0x140358300,0x140367bc0,4,"bool TESIdleForm::CheckConditions(Actor* a_actor, TESObjectREFR* a_target, bool a_checkParentIdle) bool TESIdleForm::CheckConditions(Actor* a_actor, TESObjectREFR* a_target, bool a_checkParentIdle)"
+24083,0x1403589d0,0x140368290,2,NiFormArray* TESIdleForm::GetOrCreateChildIdles()
 24093,0x140358e30,0x1403686f0,2,void TESIdleManager::InitIdleForms()
 24104,0x140359760,0x140369020,3,"TESIdleForm* SelectIdleForAction(void* a_idleManager, BGSActionData* a_action)"
 24128,0x14035b0c0,0x14036a980,2,void AnimationSystemUtils::ClearClipDataArray()
@@ -2116,7 +2121,10 @@
 30978,0x1404af910,0x1404bf970,4,"uint32_t AddOrRemoveLODWater(bool* a_add, void* a_object, void** a_objectHolder) src\Features/UnifiedWater.cpp:357"
 31017,0x1404b2960,0x1404c2a30,3,"void BGSTerrainManager::Update(const NiPoint3& a_viewPos, const std::int32_t& a_updateType)"
 31018,0x1404b2da0,0x1404c2e70,3,NiNode* BGSTerrainManager::GetLODLandRootForLevel(std::uint32_t a_level)
+31023,0x1404b3030,0x1404c3100,2,void BGSTerrainManager::QueueReferenceCellNodeUpdate(TESObjectREFR* a_ref)
+31024,0x1404b3040,0x1404c3110,2,void BGSTerrainManager::QueueCellNodeUpdate(TESObjectCELL* a_cell)
 31026,0x1404b3190,0x1404c3260,3,"void BGSTerrainManager::UnloadAll(bool a_unloadStaticData, bool a_shutdown)"
+31030,0x1404b33f0,0x1404c34c0,2,static bool BGSTerrainManager::IsLODEnabledForCurrentWorldSpace()
 31036,0x1404b38a0,0x1404c3980,3,void BGSTerrainManager::SetCullState(const CullState& a_state)
 31059,0x1404b5090,0x1404c5170,3,"void BGSTerrainNode::UpdateWaterMeshSubVisibility(BGSTerrainNode* a_node, BSMultiBoundNode* a_waterParent)"
 31060,0x1404b5220,0x1404c5300,3,void BGSTerrainNode::UpdateBlockVisibility()

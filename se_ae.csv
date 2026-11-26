@@ -2042,6 +2042,7 @@ sseid,aeid,confidence,name
 13161,13306,1,TES::sub_*
 13164,13309,1,
 13165,13310,1,
+13167,13312,1,
 13171,13316,4,"RE::TES::SetCurrentCell(RE::TESObjectCELL* a_cell, const RE::NiPoint3& a_position, float a_unk4)"
 13172,13317,3,WashThatBloodOff::Rain::Manager::Leave_Interior
 13176,13321,1,
@@ -3008,6 +3009,7 @@ sseid,aeid,confidence,name
 19154,19564,1,
 19157,19567,1,
 19166,19577,1,
+19172,19587,1,
 19186,19601,1,
 19201,19627,3,RE::TESObjectREFR::HasQuestObject
 19204,19630,3,Actor::GetShieldObjectSlot
@@ -3548,6 +3550,7 @@ sseid,aeid,confidence,name
 24076,24579,1,
 24079,24582,1,
 24081,24583,1,TESIdleForm::dtor_*
+24083,24584,1,
 24093,24591,1,
 24096,24594,1,
 24098,24596,1,
@@ -4664,6 +4667,9 @@ sseid,aeid,confidence,name
 30722,31561,1,
 30741,31581,1,
 30746,31587,1,
+31023,31809,1,
+31024,31810,1,
+31030,31816,1,
 31079,31870,2,std::uint32_t BSSubIndexTriShape::GetNumSegments() const
 31300,32084,3,BGSWaterCollisionManager::BGSWaterUpdateI::dtor
 31302,32086,3,BGSWaterCollisionManager::BGSWaterUpdateI::SetDisabled
