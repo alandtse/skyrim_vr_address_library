@@ -1873,6 +1873,7 @@
 30145,0x140482460,0x140492400,2,void TeleportDoorSearch::AddStartNodeIfNoBest()
 30148,0x140482510,0x1404924b0,2,AStarNode* TeleportDoorSearch::RunToCompletion()
 30150,0x1404825f0,0x140492590,2,bool TeleportDoorSearch::Step()
+30162,0x140483000,0x140492fa0,2,void PathingDoorPathResult::Clear()
 30176,0x1404839b0,0x140493950,2,void NavMeshSearchClosePoint::dtor()
 30177,0x140483a00,0x1404939a0,2,"bool NavMeshSearchClosePoint::RunSearch(BSPathingRequest** a_request, const BSFastNavmeshTriLocation* a_start, BSTArray<BSFastNavmeshTriLocation>* a_outLocations, BSTArray<BSFastNavmeshEdgeHandle>* a_outEdges)"
 30179,0x140483fb0,0x140493f50,2,"bool NavMeshSearchClosePoint::ExpandNode(AStarNode* a_node, BSTSmallArray<AStarNode*,3>* a_out)"
