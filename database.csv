@@ -1874,8 +1874,11 @@
 29923,0x14047ace0,0x14048ac80,2,"bool BSPathingCellManager::AddUniqueNavmeshFromInfo_Heap(BSTArray<BSNavmesh*>& a_out, BSNavmeshInfo* a_info)"
 29924,0x14047adf0,0x14048ad90,2,"bool BSPathingCellManager::AddUniqueNavmeshInfo_Scrap(BSTScrapArray<BSNavmeshInfo*>& a_out, BSNavmeshInfo* a_info)"
 29925,0x14047ae90,0x14048ae30,2,"bool BSPathingCellManager::AddUniqueNavmeshInfo_Heap(BSTArray<BSNavmeshInfo*>& a_out, BSNavmeshInfo* a_info)"
+29994,0x14047cf10,0x14048ceb0,2,PathingDoor* PathingDoor::ctor(std::uint32_t a_doorId)
 29995,0x14047cf80,0x14048cf20,2,std::uint32_t PathingDoor::GetTypeCRC()
 29997,0x14047cfe0,0x14048cf80,2,std::uint32_t PathingDoor::GetID()
+29998,0x14047cff0,0x14048cf90,2,void PathingDoor::WriteID(BSPathingStreamWrite* a_stream)
+30000,0x14047d050,0x14048cff0,2,void PathingDoor::VisitID(void* a_visitor)
 30001,0x14047d070,0x14048d010,2,bool PathingDoor::IsOpen()
 30002,0x14047d150,0x14048d0f0,2,bool PathingDoor::IsClosed()
 30003,0x14047d230,0x14048d1d0,2,bool PathingDoor::IsOpening()
@@ -1890,8 +1893,11 @@
 30022,0x14047e230,0x14048e1d0,2,BSPathingDoor* PathingDoorCreator::Create()
 30030,0x14047e6d0,0x14048e670,4,"PathingLockData* PathingLockData::PathingLockData(const ObjectRefHandle& a_handle, bool a_flag)"
 30031,0x14047e7a0,0x14048e740,4,void PathingLockData::~PathingLockData()
+30034,0x14047e840,0x14048e7e0,2,BSPathingLockData* PathingLockData::Clone()
 30035,0x14047e8f0,0x14048e890,2,bool PathingLockData::CanPassDoor(BSPathingDoor** a_door)
 30036,0x14047e920,0x14048e8c0,2,"bool PathingLockData::TryPassDoor(BSPathingDoor** a_door, float* a_costOut)"
+30037,0x14047eb40,0x14048eae0,2,"void PathingLockData::Write(BSPathingStreamWrite* a_stream, void* a_arg2, void* a_arg3)"
+30038,0x14047ec00,0x14048eba0,2,"void PathingLockData::Read(BSPathingStreamRead* a_stream, void* a_arg2, void* a_arg3)"
 30039,0x14047ece0,0x14048ec80,2,void BSPathingLockDataFactoryManager::Insert()
 30052,0x14047f200,0x14048f1a0,2,void BSPathingLockDataFactoryManager::Grow()
 30053,0x14047f2b0,0x14048f250,2,void BSPathingLockDataFactoryManager::InsertRehashed()
@@ -1952,6 +1958,7 @@
 30242,0x140487090,0x140497030,2,"std::int32_t NavMeshSearchFitSphere::FindOrAddNode(const std::uint64_t* a_key, float a_cost, void* a_init, AStarNodeFitSphere** a_nodeOut)"
 30243,0x1404871c0,0x140497160,2,"AStarNodeFitSphere* NavMeshSearchFitSphere::FindOrAddNodeByKey(const std::uint64_t* a_key, float a_cost, void* a_init, AStarNodeFitSphere** a_nodeOut)"
 30244,0x140487310,0x1404972b0,2,"void NavMeshSearchFitSphere::ReconstructPath(AStarNodeFitSphere* a_goal, BSTArray<BSFastNavmeshTriLocation>* a_locations, BSTArray<void*>* a_edges)"
+30261,0x140487db0,0x140497d50,2,"float* NavMeshSearchFitSphere::AddStartNode(void* a_navmesh, std::uint32_t a_triangle, std::uint32_t a_arg4, float a_cost)"
 30268,0x140488000,0x140497fa0,2,AStarNodeFitSphere* NavMeshSearchFitSphere::RunToCompletion()
 30269,0x140488070,0x140498010,2,void NavMeshSearchFitSphere::PopBestOpenNode()
 30270,0x1404880e0,0x140498080,2,bool NavMeshSearchFitSphere::Step()
@@ -1993,6 +2000,9 @@
 30385,0x14048edb0,0x14049ed50,2,void PathBuilderFactoryManager::Grow()
 30386,0x14048ee60,0x14049ee00,2,void PathBuilderFactoryManager::InsertRehashed()
 30394,0x14048f360,0x14049f300,2,std::uint32_t PathingRequestCover::GetStaticType()
+30396,0x14048f480,0x14049f420,2,PathingCoverLocation* PathingCoverLocation::ctor_FromRef(TESObjectREFR* a_ref)
+30397,0x14048f530,0x14049f4d0,2,PathingCoverLocation* PathingCoverLocation::ctor_FromCell(void* a_cell)
+30398,0x14048f5d0,0x14049f570,2,PathingCoverLocation* PathingCoverLocation::ctor_FromPosition(const NiPoint3* a_position)
 30400,0x14048f6b0,0x14049f650,2,void PathingCoverLocation::Read(BSPathingStreamRead* a_stream)
 30401,0x14048f7c0,0x14049f760,2,void PathingCoverLocation::Write(BSPathingStreamWrite* a_stream)
 30402,0x14048f8d0,0x14049f870,2,"void SetCoverData(std::uint16_t a_value, std::uint16_t a_lowerBound, std::uint16_t a_upperBound, std::uint8_t a_flag0, std::uint8_t a_flag1, std::uint8_t a_edgeIndex)"
@@ -3881,11 +3891,13 @@
 49022,0x14082d030,0x140858380,3,"void CombatPath::SetAccelerationDecelerationMult(float accelerationMult, float DecelerationMult)"
 49074,0x14082f990,0x14085ace0,2,"bool CombatPath::SolveAndStoreRequest(void* a_key, void* a_request)"
 49125,0x140832ab0,0x14085ddb0,2,bool CombatPathBuilder::SmoothPath()
+49128,0x1408332a0,0x14085e5a0,2,void CombatPathBuilderStandard::BuildStep()
 49129,0x1408332e0,0x14085e5e0,2,void CombatPathBuilderStandard::Stage0_ResolveEndpoints()
 49130,0x1408336e0,0x14085e9e0,2,void CombatPathBuilderStandard::Stage1_CopyDirectPath()
 49131,0x140833840,0x14085eb40,2,void CombatPathBuilderStandard::Stage2_ValidateEndpoints()
 49132,0x140833a80,0x14085ed80,2,void CombatPathBuilderStandard::Stage3_AppendFoundPath()
 49133,0x140833c80,0x14085ef80,2,void CombatPathBuilderStandard::Stage4_RunNavmeshSearch()
+49135,0x140834270,0x14085f570,2,void CombatPathBuilderOpen::BuildStep()
 49136,0x140834290,0x14085f590,2,void CombatPathBuilderOpen::Stage0_ValidateStart()
 49137,0x140834370,0x14085f670,2,void CombatPathBuilderOpen::Stage1_RunNavmeshSearch()
 49149,0x1408359f0,0x140860cf0,2,bool BSPathingLocationEntryScrapArray::CopyTo(BSTArray<BSPathingLocationEntry>* a_out)
@@ -5232,6 +5244,7 @@
 88019,0x1410a8c60,0x141105890,2,"float Pathing::ComputeNavmeshInfoPathLength(const NiPoint3* a_startPos, const NiPoint3* a_goalPos, const NavmeshInfoPath* a_path)"
 88023,0x1410a9a20,0x141106650,2,"bool Pathing::RayCast(BSPathingLocation* a_start, NiPoint3* a_end, BSPathingLocation* a_outHit, void* a_options)"
 88024,0x1410a9c80,0x1411068b0,2,"bool Pathing::RayCastEndsInTriangle(BSPathingLocation* a_start, NiPoint3* a_end, BSNavmesh* a_navmesh, std::uint16_t a_triangle, BSPathingLocation* a_outHit, void* a_options)"
+88025,0x1410a9dd0,0x141106a00,2,"bool Pathing::RayCastWithVerification(BSPathingLocation* a_start, const NiPoint3* a_target, void* a_arg4, BSPathingLocation* a_outHit, void* a_arg6, void* a_arg7)"
 88027,0x1410aa210,0x141106e40,2,"bool Pathing::UpdateLOSGridMap(BSPathingLOSGridMap** a_losMap, BSTArray<BSPathingLocation>* a_viewers, void* a_headings)"
 88028,0x1410aa450,0x141107080,2,"bool Pathing::MarkVisibleTrianglesInLOSMap(BSPathingLocation* a_viewer, BSPathingLOSMap* a_map, bool a_clearUnseen, float a_minDistance, float a_heading)"
 88029,0x1410aada0,0x1411079d0,2,"bool Pathing::GetTriangleNormalAtLocation(BSPathingLocation* a_location, NiPoint3* a_outNormal)"
@@ -5255,6 +5268,7 @@
 88076,0x1410b1ea0,0x14110ead0,2,"bool NavmeshStraightLineWalk(NavmeshSegment* a_segment, void* a_unusedVisited, void* a_unusedPredicate, BSNavmeshEdgeLocation* a_outEnd)"
 88082,0x1410b2b40,0x14110f770,2,"bool ForEachEdgeInRange(void* a_edgeFilter, BSNavmesh** a_navmesh, NiPoint3* a_position, float a_extent, void* a_visitor)"
 88084,0x1410b2e10,0x14110fa40,2,"void* anonymous_namespace::SortIntersectingEdgesFunctor::ctor(NiPoint3* a_origin, float a_radius, float a_height, std::uint32_t a_flags, void* a_outEdges)"
+88124,0x1410b3f00,0x141110b30,2,"bool CastRay(void* a_this, void* a_context, void* a_arg, BSNavmesh** a_navmesh, std::uint32_t* a_outResult)"
 88125,0x1410b3f70,0x141110ba0,2,"void Pathing::ShrinkTangentsToFitNavmesh(PathFitContext* a_ctx, PathNodeNavInfo* a_from, NiPoint3* a_fromDir, float a_fromScale, PathNodeNavInfo* a_to, NiPoint3* a_toDir, float a_toScale, float* a_outFromLength, float* a_outToLength)"
 88126,0x1410b4310,0x141110f40,2,"void Pathing::ShrinkTangentsToFitNavmeshByHandle(PathFitContext* a_ctx, PathNodeNavInfo* a_from, NiPoint3* a_fromDir, float a_fromScale, PathNodeNavInfo* a_to, NiPoint3* a_toDir, float a_toScale, float* a_outFromLength, float* a_outToLength)"
 88127,0x1410b46b0,0x1411112e0,2,"void Pathing::FitNodePairTangents(PathFitContext* a_ctx, PathNodeNavInfo* a_from, PathNodeNavInfo* a_to)"
@@ -5363,6 +5377,7 @@
 88375,0x1410c00b0,0x14111cce0,3,"MovementPlayIdleHolder** AssignPlayIdleHolder(MovementPlayIdleHolder** a_slot, MovementPlayIdleHolder* a_holder)"
 88398,0x1410c0550,0x14111d180,3,IPathFollowerAction* IPathFollowerAction::dtor_deleting(std::uint8_t a_flags)
 88408,0x1410c0790,0x14111d3c0,2,ISelectIdleFilter* MovementSelectIdleUtils::GetDefaultSelectIdleFilter()
+88414,0x1410c08c0,0x14111d4f0,2,void* MovementPathManagerAgent::GetInterface(const std::uint64_t* a_interfaceId)
 88417,0x1410c0b30,0x14111d760,2,const BSFixedString& MovementPathManagerArbiter::GetPipelineStage()
 88418,0x1410c0b40,0x14111d770,2,const BSFixedString& MovementPathManagerArbiter::GetArbiterType()
 88419,0x1410c0b50,0x14111d780,2,BSFixedString& MovementPathManagerArbiter::GetStaticArbiterType()
@@ -5425,6 +5440,7 @@
 88539,0x1410c4f80,0x141121ce0,2,float BSPathingSolution::GetCurrentPathingNodesLength()
 88540,0x1410c51a0,0x141121f00,2,float BSPathingSolution::GetPathLength()
 88541,0x1410c52d0,0x141122030,2,"float BSPathingSolution::GetPathLengthBetween(float a_from, float a_to)"
+88542,0x1410c5550,0x1411222b0,2,float BSPathingSolution::GetPathLengthToNode(std::uint32_t a_nodeIndex)
 88544,0x1410c5970,0x1411226d0,2,"bool BSPathingSolution::GetPointAtPathPosition(float a_position, float* a_out)"
 88545,0x1410c5af0,0x141122850,2,"void BSPathingSolution::GetPointAtDistance(float a_from, float a_distance, bool a_forward, float* a_outPathPosition, NiPoint3* a_outPoint, float a_scale)"
 88546,0x1410c5ba0,0x141122900,2,"void BSPathingSolution::FindPathPositionNearPoint(float* a_position, float a_startPathPosition, float a_zTolerance, float a_endPathPosition, char a_flag, float* a_outPathPosition, NiPoint3* a_outPoint, float a_scale)"
@@ -5450,10 +5466,12 @@
 88603,0x1410ca1c0,0x141126ef0,2,bool PathingStreamSaveGame::WriteBSVirtualPathingNodeArray(const BSTArray<BSVirtualPathingNode>& a_nodes)
 88609,0x1410ca310,0x141127040,2,void BSNavmeshGrid::Clear()
 88610,0x1410ca390,0x1411270c0,2,"void BSNavmeshGrid::GetCellAtPoint(const NiPoint3* a_pos, BSTArray<std::uint16_t>** a_cellOut) const"
+88612,0x1410ca4a0,0x1411271d0,2,"void BSNavmeshGrid::CollectCellsNearPoint(const float* a_point, BSTArray<NavmeshCell*>* a_outCells)"
 88615,0x1410ca8d0,0x141127600,2,"void BSNavmeshGrid::Init(NiPoint3* a_min, NiPoint3* a_max, std::uint32_t a_triangleCount)"
 88616,0x1410caa50,0x141127780,2,void BSNavmeshGrid::WriteToStream(BSPathingStreamWrite* a_stream) const
 88617,0x1410cab90,0x1411278c0,2,void BSNavmeshGrid::ReadFromStream(BSPathingStreamRead* a_stream)
 88618,0x1410cad80,0x141127ab0,2,void BSNavmeshGrid::CopyTo(BSNavmeshGrid* a_dst) const
+88622,0x1410cb3d0,0x141128100,2,"void BSNavmeshGrid::CollectTrianglesInBounds(const float* a_min, const float* a_max, BSTArray<std::uint16_t>* a_outTriangleIndices)"
 88628,0x1410cb9e0,0x141128710,2,BSNavmesh* BSNavmesh::ctor()
 88630,0x1410cbe60,0x141128b90,2,BSTSmartPointer<BSPathingCell>* BSNavmesh::GetParentCell()
 88632,0x1410cbe80,0x141128bb0,2,void BSNavmesh::Clear()
@@ -5497,10 +5515,12 @@
 88683,0x1410d0390,0x14112d0c0,2,"bool BSNavmesh::FindClosestBoundaryEdge(const NiPoint3& a_pos, float a_radius, std::uint16_t& a_outTriangle, std::int32_t& a_outEdge, bool a_flip)"
 88687,0x1410d0820,0x14112d550,2,"bool BSNavmesh::TestPointOverTriangle(std::uint16_t a_triangle, const NiPoint3& a_pos, void* a_unused, float& a_outDeltaZ)"
 88688,0x1410d0980,0x14112d6b0,2,"bool BSNavmesh::GetTriangleHeightAtPoint(std::uint16_t a_triangle, const NiPoint3& a_pos, float& a_outZ)"
+88690,0x1410d0b30,0x14112d860,2,"bool BSNavmesh::FindTriangleAtPointAccepted(const NiPoint3* a_point, ITriangleAcceptor* a_visitor, float* a_outZ)"
 88693,0x1410d1260,0x14112df90,2,"bool BSNavmesh::FindRandomPointNear(const NiPoint3& a_center, float a_radius, NiPoint3& a_out)"
 88694,0x1410d14a0,0x14112e1d0,2,"NiPoint3* BSNavmesh::OffsetPointFromEdges(NiPoint3* a_out, const NiPoint3& a_pos, float a_margin)"
 88699,0x1410d1f00,0x14112ec30,2,"std::int32_t BSNavmesh::FindCrossedEdge2D(std::uint16_t a_triangle, std::int32_t a_ignoreEdge, const float* a_p0, const float* a_p1, float* a_out)"
 88700,0x1410d20c0,0x14112edf0,2,"std::int32_t BSNavmesh::FindCrossedEdge3D(std::uint16_t a_triangle, std::int32_t a_ignoreEdge, const float* a_p0, const float* a_p1, const float* a_p2, char* a_outFlag, void* a_outData)"
+88701,0x1410d2250,0x14112ef80,2,"void BSNavmesh::FindSegmentCrossingTriangleEdge(EdgeCrossingResult* a_out, std::uint16_t a_triangle, std::int32_t a_skipEdge, const NiPoint3* a_segStart, const NiPoint3* a_segEnd)"
 88702,0x1410d2400,0x14112f130,2,"std::uint32_t BSNavmesh::FindCrossedEdgeInline2D(std::uint16_t a_triangle, std::int32_t a_ignoreEdge, const float* a_p0, const float* a_p1)"
 88703,0x1410d2660,0x14112f390,2,"void BSNavmesh::FindEdgeCrossingFromEdge(std::uint32_t* a_out, std::uint16_t a_triangle, std::int32_t a_entryEdge, float* a_target, std::int32_t a_reverse, std::uint32_t* a_query)"
 88704,0x1410d29e0,0x14112f710,2,"void BSNavmesh::FindExtremeEdgeCrossing(std::uint32_t* a_out, std::uint16_t a_triangle, std::int32_t* a_start, std::int32_t a_pickLast, std::uint32_t* a_query)"
@@ -5530,6 +5550,7 @@
 88843,0x1410d9af0,0x141136820,2,void BSCompressedNavmeshBounds::FreeArrays()
 88844,0x1410d9b80,0x1411368b0,2,void BSCompressedNavmeshBounds::CopyFrom(BSCompressedNavmeshBounds* a_src)
 88845,0x1410d9dc0,0x141136af0,2,void BSCompressedNavmeshBounds::Expand(BSCompressedNavmeshBounds* a_dst)
+88878,0x1410dcc70,0x1411399a0,2,"void BSNavmeshInfoMap::CollectInfosWithinRadius(BSNavmeshInfo* a_startInfo, void* a_arg3, float a_radius, BSTArray<BSNavmeshInfo*, BSScrapArrayAllocator>* a_out)"
 88896,0x1410dd7f0,0x14113a520,2,void NavMeshInfoMap::ReadAllPaths(PathingStreamMasterFileRead& a_stream)
 88897,0x1410dd8e0,0x14113a610,2,"bool Pathing::ReverseNavmeshInfoPath(const NavmeshInfoPath* a_src, NavmeshInfoPath* a_dst)"
 88898,0x1410ddb50,0x14113a880,2,"bool Pathing::JoinForwardAndBackwardNavmeshInfoPaths(const NavmeshInfoPath* a_forward, const NavmeshInfoPath* a_backward, NavmeshInfoPath* a_out)"
@@ -5548,6 +5569,7 @@
 88961,0x1410e10f0,0x14113de20,2,void PathingTaskData::ProcessRaycastRequests()
 88962,0x1410e1280,0x14113dfb0,2,"std::int32_t PathingTaskData::GetOrQueueRayCastRequest(BSPathingLocation* a_start, BSPathingLocation* a_goal, BSScrapArray<BSPathingLocation>* a_out)"
 88963,0x1410e1610,0x14113e340,2,"std::int32_t PathingTaskData::GetOrQueueLocationRequest(BSPathingLocation* a_location, BSScrapArray<BSPathingLocation>* a_out, bool a_flag)"
+88991,0x1410e34a0,0x1411401e0,2,"bool CopyBSPathingLocationArray(const BSTArray<BSPathingLocation>* a_src, BSTArray<BSPathingLocation, BSScrapArrayAllocator>* a_dst)"
 89007,0x1410e3ec0,0x141140c00,2,std::uint32_t PathingSolutionEntryArray::PushBack(PathingSolutionEntry* a_entry)
 89018,0x1410e42e0,0x141141020,2,"void PathingSolutionEntryArray::ReleaseRange(std::uint32_t a_index, std::uint32_t a_count)"
 89030,0x1410e4750,0x141141490,2,"void PathingSolutionEntryArray::RemoveElements(std::uint32_t a_index, std::uint32_t a_count)"
@@ -5613,8 +5635,10 @@
 89246,0x1410f1500,0x14114e240,2,"bool BSPathBuilder::PartitionVirtualNodesIntoRuns(BSTArray<VirtualNodeRun, BSScrapArrayAllocator>* a_outRuns)"
 89259,0x1410f4e80,0x141151bc0,2,"bool BSPathBuilder::FindClosestOpenEdge(BSPathingLocation* a_location, BSPathingLocation* a_outLocation, bool a_param4)"
 89294,0x1410f6ae0,0x141153820,2,void PathSmootherRayCastUsePreferredTris::dtor()
+89295,0x1410f6b00,0x141153840,2,"void PathSmootherRayCastUsePreferredTris::CastRay(void* a_context, void* a_arg, BSNavmesh** a_navmesh, float* a_outResult)"
 89296,0x1410f6b50,0x141153890,2,"PathSmootherRayCastUseTrianglePath* PathSmootherRayCastUseTrianglePath::ctor(BSTArray<BSFastNavmeshTriLocation>* a_triPath, void* a_arg)"
 89297,0x1410f6d50,0x141153a90,2,void PathSmootherRayCastUseTrianglePath::dtor()
+89298,0x1410f6d90,0x141153ad0,2,"void PathSmootherRayCastUseTrianglePath::CastRay(void* a_context, void* a_arg, BSNavmesh** a_navmesh, float* a_outResult)"
 89313,0x1410f99f0,0x141156730,2,void PathSmootherRayCastUseTrianglePath::ReserveTriangleIndexMap(std::uint32_t a_count)
 89314,0x1410f9ae0,0x141156820,2,void PathSmootherRayCastUseTrianglePath::FreeTriangleIndexMap()
 89321,0x1410f9e90,0x141156bd0,2,void PathSmootherRayCastUseTrianglePath::GrowTriangleIndexMap()
@@ -5744,6 +5768,7 @@
 89673,0x141108790,0x1411656b0,2,"void MovementPathManagerAgentStaticAvoider::PollPathEvent(MovementUpdateDataSmallDelta* a_updateData, MovementPathManagerAgentEvent* a_outEvent)"
 89674,0x141108a80,0x1411659a0,2,void MovementPathManagerAgentStaticAvoider::ModifyPathingRequest(BSPathingRequest** a_request)
 89675,0x141108c50,0x141165b70,2,void MovementPathManagerAgentStaticAvoider::ResetPathingState()
+89676,0x141108c90,0x141165bb0,2,void* IMovementQueryStaticAvoider::GetRequestData()
 89703,0x1411095b0,0x1411664d0,2,void MovementAgentActorAvoider::RegisterWithController(IMovementControllerRegisterInterface& a_controller)
 89704,0x1411095e0,0x141166500,2,void MovementAgentActorAvoider::UnregisterWithController()
 89707,0x141109680,0x1411665a0,2,const BSFixedString& MovementAgentActorAvoider::GetAgentType()
