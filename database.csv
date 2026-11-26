@@ -154,13 +154,13 @@
 13148,0x140152030,0x140162a70,4,"bool TES::UpdateGridForPosition(TES* a_this, NiPoint3* a_position, bool a_flag, float a_unk)"
 13152,0x140152fc0,0x140163a10,2,void TES::UpdateTempNodeManager()
 13159,0x1401535d0,0x140164020,3,void TES::PurgeBufferedCells()
-13164,0x140153920,0x140164370,2,"bool TES::IsLandFadingAtGrid(std::int16_t a_x, std::int16_t a_y)"
-13167,0x140153a60,0x1401644b0,2,void TES::GetFadedInGridBounds(std::int32_t* a_out)
+13164,0x140153920,0x140164370,2,"bool TES::IsLandFadingAtGrid(std::int32_t a_gridX, std::uint16_t a_gridY)"
+13167,0x140153a60,0x1401644b0,2,void TES::GetFadedInGridBounds(std::int32_t* a_bounds)
 13170,0x140153d00,0x140164750,3,void TES::SetWorldSpace(TES* a_tes)
 13171,0x140153f80,0x1401649d0,4,"RE::TES::SetCurrentCell(RE::TESObjectCELL* a_cell, const RE::NiPoint3& a_position, float a_unk4)"
 13172,0x1401545f0,0x140165040,3,void TES::ResetCellGrid(TES* a_this)
 13174,0x140154db0,0x140165800,4,"TESObjectCELL* TES::GetLoadedCell(int a_x, int a_y)"
-13176,0x140154f00,0x140165950,2,"std::int32_t TES::GetCellDetailLevel(TESObjectCELL* a_cell, const NiPoint3* a_pos)"
+13176,0x140154f00,0x140165950,2,"std::uint32_t TES::GetCellDetailLevel(TESObjectCELL* a_cell, const NiPoint3* a_pos)"
 13177,0x140155090,0x140165ae0,3,TESObjectCELL* TES::GetCell(const NiPoint3& a_position)
 13183,0x140155570,0x140165fc0,4,FUN_140155570
 13188,0x140155a30,0x140166480,4,void TES::ClearResourceCaches()
@@ -2141,6 +2141,37 @@
 31067,0x1404b5cc0,0x1404c5da0,2,static void BGSTerrainManager::CacheSettings()
 31079,0x1404b66a0,0x1404c6780,2,std::uint32_t BSSubIndexTriShape::GetNumSegments() const
 31080,0x1404b66c0,0x1404c67a0,2,float BGSTerrainNode::GetSquaredDistanceToPoint(const NiPoint3& a_pos) const
+31082,0x1404b6880,0x1404c6960,2,bool BGSQueuedTerrainUpgrade::IsReady()
+31083,0x1404b6920,0x1404c6a00,2,void BGSQueuedTerrainUpgrade::Apply()
+31084,0x1404b69f0,0x1404c6ad0,2,void BGSQueuedTerrainUpgrade::Cancel()
+31086,0x1404b6b20,0x1404c6c00,2,bool BGSQueuedTerrainDowngrade::IsReady()
+31087,0x1404b6b50,0x1404c6c30,2,void BGSQueuedTerrainDowngrade::Apply()
+31088,0x1404b6bf0,0x1404c6cd0,2,void BGSQueuedTerrainDowngrade::Cancel()
+31089,0x1404b6c90,0x1404c6d70,2,bool BGSQueuedTerrainInitialLoad::IsReady()
+31090,0x1404b6cc0,0x1404c6da0,2,void BGSQueuedTerrainInitialLoad::Apply()
+31092,0x1404b6ec0,0x1404c6fa0,2,bool BGSQueuedObjectUpgrade::IsReady()
+31093,0x1404b6f60,0x1404c7040,2,void BGSQueuedObjectUpgrade::Apply()
+31094,0x1404b7060,0x1404c7140,2,void BGSQueuedObjectUpgrade::Cancel()
+31096,0x1404b7190,0x1404c7270,2,bool BGSQueuedObjectDowngrade::IsReady()
+31097,0x1404b71c0,0x1404c72a0,2,void BGSQueuedObjectDowngrade::Apply()
+31098,0x1404b7270,0x1404c7350,2,void BGSQueuedObjectDowngrade::Cancel()
+31099,0x1404b7310,0x1404c73f0,2,bool BGSQueuedObjectInitialLoad::IsReady()
+31100,0x1404b7340,0x1404c7420,2,void BGSQueuedObjectInitialLoad::Apply()
+31102,0x1404b7450,0x1404c7530,2,void BGSTerrainUpdateManager::Update()
+31123,0x1404b8200,0x1404c82e0,2,void BGSQueuedObjectInitialLoad::Cancel()
+31124,0x1404b8230,0x1404c8310,2,void BGSQueuedTerrainInitialLoad::Cancel()
+31125,0x1404b8260,0x1404c8340,2,bool BGSQueuedObjectDowngrade::IsStillValid()
+31126,0x1404b8280,0x1404c8360,2,bool BGSQueuedObjectInitialLoad::IsStillValid()
+31127,0x1404b82d0,0x1404c83b0,2,bool BGSQueuedObjectUpgrade::IsStillValid()
+31128,0x1404b8320,0x1404c8400,2,bool BGSQueuedTerrainDowngrade::IsStillValid()
+31129,0x1404b8340,0x1404c8420,2,bool BGSQueuedTerrainInitialLoad::IsStillValid()
+31130,0x1404b8390,0x1404c8470,2,bool BGSQueuedTerrainUpgrade::IsStillValid()
+31131,0x1404b83e0,0x1404c84c0,2,std::uint32_t BGSQueuedObjectDowngrade::GetUpdateType()
+31132,0x1404b83f0,0x1404c84d0,2,std::uint32_t BGSQueuedObjectInitialLoad::GetUpdateType()
+31133,0x1404b8400,0x1404c84e0,2,std::uint32_t BGSQueuedObjectUpgrade::GetUpdateType()
+31134,0x1404b8410,0x1404c84f0,2,std::uint32_t BGSQueuedTerrainDowngrade::GetUpdateType()
+31135,0x1404b8420,0x1404c8500,2,std::uint32_t BGSQueuedTerrainInitialLoad::GetUpdateType()
+31136,0x1404b8430,0x1404c8510,2,std::uint32_t BGSQueuedTerrainUpgrade::GetUpdateType()
 31140,0x1404b8580,0x1404c8660,3,SeasonsofSkyrim::LODSwap::Terrain::BuildMeshFileName
 31141,0x1404b85c0,0x1404c86a0,3,SeasonsofSkyrim::LODSwap::Terrain::BuildDiffuseTextureFileName
 31142,0x1404b8600,0x1404c86e0,3,SeasonsofSkyrim::LODSwap::Terrain::BuildNormalTextureFileName
