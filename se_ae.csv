@@ -2133,6 +2133,7 @@ sseid,aeid,confidence,name
 13597,13693,1,
 13623,13721,3,TESDataHandler::UnloadCell
 13625,13723,3,RE::TESDataHandler::CreateReferenceAtLocation
+13633,13736,1,
 13640,13745,3,RE::TESDataHandler::SortESMsByMasters
 13642,13747,3,RE::TESDataHandler::MoveFileInList
 13643,13748,3,RE::TESDataHandler::DuplicateCheckedFiles
@@ -2789,6 +2790,7 @@ sseid,aeid,confidence,name
 18185,18570,3,RE::ImageSpaceModifierInstanceForm::Trigger
 18188,18573,3,RE::TESImageSpaceModifier::Stop*
 18192,18577,3,RE::TESImageSpaceModifier::RemoveCrossfade_*
+18224,18618,1,
 18260,18667,1,TESImageSpaceModifier::ReadFromFileStream_140250430
 18266,18673,1,
 18267,18674,1,
@@ -3126,6 +3128,7 @@ sseid,aeid,confidence,name
 19872,20279,2,
 19873,20280,1,
 19897,20302,1,
+19969,20400,1,
 20077,20520,1,
 20078,20521,1,
 20089,20536,3,TESWorldSpace::CollectMapMarkerHandles
@@ -4716,6 +4719,7 @@ sseid,aeid,confidence,name
 32999,33781,1,
 33000,33782,1,
 33002,33784,1,
+33019,418885,1,
 33080,33860,1,
 33092,33869,1,
 33108,33885,1,
@@ -5071,6 +5075,7 @@ sseid,aeid,confidence,name
 34861,35771,1,BGSSaveLoadManager::sub_*
 34862,35772,3,RE::BGSSaveLoadManager::ProcessEvents
 34874,35785,1,RegionalSaveNames::DoNameSave
+34950,35861,1,
 34968,35877,1,
 34984,35890,1,
 34985,35891,1,
@@ -8369,6 +8374,7 @@ sseid,aeid,confidence,name
 68017,69359,3,FinishAllJobLists
 68022,69383,3,JobList::ctor
 68054,69404,3,JobList::Clear
+68141,69489,1,
 68163,69510,2,
 68838,70190,3,RE::NiObject::ProcessClone
 68839,70191,3,RE::NiObject::CreateDeepCopy

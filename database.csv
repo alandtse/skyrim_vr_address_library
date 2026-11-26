@@ -198,6 +198,7 @@
 13620,0x14016bac0,0x14017c4e0,4,"TESObjectCELL* TESDataHandler::CreateCellAt(int a_x, int a_y, TESWorldSpace* a_world, bool a_arg4)"
 13623,0x14016bda0,0x14017c7c0,4,void TESDataHandler::UnloadCell(TESObjectCELL* a_cell)
 13625,0x14016c210,0x14017cc30,3,"ObjectRefHandle TESDataHandler::CreateReferenceAtLocation(TESBoundObject* a_base, const NiPoint3& a_location, const NiPoint3& a_rotation, TESObjectCELL* a_targetCell, TESWorldSpace* a_selfWorldSpace, TESObjectREFR* a_alreadyCreatedRef, BGSPrimitive* a_primitive, const ObjectRefHandle& a_linkedRoomRefHandle, bool a_forcePersist, bool a_arg11)"
+13633,0x14016d260,0x14017dc80,2,void TESDataHandler::RemoveFile(TESFile* a_file)
 13635,0x14016d4d0,0x14017def0,3,FormID TESDataHandler::GetNextID()
 13638,0x14016d720,0x14017e0b0,4,"void TESDataHandler::LoadPlugins(TESDataHandler* a_this, char* a_basePath)"
 13639,0x14016dbb0,0x14017e540,3,"void TESDataHandler::FindPluginsInDirectory(TESDataHandler* a_this, char* a_path)"
@@ -455,6 +456,7 @@
 18187,0x14024cad0,0x14025e1c0,4,"ImageSpaceModifierInstanceForm* TESImageSpaceModifier::TriggerIfNotActive(float a_strength, NiAVObject* a_target)"
 18188,0x14024ccd0,0x14025e3c0,4,void ImageSpaceModifierInstanceForm::Stop(TESImageSpaceModifier* a_imod)
 18192,0x14024d210,0x14025e900,4,void ImageSpaceModifierInstanceForm::StopCrossFade(float a_seconds)
+18224,0x14024e740,0x14025fe30,2,void TESClimate::InitDefaults()
 18311,0x1402536f0,0x140264aa0,2,"void* TESObjectLAND::GetDominantTexture(std::uint32_t a_quad, std::uint32_t a_vertex)"
 18331,0x140255660,0x140266a10,4,"void TESObjectLAND::LoadLand(int a_arg1, int a_arg2)"
 18332,0x140255760,0x140266b10,3,void TESObjectLAND::ReadLandDataFromFile()
@@ -688,6 +690,7 @@
 19872,0x1402a9af0,0x1402bb260,2,NiPoint3* TESObjectREFR::GetPackageStartPosition()
 19873,0x1402a9b30,0x1402bb2a0,2,"void TESObjectREFR::SetPackageStartLocation(TESWorldSpace* a_worldSpace, TESObjectCELL* a_cell, NiPoint3* a_position, float a_rotationZ)"
 19897,0x1402aa760,0x1402bbed0,2,ExtraTeleport::Data* ExtraTeleport::Data::GetLinkedDoorData()
+19969,0x1402ae960,0x1402c00d0,2,void TESWeather::InitWastelandDefaults()
 20022,0x1402b1b60,0x1402c32d0,3,"bool TESFile::SeekCell(TESWorldSpace* a_worldSpace, TESFile* a_file, int32_t a_x, int32_t a_y)"
 20023,0x1402b1df0,0x1402c3560,3,"std::int32_t TESWorldSpace::GetIndexForCellCoord(TESFile* a_file, std::int32_t a_cellX, std::int32_t a_cellY)"
 20026,0x1402b20e0,0x1402c3850,4,"TESObjectCELL* TESWorldSpace::GetOrCreateCell(int a_x, int a_y)"
@@ -2256,6 +2259,7 @@
 32570,0x140502ed0,0x140513370,2,"bool IntersectSegmentSphere(const float* a_segment, const void* a_sphere, float* a_outTEnter, float* a_outTExit)"
 32867,0x14051e7f0,0x14052ede0,2,void IMenu::PostDisplay(IMenu* a_this)
 32979,0x1405249d0,0x14051f690,2,"void GetContentManifestPath(GFxValue* a_content, BSFixedString* a_out)"
+33019,0x14052bd40,0x140524e70,2,void ModManager::DeleteModFiles(const char* a_modFileName)
 33257,0x14053d370,0x1405400f0,4,AccumulatingValueModifierEffect::Allocate(AccumulatingValueModifierEffect* accumulatingValueModifierEffect
 33277,0x14053DEB0,0x140540C30,4,"ActiveEffect::Adjust(Skyrim::ActiveEffect* activeEffect, float effectiveness, bool requiresHostility)"
 33278,0x14053df40,0x140540cc0,4,ActiveEffect::CalculateDurationAndMagnitude_14053DF40
@@ -2406,6 +2410,7 @@
 34856,0x140588f90,0x1405905e0,4,bool BGSSaveLoadManager::LoadMostRecentSaveGame()
 34862,0x140589a60,0x1405910d0,4,void BGSSaveLoadManager::ProcessEvents (BGSSaveLoadManager * a_this)
 34871,0x14058ac60,0x1405922d0,3,Win32FileType::ShowOutdatedSaveMessage
+34950,0x14058efc0,0x140596680,2,void AppendModdedSuffix(BSFixedString* a_saveName)
 35026,0x140592eb0,0x14059a570,4,FormID BGSNumericIDIndex::GetNumericID()
 35027,0x140592f10,0x14059a5d0,4,void BGSNumericIDIndex::SetNumericID(FormID a_formID)
 35041,0x1405942b0,0x14059b970,3,BGSSaveLoadManager::BuildSaveGameHistoryReport
@@ -2538,6 +2543,7 @@
 36248,0x1405d0fc0,0x1405d95a0,3,void Actor::SetRotationZ(float a_angle)
 36252,0x1405d1190,0x1405d9770,3,RE::Actor::IsRunning
 36259,0x1405d1620,0x1405d9c00,3,bool Actor::IsInMidair()
+36260,0x1405d16b0,0x1405d9c90,2,bool Actor::IsFallingFast()
 36271,0x1405d1f80,0x1405da540,4,RE::Actor::Jump_1405D1F80
 36272,0x1405d2190,0x1405da750,4,CharacterController* Actor::GetCharController()
 36286,0x1405d2520,0x1405daae0,3,RE::Actor::GetGhost
@@ -3963,6 +3969,7 @@
 50155,0x14085a1c0,0x1408848f0,3,UI_MESSAGE_RESULTS Console::ProcessMessage(UIMessage* a_message)
 50157,0x14085a760,0x140885100,3,Console::ExecuteCommand(FxDelegateArgs* args)
 50164,0x14085bb30,0x1408864d0,3,RE::Console::SetSelectedRef
+50165,0x14085bc90,0x140886630,2,void Console::FlushLogToHistory()
 50180,0x14085c2c0,0x140886df0,4,RE::ConsoleLog::VPrint
 50201,0x14085ddb0,0x140888D80,3,DescriptionFramework::
 50211,0x14085eaa0,0x140889a30,4,void TESObjectREFR::OpenContainer(std::int32_t a_openType)
@@ -4585,6 +4592,7 @@
 68022,0x140c335c0,0x140c78710,3,void JobList::ctor()
 68054,0x140c34650,0x140c797e0,3,void JobList::Clear()
 68058,0x140c34930,0x140c79af0,3,std::uint32_t BSJobs::JobThread::ThreadProc()
+68141,0x140c375e0,0x140c7c7b0,2,"bool SplitFileNameExtension(const char* a_path, char* a_baseName, char* a_extension)"
 68163,0x140c37fa0,0x140c7d170,2,void ResetJobTaskEvents(void* a_taskEvents)
 68203,0x140c39950,0x140c7ea00,4,BSWin32TaskletManager* BSWin32TaskletManager::GetSingleton()
 68207,0x140c39ac0,0x140c7eb70,4,bool BSTaskletManager::CreateTaskGroup(BSTaskletGroup& a_taskGroup)
