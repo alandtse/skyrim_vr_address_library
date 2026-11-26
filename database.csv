@@ -5233,6 +5233,7 @@
 87985,0x1410a64c0,0x1411030f0,3,bool BSPathingLocation::ResolveToClosestNavmeshAndTriangle(FindTriangleForLocationFilter& a_filter)
 87986,0x1410a6a30,0x141103660,2,bool BSPathingLocation::ResolveNavmeshInfo()
 87989,0x1410a6cc0,0x1411038f0,2,"void BSPathingLocation::GetDebugText(char* a_buffer, std::int32_t a_size, const char* a_label)"
+87990,0x1410a6f30,0x141103b60,2,bool BSPathingLocation::CastAxisRays(float a_radius)
 87992,0x1410a7150,0x141103d80,2,void BSPathingLocation::Read(BSPathingStreamRead* a_stream)
 87993,0x1410a7290,0x141103ec0,2,void BSPathingLocation::Write(BSPathingStreamWrite* a_stream)
 87994,0x1410a7350,0x141103f80,2,"void BSPathingLocation::SetPositionAndCell(const NiPoint3* a_pos, const NiPointer<BSPathingCell>* a_cell)"
@@ -5472,6 +5473,7 @@
 88549,0x1410c5ee0,0x141122c40,2,"void BSPathingSolution::ProjectPointOntoPath3D(NiPoint3* a_position, float a_pathPosition, float* a_outPathPosition, NiPoint3* a_outPoint)"
 88550,0x1410c5f10,0x141122c70,2,"void BSPathingSolution::ProjectPointOntoPathHorizontal(NiPoint3* a_position, float a_pathPosition, float* a_outPathPosition, NiPoint3* a_outPoint)"
 88551,0x1410c5f40,0x141122ca0,2,"bool BSPathingSolution::FindClosestPointOnVirtualPath(const BSPathingLocation* a_pos, BSPathingLocation* a_outLocation, float* a_outPathPosition) const"
+88552,0x1410c6360,0x1411230c0,2,"float FindPathSegmentAtFraction(const void* a_path, float a_fraction, float a_totalLength, std::uint32_t* a_outSegment)"
 88553,0x1410c6470,0x1411231d0,2,std::uint32_t GetVirtualPathSegmentIndices(BSPathingSolution* a_solution)
 88554,0x1410c6510,0x141123270,2,"void BSPathingSolution::GetPredictedPoint(float a_from, float a_distance, float* a_outPathPosition, NiPoint3* a_outPoint)"
 88555,0x1410c6810,0x141123570,2,"bool BSPathingSolution::GetVirtualLocationAtPathPosition(float a_pathPosition, BSPathingLocation* a_outLocation) const"
