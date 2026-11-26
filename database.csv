@@ -3829,7 +3829,7 @@
 49133,0x140833c80,0x14085ef80,2,void CombatPathBuilderStandard::Stage4_RunNavmeshSearch()
 49136,0x140834290,0x14085f590,2,void CombatPathBuilderOpen::Stage0_ValidateStart()
 49137,0x140834370,0x14085f670,2,void CombatPathBuilderOpen::Stage1_RunNavmeshSearch()
-49180,0x140836980,0x140861c80,2,float CombatPathingSearchPolicyStandard::GetEdgeCost(BSFastNavmeshTriLocation* a_from, BSFastNavmeshTriLocation* a_to)
+49180,0x140836980,0x140861c80,2,"float CombatPathingSearchPolicyStandard::GetEdgeCost(BSFastNavmeshTriLocation* a_from, BSFastNavmeshTriLocation* a_to)"
 49311,0x14083c870,0x140867b70,3,void CombatApproachTargetSpeedController::UpdateApproachTargetSpeed(CombatPath* a_combatPath)
 49315,0x14083ce90,0x140868190,2,bool CombatPathingSphere::IsOutside(BSFastNavmeshTriLocation* a_node)
 49316,0x14083cee0,0x1408681e0,2,float CombatPathingSphere::GetPenetrationDepth(BSFastNavmeshTriLocation* a_node)
