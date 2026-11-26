@@ -139,7 +139,6 @@
 12710,0x140140000,0x1401509f0,4,"void BSTArray<FACTION_RANK>::push_back(TESFaction* a_faction, std::int8_t a_rank)"
 12784,0x1401424f0,0x140152ee0,3,bhkRigidBody* bhkCollisionObject::GetRigidBody()
 12785,0x140142550,0x140152f40,4,"bool GetHandleValidatedSmartPointer (undefined8 * a_refHandle, undefined8 * a_out)"
-12801,0x140142ea0,0x140153890,2,"void BSPathingSpline::BuildHermiteSegment(BSPathingHermiteSegment* a_out, const NiPoint3& a_p0, const NiPoint3& a_m0, const NiPoint3& a_p1, const NiPoint3& a_m1)"
 12840,0x1401443b0,0x140154da0,2,NiPoint3* ExtraTeleport::Data::GetPosition()
 12841,0x1401443c0,0x140154db0,2,NiPoint3* ExtraTeleport::Data::GetRotation()
 12910,0x140147bb0,0x1401585e0,3,SeasonsofSkyrim::FormSwap::model_loader_queue_ref
@@ -5204,9 +5203,6 @@
 87907,0x1410a2370,0x1410fefa0,4,Skyrim-upscaler
 87919,0x1410a2dc0,0x1410ff9f0,2,"bool BGSMoviePlayer::OpenMovie(const char* a_path, bool a_flag)"
 87936,0x1410a3790,0x1411003c0,2,void BSMusicManager::Update()
-87956,0x1410a4330,0x141100f60,2,"void BSPathingSpline::EvaluateDerivatives(const BSPathingHermiteSegment* a_segment, float a_t, NiPoint3& a_velocity, NiPoint3& a_acceleration)"
-87957,0x1410a4490,0x1411010c0,2,"float BSPathingSpline::ComputeHermiteSegmentLength(const BSPathingHermiteSegment* a_segment, float a_t0, float a_t1, std::uint32_t a_samples)"
-87960,0x1410a5430,0x141102060,2,"void BSPathingSpline::EvaluateHermiteSegment(const BSPathingHermiteSegment* a_segment, float a_t, NiPoint3& a_out)"
 87963,0x1410a55e0,0x141102210,2,BSPathingLocation* BSPathingLocation::ctor_FromTriLocation(const BSFastNavmeshTriLocation* a_loc)
 87965,0x1410a5740,0x141102370,3,"BSPathingLocation* BSPathingLocation::ctor(const NiPoint3& a_location, const BSTSmartPointer<BSPathingCell>& a_cell)"
 87968,0x1410a5880,0x1411024b0,2,"BSPathingLocation* BSPathingLocation::ctor_ResolveTriangle(const NiPoint3* a_point, const BSPathingCell* a_cell)"
@@ -5440,6 +5436,9 @@
 88603,0x1410ca1c0,0x141126ef0,2,bool PathingStreamSaveGame::WriteBSVirtualPathingNodeArray(const BSTArray<BSVirtualPathingNode>& a_nodes)
 88609,0x1410ca310,0x141127040,2,void BSNavmeshGrid::Clear()
 88615,0x1410ca8d0,0x141127600,2,"void BSNavmeshGrid::Init(NiPoint3* a_min, NiPoint3* a_max, std::uint32_t a_triangleCount)"
+88616,0x1410caa50,0x141127780,2,void BSNavmeshGrid::WriteToStream(BSPathingStreamWrite* a_stream) const
+88617,0x1410cab90,0x1411278c0,2,void BSNavmeshGrid::ReadFromStream(BSPathingStreamRead* a_stream)
+88618,0x1410cad80,0x141127ab0,2,void BSNavmeshGrid::CopyTo(BSNavmeshGrid* a_dst) const
 88628,0x1410cb9e0,0x141128710,2,BSNavmesh* BSNavmesh::ctor()
 88630,0x1410cbe60,0x141128b90,2,BSTSmartPointer<BSPathingCell>* BSNavmesh::GetParentCell()
 88632,0x1410cbe80,0x141128bb0,2,void BSNavmesh::Clear()
