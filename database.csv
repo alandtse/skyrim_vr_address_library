@@ -726,6 +726,8 @@
 20110,0x1402b7aa0,0x1402c9210,3,OFFSET_DATA* TESWorldSpace::GetOffsetData(TESFile* a_file)
 20212,0x1402bbd50,0x1402cd4c0,2,bool BGSCameraPath::ResolveParentPath()
 20215,0x1402bc2c0,0x1402cda30,2,NiFormArray* BGSCameraPath::GetOrCreateChildPaths()
+20222,0x1402bc5c0,0x1402cdd30,2,"void BGSCameraPath::InsertChildPath(std::uint32_t a_index, BGSCameraPath* a_child)"
+20225,0x1402bc850,0x1402cdfc0,2,void BGSCameraPath::RemoveChildPath(BGSCameraPath* a_child)
 20247,0x1402bd3b0,0x1402ceb20,2,void NiFormArray::InitCameraPaths()
 20262,0x1402bdec0,0x1402cf630,3,"void BGSCameraShot::Play(TESObjectREFR* a_target, std::int32_t a_mode)"
 20263,0x1402be2d0,0x1402cfa40,3,bool BGSCameraShot::IsValid()
@@ -812,6 +814,8 @@
 24062,0x140357c80,0x140367540,2,bool TESIdleForm::LinkIntoIdleTree()
 24065,0x1403580c0,0x140367980,4,TESIdleForm::sub_1403580C0
 24069,0x140358300,0x140367bc0,4,"bool TESIdleForm::CheckConditions(Actor* a_actor, TESObjectREFR* a_target, bool a_checkParentIdle) bool TESIdleForm::CheckConditions(Actor* a_actor, TESObjectREFR* a_target, bool a_checkParentIdle)"
+24072,0x1403583d0,0x140367c90,2,"void TESIdleForm::InsertChildIdle(std::uint32_t a_index, TESIdleForm* a_child)"
+24075,0x1403585e0,0x140367ea0,2,void TESIdleForm::RemoveChildIdle(TESIdleForm* a_child)
 24083,0x1403589d0,0x140368290,2,NiFormArray* TESIdleForm::GetOrCreateChildIdles()
 24093,0x140358e30,0x1403686f0,2,void TESIdleManager::InitIdleForms()
 24104,0x140359760,0x140369020,3,"TESIdleForm* SelectIdleForAction(void* a_idleManager, BGSActionData* a_action)"
@@ -2121,6 +2125,7 @@
 30978,0x1404af910,0x1404bf970,4,"uint32_t AddOrRemoveLODWater(bool* a_add, void* a_object, void** a_objectHolder) src\Features/UnifiedWater.cpp:357"
 31017,0x1404b2960,0x1404c2a30,3,"void BGSTerrainManager::Update(const NiPoint3& a_viewPos, const std::int32_t& a_updateType)"
 31018,0x1404b2da0,0x1404c2e70,3,NiNode* BGSTerrainManager::GetLODLandRootForLevel(std::uint32_t a_level)
+31022,0x1404b2fd0,0x1404c30a0,2,"BGSTerrainChunk* BGSTerrainManager::GetTerrainChunkForPoint(const NiPoint3& a_pos, bool a_mapTerrain)"
 31023,0x1404b3030,0x1404c3100,2,void BGSTerrainManager::QueueReferenceCellNodeUpdate(TESObjectREFR* a_ref)
 31024,0x1404b3040,0x1404c3110,2,void BGSTerrainManager::QueueCellNodeUpdate(TESObjectCELL* a_cell)
 31026,0x1404b3190,0x1404c3260,3,"void BGSTerrainManager::UnloadAll(bool a_unloadStaticData, bool a_shutdown)"
