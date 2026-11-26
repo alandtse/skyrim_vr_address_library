@@ -5337,7 +5337,7 @@
 88641,0x1410cc4a0,0x1411291d0,2,void BSNavmesh::BuildCoverTriangleList()
 88662,0x1410cd390,0x14112a0c0,2,bool BSNavmesh::ReadFromStream(PathingStreamMasterFileRead& a_stream)
 88674,0x1410cf350,0x14112c080,3,NiPoint3 BSNavmesh::GetNormal(std::uint16_t a_tri) const
-88680,0x1410cfe60,0x14112cb90,2,std::uint16_t BSNavmesh::FindClosestTriangle(const NiPoint3& a_pos
+88680,0x1410cfe60,0x14112cb90,2,"std::uint16_t BSNavmesh::FindClosestTriangle(const NiPoint3& a_pos, float& a_outDistSq)"
 88761,0x1410d6a60,0x141133790,2,bool PathingStreamMasterFileRead::ReadBSNavmeshCoverTriangleArray(BSTArray<std::uint16_t>& a_array)
 88762,0x1410d6ad0,0x141133800,2,bool PathingStreamMasterFileRead::ReadBSNavmeshEdgeExtraInfoArray(BSTArray<BSNavmeshEdgeExtraInfo>& a_array)
 88763,0x1410d6b40,0x141133870,2,bool PathingStreamMasterFileRead::ReadBSNavmeshVertexArray(BSTArray<BSNavmeshVertex>& a_array)
