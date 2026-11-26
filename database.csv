@@ -5435,6 +5435,7 @@
 88597,0x1410c9b80,0x1411268b0,2,bool PathingStreamLoadGame::ReadBSVirtualPathingNodeArray(BSTArray<BSVirtualPathingNode>& a_nodes)
 88603,0x1410ca1c0,0x141126ef0,2,bool PathingStreamSaveGame::WriteBSVirtualPathingNodeArray(const BSTArray<BSVirtualPathingNode>& a_nodes)
 88609,0x1410ca310,0x141127040,2,void BSNavmeshGrid::Clear()
+88610,0x1410ca390,0x1411270c0,2,"void BSNavmeshGrid::GetCellAtPoint(const NiPoint3* a_pos, BSTArray<std::uint16_t>** a_cellOut) const"
 88615,0x1410ca8d0,0x141127600,2,"void BSNavmeshGrid::Init(NiPoint3* a_min, NiPoint3* a_max, std::uint32_t a_triangleCount)"
 88616,0x1410caa50,0x141127780,2,void BSNavmeshGrid::WriteToStream(BSPathingStreamWrite* a_stream) const
 88617,0x1410cab90,0x1411278c0,2,void BSNavmeshGrid::ReadFromStream(BSPathingStreamRead* a_stream)
@@ -5570,6 +5571,7 @@
 89115,0x1410eb100,0x141147e40,2,"BSNavmeshSearchFilters* BSNavmeshSearchFilters::ctor(BSPathingRequest* a_request, BSTArray<void*>* a_loadedNavmeshes, void* a_secondary)"
 89120,0x1410eb520,0x141148260,2,"bool ApplyEdgeListCostMultiplier(void* a_filter, void* a_edge, float* a_cost)"
 89124,0x1410eb800,0x141148540,2,void BSNavmeshSearch::dtor()
+89137,0x1410ec0e0,0x141148e20,2,"void BSPathingLOSGridMap::SetOrigin(const BSPathingLocation* a_origin, float a_radius)"
 89140,0x1410ec340,0x141149080,2,bool BSPathingLOSGridMap::ApplyGridsToMap(void** a_map)
 89141,0x1410ec630,0x141149370,2,bool BSPathingLOSGridMap::CaptureGridsFromMap(void** a_map)
 89142,0x1410ec9c0,0x141149700,2,bool BSPathingLOSGridMap::IsLocationMarked(BSPathingLocation* a_location)
