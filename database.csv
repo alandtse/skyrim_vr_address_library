@@ -5222,14 +5222,20 @@
 88040,0x1410acf40,0x141109b70,2,"bool Pathing::CreateRequestFromSolution(const BSTSmartPointer<BSPathingSolution>& a_solution, BSTSmartPointer<BSPathingRequest>& a_out)"
 88041,0x1410ad0b0,0x141109ce0,2,"void Pathing::ApplyStartTangent(void* a_request, void* a_pathState)"
 88042,0x1410ad180,0x141109db0,2,"void Pathing::ApplyEndTangent(void* a_request, void* a_pathState)"
+88045,0x1410ad2f0,0x141109f20,2,"void Pathing::FitPathTangentsByHandle(BSPathingSolution* a_solution, std::uint32_t a_param)"
+88046,0x1410ad360,0x141109f90,2,void Pathing::FitPathTangents(BSPathingSolution* a_solution)
+88047,0x1410ad480,0x14110a0b0,2,"bool Pathing::TryBuildStraightPath(BSPathingLocation* a_start, BSPathingLocation* a_end, PathingRequest* a_request, void* a_param5, BSPathingSolution* a_outSolution)"
 88048,0x1410ad8f0,0x14110a520,2,"bool Pathing::SmoothPathDefault(BSPathingRequest* a_request, BSPathingSolution* a_solution, const NiPoint3* a_start, const NiPoint3* a_goal, BSTArray<BSFastNavmeshTriLocation>* a_locations, BSTArray<BSFastNavmeshEdgeHandle>* a_edges)"
-88072,0x1410b0190,0x14110cdc0,2,"bool Pathing::WalkNavmeshSegment(void* a_ctx, BSPathingLocation* a_start, void* a_edgePredicate, BSNavmeshEdgeLocation* a_outEnd)"
-88074,0x1410b0fc0,0x14110dbf0,2,"bool Pathing::WalkNavmeshSegmentByHandle(void* a_ctx, void* a_start, void* a_edgePredicate, BSNavmeshEdgeLocation* a_outEnd)"
+88072,0x1410b0190,0x14110cdc0,2,"bool Pathing::WalkNavmeshSegment(NavmeshSegment* a_segment, NavmeshVisitedArray** a_visited, NavmeshEdgePredicate* a_predicate, BSNavmeshEdgeLocation* a_outEnd)"
+88074,0x1410b0fc0,0x14110dbf0,2,"bool Pathing::WalkNavmeshSegmentByHandle(NavmeshSegment* a_segment, void* a_unused, NavmeshEdgePredicate* a_predicate, BSNavmeshEdgeLocation* a_outEnd)"
 88076,0x1410b1ea0,0x14110ead0,2,"bool NavmeshStraightLineWalk(void* a_ctx, void* a_unused1, void* a_unused2, BSNavmeshEdgeLocation* a_inOutLocation)"
-88125,0x1410b3f70,0x141110ba0,2,"void Pathing::ShrinkTangentsToFitNavmesh(void* a_path, BSPathingLocation* a_locA, NiPoint3* a_dirA, float a_scaleA, BSPathingLocation* a_locB, NiPoint3* a_dirB, float a_scaleB, float* a_outLenA, float* a_outLenB)"
-88126,0x1410b4310,0x141110f40,2,"void Pathing::ShrinkTangentsToFitNavmeshByHandle(void* a_path, BSPathingLocation* a_locA, NiPoint3* a_dirA, float a_scaleA, BSPathingLocation* a_locB, NiPoint3* a_dirB, float a_scaleB, float* a_outLenA, float* a_outLenB)"
-88127,0x1410b46b0,0x1411112e0,2,"void Pathing::FitNodePairTangents(void* a_path, BSPathingLocation* a_locA, BSPathingLocation* a_locB)"
-88128,0x1410b4c40,0x141111870,2,"void Pathing::FitNodePairTangentsByHandle(void* a_path, BSPathingLocation* a_locA, BSPathingLocation* a_locB)"
+88125,0x1410b3f70,0x141110ba0,2,"void Pathing::ShrinkTangentsToFitNavmesh(PathFitContext* a_ctx, PathNodeNavInfo* a_from, NiPoint3* a_fromDir, float a_fromScale, PathNodeNavInfo* a_to, NiPoint3* a_toDir, float a_toScale, float* a_outFromLength, float* a_outToLength)"
+88126,0x1410b4310,0x141110f40,2,"void Pathing::ShrinkTangentsToFitNavmeshByHandle(PathFitContext* a_ctx, PathNodeNavInfo* a_from, NiPoint3* a_fromDir, float a_fromScale, PathNodeNavInfo* a_to, NiPoint3* a_toDir, float a_toScale, float* a_outFromLength, float* a_outToLength)"
+88127,0x1410b46b0,0x1411112e0,2,"void Pathing::FitNodePairTangents(PathFitContext* a_ctx, PathNodeNavInfo* a_from, PathNodeNavInfo* a_to)"
+88128,0x1410b4c40,0x141111870,2,"void Pathing::FitNodePairTangentsByHandle(PathFitContext* a_ctx, PathNodeNavInfo* a_from, PathNodeNavInfo* a_to)"
+88130,0x1410b5210,0x141111e40,2,"bool Pathing::ResolvePathNodeNavInfo(PathFitContext* a_ctx, PathNodeNavInfoArray* a_out)"
+88139,0x1410b5a20,0x141112650,2,bool Pathing::FitPathTangentsImpl(PathFitContext* a_ctx)
+88140,0x1410b5d30,0x141112960,2,bool Pathing::FitPathTangentsByHandleImpl(PathFitContext* a_ctx)
 88193,0x1410b88f0,0x141115520,2,void MovementAgentActorState::RegisterWithController(IMovementControllerRegisterInterface& a_controller)
 88194,0x1410b8940,0x141115570,2,void MovementAgentActorState::UnregisterWithController()
 88197,0x1410b8a20,0x141115650,2,const BSFixedString& MovementAgentActorState::GetAgentType()
@@ -5479,6 +5485,7 @@
 89210,0x1410efb20,0x14114c860,3,bool BSVirtualPathingNode::HasActivateDoorAction()
 89222,0x1410effc0,0x14114cd00,2,bool BSPathingNode::HasActivateDoorAction()
 89224,0x1410f00f0,0x14114ce30,2,bool BSPathingNode::GetActionAtNode(MovementMessage** a_out)
+89259,0x1410f4e80,0x141151bc0,2,"bool BSPathBuilder::FindClosestOpenEdge(BSPathingLocation* a_location, BSPathingLocation* a_outLocation, bool a_param4)"
 89294,0x1410f6ae0,0x141153820,2,void PathSmootherRayCastUsePreferredTris::dtor()
 89296,0x1410f6b50,0x141153890,2,"PathSmootherRayCastUseTrianglePath* PathSmootherRayCastUseTrianglePath::ctor(BSTArray<BSFastNavmeshTriLocation>* a_triPath, void* a_arg)"
 89297,0x1410f6d50,0x141153a90,2,void PathSmootherRayCastUseTrianglePath::dtor()
