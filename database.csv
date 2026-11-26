@@ -3821,6 +3821,7 @@
 49014,0x14082c950,0x140857ca0,2,void CombatPath::Stop()
 49022,0x14082d030,0x140858380,3,"void CombatPath::SetAccelerationDecelerationMult(float accelerationMult, float DecelerationMult)"
 49074,0x14082f990,0x14085ace0,2,"bool CombatPath::SolveAndStoreRequest(void* a_key, void* a_request)"
+49125,0x140832ab0,0x14085ddb0,2,bool CombatPathBuilder::SmoothPath()
 49129,0x1408332e0,0x14085e5e0,2,void CombatPathBuilderStandard::Stage0_ResolveEndpoints()
 49130,0x1408336e0,0x14085e9e0,2,void CombatPathBuilderStandard::Stage1_CopyDirectPath()
 49131,0x140833840,0x14085eb40,2,void CombatPathBuilderStandard::Stage2_ValidateEndpoints()
