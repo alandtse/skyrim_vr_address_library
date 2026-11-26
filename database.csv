@@ -143,9 +143,9 @@
 12841,0x1401443c0,0x140154db0,2,NiPoint3* ExtraTeleport::Data::GetRotation()
 12910,0x140147bb0,0x1401585e0,3,SeasonsofSkyrim::FormSwap::model_loader_queue_ref
 13054,0x14014dc60,0x14015e690,3,RE::INISettingCollection::InsertSetting
-13113,0x14014f700,0x140160130,3,RE::INISettingCollection::Unk_09
+13113,0x14014f700,0x140160130,3,bool INISettingCollection::ReadAllSettings()
 13119,0x14014fb40,0x140160570,3,RE::INISettingCollection::RemoveSetting
-13135,0x140150a00,0x140161430,3,RE::INISettingCollection::Unk_08
+13135,0x140150a00,0x140161430,3,bool INISettingCollection::WriteAllSettings()
 13137,0x140150b20,0x140161550,4,void TESObjectCELL::QueueAddCellGrassTask()
 13138,0x140150c80,0x1401616b0,3,void AddCellGrassTask::Run()
 13142,0x140151b60,0x1401625a0,3,TESObjectCELL* TES::GetCurrentCell()
@@ -159,7 +159,7 @@
 13174,0x140154db0,0x140165800,4,"TESObjectCELL* TES::GetLoadedCell(int a_x, int a_y)"
 13177,0x140155090,0x140165ae0,3,TESObjectCELL* TES::GetCell(const NiPoint3& a_position)
 13183,0x140155570,0x140165fc0,4,FUN_140155570
-13188,0x140155a30,0x140166480,4,void TES::FUN_140155a30 (void)
+13188,0x140155a30,0x140166480,4,void TES::ClearResourceCaches()
 13189,0x140155a60,0x1401664b0,4,void TES::FUN_140155a60 (TES * param_1)
 13190,0x140155a80,0x1401664d0,4,void TES::AddGrassForGrid()
 13191,0x140155ba0,0x1401665f0,4,void TES::RemoveGrassForGrid()
@@ -214,7 +214,7 @@
 13652,0x1401700e0,0x140180870,4,"bool TESDataHandler::ConstructObjectList(TESDataHandler* a_this, TESFile* a_file, bool a_isFirstPlugin, char* a_param4)"
 13654,0x1401703f0,0x140180b80,3,"bool TESDataHandler::ConstructObject(TESFile* a_file, bool a_checkExisting, TESForm* a_form, bool a_flag)"
 13657,0x1401713d0,0x140181b80,3,RE::TESDataHandler::LoadScripts
-13671,0x1401726a0,0x140182df0,4,void DataHandler::sub_1401726A0 (TESNPC * param_1)
+13671,0x1401726a0,0x140182df0,4,void TESDataHandler::InitAllFormItems()
 13755,0x140176c80,0x140186bd0,4,"void FUN_140176c80 (IMemoryHeap__VFTable * param_1, IMemoryHeap__VFTable * * param_2, undefined * param_3, undefined8 param_4)"
 13777,0x1401774e0,0x1401873f0,3,void BSPointerHandleManager::FreeHandle(std::uint32_t* a_handle)
 13789,0x140177790,0x1401876a0,3,RE::Sky::GetSingleton
@@ -867,7 +867,7 @@
 24985,0x14038d990,0x14039d1c0,3,RE::TESTopicInfo::ResponseData::PopulateResponseText
 25083,0x140393780,0x1403a3000,4,TESTopicInfo::TESResponseList* TESTopicInfo::GetResponseList(TESResponseList* a_list)
 25154,0x140396a80,0x1403a6300,4,void BGSAcousticSpaceListener::EntityRemovedCallback(hkpEntity* a_entity)
-25155,0x140396b00,0x1403a6380,3,BGSAcousticSpaceListener::Unk_07
+25155,0x140396b00,0x1403a6380,3,void BGSAcousticSpaceListener::ContactPointAddedCallback(hkpContactPointAddedEvent* a_event)
 25262,0x14039b080,0x1403aa900,4,"bool CellMopp::BuildLandCollision(CellMopp* a_mopp, const LandCollisionDesc* a_desc)"
 25415,0x1403a0830,0x1403b03a0,4,void LoadedAreaBound::SetCurrentCell(RE::TESObjectCELL* a_cell)
 25416,0x1403a13d0,0x1403b0f40,4,void LoadedAreaBound::Clear()
@@ -884,7 +884,7 @@
 25638,0x1403aebd0,0x1403be8d0,4,splashes_of_skyrim::RainManager::ToggleWaterRipples
 25641,0x1403af1c0,0x1403beec0,3,void Precipitation::SetupMask (Precipitation * a_this)
 25642,0x1403af380,0x1403bf0b0,3,"void Precipitation::RenderMask (Precipitation * a_this, BSParticleShaderRainEmitter * a_emitter)"
-25643,0x1403af530,0x1403bf290,3,Precipitation::sub_*
+25643,0x1403af530,0x1403bf290,3,void Precipitation::PositionOcclusionCamera()
 25645,0x1403afca0,0x1403bfa00,3,Precipitation::OcclusionMapData* Precipitation::OcclusionMapData::ctor()
 25648,0x1403aff60,0x1403bfcd0,4,BSGeometryListCullingProcess* BSGeometryListCullingProcess::dtor_deleting(uint32_t a_flags)
 25671,0x1403b0130,0x1403bfea0,4,"void UpdateShaderGeometry(RE::BSGeometry* a_precipGeometry, RE::NiCamera* a_camera, float a_delta, float a_cubeSize, float a_particleDensity, float a_windSpeed, float a_windAngle)"
@@ -2254,7 +2254,9 @@
 32565,0x140501dc0,0x140512260,2,"float SquaredDistancePointToSegment3D(const float* a_segment, const float* a_point)"
 32569,0x140502bf0,0x140513090,2,"float DistancePointToSegment3D(const float* a_segment, const float* a_point)"
 32570,0x140502ed0,0x140513370,2,"bool IntersectSegmentSphere(const float* a_segment, const void* a_sphere, float* a_outTEnter, float* a_outTExit)"
+32691,0x14050ea80,0x0,2,"void GetCreationManifestPath(GFxValue* a_content, BSFixedString* a_out)"
 32867,0x14051e7f0,0x14052ede0,2,void IMenu::PostDisplay(IMenu* a_this)
+32979,0x1405249d0,0x14051f690,2,"void GetContentManifestPath(GFxValue* a_content, BSFixedString* a_out)"
 33257,0x14053d370,0x1405400f0,4,AccumulatingValueModifierEffect::Allocate(AccumulatingValueModifierEffect* accumulatingValueModifierEffect
 33277,0x14053DEB0,0x140540C30,4,"ActiveEffect::Adjust(Skyrim::ActiveEffect* activeEffect, float effectiveness, bool requiresHostility)"
 33278,0x14053df40,0x140540cc0,4,ActiveEffect::CalculateDurationAndMagnitude_14053DF40
@@ -2396,7 +2398,7 @@
 34738,0x140581430,0x140588940,3,"void InitGlobalData(std::uint32_t a_firstType, std::uint32_t a_lastType)"
 34740,0x1405816a0,0x140588bb0,3,"void FinishLoadGlobalData(std::uint32_t a_firstType, std::uint32_t a_lastType)"
 34799,0x140585000,0x14058c530,2,std::int32_t Character::GetInitialDataType()
-34808,0x140585a70,0x14058cfa0,4,"ulonglong BGSLoadGameBuffer::sub_140585A70(BGSLoadGameBuffer *param_1,PlayerCharacter *param_2,undefined *param_3,char *param_4)"
+34808,0x140585a70,0x14058cfa0,4,"void BGSSaveLoadInitialData::LoadInitialData(BGSLoadGameBuffer* a_buffer, TESForm* a_form, void* a_unk3, std::int32_t a_type)"
 34811,0x1405864c0,0x14058d9f0,3,BGSSaveLoadManager::StartSaveLoadThread
 34818,0x140586de0,0x14058e310,3,RE::BGSSaveLoadManager::Save
 34819,0x140587350,0x14058e920,3,RE::BGSSaveLoadManager::Load
@@ -2789,7 +2791,7 @@
 37577,0x140623a80,0x14062c830,2,void ActorListenerSet::AddToSingleton(void* a_listener)
 37578,0x140623ab0,0x14062c860,2,void ActorListenerSet::RemoveFromSingleton(void* a_listener)
 37583,0x140623ba0,0x14062c950,3,Actor::SetNoBleedoutRecovery
-37586,0x140623e60,0x14062cc10,3,RE::Character::sub_140623E60
+37586,0x140623e60,0x14062cc10,3,TESCombatStyle* Character::GetCombatStyle()
 37588,0x140623f10,0x14062ccc0,4,RE::PlayerCharacter::GetReach_140623F10
 37600,0x140624e20,0x14062dc90,2,Actor* Actor::GetGuardCombatTarget()
 37601,0x140624e50,0x14062dcc0,2,CombatGroup* Actor::GetCombatGroup()
@@ -2957,7 +2959,7 @@
 38026,0x14063c2a0,0x140645310,2,"bool ActorState::DoSetMoveMode(std::uint32_t a_moveFlags, std::uint16_t a_unk)"
 38029,0x14063c300,0x140645370,2,std::uint32_t ActorState::GetMoveFlags()
 38044,0x14063c9d0,0x140645a40,3,void Actor::SetSitSleepState(SIT_SLEEP_STATE a_state)
-38046,0x14063caa0,0x140645b10,3,sub_14063CAA0
+38046,0x14063caa0,0x140645b10,3,"bool ValidateAction(void* a_manager, BGSActionData* a_action)"
 38047,0x14063cfb0,0x140646020,3,StaminaNPC::apply_deny_player_attack_or_bash
 38048,0x14063d0f0,0x140646160,3,HandleAction
 38061,0x14063dd60,0x140646df0,3,"bool GetBaseValue(ActorValueStorage*, ActorValue, float* a_value)"
@@ -3539,7 +3541,7 @@
 41277,0x140706070,0x14072ced0,3,RE::PlayerControls::RegisterHandler
 41278,0x1407061F0,0x14072d050,3,RE::PlayerControls::UnregisterHandler
 41289,0x140706c10,0x14072dc70,3,void PlayerControls::DispatchInputEvent(InputEvent* a_event)
-41346,0x140708bf0,0x14072FF80,3,"ActivateHandler::sub_140708BF0(ActivateHandler *a1, longlong a2, longlong a3)"
+41346,0x140708bf0,0x14072FF80,3,"void ActivateHandler::ProcessButton(ButtonEvent* a_event, PlayerControlsData* a_data)"
 41349,0x1407090a0,0x1407310b0,3,RE::JumpHandler::ProcessButton_1407090A0
 41361,0x1407096b0,0x140732b00,3,StaminaNPC::apply_PlayerControls__sub_140705530
 41501,0x14070ff30,0x14073a8d0,2,"bool Pathing::CanActorPathThroughTeleportDoor(TESObjectREFR* a_door, Character* a_actor)"
@@ -3577,7 +3579,7 @@
 42832,0x140742850,0x14076d400,3,RE::HitData::Populate
 42833,0x140742c00,0x14076d800,4,RE::HitData::init_hitdata_proj_ID
 42841,0x1407433e0,0x14076dfe0,3,void HitData::Copy(HitData* a_other)
-42842,0x140743510,0x14076e110,3,RE::HitData::sub_*
+42842,0x140743510,0x14076e110,3,void HitData::ApplyDamageReduction(bool a_disableBlocking)
 42852,0x140744dd0,0x14076fd10,4,void MissileProjectile::UpdateImpl_140744DD0 (MissileProjectile * a_this)
 42856,0x140746d60,0x140771ca0,3,EnhancedInvisibility::MissileProjectile::sub_140746D60
 42911,0x140749cc0,0x140774df0,2,void ProjectileManager::Update()
@@ -3915,7 +3917,7 @@
 49311,0x14083c870,0x140867b70,3,void CombatApproachTargetSpeedController::UpdateApproachTargetSpeed(CombatPath* a_combatPath)
 49315,0x14083ce90,0x140868190,2,bool CombatPathingSphere::IsOutside(BSFastNavmeshTriLocation* a_node)
 49316,0x14083cee0,0x1408681e0,2,float CombatPathingSphere::GetPenetrationDepth(BSFastNavmeshTriLocation* a_node)
-49711,0x140844d00,0x14086ffb0,3,RE::Character::sub_140844D00
+49711,0x140844d00,0x14086ffb0,3,float Character::GetDefensiveMult()
 49716,0x140844e40,0x1408700f0,4,CombatPathingRevolution::src/Advanced_Hook.h:13
 49720,0x140845070,0x140870320,4,float Character::GetCircleChanceMult_140845070(Character *param_1)
 49721,0x1408450a0,0x140870350,4,CombatPathingRevolution::src/Circling_Hook.h:61
@@ -3959,7 +3961,7 @@
 50118,0x1408575f0,0x1408819c0,3,BookMenu::ProcessMessage
 50122,0x1408582e0,0x140882580,3,"void BookMenu::OpenBookMenu(const BSString& a_description, const ExtraDataList* a_extraList, TESObjectREFR* a_ref, TESObjectBOOK* a_book, const NiPoint3& a_pos, const NiMatrix3& a_rot, float a_scale, bool a_useDefaultPos)"
 50126,0x140858c70,0x140882f80,3,po3tweaks::CantTakeBook::Button::ButtonShowTakeButton
-50155,0x14085a1c0,0x1408848f0,3,"byte Console::sub_14085A1C0 (Console * a_this, undefined8 param_2)"
+50155,0x14085a1c0,0x1408848f0,3,UI_MESSAGE_RESULTS Console::ProcessMessage(UIMessage* a_message)
 50157,0x14085a760,0x140885100,3,Console::ExecuteCommand(FxDelegateArgs* args)
 50164,0x14085bb30,0x1408864d0,3,RE::Console::SetSelectedRef
 50180,0x14085c2c0,0x140886df0,4,RE::ConsoleLog::VPrint
@@ -4077,7 +4079,7 @@
 51435,0x1408ac7f0,0x1408d97a0,3,"void* MessageBoxMenu::deleting_dtor(MessageBoxMenu* a_this, std::uint8_t a_flags)"
 51445,0x1408acb30,0x1408d9af0,2,MistMenu* MistMenu::ctor(MistMenu* a_this)
 51449,0x1408ad6f0,0x1408da710,2,void MistMenu::PostDisplay(MistMenu* a_this)
-51454,0x1408ad9f0,0x1408dad50,3,TESModelTextureSwap::sub_*
+51454,0x1408ad9f0,0x1408dad50,3,"void MistMenu::SetupLoadScreenModel3D(TESModelTextureSwap* a_model, std::uint8_t a_unk2, const NiPoint3& a_position, const NiPoint3& a_rotation, const char* a_unk5, std::uint32_t a_unk6, std::uint32_t a_unk7)"
 51455,0x1408adc70,0x1408db0d0,3,void ShowMistMenu(bool a_flag)
 51473,0x1408aee40,0x1408dc6d0,2,void BottomBar::UpdatePlayerInfo()
 51491,0x1408b1800,0x1408df120,3,void RaceSexMenu::CommitWeightSliderChange(const FxDelegateArgs& a_params)
@@ -4567,7 +4569,7 @@
 67677,0x140c249b0,0x140c698e0,3,
 67740,0x140c26240,0x140c6b170,4,SetThreadName
 67819,0x140c28bf0,0x140c6db20,3,BSFixedString* BSFixedString::ctor8(const char* a_data)
-67823,0x140c28d60,0x140c6dc90,3,void BSFixedString::SetCString(const char* a_str)
+67823,0x140c28d60,0x140c6dc90,3,BSFixedString* BSFixedString::SetCString(const char* a_str)
 67834,0x140c29510,0x140c6e440,3,BSFixedString* BSFixedString::ctor16(const wchar_t* a_data)
 67844,0x140c29900,0x140c6e830,4,"void BSScaleformTranslator::GetCachedString_140c29900 (wchar_t * * a_pOut, wchar_t * a_bufIn, uint32_t a_unused)"
 67847,0x140c29e80,0x140c6edb0,3,void Entry::release8(const char*& a_entry)
@@ -6631,7 +6633,7 @@
 99939,0x1412cb2e0,0x1413099c0,3,void BSShaderAccumulator::RenderPostAccumulationPasses(std::uint32_t a_flags)
 99940,0x1412cb930,0x14130a240,4,void BSShaderAccumulator::RenderEffects (BSShaderAccumulator * a_this)
 99942,0x1412cbcc0,0x14130a5d0,3,BSShaderAccumulator::BlendedDecals
-99943,0x1412cbe90,0x14130a970,3,"void BSShaderAccumulator::sub_1412CBE90 (BSShaderAccumulator * a_this, uint32_t param_2)"
+99943,0x1412cbe90,0x14130a970,3,void BSShaderAccumulator::FinishAccumulatingMode22_BloodDecalPass(std::uint32_t a_renderFlags)
 99947,0x1412cc3c0,0x14130af00,3,BSShaderAccumulator::ShadowMapOrMask
 99952,0x1412cc6b0,0x14130b2f0,3,void NiBackToFrontAccumulator::ClearItemsList()
 99954,0x1412cc730,0x14130b370,3,void BSShaderAccumulator::RenderFirstPersonViewPasses(NiCamera * a_camera)
@@ -6704,8 +6706,8 @@
 100587,0x1412f5590,0x14133c1c0,3,"void BSLightingShader::SetupTexture(unsigned int a_slot, RE::NiPointer<RE::NiSourceTexture> const& a_texture, RE::BSLightingShaderMaterialBase * a_material)"
 100588,0x1412f5630,0x14133c260,3,void BSLightingShaderMaterialLandscape::sub_1412F5630 (BSLightingShaderMaterialLandscape * a_this)
 100602,0x1412f63d0,0x141333470,3,"void BSWaterShader::Func4_1412F63D0 (BSWaterShader * a_this, undefined8 param_2)"
-100668,0x1412fc2b0,0x14133e7d0,3,"void ImageSpaceEffect::sub_1412FC2B0 (ImageSpaceEffect * a_this, uint32_t a_slot, RE::ImageSpaceEffect* a_effect, RE::ImageSpaceEffectParam* a_param, int32_t a_unk5)"
-100669,0x1412fc3d0,0x14133e8f0,3,"void ImageSpaceEffect::sub_1412FC3D0 (ImageSpaceEffect * a_this, uint32_t a_index, uint32_t a_unk3, uint32_t a_unk4)"
+100668,0x1412fc2b0,0x14133e7d0,3,"void ImageSpaceEffect::SetEffectSlot(std::uint32_t a_slot, ImageSpaceEffect* a_effect, ImageSpaceEffectParam* a_param, std::int32_t a_arg)"
+100669,0x1412fc3d0,0x14133e8f0,3,"void ImageSpaceEffect::SetEffectInput(std::uint32_t a_slot, std::uint32_t a_arg2, std::uint32_t a_arg3)"
 100710,0x1412fd790,0x14133fcb0,4,BSRenderPass::Set
 100711,0x1412fd830,0x14133fd50,4,BSRenderPass::SetLights
 100715,0x1412fd9e0,0x14133ff00,3,"void BSRenderPass::Sort(BSRenderPass** a_head, const NiCamera* a_camera, bool a_closest, bool a_reverse)"
@@ -6749,12 +6751,12 @@
 100873,0x141309250,0x14134a4a0,3,"void BSBatchRenderer::AppendPassToAlphaGroup(RE::BSRenderPass* a_pass, BSBatchRenderer::GeometryGroup* a_group)"
 100874,0x141309280,0x14134a4d0,4,"BSBatchRenderer::GeometryGroup * BSBatchRenderer::StartGroupingAlphas(BSBatchRenderer * a_this, NiBound * a_bound, NiCamera * a_camera, bool a_sortByClosestPoint)"
 100876,0x1413093e0,0x14134a630,3,"float BSBatchRenderer::PeekAlphaDepth(const NiPoint3* a_direction, float a_radiusScale)"
-100877,0x1413094a0,0x14134a6f0,4,BSBatchRenderer::sub_*
+100877,0x1413094a0,0x14134a6f0,4,"void BSBatchRenderer::RenderAlphaSortedPasses(NiPoint3* a_position, float a_depthScale, float a_depthLimit, std::uint32_t a_renderFlags)"
 100934,0x14130bb80,0x14134edc0,4,BSShaderMaterialHashMap::Link
 100935,0x14130be10,0x14134f050,4,BSShaderMaterialHashMap::Unlink
 100943,0x14130c5a0,0x14134f7e0,4,BSImagespaceShader* BSImagespaceShader::Ctor()
 100950,0x14130cd20,0x14134ff90,3,"void ImageSpaceEffect::Render (ImageSpaceEffect * a_this, BSTriShape * a_shape, ImageSpaceEffectParam * a_param)"
-100951,0x14130cf80,0x1413501F0,3,BSImagespaceShader::sub_*
+100951,0x14130cf80,0x1413501F0,3,void BSImagespaceShader::Render(BSTriShape* a_geometry)
 100952,0x14130d070,0x1413502b0,4,"void BSImagespaceShader::DispatchComputeShader (BSImagespaceShader * a_this, uint32_t a_threadGroupCountX, uint32_t a_threadGroupCountY, uint32_t a_threadGroupCountZ)"
 100979,0x14130ec70,0x1413527d0,3,"void BSUtilityShader::SetupGeometry(BSUtilityShader * a_this, BSRenderPass * a_pass, uint32_t a_flags)"
 100988,0x1413108c0,0x1413547e0,3,"void BSShaderPropertyLightData::RemoveGeometryFromLights(BSShaderPropertyLightData* this, BSGeometry* a_geometry)"
@@ -6792,7 +6794,7 @@
 101505,0x141327eb0,0x14135a560,3,bool BSShadowDirectionalLight::GetIsFrustumOrDirectionalLight()
 101506,0x141327ec0,0x14135a570,3,bool BSShadowDirectionalLight::GetIsDirectionalLight()
 101507,0x141327ed0,0x14135a580,3,bool BSShadowDirectionalLight::GetNeedsClipPlanes()
-101562,0x141329cf0,0x14136c520,3,void ImageSpaceEffectFullScreenBlur::sub_141329CF0(ImageSpaceEffectFullScreenBlur* a_this)
+101562,0x141329cf0,0x14136c520,3,void ImageSpaceEffectFullScreenBlur::~ImageSpaceEffectFullScreenBlur()
 101564,0x141329df0,0x14136c620,3,void ImageSpaceEffectFullScreenBlur::Setup(ImageSpaceEffectFullScreenBlur* a_this)
 101565,0x14132a370,0x14136cba0,3,void ImageSpaceEffectFullScreenBlur::Render(ImageSpaceEffectFullScreenBlur* a_this)
 101566,0x14132a560,0x14136cd90,3,ulonglong ImageSpaceEffectFullScreenBlur::UpdateParams(ImageSpaceEffectFullScreenBlur* a_this)
