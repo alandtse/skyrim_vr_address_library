@@ -1849,6 +1849,10 @@
 29880,0x140477800,0x140487790,2,"std::uint32_t PushBackRecentPathingCell(BSTArray<BSTTuple<std::uint64_t, BSTSmartPointer<PathingCell>>>& a_array, std::uint32_t a_time, BSTSmartPointer<PathingCell>& a_cell)"
 29887,0x140477e30,0x140487dc0,2,"bool BSPathingCellManager::FindPotentialNavmeshesForLocationImpl_Scrap(BSPathingLocation* a_location, float a_radius, BSScrapArray<BSTSmartPointer<BSNavmesh>>& a_navMeshesOut, bool a_flag)"
 29888,0x140478510,0x1404884a0,2,"bool BSPathingCellManager::FindPotentialNavmeshesForLocationImpl_Heap(BSPathingLocation* a_location, float a_radius, BSTArray<BSTSmartPointer<BSNavmesh>>& a_navMeshesOut, bool a_flag)"
+29894,0x140479270,0x140489200,2,"bool BSPathingCellManager::AddNavmeshAndConnectedRecursive_Scrap(BSNavmeshInfo* a_info, BSScrapArray<BSTSmartPointer<BSNavmesh>>& a_out)"
+29895,0x140479340,0x1404892d0,2,"bool BSPathingCellManager::AddNavmeshAndConnectedRecursive_Heap(BSNavmeshInfo* a_info, BSTArray<BSTSmartPointer<BSNavmesh>>& a_out)"
+29896,0x140479410,0x1404893a0,2,"bool BSPathingCellManager::AddNavmeshInfoAndConnectedRecursive_Scrap(BSNavmeshInfo* a_info, BSScrapArray<const BSNavmeshInfo*>& a_out)"
+29897,0x1404794e0,0x140489470,2,"bool BSPathingCellManager::AddNavmeshInfoAndConnectedRecursive_Heap(BSNavmeshInfo* a_info, BSTArray<const BSNavmeshInfo*>& a_out)"
 29898,0x1404795b0,0x140489540,2,"void BSPathingCellManager::CollectNavmeshesInAABB_Scrap(BSNavmeshInfo* a_start, const NiPoint3& a_min, const NiPoint3& a_max, BSScrapArray<BSTSmartPointer<BSNavmesh>>& a_out)"
 29899,0x1404797b0,0x140489740,2,"void BSPathingCellManager::CollectNavmeshesInAABB_Heap(BSNavmeshInfo* a_start, const NiPoint3& a_min, const NiPoint3& a_max, BSTArray<BSTSmartPointer<BSNavmesh>>& a_out)"
 29900,0x1404799b0,0x140489940,2,"void BSPathingCellManager::CollectNavmeshInfosInAABB_Scrap(BSNavmeshInfo* a_start, const NiPoint3& a_min, const NiPoint3& a_max, BSScrapArray<const BSNavmeshInfo*>& a_out)"
@@ -5356,6 +5360,8 @@
 88662,0x1410cd390,0x14112a0c0,2,bool BSNavmesh::ReadFromStream(PathingStreamMasterFileRead& a_stream)
 88674,0x1410cf350,0x14112c080,3,NiPoint3 BSNavmesh::GetNormal(std::uint16_t a_tri) const
 88680,0x1410cfe60,0x14112cb90,2,"std::uint16_t BSNavmesh::FindClosestTriangle(const NiPoint3& a_pos, void* a_unused, float& a_outDistSq)"
+88683,0x1410d0390,0x14112d0c0,2,"bool BSNavmesh::FindClosestBoundaryEdge(const NiPoint3& a_pos, float a_radius, std::uint16_t& a_outTriangle, std::int32_t& a_outEdge, bool a_flip)"
+88688,0x1410d0980,0x14112d6b0,2,"bool BSNavmesh::GetTriangleHeightAtPoint(std::uint16_t a_triangle, const NiPoint3& a_pos, float& a_outZ)"
 88693,0x1410d1260,0x14112df90,2,"bool BSNavmesh::FindRandomPointNear(const NiPoint3& a_center, float a_radius, NiPoint3& a_out)"
 88694,0x1410d14a0,0x14112e1d0,2,"NiPoint3* BSNavmesh::OffsetPointFromEdges(NiPoint3* a_out, const NiPoint3& a_pos, float a_margin)"
 88761,0x1410d6a60,0x141133790,2,bool PathingStreamMasterFileRead::ReadBSNavmeshCoverTriangleArray(BSTArray<std::uint16_t>& a_array)
