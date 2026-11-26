@@ -2118,10 +2118,17 @@
 30741,0x1404a18d0,0x1404b1870,3,void BGSDistantObjectBlock::Attach()
 30745,0x1404a1b10,0x1404b1ab0,2,static void BGSObjectBlock::SetAllMenuScreenFlag(bool a_set)
 30746,0x1404a1b90,0x1404b1b30,3,void BGSDistantObjectBlock::Prepare()
+30820,0x1404a6c10,0x1404b6c20,2,static void BGSDistantTreeBlock::CreateFromStream()
+30825,0x1404a6ea0,0x1404b6eb0,2,"static std::int32_t BGSDistantTreeBlock::QueueLoad(void*& a_handle, BGSTerrainNode* a_node, std::uint32_t a_level, std::int16_t a_x, std::int16_t a_y)"
 30826,0x1404a7040,0x1404b7050,3,"BGSDistantTreeBlock* BGSDistantTreeBlock::Ctor(BGSTerrainNode* a_node, std::uint32_t a_LODLevel)"
+30828,0x1404a7140,0x1404b7150,2,"void BGSDistantTreeBlock::AddInstance(std::uint32_t a_treeType, const BGSDistantTreeBlock::InstanceData& a_instance)"
 30830,0x1404a7480,0x1404b7490,3,void BGSDistantTreeBlock::Detach()
+30831,0x1404a7650,0x1404b7660,2,void BGSDistantTreeBlock::MarkLoadedAndQueueUpdate()
 30832,0x1404a76d0,0x1404b76e0,3,void BGSDistantTreeBlock::Attach()
+30836,0x1404a7a80,0x1404b7a90,2,void BGSDistantTreeBlock::Load(NiBinaryStream& a_stream)
 30839,0x1404a8090,0x1404b80a0,3,void BGSDistantTreeBlock::UpdateBlockVisibility (BGSDistantTreeBlock * a_this)
+30840,0x1404a82e0,0x1404b8340,2,void BGSDistantTreeBlock::SetHidden(bool a_hidden)
+30841,0x1404a8330,0x1404b8390,2,static void BGSDistantTreeBlock::ReleaseTreeTypes()
 30930,0x1404ad1a0,0x1404bd200,2,"static std::int32_t BGSTerrainBlock::QueueLoad(void*& a_handle, BGSTerrainNode* a_node, std::uint32_t a_level, std::int16_t a_x, std::int16_t a_y)"
 30931,0x1404ad390,0x1404bd3f0,2,"static std::int32_t BGSTerrainBlock::Load(void*& a_handle, BGSTerrainNode* a_node, std::uint32_t a_level, std::int16_t a_x, std::int16_t a_y)"
 30932,0x1404ad510,0x1404bd570,3,"BGSTerrainChunk* BGSTerrainChunk::Ctor(BGSTerrainNode* a_node, BSStream& a_stream, std::int32_t a_cellX, std::int32_t a_cellY)"
@@ -2146,6 +2153,7 @@
 31027,0x1404b3330,0x1404c3400,2,static void BGSTerrainManager::ShowLODRoots()
 31028,0x1404b3370,0x1404c3440,2,static void BGSTerrainManager::HideLODRoots()
 31030,0x1404b33f0,0x1404c34c0,2,static bool BGSTerrainManager::IsLODEnabledForCurrentWorldSpace()
+31031,0x1404b3440,0x1404c3510,2,static void BGSTerrainManager::ReleaseLODRoots()
 31032,0x1404b35e0,0x1404c36b0,2,"void BGSTerrainManager::SetMapMode(bool a_mapMode, bool a_flushUpdates)"
 31036,0x1404b38a0,0x1404c3980,3,void BGSTerrainManager::SetCullState(const CullState& a_state)
 31037,0x1404b3980,0x1404c3a60,2,void BGSTerrainManager::ApplyCachedCullState()
@@ -4296,9 +4304,10 @@
 52236,0x1408e7c80,0x14091a4e0,3,anonymous_namespace__FastTravelConfirmCallback::Run_1408E7C80
 52252,0x1408e8270,0x14091af50,3,void LoadWorldMapOverlayTextures_1408E8270()
 52253,0x1408e8650,0x14091b330,2,static void MapMenu::ShutdownMapView(bool a_arg1)
-52255,0x1408e87b0,0x14091bdc0,2,static void MapMenu::CloseMapView(bool a_arg1)
+52254,0x1408e8680,0x14091b360,2,static void MapMenu::InitMapView()
+52255,0x1408e87b0,0x14091ba80,2,static void MapMenu::CloseMapView(bool a_arg1)
 52256,0x1408e8830,0x14091bc10,2,static void MapMenu::EnterMapView()
-52257,0x1408e89e0,0x14091ba80,2,static void MapMenu::ExitMapView()
+52257,0x1408e89e0,0x14091bdc0,2,static void MapMenu::ExitMapView()
 52260,0x1408E8CA0,0x14091C0A0,3,TESWorldSpace* GetMapWorldSpace()
 52262,0x1408e8e10,0x14091c210,2,void MapMenu::EnterMapTerrain()
 52263,0x1408e9140,0x14091c540,2,void MapMenu::ExitMapTerrain()
