@@ -5368,7 +5368,15 @@
 88596,0x1410c9b10,0x141126840,2,bool PathingStreamLoadGame::ReadBSPathingNodeArray(BSTArray<BSPathingNode>& a_nodes)
 88597,0x1410c9b80,0x1411268b0,2,bool PathingStreamLoadGame::ReadBSVirtualPathingNodeArray(BSTArray<BSVirtualPathingNode>& a_nodes)
 88603,0x1410ca1c0,0x141126ef0,2,bool PathingStreamSaveGame::WriteBSVirtualPathingNodeArray(const BSTArray<BSVirtualPathingNode>& a_nodes)
+88630,0x1410cbe60,0x141128b90,2,BSTSmartPointer<BSPathingCell>* BSNavmesh::GetParentCell()
+88635,0x1410cc230,0x141128f60,2,void BSNavmesh::AddVertex(const BSNavmeshVertex* a_vertex)
+88636,0x1410cc290,0x141128fc0,2,void BSNavmesh::AddTriangle(const BSNavmeshTriangle* a_triangle)
+88640,0x1410cc440,0x141129170,2,"std::uint16_t BSNavmesh::GetEdgeTraversalInfo(std::uint16_t a_triangle, std::int8_t a_edge, std::uint8_t* a_outFlag10, std::uint8_t* a_outFlag20)"
 88641,0x1410cc4a0,0x1411291d0,2,void BSNavmesh::BuildCoverTriangleList()
+88642,0x1410cc580,0x1411292b0,2,"bool BSNavmesh::GetEdgeVertexIndices(std::uint16_t a_triangle, std::uint32_t a_edge, std::uint16_t* a_outStart, std::uint16_t* a_outEnd)"
+88643,0x1410cc5d0,0x141129300,2,"void BSNavmesh::GetEdgeVertexIndicesUnchecked(std::uint16_t* a_outIndices, std::uint16_t a_triangle, std::uint32_t a_edge)"
+88645,0x1410cc690,0x1411293c0,2,"bool BSNavmesh::GetEdgePoints(std::uint16_t a_triangle, std::uint32_t a_edge, NiPoint3* a_outStart, NiPoint3* a_outEnd)"
+88653,0x1410cccd0,0x141129a00,2,"bool BSNavmesh::GetEdgeNeighbor(std::uint16_t a_triangle, std::uint32_t a_edge, BSNavmesh** a_outNavmesh, std::uint16_t* a_outTriangle, std::uint32_t* a_outEdge)"
 88662,0x1410cd390,0x14112a0c0,2,bool BSNavmesh::ReadFromStream(PathingStreamMasterFileRead& a_stream)
 88674,0x1410cf350,0x14112c080,3,NiPoint3 BSNavmesh::GetNormal(std::uint16_t a_tri) const
 88680,0x1410cfe60,0x14112cb90,2,"std::uint16_t BSNavmesh::FindClosestTriangle(const NiPoint3& a_pos, void* a_unused, float& a_outDistSq)"
