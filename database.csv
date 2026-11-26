@@ -1951,6 +1951,7 @@
 30228,0x140486200,0x1404961a0,2,AStarClosedSetEntry* AStarClosedSet::GetFreeSlot(AStarClosedSetEntry* a_entries)
 30232,0x140486330,0x1404962d0,2,void AStarClosedSet::Grow()
 30233,0x140486480,0x140496420,2,AStarNode* AStarNodePool::AllocNode()
+30260,0x140487d30,0x140497cd0,2,"void AStarOpenListInsert(void* a_openList, void* a_node)"
 30279,0x140488940,0x1404988e0,2,"bool NavMeshSearchFlee::RunSearch(BSPathingRequest** a_request, BSFastNavmeshTriLocation* a_start, BSTArray<BSFastNavmeshTriLocation>* a_outLocations, BSTArray<BSFastNavmeshEdgeHandle>* a_outEdges)"
 30280,0x140488bb0,0x140498b50,2,"void NavMeshSearchFlee::SetNodeLocationAndHeuristic(AStarNode* a_node, BSNavmesh* a_navmesh, std::uint16_t a_triIndex)"
 30281,0x140488cb0,0x140498c50,2,"bool NavMeshSearchFlee::ExpandNode(AStarNode* a_node, BSTSmallArray<AStarNode*,3>* a_out)"
@@ -2243,6 +2244,9 @@
 32525,0x140500680,0x140510b20,3,sub_140500680
 32528,0x1405007f0,0x140510c90,4,sub_1405007F0
 32551,0x140501440,0x1405118e0,3,CombatBehaviorTreeManager* CombatBehaviorTree::CombatBehaviorTreeManager::GetSingleton()
+32562,0x140501cc0,0x140512160,2,"void InitSegment3D(float* a_out, const NiPoint3* a_origin, const NiPoint3* a_delta)"
+32563,0x140501d20,0x1405121c0,2,"bool IsSegmentWithinSphere(const float* a_segment, const void* a_sphere)"
+32565,0x140501dc0,0x140512260,2,"float SquaredDistancePointToSegment3D(const float* a_segment, const float* a_point)"
 32569,0x140502bf0,0x140513090,2,"float DistancePointToSegment3D(const float* a_segment, const float* a_point)"
 32570,0x140502ed0,0x140513370,2,"bool IntersectSegmentSphere(const float* a_segment, const void* a_sphere, float* a_outTEnter, float* a_outTExit)"
 32867,0x14051e7f0,0x14052ede0,2,void IMenu::PostDisplay(IMenu* a_this)
@@ -5523,6 +5527,8 @@
 88668,0x1410cd9e0,0x14112a710,2,void BSNavmesh::FlipTriangle(std::uint16_t a_triangle)
 88669,0x1410cdae0,0x14112a810,2,"void BSNavmesh::ComputeBounds(float* a_outMin, float* a_outMax)"
 88670,0x1410cdcb0,0x14112a9e0,2,"void BSNavmesh::BuildMeshGrid(void* a_arg0, void* a_arg1)"
+88671,0x1410ceb60,0x14112b890,2,"bool BSNavmesh::AddTrianglesToMeshGrid(std::uint16_t a_first, std::uint16_t a_last)"
+88672,0x1410cef40,0x14112bc70,2,"bool BSNavmesh::RemoveTrianglesFromMeshGrid(std::uint16_t a_first, std::uint16_t a_last)"
 88674,0x1410cf350,0x14112c080,3,NiPoint3 BSNavmesh::GetNormal(std::uint16_t a_tri) const
 88675,0x1410cf490,0x14112c1c0,2,"float* BSNavmesh::GetTriangleCircumcenter(float* a_out, std::uint16_t a_triangle)"
 88676,0x1410cf630,0x14112c360,2,"void BSNavmesh::GetTriangleCircumcenter2D(std::uint16_t a_triangle, float* a_out)"
@@ -5536,6 +5542,8 @@
 88692,0x1410d1020,0x14112dd50,2,"bool BSNavmesh::FindRandomPointNearRetry(const NiPoint3* a_center, float a_radius, void* a_out)"
 88693,0x1410d1260,0x14112df90,2,"bool BSNavmesh::FindRandomPointNear(const NiPoint3& a_center, float a_radius, NiPoint3& a_out)"
 88694,0x1410d14a0,0x14112e1d0,2,"NiPoint3* BSNavmesh::OffsetPointFromEdges(NiPoint3* a_out, const NiPoint3& a_pos, float a_margin)"
+88695,0x1410d19e0,0x14112e710,2,"void CollectUniqueTriangleEdges(const void* a_triangleSet, void* a_outEdgePairs)"
+88696,0x1410d1b30,0x14112e860,2,"BSNavmeshEdgeExtraInfo* BSNavmesh::GetOrCreateEdgeExtraInfo(std::uint16_t a_triangle, std::uint32_t a_edge)"
 88699,0x1410d1f00,0x14112ec30,2,"std::int32_t BSNavmesh::FindCrossedEdge2D(std::uint16_t a_triangle, std::int32_t a_ignoreEdge, const float* a_p0, const float* a_p1, float* a_out)"
 88700,0x1410d20c0,0x14112edf0,2,"std::int32_t BSNavmesh::FindCrossedEdge3D(std::uint16_t a_triangle, std::int32_t a_ignoreEdge, const float* a_p0, const float* a_p1, const float* a_p2, char* a_outFlag, void* a_outData)"
 88701,0x1410d2250,0x14112ef80,2,"void BSNavmesh::FindSegmentCrossingTriangleEdge(EdgeCrossingResult* a_out, std::uint16_t a_triangle, std::int32_t a_skipEdge, const NiPoint3* a_segStart, const NiPoint3* a_segEnd)"
@@ -5548,6 +5556,7 @@
 88711,0x1410d34b0,0x1411301e0,2,void BSNavmesh::AddObstacleUndoData(void* a_data)
 88712,0x1410d3510,0x141130240,2,void BSNavmesh::RemoveObstacleUndoDataAt(std::uint32_t a_index)
 88713,0x1410d3580,0x1411302b0,2,std::uint32_t BSNavmesh::FindObstacleUndoDataIndex(const std::uint64_t* a_key)
+88714,0x1410d3610,0x141130340,2,std::uint16_t BSNavmesh::GetMaxTriangleLevelInUndoData(const BSNavmeshObstacleUndoData* a_undoData)
 88715,0x1410d36b0,0x1411303e0,2,"bool BSNavmesh::GetObstacleDataForTriangle(std::uint16_t a_triangle, void* a_out)"
 88718,0x1410d3de0,0x141130b10,2,"bool BSNavmesh::FindClosedDoorsForTriangle(std::uint16_t a_triangle, void* a_outDoors)"
 88721,0x1410d3fe0,0x141130d10,2,std::uint32_t BSNavmesh::GetCellIndexForPoint(const NiPoint3* a_point)
@@ -5632,6 +5641,8 @@
 89068,0x1410e81f0,0x141144f30,2,"float TriangleArea2D(const NiPoint3* a_v0, const NiPoint3* a_v1, const NiPoint3* a_v2)"
 89069,0x1410e8290,0x141144fd0,2,"void ComputeTriangleNormalAndAreaXY(NiPoint3* a_v0, NiPoint3* a_v1, NiPoint3* a_v2, NiPoint3* a_outNormal, float* a_outAreaXY)"
 89070,0x1410e8410,0x141145150,2,"bool IsPointWithinRadiusOfSegment(const NiPoint3* a_point, float a_radius, const NiPoint3* a_segStart, const NiPoint3* a_segEnd)"
+89071,0x1410e8590,0x1411452d0,2,"bool SolveSegmentCircleIntersection2D(const float* a_circle, const float* a_segment, std::uint32_t* a_out)"
+89072,0x1410e87f0,0x141145530,2,"bool ClassifySegmentCircleIntersection2D(const float* a_circle, const float* a_segment, std::int32_t* a_out)"
 89075,0x1410e8eb0,0x141145bf0,2,"bool IsAngleWithinArc(float a_angle, float a_arcStart, float a_arcEnd, bool a_reversed)"
 89076,0x1410e8f70,0x141145cb0,2,"void GetRandomPointInTriangle(const NiPoint3* a_v0, const NiPoint3* a_v1, const NiPoint3* a_v2, NiPoint3* a_out)"
 89077,0x1410e90f0,0x141145e30,2,float GetHeadingFromXY(const float* a_xy)
@@ -5640,6 +5651,7 @@
 89081,0x1410e94a0,0x1411461e0,2,"float DistanceSquaredToVerticalSegment(const NiPoint3* a_point, const NiPoint3* a_center, float a_halfHeight)"
 89082,0x1410e9540,0x141146280,2,"bool SelectTriangleIntersectionPivot(const NiPoint3* a_v0, const NiPoint3* a_v1, const NiPoint3* a_v2, float a_p0, float a_p1, float a_p2, float a_d0, float a_d1, float a_d2, float a_s0, float a_s1, float* a_isectA, float* a_isectB, NiPoint3* a_pointA, NiPoint3* a_pointB)"
 89083,0x1410e9830,0x141146570,2,"void ComputeTriangleIntersectionEndpoints(const NiPoint3* a_v0, const NiPoint3* a_v1, const NiPoint3* a_v2, float a_p0, float a_p1, float a_p2, float a_d0, float a_d1, float a_d2, float* a_isectA, float* a_isectB, NiPoint3* a_pointA, NiPoint3* a_pointB)"
+89084,0x1410e9940,0x141146680,2,"bool IsDirectionInsideCone2D(const float* a_cone, const float* a_dir)"
 89085,0x1410e9a20,0x141146760,2,void* InitMovementArbitrationSlots(void* a_slots)
 89102,0x1410ea4c0,0x141147200,2,void NullMovementSelectIdleResult::Reset()
 89113,0x1410eae10,0x141147b50,2,"float PathingAvoidNodeArray::ComputeWeightedCenter(const NiPoint3* a_from, NiPoint3* a_outCenter)"
@@ -5689,11 +5701,13 @@
 89306,0x1410f77a0,0x1411544e0,2,"bool WalkRayPreferringTriangles(const void* a_query, void* a_arg2, const bool** a_flags, BSNavmeshEdgeLocation* a_outEnd)"
 89307,0x1410f7f60,0x141154ca0,2,"bool WalkRayAlongTrianglePath(const void* a_query, void* a_arg2, const bool** a_flags, BSNavmeshEdgeLocation* a_outEnd)"
 89308,0x1410f8670,0x1411553b0,2,"bool WalkRayAcrossNavmesh(const void* a_query, void* a_arg2, const bool* a_flags, BSNavmeshEdgeLocation* a_outEnd)"
+89309,0x1410f8dd0,0x141155b10,2,"bool SweepArcRaysSimple(const void* a_self, const BSNavmeshEdgeLocation* a_start, const float* a_segment, const float* a_dir, BSNavmeshEdgeLocation* a_outEnd)"
 89310,0x1410f9220,0x141155f60,2,"bool SweepArcRays(const void* a_self, const BSNavmeshEdgeLocation* a_start, const float* a_segment, const float* a_dir, BSNavmeshEdgeLocation* a_outEnd)"
 89311,0x1410f96d0,0x141156410,2,"bool RayCastUsingPreferredTriangles(const BSNavmeshEdgeLocation* a_start, void* a_arg2, BSNavmesh** a_navmesh, const float* a_params, void* a_preferredTriangles, float* a_outHit)"
 89312,0x1410f9850,0x141156590,2,"bool RayCastAlongTrianglePath(const BSNavmeshEdgeLocation* a_start, void* a_arg2, BSNavmesh** a_navmesh, const float* a_params, void* a_trianglePath, float* a_outHit)"
 89313,0x1410f99f0,0x141156730,2,void PathSmootherRayCastUseTrianglePath::ReserveTriangleIndexMap(std::uint32_t a_count)
 89314,0x1410f9ae0,0x141156820,2,void PathSmootherRayCastUseTrianglePath::FreeTriangleIndexMap()
+89319,0x1410f9d90,0x141156ad0,2,"bool TrianglePathCursorAdvance(void* a_cursor, const void* a_ref, const void* a_triangle)"
 89321,0x1410f9e90,0x141156bd0,2,void PathSmootherRayCastUseTrianglePath::GrowTriangleIndexMap()
 89323,0x1410fa1c0,0x141156f00,2,"float MovementUtils::ComputeAngularVelocityToTarget(float a_current, float a_target, float a_deltaTime)"
 89325,0x1410fa2f0,0x141157030,2,"void MovementUtils::ComputeDirectionFromEuler(const NiPoint3& a_euler, NiPoint3& a_out)"
