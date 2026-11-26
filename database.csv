@@ -5205,8 +5205,10 @@
 87998,0x1410a79f0,0x141104620,2,bool PathingStreamMasterFileRead::ReadBSPathingCellPtr(BSTSmartPointer<BSPathingCell>& a_ptr)
 88004,0x1410a7e10,0x141104a40,4,"bool FindTriangleForLocationFilterCheckDeltaZ::IsValidTri(NiPoint3* a_location, BSNavmesh* a_navMesh, std::uint16_t a_tri, NiPoint3* a_pointOnTri)"
 88009,0x1410a7f90,0x141104bc0,2,"bool Pathing::BuildWithRegisteredPathBuilder(BSTSmartPointer<BSPathingRequest>* a_request, BSTSmartPointer<BSPathingSolution>* a_solution)"
+88020,0x1410a8eb0,0x141105ae0,2,(rename only)
 88040,0x1410acf40,0x141109b70,2,"bool Pathing::CreateRequestFromSolution(const BSTSmartPointer<BSPathingSolution>& a_solution, BSTSmartPointer<BSPathingRequest>& a_out)"
 88048,0x1410ad8f0,0x14110a520,2,"bool Pathing::SmoothPathDefault(BSPathingRequest* a_request, BSPathingSolution* a_solution, const NiPoint3* a_start, const NiPoint3* a_goal, BSTArray<BSFastNavmeshTriLocation>* a_locations, BSTArray<BSFastNavmeshEdgeHandle>* a_edges)"
+88075,0x1410b16c0,0x14110e2f0,2,(rename only)
 88193,0x1410b88f0,0x141115520,2,void MovementAgentActorState::RegisterWithController(IMovementControllerRegisterInterface& a_controller)
 88194,0x1410b8940,0x141115570,2,void MovementAgentActorState::UnregisterWithController()
 88197,0x1410b8a20,0x141115650,2,const BSFixedString& MovementAgentActorState::GetAgentType()
@@ -5381,13 +5383,21 @@
 88643,0x1410cc5d0,0x141129300,2,"void BSNavmesh::GetEdgeVertexIndicesUnchecked(std::uint16_t* a_outIndices, std::uint16_t a_triangle, std::uint32_t a_edge)"
 88645,0x1410cc690,0x1411293c0,2,"bool BSNavmesh::GetEdgePoints(std::uint16_t a_triangle, std::uint32_t a_edge, NiPoint3* a_outStart, NiPoint3* a_outEnd)"
 88646,0x1410cc730,0x141129460,2,"void BSNavmesh::GetTriangleVertices(std::uint16_t a_triangle, NiPoint3** a_outV0, NiPoint3** a_outV1, NiPoint3** a_outV2)"
+88647,0x1410cc7f0,0x141129520,2,"bool BSNavmesh::GetEdgeNeighborTriangleRef(std::uint16_t a_triangle, std::uint32_t a_edge, BSNavmesh** a_outNavmesh, std::uint16_t* a_outTriangle)"
 88648,0x1410cc8c0,0x1411295f0,2,"bool BSNavmesh::GetEdgeNeighborTriangle(std::uint16_t a_triangle, std::uint32_t a_edge, BSNavmesh** a_outNavmesh, std::uint16_t* a_outTriangle)"
+88651,0x1410ccbc0,0x1411298f0,2,"void GetEdgeNeighborTriangleForHandle(void* a_handle, void* a_out)"
+88652,0x1410ccbf0,0x141129920,2,"bool BSNavmesh::GetEdgeNeighborRef(std::uint16_t a_triangle, std::uint32_t a_edge, BSNavmesh** a_outNavmesh, std::uint16_t* a_outTriangle, std::uint32_t* a_outEdge)"
 88653,0x1410cccd0,0x141129a00,2,"bool BSNavmesh::GetEdgeNeighbor(std::uint16_t a_triangle, std::uint32_t a_edge, BSNavmesh** a_outNavmesh, std::uint16_t* a_outTriangle, std::uint32_t* a_outEdge)"
+88654,0x1410ccf20,0x141129c50,2,"void GetEdgeNeighborForNavmeshInfoHandle(void* a_handle, void* a_out)"
+88655,0x1410cd010,0x141129d40,2,"void GetEdgeNeighborForHandle(void* a_handle, void* a_out)"
 88656,0x1410cd0a0,0x141129dd0,2,void* BSNavmesh::FindDoorPortalForTriangle(std::uint16_t a_triangle)
+88657,0x1410cd0f0,0x141129e20,2,BSNavmeshTriangleDoorPortal* BSNavmesh::GetDoorPortalAt(std::uint16_t a_index)
 88660,0x1410cd1d0,0x141129f00,2,std::uint32_t BSNavmesh::GetDoorPortalIndex(std::uint16_t a_triangle)
+88661,0x1410cd200,0x141129f30,2,void BSNavmesh::WriteToStream(void* a_stream)
 88662,0x1410cd390,0x14112a0c0,2,bool BSNavmesh::ReadFromStream(PathingStreamMasterFileRead& a_stream)
 88663,0x1410cd4e0,0x14112a210,2,void BSNavmesh::FixupNumericIDs(void* a_stream)
 88664,0x1410cd590,0x14112a2c0,2,"void BSNavmesh::FindTrianglesLinkedToNavmesh(const std::uint32_t* a_otherNavmeshID, void* a_outTriangles)"
+88665,0x1410cd700,0x14112a430,2,void BSNavmesh::HasLinkToNavmesh(const std::uint32_t* a_otherNavmeshID)
 88668,0x1410cd9e0,0x14112a710,2,void BSNavmesh::FlipTriangle(std::uint16_t a_triangle)
 88669,0x1410cdae0,0x14112a810,2,"void BSNavmesh::ComputeBounds(float* a_outMin, float* a_outMax)"
 88674,0x1410cf350,0x14112c080,3,NiPoint3 BSNavmesh::GetNormal(std::uint16_t a_tri) const
@@ -5399,7 +5409,13 @@
 88688,0x1410d0980,0x14112d6b0,2,"bool BSNavmesh::GetTriangleHeightAtPoint(std::uint16_t a_triangle, const NiPoint3& a_pos, float& a_outZ)"
 88693,0x1410d1260,0x14112df90,2,"bool BSNavmesh::FindRandomPointNear(const NiPoint3& a_center, float a_radius, NiPoint3& a_out)"
 88694,0x1410d14a0,0x14112e1d0,2,"NiPoint3* BSNavmesh::OffsetPointFromEdges(NiPoint3* a_out, const NiPoint3& a_pos, float a_margin)"
+88699,0x1410d1f00,0x14112ec30,2,"std::int32_t BSNavmesh::FindCrossedEdge2D(std::uint16_t a_triangle, std::int32_t a_ignoreEdge, const float* a_p0, const float* a_p1, float* a_out)"
+88700,0x1410d20c0,0x14112edf0,2,"std::int32_t BSNavmesh::FindCrossedEdge3D(std::uint16_t a_triangle, std::int32_t a_ignoreEdge, const float* a_p0, const float* a_p1, const float* a_p2, char* a_outFlag, void* a_outData)"
 88711,0x1410d34b0,0x1411301e0,2,void BSNavmesh::AddObstacleUndoData(void* a_data)
+88712,0x1410d3510,0x141130240,2,void BSNavmesh::RemoveObstacleUndoDataAt(std::uint32_t a_index)
+88713,0x1410d3580,0x1411302b0,2,std::uint32_t BSNavmesh::FindObstacleUndoDataIndex(const std::uint64_t* a_key)
+88715,0x1410d36b0,0x1411303e0,2,"bool BSNavmesh::GetObstacleDataForTriangle(std::uint16_t a_triangle, void* a_out)"
+88718,0x1410d3de0,0x141130b10,2,"bool BSNavmesh::FindClosedDoorsForTriangle(std::uint16_t a_triangle, void* a_outDoors)"
 88761,0x1410d6a60,0x141133790,2,bool PathingStreamMasterFileRead::ReadBSNavmeshCoverTriangleArray(BSTArray<std::uint16_t>& a_array)
 88762,0x1410d6ad0,0x141133800,2,bool PathingStreamMasterFileRead::ReadBSNavmeshEdgeExtraInfoArray(BSTArray<BSNavmeshEdgeExtraInfo>& a_array)
 88763,0x1410d6b40,0x141133870,2,bool PathingStreamMasterFileRead::ReadBSNavmeshVertexArray(BSTArray<BSNavmeshVertex>& a_array)
