@@ -2397,6 +2397,7 @@ sseid,aeid,confidence,name
 15967,16212,3,RE::BSPointerHandleManagerInterface::GetHandle
 16173,16405,2,
 16175,16407,3,RE::ScreenSplatter::Clear
+16185,16417,1,
 16188,16421,2,
 16204,16450,1,
 16293,16537,1,TESRegionDataObjects::ConstructSelf_*
@@ -5194,6 +5195,7 @@ sseid,aeid,confidence,name
 36507,37507,1,
 36531,37531,1,
 36532,37532,3,RE::Actor::CanAttackActor
+36542,37543,1,
 36548,37549,1,
 36559,37560,3,RE::Actor::GetCollisionFilterInfo
 36581,37585,1,
@@ -5677,6 +5679,7 @@ sseid,aeid,confidence,name
 38305,39275,1,
 38328,39303,1,
 38340,39319,1,
+38341,39320,1,
 38343,39322,2,
 38356,39339,1,
 38359,39342,2,

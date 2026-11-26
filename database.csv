@@ -409,6 +409,7 @@
 16173,0x1401fa360,0x14020bcb0,2,void ScreenSplatter::Update()
 16174,0x1401fa540,0x14020be90,2,"void ScreenSplatter::Trigger(void* a_unk1, float a_unk2)"
 16175,0x1401fa6c0,0x14020c010,3,void NiCamera::ScreenSplatter::Clear()
+16185,0x1401fb8d0,0x14020d220,2,"void BSTextureDB::ReleaseEntry(void* a_entryDB, void* a_entry)"
 16188,0x1401fbaf0,0x14020d440,2,void SleepFrameThrottle()
 16202,0x1401fd350,0x14020eca0,4,void TESRegion::SetCurrentWeather(TESWeather* a_weather)
 16203,0x1401fd3d0,0x14020ed20,4,TESWeather* TESRegion::SelectWeather()
@@ -2605,6 +2606,7 @@
 36532,0x1405e7500,0x1405efc20,3,bool Actor::CanAttackActor(Actor* a_actor)
 36537,0x1405e7e40,0x1405f0560,3,RE::Actor::GetHostileToActor
 36541,0x1405e8700,0x1405f0e20,3,po3tweaks::VoiceModulation::SetObjectToFollow
+36542,0x1405e8f80,0x1405f1690,2,"void Actor::Say(void* a_result, TESTopic* a_topic, TESObjectREFR* a_speakAs, void* a_outputModel, bool a_unk1, bool a_unk2, bool a_unk3)"
 36543,0x1405e9270,0x1405f1980,4,void Actor::UpdateSoundCallBack(bool a_endSceneAction)
 36548,0x1405ea350,0x1405f2a60,2,void Actor::SetSize(float a_size)
 36559,0x1405ebd90,0x1405f44a0,4,uint32_t Actor::GetCollisionFilterInfo(uint32_t& a_outCollisionFilterInfo)
@@ -3007,6 +3009,7 @@
 38328,0x14064dee0,0x140657230,2,void AIProcess::SetAwarePlayerTimer(float a_value)
 38339,0x14064e6d0,0x140657a20,3,AIProcess::ResetPackageState
 38340,0x14064e810,0x140657b60,2,BSFixedString AIProcess::GetVoiceSubtitle()
+38341,0x14064e830,0x140657b80,2,void AIProcess::SetVoiceSubtitle(void* a_subtitle)
 38343,0x14064e9c0,0x140657d10,2,"void AIProcess::AppendDialogueSpeakerAvoidNode(Actor* a_actor, NiPointer<BSTArray<BSPathingAvoidNode>>* a_avoidNodes)"
 38356,0x14064f2c0,0x140658610,2,void AIProcess::ClearQueueOfGreetings()
 38359,0x14064f4b0,0x140658800,3,AIProcess::UpdatePackageObserveCombatHigh
