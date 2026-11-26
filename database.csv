@@ -3904,6 +3904,7 @@
 49149,0x1408359f0,0x140860cf0,2,bool BSPathingLocationEntryScrapArray::CopyTo(BSTArray<BSPathingLocationEntry>* a_out)
 49166,0x140836450,0x140861750,2,void BSNavmeshInfoSearch::ResetSearchState()
 49180,0x140836980,0x140861c80,2,"float CombatPathingSearchPolicyStandard::GetEdgeCost(BSFastNavmeshTriLocation* a_from, BSFastNavmeshTriLocation* a_to)"
+49182,0x140836eb0,0x1408621b0,2,"void InitRayCastRequestFlags(void* a_out, const void* a_request)"
 49311,0x14083c870,0x140867b70,3,void CombatApproachTargetSpeedController::UpdateApproachTargetSpeed(CombatPath* a_combatPath)
 49315,0x14083ce90,0x140868190,2,bool CombatPathingSphere::IsOutside(BSFastNavmeshTriLocation* a_node)
 49316,0x14083cee0,0x1408681e0,2,float CombatPathingSphere::GetPenetrationDepth(BSFastNavmeshTriLocation* a_node)
@@ -6097,6 +6098,7 @@
 90480,0x141121720,0x14117e5f0,2,void BSPathSmootherPOVSearch::ReleaseSearchState()
 90481,0x141121830,0x14117e700,2,void BSPathSmootherPOVSearch::CreateStartNode()
 90482,0x141121930,0x14117e800,2,void BSPathSmootherPOVSearch::BuildPortalVertexNodes()
+90483,0x1411221f0,0x14117f0c0,2,"void BSPathSmootherPOVSearch::AddPortalCornerNode(void* a_portals, std::uint32_t a_index, bool a_isRight)"
 90484,0x1411226d0,0x14117f5a0,2,void BSPathSmootherPOVSearch::AddRequestObstacleCircleNodes()
 90485,0x141122cf0,0x14117fbc0,2,void BSPathSmootherPOVSearch::AddNavmeshObstacleCircleNodes()
 90486,0x141123090,0x14117ff60,2,void BSPathSmootherPOVSearch::CreateGoalNode()
@@ -6106,15 +6108,18 @@
 90490,0x1411243a0,0x141181270,2,"bool BSPathSmootherPOVSearch::TryAddArcLink(const void* a_node, void* a_arg3, void* a_arg4)"
 90491,0x141124ac0,0x141181990,2,"void BSPathSmootherPOVSearch::ExpandListEntries(BSPathSmootherPOVList* a_list, std::uint32_t a_startIndex, void* a_arg4, void* a_arg5, std::uint32_t a_maxFailures)"
 90492,0x141124b60,0x141181a30,2,"bool BSPathSmootherPOVSearch::EvaluateSegmentObstaclePenalty(const std::int32_t* a_nodeA, const std::int32_t* a_nodeB, const NiPoint3* a_p0, const NiPoint3* a_p1, float* a_outPenalty)"
+90500,0x141125970,0x141182840,2,"void FreePOVNodeList(void* a_list, bool a_dealloc)"
 90501,0x141125a30,0x141182900,2,"std::int32_t BSPathSmootherPOVSearch::AddOrUpdateOpenNode(char* a_node, float a_cost, void* a_pool, char** a_outNode)"
 90502,0x141125b70,0x141182a40,2,"void BSPathSmootherPOVSearch::ExtractPathFromGoalNode(void* a_goalNode, void* a_outEdges, void* a_outPoints)"
 90525,0x141126800,0x1411836d0,2,"void OpenListBucketInsert(float* a_openList, float* a_node)"
 90537,0x141126b60,0x141183a30,2,void* BSPathSmootherPOVSearch::RunAStarLoop()
+90544,0x141127a70,0x141184940,2,"std::uint32_t ComputeArcLinkTangents(const void* a_nodeA, const void* a_ctx, const void* a_nodeB, float* a_out)"
 90556,0x141128380,0x141185250,2,BSPathingSearchRayCast* BSPathingSearchRayCast::ctor()
 90558,0x141128460,0x141185330,2,"std::uint32_t BSPathingSearchRayCast::Initialize(const void* a_request, std::uint32_t* a_outValue)"
 90559,0x141128940,0x141185810,2,void BSPathingSearchRayCast::PrepareHavokWorldQuery()
 90561,0x141128ba0,0x141185a70,2,bool BSPathingSearchRayCast::CreateHavokRayQuery()
 90563,0x141128e30,0x141185d00,2,"bool BSPathingSearchRayCast::CastSegmentInSteps(const NiPoint3* a_start, const NiPoint3* a_end)"
+90564,0x141129020,0x141185ef0,2,"bool BSPathingSearchRayCast::CastSegmentStep(const NiPoint3* a_start, const NiPoint3* a_end)"
 90566,0x1411294f0,0x1411863c0,2,void BSPathingSearchRayCast::ResetResult()
 90581,0x141129ba0,0x141186a70,2,"void PushBackEdgeLocationWithHeight(void* a_array, const BSNavmeshEdgeLocation* a_location)"
 90623,0x14112c840,0x141189710,2,"void PathFollowerTurnTarget::GetFacingAngles(NiPoint3* a_position, float* a_current, float a_zOffset, float* a_outFacing)"

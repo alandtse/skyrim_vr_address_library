@@ -9328,10 +9328,8 @@ sseid,aeid,confidence,name
 89256,91732,1,
 89260,91736,1,
 89294,91761,1,
-89295,91762,1,
 89296,91763,1,
 89297,91764,1,
-89298,91765,1,
 89300,91767,1,
 89301,91768,1,
 89302,91770,1,
@@ -9804,6 +9802,7 @@ sseid,aeid,confidence,name
 90480,92997,1,BSPathSmootherPOVSearch::sub_*
 90481,92998,1,BSPathSmootherPOVSearch::sub_*
 90482,92999,1,BSPathSmootherPOVSearch::sub_*
+90483,93000,1,
 90484,93001,1,
 90485,93002,1,
 90486,93003,1,BSPathSmootherPOVSearch::sub_*
@@ -9812,6 +9811,7 @@ sseid,aeid,confidence,name
 90489,93006,1,BSPathSmootherPOVSearch::sub_*
 90490,93007,1,
 90492,93009,1,
+90500,93016,1,
 90502,93019,1,
 90511,93028,1,
 90514,93031,1,
@@ -9823,6 +9823,7 @@ sseid,aeid,confidence,name
 90527,93048,1,BSPathSmootherPOVSearch::sub_141126920
 90528,93049,1,BSPathSmootherPOVSearch::sub_141126950
 90529,93050,1,
+90544,93067,1,
 90556,93083,1,BSPathingSearchRayCast::sub_*
 90557,93084,1,BSPathingSearchRayCast::sub_*
 90558,93085,1,BSPathingSearchRayCast::sub_*
@@ -9871,6 +9872,7 @@ sseid,aeid,confidence,name
 90779,93328,1,
 90780,93329,1,
 90781,93339,1,
+90782,93340,1,
 90785,93348,1,
 90815,93380,1,MovementArbitrationScheme_MovementVector_::Func0_*
 90835,93399,1,
