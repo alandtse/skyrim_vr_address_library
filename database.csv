@@ -1837,6 +1837,30 @@
 30099,0x1404806c0,0x140490660,2,"bool PathingStreamMasterFileRead::ReadFormIDWithResult(std::uint32_t* a_formID, bool* a_outSuccess)"
 30100,0x1404806d0,0x140490670,2,bool PathingStreamMasterFileRead::ReadString(BSFixedString* a_out)
 30101,0x140480800,0x1404907a0,2,std::uint16_t PathingStreamMasterFileRead::GetFormVersion()
+30179,0x140483fb0,0x140493f50,2,"bool NavMeshSearchClosePoint::ExpandNode(AStarNode* a_node, BSTSmallArray<AStarNode*,3>* a_out)"
+30180,0x1404842e0,0x140494280,2,bool NavMeshSearchClosePoint::IsGoalNode(AStarNode* a_node)
+30183,0x1404847b0,0x140494750,2,"std::int32_t AStarSearch<BSFastNavmeshTriLocation,BSFastNavmeshEdgeHandle,3>::FindOrAddNode(const std::uint64_t* a_key, float a_cost, AStarNodeInit* a_init, AStarNode** a_nodeOut)"
+30184,0x1404848e0,0x140494880,2,"std::int32_t AStarSearch<BSFastNavmeshTriLocation,BSFastNavmeshEdgeHandle,3>::FindOrAddNodeByKey(std::uint64_t a_key, float a_cost, AStarNodeInit* a_init, AStarNode** a_nodeOut)"
+30185,0x140484a30,0x1404949d0,2,"void AStarSearch<BSFastNavmeshTriLocation,BSFastNavmeshEdgeHandle,3>::ReconstructPath(AStarNode* a_goalNode, BSTArray<BSFastNavmeshTriLocation>* a_locations, BSTArray<BSFastNavmeshEdgeHandle>* a_edges)"
+30208,0x1404858e0,0x140495880,2,void AStarOpenList::InsertNode(AStarNode* a_node)
+30209,0x140485960,0x140495900,2,"AStarNode* AStarSearch<BSFastNavmeshTriLocation,BSFastNavmeshEdgeHandle,3>::QueueNode(const std::uint64_t* a_key, const BSFastNavmeshTriLocation* a_location, float a_cost, float a_heuristic)"
+30218,0x140485b80,0x140495b20,2,AStarNode* AStarNodePool::CreateNode(const BSFastNavmeshTriLocation* a_location)
+30219,0x140485c10,0x140495bb0,2,"AStarNode* AStarSearch<BSFastNavmeshTriLocation,BSFastNavmeshEdgeHandle,3>::RunToCompletion()"
+30220,0x140485c80,0x140495c20,2,"void AStarSearch<BSFastNavmeshTriLocation,BSFastNavmeshEdgeHandle,3>::PopBestOpenNode()"
+30221,0x140485cf0,0x140495c90,2,"bool AStarSearch<BSFastNavmeshTriLocation,BSFastNavmeshEdgeHandle,3>::Step()"
+30227,0x140486130,0x1404960d0,2,"bool AStarClosedSet::Find(const std::uint64_t* a_key, AStarNode** a_nodeOut)"
+30228,0x140486200,0x1404961a0,2,AStarClosedSetEntry* AStarClosedSet::GetFreeSlot(AStarClosedSetEntry* a_entries)
+30232,0x140486330,0x1404962d0,2,void AStarClosedSet::Grow()
+30233,0x140486480,0x140496420,2,AStarNode* AStarNodePool::AllocNode()
+30238,0x140486b10,0x140496ab0,2,"bool NavMeshSearchFitSphere::ExpandNode(AStarNode* a_node, BSTSmallArray<AStarNode*,3>* a_out)"
+30239,0x140486ec0,0x140496e60,2,bool NavMeshSearchFitSphere::IsGoalNode(AStarNode* a_node)
+30279,0x140488940,0x1404988e0,2,"bool NavMeshSearchFlee::RunSearch(BSPathingRequest** a_request, BSFastNavmeshTriLocation* a_start, BSTArray<BSFastNavmeshTriLocation>* a_outLocations, BSTArray<BSFastNavmeshEdgeHandle>* a_outEdges)"
+30281,0x140488cb0,0x140498c50,2,"bool NavMeshSearchFlee::ExpandNode(AStarNode* a_node, BSTSmallArray<AStarNode*,3>* a_out)"
+30282,0x1404892b0,0x140499250,2,bool NavMeshSearchFlee::IsGoalNode(AStarNode* a_node)
+30287,0x140489940,0x1404998e0,2,bool NavMeshSearchHide::IsGoalNode(AStarNode* a_node)
+30298,0x14048a3c0,0x14049a360,2,"bool NavMeshSearchLOS::ExpandNode(AStarNode* a_node, BSTSmallArray<AStarNode*,3>* a_out)"
+30299,0x14048aa10,0x14049a9b0,2,bool NavMeshSearchLOS::IsGoalNode(AStarNode* a_node)
+30327,0x14048cb10,0x14049cab0,2,bool NavMeshSearchSLPoint::IsGoalNode(AStarNode* a_node)
 30331,0x14048d140,0x14049d0e0,2,void PathingRequestClosePoint::CopyTo(BSPathingRequest* a_other)
 30333,0x14048d200,0x14049d1a0,2,std::uint32_t PathingRequestClosePoint::GetStaticType()
 30334,0x14048d240,0x14049d1e0,2,void PathingRequestClosePoint::Write(BSPathingStreamWrite* a_stream)
@@ -1886,6 +1910,7 @@
 30561,0x140493580,0x1404a3520,2,void PathingRequestLOS::PathingRequestLOS(const BSPathingRequest& a_other)
 30563,0x140493670,0x1404a3610,2,void PathingRequestLOS::CopyTo(BSPathingRequest* a_other)
 30565,0x140493750,0x1404a36f0,2,std::uint32_t PathingRequestLOS::GetStaticType()
+30579,0x140493df0,0x1404a3d90,2,"void* BSTDerivedCreator<PathingRequestLOS,BSPathingRequest>::Create()"
 30586,0x140494090,0x1404a4030,2,void PathingRequestOptimalLocation::PathingRequestOptimalLocation()
 30589,0x140494180,0x1404a4120,2,void PathingRequestOptimalLocation::CopyTo(BSPathingRequest* a_other)
 30591,0x140494220,0x1404a41c0,2,std::uint32_t PathingRequestOptimalLocation::GetStaticType()
@@ -1898,6 +1923,7 @@
 30616,0x1404949c0,0x1404a4960,2,void PathingRequestSafeStraightLine::PathingRequestSafeStraightLine(const BSPathingRequest& a_other)
 30620,0x140494ac0,0x1404a4a60,2,std::uint32_t PathingRequestSafeStraightLine::GetStaticType()
 30633,0x140494e40,0x1404a4de0,2,std::uint32_t GetPathingRequestStopMovingType()
+30658,0x140495fa0,0x1404a5f40,2,"bool PathBuilderFlee::Build(BSPathingRequest** a_request, BSPathingSolution** a_solution)"
 30737,0x1404a1430,0x1404b13d0,3,"BGSDistantObjectBlock* BGSDistantObjectBlock::Ctor(BGSTerrainNode* a_node, BSStream& a_stream)"
 30739,0x1404a17c0,0x1404b1760,3,void BGSDistantObjectBlock::Detach()
 30741,0x1404a18d0,0x1404b1870,3,void BGSDistantObjectBlock::Attach()
