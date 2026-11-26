@@ -1898,7 +1898,7 @@
 30347,0x14048d6e0,0x14049d680,2,std::uint32_t PathingRequestClosestGoal::GetStaticType()
 30348,0x14048d720,0x14049d6c0,2,void PathingRequestClosestGoal::Write(BSPathingStreamWrite* a_stream)
 30349,0x14048d7b0,0x14049d750,2,void PathingRequestClosestGoal::Read(BSPathingStreamRead* a_stream)
-30355,0x14048e1d0,0x14049e170,2,bool PathBuilderFactoryManager::Insert(uint32_t a_typeId, void* a_factory)
+30355,0x14048e1d0,0x14049e170,2,"bool PathBuilderFactoryManager::Insert(std::uint32_t a_typeId, void* a_factory)"
 30359,0x14048e4f0,0x14049e490,2,void BSPathingLocationArray::Clear()
 30382,0x14048ec70,0x14049ec10,2,PathBuilderFactoryManager* GetPathBuilderFactoryManager()
 30385,0x14048edb0,0x14049ed50,2,void PathBuilderFactoryManager::Grow()
