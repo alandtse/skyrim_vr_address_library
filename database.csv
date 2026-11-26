@@ -2253,6 +2253,7 @@
 32525,0x140500680,0x140510b20,3,sub_140500680
 32528,0x1405007f0,0x140510c90,4,sub_1405007F0
 32551,0x140501440,0x1405118e0,3,CombatBehaviorTreeManager* CombatBehaviorTree::CombatBehaviorTreeManager::GetSingleton()
+32569,0x140502bf0,0x140513090,2,"float DistancePointToSegment3D(const float* a_segment, const float* a_point)"
 32867,0x14051e7f0,0x14052ede0,2,void IMenu::PostDisplay(IMenu* a_this)
 33257,0x14053d370,0x1405400f0,4,AccumulatingValueModifierEffect::Allocate(AccumulatingValueModifierEffect* accumulatingValueModifierEffect
 33277,0x14053DEB0,0x140540C30,4,"ActiveEffect::Adjust(Skyrim::ActiveEffect* activeEffect, float effectiveness, bool requiresHostility)"
@@ -5686,6 +5687,9 @@
 89296,0x1410f6b50,0x141153890,2,"PathSmootherRayCastUseTrianglePath* PathSmootherRayCastUseTrianglePath::ctor(BSTArray<BSFastNavmeshTriLocation>* a_triPath, void* a_arg)"
 89297,0x1410f6d50,0x141153a90,2,void PathSmootherRayCastUseTrianglePath::dtor()
 89298,0x1410f6d90,0x141153ad0,2,"void PathSmootherRayCastUseTrianglePath::CastRay(void* a_context, void* a_arg, BSNavmesh** a_navmesh, float* a_outResult)"
+89301,0x1410f7060,0x141153da0,2,"bool CastWidenedRay(void* a_context, const BSNavmeshEdgeLocation* a_start, const NiPoint3* a_end, void* a_outHit, bool a_extendStart, bool a_extendEnd, bool a_flag7, bool a_flag8, void* a_arg9)"
+89311,0x1410f96d0,0x141156410,2,"bool RayCastUsingPreferredTriangles(const BSNavmeshEdgeLocation* a_start, void* a_arg2, BSNavmesh** a_navmesh, const float* a_params, void* a_preferredTriangles, float* a_outHit)"
+89312,0x1410f9850,0x141156590,2,"bool RayCastAlongTrianglePath(const BSNavmeshEdgeLocation* a_start, void* a_arg2, BSNavmesh** a_navmesh, const float* a_params, void* a_trianglePath, float* a_outHit)"
 89313,0x1410f99f0,0x141156730,2,void PathSmootherRayCastUseTrianglePath::ReserveTriangleIndexMap(std::uint32_t a_count)
 89314,0x1410f9ae0,0x141156820,2,void PathSmootherRayCastUseTrianglePath::FreeTriangleIndexMap()
 89321,0x1410f9e90,0x141156bd0,2,void PathSmootherRayCastUseTrianglePath::GrowTriangleIndexMap()
@@ -6055,8 +6059,13 @@
 90430,0x14111ff90,0x14117ce60,2,"void* MovementMessageAutoRegister::RegisterNewPath(void* a_registrar, std::int32_t a_typeId)"
 90431,0x141120060,0x14117cf30,2,"void* MovementMessageAutoRegister::RegisterPathComplete(void* a_registrar, std::int32_t a_typeId)"
 90432,0x141120130,0x14117d000,2,"void* MovementMessageAutoRegister::RegisterPathFailed(void* a_registrar, std::int32_t a_typeId)"
+90474,0x141120d80,0x14117dc50,2,"BSPathSmootherPOVSearch* BSPathSmootherPOVSearch::ctor(void* a_arg2, void* a_arg3, void* a_arg4, void* a_arg5, void* a_arg6, void* a_arg7, void* a_arg8)"
 90476,0x1411210d0,0x14117dfa0,2,"bool BSPathSmootherPOVSearch::Run(const void* a_start, const void* a_goal)"
+90490,0x1411243a0,0x141181270,2,"bool BSPathSmootherPOVSearch::TryAddArcLink(const void* a_node, void* a_arg3, void* a_arg4)"
+90491,0x141124ac0,0x141181990,2,"void BSPathSmootherPOVSearch::ExpandListEntries(BSPathSmootherPOVList* a_list, std::uint32_t a_startIndex, void* a_arg4, void* a_arg5, std::uint32_t a_maxFailures)"
+90556,0x141128380,0x141185250,2,BSPathingSearchRayCast* BSPathingSearchRayCast::ctor()
 90558,0x141128460,0x141185330,2,"std::uint32_t BSPathingSearchRayCast::Initialize(const void* a_request, std::uint32_t* a_outValue)"
+90581,0x141129ba0,0x141186a70,2,"void PushBackEdgeLocationWithHeight(void* a_array, const BSNavmeshEdgeLocation* a_location)"
 90623,0x14112c840,0x141189710,2,"void PathFollowerTurnTarget::GetFacingAngles(NiPoint3* a_position, float* a_current, float a_zOffset, float* a_outFacing)"
 90628,0x14112cc60,0x141189b30,2,std::uint32_t PathingStreamLoadGame::ReadBSPathingLockInfo()
 90636,0x14112cff0,0x141189ec0,2,"bool MovementActorAvoidanceParameters::ShouldAvoidActorById(std::uint32_t a_actorId, std::uint32_t a_otherId)"
