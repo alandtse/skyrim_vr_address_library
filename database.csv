@@ -1829,6 +1829,18 @@
 29923,0x14047ace0,0x14048ac80,2,"bool BSPathingCellManager::AddUniqueNavmeshFromInfo_Heap(BSTArray<BSNavmesh*>& a_out, BSNavmeshInfo* a_info)"
 29924,0x14047adf0,0x14048ad90,2,"bool BSPathingCellManager::AddUniqueNavmeshInfo_Scrap(BSTScrapArray<BSNavmeshInfo*>& a_out, BSNavmeshInfo* a_info)"
 29925,0x14047ae90,0x14048ae30,2,"bool BSPathingCellManager::AddUniqueNavmeshInfo_Heap(BSTArray<BSNavmeshInfo*>& a_out, BSNavmeshInfo* a_info)"
+29997,0x14047cfe0,0x14048cf80,2,std::uint32_t PathingDoor::GetID()
+30001,0x14047d070,0x14048d010,2,bool PathingDoor::IsOpen()
+30002,0x14047d150,0x14048d0f0,2,bool PathingDoor::IsClosed()
+30003,0x14047d230,0x14048d1d0,2,bool PathingDoor::IsOpening()
+30004,0x14047d310,0x14048d2b0,2,bool PathingDoor::IsClosing()
+30005,0x14047d3f0,0x14048d390,2,void PathingDoor::GetLocation(BSPathingLocation* a_out)
+30006,0x14047d560,0x14048d500,2,void PathingDoor::GetTeleportLocation(BSPathingLocation* a_out)
+30007,0x14047d750,0x14048d6f0,2,void PathingDoor::GetRotationZ(float* a_out)
+30008,0x14047d830,0x14048d7d0,2,void PathingDoor::GetTeleportRotationZ(float* a_out)
+30009,0x14047d9a0,0x14048d940,2,float PathingDoor::GetAutoLoadFadeDistance()
+30011,0x14047dca0,0x14048dc40,2,bool PathingDoor::IsSameDoor(PathingDoor** a_other)
+30012,0x14047dd20,0x14048dcc0,2,"void PathingDoor::GetDebugText(char* a_buf, std::int32_t a_size)"
 30030,0x14047e6d0,0x14048e670,4,"PathingLockData* PathingLockData::PathingLockData(const ObjectRefHandle& a_handle, bool a_flag)"
 30031,0x14047e7a0,0x14048e740,4,void PathingLockData::~PathingLockData()
 30035,0x14047e8f0,0x14048e890,2,bool PathingLockData::CanPassDoor(BSPathingDoor** a_door)
