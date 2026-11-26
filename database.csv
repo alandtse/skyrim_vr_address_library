@@ -3886,6 +3886,7 @@
 49022,0x14082d030,0x140858380,3,"void CombatPath::SetAccelerationDecelerationMult(float accelerationMult, float DecelerationMult)"
 49074,0x14082f990,0x14085ace0,2,"bool CombatPath::SolveAndStoreRequest(void* a_key, void* a_request)"
 49123,0x1408327d0,0x14085dad0,2,"bool CombatPathBuilderStandard::TryDirectPath(const NiPoint3* a_start, const NiPoint3* a_end)"
+49124,0x1408329a0,0x14085dca0,2,"bool CombatPathBuilderStandard::IsDirectRayLandingNear(const void* a_start, const NiPoint3* a_end, void* a_arg)"
 49125,0x140832ab0,0x14085ddb0,2,bool CombatPathBuilder::SmoothPath()
 49126,0x140832f00,0x14085e200,2,"bool CombatPathBuilderStandard::AppendNavmeshInfoPathToSolution(const void* a_infoPath, const BSPathingLocation* a_goal)"
 49128,0x1408332a0,0x14085e5a0,2,void CombatPathBuilderStandard::BuildStep()
@@ -6093,14 +6094,26 @@
 90432,0x141120130,0x14117d000,2,"void* MovementMessageAutoRegister::RegisterPathFailed(void* a_registrar, std::int32_t a_typeId)"
 90474,0x141120d80,0x14117dc50,2,"BSPathSmootherPOVSearch* BSPathSmootherPOVSearch::ctor(void* a_arg2, void* a_arg3, void* a_arg4, void* a_arg5, void* a_arg6, void* a_arg7, void* a_arg8)"
 90476,0x1411210d0,0x14117dfa0,2,"bool BSPathSmootherPOVSearch::Run(const void* a_start, const void* a_goal)"
+90480,0x141121720,0x14117e5f0,2,void BSPathSmootherPOVSearch::ReleaseSearchState()
+90481,0x141121830,0x14117e700,2,void BSPathSmootherPOVSearch::CreateStartNode()
+90482,0x141121930,0x14117e800,2,void BSPathSmootherPOVSearch::BuildPortalVertexNodes()
+90484,0x1411226d0,0x14117f5a0,2,void BSPathSmootherPOVSearch::AddRequestObstacleCircleNodes()
+90485,0x141122cf0,0x14117fbc0,2,void BSPathSmootherPOVSearch::AddNavmeshObstacleCircleNodes()
+90486,0x141123090,0x14117ff60,2,void BSPathSmootherPOVSearch::CreateGoalNode()
+90487,0x141123190,0x141180060,2,void BSPathSmootherPOVSearch::AddStartGoalEdgeLinkNodes()
+90488,0x141123ed0,0x141180da0,2,"void BSPathSmootherPOVSearch::EmitSmoothedPath(void* a_edgeRefs, void* a_segments)"
+90489,0x141124050,0x141180f20,2,bool BSPathSmootherPOVSearch::CollectEdgesInsideObstacleCircles()
 90490,0x1411243a0,0x141181270,2,"bool BSPathSmootherPOVSearch::TryAddArcLink(const void* a_node, void* a_arg3, void* a_arg4)"
 90491,0x141124ac0,0x141181990,2,"void BSPathSmootherPOVSearch::ExpandListEntries(BSPathSmootherPOVList* a_list, std::uint32_t a_startIndex, void* a_arg4, void* a_arg5, std::uint32_t a_maxFailures)"
+90492,0x141124b60,0x141181a30,2,"bool BSPathSmootherPOVSearch::EvaluateSegmentObstaclePenalty(const std::int32_t* a_nodeA, const std::int32_t* a_nodeB, const NiPoint3* a_p0, const NiPoint3* a_p1, float* a_outPenalty)"
 90501,0x141125a30,0x141182900,2,"std::int32_t BSPathSmootherPOVSearch::AddOrUpdateOpenNode(char* a_node, float a_cost, void* a_pool, char** a_outNode)"
 90502,0x141125b70,0x141182a40,2,"void BSPathSmootherPOVSearch::ExtractPathFromGoalNode(void* a_goalNode, void* a_outEdges, void* a_outPoints)"
 90525,0x141126800,0x1411836d0,2,"void OpenListBucketInsert(float* a_openList, float* a_node)"
 90537,0x141126b60,0x141183a30,2,void* BSPathSmootherPOVSearch::RunAStarLoop()
 90556,0x141128380,0x141185250,2,BSPathingSearchRayCast* BSPathingSearchRayCast::ctor()
 90558,0x141128460,0x141185330,2,"std::uint32_t BSPathingSearchRayCast::Initialize(const void* a_request, std::uint32_t* a_outValue)"
+90559,0x141128940,0x141185810,2,void BSPathingSearchRayCast::PrepareHavokWorldQuery()
+90561,0x141128ba0,0x141185a70,2,bool BSPathingSearchRayCast::CreateHavokRayQuery()
 90563,0x141128e30,0x141185d00,2,"bool BSPathingSearchRayCast::CastSegmentInSteps(const NiPoint3* a_start, const NiPoint3* a_end)"
 90566,0x1411294f0,0x1411863c0,2,void BSPathingSearchRayCast::ResetResult()
 90581,0x141129ba0,0x141186a70,2,"void PushBackEdgeLocationWithHeight(void* a_array, const BSNavmeshEdgeLocation* a_location)"
