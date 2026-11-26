@@ -5245,10 +5245,15 @@
 88130,0x1410b5210,0x141111e40,2,"bool Pathing::ResolvePathNodeNavInfo(PathFitContext* a_ctx, PathNodeNavInfoArray* a_out)"
 88139,0x1410b5a20,0x141112650,2,bool Pathing::FitPathTangentsImpl(PathFitContext* a_ctx)
 88140,0x1410b5d30,0x141112960,2,bool Pathing::FitPathTangentsByHandleImpl(PathFitContext* a_ctx)
+88154,0x1410b6d20,0x141113950,2,"bool BSPrecomputedNavmeshInfoSearch::Run(void* a_unk228, NiPoint3* a_start, void* a_startContext, NiPoint3* a_goal, void* a_goalDoor, void* a_outPath, std::uint32_t a_flags, std::uint8_t a_flag235)"
+88160,0x1410b7050,0x141113c80,2,"std::int32_t BSPrecomputedNavmeshInfoSearch::FindOrAddStartNode(void* a_info, float a_g, void* a_pools, void** a_outNode)"
+88161,0x1410b71c0,0x141113df0,2,"std::int32_t BSPrecomputedNavmeshInfoSearch::FindOrAddNode(void* a_info, float a_g, void* a_pools, void** a_outNode)"
 88162,0x1410b7310,0x141113f40,2,"void BSPrecomputedNavmeshInfoSearch::ReconstructPath(void* a_goalNode, void* a_outA, void* a_outB)"
 88163,0x1410b7590,0x1411141c0,2,"bool BSPrecomputedNavmeshInfoSearch::RunAndReconstructPath(void* a_outA, void* a_outB, bool a_usePartialPath)"
+88176,0x1410b7cc0,0x1411148f0,2,"void* BSPrecomputedNavmeshInfoSearch::AddStartNode(void* a_info, void* a_door, float a_g, float a_h)"
 88177,0x1410b7d50,0x141114980,2,void BSPrecomputedNavmeshInfoSearch::AddStartNodeIfNoBest()
 88181,0x1410b7e20,0x141114a50,2,void* BSPrecomputedNavmeshInfoSearch::RunToCompletion()
+88182,0x1410b7e90,0x141114ac0,2,void BSPrecomputedNavmeshInfoSearch::PopBestOpenNode()
 88183,0x1410b7f00,0x141114b30,2,bool BSPrecomputedNavmeshInfoSearch::Step()
 88193,0x1410b88f0,0x141115520,2,void MovementAgentActorState::RegisterWithController(IMovementControllerRegisterInterface& a_controller)
 88194,0x1410b8940,0x141115570,2,void MovementAgentActorState::UnregisterWithController()
@@ -5488,6 +5493,16 @@
 89007,0x1410e3ec0,0x141140c00,2,std::uint32_t PathingSolutionEntryArray::PushBack(PathingSolutionEntry* a_entry)
 89018,0x1410e42e0,0x141141020,2,"void PathingSolutionEntryArray::ReleaseRange(std::uint32_t a_index, std::uint32_t a_count)"
 89030,0x1410e4750,0x141141490,2,"void PathingSolutionEntryArray::RemoveElements(std::uint32_t a_index, std::uint32_t a_count)"
+89038,0x1410e4d80,0x141141ac0,2,"float DistancePointToSegment3D(NiPoint3* a_point, NiPoint3* a_a, NiPoint3* a_b, bool* a_outOnInterior, NiPoint3* a_outClosest)"
+89052,0x1410e6890,0x1411435d0,2,"void ClosestPointsBetweenLines3D(NiPoint3* a_a0, NiPoint3* a_a1, NiPoint3* a_b0, NiPoint3* a_b1, NiPoint3* a_outPointA, NiPoint3* a_outPointB)"
+89053,0x1410e6af0,0x141143830,2,"bool IntersectSegments2D(NiPoint2* a_a0, NiPoint2* a_a1, NiPoint2* a_b0, NiPoint2* a_b1, NiPoint2* a_out)"
+89056,0x1410e6ec0,0x141143c00,2,"void ClipSegmentToLineCrossing2D(NiPoint2* a_a, NiPoint2* a_b, NiPoint2* a_c, NiPoint2* a_d, NiPoint2* a_out)"
+89059,0x1410e72e0,0x141144020,2,"bool GetSegmentLineIntersectParam2D(NiPoint2* a_p0, NiPoint2* a_p1, NiPoint2* a_q0, NiPoint2* a_q1, float* a_outT)"
+89060,0x1410e7370,0x1411440b0,2,"bool IntersectSegments2DInterpZ(NiPoint3* a_a0, NiPoint3* a_a1, NiPoint3* a_b0, NiPoint3* a_b1, NiPoint3* a_out)"
+89061,0x1410e7500,0x141144240,2,"bool IntersectSegmentsStrict2DInterpZ(NiPoint3* a_a0, NiPoint3* a_a1, NiPoint3* a_b0, NiPoint3* a_b1, NiPoint3* a_out)"
+89062,0x1410e76c0,0x141144400,2,"void ClipSegmentToLineCrossing3D(NiPoint3* a_a, NiPoint3* a_b, NiPoint3* a_c, NiPoint3* a_d, NiPoint3* a_out)"
+89063,0x1410e78e0,0x141144620,2,"void ClosestPointsBetweenSegments3D(NiPoint3* a_a0, NiPoint3* a_a1, NiPoint3* a_b0, NiPoint3* a_b1, float* a_outS, NiPoint3* a_outPointA, float* a_outT, NiPoint3* a_outPointB)"
+89064,0x1410e7bc0,0x141144900,2,"bool IntersectSegments2DWithTolerance(NiPoint3* a_a0, NiPoint3* a_a1, NiPoint3* a_b0, NiPoint3* a_b1, float a_epsilon, NiPoint3* a_out, bool* a_outNearA, bool* a_outNearB)"
 89076,0x1410e8f70,0x141145cb0,2,"void GetRandomPointInTriangle(const NiPoint3* a_v0, const NiPoint3* a_v1, const NiPoint3* a_v2, NiPoint3* a_out)"
 89079,0x1410e92d0,0x141146010,2,"bool MovementUtils::IntersectRayWithCircle(NiPoint3* a_origin, NiPoint3* a_direction, NiPoint3* a_offset, NiPoint3* a_center, float a_radius, NiPoint3* a_out)"
 89102,0x1410ea4c0,0x141147200,2,void NullMovementSelectIdleResult::Reset()
