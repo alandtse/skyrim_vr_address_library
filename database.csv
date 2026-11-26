@@ -1960,6 +1960,11 @@
 30658,0x140495fa0,0x1404a5f40,2,"bool PathBuilderFlee::Build(BSPathingRequest** a_request, BSPathingSolution** a_solution)"
 30664,0x140496d90,0x1404a6d30,2,float NiPoint3::Unitize()
 30665,0x140496e00,0x1404a6da0,2,"bool PathBuilderFlyPath::Build(BSTSmartPointer<BSPathingRequest>* a_request, BSTSmartPointer<BSPathingSolution>* a_solution)"
+30666,0x140497330,0x1404a72d0,2,"bool PathBuilderFlyActionPath::Build(BSTSmartPointer<BSPathingRequest>* a_request, BSTSmartPointer<BSPathingSolution>* a_solution)"
+30667,0x140498b20,0x1404a8ac0,2,"bool PathBuilderFlyHoverPath::Build(BSTSmartPointer<BSPathingRequest>* a_request, BSTSmartPointer<BSPathingSolution>* a_solution)"
+30668,0x140499660,0x1404a9600,2,"bool PathBuilderFlyOrbitPath::Build(BSTSmartPointer<BSPathingRequest>* a_request, BSTSmartPointer<BSPathingSolution>* a_solution)"
+30669,0x14049a770,0x1404aa710,2,"bool PathBuilderFlyLandPath::Build(BSTSmartPointer<BSPathingRequest>* a_request, BSTSmartPointer<BSPathingSolution>* a_solution)"
+30670,0x14049b270,0x1404ab210,2,"bool PathBuilderFlyTakeOffPath::Build(BSTSmartPointer<BSPathingRequest>* a_request, BSTSmartPointer<BSPathingSolution>* a_solution)"
 30672,0x14049ba80,0x1404aba20,2,"void PathBuilderFlight::GenerateTurnLimitedFlightPoints(BSPathingRequest** a_request, BSPathingSolution** a_solution, float a_flyHeight, const float* a_eulerAngles)"
 30676,0x14049d2a0,0x1404ad240,2,"void PathBuilderFlight::SmoothFlightPointsZ(BSPathingRequest** a_request, BSPathingSolution* a_solution)"
 30677,0x14049d540,0x1404ad4e0,2,"void PathBuilderFlight::ExtendFlightPathEnd(BSPathingRequest** a_request, BSPathingSolution** a_solution, float a_dist)"
