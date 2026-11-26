@@ -1851,6 +1851,11 @@
 29880,0x140477800,0x140487790,2,"std::uint32_t PushBackRecentPathingCell(BSTArray<BSTTuple<std::uint64_t, BSTSmartPointer<PathingCell>>>& a_array, std::uint32_t a_time, BSTSmartPointer<PathingCell>& a_cell)"
 29887,0x140477e30,0x140487dc0,2,"bool BSPathingCellManager::FindPotentialNavmeshesForLocationImpl_Scrap(BSPathingLocation* a_location, float a_radius, BSScrapArray<BSTSmartPointer<BSNavmesh>>& a_navMeshesOut, bool a_flag)"
 29888,0x140478510,0x1404884a0,2,"bool BSPathingCellManager::FindPotentialNavmeshesForLocationImpl_Heap(BSPathingLocation* a_location, float a_radius, BSTArray<BSTSmartPointer<BSNavmesh>>& a_navMeshesOut, bool a_flag)"
+29889,0x140478bf0,0x140488b80,2,bool NavMeshArray::AppendNavmeshInfos_Scrap(void** a_out)
+29890,0x140478d40,0x140488cd0,2,bool NavMeshArray::AppendNavmeshInfos_Heap(void** a_out)
+29891,0x140478e90,0x140488e20,2,bool NavMeshArray::AppendNavmeshes_Scrap(void** a_out)
+29892,0x140478fd0,0x140488f60,2,bool NavMeshArray::AppendNavmeshes_Heap(void** a_out)
+29893,0x140479110,0x1404890a0,2,bool NavMeshArray::InsertNavmeshesIntoSet(void** a_out)
 29894,0x140479270,0x140489200,2,"bool BSPathingCellManager::AddNavmeshAndConnectedRecursive_Scrap(BSNavmeshInfo* a_info, BSScrapArray<BSTSmartPointer<BSNavmesh>>& a_out)"
 29895,0x140479340,0x1404892d0,2,"bool BSPathingCellManager::AddNavmeshAndConnectedRecursive_Heap(BSNavmeshInfo* a_info, BSTArray<BSTSmartPointer<BSNavmesh>>& a_out)"
 29896,0x140479410,0x1404893a0,2,"bool BSPathingCellManager::AddNavmeshInfoAndConnectedRecursive_Scrap(BSNavmeshInfo* a_info, BSScrapArray<const BSNavmeshInfo*>& a_out)"
@@ -1859,6 +1864,11 @@
 29899,0x1404797b0,0x140489740,2,"void BSPathingCellManager::CollectNavmeshesInAABB_Heap(BSNavmeshInfo* a_start, const NiPoint3& a_min, const NiPoint3& a_max, BSTArray<BSTSmartPointer<BSNavmesh>>& a_out)"
 29900,0x1404799b0,0x140489940,2,"void BSPathingCellManager::CollectNavmeshInfosInAABB_Scrap(BSNavmeshInfo* a_start, const NiPoint3& a_min, const NiPoint3& a_max, BSScrapArray<const BSNavmeshInfo*>& a_out)"
 29901,0x140479bb0,0x140489b40,2,"void BSPathingCellManager::CollectNavmeshInfosInAABB_Heap(BSNavmeshInfo* a_start, const NiPoint3& a_min, const NiPoint3& a_max, BSTArray<const BSNavmeshInfo*>& a_out)"
+29902,0x140479db0,0x140489d40,2,bool BSPathingCellManager::CollectLoadedNavmeshInfos_Scrap(void* a_out)
+29903,0x140479eb0,0x140489e40,2,bool BSPathingCellManager::CollectLoadedNavmeshInfos_Heap(void* a_out)
+29904,0x140479fb0,0x140489f40,2,bool BSPathingCellManager::CollectLoadedNavmeshes_Scrap(void* a_out)
+29905,0x14047a0b0,0x14048a040,2,bool BSPathingCellManager::CollectLoadedNavmeshes_Heap(void* a_out)
+29906,0x14047a1b0,0x14048a140,2,bool BSPathingCellManager::CollectLoadedNavmeshesIntoSet(void* a_out)
 29922,0x14047abd0,0x14048ab70,2,"bool BSPathingCellManager::AddUniqueNavmeshFromInfo_Scrap(BSTScrapArray<BSNavmesh*>& a_out, BSNavmeshInfo* a_info)"
 29923,0x14047ace0,0x14048ac80,2,"bool BSPathingCellManager::AddUniqueNavmeshFromInfo_Heap(BSTArray<BSNavmesh*>& a_out, BSNavmeshInfo* a_info)"
 29924,0x14047adf0,0x14048ad90,2,"bool BSPathingCellManager::AddUniqueNavmeshInfo_Scrap(BSTScrapArray<BSNavmeshInfo*>& a_out, BSNavmeshInfo* a_info)"
@@ -5362,6 +5372,7 @@
 88662,0x1410cd390,0x14112a0c0,2,bool BSNavmesh::ReadFromStream(PathingStreamMasterFileRead& a_stream)
 88674,0x1410cf350,0x14112c080,3,NiPoint3 BSNavmesh::GetNormal(std::uint16_t a_tri) const
 88680,0x1410cfe60,0x14112cb90,2,"std::uint16_t BSNavmesh::FindClosestTriangle(const NiPoint3& a_pos, void* a_unused, float& a_outDistSq)"
+88681,0x1410cffe0,0x14112cd10,2,"bool BSNavmesh::FindContainingOrNearestTriangleDefault(const NiPoint3& a_pos, std::uint16_t& a_outTriangle, bool& a_outContains)"
 88682,0x1410d0010,0x14112cd40,2,"bool BSNavmesh::FindContainingOrNearestTriangle(const NiPoint3& a_pos, void* a_unused, std::uint16_t& a_outTriangle, bool& a_outContains)"
 88683,0x1410d0390,0x14112d0c0,2,"bool BSNavmesh::FindClosestBoundaryEdge(const NiPoint3& a_pos, float a_radius, std::uint16_t& a_outTriangle, std::int32_t& a_outEdge, bool a_flip)"
 88687,0x1410d0820,0x14112d550,2,"bool BSNavmesh::TestPointOverTriangle(std::uint16_t a_triangle, const NiPoint3& a_pos, void* a_unused, float& a_outDeltaZ)"
