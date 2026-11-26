@@ -5399,6 +5399,8 @@
 88668,0x1410cd9e0,0x14112a710,2,void BSNavmesh::FlipTriangle(std::uint16_t a_triangle)
 88669,0x1410cdae0,0x14112a810,2,"void BSNavmesh::ComputeBounds(float* a_outMin, float* a_outMax)"
 88674,0x1410cf350,0x14112c080,3,NiPoint3 BSNavmesh::GetNormal(std::uint16_t a_tri) const
+88675,0x1410cf490,0x14112c1c0,2,"float* BSNavmesh::GetTriangleCircumcenter(float* a_out, std::uint16_t a_triangle)"
+88676,0x1410cf630,0x14112c360,2,"void BSNavmesh::GetTriangleCircumcenter2D(std::uint16_t a_triangle, float* a_out)"
 88680,0x1410cfe60,0x14112cb90,2,"std::uint16_t BSNavmesh::FindClosestTriangle(const NiPoint3& a_pos, void* a_unused, float& a_outDistSq)"
 88681,0x1410cffe0,0x14112cd10,2,"bool BSNavmesh::FindContainingOrNearestTriangleDefault(const NiPoint3& a_pos, std::uint16_t& a_outTriangle, bool& a_outContains)"
 88682,0x1410d0010,0x14112cd40,2,"bool BSNavmesh::FindContainingOrNearestTriangle(const NiPoint3& a_pos, void* a_unused, std::uint16_t& a_outTriangle, bool& a_outContains)"
@@ -5409,6 +5411,10 @@
 88694,0x1410d14a0,0x14112e1d0,2,"NiPoint3* BSNavmesh::OffsetPointFromEdges(NiPoint3* a_out, const NiPoint3& a_pos, float a_margin)"
 88699,0x1410d1f00,0x14112ec30,2,"std::int32_t BSNavmesh::FindCrossedEdge2D(std::uint16_t a_triangle, std::int32_t a_ignoreEdge, const float* a_p0, const float* a_p1, float* a_out)"
 88700,0x1410d20c0,0x14112edf0,2,"std::int32_t BSNavmesh::FindCrossedEdge3D(std::uint16_t a_triangle, std::int32_t a_ignoreEdge, const float* a_p0, const float* a_p1, const float* a_p2, char* a_outFlag, void* a_outData)"
+88702,0x1410d2400,0x14112f130,2,"std::uint32_t BSNavmesh::FindCrossedEdgeInline2D(std::uint16_t a_triangle, std::int32_t a_ignoreEdge, const float* a_p0, const float* a_p1)"
+88705,0x1410d2d40,0x14112fa70,2,"void BSNavmesh::GetEdgeLine2D(std::uint16_t a_triangle, std::uint32_t a_edge, float* a_outA, float* a_outB)"
+88708,0x1410d2f60,0x14112fc90,2,"bool BSNavmesh::RemoveObstacleAt(std::uint32_t a_index, void* a_outEdges)"
+88709,0x1410d3370,0x1411300a0,2,void BSNavmesh::RemoveAllObstacles()
 88711,0x1410d34b0,0x1411301e0,2,void BSNavmesh::AddObstacleUndoData(void* a_data)
 88712,0x1410d3510,0x141130240,2,void BSNavmesh::RemoveObstacleUndoDataAt(std::uint32_t a_index)
 88713,0x1410d3580,0x1411302b0,2,std::uint32_t BSNavmesh::FindObstacleUndoDataIndex(const std::uint64_t* a_key)
