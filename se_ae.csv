@@ -4432,7 +4432,6 @@ sseid,aeid,confidence,name
 30121,30932,1,
 30122,30933,1,
 30123,30934,1,TeleportDoorSearch::Func2_*
-30127,30939,1,
 30137,30947,1,
 30138,30948,1,
 30139,30949,1,AStarSearch_ParentSpaceNode_TeleportLink_1_::Func0_*

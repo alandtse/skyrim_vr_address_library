@@ -1916,9 +1916,12 @@
 30101,0x140480800,0x1404907a0,2,std::uint16_t PathingStreamMasterFileRead::GetFormVersion()
 30121,0x140480fd0,0x140490f70,2,"bool TeleportDoorSearch::Run(BSPathingLocation* a_start, BSPathingLocation* a_goal, PathingDoorPathResult* a_pathOut, std::int32_t a_goalType, float a_maxDistance, BSPathingLockData* a_lockData, std::int32_t a_lockedDoorMode)"
 30122,0x140481220,0x1404911c0,2,"bool TeleportDoorSearch::ExpandNode(AStarNode* a_node, BSTSmallArray<AStarNode*,3>* a_out)"
-30127,0x140481860,0x140491800,2,"std::int32_t TeleportDoorSearch::FindOrAddNode(const std::uint64_t* a_key, float a_cost, void* a_init, AStarNode** a_nodeOut)"
+30126,0x140481730,0x1404916d0,2,"std::int32_t TeleportDoorSearch::FindOrAddStartNode(std::uint64_t a_key, float a_g, void* a_poolRef, AStarNode** a_outNode)"
+30127,0x140481860,0x140491800,2,"void* TeleportDoorSearch::FindOrAddNode(std::uint64_t a_key, float a_g, void* a_poolRef, AStarNode** a_outNode)"
 30143,0x140482350,0x1404922f0,2,void AStarOpenList::InsertNode(AStarNode* a_node)
+30144,0x1404823d0,0x140492370,2,"AStarNode* TeleportDoorSearch::AddStartNode(std::uint64_t a_key, bool* a_isWorldspace, float a_g, float a_h)"
 30145,0x140482460,0x140492400,2,void TeleportDoorSearch::AddStartNodeIfNoBest()
+30146,0x140482490,0x140492430,2,"void TeleportDoorSearch::AddStartNodeIfNoBest(std::uint64_t a_key, bool* a_isWorldspace, float a_g, float a_h)"
 30148,0x140482510,0x1404924b0,2,AStarNode* TeleportDoorSearch::RunToCompletion()
 30150,0x1404825f0,0x140492590,2,bool TeleportDoorSearch::Step()
 30162,0x140483000,0x140492fa0,2,void PathingDoorPathResult::Clear()
@@ -5218,8 +5221,10 @@
 88014,0x1410a82d0,0x141104f00,2,std::uint8_t Pathing::ResolveOrSnapLocationToNavmesh(BSPathingLocation* a_location)
 88015,0x1410a8440,0x141105070,2,"bool Pathing::FindNearestBoundaryEdges(NiPoint3* a_point, std::uint32_t a_maxCount, void* a_navmeshes, float a_maxDistance, void* a_out)"
 88023,0x1410a9a20,0x141106650,2,"bool Pathing::RayCast(BSPathingLocation* a_start, NiPoint3* a_end, BSPathingLocation* a_outHit, void* a_options)"
+88027,0x1410aa210,0x141106e40,2,"bool Pathing::UpdateLOSGridMap(BSPathingLOSGridMap** a_losMap, BSTArray<BSPathingLocation>* a_viewers, void* a_headings)"
 88035,0x1410abc50,0x141108880,2,"NiPoint3* Pathing::ComputeStartTangent(NiPoint3* a_out, float a_heading, BSPathingNode* a_node, BSPathingNode* a_nextNode, float a_radius)"
 88036,0x1410ac620,0x141109250,2,"NiPoint3* Pathing::ComputeEndTangent(NiPoint3* a_out, float a_heading, BSPathingNode* a_node, float a_radius)"
+88039,0x1410accf0,0x141109920,2,"bool Pathing::BuildStaticPath(BSTArray<BSPathingLocation>* a_locations, BSPathingSolution** a_outSolution)"
 88040,0x1410acf40,0x141109b70,2,"bool Pathing::CreateRequestFromSolution(const BSTSmartPointer<BSPathingSolution>& a_solution, BSTSmartPointer<BSPathingRequest>& a_out)"
 88041,0x1410ad0b0,0x141109ce0,2,"void Pathing::ApplyStartTangent(void* a_request, void* a_pathState)"
 88042,0x1410ad180,0x141109db0,2,"void Pathing::ApplyEndTangent(void* a_request, void* a_pathState)"
@@ -5418,11 +5423,11 @@
 88646,0x1410cc730,0x141129460,2,"void BSNavmesh::GetTriangleVertices(std::uint16_t a_triangle, NiPoint3** a_outV0, NiPoint3** a_outV1, NiPoint3** a_outV2)"
 88647,0x1410cc7f0,0x141129520,2,"bool BSNavmesh::GetEdgeNeighborTriangleRef(std::uint16_t a_triangle, std::uint32_t a_edge, BSNavmesh** a_outNavmesh, std::uint16_t* a_outTriangle)"
 88648,0x1410cc8c0,0x1411295f0,2,"bool BSNavmesh::GetEdgeNeighborTriangle(std::uint16_t a_triangle, std::uint32_t a_edge, BSNavmesh** a_outNavmesh, std::uint16_t* a_outTriangle)"
-88651,0x1410ccbc0,0x1411298f0,2,"void GetEdgeNeighborTriangleForHandle(void* a_handle, void* a_out)"
+88651,0x1410ccbc0,0x1411298f0,2,"void GetEdgeNeighborTriangleForHandle(BSNavmeshTriangleEdgeRef* a_edge, BSNavmeshTriangleEdgeRef* a_outNeighbor)"
 88652,0x1410ccbf0,0x141129920,2,"bool BSNavmesh::GetEdgeNeighborRef(std::uint16_t a_triangle, std::uint32_t a_edge, BSNavmesh** a_outNavmesh, std::uint16_t* a_outTriangle, std::uint32_t* a_outEdge)"
 88653,0x1410cccd0,0x141129a00,2,"bool BSNavmesh::GetEdgeNeighbor(std::uint16_t a_triangle, std::uint32_t a_edge, BSNavmesh** a_outNavmesh, std::uint16_t* a_outTriangle, std::uint32_t* a_outEdge)"
-88654,0x1410ccf20,0x141129c50,2,"void GetEdgeNeighborForNavmeshInfoHandle(void* a_handle, void* a_out)"
-88655,0x1410cd010,0x141129d40,2,"void GetEdgeNeighborForHandle(void* a_handle, void* a_out)"
+88654,0x1410ccf20,0x141129c50,2,"void GetEdgeNeighborForNavmeshInfoHandle(NavmeshEdgeRef* a_edge, NavmeshEdgeRef* a_outNeighbor)"
+88655,0x1410cd010,0x141129d40,2,"void GetEdgeNeighborForHandle(BSNavmeshTriangleEdgeRef* a_edge, BSNavmeshTriangleEdgeRef* a_outNeighbor)"
 88656,0x1410cd0a0,0x141129dd0,2,void* BSNavmesh::FindDoorPortalForTriangle(std::uint16_t a_triangle)
 88657,0x1410cd0f0,0x141129e20,2,BSNavmeshTriangleDoorPortal* BSNavmesh::GetDoorPortalAt(std::uint16_t a_index)
 88660,0x1410cd1d0,0x141129f00,2,std::uint32_t BSNavmesh::GetDoorPortalIndex(std::uint16_t a_triangle)
