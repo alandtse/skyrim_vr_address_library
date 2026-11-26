@@ -1822,6 +1822,9 @@
 29925,0x14047ae90,0x14048ae30,2,"bool BSPathingCellManager::AddUniqueNavmeshInfo_Heap(BSTArray<BSNavmeshInfo*>& a_out, BSNavmeshInfo* a_info)"
 30030,0x14047e6d0,0x14048e670,4,"PathingLockData* PathingLockData::PathingLockData(const ObjectRefHandle& a_handle, bool a_flag)"
 30031,0x14047e7a0,0x14048e740,4,void PathingLockData::~PathingLockData()
+30064,0x14047f740,0x14048f6e0,2,void BSPathingRequestFactoryManager::Insert()
+30078,0x14047fd00,0x14048fca0,2,void BSPathingRequestFactoryManager::Grow()
+30079,0x14047fdb0,0x14048fd50,2,void BSPathingRequestFactoryManager::InsertRehashed()
 30087,0x140480210,0x1404901b0,3,std::uint32_t PathingStreamMasterFileRead::GetType()
 30088,0x140480250,0x1404901f0,2,bool PathingStreamMasterFileRead::ReadBool(bool* a_out)
 30089,0x1404802a0,0x140490240,2,bool PathingStreamMasterFileRead::ReadInt8(std::int8_t* a_out)
@@ -1902,6 +1905,7 @@
 30359,0x14048e4f0,0x14049e490,2,void BSPathingLocationArray::Clear()
 30382,0x14048ec70,0x14049ec10,2,PathBuilderFactoryManager* GetPathBuilderFactoryManager()
 30385,0x14048edb0,0x14049ed50,2,void PathBuilderFactoryManager::Grow()
+30386,0x14048ee60,0x14049ee00,2,void PathBuilderFactoryManager::InsertRehashed()
 30394,0x14048f360,0x14049f300,2,std::uint32_t PathingRequestCover::GetStaticType()
 30400,0x14048f6b0,0x14049f650,2,void PathingCoverLocation::Read(BSPathingStreamRead* a_stream)
 30401,0x14048f7c0,0x14049f760,2,void PathingCoverLocation::Write(BSPathingStreamWrite* a_stream)
