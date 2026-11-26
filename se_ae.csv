@@ -2042,6 +2042,7 @@ sseid,aeid,confidence,name
 13165,13310,1,
 13171,13316,4,"RE::TES::SetCurrentCell(RE::TESObjectCELL* a_cell, const RE::NiPoint3& a_position, float a_unk4)"
 13172,13317,3,WashThatBloodOff::Rain::Manager::Leave_Interior
+13176,13321,1,
 13177,13322,3,RE::TES::Getcell
 13178,13323,1,TES::sub_*
 13179,13324,1,
@@ -2357,6 +2358,7 @@ sseid,aeid,confidence,name
 15045,15220,2,
 15156,15329,3,BGSDynamicPersistenceManager::DemoteReferences
 15159,15332,2,
+15356,15507,1,
 15492,15657,3,BipedAnim::SetRoot
 15495,15660,3,FEC::UpdateCollision::RemoveNodeFromScene
 15501,15678,3,FEC::ProcessObject::attachArmorAddon
@@ -2401,6 +2403,7 @@ sseid,aeid,confidence,name
 16185,16417,1,
 16188,16421,2,
 16204,16450,1,
+16240,16484,1,
 16293,16537,1,TESRegionDataObjects::ConstructSelf_*
 16296,16540,1,TESRegionDataObjects::IsLoaded_*
 16297,16541,1,TESRegionDataObjects::dtor_*
@@ -2870,6 +2873,7 @@ sseid,aeid,confidence,name
 18531,18989,1,
 18535,18994,1,
 18536,18995,3,RE::TESObjectCELL::GetbhkWorld
+18537,18996,1,
 18538,18997,1,TESObjectCELL::sub_*
 18539,18998,1,TESObjectCELL::sub_*
 18541,19000,1,
@@ -3133,7 +3137,9 @@ sseid,aeid,confidence,name
 20078,20521,1,
 20089,20536,3,TESWorldSpace::CollectMapMarkerHandles
 20095,20543,3,RE::TESWorldSpace::GetSkyCell
+20096,20544,1,
 20110,20559,3,TESWorldSpace::GetOffsetData
+20247,20683,1,
 20529,20968,3,RE::BGSMaterialType::GetMaterialType
 21400,21873,2,
 21434,21919,2,
@@ -3509,6 +3515,7 @@ sseid,aeid,confidence,name
 24011,24515,1,
 24012,24516,3,RE::TESFaction::SetFactionFightReaction
 24013,24518,1,TESFaction::SaveGame_*
+24022,24527,1,
 24023,24528,1,
 24024,24529,1,TESFaction::sub_*
 24025,24530,1,
@@ -3529,6 +3536,7 @@ sseid,aeid,confidence,name
 24076,24579,1,
 24079,24582,1,
 24081,24583,1,TESIdleForm::dtor_*
+24093,24591,1,
 24096,24594,1,
 24098,24596,1,
 24099,24597,1,
@@ -4664,6 +4672,7 @@ sseid,aeid,confidence,name
 31812,32582,3,
 31813,32583,3,
 31949,32703,3,
+32031,32784,1,
 32054,32808,1,
 32141,32885,3,RE::IAnimationGraphManagerHolder::SetGraphVariableBool_1404F06E0
 32142,32886,3,RE::IAnimationGraphManagerHolder::SetGraphVariableInt_1404F0700
@@ -4719,9 +4728,12 @@ sseid,aeid,confidence,name
 32976,33760,1,MenuEventHandler::ProcessThumbstick_*
 32978,33762,1,
 32986,33768,1,
+32991,418959,1,
 32999,33781,1,
 33000,33782,1,
 33002,33784,1,
+33017,442218,1,
+33018,33800,1,
 33019,418885,1,
 33080,33860,1,
 33092,33869,1,

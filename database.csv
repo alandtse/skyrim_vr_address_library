@@ -157,7 +157,7 @@
 13171,0x140153f80,0x1401649d0,4,"RE::TES::SetCurrentCell(RE::TESObjectCELL* a_cell, const RE::NiPoint3& a_position, float a_unk4)"
 13172,0x1401545f0,0x140165040,3,void TES::ResetCellGrid(TES* a_this)
 13174,0x140154db0,0x140165800,4,"TESObjectCELL* TES::GetLoadedCell(int a_x, int a_y)"
-13176,0x140154f00,0x140165950,2,"std::int32_t TES::GetCellGridDistance(TESObjectCELL* a_cell, const NiPoint3* a_pos)"
+13176,0x140154f00,0x140165950,2,"std::int32_t TES::GetCellDetailLevel(TESObjectCELL* a_cell, const NiPoint3* a_pos)"
 13177,0x140155090,0x140165ae0,3,TESObjectCELL* TES::GetCell(const NiPoint3& a_position)
 13183,0x140155570,0x140165fc0,4,FUN_140155570
 13188,0x140155a30,0x140166480,4,void TES::ClearResourceCaches()
@@ -218,6 +218,7 @@
 13657,0x1401713d0,0x140181b80,3,RE::TESDataHandler::LoadScripts
 13664,0x140171ff0,0x1401827a0,2,void TESDataHandler::UnregisterArchive(const BSFixedString& a_name)
 13671,0x1401726a0,0x140182df0,4,void TESDataHandler::InitAllFormItems()
+13681,0x140174180,0x1401848f0,2,"void QuickSort(void** a_arr, int(*a_cmp)(void*,void*), std::uint32_t a_lo, std::uint32_t a_hi)"
 13755,0x140176c80,0x140186bd0,4,"void FUN_140176c80 (IMemoryHeap__VFTable * param_1, IMemoryHeap__VFTable * * param_2, undefined * param_3, undefined8 param_4)"
 13777,0x1401774e0,0x1401873f0,3,void BSPointerHandleManager::FreeHandle(std::uint32_t* a_handle)
 13789,0x140177790,0x1401876a0,3,RE::Sky::GetSingleton
@@ -312,6 +313,7 @@
 15260,0x1401b9de0,0x1401c9f50,3,"bool BSResource::EntryDB::AllocArgs(void* a_pool, void** a_argsOut)"
 15274,0x1401ba000,0x1401ca170,3,"void BSResource::EntryDB::ProcessEntry(void* a_entryDB, void* a_entry)"
 15282,0x1401ba650,0x1401ca7c0,3,"bool BSResource::EntryDB::QueueEntry(void* a_entryDB, const char* a_name, void* a_entry, void** a_entryOut, int a_priority, void* a_args)"
+15356,0x1401becf0,0x1401cee60,2,"std::int32_t StringsFile::LoadStringTable(const BSFixedString& a_fileName, const char* a_ext)"
 15485,0x1401c5cc0,0x1401d5e30,4,char * GetGameVersion(void)
 15486,0x1401c5cd0,0x1401d5e40,4,void BIPOBJECT::Clear()
 15487,0x1401c5e60,0x1401d5fd0,4,void BIPOBJECT::Assign(BIPOBJECT* a_other)
@@ -418,6 +420,7 @@
 16202,0x1401fd350,0x14020eca0,4,void TESRegion::SetCurrentWeather(TESWeather* a_weather)
 16203,0x1401fd3d0,0x14020ed20,4,TESWeather* TESRegion::SelectWeather()
 16204,0x1401fd410,0x14020ed60,3,bool TESRegion::UsesWeather(TESWeather* a_weather)
+16240,0x1401fe230,0x14020fb80,2,TESRegionDataLandscape* TESRegionDataLandscape::ctor_from_region_data(TESRegionData* a_src)
 17034,0x14021a4b0,0x14022bdb0,3,TESFurniture::Activate_*
 17206,0x14021ecb0,0x1402305a0,4,NiAVObject* TESObjectLIGH::Clone3D(TESObjectREFR* a_ref)
 17208,0x14021efb0,0x1402308a0,4,"NiLight* TESObjectLIGH::GenDynamic(RE::TESObjectREFR* a_ref, RE::NiNode* a_node, char a_forceDynamic, char a_useLightRadius, char a_affectRefOnly)"
@@ -490,6 +493,7 @@
 18521,0x140264e50,0x140276420,3,NiNode* TESObjectCELL::GetCell3D()
 18523,0x140264f10,0x1402764e0,3,void TESObjectCELL::Unload()
 18536,0x1402654c0,0x140276a90,3,bhkWorld* TESObjectCELL::GetbhkWorld()
+18537,0x1402654e0,0x140276ab0,2,void TESObjectCELL::AddCellMoppToHavok()
 18540,0x1402657a0,0x140276d70,4,TESRegionList* TESObjectCELL::GetRegionList(bool a_createIfMissing)
 18543,0x140265990,0x140276f60,3,"bool TESObjectCELL::GetWaterHeight(const NiPoint3& a_pos, float& a_waterHeight)"
 18548,0x140265dd0,0x1402773a0,3,ImageSpaceBaseData* TESObjectCELL::GetTESImageSpace()
@@ -708,6 +712,7 @@
 20103,0x1402b6eb0,0x1402c8620,4,"bool TESWorldSpace::GetMaxHeightAt(const NiPoint3& xy, float& outHeight)"
 20109,0x1402b79b0,0x1402c9120,3,bool TESWorldSpace::IsPositionWithinBorders(const NiPoint3* a_position)
 20110,0x1402b7aa0,0x1402c9210,3,OFFSET_DATA* TESWorldSpace::GetOffsetData(TESFile* a_file)
+20247,0x1402bd3b0,0x1402ceb20,2,void NiFormArray::InitCameraPaths()
 20262,0x1402bdec0,0x1402cf630,3,"void BGSCameraShot::Play(TESObjectREFR* a_target, std::int32_t a_mode)"
 20263,0x1402be2d0,0x1402cfa40,3,bool BGSCameraShot::IsValid()
 20264,0x1402be320,0x1402cfa90,3,void BGSCameraShot::ReleaseNodes()
@@ -788,8 +793,10 @@
 23801,0x14034d8e0,0x14035d1a0,2,"bool BGSSceneActionPackage::TryStartPackage(void* a_context, TESPackage* a_package)"
 23802,0x14034da00,0x14035d2c0,2,"bool BGSSceneActionPackage::StartFirstValidPackage(void* a_packages, void* a_context)"
 24012,0x140355940,0x140365200,3,"void TESFaction::SetFactionFightReaction(TESFaction* a_faction, FIGHT_REACTION a_fightReaction)"
+24022,0x140355fa0,0x140365860,2,void TESDataHandler::InitFactionReactions()
 24065,0x1403580c0,0x140367980,4,TESIdleForm::sub_1403580C0
 24069,0x140358300,0x140367bc0,4,"bool TESIdleForm::CheckConditions(Actor* a_actor, TESObjectREFR* a_target, bool a_checkParentIdle) bool TESIdleForm::CheckConditions(Actor* a_actor, TESObjectREFR* a_target, bool a_checkParentIdle)"
+24093,0x140358e30,0x1403686f0,2,void TESIdleManager::InitIdleForms()
 24104,0x140359760,0x140369020,3,"TESIdleForm* SelectIdleForAction(void* a_idleManager, BGSActionData* a_action)"
 24128,0x14035b0c0,0x14036a980,2,void AnimationSystemUtils::ClearClipDataArray()
 24129,0x14035b130,0x14036a9f0,3,void ScrapArrayBSFixedString_Destroy(void* a_array)
@@ -2269,6 +2276,7 @@
 32991,0x140527860,0x1405212d0,2,void ModManager::InitContentDirectories()
 33016,0x14052b590,0x1405246d0,2,void ModManager::DeleteContentFromMenu(GFxFunctionHandler::Args* a_args)
 33017,0x14052b980,0x140524ab0,2,void ModManager::DeleteContentIfUnsubscribed(GFxValue* a_data)
+33018,0x14052bd10,0x140524e40,2,void ModManager::DeleteInstalledMod(const char* a_contentId)
 33019,0x14052bd40,0x140524e70,2,void ModManager::DeleteModFiles(const char* a_modFileName)
 33257,0x14053d370,0x1405400f0,4,AccumulatingValueModifierEffect::Allocate(AccumulatingValueModifierEffect* accumulatingValueModifierEffect
 33277,0x14053DEB0,0x140540C30,4,"ActiveEffect::Adjust(Skyrim::ActiveEffect* activeEffect, float effectiveness, bool requiresHostility)"
