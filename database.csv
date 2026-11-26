@@ -1,4 +1,4 @@
-id,sse,vr,status,name
+﻿id,sse,vr,status,name
 5115,0x14008a4d0,0x140089dc0,3,RegisterAssaultActorStoryEvent
 5116,0x14008a550,0x140089e40,3,RegisterKillActorStoryEvent
 5146,0x14008ad10,0x14008a600,3,RegisterPlayerAddItemStoryEvent
