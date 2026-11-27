@@ -1519,6 +1519,7 @@ sseid,aeid,confidence,name
 11046,11142,1,
 11047,11143,1,
 11048,11144,1,
+11114,11226,1,
 11127,11240,1,
 11128,11241,1,
 11131,11244,1,
@@ -1897,6 +1898,7 @@ sseid,aeid,confidence,name
 12359,12493,1,ExtraTresPassPackage::sub_*
 12360,12494,1,ExtraTresPassPackage::GetType_*
 12362,12496,1,
+12370,12504,1,
 12381,12515,1,
 12382,12516,1,ExtraReservedMarkers::sub_*
 12383,12517,1,ExtraReservedMarkers::GetType_*
@@ -1920,6 +1922,7 @@ sseid,aeid,confidence,name
 12406,12540,1,ExtraLinkedRef::GetType_*
 12407,12541,1,ExtraLinkedRefChildren::GetType_*
 12408,12542,1,TESObjectREFR::sub_*
+12414,12548,1,
 12419,12553,1,
 12422,12556,1,ExtraReflectedRefs::IsEqual_*
 12425,12559,1,
@@ -1976,8 +1979,11 @@ sseid,aeid,confidence,name
 12528,12662,1,
 12529,12663,1,ExtraAnimNoteReceiver::GetType_*
 12530,12664,1,ExtraPatrolRefData::sub_*
+12545,12679,1,
+12559,12693,1,
 12570,12704,1,
 12626,12768,3,RE::ExtraTextDisplayData::GetDisplayName
+12686,12828,1,
 12713,12853,1,
 12735,12875,1,
 12738,12878,1,ExtraAction::dtor_*
@@ -2784,6 +2790,7 @@ sseid,aeid,confidence,name
 17486,17888,1,
 17489,17891,1,
 17524,17925,1,
+17532,17934,1,
 17588,17991,1,TESObjectMISC::InitItemImpl_*
 17590,17993,1,BGSKeywordForm::GetDefaultKeyword_*
 17591,17994,1,TESObjectMISC::SaveGame_*
@@ -2814,6 +2821,7 @@ sseid,aeid,confidence,name
 17664,18070,1,
 17665,18071,1,TESObjectWEAP::sub_140232300
 17666,18072,1,TESObjectWEAP::InitializeData_140232540
+17667,18073,1,
 17668,18074,1,TESObjectWEAP::ReadFromFileStream_140232790
 17673,18080,1,
 17687,18096,1,TESObjectWEAP::sub_*
@@ -3214,6 +3222,7 @@ sseid,aeid,confidence,name
 19368,19795,1,
 19371,19798,1,TESObjectREFR::sub_*
 19373,19800,1,TESForm::sub_*
+19374,19801,1,
 19378,19805,1,TESObjectREFR::sub_*
 19379,19806,1,
 19380,19807,1,TESObjectREFR::sub_*
@@ -3318,6 +3327,7 @@ sseid,aeid,confidence,name
 20460,20903,1,
 20474,20917,1,
 20495,20938,1,
+20526,20965,1,
 20529,20968,3,RE::BGSMaterialType::GetMaterialType
 20592,21038,1,
 20593,21039,1,
@@ -3678,6 +3688,7 @@ sseid,aeid,confidence,name
 23652,24109,1,
 23656,24113,1,BGSScene::sub_*
 23657,24114,1,
+23660,24117,1,
 23663,24120,1,
 23664,24121,1,
 23665,24122,1,
@@ -5514,6 +5525,7 @@ sseid,aeid,confidence,name
 33602,34378,1,
 33606,34382,1,
 33607,34383,1,
+33610,34388,1,
 33617,34395,1,
 33628,34406,1,
 33631,34409,3,"bool MagicCaster::ProcessQuickRelease(MagicItem* a_spell, TESObjectREFR* a_target, TESBoundObject* a_source, bool a_loadCast)"
@@ -5985,6 +5997,7 @@ sseid,aeid,confidence,name
 36325,37315,1,
 36342,37332,1,
 36355,37346,1,
+36359,37350,1,
 36392,37383,3,RE::Actor::CalculateCurrentVendorFaction
 36407,37401,3,RE::Actor::EvaluatePackage
 36412,37406,1,
@@ -6009,6 +6022,7 @@ sseid,aeid,confidence,name
 36520,37520,1,
 36531,37531,1,
 36532,37532,3,RE::Actor::CanAttackActor
+36541,37542,1,
 36542,37543,1,
 36547,37548,1,
 36548,37549,1,
@@ -6030,6 +6044,7 @@ sseid,aeid,confidence,name
 36694,37703,1,
 36700,37710,1,
 36715,37725,3,bool MagicTarget::IsInvulnerable()
+36720,37732,1,
 36723,37735,3,RE::Actor::KillImmediate
 36738,37752,1,
 36739,37753,1,
@@ -6122,6 +6137,7 @@ sseid,aeid,confidence,name
 36981,38006,1,
 36985,38010,1,
 36993,38021,1,
+36994,38022,1,
 36995,38023,1,
 36996,38024,1,
 36997,38025,1,
@@ -6985,6 +7001,7 @@ sseid,aeid,confidence,name
 40297,41307,3,ProcessLists::UpdateHighActorMovement
 40299,41309,1,
 40301,41311,1,
+40317,41327,1,
 40330,41340,3,RE::ProcessLists::StopCombatAndAlarmOnActor
 40354,41367,3,ProcessLists::UpdateHighActors
 40376,41390,2,
@@ -7640,6 +7657,7 @@ sseid,aeid,confidence,name
 42309,43467,1,
 42310,43468,1,
 42411,43567,2,
+42420,43576,1,
 42492,43649,1,
 42502,43664,1,BSPassByTargetTriggerModifierInterface::Func0_*
 42505,43667,1,
@@ -9124,6 +9142,7 @@ sseid,aeid,confidence,name
 49858,50790,3,RE::PlayerCamera::ForceFirstPerson
 49863,50796,3,RE::PlayerCamera::ForceThirdPerson
 49876,50809,3,RE::PlayerCamera::ToggleFreeCameraMode
+49972,50908,1,
 49973,50909,1,ThirdPersonState::ReadFromStream_*
 49974,50910,1,ThirdPersonState::Reset_*
 49975,50911,1,ThirdPersonState::sub_*
@@ -9162,6 +9181,7 @@ sseid,aeid,confidence,name
 50121,51052,1,BookMenu::sub_*
 50122,51053,3,papyrus_extender::event::booksread::bookmenu
 50123,51054,1,BookMenu::sub_*
+50126,51057,1,
 50127,51058,1,BookMenu::sub_*
 50128,51059,1,BSTEventSink_BSAnimationGraphEvent_::Handle_*
 50130,51061,1,SimpleAnimationGraphManagerHolder::Func12_*
@@ -9170,6 +9190,7 @@ sseid,aeid,confidence,name
 50162,51089,1,
 50165,51094,1,
 50198,51127,1,
+50212,51141,1,
 50223,51152,1,
 50224,51153,1,
 50227,51156,1,
@@ -9283,6 +9304,7 @@ sseid,aeid,confidence,name
 50671,51566,1,
 50718,51612,4,RE::HUDMenu::ProcessMessage
 50720,51614,1,
+50741,51636,1,
 50749,51644,1,BSTEventSink_BSRemoteGamepadEvent_::Handle_*
 50750,51645,1,HUDObject::RegisterHUDComponent_*
 50751,51646,1,
@@ -9408,6 +9430,7 @@ sseid,aeid,confidence,name
 51530,52405,3,"void RaceSexMenu::ApplyMaskColorSliderValue(std::uint32_t a_value, std::uint32_t a_sliderIndex)"
 51531,52406,3,"void RaceSexMenu::ApplyFaceDetailsSliderValue(float a_value, std::uint32_t a_sliderIndex)"
 51777,52651,1,
+51787,52661,1,
 51834,52706,1,
 51909,52847,2,
 51970,52798,1,
@@ -10428,6 +10451,7 @@ sseid,aeid,confidence,name
 69330,70712,1,
 69331,70713,1,
 69349,70729,1,
+69357,70740,1,
 69360,70743,1,
 69391,70765,1,
 69393,70767,1,
@@ -11467,6 +11491,7 @@ sseid,aeid,confidence,name
 77173,79000,1,
 77223,79110,1,
 77258,79144,1,
+77259,79145,1,
 77261,79147,1,
 77313,79193,1,
 77314,79194,1,
@@ -11578,6 +11603,9 @@ sseid,aeid,confidence,name
 78576,80532,1,
 78579,80535,1,
 78599,80556,1,
+78613,80570,1,
+78614,80571,1,
+78615,80572,1,
 78808,80792,1,
 78809,80793,1,
 78811,80795,1,
