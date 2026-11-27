@@ -143,6 +143,7 @@
 12785,0x140142550,0x140152f40,4,"bool GetHandleValidatedSmartPointer (undefined8 * a_refHandle, undefined8 * a_out)"
 12840,0x1401443b0,0x140154da0,2,NiPoint3* ExtraTeleport::Data::GetPosition()
 12841,0x1401443c0,0x140154db0,2,NiPoint3* ExtraTeleport::Data::GetRotation()
+12863,0x140145300,0x140155d00,2,void AttachDistant3DTask::PostProcess()
 12910,0x140147bb0,0x1401585e0,3,SeasonsofSkyrim::FormSwap::model_loader_queue_ref
 13054,0x14014dc60,0x14015e690,3,RE::INISettingCollection::InsertSetting
 13113,0x14014f700,0x140160130,3,bool INISettingCollection::ReadAllSettings()
@@ -287,6 +288,9 @@
 14511,0x1401958f0,0x1401a5620,4,void TESForm::InitializeFormDataStructures()
 14514,0x140195c20,0x1401a5950,4,"uint32_t RemoteAt (undefined8 * a_this, undefined8 * param_2, uint32_t a_crc, int * a_formIdPtr, void * a_prevValueFunctor)"
 14515,0x140195ef0,0x1401a5c20,4,"bool FUN_140195ef0 (longlong param_1, undefined8 param_2, ulonglong param_3, uint32 * a_formID, TESForm * * param_5, undefined8 * param_6)"
+14530,0x140196530,0x1401a6260,2,void BSVMLoadTask::Finish()
+14534,0x1401965d0,0x1401a6300,2,void BSVMLoadTask::PostProcess()
+14536,0x140196740,0x1401a6470,2,void BSVMLoadTask::Run()
 14537,0x1401967e0,0x1401a6510,4,"ulonglong FUN_1401967e0 (longlong a_formmap, longlong param_2, uint param_3, undefined4 * param_4)"
 14546,0x140196D80,0x1401A6AB0,4,"void TESFullName__ReadFULLFromFileStream(RE::TESFullName* a_fullname, RE::TESFile* a_file)"
 14577,0x1401973c0,0x1401A70F0,3,"TESLeveledList::AddEntry(TESLeveledList *a1, std::uint16_t a2, std::int16_t a3, TESObjectMISC *a4, longlong a5)"
@@ -303,6 +307,7 @@
 15045,0x1401ae520,0x1401be3e0,2,void BGSDecalManager::UpdateSimpleDecals()
 15073,0x1401b02a0,0x1401c02b0,4,void hkpAllRayHitTempCollector::Reset()
 15118,0x1401b13f0,0x1401c1400,3,RE::BGSDecalManager::RemoveItem
+15149,0x1401b1fd0,0x1401c1fe0,2,void QueuedPromoteReferencesTask::Finish()
 15156,0x1401b2640,0x1401c2650,3,"void BGSDynamicPersistenceManager::DemoteReferences(BSTArray<BSPointerHandle<TESObjectREFR>>& a_handles, TESForm* a_owner)"
 15157,0x1401b2730,0x1401c2740,3,"bool BGSDynamicPersistenceManager::PromoteReference(TESObjectREFR* a_refr, TESForm* a_owner)"
 15158,0x1401b2910,0x1401c2920,3,"bool BGSDynamicPersistenceManager::DemoteReference(TESObjectREFR* a_refr, TESForm* a_owner, bool a_allowActors = false)"
@@ -323,6 +328,7 @@
 15282,0x1401ba650,0x1401ca7c0,3,"bool BSResource::EntryDB::QueueEntry(void* a_entryDB, const char* a_name, void* a_entry, void** a_entryOut, int a_priority, void* a_args)"
 15344,0x1401be140,0x1401ce2b0,2,"void StringsFile::AddEntries(std::uint32_t a_fileId, const std::uint32_t* a_pairs, std::uint32_t a_count)"
 15356,0x1401becf0,0x1401cee60,2,"std::int32_t StringsFile::LoadStringTable(const BSFixedString& a_fileName, const char* a_ext)"
+15431,0x1401c4070,0x1401d41e0,2,uint BGSSceneInfo::TextureUse::Accept(NiSourceTexture* a_texture)
 15485,0x1401c5cc0,0x1401d5e30,4,char * GetGameVersion(void)
 15486,0x1401c5cd0,0x1401d5e40,4,void BIPOBJECT::Clear()
 15487,0x1401c5e60,0x1401d5fd0,4,void BIPOBJECT::Assign(BIPOBJECT* a_other)
@@ -413,6 +419,7 @@
 15916,0x1401ed550,0x1401fe070,4,TESActionData* TESActionData::Ctor()
 15960,0x1401ee500,0x1401fefe0,2,BGSActionData* BGSActionData::Clone()
 15967,0x1401ee670,0x1401ff150,3,RE::BSPointerHandleManagerInterface::GetHandle
+15974,0x1401ee880,0x1401ff360,2,bool FindByEffectSettingFunctor::MatchCondition(Effect* a_effect)
 15980,0x1401ef330,0x1401ffe10,3,RE::Inventory::GetEventSource
 15991,0x1401efec0,0x1402009a0,4,bool GetWornMaskVisitor::Visit(InventoryEntryData* a_entryData)
 16021,0x1401f0de0,0x1402018c0,4,void* RE::BSIStream::DecompressLipData()
@@ -444,6 +451,7 @@
 16473,0x140208c80,0x14021a5d0,2,void BGSAddonNodeSoundHandleExtra::Dtor()
 16474,0x140208cc0,0x14021a610,2,static void BGSAddonNodeSoundHandleExtra::InitStaticName()
 16475,0x140208d40,0x14021a690,2,static void BGSAddonNodeSoundHandleExtra::ReleaseStaticName()
+16528,0x14020a030,0x14021b9a0,2,bool BGSArtObjectCloneTask::Process()
 17034,0x14021a4b0,0x14022bdb0,3,TESFurniture::Activate_*
 17206,0x14021ecb0,0x1402305a0,4,NiAVObject* TESObjectLIGH::Clone3D(TESObjectREFR* a_ref)
 17208,0x14021efb0,0x1402308a0,4,"NiLight* TESObjectLIGH::GenDynamic(RE::TESObjectREFR* a_ref, RE::NiNode* a_node, char a_forceDynamic, char a_useLightRadius, char a_affectRefOnly)"
@@ -461,6 +469,8 @@
 17539,0x14022e8d0,0x14023fc40,4,"void TESObjectDOOR::LinkRandomTeleportDoors (TESObjectREFR * a_door, TESObjectREFR * a_linkedDoor)"
 17689,0x140235070,0x1402463e0,4,"NiAVObject * TESObjectWEAP::GetFireNode (TESObjectWEAP * a_this, NiAVObject * a_root)"
 17693,0x140235240,0x1402465b0,3,RE::TESObjectWEAP::Fire_140235240
+17851,0x14023cd00,0x14024e3d0,2,void QueuedPromoteLargeReferencesTask::Finish()
+17865,0x14023d070,0x14024e740,2,void QueuedPromoteLargeReferencesTask::PostProcess()
 17912,0x14023eca0,0x140250370,3,bool LoadedReferenceMap::Insert(TESObjectREFR* a_ref)
 17913,0x14023eed0,0x1402505a0,3,bool LoadedReferenceMap::Remove(TESObjectREFR* a_ref)
 17919,0x14023f3c0,0x140250a90,3,void LoadedReferenceCollection::Create()
@@ -471,6 +481,7 @@
 17956,0x140242c50,0x140254320,3,void BGSLocation::IncrementLoadedCount()
 17957,0x140242d80,0x140254450,3,void BGSLocation::DecrementLoadedCount()
 17965,0x140243380,0x140254a50,3,BGSLocation::ClearedCheck
+18029,0x140245de0,0x1402574b0,2,void QueuedPromoteLocationReferencesTask::Finish()
 18046,0x1402463a0,0x140257a70,3,BSTEventSource<LocationCleared::Event>* LocationCleared::GetEventSource()
 18133,0x14024a0e0,0x14025b7c0,4,sub_14024A0E0
 18137,0x14024a480,0x14025bb60,4,ulonglong sub_14024A480 (CellLoaderTask * a_this)
@@ -661,6 +672,9 @@
 19418,0x14029b980,0x1402ad090,4,TESObjectREFR::GetHandle
 19423,0x14029bb90,0x1402ad2a0,2,"bool TESObjectREFR::Unk_A0(NiAVObject* a_node, float& a_angleX, float& a_angleZ, NiPoint3& a_pos)"
 19427,0x14029bcc0,0x1402ad3d0,2,"void TESObjectREFR::UnequipItem(std::uint64_t a_arg1, TESBoundObject* a_object, std::uint32_t a_count, ExtraDataList* a_extraList)"
+19434,0x14029c1f0,0x1402ad900,2,void CheckWithinMultiBoundTask::Run()
+19435,0x14029c2e0,0x1402ad9f0,2,void CheckWithinMultiBoundTask::Finish()
+19436,0x14029c300,0x1402ada10,2,void CheckWithinMultiBoundTask::PostProcess()
 19437,0x14029c440,0x1402adb50,2,void ProcessPendingMultiBoundRefs()
 19446,0x14029cb80,0x1402ae290,3,"ShaderReferenceEffect* TESObjectREFR::InstantiateHitShader(TESEffectShader* a_shader, float a_dur, TESObjectREFR* a_facingRef, bool a_faceTarget, bool a_attachToCamera, NiAVObject* a_attachNode, bool a_interfaceEffect)"
 19453,0x14029d2e0,0x1402ae9f0,4,BGSWaterCollisionManager::BGSWaterUpdateI * BGSWaterCollisionManager::BGSWaterUpdateI::ctor (BGSWaterCollisionManager::BGSWaterUpdateI * a_this)
@@ -763,6 +777,7 @@
 20463,0x1402c50b0,0x1402d6820,4,std::int32_t BGSListForm::GetIndexOf(TESForm* a_form)
 20470,0x1402c53d0,0x1402d6b40,3,RE::BGSListForm::AddForm
 20529,0x1402c73f0,0x1402d8b60,3,BGSMaterialType* BGSMaterialType::GetMaterialType(MATERIAL_ID a_materialID)
+20807,0x1402ced10,0x1402e0480,2,bool BGSSoundDescriptorForm::DoResolve(Resolution* a_resolution)
 20905,0x1402d19a0,0x1402e3110,4,BSShaderTextureSet * BGSTextureSet::ToShaderTextureSet (BGSTextureSet * a_textureSet)
 20936,0x1402d2550,0x1402e3cc0,3,ScriptCompiler::CompileExpression
 20978,0x1402d5420,0x1402e6b30,4,"bool SameRace(TESObjectREFR* a_this, TESObjectREFR* a_obj, void* unused, double& result)"
@@ -835,6 +850,7 @@
 23682,0x1403491b0,0x140358a70,2,"EmotionType BGSScene::GetActorEmotion(Actor* a_actor, std::uint32_t& a_emotionValue)"
 23801,0x14034d8e0,0x14035d1a0,2,"bool BGSSceneActionPackage::TryStartPackage(void* a_context, TESPackage* a_package)"
 23802,0x14034da00,0x14035d2c0,2,"bool BGSSceneActionPackage::StartFirstValidPackage(void* a_packages, void* a_context)"
+23940,0x140351b80,0x140361440,2,void Reset3DMobIterator::Operate(Actor* a_actor)
 24012,0x140355940,0x140365200,3,"void TESFaction::SetFactionFightReaction(TESFaction* a_faction, FIGHT_REACTION a_fightReaction)"
 24022,0x140355fa0,0x140365860,2,void TESDataHandler::InitFactionReactions()
 24027,0x140356480,0x140365d40,2,std::int32_t TESFaction::InitReactions()
@@ -927,7 +943,9 @@
 24564,0x14037ade0,0x14038a800,3,"BSTArray<TESTopic*>* TESQuest::GetTopicsOfSubtype(std::int32_t a_type, const void* a_key)"
 24647,0x14037f050,0x14038d9f0,3,Experience::
 24687,0x140380030,0x14038f890,4,void BSPointerHandleManager::ReleaseHandle(std::uint32_t& a_handle)
+24700,0x140380360,0x14038fbc0,2,void QueuedPromoteQuestTask::Finish()
 24719,0x140380be0,0x140390450,3,BSTEventSource<QuestStatus::Event>* QuestStatus::GetEventSource()
+24736,0x140381540,0x140390db0,2,void QueuedPromoteQuestTask::Run()
 24766,0x140382050,0x1403918c0,3,TESQuestStageItem* TESQuestStage::GetStageItem(std::uint8_t a_index)
 24778,0x140382720,0x140391F90,4,"void JournalMenuQuestDescriptionStrings (int64 a1, TESQuest *a2)"
 24815,0x140383c40,0x1403934b0,4,"RefHandle& TESQuestTarget::GetTargetReference(RefHandle& a_out, bool a_useExtraList, TESQuest* a_quest)"
@@ -939,8 +957,12 @@
 25155,0x140396b00,0x1403a6380,3,void BGSAcousticSpaceListener::ContactPointAddedCallback(hkpContactPointAddedEvent* a_event)
 25262,0x14039b080,0x1403aa900,4,"bool CellMopp::BuildLandCollision(CellMopp* a_mopp, const LandCollisionDesc* a_desc)"
 25266,0x14039b7e0,0x1403ab060,2,"void CellMopp::DebugDraw(bhkWorld* a_world, const NiPoint3& a_origin, ...)"
+25270,0x14039bb90,0x1403ab410,2,void CellMopp::HeightFieldWeldingTasklet::Process()
 25415,0x1403a0830,0x1403b03a0,4,void LoadedAreaBound::SetCurrentCell(RE::TESObjectCELL* a_cell)
 25416,0x1403a13d0,0x1403b0f40,4,void LoadedAreaBound::Clear()
+25449,0x1403a4180,0x1403b3cf0,2,void RagdollFurnitureListener::ContactPointCallback(hkpContactPointEvent* a_arg1)
+25450,0x1403a4280,0x1403b3df0,2,void RagdollFurnitureListener::EntityRemovedCallback(hkpEntity* a_entity)
+25451,0x1403a43a0,0x1403b3f10,2,void RagdollFurnitureListener::EntitySetMotionTypeCallback(hkpEntity* a_entity)
 25466,0x1403a4dd0,0x1403b4940,3,TESObjectREFR* TESHavokUtilities::FindCollidableRef(const hkpCollidable& a_linkedCollidable)
 25467,0x1403a4e50,0x1403b49c0,4,"float ScaleGameplayImpulseForce_1403a4e50 (float a_inputForce, bhkRigidBody * a_body, bool a_factorMass)"
 25468,0x1403a4f70,0x1403b4ae0,4,"void AddExplosionImpulse_1403a4f70 (NiAVObject * a_obj3D, hkVector4 * a_pos, float a_force, HitData * a_hitData)"
@@ -948,6 +970,9 @@
 25482,0x1403a6140,0x1403b5cb0,3,bhkCollisionObject* NiAVObject::GetCollisionObject()
 25483,0x1403a6170,0x1403b5ce0,4,"void PushTemporaryMass(bhkRigidBody* a_body, float a_mass)"
 25484,0x1403a61f0,0x1403b5d60,4,void PopTemporaryMass(bhkRigidBody* a_body)
+25513,0x1403a7ea0,0x1403b7a10,2,void TESTrapListener::Update(float a_delta)
+25523,0x1403a82b0,0x1403b7e20,2,bool TESTrapListener::ContactPointAddedCallback(hkpRootCdPoint* a_point)
+25524,0x1403a8390,0x1403b7f00,2,bool TESTrapListener::ContactPointRemovedCallback(hkpRootCdPoint* a_point)
 25591,0x1403aa4b0,0x1403BA0C0,3,"CrossHairPickData::Pick(CrossHairPickData *a1, bhkWorld *hkWorld, NiPoint3 *sourcePoint, NiPoint3 *sourceRotation)"
 25609,0x1403ac120,0x1403bbdf0,2,void Clouds::Init(NiNode* a_root)
 25620,0x1403ad1f0,0x1403bcec0,4,RE::Sky::Moon_UpdatePhase
@@ -1031,6 +1056,11 @@
 26009,0x1403c66a0,0x1403d5f20,4,RE::random
 26059,0x1403c8520,0x1403d7da0,2,static void BSFaceGenDB::DumpCache(NiBinaryStream* a_stream)
 26201,0x1403d0270,0x1403dfbd0,2,bool BSFaceGenKeyframe::SetTimer(float a_timer)
+26203,0x1403d0510,0x1403dfe70,2,"bool BSFaceGenKeyframeExclusive::Interpolate(BSFaceGenKeyframe* a_keyframe1, BSFaceGenKeyframe* a_keyframe2, float a_k)"
+26204,0x1403d0740,0x1403e00a0,2,void BSFaceGenKeyframeExclusive::Reset(bool a_initToZero)
+26205,0x1403d0790,0x1403e00f0,2,BSFaceGenKeyframe* BSFaceGenKeyframeExclusive::Clone()
+26206,0x1403d0890,0x1403e01f0,2,void BSFaceGenKeyframeExclusive::Copy(BSFaceGenKeyframe* a_keyframe)
+26207,0x1403d0920,0x1403e0280,2,bool BSFaceGenKeyframeExclusive::NotEqual(BSFaceGenKeyframe* a_keyframe)
 26210,0x1403d0a60,0x1403e03c0,2,"BSFaceGenKeyframeMultiple* BSFaceGenKeyframeMultiple::Ctor(BSFaceGenKeyframe::Type a_type, std::uint32_t a_count, const float* a_values)"
 26214,0x1403d0f00,0x1403e0860,2,bool BSFaceGenKeyframeMultiple::Unk_01(BSTArray<BSFaceGenKeyframe*>& a_arr)
 26215,0x1403d1010,0x1403e0970,2,"bool BSFaceGenKeyframeMultiple::Interpolate(BSFaceGenKeyframe* a_keyframe, float a_k, bool a_ignoreSmall, bool a_copyBig)"
@@ -1126,11 +1156,38 @@
 26620,0x1403e5570,0x1403f50c0,2,"bool GuardWarnSearch::Visit(std::uint32_t a_handle, void** a_knowledge)"
 26621,0x1403e5750,0x1403f52a0,2,bool GuardWarnSearch::IsTargetRef(TESObjectREFR* a_ref)
 26633,0x1403e5ac0,0x1403f5610,2,bool BGSAIWorldLocation::IsInSameSpace(TESObjectREFR* a_ref)
+26645,0x1403e6270,0x1403f5dc0,2,float BGSAIWorldLocationRefRadius::GetFacing()
+26647,0x1403e6360,0x1403f5eb0,2,TESObjectCELL* BGSAIWorldLocationRefRadius::GetCell()
+26648,0x1403e63d0,0x1403f5f20,2,TESWorldSpace* BGSAIWorldLocationRefRadius::GetWorldSpace()
+26650,0x1403e64e0,0x1403f6030,2,bool BGSAIWorldLocationRefRadius::HasFacing()
+26654,0x1403e6670,0x1403f61c0,2,bool BGSAIWorldLocationRefRadius::IsValid()
+26656,0x1403e6700,0x1403f6250,2,void BGSAIWorldLocationRefRadius::SaveGame(BGSSaveGameBuffer* a_buf)
+26657,0x1403e67f0,0x1403f6340,2,void BGSAIWorldLocationRefRadius::LoadGame(BGSLoadGameBuffer* a_buf)
 26674,0x1403e6d90,0x1403f68e0,3,"BGSAIWorldLocationPointRadius* BGSAIWorldLocationPointRadius::Create(NiPoint3* a_position, TESObjectCELL* a_cell, TESWorldSpace* a_worldSpace, float a_radius, float a_facing)"
+26676,0x1403e6f20,0x1403f6a70,2,void BGSAIWorldLocationPointRadius::SaveGame(BGSSaveGameBuffer* a_buf)
+26677,0x1403e6ff0,0x1403f6b40,2,void BGSAIWorldLocationPointRadius::LoadGame(BGSLoadGameBuffer* a_buf)
+26682,0x1403e7220,0x1403f6d70,2,bool BGSAIWorldLocationInteriorCell::IsActorAtLocation(TESObjectREFR* a_ref)
+26686,0x1403e72a0,0x1403f6df0,2,void BGSAIWorldLocationInteriorCell::SaveGame(BGSSaveGameBuffer* a_buf)
+26687,0x1403e72f0,0x1403f6e40,2,void BGSAIWorldLocationInteriorCell::LoadGame(BGSLoadGameBuffer* a_buf)
 26711,0x1403e7700,0x1403f7250,3,GetPackageDataLocationMap
 26718,0x1403e7c20,0x1403f7770,3,BGSAttackData* BGSAttackData::Ctor()
 26753,0x1403e9ae0,0x1403f9630,3,void* BGSPackageDataList::GetByUID(std::uint8_t a_uid)
+26806,0x1403eb570,0x1403fb0c0,2,void BGSPackageDataFloat::LoadBuffer(BGSLoadFormBuffer* a_buf)
+26810,0x1403eb5f0,0x1403fb140,2,void BGSPackageDataInt::LoadBuffer(BGSLoadFormBuffer* a_buf)
+26813,0x1403eb680,0x1403fb1d0,2,IAIWorldLocation* BGSPackageDataRefOLD::AllocateLocation(AIWorldLocationContext* a_context)
+26849,0x1403ebf80,0x1403fbad0,2,bool BGSPackageDataTargetSelector::GetDataAsString(BSString* a_dst)
 26952,0x1403ee1f0,0x1403fdd40,3,FindInPackageDataLocationMap
+26991,0x1403eed70,0x1403fe8c0,2,IAIWorldLocation* ObjectListItem::AllocateLocation(AIWorldLocationContext* a_context)
+26992,0x1403eeeb0,0x1403fea00,2,"bool ObjectListItem::IsRefAtLocation(AIWorldLocationContext* a_context, TESObjectREFR* a_ref)"
+27015,0x1403ef9d0,0x1403ff520,2,IAIWorldLocation* BGSPackageDataObjectList::AllocateLocation(AIWorldLocationContext* a_context)
+27016,0x1403efb20,0x1403ff670,2,"bool BGSPackageDataObjectList::IsRefAtLocation(AIWorldLocationContext* a_context, TESObjectREFR* a_ref)"
+27076,0x1403f11d0,0x140400d20,2,IAIWorldLocation* BGSPackageDataRef::AllocateLocation(AIWorldLocationContext* a_context)
+27086,0x1403f1590,0x1404010e0,2,"bool BGSPackageDataRef::IsRefAtLocation(AIWorldLocationContext* a_context, TESObjectREFR* a_ref)"
+27110,0x1403f1e40,0x140401990,2,void BGSPackageDataTopic::Assign(IPackageData* a_other)
+27111,0x1403f1e90,0x1404019e0,2,bool BGSPackageDataTopic::IsNotEqual(IPackageData* a_other)
+27114,0x1403f1f80,0x140401ad0,2,void BGSPackageDataTopic::InitPackage(TESForm* a_form)
+27115,0x1403f1f90,0x140401ae0,2,void BGSPackageDataTopic::LoadPackage(TESFile* a_mod)
+27116,0x1403f2030,0x140401b80,2,bool BGSPackageDataTopic::GetDataAsString(BSString* a_dst)
 27117,0x1403f2040,0x140401b90,3,RegisterPackageDataName_Topic
 27126,0x1403f2430,0x140401f80,3,InitPackageDataAndProcedureNames
 27128,0x1403f4cb0,0x140404800,3,PackageDataLocationMap_Insert
@@ -1344,6 +1401,9 @@
 27651,0x140400f40,0x140410a90,3,BGSProcedureDialogueActivate::InitActorLocation
 27652,0x140400f80,0x140410ad0,3,BGSProcedureDialogueActivate::Process
 27653,0x140401130,0x140410c80,3,RegisterProcedureName_DialogueActivate
+27657,0x140401480,0x140410fd0,2,void BGSProcedureDialogueActivateExecState::RecycleChildren()
+27660,0x140401650,0x1404111a0,2,"void BGSProcedureDialogueActivateExecState::SaveGame(BGSSaveGameBuffer* a_buffer, void* a_forwarded)"
+27661,0x140401850,0x1404113a0,2,"void BGSProcedureDialogueActivateExecState::LoadGame(BGSLoadGameBuffer* a_buffer, void* a_forwarded)"
 27665,0x1404025b0,0x140412100,3,ProcedureNameEntryCleanup_DialogueActivate
 27675,0x140402900,0x140412450,3,BSTDerivedCreator_BGSProcedureDialogueActivate::Create
 27676,0x140402970,0x1404124c0,3,BSTDerivedCreator_BGSProcedureDialogueActivate::Destroy
@@ -1677,6 +1737,7 @@
 28261,0x14041c500,0x14042c050,3,BGSProcedureSandboxExecState::Process
 28276,0x14041fb00,0x14042f650,3,BGSProcedureSandboxExecState::SaveGame
 28277,0x14041ffd0,0x14042fb20,3,BGSProcedureSandboxExecState::LoadGame
+28278,0x140420480,0x14042ffd0,2,void BGSProcedureSandboxExecState::InitLoadGame(BGSLoadFormBuffer* a_buffer)
 28281,0x140420d00,0x140430850,3,ProcedureNameEntryCleanup_Sandbox
 28291,0x140421050,0x140430ba0,3,BGSProcedureSandboxExecState::dtor_deleting
 28295,0x140421190,0x140430ce0,3,BSTDerivedCreator_BGSProcedureSandbox::Create
@@ -1821,6 +1882,8 @@
 28552,0x14042b7a0,0x14043b2f0,3,BGSProcedureUseIdleMarker::InitActorLocation
 28553,0x14042b7f0,0x14043b340,3,BGSProcedureUseIdleMarker::Process
 28554,0x14042b930,0x14043b480,3,RegisterProcedureName_UseIdleMarker
+28561,0x14042bc30,0x14043b780,2,"void BGSProcedureUseIdleMarkerExecState::SaveGame(BGSSaveGameBuffer* a_buffer, void* a_forwarded)"
+28562,0x14042bd90,0x14043b8e0,2,"void BGSProcedureUseIdleMarkerExecState::LoadGame(BGSLoadGameBuffer* a_buffer, void* a_forwarded)"
 28569,0x14042caf0,0x14043c640,3,ProcedureNameEntryCleanup_UseIdleMarker
 28580,0x14042ce60,0x14043c9b0,3,BSTDerivedCreator_BGSProcedureUseIdleMarker::Create
 28581,0x14042ced0,0x14043ca20,3,BSTDerivedCreator_BGSProcedureUseIdleMarker::Destroy
@@ -1963,6 +2026,7 @@
 29090,0x1404454c0,0x140455010,3,bool TESConditionItem::IsTrue(ConditionCheckParams& a_solution)
 29218,0x14044b9a0,0x14045b4f0,4,RE::TESObjectCELL::Spawn
 29219,0x14044bbf0,0x14045b740,4,RE::TESObjectCELL::PlaceParticleEffect
+29242,0x14044d020,0x14045cb70,2,bool BGSParticleObjectCloneTask::Process()
 29248,0x14044da80,0x14045d640,3,void InitGlobalPreloadParent()
 29249,0x14044db60,0x14045d720,3,void ReleaseGlobalPreloadParent()
 29251,0x14044dbf0,0x14045d7b0,3,"bool BSTempEffectSimpleDecal::Initialize_Impl(BSTempEffectSimpleDecal* a_this, void* a_params)"
@@ -2514,6 +2578,7 @@
 32144,0x1404f0740,0x140502b00,3,"bool IAnimationGraphManagerHolder::SetGraphVariableNiPoint3(const BSFixedString& a_variableName, NiPoint3& a_in)"
 32149,0x1404f0960,0x140500bd0,4,undefined8 IAnimationGraphManagerHolder::sub_1404F0960(IAnimationGraphManagerHolder *a_this)
 32155,0x1404f1140,0x1405013b0,4,bool IAnimationGraphManagerHolder::UpdateAnimationGraphManager(const BSAnimationUpdateData& a_updateData)
+32173,0x1404f1520,0x140501790,2,bool IAnimationGraphManagerLoadingTask::Process()
 32184,0x1404f1e60,0x1405020d0,4,RE::BSAnimationGraphManager::sub_1404F1E60
 32192,0x1404f2620,0x140502890,3,"bool IAnimationGraphManagerHolder::GetGraphVariableNiPoint3(const BSFixedString& a_variableName, NiPoint3& a_out)"
 32270,0x1404f45f0,0x140504860,3,"void TESHavokUtilities::LinearCastPhantom(bhkSimpleShapePhantom* a_phantom, bhkWorld* a_world, float* a_startPos, float* a_endPos, float* a_hitResult, TESObjectREFR** a_hitRef, float a_phantomSize)"
@@ -2521,6 +2586,7 @@
 32275,0x1404f5420,0x140505690,4,RE::ShakeCamera_1404f5420
 32290,0x1404f5c80,0x140505f60,3,RE::TESCamera::SetState
 32370,0x1404f96c0,0x140509850,4,void DragonCameraState::HandleLookInput_1404F96C0 (DragonCameraState * a_this)
+32398,0x1404faf10,0x14050b3b0,2,void CombatBehaviorTreeRanged::Initialize()
 32426,0x1404fbcc0,0x14050c160,3,void CombatBehaviorStack::CheckBuffer(std::uint32_t a_size)
 32436,0x1404fc010,0x14050c4b0,3,void CombatBehaviorIdle::Update()
 32446,0x1404fc450,0x14050c8f0,2,void* GetCombatTargetHandle(void* a_out)
@@ -2552,6 +2618,8 @@
 33248,0x14053d1b0,0x14053ff30,2,"void AbsorbEffect::ModifyOnFinish(Actor* a_caster, Actor* a_target, float a_value)"
 33257,0x14053d370,0x1405400f0,4,AccumulatingValueModifierEffect::Allocate(AccumulatingValueModifierEffect* accumulatingValueModifierEffect
 33258,0x14053d430,0x1405401b0,2,void AccumulatingValueModifierEffect::SaveGame(BGSSaveFormBuffer* a_buf)
+33261,0x14053d550,0x1405402d0,2,void AccumulatingValueModifierEffect::Start()
+33262,0x14053d5e0,0x140540360,2,void AccumulatingValueModifierEffect::Finish()
 33265,0x14053d770,0x1405404f0,2,void AccumulatingValueModifierEffect::ModifyOnUpdate(float a_delta)
 33266,0x14053d890,0x140540610,2,"void AccumulatingValueModifierEffect::ModifyOnFinish(Actor* a_caster, Actor* a_target, float a_value)"
 33277,0x14053DEB0,0x140540C30,4,"ActiveEffect::Adjust(Skyrim::ActiveEffect* activeEffect, float effectiveness, bool requiresHostility)"
@@ -2587,6 +2655,7 @@
 33383,0x1405437e0,0x140547660,2,void ActorMagicCaster::LoadGame(BGSLoadGameBuffer* a_buf)
 33384,0x140543930,0x1405477b0,2,void ActorMagicCaster::FinishLoadGame(BGSLoadGameBuffer* a_buf)
 33393,0x140543d70,0x140547bf0,2,"void ActorMagicCaster::AdjustActiveEffect(ActiveEffect* a_activeEffect, float a_power, bool a_arg3)"
+33399,0x140544180,0x1405481b0,2,bool ActorMagicCaster::CreateAnimationChannels(void* animGraphChannels)
 33403,0x140544490,0x1405484c0,3,void ActorMagicCaster::CheckAttachCastingArt()
 33420,0x140544e40,0x140548f10,2,void RefAttachTechniqueInput::Clear()
 33423,0x140544ea0,0x140548f70,4,"bool SourceActionMap::DoAction(Actor* a_actor, DEFAULT_OBJECT a_action)"
@@ -2649,14 +2718,21 @@
 33631,0x14054cbe0,0x140550db0,3,"bool MagicCaster::ProcessQuickRelease(MagicItem* a_spell, TESObjectREFR* a_target, TESBoundObject* a_source, bool a_loadCast)"
 33632,0x14054cd10,0x140550ec0,3,"bool MagicCaster::FindTargets(float a_effectivenessMult, std::uint32_t& a_targetCount, TESBoundObject* a_source, bool a_loadCast, bool a_adjustOnlyHostileEffectiveness)"
 33644,0x14054f070,0x1405531a0,3,void MagicCaster::SetCurrentSpell(MagicItem* a_item)
+33651,0x14054f210,0x140553370,2,void ExtraMagicCaster::SetCastingTimerForCharge()
+33654,0x14054f2d0,0x1405534a0,2,void ExtraMagicCaster::SaveGame(BGSSaveGameBuffer* a_buf)
+33655,0x14054f3d0,0x1405535a0,2,void ExtraMagicCaster::LoadGame(BGSLoadGameBuffer* a_buf)
 33657,0x14054f4f0,0x1405536c0,3,void MagicCaster::FinishCast() src\RE\M/MagicCaster.cpp:26
+33660,0x14054f7c0,0x1405539c0,2,"void ExtraMagicCaster::PrepareSound(MagicSystem::SoundID a_sound, MagicItem* a_spell)"
 33669,0x14054fe00,0x140554000,3,"MagicTarget* FUNC_14054FE00(longlong a1, float a2)"
 33672,0x1405506c0,0x140554980,3,MagicCaster::LaunchSpell
+33674,0x140550cd0,0x140554f90,2,"void ExtraMagicCaster::AdjustActiveEffect(ActiveEffect* a_activeEffect, float a_power, bool a_arg3)"
 33675,0x140550cf0,0x140554fb0,4,void MagicCaster::PlayReleaseSound(MagicItem* a_item) src\RE\M/MagicCaster.cpp:47
 33676,0x140550d60,0x140555020,3,"bool MagicCaster::FindTargets(float a_effectivenessMult, std::uint32_t& a_targetCount, TESBoundObject* a_source, bool a_loadCast, bool a_adjustOnlyHostileEffectiveness)"
 33677,0x140550e20,0x1405550E0,3,"MagicTarget* FUNC_140550E20(longlong a1, char a2, float a3, NiPoint3 *a4, TESObjectCELL **a5, longlong a6)"
 33684,0x140551a90,0x140555ca0,3,po3tweaks::Spell::detail::SpellApplyStruct
+33705,0x140552360,0x140556670,2,void MagicCaster::RequestCastImpl()
 33711,0x140552480,0x140556790,2,bool MagicCaster::StartChargeImpl()
+33712,0x1405524c0,0x1405567d0,2,void MagicCaster::StartReadyImpl()
 33715,0x140552550,0x140556930,4,ActiveEffectFactory::AutoAERegistrar
 33716,0x1405525f0,0x1405569d0,4,"bool ActiveEffectFactory::CheckCast(MagicCaster* a_caster, MagicItem* a_spell, Effect* a_effect, MagicSystem::CannotCastReason& a_reason)"
 33721,0x1405528e0,0x140556cb0,3,"bool MagicTarget::DispelEffect(MagicItem* a_spell, BSPointerHandle<Actor>& a_caster, ActiveEffect* a_effect)"
@@ -2685,7 +2761,11 @@
 33864,0x140558920,0x14055e6b0,2,NiAVObject* ModelReferenceEffect::GetAttachRoot()
 33869,0x140558c00,0x14055E990,3,ModelReferenceEffect::DetachImpl
 33873,0x140558fc0,0x14055ED50,3,ModelReferenceEffect::sub_*
+33875,0x140559380,0x14055f110,2,bool ModelReferenceEffect::CreateAnimationChannels(void* animGraphChannels)
 33894,0x140559b20,0x14055f8b0,2,void NightEyeEffect::Start()
+33900,0x140559d40,0x14055fad0,2,"void NonActorMagicCaster::CastSpellImmediate(MagicItem* a_spell, bool a_noHitEffectArt, TESObjectREFR* a_target, float a_effectiveness, bool a_hostileEffectivenessOnly, float a_magnitudeOverride, Actor* a_blameActor)"
+33903,0x140559ed0,0x14055fc60,2,void NonActorMagicCaster::SaveGame(BGSSaveGameBuffer* a_buf)
+33904,0x140559f70,0x14055fd00,2,void NonActorMagicCaster::LoadGame(BGSLoadGameBuffer* a_buf)
 33930,0x14055aa60,0x140560950,2,void ParalysisEffect::Start()
 33937,0x14055acc0,0x140560bb0,2,void PeakValueModifierEffect::ClearTargetImpl()
 33939,0x14055ae50,0x140560d20,2,void PeakValueModifierEffect::OnAdd(MagicTarget* a_target)
@@ -3192,6 +3272,7 @@
 37121,0x1406145e0,0x14061d1f0,2,bool MovementMessagePool::ClearWarpToMultipleHandler()
 37127,0x140614ce0,0x14061d8f0,2,void MovementMessagePool::InitFreeList()
 37128,0x140614da0,0x14061d9b0,3,MovementMessagePool* MovementMessagePool::MovementMessagePool()
+37307,0x140618bf0,0x1406217a0,2,"void ProcessCallbackAdapter::OnAnimationSetLoaded(void* a_unused, void* a_animations)"
 37340,0x140619810,0x140622400,2,EmotionType Actor::GetEmotionType()
 37341,0x140619820,0x140622410,2,std::uint32_t Actor::GetEmotionValue()
 37351,0x140619970,0x140622560,2,bool Actor::InitiateTresPassPackage(TESPackage* a_package)
@@ -3592,6 +3673,7 @@
 38645,0x140672470,0x14067b940,3,AIProcess::UpdatePackageWanderHigh
 38647,0x140673090,0x14067c560,3,AIProcess::UpdatePackageSleepHigh
 38652,0x140673850,0x14067cd20,3,AIProcess::FinishUseWeaponPackage
+38658,0x140673e00,0x14067d2d0,2,"void InstantInteractionCallback::OnAnimationSetLoaded(void* a_unused, void* a_animations)"
 38659,0x140673eb0,0x14067d380,2,"std::uint32_t BSPathingAvoidNode::AppendNode(BSTArray<BSPathingAvoidNode>* a_array, NiPoint3* a_point, float a_radius, float a_cost, std::uint32_t a_type)"
 38660,0x140673f60,0x14067d430,2,"void BSPathingAvoidNode::AppendSphereNode(BSTArray<BSPathingAvoidNode>* a_array, NiPoint3* a_point, float a_radius, float a_cost)"
 38677,0x1406759E0,0x14067EEB0,4,"bhkBoxShape * bhkBoxShape::bhkBoxShape(bhkBoxShape * a_this, RE::NiPoint3* a_halfExtents)"
@@ -3726,6 +3808,7 @@
 39025,0x14068b970,0x140694dd0,3,AIProcess::UpdatePackageDialogue
 39026,0x14068bc10,0x140695070,3,AIProcess::UpdatePackageDialogueActivateMiddleHigh
 39029,0x14068c190,0x1406955f0,2,"void AIProcess::StartInterruptPackage(Actor* a_actor, TESPackage* a_package, TESObjectREFR* a_target)"
+39043,0x14068d5e0,0x140696a30,2,"void WeaponAnimationLoadedCallback::OnAnimationSetLoaded(void* a_unused, void* a_animations)"
 39044,0x14068d6f0,0x140696b40,3,std::uint64_t QueuedItem::PreloadModels(Character* a_actor)
 39159,0x140692390,0x14069B990,2,"void ResetCachedBaseValue(CachedValues*, ActorValue)"
 39171,0x1406928c0,0x14069bec0,4,Character * Character::ctor (Character * a_this)
@@ -3813,9 +3896,12 @@
 39630,0x1406b5dc0,0x1406d90e0,3,bool TESObjectREFR::IsInMountBlockedWorldspace()
 39637,0x1406b6090,0x1406d93b0,2,NiPoint2 PlayerCharacter::GetGridUpdatePosition()
 39641,0x1406b63c0,0x1406d9690,3,bool IsFlyingMountFastTravelCruiseEnabled()
+39651,0x1406b6ba0,0x1406d9f10,2,void PlayerCharacter::FreeRequestedModels()
 39657,0x1406b6eb0,0x1406da3d0,3,"void PlayerCharacter::MoveToPositionInCell(float* a_position, float* a_rotation, TESObjectCELL* a_cell, int a_arg4)"
 39658,0x1406b7670,0x1406dac20,4,"void PlayerCharacter::MoveToPositionInWorldSpace(float* a_position, float* a_rotation, TESWorldSpace* a_world, bool a_arg4)"
 39663,0x1406b8340,0x1406db930,4,PlayerCharacter::DiscoveryCheck
+39667,0x1406b8a80,0x1406dc0f0,2,void PlayerCharacter::PostCreateAnimationGraphManager(void* a_animGraphMgr)
+39675,0x1406b9120,0x1406dc8c0,2,void PlayerCharacter::EffectAdded(ActiveEffect* a_effect)
 39709,0x1406ba7f0,0x1406de150,3,ShowDragonLandStatusMessage
 39991,0x1406c2f50,0x1406e9450,2,std::int32_t Actor::Unk_C6()
 40006,0x1406c35f0,0x1406e9de0,2,bool Actor::InitiateDialogue()
@@ -4176,6 +4262,7 @@
 42747,0x14073ee00,0x1407699e0,2,void GrenadeProjectile::Process3D()
 42749,0x14073f010,0x140769bf0,2,void GrenadeProjectile::OnKill()
 42752,0x14073f650,0x14076a230,2,void GrenadeProjectile::ReportHavokDeactivation()
+42763,0x14073fad0,0x14076a6b0,2,uint GrenadeProjectile::GetCollisionGroup()
 42768,0x14073fc10,0x14076a7f0,2,"ImpactData* GrenadeProjectile::AddImpact(TESObjectREFR* a_ref, const NiPoint3& a_targetLoc, const NiPoint3& a_velocity, hkpCollidable* a_collidable, std::int32_t a_arg6, std::uint32_t a_arg7)"
 42791,0x140740cb0,0x14076b960,3,"void Hazard::Update(Hazard *a_this, float a_delta)"
 42810,0x1407416f0,0x14076c3a0,3,bool Hazard::CheckInit3D(Hazard *a_this)
@@ -4190,6 +4277,7 @@
 42852,0x140744dd0,0x14076fd10,4,void MissileProjectile::UpdateImpl_140744DD0 (MissileProjectile * a_this)
 42853,0x1407454f0,0x140770430,2,bool MissileProjectile::ProcessImpacts()
 42856,0x140746d60,0x140771ca0,3,EnhancedInvisibility::MissileProjectile::sub_140746D60
+42866,0x140747810,0x140772940,2,"ImpactData* MissileProjectile::AddImpact(TESObjectREFR* a_ref, NiPoint3* a_targetLoc, NiPoint3* a_velocity, hkpCollidable* a_collidable, int a_arg6, uint a_arg7)"
 42911,0x140749cc0,0x140774df0,2,void ProjectileManager::Update()
 42913,0x140749d50,0x140774e80,2,void ProjectileManager::UpdateImpl(void* a_updateData)
 42914,0x14074a3d0,0x140775650,2,void ProjectileManager::PruneFinishedProjectiles()
@@ -4198,6 +4286,7 @@
 42930,0x14074bc00,0x140776f20,4,void Projectile::Kill()
 42943,0x14074c710,0x140777a30,4,ProjectileUpdate
 42983,0x14074F650,0x14077A970,3,ProcessProjectileCollisions
+42999,0x140750310,0x14077b630,2,NiNode* Projectile::GetFireNode()
 43009,0x1407516e0,0x14077CA00,3,Projectile::AutoAim
 43013,0x1407521f0,0x14077d510,4,ProjectileImpact
 43022,0x1407531c0,0x14077e4e0,2,papyrus_extender::events::game::weaponhit::projectile::target_0x38d
@@ -4209,6 +4298,16 @@
 43096,0x140757ff0,0x140783380,2,VATSCommand* VATS::GetFrontCommand()
 43098,0x1407581f0,0x140783580,3,"void VATS::UpdateKillCam(PlayerCharacter* a_player, void* a_arg2, std::uint32_t* a_arg3)"
 43103,0x140759360,0x1407846b0,3,"void VATS::SetMagicTimeSlowdown(float a_magicTimeSlowdown, float a_playerMagicTimeSlowdown)"
+43148,0x14075b800,0x140786b50,2,void CombatTrackTargetAimController::Update()
+43149,0x14075baf0,0x140786e40,2,CombatAimController* CombatTrackTargetAimController::Clone()
+43150,0x14075bbf0,0x140786f40,2,void CombatTrackTargetAimController::SaveGame(BGSSaveGameBuffer* a_buf)
+43151,0x14075bc50,0x140786fa0,2,void CombatTrackTargetAimController::LoadGame(BGSLoadGameBuffer* a_buf)
+43154,0x14075bd00,0x140787050,2,void CombatMeleeAimController::Update()
+43155,0x14075bf90,0x1407872e0,2,bool CombatMeleeAimController::CanFireNow()
+43156,0x14075c0d0,0x140787420,2,"bool CombatMeleeAimController::CanFireAtTarget(NiPoint3* a_arg2, NiPoint3* a_arg3)"
+43157,0x14075c210,0x140787560,2,CombatAimController* CombatMeleeAimController::Clone()
+43158,0x14075c320,0x140787670,2,void CombatMeleeAimController::SaveGame(BGSSaveGameBuffer* a_buf)
+43159,0x14075c3a0,0x1407876f0,2,void CombatMeleeAimController::LoadGame(BGSLoadGameBuffer* a_buf)
 43162,0x14075c760,0x140787AB0,3,CombatProjectileAimController::Update
 43163,0x14075c8f0,0x140787c40,2,bool CombatProjectileAimController::IsAimWithinRadius()
 43168,0x14075d1b0,0x140788500,2,void CombatProjectileAimController::OnProjectileCast()
@@ -4226,11 +4325,22 @@
 43245,0x1407601f0,0x14078b540,4,"bool CombatAnimation::ConstructAndExecute (CombatAnimation * a_this, Actor * a_actor, ANIM a_anim)"
 43246,0x1407602e0,0x14078b630,4,"bool CombatAnimation::ConstructAndExecute(CombatAnimation* a_this, Actor* a_actor, TESObjectREFR* a_target, ANIM a_anim)"
 43247,0x1407603e0,0x14078b730,4,bool CombatAnimation::LoadClipData()
+43250,0x140760450,0x14078b7a0,2,void CombatArea::SaveGame(BGSSaveGameBuffer* a_buf)
+43251,0x1407604f0,0x14078b840,2,void CombatArea::LoadGame(BGSLoadGameBuffer* a_buf)
+43258,0x1407608a0,0x14078bbf0,2,void CombatAreaRadius::SaveGame(BGSSaveGameBuffer* a_buf)
+43259,0x1407608f0,0x14078bc40,2,void CombatAreaRadius::LoadGame(BGSLoadGameBuffer* a_buf)
+43263,0x140760bc0,0x14078bf10,2,void CombatAreaReference::SaveGame(BGSSaveGameBuffer* a_buf)
 43311,0x140761eb0,0x14078d200,3,CombatBlackboardFlag::CombatBlackboardFlag()
 43317,0x1407624c0,0x14078d810,3,void CombatBlackboardManager::AddMember(const CombatBlackboardKeyBase* val)
 43318,0x140762560,0x14078d8b0,3,const CombatBlackboardFlag* CombatBlackboardManager::GetFlag(uint32_t flag)
 43319,0x1407625f0,0x14078d940,3,void CombatBlackboardManager::AddFlag(const CombatBlackboardFlag* val)
 43340,0x140762e60,0x14078e1b0,3,CombatBlackboardManager* CombatBlackboardManager::GetSingleton()
+43394,0x1407663d0,0x140791720,2,void CombatCoverSearch::SaveGame(BGSSaveGameBuffer* a_buf)
+43395,0x140766460,0x1407917b0,2,void CombatCoverSearch::LoadGame(BGSLoadGameBuffer* a_buf)
+43405,0x140766a00,0x140791d50,2,void CombatCoverLocation::SaveGame(BGSSaveGameBuffer* a_buf)
+43406,0x140766b40,0x140791e90,2,void CombatCoverLocation::LoadGame(BGSLoadGameBuffer* a_buf)
+43416,0x1407678c0,0x140792c10,2,void CombatCoverSearchDebugData::SaveGame(BGSSaveGameBuffer* a_buf)
+43417,0x1407679e0,0x140792d30,2,void CombatCoverSearchDebugData::LoadGame(BGSLoadGameBuffer* a_buf)
 43466,0x140768c10,0x140793f60,4,"bool SayCombatDialogueResolveHandles(void* a_arg1, CombatController* a_combatController, std::int32_t a_type, std::int32_t a_subtype, bool a_flag)"
 43477,0x140769cf0,0x140795040,2,std::int32_t CombatGroupDetectionListener::UpdateKnowledge(ActorKnowledge* a_knowledge)
 43482,0x14076A450,0x1407957A0,3,bool CombatGroup::AddTarget(TESObjectREFR* a_target)
@@ -4252,13 +4362,37 @@
 43628,0x140775550,0x1407a08a0,3,bool CombatBehaviorEquipContext::CanEquipItem()
 43657,0x1407784a0,0x1407a37f0,4,"bool CombatInventory::AddRangedItem(TESForm* a_weapon, TESAmmo* a_ammo)"
 43665,0x140778e80,0x1407a41d0,4,"CombatInventoryItem* CombatInventory::AddMagicItem(int a_kind, TESForm* a_form, MagicItem* a_magicItem)"
+43713,0x14077c150,0x1407a74a0,2,BSContainer::ForEachResult GatherSpellsFunctor::Visit(SpellItem* a_spell)
+43785,0x14077de20,0x1407a9170,2,bool CombatInventoryItemComposite::IsValid()
+43786,0x14077de40,0x1407a9190,2,void CombatInventoryItemComposite::SaveGame(BGSSaveGameBuffer* a_buf)
+43787,0x14077de80,0x1407a91d0,2,void CombatInventoryItemComposite::LoadGame(BGSLoadGameBuffer* a_buf)
+43788,0x14077df10,0x1407a9260,2,"void CombatInventoryItemComposite::GetDescription(char* a_dest, uint a_size)"
+43794,0x14077e030,0x1407a9380,2,TYPE CombatInventoryItemMelee::GetEquipType(BGSEquipSlot* a_slot)
+43799,0x14077e290,0x1407a95e0,2,bool CombatInventoryItemMelee::CheckBusy(CombatController* a_controller)
+43800,0x14077e370,0x1407a96c0,2,void CombatInventoryItemMelee::SaveGame(BGSSaveGameBuffer* a_buf)
+43801,0x14077e3c0,0x1407a9710,2,void CombatInventoryItemMelee::LoadGame(BGSLoadGameBuffer* a_buf)
+43810,0x14077e510,0x1407a9860,2,TYPE CombatInventoryItemRanged::GetEquipType(BGSEquipSlot* a_slot)
 43813,0x14077e570,0x1407a98c0,4,"float CombatController::GetRangedWeaponScore(TESForm* a_weapon, TESAmmo* a_ammo)"
+43816,0x14077e860,0x1407a9bb0,2,bool CombatInventoryItemRanged::CheckBusy(CombatController* a_controller)
+43817,0x14077e940,0x1407a9c90,2,void CombatInventoryItemRanged::SaveGame(BGSSaveGameBuffer* a_buf)
+43818,0x14077e9b0,0x1407a9d00,2,void CombatInventoryItemRanged::LoadGame(BGSLoadGameBuffer* a_buf)
+43829,0x14077ec80,0x1407a9fd0,2,bool CombatInventoryItemShield::CheckBusy(CombatController* a_controller)
+43830,0x14077ed60,0x1407aa0b0,2,void CombatInventoryItemShield::SaveGame(BGSSaveGameBuffer* a_buf)
+43831,0x14077edb0,0x1407aa100,2,void CombatInventoryItemShield::LoadGame(BGSLoadGameBuffer* a_buf)
+43836,0x14077eec0,0x1407aa210,2,CombatInventoryItem* CombatInventoryItemOneHandedBlock::Clone()
+43837,0x14077ef60,0x1407aa2b0,2,bool CombatInventoryItemOneHandedBlock::CheckShouldEquip(CombatController* a_controller)
+43849,0x14077f270,0x1407aa5c0,2,bool CombatInventoryItemTorch::CheckBusy(CombatController* a_controller)
+43850,0x14077f350,0x1407aa6a0,2,bool CombatInventoryItemTorch::CheckShouldEquip(CombatController* a_controller)
+43851,0x14077f460,0x1407aa7b0,2,void CombatInventoryItemTorch::SaveGame(BGSSaveGameBuffer* a_buf)
+43852,0x14077f4b0,0x1407aa800,2,void CombatInventoryItemTorch::LoadGame(BGSLoadGameBuffer* a_buf)
 43864,0x14077f760,0x1407aaab0,4,"float CombatController::GetMagicItemScore(TESForm* a_form, int a_kind)"
 43952,0x140781f00,0x1407ad250,4,RE::CombatMagicCaster::StaticCheckTargetValid
 43955,0x1407821f0,0x1407ad540,2,bool CombatMagicCaster::CanAffordCast(Actor* a_caster)
 43956,0x140782330,0x1407ad680,4,RE::CombatMagicCaster::CheckTargetValid
 43957,0x1407823e0,0x1407ad730,2,bool CombatMagicCaster::IsEffectActiveOnCaster()
 44019,0x140785350,0x1407b06a0,4,"static bool CombatMagicCasterBoundItem::CheckShouldEquip(CombatController* a_controller, CombatInventoryItemMagic* a_item)"
+44024,0x140785920,0x1407b0c70,2,bool CombatMagicCasterArmor::CheckStartCast(CombatController* a_combatController)
+44025,0x140785990,0x1407b0ce0,2,bool CombatMagicCasterArmor::CheckStopCast(CombatController* a_combatController)
 44036,0x140785f80,0x1407b12d0,4,enhanced_reanimation::CombatMagicCasterReanimate::CheckShouldEquip
 45570,0x1407a5a50,0x1407d0da0,2,void NiTPrimitiveArray<CombatGroup*>::RemoveEmptyCombatGroups()
 45660,0x1407aad70,0x1407d60c0,3,bool CombatState::CheckShouldFlee()
@@ -4266,6 +4400,10 @@
 45698,0x1407ac7c0,0x1407d7b10,2,"bool CombatTargetLocation::IsAngleToPointWithinTolerance(const NiPoint3& a_from, const NiPoint3& a_to, float a_scale)"
 45702,0x1407ac9f0,0x1407d7d40,3,"CombatTargetLocationSearch::CombatTargetLocationSearch(Actor* actor, Actor* target, float R)"
 45738,0x1407b0040,0x1407db390,2,CombatPathingGoalPolicyFindTargetLocation* CombatPathingGoalPolicyFindTargetLocation::CombatPathingGoalPolicyFindTargetLocation(CombatNavmeshSearch* a_search)
+45914,0x1407b5c80,0x1407e0fd0,2,void CombatTargetSelector::SaveGame(BGSSaveGameBuffer* a_buf)
+45915,0x1407b5d50,0x1407e10a0,2,void CombatTargetSelector::LoadGame(BGSLoadGameBuffer* a_buf)
+45919,0x1407b5f30,0x1407e1280,2,void CombatTargetSelectorStandard::SaveGame(BGSSaveGameBuffer* a_buf)
+45920,0x1407b5f70,0x1407e12c0,2,void CombatTargetSelectorStandard::LoadGame(BGSLoadGameBuffer* a_buf)
 45923,0x1407b6770,0x1407e1ac0,4,sub_1407B6770
 46011,0x1407ba290,0x1407e55e0,2,Actor* Actor::FindAttackTargetInReach()
 46012,0x1407ba630,0x1407e5980,2,"float TESObjectREFR::GetDistanceToEdge(TESObjectREFR* a_target, bool a_checkSlope, TESObjectREFR* a_origin)"
@@ -4370,6 +4508,7 @@
 46273,0x1407c7f00,0x1407f3250,3,const CombatBehaviorTreeNode* CombatBehaviorTreeManager::FindRootNode(const BSFixedString& a_name)
 46274,0x1407c7fa0,0x1407f32f0,3,void CombatBehaviorTreeManager::Init()
 46275,0x1407c8010,0x1407f3360,3,void CombatBehaviorTreeManager::InitializeTrees()
+46277,0x1407c8110,0x1407f3460,2,void CombatBehaviorTreeCombat::Initialize()
 46301,0x1407c8c10,0x1407f3f60,4,void CombatBehaviorTreeNode::ctor_nonvirtual() src\RE/CombatBehaviorTreeNode.h:55
 46302,0x1407c8c40,0x1407f3f90,4,void CombatBehaviorTreeNode::dtor_nonvirtual() src\RE/CombatBehaviorTreeNode.h:62
 46304,0x1407c8cb0,0x1407f4000,4,CombatBehaviorTreeNode* CombatBehaviorTreeNode::add_FirstChildren(CombatBehaviorTreeNode* child) src\RE/CombatBehaviorTreeNode.h:42
@@ -4391,13 +4530,17 @@
 46342,0x1407c9900,0x1407f4c50,3,void CombatBehaviorContextAcquireWeapon::Exit()
 46349,0x1407ca8c0,0x1407f5c10,3,void CombatBehaviorAcquireItem::Enter()
 46350,0x1407caad0,0x1407f5e20,3,void CombatBehaviorAcquireItem::Update()
+46353,0x1407cb0e0,0x1407f6430,2,void CombatBehaviorTreeAcquireWeapon::Initialize()
 46417,0x1407cd1a0,0x1407f84f0,3,void CombatBehaviorAccessors::Fail()
 46442,0x1407cd9b0,0x1407f8d00,3,bool CombatBehaviorContextAcquireWeapon::HasAmmoTarget()
+46460,0x1407cddc0,0x1407f9110,2,void CombatBehaviorTreeAction::Initialize()
+46461,0x1407ce0e0,0x1407f9430,2,void CombatBehaviorTreeActionEquipmentSelector::Initialize()
 46531,0x1407d0790,0x1407fbae0,3,std::uint32_t CombatBehaviorThread::GetChildIndex()
 46589,0x1407d1590,0x1407fc8e0,3,bool CombatBehaviorContextDodgeThreat::CheckShouldDodge()
 46590,0x1407d1740,0x1407fca90,3,void CombatBehaviorDodgeThreat::Enter()
 46591,0x1407d21e0,0x1407fd530,3,void CombatBehaviorDodgeThreat::Update()
 46592,0x1407d23f0,0x1407fd740,3,void CombatBehaviorDodgeThreat::Exit()
+46595,0x1407d2750,0x1407fdaa0,2,void CombatBehaviorTreeDodgeThreat::Initialize()
 46627,0x1407d3400,0x1407fe750,3,bool CombatBehaviorContextBlock::CheckStopBlocking()
 46628,0x1407d3600,0x1407fe950,3,void CombatBehaviorBlockAttack::Enter()
 46629,0x1407d3900,0x1407fec50,3,void CombatBehaviorBlockAttack::Update()
@@ -4407,6 +4550,7 @@
 46635,0x1407d41a0,0x1407ff4f0,3,void CombatBehaviorBlock::Exit()
 46638,0x1407d4300,0x1407ff650,2,void CombatBehaviorBash::Enter(void* a_node)
 46639,0x1407d4520,0x1407ff870,2,void CombatBehaviorBash::Update()
+46640,0x1407d4620,0x1407ff970,2,void CombatBehaviorTreeBlock::Initialize()
 46641,0x1407d4a80,0x1407ffdd0,4,"NodeArray* WrapToRandomNode_1407d4a80 (NodeArray& a_array, const char* a_name, RE::TreeCtors_extradata* a_extradata, RE::CombatBehaviorTreeNode* a_node)"
 46695,0x1407d5ba0,0x140800ef0,3,void CombatBehaviorContextCloseMovement::Enter()
 46696,0x1407d5c80,0x140800fd0,3,bool CombatBehaviorContextCloseMovement::CheckOutOfRange()
@@ -4443,11 +4587,17 @@
 46765,0x1407db530,0x140806880,2,CombatBehaviorSurround src\RE/CombatBehaviorNodesMovement.cpp:8
 46951,0x1407e0370,0x14080b6c0,3,bool CombatBehaviorEquipContext::CheckEquipmentChanged()
 46952,0x1407e04a0,0x14080b7f0,3,bool CombatBehaviorEquipContext::EquipItem()
+46971,0x1407e2440,0x14080d790,2,void CombatBehaviorTreeFindAttackLocation::Initialize()
 47089,0x1407e5fb0,0x140811300,4,float AITimer::QTimer()
 47118,0x1407e6b10,0x140811e60,3,bool CombatBehaviorContextFlankingMovement::CheckShouldStalk()
+47137,0x1407e8f60,0x1408142b0,2,void CombatBehaviorTreeFlankingMovement::Initialize()
+47140,0x1407e94d0,0x140814820,2,void CombatFlankingSearchData::SaveGame(BGSSaveGameBuffer* a_buf)
+47141,0x1407e9610,0x140814960,2,void CombatFlankingSearchData::LoadGame(BGSLoadGameBuffer* a_buf)
 47145,0x1407ea9c0,0x140815d10,2,"float CombatPathingSearchPolicyFlank::GetEdgeCost(BSFastNavmeshTriLocation* a_from, BSFastNavmeshTriLocation* a_to)"
 47404,0x1407f27e0,0x14081db30,3,bool CombatBehaviorContextFlee::CheckShouldFlee()
 47405,0x1407f29a0,0x14081dcf0,3,bool CombatBehaviorContextFlee::StartFlee()
+47426,0x1407f4a50,0x14081fda0,2,void CombatBehaviorTreeFlee::Initialize()
+47429,0x1407f5320,0x140820670,2,void CombatBehaviorTreeHide::Initialize()
 47717,0x1407fd340,0x140828690,2,void CombatBehaviorTakeoff::Update()
 47719,0x1407fd860,0x140828bb0,2,void CombatBehaviorDiveBomb::Update()
 47722,0x1407fe180,0x1408294d0,2,void CombatBehaviorHover::Update()
@@ -4457,6 +4607,10 @@
 47740,0x1408001b0,0x14082b500,2,void CombatBehaviorPerchAttack::Update()
 47744,0x140800760,0x14082bab0,2,"bool CombatBehaviorPerchAttack::IsTargetWithinPerchAngle(TESObjectREFR* a_actor, TESObjectREFR* a_target)"
 47746,0x140800b60,0x14082beb0,2,void CombatBehaviorFlyingAttack::Update()
+47752,0x140801330,0x14082c680,2,void CombatBehaviorTreeFlight::Initialize()
+47755,0x140801f10,0x14082d260,2,void DiveBombSpeedController::SaveGame(BGSSaveGameBuffer* a_buf)
+47756,0x140801fa0,0x14082d2f0,2,void DiveBombSpeedController::LoadGame(BGSLoadGameBuffer* a_buf)
+47991,0x140807150,0x1408324a0,2,void CombatBehaviorTreeLowCombat::Initialize()
 48023,0x140808020,0x140833370,3,bool CombatGroup::IsSearching()
 48026,0x1408080d0,0x140833420,3,bool CombatState::QTargetLost()
 48035,0x140808260,0x1408335b0,3,CombatBehaviorContextMagic::CombatBehaviorContextMagic(CombatInventoryItemMagic* citem)
@@ -4480,16 +4634,26 @@
 48059,0x1408098c0,0x140834c10,2,void CombatBehaviorCastConcentrationSpell::Update()
 48063,0x140809ab0,0x140834e00,2,void CombatBehaviorPrepareDualCast::Enter()
 48064,0x140809c10,0x140834f60,2,void CombatBehaviorPrepareDualCast::Update()
+48065,0x140809de0,0x140835130,2,void CombatBehaviorTreeMagic::Initialize()
 48139,0x14080c020,0x140837370,4,SCAR::AttackDistanceBase src/Hook_AttackStart.h:99
 48140,0x14080c6f0,0x140837a40,4,SCAR::Hook_AttackStart.h:20
 48141,0x14080cd10,0x140838060,3,bool CombatBehaviorContextMelee::CheckAttackRange()
 48142,0x14080cee0,0x140838230,3,void CombatBehaviorContextMelee::FinishedAttack()
 48145,0x14080d1d0,0x140838520,3,void CombatBehaviorContextMelee::GatherAttackData()
 48146,0x14080d560,0x1408388b0,3,void CombatBehaviorContextMelee::CalculateAnimationData()
+48151,0x14080df60,0x1408392b0,2,void CombatBehaviorTreeMelee::Initialize()
+48234,0x140810930,0x14083bc80,2,void CombatDisableActionController::SaveGame(BGSSaveGameBuffer* a_buf)
+48235,0x1408109c0,0x14083bd10,2,void CombatDisableActionController::LoadGame(BGSLoadGameBuffer* a_buf)
+48237,0x140810a10,0x14083bd60,2,void CombatBehaviorTreeCheckUnreachableTarget::Initialize()
+48238,0x140810af0,0x14083be40,2,void CombatBehaviorTreeReturnToCombatArea::Initialize()
+48242,0x140810cd0,0x14083c020,2,void CombatBehaviorTreeExitWater::Initialize()
+48431,0x1408166e0,0x140841a30,2,void CombatBehaviorTreeMovement::Initialize()
 48460,0x140817c60,0x140842fb0,4,bool Actor::IsEssentialDown()
 48461,0x140817c80,0x140842fd0,4,bool Actor::IsInBleedout()
 48463,0x140817cb0,0x140843000,3,float CombatInventory::QRawMaxRange()
 48467,0x140817ec0,0x140843210,3,bool CombatBehaviorContextRangedMovement::CheckOutOfRange()
+48476,0x140818d40,0x140844090,2,void CombatBehaviorTreeRangedMovement::Initialize()
+48544,0x14081c860,0x140847bb0,2,void CombatBehaviorTreeSearch::Initialize()
 48549,0x14081d770,0x140848ac0,2,"bool CombatSearchLockData::TryPassDoor(BSPathingDoor** a_door, float* a_costOut)"
 48803,0x140824d00,0x140850050,2,bool CombatBehaviorContextShout::TryCastShout()
 48804,0x140824ec0,0x140850210,2,bool CombatBehaviorContextShout::CanShoutNow(void* a_ctx)
@@ -4497,6 +4661,9 @@
 48806,0x1408250c0,0x140850410,3,float CombatBehaviorContextShout::CalcCastMagicChance()
 48809,0x140825290,0x1408505e0,2,void CombatBehaviorCastShout::Enter(void* a_node)
 48810,0x140825490,0x1408507e0,2,void CombatBehaviorCastShout::Update()
+48811,0x140825510,0x140850860,2,void CombatBehaviorTreeShout::Initialize()
+48856,0x140827820,0x140852b70,2,void CombatBehaviorTreeUseCover::Initialize()
+48988,0x14082b950,0x140856ca0,2,void CombatBehaviorTreeUsePotion::Initialize()
 49011,0x14082c540,0x140857890,3,void CombatPath::Update()
 49013,0x14082c790,0x140857ae0,3,void CombatPath::Start()
 49014,0x14082c950,0x140857ca0,2,void CombatPath::Stop()
@@ -4522,7 +4689,16 @@
 49166,0x140836450,0x140861750,2,void BSNavmeshInfoSearch::ResetSearchState()
 49180,0x140836980,0x140861c80,2,"float CombatPathingSearchPolicyStandard::GetEdgeCost(BSFastNavmeshTriLocation* a_from, BSFastNavmeshTriLocation* a_to)"
 49182,0x140836eb0,0x1408621b0,2,"void InitRayCastRequestFlags(void* a_out, const void* a_request)"
+49192,0x140837220,0x140862520,2,void CombatPathingRequest::CopyTo(BSPathingRequest* a_dest)
+49195,0x140837330,0x140862630,2,void CombatPathingRequest::Write(BSPathingStreamWrite* a_stream)
+49196,0x1408373a0,0x1408626a0,2,void CombatPathingRequest::Read(BSPathingStreamRead* a_stream)
+49200,0x140837610,0x140862910,2,void CombatPathingRequestAdapter::CopyTo(BSPathingRequest* a_dest)
+49208,0x140837c20,0x140862f20,2,void CombatPathingRequestMultiGoal::CopyTo(BSPathingRequest* a_dest)
+49214,0x1408380f0,0x1408633f0,2,void CombatPathingDebugData::SaveGame(BGSSaveGameBuffer* a_buf)
+49215,0x1408383a0,0x1408636a0,2,void CombatPathingDebugData::LoadGame(BGSLoadGameBuffer* a_buf)
 49311,0x14083c870,0x140867b70,3,void CombatApproachTargetSpeedController::UpdateApproachTargetSpeed(CombatPath* a_combatPath)
+49312,0x14083ccc0,0x140867fc0,2,void CombatApproachTargetSpeedController::SaveGame(BGSSaveGameBuffer* a_buf)
+49313,0x14083cdd0,0x1408680d0,2,void CombatApproachTargetSpeedController::LoadGame(BGSLoadGameBuffer* a_buf)
 49315,0x14083ce90,0x140868190,2,bool CombatPathingSphere::IsOutside(BSFastNavmeshTriLocation* a_node)
 49316,0x14083cee0,0x1408681e0,2,float CombatPathingSphere::GetPenetrationDepth(BSFastNavmeshTriLocation* a_node)
 49711,0x140844d00,0x14086ffb0,3,float Character::GetDefensiveMult()
@@ -4589,6 +4765,7 @@
 50297,0x140863f90,0x14088F4F0,3,DescriptionFramework::
 50298,0x1408640d0,0x14088F630,3,DescriptionFramework::
 50388,0x140869350,0x1408948f0,3,CraftingMenu* CraftingMenu::dtor_deleting(std::uint32_t a_flags)
+50404,0x140869920,0x140894ec0,2,void CraftingSubMenus::AlchemyMenu::Accept(CallbackProcessor* a_cbReg)
 50440,0x14086b200,0x1408967a0,3,YesImSure::EnchantmentLearned
 50447,0x14086b810,0x140896db0,3,CraftingMenu::QuitMenu
 50449,0x14086b980,0x140896f10,4,papyrus_extender::event::alchemy_craft
@@ -4601,11 +4778,17 @@
 50461,0x14086db70,0x140899100,4,RE::CraftingSubMenu::UpdateCraftingInfo
 50476,0x14086e2c0,0x140899850,4,YesImSure::constructibleObjectMenu
 50477,0x14086e490,0x140899a20,4,YesImSure::smithingMenu
+50479,0x14086ea30,0x140899fc0,2,char* CraftingSubMenus::EnchantConstructMenu::EnchantmentEntry::GetName()
+50480,0x14086ea50,0x140899fe0,2,char* CraftingSubMenus::EnchantConstructMenu::ItemChangeEntry::GetName()
 50485,0x14086ebb0,0x14089a140,3,YesImSure::alchemyMenu
 50487,0x14086ee80,0x14089a410,3,YesImSure::enchantmentLearned
+50491,0x14086f2a0,0x14089a830,2,void CraftingSubMenus::EnchantConstructMenu::EnchantmentEntry::SetData(GFxValue* dataContainer)
+50492,0x14086f320,0x14089a8b0,2,void CraftingSubMenus::EnchantConstructMenu::ItemChangeEntry::SetData(GFxValue* dataContainer)
 50515,0x1408708a0,0x14089be30,3,RE::ItemCrafted::GetEventSource
 50530,0x1408720d0,0x14089d5c0,4,"void EnchantConstructMenu::RenameItem_Impl(InventoryEntryData* a_entryData, ExtraDataList* a_extraList, const char* a_name)"
 50531,0x140872230,0x14089D720,4,FUN_140872230
+50543,0x140872a90,0x14089df80,2,void CraftingSubMenus::EnchantConstructMenu::EnchantmentEntry::ShowItem3D(bool a_show)
+50560,0x140873a80,0x14089f150,2,void CraftingSubMenus::EnchantConstructMenu::EnchantmentEntry::ShowInItemCard(EnchantConstructMenu* a_menu)
 50567,0x140874540,0x14089fc10,4,void EnchantConstructMenu::UpdateInterface_140874540 (undefined8 param_1)
 50569,0x140874a40,0x1408a0190,4,"bool EnchantConstructMenu::CanSelectEnchantmentEntry (EnchantConstructMenu * a_this, uint32_t a_index, bool a_showNotification)"
 50610,0x140875bc0,0x1408a1310,3,IMenu * FUN_140875bc0 (IMenu * param_1)
@@ -4986,6 +5169,7 @@
 57886,0x1409fbda0,0x140a368f0,4,hkbAnimationBindingSet hkbCharacter::GetAnimationBindingSet_1409FBDA0 (hkbCharacter * a_this)
 57938,0x1409ffa90,0x140a3a5e0,4,"void hkbGenerator::activateAndSyncVariableBindings (hkbGenerator * a_this, hkbContext * a_context, bool a_activate)"
 57940,0x1409ffba0,0x140a3a6f0,4,void hkbNode::cacheBindables (hkbNode * a_this)
+58593,0x140a0b2c0,0x140a45e10,2,void hkbBehaviorReferenceGenerator::UpdateSync(hkbContext* a_context)
 58602,0x140a0bb80,0x140a466d0,4,void hkbClipGenerator::Activate(hkbContext* a_context)
 58603,0x140a0c270,0x140a46dc0,4,"void hkbClipGenerator::Update_140A0C270(hkbClipGenerator *a_this,longlong *param_2,undefined4 param_3)"
 58604,0x140a0c610,0x140a47160,4,void hkbClipGenerator::Deactivate(hkbContext* a_context)
@@ -4999,18 +5183,96 @@
 58810,0x140a23b50,0x140a5e500,4,"void hkbVariableBindingSet::cacheBindables (hkbVariableBindingSet * a_this, hkbBindable * a_bindable)"
 58811,0x140a23bc0,0x140a5e570,4,"void hkbVariableBindingSet::cacheBinding (hkbVariableBindingSet * a_this, void * a_binding, hkbBindable * a_bindable)"
 58817,0x140a23f10,0x140a5e8c0,4,hkaMirroredSkeleton * GetMirroredSkeleton (hkbCharacterSetup * a_this)
+58855,0x140a25910,0x140a602c0,2,void hkbBlenderGenerator::Activate(hkbContext* a_context)
+58857,0x140a25b60,0x140a60510,2,void hkbBlenderGenerator::Deactivate(hkbContext* a_context)
+58879,0x140a27540,0x140a61ef0,2,void hkbManualSelectorGenerator::Activate(hkbContext* a_context)
+58887,0x140a27880,0x140a62230,2,void hkbManualSelectorGenerator::UpdateSync(hkbContext* a_context)
+58901,0x140a27f60,0x140a62910,2,void hkbModifierGenerator::UpdateSync(hkbContext* a_context)
+58909,0x140a28390,0x140a62d40,2,void hkbPoseMatchingGenerator::Activate(hkbContext* a_context)
+58910,0x140a28900,0x140a632b0,2,"void hkbPoseMatchingGenerator::Update(hkbContext* a_context, float a_timestep)"
+58912,0x140a28970,0x140a63320,2,void hkbPoseMatchingGenerator::Deactivate(hkbContext* a_context)
+58916,0x140a28c10,0x140a635c0,2,void hkbPoseMatchingGenerator::UpdateSync(hkbContext* a_context)
+58925,0x140a29370,0x140a63d20,2,void hkbReferencePoseGenerator::Generate(hkbContext* a_context)
+58930,0x140a29790,0x140a64140,2,void hkbAttachmentModifier::Deactivate(hkbContext* a_context)
+58941,0x140a2a0e0,0x140a64a90,2,void hkbCharacterControllerModifier::Activate(hkbContext* a_context)
+58942,0x140a2a150,0x140a64b00,2,"void hkbCharacterControllerModifier::Update(hkbContext* a_context, float a_timestep)"
+58950,0x140a2a8a0,0x140a65250,2,void hkbCombineTransformsModifier::Activate(hkbContext* a_context)
+58982,0x140a2b190,0x140a65b40,2,void hkbDampingModifier::Activate(hkbContext* a_context)
+58997,0x140a2b610,0x140a65fc0,2,"void hkbDelayedModifier::Update(hkbContext* a_context, float a_timestep)"
+59009,0x140a2b9a0,0x140a66350,2,"void hkbDetectCloseToGroundModifier::Update(hkbContext* a_context, float a_timestep)"
+59021,0x140a2c450,0x140a66e00,2,void hkbEvaluateExpressionModifier::Activate(hkbContext* a_context)
+59039,0x140a2d670,0x140a68020,2,void hkbEvaluateHandleModifier::Deactivate(hkbContext* a_context)
+59058,0x140a2e090,0x140a68a40,2,void hkbEventsFromRangeModifier::Activate(hkbContext* a_context)
+59059,0x140a2e170,0x140a68b20,2,"void hkbEventsFromRangeModifier::Update(hkbContext* a_context, float a_timestep)"
+59068,0x140a2e7b0,0x140a69160,2,"void hkbFootIkControlsModifier::Update(hkbContext* a_context, float a_timestep)"
+59073,0x140a2ef40,0x140a698f0,2,void hkbFootIkModifier::Activate(hkbContext* a_context)
+59074,0x140a2f100,0x140a69ab0,2,"void hkbFootIkModifier::Update(hkbContext* a_context, float a_timestep)"
+59075,0x140a2f310,0x140a69cc0,2,void hkbFootIkModifier::Deactivate(hkbContext* a_context)
+59090,0x140a33970,0x140a6e320,2,void hkbGetHandleOnBoneModifier::Activate(hkbContext* a_context)
+59091,0x140a33c80,0x140a6e630,2,void hkbGetHandleOnBoneModifier::Deactivate(hkbContext* a_context)
+59112,0x140a35090,0x140a6fa40,2,void hkbHandIkControlsModifier::Deactivate(hkbContext* a_context)
+59118,0x140a355e0,0x140a6ff90,2,void hkbHandIkModifier::Activate(hkbContext* a_context)
+59119,0x140a35780,0x140a70130,2,"void hkbHandIkModifier::Update(hkbContext* a_context, float a_timestep)"
+59162,0x140a38bb0,0x140a73560,2,void hkbProxyModifier::Activate(hkbContext* a_context)
+59164,0x140a38f30,0x140a738e0,2,void hkbProxyModifier::Deactivate(hkbContext* a_context)
+59212,0x140a3b8c0,0x140a76270,2,"void hkbSenseHandleModifier::Update(hkbContext* a_context, float a_timestep)"
+59213,0x140a3b9e0,0x140a76390,2,void hkbSenseHandleModifier::Deactivate(hkbContext* a_context)
+59232,0x140a3d000,0x140a779b0,2,"void hkbTimerModifier::Update(hkbContext* a_context, float a_timestep)"
+59247,0x140a3d530,0x140a77ee0,2,void hkbTwistModifier::Activate(hkbContext* a_context)
+59256,0x140a3e0a0,0x140a78a50,2,void hkbSequence::Activate(hkbContext* a_context)
+59257,0x140a3e2a0,0x140a78c50,2,"void hkbSequence::handleEvent(hkbContext* context, hkbEvent e)"
+59258,0x140a3e320,0x140a78cd0,2,"void hkbSequence::Update(hkbContext* a_context, float a_timestep)"
 59276,0x140a3f7b0,0x140a7a160,2,void hkbBlendingTransitionEffect::Activate(const hkbContext& a_context)
 59281,0x140a3fa20,0x140a7a3d0,2,void hkbBlendingTransitionEffect::Generate(const hkbContext& a_context)
+59305,0x140a40900,0x140a7b2b0,2,void hkbGeneratorTransitionEffect::Activate(hkbContext* a_context)
+59306,0x140a40a10,0x140a7b3c0,2,"void hkbGeneratorTransitionEffect::Update(hkbContext* a_context, float a_timestep)"
+59313,0x140a40e30,0x140a7b7e0,2,void hkbGeneratorTransitionEffect::UpdateSync(hkbContext* a_context)
 59343,0x140a42d10,0x140a7d6c0,3,"void hkbVariableBindingSetUtils::updateBinding (void * a_evalContext, void * a_binding, bool a_isPrimaryBinding, hkbBindable * a_bindable, bool a_activate)"
 59345,0x140a431a0,0x140a7db50,4,"void hkbVariableBindingSetUtils::updateBindingInt8 (void * a_evalContext, void * a_binding, unsigned int * a_variableValue, int a_variableIndex, void * a_memberPtr, bool a_isPrimaryBinding, bool a_hasRange, bool a_activate)"
 59346,0x140a43300,0x140a7dcb0,4,"void hkbVariableBindingSetUtils::updateBindingInt16 (void * a_evalContext, void * a_binding, unsigned int * a_variableValue, int a_variableIndex, void * a_memberPtr, bool a_isPrimaryBinding, bool a_hasRange, bool a_activate)"
 59347,0x140a43460,0x140a7de10,4,"void hkbVariableBindingSetUtils::updateBindingInt32 (void * a_evalContext, void * a_binding, void * a_variableValue, int a_variableIndex, void * a_memberPtr, bool a_isPrimaryBinding, bool a_hasRange, bool a_activate)"
 59348,0x140a435a0,0x140a7df50,4,"void hkbVariableBindingSetUtils::updateBindingReal (void * a_evalContext, void * a_binding, void * a_variableValue, int a_variableIndex, void * a_memberPtr, bool a_isPrimaryBinding, bool a_hasRange, bool a_activate)"
 59405,0x140a4dfa0,0x140a88950,4,hkbBehaviorGraph::doUpdateActiveNodes
+59585,0x140a586f0,0x140a930f0,2,"void hkpPhantomCallbackShape::GetAabbImpl(hkTransform* a_localToWorld, float a_tolerance, hkAabb* a_out)"
+59591,0x140a58800,0x140a93200,2,"void hkpBvShape::GetAabbImpl(hkTransform* a_localToWorld, float a_tolerance, hkAabb* a_out)"
+59592,0x140a58820,0x140a93220,2,"bool hkpBvShape::CastRayImpl(hkpShapeRayCastInput* a_input, hkpShapeRayCastOutput* a_output)"
+59593,0x140a58900,0x140a93300,2,"void hkpBvShape::CastRayWithCollectorImpl(hkpShapeRayCastInput* a_input, hkpCdBody* a_cdBody, hkpRayHitCollector* a_collector)"
 59603,0x140a58c00,0x140A93600,4,"RE::hkpBoxShape* hkpBoxShape::createBoxShape(RE::hkpBoxShape*, RE::hkVector4&, float)"
 59653,0x140a5be20,0x140a96820,4,"void hkpClosestRayHitCollector::AddRayHit(const hkpCdBody& a_body, const hkpShapeRayCastCollectorOutput& a_hitInfo)"
+59655,0x140a5bf90,0x140a96990,2,"void hkpPlaneShape::GetAabbImpl(hkTransform* a_localToWorld, float a_tolerance, hkAabb* a_out)"
+59657,0x140a5c050,0x140a96a50,2,"bool hkpPlaneShape::CastRayImpl(hkpShapeRayCastInput* a_input, hkpShapeRayCastOutput* a_output)"
+59658,0x140a5c1d0,0x140a96bd0,2,"void hkpPlaneShape::CastRayWithCollectorImpl(hkpShapeRayCastInput* a_input, hkpCdBody* a_cdBody, hkpRayHitCollector* a_collector)"
+59820,0x140a5fb10,0x140a9a510,2,"int hkpConvexTransformShape::CalcSizeForSpu(CalcSizeForSpuInput* a_input, int a_spuBufferSizeLeft)"
 59887,0x140a60fa0,0x140a9b9a0,3,"std::int32_t hkpShapeCollectionFilter::NumShapeKeyHitsLimitBreached(const hkpCollisionInput& a_input, const hkpCdBody& a_bodyA, const hkpCdBody& a_bodyB, const hkpBvTreeShape* a_shapeB, hkAabb& a_AABB, hkpShapeKey* a_shapeKeysInOut, std::int32_t a_shapeKeysCapacity)"
+59948,0x140a63340,0x140a9dd40,2,"void hkpConvexTransformShape::GetAabbImpl(hkTransform* a_localToWorld, float a_tolerance, hkAabb* a_out)"
+59949,0x140a633a0,0x140a9dda0,2,"bool hkpConvexTransformShape::CastRayImpl(hkpShapeRayCastInput* a_input, hkpShapeRayCastOutput* a_output)"
+59960,0x140a63a30,0x140a9e430,2,"void hkpConvexTranslateShape::GetAabbImpl(hkTransform* a_localToWorld, float a_tolerance, hkAabb* a_out)"
+59961,0x140a63ab0,0x140a9e4b0,2,"bool hkpConvexTranslateShape::CastRayImpl(hkpShapeRayCastInput* a_input, hkpShapeRayCastOutput* a_output)"
+59967,0x140a63d80,0x140a9e780,2,"int hkpConvexTranslateShape::CalcSizeForSpu(CalcSizeForSpuInput* a_input, int a_spuBufferSizeLeft)"
 59971,0x140a640c0,0x140A9EAC0,4,"RE::hkpCylinderShape* hkpCylinderShape::createCylinderShape(RE::hkpCylinderShape*, RE::hkVector4&, RE::hkVector4&, float, int)"
+59979,0x140a64740,0x140a9f140,2,"void hkpCylinderShape::GetAabbImpl(hkTransform* a_localToWorld, float a_tolerance, hkAabb* a_out)"
+59980,0x140a648a0,0x140a9f2a0,2,"bool hkpCylinderShape::CastRayImpl(hkpShapeRayCastInput* a_input, hkpShapeRayCastOutput* a_output)"
+59993,0x140a65c10,0x140aa0610,2,"void hkpTriangleShape::GetAabbImpl(hkTransform* a_localToWorld, float a_tolerance, hkAabb* a_out)"
+59994,0x140a65ce0,0x140aa06e0,2,"bool hkpTriangleShape::CastRayImpl(hkpShapeRayCastInput* a_input, hkpShapeRayCastOutput* a_output)"
+59995,0x140a66130,0x140aa0b30,2,"hkVector4Comparison hkpTriangleShape::CastRayBundleImpl(hkpShapeRayBundleCastInput* a_input, hkpShapeRayBundleCastOutput* a_output, hkVector4Comparison* a_mask)"
+60011,0x140a66d30,0x140aa1730,2,"void hkpConvexListShape::GetAabbImpl(hkTransform* a_localToWorld, float a_tolerance, hkAabb* a_out)"
+60012,0x140a66e90,0x140aa1890,2,"bool hkpConvexListShape::CastRayImpl(hkpShapeRayCastInput* a_input, hkpShapeRayCastOutput* a_output)"
+60021,0x140a67350,0x140aa1d50,2,"void hkpMultiSphereShape::GetAabbImpl(hkTransform* a_localToWorld, float a_tolerance, hkAabb* a_out)"
+60022,0x140a67450,0x140aa1e50,2,"bool hkpMultiSphereShape::CastRayImpl(hkpShapeRayCastInput* a_input, hkpShapeRayCastOutput* a_output)"
+60023,0x140a674f0,0x140aa1ef0,2,"void hkpMultiSphereShape::CastRayWithCollectorImpl(hkpShapeRayCastInput* a_input, hkpCdBody* a_cdBody, hkpRayHitCollector* a_collector)"
+60027,0x140a67b90,0x140aa2590,2,"void hkpMultiRayShape::GetAabbImpl(hkTransform* a_localToWorld, float a_tolerance, hkAabb* a_out)"
+60033,0x140a67e60,0x140aa2860,2,"void hkpTransformShape::GetAabbImpl(hkTransform* a_localToWorld, float a_tolerance, hkAabb* a_out)"
+60034,0x140a67ec0,0x140aa28c0,2,"bool hkpTransformShape::CastRayImpl(hkpShapeRayCastInput* a_input, hkpShapeRayCastOutput* a_output)"
+60035,0x140a68090,0x140aa2a90,2,"void hkpTransformShape::CastRayWithCollectorImpl(hkpShapeRayCastInput* a_input, hkpCdBody* a_cdBody, hkpRayHitCollector* a_collector)"
+60036,0x140a68250,0x140aa2c50,2,float hkpTransformShape::GetMaximumProjection(hkVector4* a_direction)
+60039,0x140a68390,0x140aa2d90,2,"int hkpTransformShape::CalcSizeForSpu(CalcSizeForSpuInput* a_input, int a_spuBufferSizeLeft)"
+60042,0x140a68560,0x140aa2f60,2,"void hkpSampledHeightFieldShape::GetAabbImpl(hkTransform* a_localToWorld, float a_tolerance, hkAabb* a_out)"
+60044,0x140a68790,0x140aa3190,2,"bool hkpSampledHeightFieldShape::CastRayImpl(hkpShapeRayCastInput* a_input, hkpShapeRayCastOutput* a_output)"
+60045,0x140a68800,0x140aa3200,2,"void hkpSampledHeightFieldShape::CastRayWithCollectorImpl(hkpShapeRayCastInput* a_input, hkpCdBody* a_cdBody, hkpRayHitCollector* a_collector)"
+60073,0x140a6b860,0x140aa6260,2,"void hkpTriSampledHeightFieldBvTreeShape::GetAabbImpl(hkTransform* a_localToWorld, float a_tolerance, hkAabb* a_out)"
+60074,0x140a6b880,0x140aa6280,2,"bool hkpTriSampledHeightFieldBvTreeShape::CastRayImpl(hkpShapeRayCastInput* a_input, hkpShapeRayCastOutput* a_output)"
+60075,0x140a6b8d0,0x140aa62d0,2,"void hkpTriSampledHeightFieldBvTreeShape::CastRayWithCollectorImpl(hkpShapeRayCastInput* a_input, hkpCdBody* a_cdBody, hkpRayHitCollector* a_collector)"
+60076,0x140a6b920,0x140aa6320,2,"int hkpTriSampledHeightFieldBvTreeShape::CalcSizeForSpu(CalcSizeForSpuInput* a_input, int a_spuBufferSizeLeft)"
 60094,0x140a6c5e0,0x140aa6fe0,4,void hkpEntity::AddContactListener(hkpContactListener* a_listener)
 60095,0x140a6c680,0x140aa7080,4,void hkpEntity::RemoveContactListener(hkpContactListener* a_listener)
 60096,0x140a6c730,0x140aa7130,4,void hkpEntity::Activate
@@ -5021,6 +5283,7 @@
 60174,0x140a6fe00,0x140AAA800,4,"void hkpAabbPhantom::castRay(hkpAabbPhantom*, hkpWorldRayCastInput*, hkpWorldRayCastOutput*)"
 60175,0x140a70020,0x140AAAA20,4,"void hkpAabbPhantom::linearCast(hkpAabbPhantom*, hkpCollidable*, hkpLinearCastInput*, hkpCdPointCollector*, hkpCdPointCollector*)"
 60181,0x140a70650,0x140AAB050,4,"void hkpAabbPhantom::setAabb(hkpAabbPhantom * a_phantom, hkAabb * a_aabb)"
+60211,0x140a71580,0x140aabf80,2,bool hkpPrismaticConstraintData::IsValid()
 60493,0x140a76450,0x140ab0e50,4,void hkpWorld::RemoveEntity(hkpEntity* a_entity)
 60502,0x140a77780,0x140ab2180,3,hkpPhantom* hkpWorld::AddPhantom(hkpPhantom* a_phantom)
 60504,0x140a77d80,0x140ab2780,3,void hkpWorld::RemovePhantom(hkpPhantom* a_phantom)
@@ -5031,18 +5294,60 @@
 60628,0x140a7f0e0,0x140ab9ae0,4,"void hkpWorldObject::SetProperty(std::uint32_t a_key, hkpPropertyValue a_value)"
 60675,0x140a83c70,0x140ABE670,4,"RE::hkpShapePhantom* createSimpleShapePhantom(RE::hkpShapePhantom*, RE::hkpShape*, const RE::hkTransform&, uint32_t)"
 60682,0x140a840a0,0x140ABEAA0,4,"void hkpShapePhantom::GetPenetrations(RE::hkpShapePhantom*, RE::hkpCdBodyPairCollector*, RE::hkpCollisionInput*)"
+60697,0x140a84ea0,0x140abf8a0,2,bool hkpHingeConstraintData::IsValid()
+60701,0x140a84fa0,0x140abf9a0,2,hkResult hkpHingeConstraintData::SetInertiaStabilizationFactor(hkReal a_inertiaStabilizationFactorIn)
+60786,0x140a87710,0x140ac2110,2,hkResult hkpBallAndSocketConstraintData::SetInertiaStabilizationFactor(hkReal a_inertiaStabilizationFactorIn)
 60790,0x140a87840,0x140AC2240,4,"void hkpShapePhantom::SetTransform(hkpShapePhantom*, hkTransform*)"
 60791,0x140a878c0,0x140AC22C0,4,"void hkpShapePhantom::SetPosition(RE::hkpShapePhantom*, RE::hkVector4)"
 60792,0x140a87930,0x140AC2330,4,"hkWorldOperation::Result hkpShapePhantom::SetShape(RE::hkpShapePhantom*, RE::hkpShape*)"
+61021,0x140a940e0,0x140aceae0,2,bool hkpCogWheelConstraintData::IsValid()
+61042,0x140a953d0,0x140acfdd0,2,bool hkpPointToPathConstraintData::IsValid()
+61046,0x140a95490,0x140acfe90,2,"void hkpPointToPathConstraintData::BuildJacobian(hkpConstraintQueryIn* a_in, hkpConstraintQueryOut* a_out)"
+61051,0x140a95dc0,0x140ad07c0,2,bool hkpPointToPlaneConstraintData::IsValid()
+61060,0x140a969f0,0x140ad13f0,2,bool hkpRackAndPinionConstraintData::IsValid()
+61065,0x140a96b10,0x140ad1510,2,bool hkpStiffSpringConstraintData::IsValid()
+61072,0x140a97610,0x140ad2010,2,bool hkpWheelConstraintData::IsValid()
+61078,0x140a97930,0x140ad2330,2,bool hkpRotationalConstraintData::IsValid()
+61085,0x140a97bc0,0x140ad25c0,2,bool hkpBreakableConstraintData::IsValid()
+61090,0x140a97c80,0x140ad2680,2,"void hkpBreakableConstraintData::BuildJacobian(hkpConstraintQueryIn* a_in, hkpConstraintQueryOut* a_out)"
+61091,0x140a97da0,0x140ad27a0,2,void hkpBreakableConstraintData::BuildJacobianCallback(hkpConstraintQueryIn* a_in)
+61092,0x140a98120,0x140ad2b20,2,void hkpBreakableConstraintData::GetConstraintInfo(ConstraintInfo* a_infoOut)
+61100,0x140a983b0,0x140ad2db0,2,"void hkpBallSocketChainData::BuildJacobian(hkpConstraintQueryIn* a_in, hkpConstraintQueryOut* a_out)"
+61111,0x140a98f10,0x140ad3910,2,bool hkpHingeLimitsData::IsValid()
+61119,0x140a99550,0x140ad3f50,2,bool hkpRagdollLimitsData::IsValid()
+61127,0x140a99800,0x140ad4200,2,"void hkpStiffSpringChainData::BuildJacobian(hkpConstraintQueryIn* a_in, hkpConstraintQueryOut* a_out)"
+61151,0x140a9b020,0x140ad5a20,2,"void hkpGenericConstraintData::BuildJacobian(hkpConstraintQueryIn* a_in, hkpConstraintQueryOut* a_out)"
+61161,0x140a9b550,0x140ad5f50,2,bool hkpMalleableConstraintData::IsValid()
+61163,0x140a9b590,0x140ad5f90,2,void hkpMalleableConstraintData::GetConstraintInfo(ConstraintInfo* a_infoOut)
+61167,0x140a9b630,0x140ad6030,2,"void hkpMalleableConstraintData::BuildJacobian(hkpConstraintQueryIn* a_in, hkpConstraintQueryOut* a_out)"
+61168,0x140a9b700,0x140ad6100,2,"void hkpMalleableConstraintData::GetRuntimeInfo(bool a_wantRuntime, RuntimeInfo* a_infoOut)"
 61388,0x140aa8740,0x140ae3140,3,"void hkpResponseModifier::SetInvMassScalingForContact(hkpDynamicsContactMgr* a_mgr, hkpRigidBody* a_body, hkpConstraintOwner& a_constraintOwner, const hkVector4& a_factor)"
 61559,0x140abb120,0x140af5b20,3,"void hkpCharacterRigidBody::SetLinearVelocity(const hkVector4& a_newVel, float a_timestep)"
 61571,0x140abb790,0x140AF6190,3,"hkpMouseSpringAction::sub_140ABB790(hkpMouseSpringAction *a1, float *a2)"
 61874,0x140ac93f0,0x140b03df0,3,void hkpGravityGun::FindTargetBody()
+61998,0x140ad1340,0x140b0bd40,2,void BGSGamebryoSequenceGenerator::Deactivate(hkbContext* a_context)
 62122,0x140ad2d10,0x140b0d7b0,3,undefined8 BSSynchronizedClipGenerator::sub_140AD2D10 (BSSynchronizedClipGenerator * a_this)
+62150,0x140ad39b0,0x140b0e490,2,void BSRagdollContactListenerModifier::Activate(hkbContext* a_context)
+62151,0x140ad39d0,0x140b0e4b0,2,void BSRagdollContactListenerModifier::Deactivate(hkbContext* a_context)
+62153,0x140ad3d80,0x140b0e860,2,"void BSRagdollContactListenerModifier::Update(hkbContext* a_context, float a_timestep)"
+62180,0x140ad4ff0,0x140b0f450,2,void BSBoneSwitchGenerator::Generate(hkbContext* a_context)
 62191,0x140ad5570,0x140b0f9d0,2,void BSCyclicBlendTransitionGenerator::Activate(const hkbContext& a_context)
 62192,0x140ad5630,0x140b0fa90,2,void BSCyclicBlendTransitionGenerator::Deactivate(const hkbContext& a_context)
 62201,0x140ad5e10,0x140b10230,2,void BSCyclicBlendTransitionGenerator::UpdateSync(const hkbContext& a_context)
+62209,0x140ad62b0,0x140b106d0,2,void BSOffsetAnimationGenerator::Activate(hkbContext* a_context)
+62210,0x140ad6350,0x140b10770,2,void BSOffsetAnimationGenerator::Deactivate(hkbContext* a_context)
+62218,0x140ad6770,0x140b10b90,2,void BSOffsetAnimationGenerator::UpdateSync(hkbContext* a_context)
+62234,0x140ad7240,0x140b11670,2,void BSiStateTaggingGenerator::UpdateSync(hkbContext* a_context)
+62255,0x140ad81a0,0x140b125d0,2,"void BSDirectAtModifier::Update(hkbContext* a_context, float a_timestep)"
+62271,0x140ad8ad0,0x140b12f00,2,"void BSEventEveryNEventsModifier::handleEvent(hkbContext* context, hkbEvent e)"
+62279,0x140ad8fd0,0x140b13400,2,void BSEventOnDeactivateModifier::Deactivate(hkbContext* a_context)
+62287,0x140ad9380,0x140b137b0,2,"void BSEventOnFalseToTrueModifier::Update(hkbContext* a_context, float a_timestep)"
+62305,0x140ad9d30,0x140b14160,2,"void BSInterpValueModifier::Update(hkbContext* a_context, float a_timestep)"
 62332,0x140adb7a0,0x140b15bb0,2,void BSLookAtModifier::Activate(const hkbContext& a_context)
+62344,0x140adc8c0,0x140b16cd0,2,void BSModifyOnceModifier::Activate(hkbContext* a_context)
+62345,0x140adc920,0x140b16d30,2,void BSModifyOnceModifier::Deactivate(hkbContext* a_context)
+62365,0x140add430,0x140b17880,2,"void BSSpeedSamplerModifier::Update(hkbContext* a_context, float a_timestep)"
+62373,0x140add740,0x140b17b90,2,"void BSTimerModifier::Update(hkbContext* a_context, float a_timestep)"
 62391,0x140ade070,0x140b18b40,4,undefined8 hkbCharacter::sub_140ADE070 (hkbCharacter * a_this)
 62420,0x140ae24a0,0x140b1cfa0,4,BSAnimationGraphManager::NotifyAnimationGraph
 62430,0x140ae2db0,0x140b1d8b0,4,BSAnimationGraphManager::sub_140AE2DB0
@@ -5088,6 +5393,7 @@
 63608,0x140b25990,0x140b60770,1,sub_140B25990
 63609,0x140b25c70,0x140b60a50,1,sub_140B25C70
 63764,0x140b425c0,0x140b846e0,3,hkpContinuousSimulation::sub_140B425C0
+64030,0x140b58dc0,0x140b93c10,2,"void hkpPoweredChainData::BuildJacobian(hkpConstraintQueryIn* a_in, hkpConstraintQueryOut* a_out)"
 64067,0x140b5e120,0x140b98f70,4,"void hkpConvexVerticesShape::sub_140B5E120(longlong param_1,longlong *param_2)"
 64198,0x140b66930,0x140ba17a0,4,"bool BShkbUtils::VisitActiveClips(void* a_args, hkbCharacter* a_character, void* a_functor)"
 64204,0x140b66de0,0x140ba1c50,4,"bool BShkbUtils::VisitGeneratorRecursive(void* a_args, void* a_functor, hkbGenerator* a_generator)"
@@ -5123,6 +5429,9 @@
 66636,0x140bf99d0,0x140c34870,2,"void BSGameSound::Copy(BSGameSound* a_other, bool a_updateImpl)"
 66641,0x140bf9bb0,0x140c34a50,2,bool BSGameSound::Update()
 66646,0x140bf9e40,0x140c34ce0,4,void BSGameSound::SetOutputModel(BSISoundOutputModel* a_outputModel)
+66652,0x140bfa0e0,0x140c34f80,2,bool BSNullImplAudio::Init(REX::W32::HWND* a_wnd)
+66654,0x140bfa1a0,0x140c35040,2,BSGameSound* BSNullImplAudio::GetGameSound(BSResource::ID* a_resourceID)
+66689,0x140bfac30,0x140c35ad0,2,bool BSNullImplGameSound::Update()
 66701,0x140bfadb0,0x140c35c50,2,BSGameSound* BSXAudio2Audio::GetGameSound(const BSResource::ID& a_resourceID)
 66702,0x140bfae60,0x140c35d00,2,void BSXAudio2Audio::ReleaseGameSound(BSGameSound* a_gameSound)
 66706,0x140bfb2d0,0x140c36170,2,void BSXAudio2Audio::Shutdown()
@@ -5233,6 +5542,11 @@
 67852,0x140c2a1b0,0x140c6f0e0,4,"void BSStringPool::CreateEntry(BSStringPool::Entry** a_out, const char* a_string, uint32_t a_bucketAndCrc, uint32_t a_length, int a_allocSize, bool a_wide)"
 67855,0x140c2a4d0,0x140c6f400,3,BSStringPool::BucketTable* BSStringPool::BucketTable::GetSingleton()
 67856,0x140c2a590,0x140c6f4c0,4,"void BSStringPool::GetEntry(BSStringPool::Entry** a_out, const char* a_string, uint32_t a_hash, uint32_t a_length)"
+67935,0x140c306f0,0x140c755d0,2,"bool ArchiveFile::Open(std::uint64_t a_unused, bool a_textMode)"
+67945,0x140c30c40,0x140c75b20,2,"uint ArchiveFile::ReadBytes(void* a_buffer, uint a_bytes)"
+67946,0x140c30c90,0x140c75b70,2,"uint ArchiveFile::ReadWString(void* a_out, uint a_maxLen)"
+67947,0x140c30d40,0x140c75c20,2,"uint ArchiveFile::ReadString(BSString* a_out, uint a_maxLen)"
+67949,0x140c30eb0,0x140c75d90,2,"bool CompressedArchiveFile::Open(std::uint64_t a_unused, bool a_textMode)"
 67988,0x140c31d40,0x140c76c20,3,void JobList::QueueJob()
 67991,0x140c31e80,0x140c76d60,3,void JobList::Submit()
 67992,0x140c31ea0,0x140c76d80,3,void JobList::Finish()
@@ -5258,6 +5572,11 @@
 68635,0x140c4a610,0x140c8f6c0,4,void ID::GenerateFromPath(const char* a_path)
 68663,0x140c4b990,0x140c90a40,3,RE::LooseFileStream::Ctor
 68688,0x140c4c360,0x140c91410,4,"std::uint32_t BSResource::LooseFileStream::DoRead(void* a_dst, std::uint64_t a_bytes, std::uint64_t* a_read)"
+68756,0x140c4fc40,0x140c94cf0,2,"ErrorCode BSResource::CacheDrive::DoCreateStream(char* a_path, void* a_stream, Location** a_location, bool a_readOnly)"
+68757,0x140c4fcd0,0x140c94d80,2,"ErrorCode BSResource::CacheDrive::DoCreateAsyncStream(char* a_path, void* a_out, Location** a_location, bool a_readOnly)"
+68758,0x140c4fd60,0x140c94e10,2,"ErrorCode BSResource::CacheDrive::DoTraversePrefix(char* a_path, LocationTraverser* a_traverser)"
+68759,0x140c4fdd0,0x140c94e80,2,"ErrorCode BSResource::CacheDrive::DoGetInfo2(char* a_path, Info* a_info, LocationTraverser* a_traverser)"
+68760,0x140c4fe40,0x140c94ef0,2,"ErrorCode BSResource::CacheDrive::DoGetInfo1(char* a_path, Info* a_info, Location** a_location)"
 68820,0x140c51f70,0x140c97030,4,float NiPoint3::GetPolarAngle (NiPoint3 * a_this)
 68835,0x140c52750,0x140c97810,4,NiObject* NiObject::clone_140C52750(NiObject *a_this)
 68838,0x140c52900,0x140c979c0,3,void NiObject::ProcessClone(NiCloningProcess& a_cloning)
@@ -5387,12 +5706,67 @@
 71069,0x140cd0340,0x140d16e90,3,NiFloatData* NiFloatData::Create()
 71071,0x140cd0460,0x140d16fb0,3,"void NiFloatData::ReplaceAnim(NiFloatKey* a_keys, std::uint32_t a_numKeys, KeyType a_type)"
 71088,0x140cd0bf0,0x140d17740,3,NiFloatInterpolator* NiFloatInterpolator::Create()
+71340,0x140cd8350,0x140d1eea0,2,bool NiTransformController::InterpTargetIsCorrectType(NiObjectNET* a_target)
+72038,0x140ceb0e0,0x140d31c30,2,bool NiLightColorController::InterpTargetIsCorrectType(NiObjectNET* a_target)
 72049,0x140ceb380,0x140d31ed0,3,NiLightDimmerController* NiLightDimmerController::Create()
+72327,0x140cf4d50,0x140d3b8a0,2,bool NiVisController::InterpTargetIsCorrectType(NiObjectNET* a_target)
+72357,0x140cf5660,0x140d3c1b0,2,void BSGrabIKNote::LoadBinary(NiStream* a_stream)
+72359,0x140cf5730,0x140d3c280,2,bool BSGrabIKNote::RegisterStreamables(NiStream* a_stream)
+72360,0x140cf5750,0x140d3c2a0,2,void BSGrabIKNote::SaveBinary(NiStream* a_stream)
+72381,0x140cf5ee0,0x140d3ca30,2,void BSLookIKNote::LoadBinary(NiStream* a_stream)
+72383,0x140cf5f80,0x140d3cad0,2,bool BSLookIKNote::RegisterStreamables(NiStream* a_stream)
+72384,0x140cf5fa0,0x140d3caf0,2,void BSLookIKNote::SaveBinary(NiStream* a_stream)
+72460,0x140cf7b50,0x140d3e6a0,2,bool BSFrustumFOVController::InterpTargetIsCorrectType(NiObjectNET* a_target)
 72540,0x140cface0,0x140d41830,3,NiLinFloatKey* NiLinFloatKey::CreateArray(std::uint32_t a_count)
+72707,0x140d010c0,0x140d47c10,2,bool NiExtraDataController::InterpTargetIsCorrectType(NiObjectNET* a_target)
 72790,0x140d02aa0,0x140d495f0,3,"void NiParticleSystem::CopyMembersFrom(NiParticleSystem* a_src, NiParticleSystem* a_dst, NiCloningProcess& a_cloning)"
 72798,0x140d03180,0x140d49d00,2,void NiParticleSystem::Do_UpdateSystem(float a_time)
 72799,0x140d03330,0x140d49ec0,4,void NiParticleSystem::AddModifier(NiPSysModifier* a_modifier)
+72843,0x140d05390,0x140d4bf30,2,bool NiPSysEmitterCtlr::InterpTargetIsCorrectType(NiObjectNET* a_target)
 72864,0x140d06200,0x140d4cda0,2,"bool NiPSysGravityModifier::Update(float a_time, NiPSysData* a_particleData, NiPoint3* a_position, NiPoint3* a_radii, NiColorA* a_rotation)"
+72887,0x140d07730,0x140d4e2d0,2,"bool BSPSysHavokUpdateModifier::Update(float a_time, NiPSysData* a_particleData, NiPoint3* a_position, NiPoint3* a_radii, NiColorA* a_rotation)"
+72888,0x140d077e0,0x140d4e380,2,"void BSPSysHavokUpdateModifier::Initialize(NiPSysData* a_particleData, ushort a_arg2, NiPoint3* a_arg3)"
+73000,0x140d0b120,0x140d51cf0,2,"bool NiPSysMeshUpdateModifier::Update(float a_time, NiPSysData* a_particleData, NiPoint3* a_position, NiPoint3* a_radii, NiColorA* a_rotation)"
+73001,0x140d0b290,0x140d51e60,2,"void NiPSysMeshUpdateModifier::Initialize(NiPSysData* a_particleData, ushort a_arg2, NiPoint3* a_arg3)"
+73037,0x140d0c700,0x140d532d0,2,void NiMeshPSysData::SetActiveVertexCount(ushort a_vertexCount)
+73060,0x140d0d010,0x140d53c00,2,bool NiPSysAirFieldAirFrictionCtlr::InterpTargetIsCorrectType(NiObjectNET* a_target)
+73075,0x140d0d390,0x140d53f80,2,bool NiPSysAirFieldInheritVelocityCtlr::InterpTargetIsCorrectType(NiObjectNET* a_target)
+73090,0x140d0db50,0x140d54740,2,"bool NiPSysAirFieldModifier::Update(float a_time, NiPSysData* a_particleData, NiPoint3* a_position, NiPoint3* a_radii, NiColorA* a_rotation)"
+73108,0x140d0eef0,0x140d55b00,2,bool NiPSysAirFieldSpreadCtlr::InterpTargetIsCorrectType(NiObjectNET* a_target)
+73123,0x140d0f470,0x140d56080,2,"bool NiPSysAgeDeathModifier::Update(float a_time, NiPSysData* a_particleData, NiPoint3* a_position, NiPoint3* a_radii, NiColorA* a_rotation)"
+73138,0x140d0fdc0,0x140d569d0,2,"bool NiPSysBombModifier::Update(float a_time, NiPSysData* a_particleData, NiPoint3* a_position, NiPoint3* a_radii, NiColorA* a_rotation)"
+73163,0x140d11080,0x140d57eb0,2,void NiPSysBoundUpdateModifier::SetSystemPointer(NiParticleSystem* a_target)
+73195,0x140d12700,0x140d59ae0,2,"bool NiPSysColliderManager::Update(float a_time, NiPSysData* a_particleData, NiPoint3* a_position, NiPoint3* a_radii, NiColorA* a_rotation)"
+73210,0x140d12da0,0x140d5a180,2,"bool NiPSysColorModifier::Update(float a_time, NiPSysData* a_particleData, NiPoint3* a_position, NiPoint3* a_radii, NiColorA* a_rotation)"
+73228,0x140d13bf0,0x140d5b020,2,void NiPSysData::ResolveAddedParticles()
+73242,0x140d14160,0x140d5b5a0,2,"bool NiPSysDragFieldModifier::Update(float a_time, NiPSysData* a_particleData, NiPoint3* a_position, NiPoint3* a_radii, NiColorA* a_rotation)"
+73259,0x140d150b0,0x140d5c500,2,"bool NiPSysDragModifier::Update(float a_time, NiPSysData* a_particleData, NiPoint3* a_position, NiPoint3* a_radii, NiColorA* a_rotation)"
+73288,0x140d16180,0x140d5d5e0,2,bool NiPSysEmitterDeclinationCtlr::InterpTargetIsCorrectType(NiObjectNET* a_target)
+73303,0x140d164e0,0x140d5d940,2,bool NiPSysEmitterDeclinationVarCtlr::InterpTargetIsCorrectType(NiObjectNET* a_target)
+73318,0x140d16840,0x140d5dca0,2,bool NiPSysEmitterInitialRadiusCtlr::InterpTargetIsCorrectType(NiObjectNET* a_target)
+73333,0x140d16ba0,0x140d5e000,2,bool NiPSysEmitterLifeSpanCtlr::InterpTargetIsCorrectType(NiObjectNET* a_target)
+73348,0x140d16f00,0x140d5e360,2,bool NiPSysEmitterPlanarAngleCtlr::InterpTargetIsCorrectType(NiObjectNET* a_target)
+73363,0x140d17260,0x140d5e6c0,2,bool NiPSysEmitterPlanarAngleVarCtlr::InterpTargetIsCorrectType(NiObjectNET* a_target)
+73378,0x140d175c0,0x140d5ea20,2,bool NiPSysEmitterSpeedCtlr::InterpTargetIsCorrectType(NiObjectNET* a_target)
+73393,0x140d17920,0x140d5ed80,2,bool NiPSysFieldAttenuationCtlr::InterpTargetIsCorrectType(NiObjectNET* a_target)
+73408,0x140d17c80,0x140d5f0e0,2,bool NiPSysFieldMagnitudeCtlr::InterpTargetIsCorrectType(NiObjectNET* a_target)
+73423,0x140d17fe0,0x140d5f440,2,bool NiPSysFieldMaxDistanceCtlr::InterpTargetIsCorrectType(NiObjectNET* a_target)
+73438,0x140d18430,0x140d5f890,2,"bool NiPSysGravityFieldModifier::Update(float a_time, NiPSysData* a_particleData, NiPoint3* a_position, NiPoint3* a_radii, NiColorA* a_rotation)"
+73455,0x140d19010,0x140d60490,2,bool NiPSysGravityStrengthCtlr::InterpTargetIsCorrectType(NiObjectNET* a_target)
+73470,0x140d196c0,0x140d60b40,2,"bool NiPSysGrowFadeModifier::Update(float a_time, NiPSysData* a_particleData, NiPoint3* a_position, NiPoint3* a_radii, NiColorA* a_rotation)"
+73484,0x140d19a80,0x140d60f10,2,bool NiPSysInitialRotAngleCtlr::InterpTargetIsCorrectType(NiObjectNET* a_target)
+73499,0x140d19de0,0x140d61270,2,bool NiPSysInitialRotAngleVarCtlr::InterpTargetIsCorrectType(NiObjectNET* a_target)
+73514,0x140d1a140,0x140d615d0,2,bool NiPSysInitialRotSpeedCtlr::InterpTargetIsCorrectType(NiObjectNET* a_target)
+73529,0x140d1a4a0,0x140d61930,2,bool NiPSysInitialRotSpeedVarCtlr::InterpTargetIsCorrectType(NiObjectNET* a_target)
+73625,0x140d1ead0,0x140d65f60,2,"bool NiPSysPositionModifier::Update(float a_time, NiPSysData* a_particleData, NiPoint3* a_position, NiPoint3* a_radii, NiColorA* a_rotation)"
+73638,0x140d1ef70,0x140d66400,2,"bool NiPSysRadialFieldModifier::Update(float a_time, NiPSysData* a_particleData, NiPoint3* a_position, NiPoint3* a_radii, NiColorA* a_rotation)"
+73667,0x140d20030,0x140d674d0,2,"bool NiPSysRotationModifier::Update(float a_time, NiPSysData* a_particleData, NiPoint3* a_position, NiPoint3* a_radii, NiColorA* a_rotation)"
+73668,0x140d20110,0x140d675b0,2,"void NiPSysRotationModifier::Initialize(NiPSysData* a_particleData, ushort a_arg2, NiPoint3* a_arg3)"
+73729,0x140d22430,0x140d698e0,2,"bool NiPSysTurbulenceFieldModifier::Update(float a_time, NiPSysData* a_particleData, NiPoint3* a_position, NiPoint3* a_radii, NiColorA* a_rotation)"
+73746,0x140d230a0,0x140d6a560,2,"bool NiPSysVortexFieldModifier::Update(float a_time, NiPSysData* a_particleData, NiPoint3* a_position, NiPoint3* a_radii, NiColorA* a_rotation)"
+73789,0x140d25de0,0x140d6d2a0,2,"bool BSPSysRecycleBoundModifier::Update(float a_time, NiPSysData* a_particleData, NiPoint3* a_position, NiPoint3* a_radii, NiColorA* a_rotation)"
+73803,0x140d26920,0x140d6ddf0,2,"bool BSPSysInheritVelocityModifier::Update(float a_time, NiPSysData* a_particleData, NiPoint3* a_position, NiPoint3* a_radii, NiColorA* a_rotation)"
+73804,0x140d269e0,0x140d6deb0,2,"void BSPSysInheritVelocityModifier::Initialize(NiPSysData* a_particleData, ushort a_arg2, NiPoint3* a_arg3)"
 73882,0x140d28c40,0x140d70310,3,"Setting * SettingT<T1>::SetStringValue_140D28C40 (Setting * a_this, char * a_string)"
 73893,0x140d29090,0x140d70fb0,3,"void BSTaskManager::BSTaskManager(BSTaskManager* a_this, std::uint32_t a_extraNodes, std::uint32_t a_threadCount, std::uint32_t a_bucketCount)"
 73894,0x140d292e0,0x140d71200,3,void BSTaskManager::~BSTaskManager(BSTaskManager* a_this)
@@ -5489,6 +5863,8 @@
 74607,0x140d47590,0x140d904c0,4,"BSMultiBoundShape* BSMultiBoundShape::LoadFromStream(BSMultiBoundShape* param_1, NiPoint3* param_2, NiPoint3* param_3, bool param_4, undefined4 param_5, int param_6, longlong param_7, int param_8)"
 74621,0x140d47af0,0x140d90a20,4,"void BSIOStreamTraits::Write (BSIOStreamTraits * a_this, void * a_1, uint a_2)"
 74649,0x140d485a0,0x140d914d0,3,"bool BSMultiBoundAABB::TestOcclusionShape(std::uint64_t a_unused, BSCullingProcess* a_process, BSOcclusionShape* a_shape)"
+74664,0x140d48b20,0x140d91a50,2,bool BSMultiBoundSphere::CheckBound(BSMultiBound* a_arg1)
+74666,0x140d48d60,0x140d91c90,2,bool BSMultiBoundSphere::CompletelyWithinFrustum(NiFrustumPlanes* a_arg1)
 74671,0x140d48f80,0x140d91eb0,3,NiObject* BSOcclusionBox::CreateClone()
 74673,0x140d49070,0x140d91fa0,3,BSOcclusionBox* BSOcclusionBox::CtorDefault(BSOcclusionBox* a_this)
 74674,0x140d491a0,0x140d920d0,3,"BSOcclusionBox* BSOcclusionBox::Ctor(BSOcclusionBox* a_this, NiPoint3* a_center, NiPoint3* a_size, NiMatrix3* a_rotation)"
@@ -5588,6 +5964,10 @@
 75086,0x140d5c3a0,0x140da54b0,3,"bool BSCompoundFrustum::SphereInsidePlanes(NiBound* a_bound, NiFrustumPlanes* a_planes)"
 75175,0x140d60170,0x140daa230,4,void BSProceduralLightningController::SendGeomEvent(BSProceduralLightningController * a_this)
 75197,0x140d60a00,0x140daab20,4,void BSTEventSource<BSProceduralGeomEvent>::SendEvent(const BSProceduralGeomEvent* a_event)
+75335,0x140d64430,0x140dae550,2,"bool BSPSysStripUpdateModifier::Update(float a_time, NiPSysData* a_particleData, NiPoint3* a_position, NiPoint3* a_radii, NiColorA* a_rotation)"
+75336,0x140d644d0,0x140dae5f0,2,"void BSPSysStripUpdateModifier::Initialize(NiPSysData* a_particleData, ushort a_arg2, NiPoint3* a_arg3)"
+75350,0x140d64bf0,0x140daed10,2,"bool BSPSysSubTexModifier::Update(float a_time, NiPSysData* a_particleData, NiPoint3* a_position, NiPoint3* a_radii, NiColorA* a_rotation)"
+75365,0x140d65290,0x140daf3b0,2,"bool BSPSysScaleModifier::Update(float a_time, NiPSysData* a_particleData, NiPoint3* a_position, NiPoint3* a_radii, NiColorA* a_rotation)"
 75445,0x140d68dd0,0x1405be850,3,"void Renderer::Init(RendererInitOSData* a_data, ApplicationWindowProperties* windowProps, WinAPI::HWND window)"
 75447,0x140d69140,0x140dbabc0,4,void Renderer::Shutdown()
 75448,0x140d69590,0x140dbb010,4,"void Renderer::SetWindowPosition(std::uint32_t windowID, std::int32_t x, std::int32_t y)"
@@ -5653,6 +6033,7 @@
 76017,0x140da6440,0x140dfb3c0,3,"void ComputePhysicsStepTimes(float a_frameDelta, bool a_complex)"
 76023,0x140da6e60,0x140dfbde0,4,HavokWorld::Init_*
 76027,0x140da7580,0x140dfc500,3,bool bhkWorld::PickObject(bhkPickData& a_pickData)
+76030,0x140da7af0,0x140dfca70,2,"void bhkWorldM::InitHavok(NiAVObject* a_sceneObject, NiAVObject* a_root)"
 76033,0x140da81e0,0x140dfd160,3,RE::NiAVObject::SetMotionType
 76071,0x140da94e0,0x140dfe460,2,void bhkWorld::BeginDeferral()
 76072,0x140da94f0,0x140dfe470,2,void bhkWorld::EndDeferral(bool a_flag)
@@ -5663,13 +6044,18 @@
 76160,0x140dad060,0x140e01fe0,4,NiAVObject * GetNiObjectFromHavokCollidable_140DAD060 (hkpCollidable * param_1)
 76170,0x140dae3d0,0x140e03350,3,void NiAVObject::SetCollisionLayer(COL_LAYER a_collisionLayer)
 76171,0x140dae3f0,0x140e03370,3,"void NiAVObject::SetCollisionLayerAndGroup(COL_LAYER a_collisionLayer, std::uint32_t a_group)"
+76244,0x140db2de0,0x140e07d60,2,void bhkRigidBodyT::MoveToWorld(bhkWorld* a_world)
+76246,0x140db3020,0x140e07fa0,2,void bhkRigidBodyT::RemoveFromCurrentWorld()
 76247,0x140db30c0,0x140e08040,3,bool bhkRigidBody::SetMotionType(std::uint32_t a_motionType)
+76253,0x140db3470,0x140e083f0,2,void bhkRigidBodyT::GetCenterOfMassLocal(hkVector4* a_outCenterOfMassLocal)
+76256,0x140db3540,0x140e084c0,2,void bhkRigidBodyT::GetAabbWorldspace(hkAabb* a_outAabb)
 76259,0x140db36f0,0x140e08670,4,void bhkRigidBody::SetLinearVelocity(const hkVector4& a_newVel)
 76260,0x140db37c0,0x140e08740,4,void bhkRigidBody::SetAngularVelocity(const hkVector4& a_newVel)
 76261,0x140db3890,0x140e08810,4,void bhkRigidBody::SetLinearImpulse(const hkVector4& a_impulse) src\RE\B/bhkRigidBody.cpp:22
 76262,0x140db3930,0x140e088b0,4,void bhkRigidBody::SetAngularImpulse(const hkVector4& a_impulse) src\RE\B/bhkRigidBody.cpp:8
 76271,0x140db4d20,0x140e09ca0,3,"void NiAVObject::UpdateRigidConstraints(bool a_enable, std::uint8_t a_arg2, std::uint32_t a_arg3)"
 76354,0x140db81d0,0x140e0d150,3,"void bhkCollisionObject::SetMotionType(std::uint32_t a_motionType, bhkRigidBody* a_body, bool a_activate)"
+76358,0x140db8410,0x140e0d390,2,void bhkWindListener::Update(float a_delta)
 76421,0x140dbe770,0x140e136f0,3,"bool bhkCharacterController::TryMoveTo(const hkVector4& a_pos, void* a_arg2, bool a_ignoreDepth)"
 76426,0x140dbef90,0x140e13f10,2,float bhkCharRigidBodyController::GetSupportMass()
 76456,0x140dc1380,0x140e16300,4,bool bhkCharacterController::IsHurtfulBody(hkpRigidBody* a_body)
@@ -5690,6 +6076,7 @@
 76736,0x140ddb540,0x140e3a670,2,"void bhkRigidBodyT::SetPositionAndRotation(hkVector4& a_position, hkQuaternion& a_rotation)"
 76737,0x140ddb6d0,0x140e3a800,2,void bhkRigidBodyT::GetCenterOfMassWorld(hkVector4& a_outCenterOfMassWorld)
 76738,0x140ddb730,0x140e3a860,2,void bhkRigidBodyT::GetTransform(hkTransform& a_outTransform)
+76746,0x140ddb930,0x140e2fdf0,2,void bhkEntityListener::EntityAddedCallback(hkpEntity* a_entity)
 76751,0x140ddbad0,0x140e2ff90,2,bhkWorldObject* bhkEntityListener::GetMatchingWorldObject(hkpEntity* a_entity)
 76773,0x140ddc2a0,0x140e30760,2,void bhkRefObject::SetReferencedObject(hkReferencedObject* a_object)
 76774,0x140ddc2f0,0x140e307b0,2,void bhkRefObject::AdjustRefCount(bool a_increment)
@@ -5700,6 +6087,15 @@
 76809,0x140ddcda0,0x140e31260,2,void bhkPhantom::RemoveFromCurrentWorld()
 76924,0x140de1f20,0x140E363E0,4,"bhkCapsuleShape * bhkCapsuleShape::bhkCapsuleShape(bhkCapsuleShape * a_this, RE::NiPoint3 * a_topVec, RE::NiPoint3 * a_botVec, float a_radius)"
 76940,0x140de2a40,0x140e36f00,4,void bhkBoxShape::InitializeShape(const BoxInfo* a_info)
+76966,0x140de36b0,0x140e37b70,2,void bhkBvTreeShape::AdjustRefCount(bool a_increment)
+77048,0x140de69c0,0x140e3b990,2,void hkAvoidBox::AddOverlappingCollidable(hkpCollidable* a_collidable)
+77049,0x140de6af0,0x140e3bac0,2,void hkAvoidBox::RemoveOverlappingCollidable(hkpCollidable* a_collidable)
+77061,0x140de7c20,0x140e3cbf0,2,void bhkAvoidBox::MoveToWorld(bhkWorld* a_world)
+77122,0x140de9d40,0x140e3ed10,2,hkpWorld* bhkConstraint::GetWorld1()
+77124,0x140de9d90,0x140e3ed60,2,void bhkConstraint::SetReferencedObject(hkReferencedObject* a_object)
+77132,0x140dea1f0,0x140e3f1c0,2,void bhkConstraint::MoveToWorld(bhkWorld* a_world)
+77133,0x140dea2a0,0x140e3f270,2,void bhkConstraint::RemoveFromCurrentWorld()
+77138,0x140dea780,0x140e3f750,2,void bhkConstraint::AdjustRefCount(bool a_increment)
 77163,0x140deb530,0x140e40500,2,hkpWorld* bhkAction::GetWorld1()
 77164,0x140deb550,0x140e40520,2,ahkpWorld* bhkAction::GetWorld2()
 77165,0x140deb570,0x140e40540,2,void bhkAction::MoveToWorld(bhkWorld* a_world)
@@ -5708,16 +6104,32 @@
 77177,0x140debae0,0x140e40ab0,2,void bhkUnaryAction::MoveToWorld(bhkWorld* a_world)
 77186,0x140dec000,0x140e40fd0,4,"std::uintptr_t bhkTriSampledHeightFieldBvTreeShape::InitFromCInfo(bhkShape* a_shape, HeightFieldCInfo* a_cinfo)"
 77215,0x140ded7c0,0x140e427c0,4,int HavokThreadMemorySink::Handle(void* a_event)
+77255,0x140df0080,0x140e45080,2,"void bhkCharProxyController::SetPositionImpl(hkVector4* a_pos, bool a_applyCenterOffset, bool a_forceWarp)"
+77256,0x140df0100,0x140e45100,2,"void bhkCharProxyController::GetPositionImpl(hkVector4* a_pos, bool a_applyCenterOffset)"
+77258,0x140df01c0,0x140e451c0,2,void bhkCharProxyController::SetTransformImpl(hkTransform* a_tranform)
+77260,0x140df02a0,0x140e452a0,2,void bhkCharProxyController::SetLinearVelocityImpl(hkVector4* a_velocity)
+77261,0x140df02c0,0x140e452c0,2,void bhkCharProxyController::GetCollisionFilterInfo(CFilter* a_collisionFilterInfo)
 77313,0x140df22f0,0x140e472f0,2,"void bhkCharRigidBodyController::SetPositionImpl(const hkVector4& a_pos, bool a_applyCenterOffset, bool a_forceWarp)"
+77314,0x140df25a0,0x140e475a0,2,"void bhkCharRigidBodyController::GetPositionImpl(hkVector4* a_pos, bool a_applyCenterOffset)"
 77315,0x140df2780,0x140e47780,2,void bhkCharRigidBodyController::GetTransformImpl(hkTransform& a_tranform)
 77316,0x140df2810,0x140e47810,2,void bhkCharRigidBodyController::SetTransformImpl(const hkTransform& a_tranform)
 77317,0x140df28d0,0x140e478d0,2,void bhkCharRigidBodyController::GetLinearVelocityImpl(hkVector4& a_velocity)
 77318,0x140df2910,0x140e47910,2,void bhkCharRigidBodyController::SetLinearVelocityImpl(const hkVector4& a_velocity)
+77319,0x140df29c0,0x140e479c0,2,void bhkCharRigidBodyController::GetCollisionFilterInfo(CFilter* a_collisionFilterInfo)
+77323,0x140df2ce0,0x140e47ce0,2,void bhkCharRigidBodyController::CheckSupportImpl()
 77446,0x140df8690,0x140e4d690,4,"void hkpAllRayHitCollector::AddRayHit(const hkpCdBody& a_body, const hkpShapeRayCastCollectorOutput& a_hitInfo)"
 77470,0x140df9140,0x140e4e140,4,"bhkMemorySystem * ctor_140df9140 (bhkMemorySystem * param_1, undefined8 param_2, undefined8 param_3, undefined8 param_4)"
+77644,0x140e04840,0x140e59840,2,void bhkConvexTransformShape::AdjustRefCount(bool a_increment)
+77665,0x140e052a0,0x140e5a2a0,2,void bhkConvexTranslateShape::AdjustRefCount(bool a_increment)
+77801,0x140e0ad40,0x140e5fd40,2,void bhkTransformShape::AdjustRefCount(bool a_increment)
 77824,0x140e0bf10,0x140e60f10,2,void bhkListShape::AdjustRefCount(bool a_increment)
+78226,0x140e1f360,0x140e74360,2,void bhkCollisionBox::MoveToWorld(bhkWorld* a_world)
 78586,0x140e34280,0x140e904d0,2,void bhkCharacterProxy::AdjustRefCount(bool a_increment)
 78605,0x140e34ae0,0x140e90d30,2,void bhkCharacterRigidBody::AdjustRefCount(bool a_increment)
+78816,0x140e422d0,0x140e9e520,2,void bhkConstraintChain::MoveToWorld(bhkWorld* a_world)
+78817,0x140e423b0,0x140e9e600,2,void bhkConstraintChain::RemoveFromCurrentWorld()
+78831,0x140e42ca0,0x140e9eef0,2,void bhkBinaryAction::MoveToWorld(bhkWorld* a_world)
+78832,0x140e42d60,0x140e9efb0,2,void bhkBinaryAction::RemoveFromCurrentWorld()
 78843,0x140e43640,0x140e9f890,4,"undefined8 *hkpConvexVerticesShape::sub_140E43640(undefined8 *param_1,undefined8 param_2,char *param_3)"
 79937,0x140ebe150,0x140f1a3b0,4,UI::IsMenuOpen
 79944,0x140ebe510,0x140F1A680,3,"void UI::GetTopMostMenu(RE::UI this, RE::IMenu** a_result, std::uint32_t a_depthLimit)"
@@ -5945,6 +6357,7 @@
 82383,0x140f45820,0x140fa2520,4,void BSScaleformImageLoader::RemoveTexture(BSScaleformExternalTexture& a_texture)
 82462,0x140f48270,0x140fa4f70,3,bool GSysAllocPaged::InitHeapEngine(const void* a_heapDesc)
 82464,0x140f48360,0x140fa5060,3,void GSysAllocPaged::ShutdownHeapEngine()
+82553,0x140f4d5d0,0x140faa2d0,2,void BSScaleformMovieLoadTask::Run()
 82556,0x140f4d680,0x140faa380,4,GFxLog::LogMessageVarg
 82638,0x140f52650,0x140faf350,4,"void GFxLog::LogScriptError (GFxLog * a_this, void * a_format, void * a_arg1, void * a_arg2)"
 83641,0x140f85e60,0x140fe2b60,4,GFxEditTextCharacter::~GFxEditTextCharacter
@@ -7170,6 +7583,7 @@
 98118,0x141260610,0x1412800f0,2,"bool BSScript::IVMSaveLoadInterface::ReadHandle(void* a_storage, std::uint64_t* a_out)"
 98119,0x1412606c0,0x1412801a0,2,"bool BSScript::IVMSaveLoadInterface::GetStackByID(std::uint32_t a_stackID, void** a_stack)"
 98120,0x1412607b0,0x141280290,2,"bool BSScript::IVMSaveLoadInterface::CreateEmptyTasklet(void* a_stack, void** a_out)"
+98121,0x1412608a0,0x141280380,2,void BSScript::Internal::VirtualMachine::DumpRunningStacksToLog()
 98124,0x141260f80,0x141280a60,2,"bool BSScript::Internal::VirtualMachine::FindFunctionInTypeHierarchy(void* a_type, BSFixedString* a_stateName, BSFixedString* a_fnName, void* a_out, void* a_unk)"
 98130,0x141261cb0,0x141281790,3,BSScript::Internal::VirtualMachine::AttemptFunctionCall
 98132,0x141262ae0,0x1412825c0,2,void BSScript::Internal::VirtualMachine::TasksToJobs(void* a_jobList)
@@ -7424,6 +7838,8 @@
 99967,0x1412cd140,0x14130bd60,4,void BSShaderAccumulator::UpdateSunOcclusionTestResult(int a_index)
 99971,0x1412cd520,0x14130c0f0,3,"std::uint32_t AccumulateSceneGraphNode(NiAVObject* a_object, AccumulateSceneGraphContext* a_context)"
 99974,0x1412cd6d0,0x14130c360,3,"std::uint32_t AccumulateNodeChildren(AccumulateSceneGraphContext* a_context, NiNode* a_node)"
+99993,0x1412ce060,0x14130ce90,2,bool BSGrassShader::SetupTechnique(uint a_technique)
+99994,0x1412ce200,0x14130d030,2,void BSGrassShader::SetupMaterial(BSShaderMaterial* a_material)
 99996,0x1412ce260,0x14130d090,3,"void BSGrassShader::SetupGeometry(BSGrassShader* a_this, BSRenderPass* a_pass, uint a_flags)"
 100000,0x1412ceb10,0x14130da10,4,"void fogMethod (undefined8 param_1, int param_2)"
 100004,0x1412ced50,0x14130dc60,3,BSLightingShaderMaterial* BSLightingShaderMaterial::Ctor()
@@ -7446,10 +7862,14 @@
 100213,0x1412d6bb0,0x141315b40,3,"void BSCullingProcess::DispatchCullAndAccumulate(CullDescriptor* a_job, int a_mode, int a_phase)"
 100216,0x1412d6f20,0x1413162b0,3,void SubmitCullResultsJob(CullDescriptor* a_job)
 100217,0x1412d6f90,0x141316320,3,void FlushAlphaGroupQueueJob(CullDescriptor* a_job)
+100265,0x1412d8bf0,0x141318030,2,bool BSBloodSplatterShader::SetupTechnique(uint a_technique)
 100297,0x1412dbad0,0x14131acc0,3,VolumetricLightingDescriptor& VolumetricLightingDescriptor::GetDescriptor()
 100299,0x1412dbb80,0x14131ad70,3,"void VolumetricLightingDescriptor::SetQuality(VolumetricLightingDescriptor& this, uint32_t quality)"
 100306,0x1412dc050,0x14131b240,4,"void VolumetricLightingDescriptor::Render (longlong param_1, undefined8 param_2, bool param_3)"
 100309,0x1412dc3a0,0x14131b590,4,void VolumetricLightingDescriptor::Raymarch (VolumetricLightingDescriptor* this)
+100371,0x1412dfdb0,0x14131f350,2,"void BSParticleShaderGeometryEmitter::CollectObjects(NiAVObject* a_targetRoot, ushort a_depthLimit, ushort a_arg3, bool a_nodeFilterFunc( BSFixedString*) a_arg4)"
+100375,0x1412e0380,0x14131f920,2,"void BSParticleShaderCollisionEmitter::CollectObjects(NiAVObject* a_targetRoot, ushort a_depthLimit, ushort a_arg3, bool a_nodeFilterFunc( BSFixedString*) a_arg4)"
+100379,0x1412e06b0,0x14131fc50,2,"void BSParticleShaderRayEmitter::CollectObjects(NiAVObject* a_targetRoot, ushort a_depthLimit, ushort a_arg3, bool a_nodeFilterFunc( BSFixedString*) a_arg4)"
 100403,0x1412e1aa0,0x141321040,2,float* GetNiCameraScale()
 100405,0x1412e1af0,0x141321090,2,void Main::EnterFirstPersonCamera()
 100406,0x1412e1d40,0x1413213f0,2,void Main::RestoreWorldCamera()
@@ -7493,6 +7913,9 @@
 100720,0x1412fde50,0x141340330,4,void renderPassCacheCtor()
 100721,0x1412fe020,0x141340500,4,BSRenderPassCache::Kill
 100722,0x1412fe0e0,0x1413405c0,3,BSRenderPassCache::Clear
+100741,0x1412feba0,0x141341080,2,void BSEffectShader::RestoreTechnique(uint a_technique)
+100743,0x1412fecb0,0x141341190,2,bool BSEffectShader::SetupTechnique(uint a_technique)
+100744,0x1412ff0b0,0x141341660,2,void BSEffectShader::SetupMaterial(BSShaderMaterial* a_material)
 100771,0x1413014c0,0x141343d40,3,"bool BSDistantTreeShader::Func2_1413014C0 (BSDistantTreeShader * a_this, undefined8 param_2)"
 100776,0x141301c50,0x141344550,3,BSCubeMapCamera* BSCubeMapCamera::Ctor()
 100779,0x141301fa0,0x1413448a0,4,void BSCubeMapCamera::SetFace(Face a_face)
@@ -7539,6 +7962,7 @@
 100950,0x14130cd20,0x14134ff90,3,"void ImageSpaceEffect::Render (ImageSpaceEffect * a_this, BSTriShape * a_shape, ImageSpaceEffectParam * a_param)"
 100951,0x14130cf80,0x1413501F0,3,void BSImagespaceShader::Render(BSTriShape* a_geometry)
 100952,0x14130d070,0x1413502b0,4,"void BSImagespaceShader::DispatchComputeShader (BSImagespaceShader * a_this, uint32_t a_threadGroupCountX, uint32_t a_threadGroupCountY, uint32_t a_threadGroupCountZ)"
+100955,0x14130d1a0,0x141350430,2,void BSImagespaceShader::ShutDown()
 100974,0x14130dd80,0x141351840,2,void BSUtilityShader::RestoreTechnique(std::uint32_t a_technique)
 100976,0x14130df90,0x141351a50,2,bool BSUtilityShader::SetupTechnique(std::uint32_t a_technique)
 100977,0x14130e890,0x1413523f0,2,void BSUtilityShader::SetupMaterial(const BSShaderMaterial* a_material)
@@ -7578,6 +8002,15 @@
 101335,0x14131f630,0x1413654b0,3,"void NiBoneMatrixSetterI::SetBoneMatrices(NiBoneMatrixSetterI* a_this, NiSkinInstance* a_skin, void* a_context, NiTransform* a_transform)"
 101339,0x14131f810,0x1413656b0,4,"void BSShader::LoadShaders_14131F810 (BSShader * a_this, UINT_PTR * a_stream)"
 101341,0x14131fbd0,0x141365a70,4,"bool BSShader::BeginTechnique_14131FBD0 (BSShader * shader, int vertexDescriptor, int pixelDescriptor, bool skipPIxelShader)"
+101353,0x1413200b0,0x141365f50,2,void BSParticleShader::RestoreTechnique(uint a_technique)
+101373,0x141321510,0x141367720,2,bool BSLightingShaderPropertyFloatController::InterpTargetIsCorrectType(NiObjectNET* a_target)
+101390,0x141321990,0x141367ba0,2,bool BSLightingShaderPropertyUShortController::InterpTargetIsCorrectType(NiObjectNET* a_target)
+101407,0x141321e90,0x1413680a0,2,bool BSLightingShaderPropertyColorController::InterpTargetIsCorrectType(NiObjectNET* a_target)
+101424,0x141322460,0x141368670,2,bool BSEffectShaderPropertyFloatController::InterpTargetIsCorrectType(NiObjectNET* a_target)
+101441,0x141322980,0x141368b90,2,bool BSEffectShaderPropertyColorController::InterpTargetIsCorrectType(NiObjectNET* a_target)
+101455,0x141322d30,0x141368f40,2,bool BSNiAlphaPropertyTestRefController::InterpTargetIsCorrectType(NiObjectNET* a_target)
+101456,0x141322d80,0x141368f90,2,void BSNiAlphaPropertyTestRefController::GetTargetFloatValue(float* a_value)
+101469,0x141323550,0x141369760,2,"bool BSPSysSimpleColorModifier::Update(float a_time, NiPSysData* a_particleData, NiPoint3* a_position, NiPoint3* a_radii, NiColorA* a_rotation)"
 101491,0x141324500,0x141356630,3,BSShadowDirectionalLight* BSShadowDirectionalLight::ctor(uint32_t a_shadowCount)
 101493,0x141324ac0,0x141356c30,3,"void BSShadowDirectionalLight::TransformClipSpacePlanes(REX::W32::D3DXMatrix* a_matrix1, REX::W32::D3DXMatrix* a_matrix2)"
 101494,0x141324b40,0x141356cb0,3,"void BSShadowDirectionalLight::Accumulate(std::uint32_t& a_globalShadowLightCount, std::uint32_t a_shadowMaskChannel, NiAVObject* a_cullingScene)"
