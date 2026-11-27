@@ -5074,7 +5074,7 @@
 32433,0x1404fbf60,0x14050c400,2,void CombatBehaviorTreeNodeObject<CombatBehaviorRepeat>::Enter(CombatBehaviorThread* a_thread)
 32434,0x1404fbfa0,0x14050c440,2,void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextRanged>::Exit(CombatBehaviorThread* a_thread)
 32435,0x1404fc000,0x14050c4a0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFallbackSelector<NextChildSelector>>::Exit(CombatBehaviorThread* a_thread)
-32436,0x1404fc010,0x14050c4b0,3,void CombatBehaviorIdle::Update()
+32436,0x1404fc010,0x14050c4b0,3,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorIdle>::Exit(CombatBehaviorThread* a_thread)
 32437,0x1404fc020,0x14050c4c0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorRangedAttack>::Exit(CombatBehaviorThread* a_thread)
 32438,0x1404fc090,0x14050c530,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorRepeat>::Exit(CombatBehaviorThread* a_thread)
 32439,0x1404fc0a0,0x14050c540,2,"const BSFixedString& CombatBehaviorTreeConditionalNode<CombatBehaviorExpression<CombatBehaviorFunc1<bool_(__cdecl*)(float),CombatBehaviorExpression<CombatBehaviorFunc1<float_(__cdecl*)(Actor*_),CombatBehaviorTree::CombatBehaviorAttacker>>>>>::GetClassType()"
@@ -5291,7 +5291,7 @@
 33676,0x140550d60,0x140555020,3,"bool MagicCaster::FindTargets(float a_effectivenessMult, std::uint32_t& a_targetCount, TESBoundObject* a_source, bool a_loadCast, bool a_adjustOnlyHostileEffectiveness)"
 33677,0x140550e20,0x1405550E0,3,"MagicTarget* FUNC_140550E20(longlong a1, char a2, float a3, NiPoint3 *a4, TESObjectCELL **a5, longlong a6)"
 33683,0x140551980,0x140555b90,2,void MagicCaster::PostCreationCallback::ModifyActiveEffect(ActiveEffect* a_effect)
-33684,0x140551a90,0x140555ca0,3,po3tweaks::Spell::detail::SpellApplyStruct
+33684,0x140551a90,0x140555ca0,3,BSContainer::ForEachResult PermanentMagicFunctor::operator()(MagicItem* a_spell)
 33704,0x1405522f0,0x140556600,2,bool ActorTargetCheck::IsValid(Actor* a_actor)
 33705,0x140552360,0x140556670,2,void MagicCaster::RequestCastImpl()
 33711,0x140552480,0x140556790,2,bool MagicCaster::StartChargeImpl()
@@ -5944,9 +5944,9 @@
 36743,0x1405fc7c0,0x140604fb0,2,"bool Character::RefreshKnowledgeOf(TESObjectREFR* a_target, DetectionListener* a_listener, std::int32_t a_level)"
 36748,0x1405fc9a0,0x140605190,3,RE::Actor::RequestDetectionLevel
 36750,0x1405fcaf0,0x1406052e0,2,bool Character::IsTargetDetected(TESObjectREFR* a_target)
-36752,0x1405fccb0,0x1406054a0,3,"std::int32_t Actor::RequestLOS(Actor* a_target, float a_viewCone)"
+36752,0x1405fccb0,0x1406054a0,3,"ACTOR_LOS_LOCATION Actor::CalculateLOS(Actor* a_target, float a_viewCone)"
 36754,0x1405fd2c0,0x140605b10,4,"NiAVObject* Actor::CalculateLOS(NiPoint3* a_targetPos, NiPoint3* a_hitPosOut, float a_viewCone)"
-36755,0x1405fd5b0,0x140605e00,4,RE::Actor::GetEyePos
+36755,0x1405fd5b0,0x140605e00,4,NiPoint3 Actor::CalculateLOSLocation(ACTOR_LOS_LOCATION a_location)
 36759,0x1405fe370,0x140606b80,3,Actor::GetLightLevel
 36760,0x1405fe4b0,0x140606cc0,3,float Character::GetLookAtHeadingMaxAngle()
 36762,0x1405fe650,0x140606e60,2,void Actor::RequestFollowPath()
@@ -7659,8 +7659,8 @@
 43242,0x140760070,0x14078b3c0,4,bool CombatAnimation::GetTranslation(NiPoint3& a_translation)
 43243,0x140760110,0x14078b460,4,float CombatAnimation::GetEventTime(const BSFixedString& a_eventName)
 43244,0x140760190,0x14078b4e0,4,float CombatAnimation::GetLength()
-43245,0x1407601f0,0x14078b540,4,"bool CombatAnimation::ConstructAndExecute (CombatAnimation * a_this, Actor * a_actor, ANIM a_anim)"
-43246,0x1407602e0,0x14078b630,4,"bool CombatAnimation::ConstructAndExecute(CombatAnimation* a_this, Actor* a_actor, TESObjectREFR* a_target, ANIM a_anim)"
+43245,0x1407601f0,0x14078b540,4,"static bool CombatAnimation::ConstructAndExecute(Actor* a_actor, CombatAnimation::ANIM a_anim)"
+43246,0x1407602e0,0x14078b630,4,"static bool CombatAnimation::ConstructAndExecute(Actor* a_actor, TESObjectREFR* a_target, CombatAnimation::ANIM a_anim)"
 43247,0x1407603e0,0x14078b730,4,bool CombatAnimation::LoadClipData()
 43250,0x140760450,0x14078b7a0,2,void CombatArea::SaveGame(BGSSaveGameBuffer* a_buf)
 43251,0x1407604f0,0x14078b840,2,void CombatArea::LoadGame(BGSLoadGameBuffer* a_buf)
@@ -8566,6 +8566,8 @@
 46113,0x1407c2850,0x1407edba0,4,CombatController* CombatBehaviorController::GetCurrentCombatController
 46114,0x1407c2880,0x1407edbd0,4,Actor* CombatBehaviorController::GetCurrentAttacker()
 46148,0x1407c3850,0x1407eeba0,3,void CombatBehaviorSequence::Enter()
+46149,0x1407c38d0,0x1407eec20,2,void CombatBehaviorSequence::SaveGame(BGSSaveFormBuffer* a_buffer)
+46150,0x1407c3930,0x1407eec80,2,void CombatBehaviorSequence::LoadGame(BGSLoadFormBuffer* a_buffer)
 46151,0x1407c39b0,0x1407eed00,3,"bool ChildSelectorBase::ValidateChildren(CombatBehaviorTreeNode* node, BSFixedString const& type)"
 46152,0x1407c3a30,0x1407eed80,3,"uint32_t NextChildSelector::SelectChild(CombatBehaviorTreeNode* node, uint32_t a_selected_ind)"
 46153,0x1407c3a50,0x1407eeda0,3,"uint32_t PriorityChildSelector::SelectChild(CombatBehaviorTreeNode* node, uint32_t selected)"
@@ -8582,12 +8584,18 @@
 46169,0x1407c42f0,0x1407ef640,3,void CombatBehaviorParallel::Update()
 46170,0x1407c4470,0x1407ef7c0,3,void CombatBehaviorParallel::Abort()
 46173,0x1407c4750,0x1407efaa0,3,void CombatBehaviorSpawnParallel::Enter()
+46174,0x1407c4880,0x1407efbd0,2,void CombatBehaviorSpawnParallel::SaveGame(BGSSaveFormBuffer* a_buffer)
+46175,0x1407c48d0,0x1407efc20,2,void CombatBehaviorSpawnParallel::LoadGame(BGSLoadFormBuffer* a_buffer)
 46176,0x1407c4910,0x1407efc60,3,CombatBehaviorDynamicConditionalNode::CombatBehaviorDynamicConditionalNode(float interval)
 46178,0x1407c4980,0x1407efcd0,3,void CombatBehaviorDynamicConditionalNode::Enter()
 46179,0x1407c4a00,0x1407efd50,3,void CombatBehaviorDynamicConditionalNode::Update()
 46180,0x1407c4b00,0x1407efe50,3,void CombatBehaviorDynamicConditionalNode::Abort()
+46181,0x1407c4b70,0x1407efec0,2,void CombatBehaviorDynamicConditionalNode::SaveGame(BGSSaveFormBuffer* a_buffer)
+46182,0x1407c4bb0,0x1407eff00,2,void CombatBehaviorDynamicConditionalNode::LoadGame(BGSLoadFormBuffer* a_buffer)
 46183,0x1407c4c80,0x1407effd0,3,bool CombatBehaviorDynamicConditionalNode::Validate(CombatBehaviorTreeNode* node)
 46184,0x1407c4cf0,0x1407f0040,3,void CombatBehaviorRepeat::Update()
+46185,0x1407c4df0,0x1407f0140,2,void CombatBehaviorRepeat::SaveGame(BGSSaveFormBuffer* a_buffer)
+46186,0x1407c4e60,0x1407f01b0,2,void CombatBehaviorRepeat::LoadGame(BGSLoadFormBuffer* a_buffer)
 46187,0x1407c4ec0,0x1407f0210,3,CombatBehaviorIdle::CombatBehaviorIdle(float interval)
 46190,0x1407c4f40,0x1407f0290,3,void CombatBehaviorPause::Enter()
 46193,0x1407c5050,0x1407f03a0,2,const BSFixedString& CombatBehaviorTreeValueNode<unsigned_int>::GetClassType()
@@ -8603,6 +8611,8 @@
 46210,0x1407c5da0,0x1407f10f0,3,void CombatBehaviorAcquireResource::Update()
 46211,0x1407c5ec0,0x1407f1210,3,void CombatBehaviorAcquireResource::Exit()
 46212,0x1407c5ef0,0x1407f1240,3,void CombatBehaviorAcquireResource::Abort()
+46213,0x1407c5f70,0x1407f12c0,2,void CombatBehaviorAcquireResource::SaveGame(BGSSaveFormBuffer* a_buffer)
+46214,0x1407c6000,0x1407f1350,2,void CombatBehaviorAcquireResource::LoadGame(BGSLoadFormBuffer* a_buffer)
 46226,0x1407c65d0,0x1407f1920,3,"CombatBehaviorThread::CombatBehaviorThread(CombatBehaviorController* a_controller, CombatBehaviorThread* a_parent)"
 46227,0x1407c66d0,0x1407f1a20,3,CombatBehaviorThread::~CombatBehaviorThread()
 46228,0x1407c6800,0x1407f1b50,3,void CombatBehaviorThread::Update()
@@ -8678,8 +8688,11 @@
 46338,0x1407c94d0,0x1407f4820,3,bool CombatAcquireItem::IsValid()
 46341,0x1407c9690,0x1407f49e0,3,void CombatBehaviorContextAcquireWeapon::Enter()
 46342,0x1407c9900,0x1407f4c50,3,void CombatBehaviorContextAcquireWeapon::Exit()
+46347,0x1407ca670,0x1407f59c0,2,void CombatBehaviorFindWeapon::SaveGame(BGSSaveFormBuffer* a_buffer)
+46348,0x1407ca720,0x1407f5a70,2,void CombatBehaviorFindWeapon::LoadGame(BGSLoadFormBuffer* a_buffer)
 46349,0x1407ca8c0,0x1407f5c10,3,void CombatBehaviorAcquireItem::Enter()
 46350,0x1407caad0,0x1407f5e20,3,void CombatBehaviorAcquireItem::Update()
+46352,0x1407cb060,0x1407f63b0,2,void CombatBehaviorAcquireItem::LoadGame(BGSLoadFormBuffer* a_buffer)
 46353,0x1407cb0e0,0x1407f6430,2,void CombatBehaviorTreeAcquireWeapon::Initialize()
 46391,0x1407cc9f0,0x1407f7d40,2,CombatBehaviorTreeNodeObject<CombatBehaviorSequence>* CombatBehaviorTreeNodeObject<CombatBehaviorSequence>::dtor_deleting(std::uint32_t a_flags)
 46392,0x1407cca30,0x1407f7d80,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorAcquireItem>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorAcquireItem>::dtor_deleting(std::uint32_t a_flags)
@@ -8829,6 +8842,8 @@
 46590,0x1407d1740,0x1407fca90,3,void CombatBehaviorDodgeThreat::Enter()
 46591,0x1407d21e0,0x1407fd530,3,void CombatBehaviorDodgeThreat::Update()
 46592,0x1407d23f0,0x1407fd740,3,void CombatBehaviorDodgeThreat::Exit()
+46593,0x1407d2570,0x1407fd8c0,2,void CombatBehaviorDodgeThreat::SaveGame(BGSSaveFormBuffer* a_buffer)
+46594,0x1407d2610,0x1407fd960,2,void CombatBehaviorDodgeThreat::LoadGame(BGSLoadFormBuffer* a_buffer)
 46595,0x1407d2750,0x1407fdaa0,2,void CombatBehaviorTreeDodgeThreat::Initialize()
 46605,0x1407d2e10,0x1407fe160,2,CombatBehaviorTreeNodeObject<CombatBehaviorDodgeThreat>* CombatBehaviorTreeNodeObject<CombatBehaviorDodgeThreat>::dtor_deleting(std::uint32_t a_flags)
 46606,0x1407d2e50,0x1407fe1a0,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorDodgeThreat>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorDodgeThreat>::dtor_deleting(std::uint32_t a_flags)
@@ -9125,6 +9140,8 @@
 47115,0x1407e6a40,0x140811d90,2,bool CombatBehaviorTreeNodeObjectBase<CombatBehaviorFindLateralAttackLocation>::Validate(CombatBehaviorTreeNode* a_node)
 47116,0x1407e6a50,0x140811da0,2,bool CombatBehaviorTreeNodeObjectBase<CombatBehaviorSetBlackboardData>::Validate(CombatBehaviorTreeNode* a_node)
 47118,0x1407e6b10,0x140811e60,3,bool CombatBehaviorContextFlankingMovement::CheckShouldStalk()
+47128,0x1407e8120,0x140813470,2,void CombatBehaviorChase::LoadGame(BGSLoadFormBuffer* a_buffer)
+47132,0x1407e87c0,0x140813b10,2,void CombatBehaviorStalk::LoadGame(BGSLoadFormBuffer* a_buffer)
 47137,0x1407e8f60,0x1408142b0,2,void CombatBehaviorTreeFlankingMovement::Initialize()
 47140,0x1407e94d0,0x140814820,2,void CombatFlankingSearchData::SaveGame(BGSSaveGameBuffer* a_buf)
 47141,0x1407e9610,0x140814960,2,void CombatFlankingSearchData::LoadGame(BGSLoadGameBuffer* a_buf)
@@ -9228,6 +9245,7 @@
 47401,0x1407f2680,0x14081d9d0,2,bool CombatBehaviorTreeNodeObjectBase<CombatBehaviorWatchTarget>::Validate(CombatBehaviorTreeNode* a_node)
 47404,0x1407f27e0,0x14081db30,3,bool CombatBehaviorContextFlee::CheckShouldFlee()
 47405,0x1407f29a0,0x14081dcf0,3,bool CombatBehaviorContextFlee::StartFlee()
+47417,0x1407f4080,0x14081f3d0,2,void CombatBehaviorFleeToCover::LoadGame(BGSLoadFormBuffer* a_buffer)
 47426,0x1407f4a50,0x14081fda0,2,void CombatBehaviorTreeFlee::Initialize()
 47429,0x1407f5320,0x140820670,2,void CombatBehaviorTreeHide::Initialize()
 47518,0x1407f7e20,0x140823170,2,CombatBehaviorTreeNodeObject<CombatBehaviorFlee>* CombatBehaviorTreeNodeObject<CombatBehaviorFlee>::dtor_deleting(std::uint32_t a_flags)
@@ -9377,12 +9395,16 @@
 47717,0x1407fd340,0x140828690,2,void CombatBehaviorTakeoff::Update()
 47719,0x1407fd860,0x140828bb0,2,void CombatBehaviorDiveBomb::Update()
 47722,0x1407fe180,0x1408294d0,2,void CombatBehaviorHover::Update()
+47725,0x1407fe4a0,0x1408297f0,2,void CombatBehaviorHover::LoadGame(BGSLoadFormBuffer* a_buffer)
 47727,0x1407fe740,0x140829a90,2,void CombatBehaviorOrbit::UpdatePath()
 47731,0x1407fee50,0x14082a1a0,2,void CombatBehaviorGroundAttack::Update()
+47733,0x1407ff280,0x14082a5d0,2,void CombatBehaviorGroundAttack::LoadGame(BGSLoadFormBuffer* a_buffer)
 47735,0x1407ff6a0,0x14082a9f0,2,void CombatBehaviorLand::Update()
 47740,0x1408001b0,0x14082b500,2,void CombatBehaviorPerchAttack::Update()
+47743,0x1408006b0,0x14082ba00,2,void CombatBehaviorPerchAttack::LoadGame(BGSLoadFormBuffer* a_buffer)
 47744,0x140800760,0x14082bab0,2,"bool CombatBehaviorPerchAttack::IsTargetWithinPerchAngle(TESObjectREFR* a_actor, TESObjectREFR* a_target)"
 47746,0x140800b60,0x14082beb0,2,void CombatBehaviorFlyingAttack::Update()
+47748,0x140800e70,0x14082c1c0,2,void CombatBehaviorFlyingAttack::LoadGame(BGSLoadFormBuffer* a_buffer)
 47752,0x140801330,0x14082c680,2,void CombatBehaviorTreeFlight::Initialize()
 47755,0x140801f10,0x14082d260,2,void DiveBombSpeedController::SaveGame(BGSSaveGameBuffer* a_buf)
 47756,0x140801fa0,0x14082d2f0,2,void DiveBombSpeedController::LoadGame(BGSLoadGameBuffer* a_buf)
@@ -9638,6 +9660,15 @@
 48190,0x14080eda0,0x14083a0f0,2,bool CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextMelee>::Validate(CombatBehaviorTreeNode* a_node)
 48191,0x14080edb0,0x14083a100,2,bool CombatBehaviorTreeNodeObjectBase<CombatBehaviorAttack>::Validate(CombatBehaviorTreeNode* a_node)
 48192,0x14080edc0,0x14083a110,2,bool CombatBehaviorTreeNodeObjectBase<CombatBehaviorSpecialAttack>::Validate(CombatBehaviorTreeNode* a_node)
+48196,0x14080efe0,0x14083a330,2,void CombatBehaviorTrackTarget::LoadGame(BGSLoadFormBuffer* a_buffer)
+48198,0x14080f0c0,0x14083a410,2,void CombatBehaviorWatchTarget::SaveGame(BGSSaveFormBuffer* a_buffer)
+48199,0x14080f100,0x14083a450,2,void CombatBehaviorWatchTarget::LoadGame(BGSLoadFormBuffer* a_buffer)
+48203,0x14080f4c0,0x14083a810,2,void CombatBehaviorFaceAngle::SaveGame(BGSSaveFormBuffer* a_buffer)
+48204,0x14080f510,0x14083a860,2,void CombatBehaviorFaceAngle::LoadGame(BGSLoadFormBuffer* a_buffer)
+48207,0x14080f6e0,0x14083aa30,2,void CombatBehaviorDisableAim::LoadGame(BGSLoadFormBuffer* a_buffer)
+48211,0x14080f7d0,0x14083ab20,2,void CombatBehaviorEnableBlackboardFlag::SaveGame(BGSSaveFormBuffer* a_buffer)
+48222,0x1408100c0,0x14083b410,2,void CombatBehaviorFollowPath::LoadGame(BGSLoadFormBuffer* a_buffer)
+48227,0x1408104c0,0x14083b810,2,void CombatBehaviorReturnToCombatArea::LoadGame(BGSLoadFormBuffer* a_buffer)
 48234,0x140810930,0x14083bc80,2,void CombatDisableActionController::SaveGame(BGSSaveGameBuffer* a_buf)
 48235,0x1408109c0,0x14083bd10,2,void CombatDisableActionController::LoadGame(BGSLoadGameBuffer* a_buf)
 48236,0x140810a00,0x14083bd50,2,std::uint32_t CombatDisableActionController::GetObjectType()
@@ -9756,6 +9787,9 @@
 48517,0x14081a3c0,0x140845710,2,bool CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextRangedMovement>::Validate(CombatBehaviorTreeNode* a_node)
 48518,0x14081a3d0,0x140845720,2,bool CombatBehaviorTreeNodeObjectBase<CombatBehaviorMaintainOptimalRange>::Validate(CombatBehaviorTreeNode* a_node)
 48519,0x14081a3e0,0x140845730,2,bool CombatBehaviorTreeNodeObjectBase<CombatBehaviorStrafe>::Validate(CombatBehaviorTreeNode* a_node)
+48533,0x14081bae0,0x140846e30,2,void CombatBehaviorSearchLocation::SaveGame(BGSSaveFormBuffer* a_buffer)
+48534,0x14081bb60,0x140846eb0,2,void CombatBehaviorSearchLocation::LoadGame(BGSLoadFormBuffer* a_buffer)
+48542,0x14081c750,0x140847aa0,2,void CombatBehaviorSearchInvestigateDoor::SaveGame(BGSSaveFormBuffer* a_buffer)
 48544,0x14081c860,0x140847bb0,2,void CombatBehaviorTreeSearch::Initialize()
 48549,0x14081d770,0x140848ac0,2,"bool CombatSearchLockData::TryPassDoor(BSPathingDoor** a_door, float* a_costOut)"
 48641,0x1408203e0,0x14084b730,2,CombatBehaviorTreeNodeObject<CombatBehaviorForceFail>* CombatBehaviorTreeNodeObject<CombatBehaviorForceFail>::dtor_deleting(std::uint32_t a_flags)
@@ -9889,6 +9923,7 @@
 48837,0x1408261b0,0x140851500,2,"bool CombatBehaviorTreeConditionalNode<CombatBehaviorExpression<CombatBehaviorFunc1<bool_(__cdecl*)(float),CombatBehaviorExpression<CombatBehaviorMemberFunc<CombatBehaviorContextShout,float_(__cdecl_CombatBehaviorContextShout::*)(void)const>>>>>::Validate(CombatBehaviorTreeNode* a_node)"
 48838,0x1408261c0,0x140851510,2,bool CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextShout>::Validate(CombatBehaviorTreeNode* a_node)
 48839,0x1408261d0,0x140851520,2,bool CombatBehaviorTreeNodeObjectBase<CombatBehaviorCastShout>::Validate(CombatBehaviorTreeNode* a_node)
+48847,0x140826cf0,0x140852040,2,void CombatBehaviorFindCover::LoadGame(BGSLoadFormBuffer* a_buffer)
 48856,0x140827820,0x140852b70,2,void CombatBehaviorTreeUseCover::Initialize()
 48896,0x140828ea0,0x1408541f0,2,CombatBehaviorTreeNodeObject<CombatBehaviorAttackFromCover>* CombatBehaviorTreeNodeObject<CombatBehaviorAttackFromCover>::dtor_deleting(std::uint32_t a_flags)
 48897,0x140828ee0,0x140854230,2,CombatBehaviorTreeNodeObject<CombatBehaviorFindCover>* CombatBehaviorTreeNodeObject<CombatBehaviorFindCover>::dtor_deleting(std::uint32_t a_flags)
@@ -12358,7 +12393,6 @@
 67299,0x140c14b70,0x140c514e0,4,RE::ButtonEvent::IsDown
 67315,0x140c150b0,0x140c519e0,3,void BSInputDeviceManager::PollInputDevices(float a_secsSinceLastFrame)
 67316,0x140c15180,0x140c51ac0,4,"bool BSInputDeviceManager::GetButtonNameFromID(INPUT_DEVICE a_device, std::int32_t a_id, BSFixedString& a_buttonName) const"
-67325,0x140c15300,0x140C51C40,2,void BSInputDeviceManager::ResetInputDevices()
 67373,0x140c165e0,0x140c533a0,4,DirectInput8::IDirectInputDevice8A* BSDirectInputManager::CreateDeviceWithGUID(WinAPI::GUID* a_guid)
 67374,0x140c16620,0x140c533e0,4,void BSDirectInputManager::ReleaseDevice(DirectInput8::IDirectInputDevice8A* a_device)
 67375,0x140c16650,0x140c53410,4,"void BSDirectInputManager::GetDeviceState(DirectInput8::IDirectInputDevice8A* a_device, std::uint32_t a_size, void* a_outData)"
@@ -13795,7 +13829,6 @@
 72864,0x140d06200,0x140d4cda0,2,"bool NiPSysGravityModifier::Update(float a_time, NiPSysData* a_particleData, NiPoint3* a_position, NiPoint3* a_radii, NiColorA* a_rotation)"
 72865,0x140d06f10,0x140d4dab0,2,void NiPSysGravityModifier::ProcessClone(NiCloningProcess& a_cloning)
 72873,0x140d071c0,0x140d4dd60,2,const NiRTTI* NiPSysGravityModifier::GetRTTI()
-72874,0x140d071d0,0x140D4DD70,2,float NiSymmetricRandom()
 72875,0x140d07200,0x140d4dda0,2,void NiPSysModifier::SetActive(bool a_active)
 72876,0x140d07210,0x140d4ddb0,2,NiObject* BSPSysHavokUpdateModifier::CreateClone(NiCloningProcess& a_cloning)
 72878,0x140d07380,0x140d4df20,2,void BSPSysHavokUpdateModifier::LoadBinary(NiStream& a_stream)
@@ -26251,6 +26284,9 @@
 530053,0x14080b130,0x140836480,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorPrepareDualCast>::Abort(CombatBehaviorThread* a_thread)
 530054,0x14080e7d0,0x140839b20,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorAttack>::Abort(CombatBehaviorThread* a_thread)
 530055,0x14080e800,0x140839b50,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorSpecialAttack>::Abort(CombatBehaviorThread* a_thread)
+530056,0x14080efc0,0x14083a310,2,void CombatBehaviorTrackTarget::SaveGame(BGSSaveFormBuffer* a_buffer)
+530057,0x14080f6c0,0x14083aa10,2,void CombatBehaviorDisableAim::SaveGame(BGSSaveFormBuffer* a_buffer)
+530058,0x1408100a0,0x14083b3f0,2,void CombatBehaviorFollowPath::SaveGame(BGSSaveFormBuffer* a_buffer)
 530068,0x140813060,0x14083e3b0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorCheckUnreachableTarget>::Abort(CombatBehaviorThread* a_thread)
 530069,0x140813090,0x14083e3e0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorExitWater>::Abort(CombatBehaviorThread* a_thread)
 530070,0x1408130c0,0x14083e410,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorReturnToCombatArea>::Abort(CombatBehaviorThread* a_thread)
