@@ -3729,32 +3729,58 @@ sseid,aeid,confidence,name
 25962,26551,1,
 25963,26552,1,
 25964,26553,1,
+25965,26555,1,
+25966,26556,1,
+25969,26559,1,
 25970,26560,1,
 25971,26561,1,
+25972,26562,1,
+25976,26585,1,
 25977,26586,3,RE::BSFaceGenAnimationData::Reset
 25978,26591,1,
 25979,26593,1,
 25980,26594,3,RE::BSFaceGenAnimationData::SetExpressionOverride
+25981,26595,1,
 25983,26598,1,
 25984,26599,1,
 25985,26600,1,
 25986,26601,1,
 25988,26604,1,
+25991,26608,1,
 26059,26667,1,
+26247,26826,1,
+26250,26829,1,
 26259,26838,3,RE::BSFaceGenManager::PrepareHeadPartForShaders
+26296,26879,1,
 26298,26881,1,
 26304,26887,1,
 26305,26888,1,
+26314,26900,1,
 26348,26926,1,
+26349,26927,1,
+26350,26928,1,
+26355,26933,1,
+26357,26935,1,
+26358,26936,1,
 26363,26941,1,
 26364,26942,1,
 26365,26943,1,
+26401,26981,1,
+26402,26982,1,
+26403,26983,1,
 26407,26988,2,
 26408,26989,1,
 26409,26990,1,
 26410,26991,1,
+26411,26992,1,
 26412,26993,1,
+26413,26994,1,
 26414,26995,1,
+26417,26998,1,
+26440,27019,1,
+26441,27020,1,
+26442,27021,1,
+26463,27058,1,
 26497,27093,2,
 26563,27195,1,
 26620,27293,1,
@@ -8598,7 +8624,10 @@ sseid,aeid,confidence,name
 69557,70941,3,void BSDynamicTriShape::LoadBinary(NiStream* a_stream)
 69563,70947,3,"BSDynamicTriShape* BSDynamicTriShape::ctor(std::uint64_t a_vertexDesc, std::uint16_t a_vertexCount, std::uint16_t a_triangleCount, std::uint32_t a_dataSize)"
 69564,70948,3,RE::BSDynamicTriShape::BSDynamicTriShape
+69566,70950,1,
+69568,70952,1,
 69569,70953,3,void BSDynamicTriShape::ResizeDynamicData(std::uint32_t a_dataSize)
+69570,70954,1,
 69573,70958,3,BSDynamicTriShape* BSDynamicTriShape::scalar_deleting_destructor(std::uint32_t a_flags)
 71069,72667,3,NiFloatData* NiFloatData::Create()
 71071,72669,3,"void NiFloatData::ReplaceAnim(NiFloatKey* a_keys, std::uint32_t a_numKeys, KeyType a_type)"
@@ -8647,6 +8676,11 @@ sseid,aeid,confidence,name
 75660,77466,1,
 75662,77468,1,
 75663,77469,1,
+75665,77471,1,
+75668,77474,1,
+75669,77475,1,
+75672,77478,1,
+75689,77499,1,
 76017,77850,3,"void ComputePhysicsStepTimes(float a_frameDelta, bool a_complex)"
 76071,77905,2,
 76072,77906,2,
@@ -10963,10 +10997,16 @@ sseid,aeid,confidence,name
 101143,108127,1,
 101144,108128,1,
 101145,108129,1,BSOrderedNode::dtor_*
+101148,108132,1,
 101149,108133,1,
 101150,108134,1,
 101152,108136,1,BSLines::dtor_*
 101163,108147,1,
+101164,108148,1,
+101165,108149,1,
+101166,108150,1,
+101167,108151,1,
+101169,108153,1,
 101170,108154,1,
 101172,108157,1,BSDynamicLines::GetRTTI_*
 101174,108158,1,BSStreamParserData::sub_*
