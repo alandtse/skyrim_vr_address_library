@@ -52,6 +52,7 @@
 10924,0x1400f8550,0x140108b00,4,void Effect::SetDuration(std::int32_t a_duration)
 10929,0x1400f8630,0x140108be0,4,"ulonglong FUN_1400f8630(longlong param_1, longlong param_2)"
 10956,0x1400f9860,0x140109e10,4,"int memmove_s(void* a_dest, std::size_t a_destSize, const void* a_src, std::size_t a_count)"
+10966,0x1400f9a60,0x14010a010,2,std::uint32_t BSTCaseInsensitiveStringMap<Setting*>::hash_function(key_type a_key)
 10974,0x1400f9ca0,0x14010a250,3,RE::INISettingCollection::Unk_07
 10979,0x1400f9e90,0x14010a440,3,RE::BSString::Set_CStr
 10985,0x1400fa270,0x14010a820,2,bool GameSettingCollection::WriteAllSettings()
@@ -144,6 +145,7 @@
 12840,0x1401443b0,0x140154da0,2,NiPoint3* ExtraTeleport::Data::GetPosition()
 12841,0x1401443c0,0x140154db0,2,NiPoint3* ExtraTeleport::Data::GetRotation()
 12863,0x140145300,0x140155d00,2,void AttachDistant3DTask::PostProcess()
+12890,0x140146d60,0x140157770,2,"bool QueuedAnimationObject::GetDescription(char* a_dest, std::uint32_t a_maxCount)"
 12910,0x140147bb0,0x1401585e0,3,SeasonsofSkyrim::FormSwap::model_loader_queue_ref
 13054,0x14014dc60,0x14015e690,3,RE::INISettingCollection::InsertSetting
 13113,0x14014f700,0x140160130,3,bool INISettingCollection::ReadAllSettings()
@@ -328,7 +330,7 @@
 15282,0x1401ba650,0x1401ca7c0,3,"bool BSResource::EntryDB::QueueEntry(void* a_entryDB, const char* a_name, void* a_entry, void** a_entryOut, int a_priority, void* a_args)"
 15344,0x1401be140,0x1401ce2b0,2,"void StringsFile::AddEntries(std::uint32_t a_fileId, const std::uint32_t* a_pairs, std::uint32_t a_count)"
 15356,0x1401becf0,0x1401cee60,2,"std::int32_t StringsFile::LoadStringTable(const BSFixedString& a_fileName, const char* a_ext)"
-15431,0x1401c4070,0x1401d41e0,2,uint BGSSceneInfo::TextureUse::Accept(NiSourceTexture* a_texture)
+15431,0x1401c4070,0x1401d41e0,2,std::uint32_t BGSSceneInfo::TextureUse::Accept(NiSourceTexture* a_texture)
 15485,0x1401c5cc0,0x1401d5e30,4,char * GetGameVersion(void)
 15486,0x1401c5cd0,0x1401d5e40,4,void BIPOBJECT::Clear()
 15487,0x1401c5e60,0x1401d5fd0,4,void BIPOBJECT::Assign(BIPOBJECT* a_other)
@@ -1176,12 +1178,15 @@
 26810,0x1403eb5f0,0x1403fb140,2,void BGSPackageDataInt::LoadBuffer(BGSLoadFormBuffer* a_buf)
 26813,0x1403eb680,0x1403fb1d0,2,IAIWorldLocation* BGSPackageDataRefOLD::AllocateLocation(AIWorldLocationContext* a_context)
 26849,0x1403ebf80,0x1403fbad0,2,bool BGSPackageDataTargetSelector::GetDataAsString(BSString* a_dst)
+26921,0x1403ed6c0,0x1403fd210,2,bool BGSNamedPackageData<IPackageData>::IsNotEqual(IPackageData* a_other)
 26952,0x1403ee1f0,0x1403fdd40,3,FindInPackageDataLocationMap
+26965,0x1403ee540,0x1403fe090,2,void BGSNamedPackageData<IPackageData>::LoadPackage(TESFile* a_mod)
 26991,0x1403eed70,0x1403fe8c0,2,IAIWorldLocation* ObjectListItem::AllocateLocation(AIWorldLocationContext* a_context)
 26992,0x1403eeeb0,0x1403fea00,2,"bool ObjectListItem::IsRefAtLocation(AIWorldLocationContext* a_context, TESObjectREFR* a_ref)"
 27015,0x1403ef9d0,0x1403ff520,2,IAIWorldLocation* BGSPackageDataObjectList::AllocateLocation(AIWorldLocationContext* a_context)
 27016,0x1403efb20,0x1403ff670,2,"bool BGSPackageDataObjectList::IsRefAtLocation(AIWorldLocationContext* a_context, TESObjectREFR* a_ref)"
 27076,0x1403f11d0,0x140400d20,2,IAIWorldLocation* BGSPackageDataRef::AllocateLocation(AIWorldLocationContext* a_context)
+27077,0x1403f1330,0x140400e80,2,bool BGSPackageDataRef::IsNotEqual(IPackageData* a_other)
 27086,0x1403f1590,0x1404010e0,2,"bool BGSPackageDataRef::IsRefAtLocation(AIWorldLocationContext* a_context, TESObjectREFR* a_ref)"
 27110,0x1403f1e40,0x140401990,2,void BGSPackageDataTopic::Assign(IPackageData* a_other)
 27111,0x1403f1e90,0x1404019e0,2,bool BGSPackageDataTopic::IsNotEqual(IPackageData* a_other)
@@ -2082,6 +2087,7 @@
 29871,0x1404771a0,0x140487160,2,TESWorldSpace* Pathing::GetWorldSpaceForPathingCell(const BSTSmartPointer<PathingCell>& a_cell)
 29872,0x1404771c0,0x140487180,2,BSPathingDoor* Pathing::CreatePathingDoorFromRef(TESObjectREFR* a_ref)
 29875,0x1404772b0,0x140487270,2,"bool Pathing::GetPathingDoorForCollidable(hkpCollidable* a_collidable, BSTSmartPointer<BSPathingDoor>& a_out)"
+29878,0x1404774e0,0x1404874a0,2,"BSEventNotifyControl Pathing::ProcessEvent(CellAttachDetachEvent* a_event, BSTEventSource<CellAttachDetachEvent>* a_eventSource)"
 29880,0x140477800,0x140487790,2,"std::uint32_t PushBackRecentPathingCell(BSTArray<BSTTuple<std::uint64_t, BSTSmartPointer<PathingCell>>>& a_array, std::uint32_t a_time, BSTSmartPointer<PathingCell>& a_cell)"
 29887,0x140477e30,0x140487dc0,2,"bool BSPathingCellManager::FindPotentialNavmeshesForLocationImpl_Scrap(BSPathingLocation* a_location, float a_radius, BSScrapArray<BSTSmartPointer<BSNavmesh>>& a_navMeshesOut, bool a_flag)"
 29888,0x140478510,0x1404884a0,2,"bool BSPathingCellManager::FindPotentialNavmeshesForLocationImpl_Heap(BSPathingLocation* a_location, float a_radius, BSTArray<BSTSmartPointer<BSNavmesh>>& a_navMeshesOut, bool a_flag)"
@@ -2929,6 +2935,7 @@
 35402,0x1405a6230,0x1405ad8f0,4,"void Calendar::Update_1405a6230 (Calendar * a_this, float GameDaysPassed)"
 35408,0x1405a64f0,0x1405adbb0,4,RE::Calendar::GetGameDaysPassed
 35413,0x1405a6640,0x1405add00,3,"void Calendar::GetTimeDateString(char* a_dest, std::uint32_t a_max, bool a_showYear)"
+35466,0x1405a8e80,0x1405b0540,2,"Explosion* ConcreteExplosionFactory<ChainExplosion,1>::Create(SpawnExplosionData& a_data)"
 35477,0x1405a97f0,0x1405b0eb0,2,void EnhanceWeaponEffect::ClearTargetImpl()
 35480,0x1405a99a0,0x1405b1060,2,void EnhanceWeaponEffect::FinishLoadGame(BGSLoadFormBuffer* a_buf)
 35487,0x1405a9c40,0x1405b1300,2,void EnhanceWeaponEffect::Revert(BGSLoadFormBuffer* a_buf)
@@ -2991,6 +2998,19 @@
 35698,0x1405badb0,0x1405c3020,2,void MovementAgentNameSet::StaticDtor_PathFollowerFlightSet()
 35754,0x1405bc350,0x1405c4770,3,void BSFadeNode::RegisterFocusShadowActor()
 35771,0x1405bc830,0x1405c4c10,3,void ClearFocusShadowActors()
+35779,0x1405bcaf0,0x1405c4f50,2,bool BSTCommonScrapHeapMessageQueue<BSPackedTask>::PushInternal(BSPackedTask* a_obj)
+35791,0x1405bd1b0,0x1405c5610,2,"BSEventNotifyControl DoorObstacleAdapter::ProcessEvent(TESOpenCloseEvent* a_event, BSTEventSource<TESOpenCloseEvent>* a_eventSource)"
+35792,0x1405bd250,0x1405c56b0,2,"BSEventNotifyControl MovementAvoidBoxEventAdapter::ProcessEvent(PositionPlayerEvent* a_event, BSTEventSource<PositionPlayerEvent>* a_eventSource)"
+35793,0x1405bd2c0,0x1405c5720,2,"BSEventNotifyControl PathManagerPositionPlayerAdapter::ProcessEvent(PositionPlayerEvent* a_event, BSTEventSource<PositionPlayerEvent>* a_eventSource)"
+35794,0x1405bd340,0x1405c57a0,2,"BSEventNotifyControl PathManagerPositionPlayerAdapter::ProcessEvent(TESSleepStartEvent* a_event, BSTEventSource<TESSleepStartEvent>* a_eventSource)"
+35795,0x1405bd3a0,0x1405c5800,2,"BSEventNotifyControl PathManagerPositionPlayerAdapter::ProcessEvent(TESSleepStopEvent* a_event, BSTEventSource<TESSleepStopEvent>* a_eventSource)"
+35796,0x1405bd400,0x1405c5860,2,"BSEventNotifyControl PathManagerPositionPlayerAdapter::ProcessEvent(TESWaitStartEvent* a_event, BSTEventSource<TESWaitStartEvent>* a_eventSource)"
+35797,0x1405bd460,0x1405c58c0,2,"BSEventNotifyControl PathManagerPositionPlayerAdapter::ProcessEvent(TESWaitStopEvent* a_event, BSTEventSource<TESWaitStopEvent>* a_eventSource)"
+35798,0x1405bd4c0,0x1405c5920,2,"BSEventNotifyControl PlayerSleepWaitMovementControllerAdapter::ProcessEvent(PositionPlayerEvent* a_event, BSTEventSource<PositionPlayerEvent>* a_eventSource)"
+35799,0x1405bd520,0x1405c5980,2,"BSEventNotifyControl PlayerSleepWaitMovementControllerAdapter::ProcessEvent(TESSleepStartEvent* a_event, BSTEventSource<TESSleepStartEvent>* a_eventSource)"
+35800,0x1405bd570,0x1405c59d0,2,"BSEventNotifyControl PlayerSleepWaitMovementControllerAdapter::ProcessEvent(TESSleepStopEvent* a_event, BSTEventSource<TESSleepStopEvent>* a_eventSource)"
+35801,0x1405bd5d0,0x1405c5a30,2,"BSEventNotifyControl PlayerSleepWaitMovementControllerAdapter::ProcessEvent(TESWaitStartEvent* a_event, BSTEventSource<TESWaitStartEvent>* a_eventSource)"
+35802,0x1405bd620,0x1405c5a80,2,"BSEventNotifyControl PlayerSleepWaitMovementControllerAdapter::ProcessEvent(TESWaitStopEvent* a_event, BSTEventSource<TESWaitStopEvent>* a_eventSource)"
 35825,0x1405beb00,0x1405c6f70,3,void StartVMInitThread()
 35869,0x1405c0090,0x1405c85b0,3,void SceneGraph::SetNearDistance(float* a_distance)
 35871,0x1405c00c0,0x1405c85e0,3,void SceneGraph::SetFarDistance(float a_distance)
@@ -4220,6 +4240,7 @@
 41346,0x140708bf0,0x14072FF80,3,"void ActivateHandler::ProcessButton(ButtonEvent* a_event, PlayerControlsData* a_data)"
 41349,0x1407090a0,0x1407310b0,3,RE::JumpHandler::ProcessButton_1407090A0
 41361,0x1407096b0,0x140732b00,3,StaminaNPC::apply_PlayerControls__sub_140705530
+41406,0x14070ae30,0x1407357d0,2,"BSEventNotifyControl StaticAvoidNodeManager::ProcessEvent(CellAttachDetachEvent* a_event, BSTEventSource<CellAttachDetachEvent>* a_eventSource)"
 41501,0x14070ff30,0x14073a8d0,2,"bool Pathing::CanActorPathThroughTeleportDoor(TESObjectREFR* a_door, Character* a_actor)"
 41622,0x1407184c0,0x140742e60,2,"void ActorKnowledge::AddListener(DetectionListener* a_listener, std::int32_t a_level)"
 41624,0x1407186c0,0x140743060,2,DetectionState* ActorKnowledge::GetFreshDetectionState(std::int32_t a_level)
@@ -4251,9 +4272,11 @@
 42633,0x140735aa0,0x1407605a0,2,"ImpactData* ConeProjectile::AddImpact(TESObjectREFR* a_ref, const NiPoint3& a_targetLoc, const NiPoint3& a_velocity, hkpCollidable* a_collidable, std::int32_t a_arg6, std::uint32_t a_arg7)"
 42634,0x140735b70,0x140760670,2,bool ConeProjectile::HandleHits(hkpCollidable* a_collidable)
 42638,0x1407369b0,0x1407614b0,3,splashes_of_skyrim::ProjectileManager::ProcessInWater::create_splash
+42655,0x140737700,0x1407622a0,2,Explosion::Ctor
 42664,0x140738780,0x140763320,3,"void Explosion::Update(Explosion* a_this, float a_delta)"
 42672,0x140739080,0x140763c20,4,undefined Explosion::sub_140739080(Explosion* this)
 42696,0x14073c410,0x140766fb0,3,bool Explosion::CheckInit3D(Explosion *a_this)
+42713,0x14073d1a0,0x140767d40,2,"Explosion* ConcreteExplosionFactory<Explosion,0>::Create(SpawnExplosionData& a_data)"
 42726,0x14073d870,0x140768410,2,void FlameProjectile::Process3D()
 42727,0x14073d9d0,0x140768570,3,"void FlameProjectile::UpdateImpl(FlameProjectile* a_this, float a_delta)"
 42728,0x14073dd40,0x140768920,2,bool FlameProjectile::RunTargetPick()
@@ -4262,7 +4285,7 @@
 42747,0x14073ee00,0x1407699e0,2,void GrenadeProjectile::Process3D()
 42749,0x14073f010,0x140769bf0,2,void GrenadeProjectile::OnKill()
 42752,0x14073f650,0x14076a230,2,void GrenadeProjectile::ReportHavokDeactivation()
-42763,0x14073fad0,0x14076a6b0,2,uint GrenadeProjectile::GetCollisionGroup()
+42763,0x14073fad0,0x14076a6b0,2,std::uint32_t GrenadeProjectile::GetCollisionGroup()
 42768,0x14073fc10,0x14076a7f0,2,"ImpactData* GrenadeProjectile::AddImpact(TESObjectREFR* a_ref, const NiPoint3& a_targetLoc, const NiPoint3& a_velocity, hkpCollidable* a_collidable, std::int32_t a_arg6, std::uint32_t a_arg7)"
 42791,0x140740cb0,0x14076b960,3,"void Hazard::Update(Hazard *a_this, float a_delta)"
 42810,0x1407416f0,0x14076c3a0,3,bool Hazard::CheckInit3D(Hazard *a_this)
@@ -4277,7 +4300,7 @@
 42852,0x140744dd0,0x14076fd10,4,void MissileProjectile::UpdateImpl_140744DD0 (MissileProjectile * a_this)
 42853,0x1407454f0,0x140770430,2,bool MissileProjectile::ProcessImpacts()
 42856,0x140746d60,0x140771ca0,3,EnhancedInvisibility::MissileProjectile::sub_140746D60
-42866,0x140747810,0x140772940,2,"ImpactData* MissileProjectile::AddImpact(TESObjectREFR* a_ref, NiPoint3* a_targetLoc, NiPoint3* a_velocity, hkpCollidable* a_collidable, int a_arg6, uint a_arg7)"
+42866,0x140747810,0x140772940,2,"ImpactData* MissileProjectile::AddImpact(TESObjectREFR* a_ref, NiPoint3* a_targetLoc, NiPoint3* a_velocity, hkpCollidable* a_collidable, int a_arg6, std::uint32_t a_arg7)"
 42911,0x140749cc0,0x140774df0,2,void ProjectileManager::Update()
 42913,0x140749d50,0x140774e80,2,void ProjectileManager::UpdateImpl(void* a_updateData)
 42914,0x14074a3d0,0x140775650,2,void ProjectileManager::PruneFinishedProjectiles()
@@ -4363,10 +4386,11 @@
 43657,0x1407784a0,0x1407a37f0,4,"bool CombatInventory::AddRangedItem(TESForm* a_weapon, TESAmmo* a_ammo)"
 43665,0x140778e80,0x1407a41d0,4,"CombatInventoryItem* CombatInventory::AddMagicItem(int a_kind, TESForm* a_form, MagicItem* a_magicItem)"
 43713,0x14077c150,0x1407a74a0,2,BSContainer::ForEachResult GatherSpellsFunctor::Visit(SpellItem* a_spell)
+43766,0x14077da80,0x1407a8dd0,2,CombatInventoryItem::Ctor
 43785,0x14077de20,0x1407a9170,2,bool CombatInventoryItemComposite::IsValid()
 43786,0x14077de40,0x1407a9190,2,void CombatInventoryItemComposite::SaveGame(BGSSaveGameBuffer* a_buf)
 43787,0x14077de80,0x1407a91d0,2,void CombatInventoryItemComposite::LoadGame(BGSLoadGameBuffer* a_buf)
-43788,0x14077df10,0x1407a9260,2,"void CombatInventoryItemComposite::GetDescription(char* a_dest, uint a_size)"
+43788,0x14077df10,0x1407a9260,2,"void CombatInventoryItemComposite::GetDescription(char* a_dest, std::uint32_t a_size)"
 43794,0x14077e030,0x1407a9380,2,TYPE CombatInventoryItemMelee::GetEquipType(BGSEquipSlot* a_slot)
 43799,0x14077e290,0x1407a95e0,2,bool CombatInventoryItemMelee::CheckBusy(CombatController* a_controller)
 43800,0x14077e370,0x1407a96c0,2,void CombatInventoryItemMelee::SaveGame(BGSSaveGameBuffer* a_buf)
@@ -4394,12 +4418,247 @@
 44024,0x140785920,0x1407b0c70,2,bool CombatMagicCasterArmor::CheckStartCast(CombatController* a_combatController)
 44025,0x140785990,0x1407b0ce0,2,bool CombatMagicCasterArmor::CheckStopCast(CombatController* a_combatController)
 44036,0x140785f80,0x1407b12d0,4,enhanced_reanimation::CombatMagicCasterReanimate::CheckShouldEquip
+44752,0x140796130,0x1407c1480,2,"bool CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterArmor>::CheckShouldEquip(CombatController* a_controller)"
+44753,0x140796180,0x1407c14d0,2,"bool CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterBoundItem>::CheckShouldEquip(CombatController* a_controller)"
+44754,0x1407961d0,0x1407c1520,2,"bool CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterCloak>::CheckShouldEquip(CombatController* a_controller)"
+44755,0x140796220,0x1407c1570,2,"bool CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterDisarm>::CheckShouldEquip(CombatController* a_controller)"
+44756,0x140796270,0x1407c15c0,2,"bool CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterInvisibility>::CheckShouldEquip(CombatController* a_controller)"
+44757,0x1407962c0,0x1407c1610,2,"bool CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterLight>::CheckShouldEquip(CombatController* a_controller)"
+44758,0x140796310,0x1407c1660,2,"bool CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterOffensive>::CheckShouldEquip(CombatController* a_controller)"
+44759,0x140796340,0x1407c1690,2,"bool CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterParalyze>::CheckShouldEquip(CombatController* a_controller)"
+44760,0x140796390,0x1407c16e0,2,"bool CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterReanimate>::CheckShouldEquip(CombatController* a_controller)"
+44761,0x1407963e0,0x1407c1730,2,"bool CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterRestore>::CheckShouldEquip(CombatController* a_controller)"
+44762,0x140796430,0x1407c1780,2,"bool CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterScript>::CheckShouldEquip(CombatController* a_controller)"
+44763,0x140796480,0x1407c17d0,2,"bool CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterStagger>::CheckShouldEquip(CombatController* a_controller)"
+44764,0x1407964b0,0x1407c1800,2,"bool CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterSummon>::CheckShouldEquip(CombatController* a_controller)"
+44765,0x140796500,0x1407c1850,2,"bool CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterTargetEffect>::CheckShouldEquip(CombatController* a_controller)"
+44766,0x140796550,0x1407c18a0,2,"bool CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterWard>::CheckShouldEquip(CombatController* a_controller)"
+44767,0x1407965a0,0x1407c18f0,2,"bool CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterArmor>::CheckShouldEquip(CombatController* a_controller)"
+44768,0x1407965f0,0x1407c1940,2,"bool CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterBoundItem>::CheckShouldEquip(CombatController* a_controller)"
+44769,0x140796640,0x1407c1990,2,"bool CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterCloak>::CheckShouldEquip(CombatController* a_controller)"
+44770,0x140796690,0x1407c19e0,2,"bool CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterDisarm>::CheckShouldEquip(CombatController* a_controller)"
+44771,0x1407966e0,0x1407c1a30,2,"bool CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterInvisibility>::CheckShouldEquip(CombatController* a_controller)"
+44772,0x140796730,0x1407c1a80,2,"bool CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterLight>::CheckShouldEquip(CombatController* a_controller)"
+44773,0x140796780,0x1407c1ad0,2,"bool CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterOffensive>::CheckShouldEquip(CombatController* a_controller)"
+44774,0x1407967b0,0x1407c1b00,2,"bool CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterParalyze>::CheckShouldEquip(CombatController* a_controller)"
+44775,0x140796800,0x1407c1b50,2,"bool CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterReanimate>::CheckShouldEquip(CombatController* a_controller)"
+44776,0x140796850,0x1407c1ba0,2,"bool CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterRestore>::CheckShouldEquip(CombatController* a_controller)"
+44777,0x1407968a0,0x1407c1bf0,2,"bool CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterScript>::CheckShouldEquip(CombatController* a_controller)"
+44778,0x1407968f0,0x1407c1c40,2,"bool CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterStagger>::CheckShouldEquip(CombatController* a_controller)"
+44779,0x140796920,0x1407c1c70,2,"bool CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterSummon>::CheckShouldEquip(CombatController* a_controller)"
+44780,0x140796970,0x1407c1cc0,2,"bool CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterTargetEffect>::CheckShouldEquip(CombatController* a_controller)"
+44781,0x1407969c0,0x1407c1d10,2,"bool CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterWard>::CheckShouldEquip(CombatController* a_controller)"
+44782,0x140796a10,0x1407c1d60,2,"bool CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterArmor>::CheckShouldEquip(CombatController* a_controller)"
+44783,0x140796a60,0x1407c1db0,2,"bool CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterBoundItem>::CheckShouldEquip(CombatController* a_controller)"
+44784,0x140796ab0,0x1407c1e00,2,"bool CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterCloak>::CheckShouldEquip(CombatController* a_controller)"
+44785,0x140796b00,0x1407c1e50,2,"bool CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterDisarm>::CheckShouldEquip(CombatController* a_controller)"
+44786,0x140796b50,0x1407c1ea0,2,"bool CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterInvisibility>::CheckShouldEquip(CombatController* a_controller)"
+44787,0x140796ba0,0x1407c1ef0,2,"bool CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterLight>::CheckShouldEquip(CombatController* a_controller)"
+44788,0x140796bf0,0x1407c1f40,2,"bool CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterOffensive>::CheckShouldEquip(CombatController* a_controller)"
+44789,0x140796c20,0x1407c1f70,2,"bool CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterParalyze>::CheckShouldEquip(CombatController* a_controller)"
+44790,0x140796c70,0x1407c1fc0,2,"bool CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterReanimate>::CheckShouldEquip(CombatController* a_controller)"
+44791,0x140796cc0,0x1407c2010,2,"bool CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterRestore>::CheckShouldEquip(CombatController* a_controller)"
+44792,0x140796d10,0x1407c2060,2,"bool CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterScript>::CheckShouldEquip(CombatController* a_controller)"
+44793,0x140796d60,0x1407c20b0,2,"bool CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterStagger>::CheckShouldEquip(CombatController* a_controller)"
+44794,0x140796d90,0x1407c20e0,2,"bool CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterSummon>::CheckShouldEquip(CombatController* a_controller)"
+44795,0x140796de0,0x1407c2130,2,"bool CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterTargetEffect>::CheckShouldEquip(CombatController* a_controller)"
+44796,0x140796e30,0x1407c2180,2,"bool CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterWard>::CheckShouldEquip(CombatController* a_controller)"
+44797,0x140796e80,0x1407c21d0,2,"bool CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterArmor>::CheckShouldEquip(CombatController* a_controller)"
+44798,0x140796ed0,0x1407c2220,2,"bool CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterBoundItem>::CheckShouldEquip(CombatController* a_controller)"
+44799,0x140796f20,0x1407c2270,2,"bool CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterCloak>::CheckShouldEquip(CombatController* a_controller)"
+44800,0x140796f70,0x1407c22c0,2,"bool CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterDisarm>::CheckShouldEquip(CombatController* a_controller)"
+44801,0x140796fc0,0x1407c2310,2,"bool CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterInvisibility>::CheckShouldEquip(CombatController* a_controller)"
+44802,0x140797010,0x1407c2360,2,"bool CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterLight>::CheckShouldEquip(CombatController* a_controller)"
+44803,0x140797060,0x1407c23b0,2,"bool CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterOffensive>::CheckShouldEquip(CombatController* a_controller)"
+44804,0x140797090,0x1407c23e0,2,"bool CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterParalyze>::CheckShouldEquip(CombatController* a_controller)"
+44805,0x1407970e0,0x1407c2430,2,"bool CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterReanimate>::CheckShouldEquip(CombatController* a_controller)"
+44806,0x140797130,0x1407c2480,2,"bool CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterRestore>::CheckShouldEquip(CombatController* a_controller)"
+44807,0x140797180,0x1407c24d0,2,"bool CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterScript>::CheckShouldEquip(CombatController* a_controller)"
+44808,0x1407971d0,0x1407c2520,2,"bool CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterStagger>::CheckShouldEquip(CombatController* a_controller)"
+44809,0x140797200,0x1407c2550,2,"bool CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterSummon>::CheckShouldEquip(CombatController* a_controller)"
+44810,0x140797250,0x1407c25a0,2,"bool CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterTargetEffect>::CheckShouldEquip(CombatController* a_controller)"
+44811,0x1407972a0,0x1407c25f0,2,"bool CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterWard>::CheckShouldEquip(CombatController* a_controller)"
+44812,0x1407972f0,0x1407c2640,2,"bool CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterArmor>::CheckShouldEquip(CombatController* a_controller)"
+44813,0x140797340,0x1407c2690,2,"bool CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterBoundItem>::CheckShouldEquip(CombatController* a_controller)"
+44814,0x140797390,0x1407c26e0,2,"bool CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterCloak>::CheckShouldEquip(CombatController* a_controller)"
+44815,0x1407973e0,0x1407c2730,2,"bool CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterDisarm>::CheckShouldEquip(CombatController* a_controller)"
+44816,0x140797430,0x1407c2780,2,"bool CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterInvisibility>::CheckShouldEquip(CombatController* a_controller)"
+44817,0x140797480,0x1407c27d0,2,"bool CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterLight>::CheckShouldEquip(CombatController* a_controller)"
+44818,0x1407974d0,0x1407c2820,2,"bool CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterOffensive>::CheckShouldEquip(CombatController* a_controller)"
+44819,0x140797500,0x1407c2850,2,"bool CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterParalyze>::CheckShouldEquip(CombatController* a_controller)"
+44820,0x140797550,0x1407c28a0,2,"bool CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterReanimate>::CheckShouldEquip(CombatController* a_controller)"
+44821,0x1407975a0,0x1407c28f0,2,"bool CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterRestore>::CheckShouldEquip(CombatController* a_controller)"
+44822,0x1407975f0,0x1407c2940,2,"bool CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterScript>::CheckShouldEquip(CombatController* a_controller)"
+44823,0x140797640,0x1407c2990,2,"bool CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterStagger>::CheckShouldEquip(CombatController* a_controller)"
+44824,0x140797670,0x1407c29c0,2,"bool CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterSummon>::CheckShouldEquip(CombatController* a_controller)"
+44825,0x1407976c0,0x1407c2a10,2,"bool CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterTargetEffect>::CheckShouldEquip(CombatController* a_controller)"
+44826,0x140797710,0x1407c2a60,2,"bool CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterWard>::CheckShouldEquip(CombatController* a_controller)"
+44827,0x140797760,0x1407c2ab0,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterArmor>::Clone()"
+44828,0x140797810,0x1407c2b60,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterBoundItem>::Clone()"
+44829,0x1407978c0,0x1407c2c10,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterCloak>::Clone()"
+44830,0x140797970,0x1407c2cc0,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterDisarm>::Clone()"
+44831,0x140797a20,0x1407c2d70,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterInvisibility>::Clone()"
+44832,0x140797ad0,0x1407c2e20,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterLight>::Clone()"
+44833,0x140797b80,0x1407c2ed0,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterOffensive>::Clone()"
+44834,0x140797c30,0x1407c2f80,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterParalyze>::Clone()"
+44835,0x140797ce0,0x1407c3030,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterReanimate>::Clone()"
+44836,0x140797d90,0x1407c30e0,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterRestore>::Clone()"
+44837,0x140797e40,0x1407c3190,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterScript>::Clone()"
+44838,0x140797ef0,0x1407c3240,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterStagger>::Clone()"
+44839,0x140797fa0,0x1407c32f0,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterSummon>::Clone()"
+44840,0x140798050,0x1407c33a0,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterTargetEffect>::Clone()"
+44841,0x140798100,0x1407c3450,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterWard>::Clone()"
+44842,0x1407981b0,0x1407c3500,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterArmor>::Clone()"
+44843,0x140798260,0x1407c35b0,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterBoundItem>::Clone()"
+44844,0x140798310,0x1407c3660,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterCloak>::Clone()"
+44845,0x1407983c0,0x1407c3710,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterDisarm>::Clone()"
+44846,0x140798470,0x1407c37c0,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterInvisibility>::Clone()"
+44847,0x140798520,0x1407c3870,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterLight>::Clone()"
+44848,0x1407985d0,0x1407c3920,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterOffensive>::Clone()"
+44849,0x140798680,0x1407c39d0,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterParalyze>::Clone()"
+44850,0x140798730,0x1407c3a80,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterReanimate>::Clone()"
+44851,0x1407987e0,0x1407c3b30,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterRestore>::Clone()"
+44852,0x140798890,0x1407c3be0,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterScript>::Clone()"
+44853,0x140798940,0x1407c3c90,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterStagger>::Clone()"
+44854,0x1407989f0,0x1407c3d40,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterSummon>::Clone()"
+44855,0x140798aa0,0x1407c3df0,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterTargetEffect>::Clone()"
+44856,0x140798b50,0x1407c3ea0,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterWard>::Clone()"
+44857,0x140798c00,0x1407c3f50,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterArmor>::Clone()"
+44858,0x140798cb0,0x1407c4000,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterBoundItem>::Clone()"
+44859,0x140798d60,0x1407c40b0,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterCloak>::Clone()"
+44860,0x140798e10,0x1407c4160,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterDisarm>::Clone()"
+44861,0x140798ec0,0x1407c4210,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterInvisibility>::Clone()"
+44862,0x140798f70,0x1407c42c0,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterLight>::Clone()"
+44863,0x140799020,0x1407c4370,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterOffensive>::Clone()"
+44864,0x1407990d0,0x1407c4420,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterParalyze>::Clone()"
+44865,0x140799180,0x1407c44d0,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterReanimate>::Clone()"
+44866,0x140799230,0x1407c4580,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterRestore>::Clone()"
+44867,0x1407992e0,0x1407c4630,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterScript>::Clone()"
+44868,0x140799390,0x1407c46e0,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterStagger>::Clone()"
+44869,0x140799440,0x1407c4790,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterSummon>::Clone()"
+44870,0x1407994f0,0x1407c4840,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterTargetEffect>::Clone()"
+44871,0x1407995a0,0x1407c48f0,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterWard>::Clone()"
+44872,0x140799650,0x1407c49a0,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterArmor>::Clone()"
+44873,0x140799700,0x1407c4a50,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterBoundItem>::Clone()"
+44874,0x1407997b0,0x1407c4b00,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterCloak>::Clone()"
+44875,0x140799860,0x1407c4bb0,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterDisarm>::Clone()"
+44876,0x140799910,0x1407c4c60,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterInvisibility>::Clone()"
+44877,0x1407999c0,0x1407c4d10,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterLight>::Clone()"
+44878,0x140799a70,0x1407c4dc0,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterOffensive>::Clone()"
+44879,0x140799b20,0x1407c4e70,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterParalyze>::Clone()"
+44880,0x140799bd0,0x1407c4f20,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterReanimate>::Clone()"
+44881,0x140799c80,0x1407c4fd0,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterRestore>::Clone()"
+44882,0x140799d30,0x1407c5080,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterScript>::Clone()"
+44883,0x140799de0,0x1407c5130,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterStagger>::Clone()"
+44884,0x140799e90,0x1407c51e0,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterSummon>::Clone()"
+44885,0x140799f40,0x1407c5290,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterTargetEffect>::Clone()"
+44886,0x140799ff0,0x1407c5340,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterWard>::Clone()"
+44887,0x14079a0a0,0x1407c53f0,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterArmor>::Clone()"
+44888,0x14079a150,0x1407c54a0,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterBoundItem>::Clone()"
+44889,0x14079a200,0x1407c5550,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterCloak>::Clone()"
+44890,0x14079a2b0,0x1407c5600,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterDisarm>::Clone()"
+44891,0x14079a360,0x1407c56b0,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterInvisibility>::Clone()"
+44892,0x14079a410,0x1407c5760,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterLight>::Clone()"
+44893,0x14079a4c0,0x1407c5810,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterOffensive>::Clone()"
+44894,0x14079a570,0x1407c58c0,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterParalyze>::Clone()"
+44895,0x14079a620,0x1407c5970,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterReanimate>::Clone()"
+44896,0x14079a6d0,0x1407c5a20,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterRestore>::Clone()"
+44897,0x14079a780,0x1407c5ad0,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterScript>::Clone()"
+44898,0x14079a830,0x1407c5b80,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterStagger>::Clone()"
+44899,0x14079a8e0,0x1407c5c30,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterSummon>::Clone()"
+44900,0x14079a990,0x1407c5ce0,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterTargetEffect>::Clone()"
+44901,0x14079aa40,0x1407c5d90,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterWard>::Clone()"
+44992,0x14079d7f0,0x1407c8b40,2,"void* CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterArmor>::CreateCaster()"
+44993,0x14079d860,0x1407c8bb0,2,"void* CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterBoundItem>::CreateCaster()"
+44994,0x14079d8d0,0x1407c8c20,2,"void* CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterCloak>::CreateCaster()"
+44995,0x14079d940,0x1407c8c90,2,"void* CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterDisarm>::CreateCaster()"
+44996,0x14079d9b0,0x1407c8d00,2,"void* CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterInvisibility>::CreateCaster()"
+44997,0x14079da20,0x1407c8d70,2,"void* CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterLight>::CreateCaster()"
+44998,0x14079da90,0x1407c8de0,2,"void* CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterOffensive>::CreateCaster()"
+44999,0x14079db00,0x1407c8e50,2,"void* CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterParalyze>::CreateCaster()"
+45000,0x14079db70,0x1407c8ec0,2,"void* CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterReanimate>::CreateCaster()"
+45001,0x14079dbe0,0x1407c8f30,2,"void* CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterRestore>::CreateCaster()"
+45002,0x14079dc50,0x1407c8fa0,2,"void* CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterScript>::CreateCaster()"
+45003,0x14079dcc0,0x1407c9010,2,"void* CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterStagger>::CreateCaster()"
+45004,0x14079dd30,0x1407c9080,2,"void* CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterSummon>::CreateCaster()"
+45005,0x14079dda0,0x1407c90f0,2,"void* CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterTargetEffect>::CreateCaster()"
+45006,0x14079de10,0x1407c9160,2,"void* CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterWard>::CreateCaster()"
+45007,0x14079de80,0x1407c91d0,2,"void* CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterArmor>::CreateCaster()"
+45008,0x14079def0,0x1407c9240,2,"void* CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterBoundItem>::CreateCaster()"
+45009,0x14079df60,0x1407c92b0,2,"void* CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterCloak>::CreateCaster()"
+45010,0x14079dfd0,0x1407c9320,2,"void* CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterDisarm>::CreateCaster()"
+45011,0x14079e040,0x1407c9390,2,"void* CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterInvisibility>::CreateCaster()"
+45012,0x14079e0b0,0x1407c9400,2,"void* CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterLight>::CreateCaster()"
+45013,0x14079e120,0x1407c9470,2,"void* CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterOffensive>::CreateCaster()"
+45014,0x14079e190,0x1407c94e0,2,"void* CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterParalyze>::CreateCaster()"
+45015,0x14079e200,0x1407c9550,2,"void* CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterReanimate>::CreateCaster()"
+45016,0x14079e270,0x1407c95c0,2,"void* CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterRestore>::CreateCaster()"
+45017,0x14079e2e0,0x1407c9630,2,"void* CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterScript>::CreateCaster()"
+45018,0x14079e350,0x1407c96a0,2,"void* CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterStagger>::CreateCaster()"
+45019,0x14079e3c0,0x1407c9710,2,"void* CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterSummon>::CreateCaster()"
+45020,0x14079e430,0x1407c9780,2,"void* CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterTargetEffect>::CreateCaster()"
+45021,0x14079e4a0,0x1407c97f0,2,"void* CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterWard>::CreateCaster()"
+45022,0x14079e510,0x1407c9860,2,"void* CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterArmor>::CreateCaster()"
+45023,0x14079e580,0x1407c98d0,2,"void* CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterBoundItem>::CreateCaster()"
+45024,0x14079e5f0,0x1407c9940,2,"void* CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterCloak>::CreateCaster()"
+45025,0x14079e660,0x1407c99b0,2,"void* CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterDisarm>::CreateCaster()"
+45026,0x14079e6d0,0x1407c9a20,2,"void* CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterInvisibility>::CreateCaster()"
+45027,0x14079e740,0x1407c9a90,2,"void* CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterLight>::CreateCaster()"
+45028,0x14079e7b0,0x1407c9b00,2,"void* CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterOffensive>::CreateCaster()"
+45029,0x14079e820,0x1407c9b70,2,"void* CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterParalyze>::CreateCaster()"
+45030,0x14079e890,0x1407c9be0,2,"void* CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterReanimate>::CreateCaster()"
+45031,0x14079e900,0x1407c9c50,2,"void* CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterRestore>::CreateCaster()"
+45032,0x14079e970,0x1407c9cc0,2,"void* CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterScript>::CreateCaster()"
+45033,0x14079e9e0,0x1407c9d30,2,"void* CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterStagger>::CreateCaster()"
+45034,0x14079ea50,0x1407c9da0,2,"void* CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterSummon>::CreateCaster()"
+45035,0x14079eac0,0x1407c9e10,2,"void* CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterTargetEffect>::CreateCaster()"
+45036,0x14079eb30,0x1407c9e80,2,"void* CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterWard>::CreateCaster()"
+45037,0x14079eba0,0x1407c9ef0,2,"void* CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterArmor>::CreateCaster()"
+45038,0x14079ec10,0x1407c9f60,2,"void* CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterBoundItem>::CreateCaster()"
+45039,0x14079ec80,0x1407c9fd0,2,"void* CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterCloak>::CreateCaster()"
+45040,0x14079ecf0,0x1407ca040,2,"void* CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterDisarm>::CreateCaster()"
+45041,0x14079ed60,0x1407ca0b0,2,"void* CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterInvisibility>::CreateCaster()"
+45042,0x14079edd0,0x1407ca120,2,"void* CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterLight>::CreateCaster()"
+45043,0x14079ee40,0x1407ca190,2,"void* CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterOffensive>::CreateCaster()"
+45044,0x14079eeb0,0x1407ca200,2,"void* CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterParalyze>::CreateCaster()"
+45045,0x14079ef20,0x1407ca270,2,"void* CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterReanimate>::CreateCaster()"
+45046,0x14079ef90,0x1407ca2e0,2,"void* CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterRestore>::CreateCaster()"
+45047,0x14079f000,0x1407ca350,2,"void* CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterScript>::CreateCaster()"
+45048,0x14079f070,0x1407ca3c0,2,"void* CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterStagger>::CreateCaster()"
+45049,0x14079f0e0,0x1407ca430,2,"void* CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterSummon>::CreateCaster()"
+45050,0x14079f150,0x1407ca4a0,2,"void* CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterTargetEffect>::CreateCaster()"
+45051,0x14079f1c0,0x1407ca510,2,"void* CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterWard>::CreateCaster()"
+45052,0x14079f230,0x1407ca580,2,"void* CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterArmor>::CreateCaster()"
+45053,0x14079f2a0,0x1407ca5f0,2,"void* CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterBoundItem>::CreateCaster()"
+45054,0x14079f310,0x1407ca660,2,"void* CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterCloak>::CreateCaster()"
+45055,0x14079f380,0x1407ca6d0,2,"void* CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterDisarm>::CreateCaster()"
+45056,0x14079f3f0,0x1407ca740,2,"void* CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterInvisibility>::CreateCaster()"
+45057,0x14079f460,0x1407ca7b0,2,"void* CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterLight>::CreateCaster()"
+45058,0x14079f4d0,0x1407ca820,2,"void* CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterOffensive>::CreateCaster()"
+45059,0x14079f540,0x1407ca890,2,"void* CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterParalyze>::CreateCaster()"
+45060,0x14079f5b0,0x1407ca900,2,"void* CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterReanimate>::CreateCaster()"
+45061,0x14079f620,0x1407ca970,2,"void* CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterRestore>::CreateCaster()"
+45062,0x14079f690,0x1407ca9e0,2,"void* CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterScript>::CreateCaster()"
+45063,0x14079f700,0x1407caa50,2,"void* CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterStagger>::CreateCaster()"
+45064,0x14079f770,0x1407caac0,2,"void* CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterSummon>::CreateCaster()"
+45065,0x14079f7e0,0x1407cab30,2,"void* CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterTargetEffect>::CreateCaster()"
+45066,0x14079f850,0x1407caba0,2,"void* CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterWard>::CreateCaster()"
+45067,0x14079f8c0,0x1407cac10,2,void CombatBlackboardKey<AITimer>::CreateObject(void* a_arg)
+45496,0x1407a4d50,0x1407d00a0,2,"void CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterRestore>::Unequip(CombatController* a_controller)"
+45511,0x1407a4e80,0x1407d01d0,2,"void CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterRestore>::Unequip(CombatController* a_controller)"
+45526,0x1407a4fb0,0x1407d0300,2,"void CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterRestore>::Unequip(CombatController* a_controller)"
+45541,0x1407a50e0,0x1407d0430,2,"void CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterRestore>::Unequip(CombatController* a_controller)"
+45556,0x1407a5210,0x1407d0560,2,"void CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterRestore>::Unequip(CombatController* a_controller)"
 45570,0x1407a5a50,0x1407d0da0,2,void NiTPrimitiveArray<CombatGroup*>::RemoveEmptyCombatGroups()
 45660,0x1407aad70,0x1407d60c0,3,bool CombatState::CheckShouldFlee()
 45661,0x1407aae90,0x1407d61e0,3,bool CombatState::CheckShouldHide()
+45682,0x1407ac270,0x1407d75c0,2,void CombatBlackboardKey<AITimeStamp>::CreateObject(void* a_arg)
 45698,0x1407ac7c0,0x1407d7b10,2,"bool CombatTargetLocation::IsAngleToPointWithinTolerance(const NiPoint3& a_from, const NiPoint3& a_to, float a_scale)"
 45702,0x1407ac9f0,0x1407d7d40,3,"CombatTargetLocationSearch::CombatTargetLocationSearch(Actor* actor, Actor* target, float R)"
 45738,0x1407b0040,0x1407db390,2,CombatPathingGoalPolicyFindTargetLocation* CombatPathingGoalPolicyFindTargetLocation::CombatPathingGoalPolicyFindTargetLocation(CombatNavmeshSearch* a_search)
+45840,0x1407b3720,0x1407dea70,2,"void CombatPathingRequestGeneric<CombatPathingGoalPolicyFindTargetLocation,CombatPathingSearchPolicyStandard>::CopyTo(BSPathingRequest& a_dest)"
+45880,0x1407b4c80,0x1407dffd0,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFindTargetLocation,CombatPathingSearchPolicyStandard>,CombatPathDestinationRef>::LoadGame(BGSLoadGameBuffer* a_buf)"
+45890,0x1407b5190,0x1407e04e0,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFindTargetLocation,CombatPathingSearchPolicyStandard>,CombatPathDestinationRef>::SaveGame(BGSSaveGameBuffer* a_buf)"
 45914,0x1407b5c80,0x1407e0fd0,2,void CombatTargetSelector::SaveGame(BGSSaveGameBuffer* a_buf)
 45915,0x1407b5d50,0x1407e10a0,2,void CombatTargetSelector::LoadGame(BGSLoadGameBuffer* a_buf)
 45919,0x1407b5f30,0x1407e1280,2,void CombatTargetSelectorStandard::SaveGame(BGSSaveGameBuffer* a_buf)
@@ -4585,19 +4844,39 @@
 46763,0x1407db410,0x140806760,2,CombatBehaviorFallbackToRanged src\RE/CombatBehaviorNodesMovement.cpp:11
 46764,0x1407db4a0,0x1408067f0,2,CombatBehaviorReposition src\RE/CombatBehaviorNodesMovement.cpp:9
 46765,0x1407db530,0x140806880,2,CombatBehaviorSurround src\RE/CombatBehaviorNodesMovement.cpp:8
+46817,0x1407dc9b0,0x140807d00,2,"void CombatPathingRequestGeneric<CombatPathingGoalPolicyRetreat,CombatPathingSearchPolicyStandard>::CopyTo(BSPathingRequest& a_dest)"
+46909,0x1407df590,0x14080a8e0,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyRetreat,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::LoadGame(BGSLoadGameBuffer* a_buf)"
+46924,0x1407df990,0x14080ace0,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyRetreat,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::SaveGame(BGSSaveGameBuffer* a_buf)"
 46951,0x1407e0370,0x14080b6c0,3,bool CombatBehaviorEquipContext::CheckEquipmentChanged()
 46952,0x1407e04a0,0x14080b7f0,3,bool CombatBehaviorEquipContext::EquipItem()
 46971,0x1407e2440,0x14080d790,2,void CombatBehaviorTreeFindAttackLocation::Initialize()
+47037,0x1407e46a0,0x14080f9f0,2,"void CombatPathingRequestGeneric<CombatPathingGoalPolicyFindAttackLocation,CombatPathingSearchPolicyStandard>::CopyTo(BSPathingRequest& a_dest)"
+47079,0x1407e5bc0,0x140810f10,2,"bool CombatNavmeshSearchT<CombatPathingGoalPolicyFindAttackLocation,CombatPathingSearchPolicyStandard>::IsGoalNode(AStarNode* a_node)"
+47086,0x1407e5f00,0x140811250,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFindAttackLocation,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::LoadGame(BGSLoadGameBuffer* a_buf)"
 47089,0x1407e5fb0,0x140811300,4,float AITimer::QTimer()
+47099,0x1407e62c0,0x140811610,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFindAttackLocation,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::SaveGame(BGSSaveGameBuffer* a_buf)"
 47118,0x1407e6b10,0x140811e60,3,bool CombatBehaviorContextFlankingMovement::CheckShouldStalk()
 47137,0x1407e8f60,0x1408142b0,2,void CombatBehaviorTreeFlankingMovement::Initialize()
 47140,0x1407e94d0,0x140814820,2,void CombatFlankingSearchData::SaveGame(BGSSaveGameBuffer* a_buf)
 47141,0x1407e9610,0x140814960,2,void CombatFlankingSearchData::LoadGame(BGSLoadGameBuffer* a_buf)
 47145,0x1407ea9c0,0x140815d10,2,"float CombatPathingSearchPolicyFlank::GetEdgeCost(BSFastNavmeshTriLocation* a_from, BSFastNavmeshTriLocation* a_to)"
+47267,0x1407ee7a0,0x140819af0,2,"void CombatPathingRequestGeneric<CombatPathingGoalPolicyFlank,CombatPathingSearchPolicyFlank>::CopyTo(BSPathingRequest& a_dest)"
+47268,0x1407ee840,0x140819b90,2,"void CombatPathingRequestGeneric<CombatPathingGoalPolicyFlankDistant,CombatPathingSearchPolicyStandard>::CopyTo(BSPathingRequest& a_dest)"
+47354,0x1407f1340,0x14081c690,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFlank,CombatPathingSearchPolicyFlank>,CombatPathDestinationRef>::LoadGame(BGSLoadGameBuffer* a_buf)"
+47355,0x1407f1390,0x14081c6e0,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFlankDistant,CombatPathingSearchPolicyStandard>,CombatPathDestinationLocation>::LoadGame(BGSLoadGameBuffer* a_buf)"
+47370,0x1407f1960,0x14081ccb0,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFlank,CombatPathingSearchPolicyFlank>,CombatPathDestinationRef>::SaveGame(BGSSaveGameBuffer* a_buf)"
 47404,0x1407f27e0,0x14081db30,3,bool CombatBehaviorContextFlee::CheckShouldFlee()
 47405,0x1407f29a0,0x14081dcf0,3,bool CombatBehaviorContextFlee::StartFlee()
 47426,0x1407f4a50,0x14081fda0,2,void CombatBehaviorTreeFlee::Initialize()
 47429,0x1407f5320,0x140820670,2,void CombatBehaviorTreeHide::Initialize()
+47549,0x1407f8c40,0x140823f90,2,"void CombatPathingRequestGeneric<CombatPathingGoalPolicyFindHideCover,CombatPathingSearchPolicyStandard>::CopyTo(BSPathingRequest& a_dest)"
+47550,0x1407f8cb0,0x140824000,2,"void CombatPathingRequestGeneric<CombatPathingGoalPolicyFlee,CombatPathingSearchPolicyStandard>::CopyTo(BSPathingRequest& a_dest)"
+47557,0x1407f8fc0,0x140824310,2,"void CombatBlackboardKey<BSTTuple<TESObjectREFR* ,AITimeStamp>>::CreateObject(void* a_arg)"
+47660,0x1407fbf20,0x140827270,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFindHideCover,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::LoadGame(BGSLoadGameBuffer* a_buf)"
+47661,0x1407fbfb0,0x140827300,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFlee,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::LoadGame(BGSLoadGameBuffer* a_buf)"
+47664,0x1407fc0c0,0x140827410,2,"void CombatBlackboardKey<BSTTuple<TESObjectREFR* ,AITimeStamp>>::LoadObject(BGSLoadGameBuffer* a_arg, void* a_arg)"
+47681,0x1407fc4f0,0x140827840,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFindHideCover,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::SaveGame(BGSSaveGameBuffer* a_buf)"
+47682,0x1407fc540,0x140827890,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFlee,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::SaveGame(BGSSaveGameBuffer* a_buf)"
 47717,0x1407fd340,0x140828690,2,void CombatBehaviorTakeoff::Update()
 47719,0x1407fd860,0x140828bb0,2,void CombatBehaviorDiveBomb::Update()
 47722,0x1407fe180,0x1408294d0,2,void CombatBehaviorHover::Update()
@@ -4647,6 +4926,10 @@
 48237,0x140810a10,0x14083bd60,2,void CombatBehaviorTreeCheckUnreachableTarget::Initialize()
 48238,0x140810af0,0x14083be40,2,void CombatBehaviorTreeReturnToCombatArea::Initialize()
 48242,0x140810cd0,0x14083c020,2,void CombatBehaviorTreeExitWater::Initialize()
+48330,0x1408135b0,0x14083e900,2,"void CombatPathingRequestGeneric<CombatPathingGoalPolicyExitWater,CombatPathingSearchPolicyStandard>::CopyTo(BSPathingRequest& a_dest)"
+48391,0x1408157f0,0x140840b40,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyExitWater,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::LoadGame(BGSLoadGameBuffer* a_buf)"
+48402,0x140815bb0,0x140840f00,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyExitWater,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::SaveGame(BGSSaveGameBuffer* a_buf)"
+48403,0x140815bf0,0x140840f40,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyReturnToCombatArea,CombatPathingSearchPolicyStandard>,CombatPathDestinationLocation>::SaveGame(BGSSaveGameBuffer* a_buf)"
 48431,0x1408166e0,0x140841a30,2,void CombatBehaviorTreeMovement::Initialize()
 48460,0x140817c60,0x140842fb0,4,bool Actor::IsEssentialDown()
 48461,0x140817c80,0x140842fd0,4,bool Actor::IsInBleedout()
@@ -4655,6 +4938,11 @@
 48476,0x140818d40,0x140844090,2,void CombatBehaviorTreeRangedMovement::Initialize()
 48544,0x14081c860,0x140847bb0,2,void CombatBehaviorTreeSearch::Initialize()
 48549,0x14081d770,0x140848ac0,2,"bool CombatSearchLockData::TryPassDoor(BSPathingDoor** a_door, float* a_costOut)"
+48665,0x140821050,0x14084c3a0,2,"void CombatPathingRequestGeneric<CombatPathingGoalPolicySearch,CombatPathingSearchPolicyStandard>::CopyTo(BSPathingRequest& a_dest)"
+48666,0x1408210a0,0x14084c3f0,2,"void CombatPathingRequestGeneric<CombatPathingGoalPolicySearchWander,CombatPathingSearchPolicyStandard>::CopyTo(BSPathingRequest& a_dest)"
+48754,0x140823cc0,0x14084f010,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicySearch,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::LoadGame(BGSLoadGameBuffer* a_buf)"
+48770,0x140824130,0x14084f480,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicySearch,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::SaveGame(BGSSaveGameBuffer* a_buf)"
+48771,0x140824180,0x14084f4d0,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicySearchWander,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::SaveGame(BGSSaveGameBuffer* a_buf)"
 48803,0x140824d00,0x140850050,2,bool CombatBehaviorContextShout::TryCastShout()
 48804,0x140824ec0,0x140850210,2,bool CombatBehaviorContextShout::CanShoutNow(void* a_ctx)
 48805,0x140824fd0,0x140850320,2,bool CombatBehaviorCastShout::IsVoiceStateNone()
@@ -4663,6 +4951,9 @@
 48810,0x140825490,0x1408507e0,2,void CombatBehaviorCastShout::Update()
 48811,0x140825510,0x140850860,2,void CombatBehaviorTreeShout::Initialize()
 48856,0x140827820,0x140852b70,2,void CombatBehaviorTreeUseCover::Initialize()
+48909,0x1408294a0,0x1408547f0,2,"void CombatPathingRequestGeneric<CombatPathingGoalPolicyFindCover,CombatPathingSearchPolicyStandard>::CopyTo(BSPathingRequest& a_dest)"
+48955,0x14082ac70,0x140855fc0,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFindCover,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::LoadGame(BGSLoadGameBuffer* a_buf)"
+48963,0x14082af60,0x1408562b0,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFindCover,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::SaveGame(BGSSaveGameBuffer* a_buf)"
 48988,0x14082b950,0x140856ca0,2,void CombatBehaviorTreeUsePotion::Initialize()
 49011,0x14082c540,0x140857890,3,void CombatPath::Update()
 49013,0x14082c790,0x140857ae0,3,void CombatPath::Start()
@@ -4701,6 +4992,33 @@
 49313,0x14083cdd0,0x1408680d0,2,void CombatApproachTargetSpeedController::LoadGame(BGSLoadGameBuffer* a_buf)
 49315,0x14083ce90,0x140868190,2,bool CombatPathingSphere::IsOutside(BSFastNavmeshTriLocation* a_node)
 49316,0x14083cee0,0x1408681e0,2,float CombatPathingSphere::GetPenetrationDepth(BSFastNavmeshTriLocation* a_node)
+49569,0x140842c00,0x14086df00,2,"void CombatPathT<CombatPathRequestFlight,CombatPathDestinationLocation>::LoadGame(BGSLoadGameBuffer* a_buf)"
+49570,0x140842c50,0x14086df50,2,"void CombatPathT<CombatPathRequestFlight,CombatPathDestinationRef>::LoadGame(BGSLoadGameBuffer* a_buf)"
+49571,0x140842ca0,0x14086dfa0,2,"void CombatPathT<CombatPathRequestFlyingAttack,CombatPathDestinationNone>::LoadGame(BGSLoadGameBuffer* a_buf)"
+49572,0x140842ce0,0x14086dfe0,2,"void CombatPathT<CombatPathRequestHover,CombatPathDestinationNone>::LoadGame(BGSLoadGameBuffer* a_buf)"
+49573,0x140842d20,0x14086e020,2,"void CombatPathT<CombatPathRequestLanding,CombatPathDestinationLocation>::LoadGame(BGSLoadGameBuffer* a_buf)"
+49574,0x140842d70,0x14086e070,2,"void CombatPathT<CombatPathRequestMultiGoal,CombatPathDestinationLocations>::LoadGame(BGSLoadGameBuffer* a_buf)"
+49575,0x140842dc0,0x14086e0c0,2,"void CombatPathT<CombatPathRequestMultiGoal,CombatPathDestinationRefs>::LoadGame(BGSLoadGameBuffer* a_buf)"
+49576,0x140842e10,0x14086e110,2,"void CombatPathT<CombatPathRequestOrbit,CombatPathDestinationLocation>::LoadGame(BGSLoadGameBuffer* a_buf)"
+49577,0x140842e60,0x14086e160,2,"void CombatPathT<CombatPathRequestRotatePath,CombatPathDestinationLocation>::LoadGame(BGSLoadGameBuffer* a_buf)"
+49578,0x140842eb0,0x14086e1b0,2,"void CombatPathT<CombatPathRequestStandard,CombatPathDestinationLocation>::LoadGame(BGSLoadGameBuffer* a_buf)"
+49579,0x140842f00,0x14086e200,2,"void CombatPathT<CombatPathRequestStandard,CombatPathDestinationRef>::LoadGame(BGSLoadGameBuffer* a_buf)"
+49580,0x140842f50,0x14086e250,2,"void CombatPathT<CombatPathRequestStraightPath,CombatPathDestinationLocation>::LoadGame(BGSLoadGameBuffer* a_buf)"
+49581,0x140842fa0,0x14086e2a0,2,"void CombatPathT<CombatPathRequestWeightedMultiGoal,CombatPathDestinationLocations>::LoadGame(BGSLoadGameBuffer* a_buf)"
+49582,0x140842ff0,0x14086e2f0,2,"void CombatPathT<CombatPathRequestWeightedMultiGoal,CombatPathDestinationRefs>::LoadGame(BGSLoadGameBuffer* a_buf)"
+49605,0x1408437a0,0x14086eaa0,2,"void CombatPathT<CombatPathRequestFlight,CombatPathDestinationRef>::SaveGame(BGSSaveGameBuffer* a_buf)"
+49606,0x1408437e0,0x14086eae0,2,"void CombatPathT<CombatPathRequestFlyingAttack,CombatPathDestinationNone>::SaveGame(BGSSaveGameBuffer* a_buf)"
+49607,0x140843810,0x14086eb10,2,"void CombatPathT<CombatPathRequestHover,CombatPathDestinationNone>::SaveGame(BGSSaveGameBuffer* a_buf)"
+49608,0x140843840,0x14086eb40,2,"void CombatPathT<CombatPathRequestLanding,CombatPathDestinationLocation>::SaveGame(BGSSaveGameBuffer* a_buf)"
+49609,0x140843880,0x14086eb80,2,"void CombatPathT<CombatPathRequestMultiGoal,CombatPathDestinationLocations>::SaveGame(BGSSaveGameBuffer* a_buf)"
+49610,0x1408438c0,0x14086ebc0,2,"void CombatPathT<CombatPathRequestMultiGoal,CombatPathDestinationRefs>::SaveGame(BGSSaveGameBuffer* a_buf)"
+49611,0x140843900,0x14086ec00,2,"void CombatPathT<CombatPathRequestOrbit,CombatPathDestinationLocation>::SaveGame(BGSSaveGameBuffer* a_buf)"
+49612,0x140843940,0x14086ec40,2,"void CombatPathT<CombatPathRequestRotatePath,CombatPathDestinationLocation>::SaveGame(BGSSaveGameBuffer* a_buf)"
+49613,0x140843980,0x14086ec80,2,"void CombatPathT<CombatPathRequestStandard,CombatPathDestinationLocation>::SaveGame(BGSSaveGameBuffer* a_buf)"
+49614,0x1408439c0,0x14086ecc0,2,"void CombatPathT<CombatPathRequestStandard,CombatPathDestinationRef>::SaveGame(BGSSaveGameBuffer* a_buf)"
+49615,0x140843a00,0x14086ed00,2,"void CombatPathT<CombatPathRequestStraightPath,CombatPathDestinationLocation>::SaveGame(BGSSaveGameBuffer* a_buf)"
+49616,0x140843a40,0x14086ed40,2,"void CombatPathT<CombatPathRequestWeightedMultiGoal,CombatPathDestinationLocations>::SaveGame(BGSSaveGameBuffer* a_buf)"
+49617,0x140843a80,0x14086ed80,2,"void CombatPathT<CombatPathRequestWeightedMultiGoal,CombatPathDestinationRefs>::SaveGame(BGSSaveGameBuffer* a_buf)"
 49711,0x140844d00,0x14086ffb0,3,float Character::GetDefensiveMult()
 49716,0x140844e40,0x1408700f0,4,CombatPathingRevolution::src/Advanced_Hook.h:13
 49720,0x140845070,0x140870320,4,float Character::GetCircleChanceMult_140845070(Character *param_1)
@@ -4715,6 +5033,7 @@
 49751,0x140845c60,0x140870f10,3,StaminaNPC::apply_get_CombatBlockChance
 49755,0x140845e20,0x1408710d0,3,StaminaNPC::apply_get_CombatBashChance
 49756,0x140845e80,0x140871130,3,StaminaNPC::apply_get_OffensiveBashChance
+49771,0x140846550,0x140871800,2,"void CombatBlackboardKey<float>::SaveObject(BGSSaveGameBuffer* a_arg, void* a_arg)"
 49772,0x140846580,0x140871830,3,StaminaNPC::apply_get_CombatRangedAttackChance
 49800,0x140847de0,0x140873090,4,"void ProcessButton_140847DE0 (PlayerInputHandler * a_this, undefined8 param_2)"
 49814,0x140848820,0x140873af0,4,FreeCameraState::GetCurrentRotation_*
@@ -4981,6 +5300,7 @@
 52368,0x1408ee900,0x140923570,4,QuitToMainMenuCallback
 52374,0x1408ef500,0x140924430,4,QuickLoot::
 52400,0x1408f03c0,0x1409254b0,4,QuickLoot::
+52405,0x1408f07c0,0x1409258b0,2,"BSEventNotifyControl JournalInputMapping::RemapHandler::ProcessEvent(InputEvent** a_event, BSTEventSource<InputEvent*>* a_eventSource)"
 52457,0x1408f6310,0x140930a90,3,"void SkyrimScript::Internal::AnimationCallbacks::RemoveHandleFromEvent(void* a_event, VMHandle a_handle)"
 52458,0x1408f6430,0x140930bb0,3,void SkyrimScript::Internal::AnimationCallbacks::RemoveHandleFromAllEvents(VMHandle* a_handle)
 52465,0x1408f6d90,0x140931510,3,"void SkyrimScript::Internal::AnimationCallbackRegistry::RemoveHandleFromEvent(void* a_key, VMHandle a_handle)"
@@ -5162,6 +5482,7 @@
 56763,0x1409ca770,0x140a052c0,4,sub_1409CA770
 56801,0x1409cb860,0x140a063b0,4,"hkStringPtr * ctor_1409cb860 (undefined8 a_this, char * a_data)"
 56806,0x1409cba10,0x140a06560,4,"hkStringPtr::hkStringPtr(std::string_view a_data, const std::uint32_t a_mask, const bool a_mark)"
+57754,0x1409ef430,0x140a29f80,2,hkbBehaviorGraph::Ctor
 57759,0x1409f0360,0x140a2aeb0,4,"void hkbBehaviorGraph::handleEvent(const hkbContext& a_context, const hkbEvent a_event)"
 57804,0x1409f3cd0,0x140a2e820,4,hkbBehaviorGraph::handleEventForActiveNodes
 57805,0x1409f3ef0,0x140a2ea40,4,hkbBehaviorGraph::sub_1409F3EF0
@@ -5543,9 +5864,9 @@
 67855,0x140c2a4d0,0x140c6f400,3,BSStringPool::BucketTable* BSStringPool::BucketTable::GetSingleton()
 67856,0x140c2a590,0x140c6f4c0,4,"void BSStringPool::GetEntry(BSStringPool::Entry** a_out, const char* a_string, uint32_t a_hash, uint32_t a_length)"
 67935,0x140c306f0,0x140c755d0,2,"bool ArchiveFile::Open(std::uint64_t a_unused, bool a_textMode)"
-67945,0x140c30c40,0x140c75b20,2,"uint ArchiveFile::ReadBytes(void* a_buffer, uint a_bytes)"
-67946,0x140c30c90,0x140c75b70,2,"uint ArchiveFile::ReadWString(void* a_out, uint a_maxLen)"
-67947,0x140c30d40,0x140c75c20,2,"uint ArchiveFile::ReadString(BSString* a_out, uint a_maxLen)"
+67945,0x140c30c40,0x140c75b20,2,"std::uint32_t ArchiveFile::ReadBytes(void* a_buffer, std::uint32_t a_bytes)"
+67946,0x140c30c90,0x140c75b70,2,"std::uint32_t ArchiveFile::ReadWString(void* a_out, std::uint32_t a_maxLen)"
+67947,0x140c30d40,0x140c75c20,2,"std::uint32_t ArchiveFile::ReadString(BSString* a_out, std::uint32_t a_maxLen)"
 67949,0x140c30eb0,0x140c75d90,2,"bool CompressedArchiveFile::Open(std::uint64_t a_unused, bool a_textMode)"
 67988,0x140c31d40,0x140c76c20,3,void JobList::QueueJob()
 67991,0x140c31e80,0x140c76d60,3,void JobList::Submit()
@@ -5692,6 +6013,12 @@
 69988,0x140c856d0,0x140ccbfb0,2,NiObject* NiFogProperty::CreateClone([[maybe_unused]] NiCloningProcess& a_cloning)
 69990,0x140c85810,0x140ccc0f0,2,void NiFogProperty::LoadBinary([[maybe_unused]] NiStream& a_stream)
 69993,0x140c858d0,0x140ccc1b0,2,void NiFogProperty::SaveBinary([[maybe_unused]] NiStream& a_stream)
+70063,0x140c88710,0x140ccf080,2,void NiParticlesData::RemoveParticle(std::uint16_t a_index)
+70068,0x140c88a30,0x140ccf3b0,2,void NiParticlesData::CalculateNormals()
+70069,0x140c88a40,0x140ccf3c0,2,std::uint16_t NiParticlesData::GetActiveVertexCount()
+70071,0x140c88a60,0x140ccf3e0,2,void NiParticlesData::SetActiveVertexCount(std::uint16_t a_vertexCount)
+70081,0x140c88e80,0x140ccf810,2,void NiParticleMeshesData::SetActiveVertexCount(std::uint16_t a_vertexCount)
+70082,0x140c88ef0,0x140ccf880,2,void NiParticleMeshesData::RemoveParticle(std::uint16_t a_index)
 70265,0x140c8e220,0x140cd4d20,3,"bool BSLODTriShape::HasDrawableLOD(std::uint32_t a_lodModeA, std::uint32_t a_lodModeB, bool a_checkB)"
 70266,0x140c8e300,0x140cd4e00,3,std::uint32_t BSLODTriShape::GetTriangleCountForLOD(std::uint32_t a_lodMode)
 70316,0x140c907d0,0x140cd72e0,2,void NiAccumulator::FinishAccumulating()
@@ -5725,10 +6052,13 @@
 72843,0x140d05390,0x140d4bf30,2,bool NiPSysEmitterCtlr::InterpTargetIsCorrectType(NiObjectNET* a_target)
 72864,0x140d06200,0x140d4cda0,2,"bool NiPSysGravityModifier::Update(float a_time, NiPSysData* a_particleData, NiPoint3* a_position, NiPoint3* a_radii, NiColorA* a_rotation)"
 72887,0x140d07730,0x140d4e2d0,2,"bool BSPSysHavokUpdateModifier::Update(float a_time, NiPSysData* a_particleData, NiPoint3* a_position, NiPoint3* a_radii, NiColorA* a_rotation)"
-72888,0x140d077e0,0x140d4e380,2,"void BSPSysHavokUpdateModifier::Initialize(NiPSysData* a_particleData, ushort a_arg2, NiPoint3* a_arg3)"
+72888,0x140d077e0,0x140d4e380,2,"void BSPSysHavokUpdateModifier::Initialize(NiPSysData* a_particleData, std::uint16_t a_arg2, NiPoint3* a_arg3)"
 73000,0x140d0b120,0x140d51cf0,2,"bool NiPSysMeshUpdateModifier::Update(float a_time, NiPSysData* a_particleData, NiPoint3* a_position, NiPoint3* a_radii, NiColorA* a_rotation)"
-73001,0x140d0b290,0x140d51e60,2,"void NiPSysMeshUpdateModifier::Initialize(NiPSysData* a_particleData, ushort a_arg2, NiPoint3* a_arg3)"
-73037,0x140d0c700,0x140d532d0,2,void NiMeshPSysData::SetActiveVertexCount(ushort a_vertexCount)
+73001,0x140d0b290,0x140d51e60,2,"void NiPSysMeshUpdateModifier::Initialize(NiPSysData* a_particleData, std::uint16_t a_arg2, NiPoint3* a_arg3)"
+73034,0x140d0c4c0,0x140d53090,2,void NiMeshPSysData::RemoveParticle(std::uint16_t a_index)
+73035,0x140d0c660,0x140d53230,2,void NiMeshPSysData::ResolveAddedParticles()
+73037,0x140d0c700,0x140d532d0,2,void NiMeshPSysData::SetActiveVertexCount(std::uint16_t a_vertexCount)
+73047,0x140d0cbb0,0x140d53790,2,std::uint16_t NiPSysData::AddParticle()
 73060,0x140d0d010,0x140d53c00,2,bool NiPSysAirFieldAirFrictionCtlr::InterpTargetIsCorrectType(NiObjectNET* a_target)
 73075,0x140d0d390,0x140d53f80,2,bool NiPSysAirFieldInheritVelocityCtlr::InterpTargetIsCorrectType(NiObjectNET* a_target)
 73090,0x140d0db50,0x140d54740,2,"bool NiPSysAirFieldModifier::Update(float a_time, NiPSysData* a_particleData, NiPoint3* a_position, NiPoint3* a_radii, NiColorA* a_rotation)"
@@ -5738,6 +6068,7 @@
 73163,0x140d11080,0x140d57eb0,2,void NiPSysBoundUpdateModifier::SetSystemPointer(NiParticleSystem* a_target)
 73195,0x140d12700,0x140d59ae0,2,"bool NiPSysColliderManager::Update(float a_time, NiPSysData* a_particleData, NiPoint3* a_position, NiPoint3* a_radii, NiColorA* a_rotation)"
 73210,0x140d12da0,0x140d5a180,2,"bool NiPSysColorModifier::Update(float a_time, NiPSysData* a_particleData, NiPoint3* a_position, NiPoint3* a_radii, NiColorA* a_rotation)"
+73227,0x140d13b20,0x140d5af50,2,void NiPSysData::RemoveParticle(std::uint16_t a_index)
 73228,0x140d13bf0,0x140d5b020,2,void NiPSysData::ResolveAddedParticles()
 73242,0x140d14160,0x140d5b5a0,2,"bool NiPSysDragFieldModifier::Update(float a_time, NiPSysData* a_particleData, NiPoint3* a_position, NiPoint3* a_radii, NiColorA* a_rotation)"
 73259,0x140d150b0,0x140d5c500,2,"bool NiPSysDragModifier::Update(float a_time, NiPSysData* a_particleData, NiPoint3* a_position, NiPoint3* a_radii, NiColorA* a_rotation)"
@@ -5761,12 +6092,13 @@
 73625,0x140d1ead0,0x140d65f60,2,"bool NiPSysPositionModifier::Update(float a_time, NiPSysData* a_particleData, NiPoint3* a_position, NiPoint3* a_radii, NiColorA* a_rotation)"
 73638,0x140d1ef70,0x140d66400,2,"bool NiPSysRadialFieldModifier::Update(float a_time, NiPSysData* a_particleData, NiPoint3* a_position, NiPoint3* a_radii, NiColorA* a_rotation)"
 73667,0x140d20030,0x140d674d0,2,"bool NiPSysRotationModifier::Update(float a_time, NiPSysData* a_particleData, NiPoint3* a_position, NiPoint3* a_radii, NiColorA* a_rotation)"
-73668,0x140d20110,0x140d675b0,2,"void NiPSysRotationModifier::Initialize(NiPSysData* a_particleData, ushort a_arg2, NiPoint3* a_arg3)"
+73668,0x140d20110,0x140d675b0,2,"void NiPSysRotationModifier::Initialize(NiPSysData* a_particleData, std::uint16_t a_arg2, NiPoint3* a_arg3)"
 73729,0x140d22430,0x140d698e0,2,"bool NiPSysTurbulenceFieldModifier::Update(float a_time, NiPSysData* a_particleData, NiPoint3* a_position, NiPoint3* a_radii, NiColorA* a_rotation)"
 73746,0x140d230a0,0x140d6a560,2,"bool NiPSysVortexFieldModifier::Update(float a_time, NiPSysData* a_particleData, NiPoint3* a_position, NiPoint3* a_radii, NiColorA* a_rotation)"
+73763,0x140d24740,0x140d6bc00,2,void BSStripPSysData::RemoveParticle(std::uint16_t a_index)
 73789,0x140d25de0,0x140d6d2a0,2,"bool BSPSysRecycleBoundModifier::Update(float a_time, NiPSysData* a_particleData, NiPoint3* a_position, NiPoint3* a_radii, NiColorA* a_rotation)"
 73803,0x140d26920,0x140d6ddf0,2,"bool BSPSysInheritVelocityModifier::Update(float a_time, NiPSysData* a_particleData, NiPoint3* a_position, NiPoint3* a_radii, NiColorA* a_rotation)"
-73804,0x140d269e0,0x140d6deb0,2,"void BSPSysInheritVelocityModifier::Initialize(NiPSysData* a_particleData, ushort a_arg2, NiPoint3* a_arg3)"
+73804,0x140d269e0,0x140d6deb0,2,"void BSPSysInheritVelocityModifier::Initialize(NiPSysData* a_particleData, std::uint16_t a_arg2, NiPoint3* a_arg3)"
 73882,0x140d28c40,0x140d70310,3,"Setting * SettingT<T1>::SetStringValue_140D28C40 (Setting * a_this, char * a_string)"
 73893,0x140d29090,0x140d70fb0,3,"void BSTaskManager::BSTaskManager(BSTaskManager* a_this, std::uint32_t a_extraNodes, std::uint32_t a_threadCount, std::uint32_t a_bucketCount)"
 73894,0x140d292e0,0x140d71200,3,void BSTaskManager::~BSTaskManager(BSTaskManager* a_this)
@@ -5965,7 +6297,7 @@
 75175,0x140d60170,0x140daa230,4,void BSProceduralLightningController::SendGeomEvent(BSProceduralLightningController * a_this)
 75197,0x140d60a00,0x140daab20,4,void BSTEventSource<BSProceduralGeomEvent>::SendEvent(const BSProceduralGeomEvent* a_event)
 75335,0x140d64430,0x140dae550,2,"bool BSPSysStripUpdateModifier::Update(float a_time, NiPSysData* a_particleData, NiPoint3* a_position, NiPoint3* a_radii, NiColorA* a_rotation)"
-75336,0x140d644d0,0x140dae5f0,2,"void BSPSysStripUpdateModifier::Initialize(NiPSysData* a_particleData, ushort a_arg2, NiPoint3* a_arg3)"
+75336,0x140d644d0,0x140dae5f0,2,"void BSPSysStripUpdateModifier::Initialize(NiPSysData* a_particleData, std::uint16_t a_arg2, NiPoint3* a_arg3)"
 75350,0x140d64bf0,0x140daed10,2,"bool BSPSysSubTexModifier::Update(float a_time, NiPSysData* a_particleData, NiPoint3* a_position, NiPoint3* a_radii, NiColorA* a_rotation)"
 75365,0x140d65290,0x140daf3b0,2,"bool BSPSysScaleModifier::Update(float a_time, NiPSysData* a_particleData, NiPoint3* a_position, NiPoint3* a_radii, NiColorA* a_rotation)"
 75445,0x140d68dd0,0x1405be850,3,"void Renderer::Init(RendererInitOSData* a_data, ApplicationWindowProperties* windowProps, WinAPI::HWND window)"
@@ -6069,6 +6401,7 @@
 76683,0x140dd6d10,0x140e2bce0,4,"void bhkCollisionFilter::SetLayerPairCollisionEnabled(COL_LAYER a_layerA, COL_LAYER a_layerB, bool a_enabled)"
 76684,0x140dd6d90,0x140e2bd60,4,"void bhkCollisionFilter::SetLayerBitfield(COL_LAYER a_layer, std::uint64_t a_mask)"
 76693,0x140dd94e0,0x140e2e4b0,4,"void hkpAllRayHitTempCollector::AddRayHit(const hkpCdBody& a_body, const hkpShapeRayCastCollectorOutput& a_hitInfo)"
+76725,0x140ddade0,0x140e39f10,2,bhkRigidBodyT::Ctor
 76732,0x140ddb210,0x140e3a340,2,void bhkRigidBodyT::GetPosition(hkVector4& a_outPosition)
 76733,0x140ddb300,0x140e3a430,2,void bhkRigidBodyT::GetRotation(hkQuaternion& a_outRotation)
 76734,0x140ddb3c0,0x140e3a4f0,2,void bhkRigidBodyT::SetPosition(hkVector4& a_position)
@@ -7641,6 +7974,7 @@
 98375,0x141272c50,0x141292f00,2,"void BSTHashMap<VMHandle, BSTSmallSharedArray<AttachedScript>>::Entry::Emplace(void* a_next, std::uint64_t* a_key, BSTSmallSharedArray<AttachedScript>* a_value)"
 98377,0x141272d00,0x141292fb0,2,void BSTFreeList<BSScript::Internal::FunctionMessage>::Free(BSTFreeListElem<BSScript::Internal::FunctionMessage>*& a_node)
 98381,0x141272f90,0x141293240,3,"void ScrapArrayBSFixedString_ReleaseRange(void* a_array, std::uint32_t a_start, std::uint32_t a_count)"
+98385,0x141273050,0x141293300,2,"bool BSTCommonStaticMessageQueue<BSScript::Internal::SuspendedStack,128>::PopInternal(BSScript::Internal::SuspendedStack* a_obj)"
 98404,0x141273520,0x1412937d0,2,"bool BSScript::Internal::RawFuncCallQuery::GetFunctionCallInfo(CallType& a_callType, BSTSmartPointer<ObjectTypeInfo>& a_objType, BSFixedString& a_name, Variable& a_obj, BSScrapArray<Variable>& a_args)"
 98411,0x141273800,0x141293ab0,2,"BSTHashMap<VMHandle, BSTSmallSharedArray<AttachedScript>>::Entry* BSTHashMap<VMHandle, BSTSmallSharedArray<AttachedScript>>::GetFreeEntry(void* a_entries)"
 98414,0x141273910,0x141293bc0,2,void* BSScript::IVMSaveLoadInterface::GetReadableStringTable()
@@ -7838,7 +8172,7 @@
 99967,0x1412cd140,0x14130bd60,4,void BSShaderAccumulator::UpdateSunOcclusionTestResult(int a_index)
 99971,0x1412cd520,0x14130c0f0,3,"std::uint32_t AccumulateSceneGraphNode(NiAVObject* a_object, AccumulateSceneGraphContext* a_context)"
 99974,0x1412cd6d0,0x14130c360,3,"std::uint32_t AccumulateNodeChildren(AccumulateSceneGraphContext* a_context, NiNode* a_node)"
-99993,0x1412ce060,0x14130ce90,2,bool BSGrassShader::SetupTechnique(uint a_technique)
+99993,0x1412ce060,0x14130ce90,2,bool BSGrassShader::SetupTechnique(std::uint32_t a_technique)
 99994,0x1412ce200,0x14130d030,2,void BSGrassShader::SetupMaterial(BSShaderMaterial* a_material)
 99996,0x1412ce260,0x14130d090,3,"void BSGrassShader::SetupGeometry(BSGrassShader* a_this, BSRenderPass* a_pass, uint a_flags)"
 100000,0x1412ceb10,0x14130da10,4,"void fogMethod (undefined8 param_1, int param_2)"
@@ -7862,14 +8196,14 @@
 100213,0x1412d6bb0,0x141315b40,3,"void BSCullingProcess::DispatchCullAndAccumulate(CullDescriptor* a_job, int a_mode, int a_phase)"
 100216,0x1412d6f20,0x1413162b0,3,void SubmitCullResultsJob(CullDescriptor* a_job)
 100217,0x1412d6f90,0x141316320,3,void FlushAlphaGroupQueueJob(CullDescriptor* a_job)
-100265,0x1412d8bf0,0x141318030,2,bool BSBloodSplatterShader::SetupTechnique(uint a_technique)
+100265,0x1412d8bf0,0x141318030,2,bool BSBloodSplatterShader::SetupTechnique(std::uint32_t a_technique)
 100297,0x1412dbad0,0x14131acc0,3,VolumetricLightingDescriptor& VolumetricLightingDescriptor::GetDescriptor()
 100299,0x1412dbb80,0x14131ad70,3,"void VolumetricLightingDescriptor::SetQuality(VolumetricLightingDescriptor& this, uint32_t quality)"
 100306,0x1412dc050,0x14131b240,4,"void VolumetricLightingDescriptor::Render (longlong param_1, undefined8 param_2, bool param_3)"
 100309,0x1412dc3a0,0x14131b590,4,void VolumetricLightingDescriptor::Raymarch (VolumetricLightingDescriptor* this)
-100371,0x1412dfdb0,0x14131f350,2,"void BSParticleShaderGeometryEmitter::CollectObjects(NiAVObject* a_targetRoot, ushort a_depthLimit, ushort a_arg3, bool a_nodeFilterFunc( BSFixedString*) a_arg4)"
-100375,0x1412e0380,0x14131f920,2,"void BSParticleShaderCollisionEmitter::CollectObjects(NiAVObject* a_targetRoot, ushort a_depthLimit, ushort a_arg3, bool a_nodeFilterFunc( BSFixedString*) a_arg4)"
-100379,0x1412e06b0,0x14131fc50,2,"void BSParticleShaderRayEmitter::CollectObjects(NiAVObject* a_targetRoot, ushort a_depthLimit, ushort a_arg3, bool a_nodeFilterFunc( BSFixedString*) a_arg4)"
+100371,0x1412dfdb0,0x14131f350,2,"void BSParticleShaderGeometryEmitter::CollectObjects(NiAVObject* a_targetRoot, std::uint16_t a_depthLimit, std::uint16_t a_arg3, bool a_nodeFilterFunc( BSFixedString*) a_arg4)"
+100375,0x1412e0380,0x14131f920,2,"void BSParticleShaderCollisionEmitter::CollectObjects(NiAVObject* a_targetRoot, std::uint16_t a_depthLimit, std::uint16_t a_arg3, bool a_nodeFilterFunc( BSFixedString*) a_arg4)"
+100379,0x1412e06b0,0x14131fc50,2,"void BSParticleShaderRayEmitter::CollectObjects(NiAVObject* a_targetRoot, std::uint16_t a_depthLimit, std::uint16_t a_arg3, bool a_nodeFilterFunc( BSFixedString*) a_arg4)"
 100403,0x1412e1aa0,0x141321040,2,float* GetNiCameraScale()
 100405,0x1412e1af0,0x141321090,2,void Main::EnterFirstPersonCamera()
 100406,0x1412e1d40,0x1413213f0,2,void Main::RestoreWorldCamera()
@@ -7913,8 +8247,8 @@
 100720,0x1412fde50,0x141340330,4,void renderPassCacheCtor()
 100721,0x1412fe020,0x141340500,4,BSRenderPassCache::Kill
 100722,0x1412fe0e0,0x1413405c0,3,BSRenderPassCache::Clear
-100741,0x1412feba0,0x141341080,2,void BSEffectShader::RestoreTechnique(uint a_technique)
-100743,0x1412fecb0,0x141341190,2,bool BSEffectShader::SetupTechnique(uint a_technique)
+100741,0x1412feba0,0x141341080,2,void BSEffectShader::RestoreTechnique(std::uint32_t a_technique)
+100743,0x1412fecb0,0x141341190,2,bool BSEffectShader::SetupTechnique(std::uint32_t a_technique)
 100744,0x1412ff0b0,0x141341660,2,void BSEffectShader::SetupMaterial(BSShaderMaterial* a_material)
 100771,0x1413014c0,0x141343d40,3,"bool BSDistantTreeShader::Func2_1413014C0 (BSDistantTreeShader * a_this, undefined8 param_2)"
 100776,0x141301c50,0x141344550,3,BSCubeMapCamera* BSCubeMapCamera::Ctor()
@@ -8002,7 +8336,7 @@
 101335,0x14131f630,0x1413654b0,3,"void NiBoneMatrixSetterI::SetBoneMatrices(NiBoneMatrixSetterI* a_this, NiSkinInstance* a_skin, void* a_context, NiTransform* a_transform)"
 101339,0x14131f810,0x1413656b0,4,"void BSShader::LoadShaders_14131F810 (BSShader * a_this, UINT_PTR * a_stream)"
 101341,0x14131fbd0,0x141365a70,4,"bool BSShader::BeginTechnique_14131FBD0 (BSShader * shader, int vertexDescriptor, int pixelDescriptor, bool skipPIxelShader)"
-101353,0x1413200b0,0x141365f50,2,void BSParticleShader::RestoreTechnique(uint a_technique)
+101353,0x1413200b0,0x141365f50,2,void BSParticleShader::RestoreTechnique(std::uint32_t a_technique)
 101373,0x141321510,0x141367720,2,bool BSLightingShaderPropertyFloatController::InterpTargetIsCorrectType(NiObjectNET* a_target)
 101390,0x141321990,0x141367ba0,2,bool BSLightingShaderPropertyUShortController::InterpTargetIsCorrectType(NiObjectNET* a_target)
 101407,0x141321e90,0x1413680a0,2,bool BSLightingShaderPropertyColorController::InterpTargetIsCorrectType(NiObjectNET* a_target)
@@ -8052,6 +8386,7 @@
 101779,0x14133a750,0x141377b30,3,void StartTimer(int a_index)
 101780,0x14133a7b0,0x141377b90,3,void StopTimer(int a_index)
 101821,0x14133e250,0x14137b630,3,BSWin32SystemUtility* BSWin32SystemUtility::GetSingleton()
+101824,0x14133e300,0x14137b6e0,2,"void CCallResult<BSWin32SystemUtility,EncryptedAppTicketResponse_t>::Run(void* a_pvParam)"
 101862,0x14133ea10,0x14137be00,2,BSWin32GameDataSystemUtility* BSWin32GameDataSystemUtility::GetSingleton()
 101884,0x14133f0c0,0x14137c200,3,RE::BSWin32SaveDataSystemUtility::GetSingleton
 101962,0x141340ff0,0x14137e180,4,"longlong **BSWin32SaveDataSystemUtility::Ctor_141340FF0(longlong param_1,longlong **param_2,char *param_3,int param_4)"
