@@ -8490,6 +8490,7 @@
 45686,0x1407ac300,0x1407d7650,2,"void CombatBlackboardKey<AITimeStamp>::LoadObject(BGSLoadGameBuffer* a_arg1, void* a_arg2)"
 45687,0x1407ac310,0x1407d7660,2,const BSFixedString& CombatBlackboardKey<AITimeStamp>::GetName()
 45688,0x1407ac320,0x1407d7670,2,"void CombatBlackboardKey<AITimeStamp>::SaveObject(BGSSaveGameBuffer* a_arg1, void* a_arg2)"
+45696,0x1407ac6e0,0x1407d7a30,2,void CombatTargetLocation::dtor()
 45698,0x1407ac7c0,0x1407d7b10,2,"bool CombatTargetLocation::IsAngleToPointWithinTolerance(const NiPoint3& a_from, const NiPoint3& a_to, float a_scale)"
 45699,0x1407ac8a0,0x1407d7bf0,2,void CombatTargetLocation::SaveGame(BGSSaveGameBuffer* a_buf)
 45700,0x1407ac970,0x1407d7cc0,2,void CombatTargetLocation::LoadGame(BGSLoadGameBuffer* a_buf)
@@ -8498,6 +8499,8 @@
 45709,0x1407ad960,0x1407d8cb0,2,void CombatTargetLocationSearch::SaveGame(BGSSaveGameBuffer* a_buf)
 45710,0x1407adc30,0x1407d8f80,2,void CombatTargetLocationSearch::LoadGame(BGSLoadGameBuffer* a_buf)
 45711,0x1407adf30,0x1407d9280,2,std::uint32_t CombatTargetLocationSearch::GetObjectType()
+45712,0x1407adf40,0x1407d9290,2,"CombatTargetLocationSearchResult* CombatTargetLocationSearchResult::ctor(CombatTargetLocationSearch* a_search, CombatTargetLocation* a_location)"
+45713,0x1407adf90,0x1407d92e0,2,void CombatTargetLocationSearchResult::~CombatTargetLocationSearchResult()
 45715,0x1407ae120,0x1407d9470,2,void CombatTargetLocationSearchResult::SaveGame(BGSSaveGameBuffer* a_buf)
 45716,0x1407ae160,0x1407d94b0,2,void CombatTargetLocationSearchResult::LoadGame(BGSLoadGameBuffer* a_buf)
 45717,0x1407ae200,0x1407d9550,2,std::uint32_t CombatTargetLocationSearchResult::GetObjectType()
@@ -8505,6 +8508,7 @@
 45741,0x1407b0470,0x1407db7c0,2,void CombatPathingGoalPolicyFindTargetLocation::SaveGame(BGSSaveGameBuffer* a_buf)
 45742,0x1407b0490,0x1407db7e0,2,void CombatPathingGoalPolicyFindTargetLocation::LoadGame(BGSLoadGameBuffer* a_buf)
 45777,0x1407b2220,0x1407dd570,2,CombatTargetLocationSearch::Ctor
+45791,0x1407b27f0,0x1407ddb40,2,void CombatTargetLocationSearch::dtor()
 45829,0x1407b3210,0x1407de560,2,"void CombatNavmeshSearchT<CombatPathingGoalPolicyFindTargetLocation,CombatPathingSearchPolicyStandard>::QueueSuccessorNode(void* a_location, void* a_edge, void* a_parentNode, float a_costScale)"
 45830,0x1407b3310,0x1407de660,2,"void CombatNavmeshSearchT<CombatPathingGoalPolicyFindTargetLocation,CombatPathingSearchPolicyStandard>::QueueStartNode(const BSFastNavmeshTriLocation& a_location, float a_cost)"
 45840,0x1407b3720,0x1407dea70,2,"void CombatPathingRequestGeneric<CombatPathingGoalPolicyFindTargetLocation,CombatPathingSearchPolicyStandard>::CopyTo(BSPathingRequest& a_dest)"
@@ -9213,6 +9217,7 @@
 47133,0x1407e8860,0x140813bb0,2,void CombatBehaviorFlankDistant::Enter()
 47134,0x1407e8de0,0x140814130,2,void CombatBehaviorFlankDistant::Update()
 47137,0x1407e8f60,0x1408142b0,2,void CombatBehaviorTreeFlankingMovement::Initialize()
+47138,0x1407e92e0,0x140814630,2,"CombatFlankingSearchData* CombatFlankingSearchData::ctor(float a_maxDistance, float a_minDistance)"
 47140,0x1407e94d0,0x140814820,2,void CombatFlankingSearchData::SaveGame(BGSSaveGameBuffer* a_buf)
 47141,0x1407e9610,0x140814960,2,void CombatFlankingSearchData::LoadGame(BGSLoadGameBuffer* a_buf)
 47142,0x1407e9780,0x140814ad0,2,void CombatPathingGoalPolicyFlank::SaveGame(BGSSaveGameBuffer* a_buf)
@@ -9223,6 +9228,7 @@
 47148,0x1407ead80,0x1408160d0,2,void CombatPathingSearchPolicyFlank::LoadGame(BGSLoadGameBuffer* a_buf)
 47150,0x1407eaf30,0x140816280,2,void CombatPathingGoalPolicyFlankDistant::SaveGame(BGSSaveGameBuffer* a_buf)
 47151,0x1407eafb0,0x140816300,2,void CombatPathingGoalPolicyFlankDistant::LoadGame(BGSLoadGameBuffer* a_buf)
+47208,0x1407ed560,0x1408188b0,2,void CombatPathingSearchPolicyFlank::dtor()
 47241,0x1407edbc0,0x140818f10,2,CombatBehaviorTreeNodeObject<CombatBehaviorChase>* CombatBehaviorTreeNodeObject<CombatBehaviorChase>::dtor_deleting(std::uint32_t a_flags)
 47244,0x1407edc80,0x140818fd0,2,CombatBehaviorTreeNodeObject<CombatBehaviorStalk>* CombatBehaviorTreeNodeObject<CombatBehaviorStalk>::dtor_deleting(std::uint32_t a_flags)
 47245,0x1407edcc0,0x140819010,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorChase>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorChase>::dtor_deleting(std::uint32_t a_flags)
