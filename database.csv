@@ -5050,7 +5050,7 @@
 32254,0x1404f3d20,0x140503f90,2,bool WeaponAnimationGraphManagerHolder::ConstructAnimationGraph(BSTSmartPointer<BShkbAnimationGraph>& a_out)
 32270,0x1404f45f0,0x140504860,3,"void TESHavokUtilities::LinearCastPhantom(bhkSimpleShapePhantom* a_phantom, bhkWorld* a_world, float* a_startPos, float* a_endPos, float* a_hitResult, TESObjectREFR** a_hitRef, float a_phantomSize)"
 32271,0x1404f4c00,0x140504e70,3,"bool TESHavokUtilities::CheckCharacterCollision(bhkSimpleShapePhantom* a_phantom, TESObjectREFR* a_character, float* a_pos, float a_casterSize, float a_checkHeight)"
-32275,0x1404f5420,0x140505690,4,RE::ShakeCamera_1404f5420
+32275,0x1404f5420,0x140505690,4,"void ShakeCamera(float a_strength, const NiPoint3& a_position, float a_duration)"
 32289,0x1404f5b60,0x140505dd0,2,void TESCamera::Update()
 32290,0x1404f5c80,0x140505f60,3,RE::TESCamera::SetState
 32359,0x1404f9240,0x1405093d0,2,void DragonCameraState::Begin()
@@ -5060,6 +5060,11 @@
 32370,0x1404f96c0,0x140509850,4,void DragonCameraState::HandleLookInput_1404F96C0 (DragonCameraState * a_this)
 32371,0x1404f9800,0x140509990,2,void DragonCameraState::UpdateRotation()
 32398,0x1404faf10,0x14050b3b0,2,void CombatBehaviorTreeRanged::Initialize()
+32420,0x1404fba80,0x14050bf20,2,CombatBehaviorTreeNodeObject<CombatBehaviorRangedAttack>* CombatBehaviorTreeNodeObject<CombatBehaviorRangedAttack>::dtor_deleting(std::uint32_t a_flags)
+32421,0x1404fbac0,0x14050bf60,2,CombatBehaviorTreeNodeObject<CombatBehaviorRepeat>* CombatBehaviorTreeNodeObject<CombatBehaviorRepeat>::dtor_deleting(std::uint32_t a_flags)
+32423,0x1404fbb40,0x14050bfe0,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorIdle>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorIdle>::dtor_deleting(std::uint32_t a_flags)
+32424,0x1404fbb80,0x14050c020,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorRangedAttack>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorRangedAttack>::dtor_deleting(std::uint32_t a_flags)
+32425,0x1404fbbc0,0x14050c060,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorRepeat>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorRepeat>::dtor_deleting(std::uint32_t a_flags)
 32426,0x1404fbcc0,0x14050c160,3,void CombatBehaviorStack::CheckBuffer(std::uint32_t a_size)
 32428,0x1404fbe10,0x14050c2b0,2,"void CombatBehaviorTreeConditionalNode<CombatBehaviorExpression<CombatBehaviorFunc1<bool (__cdecl*)(float),CombatBehaviorExpression<CombatBehaviorFunc1<float (__cdecl*)(Actor* ),CombatBehaviorTree::CombatBehaviorAttacker>>>>>::Enter(CombatBehaviorThread* a_thread)"
 32429,0x1404fbe70,0x14050c310,2,"void CombatBehaviorTreeCreateContextNode1<CombatBehaviorContextRanged,CombatBehaviorExpression<CombatBehaviorMemberFunc<CombatBehaviorEquipContext,NiPointer<CombatInventoryItem> const &  (__cdecl CombatBehaviorEquipContext::*)(void)const>>>::Enter(CombatBehaviorThread* a_thread)"
@@ -7901,6 +7906,10 @@
 44052,0x140786bc0,0x1407b1f10,2,bool CombatMagicCasterScript::CheckStartCast(CombatController* a_combatController)
 44053,0x140786c30,0x1407b1f80,2,void CombatMagicCasterScript::NotifyStopCast(CombatController* a_combatController)
 44054,0x140786c80,0x1407b1fd0,2,std::uint32_t CombatMagicCasterScript::GetObjectType()
+44300,0x140790390,0x1407BB6E0,2,"AutoRegisterCombatObject<CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterParalyze>>* AutoRegisterCombatObject<CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterParalyze>>::dtor_deleting(std::uint32_t a_flags)"
+44315,0x140790660,0x1407BB9B0,2,"AutoRegisterCombatObject<CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterParalyze>>* AutoRegisterCombatObject<CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterParalyze>>::dtor_deleting(std::uint32_t a_flags)"
+44483,0x1407925e0,0x1407BD930,2,"AutoRegisterFactory<BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterScript>,CombatObject>,BSTCreateFactoryManager<std::uint32_t,CombatObject,256>>* AutoRegisterFactory<BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterScript>,CombatObject>,BSTCreateFactoryManager<std::uint32_t,CombatObject,256>>::dtor_deleting(std::uint32_t a_flags)"
+44498,0x1407928b0,0x1407BDC00,2,"AutoRegisterFactory<BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterScript>,CombatObject>,BSTCreateFactoryManager<std::uint32_t,CombatObject,256>>* AutoRegisterFactory<BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterScript>,CombatObject>,BSTCreateFactoryManager<std::uint32_t,CombatObject,256>>::dtor_deleting(std::uint32_t a_flags)"
 44752,0x140796130,0x1407c1480,2,"bool CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterArmor>::CheckShouldEquip(CombatController* a_controller)"
 44753,0x140796180,0x1407c14d0,2,"bool CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterBoundItem>::CheckShouldEquip(CombatController* a_controller)"
 44754,0x1407961d0,0x1407c1520,2,"bool CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterCloak>::CheckShouldEquip(CombatController* a_controller)"
@@ -8627,6 +8636,7 @@
 46274,0x1407c7fa0,0x1407f32f0,3,void CombatBehaviorTreeManager::Init()
 46275,0x1407c8010,0x1407f3360,3,void CombatBehaviorTreeManager::InitializeTrees()
 46277,0x1407c8110,0x1407f3460,2,void CombatBehaviorTreeCombat::Initialize()
+46282,0x1407c84f0,0x1407f3840,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorParallel>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorParallel>::dtor_deleting(std::uint32_t a_flags)
 46283,0x1407c8530,0x1407f3880,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorParallel>::Abort(CombatBehaviorThread* a_thread)
 46289,0x1407c8650,0x1407f39a0,2,void CombatBehaviorTreeNodeObject<CombatBehaviorParallel>::Enter(CombatBehaviorThread* a_thread)
 46290,0x1407c8680,0x1407f39d0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorParallel>::Exit(CombatBehaviorThread* a_thread)
@@ -8671,6 +8681,13 @@
 46349,0x1407ca8c0,0x1407f5c10,3,void CombatBehaviorAcquireItem::Enter()
 46350,0x1407caad0,0x1407f5e20,3,void CombatBehaviorAcquireItem::Update()
 46353,0x1407cb0e0,0x1407f6430,2,void CombatBehaviorTreeAcquireWeapon::Initialize()
+46391,0x1407cc9f0,0x1407f7d40,2,CombatBehaviorTreeNodeObject<CombatBehaviorSequence>* CombatBehaviorTreeNodeObject<CombatBehaviorSequence>::dtor_deleting(std::uint32_t a_flags)
+46392,0x1407cca30,0x1407f7d80,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorAcquireItem>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorAcquireItem>::dtor_deleting(std::uint32_t a_flags)
+46393,0x1407cca70,0x1407f7dc0,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorAcquireResource>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorAcquireResource>::dtor_deleting(std::uint32_t a_flags)
+46394,0x1407ccab0,0x1407f7e00,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorDisableAim>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorDisableAim>::dtor_deleting(std::uint32_t a_flags)
+46395,0x1407ccaf0,0x1407f7e40,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorFindWeapon>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorFindWeapon>::dtor_deleting(std::uint32_t a_flags)
+46396,0x1407ccb30,0x1407f7e80,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorFollowPath>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorFollowPath>::dtor_deleting(std::uint32_t a_flags)
+46397,0x1407ccb70,0x1407f7ec0,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorSequence>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorSequence>::dtor_deleting(std::uint32_t a_flags)
 46401,0x1407ccd70,0x1407f80c0,2,"void CombatBehaviorTreeConditionalNode<CombatBehaviorExpression<CombatBehaviorMemberFunc<CombatBehaviorContextAcquireWeapon,bool_(__cdecl_CombatBehaviorContextAcquireWeapon::*)(void)const>>>::Enter(CombatBehaviorThread* a_thread)"
 46402,0x1407cce00,0x1407f8150,2,void CombatBehaviorTreeCreateContextNode<CombatBehaviorContextAcquireWeapon>::Enter(CombatBehaviorThread* a_thread)
 46403,0x1407ccea0,0x1407f81f0,2,"void CombatBehaviorTreeNodeObject1<CombatBehaviorAcquireItem,CombatBehaviorExpression<CombatBehaviorMemberFunc<CombatBehaviorContextAcquireWeapon,CombatAcquireItem const &  (__cdecl CombatBehaviorContextAcquireWeapon::*)(void)const>>>::Enter(CombatBehaviorThread* a_thread)"
@@ -8721,10 +8738,24 @@
 46452,0x1407cdb70,0x1407f8ec0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorSequence>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 46454,0x1407cdc30,0x1407f8f80,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorAcquireItem>::Update(CombatBehaviorThread* a_thread)
 46455,0x1407cdc40,0x1407f8f90,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorAcquireResource>::Update(CombatBehaviorThread* a_thread)
+46456,0x1407cdc50,0x1407f8fa0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorDisableAim>::Update(CombatBehaviorThread* a_thread)
 46457,0x1407cdc60,0x1407f8fb0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFindWeapon>::Update(CombatBehaviorThread* a_thread)
 46458,0x1407cdc70,0x1407f8fc0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFollowPath>::Update(CombatBehaviorThread* a_thread)
 46460,0x1407cddc0,0x1407f9110,2,void CombatBehaviorTreeAction::Initialize()
 46461,0x1407ce0e0,0x1407f9430,2,void CombatBehaviorTreeActionEquipmentSelector::Initialize()
+46491,0x1407cfc90,0x1407fafe0,2,CombatBehaviorTreeNodeObject<CombatBehaviorDynamicConditionalNode>* CombatBehaviorTreeNodeObject<CombatBehaviorDynamicConditionalNode>::dtor_deleting(std::uint32_t a_flags)
+46492,0x1407cfcd0,0x1407fb020,2,CombatBehaviorTreeNodeObject<CombatBehaviorEquipObject>* CombatBehaviorTreeNodeObject<CombatBehaviorEquipObject>::dtor_deleting(std::uint32_t a_flags)
+46493,0x1407cfd10,0x1407fb060,2,CombatBehaviorTreeNodeObject<CombatBehaviorEquipRangedWeapon>* CombatBehaviorTreeNodeObject<CombatBehaviorEquipRangedWeapon>::dtor_deleting(std::uint32_t a_flags)
+46494,0x1407cfd50,0x1407fb0a0,2,CombatBehaviorTreeNodeObject<CombatBehaviorEquipShout>* CombatBehaviorTreeNodeObject<CombatBehaviorEquipShout>::dtor_deleting(std::uint32_t a_flags)
+46495,0x1407cfd90,0x1407fb0e0,2,CombatBehaviorTreeNodeObject<CombatBehaviorEquipSpell>* CombatBehaviorTreeNodeObject<CombatBehaviorEquipSpell>::dtor_deleting(std::uint32_t a_flags)
+46496,0x1407cfdd0,0x1407fb120,2,CombatBehaviorTreeNodeObject<CombatBehaviorPause>* CombatBehaviorTreeNodeObject<CombatBehaviorPause>::dtor_deleting(std::uint32_t a_flags)
+46498,0x1407cfe50,0x1407fb1a0,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorDynamicConditionalNode>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorDynamicConditionalNode>::dtor_deleting(std::uint32_t a_flags)
+46499,0x1407cfe90,0x1407fb1e0,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorEquipObject>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorEquipObject>::dtor_deleting(std::uint32_t a_flags)
+46500,0x1407cfed0,0x1407fb220,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorEquipRangedWeapon>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorEquipRangedWeapon>::dtor_deleting(std::uint32_t a_flags)
+46501,0x1407cff10,0x1407fb260,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorEquipShout>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorEquipShout>::dtor_deleting(std::uint32_t a_flags)
+46502,0x1407cff50,0x1407fb2a0,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorEquipSpell>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorEquipSpell>::dtor_deleting(std::uint32_t a_flags)
+46503,0x1407cff90,0x1407fb2e0,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorPause>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorPause>::dtor_deleting(std::uint32_t a_flags)
+46504,0x1407cffd0,0x1407fb320,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorSpawnParallel>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorSpawnParallel>::dtor_deleting(std::uint32_t a_flags)
 46511,0x1407d02f0,0x1407fb640,2,"void CombatBehaviorTreeConditionalNode<CombatBehaviorExpression<CombatBehaviorMemberFunc<CombatBehaviorEquipContext,bool_(__cdecl_CombatBehaviorEquipContext::*)(void)const>>>::Enter(CombatBehaviorThread* a_thread)"
 46512,0x1407d0380,0x1407fb6d0,2,"void CombatBehaviorTreeCreateContextNode1<CombatBehaviorEquipContext,CombatBehaviorExpression<CombatBehaviorMemberFunc<CombatBehaviorThread,unsigned int (__cdecl CombatBehaviorThread::*)(void)const>>>::Enter(CombatBehaviorThread* a_thread)"
 46513,0x1407d03f0,0x1407fb740,2,"void CombatBehaviorTreeNodeObject2<CombatBehaviorAcquireResource,BSFixedString,int>::Enter(CombatBehaviorThread* a_thread)"
@@ -8777,7 +8808,11 @@
 46566,0x1407d1150,0x1407fc4a0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorSpawnParallel>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 46567,0x1407d11a0,0x1407fc4f0,2,"void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorEquipContext>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 46569,0x1407d11d0,0x1407fc520,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorDynamicConditionalNode>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+46570,0x1407d11f0,0x1407fc540,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorEquipObject>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+46571,0x1407d1200,0x1407fc550,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorEquipRangedWeapon>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 46572,0x1407d1210,0x1407FC560,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorEquipShout>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+46573,0x1407d1220,0x1407fc570,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorEquipSpell>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+46574,0x1407d1230,0x1407fc580,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorPause>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 46575,0x1407d1240,0x1407fc590,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorSpawnParallel>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 46576,0x1407d1260,0x1407fc5b0,2,"void CombatBehaviorTreeNodeEvaluateFunction<CombatBehaviorExpression<CombatBehaviorMemberFunc<CombatBehaviorEquipContext,bool (__cdecl CombatBehaviorEquipContext::*)(void)>>>::Update(CombatBehaviorThread* a_thread)"
 46578,0x1407d1410,0x1407fc760,2,"bool CombatBehaviorTreeConditionalNode<CombatBehaviorExpression<CombatBehaviorMemberFunc<CombatBehaviorEquipContext,bool_(__cdecl_CombatBehaviorEquipContext::*)(void)const>>>::Validate(CombatBehaviorTreeNode* a_node)"
@@ -8795,6 +8830,8 @@
 46591,0x1407d21e0,0x1407fd530,3,void CombatBehaviorDodgeThreat::Update()
 46592,0x1407d23f0,0x1407fd740,3,void CombatBehaviorDodgeThreat::Exit()
 46595,0x1407d2750,0x1407fdaa0,2,void CombatBehaviorTreeDodgeThreat::Initialize()
+46605,0x1407d2e10,0x1407fe160,2,CombatBehaviorTreeNodeObject<CombatBehaviorDodgeThreat>* CombatBehaviorTreeNodeObject<CombatBehaviorDodgeThreat>::dtor_deleting(std::uint32_t a_flags)
+46606,0x1407d2e50,0x1407fe1a0,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorDodgeThreat>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorDodgeThreat>::dtor_deleting(std::uint32_t a_flags)
 46607,0x1407d2ec0,0x1407fe210,2,"void CombatBehaviorTreeConditionalNode<CombatBehaviorExpression<CombatBehaviorMemberFunc<CombatBehaviorContextDodgeThreat,bool (__cdecl CombatBehaviorContextDodgeThreat::*)(void)>>>::Enter(CombatBehaviorThread* a_thread)"
 46608,0x1407d2f50,0x1407fe2a0,2,void CombatBehaviorTreeCreateContextNode<CombatBehaviorContextDodgeThreat>::Enter(CombatBehaviorThread* a_thread)
 46609,0x1407d2fd0,0x1407fe320,2,void CombatBehaviorTreeNodeObject<CombatBehaviorDodgeThreat>::Enter(CombatBehaviorThread* a_thread)
@@ -8824,6 +8861,12 @@
 46639,0x1407d4520,0x1407ff870,2,void CombatBehaviorBash::Update()
 46640,0x1407d4620,0x1407ff970,2,void CombatBehaviorTreeBlock::Initialize()
 46641,0x1407d4a80,0x1407ffdd0,4,"NodeArray* WrapToRandomNode_1407d4a80 (NodeArray& a_array, const char* a_name, RE::TreeCtors_extradata* a_extradata, RE::CombatBehaviorTreeNode* a_node)"
+46652,0x1407d5020,0x140800370,2,CombatBehaviorTreeNodeObject<CombatBehaviorBash>* CombatBehaviorTreeNodeObject<CombatBehaviorBash>::dtor_deleting(std::uint32_t a_flags)
+46653,0x1407d5060,0x1408003b0,2,CombatBehaviorTreeNodeObject<CombatBehaviorBlock>* CombatBehaviorTreeNodeObject<CombatBehaviorBlock>::dtor_deleting(std::uint32_t a_flags)
+46654,0x1407d50a0,0x1408003f0,2,CombatBehaviorTreeNodeObject<CombatBehaviorBlockAttack>* CombatBehaviorTreeNodeObject<CombatBehaviorBlockAttack>::dtor_deleting(std::uint32_t a_flags)
+46655,0x1407d50e0,0x140800430,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorBash>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorBash>::dtor_deleting(std::uint32_t a_flags)
+46656,0x1407d5120,0x140800470,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorBlock>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorBlock>::dtor_deleting(std::uint32_t a_flags)
+46657,0x1407d5160,0x1408004b0,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorBlockAttack>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorBlockAttack>::dtor_deleting(std::uint32_t a_flags)
 46658,0x1407d5230,0x140800580,2,"void CombatBehaviorTreeConditionalNode<CombatBehaviorExpression<CombatBehaviorFunc1<bool (__cdecl*)(float),CombatBehaviorExpression<CombatBehaviorFunc2<float (__cdecl*)(Actor* ,Actor* ),CombatBehaviorTree::CombatBehaviorAttacker,CombatBehaviorTree::CombatBehaviorTarget>>>>>::Enter(CombatBehaviorThread* a_thread)"
 46659,0x1407d52b0,0x140800600,2,"void CombatBehaviorTreeCreateContextNode2<CombatBehaviorContextBlock,CombatBehaviorExpression<CombatBehaviorMemberFunc<CombatBehaviorEquipContext,NiPointer<CombatInventoryItem> const &  (__cdecl CombatBehaviorEquipContext::*)(void)const>>,CombatBehaviorContextMelee::ATTACK_TYPE>::Enter(CombatBehaviorThread* a_thread)"
 46660,0x1407d5350,0x1408006a0,2,void CombatBehaviorTreeNodeObject<CombatBehaviorBash>::Enter(CombatBehaviorThread* a_thread)
@@ -8839,12 +8882,15 @@
 46671,0x1407d56e0,0x140800a30,2,const BSFixedString& CombatBehaviorTreeNodeObjectBase<CombatBehaviorBlockAttack>::GetClassType()
 46672,0x1407d5770,0x140800ac0,2,"const BSFixedString& CombatBehaviorTreeConditionalNode<CombatBehaviorExpression<CombatBehaviorFunc1<bool_(__cdecl*)(float),CombatBehaviorExpression<CombatBehaviorFunc2<float_(__cdecl*)(Actor*_,Actor*_),CombatBehaviorTree::CombatBehaviorAttacker,CombatBehaviorTree::CombatBehaviorTarget>>>>>::GetType()"
 46673,0x1407d5780,0x140800ad0,2,const BSFixedString& CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextBlock>::GetType()
+46674,0x1407d5790,0x140800ae0,2,const BSFixedString& CombatBehaviorTreeNodeObjectBase<CombatBehaviorBash>::GetType()
 46675,0x1407d57a0,0x140800af0,2,const BSFixedString& CombatBehaviorTreeNodeObjectBase<CombatBehaviorBlock>::GetType()
 46676,0x1407d57b0,0x140800b00,2,const BSFixedString& CombatBehaviorTreeNodeObjectBase<CombatBehaviorBlockAttack>::GetType()
 46677,0x1407d57c0,0x140800b10,2,"void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextBlock>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+46678,0x1407d5840,0x140800b90,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorBash>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 46679,0x1407d5870,0x140800bc0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorBlock>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 46680,0x1407d58d0,0x140800c20,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorBlockAttack>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 46681,0x1407d5930,0x140800c80,2,"void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextBlock>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+46682,0x1407d5950,0x140800ca0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorBash>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 46683,0x1407d5960,0x140800cb0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorBlock>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 46684,0x1407d59b0,0x140800d00,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorBlockAttack>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 46685,0x1407d59f0,0x140800d40,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorBash>::Update(CombatBehaviorThread* a_thread)
@@ -8888,6 +8934,18 @@
 46763,0x1407db410,0x140806760,2,CombatBehaviorFallbackToRanged src\RE/CombatBehaviorNodesMovement.cpp:11
 46764,0x1407db4a0,0x1408067f0,2,CombatBehaviorReposition src\RE/CombatBehaviorNodesMovement.cpp:9
 46765,0x1407db530,0x140806880,2,CombatBehaviorSurround src\RE/CombatBehaviorNodesMovement.cpp:8
+46785,0x1407dbd10,0x140807060,2,CombatBehaviorTreeNodeObject<CombatBehaviorCircle>* CombatBehaviorTreeNodeObject<CombatBehaviorCircle>::dtor_deleting(std::uint32_t a_flags)
+46786,0x1407dbd50,0x1408070a0,2,CombatBehaviorTreeNodeObject<CombatBehaviorCircleDistant>* CombatBehaviorTreeNodeObject<CombatBehaviorCircleDistant>::dtor_deleting(std::uint32_t a_flags)
+46787,0x1407dbd90,0x1408070e0,2,CombatBehaviorTreeNodeObject<CombatBehaviorFallback>* CombatBehaviorTreeNodeObject<CombatBehaviorFallback>::dtor_deleting(std::uint32_t a_flags)
+46788,0x1407dbdd0,0x140807120,2,CombatBehaviorTreeNodeObject<CombatBehaviorFallbackToRanged>* CombatBehaviorTreeNodeObject<CombatBehaviorFallbackToRanged>::dtor_deleting(std::uint32_t a_flags)
+46789,0x1407dbe10,0x140807160,2,CombatBehaviorTreeNodeObject<CombatBehaviorReposition>* CombatBehaviorTreeNodeObject<CombatBehaviorReposition>::dtor_deleting(std::uint32_t a_flags)
+46790,0x1407dbe50,0x1408071a0,2,CombatBehaviorTreeNodeObject<CombatBehaviorSurround>* CombatBehaviorTreeNodeObject<CombatBehaviorSurround>::dtor_deleting(std::uint32_t a_flags)
+46795,0x1407dbf90,0x1408072e0,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorCircle>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorCircle>::dtor_deleting(std::uint32_t a_flags)
+46796,0x1407dbfd0,0x140807320,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorCircleDistant>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorCircleDistant>::dtor_deleting(std::uint32_t a_flags)
+46797,0x1407dc010,0x140807360,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorFallback>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorFallback>::dtor_deleting(std::uint32_t a_flags)
+46798,0x1407dc050,0x1408073a0,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorFallbackToRanged>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorFallbackToRanged>::dtor_deleting(std::uint32_t a_flags)
+46799,0x1407dc090,0x1408073e0,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorReposition>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorReposition>::dtor_deleting(std::uint32_t a_flags)
+46800,0x1407dc0d0,0x140807420,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorSurround>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorSurround>::dtor_deleting(std::uint32_t a_flags)
 46813,0x1407dc6a0,0x1408079f0,2,"void CombatNavmeshSearchT<CombatPathingGoalPolicyRetreat,CombatPathingSearchPolicyStandard>::QueueSuccessorNode(void* a_location, void* a_edge, void* a_parentNode, float a_costScale)"
 46814,0x1407dc780,0x140807ad0,2,"void CombatNavmeshSearchT<CombatPathingGoalPolicyStandard,CombatPathingSearchPolicyStandard>::QueueSuccessorNode(void* a_location, void* a_edge, void* a_parentNode, float a_costScale)"
 46815,0x1407dc880,0x140807bd0,2,"void CombatNavmeshSearchT<CombatPathingGoalPolicyRetreat,CombatPathingSearchPolicyStandard>::QueueStartNode(const BSFastNavmeshTriLocation& a_location, float a_cost)"
@@ -9004,6 +9062,13 @@
 46951,0x1407e0370,0x14080b6c0,3,bool CombatBehaviorEquipContext::CheckEquipmentChanged()
 46952,0x1407e04a0,0x14080b7f0,3,bool CombatBehaviorEquipContext::EquipItem()
 46971,0x1407e2440,0x14080d790,2,void CombatBehaviorTreeFindAttackLocation::Initialize()
+47021,0x1407e3f10,0x14080f260,2,CombatBehaviorTreeNodeObject<CombatBehaviorFindAllyAttackLocation>* CombatBehaviorTreeNodeObject<CombatBehaviorFindAllyAttackLocation>::dtor_deleting(std::uint32_t a_flags)
+47022,0x1407e3f50,0x14080f2a0,2,CombatBehaviorTreeNodeObject<CombatBehaviorFindAttackLocation>* CombatBehaviorTreeNodeObject<CombatBehaviorFindAttackLocation>::dtor_deleting(std::uint32_t a_flags)
+47023,0x1407e3f90,0x14080f2e0,2,CombatBehaviorTreeNodeObject<CombatBehaviorFindLateralAttackLocation>* CombatBehaviorTreeNodeObject<CombatBehaviorFindLateralAttackLocation>::dtor_deleting(std::uint32_t a_flags)
+47024,0x1407e3fd0,0x14080f320,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorFindAllyAttackLocation>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorFindAllyAttackLocation>::dtor_deleting(std::uint32_t a_flags)
+47025,0x1407e4010,0x14080f360,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorFindAttackLocation>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorFindAttackLocation>::dtor_deleting(std::uint32_t a_flags)
+47026,0x1407e4050,0x14080f3a0,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorFindLateralAttackLocation>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorFindLateralAttackLocation>::dtor_deleting(std::uint32_t a_flags)
+47027,0x1407e4090,0x14080f3e0,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorSetBlackboardData>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorSetBlackboardData>::dtor_deleting(std::uint32_t a_flags)
 47032,0x1407e4370,0x14080f6c0,2,"void CombatNavmeshSearchT<CombatPathingGoalPolicyFindAttackLocation,CombatPathingSearchPolicyStandard>::QueueSuccessorNode(void* a_location, void* a_edge, void* a_parentNode, float a_costScale)"
 47037,0x1407e46a0,0x14080f9f0,2,"void CombatPathingRequestGeneric<CombatPathingGoalPolicyFindAttackLocation,CombatPathingSearchPolicyStandard>::CopyTo(BSPathingRequest& a_dest)"
 47038,0x1407e4740,0x14080fa90,2,"CombatObject* BSTDerivedCreator<CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFindAttackLocation,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>,CombatObject>::CreateImpl(CombatObject* a_val) const"
@@ -9042,11 +9107,13 @@
 47081,0x1407e5ca0,0x140810ff0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFindAllyAttackLocation>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 47082,0x1407e5d10,0x140811060,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFindAttackLocation>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 47083,0x1407e5d80,0x1408110d0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFindLateralAttackLocation>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+47084,0x1407e5df0,0x140811140,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorSetBlackboardData>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 47086,0x1407e5f00,0x140811250,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFindAttackLocation,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::LoadGame(BGSLoadGameBuffer* a_buf)"
 47089,0x1407e5fb0,0x140811300,4,float AITimer::QTimer()
 47093,0x1407e6150,0x1408114a0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFindAllyAttackLocation>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 47094,0x1407e6170,0x1408114c0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFindAttackLocation>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 47095,0x1407e6190,0x1408114e0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFindLateralAttackLocation>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+47096,0x1407e61b0,0x140811500,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorSetBlackboardData>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 47099,0x1407e62c0,0x140811610,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFindAttackLocation,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::SaveGame(BGSSaveGameBuffer* a_buf)"
 47101,0x1407e6370,0x1408116c0,2,"bool CombatNavmeshSearchT<CombatPathingGoalPolicyFindAttackLocation,CombatPathingSearchPolicyStandard>::RunToCompletion()"
 47108,0x1407e68a0,0x140811bf0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFindAllyAttackLocation>::Update(CombatBehaviorThread* a_thread)
@@ -9062,6 +9129,11 @@
 47140,0x1407e94d0,0x140814820,2,void CombatFlankingSearchData::SaveGame(BGSSaveGameBuffer* a_buf)
 47141,0x1407e9610,0x140814960,2,void CombatFlankingSearchData::LoadGame(BGSLoadGameBuffer* a_buf)
 47145,0x1407ea9c0,0x140815d10,2,"float CombatPathingSearchPolicyFlank::GetEdgeCost(BSFastNavmeshTriLocation* a_from, BSFastNavmeshTriLocation* a_to)"
+47241,0x1407edbc0,0x140818f10,2,CombatBehaviorTreeNodeObject<CombatBehaviorChase>* CombatBehaviorTreeNodeObject<CombatBehaviorChase>::dtor_deleting(std::uint32_t a_flags)
+47244,0x1407edc80,0x140818fd0,2,CombatBehaviorTreeNodeObject<CombatBehaviorStalk>* CombatBehaviorTreeNodeObject<CombatBehaviorStalk>::dtor_deleting(std::uint32_t a_flags)
+47245,0x1407edcc0,0x140819010,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorChase>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorChase>::dtor_deleting(std::uint32_t a_flags)
+47248,0x1407edd80,0x1408190d0,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorStalk>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorStalk>::dtor_deleting(std::uint32_t a_flags)
+47249,0x1407eddc0,0x140819110,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorWatchTarget>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorWatchTarget>::dtor_deleting(std::uint32_t a_flags)
 47259,0x1407ee200,0x140819550,2,"void CombatNavmeshSearchT<CombatPathingGoalPolicyFlank,CombatPathingSearchPolicyFlank>::QueueSuccessorNode(void* a_location, void* a_edge, void* a_parentNode, float a_costScale)"
 47260,0x1407ee320,0x140819670,2,"void CombatNavmeshSearchT<CombatPathingGoalPolicyFlankDistant,CombatPathingSearchPolicyStandard>::QueueSuccessorNode(void* a_location, void* a_edge, void* a_parentNode, float a_costScale)"
 47261,0x1407ee3e0,0x140819730,2,"void CombatNavmeshSearchT<CombatPathingGoalPolicyFlank,CombatPathingSearchPolicyFlank>::QueueStartNode(void* a_location, float a_cost)"
@@ -9084,6 +9156,7 @@
 47293,0x1407ef020,0x14081a370,2,void CombatBehaviorTreeNodeObject<CombatBehaviorFlankDistant>::Enter(CombatBehaviorThread* a_thread)
 47294,0x1407ef050,0x14081a3a0,2,void CombatBehaviorTreeNodeObject<CombatBehaviorStalk>::Enter(CombatBehaviorThread* a_thread)
 47295,0x1407ef080,0x14081a3d0,2,void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextFlankingMovement>::Exit(CombatBehaviorThread* a_thread)
+47296,0x1407ef0e0,0x14081a430,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorChase>::Exit(CombatBehaviorThread* a_thread)
 47297,0x1407ef110,0x14081a460,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFlank>::Exit(CombatBehaviorThread* a_thread)
 47298,0x1407ef140,0x14081a490,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFlankDistant>::Exit(CombatBehaviorThread* a_thread)
 47299,0x1407ef150,0x14081a4a0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorStalk>::Exit(CombatBehaviorThread* a_thread)
@@ -9157,6 +9230,22 @@
 47405,0x1407f29a0,0x14081dcf0,3,bool CombatBehaviorContextFlee::StartFlee()
 47426,0x1407f4a50,0x14081fda0,2,void CombatBehaviorTreeFlee::Initialize()
 47429,0x1407f5320,0x140820670,2,void CombatBehaviorTreeHide::Initialize()
+47518,0x1407f7e20,0x140823170,2,CombatBehaviorTreeNodeObject<CombatBehaviorFlee>* CombatBehaviorTreeNodeObject<CombatBehaviorFlee>::dtor_deleting(std::uint32_t a_flags)
+47519,0x1407f7e60,0x1408231b0,2,CombatBehaviorTreeNodeObject<CombatBehaviorFleeThroughDoor>* CombatBehaviorTreeNodeObject<CombatBehaviorFleeThroughDoor>::dtor_deleting(std::uint32_t a_flags)
+47520,0x1407f7ea0,0x1408231f0,2,CombatBehaviorTreeNodeObject<CombatBehaviorFleeToAlly>* CombatBehaviorTreeNodeObject<CombatBehaviorFleeToAlly>::dtor_deleting(std::uint32_t a_flags)
+47521,0x1407f7ee0,0x140823230,2,CombatBehaviorTreeNodeObject<CombatBehaviorFleeToCover>* CombatBehaviorTreeNodeObject<CombatBehaviorFleeToCover>::dtor_deleting(std::uint32_t a_flags)
+47522,0x1407f7f20,0x140823270,2,CombatBehaviorTreeNodeObject<CombatBehaviorForceSuccess>* CombatBehaviorTreeNodeObject<CombatBehaviorForceSuccess>::dtor_deleting(std::uint32_t a_flags)
+47523,0x1407f7f60,0x1408232b0,2,CombatBehaviorTreeNodeObject<CombatBehaviorHide>* CombatBehaviorTreeNodeObject<CombatBehaviorHide>::dtor_deleting(std::uint32_t a_flags)
+47524,0x1407f7fa0,0x1408232f0,2,CombatBehaviorTreeNodeObject<CombatBehaviorTrackTarget>* CombatBehaviorTreeNodeObject<CombatBehaviorTrackTarget>::dtor_deleting(std::uint32_t a_flags)
+47525,0x1407f7fe0,0x140823330,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorEnableBlackboardFlag>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorEnableBlackboardFlag>::dtor_deleting(std::uint32_t a_flags)
+47526,0x1407f8020,0x140823370,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorFaceAngle>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorFaceAngle>::dtor_deleting(std::uint32_t a_flags)
+47527,0x1407f8060,0x1408233b0,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorFlee>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorFlee>::dtor_deleting(std::uint32_t a_flags)
+47528,0x1407f80a0,0x1408233f0,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorFleeThroughDoor>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorFleeThroughDoor>::dtor_deleting(std::uint32_t a_flags)
+47529,0x1407f80e0,0x140823430,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorFleeToAlly>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorFleeToAlly>::dtor_deleting(std::uint32_t a_flags)
+47530,0x1407f8120,0x140823470,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorFleeToCover>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorFleeToCover>::dtor_deleting(std::uint32_t a_flags)
+47531,0x1407f8160,0x1408234b0,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorForceSuccess>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorForceSuccess>::dtor_deleting(std::uint32_t a_flags)
+47532,0x1407f81a0,0x1408234f0,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorHide>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorHide>::dtor_deleting(std::uint32_t a_flags)
+47533,0x1407f81e0,0x140823530,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorTrackTarget>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorTrackTarget>::dtor_deleting(std::uint32_t a_flags)
 47543,0x1407f8730,0x140823a80,2,"void CombatNavmeshSearchT<CombatPathingGoalPolicyFindHideCover,CombatPathingSearchPolicyStandard>::QueueSuccessorNode(void* a_location, void* a_edge, void* a_parentNode, float a_costScale)"
 47544,0x1407f8830,0x140823b80,2,"CombatNavmeshSearchT<CombatPathingGoalPolicyFlee,CombatPathingSearchPolicyStandard>::QueueSuccessorNode"
 47545,0x1407f8910,0x140823c60,2,"void CombatNavmeshSearchT<CombatPathingGoalPolicyFindHideCover,CombatPathingSearchPolicyStandard>::QueueStartNode(const BSFastNavmeshTriLocation& a_location, float a_cost)"
@@ -9265,6 +9354,7 @@
 47673,0x1407fc2d0,0x140827620,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFleeThroughDoor>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 47674,0x1407fc2f0,0x140827640,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFleeToAlly>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 47675,0x1407fc310,0x140827660,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFleeToCover>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+47676,0x1407fc360,0x1408276b0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorForceSuccess>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 47677,0x1407fc370,0x1408276c0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorHide>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 47678,0x1407fc3d0,0x140827720,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorTrackTarget>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 47681,0x1407fc4f0,0x140827840,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFindHideCover,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::SaveGame(BGSSaveGameBuffer* a_buf)"
@@ -9296,6 +9386,25 @@
 47752,0x140801330,0x14082c680,2,void CombatBehaviorTreeFlight::Initialize()
 47755,0x140801f10,0x14082d260,2,void DiveBombSpeedController::SaveGame(BGSSaveGameBuffer* a_buf)
 47756,0x140801fa0,0x14082d2f0,2,void DiveBombSpeedController::LoadGame(BGSLoadGameBuffer* a_buf)
+47826,0x1408040d0,0x14082f420,2,CombatBehaviorTreeNodeObject<CombatBehaviorDiveBomb>* CombatBehaviorTreeNodeObject<CombatBehaviorDiveBomb>::dtor_deleting(std::uint32_t a_flags)
+47827,0x140804110,0x14082f460,2,CombatBehaviorTreeNodeObject<CombatBehaviorFlyingAttack>* CombatBehaviorTreeNodeObject<CombatBehaviorFlyingAttack>::dtor_deleting(std::uint32_t a_flags)
+47828,0x140804150,0x14082f4a0,2,CombatBehaviorTreeNodeObject<CombatBehaviorGroundAttack>* CombatBehaviorTreeNodeObject<CombatBehaviorGroundAttack>::dtor_deleting(std::uint32_t a_flags)
+47829,0x140804190,0x14082f4e0,2,CombatBehaviorTreeNodeObject<CombatBehaviorHover>* CombatBehaviorTreeNodeObject<CombatBehaviorHover>::dtor_deleting(std::uint32_t a_flags)
+47830,0x1408041d0,0x14082f520,2,CombatBehaviorTreeNodeObject<CombatBehaviorLand>* CombatBehaviorTreeNodeObject<CombatBehaviorLand>::dtor_deleting(std::uint32_t a_flags)
+47831,0x140804210,0x14082f560,2,CombatBehaviorTreeNodeObject<CombatBehaviorOrbit>* CombatBehaviorTreeNodeObject<CombatBehaviorOrbit>::dtor_deleting(std::uint32_t a_flags)
+47832,0x140804250,0x14082f5a0,2,CombatBehaviorTreeNodeObject<CombatBehaviorOrbitDistant>* CombatBehaviorTreeNodeObject<CombatBehaviorOrbitDistant>::dtor_deleting(std::uint32_t a_flags)
+47833,0x140804290,0x14082f5e0,2,CombatBehaviorTreeNodeObject<CombatBehaviorPerchAttack>* CombatBehaviorTreeNodeObject<CombatBehaviorPerchAttack>::dtor_deleting(std::uint32_t a_flags)
+47834,0x1408042d0,0x14082f620,2,CombatBehaviorTreeNodeObject<CombatBehaviorTakeoff>* CombatBehaviorTreeNodeObject<CombatBehaviorTakeoff>::dtor_deleting(std::uint32_t a_flags)
+47837,0x140804390,0x14082f6e0,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorDiveBomb>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorDiveBomb>::dtor_deleting(std::uint32_t a_flags)
+47838,0x1408043d0,0x14082f720,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorFlyingAttack>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorFlyingAttack>::dtor_deleting(std::uint32_t a_flags)
+47839,0x140804410,0x14082f760,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorGroundAttack>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorGroundAttack>::dtor_deleting(std::uint32_t a_flags)
+47840,0x140804450,0x14082f7a0,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorHover>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorHover>::dtor_deleting(std::uint32_t a_flags)
+47841,0x140804490,0x14082f7e0,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorLand>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorLand>::dtor_deleting(std::uint32_t a_flags)
+47842,0x1408044d0,0x14082f820,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorLandNearby>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorLandNearby>::dtor_deleting(std::uint32_t a_flags)
+47843,0x140804510,0x14082f860,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorOrbit>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorOrbit>::dtor_deleting(std::uint32_t a_flags)
+47844,0x140804550,0x14082f8a0,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorOrbitDistant>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorOrbitDistant>::dtor_deleting(std::uint32_t a_flags)
+47845,0x140804590,0x14082f8e0,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorPerchAttack>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorPerchAttack>::dtor_deleting(std::uint32_t a_flags)
+47846,0x1408045d0,0x14082f920,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorTakeoff>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorTakeoff>::dtor_deleting(std::uint32_t a_flags)
 47852,0x140804780,0x14082fad0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorDynamicSelector<ConditionalChildSelector>>::Abort(CombatBehaviorThread* a_thread)
 47855,0x140804a30,0x14082fd80,2,"CombatObject* BSTDerivedCreator<DiveBombSpeedController,CombatObject>::CreateImpl()"
 47856,0x140804ab0,0x14082fe00,2,"void BSTDerivedCreator<DiveBombSpeedController,CombatObject>::Destroy(const CombatObject* a_val)"
@@ -9317,9 +9426,15 @@
 47876,0x140805000,0x140830350,2,void CombatBehaviorTreeNodeObject<CombatBehaviorTakeoff>::Enter(CombatBehaviorThread* a_thread)
 47877,0x140805040,0x140830390,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorDynamicSelector<ConditionalChildSelector>>::Exit(CombatBehaviorThread* a_thread)
 47878,0x1408050a0,0x1408303f0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFallbackSelector<WeightedRandomChildSelector>>::Exit(CombatBehaviorThread* a_thread)
+47879,0x1408050b0,0x140830400,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorDiveBomb>::Exit(CombatBehaviorThread* a_thread)
+47880,0x140805100,0x140830450,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFlyingAttack>::Exit(CombatBehaviorThread* a_thread)
+47881,0x140805130,0x140830480,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorGroundAttack>::Exit(CombatBehaviorThread* a_thread)
+47882,0x140805140,0x140830490,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorHover>::Exit(CombatBehaviorThread* a_thread)
+47883,0x140805170,0x1408304c0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorLand>::Exit(CombatBehaviorThread* a_thread)
 47884,0x140805180,0x1408304d0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorLandNearby>::Exit(CombatBehaviorThread* a_thread)
 47885,0x140805190,0x1408304e0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorOrbit>::Exit(CombatBehaviorThread* a_thread)
 47886,0x1408051e0,0x140830530,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorOrbitDistant>::Exit(CombatBehaviorThread* a_thread)
+47887,0x140805230,0x140830580,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorPerchAttack>::Exit(CombatBehaviorThread* a_thread)
 47888,0x140805260,0x1408305b0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorTakeoff>::Exit(CombatBehaviorThread* a_thread)
 47889,0x140805270,0x1408305c0,2,"const BSFixedString& CombatBehaviorTreeConditionalNode<CombatBehaviorExpression<CombatBehaviorBinaryExpression<CombatBehaviorMemberFunc<Actor,FLY_STATE_(__cdecl_ActorState::*)(void)const>,FLY_STATE,OpEquals>>>::GetClassType()"
 47890,0x140805300,0x140830650,2,"const BSFixedString& CombatBehaviorTreeConditionalNode<CombatBehaviorExpression<CombatBehaviorFunc1<bool_(__cdecl*)(Actor*_),CombatBehaviorTree::CombatBehaviorAttacker>>>::GetClassType()"
@@ -9338,24 +9453,42 @@
 47912,0x140805c50,0x140830fa0,2,"const BSFixedString& CombatBehaviorTreeNodeCondition<CombatBehaviorExpression<CombatBehaviorBinaryExpression<CombatBehaviorMemberFunc<Actor,FLY_STATE_(__cdecl_ActorState::*)(void)const>,FLY_STATE,OpEquals>>>::GetType()"
 47913,0x140805c60,0x140830fb0,2,const BSFixedString& CombatBehaviorTreeNodeObjectBase<CombatBehaviorDynamicSelector<ConditionalChildSelector>>::GetType()
 47914,0x140805c70,0x140830fc0,2,const BSFixedString& CombatBehaviorTreeNodeObjectBase<CombatBehaviorFallbackSelector<WeightedRandomChildSelector>>::GetType()
+47915,0x140805c80,0x140830fd0,2,const BSFixedString& CombatBehaviorTreeNodeObjectBase<CombatBehaviorDiveBomb>::GetType()
+47916,0x140805c90,0x140830fe0,2,const BSFixedString& CombatBehaviorTreeNodeObjectBase<CombatBehaviorFlyingAttack>::GetType()
+47917,0x140805ca0,0x140830ff0,2,const BSFixedString& CombatBehaviorTreeNodeObjectBase<CombatBehaviorGroundAttack>::GetType()
+47918,0x140805cb0,0x140831000,2,const BSFixedString& CombatBehaviorTreeNodeObjectBase<CombatBehaviorHover>::GetType()
+47919,0x140805cc0,0x140831010,2,const BSFixedString& CombatBehaviorTreeNodeObjectBase<CombatBehaviorLand>::GetType()
 47920,0x140805cd0,0x140831020,2,const BSFixedString& CombatBehaviorTreeNodeObjectBase<CombatBehaviorLandNearby>::GetType()
 47921,0x140805ce0,0x140831030,2,const BSFixedString& CombatBehaviorTreeNodeObjectBase<CombatBehaviorOrbit>::GetType()
 47922,0x140805cf0,0x140831040,2,const BSFixedString& CombatBehaviorTreeNodeObjectBase<CombatBehaviorOrbitDistant>::GetType()
+47923,0x140805d00,0x140831050,2,const BSFixedString& CombatBehaviorTreeNodeObjectBase<CombatBehaviorPerchAttack>::GetType()
+47924,0x140805d10,0x140831060,2,const BSFixedString& CombatBehaviorTreeNodeObjectBase<CombatBehaviorTakeoff>::GetType()
 47926,0x140805d60,0x1408310b0,2,"CombatBehaviorTreeValueNodeT<unsigned int,CombatBehaviorExpression<CombatBehaviorMemberFunc<Actor,bool (__cdecl Actor::*)(void)>>>::GetValue"
 47927,0x140805d90,0x1408310e0,2,"CombatBehaviorTreeValueNodeT<unsigned int,CombatBehaviorExpression<CombatBehaviorMemberFunc<Actor,bool (__cdecl ActorState::*)(void)const>>>::GetValue"
 47930,0x140805f00,0x140831250,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorDynamicSelector<ConditionalChildSelector>>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 47931,0x140805f40,0x140831290,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFallbackSelector<WeightedRandomChildSelector>>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+47932,0x140805fa0,0x1408312f0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorDiveBomb>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 47933,0x140806010,0x140831360,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFlyingAttack>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+47934,0x140806050,0x1408313a0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorGroundAttack>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+47935,0x140806090,0x1408313e0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorHover>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+47936,0x1408060d0,0x140831420,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorLand>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 47937,0x140806110,0x140831460,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorLandNearby>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 47938,0x140806150,0x1408314a0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorOrbit>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 47939,0x1408061d0,0x140831520,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorOrbitDistant>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 47940,0x140806240,0x140831590,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorPerchAttack>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+47941,0x140806280,0x1408315d0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorTakeoff>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 47944,0x140806370,0x1408316c0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorDynamicSelector<ConditionalChildSelector>>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 47945,0x1408063f0,0x140831740,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFallbackSelector<WeightedRandomChildSelector>>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 47946,0x140806440,0x140831790,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorDiveBomb>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+47947,0x140806460,0x1408317b0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFlyingAttack>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+47948,0x1408064d0,0x140831820,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorGroundAttack>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+47949,0x140806520,0x140831870,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorHover>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+47950,0x140806570,0x1408318c0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorLand>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 47951,0x1408065d0,0x140831920,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorLandNearby>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 47952,0x140806630,0x140831980,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorOrbit>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 47953,0x140806670,0x1408319c0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorOrbitDistant>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+47954,0x140806690,0x1408319e0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorPerchAttack>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+47955,0x1408066e0,0x140831a30,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorTakeoff>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 47957,0x140806810,0x140831b60,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorDynamicSelector<ConditionalChildSelector>>::Update(CombatBehaviorThread* a_thread)
 47958,0x140806820,0x140831b70,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFallbackSelector<WeightedRandomChildSelector>>::Update(CombatBehaviorThread* a_thread)
 47959,0x140806880,0x140831bd0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorDiveBomb>::Update(CombatBehaviorThread* a_thread)
@@ -9384,6 +9517,10 @@
 47984,0x140806bb0,0x140831f00,2,bool CombatBehaviorTreeNodeObjectBase<CombatBehaviorPerchAttack>::Validate(CombatBehaviorTreeNode* a_node)
 47985,0x140806bc0,0x140831f10,2,bool CombatBehaviorTreeNodeObjectBase<CombatBehaviorTakeoff>::Validate(CombatBehaviorTreeNode* a_node)
 47991,0x140807150,0x1408324a0,2,void CombatBehaviorTreeLowCombat::Initialize()
+48003,0x140807af0,0x140832e40,2,CombatBehaviorTreeNodeObject<CombatBehaviorAttackLow>* CombatBehaviorTreeNodeObject<CombatBehaviorAttackLow>::dtor_deleting(std::uint32_t a_flags)
+48004,0x140807b30,0x140832e80,2,CombatBehaviorTreeNodeObject<CombatBehaviorPursueTarget>* CombatBehaviorTreeNodeObject<CombatBehaviorPursueTarget>::dtor_deleting(std::uint32_t a_flags)
+48005,0x140807b70,0x140832ec0,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorAttackLow>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorAttackLow>::dtor_deleting(std::uint32_t a_flags)
+48006,0x140807bb0,0x140832f00,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorPursueTarget>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorPursueTarget>::dtor_deleting(std::uint32_t a_flags)
 48011,0x140807d50,0x1408330a0,2,void CombatBehaviorTreeNodeObject<CombatBehaviorAttackLow>::Enter(CombatBehaviorThread* a_thread)
 48012,0x140807d80,0x1408330d0,2,void CombatBehaviorTreeNodeObject<CombatBehaviorPursueTarget>::Enter(CombatBehaviorThread* a_thread)
 48013,0x140807db0,0x140833100,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorAttackLow>::Exit(CombatBehaviorThread* a_thread)
@@ -9399,6 +9536,7 @@
 48024,0x140808030,0x140833380,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorAttackLow>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 48025,0x140808060,0x1408333b0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorPursueTarget>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 48026,0x1408080d0,0x140833420,3,bool CombatState::QTargetLost()
+48027,0x1408080e0,0x140833430,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorAttackLow>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 48028,0x1408080f0,0x140833440,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorPursueTarget>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 48029,0x140808110,0x140833460,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorAttackLow>::Update(CombatBehaviorThread* a_thread)
 48030,0x140808120,0x140833470,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorPursueTarget>::Update(CombatBehaviorThread* a_thread)
@@ -9426,6 +9564,12 @@
 48063,0x140809ab0,0x140834e00,2,void CombatBehaviorPrepareDualCast::Enter()
 48064,0x140809c10,0x140834f60,2,void CombatBehaviorPrepareDualCast::Update()
 48065,0x140809de0,0x140835130,2,void CombatBehaviorTreeMagic::Initialize()
+48087,0x14080aed0,0x140836220,2,CombatBehaviorTreeNodeObject<CombatBehaviorCastConcentrationSpell>* CombatBehaviorTreeNodeObject<CombatBehaviorCastConcentrationSpell>::dtor_deleting(std::uint32_t a_flags)
+48088,0x14080af10,0x140836260,2,CombatBehaviorTreeNodeObject<CombatBehaviorCastImmediateSpell>* CombatBehaviorTreeNodeObject<CombatBehaviorCastImmediateSpell>::dtor_deleting(std::uint32_t a_flags)
+48089,0x14080af50,0x1408362a0,2,CombatBehaviorTreeNodeObject<CombatBehaviorPrepareDualCast>* CombatBehaviorTreeNodeObject<CombatBehaviorPrepareDualCast>::dtor_deleting(std::uint32_t a_flags)
+48090,0x14080af90,0x1408362e0,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorCastConcentrationSpell>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorCastConcentrationSpell>::dtor_deleting(std::uint32_t a_flags)
+48091,0x14080afd0,0x140836320,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorCastImmediateSpell>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorCastImmediateSpell>::dtor_deleting(std::uint32_t a_flags)
+48092,0x14080b010,0x140836360,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorPrepareDualCast>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorPrepareDualCast>::dtor_deleting(std::uint32_t a_flags)
 48095,0x14080b160,0x1408364b0,2,"void CombatBehaviorTreeConditionalNode<CombatBehaviorExpression<CombatBehaviorFunc1<bool (__cdecl*)(float),CombatBehaviorExpression<CombatBehaviorMemberFunc<CombatBehaviorContextMagic,float (__cdecl CombatBehaviorContextMagic::*)(void)const>>>>>::Enter(CombatBehaviorThread* a_thread)"
 48097,0x14080b260,0x1408365b0,2,"void CombatBehaviorTreeNodeObject1<CombatBehaviorCastConcentrationSpell,bool>::Enter(CombatBehaviorThread* a_thread)"
 48098,0x14080b290,0x1408365e0,2,"void CombatBehaviorTreeNodeObject1<CombatBehaviorCastImmediateSpell,bool>::Enter(CombatBehaviorThread* a_thread)"
@@ -9433,14 +9577,25 @@
 48100,0x14080b2f0,0x140836640,2,void CombatBehaviorTreeNodeObject<CombatBehaviorCastImmediateSpell>::Enter(CombatBehaviorThread* a_thread)
 48101,0x14080b320,0x140836670,2,void CombatBehaviorTreeNodeObject<CombatBehaviorPrepareDualCast>::Enter(CombatBehaviorThread* a_thread)
 48102,0x14080b360,0x1408366b0,2,void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextMagic>::Exit(CombatBehaviorThread* a_thread)
+48103,0x14080b3a0,0x1408366f0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorCastConcentrationSpell>::Exit(CombatBehaviorThread* a_thread)
+48104,0x14080b400,0x140836750,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorCastImmediateSpell>::Exit(CombatBehaviorThread* a_thread)
 48105,0x14080b460,0x1408367b0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorPrepareDualCast>::Exit(CombatBehaviorThread* a_thread)
 48106,0x14080b470,0x1408367c0,2,"const BSFixedString& CombatBehaviorTreeConditionalNode<CombatBehaviorExpression<CombatBehaviorFunc1<bool_(__cdecl*)(float),CombatBehaviorExpression<CombatBehaviorMemberFunc<CombatBehaviorContextMagic,float_(__cdecl_CombatBehaviorContextMagic::*)(void)const>>>>>::GetClassType()"
 48107,0x14080b500,0x140836850,2,const BSFixedString& CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextMagic>::GetClassType()
 48111,0x14080b740,0x140836a90,2,"const BSFixedString& CombatBehaviorTreeConditionalNode<CombatBehaviorExpression<CombatBehaviorFunc1<bool_(__cdecl*)(float),CombatBehaviorExpression<CombatBehaviorMemberFunc<CombatBehaviorContextMagic,float_(__cdecl_CombatBehaviorContextMagic::*)(void)const>>>>>::GetType()"
 48112,0x14080b750,0x140836aa0,2,const BSFixedString& CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextMagic>::GetType()
+48113,0x14080b760,0x140836ab0,2,const BSFixedString& CombatBehaviorTreeNodeObjectBase<CombatBehaviorCastConcentrationSpell>::GetType()
+48114,0x14080b770,0x140836ac0,2,const BSFixedString& CombatBehaviorTreeNodeObjectBase<CombatBehaviorCastImmediateSpell>::GetType()
+48115,0x14080b780,0x140836ad0,2,const BSFixedString& CombatBehaviorTreeNodeObjectBase<CombatBehaviorPrepareDualCast>::GetType()
 48116,0x14080b790,0x140836ae0,2,"CombatBehaviorTreeValueNodeT<unsigned int,CombatBehaviorExpression<CombatBehaviorMemberFunc<CombatBehaviorContextMagic,MagicSystem::CastingType (__cdecl CombatBehaviorContextMagic::*)(void)const>>>::GetValue"
 48118,0x14080b800,0x140836b50,2,"void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextMagic>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+48119,0x14080b880,0x140836bd0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorCastConcentrationSpell>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+48120,0x14080b8e0,0x140836c30,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorCastImmediateSpell>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+48121,0x14080b940,0x140836c90,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorPrepareDualCast>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 48122,0x14080b970,0x140836cc0,2,"void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextMagic>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+48123,0x14080b990,0x140836ce0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorCastConcentrationSpell>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+48124,0x14080b9e0,0x140836d30,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorCastImmediateSpell>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+48125,0x14080ba30,0x140836d80,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorPrepareDualCast>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 48126,0x14080ba40,0x140836d90,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorCastConcentrationSpell>::Update(CombatBehaviorThread* a_thread)
 48127,0x14080ba50,0x140836da0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorCastImmediateSpell>::Update(CombatBehaviorThread* a_thread)
 48128,0x14080ba60,0x140836db0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorPrepareDualCast>::Update(CombatBehaviorThread* a_thread)
@@ -9456,6 +9611,10 @@
 48145,0x14080d1d0,0x140838520,3,void CombatBehaviorContextMelee::GatherAttackData()
 48146,0x14080d560,0x1408388b0,3,void CombatBehaviorContextMelee::CalculateAnimationData()
 48151,0x14080df60,0x1408392b0,2,void CombatBehaviorTreeMelee::Initialize()
+48163,0x14080e6d0,0x140839a20,2,CombatBehaviorTreeNodeObject<CombatBehaviorAttack>* CombatBehaviorTreeNodeObject<CombatBehaviorAttack>::dtor_deleting(std::uint32_t a_flags)
+48164,0x14080e710,0x140839a60,2,CombatBehaviorTreeNodeObject<CombatBehaviorSpecialAttack>* CombatBehaviorTreeNodeObject<CombatBehaviorSpecialAttack>::dtor_deleting(std::uint32_t a_flags)
+48165,0x14080e750,0x140839aa0,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorAttack>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorAttack>::dtor_deleting(std::uint32_t a_flags)
+48166,0x14080e790,0x140839ae0,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorSpecialAttack>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorSpecialAttack>::dtor_deleting(std::uint32_t a_flags)
 48170,0x14080e900,0x140839c50,2,"void CombatBehaviorTreeCreateContextNode2<CombatBehaviorContextMelee,CombatBehaviorExpression<CombatBehaviorMemberFunc<CombatBehaviorEquipContext,NiPointer<CombatInventoryItem>_const_&__(__cdecl_CombatBehaviorEquipContext::*)(void)const>>,CombatBehaviorContextMelee::ATTACK_TYPE>::Enter(CombatBehaviorThread* a_thread)"
 48171,0x14080e9a0,0x140839cf0,2,void CombatBehaviorTreeNodeObject<CombatBehaviorAttack>::Enter(CombatBehaviorThread* a_thread)
 48172,0x14080e9e0,0x140839d30,2,void CombatBehaviorTreeNodeObject<CombatBehaviorSpecialAttack>::Enter(CombatBehaviorThread* a_thread)
@@ -9472,6 +9631,8 @@
 48183,0x14080ece0,0x14083a030,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorAttack>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 48184,0x14080ed10,0x14083a060,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorSpecialAttack>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 48185,0x14080ed40,0x14083a090,2,"void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextMelee>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+48186,0x14080ed60,0x14083a0b0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorAttack>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+48187,0x14080ed70,0x14083a0c0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorSpecialAttack>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 48188,0x14080ed80,0x14083a0d0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorAttack>::Update(CombatBehaviorThread* a_thread)
 48189,0x14080ed90,0x14083a0e0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorSpecialAttack>::Update(CombatBehaviorThread* a_thread)
 48190,0x14080eda0,0x14083a0f0,2,bool CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextMelee>::Validate(CombatBehaviorTreeNode* a_node)
@@ -9483,6 +9644,12 @@
 48237,0x140810a10,0x14083bd60,2,void CombatBehaviorTreeCheckUnreachableTarget::Initialize()
 48238,0x140810af0,0x14083be40,2,void CombatBehaviorTreeReturnToCombatArea::Initialize()
 48242,0x140810cd0,0x14083c020,2,void CombatBehaviorTreeExitWater::Initialize()
+48309,0x140812b90,0x14083dee0,2,CombatBehaviorTreeNodeObject<CombatBehaviorCheckUnreachableTarget>* CombatBehaviorTreeNodeObject<CombatBehaviorCheckUnreachableTarget>::dtor_deleting(std::uint32_t a_flags)
+48310,0x140812bd0,0x14083df20,2,CombatBehaviorTreeNodeObject<CombatBehaviorExitWater>* CombatBehaviorTreeNodeObject<CombatBehaviorExitWater>::dtor_deleting(std::uint32_t a_flags)
+48311,0x140812c10,0x14083df60,2,CombatBehaviorTreeNodeObject<CombatBehaviorReturnToCombatArea>* CombatBehaviorTreeNodeObject<CombatBehaviorReturnToCombatArea>::dtor_deleting(std::uint32_t a_flags)
+48312,0x140812c50,0x14083dfa0,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorCheckUnreachableTarget>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorCheckUnreachableTarget>::dtor_deleting(std::uint32_t a_flags)
+48313,0x140812c90,0x14083dfe0,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorExitWater>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorExitWater>::dtor_deleting(std::uint32_t a_flags)
+48314,0x140812cd0,0x14083e020,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorReturnToCombatArea>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorReturnToCombatArea>::dtor_deleting(std::uint32_t a_flags)
 48324,0x1408130f0,0x14083e440,2,"void CombatNavmeshSearchT<CombatPathingGoalPolicyExitWater,CombatPathingSearchPolicyStandard>::QueueSuccessorNode(void* a_location, void* a_edge, void* a_parentNode, float a_costScale)"
 48325,0x1408131b0,0x14083e500,2,"void CombatNavmeshSearchT<CombatPathingGoalPolicyReturnToCombatArea,CombatPathingSearchPolicyStandard>::QueueSuccessorNode(void* a_location, void* a_edge, void* a_parentNode, float a_costScale)"
 48326,0x1408132b0,0x14083e600,2,"void CombatNavmeshSearchT<CombatPathingGoalPolicyExitWater,CombatPathingSearchPolicyStandard>::QueueStartNode(const BSFastNavmeshTriLocation& a_location, float a_cost)"
@@ -9532,6 +9699,7 @@
 48384,0x1408153f0,0x140840740,2,"bool CombatNavmeshSearchT<CombatPathingGoalPolicyReturnToCombatArea,CombatPathingSearchPolicyStandard>::IsGoalNode(AStarNode* a_node)"
 48385,0x140815460,0x1408407b0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorCheckUnreachableTarget>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 48386,0x1408154e0,0x140840830,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorExitWater>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+48387,0x140815550,0x1408408a0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorReturnToCombatArea>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 48391,0x1408157f0,0x140840b40,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyExitWater,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::LoadGame(BGSLoadGameBuffer* a_buf)"
 48392,0x140815840,0x140840b90,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyReturnToCombatArea,CombatPathingSearchPolicyStandard>,CombatPathDestinationLocation>::LoadGame(BGSLoadGameBuffer* a_buf)"
 48397,0x140815a10,0x140840d60,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorCheckUnreachableTarget>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
@@ -9559,6 +9727,10 @@
 48463,0x140817cb0,0x140843000,3,float CombatInventory::QRawMaxRange()
 48467,0x140817ec0,0x140843210,3,bool CombatBehaviorContextRangedMovement::CheckOutOfRange()
 48476,0x140818d40,0x140844090,2,void CombatBehaviorTreeRangedMovement::Initialize()
+48489,0x140819ac0,0x140844e10,2,CombatBehaviorTreeNodeObject<CombatBehaviorMaintainOptimalRange>* CombatBehaviorTreeNodeObject<CombatBehaviorMaintainOptimalRange>::dtor_deleting(std::uint32_t a_flags)
+48490,0x140819b00,0x140844e50,2,CombatBehaviorTreeNodeObject<CombatBehaviorStrafe>* CombatBehaviorTreeNodeObject<CombatBehaviorStrafe>::dtor_deleting(std::uint32_t a_flags)
+48491,0x140819b40,0x140844e90,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorMaintainOptimalRange>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorMaintainOptimalRange>::dtor_deleting(std::uint32_t a_flags)
+48492,0x140819b80,0x140844ed0,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorStrafe>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorStrafe>::dtor_deleting(std::uint32_t a_flags)
 48495,0x140819ca0,0x140844ff0,2,void CombatBehaviorTreeCreateContextNode<CombatBehaviorContextRangedMovement>::Enter(CombatBehaviorThread* a_thread)
 48496,0x140819d40,0x140845090,2,void CombatBehaviorTreeNodeObject<CombatBehaviorMaintainOptimalRange>::Enter(CombatBehaviorThread* a_thread)
 48497,0x140819d70,0x1408450c0,2,void CombatBehaviorTreeNodeObject<CombatBehaviorStrafe>::Enter(CombatBehaviorThread* a_thread)
@@ -9586,6 +9758,14 @@
 48519,0x14081a3e0,0x140845730,2,bool CombatBehaviorTreeNodeObjectBase<CombatBehaviorStrafe>::Validate(CombatBehaviorTreeNode* a_node)
 48544,0x14081c860,0x140847bb0,2,void CombatBehaviorTreeSearch::Initialize()
 48549,0x14081d770,0x140848ac0,2,"bool CombatSearchLockData::TryPassDoor(BSPathingDoor** a_door, float* a_costOut)"
+48641,0x1408203e0,0x14084b730,2,CombatBehaviorTreeNodeObject<CombatBehaviorForceFail>* CombatBehaviorTreeNodeObject<CombatBehaviorForceFail>::dtor_deleting(std::uint32_t a_flags)
+48642,0x140820420,0x14084b770,2,CombatBehaviorTreeNodeObject<CombatBehaviorSearchInvestigateDoor>* CombatBehaviorTreeNodeObject<CombatBehaviorSearchInvestigateDoor>::dtor_deleting(std::uint32_t a_flags)
+48643,0x140820460,0x14084b7b0,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorForceFail>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorForceFail>::dtor_deleting(std::uint32_t a_flags)
+48644,0x1408204a0,0x14084b7f0,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorSearch>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorSearch>::dtor_deleting(std::uint32_t a_flags)
+48645,0x1408204e0,0x14084b830,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorSearchCenter>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorSearchCenter>::dtor_deleting(std::uint32_t a_flags)
+48646,0x140820520,0x14084b870,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorSearchInvestigateDoor>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorSearchInvestigateDoor>::dtor_deleting(std::uint32_t a_flags)
+48647,0x140820560,0x14084b8b0,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorSearchLocation>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorSearchLocation>::dtor_deleting(std::uint32_t a_flags)
+48648,0x1408205a0,0x14084b8f0,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorSearchWander>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorSearchWander>::dtor_deleting(std::uint32_t a_flags)
 48659,0x140820ac0,0x14084be10,2,"void CombatNavmeshSearchT<CombatPathingGoalPolicySearch,CombatPathingSearchPolicyStandard>::QueueSuccessorNode(void* a_location, void* a_edge, void* a_parentNode, float a_costScale)"
 48660,0x140820be0,0x14084bf30,2,"CombatNavmeshSearchT<CombatPathingGoalPolicySearchWander,CombatPathingSearchPolicyStandard>::QueueSuccessorNode"
 48661,0x140820ce0,0x14084c030,2,"void CombatNavmeshSearchT<CombatPathingGoalPolicySearch,CombatPathingSearchPolicyStandard>::QueueStartNode(const BSFastNavmeshTriLocation& a_location, float a_cost)"
@@ -9656,6 +9836,7 @@
 48743,0x140823700,0x14084ea50,2,"bool CombatNavmeshSearchT<CombatPathingGoalPolicySearch,CombatPathingSearchPolicyStandard>::IsGoalNode(AStarNode* a_node)"
 48744,0x140823770,0x14084eac0,2,"bool CombatNavmeshSearchT<CombatPathingGoalPolicySearchWander,CombatPathingSearchPolicyStandard>::IsGoalNode(AStarNode* a_node)"
 48745,0x1408237e0,0x14084eb30,2,"void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextSearch>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+48746,0x140823880,0x14084ebd0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorForceFail>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 48747,0x1408238b0,0x14084ec00,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorSearch>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 48748,0x140823930,0x14084ec80,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorSearchCenter>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 48749,0x1408239a0,0x14084ecf0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorSearchInvestigateDoor>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
@@ -9664,6 +9845,7 @@
 48754,0x140823cc0,0x14084f010,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicySearch,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::LoadGame(BGSLoadGameBuffer* a_buf)"
 48755,0x140823d20,0x14084f070,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicySearchWander,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::LoadGame(BGSLoadGameBuffer* a_buf)"
 48761,0x140823f10,0x14084f260,2,"void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextSearch>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+48762,0x140823f60,0x14084f2b0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorForceFail>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 48763,0x140823f70,0x14084f2c0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorSearch>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 48764,0x140823fb0,0x14084f300,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorSearchCenter>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 48765,0x140823fd0,0x14084f320,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorSearchInvestigateDoor>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
@@ -9688,6 +9870,8 @@
 48809,0x140825290,0x1408505e0,2,void CombatBehaviorCastShout::Enter(void* a_node)
 48810,0x140825490,0x1408507e0,2,void CombatBehaviorCastShout::Update()
 48811,0x140825510,0x140850860,2,void CombatBehaviorTreeShout::Initialize()
+48819,0x140825c30,0x140850f80,2,CombatBehaviorTreeNodeObject<CombatBehaviorCastShout>* CombatBehaviorTreeNodeObject<CombatBehaviorCastShout>::dtor_deleting(std::uint32_t a_flags)
+48820,0x140825c70,0x140850fc0,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorCastShout>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorCastShout>::dtor_deleting(std::uint32_t a_flags)
 48821,0x140825ce0,0x140851030,2,"void CombatBehaviorTreeConditionalNode<CombatBehaviorExpression<CombatBehaviorFunc1<bool (__cdecl*)(float),CombatBehaviorExpression<CombatBehaviorMemberFunc<CombatBehaviorContextShout,float (__cdecl CombatBehaviorContextShout::*)(void)const>>>>>::Enter(CombatBehaviorThread* a_thread)"
 48823,0x140825de0,0x140851130,2,void CombatBehaviorTreeNodeObject<CombatBehaviorCastShout>::Enter(CombatBehaviorThread* a_thread)
 48824,0x140825e20,0x140851170,2,void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextShout>::Exit(CombatBehaviorThread* a_thread)
@@ -9696,13 +9880,20 @@
 48827,0x140825f00,0x140851250,2,const BSFixedString& CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextShout>::GetClassType()
 48829,0x140826020,0x140851370,2,"const BSFixedString& CombatBehaviorTreeConditionalNode<CombatBehaviorExpression<CombatBehaviorFunc1<bool_(__cdecl*)(float),CombatBehaviorExpression<CombatBehaviorMemberFunc<CombatBehaviorContextShout,float_(__cdecl_CombatBehaviorContextShout::*)(void)const>>>>>::GetType()"
 48830,0x140826030,0x140851380,2,const BSFixedString& CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextShout>::GetType()
+48831,0x140826040,0x140851390,2,const BSFixedString& CombatBehaviorTreeNodeObjectBase<CombatBehaviorCastShout>::GetType()
 48832,0x140826050,0x1408513a0,2,"void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextShout>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+48833,0x140826120,0x140851470,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorCastShout>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 48834,0x140826150,0x1408514a0,2,"void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextShout>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+48835,0x140826190,0x1408514e0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorCastShout>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 48836,0x1408261a0,0x1408514f0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorCastShout>::Update(CombatBehaviorThread* a_thread)
 48837,0x1408261b0,0x140851500,2,"bool CombatBehaviorTreeConditionalNode<CombatBehaviorExpression<CombatBehaviorFunc1<bool_(__cdecl*)(float),CombatBehaviorExpression<CombatBehaviorMemberFunc<CombatBehaviorContextShout,float_(__cdecl_CombatBehaviorContextShout::*)(void)const>>>>>::Validate(CombatBehaviorTreeNode* a_node)"
 48838,0x1408261c0,0x140851510,2,bool CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextShout>::Validate(CombatBehaviorTreeNode* a_node)
 48839,0x1408261d0,0x140851520,2,bool CombatBehaviorTreeNodeObjectBase<CombatBehaviorCastShout>::Validate(CombatBehaviorTreeNode* a_node)
 48856,0x140827820,0x140852b70,2,void CombatBehaviorTreeUseCover::Initialize()
+48896,0x140828ea0,0x1408541f0,2,CombatBehaviorTreeNodeObject<CombatBehaviorAttackFromCover>* CombatBehaviorTreeNodeObject<CombatBehaviorAttackFromCover>::dtor_deleting(std::uint32_t a_flags)
+48897,0x140828ee0,0x140854230,2,CombatBehaviorTreeNodeObject<CombatBehaviorFindCover>* CombatBehaviorTreeNodeObject<CombatBehaviorFindCover>::dtor_deleting(std::uint32_t a_flags)
+48899,0x140828f60,0x1408542b0,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorAttackFromCover>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorAttackFromCover>::dtor_deleting(std::uint32_t a_flags)
+48900,0x140828fa0,0x1408542f0,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorFindCover>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorFindCover>::dtor_deleting(std::uint32_t a_flags)
 48906,0x140829250,0x1408545a0,2,"void CombatNavmeshSearchT<CombatPathingGoalPolicyFindCover,CombatPathingSearchPolicyStandard>::QueueSuccessorNode(void* a_location, void* a_edge, void* a_parentNode, float a_costScale)"
 48907,0x140829330,0x140854680,2,"void CombatNavmeshSearchT<CombatPathingGoalPolicyFindCover,CombatPathingSearchPolicyStandard>::QueueStartNode(const BSFastNavmeshTriLocation& a_location, float a_cost)"
 48909,0x1408294a0,0x1408547f0,2,"void CombatPathingRequestGeneric<CombatPathingGoalPolicyFindCover,CombatPathingSearchPolicyStandard>::CopyTo(BSPathingRequest& a_dest)"
@@ -9733,6 +9924,7 @@
 48942,0x14082a8a0,0x140855bf0,2,"void* CombatNavmeshSearchT<CombatPathingGoalPolicyFindCover,CombatPathingSearchPolicyStandard>::GetSearchPolicyByTypeId(std::uint32_t a_typeId)"
 48943,0x14082a8e0,0x140855c30,2,const BSFixedString& CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextCover>::GetType()
 48944,0x14082a8f0,0x140855c40,2,"const BSFixedString& CombatBehaviorTreeNodeEvaluateFunction<CombatBehaviorExpression<CombatBehaviorMemberFunc<CombatBehaviorContextCover,bool_(__cdecl_CombatBehaviorContextCover::*)(void)const>>>::GetType()"
+48945,0x14082a900,0x140855c50,2,const BSFixedString& CombatBehaviorTreeNodeObjectBase<CombatBehaviorAttackFromCover>::GetType()
 48946,0x14082a910,0x140855c60,2,const BSFixedString& CombatBehaviorTreeNodeObjectBase<CombatBehaviorFindCover>::GetType()
 48947,0x14082a920,0x140855c70,2,const BSFixedString& CombatBehaviorTreeNodeObjectBase<CombatBehaviorWaitBehindCover>::GetType()
 48948,0x14082a930,0x140855c80,2,"std::uint32_t CombatPathingRequestGeneric<CombatPathingGoalPolicyFindCover,CombatPathingSearchPolicyStandard>::GetType()"
@@ -9756,13 +9948,17 @@
 48980,0x14082b5c0,0x140856910,2,bool CombatBehaviorTreeNodeObjectBase<CombatBehaviorFindCover>::Validate(CombatBehaviorTreeNode* a_node)
 48981,0x14082b5d0,0x140856920,2,bool CombatBehaviorTreeNodeObjectBase<CombatBehaviorWaitBehindCover>::Validate(CombatBehaviorTreeNode* a_node)
 48988,0x14082b950,0x140856ca0,2,void CombatBehaviorTreeUsePotion::Initialize()
+48994,0x14082bf20,0x140857270,2,CombatBehaviorTreeNodeObject<CombatBehaviorDrinkPotion>* CombatBehaviorTreeNodeObject<CombatBehaviorDrinkPotion>::dtor_deleting(std::uint32_t a_flags)
+48995,0x14082bf60,0x1408572b0,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorDrinkPotion>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorDrinkPotion>::dtor_deleting(std::uint32_t a_flags)
 48996,0x14082bfd0,0x140857320,2,"void CombatBehaviorTreeCreateContextNode1<CombatBehaviorContextUsePotion,CombatBehaviorExpression<CombatBehaviorMemberFunc<CombatBehaviorEquipContext,NiPointer<CombatInventoryItem> const &  (__cdecl CombatBehaviorEquipContext::*)(void)const>>>::Enter(CombatBehaviorThread* a_thread)"
 48997,0x14082c040,0x140857390,2,void CombatBehaviorTreeNodeObject<CombatBehaviorDrinkPotion>::Enter(CombatBehaviorThread* a_thread)
 48998,0x14082c080,0x1408573d0,2,void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextUsePotion>::Exit(CombatBehaviorThread* a_thread)
 48999,0x14082c0c0,0x140857410,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorDrinkPotion>::Exit(CombatBehaviorThread* a_thread)
+49003,0x14082c200,0x140857550,2,const BSFixedString& CombatBehaviorTreeNodeObjectBase<CombatBehaviorDrinkPotion>::GetType()
 49004,0x14082c210,0x140857560,2,"void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextUsePotion>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 49005,0x14082c2e0,0x140857630,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorDrinkPotion>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 49006,0x14082c310,0x140857660,2,"void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextUsePotion>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+49007,0x14082c350,0x1408576a0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorDrinkPotion>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 49011,0x14082c540,0x140857890,3,void CombatPath::Update()
 49013,0x14082c790,0x140857ae0,3,void CombatPath::Start()
 49014,0x14082c950,0x140857ca0,2,void CombatPath::Stop()
@@ -14580,7 +14776,7 @@
 75451,0x140d69650,0x140dbb0d0,4,void Renderer::SetWindowActiveState(bool show)
 75452,0x140d696b0,0x140dbb130,4,void Renderer::KillWindow(std::uint32_t windowID)
 75453,0x140d698a0,0x140dbb320,3,void Renderer::WindowSizeChanged(std::uint32_t windowID)
-75454,0x140d69b70,0x140dbb5f0,4,"void Renderer::ResizeWindow(std::uint32_t windowID, std::uint32_t width, std::uint32_t height, bool fullscreen, bool borderless)"
+75454,0x140d69b70,0x140dbb5f0,4,void BSGraphics::Renderer::ResetWindow(std::uint32_t a_windowID)
 75455,0x140d69d00,0x140dbb780,3,"void Renderer::UpdateViewPort(std::uint32_t a_unk, std::uint32_t b_unk, bool c_unk)"
 75457,0x140d69ea0,0x140dbb960,4,"void Renderer::CreateSwapChain(WinAPI::HWND* window, bool setCurrent)"
 75458,0x140d6a080,0x140dbbb40,4,void Renderer::Lock()
@@ -26035,6 +26231,7 @@
 530027,0x1407fceb0,0x140828200,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFleeToCover>::Update(CombatBehaviorThread* a_thread)
 530028,0x1407fcec0,0x140828210,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorForceSuccess>::Update(CombatBehaviorThread* a_thread)
 530029,0x1407fcef0,0x140828240,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorHide>::Update(CombatBehaviorThread* a_thread)
+530030,0x1407fcf00,0x140828250,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorTrackTarget>::Update(CombatBehaviorThread* a_thread)
 530037,0x140804790,0x14082fae0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFallbackSelector<WeightedRandomChildSelector>>::Abort(CombatBehaviorThread* a_thread)
 530038,0x1408047c0,0x14082fb10,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorDiveBomb>::Abort(CombatBehaviorThread* a_thread)
 530039,0x1408047f0,0x14082fb40,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFlyingAttack>::Abort(CombatBehaviorThread* a_thread)
