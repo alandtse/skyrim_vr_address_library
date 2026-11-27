@@ -54,6 +54,7 @@
 10956,0x1400f9860,0x140109e10,4,"int memmove_s(void* a_dest, std::size_t a_destSize, const void* a_src, std::size_t a_count)"
 10974,0x1400f9ca0,0x14010a250,3,RE::INISettingCollection::Unk_07
 10979,0x1400f9e90,0x14010a440,3,RE::BSString::Set_CStr
+10985,0x1400fa270,0x14010a820,2,bool GameSettingCollection::WriteAllSettings()
 11031,0x1400fce20,0x14010d3d0,2,"bool TESForm::Activate(TESObjectREFR* a_targetRef, TESObjectREFR* a_activatorRef, std::uint8_t a_arg3, TESBoundObject* a_object, std::int32_t a_targetCount)"
 11044,0x1400fcfd0,0x14010d580,2,std::uint32_t TESForm::GetRefCount()
 11045,0x1400fcfe0,0x14010d590,3,MemoryManager* MemoryManager::GetSingleton()
@@ -146,6 +147,7 @@
 13054,0x14014dc60,0x14015e690,3,RE::INISettingCollection::InsertSetting
 13113,0x14014f700,0x140160130,3,bool INISettingCollection::ReadAllSettings()
 13119,0x14014fb40,0x140160570,3,RE::INISettingCollection::RemoveSetting
+13129,0x140150230,0x140160c60,2,void NiStream::SaveLinkID(const NiObject* a_object)
 13135,0x140150a00,0x140161430,3,bool INISettingCollection::WriteAllSettings()
 13137,0x140150b20,0x140161550,4,void TESObjectCELL::QueueAddCellGrassTask()
 13138,0x140150c80,0x1401616b0,3,void AddCellGrassTask::Run()
@@ -363,6 +365,11 @@
 15644,0x1401d1530,0x1401e1ff0,4,NiAVObject * TESHavokUtilities::FindCollidableObject_1401d1530 (hkpCollidable * a_linkedCollidable)
 15671,0x1401d24c0,0x1401e2f80,4,"bool NiCamera::BoundInFrustum(const NiBound& a_bound, NiCamera* a_camera)"
 15672,0x1401d2630,0x1401e30f0,3,RE::PointInFrustum
+15708,0x1401d4a40,0x1401e55b0,2,"bool GridArray::SetCenter(std::int32_t a_x, std::int32_t a_y)"
+15709,0x1401d4a90,0x1401e5600,2,"void GridArray::Shift(std::int32_t a_x, std::int32_t a_y)"
+15719,0x1401d4ff0,0x1401e5b80,2,"bool GridCellArray::SetCenter(std::int32_t a_x, std::int32_t a_y)"
+15720,0x1401d5070,0x1401e5c00,2,"void GridCellArray::Detach(std::uint32_t a_x, std::uint32_t a_y)"
+15722,0x1401d5120,0x1401e5cb0,2,"void GridCellArray::MoveItem(std::uint32_t a_fromX, std::uint32_t a_fromY, std::uint32_t a_toX, std::uint32_t a_toY)"
 15745,0x1401d5c20,0x1401e67c0,4,InventoryEntryData& InventoryEntryData::DeepCopy(const InventoryEntryData& a_other)
 15746,0x1401d5dc0,0x1401e6960,4,void InventoryEntryData::FreeExtraLists()
 15752,0x1401d64e0,0x1401e7080,4,RE::ExtraContainerChanges__get_max_something
@@ -404,6 +411,7 @@
 15908,0x1401ecd30,0x1401fd8a0,2,std::uint16_t InventoryChanges::GetNextUniqueID()
 15909,0x1401ece20,0x1401fd990,3,"void InventoryChanges::SendContainerChangedEvent(ExtraDataList* a_itemExtraList, TESObjectREFR* a_fromRefr, TESForm* a_item, std::int32_t a_count)"
 15916,0x1401ed550,0x1401fe070,4,TESActionData* TESActionData::Ctor()
+15960,0x1401ee500,0x1401fefe0,2,BGSActionData* BGSActionData::Clone()
 15967,0x1401ee670,0x1401ff150,3,RE::BSPointerHandleManagerInterface::GetHandle
 15980,0x1401ef330,0x1401ffe10,3,RE::Inventory::GetEventSource
 15991,0x1401efec0,0x1402009a0,4,bool GetWornMaskVisitor::Visit(InventoryEntryData* a_entryData)
@@ -477,6 +485,10 @@
 18187,0x14024cad0,0x14025e1c0,4,"ImageSpaceModifierInstanceForm* TESImageSpaceModifier::TriggerIfNotActive(float a_strength, NiAVObject* a_target)"
 18188,0x14024ccd0,0x14025e3c0,4,void ImageSpaceModifierInstanceForm::Stop(TESImageSpaceModifier* a_imod)
 18192,0x14024d210,0x14025e900,4,void ImageSpaceModifierInstanceForm::StopCrossFade(float a_seconds)
+18193,0x14024d380,0x14025ea70,2,void ImageSpaceModifierInstanceForm::PrintInfo(char* a_dstBuf)
+18196,0x14024d530,0x14025ec20,2,void ImageSpaceModifierInstanceTemp::PrintInfo(char* a_dstBuf)
+18198,0x14024d650,0x14025ed40,2,void ImageSpaceModifierInstanceDOF::Apply()
+18201,0x14024da70,0x14025f160,2,void ImageSpaceModifierInstanceDOF::PrintInfo(char* a_dstBuf)
 18224,0x14024e740,0x14025fe30,2,void TESClimate::InitDefaults()
 18311,0x1402536f0,0x140264aa0,2,"void* TESObjectLAND::GetDominantTexture(std::uint32_t a_quad, std::uint32_t a_vertex)"
 18329,0x140255500,0x1402668b0,2,float TESObjectLAND::GetLandFade()
@@ -937,7 +949,9 @@
 25483,0x1403a6170,0x1403b5ce0,4,"void PushTemporaryMass(bhkRigidBody* a_body, float a_mass)"
 25484,0x1403a61f0,0x1403b5d60,4,void PopTemporaryMass(bhkRigidBody* a_body)
 25591,0x1403aa4b0,0x1403BA0C0,3,"CrossHairPickData::Pick(CrossHairPickData *a1, bhkWorld *hkWorld, NiPoint3 *sourcePoint, NiPoint3 *sourceRotation)"
+25609,0x1403ac120,0x1403bbdf0,2,void Clouds::Init(NiNode* a_root)
 25620,0x1403ad1f0,0x1403bcec0,4,RE::Sky::Moon_UpdatePhase
+25625,0x1403ad7b0,0x1403bd480,2,void Moon::Init(NiNode* a_root)
 25626,0x1403adf90,0x1403bdc60,4,RE::Sky::Moon::Update_*
 25638,0x1403aebd0,0x1403be8d0,4,splashes_of_skyrim::RainManager::ToggleWaterRipples
 25641,0x1403af1c0,0x1403beec0,3,void Precipitation::SetupMask (Precipitation * a_this)
@@ -968,6 +982,7 @@
 25762,0x1403b9340,0x1403c9160,3,BGSLightingTemplate* Sky::GetCurrentRoomLightingTemplate()
 25764,0x1403b9450,0x1403c9270,3,TESImageSpace* Sky::GetPreviousRoomImageSpace()
 25765,0x1403b94c0,0x1403c92e0,3,BGSLightingTemplate* Sky::GetPreviousRoomLightingTemplate()
+25782,0x1403b9a40,0x1403c9860,2,void SkyObject::Init(NiNode* a_root)
 25799,0x1403bbf20,0x1403cbd60,3,"void Sun::SubmitOcclusionQuery(std::uint32_t a_renderFlags, BSShaderAccumulator* a_accumulator, NiCamera* a_camera)"
 25801,0x1403bc010,0x1403cbe50,3,void Sun::UpdateOcclusionQueries()
 25814,0x1403bcaf0,0x1403cc940,4,SoundLevels GetSoundLevelValue (SoundLevels a_soundLevel)
@@ -1110,6 +1125,7 @@
 26619,0x1403e54a0,0x1403f4ff0,2,"void* GuardWarnSearch::ctor(Actor* a_actor, void* a_package, TESObjectREFR* a_targetRef, PackageTarget* a_packageTarget, float a_radius, NiPoint3* a_center, TESObjectREFR* a_centerRef)"
 26620,0x1403e5570,0x1403f50c0,2,"bool GuardWarnSearch::Visit(std::uint32_t a_handle, void** a_knowledge)"
 26621,0x1403e5750,0x1403f52a0,2,bool GuardWarnSearch::IsTargetRef(TESObjectREFR* a_ref)
+26633,0x1403e5ac0,0x1403f5610,2,bool BGSAIWorldLocation::IsInSameSpace(TESObjectREFR* a_ref)
 26674,0x1403e6d90,0x1403f68e0,3,"BGSAIWorldLocationPointRadius* BGSAIWorldLocationPointRadius::Create(NiPoint3* a_position, TESObjectCELL* a_cell, TESWorldSpace* a_worldSpace, float a_radius, float a_facing)"
 26711,0x1403e7700,0x1403f7250,3,GetPackageDataLocationMap
 26718,0x1403e7c20,0x1403f7770,3,BGSAttackData* BGSAttackData::Ctor()
@@ -1963,6 +1979,12 @@
 29765,0x140470860,0x140480820,2,void* GetTaskletGroupHandle()
 29789,0x140471910,0x1404818d0,2,"void ObstacleTaskOperation::PrintDebug(void* a_context, void* a_printer)"
 29799,0x140472740,0x140482700,2,"void ObstacleTaskData::PrintDebug(void* a_context, void* a_printer)"
+29813,0x140473010,0x140482ff0,2,bool Pathing::GetAllLoadedNavmeshes5(BSTArray<BSTSmartPointer<BSNavmesh>>& a_retNavMeshes)
+29814,0x140473030,0x140483010,2,bool Pathing::GetAllLoadedNavmeshes4(BSScrapArray<BSTSmartPointer<BSNavmesh>>& a_retNavMeshes)
+29815,0x140473050,0x140483030,2,bool Pathing::GetAllLoadedNavmeshes3(BSTArray<BSNavmeshInfo*>& a_retNavMeshes)
+29816,0x140473070,0x140483050,2,bool Pathing::GetAllLoadedNavmeshes2(BSScrapArray<BSNavmeshInfo*>& a_retNavMeshes)
+29817,0x140473090,0x140483070,2,"bool Pathing::GetAllLoadedNavmeshes1(BSTScrapHashMap<std::uint32_t, BSTSmartPointer<BSNavmesh>>& a_retNavMeshes)"
+29818,0x1404730b0,0x140483090,2,FormID Pathing::GetSelectedDebugRef()
 29819,0x140473120,0x140483100,4,"void* Pathing::BuildFollowPath(Pathing* a_this, void* a_pathOut, Character* a_actor, void* a_reserved)"
 29822,0x140473300,0x1404832e0,2,"BSPathingLocation* Pathing::MakeLocationFromRef(BSPathingLocation* a_out, NiPoint3* a_pos, TESObjectREFR* a_ref)"
 29823,0x1404733b0,0x140483390,2,"BSPathingLocation* Pathing::MakeLocationForPosition(BSPathingLocation* a_out, const NiPoint3& a_pos, TESForm* a_worldSpace)"
@@ -2022,6 +2044,12 @@
 29924,0x14047adf0,0x14048ad90,2,"bool BSPathingCellManager::AddUniqueNavmeshInfo_Scrap(BSTScrapArray<BSNavmeshInfo*>& a_out, BSNavmeshInfo* a_info)"
 29925,0x14047ae90,0x14048ae30,2,"bool BSPathingCellManager::AddUniqueNavmeshInfo_Heap(BSTArray<BSNavmeshInfo*>& a_out, BSNavmeshInfo* a_info)"
 29943,0x14047b400,0x14048b3a0,2,"bool AreNavmeshInfosConnectedRecursive(BSNavmeshInfo* a_info, const BSNavmeshInfo* a_goal, void* a_visited)"
+29964,0x14047c170,0x14048c110,2,void PathingCell::Read(const BSPathingStreamRead& a_stream)
+29965,0x14047c290,0x14048c230,2,void PathingCell::FixupNumericID(BSPathingNumericIDVisitor& a_visitor)
+29971,0x14047c480,0x14048c420,2,void PathingCell::GetSpace(BSTSmartPointer<BSPathingSpace>& a_out)
+29972,0x14047c520,0x14048c4c0,2,bhkWorld* PathingCell::GetBhkWorld()
+29975,0x14047c5a0,0x14048c540,2,bool PathingCell::QLoaded()
+29976,0x14047c5e0,0x14048c580,2,bool PathingCell::IsInSameSpace(BSTSmartPointer<BSPathingCell>* a_otherCell)
 29992,0x14047ce60,0x14048ce00,2,PathingDoor* PathingDoor::ctor_default()
 29994,0x14047cf10,0x14048ceb0,2,PathingDoor* PathingDoor::ctor(std::uint32_t a_doorId)
 29995,0x14047cf80,0x14048cf20,2,std::uint32_t PathingDoor::GetTypeCRC()
@@ -2541,14 +2569,26 @@
 33321,0x140540410,0x140542F50,3,"ValueModifierEffect::sub_140540410(ValueModifierEffect *a1, float a2)"
 33322,0x140540570,0x1405430B0,3,"bool ScriptEffect::ReadFromStream(ScriptEffect *a1@, BGSLoadGameBuffer* a2, std::uint32_t a3)"
 33355,0x140541a70,0x140545320,2,void ActorMagicCaster::RequestCastImpl()
+33357,0x140541bf0,0x1405454a0,2,void ActorMagicCaster::StartReadyImpl()
+33358,0x140541cb0,0x140545560,2,void ActorMagicCaster::StartCastImpl()
 33359,0x140541d90,0x140545640,3,ActorMagicCaster::InterruptCastImpl
 33363,0x140542470,0x140546260,4,ActorMagicCaster::SpellCast
+33364,0x1405427b0,0x1405465a0,2,"bool ActorMagicCaster::CheckCast(MagicItem* a_spell, bool a_dualCast, float* a_effectStrength, MagicSystem::CannotCastReason* a_reason, bool a_useBaseValueForCost)"
+33365,0x140542d70,0x140546b60,2,void ActorMagicCaster::SetCastingTimerForCharge()
 33371,0x140542fe0,0x140546DD0,3,ActorMagicCaster::sub_*
 33373,0x140543110,0x140546F90,3,ActorMagicCaster::sub_*
 33375,0x1405433b0,0x140547230,3,ActorMagicCaster::ResetNodes
+33376,0x1405434e0,0x140547360,2,void ActorMagicCaster::SelectSpellImpl()
+33377,0x140543540,0x1405473c0,2,void ActorMagicCaster::DeselectSpellImpl()
+33378,0x1405435b0,0x140547430,2,void ActorMagicCaster::SetCurrentSpellImpl(MagicItem* a_spell)
 33380,0x140543630,0x1405474b0,2,void* ActorMagicCaster::GetCastingSourceDefaultObject()
 33381,0x140543680,0x140547500,2,void* ActorMagicCaster::GetCastingSourceNodeName()
+33382,0x1405436e0,0x140547560,2,void ActorMagicCaster::SaveGame(BGSSaveGameBuffer* a_buf)
+33383,0x1405437e0,0x140547660,2,void ActorMagicCaster::LoadGame(BGSLoadGameBuffer* a_buf)
+33384,0x140543930,0x1405477b0,2,void ActorMagicCaster::FinishLoadGame(BGSLoadGameBuffer* a_buf)
+33393,0x140543d70,0x140547bf0,2,"void ActorMagicCaster::AdjustActiveEffect(ActiveEffect* a_activeEffect, float a_power, bool a_arg3)"
 33403,0x140544490,0x1405484c0,3,void ActorMagicCaster::CheckAttachCastingArt()
+33420,0x140544e40,0x140548f10,2,void RefAttachTechniqueInput::Clear()
 33423,0x140544ea0,0x140548f70,4,"bool SourceActionMap::DoAction(Actor* a_actor, DEFAULT_OBJECT a_action)"
 33426,0x140544ff0,0x1405490c0,4,float MagicCaster::GetCurrentSpellCost()
 33444,0x140545970,0x140549a40,2,void BoundItemEffect::SaveGame(BGSSaveFormBuffer* a_buf)
@@ -2603,6 +2643,8 @@
 33617,0x14054bf20,0x140550130,2,void LockEffect::Start()
 33622,0x14054c1a0,0x1405503e0,4,void MagicCaster::UpdateImpl(float a_delta) src\RE\M/MagicCaster.cpp:80
 33623,0x14054c300,0x140550540,4,MagicCaster::CastSpell
+33626,0x14054c5f0,0x140550830,2,"void MagicCaster::CastSpellImmediate(MagicItem* a_spell, bool a_noHitEffectArt, TESObjectREFR* a_target, float a_effectiveness, bool a_hostileEffectivenessOnly, float a_magnitudeOverride, Actor* a_blameActor)"
+33628,0x14054c740,0x140550910,2,void MagicCaster::FindTouchTarget()
 33630,0x14054cb70,0x140550d40,4,void MagicCaster::InterruptCast(bool a_refund) src\RE\M/MagicCaster.cpp:40
 33631,0x14054cbe0,0x140550db0,3,"bool MagicCaster::ProcessQuickRelease(MagicItem* a_spell, TESObjectREFR* a_target, TESBoundObject* a_source, bool a_loadCast)"
 33632,0x14054cd10,0x140550ec0,3,"bool MagicCaster::FindTargets(float a_effectivenessMult, std::uint32_t& a_targetCount, TESBoundObject* a_source, bool a_loadCast, bool a_adjustOnlyHostileEffectiveness)"
@@ -2614,6 +2656,7 @@
 33676,0x140550d60,0x140555020,3,"bool MagicCaster::FindTargets(float a_effectivenessMult, std::uint32_t& a_targetCount, TESBoundObject* a_source, bool a_loadCast, bool a_adjustOnlyHostileEffectiveness)"
 33677,0x140550e20,0x1405550E0,3,"MagicTarget* FUNC_140550E20(longlong a1, char a2, float a3, NiPoint3 *a4, TESObjectCELL **a5, longlong a6)"
 33684,0x140551a90,0x140555ca0,3,po3tweaks::Spell::detail::SpellApplyStruct
+33711,0x140552480,0x140556790,2,bool MagicCaster::StartChargeImpl()
 33715,0x140552550,0x140556930,4,ActiveEffectFactory::AutoAERegistrar
 33716,0x1405525f0,0x1405569d0,4,"bool ActiveEffectFactory::CheckCast(MagicCaster* a_caster, MagicItem* a_spell, Effect* a_effect, MagicSystem::CannotCastReason& a_reason)"
 33721,0x1405528e0,0x140556cb0,3,"bool MagicTarget::DispelEffect(MagicItem* a_spell, BSPointerHandle<Actor>& a_caster, ActiveEffect* a_effect)"
@@ -2639,6 +2682,7 @@
 33828,0x140556f20,0x14055ccb0,3,RE::Actor::DispelWornItemEnchantments
 33830,0x140556fc0,0x14055cd50,2,void TESObjectREFR::UnloadWornItemEnchants()
 33834,0x140557120,0x14055ceb0,4,BSContainer::ForEachResult MagicItemDataCollector::operator()(Effect* a_effect)
+33864,0x140558920,0x14055e6b0,2,NiAVObject* ModelReferenceEffect::GetAttachRoot()
 33869,0x140558c00,0x14055E990,3,ModelReferenceEffect::DetachImpl
 33873,0x140558fc0,0x14055ED50,3,ModelReferenceEffect::sub_*
 33894,0x140559b20,0x14055f8b0,2,void NightEyeEffect::Start()
@@ -2652,11 +2696,18 @@
 33956,0x14055b750,0x140561990,2,enhanced_reanimation::Reanimate::Start
 33957,0x14055b9f0,0x140561c30,2,void ReanimateEffect::Update(float a_delta)
 33961,0x14055bc80,0x140561ec0,4,"void Start_14055BC80 (ActiveEffectReferenceEffectController * param_1, ReferenceEffect * * a_effectOut)"
+33970,0x14055c1c0,0x140562400,2,void ReferenceEffect::UpdateParentCell(NiAVObject* a_object)
+33974,0x14055c490,0x1405626d0,2,NiAVObject* ReferenceEffect::GetAttachRoot()
+34039,0x14055d150,0x140563390,2,float ActiveEffectReferenceEffectController::GetScale()
 34074,0x14055da10,0x140563c50,4,void WeaponEnchantmentController::SetAttachRoot(RE::ReferenceEffectController* a_this)
 34089,0x14055de80,0x1405640c0,2,void ScriptEffect::ClearTargetImpl()
 34092,0x14055e030,0x140564270,2,void ScriptEffect::Finish()
 34093,0x14055e0b0,0x1405642f0,2,void ScriptEffect::Update(float a_delta)
 34094,0x14055e110,0x140564350,2,void ScriptEffect::SaveGame(BGSSaveFormBuffer* a_buf)
+34113,0x14055fcd0,0x140565f40,2,void ShaderReferenceEffect::Suspend()
+34114,0x14055fdb0,0x140566020,2,void ShaderReferenceEffect::Resume()
+34115,0x14055fe90,0x140566100,2,void ShaderReferenceEffect::ClearTarget()
+34126,0x140560680,0x1405668f0,2,void ShaderReferenceEffect::DetachImpl()
 34132,0x140560e40,0x1405670b0,3,ENBLightForEffectShaders::ShaderReferenceEffect::Add:AddAddonModel::thunk_0x8C2
 34175,0x140562d30,0x140568fa0,2,void SlowTimeEffect::Start()
 34176,0x140562e00,0x140569070,2,void SlowTimeEffect::Finish()
@@ -2762,11 +2813,13 @@
 35095,0x140597590,0x14059ec50,3,TESForm* BGSLoadFormData::GetForm()
 35096,0x1405975d0,0x14059ec90,3,TESObjectREFR* BGSLoadFormData::GetReference()
 35100,0x140597870,0x14059ef30,4,BGSLoadGameBuffer::BGSLoadGameBuffer
+35106,0x140597a80,0x14059f140,2,std::uint8_t BGSLoadGameBuffer::GetVersion()
 35107,0x140597aa0,0x14059f160,4,BGSLoadGameBuffer::ReadFormID
 35111,0x140597cf0,0x14059f3b0,4,std::uint32_t BGSLoadFormBuffer::ReadVSVal()
 35112,0x140597d50,0x14059f410,4,"void BGSLoadGameBuffer::LoadDataEndian(void* a_data, std::uint32_t a_offset, std::uint32_t a_size)"
 35138,0x140598ef0,0x1405a05b0,4,"void BGSSaveGameBuffer::AllocateBuffer(void** a_outBuffer, std::uint32_t a_size)"
 35145,0x140599440,0x1405a0b00,4,BGSSaveFormBuffer::BGSSaveFormBuffer
+35148,0x1405996e0,0x1405a0da0,2,TESObjectREFR* BGSSaveFormBuffer::GetReference()
 35157,0x140599930,0x1405a0ff0,4,BGSSaveGameBuffer::SaveFormID
 35158,0x1405999b0,0x1405a1070,4,BGSSaveGameBuffer::WriteFormID
 35162,0x140599c90,0x1405a1350,4,"void BGSSaveGameBuffer::SaveVSVal(std::uint32_t a_value, std::uint32_t a_position)"
@@ -2789,6 +2842,10 @@
 35317,0x1405a2930,0x1405a9ff0,3,bool BGSImpactManager::PlayImpactDataSounds(ImpactSoundData& a_impactSoundData)
 35318,0x1405a2a70,0x1405aa130,2,void BGSImpactManager::ProcessCollisionSoundQueue(std::uint32_t a_time)
 35320,0x1405a2c60,0x1405aa320,4,"bool BGSImpactManager::PlayImpactEffect(TESObjectREFR* a_ref, BGSImpactDataSet* a_impactEffect, const BSFixedString& a_nodeName, NiPoint3& a_pickDirection, float a_pickLength, bool a_applyNodeRotation, bool a_useNodeLocalRotation)"
+35361,0x1405a4cf0,0x1405ac3b0,2,void BGSMoviePlayer::MuteAudio()
+35362,0x1405a4d40,0x1405ac400,2,void BGSMoviePlayer::UnmuteAudio()
+35363,0x1405a4d90,0x1405ac450,2,void BGSMoviePlayer::PauseMusic()
+35364,0x1405a4dc0,0x1405ac480,2,void BGSMoviePlayer::UnPauseMusic()
 35402,0x1405a6230,0x1405ad8f0,4,"void Calendar::Update_1405a6230 (Calendar * a_this, float GameDaysPassed)"
 35408,0x1405a64f0,0x1405adbb0,4,RE::Calendar::GetGameDaysPassed
 35413,0x1405a6640,0x1405add00,3,"void Calendar::GetTimeDateString(char* a_dest, std::uint32_t a_max, bool a_showYear)"
@@ -3680,6 +3737,7 @@
 39178,0x140692eb0,0x14069c4b0,2,float PlayerCharacter::GetEquippedWeaponsDamage()
 39179,0x140693050,0x14069c650,3,RE::PlayerCharacter::GetDamage
 39181,0x140693110,0x14069c710,3,RE::Actor::DoReset3D
+39182,0x1406932d0,0x14069c8d0,2,void Character::InitiateSpectator(Actor* a_target)
 39183,0x140693640,0x14069cc40,2,bool Character::InitiateTresPassPackage(TESPackage* a_package)
 39184,0x140693820,0x14069ce20,4,"void Character::SetFaceNodeSkinned(NiNode* a_root, BSFaceGenNiNode* a_faceNode)"
 39215,0x140694350,0x14069D950,4,PlayerCharacter::sub_140694350
@@ -3689,6 +3747,7 @@
 39231,0x140694710,0x14069dd10,3,PlayerSkills::Ctor
 39247,0x140695020,0x14069e620,3,BSTEventSource<LevelIncrease::Event>* LevelIncrease::GetEventSource()
 39248,0x140695110,0x14069e710,3,BSTEventSource<SkillIncrease::Event>* SkillIncrease::GetEventSource()
+39262,0x140695d50,0x14069f350,2,void HighActorCuller::Operate(Actor* a_actor)
 39266,0x140695fd0,0x14069f600,4,"MountInteraction* MountInteraction::MountInteraction(TESObjectREFR* a_refr1, TESObjectREFR* a_refr2)"
 39340,0x140699040,0x1406a26a0,2,PlayerCharacter::Ctor
 39343,0x14069a9d0,0x1406bae40,3,void Actor::StartSleeping(int32_t a_hours)
@@ -3794,6 +3853,7 @@
 40478,0x1406e3ee0,0x14070ad10,3,"std::uint64_t LockFreeRing2048Push(void*, void*)"
 40499,0x1406e4540,0x14070b370,3,void* LockFreeRing2048Pop(void*)
 40529,0x1406e5630,0x14070c520,2,void TESObjectREFR::ClearMountInteraction()
+40547,0x1406e5fe0,0x14070ced0,2,BGSActionData* TESActionData::Clone()
 40548,0x1406e60c0,0x14070cfb0,2,ActorState* TESActionData::GetSourceActorState()
 40550,0x1406e6100,0x14070cff0,2,BGSAnimationSequencer* TESActionData::GetAnimationSequencer()
 40552,0x1406e6130,0x14070d020,3,PlayerSkills::GetSkillData
@@ -4092,15 +4152,31 @@
 41824,0x1407236c0,0x14074e0d0,3,"std::uint64_t Actor::SetSitSleepStateChoosingFurniture(SIT_SLEEP_STATE* a_state, bool a_keepFurniture)"
 42411,0x14072c300,0x140756d10,3,"bool SendActionAnimEvent(void* a_manager, BGSActionData* a_action)"
 42420,0x14072cc80,0x140757690,4,AnimObjectSwapper::AnimObjectSwapHook
+42534,0x140731fe0,0x14075ca40,2,bool ArrowProjectile::ProcessImpacts()
+42540,0x140732120,0x14075cb80,2,void ArrowProjectile::PostLoad3D(NiAVObject* a_root)
 42547,0x140732400,0x14075ce60,4,ArrowProjectile::GetImpactData
+42560,0x140733350,0x14075ddb0,2,bool BarrierProjectile::ProcessImpacts()
 42586,0x140733cc0,0x14075e720,3,RE::BeamProjectile::UpdateImpl_*
 42600,0x1407345b0,0x14075f040,4,"ulonglong BeamProjectile::RegisterProceduralGeomSinks (BeamProjectile * a_this, longlong * param_2, longlong param_3)"
 42616,0x140734fe0,0x14075fae0,4,void BSTEventSource<BSProceduralGeomEvent>::AddEventSink(BSTEventSink<BSProceduralGeomEvent>* a_eventSink)
+42623,0x1407353e0,0x14075fee0,2,void ConeProjectile::Process3D()
+42625,0x1407356a0,0x1407601a0,2,bool ConeProjectile::ProcessImpacts()
+42632,0x1407359a0,0x1407604a0,2,bhkShape* ConeProjectile::GetCollisionShape()
+42633,0x140735aa0,0x1407605a0,2,"ImpactData* ConeProjectile::AddImpact(TESObjectREFR* a_ref, const NiPoint3& a_targetLoc, const NiPoint3& a_velocity, hkpCollidable* a_collidable, std::int32_t a_arg6, std::uint32_t a_arg7)"
+42634,0x140735b70,0x140760670,2,bool ConeProjectile::HandleHits(hkpCollidable* a_collidable)
 42638,0x1407369b0,0x1407614b0,3,splashes_of_skyrim::ProjectileManager::ProcessInWater::create_splash
 42664,0x140738780,0x140763320,3,"void Explosion::Update(Explosion* a_this, float a_delta)"
 42672,0x140739080,0x140763c20,4,undefined Explosion::sub_140739080(Explosion* this)
 42696,0x14073c410,0x140766fb0,3,bool Explosion::CheckInit3D(Explosion *a_this)
+42726,0x14073d870,0x140768410,2,void FlameProjectile::Process3D()
 42727,0x14073d9d0,0x140768570,3,"void FlameProjectile::UpdateImpl(FlameProjectile* a_this, float a_delta)"
+42728,0x14073dd40,0x140768920,2,bool FlameProjectile::RunTargetPick()
+42736,0x14073e5f0,0x1407691d0,2,"ImpactData* FlameProjectile::AddImpact(TESObjectREFR* a_ref, const NiPoint3& a_targetLoc, const NiPoint3& a_velocity, hkpCollidable* a_collidable, std::int32_t a_arg6, std::uint32_t a_arg7)"
+42738,0x14073e7d0,0x1407693b0,2,bool FlameProjectile::ShouldUseDesiredTarget()
+42747,0x14073ee00,0x1407699e0,2,void GrenadeProjectile::Process3D()
+42749,0x14073f010,0x140769bf0,2,void GrenadeProjectile::OnKill()
+42752,0x14073f650,0x14076a230,2,void GrenadeProjectile::ReportHavokDeactivation()
+42768,0x14073fc10,0x14076a7f0,2,"ImpactData* GrenadeProjectile::AddImpact(TESObjectREFR* a_ref, const NiPoint3& a_targetLoc, const NiPoint3& a_velocity, hkpCollidable* a_collidable, std::int32_t a_arg6, std::uint32_t a_arg7)"
 42791,0x140740cb0,0x14076b960,3,"void Hazard::Update(Hazard *a_this, float a_delta)"
 42810,0x1407416f0,0x14076c3a0,3,bool Hazard::CheckInit3D(Hazard *a_this)
 42826,0x140742450,0x14076d000,3,HitData* HitData::Ctor()
@@ -4110,7 +4186,9 @@
 42833,0x140742c00,0x14076d800,4,RE::HitData::init_hitdata_proj_ID
 42841,0x1407433e0,0x14076dfe0,3,void HitData::Copy(HitData* a_other)
 42842,0x140743510,0x14076e110,3,void HitData::ApplyDamageReduction(bool a_disableBlocking)
+42851,0x140744c10,0x14076fb50,2,void MissileProjectile::Process3D()
 42852,0x140744dd0,0x14076fd10,4,void MissileProjectile::UpdateImpl_140744DD0 (MissileProjectile * a_this)
+42853,0x1407454f0,0x140770430,2,bool MissileProjectile::ProcessImpacts()
 42856,0x140746d60,0x140771ca0,3,EnhancedInvisibility::MissileProjectile::sub_140746D60
 42911,0x140749cc0,0x140774df0,2,void ProjectileManager::Update()
 42913,0x140749d50,0x140774e80,2,void ProjectileManager::UpdateImpl(void* a_updateData)
@@ -4551,6 +4629,8 @@
 50751,0x140880160,0x1408ADA40,4,"void HudMenuStrings (int32 a1, struct8 *a2, TESQuest *a3, int64 a4)"
 50757,0x1408808d0,0x1408ae1e0,3,HUDNotifications::Update
 50758,0x140880fd0,0x1408ae8e0,3,undefined8 ProcessMessage_140880FD0 (HUDNotifications * a_this)
+50765,0x1408818b0,0x1408af1c0,2,float ActorValueMeter::GetFillPct()
+50767,0x140881ae0,0x1408af3e0,2,float ShoutMeter::GetFillPct()
 50771,0x140881cc0,0x1408af5c0,3,TrueHUD::HUDChargeMeter::Update_140881CC0
 50773,0x140882070,0x1408af970,3,void Compass::Update()
 50775,0x1408823f0,0x1408afd30,3,void __thiscall Compass::SetMarkers (Compass * a_this)
@@ -4902,6 +4982,7 @@
 57759,0x1409f0360,0x140a2aeb0,4,"void hkbBehaviorGraph::handleEvent(const hkbContext& a_context, const hkbEvent a_event)"
 57804,0x1409f3cd0,0x140a2e820,4,hkbBehaviorGraph::handleEventForActiveNodes
 57805,0x1409f3ef0,0x140a2ea40,4,hkbBehaviorGraph::sub_1409F3EF0
+57879,0x1409fb970,0x140a364c0,2,"void hkbCharacter::GetNearbyCharacters(float maxDistance, hkArray<hkbCharacter*>& characters)"
 57886,0x1409fbda0,0x140a368f0,4,hkbAnimationBindingSet hkbCharacter::GetAnimationBindingSet_1409FBDA0 (hkbCharacter * a_this)
 57938,0x1409ffa90,0x140a3a5e0,4,"void hkbGenerator::activateAndSyncVariableBindings (hkbGenerator * a_this, hkbContext * a_context, bool a_activate)"
 57940,0x1409ffba0,0x140a3a6f0,4,void hkbNode::cacheBindables (hkbNode * a_this)
@@ -4918,6 +4999,8 @@
 58810,0x140a23b50,0x140a5e500,4,"void hkbVariableBindingSet::cacheBindables (hkbVariableBindingSet * a_this, hkbBindable * a_bindable)"
 58811,0x140a23bc0,0x140a5e570,4,"void hkbVariableBindingSet::cacheBinding (hkbVariableBindingSet * a_this, void * a_binding, hkbBindable * a_bindable)"
 58817,0x140a23f10,0x140a5e8c0,4,hkaMirroredSkeleton * GetMirroredSkeleton (hkbCharacterSetup * a_this)
+59276,0x140a3f7b0,0x140a7a160,2,void hkbBlendingTransitionEffect::Activate(const hkbContext& a_context)
+59281,0x140a3fa20,0x140a7a3d0,2,void hkbBlendingTransitionEffect::Generate(const hkbContext& a_context)
 59343,0x140a42d10,0x140a7d6c0,3,"void hkbVariableBindingSetUtils::updateBinding (void * a_evalContext, void * a_binding, bool a_isPrimaryBinding, hkbBindable * a_bindable, bool a_activate)"
 59345,0x140a431a0,0x140a7db50,4,"void hkbVariableBindingSetUtils::updateBindingInt8 (void * a_evalContext, void * a_binding, unsigned int * a_variableValue, int a_variableIndex, void * a_memberPtr, bool a_isPrimaryBinding, bool a_hasRange, bool a_activate)"
 59346,0x140a43300,0x140a7dcb0,4,"void hkbVariableBindingSetUtils::updateBindingInt16 (void * a_evalContext, void * a_binding, unsigned int * a_variableValue, int a_variableIndex, void * a_memberPtr, bool a_isPrimaryBinding, bool a_hasRange, bool a_activate)"
@@ -4956,6 +5039,10 @@
 61571,0x140abb790,0x140AF6190,3,"hkpMouseSpringAction::sub_140ABB790(hkpMouseSpringAction *a1, float *a2)"
 61874,0x140ac93f0,0x140b03df0,3,void hkpGravityGun::FindTargetBody()
 62122,0x140ad2d10,0x140b0d7b0,3,undefined8 BSSynchronizedClipGenerator::sub_140AD2D10 (BSSynchronizedClipGenerator * a_this)
+62191,0x140ad5570,0x140b0f9d0,2,void BSCyclicBlendTransitionGenerator::Activate(const hkbContext& a_context)
+62192,0x140ad5630,0x140b0fa90,2,void BSCyclicBlendTransitionGenerator::Deactivate(const hkbContext& a_context)
+62201,0x140ad5e10,0x140b10230,2,void BSCyclicBlendTransitionGenerator::UpdateSync(const hkbContext& a_context)
+62332,0x140adb7a0,0x140b15bb0,2,void BSLookAtModifier::Activate(const hkbContext& a_context)
 62391,0x140ade070,0x140b18b40,4,undefined8 hkbCharacter::sub_140ADE070 (hkbCharacter * a_this)
 62420,0x140ae24a0,0x140b1cfa0,4,BSAnimationGraphManager::NotifyAnimationGraph
 62430,0x140ae2db0,0x140b1d8b0,4,BSAnimationGraphManager::sub_140AE2DB0
@@ -4967,6 +5054,11 @@
 62649,0x140af0360,0x140b2b0f0,4,"bool BShkbAnimationGraph::QueryAnimations_fromTime(float a_fromTime, BSScrapArray<ClipData>& a_clips)"
 62650,0x140af03a0,0x140b2b130,4,"bool BShkbAnimationGraph::QueryAnimations_fromEvents(const BSScrapArray<BSFixedString>& a_events, BSScrapArray<ClipData>& a_clips)"
 62655,0x140af0d10,0x140b2baa0,4,"longlong GetHashedAnimFromAnimIndex_140AF0D10 (BShkbAnimationGraph * a_this, undefined param_2)"
+62673,0x140af3f80,0x140b2ed10,2,bool BShkbAnimationGraph::HasRagdoll()
+62674,0x140af3fc0,0x140b2ed50,2,bool BShkbAnimationGraph::AddRagdollToWorld()
+62675,0x140af4310,0x140b2f0a0,2,bool BShkbAnimationGraph::RemoveRagdollFromWorld()
+62679,0x140af4620,0x140b2f3b0,2,void BShkbAnimationGraph::SetRagdollConstraintsFromBhkConstraints()
+62682,0x140af5000,0x140b2fd90,2,void BShkbAnimationGraph::ToggleSyncOnUpdate(bool a_disable)
 62694,0x140af5fd0,0x140b30db0,3,"bool BShkbAnimationGraph::GetGraphVariableInt(const BSFixedString& a_variableName, int& a_out)"
 62695,0x140af6090,0x140b30e70,3,"bool BShkbAnimationGraph::GetGraphVariableFloat(const BSFixedString& a_variableName, float& a_out)"
 62696,0x140af6150,0x140b30f30,3,"bool BShkbAnimationGraph::GetGraphVariableBool(const BSFixedString& a_variableName, bool& a_out)"
@@ -4986,6 +5078,7 @@
 63032,0x140b06fc0,0x140b41e00,4,"void hkbCharacterStringData::sub_140B06FC0 (hkbCharacterStringData * a_this, undefined param_2, undefined param_3, undefined param_4, undefined8 param_5, undefined8 param_6, undefined8 param_7)"
 63069,0x140b09fb0,0x140b44d90,4,"int AnimationFileManagerSingleton::Func1_140B09FB0 (longlong param_1,longlong *param_2,longlong param_3,undefined8 param_4)"
 63070,0x140b0a150,0x140b44f30,4,"std::uint64_t AnimationFileManagerSingleton::Load(const hkbContext& a_context, hkbClipGenerator* a_clipGenerator, std::uint64_t a_arg4)"
+63071,0x140b0a2c0,0x140b450a0,2,"std::int32_t AnimationFileManagerSingleton::Unload(const hkbContext& a_hkbContext, hkbClipGenerator* a_clipGenerator, BSSynchronizedClipGenerator* a_synchronizedClipGenerator)"
 63080,0x140b0acd0,0x140b45ab0,4,void AnimationFileManagerSingleton::UpdateQueue_140B0ACD0 (AnimationFileManagerSingleton * param_1)
 63192,0x140b12fa0,0x140b4dd80,4,"hkVector4 * hkbBlendPoses_140b12fa0 (uint32_t numData, hkQsTransform * src, hkQsTransform * dst, float amount, hkQsTransform * out)"
 63231,0x140b16fb0,0x140b51d90,4,"hkaDefaultAnimationControl * hkaDefaultAnimationControl::ctor (hkaDefaultAnimationControl * a_this, hkaDefaultAnimationControl * a_other)"
@@ -5025,9 +5118,31 @@
 66453,0x140bf0d50,0x140c2bc00,4,"void BSAudioManager::ComposeMessage(SOUND_MSG a_message, std::uint32_t a_id, std::int32_t a_iData, void* a_pData, NiPointer<NiAVObject> a_spData, const NiPoint3& a_vector3)"
 66456,0x140bf0fb0,0x140c2be60,4,"void BSAudioManager::PrecacheDescriptor(const BSISoundDescriptor* a_descriptor, std::uint32_t a_flags)"
 66472,0x140bf3ec0,0x140c2ed60,3,void BSAudioManager::ReleaseAllSounds()
+66482,0x140bf4b80,0x140c2fa20,2,std::uint32_t BSAudioManagerThread::ThreadProc()
 66606,0x140bf9060,0x140c33f00,2,void BSSoundCategoryHandle::SetFrequency(float a_frequency)
+66636,0x140bf99d0,0x140c34870,2,"void BSGameSound::Copy(BSGameSound* a_other, bool a_updateImpl)"
+66641,0x140bf9bb0,0x140c34a50,2,bool BSGameSound::Update()
 66646,0x140bf9e40,0x140c34ce0,4,void BSGameSound::SetOutputModel(BSISoundOutputModel* a_outputModel)
+66701,0x140bfadb0,0x140c35c50,2,BSGameSound* BSXAudio2Audio::GetGameSound(const BSResource::ID& a_resourceID)
+66702,0x140bfae60,0x140c35d00,2,void BSXAudio2Audio::ReleaseGameSound(BSGameSound* a_gameSound)
+66706,0x140bfb2d0,0x140c36170,2,void BSXAudio2Audio::Shutdown()
+66712,0x140bfba00,0x140c368a0,2,std::uint32_t BSXAudio2Audio::CreateMonitor()
+66713,0x140bfbd10,0x140c36bb0,2,void BSXAudio2Audio::ReleaseMonitor(std::uint32_t a_monitor)
+66714,0x140bfbe20,0x140c36cc0,2,BSAudioMonitor::Receiver BSXAudio2Audio::GetReceiver(std::uint32_t a_monitor)
+66757,0x140bfd280,0x140c38120,2,bool BSXAudio2GameSound::SyncOpen()
+66758,0x140bfd3c0,0x140c38250,2,bool BSXAudio2GameSound::StartAsyncOpen()
+66759,0x140bfd4f0,0x140c38380,2,bool BSXAudio2GameSound::TestAsyncOpenReady()
+66760,0x140bfd540,0x140c383d0,2,bool BSXAudio2GameSound::FinishAsyncOpen()
+66761,0x140bfd610,0x140c38490,2,bool BSXAudio2GameSound::HandleExternalOpen()
+66762,0x140bfd780,0x140c38600,2,bool BSXAudio2GameSound::Prepare()
+66763,0x140bfd930,0x140c387b0,2,"void BSXAudio2GameSound::Copy(BSGameSound* a_other, bool a_updateImpl)"
+66766,0x140bfe2f0,0x140c39170,2,void BSXAudio2GameSound::SetEmitterPositionImpl(const NiPoint3& a_position)
+66771,0x140bfe5c0,0x140c39440,2,void BSXAudio2GameSound::Seek(std::uint32_t a_milliseconds)
 66772,0x140bfe670,0x140c394f0,4,void BSXAudio2GameSound::SeekInSamples(std::uint32_t a_samples)
+66773,0x140bfe700,0x140c39580,2,std::uint32_t BSXAudio2GameSound::GetCurrentPlaybackPosition()
+66776,0x140bfeb40,0x140c399c0,2,void BSXAudio2GameSound::PlayImpl()
+66777,0x140bfec00,0x140c39a80,2,void BSXAudio2GameSound::PauseImpl()
+66778,0x140bfec50,0x140c39ad0,2,void BSXAudio2GameSound::StopImpl()
 66841,0x140c01800,0x140c3c680,3,ScrapHeap* MemoryManager::GetThreadScrapHeap()
 66849,0x140c01b70,0x140c3c9f0,4,"size_t MemoryManager::Size (MemoryManager * a_this, IMemoryHeap * a_heap)"
 66853,0x140c01f10,0x140c3cd90,4,"ScrapHeap * MemoryManager::AutoScrapBuffer::Ctor (ScrapHeap * a_self, size_t a_size, size_t a_alignment)"
@@ -5066,6 +5181,8 @@
 67019,0x140c08290,0x140c43120,2,void RandomNumberGenerator::Regenerate()
 67070,0x140c0b120,0x140c45fb0,2,bool IsNullOrWhitespace(const char* a_str)
 67151,0x140c0d7b0,0x140c485e0,3,void BSThreadEvent::InitSDM()
+67215,0x140c10370,0x140c4b1a0,2,bool INIPrefSettingCollection::WriteAllSettings()
+67216,0x140c103b0,0x140c4b1e0,2,bool INIPrefSettingCollection::ReadAllSettings()
 67220,0x140c10610,0x140c4b460,3,ShakeController
 67223,0x140c10860,0x140c4b740,3,RE::Rumble::Update
 67224,0x140c10b30,0x140c4ba30,4,void Rumble::DisableRumble()
@@ -5129,6 +5246,11 @@
 68163,0x140c37fa0,0x140c7d170,2,void ResetJobTaskEvents(void* a_taskEvents)
 68203,0x140c39950,0x140c7ea00,4,BSWin32TaskletManager* BSWin32TaskletManager::GetSingleton()
 68207,0x140c39ac0,0x140c7eb70,4,bool BSTaskletManager::CreateTaskGroup(BSTaskletGroup& a_taskGroup)
+68257,0x140c3b370,0x140c80420,2,bool BSWin32TaskletManager::IsWorkerThread(std::uint32_t a_threadID)
+68258,0x140c3b3a0,0x140c80450,2,bool BSWin32TaskletManager::CreateTaskGroupData(BSTaskletGroupData** a_taskGroupData)
+68259,0x140c3b420,0x140c804d0,2,bool BSWin32TaskletManager::BeginTaskGroup(BSTaskletGroupData* a_taskGroupData)
+68260,0x140c3b490,0x140c80540,2,"bool BSWin32TaskletManager::AddTasklet(BSTaskletGroupData* a_taskGroupData, BSTaskletData* a_tasklet, bool a_flag)"
+68262,0x140c3b5a0,0x140c80650,2,void BSWin32TaskletManager::ReleaseTaskletData(BSTaskletData* a_tasklet)
 68296,0x140c3cb30,0x140c81be0,4,"std::uint32_t BSResource::ArchiveStream::DoRead(void* a_dst, std::uint64_t a_bytes, std::uint64_t* a_read)"
 68476,0x140c448b0,0x140c89960,4,"void BSResource::RegisterLocation(Location* a_location, std::uint32_t a_priority)"
 68480,0x140c44a00,0x140c89ab0,4,void BSResource::RegisterGlobalPath (char * a_path)
@@ -5149,7 +5271,26 @@
 68971,0x140c59690,0x140c9ec40,4,NiStream * NiStream::NiStream(NiStream * a_this)
 68972,0x140c598f0,0x140c9eea0,4,void NiStream::~NiStream(NiStream * a_this)
 68973,0x140c59ae0,0x140c9f090,3,void NiStream::AddObject(NiObject* a_object)
+68976,0x140c59cc0,0x140c9f270,2,bool NiStream::Load3(const char* a_path)
+68977,0x140c59dd0,0x140c9f380,2,bool NiStream::Save3(const char* a_path)
+68978,0x140c59ec0,0x140c9f470,2,"bool NiStream::Load2(char* a_buffer, std::uint64_t a_len)"
+68979,0x140c59f10,0x140c9f4c0,2,"bool NiStream::Save2(char*& a_path, std::uint64_t& a_len)"
+68981,0x140c59fe0,0x140c9f590,2,bool NiStream::Save1(NiBinaryStream* a_stream)
+68998,0x140c5a8f0,0x140c9fea0,2,bool NiStream::RegisterFixedString(const BSFixedString& a_fixedString)
+68999,0x140c5a960,0x140c9ff10,2,bool NiStream::RegisterSaveObject(NiObject* a_object)
+69000,0x140c5aab0,0x140ca0060,2,bool NiStream::ChangeObject(NiObject* a_object)
+69001,0x140c5aba0,0x140ca0150,2,std::uint32_t NiStream::GetLinkIDFromObject(const NiObject* a_object)
 69002,0x140c5ac30,0x140ca01e0,4,void NiStream::LoadLinkID
+69018,0x140c5b3d0,0x140ca0980,2,bool NiStream::LoadHeader()
+69019,0x140c5b7c0,0x140ca0d70,2,void NiStream::SaveHeader()
+69020,0x140c5ba80,0x140ca1030,2,bool NiStream::LoadStream()
+69021,0x140c5c040,0x140ca15f0,2,void NiStream::SaveStream()
+69023,0x140c5c260,0x140ca1810,2,void NiStream::LoadTopLevelObjects()
+69024,0x140c5c3f0,0x140ca19a0,2,void NiStream::SaveTopLevelObjects()
+69025,0x140c5c470,0x140ca1a20,2,bool NiStream::LoadObject()
+69026,0x140c5c680,0x140ca1c30,2,std::uint64_t NiStream::PreSaveObjectSizeTable()
+69027,0x140c5c700,0x140ca1cb0,2,bool NiStream::SaveObjectSizeTable(std::uint64_t a_size)
+69028,0x140c5c7a0,0x140ca1d50,2,bool NiStream::LoadObjectSizeTable()
 69139,0x140c5ffd0,0x140ca5580,2,"void NiObjectNET::CopyMembers(NiObjectNET* a_target, NiCloningProcess* a_cloning)"
 69156,0x140c60fb0,0x140ca6560,4,void NiObjectNET::RemoveController(NiTimeController* a_controller)
 69180,0x140c61ce0,0x140ca7290,4,void QueueNiRefObjectForDeferredRelease(NiPointer<NiRefObject>* a_object)
@@ -5168,6 +5309,8 @@
 69289,0x140c676b0,0x140cad8f0,2,BSSkinnedDecalTriShape* BSSkinnedDecalTriShape::Ctor()
 69314,0x140c67ea0,0x140cae0e0,4,void InitSinCosLUT()
 69315,0x140c67f30,0x140cae170,3,"float NiFastATan2(float a_y, float a_x)"
+69330,0x140c68740,0x140cae980,2,char* NiSourceTexture::GetTextureFormat()
+69331,0x140c68870,0x140caeab0,2,"void NiSourceTexture::GetTextureDimensionsAndMipInfo(std::uint32_t* width, std::uint32_t* height, std::uint32_t* mipLevels, std::uint32_t* arraySize)"
 69335,0x140c68d20,0x140caef60,3,NiSourceTexture* CreateSourceTexture(const BSFixedString& a_name)
 69398,0x140c6b6e0,0x140cb18c0,3,BSDismemberSkinInstance* BSDismemberSkinInstance::Create()
 69406,0x140c6bc70,0x140cb1e30,3,BSDismemberSkinInstance* BSDismemberSkinInstance::Ctor(BSDismemberSkinInstance* a_this)
@@ -5225,9 +5368,15 @@
 69758,0x140c7ca70,0x140cc32c0,3,"bool NiSkinPartition::DrawPartition(NiSkinPartition::DrawContext* a_context, std::uint32_t a_index)"
 69759,0x140c7cb60,0x140cc33b0,3,"bool NiSkinPartition::HasPartitionForLOD(std::uint32_t a_singleLevel, std::uint32_t a_lodIndex)"
 69804,0x140c7eb60,0x140cc5250,3,RE::NiSkinInstance::Ctor
+69829,0x140c7fd20,0x140cc65c0,2,void NiGeometry::SetGeometryData(NiGeometryData* unk1)
 69838,0x140c80b80,0x140cc7420,3,void NiTriBasedGeom::NiTriBasedGeom(NiGeometryData* a_data)
+69988,0x140c856d0,0x140ccbfb0,2,NiObject* NiFogProperty::CreateClone([[maybe_unused]] NiCloningProcess& a_cloning)
+69990,0x140c85810,0x140ccc0f0,2,void NiFogProperty::LoadBinary([[maybe_unused]] NiStream& a_stream)
+69993,0x140c858d0,0x140ccc1b0,2,void NiFogProperty::SaveBinary([[maybe_unused]] NiStream& a_stream)
 70265,0x140c8e220,0x140cd4d20,3,"bool BSLODTriShape::HasDrawableLOD(std::uint32_t a_lodModeA, std::uint32_t a_lodModeB, bool a_checkB)"
 70266,0x140c8e300,0x140cd4e00,3,std::uint32_t BSLODTriShape::GetTriangleCountForLOD(std::uint32_t a_lodMode)
+70316,0x140c907d0,0x140cd72e0,2,void NiAccumulator::FinishAccumulating()
+70329,0x140c90bc0,0x140cd76d0,2,void NiBackToFrontAccumulator::RegisterObjectArray(NiVisibleArray& a_visibleArray)
 70361,0x140c91820,0x140cd8370,3,"NiPick* NiPick::ctor(std::uint32_t a_initialSize, std::uint32_t a_growBy)"
 70362,0x140c918e0,0x140cd8430,3,void NiPick::dtor()
 70363,0x140c91930,0x140cd8480,3,"bool NiPick::PickObjects(const NiPoint3& a_origin, const NiPoint3& a_direction, bool a_append)"
@@ -5241,7 +5390,9 @@
 72049,0x140ceb380,0x140d31ed0,3,NiLightDimmerController* NiLightDimmerController::Create()
 72540,0x140cface0,0x140d41830,3,NiLinFloatKey* NiLinFloatKey::CreateArray(std::uint32_t a_count)
 72790,0x140d02aa0,0x140d495f0,3,"void NiParticleSystem::CopyMembersFrom(NiParticleSystem* a_src, NiParticleSystem* a_dst, NiCloningProcess& a_cloning)"
+72798,0x140d03180,0x140d49d00,2,void NiParticleSystem::Do_UpdateSystem(float a_time)
 72799,0x140d03330,0x140d49ec0,4,void NiParticleSystem::AddModifier(NiPSysModifier* a_modifier)
+72864,0x140d06200,0x140d4cda0,2,"bool NiPSysGravityModifier::Update(float a_time, NiPSysData* a_particleData, NiPoint3* a_position, NiPoint3* a_radii, NiColorA* a_rotation)"
 73882,0x140d28c40,0x140d70310,3,"Setting * SettingT<T1>::SetStringValue_140D28C40 (Setting * a_this, char * a_string)"
 73893,0x140d29090,0x140d70fb0,3,"void BSTaskManager::BSTaskManager(BSTaskManager* a_this, std::uint32_t a_extraNodes, std::uint32_t a_threadCount, std::uint32_t a_bucketCount)"
 73894,0x140d292e0,0x140d71200,3,void BSTaskManager::~BSTaskManager(BSTaskManager* a_this)
@@ -5273,6 +5424,7 @@
 73999,0x140d2dd50,0x140d76130,2,void QueuedFile::BeginProcessing()
 74000,0x140d2dda0,0x140d76180,2,void QueuedFile::ProcessStateMachine()
 74003,0x140d2df00,0x140d762e0,2,void QueuedFile::NotifyChildrenAndFinalize(std::uint32_t a_flag)
+74004,0x140d2df90,0x140d76370,2,"void QueuedFile::Cancel([[maybe_unused]] std::uint32_t a_previousState, [[maybe_unused]] void* a_unk)"
 74005,0x140d2e090,0x140d76470,2,void QueuedFile::AddChild(QueuedFile* a_child)
 74013,0x140d2e350,0x140d76730,2,QueuedFile* QueuedFile::dtor_deleting()
 74031,0x140d2e880,0x140d76c40,3,"void BSModelDB::ParseModel(BSTSmartPointer<BSResource::Stream>* a_stream, const char* a_modelName, const DBTraits::ArgsType& a_args, NiPointer<NiNode>& a_modelOut, std::uint32_t& a_typeOut)"
@@ -5280,7 +5432,26 @@
 74055,0x140d300f0,0x140d784b0,3,"void BSResource::EntryDB::ProcessLoadQueue(void* a_loadQueue, void* a_context)"
 74078,0x140d30c50,0x140d79010,3,"BSResource::ErrorCode BSModelDB::LoadByName(void* a_entryDB, const char* a_path, void* a_entryOut, bool a_unk, const DBTraits::ArgsType& a_args)"
 74084,0x140d30fe0,0x140d793a0,3,"bool BSModelDB::FindOrCreateEntry(void* a_entryDB, const BSResource::ID* a_id, void** a_entryOut, bool a_skipLookup)"
+74133,0x140d338f0,0x140d7bcb0,2,bool BSMultiBound::QWithinPoint(const NiPoint3& a_pos)
+74152,0x140d33eb0,0x140d7c270,2,bool BSMultiBoundRoom::CheckBound2(const NiBound& a_targetBound)
+74153,0x140d33f40,0x140d7c300,2,bool BSMultiBoundRoom::CheckBound1(const BSMultiBound& a_targetBound)
+74177,0x140d34940,0x140d7cd70,2,bool BSMultiBoundAABB::CheckBound(NiBound const& a_arg1)
+74178,0x140d34a60,0x140d7ce90,2,bool BSMultiBoundAABB::CheckBound(BSMultiBound const& a_arg1)
+74179,0x140d34cb0,0x140d7d100,2,bool BSMultiBoundAABB::WithinFrustum(NiFrustumPlanes const& a_arg1)
+74180,0x140d34e60,0x140d7d2b0,2,bool BSMultiBoundAABB::CompletelyWithinFrustum(NiFrustumPlanes const& a_arg1)
+74182,0x140d34f60,0x140d7d3b0,2,bool BSMultiBoundAABB::GetWithinPoint(const NiPoint3& a_pos)
+74183,0x140d34fc0,0x140d7d410,2,void BSMultiBoundAABB::MoveToWorld(NiTransform const& a_arg1)
+74196,0x140d358a0,0x140d7dcf0,2,bool BSMultiBoundOBB::CheckBound(NiBound const& a_arg1)
+74197,0x140d35ac0,0x140d7df10,2,bool BSMultiBoundOBB::CheckBound(BSMultiBound const& a_arg1)
+74198,0x140d35f80,0x140d7e400,2,bool BSMultiBoundOBB::WithinFrustum(NiFrustumPlanes const& a_arg1)
+74199,0x140d360c0,0x140d7e540,2,bool BSMultiBoundOBB::CompletelyWithinFrustum(NiFrustumPlanes const& a_arg1)
+74200,0x140d361a0,0x140d7e620,2,bool BSMultiBoundOBB::GetWithinPoint(const NiPoint3& a_pos)
+74201,0x140d363a0,0x140d7e820,2,void BSMultiBoundOBB::MoveToWorld(NiTransform const& a_arg1)
 74207,0x140d36950,0x140d7edd0,3,"bool BSStream::Load(const char* a_path, NiBinaryStream* a_stream)"
+74209,0x140d36a20,0x140d7eea0,2,bool BSStream::Save3(const char* a_path)
+74210,0x140d36aa0,0x140d7ef20,2,bool BSStream::RegisterSaveObject(NiObject* a_object)
+74218,0x140d372e0,0x140d7f770,2,bool BSStream::LoadStream()
+74219,0x140d37520,0x140d7f9b0,2,void BSStream::SaveStream()
 74236,0x140d38120,0x140d805b0,3,RE::INISettingCollection::WriteSetting
 74237,0x140d38310,0x14053c550,3,RE::INISettingCollection::ReadSetting
 74239,0x140d38710,0x140d80bb0,3,RE::INISettingCollection::OpenHandle
@@ -5364,6 +5535,9 @@
 74857,0x140d53440,0x140d9c3d0,3,bool BSParticleSystemManager::IsValidMasterParticleSystem(std::uint32_t a_index)
 74860,0x140d53670,0x140d9c600,3,BSMasterParticleSystem* BSParticleSystemManager::GetMasterParticleSystemAt(std::uint32_t a_index)
 74889,0x140d546b0,0x140d9d640,4,BSFurnitureMarkerNode* BSFurnitureMarkerNode::FindBSFurnitureMarkerNode(NiObjectNET* a_object)
+74938,0x140d56700,0x140d9f6c0,2,bool BSMultiBoundNode::CheckBound2(const NiBound& a_targetBound)
+74939,0x140d56720,0x140d9f6e0,2,bool BSMultiBoundNode::CheckBound1(const BSMultiBound& a_targetBound)
+74988,0x140d57bb0,0x140da0b70,2,void BSSceneGraph::SetViewDistanceBasedOnFrameRate(float a_frameRate)
 75008,0x140d58800,0x140da1810,4,void BSGeometryListCullingProcess::~BSGeometryListCullingProcess()
 75009,0x140d58850,0x140da1860,3,"void BSGeometryListCullingProcess::AppendNonAccum(BSGeometry* a_geometry, int a_alphaGroupIndex)"
 75010,0x140d588a0,0x140da19b0,4,"void BSGeometryListCullingProcess::SubmitCollectedGeometry(BSCullingProcess* a_process, bool a_useJobs)"
@@ -5471,7 +5645,11 @@
 75709,0x140d7cfb0,0x140dd1160,3,void BSGraphics_Renderer_Begin_UpdateJitter_140d7cfb0(BSGraphics::State* a_state)
 75711,0x140d7d130,0x140dd1320,3,"void BSGraphics::State::BuildCameraStateData(CameraStateData* a_entry, NiCamera* a_camera, bool a_useJitter)"
 75721,0x140d7dc50,0x140dd2b60,4,"HRESULT BSGraphics::Renderer::LoadTextureFromStream (ID3D11Device * a_this, BSResourceNiBinaryStream * a_stream, BSGraphics::Texture** a_texture, BSGraphics::DDSInfo* a_ddsinfo, uint32_t param_5, uint32_t param_6)"
+75970,0x140da3a80,0x140df89f0,2,hkpWorld* bhkWorldObject::GetWorld1()
+75971,0x140da3aa0,0x140df8a10,2,ahkpWorld* bhkWorldObject::GetWorld2()
+75972,0x140da3ac0,0x140df8a30,2,void bhkWorldObject::MoveToWorld(bhkWorld* a_world)
 75976,0x140da3ca0,0x140df8c10,4,void hkpWorldObject::RemoveProperty(std::uint32_t a_key)
+75984,0x140da4010,0x140df8f80,2,void bhkWorldObject::AdjustRefCount(bool a_increment)
 76017,0x140da6440,0x140dfb3c0,3,"void ComputePhysicsStepTimes(float a_frameDelta, bool a_complex)"
 76023,0x140da6e60,0x140dfbde0,4,HavokWorld::Init_*
 76027,0x140da7580,0x140dfc500,3,bool bhkWorld::PickObject(bhkPickData& a_pickData)
@@ -5481,6 +5659,7 @@
 76084,0x140daa120,0x140dff0a0,2,void bhkWorld::FlushPendingPhantomRemovals()
 76094,0x140dab050,0x140dfffd0,3,void bhkWorld::HavokWorldEnterWrite()
 76095,0x140dab070,0x140dffff0,3,void bhkWorld::HavokWorldExitWrite()
+76099,0x140dab5f0,0x140e00570,2,void bhkWorld::AdjustRefCount(bool a_increment)
 76160,0x140dad060,0x140e01fe0,4,NiAVObject * GetNiObjectFromHavokCollidable_140DAD060 (hkpCollidable * param_1)
 76170,0x140dae3d0,0x140e03350,3,void NiAVObject::SetCollisionLayer(COL_LAYER a_collisionLayer)
 76171,0x140dae3f0,0x140e03370,3,"void NiAVObject::SetCollisionLayerAndGroup(COL_LAYER a_collisionLayer, std::uint32_t a_group)"
@@ -5504,13 +5683,41 @@
 76683,0x140dd6d10,0x140e2bce0,4,"void bhkCollisionFilter::SetLayerPairCollisionEnabled(COL_LAYER a_layerA, COL_LAYER a_layerB, bool a_enabled)"
 76684,0x140dd6d90,0x140e2bd60,4,"void bhkCollisionFilter::SetLayerBitfield(COL_LAYER a_layer, std::uint64_t a_mask)"
 76693,0x140dd94e0,0x140e2e4b0,4,"void hkpAllRayHitTempCollector::AddRayHit(const hkpCdBody& a_body, const hkpShapeRayCastCollectorOutput& a_hitInfo)"
+76732,0x140ddb210,0x140e3a340,2,void bhkRigidBodyT::GetPosition(hkVector4& a_outPosition)
+76733,0x140ddb300,0x140e3a430,2,void bhkRigidBodyT::GetRotation(hkQuaternion& a_outRotation)
+76734,0x140ddb3c0,0x140e3a4f0,2,void bhkRigidBodyT::SetPosition(hkVector4& a_position)
+76735,0x140ddb490,0x140e3a5c0,2,void bhkRigidBodyT::SetRotation(hkQuaternion& a_rotation)
+76736,0x140ddb540,0x140e3a670,2,"void bhkRigidBodyT::SetPositionAndRotation(hkVector4& a_position, hkQuaternion& a_rotation)"
+76737,0x140ddb6d0,0x140e3a800,2,void bhkRigidBodyT::GetCenterOfMassWorld(hkVector4& a_outCenterOfMassWorld)
+76738,0x140ddb730,0x140e3a860,2,void bhkRigidBodyT::GetTransform(hkTransform& a_outTransform)
+76751,0x140ddbad0,0x140e2ff90,2,bhkWorldObject* bhkEntityListener::GetMatchingWorldObject(hkpEntity* a_entity)
+76773,0x140ddc2a0,0x140e30760,2,void bhkRefObject::SetReferencedObject(hkReferencedObject* a_object)
+76774,0x140ddc2f0,0x140e307b0,2,void bhkRefObject::AdjustRefCount(bool a_increment)
+76783,0x140ddc570,0x140e30a30,2,void bhkSerializable::SetReferencedObject(hkReferencedObject* a_object)
 76799,0x140ddca80,0x140e30f40,4,MATERIAL_ID bhkShape::GetMaterialID(hkpShapeKey a_key)
+76800,0x140ddcad0,0x140e30f90,2,void bhkShape::AdjustRefCount(bool a_increment)
+76807,0x140ddcd20,0x140e311e0,2,void bhkEntity::RemoveFromCurrentWorld()
+76809,0x140ddcda0,0x140e31260,2,void bhkPhantom::RemoveFromCurrentWorld()
 76924,0x140de1f20,0x140E363E0,4,"bhkCapsuleShape * bhkCapsuleShape::bhkCapsuleShape(bhkCapsuleShape * a_this, RE::NiPoint3 * a_topVec, RE::NiPoint3 * a_botVec, float a_radius)"
 76940,0x140de2a40,0x140e36f00,4,void bhkBoxShape::InitializeShape(const BoxInfo* a_info)
+77163,0x140deb530,0x140e40500,2,hkpWorld* bhkAction::GetWorld1()
+77164,0x140deb550,0x140e40520,2,ahkpWorld* bhkAction::GetWorld2()
+77165,0x140deb570,0x140e40540,2,void bhkAction::MoveToWorld(bhkWorld* a_world)
+77166,0x140deb640,0x140e40610,2,void bhkAction::RemoveFromCurrentWorld()
+77167,0x140deb6e0,0x140e406b0,2,void bhkAction::AdjustRefCount(bool a_increment)
+77177,0x140debae0,0x140e40ab0,2,void bhkUnaryAction::MoveToWorld(bhkWorld* a_world)
 77186,0x140dec000,0x140e40fd0,4,"std::uintptr_t bhkTriSampledHeightFieldBvTreeShape::InitFromCInfo(bhkShape* a_shape, HeightFieldCInfo* a_cinfo)"
 77215,0x140ded7c0,0x140e427c0,4,int HavokThreadMemorySink::Handle(void* a_event)
+77313,0x140df22f0,0x140e472f0,2,"void bhkCharRigidBodyController::SetPositionImpl(const hkVector4& a_pos, bool a_applyCenterOffset, bool a_forceWarp)"
+77315,0x140df2780,0x140e47780,2,void bhkCharRigidBodyController::GetTransformImpl(hkTransform& a_tranform)
+77316,0x140df2810,0x140e47810,2,void bhkCharRigidBodyController::SetTransformImpl(const hkTransform& a_tranform)
+77317,0x140df28d0,0x140e478d0,2,void bhkCharRigidBodyController::GetLinearVelocityImpl(hkVector4& a_velocity)
+77318,0x140df2910,0x140e47910,2,void bhkCharRigidBodyController::SetLinearVelocityImpl(const hkVector4& a_velocity)
 77446,0x140df8690,0x140e4d690,4,"void hkpAllRayHitCollector::AddRayHit(const hkpCdBody& a_body, const hkpShapeRayCastCollectorOutput& a_hitInfo)"
 77470,0x140df9140,0x140e4e140,4,"bhkMemorySystem * ctor_140df9140 (bhkMemorySystem * param_1, undefined8 param_2, undefined8 param_3, undefined8 param_4)"
+77824,0x140e0bf10,0x140e60f10,2,void bhkListShape::AdjustRefCount(bool a_increment)
+78586,0x140e34280,0x140e904d0,2,void bhkCharacterProxy::AdjustRefCount(bool a_increment)
+78605,0x140e34ae0,0x140e90d30,2,void bhkCharacterRigidBody::AdjustRefCount(bool a_increment)
 78843,0x140e43640,0x140e9f890,4,"undefined8 *hkpConvexVerticesShape::sub_140E43640(undefined8 *param_1,undefined8 param_2,char *param_3)"
 79937,0x140ebe150,0x140f1a3b0,4,UI::IsMenuOpen
 79944,0x140ebe510,0x140F1A680,3,"void UI::GetTopMostMenu(RE::UI this, RE::IMenu** a_result, std::uint32_t a_depthLimit)"
@@ -6633,6 +6840,8 @@
 90294,0x14111c1f0,0x1411790c0,2,void MovementTweenerArbiter::SetActorTransform(const NiTransform& a_transform)
 90323,0x14111c980,0x141179850,2,const BSFixedString& MovementStateTweener::GetAgentType()
 90324,0x14111c990,0x141179860,2,BSFixedString& MovementStateTweener::GetStaticAgentType()
+90327,0x14111ca50,0x141179920,2,void MovementStateTweener::RegisterWithController(IMovementControllerRegisterInterface& a_arg1)
+90328,0x14111caa0,0x141179970,2,void MovementStateTweener::UnregisterWithController()
 90331,0x14111cb60,0x141179a30,2,void MovementStateTweener::GetPosition(NiPoint3* a_out)
 90332,0x14111cd10,0x141179be0,2,void MovementStateTweener::GetAngle(NiPoint3* a_out)
 90333,0x14111ce40,0x141179d10,2,float MovementStateTweener::GetCurrentMovementSpeed()
@@ -6640,6 +6849,8 @@
 90335,0x14111d0d0,0x141179fa0,2,void MovementStateTweener::GetProcessRotation(NiPoint3* a_out)
 90359,0x14111d600,0x14117a4d0,2,const BSFixedString& MovementStateFollowPath::GetAgentType()
 90360,0x14111d610,0x14117a4e0,2,BSFixedString& MovementStateFollowPath::GetStaticAgentType()
+90363,0x14111d6d0,0x14117a5a0,2,void MovementStateFollowPath::RegisterWithController(IMovementControllerRegisterInterface& a_arg1)
+90364,0x14111d720,0x14117a5f0,2,void MovementStateFollowPath::UnregisterWithController()
 90367,0x14111d7e0,0x14117a6b0,2,void MovementStateFollowPath::GetPosition(NiPoint3* a_out)
 90368,0x14111d880,0x14117a750,2,void MovementStateFollowPath::GetAngle(NiPoint3* a_out)
 90369,0x14111d9f0,0x14117a8c0,2,float MovementStateFollowPath::GetCurrentMovementSpeed()
@@ -7286,6 +7497,7 @@
 100776,0x141301c50,0x141344550,3,BSCubeMapCamera* BSCubeMapCamera::Ctor()
 100779,0x141301fa0,0x1413448a0,4,void BSCubeMapCamera::SetFace(Face a_face)
 100781,0x141302780,0x1413450a0,3,BSCubeMapCamera* BSCubeMapCamera::Dtor(std::uint32_t a_flags)
+100804,0x1413045e0,0x141346f00,2,NiObject* BSFogProperty::CreateClone([[maybe_unused]] NiCloningProcess& a_cloning)
 100810,0x1413047f0,0x14134b330,3,BSShadowLight::ctor
 100817,0x141304da0,0x14134b960,3,"static void BSShadowDirectionalLight::SetupFocusShadowMaps(RE::BSShadowLight* light, RE::NiCamera* camera)"
 100818,0x141305240,0x14134be20,3,BSShadowLight::AccumulateShadowMap
@@ -7321,9 +7533,15 @@
 100934,0x14130bb80,0x14134edc0,4,BSShaderMaterialHashMap::Link
 100935,0x14130be10,0x14134f050,4,BSShaderMaterialHashMap::Unlink
 100943,0x14130c5a0,0x14134f7e0,4,BSImagespaceShader* BSImagespaceShader::Ctor()
+100945,0x14130c870,0x14134fab0,2,bool BSImagespaceShader::SetupTechnique(std::uint32_t a_technique)
+100947,0x14130c980,0x14134fbc0,2,"void BSImagespaceShader::SetupGeometry(BSRenderPass* a_currentPass, std::uint32_t a_flags)"
+100949,0x14130cce0,0x14134ff50,2,void BSImagespaceShader::ReloadShaders(bool a_clear)
 100950,0x14130cd20,0x14134ff90,3,"void ImageSpaceEffect::Render (ImageSpaceEffect * a_this, BSTriShape * a_shape, ImageSpaceEffectParam * a_param)"
 100951,0x14130cf80,0x1413501F0,3,void BSImagespaceShader::Render(BSTriShape* a_geometry)
 100952,0x14130d070,0x1413502b0,4,"void BSImagespaceShader::DispatchComputeShader (BSImagespaceShader * a_this, uint32_t a_threadGroupCountX, uint32_t a_threadGroupCountY, uint32_t a_threadGroupCountZ)"
+100974,0x14130dd80,0x141351840,2,void BSUtilityShader::RestoreTechnique(std::uint32_t a_technique)
+100976,0x14130df90,0x141351a50,2,bool BSUtilityShader::SetupTechnique(std::uint32_t a_technique)
+100977,0x14130e890,0x1413523f0,2,void BSUtilityShader::SetupMaterial(const BSShaderMaterial* a_material)
 100979,0x14130ec70,0x1413527d0,3,"void BSUtilityShader::SetupGeometry(BSUtilityShader * a_this, BSRenderPass * a_pass, uint32_t a_flags)"
 100988,0x1413108c0,0x1413547e0,3,"void BSShaderPropertyLightData::RemoveGeometryFromLights(BSShaderPropertyLightData* this, BSGeometry* a_geometry)"
 100990,0x141310a30,0x141354950,3,"void BSShaderPropertyLightData::AddLight(BSShaderPropertyLightData* this, BSLight* a_light)"
@@ -7383,6 +7601,7 @@
 101601,0x14132c690,0x14136f4f0,3,"void BSParabolicCullingProcess::AppendNonAccum(NiAVObject* a_object, int a_alphaGroupIndex)"
 101612,0x14132cfd0,0x14136fe60,3,"void BSShadowFrustumLight::Accumulate(std::uint32_t& a_globalShadowLightCount, std::uint32_t a_shadowMaskChannel, NiAVObject* a_cullingScene)"
 101613,0x14132d040,0x14136fec0,4,void BSShadowFrustumLight::Render(std::uint32_t& a_index)
+101614,0x14132d0f0,0x14136ff70,2,bool BSShadowFrustumLight::SetLight(NiLight* a_light)
 101615,0x14132d1d0,0x141370050,3,bool BSShadowFrustumLight::UpdateCamera(const NiCamera* a_viewCamera)
 101617,0x14132d570,0x1413703f0,3,bool BSShadowFrustumLight::GetIsFrustumOrDirectionalLight()
 101618,0x14132d580,0x141370400,3,bool BSShadowFrustumLight::GetIsFrustumLight()

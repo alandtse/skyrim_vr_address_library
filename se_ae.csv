@@ -1504,6 +1504,7 @@ sseid,aeid,confidence,name
 10879,10922,1,
 10880,10923,1,
 10906,10962,1,
+10985,10989,1,
 11031,11134,1,
 11044,11140,1,
 11045,11141,3,RE::MemoryManager::GetSingleton
@@ -2388,6 +2389,10 @@ sseid,aeid,confidence,name
 15561,15739,2,BipedAnim::ApplySlotTextureSetToGeometry
 15569,15746,1,VampiresCastNoShadow::attach_weapon
 15576,15753,3,RE::BSDismemberSkinInstance::UpdateDismemberPartion
+15708,15941,1,
+15709,15942,1,
+15719,15954,1,
+15720,15955,1,
 15757,15995,3,RE::InventoryEntryData::GetValue
 15767,16005,3,RE::InventoryEntryData::IsQuestObject
 15779,16017,3,RE::GetArmorFinalRating
@@ -2404,6 +2409,7 @@ sseid,aeid,confidence,name
 15889,16129,3,RE::InventoryChanges::InitLeveledItems
 15890,16130,3,RE::InventoryChanges::InitFromContainerExtra
 15916,41558,3,RE::TESActionData::Ctor
+15960,16210,1,
 15967,16212,3,RE::BSPointerHandleManagerInterface::GetHandle
 16169,16401,1,
 16170,16402,1,
@@ -2808,6 +2814,9 @@ sseid,aeid,confidence,name
 18185,18570,3,RE::ImageSpaceModifierInstanceForm::Trigger
 18188,18573,3,RE::TESImageSpaceModifier::Stop*
 18192,18577,3,RE::TESImageSpaceModifier::RemoveCrossfade_*
+18193,18578,1,
+18198,18583,1,
+18201,18586,1,
 18224,18618,1,
 18260,18667,1,TESImageSpaceModifier::ReadFromFileStream_140250430
 18266,18673,1,
@@ -3728,9 +3737,12 @@ sseid,aeid,confidence,name
 25213,25741,1,
 25266,25788,1,
 25482,26022,3,RE::NiAVObject::GetCollisionObject
+25609,26148,1,
+25625,26168,1,
 25684,26231,3,papyrus_extender::events::game::weatherevent::target_0x416
 25686,26233,3,RE::Sky::GetFog
 25729,26288,1,
+25782,26336,1,
 25822,26379,3,RE::AIForumulas::ComputePickpocketSuccess
 25932,26519,1,
 25961,26550,1,
@@ -3824,6 +3836,7 @@ sseid,aeid,confidence,name
 26563,27195,1,
 26620,27293,1,
 26621,27294,1,
+26633,27309,1,
 26674,27350,2,
 26753,27429,2,void* BGSPackageDataList::GetByUID(std::uint8_t a_uid)
 27430,28151,3,
@@ -4466,6 +4479,7 @@ sseid,aeid,confidence,name
 29815,30631,1,Pathing::Func4_*
 29816,30632,1,Pathing::Func3_*
 29817,30633,1,Pathing::Func2_*
+29818,30634,1,
 29819,30635,1,Pathing::sub_*
 29820,30636,1,Pathing::sub_*
 29821,30637,1,Pathing::sub_*
@@ -4526,6 +4540,12 @@ sseid,aeid,confidence,name
 29922,30733,1,
 29923,30734,1,
 29943,30754,1,
+29964,30778,1,
+29965,30779,1,
+29971,30785,1,
+29972,30786,1,
+29975,30789,1,
+29976,30790,1,
 29992,30807,1,
 29994,30809,1,
 29995,30810,1,
@@ -5015,17 +5035,26 @@ sseid,aeid,confidence,name
 33340,34125,1,
 33348,34130,1,
 33355,34136,1,
+33357,34138,1,
+33358,34139,1,
 33363,34144,1,ActorMagicCaster::Func9_*
+33364,34145,1,
+33365,34146,1,
 33373,34154,1,ActorMagicCaster::sub_*
+33376,34157,1,
 33377,34158,1,ActorMagicCaster::Func18_140543540
 33379,34160,1,ActorMagicCaster::Func19_140543620
 33380,34161,1,ActorMagicCaster::sub_140543630
 33381,34162,1,ActorMagicCaster::sub_140543680
+33382,34163,1,
+33383,34164,1,
 33384,34165,1,ActorMagicCaster::Func26_*
+33393,34175,1,
 33398,34180,1,SimpleAnimationGraphManagerHolder::Func7_*
 33399,34181,1,SimpleAnimationGraphManagerHolder::Func10_*
 33400,34182,1,SimpleAnimationGraphManagerHolder::SetupAnimEventSinks_*
 33406,34186,1,TempLoadGameBuffer::sub_*
+33420,34199,1,
 33427,34205,1,ActorMagicCaster::Func22_140545030
 33428,34206,1,
 33430,34208,1,
@@ -5113,6 +5142,7 @@ sseid,aeid,confidence,name
 33606,34382,1,
 33607,34383,1,
 33617,34395,1,
+33628,34406,1,
 33631,34409,3,"bool MagicCaster::ProcessQuickRelease(MagicItem* a_spell, TESObjectREFR* a_target, TESBoundObject* a_source, bool a_loadCast)"
 33671,34451,1,ActorMagicCaster::sub_*
 33680,34460,1,
@@ -5196,10 +5226,16 @@ sseid,aeid,confidence,name
 33954,34747,1,
 33956,34750,3,enhanced_reanimation::Reanimate::Start
 33957,34746,1,
+33970,34770,1,
+33974,34774,1,
+34039,34836,1,
 34089,34885,1,
 34092,34888,1,
 34093,34889,1,
 34094,34890,1,
+34113,34915,1,
+34114,34916,1,
+34115,34917,1,
 34116,34918,1,ShaderReferenceEffect::Get3D_*
 34117,34919,1,ShaderReferenceEffect::Func60_*
 34121,34923,1,
@@ -5435,6 +5471,7 @@ sseid,aeid,confidence,name
 35145,36035,1,
 35146,36036,1,BGSSaveFormBuffer::sub_*
 35147,36037,1,BGSSaveFormBuffer::sub_*
+35148,36038,1,
 35149,36039,1,BGSSaveFormBuffer::Func3_*
 35150,36040,1,
 35151,36041,1,BGSSaveFormBuffer::Func0_*
@@ -5446,6 +5483,10 @@ sseid,aeid,confidence,name
 35317,36212,3,RE::BGSImpactManager::PlayImpactSound
 35318,36213,2,
 35320,36215,3,RE::BGSImpactManager::PlayImpactEffect
+35361,36250,1,
+35362,36251,1,
+35363,36252,1,
+35364,36253,1,
 35413,36311,3,RE::Calendar::GetTimeDateString
 35477,36441,1,
 35480,36444,1,
@@ -6385,6 +6426,7 @@ sseid,aeid,confidence,name
 39177,40251,1,
 39179,40253,3,RE::PlayerCharacter::GetDamage
 39181,40255,3,RE::Actor::DoReset3D
+39182,40256,1,
 39183,40257,1,
 39186,40260,1,Character::GetFaceAnimationData_*
 39198,40272,1,Character::IsChild_140694070
@@ -6414,6 +6456,7 @@ sseid,aeid,confidence,name
 39253,40325,1,
 39259,40332,1,
 39260,40333,1,
+39262,40335,1,
 39267,40346,1,MountInteraction::Func3_*
 39268,40347,1,MountInteraction::Func4_*
 39269,40348,1,MountInteraction::Func13_*
@@ -6468,6 +6511,7 @@ sseid,aeid,confidence,name
 40459,41476,3,BeginLowActorUpdate
 40478,41497,3,LockFreeRing2048Push
 40499,41507,3,LockFreeRing2048Pop
+40547,41553,1,
 40578,41607,1,
 40579,41608,1,
 40580,41609,1,
@@ -7026,6 +7070,7 @@ sseid,aeid,confidence,name
 42520,43685,1,BSRagdollContactListenerModifierInterface::Func0_*
 42522,43686,1,BSTArrayAllocatorFunctor_BSTSmallArrayHeapAllocator_2080__::Allocate_*
 42523,43688,1,BSTArrayAllocatorFunctor_BSTSmallArrayHeapAllocator_2080__::Free_*
+42534,43697,1,
 42535,43698,1,ArrowProjectile::Func181_*
 42539,43702,1,ArrowProjectile::Func185_*
 42540,43703,1,ArrowProjectile::Func170_*
@@ -7058,11 +7103,15 @@ sseid,aeid,confidence,name
 42619,43784,1,FlameProjectile::sub_*
 42620,43785,1,ConeProjectile::Constructor_*
 42621,43786,1,TESObjectREFR::sub_*
+42623,43788,1,
 42624,43789,1,ConeProjectile::UpdateImpl_*
+42625,43790,1,
 42626,43794,1,ConeProjectile::SaveGame_*
 42627,43795,1,ConeProjectile::LoadGame_*
 42630,43798,1,ConeProjectile::Revert_*
 42631,43799,1,ConeProjectile::Func184_*
+42633,43801,1,
+42634,43802,1,
 42635,43803,1,ConeProjectile::Handle3DLoaded_*
 42636,43804,1,ConeProjectile::sub_*
 42638,43806,3,splashes_of_skyrim::ProjectileManager::ProcessInWater::create_splash
@@ -7082,6 +7131,12 @@ sseid,aeid,confidence,name
 42673,43845,1,Explosion::sub_*
 42676,43848,1,Explosion::sub_*
 42677,43849,1,Explosion::sub_*
+42726,43893,1,
+42728,43895,1,
+42736,43903,1,
+42738,43905,1,
+42747,43914,1,
+42752,43919,1,
 42776,43944,1,
 42777,43945,1,
 42780,43948,1,
@@ -7113,6 +7168,8 @@ sseid,aeid,confidence,name
 42841,44013,1,
 42842,44014,1,HitData::sub_*
 42845,44017,1,
+42851,44026,1,
+42853,44028,1,
 42854,44029,1,ArrowProjectile::sub_*
 42857,44032,1,ArrowProjectile::sub_*
 42860,44035,1,MissileProjectile::SaveGame_*
@@ -8090,6 +8147,7 @@ sseid,aeid,confidence,name
 50763,51658,1,HUDMeter::ProcessMessage_*
 50764,51659,1,
 50766,51661,1,ActorValueMeter::ProcessMessage_*
+50767,51662,1,
 50773,51668,4,RE::Compass::Update
 50775,51670,3,Compass::SetMarkers
 50776,51671,1,EnemyHealth::Update_*
@@ -8805,17 +8863,30 @@ sseid,aeid,confidence,name
 55715,56246,1,
 55945,56489,3,SPID:Distribute::DeathItemManager::Detail::Add_item
 56476,56833,3,DialogueMovementEnabler::isInMenuMode
+57879,58452,1,
 58602,59252,3,
 58604,59254,3,
+59276,59947,1,
+59281,59952,1,
 59887,60624,3,
 60097,60850,3,void hkpEntity::Deactivate()
 60100,60853,3,void hkpEntity::IsActive(bool* a_out)
 60502,61314,3,RE::hkpWorld::AddPhantom
 60504,61316,3,RE::hkpWorld::RemovePhantom
 60551,61399,3,RE::hkpWorld::CastRay
+62191,63130,1,
+62192,63131,1,
+62201,63140,1,
+62332,63273,1,
+62673,63620,1,
+62674,63621,1,
+62675,63622,1,
+62679,63626,1,
+62682,63629,1,
 62694,63615,3,RE::BShkbAnimationGraph::GetGraphVariableInt
 62695,63614,3,RE::BShkbAnimationGraph::GetGraphVariableFloat
 62696,63613,3,RE::BShkbAnimationGraph::GetGraphVariableBool
+63071,63983,1,
 63607,62710,3,RE::BShkbAnimationGraph::SetGraphVariableInt
 63608,62709,3,RE::BShkbAnimationGraph::SetGraphVariableFloat
 63609,62708,3,RE::BShkbAnimationGraph::SetGraphVariableBool
@@ -8824,7 +8895,28 @@ sseid,aeid,confidence,name
 66382,67643,3,bool BSSoundHandle::Release()
 66385,67646,3,RE::BSSoundHandle::FadeOutAndRelease
 66403,67665,3,RE::BSAudioManager::BuildSoundDataFromEditorID
+66482,67746,1,
 66606,67846,1,
+66636,67882,1,
+66641,67887,1,
+66701,67947,1,
+66702,67948,1,
+66706,67953,1,
+66712,67959,1,
+66713,67960,1,
+66757,67998,1,
+66758,67999,1,
+66759,68000,1,
+66760,68001,1,
+66761,68002,1,
+66762,68003,1,
+66763,68004,1,
+66766,68007,1,
+66771,68012,1,
+66773,68014,1,
+66776,68017,1,
+66777,68018,1,
+66778,68019,1,
 66841,68088,3,RE::MemoryManager::GetThreadScrapHeap
 66853,68108,1,
 66854,68109,1,
@@ -8860,13 +8952,34 @@ sseid,aeid,confidence,name
 68054,69404,3,JobList::Clear
 68141,69489,1,
 68163,69510,2,
+68258,69611,1,
+68259,69612,1,
+68260,69613,1,
 68838,70190,3,RE::NiObject::ProcessClone
 68839,70191,3,RE::NiObject::CreateDeepCopy
 68893,70244,2,"void NiAVObject::CopyTransformAndCollision(NiAVObject* a_target, NiCloningProcess* a_cloning)"
+68976,70329,1,
+68977,70330,1,
+68978,70331,1,
+68979,70332,1,
+68981,70334,1,
+69000,70357,1,
+69001,70358,1,
+69018,70379,1,
+69019,70380,1,
+69020,70381,1,
+69023,70384,1,
+69024,70385,1,
+69025,70386,1,
+69026,70387,1,
+69027,70388,1,
+69028,70389,1,
 69139,70500,2,"void NiObjectNET::CopyMembers(NiObjectNET* a_target, NiCloningProcess* a_cloning)"
 69181,70545,2,
 69278,70649,2,"void BSTriShape::CopyMembers(BSTriShape* a_target, NiCloningProcess* a_cloning)"
 69289,70660,1,
+69330,70712,1,
+69331,70713,1,
 69433,70810,3,RE::NiTimeController::LoadBinary
 69434,70811,3,RE::NiTimeController::LinkObject
 69435,70812,3,RE::NiTimeController::RegisterStreamables
@@ -8896,11 +9009,17 @@ sseid,aeid,confidence,name
 69572,70956,1,
 69573,70958,3,BSDynamicTriShape* BSDynamicTriShape::scalar_deleting_destructor(std::uint32_t a_flags)
 69587,70972,1,
+69988,71417,1,
+69990,71419,1,
+69993,71422,1,
+70316,71827,1,
+70329,71806,1,
 71069,72667,3,NiFloatData* NiFloatData::Create()
 71071,72669,3,"void NiFloatData::ReplaceAnim(NiFloatKey* a_keys, std::uint32_t a_numKeys, KeyType a_type)"
 71088,72686,3,NiFloatInterpolator* NiFloatInterpolator::Create()
 72049,73695,3,NiLightDimmerController* NiLightDimmerController::Create()
 72540,74222,3,NiLinFloatKey* NiLinFloatKey::CreateArray(std::uint32_t a_count)
+72864,74558,1,
 73897,75634,3,IOManager::NotifyTaskComplete
 73901,75638,3,IOManager::CancelTask
 73902,75639,3,IOManager::WaitForTask
@@ -8914,14 +9033,33 @@ sseid,aeid,confidence,name
 73999,75738,3,QueuedFile::BeginProcessing
 74000,75739,3,QueuedFile::ProcessStateMachine
 74003,75742,3,QueuedFile::NotifyChildrenAndFinalize
+74004,75743,1,
 74005,75744,3,QueuedFile::AddChild
 74013,75755,3,QueuedFile::dtor_deleting
+74152,75891,1,
+74153,75892,1,
+74177,75913,1,
+74178,75914,1,
+74179,75915,1,
+74180,75916,1,
+74182,75918,1,
+74183,75919,1,
+74196,75932,1,
+74197,75933,1,
+74198,75934,1,
+74199,75935,1,
+74200,75936,1,
+74209,75951,1,
+74210,75952,1,
+74218,75960,1,
+74219,75961,1,
 74250,75979,1,
 74649,76380,3,BSMultiBoundAABB::TestOcclusionShape
 74682,76414,3,BSOcclusionBox::IsOcclusionPlane
 74683,76415,3,BSOcclusionBox::IsOcclusionBox
 74706,76440,3,BSOcclusionPlane::IsOcclusionPlane
 74707,76441,3,BSOcclusionPlane::IsOcclusionBox
+74988,76751,1,
 75014,76776,2,"void BSSubIndexTriShape::CopyMembers(BSSubIndexTriShape* a_target, NiCloningProcess* a_cloning)"
 75020,76782,2,BSSubIndexTriShape* BSSubIndexTriShape::Create()
 75023,76785,2,"void BSSubIndexTriShape::SetSegmentRange(std::uint32_t a_segment, std::uint32_t a_index, std::uint32_t a_numTris)"
@@ -8949,12 +9087,16 @@ sseid,aeid,confidence,name
 75669,77475,1,
 75672,77478,1,
 75689,77499,1,
+75970,77796,1,
+75971,77797,1,
+75972,77798,1,
 76017,77850,3,"void ComputePhysicsStepTimes(float a_frameDelta, bool a_complex)"
 76071,77905,2,
 76072,77906,2,
 76084,77918,2,
 76094,77928,3,void bhkWorld::HavokWorldEnterWrite()
 76095,77929,3,void bhkWorld::HavokWorldExitWrite()
+76099,77933,1,
 76170,77998,3,RE::NiAVObject::SetCollisionLayer
 76171,77999,3,RE::NiAVObject::UpdateRigidBodySettings
 76247,78077,3,bool bhkRigidBody::SetMotionType(std::uint32_t a_motionType)
@@ -8965,6 +9107,26 @@ sseid,aeid,confidence,name
 76679,78551,3,
 76680,78552,3,
 76681,78553,3,
+76732,78608,1,
+76733,78609,1,
+76734,78610,1,
+76735,78611,1,
+76736,78612,1,
+76737,78613,1,
+76738,78614,1,
+76773,78649,1,
+76774,78650,1,
+76783,78659,1,
+76800,78677,1,
+76807,78684,1,
+76809,78686,1,
+77165,79063,1,
+77166,79064,1,
+77313,79193,1,
+77315,79195,1,
+77316,79196,1,
+77317,79197,1,
+77318,79198,1,
 79946,82083,2,
 80087,82411,3,RE::BSScaleformManager::FileExists
 80176,82196,3,GRefCountNTSImpl::GetWeakProxy
@@ -10284,6 +10446,8 @@ sseid,aeid,confidence,name
 90294,92806,1,
 90323,92839,1,
 90324,92840,1,
+90327,92843,1,
+90328,92844,1,
 90331,92847,1,
 90332,92848,1,
 90333,92850,1,
@@ -10291,6 +10455,8 @@ sseid,aeid,confidence,name
 90335,92852,1,
 90359,92878,1,
 90360,92879,1,
+90363,92882,1,
+90364,92883,1,
 90367,92886,1,
 90368,92887,1,
 90369,92888,1,
@@ -11213,6 +11379,12 @@ sseid,aeid,confidence,name
 100874,107670,1,
 100879,107675,1,
 100880,107677,1,
+100945,107727,1,
+100947,107729,1,
+100949,107731,1,
+100974,107757,1,
+100976,107759,1,
+100977,107760,1,
 100982,107768,1,BSUtilityShader::Func7_*
 100984,107771,1,NiBoneMatrixSetterI::dtor_*
 100985,107772,1,BSUtilityShader::dtor_*
@@ -11375,6 +11547,7 @@ sseid,aeid,confidence,name
 101559,108557,1,ImageSpaceEffectBlur::Func2_*
 101560,108558,1,ImageSpaceEffectBlur::Func7_*
 101599,108602,3,BSParabolicCullingProcess::UpdateLightPlanes
+101614,108617,1,
 101659,108741,1,
 101661,108743,1,BSMeshLODTriShape::Func55_141330150
 101662,108744,1,
