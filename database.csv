@@ -52,9 +52,12 @@
 10924,0x1400f8550,0x140108b00,4,void Effect::SetDuration(std::int32_t a_duration)
 10929,0x1400f8630,0x140108be0,4,"ulonglong FUN_1400f8630(longlong param_1, longlong param_2)"
 10956,0x1400f9860,0x140109e10,4,"int memmove_s(void* a_dest, std::size_t a_destSize, const void* a_src, std::size_t a_count)"
+10963,0x1400f9a10,0x140109fc0,2,"bool BSTCaseInsensitiveStringMap<Setting*>::key_eq(const char* a_lhs, const char* a_rhs)"
+10965,0x1400f9a40,0x140109ff0,2,"bool NiTStringTemplateMap<NiTMap<char const* ,Setting*>,Setting*>::key_eq(const char* a_lhs, const char* a_rhs)"
 10966,0x1400f9a60,0x14010a010,2,std::uint32_t BSTCaseInsensitiveStringMap<Setting*>::hash_function(key_type a_key)
 10974,0x1400f9ca0,0x14010a250,3,RE::INISettingCollection::Unk_07
 10979,0x1400f9e90,0x14010a440,3,RE::BSString::Set_CStr
+10982,0x1400fa150,0x14010a700,2,"void NiTStringTemplateMap<NiTMap<char const* ,Setting*>,Setting*>::assign_value(void* a_item, const char* a_key, Setting* a_value)"
 10985,0x1400fa270,0x14010a820,2,bool GameSettingCollection::WriteAllSettings()
 11031,0x1400fce20,0x14010d3d0,2,"bool TESForm::Activate(TESObjectREFR* a_targetRef, TESObjectREFR* a_activatorRef, std::uint8_t a_arg3, TESBoundObject* a_object, std::int32_t a_targetCount)"
 11044,0x1400fcfd0,0x14010d580,2,std::uint32_t TESForm::GetRefCount()
@@ -76,6 +79,7 @@
 11264,0x140102d00,0x1401132b0,3,"void* BSResource::EntryDB::FreeArgs(void* a_pool, void* a_args)"
 11269,0x140102fa0,0x140113550,3,"int BSResource::EntryDB::OpenStream(void* a_entryDB, void* a_entry, const char* a_name, void* a_rootLocation, void** a_streamOut)"
 11270,0x1401033e0,0x140113990,3,"int BSModelDB::LoadEntryStream(void* a_entryDB, void* a_entry, const char* a_name, void* a_args, int a_state)"
+11276,0x140103750,0x140113d00,2,"void BSQueuedResourceCollection<BSResource::EntryDB<BSModelDB::DBTraits>,2>::Run()"
 11286,0x140103b10,0x1401140c0,4,BGSSoundDescriptorForm* MagicSystem::GetMagicFailureSound(MagicSystem::SpellType a_type)
 11291,0x140103c90,0x140114240,2,CastingSource BGSEquipSlot::GetCastingSource()
 11294,0x140103dd0,0x140114380,4,float MagicSystem::GetMagicCasterTargetUpdateInterval()
@@ -150,6 +154,7 @@
 13054,0x14014dc60,0x14015e690,3,RE::INISettingCollection::InsertSetting
 13113,0x14014f700,0x140160130,3,bool INISettingCollection::ReadAllSettings()
 13119,0x14014fb40,0x140160570,3,RE::INISettingCollection::RemoveSetting
+13126,0x1401501a0,0x140160bd0,2,"void BSQueuedResourceCollection<BSResource::EntryDB<BSModelDB::DBTraits>,42>::Run()"
 13129,0x140150230,0x140160c60,2,void NiStream::SaveLinkID(const NiObject* a_object)
 13135,0x140150a00,0x140161430,3,bool INISettingCollection::WriteAllSettings()
 13137,0x140150b20,0x140161550,4,void TESObjectCELL::QueueAddCellGrassTask()
@@ -454,6 +459,7 @@
 16474,0x140208cc0,0x14021a610,2,static void BGSAddonNodeSoundHandleExtra::InitStaticName()
 16475,0x140208d40,0x14021a690,2,static void BGSAddonNodeSoundHandleExtra::ReleaseStaticName()
 16528,0x14020a030,0x14021b9a0,2,bool BGSArtObjectCloneTask::Process()
+16553,0x14020a700,0x14021c080,2,"void BSQueuedResourceCollection<BSResource::EntryDB<BSModelDB::DBTraits>,1>::Run()"
 17034,0x14021a4b0,0x14022bdb0,3,TESFurniture::Activate_*
 17206,0x14021ecb0,0x1402305a0,4,NiAVObject* TESObjectLIGH::Clone3D(TESObjectREFR* a_ref)
 17208,0x14021efb0,0x1402308a0,4,"NiLight* TESObjectLIGH::GenDynamic(RE::TESObjectREFR* a_ref, RE::NiNode* a_node, char a_forceDynamic, char a_useLightRadius, char a_affectRefOnly)"
@@ -779,6 +785,8 @@
 20463,0x1402c50b0,0x1402d6820,4,std::int32_t BGSListForm::GetIndexOf(TESForm* a_form)
 20470,0x1402c53d0,0x1402d6b40,3,RE::BGSListForm::AddForm
 20529,0x1402c73f0,0x1402d8b60,3,BGSMaterialType* BGSMaterialType::GetMaterialType(MATERIAL_ID a_materialID)
+20634,0x1402ca850,0x1402dbfc0,2,"BSIMusicTrack* BSTDerivedCreator<BGSMusicSilenceTrack,BSIMusicTrack>::CreateImpl(BSIMusicTrack* a_val) const"
+20656,0x1402cb620,0x1402dcd90,2,"BSIMusicTrack* BSTDerivedCreator<BGSMusicSingleTrack,BSIMusicTrack>::CreateImpl(BSIMusicTrack* a_val) const"
 20807,0x1402ced10,0x1402e0480,2,bool BGSSoundDescriptorForm::DoResolve(Resolution* a_resolution)
 20905,0x1402d19a0,0x1402e3110,4,BSShaderTextureSet * BGSTextureSet::ToShaderTextureSet (BGSTextureSet * a_textureSet)
 20936,0x1402d2550,0x1402e3cc0,3,ScriptCompiler::CompileExpression
@@ -1028,6 +1036,7 @@
 25931,0x1403c1700,0x1403d0f80,4,"float GetDualCastingEffectiveness(RE::ActorValueOwner* a_actorValueOwner, float a_cost)"
 25932,0x1403c1720,0x1403d0fa0,3,"float GetDualCastCost(void* a_unused, float a_cost)"
 25933,0x1403c1740,0x1403d0fc0,3,TrueHUD::GetSoulType
+25951,0x1403c2030,0x1403d18b0,2,"BShkNonTransformController* BSTDerivedCreator<BGShkPhonemeController,BShkNonTransformController>::CreateImpl(BShkNonTransformController* a_val) const"
 25961,0x1403c26f0,0x1403d1f70,2,bool BSFaceGenAnimationData::UpdateDialoguePhonemes(float a_delta)
 25962,0x1403c27c0,0x1403d2040,2,bool BSFaceGenAnimationData::UpdateDialogueModifiers(float a_delta)
 25963,0x1403c2880,0x1403d2100,2,void BSFaceGenAnimationData::ReleaseFinishedDialogueData()
@@ -1086,6 +1095,7 @@
 26256,0x1403d24f0,0x1403e1e50,3,
 26258,0x1403D2970,0x1403E22E0,4,WhosWho::GetFaceRelatedData
 26259,0x1403d2a60,0x1403e23d0,3,"void BSFaceGenManager::PrepareHeadPartForShaders(BSFaceGenNiNode* a_node, BGSHeadPart* a_headPart, TESNPC* a_npc)"
+26282,0x1403d3e20,0x1403e3790,2,"void BSQueuedResourceCollection<BSResource::EntryDB<BSFaceGenDB::TRI::DBTraits>,2>::Run()"
 26291,0x1403d4070,0x1403e39e0,2,BSFaceGenModel* BSFaceGenModel::Ctor()
 26296,0x1403d42f0,0x1403e3c60,2,NiPointer<BSFaceGenMorphData>& BSFaceGenModel::GetMorphData(NiPointer<BSFaceGenMorphData>& a_out)
 26297,0x1403d4400,0x1403e3d70,2,"bool BSFaceGenModel::LoadModel(const char* a_modelPath, const char* a_triPath, bool a_unk)"
@@ -1179,21 +1189,38 @@
 26813,0x1403eb680,0x1403fb1d0,2,IAIWorldLocation* BGSPackageDataRefOLD::AllocateLocation(AIWorldLocationContext* a_context)
 26849,0x1403ebf80,0x1403fbad0,2,bool BGSPackageDataTargetSelector::GetDataAsString(BSString* a_dst)
 26921,0x1403ed6c0,0x1403fd210,2,bool BGSNamedPackageData<IPackageData>::IsNotEqual(IPackageData* a_other)
+26924,0x1403ed810,0x1403fd360,2,"bool BGSPackageDataBasicTemplate<IPackageData,int,&BSFixedString const kPackageDataIntTypeName,&int const iPackageDataIntDefault>::IsNotEqual(IPackageData* a_other)"
+26925,0x1403ed8a0,0x1403fd3f0,2,"bool BGSPackageDataBasicTemplate<IPackageData,float,&BSFixedString const kPackageDataFloatTypeName,&float const fPackageDataFloatDefault>::IsNotEqual(IPackageData* a_other)"
+26933,0x1403edb40,0x1403fd690,2,"void BGSPackageDataBasicTemplate<IPackageData,int,&BSFixedString const kPackageDataIntTypeName,&int const iPackageDataIntDefault>::Assign(IPackageData* a_other)"
+26934,0x1403edb80,0x1403fd6d0,2,"void BGSPackageDataBasicTemplate<IPackageData,float,&BSFixedString const kPackageDataFloatTypeName,&float const fPackageDataFloatDefault>::Assign(IPackageData* a_other)"
+26937,0x1403edd70,0x1403fd8c0,2,"IPackageData* BSTDerivedCreator<BGSPackageDataBool,IPackageData>::CreateImpl(IPackageData* a_val) const"
+26938,0x1403eddf0,0x1403fd940,2,"IPackageData* BSTDerivedCreator<BGSPackageDataFloat,IPackageData>::CreateImpl(IPackageData* a_val) const"
+26939,0x1403ede70,0x1403fd9c0,2,"IPackageData* BSTDerivedCreator<BGSPackageDataInt,IPackageData>::CreateImpl(IPackageData* a_val) const"
+26940,0x1403edef0,0x1403fda40,2,"IPackageData* BSTDerivedCreator<BGSPackageDataLocation,IPackageData>::CreateImpl(IPackageData* a_val) const"
+26941,0x1403edf80,0x1403fdad0,2,"IPackageData* BSTDerivedCreator<BGSPackageDataLocationWrapper,IPackageData>::CreateImpl(IPackageData* a_val) const"
+26942,0x1403edff0,0x1403fdb40,2,"IPackageData* BSTDerivedCreator<BGSPackageDataRefOLD,IPackageData>::CreateImpl(IPackageData* a_val) const"
+26943,0x1403ee090,0x1403fdbe0,2,"IPackageData* BSTDerivedCreator<BGSPackageDataTargetSelector,IPackageData>::CreateImpl(IPackageData* a_val) const"
 26952,0x1403ee1f0,0x1403fdd40,3,FindInPackageDataLocationMap
+26958,0x1403ee320,0x1403fde70,2,"void BGSPackageDataPointerTemplate<IPackageData,PackageTarget,&BSFixedString const kPackageDataTargetSelectorTypeName>::InitPackage(TESForm* a_form)"
 26965,0x1403ee540,0x1403fe090,2,void BGSNamedPackageData<IPackageData>::LoadPackage(TESFile* a_mod)
+26969,0x1403ee7a0,0x1403fe2f0,2,"void BGSPackageDataBasicTemplate<IPackageData,float,&BSFixedString const kPackageDataFloatTypeName,&float const fPackageDataFloatDefault>::LoadPackage(TESFile* a_mod)"
+26970,0x1403ee7d0,0x1403fe320,2,"void BGSPackageDataPointerTemplate<IPackageData,PackageTarget,&BSFixedString const kPackageDataTargetSelectorTypeName>::LoadPackage(TESFile* a_mod)"
 26991,0x1403eed70,0x1403fe8c0,2,IAIWorldLocation* ObjectListItem::AllocateLocation(AIWorldLocationContext* a_context)
 26992,0x1403eeeb0,0x1403fea00,2,"bool ObjectListItem::IsRefAtLocation(AIWorldLocationContext* a_context, TESObjectREFR* a_ref)"
 27015,0x1403ef9d0,0x1403ff520,2,IAIWorldLocation* BGSPackageDataObjectList::AllocateLocation(AIWorldLocationContext* a_context)
 27016,0x1403efb20,0x1403ff670,2,"bool BGSPackageDataObjectList::IsRefAtLocation(AIWorldLocationContext* a_context, TESObjectREFR* a_ref)"
+27056,0x1403f0c50,0x1404007a0,2,"IPackageData* BSTDerivedCreator<BGSPackageDataObjectList,IPackageData>::CreateImpl(IPackageData* a_val) const"
 27076,0x1403f11d0,0x140400d20,2,IAIWorldLocation* BGSPackageDataRef::AllocateLocation(AIWorldLocationContext* a_context)
 27077,0x1403f1330,0x140400e80,2,bool BGSPackageDataRef::IsNotEqual(IPackageData* a_other)
 27086,0x1403f1590,0x1404010e0,2,"bool BGSPackageDataRef::IsRefAtLocation(AIWorldLocationContext* a_context, TESObjectREFR* a_ref)"
+27104,0x1403f1d30,0x140401880,2,"IPackageData* BSTDerivedCreator<BGSPackageDataRef,IPackageData>::CreateImpl(IPackageData* a_val) const"
 27110,0x1403f1e40,0x140401990,2,void BGSPackageDataTopic::Assign(IPackageData* a_other)
 27111,0x1403f1e90,0x1404019e0,2,bool BGSPackageDataTopic::IsNotEqual(IPackageData* a_other)
 27114,0x1403f1f80,0x140401ad0,2,void BGSPackageDataTopic::InitPackage(TESForm* a_form)
 27115,0x1403f1f90,0x140401ae0,2,void BGSPackageDataTopic::LoadPackage(TESFile* a_mod)
 27116,0x1403f2030,0x140401b80,2,bool BGSPackageDataTopic::GetDataAsString(BSString* a_dst)
 27117,0x1403f2040,0x140401b90,3,RegisterPackageDataName_Topic
+27123,0x1403f2370,0x140401ec0,2,"IPackageData* BSTDerivedCreator<BGSPackageDataTopic,IPackageData>::CreateImpl(IPackageData* a_val) const"
 27126,0x1403f2430,0x140401f80,3,InitPackageDataAndProcedureNames
 27128,0x1403f4cb0,0x140404800,3,PackageDataLocationMap_Insert
 27129,0x1403f4e00,0x140404950,3,ExecStatePoolMap_Insert
@@ -1232,6 +1259,9 @@
 27275,0x1403f7150,0x140406ca0,3,BSTDerivedCreator_BGSProcedureWaitExecState::dtor_deleting
 27276,0x1403f7180,0x140406cd0,3,BSTDerivedCreator_BGSProcedureWanderExecState::dtor_deleting
 27302,0x1403f77e0,0x140407330,3,BGSProcedureTreeBranch::AddConditionalItem
+27315,0x1403f7ac0,0x140407610,2,"IAIWorldLocation* BSTDerivedCreator<BGSAIWorldLocationInteriorCell,IAIWorldLocation>::CreateImpl(IAIWorldLocation* a_val) const"
+27316,0x1403f7b20,0x140407670,2,"IAIWorldLocation* BSTDerivedCreator<BGSAIWorldLocationPointRadius,IAIWorldLocation>::CreateImpl(IAIWorldLocation* a_val) const"
+27317,0x1403f7b80,0x1404076d0,2,"IAIWorldLocation* BSTDerivedCreator<BGSAIWorldLocationRefRadius,IAIWorldLocation>::CreateImpl(IAIWorldLocation* a_val) const"
 27318,0x1403f7be0,0x140407730,3,BSTDerivedCreator_BGSProcedureAcquireExecState::Create
 27319,0x1403f7c40,0x140407790,3,BSTDerivedCreator_BGSProcedureActivateExecState::Create
 27320,0x1403f7ca0,0x1404077f0,3,BSTDerivedCreator_BGSProcedureDialogueActivateExecState::Create
@@ -1255,9 +1285,14 @@
 27338,0x1403f83d0,0x140407f20,3,BSTDerivedCreator_BGSProcedureShoutExecState::Create
 27339,0x1403f8430,0x140407f80,3,BSTDerivedCreator_BGSProcedureSitSleepExecState::Create
 27340,0x1403f8490,0x140407fe0,3,BSTDerivedCreator_BGSProcedureTravelExecState::Create
+27341,0x1403f84f0,0x140408040,2,"IProcedureTreeItem* BSTDerivedCreator<BGSProcedureTreeProcedure,IProcedureTreeItem>::CreateImpl(IProcedureTreeItem* a_val) const"
+27342,0x1403f8550,0x1404080a0,2,"IProcedureTreeItem* BSTDerivedCreator<BGSProcedureTreeRandom,IProcedureTreeItem>::CreateImpl(IProcedureTreeItem* a_val) const"
 27343,0x1403f85d0,0x140408120,3,BSTDerivedCreator_BGSProcedureTreeRandomExecState::Create
+27344,0x1403f8630,0x140408180,2,"IProcedureTreeItem* BSTDerivedCreator<BGSProcedureTreeSequence,IProcedureTreeItem>::CreateImpl(IProcedureTreeItem* a_val) const"
 27345,0x1403f86a0,0x1404081f0,3,BSTDerivedCreator_BGSProcedureTreeSequenceExecState::Create
+27346,0x1403f8710,0x140408260,2,"IProcedureTreeItem* BSTDerivedCreator<BGSProcedureTreeSimultaneous,IProcedureTreeItem>::CreateImpl(IProcedureTreeItem* a_val) const"
 27347,0x1403f8790,0x1404082e0,3,BSTDerivedCreator_BGSProcedureTreeSimultaneousExecState::Create
+27348,0x1403f8820,0x140408370,2,"IProcedureTreeItem* BSTDerivedCreator<BGSProcedureTreeStacked,IProcedureTreeItem>::CreateImpl(IProcedureTreeItem* a_val) const"
 27349,0x1403f8890,0x1404083e0,3,BSTDerivedCreator_BGSProcedureTreeStackedExecState::Create
 27350,0x1403f8900,0x140408450,3,BSTDerivedCreator_BGSProcedureUseIdleMarkerExecState::Create
 27351,0x1403f8960,0x1404084b0,3,BSTDerivedCreator_BGSProcedureUseMagicExecState::Create
@@ -2120,6 +2155,7 @@
 29972,0x14047c520,0x14048c4c0,2,bhkWorld* PathingCell::GetBhkWorld()
 29975,0x14047c5a0,0x14048c540,2,bool PathingCell::QLoaded()
 29976,0x14047c5e0,0x14048c580,2,bool PathingCell::IsInSameSpace(BSTSmartPointer<BSPathingCell>* a_otherCell)
+29985,0x14047ca10,0x14048c9b0,2,"BSPathingCell* BSTDerivedCreator<PathingCell,BSPathingCell>::CreateImpl(BSPathingCell* a_val) const"
 29992,0x14047ce60,0x14048ce00,2,PathingDoor* PathingDoor::ctor_default()
 29994,0x14047cf10,0x14048ceb0,2,PathingDoor* PathingDoor::ctor(std::uint32_t a_doorId)
 29995,0x14047cf80,0x14048cf20,2,std::uint32_t PathingDoor::GetTypeCRC()
@@ -2137,6 +2173,7 @@
 30009,0x14047d9a0,0x14048d940,2,float PathingDoor::GetAutoLoadFadeDistance()
 30011,0x14047dca0,0x14048dc40,2,bool PathingDoor::IsSameDoor(PathingDoor** a_other)
 30012,0x14047dd20,0x14048dcc0,2,"void PathingDoor::GetDebugText(char* a_buf, std::int32_t a_size)"
+30029,0x14047e680,0x14048e620,2,PathingLockData::Ctor
 30030,0x14047e6d0,0x14048e670,4,"PathingLockData* PathingLockData::PathingLockData(const ObjectRefHandle& a_handle, bool a_flag)"
 30031,0x14047e7a0,0x14048e740,4,void PathingLockData::~PathingLockData()
 30034,0x14047e840,0x14048e7e0,2,BSPathingLockData* PathingLockData::Clone()
@@ -2555,6 +2592,7 @@
 31812,0x1404dda20,0x1404edb90,4,"void MotionDataContainer::ProcessTranslationData(float a_time, NiPoint3& a_out)"
 31813,0x1404ddc90,0x1404ede00,4,"void MotionDataContainer::ProcessRotationData(float a_time, NiQuaternion& a_out)"
 31850,0x1404ded70,0x1404eeee0,4,"bool ParseClipMotionData(BSResourceNiBinaryStream* a_stream, void* a_entries, void* a_indices, std::int32_t a_count)"
+31936,0x1404e5400,0x1404f5570,2,"void BSQueuedResourceCollection<BSResource::EntryDB<BShkbHkxDB::DBTraits>,2>::Run()"
 31940,0x1404e5780,0x1404f58f0,3,"bool GetClipInfoFromEvent(TESObjectREFR* a, const BSFixedString& event_name, ClipInfo& clipInfo)"
 31942,0x1404e59c0,0x1404f5b30,3,"bool GetClipInfo(BSAnimationGraphManager* mngr, int32_t activeGraph_ind, const BSScrapArray<BSFixedString>& events, ClipInfo& clipInfo)"
 31944,0x1404e5c00,0x1404f5d70,4,"bool SumAnimationDataToTime(const ClipInfo& clipInfo, float time, NiPoint3& translation, NiQuaternion& rotation)"
@@ -2594,9 +2632,26 @@
 32370,0x1404f96c0,0x140509850,4,void DragonCameraState::HandleLookInput_1404F96C0 (DragonCameraState * a_this)
 32398,0x1404faf10,0x14050b3b0,2,void CombatBehaviorTreeRanged::Initialize()
 32426,0x1404fbcc0,0x14050c160,3,void CombatBehaviorStack::CheckBuffer(std::uint32_t a_size)
+32428,0x1404fbe10,0x14050c2b0,2,"void CombatBehaviorTreeConditionalNode<CombatBehaviorExpression<CombatBehaviorFunc1<bool (__cdecl*)(float),CombatBehaviorExpression<CombatBehaviorFunc1<float (__cdecl*)(Actor* ),CombatBehaviorTree::CombatBehaviorAttacker>>>>>::Enter(CombatBehaviorThread* a_thread)"
+32429,0x1404fbe70,0x14050c310,2,"void CombatBehaviorTreeCreateContextNode1<CombatBehaviorContextRanged,CombatBehaviorExpression<CombatBehaviorMemberFunc<CombatBehaviorEquipContext,NiPointer<CombatInventoryItem> const &  (__cdecl CombatBehaviorEquipContext::*)(void)const>>>::Enter(CombatBehaviorThread* a_thread)"
+32430,0x1404fbee0,0x14050c380,2,"void CombatBehaviorTreeNodeObject1<CombatBehaviorIdle,float>::Enter(CombatBehaviorThread* a_thread)"
+32431,0x1404fbf00,0x14050c3a0,2,void CombatBehaviorTreeNodeObject<CombatBehaviorFallbackSelector<NextChildSelector>>::Enter(CombatBehaviorThread* a_thread)
+32432,0x1404fbf30,0x14050c3d0,2,void CombatBehaviorTreeNodeObject<CombatBehaviorRangedAttack>::Enter(CombatBehaviorThread* a_thread)
+32433,0x1404fbf60,0x14050c400,2,void CombatBehaviorTreeNodeObject<CombatBehaviorRepeat>::Enter(CombatBehaviorThread* a_thread)
+32434,0x1404fbfa0,0x14050c440,2,void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextRanged>::Exit(CombatBehaviorThread* a_thread)
 32436,0x1404fc010,0x14050c4b0,3,void CombatBehaviorIdle::Update()
+32437,0x1404fc020,0x14050c4c0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorRangedAttack>::Exit(CombatBehaviorThread* a_thread)
 32446,0x1404fc450,0x14050c8f0,2,void* GetCombatTargetHandle(void* a_out)
+32453,0x1404fc550,0x14050c9f0,2,"void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextRanged>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+32454,0x1404fc5d0,0x14050ca70,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFallbackSelector<NextChildSelector>>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+32455,0x1404fc620,0x14050cac0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorIdle>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+32456,0x1404fc660,0x14050cb00,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorRangedAttack>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+32457,0x1404fc6c0,0x14050cb60,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorRepeat>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 32458,0x1404fc700,0x14050cba0,3,NiPointer<CombatInventoryItem> const& CombatBehaviorEquipContext::GetCombatItem()
+32460,0x1404fc740,0x14050cbe0,2,"void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextRanged>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+32461,0x1404fc790,0x14050cc30,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFallbackSelector<NextChildSelector>>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+32463,0x1404fc7f0,0x14050cc90,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorRangedAttack>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+32465,0x1404fc850,0x14050ccf0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFallbackSelector<NextChildSelector>>::Update(CombatBehaviorThread* a_thread)
 32468,0x1404fcde0,0x14050d280,3,void CombatController::Dtor()
 32469,0x1404FD1C0,0x14050D660,4,bool __fastcall CombatAIHook::sub_1404FD1C0(RE::Actor* a1)
 32488,0x1404fdfe0,0x14050e480,3,CombatController::SetTarget
@@ -2892,6 +2947,10 @@
 34862,0x140589a60,0x1405910d0,4,void BGSSaveLoadManager::ProcessEvents (BGSSaveLoadManager * a_this)
 34871,0x14058ac60,0x1405922d0,3,Win32FileType::ShowOutdatedSaveMessage
 34950,0x14058efc0,0x140596680,2,void AppendModdedSuffix(BSFixedString* a_saveName)
+34964,0x14058ff80,0x140597640,2,"bool BSTCommonMessageQueue<BSTSmartPointer<bgs::saveload::Request,BSTSmartPointerIntrusiveRefCount>>::Pop(BSTSmartPointer<bgs::saveload::Request,BSTSmartPointerIntrusiveRefCount>* a_obj)"
+34965,0x14058ffd0,0x140597690,2,"bool BSTCommonMessageQueue<BSTSmartPointer<bgs::saveload::Request,BSTSmartPointerIntrusiveRefCount>>::Push(BSTSmartPointer<bgs::saveload::Request,BSTSmartPointerIntrusiveRefCount>* a_obj)"
+34984,0x140591200,0x1405988c0,2,"bool BSTCommonMessageQueue<BSTSmartPointer<bgs::saveload::Request,BSTSmartPointerIntrusiveRefCount>>::TryPop(BSTSmartPointer<bgs::saveload::Request,BSTSmartPointerIntrusiveRefCount>* a_obj)"
+34985,0x140591260,0x140598920,2,"bool BSTCommonMessageQueue<BSTSmartPointer<bgs::saveload::Request,BSTSmartPointerIntrusiveRefCount>>::TryPush(BSTSmartPointer<bgs::saveload::Request,BSTSmartPointerIntrusiveRefCount>* a_obj)"
 35026,0x140592eb0,0x14059a570,4,FormID BGSNumericIDIndex::GetNumericID()
 35027,0x140592f10,0x14059a5d0,4,void BGSNumericIDIndex::SetNumericID(FormID a_formID)
 35041,0x1405942b0,0x14059b970,3,BGSSaveLoadManager::BuildSaveGameHistoryReport
@@ -2999,6 +3058,7 @@
 35754,0x1405bc350,0x1405c4770,3,void BSFadeNode::RegisterFocusShadowActor()
 35771,0x1405bc830,0x1405c4c10,3,void ClearFocusShadowActors()
 35779,0x1405bcaf0,0x1405c4f50,2,bool BSTCommonScrapHeapMessageQueue<BSPackedTask>::PushInternal(BSPackedTask* a_obj)
+35790,0x1405bd0f0,0x1405c5550,2,bool BSTCommonMessageQueue<BSPackedTask>::Pop(BSPackedTask* a_obj)
 35791,0x1405bd1b0,0x1405c5610,2,"BSEventNotifyControl DoorObstacleAdapter::ProcessEvent(TESOpenCloseEvent* a_event, BSTEventSource<TESOpenCloseEvent>* a_eventSource)"
 35792,0x1405bd250,0x1405c56b0,2,"BSEventNotifyControl MovementAvoidBoxEventAdapter::ProcessEvent(PositionPlayerEvent* a_event, BSTEventSource<PositionPlayerEvent>* a_eventSource)"
 35793,0x1405bd2c0,0x1405c5720,2,"BSEventNotifyControl PathManagerPositionPlayerAdapter::ProcessEvent(PositionPlayerEvent* a_event, BSTEventSource<PositionPlayerEvent>* a_eventSource)"
@@ -3011,7 +3071,10 @@
 35800,0x1405bd570,0x1405c59d0,2,"BSEventNotifyControl PlayerSleepWaitMovementControllerAdapter::ProcessEvent(TESSleepStopEvent* a_event, BSTEventSource<TESSleepStopEvent>* a_eventSource)"
 35801,0x1405bd5d0,0x1405c5a30,2,"BSEventNotifyControl PlayerSleepWaitMovementControllerAdapter::ProcessEvent(TESWaitStartEvent* a_event, BSTEventSource<TESWaitStartEvent>* a_eventSource)"
 35802,0x1405bd620,0x1405c5a80,2,"BSEventNotifyControl PlayerSleepWaitMovementControllerAdapter::ProcessEvent(TESWaitStopEvent* a_event, BSTEventSource<TESWaitStopEvent>* a_eventSource)"
+35805,0x1405bd7b0,0x1405c5c20,2,bool BSTCommonMessageQueue<BSPackedTask>::Push(BSPackedTask* a_obj)
 35825,0x1405beb00,0x1405c6f70,3,void StartVMInitThread()
+35828,0x1405beca0,0x1405c7110,2,bool BSTCommonMessageQueue<BSPackedTask>::TryPop(BSPackedTask* a_obj)
+35829,0x1405bed00,0x1405c7170,2,bool BSTCommonMessageQueue<BSPackedTask>::TryPush(BSPackedTask* a_obj)
 35869,0x1405c0090,0x1405c85b0,3,void SceneGraph::SetNearDistance(float* a_distance)
 35871,0x1405c00c0,0x1405c85e0,3,void SceneGraph::SetFarDistance(float a_distance)
 35882,0x1405c0610,0x1405c8b30,3,po3tweaks::ScreenshotToConsole::DebugNotification
@@ -3999,6 +4062,7 @@
 40606,0x1406e9a30,0x140710920,2,"bool ActorMover::GetPathingDoor(std::uint32_t* a_outDoorHandle, BSPathingLocation* a_outLocation)"
 40612,0x1406e9fc0,0x140710eb0,2,"void Character::SubmitPathRequest(void* a_request, void* a_location, float a_unkFloat, void* a_unk)"
 40627,0x1406eaa80,0x140711970,3,MovementParametersFixed* MovementParametersFixed::dtor_deleting(std::uint32_t a_flags)
+40628,0x1406eaab0,0x1407119a0,2,"IMovementParameters* BSTDerivedCreator<MovementParameters,IMovementParameters>::CreateImpl(IMovementParameters* a_val) const"
 40632,0x1406eac00,0x140711af0,2,float MovementParametersFixed::GetInverseAcceleration()
 40633,0x1406eac90,0x140711b80,2,float MovementParametersFixed::GetInverseAngleAcceleration()
 40634,0x1406ead20,0x140711c10,2,float MovementParametersFixed::GetInverseDeceleration()
@@ -4257,8 +4321,102 @@
 41694,0x14071B670,0x140746010,2,"unk_14071B670(__m128 *a1, int64 a2, int64 a3, Actor *a4, float *a5)"
 41778,0x1407220b0,0x14074ca60,3,RE::ArrowReleaseHandler::Handle_1407220B0
 41824,0x1407236c0,0x14074e0d0,3,"std::uint64_t Actor::SetSitSleepStateChoosingFurniture(SIT_SLEEP_STATE* a_state, bool a_keepFurniture)"
+42218,0x140729010,0x140753a20,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<ActionActivateDoneHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42219,0x140729070,0x140753a80,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<AddRagdollHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42220,0x1407290d0,0x140753ae0,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<AllowRotationHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42221,0x140729130,0x140753b40,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<AnimatedCameraDeltaStartHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42222,0x140729190,0x140753ba0,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<AnimatedCameraEndHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42223,0x1407291f0,0x140753c00,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<AnimatedCameraStartHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42224,0x140729250,0x140753c60,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<AnimationDrivenHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42225,0x1407292b0,0x140753cc0,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<AnimationObjectDrawHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42226,0x140729310,0x140753d20,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<AnimationObjectLoadHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42227,0x140729370,0x140753d80,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<AnticipateAttackHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42228,0x1407293d0,0x140753de0,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<ArrowAttachHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42229,0x140729430,0x140753e40,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<ArrowDetachHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42230,0x140729490,0x140753ea0,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<ArrowReleaseHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42231,0x1407294f0,0x140753f00,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<AttackStopHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42232,0x140729550,0x140753f60,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<AttackWinEndHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42233,0x1407295b0,0x140753fc0,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<AttackWinStartHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42234,0x140729610,0x140754020,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<BedEnterHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42235,0x140729670,0x140754080,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<BedFurnitureExitHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42236,0x1407296d0,0x1407540e0,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<BowDrawnHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42237,0x140729730,0x140754140,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<BowReleaseHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42238,0x140729790,0x1407541a0,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<BowZoomStartHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42239,0x1407297f0,0x140754200,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<BowZoomStopHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42240,0x140729850,0x140754260,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<CameraOverrideStartHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42241,0x1407298b0,0x1407542c0,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<CameraOverrideStopHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42242,0x140729910,0x140754320,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<CameraShakeHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42243,0x140729970,0x140754380,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<ChairEnterHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42244,0x1407299d0,0x1407543e0,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<ChairFurnitureExitHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42245,0x140729a30,0x140754440,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<DeathEmoteHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42246,0x140729a90,0x1407544a0,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<DeathStopHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42247,0x140729af0,0x140754500,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<DecapitateHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42248,0x140729b50,0x140754560,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<DisableCharacterBumperHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42249,0x140729bb0,0x1407545c0,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<DisableCharacterPitchHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42250,0x140729c10,0x140754620,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<EnableCharacterBumperHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42251,0x140729c70,0x140754680,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<EnableCharacterPitchHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42252,0x140729cd0,0x1407546e0,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<EndSummonAnimationHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42253,0x140729d30,0x140754740,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<ExitCartBeginHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42254,0x140729d90,0x1407547a0,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<ExitCartEndHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42255,0x140729df0,0x140754800,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<FlightActionEndHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42256,0x140729e50,0x140754860,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<FlightActionEntryEndHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42257,0x140729eb0,0x1407548c0,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<FlightActionGrabHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42258,0x140729f10,0x140754920,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<FlightActionHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42259,0x140729f70,0x140754980,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<FlightActionReleaseHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42260,0x140729fd0,0x1407549e0,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<FlightCrashLandStartHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42261,0x14072a030,0x140754a40,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<FlightCruisingHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42262,0x14072a090,0x140754aa0,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<FlightHoveringHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42263,0x14072a0f0,0x140754b00,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<FlightLandEndHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42264,0x14072a150,0x140754b60,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<FlightLandHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42265,0x14072a1b0,0x140754bc0,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<FlightLandingHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42266,0x14072a210,0x140754c20,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<FlightPerchingHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42267,0x14072a270,0x140754c80,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<FlightTakeOffHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42268,0x14072a2d0,0x140754ce0,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<GetUpEndHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42269,0x14072a330,0x140754d40,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<GetUpStartHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42270,0x14072a390,0x140754da0,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<HeadTrackingOffHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42271,0x14072a3f0,0x140754e00,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<HeadTrackingOnHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42272,0x14072a450,0x140754e60,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<HitFrameHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42273,0x14072a4b0,0x140754ec0,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<IdleDialogueEnterHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42274,0x14072a510,0x140754f20,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<IdleDialogueExitHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42275,0x14072a570,0x140754f80,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<InterruptCastHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42276,0x14072a5d0,0x140754fe0,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<JumpAnimEventHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42277,0x14072a630,0x140755040,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<KillActorHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42278,0x14072a690,0x1407550a0,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<KillMoveEndHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42279,0x14072a6f0,0x140755100,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<KillMoveStartHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42280,0x14072a750,0x140755160,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<LeftHandSpellCastHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42281,0x14072a7b0,0x1407551c0,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<LeftHandSpellFireHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42282,0x14072a810,0x140755220,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<MTStateHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42283,0x14072a870,0x140755280,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<MotionDrivenHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42284,0x14072a8d0,0x1407552e0,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<MountDismountEndHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42285,0x14072a930,0x140755340,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<NPCAttachHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42286,0x14072a990,0x1407553a0,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<NPCDetachHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42287,0x14072a9f0,0x140755400,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<PairedStopHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42288,0x14072aa50,0x140755460,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<PickNewIdleHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42289,0x14072aab0,0x1407554c0,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<PitchOverrideEndHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42290,0x14072ab10,0x140755520,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<PitchOverrideStartHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42291,0x14072ab70,0x140755580,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<PlayerBedEnterHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42292,0x14072abd0,0x1407555e0,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<PlayerChairEnterHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42293,0x14072ac30,0x140755640,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<PlayerFurnitureExitHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42294,0x14072ac90,0x1407556a0,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<RagdollStartHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42295,0x14072acf0,0x140755700,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<RecoilStopHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42296,0x14072ad50,0x140755760,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<RemoveRagdollHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42297,0x14072adb0,0x1407557c0,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<RightHandSpellCastHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42298,0x14072ae10,0x140755820,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<RightHandSpellFireHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42299,0x14072ae70,0x140755880,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<RightHandWeaponDrawHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42300,0x14072aed0,0x1407558e0,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<RightHandWeaponSheatheHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42301,0x14072af30,0x140755940,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<StaggeredStopHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42302,0x14072af90,0x1407559a0,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<StopMountCameraHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42303,0x14072aff0,0x140755a00,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<VampireFeedEndHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42304,0x14072b050,0x140755a60,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<VoiceSpellCastHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42305,0x14072b0b0,0x140755ac0,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<VoiceSpellFireHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42306,0x14072b110,0x140755b20,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<WeaponBeginDrawRightHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42307,0x14072b170,0x140755b80,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<WeaponBeginSheatheRightHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42308,0x14072b1d0,0x140755be0,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<WeaponLeftSwingHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42309,0x14072b230,0x140755c40,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<WeaponRightSwingHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
+42310,0x14072b290,0x140755ca0,2,"IHandlerFunctor<Actor,BSFixedStringCI>* BSTDerivedCreator<ZeroPitchHandler,IHandlerFunctor<Actor,BSFixedStringCI>>::CreateImpl(IHandlerFunctor<Actor,BSFixedStringCI>* a_val) const"
 42411,0x14072c300,0x140756d10,3,"bool SendActionAnimEvent(void* a_manager, BGSActionData* a_action)"
 42420,0x14072cc80,0x140757690,4,AnimObjectSwapper::AnimObjectSwapHook
+42492,0x14072f920,0x14075a330,2,"BShkNonTransformController* BSTDerivedCreator<BGShkMatFadeController,BShkNonTransformController>::CreateImpl(BShkNonTransformController* a_val) const"
 42534,0x140731fe0,0x14075ca40,2,bool ArrowProjectile::ProcessImpacts()
 42540,0x140732120,0x14075cb80,2,void ArrowProjectile::PostLoad3D(NiAVObject* a_root)
 42547,0x140732400,0x14075ce60,4,ArrowProjectile::GetImpactData
@@ -4335,6 +4493,11 @@
 43163,0x14075c8f0,0x140787c40,2,bool CombatProjectileAimController::IsAimWithinRadius()
 43168,0x14075d1b0,0x140788500,2,void CombatProjectileAimController::OnProjectileCast()
 43174,0x14075d7b0,0x140788B00,3,void CombatProjectileAimController::UpdateAimSolution(CombatProjectileAimController* a_this)
+43215,0x14075f3e0,0x14078a730,2,"CombatObject* BSTDerivedCreator<CombatAimController,CombatObject>::CreateImpl(CombatObject* a_val) const"
+43216,0x14075f460,0x14078a7b0,2,"CombatObject* BSTDerivedCreator<CombatDisableAimController,CombatObject>::CreateImpl(CombatObject* a_val) const"
+43217,0x14075f4e0,0x14078a830,2,"CombatObject* BSTDerivedCreator<CombatMeleeAimController,CombatObject>::CreateImpl(CombatObject* a_val) const"
+43218,0x14075f560,0x14078a8b0,2,"CombatObject* BSTDerivedCreator<CombatProjectileAimController,CombatObject>::CreateImpl(CombatObject* a_val) const"
+43219,0x14075f600,0x14078a950,2,"CombatObject* BSTDerivedCreator<CombatTrackTargetAimController,CombatObject>::CreateImpl(CombatObject* a_val) const"
 43235,0x14075fd20,0x14078b070,4,"CombatAnimation* CombatAnimation::Ctor0(Actor* a_actor, ANIM a_anim)"
 43236,0x14075fdd0,0x14078b120,4,"CombatAnimation* CombatAnimation::Ctor1(Actor* a_actor, TESObjectREFR* a_target, ANIM a_anim)"
 43237,0x14075fe80,0x14078b1d0,4,"CombatAnimation* CombatAnimation::Ctor2(Actor* a_actor, BGSAction* a_action)"
@@ -4353,6 +4516,7 @@
 43258,0x1407608a0,0x14078bbf0,2,void CombatAreaRadius::SaveGame(BGSSaveGameBuffer* a_buf)
 43259,0x1407608f0,0x14078bc40,2,void CombatAreaRadius::LoadGame(BGSLoadGameBuffer* a_buf)
 43263,0x140760bc0,0x14078bf10,2,void CombatAreaReference::SaveGame(BGSSaveGameBuffer* a_buf)
+43300,0x140761af0,0x14078ce40,2,"CombatObject* BSTDerivedCreator<CombatAreaReference,CombatObject>::CreateImpl(CombatObject* a_val) const"
 43311,0x140761eb0,0x14078d200,3,CombatBlackboardFlag::CombatBlackboardFlag()
 43317,0x1407624c0,0x14078d810,3,void CombatBlackboardManager::AddMember(const CombatBlackboardKeyBase* val)
 43318,0x140762560,0x14078d8b0,3,const CombatBlackboardFlag* CombatBlackboardManager::GetFlag(uint32_t flag)
@@ -4364,6 +4528,9 @@
 43406,0x140766b40,0x140791e90,2,void CombatCoverLocation::LoadGame(BGSLoadGameBuffer* a_buf)
 43416,0x1407678c0,0x140792c10,2,void CombatCoverSearchDebugData::SaveGame(BGSSaveGameBuffer* a_buf)
 43417,0x1407679e0,0x140792d30,2,void CombatCoverSearchDebugData::LoadGame(BGSLoadGameBuffer* a_buf)
+43450,0x1407686a0,0x1407939f0,2,"CombatObject* BSTDerivedCreator<CombatCoverLocation,CombatObject>::CreateImpl(CombatObject* a_val) const"
+43452,0x1407687c0,0x140793b10,2,"CombatObject* BSTDerivedCreator<CombatCoverSearchDebugData,CombatObject>::CreateImpl(CombatObject* a_val) const"
+43453,0x140768820,0x140793b70,2,"CombatObject* BSTDerivedCreator<CombatCoverSearchResult,CombatObject>::CreateImpl(CombatObject* a_val) const"
 43466,0x140768c10,0x140793f60,4,"bool SayCombatDialogueResolveHandles(void* a_arg1, CombatController* a_combatController, std::int32_t a_type, std::int32_t a_subtype, bool a_flag)"
 43477,0x140769cf0,0x140795040,2,std::int32_t CombatGroupDetectionListener::UpdateKnowledge(ActorKnowledge* a_knowledge)
 43482,0x14076A450,0x1407957A0,3,bool CombatGroup::AddTarget(TESObjectREFR* a_target)
@@ -4410,6 +4577,11 @@
 43851,0x14077f460,0x1407aa7b0,2,void CombatInventoryItemTorch::SaveGame(BGSSaveGameBuffer* a_buf)
 43852,0x14077f4b0,0x1407aa800,2,void CombatInventoryItemTorch::LoadGame(BGSLoadGameBuffer* a_buf)
 43864,0x14077f760,0x1407aaab0,4,"float CombatController::GetMagicItemScore(TESForm* a_form, int a_kind)"
+43914,0x1407809f0,0x1407abd40,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMelee,CombatObject>::CreateImpl(CombatObject* a_val) const"
+43915,0x140780a70,0x1407abdc0,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemOneHandedBlock,CombatObject>::CreateImpl(CombatObject* a_val) const"
+43916,0x140780af0,0x1407abe40,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemRanged,CombatObject>::CreateImpl(CombatObject* a_val) const"
+43917,0x140780b70,0x1407abec0,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemShield,CombatObject>::CreateImpl(CombatObject* a_val) const"
+43918,0x140780bf0,0x1407abf40,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemTorch,CombatObject>::CreateImpl(CombatObject* a_val) const"
 43952,0x140781f00,0x1407ad250,4,RE::CombatMagicCaster::StaticCheckTargetValid
 43955,0x1407821f0,0x1407ad540,2,bool CombatMagicCaster::CanAffordCast(Actor* a_caster)
 43956,0x140782330,0x1407ad680,4,RE::CombatMagicCaster::CheckTargetValid
@@ -4568,6 +4740,96 @@
 44899,0x14079a8e0,0x1407c5c30,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterSummon>::Clone()"
 44900,0x14079a990,0x1407c5ce0,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterTargetEffect>::Clone()"
 44901,0x14079aa40,0x1407c5d90,2,"CombatInventoryItem* CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterWard>::Clone()"
+44902,0x14079aaf0,0x1407c5e40,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterArmor>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44903,0x14079ab70,0x1407c5ec0,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterBoundItem>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44904,0x14079abf0,0x1407c5f40,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterCloak>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44905,0x14079ac70,0x1407c5fc0,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterDisarm>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44906,0x14079acf0,0x1407c6040,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterInvisibility>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44907,0x14079ad70,0x1407c60c0,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterLight>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44908,0x14079adf0,0x1407c6140,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterOffensive>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44909,0x14079ae70,0x1407c61c0,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterParalyze>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44910,0x14079aef0,0x1407c6240,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterReanimate>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44911,0x14079af70,0x1407c62c0,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterRestore>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44912,0x14079aff0,0x1407c6340,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterScript>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44913,0x14079b070,0x1407c63c0,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterStagger>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44914,0x14079b0f0,0x1407c6440,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterSummon>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44915,0x14079b170,0x1407c64c0,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterTargetEffect>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44916,0x14079b1f0,0x1407c6540,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterWard>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44917,0x14079b270,0x1407c65c0,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterArmor>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44918,0x14079b2f0,0x1407c6640,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterBoundItem>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44919,0x14079b370,0x1407c66c0,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterCloak>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44920,0x14079b3f0,0x1407c6740,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterDisarm>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44921,0x14079b470,0x1407c67c0,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterInvisibility>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44922,0x14079b4f0,0x1407c6840,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterLight>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44923,0x14079b570,0x1407c68c0,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterOffensive>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44924,0x14079b5f0,0x1407c6940,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterParalyze>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44925,0x14079b670,0x1407c69c0,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterReanimate>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44926,0x14079b6f0,0x1407c6a40,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterRestore>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44927,0x14079b770,0x1407c6ac0,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterScript>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44928,0x14079b7f0,0x1407c6b40,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterStagger>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44929,0x14079b870,0x1407c6bc0,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterSummon>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44930,0x14079b8f0,0x1407c6c40,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterTargetEffect>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44931,0x14079b970,0x1407c6cc0,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterWard>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44932,0x14079b9f0,0x1407c6d40,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterArmor>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44933,0x14079ba70,0x1407c6dc0,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterBoundItem>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44934,0x14079baf0,0x1407c6e40,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterCloak>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44935,0x14079bb70,0x1407c6ec0,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterDisarm>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44936,0x14079bbf0,0x1407c6f40,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterInvisibility>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44937,0x14079bc70,0x1407c6fc0,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterLight>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44938,0x14079bcf0,0x1407c7040,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterOffensive>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44939,0x14079bd70,0x1407c70c0,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterParalyze>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44940,0x14079bdf0,0x1407c7140,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterReanimate>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44941,0x14079be70,0x1407c71c0,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterRestore>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44942,0x14079bef0,0x1407c7240,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterScript>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44943,0x14079bf70,0x1407c72c0,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterStagger>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44944,0x14079bff0,0x1407c7340,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterSummon>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44945,0x14079c070,0x1407c73c0,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterTargetEffect>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44946,0x14079c0f0,0x1407c7440,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterWard>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44947,0x14079c170,0x1407c74c0,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterArmor>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44948,0x14079c1f0,0x1407c7540,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterBoundItem>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44949,0x14079c270,0x1407c75c0,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterCloak>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44950,0x14079c2f0,0x1407c7640,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterDisarm>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44951,0x14079c370,0x1407c76c0,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterInvisibility>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44952,0x14079c3f0,0x1407c7740,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterLight>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44953,0x14079c470,0x1407c77c0,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterOffensive>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44954,0x14079c4f0,0x1407c7840,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterParalyze>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44955,0x14079c570,0x1407c78c0,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterReanimate>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44956,0x14079c5f0,0x1407c7940,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterRestore>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44957,0x14079c670,0x1407c79c0,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterScript>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44958,0x14079c6f0,0x1407c7a40,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterStagger>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44959,0x14079c770,0x1407c7ac0,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterSummon>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44960,0x14079c7f0,0x1407c7b40,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterTargetEffect>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44961,0x14079c870,0x1407c7bc0,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterWard>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44962,0x14079c8f0,0x1407c7c40,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterArmor>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44963,0x14079c970,0x1407c7cc0,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterBoundItem>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44964,0x14079c9f0,0x1407c7d40,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterCloak>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44965,0x14079ca70,0x1407c7dc0,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterDisarm>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44966,0x14079caf0,0x1407c7e40,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterInvisibility>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44967,0x14079cb70,0x1407c7ec0,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterLight>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44968,0x14079cbf0,0x1407c7f40,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterOffensive>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44969,0x14079cc70,0x1407c7fc0,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterParalyze>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44970,0x14079ccf0,0x1407c8040,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterReanimate>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44971,0x14079cd70,0x1407c80c0,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterRestore>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44972,0x14079cdf0,0x1407c8140,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterScript>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44973,0x14079ce70,0x1407c81c0,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterStagger>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44974,0x14079cef0,0x1407c8240,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterSummon>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44975,0x14079cf70,0x1407c82c0,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterTargetEffect>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44976,0x14079cff0,0x1407c8340,2,"CombatObject* BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterWard>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44977,0x14079d070,0x1407c83c0,2,"CombatObject* BSTDerivedCreator<CombatMagicCasterArmor,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44978,0x14079d0f0,0x1407c8440,2,"CombatObject* BSTDerivedCreator<CombatMagicCasterBoundItem,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44979,0x14079d170,0x1407c84c0,2,"CombatObject* BSTDerivedCreator<CombatMagicCasterCloak,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44980,0x14079d1f0,0x1407c8540,2,"CombatObject* BSTDerivedCreator<CombatMagicCasterDisarm,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44981,0x14079d270,0x1407c85c0,2,"CombatObject* BSTDerivedCreator<CombatMagicCasterInvisibility,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44982,0x14079d2f0,0x1407c8640,2,"CombatObject* BSTDerivedCreator<CombatMagicCasterLight,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44983,0x14079d370,0x1407c86c0,2,"CombatObject* BSTDerivedCreator<CombatMagicCasterOffensive,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44984,0x14079d3f0,0x1407c8740,2,"CombatObject* BSTDerivedCreator<CombatMagicCasterParalyze,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44985,0x14079d470,0x1407c87c0,2,"CombatObject* BSTDerivedCreator<CombatMagicCasterReanimate,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44986,0x14079d4f0,0x1407c8840,2,"CombatObject* BSTDerivedCreator<CombatMagicCasterRestore,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44987,0x14079d570,0x1407c88c0,2,"CombatObject* BSTDerivedCreator<CombatMagicCasterScript,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44988,0x14079d5f0,0x1407c8940,2,"CombatObject* BSTDerivedCreator<CombatMagicCasterStagger,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44989,0x14079d670,0x1407c89c0,2,"CombatObject* BSTDerivedCreator<CombatMagicCasterSummon,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44990,0x14079d6f0,0x1407c8a40,2,"CombatObject* BSTDerivedCreator<CombatMagicCasterTargetEffect,CombatObject>::CreateImpl(CombatObject* a_val) const"
+44991,0x14079d770,0x1407c8ac0,2,"CombatObject* BSTDerivedCreator<CombatMagicCasterWard,CombatObject>::CreateImpl(CombatObject* a_val) const"
 44992,0x14079d7f0,0x1407c8b40,2,"void* CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterArmor>::CreateCaster()"
 44993,0x14079d860,0x1407c8bb0,2,"void* CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterBoundItem>::CreateCaster()"
 44994,0x14079d8d0,0x1407c8c20,2,"void* CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterCloak>::CreateCaster()"
@@ -4656,7 +4918,11 @@
 45698,0x1407ac7c0,0x1407d7b10,2,"bool CombatTargetLocation::IsAngleToPointWithinTolerance(const NiPoint3& a_from, const NiPoint3& a_to, float a_scale)"
 45702,0x1407ac9f0,0x1407d7d40,3,"CombatTargetLocationSearch::CombatTargetLocationSearch(Actor* actor, Actor* target, float R)"
 45738,0x1407b0040,0x1407db390,2,CombatPathingGoalPolicyFindTargetLocation* CombatPathingGoalPolicyFindTargetLocation::CombatPathingGoalPolicyFindTargetLocation(CombatNavmeshSearch* a_search)
+45777,0x1407b2220,0x1407dd570,2,CombatTargetLocationSearch::Ctor
 45840,0x1407b3720,0x1407dea70,2,"void CombatPathingRequestGeneric<CombatPathingGoalPolicyFindTargetLocation,CombatPathingSearchPolicyStandard>::CopyTo(BSPathingRequest& a_dest)"
+45841,0x1407b3770,0x1407deac0,2,"CombatObject* BSTDerivedCreator<CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFindTargetLocation,CombatPathingSearchPolicyStandard>,CombatPathDestinationRef>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+45844,0x1407b38e0,0x1407dec30,2,"CombatObject* BSTDerivedCreator<CombatTargetLocationSearch,CombatObject>::CreateImpl(CombatObject* a_val) const"
+45845,0x1407b3940,0x1407dec90,2,"CombatObject* BSTDerivedCreator<CombatTargetLocationSearchResult,CombatObject>::CreateImpl(CombatObject* a_val) const"
 45880,0x1407b4c80,0x1407dffd0,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFindTargetLocation,CombatPathingSearchPolicyStandard>,CombatPathDestinationRef>::LoadGame(BGSLoadGameBuffer* a_buf)"
 45890,0x1407b5190,0x1407e04e0,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFindTargetLocation,CombatPathingSearchPolicyStandard>,CombatPathDestinationRef>::SaveGame(BGSSaveGameBuffer* a_buf)"
 45914,0x1407b5c80,0x1407e0fd0,2,void CombatTargetSelector::SaveGame(BGSSaveGameBuffer* a_buf)
@@ -4664,6 +4930,9 @@
 45919,0x1407b5f30,0x1407e1280,2,void CombatTargetSelectorStandard::SaveGame(BGSSaveGameBuffer* a_buf)
 45920,0x1407b5f70,0x1407e12c0,2,void CombatTargetSelectorStandard::LoadGame(BGSLoadGameBuffer* a_buf)
 45923,0x1407b6770,0x1407e1ac0,4,sub_1407B6770
+45945,0x1407b6fe0,0x1407e2330,2,"CombatObject* BSTDerivedCreator<CombatTargetSelectorFixed,CombatObject>::CreateImpl(CombatObject* a_val) const"
+45946,0x1407b7060,0x1407e23b0,2,"CombatObject* BSTDerivedCreator<CombatTargetSelectorStandard,CombatObject>::CreateImpl(CombatObject* a_val) const"
+45994,0x1407b9a90,0x1407e4de0,2,"CombatObject* BSTDerivedCreator<CombatThreat,CombatObject>::CreateImpl(CombatObject* a_val) const"
 46011,0x1407ba290,0x1407e55e0,2,Actor* Actor::FindAttackTargetInReach()
 46012,0x1407ba630,0x1407e5980,2,"float TESObjectREFR::GetDistanceToEdge(TESObjectREFR* a_target, bool a_checkSlope, TESObjectREFR* a_origin)"
 46015,0x1407ba9c0,0x1407e5d10,2,float TESObjectREFR::GetCombinedBoundLength(TESObjectREFR* a_other)
@@ -4768,6 +5037,9 @@
 46274,0x1407c7fa0,0x1407f32f0,3,void CombatBehaviorTreeManager::Init()
 46275,0x1407c8010,0x1407f3360,3,void CombatBehaviorTreeManager::InitializeTrees()
 46277,0x1407c8110,0x1407f3460,2,void CombatBehaviorTreeCombat::Initialize()
+46289,0x1407c8650,0x1407f39a0,2,void CombatBehaviorTreeNodeObject<CombatBehaviorParallel>::Enter(CombatBehaviorThread* a_thread)
+46290,0x1407c8680,0x1407f39d0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorParallel>::Exit(CombatBehaviorThread* a_thread)
+46294,0x1407c87b0,0x1407f3b00,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorParallel>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 46301,0x1407c8c10,0x1407f3f60,4,void CombatBehaviorTreeNode::ctor_nonvirtual() src\RE/CombatBehaviorTreeNode.h:55
 46302,0x1407c8c40,0x1407f3f90,4,void CombatBehaviorTreeNode::dtor_nonvirtual() src\RE/CombatBehaviorTreeNode.h:62
 46304,0x1407c8cb0,0x1407f4000,4,CombatBehaviorTreeNode* CombatBehaviorTreeNode::add_FirstChildren(CombatBehaviorTreeNode* child) src\RE/CombatBehaviorTreeNode.h:42
@@ -4790,16 +5062,67 @@
 46349,0x1407ca8c0,0x1407f5c10,3,void CombatBehaviorAcquireItem::Enter()
 46350,0x1407caad0,0x1407f5e20,3,void CombatBehaviorAcquireItem::Update()
 46353,0x1407cb0e0,0x1407f6430,2,void CombatBehaviorTreeAcquireWeapon::Initialize()
+46402,0x1407cce00,0x1407f8150,2,void CombatBehaviorTreeCreateContextNode<CombatBehaviorContextAcquireWeapon>::Enter(CombatBehaviorThread* a_thread)
+46403,0x1407ccea0,0x1407f81f0,2,"void CombatBehaviorTreeNodeObject1<CombatBehaviorAcquireItem,CombatBehaviorExpression<CombatBehaviorMemberFunc<CombatBehaviorContextAcquireWeapon,CombatAcquireItem const &  (__cdecl CombatBehaviorContextAcquireWeapon::*)(void)const>>>::Enter(CombatBehaviorThread* a_thread)"
+46404,0x1407cced0,0x1407f8220,2,"void CombatBehaviorTreeNodeObject1<CombatBehaviorDisableAim,CombatAimController::PRIORITY>::Enter(CombatBehaviorThread* a_thread)"
+46405,0x1407ccef0,0x1407f8240,2,"void CombatBehaviorTreeNodeObject1<CombatBehaviorFollowPath,CombatBehaviorExpression<CombatBehaviorMemberFunc<CombatBehaviorContextAcquireWeapon,NiPointer<CombatPath> (__cdecl CombatBehaviorContextAcquireWeapon::*)(void)>>>::Enter(CombatBehaviorThread* a_thread)"
+46406,0x1407ccf30,0x1407f8280,2,"void CombatBehaviorTreeNodeObject1<CombatBehaviorRepeat,float>::Enter(CombatBehaviorThread* a_thread)"
+46408,0x1407ccfb0,0x1407f8300,2,void CombatBehaviorTreeNodeObject<CombatBehaviorFindWeapon>::Enter(CombatBehaviorThread* a_thread)
+46409,0x1407ccfe0,0x1407f8330,2,void CombatBehaviorTreeNodeObject<CombatBehaviorSequence>::Enter(CombatBehaviorThread* a_thread)
+46410,0x1407cd010,0x1407f8360,2,void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextAcquireWeapon>::Exit(CombatBehaviorThread* a_thread)
+46411,0x1407cd0a0,0x1407f83f0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorAcquireItem>::Exit(CombatBehaviorThread* a_thread)
+46412,0x1407cd0f0,0x1407f8440,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorAcquireResource>::Exit(CombatBehaviorThread* a_thread)
+46413,0x1407cd120,0x1407f8470,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorDisableAim>::Exit(CombatBehaviorThread* a_thread)
+46415,0x1407cd160,0x1407f84b0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFollowPath>::Exit(CombatBehaviorThread* a_thread)
 46417,0x1407cd1a0,0x1407f84f0,3,void CombatBehaviorAccessors::Fail()
+46435,0x1407cd760,0x1407f8ab0,2,"void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextAcquireWeapon>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+46436,0x1407cd830,0x1407f8b80,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorAcquireItem>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+46437,0x1407cd870,0x1407f8bc0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorAcquireResource>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+46438,0x1407cd8b0,0x1407f8c00,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorDisableAim>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+46439,0x1407cd8f0,0x1407f8c40,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFindWeapon>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+46440,0x1407cd930,0x1407f8c80,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFollowPath>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+46441,0x1407cd970,0x1407f8cc0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorSequence>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 46442,0x1407cd9b0,0x1407f8d00,3,bool CombatBehaviorContextAcquireWeapon::HasAmmoTarget()
+46446,0x1407cda50,0x1407f8da0,2,"void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextAcquireWeapon>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+46447,0x1407cdaa0,0x1407f8df0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorAcquireItem>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 46460,0x1407cddc0,0x1407f9110,2,void CombatBehaviorTreeAction::Initialize()
 46461,0x1407ce0e0,0x1407f9430,2,void CombatBehaviorTreeActionEquipmentSelector::Initialize()
+46512,0x1407d0380,0x1407fb6d0,2,"void CombatBehaviorTreeCreateContextNode1<CombatBehaviorEquipContext,CombatBehaviorExpression<CombatBehaviorMemberFunc<CombatBehaviorThread,unsigned int (__cdecl CombatBehaviorThread::*)(void)const>>>::Enter(CombatBehaviorThread* a_thread)"
+46513,0x1407d03f0,0x1407fb740,2,"void CombatBehaviorTreeNodeObject2<CombatBehaviorAcquireResource,BSFixedString,int>::Enter(CombatBehaviorThread* a_thread)"
+46514,0x1407d0430,0x1407fb780,2,"void CombatBehaviorTreeNodeObject2<CombatBehaviorSpawnParallel,unsigned int,CombatBehaviorParallel::FLAGS>::Enter(CombatBehaviorThread* a_thread)"
+46515,0x1407d0470,0x1407fb7c0,2,void CombatBehaviorTreeNodeObject<CombatBehaviorChildSelector<ValueChildSelector>>::Enter(CombatBehaviorThread* a_thread)
+46516,0x1407d0500,0x1407fb850,2,void CombatBehaviorTreeNodeObject<CombatBehaviorDynamicConditionalNode>::Enter(CombatBehaviorThread* a_thread)
+46517,0x1407d0530,0x1407fb880,2,void CombatBehaviorTreeNodeObject<CombatBehaviorEquipObject>::Enter(CombatBehaviorThread* a_thread)
+46518,0x1407d0570,0x1407fb8c0,2,void CombatBehaviorTreeNodeObject<CombatBehaviorEquipRangedWeapon>::Enter(CombatBehaviorThread* a_thread)
+46519,0x1407d05b0,0x1407fb900,2,void CombatBehaviorTreeNodeObject<CombatBehaviorEquipShout>::Enter(CombatBehaviorThread* a_thread)
+46520,0x1407d05f0,0x1407fb940,2,void CombatBehaviorTreeNodeObject<CombatBehaviorEquipSpell>::Enter(CombatBehaviorThread* a_thread)
+46522,0x1407d0670,0x1407fb9c0,2,void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorEquipContext>::Exit(CombatBehaviorThread* a_thread)
+46524,0x1407d06e0,0x1407fba30,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorDynamicConditionalNode>::Exit(CombatBehaviorThread* a_thread)
+46530,0x1407d0760,0x1407fbab0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorSpawnParallel>::Exit(CombatBehaviorThread* a_thread)
 46531,0x1407d0790,0x1407fbae0,3,std::uint32_t CombatBehaviorThread::GetChildIndex()
+46555,0x1407d0ee0,0x1407fc230,2,"CombatBehaviorTreeValueNodeT<unsigned int,CombatBehaviorExpression<CombatBehaviorMemberFunc<CombatBehaviorEquipContext,CombatInventoryItem::TYPE (__cdecl CombatBehaviorEquipContext::*)(void)const>>>::GetValue"
+46558,0x1407d0f70,0x1407fc2c0,2,"void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorEquipContext>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+46559,0x1407d0ff0,0x1407fc340,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorChildSelector<ValueChildSelector>>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+46560,0x1407d1020,0x1407fc370,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorDynamicConditionalNode>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+46561,0x1407d1060,0x1407fc3b0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorEquipObject>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+46562,0x1407d1090,0x1407fc3e0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorEquipRangedWeapon>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+46563,0x1407d10c0,0x1407fc410,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorEquipShout>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+46564,0x1407d10f0,0x1407fc440,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorEquipSpell>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+46565,0x1407d1120,0x1407fc470,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorPause>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+46566,0x1407d1150,0x1407fc4a0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorSpawnParallel>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+46576,0x1407d1260,0x1407fc5b0,2,"void CombatBehaviorTreeNodeEvaluateFunction<CombatBehaviorExpression<CombatBehaviorMemberFunc<CombatBehaviorEquipContext,bool (__cdecl CombatBehaviorEquipContext::*)(void)>>>::Update(CombatBehaviorThread* a_thread)"
+46580,0x1407d1430,0x1407fc780,2,bool CombatBehaviorTreeNodeObjectBase<CombatBehaviorChildSelector<ValueChildSelector>>::Validate(CombatBehaviorTreeNode* a_node) const
 46589,0x1407d1590,0x1407fc8e0,3,bool CombatBehaviorContextDodgeThreat::CheckShouldDodge()
 46590,0x1407d1740,0x1407fca90,3,void CombatBehaviorDodgeThreat::Enter()
 46591,0x1407d21e0,0x1407fd530,3,void CombatBehaviorDodgeThreat::Update()
 46592,0x1407d23f0,0x1407fd740,3,void CombatBehaviorDodgeThreat::Exit()
 46595,0x1407d2750,0x1407fdaa0,2,void CombatBehaviorTreeDodgeThreat::Initialize()
+46607,0x1407d2ec0,0x1407fe210,2,"void CombatBehaviorTreeConditionalNode<CombatBehaviorExpression<CombatBehaviorMemberFunc<CombatBehaviorContextDodgeThreat,bool (__cdecl CombatBehaviorContextDodgeThreat::*)(void)>>>::Enter(CombatBehaviorThread* a_thread)"
+46608,0x1407d2f50,0x1407fe2a0,2,void CombatBehaviorTreeCreateContextNode<CombatBehaviorContextDodgeThreat>::Enter(CombatBehaviorThread* a_thread)
+46609,0x1407d2fd0,0x1407fe320,2,void CombatBehaviorTreeNodeObject<CombatBehaviorDodgeThreat>::Enter(CombatBehaviorThread* a_thread)
+46611,0x1407d3020,0x1407fe370,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorDodgeThreat>::Exit(CombatBehaviorThread* a_thread)
+46618,0x1407d3230,0x1407fe580,2,"void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextDodgeThreat>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+46619,0x1407d32a0,0x1407fe5f0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorDodgeThreat>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 46627,0x1407d3400,0x1407fe750,3,bool CombatBehaviorContextBlock::CheckStopBlocking()
 46628,0x1407d3600,0x1407fe950,3,void CombatBehaviorBlockAttack::Enter()
 46629,0x1407d3900,0x1407fec50,3,void CombatBehaviorBlockAttack::Update()
@@ -4811,6 +5134,18 @@
 46639,0x1407d4520,0x1407ff870,2,void CombatBehaviorBash::Update()
 46640,0x1407d4620,0x1407ff970,2,void CombatBehaviorTreeBlock::Initialize()
 46641,0x1407d4a80,0x1407ffdd0,4,"NodeArray* WrapToRandomNode_1407d4a80 (NodeArray& a_array, const char* a_name, RE::TreeCtors_extradata* a_extradata, RE::CombatBehaviorTreeNode* a_node)"
+46658,0x1407d5230,0x140800580,2,"void CombatBehaviorTreeConditionalNode<CombatBehaviorExpression<CombatBehaviorFunc1<bool (__cdecl*)(float),CombatBehaviorExpression<CombatBehaviorFunc2<float (__cdecl*)(Actor* ,Actor* ),CombatBehaviorTree::CombatBehaviorAttacker,CombatBehaviorTree::CombatBehaviorTarget>>>>>::Enter(CombatBehaviorThread* a_thread)"
+46659,0x1407d52b0,0x140800600,2,"void CombatBehaviorTreeCreateContextNode2<CombatBehaviorContextBlock,CombatBehaviorExpression<CombatBehaviorMemberFunc<CombatBehaviorEquipContext,NiPointer<CombatInventoryItem> const &  (__cdecl CombatBehaviorEquipContext::*)(void)const>>,CombatBehaviorContextMelee::ATTACK_TYPE>::Enter(CombatBehaviorThread* a_thread)"
+46661,0x1407d5390,0x1408006e0,2,void CombatBehaviorTreeNodeObject<CombatBehaviorBlock>::Enter(CombatBehaviorThread* a_thread)
+46662,0x1407d53c0,0x140800710,2,void CombatBehaviorTreeNodeObject<CombatBehaviorBlockAttack>::Enter(CombatBehaviorThread* a_thread)
+46663,0x1407d53f0,0x140800740,2,void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextBlock>::Exit(CombatBehaviorThread* a_thread)
+46665,0x1407d5440,0x140800790,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorBlock>::Exit(CombatBehaviorThread* a_thread)
+46666,0x1407d5470,0x1408007c0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorBlockAttack>::Exit(CombatBehaviorThread* a_thread)
+46677,0x1407d57c0,0x140800b10,2,"void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextBlock>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+46679,0x1407d5870,0x140800bc0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorBlock>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+46680,0x1407d58d0,0x140800c20,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorBlockAttack>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+46683,0x1407d5960,0x140800cb0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorBlock>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+46684,0x1407d59b0,0x140800d00,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorBlockAttack>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 46695,0x1407d5ba0,0x140800ef0,3,void CombatBehaviorContextCloseMovement::Enter()
 46696,0x1407d5c80,0x140800fd0,3,bool CombatBehaviorContextCloseMovement::CheckOutOfRange()
 46697,0x1407d5ec0,0x140801210,3,bool CombatBehaviorContextCloseMovement::CheckOutOfPosition()
@@ -4845,13 +5180,64 @@
 46764,0x1407db4a0,0x1408067f0,2,CombatBehaviorReposition src\RE/CombatBehaviorNodesMovement.cpp:9
 46765,0x1407db530,0x140806880,2,CombatBehaviorSurround src\RE/CombatBehaviorNodesMovement.cpp:8
 46817,0x1407dc9b0,0x140807d00,2,"void CombatPathingRequestGeneric<CombatPathingGoalPolicyRetreat,CombatPathingSearchPolicyStandard>::CopyTo(BSPathingRequest& a_dest)"
+46825,0x1407dcc90,0x140807fe0,2,"void CombatBehaviorTreeConditionalNode<CombatBehaviorExpression<CombatBehaviorFunc1<bool (__cdecl*)(float),CombatBehaviorExpression<CombatBehaviorFunc<float (__cdecl*)(void)>>>>>::Enter(CombatBehaviorThread* a_thread)"
+46827,0x1407dcd70,0x1408080c0,2,void CombatBehaviorTreeCreateContextNode<CombatBehaviorContextCloseMovement>::Enter(CombatBehaviorThread* a_thread)
+46828,0x1407dce10,0x140808160,2,void CombatBehaviorTreeNodeObject<CombatBehaviorChildSelector<ConditionalChildSelector>>::Enter(CombatBehaviorThread* a_thread)
+46829,0x1407dcea0,0x1408081f0,2,void CombatBehaviorTreeNodeObject<CombatBehaviorChildSelector<RandomValueChildSelector>>::Enter(CombatBehaviorThread* a_thread)
+46830,0x1407dcf20,0x140808270,2,void CombatBehaviorTreeNodeObject<CombatBehaviorAdvance>::Enter(CombatBehaviorThread* a_thread)
+46831,0x1407dcf50,0x1408082a0,2,void CombatBehaviorTreeNodeObject<CombatBehaviorBackoff>::Enter(CombatBehaviorThread* a_thread)
+46832,0x1407dcf80,0x1408082d0,2,void CombatBehaviorTreeNodeObject<CombatBehaviorCircle>::Enter(CombatBehaviorThread* a_thread)
+46833,0x1407dcfb0,0x140808300,2,void CombatBehaviorTreeNodeObject<CombatBehaviorCircleDistant>::Enter(CombatBehaviorThread* a_thread)
+46834,0x1407dcfe0,0x140808330,2,void CombatBehaviorTreeNodeObject<CombatBehaviorFallback>::Enter(CombatBehaviorThread* a_thread)
+46835,0x1407dd010,0x140808360,2,void CombatBehaviorTreeNodeObject<CombatBehaviorFallbackToRanged>::Enter(CombatBehaviorThread* a_thread)
+46836,0x1407dd040,0x140808390,2,void CombatBehaviorTreeNodeObject<CombatBehaviorReposition>::Enter(CombatBehaviorThread* a_thread)
+46837,0x1407dd070,0x1408083c0,2,void CombatBehaviorTreeNodeObject<CombatBehaviorSurround>::Enter(CombatBehaviorThread* a_thread)
+46838,0x1407dd0a0,0x1408083f0,2,void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextCloseMovement>::Exit(CombatBehaviorThread* a_thread)
+46841,0x1407dd100,0x140808450,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorAdvance>::Exit(CombatBehaviorThread* a_thread)
+46842,0x1407dd170,0x1408084c0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorBackoff>::Exit(CombatBehaviorThread* a_thread)
+46843,0x1407dd1c0,0x140808510,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorCircle>::Exit(CombatBehaviorThread* a_thread)
+46844,0x1407dd210,0x140808560,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorCircleDistant>::Exit(CombatBehaviorThread* a_thread)
+46845,0x1407dd260,0x1408085b0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFallback>::Exit(CombatBehaviorThread* a_thread)
+46846,0x1407dd2b0,0x140808600,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFallbackToRanged>::Exit(CombatBehaviorThread* a_thread)
+46847,0x1407dd300,0x140808650,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorReposition>::Exit(CombatBehaviorThread* a_thread)
+46848,0x1407dd370,0x1408086c0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorSurround>::Exit(CombatBehaviorThread* a_thread)
+46893,0x1407deea0,0x14080a1f0,2,"CombatBehaviorTreeValueNodeT<unsigned int,CombatBehaviorExpression<CombatBehaviorMemberFunc<CombatBehaviorContextCloseMovement,bool (__cdecl CombatBehaviorContextCloseMovement::*)(void)const>>>::GetValue"
+46894,0x1407def00,0x14080a250,2,"CombatBehaviorTreeValueNodeT<float,CombatBehaviorExpression<CombatBehaviorFunc1<float (__cdecl*)(Actor* ),CombatBehaviorTree::CombatBehaviorAttacker>>>::GetValue"
+46897,0x1407df040,0x14080a390,2,"void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextCloseMovement>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+46898,0x1407df0c0,0x14080a410,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorChildSelector<ConditionalChildSelector>>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+46899,0x1407df0f0,0x14080a440,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorChildSelector<RandomValueChildSelector>>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+46900,0x1407df130,0x14080a480,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorAdvance>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+46901,0x1407df170,0x14080a4c0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorBackoff>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+46902,0x1407df1f0,0x14080a540,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorCircle>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+46903,0x1407df270,0x14080a5c0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorCircleDistant>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+46905,0x1407df370,0x14080a6c0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFallbackToRanged>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+46906,0x1407df3f0,0x14080a740,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorReposition>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+46907,0x1407df430,0x14080a780,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorSurround>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 46909,0x1407df590,0x14080a8e0,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyRetreat,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::LoadGame(BGSLoadGameBuffer* a_buf)"
+46912,0x1407df6b0,0x14080aa00,2,"void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextCloseMovement>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+46915,0x1407df720,0x14080aa70,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorAdvance>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+46917,0x1407df7b0,0x14080ab00,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorCircle>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+46919,0x1407df810,0x14080ab60,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFallback>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+46920,0x1407df860,0x14080abb0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFallbackToRanged>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+46921,0x1407df8a0,0x14080abf0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorReposition>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 46924,0x1407df990,0x14080ace0,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyRetreat,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::SaveGame(BGSSaveGameBuffer* a_buf)"
+46939,0x1407e0110,0x14080b460,2,bool CombatBehaviorTreeNodeObjectBase<CombatBehaviorChildSelector<ConditionalChildSelector>>::Validate(CombatBehaviorTreeNode* a_node) const
+46940,0x1407e0150,0x14080b4a0,2,bool CombatBehaviorTreeNodeObjectBase<CombatBehaviorChildSelector<RandomValueChildSelector>>::Validate(CombatBehaviorTreeNode* a_node) const
 46951,0x1407e0370,0x14080b6c0,3,bool CombatBehaviorEquipContext::CheckEquipmentChanged()
 46952,0x1407e04a0,0x14080b7f0,3,bool CombatBehaviorEquipContext::EquipItem()
 46971,0x1407e2440,0x14080d790,2,void CombatBehaviorTreeFindAttackLocation::Initialize()
 47037,0x1407e46a0,0x14080f9f0,2,"void CombatPathingRequestGeneric<CombatPathingGoalPolicyFindAttackLocation,CombatPathingSearchPolicyStandard>::CopyTo(BSPathingRequest& a_dest)"
+47038,0x1407e4740,0x14080fa90,2,"CombatObject* BSTDerivedCreator<CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFindAttackLocation,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+47048,0x1407e4af0,0x14080fe40,2,"void CombatBehaviorTreeNodeObject2<CombatBehaviorSetBlackboardData,CombatBlackboardKey<AITimeStamp>* ,CombatBehaviorExpression<CombatBehaviorFunc<float (__cdecl*)(void)>>>::Enter(CombatBehaviorThread* a_thread)"
+47049,0x1407e4b20,0x14080fe70,2,void CombatBehaviorTreeNodeObject<CombatBehaviorFindAllyAttackLocation>::Enter(CombatBehaviorThread* a_thread)
+47050,0x1407e4b50,0x14080fea0,2,void CombatBehaviorTreeNodeObject<CombatBehaviorFindAttackLocation>::Enter(CombatBehaviorThread* a_thread)
+47051,0x1407e4b80,0x14080fed0,2,void CombatBehaviorTreeNodeObject<CombatBehaviorFindLateralAttackLocation>::Enter(CombatBehaviorThread* a_thread)
+47053,0x1407e4bd0,0x14080ff20,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFindAllyAttackLocation>::Exit(CombatBehaviorThread* a_thread)
+47054,0x1407e4c20,0x14080ff70,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFindAttackLocation>::Exit(CombatBehaviorThread* a_thread)
+47055,0x1407e4c70,0x14080ffc0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFindLateralAttackLocation>::Exit(CombatBehaviorThread* a_thread)
 47079,0x1407e5bc0,0x140810f10,2,"bool CombatNavmeshSearchT<CombatPathingGoalPolicyFindAttackLocation,CombatPathingSearchPolicyStandard>::IsGoalNode(AStarNode* a_node)"
+47080,0x1407e5c30,0x140810f80,2,"void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextFindAttackLocation>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+47081,0x1407e5ca0,0x140810ff0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFindAllyAttackLocation>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 47086,0x1407e5f00,0x140811250,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFindAttackLocation,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::LoadGame(BGSLoadGameBuffer* a_buf)"
 47089,0x1407e5fb0,0x140811300,4,float AITimer::QTimer()
 47099,0x1407e62c0,0x140811610,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFindAttackLocation,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::SaveGame(BGSSaveGameBuffer* a_buf)"
@@ -4862,21 +5248,79 @@
 47145,0x1407ea9c0,0x140815d10,2,"float CombatPathingSearchPolicyFlank::GetEdgeCost(BSFastNavmeshTriLocation* a_from, BSFastNavmeshTriLocation* a_to)"
 47267,0x1407ee7a0,0x140819af0,2,"void CombatPathingRequestGeneric<CombatPathingGoalPolicyFlank,CombatPathingSearchPolicyFlank>::CopyTo(BSPathingRequest& a_dest)"
 47268,0x1407ee840,0x140819b90,2,"void CombatPathingRequestGeneric<CombatPathingGoalPolicyFlankDistant,CombatPathingSearchPolicyStandard>::CopyTo(BSPathingRequest& a_dest)"
+47269,0x1407ee8d0,0x140819c20,2,"CombatObject* BSTDerivedCreator<CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFlank,CombatPathingSearchPolicyFlank>,CombatPathDestinationRef>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+47270,0x1407ee930,0x140819c80,2,"CombatObject* BSTDerivedCreator<CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFlankDistant,CombatPathingSearchPolicyStandard>,CombatPathDestinationLocation>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+47273,0x1407eeb00,0x140819e50,2,"CombatObject* BSTDerivedCreator<CombatFlankingSearchData,CombatObject>::CreateImpl(CombatObject* a_val) const"
+47288,0x1407eeea0,0x14081a1f0,2,"void CombatBehaviorTreeConditionalNode<CombatBehaviorExpression<CombatBehaviorMemberFunc<CombatBehaviorContextFlankingMovement,bool (__cdecl CombatBehaviorContextFlankingMovement::*)(void)const>>>::Enter(CombatBehaviorThread* a_thread)"
+47289,0x1407eef30,0x14081a280,2,void CombatBehaviorTreeCreateContextNode<CombatBehaviorContextFlankingMovement>::Enter(CombatBehaviorThread* a_thread)
+47290,0x1407eefa0,0x14081a2f0,2,"void CombatBehaviorTreeNodeObject1<CombatBehaviorWatchTarget,float>::Enter(CombatBehaviorThread* a_thread)"
+47291,0x1407eefc0,0x14081a310,2,void CombatBehaviorTreeNodeObject<CombatBehaviorChase>::Enter(CombatBehaviorThread* a_thread)
+47292,0x1407eeff0,0x14081a340,2,void CombatBehaviorTreeNodeObject<CombatBehaviorFlank>::Enter(CombatBehaviorThread* a_thread)
+47293,0x1407ef020,0x14081a370,2,void CombatBehaviorTreeNodeObject<CombatBehaviorFlankDistant>::Enter(CombatBehaviorThread* a_thread)
+47294,0x1407ef050,0x14081a3a0,2,void CombatBehaviorTreeNodeObject<CombatBehaviorStalk>::Enter(CombatBehaviorThread* a_thread)
+47295,0x1407ef080,0x14081a3d0,2,void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextFlankingMovement>::Exit(CombatBehaviorThread* a_thread)
+47297,0x1407ef110,0x14081a460,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFlank>::Exit(CombatBehaviorThread* a_thread)
+47300,0x1407ef160,0x14081a4b0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorWatchTarget>::Exit(CombatBehaviorThread* a_thread)
+47344,0x1407f0e60,0x14081c1b0,2,"void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextFlankingMovement>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+47345,0x1407f0f20,0x14081c270,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorChase>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+47346,0x1407f0f60,0x14081c2b0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFlank>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+47347,0x1407f0fa0,0x14081c2f0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFlankDistant>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+47348,0x1407f0fe0,0x14081c330,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorStalk>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+47349,0x1407f1020,0x14081c370,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorWatchTarget>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 47354,0x1407f1340,0x14081c690,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFlank,CombatPathingSearchPolicyFlank>,CombatPathDestinationRef>::LoadGame(BGSLoadGameBuffer* a_buf)"
 47355,0x1407f1390,0x14081c6e0,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFlankDistant,CombatPathingSearchPolicyStandard>,CombatPathDestinationLocation>::LoadGame(BGSLoadGameBuffer* a_buf)"
+47363,0x1407f1710,0x14081ca60,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorChase>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 47370,0x1407f1960,0x14081ccb0,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFlank,CombatPathingSearchPolicyFlank>,CombatPathDestinationRef>::SaveGame(BGSSaveGameBuffer* a_buf)"
 47404,0x1407f27e0,0x14081db30,3,bool CombatBehaviorContextFlee::CheckShouldFlee()
 47405,0x1407f29a0,0x14081dcf0,3,bool CombatBehaviorContextFlee::StartFlee()
 47426,0x1407f4a50,0x14081fda0,2,void CombatBehaviorTreeFlee::Initialize()
 47429,0x1407f5320,0x140820670,2,void CombatBehaviorTreeHide::Initialize()
+47544,0x1407f8830,0x140823b80,2,"CombatNavmeshSearchT<CombatPathingGoalPolicyFlee,CombatPathingSearchPolicyStandard>::QueueSuccessorNode"
 47549,0x1407f8c40,0x140823f90,2,"void CombatPathingRequestGeneric<CombatPathingGoalPolicyFindHideCover,CombatPathingSearchPolicyStandard>::CopyTo(BSPathingRequest& a_dest)"
 47550,0x1407f8cb0,0x140824000,2,"void CombatPathingRequestGeneric<CombatPathingGoalPolicyFlee,CombatPathingSearchPolicyStandard>::CopyTo(BSPathingRequest& a_dest)"
+47551,0x1407f8d20,0x140824070,2,"CombatObject* BSTDerivedCreator<CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFindHideCover,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>,CombatObject>::CreateImpl(CombatObject* a_val) const"
 47557,0x1407f8fc0,0x140824310,2,"void CombatBlackboardKey<BSTTuple<TESObjectREFR* ,AITimeStamp>>::CreateObject(void* a_arg)"
+47569,0x1407f92e0,0x140824630,2,"void CombatBehaviorTreeConditionalNode<CombatBehaviorExpression<CombatBehaviorMemberFunc<CombatBehaviorContextFlee,bool (__cdecl CombatBehaviorContextFlee::*)(void)const>>>::Enter(CombatBehaviorThread* a_thread)"
+47570,0x1407f9370,0x1408246c0,2,void CombatBehaviorTreeCreateContextNode<CombatBehaviorContextFlee>::Enter(CombatBehaviorThread* a_thread)
+47571,0x1407f9440,0x140824790,2,void CombatBehaviorTreeCreateContextNode<CombatBehaviorContextHide>::Enter(CombatBehaviorThread* a_thread)
+47572,0x1407f94b0,0x140824800,2,"void CombatBehaviorTreeNodeObject1<CombatBehaviorEnableBlackboardFlag,CombatBlackboardFlag*>::Enter(CombatBehaviorThread* a_thread)"
+47573,0x1407f94e0,0x140824830,2,"void CombatBehaviorTreeNodeObject1<CombatBehaviorFlee,float>::Enter(CombatBehaviorThread* a_thread)"
+47574,0x1407f9510,0x140824860,2,"void CombatBehaviorTreeNodeObject2<CombatBehaviorFaceAngle,float,bool>::Enter(CombatBehaviorThread* a_thread)"
+47575,0x1407f9540,0x140824890,2,void CombatBehaviorTreeNodeObject<CombatBehaviorFlee>::Enter(CombatBehaviorThread* a_thread)
+47576,0x1407f9570,0x1408248c0,2,void CombatBehaviorTreeNodeObject<CombatBehaviorFleeThroughDoor>::Enter(CombatBehaviorThread* a_thread)
+47577,0x1407f95a0,0x1408248f0,2,void CombatBehaviorTreeNodeObject<CombatBehaviorFleeToAlly>::Enter(CombatBehaviorThread* a_thread)
+47578,0x1407f95d0,0x140824920,2,void CombatBehaviorTreeNodeObject<CombatBehaviorFleeToCover>::Enter(CombatBehaviorThread* a_thread)
+47579,0x1407f9600,0x140824950,2,void CombatBehaviorTreeNodeObject<CombatBehaviorForceSuccess>::Enter(CombatBehaviorThread* a_thread)
+47580,0x1407f9660,0x1408249b0,2,void CombatBehaviorTreeNodeObject<CombatBehaviorHide>::Enter(CombatBehaviorThread* a_thread)
+47581,0x1407f9690,0x1408249e0,2,void CombatBehaviorTreeNodeObject<CombatBehaviorTrackTarget>::Enter(CombatBehaviorThread* a_thread)
+47582,0x1407f96b0,0x140824a00,2,void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextFlee>::Exit(CombatBehaviorThread* a_thread)
+47583,0x1407f9750,0x140824aa0,2,void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextHide>::Exit(CombatBehaviorThread* a_thread)
+47584,0x1407f97b0,0x140824b00,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorEnableBlackboardFlag>::Exit(CombatBehaviorThread* a_thread)
+47585,0x1407f97e0,0x140824b30,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFaceAngle>::Exit(CombatBehaviorThread* a_thread)
+47586,0x1407f9810,0x140824b60,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFlee>::Exit(CombatBehaviorThread* a_thread)
+47587,0x1407f9860,0x140824bb0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFleeThroughDoor>::Exit(CombatBehaviorThread* a_thread)
+47588,0x1407f98b0,0x140824c00,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFleeToAlly>::Exit(CombatBehaviorThread* a_thread)
+47589,0x1407f9900,0x140824c50,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFleeToCover>::Exit(CombatBehaviorThread* a_thread)
+47591,0x1407f9940,0x140824c90,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorHide>::Exit(CombatBehaviorThread* a_thread)
+47592,0x1407f9990,0x140824ce0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorTrackTarget>::Exit(CombatBehaviorThread* a_thread)
+47647,0x1407fb8b0,0x140826c00,2,"void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextFlee>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+47648,0x1407fb970,0x140826cc0,2,"void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextHide>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+47649,0x1407fba30,0x140826d80,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorEnableBlackboardFlag>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+47650,0x1407fba70,0x140826dc0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFaceAngle>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+47651,0x1407fbab0,0x140826e00,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFlee>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+47652,0x1407fbb40,0x140826e90,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFleeThroughDoor>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+47655,0x1407fbc60,0x140826fb0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorForceSuccess>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+47656,0x1407fbc90,0x140826fe0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorHide>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+47657,0x1407fbd00,0x140827050,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorTrackTarget>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 47660,0x1407fbf20,0x140827270,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFindHideCover,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::LoadGame(BGSLoadGameBuffer* a_buf)"
 47661,0x1407fbfb0,0x140827300,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFlee,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::LoadGame(BGSLoadGameBuffer* a_buf)"
 47664,0x1407fc0c0,0x140827410,2,"void CombatBlackboardKey<BSTTuple<TESObjectREFR* ,AITimeStamp>>::LoadObject(BGSLoadGameBuffer* a_arg, void* a_arg)"
+47672,0x1407fc280,0x1408275d0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFlee>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+47675,0x1407fc310,0x140827660,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFleeToCover>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+47677,0x1407fc370,0x1408276c0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorHide>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 47681,0x1407fc4f0,0x140827840,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFindHideCover,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::SaveGame(BGSSaveGameBuffer* a_buf)"
 47682,0x1407fc540,0x140827890,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFlee,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::SaveGame(BGSSaveGameBuffer* a_buf)"
+47698,0x1407fccf0,0x140828040,2,"void CombatBehaviorTreeNodeEvaluateFunction<CombatBehaviorExpression<CombatBehaviorMemberFunc<CombatBehaviorContextFlee,bool (__cdecl CombatBehaviorContextFlee::*)(void)const>>>::Update(CombatBehaviorThread* a_thread)"
 47717,0x1407fd340,0x140828690,2,void CombatBehaviorTakeoff::Update()
 47719,0x1407fd860,0x140828bb0,2,void CombatBehaviorDiveBomb::Update()
 47722,0x1407fe180,0x1408294d0,2,void CombatBehaviorHover::Update()
@@ -4889,9 +5333,44 @@
 47752,0x140801330,0x14082c680,2,void CombatBehaviorTreeFlight::Initialize()
 47755,0x140801f10,0x14082d260,2,void DiveBombSpeedController::SaveGame(BGSSaveGameBuffer* a_buf)
 47756,0x140801fa0,0x14082d2f0,2,void DiveBombSpeedController::LoadGame(BGSLoadGameBuffer* a_buf)
+47860,0x140804c50,0x14082ffa0,2,"void CombatBehaviorTreeConditionalNode<CombatBehaviorExpression<CombatBehaviorFunc1<bool (__cdecl*)(Actor* ),CombatBehaviorTree::CombatBehaviorAttacker>>>::Enter(CombatBehaviorThread* a_thread)"
+47861,0x140804cb0,0x140830000,2,"void CombatBehaviorTreeConditionalNode<CombatBehaviorExpression<CombatBehaviorUnaryExpression<CombatBehaviorFunc2<bool (__cdecl*)(Actor* ,Actor* ),CombatBehaviorTree::CombatBehaviorAttacker,CombatBehaviorTree::CombatBehaviorTarget>,OpNot>>>::Enter(CombatBehaviorThread* a_thread)"
+47863,0x140804d80,0x1408300d0,2,"void CombatBehaviorTreeNodeObject1<CombatBehaviorDynamicSelector<ConditionalChildSelector>,float>::Enter(CombatBehaviorThread* a_thread)"
+47864,0x140804db0,0x140830100,2,"void CombatBehaviorTreeNodeObject1<CombatBehaviorLand,float>::Enter(CombatBehaviorThread* a_thread)"
+47865,0x140804de0,0x140830130,2,"void CombatBehaviorTreeNodeObject1<CombatBehaviorLandNearby,float>::Enter(CombatBehaviorThread* a_thread)"
+47866,0x140804e10,0x140830160,2,"void CombatBehaviorTreeNodeObject1<CombatBehaviorRepeat,CombatBehaviorRepeat::FLAGS>::Enter(CombatBehaviorThread* a_thread)"
+47873,0x140804f70,0x1408302c0,2,void CombatBehaviorTreeNodeObject<CombatBehaviorOrbit>::Enter(CombatBehaviorThread* a_thread)
+47874,0x140804fa0,0x1408302f0,2,void CombatBehaviorTreeNodeObject<CombatBehaviorOrbitDistant>::Enter(CombatBehaviorThread* a_thread)
+47877,0x140805040,0x140830390,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorDynamicSelector<ConditionalChildSelector>>::Exit(CombatBehaviorThread* a_thread)
+47885,0x140805190,0x1408304e0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorOrbit>::Exit(CombatBehaviorThread* a_thread)
+47886,0x1408051e0,0x140830530,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorOrbitDistant>::Exit(CombatBehaviorThread* a_thread)
+47926,0x140805d60,0x1408310b0,2,"CombatBehaviorTreeValueNodeT<unsigned int,CombatBehaviorExpression<CombatBehaviorMemberFunc<Actor,bool (__cdecl Actor::*)(void)>>>::GetValue"
+47927,0x140805d90,0x1408310e0,2,"CombatBehaviorTreeValueNodeT<unsigned int,CombatBehaviorExpression<CombatBehaviorMemberFunc<Actor,bool (__cdecl ActorState::*)(void)const>>>::GetValue"
+47930,0x140805f00,0x140831250,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorDynamicSelector<ConditionalChildSelector>>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+47931,0x140805f40,0x140831290,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFallbackSelector<WeightedRandomChildSelector>>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+47937,0x140806110,0x140831460,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorLandNearby>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+47938,0x140806150,0x1408314a0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorOrbit>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+47939,0x1408061d0,0x140831520,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorOrbitDistant>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+47944,0x140806370,0x1408316c0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorDynamicSelector<ConditionalChildSelector>>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+47945,0x1408063f0,0x140831740,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFallbackSelector<WeightedRandomChildSelector>>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+47951,0x1408065d0,0x140831920,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorLandNearby>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+47952,0x140806630,0x140831980,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorOrbit>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+47958,0x140806820,0x140831b70,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFallbackSelector<WeightedRandomChildSelector>>::Update(CombatBehaviorThread* a_thread)
+47966,0x1408068f0,0x140831c40,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorOrbitDistant>::Update(CombatBehaviorThread* a_thread)
+47974,0x140806ab0,0x140831e00,2,bool CombatBehaviorTreeNodeObjectBase<CombatBehaviorDynamicSelector<ConditionalChildSelector>>::Validate(CombatBehaviorTreeNode* a_node) const
+47975,0x140806af0,0x140831e40,2,bool CombatBehaviorTreeNodeObjectBase<CombatBehaviorFallbackSelector<WeightedRandomChildSelector>>::Validate(CombatBehaviorTreeNode* a_node) const
 47991,0x140807150,0x1408324a0,2,void CombatBehaviorTreeLowCombat::Initialize()
+48011,0x140807d50,0x1408330a0,2,void CombatBehaviorTreeNodeObject<CombatBehaviorAttackLow>::Enter(CombatBehaviorThread* a_thread)
+48012,0x140807d80,0x1408330d0,2,void CombatBehaviorTreeNodeObject<CombatBehaviorPursueTarget>::Enter(CombatBehaviorThread* a_thread)
+48014,0x140807dc0,0x140833110,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorPursueTarget>::Exit(CombatBehaviorThread* a_thread)
+48019,0x140807f50,0x1408332a0,2,"CombatBehaviorTreeValueNodeT<unsigned int,CombatBehaviorExpression<CombatBehaviorBinaryExpression<CombatBehaviorUnaryExpression<CombatBehaviorMemberFunc<CombatState,bool (__cdecl CombatState::*)(void)const>,OpNot>,CombatBehaviorExpression<CombatBehaviorBinaryExpression<CombatBehaviorFunc2<float (__cdecl*)(TESObjectREFR* ,TESObjectREFR* ),CombatBehaviorTree::CombatBehaviorAttacker,CombatBehaviorTree::CombatBehaviorTarget>,float,OpLessThan>>,OpAnd>>>::GetValue"
+48020,0x140807fb0,0x140833300,2,"CombatBehaviorTreeValueNodeT<unsigned int,CombatBehaviorExpression<CombatBehaviorMemberFunc<CombatGroup,bool (__cdecl CombatGroup::*)(void)const>>>::GetValue"
+48021,0x140807fd0,0x140833320,2,"CombatBehaviorTreeValueNodeT<unsigned int,CombatBehaviorExpression<CombatBehaviorMemberFunc<CombatState,bool (__cdecl CombatState::*)(void)const>>>::GetValue"
 48023,0x140808020,0x140833370,3,bool CombatGroup::IsSearching()
+48024,0x140808030,0x140833380,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorAttackLow>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+48025,0x140808060,0x1408333b0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorPursueTarget>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 48026,0x1408080d0,0x140833420,3,bool CombatState::QTargetLost()
+48030,0x140808120,0x140833470,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorPursueTarget>::Update(CombatBehaviorThread* a_thread)
 48035,0x140808260,0x1408335b0,3,CombatBehaviorContextMagic::CombatBehaviorContextMagic(CombatInventoryItemMagic* citem)
 48036,0x140808570,0x1408338c0,2,void CombatBehaviorContextMagic::ReleaseMembers()
 48037,0x1408085e0,0x140833930,2,bool CombatBehaviorContextMagic::StartCast(bool a_isDualCast)
@@ -4914,6 +5393,12 @@
 48063,0x140809ab0,0x140834e00,2,void CombatBehaviorPrepareDualCast::Enter()
 48064,0x140809c10,0x140834f60,2,void CombatBehaviorPrepareDualCast::Update()
 48065,0x140809de0,0x140835130,2,void CombatBehaviorTreeMagic::Initialize()
+48095,0x14080b160,0x1408364b0,2,"void CombatBehaviorTreeConditionalNode<CombatBehaviorExpression<CombatBehaviorFunc1<bool (__cdecl*)(float),CombatBehaviorExpression<CombatBehaviorMemberFunc<CombatBehaviorContextMagic,float (__cdecl CombatBehaviorContextMagic::*)(void)const>>>>>::Enter(CombatBehaviorThread* a_thread)"
+48097,0x14080b260,0x1408365b0,2,"void CombatBehaviorTreeNodeObject1<CombatBehaviorCastConcentrationSpell,bool>::Enter(CombatBehaviorThread* a_thread)"
+48098,0x14080b290,0x1408365e0,2,"void CombatBehaviorTreeNodeObject1<CombatBehaviorCastImmediateSpell,bool>::Enter(CombatBehaviorThread* a_thread)"
+48102,0x14080b360,0x1408366b0,2,void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextMagic>::Exit(CombatBehaviorThread* a_thread)
+48116,0x14080b790,0x140836ae0,2,"CombatBehaviorTreeValueNodeT<unsigned int,CombatBehaviorExpression<CombatBehaviorMemberFunc<CombatBehaviorContextMagic,MagicSystem::CastingType (__cdecl CombatBehaviorContextMagic::*)(void)const>>>::GetValue"
+48118,0x14080b800,0x140836b50,2,"void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextMagic>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 48139,0x14080c020,0x140837370,4,SCAR::AttackDistanceBase src/Hook_AttackStart.h:99
 48140,0x14080c6f0,0x140837a40,4,SCAR::Hook_AttackStart.h:20
 48141,0x14080cd10,0x140838060,3,bool CombatBehaviorContextMelee::CheckAttackRange()
@@ -4921,26 +5406,86 @@
 48145,0x14080d1d0,0x140838520,3,void CombatBehaviorContextMelee::GatherAttackData()
 48146,0x14080d560,0x1408388b0,3,void CombatBehaviorContextMelee::CalculateAnimationData()
 48151,0x14080df60,0x1408392b0,2,void CombatBehaviorTreeMelee::Initialize()
+48171,0x14080e9a0,0x140839cf0,2,void CombatBehaviorTreeNodeObject<CombatBehaviorAttack>::Enter(CombatBehaviorThread* a_thread)
+48172,0x14080e9e0,0x140839d30,2,void CombatBehaviorTreeNodeObject<CombatBehaviorSpecialAttack>::Enter(CombatBehaviorThread* a_thread)
+48173,0x14080ea20,0x140839d70,2,void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextMelee>::Exit(CombatBehaviorThread* a_thread)
+48182,0x14080ec60,0x140839fb0,2,"void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextMelee>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+48183,0x14080ece0,0x14083a030,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorAttack>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+48184,0x14080ed10,0x14083a060,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorSpecialAttack>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 48234,0x140810930,0x14083bc80,2,void CombatDisableActionController::SaveGame(BGSSaveGameBuffer* a_buf)
 48235,0x1408109c0,0x14083bd10,2,void CombatDisableActionController::LoadGame(BGSLoadGameBuffer* a_buf)
 48237,0x140810a10,0x14083bd60,2,void CombatBehaviorTreeCheckUnreachableTarget::Initialize()
 48238,0x140810af0,0x14083be40,2,void CombatBehaviorTreeReturnToCombatArea::Initialize()
 48242,0x140810cd0,0x14083c020,2,void CombatBehaviorTreeExitWater::Initialize()
 48330,0x1408135b0,0x14083e900,2,"void CombatPathingRequestGeneric<CombatPathingGoalPolicyExitWater,CombatPathingSearchPolicyStandard>::CopyTo(BSPathingRequest& a_dest)"
+48332,0x140813660,0x14083e9b0,2,"CombatObject* BSTDerivedCreator<CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyExitWater,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+48333,0x140813730,0x14083ea80,2,"CombatObject* BSTDerivedCreator<CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyReturnToCombatArea,CombatPathingSearchPolicyStandard>,CombatPathDestinationLocation>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+48336,0x140813890,0x14083ebe0,2,"CombatObject* BSTDerivedCreator<CombatDisableActionController,CombatObject>::CreateImpl(CombatObject* a_val) const"
+48350,0x140813c20,0x14083ef70,2,void CombatBehaviorTreeNodeObject<CombatBehaviorCheckUnreachableTarget>::Enter(CombatBehaviorThread* a_thread)
+48351,0x140813c40,0x14083ef90,2,void CombatBehaviorTreeNodeObject<CombatBehaviorExitWater>::Enter(CombatBehaviorThread* a_thread)
+48352,0x140813c70,0x14083efc0,2,void CombatBehaviorTreeNodeObject<CombatBehaviorReturnToCombatArea>::Enter(CombatBehaviorThread* a_thread)
+48353,0x140813ca0,0x14083eff0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorCheckUnreachableTarget>::Exit(CombatBehaviorThread* a_thread)
+48354,0x140813cf0,0x14083f040,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorExitWater>::Exit(CombatBehaviorThread* a_thread)
+48385,0x140815460,0x1408407b0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorCheckUnreachableTarget>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+48386,0x1408154e0,0x140840830,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorExitWater>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 48391,0x1408157f0,0x140840b40,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyExitWater,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::LoadGame(BGSLoadGameBuffer* a_buf)"
+48397,0x140815a10,0x140840d60,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorCheckUnreachableTarget>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+48399,0x140815a70,0x140840dc0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorReturnToCombatArea>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 48402,0x140815bb0,0x140840f00,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyExitWater,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::SaveGame(BGSSaveGameBuffer* a_buf)"
 48403,0x140815bf0,0x140840f40,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyReturnToCombatArea,CombatPathingSearchPolicyStandard>,CombatPathDestinationLocation>::SaveGame(BGSSaveGameBuffer* a_buf)"
 48431,0x1408166e0,0x140841a30,2,void CombatBehaviorTreeMovement::Initialize()
+48453,0x140817a90,0x140842de0,2,"CombatBehaviorTreeValueNodeT<unsigned int,CombatBehaviorExpression<CombatBehaviorBinaryExpression<CombatBehaviorMemberFunc<Actor,bool (__cdecl Actor::*)(void)>,CombatBehaviorExpression<CombatBehaviorBinaryExpression<CombatBehaviorMemberFunc<Actor,FLY_STATE (__cdecl ActorState::*)(void)const>,FLY_STATE,OpNotEquals>>,OpOr>>>::GetValue"
+48454,0x140817af0,0x140842e40,2,"CombatBehaviorTreeValueNodeT<unsigned int,CombatBehaviorExpression<CombatBehaviorBinaryExpression<CombatBehaviorMemberFunc<Actor,bool (__cdecl Actor::*)(void)const>,CombatBehaviorExpression<CombatBehaviorUnaryExpression<CombatBehaviorMemberFunc<Actor,bool (__cdecl Actor::*)(void)>,OpNot>>,OpAnd>>>::GetValue"
+48456,0x140817b70,0x140842ec0,2,"CombatBehaviorTreeValueNodeT<unsigned int,CombatBehaviorExpression<CombatBehaviorBinaryExpression<CombatBehaviorMemberFunc<CombatState,bool (__cdecl CombatState::*)(void)const>,CombatBehaviorExpression<CombatBehaviorMemberFunc<Actor,bool (__cdecl Actor::*)(void)const>>,OpOr>>>::GetValue"
+48457,0x140817bc0,0x140842f10,2,"CombatBehaviorTreeValueNodeT<unsigned int,CombatBehaviorExpression<CombatBehaviorMemberFunc1<TESCombatStyle,bool (__cdecl TESCombatStyle::*)(unsigned int)const ,TESCombatStyle::FLAG>>>::GetValue"
+48458,0x140817bf0,0x140842f40,2,"CombatBehaviorTreeValueNodeT<unsigned int,CombatBehaviorExpression<CombatBehaviorMemberFunc<Actor,bool (__cdecl Actor::*)(void)const>>>::GetValue"
+48459,0x140817c20,0x140842f70,2,"CombatBehaviorTreeValueNodeT<unsigned int,CombatBehaviorExpression<CombatBehaviorUnaryExpression<CombatBehaviorMemberFunc1<CombatController,bool (__cdecl CombatController::*)(Actor* )const ,CombatBehaviorTree::CombatBehaviorAttacker>,OpNot>>>::GetValue"
 48460,0x140817c60,0x140842fb0,4,bool Actor::IsEssentialDown()
 48461,0x140817c80,0x140842fd0,4,bool Actor::IsInBleedout()
 48463,0x140817cb0,0x140843000,3,float CombatInventory::QRawMaxRange()
 48467,0x140817ec0,0x140843210,3,bool CombatBehaviorContextRangedMovement::CheckOutOfRange()
 48476,0x140818d40,0x140844090,2,void CombatBehaviorTreeRangedMovement::Initialize()
+48495,0x140819ca0,0x140844ff0,2,void CombatBehaviorTreeCreateContextNode<CombatBehaviorContextRangedMovement>::Enter(CombatBehaviorThread* a_thread)
+48496,0x140819d40,0x140845090,2,void CombatBehaviorTreeNodeObject<CombatBehaviorMaintainOptimalRange>::Enter(CombatBehaviorThread* a_thread)
+48497,0x140819d70,0x1408450c0,2,void CombatBehaviorTreeNodeObject<CombatBehaviorStrafe>::Enter(CombatBehaviorThread* a_thread)
+48498,0x140819da0,0x1408450f0,2,void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextRangedMovement>::Exit(CombatBehaviorThread* a_thread)
+48499,0x140819e00,0x140845150,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorMaintainOptimalRange>::Exit(CombatBehaviorThread* a_thread)
+48500,0x140819e50,0x1408451a0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorStrafe>::Exit(CombatBehaviorThread* a_thread)
+48507,0x14081a080,0x1408453d0,2,"CombatBehaviorTreeValueNodeT<unsigned int,CombatBehaviorExpression<CombatBehaviorMemberFunc<Actor,bool (__cdecl IMovementState::*)(void)const>>>::GetValue"
+48508,0x14081a0c0,0x140845410,2,"CombatBehaviorTreeValueNodeT<unsigned int,CombatBehaviorExpression<CombatBehaviorMemberFunc<CombatBehaviorContextRangedMovement,bool (__cdecl CombatBehaviorContextRangedMovement::*)(void)>>>::GetValue"
+48509,0x14081a120,0x140845470,2,"void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextRangedMovement>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+48510,0x14081a1e0,0x140845530,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorMaintainOptimalRange>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+48511,0x14081a260,0x1408455b0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorStrafe>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+48513,0x14081a2f0,0x140845640,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorMaintainOptimalRange>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+48516,0x14081a360,0x1408456b0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorStrafe>::Update(CombatBehaviorThread* a_thread)
 48544,0x14081c860,0x140847bb0,2,void CombatBehaviorTreeSearch::Initialize()
 48549,0x14081d770,0x140848ac0,2,"bool CombatSearchLockData::TryPassDoor(BSPathingDoor** a_door, float* a_costOut)"
+48660,0x140820be0,0x14084bf30,2,"CombatNavmeshSearchT<CombatPathingGoalPolicySearchWander,CombatPathingSearchPolicyStandard>::QueueSuccessorNode"
 48665,0x140821050,0x14084c3a0,2,"void CombatPathingRequestGeneric<CombatPathingGoalPolicySearch,CombatPathingSearchPolicyStandard>::CopyTo(BSPathingRequest& a_dest)"
 48666,0x1408210a0,0x14084c3f0,2,"void CombatPathingRequestGeneric<CombatPathingGoalPolicySearchWander,CombatPathingSearchPolicyStandard>::CopyTo(BSPathingRequest& a_dest)"
+48667,0x1408210f0,0x14084c440,2,"CombatObject* BSTDerivedCreator<CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicySearch,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+48668,0x140821150,0x14084c4a0,2,"CombatObject* BSTDerivedCreator<CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicySearchWander,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+48671,0x1408212f0,0x14084c640,2,"BSPathingLockData* BSTDerivedCreator<CombatSearchLockData,BSPathingLockData>::CreateImpl(BSPathingLockData* a_val) const"
+48685,0x1408216c0,0x14084ca10,2,"void CombatBehaviorTreeConditionalNode<CombatBehaviorExpression<CombatBehaviorBinaryExpression<CombatBehaviorMemberFunc<CombatBehaviorContextSearch,unsigned int (__cdecl CombatBehaviorContextSearch::*)(void)const>,unsigned int,OpGreaterThan>>>::Enter(CombatBehaviorThread* a_thread)"
+48686,0x140821720,0x14084ca70,2,void CombatBehaviorTreeCreateContextNode<CombatBehaviorContextSearch>::Enter(CombatBehaviorThread* a_thread)
+48688,0x1408217e0,0x14084cb30,2,"void CombatBehaviorTreeNodeObject1<CombatBehaviorSearch,COMBAT_SEARCH_PRIORITY>::Enter(CombatBehaviorThread* a_thread)"
+48689,0x140821810,0x14084cb60,2,"void CombatBehaviorTreeNodeObject1<CombatBehaviorSearchCenter,COMBAT_SEARCH_PRIORITY>::Enter(CombatBehaviorThread* a_thread)"
+48690,0x140821840,0x14084cb90,2,"void CombatBehaviorTreeNodeObject1<CombatBehaviorSearchLocation,COMBAT_SEARCH_PRIORITY>::Enter(CombatBehaviorThread* a_thread)"
+48691,0x140821870,0x14084cbc0,2,"void CombatBehaviorTreeNodeObject1<CombatBehaviorSearchWander,COMBAT_SEARCH_PRIORITY>::Enter(CombatBehaviorThread* a_thread)"
+48693,0x140821900,0x14084cc50,2,void CombatBehaviorTreeNodeObject<CombatBehaviorSearchInvestigateDoor>::Enter(CombatBehaviorThread* a_thread)
+48696,0x140821960,0x14084ccb0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorSearch>::Exit(CombatBehaviorThread* a_thread)
+48697,0x1408219b0,0x14084cd00,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorSearchCenter>::Exit(CombatBehaviorThread* a_thread)
+48698,0x140821a00,0x14084cd50,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorSearchInvestigateDoor>::Exit(CombatBehaviorThread* a_thread)
+48699,0x140821a50,0x14084cda0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorSearchLocation>::Exit(CombatBehaviorThread* a_thread)
+48700,0x140821ab0,0x14084ce00,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorSearchWander>::Exit(CombatBehaviorThread* a_thread)
+48745,0x1408237e0,0x14084eb30,2,"void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextSearch>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+48747,0x1408238b0,0x14084ec00,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorSearch>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+48748,0x140823930,0x14084ec80,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorSearchCenter>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+48750,0x140823a30,0x14084ed80,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorSearchLocation>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+48751,0x140823a70,0x14084edc0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorSearchWander>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 48754,0x140823cc0,0x14084f010,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicySearch,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::LoadGame(BGSLoadGameBuffer* a_buf)"
+48761,0x140823f10,0x14084f260,2,"void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextSearch>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+48763,0x140823f70,0x14084f2c0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorSearch>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 48770,0x140824130,0x14084f480,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicySearch,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::SaveGame(BGSSaveGameBuffer* a_buf)"
 48771,0x140824180,0x14084f4d0,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicySearchWander,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::SaveGame(BGSSaveGameBuffer* a_buf)"
 48803,0x140824d00,0x140850050,2,bool CombatBehaviorContextShout::TryCastShout()
@@ -4950,11 +5495,38 @@
 48809,0x140825290,0x1408505e0,2,void CombatBehaviorCastShout::Enter(void* a_node)
 48810,0x140825490,0x1408507e0,2,void CombatBehaviorCastShout::Update()
 48811,0x140825510,0x140850860,2,void CombatBehaviorTreeShout::Initialize()
+48821,0x140825ce0,0x140851030,2,"void CombatBehaviorTreeConditionalNode<CombatBehaviorExpression<CombatBehaviorFunc1<bool (__cdecl*)(float),CombatBehaviorExpression<CombatBehaviorMemberFunc<CombatBehaviorContextShout,float (__cdecl CombatBehaviorContextShout::*)(void)const>>>>>::Enter(CombatBehaviorThread* a_thread)"
+48824,0x140825e20,0x140851170,2,void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextShout>::Exit(CombatBehaviorThread* a_thread)
+48832,0x140826050,0x1408513a0,2,"void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextShout>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+48834,0x140826150,0x1408514a0,2,"void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextShout>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 48856,0x140827820,0x140852b70,2,void CombatBehaviorTreeUseCover::Initialize()
 48909,0x1408294a0,0x1408547f0,2,"void CombatPathingRequestGeneric<CombatPathingGoalPolicyFindCover,CombatPathingSearchPolicyStandard>::CopyTo(BSPathingRequest& a_dest)"
+48910,0x140829510,0x140854860,2,"CombatObject* BSTDerivedCreator<CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFindCover,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+48918,0x140829800,0x140854b50,2,void CombatBehaviorTreeCreateContextNode<CombatBehaviorContextCover>::Enter(CombatBehaviorThread* a_thread)
+48919,0x1408298a0,0x140854bf0,2,"void CombatBehaviorTreeNodeObject2<CombatBehaviorRepeat,float,CombatBehaviorRepeat::FLAGS>::Enter(CombatBehaviorThread* a_thread)"
+48920,0x1408298f0,0x140854c40,2,void CombatBehaviorTreeNodeObject<CombatBehaviorAttackFromCover>::Enter(CombatBehaviorThread* a_thread)
+48921,0x140829920,0x140854c70,2,void CombatBehaviorTreeNodeObject<CombatBehaviorFindCover>::Enter(CombatBehaviorThread* a_thread)
+48922,0x140829950,0x140854ca0,2,void CombatBehaviorTreeNodeObject<CombatBehaviorWaitBehindCover>::Enter(CombatBehaviorThread* a_thread)
+48923,0x140829980,0x140854cd0,2,void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextCover>::Exit(CombatBehaviorThread* a_thread)
+48924,0x140829a30,0x140854d80,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorAttackFromCover>::Exit(CombatBehaviorThread* a_thread)
+48925,0x140829a80,0x140854dd0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFindCover>::Exit(CombatBehaviorThread* a_thread)
+48926,0x140829ab0,0x140854e00,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorWaitBehindCover>::Exit(CombatBehaviorThread* a_thread)
+48950,0x14082a9b0,0x140855d00,2,"void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextCover>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+48951,0x14082aa70,0x140855dc0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorAttackFromCover>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+48952,0x14082ab00,0x140855e50,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFindCover>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+48953,0x14082ab40,0x140855e90,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorWaitBehindCover>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 48955,0x14082ac70,0x140855fc0,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFindCover,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::LoadGame(BGSLoadGameBuffer* a_buf)"
+48959,0x14082adf0,0x140856140,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorAttackFromCover>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+48960,0x14082ae40,0x140856190,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFindCover>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 48963,0x14082af60,0x1408562b0,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFindCover,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::SaveGame(BGSSaveGameBuffer* a_buf)"
+48971,0x14082b3c0,0x140856710,2,"void CombatBehaviorTreeNodeEvaluateFunction<CombatBehaviorExpression<CombatBehaviorMemberFunc<CombatBehaviorContextCover,bool (__cdecl CombatBehaviorContextCover::*)(void)const>>>::Update(CombatBehaviorThread* a_thread)"
 48988,0x14082b950,0x140856ca0,2,void CombatBehaviorTreeUsePotion::Initialize()
+48996,0x14082bfd0,0x140857320,2,"void CombatBehaviorTreeCreateContextNode1<CombatBehaviorContextUsePotion,CombatBehaviorExpression<CombatBehaviorMemberFunc<CombatBehaviorEquipContext,NiPointer<CombatInventoryItem> const &  (__cdecl CombatBehaviorEquipContext::*)(void)const>>>::Enter(CombatBehaviorThread* a_thread)"
+48997,0x14082c040,0x140857390,2,void CombatBehaviorTreeNodeObject<CombatBehaviorDrinkPotion>::Enter(CombatBehaviorThread* a_thread)
+48998,0x14082c080,0x1408573d0,2,void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextUsePotion>::Exit(CombatBehaviorThread* a_thread)
+49004,0x14082c210,0x140857560,2,"void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextUsePotion>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+49005,0x14082c2e0,0x140857630,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorDrinkPotion>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+49006,0x14082c310,0x140857660,2,"void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextUsePotion>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 49011,0x14082c540,0x140857890,3,void CombatPath::Update()
 49013,0x14082c790,0x140857ae0,3,void CombatPath::Start()
 49014,0x14082c950,0x140857ca0,2,void CombatPath::Stop()
@@ -4987,11 +5559,27 @@
 49208,0x140837c20,0x140862f20,2,void CombatPathingRequestMultiGoal::CopyTo(BSPathingRequest* a_dest)
 49214,0x1408380f0,0x1408633f0,2,void CombatPathingDebugData::SaveGame(BGSSaveGameBuffer* a_buf)
 49215,0x1408383a0,0x1408636a0,2,void CombatPathingDebugData::LoadGame(BGSLoadGameBuffer* a_buf)
+49265,0x140839e70,0x140865170,2,"AutoRegisterPathBuilderFactory<CombatPathingRequestMultiGoal,CombatPathingRequestBuilder>::BuildPath"
+49266,0x140839f60,0x140865260,2,"AutoRegisterPathBuilderFactory<CombatPathingRequestStandard,CombatPathingRequestBuilder>::BuildPath"
 49311,0x14083c870,0x140867b70,3,void CombatApproachTargetSpeedController::UpdateApproachTargetSpeed(CombatPath* a_combatPath)
 49312,0x14083ccc0,0x140867fc0,2,void CombatApproachTargetSpeedController::SaveGame(BGSSaveGameBuffer* a_buf)
 49313,0x14083cdd0,0x1408680d0,2,void CombatApproachTargetSpeedController::LoadGame(BGSLoadGameBuffer* a_buf)
 49315,0x14083ce90,0x140868190,2,bool CombatPathingSphere::IsOutside(BSFastNavmeshTriLocation* a_node)
 49316,0x14083cee0,0x1408681e0,2,float CombatPathingSphere::GetPenetrationDepth(BSFastNavmeshTriLocation* a_node)
+49458,0x140840a10,0x14086bd10,2,"CombatObject* BSTDerivedCreator<CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyRetreat,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+49460,0x140840b30,0x14086be30,2,"CombatObject* BSTDerivedCreator<CombatPathT<CombatPathRequestFlight,CombatPathDestinationRef>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+49461,0x140840b90,0x14086be90,2,"CombatObject* BSTDerivedCreator<CombatPathT<CombatPathRequestFlyingAttack,CombatPathDestinationNone>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+49462,0x140840bf0,0x14086bef0,2,"CombatObject* BSTDerivedCreator<CombatPathT<CombatPathRequestHover,CombatPathDestinationNone>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+49463,0x140840c50,0x14086bf50,2,"CombatObject* BSTDerivedCreator<CombatPathT<CombatPathRequestLanding,CombatPathDestinationLocation>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+49464,0x140840cb0,0x14086bfb0,2,"CombatObject* BSTDerivedCreator<CombatPathT<CombatPathRequestMultiGoal,CombatPathDestinationLocations>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+49465,0x140840d10,0x14086c010,2,"CombatObject* BSTDerivedCreator<CombatPathT<CombatPathRequestMultiGoal,CombatPathDestinationRefs>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+49466,0x140840d70,0x14086c070,2,"CombatObject* BSTDerivedCreator<CombatPathT<CombatPathRequestOrbit,CombatPathDestinationLocation>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+49467,0x140840dd0,0x14086c0d0,2,"CombatObject* BSTDerivedCreator<CombatPathT<CombatPathRequestRotatePath,CombatPathDestinationLocation>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+49468,0x140840ea0,0x14086c1a0,2,"CombatObject* BSTDerivedCreator<CombatPathT<CombatPathRequestStandard,CombatPathDestinationLocation>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+49469,0x140840f70,0x14086c270,2,"CombatObject* BSTDerivedCreator<CombatPathT<CombatPathRequestStandard,CombatPathDestinationRef>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+49471,0x140841110,0x14086c410,2,"CombatObject* BSTDerivedCreator<CombatPathT<CombatPathRequestWeightedMultiGoal,CombatPathDestinationLocations>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+49472,0x140841170,0x14086c470,2,"CombatObject* BSTDerivedCreator<CombatPathT<CombatPathRequestWeightedMultiGoal,CombatPathDestinationRefs>,CombatObject>::CreateImpl(CombatObject* a_val) const"
+49474,0x140841230,0x14086c530,2,"CombatObject* BSTDerivedCreator<CombatApproachTargetSpeedController,CombatObject>::CreateImpl(CombatObject* a_val) const"
 49569,0x140842c00,0x14086df00,2,"void CombatPathT<CombatPathRequestFlight,CombatPathDestinationLocation>::LoadGame(BGSLoadGameBuffer* a_buf)"
 49570,0x140842c50,0x14086df50,2,"void CombatPathT<CombatPathRequestFlight,CombatPathDestinationRef>::LoadGame(BGSLoadGameBuffer* a_buf)"
 49571,0x140842ca0,0x14086dfa0,2,"void CombatPathT<CombatPathRequestFlyingAttack,CombatPathDestinationNone>::LoadGame(BGSLoadGameBuffer* a_buf)"
@@ -5085,6 +5673,8 @@
 50298,0x1408640d0,0x14088F630,3,DescriptionFramework::
 50388,0x140869350,0x1408948f0,3,CraftingMenu* CraftingMenu::dtor_deleting(std::uint32_t a_flags)
 50404,0x140869920,0x140894ec0,2,void CraftingSubMenus::AlchemyMenu::Accept(CallbackProcessor* a_cbReg)
+50405,0x140869b80,0x140895120,2,void CraftingSubMenus::ConstructibleObjectMenu::Accept(CallbackProcessor* a_cbReg)
+50407,0x14086a180,0x140895720,2,void CraftingSubMenus::SmithingMenu::Accept(CallbackProcessor* a_cbReg)
 50440,0x14086b200,0x1408967a0,3,YesImSure::EnchantmentLearned
 50447,0x14086b810,0x140896db0,3,CraftingMenu::QuitMenu
 50449,0x14086b980,0x140896f10,4,papyrus_extender::event::alchemy_craft
@@ -5101,8 +5691,12 @@
 50480,0x14086ea50,0x140899fe0,2,char* CraftingSubMenus::EnchantConstructMenu::ItemChangeEntry::GetName()
 50485,0x14086ebb0,0x14089a140,3,YesImSure::alchemyMenu
 50487,0x14086ee80,0x14089a410,3,YesImSure::enchantmentLearned
+50488,0x14086f100,0x14089a690,2,bool CraftingSubMenus::SmithingMenu::ProcessUserEvent(BSFixedString* a_control)
 50491,0x14086f2a0,0x14089a830,2,void CraftingSubMenus::EnchantConstructMenu::EnchantmentEntry::SetData(GFxValue* dataContainer)
 50492,0x14086f320,0x14089a8b0,2,void CraftingSubMenus::EnchantConstructMenu::ItemChangeEntry::SetData(GFxValue* dataContainer)
+50494,0x14086f430,0x14089a9c0,2,void CraftingSubMenus::SmithingMenu::UpdateSmithingList()
+50502,0x14086fa90,0x14089b020,2,void CraftingSubMenus::ConstructibleObjectMenu::SetItemCardInfo(ItemCard* a_itemCard)
+50504,0x14086fb70,0x14089b100,2,void CraftingSubMenus::EnchantConstructMenu::SetItemCardInfo(ItemCard* a_itemCard)
 50515,0x1408708a0,0x14089be30,3,RE::ItemCrafted::GetEventSource
 50530,0x1408720d0,0x14089d5c0,4,"void EnchantConstructMenu::RenameItem_Impl(InventoryEntryData* a_entryData, ExtraDataList* a_extraList, const char* a_name)"
 50531,0x140872230,0x14089D720,4,FUN_140872230
@@ -5259,6 +5853,15 @@
 51911,0x1408d5710,0x140903370,3,"void SendUIMessage::SendInventoryUpdateMessage(TESObjectREFR* a_inventoryRef, const TESBoundObject* a_updateObj)"
 51916,0x1408d5b90,0x1409037f0,3,void QueueDialogSubtitles (BSString * a_text)
 51917,0x1408d5cd0,0x140903940,3,void SendDialogueMenuHideTextMessage()
+51970,0x1408d6e60,0x140904b00,2,"IUIMessageData* BSTDerivedCreator<FaderData,IUIMessageData>::CreateImpl(IUIMessageData* a_val) const"
+51972,0x1408d6f40,0x140904be0,2,"IUIMessageData* BSTDerivedCreator<RefHandleUIData,IUIMessageData>::CreateImpl(IUIMessageData* a_val) const"
+51973,0x1408d6fb0,0x140904c50,2,"IUIMessageData* BSTDerivedCreator<TESFormUIData,IUIMessageData>::CreateImpl(IUIMessageData* a_val) const"
+51974,0x1408d7010,0x140904cb0,2,"IUIMessageData* BSTDerivedCreator<ConsoleData,IUIMessageData>::CreateImpl(IUIMessageData* a_val) const"
+51975,0x1408d7090,0x140904d30,2,"IUIMessageData* BSTDerivedCreator<HUDData,IUIMessageData>::CreateImpl(IUIMessageData* a_val) const"
+51976,0x1408d70f0,0x140904d90,2,"IUIMessageData* BSTDerivedCreator<InventoryUpdateData,IUIMessageData>::CreateImpl(IUIMessageData* a_val) const"
+51977,0x1408d7160,0x140904e00,2,"IUIMessageData* BSTDerivedCreator<KinectStateChangeData,IUIMessageData>::CreateImpl(IUIMessageData* a_val) const"
+51978,0x1408d71d0,0x140904e70,2,"IUIMessageData* BSTDerivedCreator<KinectUserEventData,IUIMessageData>::CreateImpl(IUIMessageData* a_val) const"
+51979,0x1408d7240,0x140904ee0,2,"IUIMessageData* BSTDerivedCreator<MessageBoxData,IUIMessageData>::CreateImpl(IUIMessageData* a_val) const"
 52016,0x1408d8bb0,0x140906950,3,UISaveLoadManager::SetSaveEntryData
 52035,0x1408d99a0,0x140907740,3,UISaveLoadManager::ShowCorruptSaveMessage
 52044,0x1408d9f60,0x140907d00,3,UISaveLoadManager::NotifyBatchComplete
@@ -5422,8 +6025,12 @@
 53512,0x140939e20,0x1409743d0,3,SkyrimScript::HandlePolicy* SkyrimScript::HandlePolicy::dtor_deleting(std::uint32_t a_flags)
 53567,0x14093aae0,0x140975110,2,"BSScript::Variable* MakeStringVariable(BSScript::Variable* a_out, const char* a_string)"
 53581,0x14093aef0,0x140975590,2,"bool EventCallbackAdapter::Load(std::int32_t a_flags, BSStorage* a_storage, BSScript::IVMSaveLoadInterface* a_loader, BSScript::IVirtualMachine* a_vm, bool* a_ok)"
+53591,0x14093b7a0,0x140975e40,2,"bool BSTCommonMessageQueue<BSTSmartPointer<SkyrimScript::DelayFunctor,BSTSmartPointerIntrusiveRefCount>>::Pop(BSTSmartPointer<SkyrimScript::DelayFunctor,BSTSmartPointerIntrusiveRefCount>* a_obj)"
+53594,0x14093b900,0x140975fa0,2,"bool BSTCommonMessageQueue<BSTSmartPointer<SkyrimScript::DelayFunctor,BSTSmartPointerIntrusiveRefCount>>::Push(BSTSmartPointer<SkyrimScript::DelayFunctor,BSTSmartPointerIntrusiveRefCount>* a_obj)"
 53604,0x14093bff0,0x140976690,4,BSTEventSource::AddEventSink
 53698,0x140941050,0x14097b5f0,2,"bool EventCallbackAdapter::Save(SaveStorageWrapper* a_storage, BSScript::IVMSaveLoadInterface* a_saveLoad)"
+53703,0x1409416a0,0x14097bc40,2,"bool BSTCommonMessageQueue<BSTSmartPointer<SkyrimScript::DelayFunctor,BSTSmartPointerIntrusiveRefCount>>::TryPop(BSTSmartPointer<SkyrimScript::DelayFunctor,BSTSmartPointerIntrusiveRefCount>* a_obj)"
+53704,0x140941700,0x14097bca0,2,"bool BSTCommonMessageQueue<BSTSmartPointer<SkyrimScript::DelayFunctor,BSTSmartPointerIntrusiveRefCount>>::TryPush(BSTSmartPointer<SkyrimScript::DelayFunctor,BSTSmartPointerIntrusiveRefCount>* a_obj)"
 53705,0x140941760,0x14097bd00,4,BSTEventSource::RemoveEventSink
 53861,0x14094a5d0,0x1409849c0,3,papyrus::Actor::EquipItem
 53948,0x14094d850,0x140987ab0,3,papyrus::Actor::TrapSoul
@@ -5674,6 +6281,11 @@
 62430,0x140ae2db0,0x140b1d8b0,4,BSAnimationGraphManager::sub_140AE2DB0
 62431,0x140ae2e80,0x140b1d980,3,"bool QueryAnimations(float a_fromTime, BSFixedString& a_projectName, BSScrapArray<ClipData>& a_clips, std::int32_t a_activeGraphIndex)"
 62432,0x140ae2f80,0x140b1da80,3,"bool QueryAnimations(const BSScrapArray<BSFixedString>& a_events, std::int32_t a_activeGraphIndex, BSFixedString& a_projectName, BSScrapArray<ClipData>& a_clips)"
+62477,0x140ae58b0,0x140b203b0,2,"bool BSTCommonStaticMessageQueue<BSTSmartPointer<BSAnimationGraphManager,BSTSmartPointerIntrusiveRefCount>,128>::PopInternal(BSTSmartPointer<BSAnimationGraphManager,BSTSmartPointerIntrusiveRefCount>* a_obj)"
+62484,0x140ae5a70,0x140b20570,2,"bool BSTCommonMessageQueue<BSTSmartPointer<BSAnimationGraphManager,BSTSmartPointerIntrusiveRefCount>>::Pop(BSTSmartPointer<BSAnimationGraphManager,BSTSmartPointerIntrusiveRefCount>* a_obj)"
+62485,0x140ae5ac0,0x140b205c0,2,"bool BSTCommonMessageQueue<BSTSmartPointer<BSAnimationGraphManager,BSTSmartPointerIntrusiveRefCount>>::Push(BSTSmartPointer<BSAnimationGraphManager,BSTSmartPointerIntrusiveRefCount>* a_obj)"
+62490,0x140ae5ee0,0x140b209e0,2,"bool BSTCommonMessageQueue<BSTSmartPointer<BSAnimationGraphManager,BSTSmartPointerIntrusiveRefCount>>::TryPop(BSTSmartPointer<BSAnimationGraphManager,BSTSmartPointerIntrusiveRefCount>* a_obj)"
+62491,0x140ae5f40,0x140b20a40,2,"bool BSTCommonMessageQueue<BSTSmartPointer<BSAnimationGraphManager,BSTSmartPointerIntrusiveRefCount>>::TryPush(BSTSmartPointer<BSAnimationGraphManager,BSTSmartPointerIntrusiveRefCount>* a_obj)"
 62584,0x140ae9a70,0x140b245d0,4,"BSResource__EntryDB_BShkbHkxDB__DBTraits_::Func3_140AE9A70 (longlong param_1, undefined8 param_2)"
 62618,0x140aeb360,0x140b25ec0,4,ulonglong BShkbAnimationGraph::sub_140AEB360 (BShkbAnimationGraph * a_this)
 62640,0x140aedd10,0x140b28870,4,"BShkbAnimationGraph::sub_140AEDD10 (ulonglong param_1, undefined8 param_2, char param_3)"
@@ -5692,6 +6304,7 @@
 62709,0x140af7250,0x140b32030,3,"bool BShkbAnimationGraph::SetGraphVariableFloat(const BSFixedString& a_variableName, const float a_in)"
 62710,0x140af7310,0x140b320f0,3,"bool BShkbAnimationGraph::SetGraphVariableBool(const BSFixedString& a_variableName, const bool a_in)"
 62805,0x140afa330,0x140b35110,3,"std::uint32_t ScrapArrayBSFixedString_Push(void* a_array, BSFixedString* a_string)"
+62919,0x140afff50,0x140b3ad30,2,"BShkNonTransformController* BSTDerivedCreator<BShkVisibilityController,BShkNonTransformController>::CreateImpl(BShkNonTransformController* a_val) const"
 62923,0x140b00650,0x140b3b430,4,"undefined4 bshkbAnimationGraphHook2_140b00650 (undefined8 param_1, hkbCharacter * param_2, char param_3, undefined8 param_4, undefined8 param_5)"
 62927,0x140b00ce0,0x140b3bac0,4,"void FUN_140b00ce0 (undefined8 param_1, longlong param_2, longlong * param_3, undefined8 param_4)"
 62935,0x140b01670,0x140b3c450,4,"bool hkbCharacter::QueryClips_fromTime(float a_fromTime, BSScrapArray<ClipData>& a_clips)"
@@ -5752,6 +6365,7 @@
 66646,0x140bf9e40,0x140c34ce0,4,void BSGameSound::SetOutputModel(BSISoundOutputModel* a_outputModel)
 66652,0x140bfa0e0,0x140c34f80,2,bool BSNullImplAudio::Init(REX::W32::HWND* a_wnd)
 66654,0x140bfa1a0,0x140c35040,2,BSGameSound* BSNullImplAudio::GetGameSound(BSResource::ID* a_resourceID)
+66665,0x140bfa5b0,0x140c35450,2,"BSAudio* BSTDerivedCreator<BSNullImplAudio,BSAudio>::CreateImpl(BSAudio* a_val) const"
 66689,0x140bfac30,0x140c35ad0,2,bool BSNullImplGameSound::Update()
 66701,0x140bfadb0,0x140c35c50,2,BSGameSound* BSXAudio2Audio::GetGameSound(const BSResource::ID& a_resourceID)
 66702,0x140bfae60,0x140c35d00,2,void BSXAudio2Audio::ReleaseGameSound(BSGameSound* a_gameSound)
@@ -5759,6 +6373,7 @@
 66712,0x140bfba00,0x140c368a0,2,std::uint32_t BSXAudio2Audio::CreateMonitor()
 66713,0x140bfbd10,0x140c36bb0,2,void BSXAudio2Audio::ReleaseMonitor(std::uint32_t a_monitor)
 66714,0x140bfbe20,0x140c36cc0,2,BSAudioMonitor::Receiver BSXAudio2Audio::GetReceiver(std::uint32_t a_monitor)
+66730,0x140bfc3f0,0x140c37290,2,"BSAudio* BSTDerivedCreator<BSXAudio2Audio,BSAudio>::CreateImpl(BSAudio* a_val) const"
 66757,0x140bfd280,0x140c38120,2,bool BSXAudio2GameSound::SyncOpen()
 66758,0x140bfd3c0,0x140c38250,2,bool BSXAudio2GameSound::StartAsyncOpen()
 66759,0x140bfd4f0,0x140c38380,2,bool BSXAudio2GameSound::TestAsyncOpenReady()
@@ -5931,6 +6546,8 @@
 69026,0x140c5c680,0x140ca1c30,2,std::uint64_t NiStream::PreSaveObjectSizeTable()
 69027,0x140c5c700,0x140ca1cb0,2,bool NiStream::SaveObjectSizeTable(std::uint64_t a_size)
 69028,0x140c5c7a0,0x140ca1d50,2,bool NiStream::LoadObjectSizeTable()
+69110,0x140c5f030,0x140ca45e0,2,"bool NiTStringTemplateMap<NiTPointerMap<char const* ,NiObject*  (__cdecl*)(void)>,NiObject*  (__cdecl*)(void)>::key_eq(const char* a_lhs, const char* a_rhs)"
+69138,0x140c5ff40,0x140ca54f0,2,"void NiTStringTemplateMap<NiTPointerMap<char const* ,NiObject*  (__cdecl*)(void)>,NiObject*  (__cdecl*)(void)>::assign_value(void* a_item, const char* a_key, void* a_value)"
 69139,0x140c5ffd0,0x140ca5580,2,"void NiObjectNET::CopyMembers(NiObjectNET* a_target, NiCloningProcess* a_cloning)"
 69156,0x140c60fb0,0x140ca6560,4,void NiObjectNET::RemoveController(NiTimeController* a_controller)
 69180,0x140c61ce0,0x140ca7290,4,void QueueNiRefObjectForDeferredRelease(NiPointer<NiRefObject>* a_object)
@@ -6034,6 +6651,8 @@
 71071,0x140cd0460,0x140d16fb0,3,"void NiFloatData::ReplaceAnim(NiFloatKey* a_keys, std::uint32_t a_numKeys, KeyType a_type)"
 71088,0x140cd0bf0,0x140d17740,3,NiFloatInterpolator* NiFloatInterpolator::Create()
 71340,0x140cd8350,0x140d1eea0,2,bool NiTransformController::InterpTargetIsCorrectType(NiObjectNET* a_target)
+72016,0x140cea6c0,0x140d31210,2,"bool NiTStringTemplateMap<NiTPointerMap<char const* ,NiPointer<NiSequence>>,NiPointer<NiSequence>>::key_eq(const char* a_lhs, const char* a_rhs)"
+72024,0x140ceaa90,0x140d315e0,2,"void NiTStringTemplateMap<NiTPointerMap<char const* ,NiPointer<NiSequence>>,NiPointer<NiSequence>>::assign_value(void* a_item, const char* a_key, NiPointer<NiSequence> a_value)"
 72038,0x140ceb0e0,0x140d31c30,2,bool NiLightColorController::InterpTargetIsCorrectType(NiObjectNET* a_target)
 72049,0x140ceb380,0x140d31ed0,3,NiLightDimmerController* NiLightDimmerController::Create()
 72327,0x140cf4d50,0x140d3b8a0,2,bool NiVisController::InterpTargetIsCorrectType(NiObjectNET* a_target)
@@ -6133,6 +6752,9 @@
 74004,0x140d2df90,0x140d76370,2,"void QueuedFile::Cancel([[maybe_unused]] std::uint32_t a_previousState, [[maybe_unused]] void* a_unk)"
 74005,0x140d2e090,0x140d76470,2,void QueuedFile::AddChild(QueuedFile* a_child)
 74013,0x140d2e350,0x140d76730,2,QueuedFile* QueuedFile::dtor_deleting()
+74019,0x140d2e590,0x140d76970,2,"void BSQueuedResourceCollectionBase::Cancel(std::uint32_t a_previousState, void* a_unk)"
+74021,0x140d2e630,0x140d76a10,2,void BSQueuedResourceCollectionBase::DoOnQueueMe()
+74026,0x140d2e7e0,0x140d76ba0,2,void BSQueuedResourceCollectionBase::DoOnTaskFinished()
 74031,0x140d2e880,0x140d76c40,3,"void BSModelDB::ParseModel(BSTSmartPointer<BSResource::Stream>* a_stream, const char* a_modelName, const DBTraits::ArgsType& a_args, NiPointer<NiNode>& a_modelOut, std::uint32_t& a_typeOut)"
 74040,0x140d2f220,0x140d775e0,4,"BSResource::ErrorCode BSModelDB::Demand(const char* a_modelPath, NiPointer<NiNode>& a_modelOut, const DBTraits::ArgsType& a_args)"
 74055,0x140d300f0,0x140d784b0,3,"void BSResource::EntryDB::ProcessLoadQueue(void* a_loadQueue, void* a_context)"
@@ -6163,6 +6785,7 @@
 74239,0x140d38710,0x140d80bb0,3,RE::INISettingCollection::OpenHandle
 74240,0x140d38720,0x140d80bc0,3,RE::INISettingCollection::CloseHandle
 74250,0x140d38940,0x140d80de0,2,BSXFlags* BSXFlags::BSXFlags()
+74366,0x140d3d070,0x140d86000,2,"void BSQueuedResourceCollection<BSResource::EntryDB<BSTextureDB::DBTraits>,2>::Run()"
 74377,0x140d3d3d0,0x140d86360,4,BSWindModifier* BSWindModifier::Ctor()
 74378,0x140d3d410,0x140d863a0,4,"void UpdateWindVectorForBSWindModifier(float strength, float angle)"
 74387,0x140d3d6b0,0x140d86640,3,void BSTempNodeManager::UpdateTempNodeTimers(float a_elapsedTime)
@@ -6469,6 +7092,12 @@
 79945,0x140ebe630,0x140f1a770,3,UI::ProcessMessages
 79946,0x140ebf260,0x140f1b430,2,void UI::AdvanceMenuMovies()
 79947,0x140ebf510,0x140f1b750,3,void UI::DrawInterface(UI* a_this)
+80009,0x140ec19f0,0x140f1e510,2,"IUIMessageData* BSTDerivedCreator<BSUIMessageData,IUIMessageData>::CreateImpl(IUIMessageData* a_val) const"
+80010,0x140ec1a60,0x140f1e580,2,"IUIMessageData* BSTDerivedCreator<BSUIScaleformData,IUIMessageData>::CreateImpl(IUIMessageData* a_val) const"
+80035,0x140ec26f0,0x140f1f210,2,bool BSTCommonMessageQueue<UIMessage*>::Pop(UIMessage** a_obj)
+80036,0x140ec2740,0x140f1f260,2,bool BSTCommonMessageQueue<UIMessage*>::Push(UIMessage** a_obj)
+80043,0x140ec2c90,0x140f1f7b0,2,bool BSTCommonMessageQueue<UIMessage*>::TryPop(UIMessage** a_obj)
+80044,0x140ec2cf0,0x140f1f810,2,bool BSTCommonMessageQueue<UIMessage*>::TryPush(UIMessage** a_obj)
 80059,0x140ec30f0,0x140f1fbc0,3,RE::UIMessageQueue::ProcessCommands
 80061,0x140ec31d0,0x140f1fca0,4,RE::UIMessageQueue::CreateUIMessageData
 80077,0x140ec3d50,0x140f20820,3,po3tweaks::SitToWait::ProcessMenu
@@ -7017,6 +7646,8 @@
 88562,0x1410c7120,0x141123e50,2,"bool ClosestPointOnSegmentMetricHorizontal(NiPoint3* a_position, NiPoint3* a_segStart, NiPoint3* a_segEnd, NiPoint3* a_outClosest, float* a_outDistance, float* a_outParam)"
 88568,0x1410c80f0,0x141124e20,2,"bool BSPathingSolution::FindPathPositionNearPointImpl(const NiPoint3& a_point, float a_startPosition, float a_distance, bool a_forward, float& a_outPosition, NiPoint3& a_outPoint, float a_tolerance)"
 88571,0x1410c8da0,0x141125ad0,2,"void BSPathingSolution::FindMaxSpeedImpl(float* a_inOutSpeed, float a_distance, float a_param)"
+88588,0x1410c98e0,0x141126610,2,"BSPathingSolution* BSTDerivedCreator<BSPathingSolution,BSPathingSolution>::CreateImpl(BSPathingSolution* a_val) const"
+88589,0x1410c9940,0x141126670,2,"void BSTDerivedCreator<BSPathingSolution,BSPathingSolution>::Destroy(const BSPathingSolution* a_val) const"
 88596,0x1410c9b10,0x141126840,2,bool PathingStreamLoadGame::ReadBSPathingNodeArray(BSTArray<BSPathingNode>& a_nodes)
 88597,0x1410c9b80,0x1411268b0,2,bool PathingStreamLoadGame::ReadBSVirtualPathingNodeArray(BSTArray<BSVirtualPathingNode>& a_nodes)
 88603,0x1410ca1c0,0x141126ef0,2,bool PathingStreamSaveGame::WriteBSVirtualPathingNodeArray(const BSTArray<BSVirtualPathingNode>& a_nodes)
@@ -7322,6 +7953,7 @@
 89493,0x1411035a0,0x1411604c0,2,"bool IPathFollowerAction::ActivateDoor_Prepare(PathFollowerStateUpdateData* a_updateData, float* a_out)"
 89494,0x141103700,0x141160620,2,"bool IPathFollowerAction::ActivateDoor_GetTargetSpeed(PathFollowerStateUpdateData* a_updateData, float* a_out)"
 89495,0x141103710,0x141160630,2,"void* MovementMessageAutoRegister::RegisterActivateDoor(void* a_registrar, std::int32_t a_typeId)"
+89504,0x141103a40,0x141160960,2,"MovementMessage* BSTDerivedCreator<MovementMessageActivateDoor,MovementMessage>::CreateImpl(MovementMessage* a_val) const"
 89507,0x141103b40,0x141160a60,2,"MovementMessageWarpToLocation* MovementMessageWarpToLocation::ctor(const BSPathingLocation& a_location, const NiPoint3& a_position)"
 89510,0x141103c10,0x141160b30,3,std::int32_t MovementMessageWarpToLocation::GetStaticType()
 89511,0x141103c50,0x141160b70,3,void MovementMessageWarpToLocation::SaveGame(PathingStreamSaveGame* a_stream)
@@ -7365,6 +7997,7 @@
 89625,0x1411074f0,0x141164410,2,"bool MovementMessageJump::Prepare(PathFollowerStateUpdateData* a_updateData, float* a_out)"
 89626,0x141107540,0x141164460,2,"bool IPathFollowerAction::Jump_GetTargetSpeed(PathFollowerStateUpdateData* a_updateData, float* a_out)"
 89627,0x141107560,0x141164480,2,"void* MovementMessageAutoRegister::RegisterJump(void* a_registrar, std::int32_t a_typeId)"
+89634,0x141107770,0x141164690,2,"MovementMessage* BSTDerivedCreator<MovementMessageJump,MovementMessage>::CreateImpl(MovementMessage* a_val) const"
 89638,0x1411078d0,0x1411647f0,2,const BSFixedString& MovementPostUpdateArbiter::GetPipelineStage()
 89639,0x1411078e0,0x141164800,2,const BSFixedString& MovementPostUpdateArbiter::GetArbiterType()
 89640,0x1411078f0,0x141164810,2,BSFixedString& MovementPostUpdateArbiter::GetStaticArbiterType()
@@ -7626,6 +8259,7 @@
 90430,0x14111ff90,0x14117ce60,2,"void* MovementMessageAutoRegister::RegisterNewPath(void* a_registrar, std::int32_t a_typeId)"
 90431,0x141120060,0x14117cf30,2,"void* MovementMessageAutoRegister::RegisterPathComplete(void* a_registrar, std::int32_t a_typeId)"
 90432,0x141120130,0x14117d000,2,"void* MovementMessageAutoRegister::RegisterPathFailed(void* a_registrar, std::int32_t a_typeId)"
+90449,0x1411205a0,0x14117d470,2,"MovementMessage* BSTDerivedCreator<MovementMessageNewPath,MovementMessage>::CreateImpl(MovementMessage* a_val) const"
 90474,0x141120d80,0x14117dc50,2,"BSPathSmootherPOVSearch* BSPathSmootherPOVSearch::ctor(void* a_arg2, void* a_arg3, void* a_arg4, void* a_arg5, void* a_arg6, void* a_arg7, void* a_arg8)"
 90476,0x1411210d0,0x14117dfa0,2,"bool BSPathSmootherPOVSearch::Run(const void* a_start, const void* a_goal)"
 90480,0x141121720,0x14117e5f0,2,void BSPathSmootherPOVSearch::ReleaseSearchState()
@@ -7983,6 +8617,10 @@
 98417,0x141273940,0x141293bf0,2,void* BSScript::IVMSaveLoadInterface::GetWritableStringTable1()
 98418,0x141273950,0x141293c00,2,void* BSScript::IVMSaveLoadInterface::GetWritableTypeTable2()
 98419,0x141273960,0x141293c10,2,void* BSScript::IVMSaveLoadInterface::GetWritableTypeTable1()
+98434,0x141273e50,0x1412941e0,2,bool BSTCommonMessageQueue<BSScript::Internal::FunctionMessage>::Pop(BSScript::Internal::FunctionMessage* a_obj)
+98435,0x141273ea0,0x141294230,2,bool BSTCommonMessageQueue<BSScript::Internal::SuspendedStack>::Pop(BSScript::Internal::SuspendedStack* a_obj)
+98437,0x141274130,0x1412944c0,2,bool BSTCommonMessageQueue<BSScript::Internal::FunctionMessage>::Push(BSScript::Internal::FunctionMessage* a_obj)
+98438,0x141274180,0x141294510,2,bool BSTCommonMessageQueue<BSScript::Internal::SuspendedStack>::Push(BSScript::Internal::SuspendedStack* a_obj)
 98441,0x141274320,0x1412946b0,2,std::uint32_t BSScript::TypeInfo::GetRawType()
 98450,0x141274ca0,0x141295030,2,"void BSTHashMap<VMHandle, BSTSmallSharedArray<AttachedScript>>::Grow()"
 98465,0x141275680,0x141295a10,2,void BSTSmallSharedArray<BSScript::Internal::AttachedScript>::EraseAt(std::uint32_t a_index)
@@ -7990,6 +8628,10 @@
 98476,0x1412766c0,0x141296a50,2,"bool BSTHashMap<VMHandle, BSTSmallSharedArray<AttachedScript>>::ReinsertEntry(void* a_entries, std::uint32_t a_hash, BSTHashMap<VMHandle, BSTSmallSharedArray<AttachedScript>>::Entry* a_entry)"
 98480,0x141276e50,0x141297270,2,void BSScript::Internal::VirtualMachine::SetLinkedCallback(void* a_callback)
 98482,0x141277020,0x141297440,3,"bool ScrapArrayBSFixedString_Resize(void* a_array, std::uint32_t a_newSize)"
+98485,0x141277270,0x141297740,2,bool BSTCommonMessageQueue<BSScript::Internal::FunctionMessage>::TryPop(BSScript::Internal::FunctionMessage* a_obj)
+98486,0x1412772d0,0x1412977a0,2,bool BSTCommonMessageQueue<BSScript::Internal::SuspendedStack>::TryPop(BSScript::Internal::SuspendedStack* a_obj)
+98487,0x141277330,0x141297800,2,bool BSTCommonMessageQueue<BSScript::Internal::FunctionMessage>::TryPush(BSScript::Internal::FunctionMessage* a_obj)
+98488,0x141277390,0x141297860,2,bool BSTCommonMessageQueue<BSScript::Internal::SuspendedStack>::TryPush(BSScript::Internal::SuspendedStack* a_obj)
 98493,0x141277a40,0x141297f10,3,BSScript::Internal::VirtualMachine::WriteObject
 98520,0x141278110,0x1412b1380,3,BSScript::Internal::CodeTasklet::VMProcess
 98521,0x1412786c0,0x1412b1930,2,bool BSScript::Internal::CodeTasklet::SaveResumeReason(SaveStorageWrapper& a_storage)
@@ -8387,6 +9029,7 @@
 101780,0x14133a7b0,0x141377b90,3,void StopTimer(int a_index)
 101821,0x14133e250,0x14137b630,3,BSWin32SystemUtility* BSWin32SystemUtility::GetSingleton()
 101824,0x14133e300,0x14137b6e0,2,"void CCallResult<BSWin32SystemUtility,EncryptedAppTicketResponse_t>::Run(void* a_pvParam)"
+101825,0x14133e320,0x14137b700,2,"void CCallResult<BSWin32SystemUtility,EncryptedAppTicketResponse_t>::Run(void* a_pvParam, bool a_bIOFailure, std::uint64_t a_hSteamAPICall)"
 101862,0x14133ea10,0x14137be00,2,BSWin32GameDataSystemUtility* BSWin32GameDataSystemUtility::GetSingleton()
 101884,0x14133f0c0,0x14137c200,3,RE::BSWin32SaveDataSystemUtility::GetSingleton
 101962,0x141340ff0,0x14137e180,4,"longlong **BSWin32SaveDataSystemUtility::Ctor_141340FF0(longlong param_1,longlong **param_2,char *param_3,int param_4)"
