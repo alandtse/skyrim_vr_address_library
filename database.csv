@@ -2519,13 +2519,24 @@
 33017,0x14052b980,0x140524ab0,2,void ModManager::DeleteContentIfUnsubscribed(GFxValue* a_data)
 33018,0x14052bd10,0x140524e40,2,void ModManager::DeleteInstalledMod(const char* a_contentId)
 33019,0x14052bd40,0x140524e70,2,void ModManager::DeleteModFiles(const char* a_modFileName)
+33246,0x14053d060,0x14053fde0,2,void AbsorbEffect::ModifyOnStart()
+33247,0x14053d100,0x14053fe80,2,void AbsorbEffect::ModifyOnUpdate(float a_delta)
+33248,0x14053d1b0,0x14053ff30,2,"void AbsorbEffect::ModifyOnFinish(Actor* a_caster, Actor* a_target, float a_value)"
 33257,0x14053d370,0x1405400f0,4,AccumulatingValueModifierEffect::Allocate(AccumulatingValueModifierEffect* accumulatingValueModifierEffect
+33258,0x14053d430,0x1405401b0,2,void AccumulatingValueModifierEffect::SaveGame(BGSSaveFormBuffer* a_buf)
+33265,0x14053d770,0x1405404f0,2,void AccumulatingValueModifierEffect::ModifyOnUpdate(float a_delta)
+33266,0x14053d890,0x140540610,2,"void AccumulatingValueModifierEffect::ModifyOnFinish(Actor* a_caster, Actor* a_target, float a_value)"
 33277,0x14053DEB0,0x140540C30,4,"ActiveEffect::Adjust(Skyrim::ActiveEffect* activeEffect, float effectiveness, bool requiresHostility)"
 33278,0x14053df40,0x140540cc0,4,ActiveEffect::CalculateDurationAndMagnitude_14053DF40
+33279,0x14053dff0,0x140540d70,2,void ActiveEffect::OnAdd(MagicTarget* a_target)
 33282,0x14053e120,0x140540ea0,4,float ActiveEffect::GetMagnitude_14053E120 (ActiveEffect * a_this)
 33283,0x14053E1B0,0x140540f30,4,ActiveEffect::Restart(Skyrim::ActiveEffect* activeEffect)
 33286,0x14053e380,0x140541100,3,void ActiveEffect::Dispel(bool a_force)
 33289,0x14053e670,0x1405413f0,4,bool ActiveEffect::ShouldUpdate()
+33295,0x14053e8d0,0x140541650,2,void ActiveEffect::SaveGame(BGSSaveFormBuffer* a_buf)
+33298,0x14053ef50,0x140541cd0,2,void ActiveEffect::Revert(BGSLoadFormBuffer* a_buf)
+33306,0x14053f5f0,0x140542130,2,std::int32_t ActiveEffect::Compare(ActiveEffect* a_otherEffect)
+33316,0x14053fb20,0x140542660,2,bool ActiveEffect::CanFinish()
 33320,0x140540360,0x140542EA0,3,"ActiveEffect::SetEffectiveness(Skyrim::ActiveEffect* activeEffect, float effectiveness)"
 33321,0x140540410,0x140542F50,3,"ValueModifierEffect::sub_140540410(ValueModifierEffect *a1, float a2)"
 33322,0x140540570,0x1405430B0,3,"bool ScriptEffect::ReadFromStream(ScriptEffect *a1@, BGSLoadGameBuffer* a2, std::uint32_t a3)"
@@ -2540,15 +2551,56 @@
 33403,0x140544490,0x1405484c0,3,void ActorMagicCaster::CheckAttachCastingArt()
 33423,0x140544ea0,0x140548f70,4,"bool SourceActionMap::DoAction(Actor* a_actor, DEFAULT_OBJECT a_action)"
 33426,0x140544ff0,0x1405490c0,4,float MagicCaster::GetCurrentSpellCost()
+33444,0x140545970,0x140549a40,2,void BoundItemEffect::SaveGame(BGSSaveFormBuffer* a_buf)
+33446,0x140545a60,0x140549b30,2,void BoundItemEffect::FinishLoadGame(BGSLoadFormBuffer* a_buf)
+33447,0x140545a90,0x140549b60,2,void BoundItemEffect::Revert(BGSLoadFormBuffer* a_buf)
+33448,0x140545b10,0x140549be0,2,void BoundItemEffect::Start()
+33449,0x140545b80,0x140549c50,2,void BoundItemEffect::Finish()
+33450,0x140545cc0,0x140549d90,2,bool BoundItemEffect::CanFinish()
+33451,0x140545d10,0x140549de0,2,void BoundItemEffect::Update(float a_delta)
+33452,0x140545eb0,0x140549f80,2,void BoundItemEffect::ClearTargetImpl()
+33455,0x140545f80,0x14054a050,2,void BoundItemEffect::EquipBoundWeapon(Actor* a_actor)
+33463,0x140546390,0x14054a460,2,void CloakEffect::Update(float a_delta)
+33474,0x1405469a0,0x14054aa70,2,void CommandEffect::ClearTargetImpl()
+33475,0x140546aa0,0x14054ab70,2,void CommandEffect::OnAdd(MagicTarget* a_target)
+33477,0x140546b60,0x14054ac30,2,void CommandEffect::Update(float a_delta)
+33478,0x140546c60,0x14054ad30,2,void CommandEffect::SaveGame(BGSSaveFormBuffer* a_buf)
+33480,0x140546d40,0x14054ae10,2,void CommandEffect::FinishLoadGame(BGSLoadFormBuffer* a_buf)
+33481,0x140546e20,0x14054aef0,2,void CommandEffect::Start()
+33482,0x140546f10,0x14054afe0,2,void CommandEffect::Finish()
+33486,0x140547140,0x14054b210,2,void CommandSummonedEffect::Start()
+33499,0x140547880,0x14054b950,2,void DarknessEffect::Start()
+33500,0x140547940,0x14054ba10,2,void DarknessEffect::Finish()
+33511,0x140547d90,0x14054be60,2,void DisarmEffect::Update(float a_delta)
+33512,0x140547e00,0x14054bed0,2,"void DisguiseEffect::EvaluateConditions(float a_delta, bool a_forceUpdate)"
+33513,0x140547e50,0x14054bf20,2,void DisguiseEffect::SaveGame(BGSSaveFormBuffer* a_buf)
 33516,0x140547f10,0x14054bfe0,2,void DisguiseEffect::StartDetectionCheck()
 33519,0x1405481f0,0x14054c2c0,3,DisguiseEffect::DetectionChecker* DisguiseEffect::DetectionChecker::DetectionChecker(DisguiseEffect* a_effect)
 33520,0x140548280,0x14054c350,2,void DisguiseEffect::DetectionChecker::OnComplete()
 33521,0x140548370,0x14054c440,2,"bool DisguiseEffect::RefreshActorKnowledgeOfPlayer(DetectionListener** a_listener, std::uint32_t* a_handle)"
 33524,0x1405484c0,0x14054c590,2,void ProcessLists::RefreshHighActorsKnowledgeOfPlayer(DetectionListener** a_listener)
+33531,0x140548770,0x14054c840,2,void DispelEffect::Start()
+33538,0x140548a70,0x14054cb40,2,void DualValueModifierEffect::SaveGame(BGSSaveFormBuffer* a_buf)
+33544,0x140548ce0,0x14054cdb0,2,bool DualValueModifierEffect::IsCausingHealthDamage()
 33559,0x140549540,0x14054D680,3,GrabActorEffect::Func21(GrabActorEffect *a1)
+33562,0x140549860,0x14054d9a0,2,"void GrabActorEffect::ModifyActorValue(Actor* a_actor, float a_value, ActorValue a_actorValue)"
+33563,0x140549920,0x14054db10,2,void GrabActorEffect::SaveGame(BGSSaveFormBuffer* a_buf)
 33564,0x140549950,0x14054DB40,3,GrabActorEffect::Func20(GrabActorEffect *a1)
+33565,0x140549b00,0x14054dcf0,2,void GrabActorEffect::Update(float a_delta)
+33568,0x140549cc0,0x14054ded0,2,void VampireLordEffect::Finish()
+33583,0x14054aae0,0x14054ecf0,2,void GuideEffect::Finish()
+33586,0x14054adc0,0x14054efd0,2,void GuideEffect::Start()
+33590,0x14054b0b0,0x14054f2c0,2,void InvisibilityEffect::FinishLoadGame(BGSLoadFormBuffer* a_buf)
+33591,0x14054b1a0,0x14054f3b0,2,void InvisibilityEffect::Revert(BGSLoadFormBuffer* a_buf)
+33593,0x14054b210,0x14054f420,2,void InvisibilityEffect::Start()
 33594,0x14054b2f0,0x14054f500,3,InvisibilityEffect::Finish
+33598,0x14054b5b0,0x14054f7c0,2,"void LightEffect::SwitchAttachedRoot(NiNode* a_root, NiNode* a_attachRoot)"
+33600,0x14054b730,0x14054f940,2,void LightEffect::Update(float a_delta)
+33602,0x14054b800,0x14054fa10,2,void LightEffect::Finish()
+33606,0x14054bac0,0x14054fcd0,2,void LightEffect::FinishLoadGame(BGSLoadFormBuffer* a_buf)
+33607,0x14054baf0,0x14054fd00,2,void LightEffect::Revert(BGSLoadFormBuffer* a_buf)
 33610,0x14054bc60,0x14054fe70,2,po3tweaks::AttachLightCrash::AttachLightHitEffectVisitor
+33617,0x14054bf20,0x140550130,2,void LockEffect::Start()
 33622,0x14054c1a0,0x1405503e0,4,void MagicCaster::UpdateImpl(float a_delta) src\RE\M/MagicCaster.cpp:80
 33623,0x14054c300,0x140550540,4,MagicCaster::CastSpell
 33630,0x14054cb70,0x140550d40,4,void MagicCaster::InterruptCast(bool a_refund) src\RE\M/MagicCaster.cpp:40
@@ -2589,22 +2641,55 @@
 33834,0x140557120,0x14055ceb0,4,BSContainer::ForEachResult MagicItemDataCollector::operator()(Effect* a_effect)
 33869,0x140558c00,0x14055E990,3,ModelReferenceEffect::DetachImpl
 33873,0x140558fc0,0x14055ED50,3,ModelReferenceEffect::sub_*
+33894,0x140559b20,0x14055f8b0,2,void NightEyeEffect::Start()
+33930,0x14055aa60,0x140560950,2,void ParalysisEffect::Start()
+33937,0x14055acc0,0x140560bb0,2,void PeakValueModifierEffect::ClearTargetImpl()
+33939,0x14055ae50,0x140560d20,2,void PeakValueModifierEffect::OnAdd(MagicTarget* a_target)
+33940,0x14055ae80,0x140560d50,2,void PeakValueModifierEffect::OnRemove()
+33941,0x14055afa0,0x140560e60,2,void PeakValueModifierEffect::FinishLoadGame(BGSLoadFormBuffer* a_buf)
+33943,0x14055b050,0x140560f10,2,"void PeakValueModifierEffect::EvaluateConditions(float a_delta, bool a_forceUpdate)"
+33954,0x14055b6d0,0x140561910,2,void ReanimateEffect::SaveGame(BGSSaveFormBuffer* a_buf)
 33956,0x14055b750,0x140561990,2,enhanced_reanimation::Reanimate::Start
+33957,0x14055b9f0,0x140561c30,2,void ReanimateEffect::Update(float a_delta)
 33961,0x14055bc80,0x140561ec0,4,"void Start_14055BC80 (ActiveEffectReferenceEffectController * param_1, ReferenceEffect * * a_effectOut)"
 34074,0x14055da10,0x140563c50,4,void WeaponEnchantmentController::SetAttachRoot(RE::ReferenceEffectController* a_this)
+34089,0x14055de80,0x1405640c0,2,void ScriptEffect::ClearTargetImpl()
+34092,0x14055e030,0x140564270,2,void ScriptEffect::Finish()
+34093,0x14055e0b0,0x1405642f0,2,void ScriptEffect::Update(float a_delta)
+34094,0x14055e110,0x140564350,2,void ScriptEffect::SaveGame(BGSSaveFormBuffer* a_buf)
 34132,0x140560e40,0x1405670b0,3,ENBLightForEffectShaders::ShaderReferenceEffect::Add:AddAddonModel::thunk_0x8C2
+34175,0x140562d30,0x140568fa0,2,void SlowTimeEffect::Start()
+34176,0x140562e00,0x140569070,2,void SlowTimeEffect::Finish()
+34182,0x140563140,0x1405693b0,2,void SoulTrapEffect::Update(float a_delta)
+34183,0x140563210,0x140569480,2,void SoulTrapEffect::Finish()
 34188,0x140563460,0x1405696D0,4,"void StaggerEffect (StaggerEffect *a1, float a2)"
 34193,0x1405636b0,0x140569920,4,sub_1405636B0
+34194,0x140563770,0x1405699e0,2,void SummonCreatureEffect::Start()
+34195,0x140563a80,0x140569cf0,2,void SummonCreatureEffect::Finish()
+34196,0x140563c00,0x140569e70,2,void SummonCreatureEffect::Update(float a_delta)
+34200,0x1405645f0,0x14056a860,2,void SummonCreatureEffect::SaveGame(BGSSaveFormBuffer* a_buf)
+34202,0x140564900,0x14056ab70,2,void SummonCreatureEffect::FinishLoadGame(BGSLoadFormBuffer* a_buf)
 34250,0x140566060,0x14056C2D0,3,"FUN_140566060 (void* a1, TelekinesisEffect* a2)"
 34252,0x1405663c0,0x14056C720,3,"TelekinesisEffect::Func19(TelekinesisEffect *a1, longlong a2, longlong a3, longlong a4)"
 34255,0x140566550,0x14056c8e0,3,void TelekinesisEffect::GrabObjects()
 34256,0x140566a90,0x14056CFD0,3,TelekinesisEffect::Func21(TelekinesisEffect *a1)
 34259,0x140566bd0,0x14056D0B0,3,TelekinesisEffect::Func20(TelekinesisEffect* a1)
 34260,0x140566c50,0x14056D180,3,"TelekinesisEffect::Func4(TelekinesisEffect *a1, float a2)"
+34265,0x140567070,0x14056d660,2,void ValueAndConditionsEffect::SaveGame(BGSSaveFormBuffer* a_buf)
+34267,0x140567100,0x14056d6f0,2,"void ValueAndConditionsEffect::ModifyActorValue(Actor* a_actor, float a_value, ActorValue a_actorValue)"
 34269,0x1405671f0,0x14056d7e0,4,"IMemoryHeap* FUN_1405671f0(IMemoryHeap* param_1, Character* param_2, MagicItem* param_3, longlong param_4)"
+34270,0x140567270,0x14056d860,2,void ValueModifierEffect::ClearTargetImpl()
 34271,0x1405672c0,0x14056d8b0,4,"IMemoryHeap* FUN_1405672c0(Character* param_1, MagicItem* param_2, longlong param_3)"
+34273,0x140567420,0x14056da10,2,bool ValueModifierEffect::IsCausingHealthDamage()
 34274,0x140567470,0x14056da60,4,undefined ValueModifierEffect::Func1_140567470(ValueModifierEffect* this)
+34277,0x140567590,0x14056db80,2,bool ValueModifierEffect::ShouldModifyOnStart()
+34280,0x140567730,0x14056dd20,2,bool ValueModifierEffect::ShouldModifyOnUpdate()
+34282,0x140567810,0x14056de00,2,void ValueModifierEffect::Update(float a_delta)
+34285,0x1405679c0,0x14056dfb0,2,void ValueModifierEffect::Finish()
 34286,0x140567a80,0x14056e070,3,ValueModifierEffect::ModifyActorValue
+34287,0x140567dd0,0x14056e3c0,2,bool ValueModifierEffect::CheckCustomSkillUseConditions()
+34288,0x140567e30,0x14056e420,2,float ValueModifierEffect::GetCustomSkillUseMagnitudeMultiplier(float a_mult)
+34299,0x1405683d0,0x14056e9c0,2,void WerewolfFeedEffect::Start()
 34308,0x1405692b0,0x14056f8a0,3,void BGSAcousticSpace::Activate()
 34309,0x1405693b0,0x14056f9a0,2,void BGSAcousticSpace::Deactivate()
 34413,0x14056c9d0,0x140572fd0,3,"DialogueItem* DialogueItem::Ctor(TESQuest* a_quest, TESTopic* a_topic, TESTopicInfo* a_topicInfo, Actor* a_speaker)"
@@ -2707,6 +2792,9 @@
 35402,0x1405a6230,0x1405ad8f0,4,"void Calendar::Update_1405a6230 (Calendar * a_this, float GameDaysPassed)"
 35408,0x1405a64f0,0x1405adbb0,4,RE::Calendar::GetGameDaysPassed
 35413,0x1405a6640,0x1405add00,3,"void Calendar::GetTimeDateString(char* a_dest, std::uint32_t a_max, bool a_showYear)"
+35477,0x1405a97f0,0x1405b0eb0,2,void EnhanceWeaponEffect::ClearTargetImpl()
+35480,0x1405a99a0,0x1405b1060,2,void EnhanceWeaponEffect::FinishLoadGame(BGSLoadFormBuffer* a_buf)
+35487,0x1405a9c40,0x1405b1300,2,void EnhanceWeaponEffect::Revert(BGSLoadFormBuffer* a_buf)
 35492,0x1405aa050,0x1405b1710,4,"void GarbageCollector::Add (GarbageCollector * a_this, TESObjectREFR * a_object, bool a_removeFromCell)"
 35493,0x1405AA2B0,0x1405B1970,3,"void GarbageCollector::QueueFormForDeletion(GarbageCollector* a_this, TESForm* a_form)"
 35494,0x1405AA3F0,0x1405B1AB0,3,"void GarbageCollector::QueueAnimationGraphManager(GarbageCollector* a_this, void* a_manager)"
@@ -2770,6 +2858,8 @@
 35869,0x1405c0090,0x1405c85b0,3,void SceneGraph::SetNearDistance(float* a_distance)
 35871,0x1405c00c0,0x1405c85e0,3,void SceneGraph::SetFarDistance(float a_distance)
 35882,0x1405c0610,0x1405c8b30,3,po3tweaks::ScreenshotToConsole::DebugNotification
+35906,0x1405c16f0,0x1405c9c10,2,void SpawnHazardEffect::Finish()
+35910,0x1405c19e0,0x1405c9f00,2,void SpawnHazardEffect::Start()
 35912,0x1405c1a90,0x1405c9fb0,2,void BSTaskPool::ReleaseSemaphore()
 35914,0x1405c1af0,0x1405ca010,2,void BSTaskPool::WaitSemaphore()
 35916,0x1405c1be0,0x1405ca100,2,void BSTaskPool::DrainQueues()
@@ -2792,6 +2882,7 @@
 36195,0x1405CDBF0,0x1405D61F0,2,"Actor* Actor::ctor(Actor *a1, uint8 a2)"
 36196,0x1405cdda0,0x1405d63a0,4,Actor::~Actor
 36198,0x1405ce240,0x1405d6840,4,po3tweaks::Spell::ReapplyOnDeath::Load3d
+36215,0x1405cf780,0x1405d7d60,2,void Actor::UpdateLightingProperty(NiAVObject* a_object)
 36218,0x1405cfac0,0x1405d80a0,4,void Actor::AddDeathItems()
 36219,0x1405cfd30,0x1405d8310,2,bool Character::IsTalkingToPC()
 36224,0x1405d0680,0x1405d8c60,4,bool Actor::CanUseIdle(TESIdleForm* a_idle)
@@ -2806,6 +2897,7 @@
 36265,0x1405d1be0,0x1405da1c0,2,EmotionType Actor::GetCurrentSceneEmotion(std::uint32_t& a_emotionValue)
 36271,0x1405d1f80,0x1405da540,4,RE::Actor::Jump_1405D1F80
 36272,0x1405d2190,0x1405da750,4,CharacterController* Actor::GetCharController()
+36277,0x1405d2330,0x1405da8f0,2,bool Actor::IsTalking()
 36286,0x1405d2520,0x1405daae0,3,RE::Actor::GetGhost
 36287,0x1405d25e0,0x1405daba0,4,RE::Actor::SetGhost
 36289,0x1405d27a0,0x1405dad60,2,DrawSheatheWeaponActor
@@ -2878,6 +2970,7 @@
 36543,0x1405e9270,0x1405f1980,4,void Actor::UpdateSoundCallBack(bool a_endSceneAction)
 36548,0x1405ea350,0x1405f2a60,2,void Actor::SetSize(float a_size)
 36559,0x1405ebd90,0x1405f44a0,4,uint32_t Actor::GetCollisionFilterInfo(uint32_t& a_outCollisionFilterInfo)
+36566,0x1405ec230,0x1405f4940,2,bool Actor::ShouldUseTorch()
 36568,0x1405ec540,0x1405f4c50,3,Actor::InitiateGetUpPackage
 36575,0x1405ecb70,0x1405f5280,4,Actor::IsFleeing
 36581,0x1405ed250,0x1405f5960,2,NiNode* Actor::GetFireNode()
@@ -2967,6 +3060,7 @@
 36889,0x140606850,0x14060f1d0,3,RE::Actor::IsActorNPC
 36892,0x1406069c0,0x14060f340,3,Character::HasNoActiveInteraction
 36893,0x140606a30,0x14060f3b0,3,void Character::UpdateGuardBoolBit()
+36898,0x140607160,0x14060fae0,2,void Actor::InitValues()
 36899,0x1406071a0,0x14060fb20,3,void Actor::PreloadRaceModels(TESRace* a_race)
 36901,0x140607680,0x140610000,3,RE::Actor::SwitchRace
 36910,0x140607c70,0x1406106f0,4,void Character::SetAnimationDrivenMotion(bool a_active)
@@ -2981,6 +3075,9 @@
 36943,0x140609000,0x140611bc0,4,void Actor::UpdateAwakeSound(NiAVObject* a_obj3D)
 36950,0x140609860,0x140612420,4,Actor::UnequipItem
 36953,0x140609b20,0x1406126e0,2,bool Actor::RefreshEquippedHandItems()
+36955,0x140609ca0,0x140612860,2,void Actor::PostCreateAnimationGraphManager(BSTSmartPointer<BSAnimationGraphManager>& a_manager)
+36959,0x14060a050,0x140612c10,2,bool Actor::CreateAnimationChannels(BSScrapArray<BSTSmartPointer<BSAnimationGraphChannel>>& a_channels)
+36965,0x14060aa70,0x140613630,2,"void Actor::ModifyMovementData(float a_delta, NiPoint3& a_arg3, NiPoint3& a_arg4)"
 36973,0x14060b620,0x140614210,3,RE::GameEventHandler::FallLongDistance::CalcDoDamage::process_movefinish_event
 36979,0x14060ca30,0x1406155f0,3,Actor::EquipConflictCheck
 36985,0x14060db50,0x140616710,2,void Actor::UpdateFacialExpression()
@@ -3159,9 +3256,12 @@
 37777,0x14062fad0,0x1406389a0,4,void Actor::SetAlpha(float a_value)
 37778,0x14062fb60,0x140638a30,3,float Actor::GetAlpha()
 37787,0x140630410,0x1406392e0,4,void Actor::AddCastPower(SpellItem* a_power)
+37790,0x140630710,0x1406395e0,2,void Actor::EffectAdded(ActiveEffect* a_effect)
+37791,0x140630810,0x1406396e0,2,void Actor::EffectRemoved(ActiveEffect* a_effect)
 37792,0x140630850,0x140639720,4,MagicTarget::CheckAbsorb_14063085
 37793,0x140630990,0x140639860,4,bool Actor::IsInCastPowerList(SpellItem* a_power)
 37796,0x140630b40,0x140639a10,3,PlayerCharacter::LearnIngredientEffects
+37797,0x140630e80,0x140639d50,2,"bool Actor::DrinkPotion(AlchemyItem* a_potion, ExtraDataList* a_extralist)"
 37798,0x140630f40,0x140639e10,4,"void Actor::RemoveCastScroll(SpellItem* a_spell, MagicSystem::CastingSource a_source)"
 37799,0x1406310a0,0x140639f70,4,"void Actor::ApplyAllCombatSpellsFromAttack_1406310A0 (ExtraContainerChanges__ItemEntry* param_2, bool param_3, undefined param_4)"
 37802,0x140631360,0x14063a230,3,RE::Actor::UpdateArmorAbility
@@ -3297,6 +3397,7 @@
 38349,0x14064ed20,0x140658070,2,void AIProcess::SetActivationHeight(float a_value)
 38352,0x14064ef50,0x1406582a0,2,void AIProcess::SayDeathDialogue(Actor* a_actor)
 38353,0x14064efa0,0x1406582f0,2,void AIProcess::ClearDeathDialogue()
+38354,0x14064efc0,0x140658310,2,"void AIProcess::QueueDialogue(Actor* a_target, int a_type, int a_subtype, TESTopic* a_topic)"
 38356,0x14064f2c0,0x140658610,2,void AIProcess::ClearQueueOfGreetings()
 38357,0x14064f360,0x1406586b0,2,bool AIProcess::HasQueuedGreetings()
 38359,0x14064f4b0,0x140658800,3,AIProcess::UpdatePackageObserveCombatHigh
@@ -3320,6 +3421,7 @@
 38405,0x140651250,0x14065a5a0,2,void AIProcess::SetGreetActor(ActorHandle* a_handle)
 38406,0x140651270,0x14065a5c0,2,BSSoundHandle* AIProcess::GetSoundHandle(std::int32_t a_index)
 38407,0x1406512a0,0x14065a5f0,2,"void AIProcess::SetSoundHandle(std::int32_t a_index, BSSoundHandle* a_handle)"
+38408,0x1406512e0,0x14065a630,2,void AIProcess::StopSoundHandle(int a_index)
 38412,0x1406514e0,0x14065a830,2,"void AIProcess::SetLastActivatedDoor(std::uint32_t* a_handle, bool a_flag)"
 38416,0x140651660,0x14065a9b0,2,float AIProcess::GetGreetingTimer()
 38417,0x140651680,0x14065a9d0,2,void AIProcess::SetGreetingTimer(float a_value)
@@ -3460,6 +3562,7 @@
 38796,0x14067b0c0,0x140684540,2,void AIProcess::SetWeaponBone(NiNode* a_node)
 38799,0x14067b1d0,0x140684650,4,"static NiAVObject * GetTorchNode (ActorProcess * a_this, BSTSmartPointer_BipedAnim_ * a_biped)"
 38800,0x14067b230,0x1406846b0,3,NiAVObject* AIProcess::GetShieldNode(BipedAnim** a_biped)
+38809,0x14067b4f0,0x140684970,2,bool AIProcess::SetAnimResponse(const BSTSmartPointer<AnimResponse>& a_response)
 38812,0x14067b780,0x140684c00,2,BSAnimationGraphVariableCache* AIProcess::GetAnimationVariableCache()
 38818,0x14067bc50,0x1406850d0,2,TESPackage* AIProcess::GetRunOncePackage()
 38819,0x14067bc70,0x1406850f0,4,"void AIProcess::SetRunOncePackage(TESPackage* a_package, Actor* a_actor)"
@@ -3541,6 +3644,8 @@
 38960,0x140681b90,0x14068b000,2,void AIProcess::SetWardState(MagicSystem::WardState a_state)
 38966,0x140681fd0,0x14068b440,4,"void FUN_140681fd0 (undefined8 param_1, Actor * a_actor)"
 38967,0x140682020,0x14068b490,4,void FUN_140682020 (longlong param_1)
+38969,0x140682060,0x14068b4d0,2,void AIProcess::AddActorInventoryEventSink(BSTEventSink<ActorInventoryEvent>* a_sink)
+38970,0x140682080,0x14068b4f0,2,void AIProcess::RemoveActorInventoryEventSink(BSTEventSink<ActorInventoryEvent>* a_sink)
 38971,0x1406820a0,0x14068b510,2,void AIProcess::SetSoulTrapped()
 38972,0x1406820c0,0x14068b530,2,bool AIProcess::GetSoulTrapped()
 38974,0x140682160,0x14068b5d0,3,"void AIProcess::EndDeferredKill(bool a_flag, Actor* a_actor)"
@@ -3608,6 +3713,7 @@
 39407,0x1406a1e30,0x1406c28a0,3,YesImSure::NoPoisonPrompt::PoisonPromptLeftHand
 39409,0x1406a2060,0x1406c2ad0,3,"bool PlayerCharacter::CheckCast(MagicItem* a_spell, Effect* a_effect, MagicSystem::CannotCastReason& a_reason)"
 39410,0x1406a20b0,0x1406c2c00,3,po3tweaks::GameTimers::detail::UpdateTimers
+39411,0x1406a22a0,0x1406c2e00,2,bool PlayerCharacter::ActivateFurniture(TESObjectREFR* a_furniture)
 39413,0x1406a2540,0x1406c30b0,3,RE::PlayerCharacter::AddSkillExperience
 39415,0x1406a25a0,0x1406c3110,3,void PlayerCharacter::InitValues()
 39424,0x1406a2fb0,0x1406c3890,4,void PlayerCharacter::SetGodMode(bool a_enable)
@@ -3670,6 +3776,7 @@
 40294,0x1406d4b80,0x1406fba20,3,"void ProcessLists::UpdateMiddleLowActors(std::int64_t*, bool*, float, bool)"
 40295,0x1406d4e00,0x1406fbca0,3,"void ProcessLists::UpdateMiddleHighActors(std::int64_t*, bool*, float, bool)"
 40297,0x1406d53f0,0x1406fc290,3,void ProcessLists::UpdateHighActorMovement()
+40299,0x1406d5670,0x1406fc510,2,void ProcessLists::FinishHighActorFadeIns()
 40301,0x1406d5780,0x1406fc620,2,void ProcessLists::MoveAllActorsToPackageLocations()
 40303,0x1406d5e50,0x1406fccf0,2,void ProcessLists::ProcessPackageLocationQueue()
 40317,0x1406d71c0,0x1406fe060,4,po3tweaks::ToggleAI
