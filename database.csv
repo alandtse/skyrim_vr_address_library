@@ -295,7 +295,7 @@
 12210,0x140132bd0,0x140143380,4,DWORD Lock1_140132BD0 (Mutex * a_this)
 12215,0x140132d60,0x140143510,3,BSFixedString** GetStaticEmptyBSFixedString()
 12216,0x140132df0,0x1401435a0,2,"bool BSTArrayAllocatorFunctor<BSTSmallArrayHeapAllocator<16>>::Reallocate(std::uint32_t a_minNewSizeInItems, std::uint32_t a_frontCopyCount, std::uint32_t a_shiftCount, std::uint32_t a_backCopyCount, std::uint32_t a_elemSize)"
-12233,0x1401337a0,0x140144040,2,void TESObjectREFR::Set3DLocked()
+12233,0x1401337a0,0x140144040,2,"void TESObjectREFR::Set3DLocked(NiAVObject* a_3d, bool a_arg)"
 12256,0x1401342e0,0x140144c90,2,ExtraDataType ExtraAnimGraphManager::GetType()
 12263,0x140134760,0x140145110,2,ExtraDataType ExtraDismemberedLimbs::GetType()
 12265,0x1401347a0,0x140145150,2,ExtraDataType ExtraBiped::GetType()
@@ -756,7 +756,7 @@
 14457,0x140194140,0x1401a3e70,2,void TESForm::LoadGame(BGSLoadFormBuffer* a_buf)
 14461,0x140194230,0x1401a3f60,4,static TESForm * TESForm::LookupFormById_140194230 (int a_formid)
 14467,0x140194640,0x1401a4370,3,void TESForm::SetFile(TESFile* a_file)
-14468,0x140194720,0x1401a4450,2,std::uint32_t TESForm::GetFormTypeFromRecordType(std::uint32_t a_recordType)
+14468,0x140194720,0x1401a4450,2,static std::uint32_t TESForm::GetFormTypeFromRecordType(std::uint32_t a_recordType)
 14470,0x1401947a0,0x1401a44d0,2,"void TESForm::GetFormDetailedString(char* a_buf, std::uint32_t a_bufLen)"
 14471,0x1401947f0,0x1401a4520,4,"void TESForm::sub_1401947F0 (TESForm * a_this, bool param_2)"
 14479,0x140194b40,0x1401a4870,2,void TESForm::SetDelete(bool a_set)
@@ -794,7 +794,7 @@
 14639,0x14019aa70,0x1401aa7a0,2,void TESModelLODList::ClearDataComponent()
 14642,0x14019ace0,0x1401aaa10,2,void TESModelLODList::CopyComponent(BaseFormComponent* a_rhs)
 14651,0x14019b110,0x1401aae40,2,void TESModelTextureSwap::ClearDataComponent()
-14652,0x14019b140,0x1401aae70,2,"void TESModelTextureSwap::ReadAlternateTextures(void* a_data, std::uint32_t a_size)"
+14652,0x14019b140,0x1401aae70,2,"void TESModelTextureSwap::ReadAlternateTextures(void* a_data, std::uint32_t a_size, std::uint16_t a_formVersion)"
 14653,0x14019b290,0x1401aafc0,4,void TESModelTextureSwap::ReadChunk(TESFile* a_mod)
 14655,0x14019b4e0,0x1401ab210,2,void TESModelTextureSwap::CopyComponent(BaseFormComponent* a_rhs)
 14684,0x14019c7c0,0x1401ac4f0,2,void TESModelTri::SetModel(const char* a_model)
@@ -858,8 +858,8 @@
 15274,0x1401ba000,0x1401ca170,3,"void BSResource::EntryDB::ProcessEntry(void* a_entryDB, void* a_entry)"
 15279,0x1401ba2b0,0x1401ca420,2,"bool BSTArrayAllocatorFunctor<BSTSmallArrayHeapAllocator<32>>::Reallocate(std::uint32_t a_minNewSizeInItems, std::uint32_t a_frontCopyCount, std::uint32_t a_shiftCount, std::uint32_t a_backCopyCount, std::uint32_t a_elemSize)"
 15282,0x1401ba650,0x1401ca7c0,3,"bool BSResource::EntryDB::QueueEntry(void* a_entryDB, const char* a_name, void* a_entry, void** a_entryOut, int a_priority, void* a_args)"
-15344,0x1401be140,0x1401ce2b0,2,"void StringsFile::AddEntries(std::uint32_t a_fileId, const std::uint32_t* a_pairs, std::uint32_t a_count)"
-15356,0x1401becf0,0x1401cee60,2,"std::int32_t StringsFile::LoadStringTable(const BSFixedString& a_fileName, const char* a_ext)"
+15344,0x1401be140,0x1401ce2b0,2,"static void StringsFile::AddEntries(std::uint32_t a_fileId, const std::uint32_t* a_pairs, std::uint32_t a_count)"
+15356,0x1401becf0,0x1401cee60,2,"static std::int32_t StringsFile::LoadStringTable(const BSFixedString& a_fileName, const char* a_ext)"
 15407,0x1401c1fd0,0x1401d2140,2,const NiRTTI* BSMultiBoundAABB::GetRTTI()
 15408,0x1401c1fe0,0x1401d2150,2,const NiRTTI* BSMultiBoundOBB::GetRTTI()
 15409,0x1401c1ff0,0x1401d2160,2,const NiRTTI* BSMultiBoundSphere::GetRTTI()
@@ -998,7 +998,7 @@
 16175,0x1401fa6c0,0x14020c010,3,void NiCamera::ScreenSplatter::Clear()
 16176,0x1401fa6f0,0x14020c040,2,NiNode* ScreenSplatter::CreateSplatterNode(std::uint16_t a_count)
 16183,0x1401fb830,0x14020d180,2,const NiRTTI* BSSplatterExtraData::GetRTTI()
-16185,0x1401fb8d0,0x14020d220,2,"void BSTextureDB::ReleaseEntry(void* a_entryDB, void* a_entry)"
+16185,0x1401fb8d0,0x14020d220,2,"static void BSTextureDB::ReleaseEntry(void* a_entryDB, void* a_entry)"
 16188,0x1401fbaf0,0x14020d440,2,void SleepFrameThrottle()
 16190,0x1401fc8c0,0x14020e210,2,bool GameSettingCollection::WriteSetting(void* a_setting)
 16191,0x1401fc8d0,0x14020e220,2,bool GameSettingCollection::ReadSetting(Setting* a_setting)
@@ -1765,7 +1765,7 @@
 18993,0x14027d150,0x14028e720,2,void hkpEntityListener::EntityShapeSetCallback(hkpEntity* a_entity)
 19002,0x14027ddc0,0x14028f390,3,void TESObjectCELL::AttachReference3D(TESObjectREFR* a_ref)
 19024,0x140280160,0x140291770,3,"BSMultiBoundNode* TESObjectCELL::sub_140280160(const ObjectRefHandle& a_handle, bool a_flag)"
-19036,0x1402811c0,0x140292830,2,BSFadeNode* TESObjectCELL::InitReferenceFade(TESObjectREFR* a_ref)
+19036,0x1402811c0,0x140292830,2,"BSFadeNode* TESObjectCELL::InitReferenceFade(TESObjectREFR* a_ref, bool a_arg2)"
 19076,0x1402829a0,0x1402940d0,2,void* GetQueuedAttachMap()
 19078,0x140282bb0,0x1402942e0,2,void QueuedAttachMap_RemoveAll(void* a_map)
 19100,0x140283bd0,0x140295300,2,void TESObjectREFR::Predestroy()
@@ -2692,8 +2692,8 @@
 23796,0x14034d6d0,0x14035cf90,2,"void BGSSceneActionPackage::LoadBuffer(void* a_arg1, BGSLoadGameBuffer* a_buf)"
 23797,0x14034d740,0x14035d000,2,void BGSSceneActionPackage::SaveBuffer(BGSSaveFormBuffer* a_buf)
 23798,0x14034d790,0x14035d050,2,void BGSSceneActionPackage::ClearActiveFlags()
-23801,0x14034d8e0,0x14035d1a0,2,"bool BGSSceneActionPackage::TryStartPackage(void* a_context, TESPackage* a_package)"
-23802,0x14034da00,0x14035d2c0,2,"bool BGSSceneActionPackage::StartFirstValidPackage(void* a_packages, void* a_context)"
+23801,0x14034d8e0,0x14035d1a0,2,"static bool BGSSceneActionPackage::TryStartPackage(void* a_context, TESPackage* a_package)"
+23802,0x14034da00,0x14035d2c0,2,"static bool BGSSceneActionPackage::StartFirstValidPackage(void* a_packages, void* a_context)"
 23806,0x14034dcc0,0x14035d580,2,bool BGSSceneActionTimer::LoadSceneAction(TESFile* a_mod)
 23807,0x14034dd50,0x14035d610,2,void BGSSceneActionTimer::ClearFlags()
 23808,0x14034dd60,0x14035d620,2,BGSSceneAction::Type BGSSceneActionTimer::GetType()
@@ -2719,6 +2719,8 @@
 23924,0x1403512e0,0x140360ba0,2,void TESActorBase::SetAutoCalc(bool a_autoCalc)
 23928,0x1403514b0,0x140360d70,2,float TESActorBase::GetActorValue(ActorValue a_akValue)
 23929,0x140351630,0x140360ef0,2,"void TESActorBase::SetBaseActorValue(ActorValue a_akValue, float a_value)"
+23930,0x140351740,0x140361000,2,"void TESActorBase::ModBaseActorValue(ActorValue a_akValue, float a_value)"
+23931,0x140351790,0x140361050,2,bool TESActorBase::GetIsPlayerOwner()
 23933,0x140351850,0x140361110,2,bool TESActorBase::AddChange(std::uint32_t a_changeFlags)
 23935,0x140351940,0x140361200,2,void TESActorBase::SaveGame(BGSSaveFormBuffer* a_buf)
 23936,0x1403519c0,0x140361280,2,void TESActorBase::LoadGame(BGSLoadFormBuffer* a_buf)
@@ -2852,6 +2854,7 @@
 24395,0x14036c4f0,0x14037be50,2,"OBJECT_CATEGORY_TYPE ConcreteObjectFormFactory<TESNPC,43,13,0>::GetObjectCategory()"
 24396,0x14036c500,0x14037be60,2,"const char* ConcreteObjectFormFactory<TESNPC,43,13,0>::GetObjectName()"
 24397,0x14036c510,0x14037be70,2,"OBJECT_TYPE ConcreteObjectFormFactory<TESNPC,43,13,0>::GetObjectType()"
+24399,0x14036c530,0x14037be90,2,float TESActorBase::GetPermanentActorValue(ActorValue a_akValue)
 24400,0x14036c540,0x14037bea0,2,const NiRTTI* BSFaceGenModelExtraData::GetRTTI()
 24422,0x14036d290,0x14037cc30,2,"void TESActorBase::SetActorValue(ActorValue a_akValue, float a_value)"
 24423,0x14036d2a0,0x14037cc40,2,void BSFaceGenNiNode::SetAnimationData(BSFaceGenAnimationData* a_data)
@@ -2980,6 +2983,7 @@
 25484,0x1403a61f0,0x1403b5d60,4,void PopTemporaryMass(bhkRigidBody* a_body)
 25513,0x1403a7ea0,0x1403b7a10,2,void TESTrapListener::Update(float a_delta)
 25517,0x1403a8050,0x1403b7bc0,2,void TESTrapListener::EntityDeletedCallback(hkpEntity* a_entity)
+25518,0x1403a8060,0x1403b7bd0,2,void TESTrapListener::EntityRemovedCallback(hkpEntity* a_entity)
 25519,0x1403a8110,0x1403b7c80,2,void TESTrapListener::EntityAddedCallback(hkpEntity* a_entity)
 25520,0x1403a8120,0x1403b7c90,2,void TESTrapListener::PhantomDeletedCallback(hkpPhantom* a_phantom)
 25521,0x1403a8130,0x1403b7ca0,2,void TESTrapListener::PhantomRemovedCallback(hkpPhantom* a_phantom)
@@ -2996,7 +3000,7 @@
 25638,0x1403aebd0,0x1403be8d0,4,splashes_of_skyrim::RainManager::ToggleWaterRipples
 25641,0x1403af1c0,0x1403beec0,3,void Precipitation::SetupMask (Precipitation * a_this)
 25642,0x1403af380,0x1403bf0b0,3,"void Precipitation::RenderMask (Precipitation * a_this, BSParticleShaderRainEmitter * a_emitter)"
-25643,0x1403af530,0x1403bf290,3,void Precipitation::PositionOcclusionCamera()
+25643,0x1403af530,0x1403bf290,3,void Precipitation::PositionOcclusionCamera(void* a_cameraPtr)
 25645,0x1403afca0,0x1403bfa00,3,Precipitation::OcclusionMapData* Precipitation::OcclusionMapData::ctor()
 25648,0x1403aff60,0x1403bfcd0,4,BSGeometryListCullingProcess* BSGeometryListCullingProcess::dtor_deleting(uint32_t a_flags)
 25671,0x1403b0130,0x1403bfea0,4,"void UpdateShaderGeometry(RE::BSGeometry* a_precipGeometry, RE::NiCamera* a_camera, float a_delta, float a_cubeSize, float a_particleDensity, float a_windSpeed, float a_windAngle)"
@@ -3016,7 +3020,7 @@
 25703,0x1403b55e0,0x1403c5400,4,void Sky::UpdateLightingTransition_1403B55E0 (Sky * param_1)
 25704,0x1403b57b0,0x1403c55d0,3,void Sky::UpdateLightLODFadeDistances(Sky* this)
 25706,0x1403b5d20,0x1403c5b40,4,"void Sky::FillColorBlend(COLOR_BLEND& a_colorBlend, TESWeather* a_currentWeather, float a_weatherPct, TESWeather::ColorTime& a_time1, TESWeather::ColorTime& a_time2)"
-25729,0x1403b7ff0,0x1403c7e10,2,void Sky::PopulateWorldMapCloudTextures()
+25729,0x1403b7ff0,0x1403c7e10,2,void Sky::PopulateWorldMapCloudTextures(void* a_outTextureList)
 25746,0x1403b8d30,0x1403c8b50,4,"void Sky::ResetModelHandle(ModelDBHandle* a_handle, ModelDBHandle::U_Entry* a_entry)"
 25761,0x1403b92d0,0x1403c90f0,3,TESImageSpace* Sky::GetCurrentRoomImageSpace()
 25762,0x1403b9340,0x1403c9160,3,BGSLightingTemplate* Sky::GetCurrentRoomLightingTemplate()
@@ -3646,7 +3650,7 @@
 27805,0x140407d20,0x140417870,3,RegisterProcedureName_Flee
 27809,0x1404084f0,0x140418040,3,BGSProcedureFleeExecState::BGSProcedureFleeExecState
 27810,0x1404085f0,0x140418140,3,BGSProcedureFleeExecState::~BGSProcedureFleeExecState
-27811,0x140408680,0x1404181d0,2,"void BGSProcedureFlee::UpdateFleeMovement(void** a_context, char a_arg3, void* a_arg4)"
+27811,0x140408680,0x1404181d0,2,"void BGSProcedureFlee::UpdateFleeMovement(void** a_context, char a_arg3)"
 27812,0x140408d10,0x140418860,3,BGSProcedureFleeExecState::RecycleChildren
 27813,0x140408de0,0x140418930,2,void BGSProcedureFleeExecState::Cleanup(IProcedureTreeItem::ProcedureExecContext* a_context)
 27814,0x140408e20,0x140418970,3,BGSProcedureFleeExecState::SaveGame
@@ -3713,6 +3717,7 @@
 27934,0x140410810,0x140420360,3,BSTDerivedCreator_BGSProcedureFollowTo::Destroy
 27935,0x140410830,0x140420380,3,float MovementParameters::GetInverseAcceleration()
 27936,0x140410840,0x140420390,3,float MovementParameters::GetInverseAngleAcceleration()
+27939,0x1404108a0,0x1404203f0,2,static std::uint32_t MovementParameters::GetClassType()
 27940,0x1404108d0,0x140420420,3,float MovementParameters::GetInverseDeceleration()
 27942,0x1404108f0,0x140420440,3,float MovementParameters::GetParam1C()
 27943,0x140410900,0x140420450,3,float MovementParameters::GetSpeed()
@@ -4272,6 +4277,7 @@
 29044,0x140443690,0x1404531e0,4,void PackageTarget::SetType(std::uint32_t a_type)
 29046,0x140443750,0x1404532a0,3,PackageTarget::SetRefHandle
 29050,0x1404437d0,0x140453320,4,void PackageTarget::Copy(const PackageTarget* a_other)
+29053,0x140443b30,0x140453680,2,"void PackageTarget::GetDescription(BSString* a_dst, TESForm* a_owner)"
 29065,0x140444370,0x140453EC0,4,void TESCondition::InitItem(TESForm* a_owner)
 29067,0x140444440,0x140453f90,4,"void TESCondition::Copy(const TESCondition* a_other, TESForm* a_arg2)"
 29074,0x1404447a0,0x1404542f0,3,"bool TESCondition::IsTrue(TESObjectREFR* a_actionRef, TESObjectREFR* a_targetRef)"
@@ -4394,7 +4400,7 @@
 29826,0x1404735a0,0x140483580,2,BSTArray<BSNavmeshInfo*> Pathing::GetPotentialNavMeshInfoForLocation(PathingCell* a_cell)
 29832,0x1404737a0,0x140483780,4,"bool FindClosestPointOnNavmesh(const BSTSmartPointer<BSPathingCell>& a_cell, const NiPoint3& a_location, FindTriangleForLocationFilter& a_filter, NiPoint3& a_pointOut)"
 29833,0x140473870,0x140483850,2,"bool Pathing::FindNearestNavmeshPoint(TESWorldSpace* a_worldSpace, TESObjectCELL* a_cell, NiPoint3* a_pos, float a_radius, NiPoint3* a_outPos)"
-29836,0x140473f40,0x140483f20,2,bool Pathing::RunSafeStraightLineSearch(PathingRequestSafeStraightLine** a_request)
+29836,0x140473f40,0x140483f20,2,"bool Pathing::RunSafeStraightLineSearch(PathingRequestSafeStraightLine** a_request, NiPoint3* a_outPoint)"
 29837,0x140474420,0x140484400,2,"bool Pathing::HasSafeStraightLine(TESObjectREFR* a_from, TESObjectREFR* a_to, float a_extraRange)"
 29838,0x140474750,0x140484730,2,"BSPathingLocation* Pathing::FindClosestReachableLocation(BSPathingLocation* a_out, BSPathingLocation* a_start, BSPathingLocation* a_goal, float a_maxCost)"
 29839,0x1404749e0,0x1404849c0,3,AIProcess::FindAmbushCoverLocation
@@ -4422,30 +4428,30 @@
 29875,0x1404772b0,0x140487270,2,"bool Pathing::GetPathingDoorForCollidable(hkpCollidable* a_collidable, BSTSmartPointer<BSPathingDoor>& a_out)"
 29878,0x1404774e0,0x1404874a0,2,"BSEventNotifyControl Pathing::ProcessEvent(CellAttachDetachEvent* a_event, BSTEventSource<CellAttachDetachEvent>* a_eventSource)"
 29880,0x140477800,0x140487790,2,"std::uint32_t PushBackRecentPathingCell(BSTArray<BSTTuple<std::uint64_t, BSTSmartPointer<PathingCell>>>& a_array, std::uint32_t a_time, BSTSmartPointer<PathingCell>& a_cell)"
-29887,0x140477e30,0x140487dc0,2,"bool BSPathingCellManager::FindPotentialNavmeshesForLocationImpl_Scrap(BSPathingLocation* a_location, float a_radius, BSScrapArray<BSTSmartPointer<BSNavmesh>>& a_navMeshesOut, bool a_flag)"
-29888,0x140478510,0x1404884a0,2,"bool BSPathingCellManager::FindPotentialNavmeshesForLocationImpl_Heap(BSPathingLocation* a_location, float a_radius, BSTArray<BSTSmartPointer<BSNavmesh>>& a_navMeshesOut, bool a_flag)"
+29887,0x140477e30,0x140487dc0,2,"static bool BSPathingCellManager::FindPotentialNavmeshesForLocationImpl_Scrap(BSPathingLocation* a_location, float a_radius, BSScrapArray<BSTSmartPointer<BSNavmesh>>& a_navMeshesOut, bool a_flag)"
+29888,0x140478510,0x1404884a0,2,"static bool BSPathingCellManager::FindPotentialNavmeshesForLocationImpl_Heap(BSPathingLocation* a_location, float a_radius, BSTArray<BSTSmartPointer<BSNavmesh>>& a_navMeshesOut, bool a_flag)"
 29889,0x140478bf0,0x140488b80,2,bool NavMeshArray::AppendNavmeshInfos_Scrap(void** a_out)
 29890,0x140478d40,0x140488cd0,2,bool NavMeshArray::AppendNavmeshInfos_Heap(void** a_out)
 29891,0x140478e90,0x140488e20,2,bool NavMeshArray::AppendNavmeshes_Scrap(void** a_out)
 29892,0x140478fd0,0x140488f60,2,bool NavMeshArray::AppendNavmeshes_Heap(void** a_out)
 29893,0x140479110,0x1404890a0,2,bool NavMeshArray::InsertNavmeshesIntoSet(void** a_out)
-29894,0x140479270,0x140489200,2,"bool BSPathingCellManager::AddNavmeshAndConnectedRecursive_Scrap(BSNavmeshInfo* a_info, BSScrapArray<BSTSmartPointer<BSNavmesh>>& a_out)"
-29895,0x140479340,0x1404892d0,2,"bool BSPathingCellManager::AddNavmeshAndConnectedRecursive_Heap(BSNavmeshInfo* a_info, BSTArray<BSTSmartPointer<BSNavmesh>>& a_out)"
-29896,0x140479410,0x1404893a0,2,"bool BSPathingCellManager::AddNavmeshInfoAndConnectedRecursive_Scrap(BSNavmeshInfo* a_info, BSScrapArray<const BSNavmeshInfo*>& a_out)"
-29897,0x1404794e0,0x140489470,2,"bool BSPathingCellManager::AddNavmeshInfoAndConnectedRecursive_Heap(BSNavmeshInfo* a_info, BSTArray<const BSNavmeshInfo*>& a_out)"
+29894,0x140479270,0x140489200,2,"static bool BSPathingCellManager::AddNavmeshAndConnectedRecursive_Scrap(BSNavmeshInfo* a_info, BSScrapArray<BSTSmartPointer<BSNavmesh>>& a_out)"
+29895,0x140479340,0x1404892d0,2,"static bool BSPathingCellManager::AddNavmeshAndConnectedRecursive_Heap(BSNavmeshInfo* a_info, BSTArray<BSTSmartPointer<BSNavmesh>>& a_out)"
+29896,0x140479410,0x1404893a0,2,"static bool BSPathingCellManager::AddNavmeshInfoAndConnectedRecursive_Scrap(BSNavmeshInfo* a_info, BSScrapArray<const BSNavmeshInfo*>& a_out)"
+29897,0x1404794e0,0x140489470,2,"static bool BSPathingCellManager::AddNavmeshInfoAndConnectedRecursive_Heap(BSNavmeshInfo* a_info, BSTArray<const BSNavmeshInfo*>& a_out)"
 29898,0x1404795b0,0x140489540,2,"void BSPathingCellManager::CollectNavmeshesInAABB_Scrap(BSNavmeshInfo* a_start, const NiPoint3& a_min, const NiPoint3& a_max, BSScrapArray<BSTSmartPointer<BSNavmesh>>& a_out)"
 29899,0x1404797b0,0x140489740,2,"void BSPathingCellManager::CollectNavmeshesInAABB_Heap(BSNavmeshInfo* a_start, const NiPoint3& a_min, const NiPoint3& a_max, BSTArray<BSTSmartPointer<BSNavmesh>>& a_out)"
 29900,0x1404799b0,0x140489940,2,"void BSPathingCellManager::CollectNavmeshInfosInAABB_Scrap(BSNavmeshInfo* a_start, const NiPoint3& a_min, const NiPoint3& a_max, BSScrapArray<const BSNavmeshInfo*>& a_out)"
 29901,0x140479bb0,0x140489b40,2,"void BSPathingCellManager::CollectNavmeshInfosInAABB_Heap(BSNavmeshInfo* a_start, const NiPoint3& a_min, const NiPoint3& a_max, BSTArray<const BSNavmeshInfo*>& a_out)"
-29902,0x140479db0,0x140489d40,2,bool BSPathingCellManager::CollectLoadedNavmeshInfos_Scrap(void* a_out)
-29903,0x140479eb0,0x140489e40,2,bool BSPathingCellManager::CollectLoadedNavmeshInfos_Heap(void* a_out)
-29904,0x140479fb0,0x140489f40,2,bool BSPathingCellManager::CollectLoadedNavmeshes_Scrap(void* a_out)
-29905,0x14047a0b0,0x14048a040,2,bool BSPathingCellManager::CollectLoadedNavmeshes_Heap(void* a_out)
-29906,0x14047a1b0,0x14048a140,2,bool BSPathingCellManager::CollectLoadedNavmeshesIntoSet(void* a_out)
-29922,0x14047abd0,0x14048ab70,2,"bool BSPathingCellManager::AddUniqueNavmeshFromInfo_Scrap(BSTScrapArray<BSNavmesh*>& a_out, BSNavmeshInfo* a_info)"
-29923,0x14047ace0,0x14048ac80,2,"bool BSPathingCellManager::AddUniqueNavmeshFromInfo_Heap(BSTArray<BSNavmesh*>& a_out, BSNavmeshInfo* a_info)"
-29924,0x14047adf0,0x14048ad90,2,"bool BSPathingCellManager::AddUniqueNavmeshInfo_Scrap(BSTScrapArray<BSNavmeshInfo*>& a_out, BSNavmeshInfo* a_info)"
-29925,0x14047ae90,0x14048ae30,2,"bool BSPathingCellManager::AddUniqueNavmeshInfo_Heap(BSTArray<BSNavmeshInfo*>& a_out, BSNavmeshInfo* a_info)"
+29902,0x140479db0,0x140489d40,2,static bool BSPathingCellManager::CollectLoadedNavmeshInfos_Scrap(void* a_out)
+29903,0x140479eb0,0x140489e40,2,static bool BSPathingCellManager::CollectLoadedNavmeshInfos_Heap(void* a_out)
+29904,0x140479fb0,0x140489f40,2,static bool BSPathingCellManager::CollectLoadedNavmeshes_Scrap(void* a_out)
+29905,0x14047a0b0,0x14048a040,2,static bool BSPathingCellManager::CollectLoadedNavmeshes_Heap(void* a_out)
+29906,0x14047a1b0,0x14048a140,2,static bool BSPathingCellManager::CollectLoadedNavmeshesIntoSet(void* a_out)
+29922,0x14047abd0,0x14048ab70,2,"static bool BSPathingCellManager::AddUniqueNavmeshFromInfo_Scrap(BSTScrapArray<BSNavmesh*>& a_out, BSNavmeshInfo* a_info)"
+29923,0x14047ace0,0x14048ac80,2,"static bool BSPathingCellManager::AddUniqueNavmeshFromInfo_Heap(BSTArray<BSNavmesh*>& a_out, BSNavmeshInfo* a_info)"
+29924,0x14047adf0,0x14048ad90,2,"static bool BSPathingCellManager::AddUniqueNavmeshInfo_Scrap(BSTScrapArray<BSNavmeshInfo*>& a_out, BSNavmeshInfo* a_info)"
+29925,0x14047ae90,0x14048ae30,2,"static bool BSPathingCellManager::AddUniqueNavmeshInfo_Heap(BSTArray<BSNavmeshInfo*>& a_out, BSNavmeshInfo* a_info)"
 29943,0x14047b400,0x14048b3a0,2,"bool AreNavmeshInfosConnectedRecursive(BSNavmeshInfo* a_info, const BSNavmeshInfo* a_goal, void* a_visited)"
 29962,0x14047c0e0,0x14048c080,2,std::uint32_t PathingCell::GetType()
 29963,0x14047c120,0x14048c0c0,2,void PathingCell::Write(const BSPathingStreamWrite& a_stream)
@@ -4490,14 +4496,14 @@
 30036,0x14047e920,0x14048e8c0,2,"bool PathingLockData::TryPassDoor(BSPathingDoor** a_door, float* a_costOut)"
 30037,0x14047eb40,0x14048eae0,2,"void PathingLockData::Write(BSPathingStreamWrite* a_stream, void* a_arg2, void* a_arg3)"
 30038,0x14047ec00,0x14048eba0,2,"void PathingLockData::Read(BSPathingStreamRead* a_stream, void* a_arg2, void* a_arg3)"
-30039,0x14047ece0,0x14048ec80,2,void BSPathingLockDataFactoryManager::Insert()
+30039,0x14047ece0,0x14048ec80,2,"void* BSPathingLockDataFactoryManager::Insert(void* a_entries, std::uint32_t a_hash, const std::uint32_t* a_key, const void* a_value, void* a_arg5, void* a_arg6)"
 30048,0x14047f0d0,0x14048f070,2,"void BSTDerivedCreator<PathingLockData,BSPathingLockData>::Destroy(const BSPathingLockData* a_val)"
 30052,0x14047f200,0x14048f1a0,2,void BSPathingLockDataFactoryManager::Grow()
-30053,0x14047f2b0,0x14048f250,2,void BSPathingLockDataFactoryManager::InsertRehashed()
-30064,0x14047f740,0x14048f6e0,2,void BSPathingRequestFactoryManager::Insert()
+30053,0x14047f2b0,0x14048f250,2,"bool BSPathingLockDataFactoryManager::InsertRehashed(void* a_entries, std::uint32_t a_hash, const void* a_entry)"
+30064,0x14047f740,0x14048f6e0,2,"void* BSPathingRequestFactoryManager::Insert(void* a_entries, std::uint32_t a_hash, const std::uint32_t* a_key, const void* a_value, void* a_arg5, void* a_arg6)"
 30074,0x14047fbd0,0x14048fb70,2,"void BSTDerivedCreator<PathingRequest,BSPathingRequest>::Destroy(const BSPathingRequest* a_val)"
 30078,0x14047fd00,0x14048fca0,2,void BSPathingRequestFactoryManager::Grow()
-30079,0x14047fdb0,0x14048fd50,2,void BSPathingRequestFactoryManager::InsertRehashed()
+30079,0x14047fdb0,0x14048fd50,2,"bool BSPathingRequestFactoryManager::InsertRehashed(void* a_entries, std::uint32_t a_hash, const void* a_entry)"
 30081,0x140480070,0x140490010,2,std::uint32_t PathingSpace::GetType()
 30087,0x140480210,0x1404901b0,3,std::uint32_t PathingStreamMasterFileRead::GetType()
 30088,0x140480250,0x1404901f0,2,bool PathingStreamMasterFileRead::ReadBool(bool* a_out)
@@ -4535,7 +4541,7 @@
 30183,0x1404847b0,0x140494750,2,"std::int32_t AStarSearch<BSFastNavmeshTriLocation,BSFastNavmeshEdgeHandle,3>::FindOrAddNode(const std::uint64_t* a_key, float a_cost, AStarNodeInit* a_init, AStarNode** a_nodeOut)"
 30184,0x1404848e0,0x140494880,2,"std::int32_t AStarSearch<BSFastNavmeshTriLocation,BSFastNavmeshEdgeHandle,3>::FindOrAddNodeByKey(std::uint64_t a_key, float a_cost, AStarNodeInit* a_init, AStarNode** a_nodeOut)"
 30185,0x140484a30,0x1404949d0,2,"void AStarSearch<BSFastNavmeshTriLocation,BSFastNavmeshEdgeHandle,3>::ReconstructPath(AStarNode* a_goalNode, BSTArray<BSFastNavmeshTriLocation>* a_locations, BSTArray<BSFastNavmeshEdgeHandle>* a_edges)"
-30188,0x140484cd0,0x140494c70,2,bool NavMeshSearchFlee::RunToCompletion()
+30188,0x140484cd0,0x140494c70,2,"bool NavMeshSearchFlee::RunToCompletion(void* a_arg1, void* a_arg2, bool a_acceptBestNode)"
 30208,0x1404858e0,0x140495880,2,void AStarOpenList::InsertNode(AStarNode* a_node)
 30209,0x140485960,0x140495900,2,"AStarNode* AStarSearch<BSFastNavmeshTriLocation,BSFastNavmeshEdgeHandle,3>::QueueNode(const std::uint64_t* a_key, const BSFastNavmeshTriLocation* a_location, float a_cost, float a_heuristic)"
 30218,0x140485b80,0x140495b20,2,AStarNode* AStarNodePool::CreateNode(const BSFastNavmeshTriLocation* a_location)
@@ -4553,7 +4559,7 @@
 30238,0x140486b10,0x140496ab0,2,"bool NavMeshSearchFitSphere::ExpandNode(AStarNode* a_node, void* a_out)"
 30239,0x140486ec0,0x140496e60,2,bool NavMeshSearchFitSphere::IsGoalNode(AStarNode* a_node)
 30260,0x140487d30,0x140497cd0,2,"void AStarOpenListInsert(void* a_openList, void* a_node)"
-30261,0x140487db0,0x140497d50,2,"float* NavMeshSearchFitSphere::AddStartNode(void* a_navmesh, std::uint32_t a_triangle, std::uint32_t a_arg4, float a_cost)"
+30261,0x140487db0,0x140497d50,2,"float* NavMeshSearchFitSphere::AddStartNode(void* a_navmesh, std::uint32_t a_triangle, float a_arg4, float a_cost)"
 30279,0x140488940,0x1404988e0,2,"bool NavMeshSearchFlee::RunSearch(BSPathingRequest** a_request, BSFastNavmeshTriLocation* a_start, BSTArray<BSFastNavmeshTriLocation>* a_outLocations, BSTArray<BSFastNavmeshEdgeHandle>* a_outEdges)"
 30280,0x140488bb0,0x140498b50,2,"void NavMeshSearchFlee::SetNodeLocationAndHeuristic(AStarNode* a_node, BSNavmesh* a_navmesh, std::uint16_t a_triIndex)"
 30281,0x140488cb0,0x140498c50,2,"bool NavMeshSearchFlee::ExpandNode(AStarNode* a_node, BSTSmallArray<AStarNode*,3>* a_out)"
@@ -4590,18 +4596,18 @@
 30347,0x14048d6e0,0x14049d680,2,std::uint32_t PathingRequestClosestGoal::GetStaticType()
 30348,0x14048d720,0x14049d6c0,2,void PathingRequestClosestGoal::Write(BSPathingStreamWrite* a_stream)
 30349,0x14048d7b0,0x14049d750,2,void PathingRequestClosestGoal::Read(BSPathingStreamRead* a_stream)
-30355,0x14048e1d0,0x14049e170,2,"bool PathBuilderFactoryManager::Insert(std::uint32_t a_typeId, void* a_factory)"
+30355,0x14048e1d0,0x14049e170,2,"bool PathBuilderFactoryManager::Insert(void* a_entries, std::uint32_t a_hash, const std::uint32_t* a_key, const void* a_value, void* a_arg5, void* a_arg6)"
 30359,0x14048e4f0,0x14049e490,2,void BSPathingLocationArray::Clear()
 30378,0x14048eba0,0x14049eb40,2,"void BSTDerivedCreator<PathingRequestClosestGoal,BSPathingRequest>::Destroy(const BSPathingRequest* a_val)"
 30382,0x14048ec70,0x14049ec10,2,PathBuilderFactoryManager* GetPathBuilderFactoryManager()
 30385,0x14048edb0,0x14049ed50,2,void PathBuilderFactoryManager::Grow()
-30386,0x14048ee60,0x14049ee00,2,void PathBuilderFactoryManager::InsertRehashed()
+30386,0x14048ee60,0x14049ee00,2,"bool PathBuilderFactoryManager::InsertRehashed(void* a_entries, std::uint32_t a_hash, const void* a_entry)"
 30393,0x14048f320,0x14049f2c0,2,std::uint32_t PathingRequestCover::GetType()
 30394,0x14048f360,0x14049f300,2,std::uint32_t PathingRequestCover::GetStaticType()
 30395,0x14048f3a0,0x14049f340,2,void PathingRequestCover::CopyTo(BSPathingRequest& a_dest)
 30396,0x14048f480,0x14049f420,2,PathingCoverLocation* PathingCoverLocation::ctor_FromRef(TESObjectREFR* a_ref)
-30397,0x14048f530,0x14049f4d0,2,PathingCoverLocation* PathingCoverLocation::ctor_FromCell(void* a_cell)
-30398,0x14048f5d0,0x14049f570,2,PathingCoverLocation* PathingCoverLocation::ctor_FromPosition(const NiPoint3* a_position)
+30397,0x14048f530,0x14049f4d0,2,"PathingCoverLocation* PathingCoverLocation::ctor_FromCell(const NiPoint3* a_position, void* a_cell)"
+30398,0x14048f5d0,0x14049f570,2,"PathingCoverLocation* PathingCoverLocation::ctor_FromPosition(const NiPoint3* a_position, void* a_worldSpace)"
 30400,0x14048f6b0,0x14049f650,2,void PathingCoverLocation::Read(BSPathingStreamRead* a_stream)
 30401,0x14048f7c0,0x14049f760,2,void PathingCoverLocation::Write(BSPathingStreamWrite* a_stream)
 30402,0x14048f8d0,0x14049f870,2,"void SetCoverData(std::uint16_t a_value, std::uint16_t a_lowerBound, std::uint16_t a_upperBound, std::uint8_t a_flag0, std::uint8_t a_flag1, std::uint8_t a_edgeIndex)"
@@ -4700,23 +4706,23 @@
 30633,0x140494e40,0x1404a4de0,2,std::uint32_t GetPathingRequestStopMovingType()
 30641,0x1404950f0,0x1404a5090,2,"void BSTDerivedCreator<PathingRequestStopMoving,BSPathingRequest>::Destroy(const BSPathingRequest* a_val)"
 30647,0x140495420,0x1404a53c0,2,"bool PathBuilderClosePointPath::Build(BSTSmartPointer<BSPathingRequest>* a_request, BSTSmartPointer<BSPathingSolution>* a_solution)"
-30657,0x140495e90,0x1404a5e30,2,"bool PathBuilderStationaryPath::Build(BSPathingRequest** a_request, BSPathingSolution** a_solution)"
-30658,0x140495fa0,0x1404a5f40,2,"bool PathBuilderFlee::Build(BSPathingRequest** a_request, BSPathingSolution** a_solution)"
+30657,0x140495e90,0x1404a5e30,2,"static bool PathBuilderStationaryPath::Build(BSPathingRequest** a_request, BSPathingSolution** a_solution)"
+30658,0x140495fa0,0x1404a5f40,2,"static bool PathBuilderFlee::Build(BSPathingRequest** a_request, BSPathingSolution** a_solution)"
 30664,0x140496d90,0x1404a6d30,2,float NiPoint3::Unitize()
-30665,0x140496e00,0x1404a6da0,2,"bool PathBuilderFlyPath::Build(BSTSmartPointer<BSPathingRequest>* a_request, BSTSmartPointer<BSPathingSolution>* a_solution)"
-30666,0x140497330,0x1404a72d0,2,"bool PathBuilderFlyActionPath::Build(BSTSmartPointer<BSPathingRequest>* a_request, BSTSmartPointer<BSPathingSolution>* a_solution)"
-30667,0x140498b20,0x1404a8ac0,2,"bool PathBuilderFlyHoverPath::Build(BSTSmartPointer<BSPathingRequest>* a_request, BSTSmartPointer<BSPathingSolution>* a_solution)"
-30668,0x140499660,0x1404a9600,2,"bool PathBuilderFlyOrbitPath::Build(BSTSmartPointer<BSPathingRequest>* a_request, BSTSmartPointer<BSPathingSolution>* a_solution)"
-30669,0x14049a770,0x1404aa710,2,"bool PathBuilderFlyLandPath::Build(BSTSmartPointer<BSPathingRequest>* a_request, BSTSmartPointer<BSPathingSolution>* a_solution)"
-30670,0x14049b270,0x1404ab210,2,"bool PathBuilderFlyTakeOffPath::Build(BSTSmartPointer<BSPathingRequest>* a_request, BSTSmartPointer<BSPathingSolution>* a_solution)"
-30672,0x14049ba80,0x1404aba20,2,"void PathBuilderFlight::GenerateTurnLimitedFlightPoints(BSPathingRequest** a_request, BSPathingSolution** a_solution, float a_flyHeight, const float* a_eulerAngles)"
-30676,0x14049d2a0,0x1404ad240,2,"void PathBuilderFlight::SmoothFlightPointsZ(BSPathingRequest** a_request, BSPathingSolution* a_solution)"
-30677,0x14049d540,0x1404ad4e0,2,"void PathBuilderFlight::ExtendFlightPathEnd(BSPathingRequest** a_request, BSPathingSolution** a_solution, float a_dist)"
-30678,0x14049d7c0,0x1404ad760,2,void PathBuilderFlight::ComputeFlightPointTangents(BSPathingSolution** a_solution)
-30710,0x14049ebb0,0x1404aeb50,2,"bool PathBuilderHidePath::Build(BSTSmartPointer<BSPathingRequest>* a_request, BSTSmartPointer<BSPathingSolution>* a_solution)"
-30714,0x14049f200,0x1404af1a0,2,"bool PathBuilderLOSPath::Build(BSTSmartPointer<BSPathingRequest>* a_request, BSTSmartPointer<BSPathingSolution>* a_solution)"
-30718,0x14049fa80,0x1404afa20,2,"bool PathBuilderOptimalLocationPath::Build(BSTSmartPointer<BSPathingRequest>* a_request, BSTSmartPointer<BSPathingSolution>* a_solution)"
-30722,0x1404a0370,0x1404b0310,2,"bool PathBuilderSafeStraightLinePath::Build(BSTSmartPointer<BSPathingRequest>* a_request, BSTSmartPointer<BSPathingSolution>* a_solution)"
+30665,0x140496e00,0x1404a6da0,2,"static bool PathBuilderFlyPath::Build(BSTSmartPointer<BSPathingRequest>* a_request, BSTSmartPointer<BSPathingSolution>* a_solution)"
+30666,0x140497330,0x1404a72d0,2,"static bool PathBuilderFlyActionPath::Build(BSTSmartPointer<BSPathingRequest>* a_request, BSTSmartPointer<BSPathingSolution>* a_solution)"
+30667,0x140498b20,0x1404a8ac0,2,"static bool PathBuilderFlyHoverPath::Build(BSTSmartPointer<BSPathingRequest>* a_request, BSTSmartPointer<BSPathingSolution>* a_solution)"
+30668,0x140499660,0x1404a9600,2,"static bool PathBuilderFlyOrbitPath::Build(BSTSmartPointer<BSPathingRequest>* a_request, BSTSmartPointer<BSPathingSolution>* a_solution)"
+30669,0x14049a770,0x1404aa710,2,"static bool PathBuilderFlyLandPath::Build(BSTSmartPointer<BSPathingRequest>* a_request, BSTSmartPointer<BSPathingSolution>* a_solution)"
+30670,0x14049b270,0x1404ab210,2,"static bool PathBuilderFlyTakeOffPath::Build(BSTSmartPointer<BSPathingRequest>* a_request, BSTSmartPointer<BSPathingSolution>* a_solution)"
+30672,0x14049ba80,0x1404aba20,2,"static void PathBuilderFlight::GenerateTurnLimitedFlightPoints(BSPathingRequest** a_request, BSPathingSolution** a_solution, float a_flyHeight, const float* a_eulerAngles)"
+30676,0x14049d2a0,0x1404ad240,2,"static void PathBuilderFlight::SmoothFlightPointsZ(BSPathingRequest** a_request, BSPathingSolution* a_solution)"
+30677,0x14049d540,0x1404ad4e0,2,"static void PathBuilderFlight::ExtendFlightPathEnd(BSPathingRequest** a_request, BSPathingSolution** a_solution, float a_dist)"
+30678,0x14049d7c0,0x1404ad760,2,static void PathBuilderFlight::ComputeFlightPointTangents(BSPathingSolution** a_solution)
+30710,0x14049ebb0,0x1404aeb50,2,"static bool PathBuilderHidePath::Build(BSTSmartPointer<BSPathingRequest>* a_request, BSTSmartPointer<BSPathingSolution>* a_solution)"
+30714,0x14049f200,0x1404af1a0,2,"static bool PathBuilderLOSPath::Build(BSTSmartPointer<BSPathingRequest>* a_request, BSTSmartPointer<BSPathingSolution>* a_solution)"
+30718,0x14049fa80,0x1404afa20,2,"static bool PathBuilderOptimalLocationPath::Build(BSTSmartPointer<BSPathingRequest>* a_request, BSTSmartPointer<BSPathingSolution>* a_solution)"
+30722,0x1404a0370,0x1404b0310,2,"static bool PathBuilderSafeStraightLinePath::Build(BSTSmartPointer<BSPathingRequest>* a_request, BSTSmartPointer<BSPathingSolution>* a_solution)"
 30732,0x1404a0e90,0x1404b0e30,2,static void BGSBtoDB::InitSingleton()
 30733,0x1404a0f30,0x1404b0ed0,2,static void BGSBtoDB::ShutdownSingleton()
 30734,0x1404a0ff0,0x1404b0f90,2,"static void BGSBtoDB::DumpCache(NiBinaryStream* a_stream, std::uint32_t a_minRefCount)"
@@ -4731,7 +4737,7 @@
 30744,0x1404a1ad0,0x1404b1a70,2,static void BGSBtoDB::SetAllNonSegmented()
 30745,0x1404a1b10,0x1404b1ab0,2,static void BGSDistantObjectBlock::SetAllMenuScreenFlag(bool a_set)
 30746,0x1404a1b90,0x1404b1b30,3,void BGSDistantObjectBlock::Prepare()
-30820,0x1404a6c10,0x1404b6c20,2,static void BGSDistantTreeBlock::CreateFromStream()
+30820,0x1404a6c10,0x1404b6c20,2,"static void BGSDistantTreeBlock::CreateFromStream(const char* a_path, void* a_arg2, void* a_arg3, void* a_arg4)"
 30823,0x1404a6db0,0x1404b6dc0,2,static void BGSBttDB::InitSingleton()
 30824,0x1404a6e20,0x1404b6e30,2,static void BGSBttDB::ShutdownSingleton()
 30825,0x1404a6ea0,0x1404b6eb0,2,"static std::int32_t BGSDistantTreeBlock::QueueLoad(void*& a_handle, BGSTerrainNode* a_node, std::uint32_t a_level, std::int16_t a_x, std::int16_t a_y)"
@@ -4857,7 +4863,7 @@
 31168,0x1404b8fa0,0x1404c9080,2,"static void BGSTerrainVisibilityData::CreateFromStream(void* a_stream, void* a_arg2, void* a_arg3, BGSTerrainVisibilityData*& a_data)"
 31171,0x1404b9200,0x1404c92e0,2,static void BGSTerrainVisibilityDataDB::InitSingleton()
 31172,0x1404b9280,0x1404c9360,2,static void BGSTerrainVisibilityDataDB::ShutdownSingleton()
-31173,0x1404b9310,0x1404c93f0,2,"static std::int32_t BGSTerrainVisibilityDataDB::QueueLoad(const char* a_path, void* a_handle)"
+31173,0x1404b9310,0x1404c93f0,2,"static std::int32_t BGSTerrainVisibilityDataDB::QueueLoad(const char* a_path, void* a_handle, void* a_arg3)"
 31174,0x1404b93e0,0x1404c94c0,2,"static std::int32_t BGSTerrainVisibilityDataDB::Demand(const char* a_path, void* a_handle, void* a_arg3)"
 31230,0x1404bca00,0x1404ccb50,3,"void BGSAutoWater::GeneratePlaceableWaterForCell(TESObjectCELL* a_cell, bool a_skipFlowMap)"
 31231,0x1404bcc20,0x1404ccd70,3,"void BGSAutoWater::LoadCellFlowMap(TESObjectCELL* a_cell, BSGeometry* a_geometry)"
@@ -5109,9 +5115,9 @@
 32979,0x1405249d0,0x14051f690,2,"void GetContentManifestPath(GFxValue* a_content, BSFixedString* a_out)"
 32991,0x140527860,0x1405212d0,2,void ModManager::InitContentDirectories()
 33016,0x14052b590,0x1405246d0,2,void ModManager::DeleteContentFromMenu(GFxFunctionHandler::Args* a_args)
-33017,0x14052b980,0x140524ab0,2,void ModManager::DeleteContentIfUnsubscribed(GFxValue* a_data)
+33017,0x14052b980,0x140524ab0,2,static void ModManager::DeleteContentIfUnsubscribed(GFxValue* a_data)
 33018,0x14052bd10,0x140524e40,2,void ModManager::DeleteInstalledMod(const char* a_contentId)
-33019,0x14052bd40,0x140524e70,2,void ModManager::DeleteModFiles(const char* a_modFileName)
+33019,0x14052bd40,0x140524e70,2,static void ModManager::DeleteModFiles(const char* a_modFileName)
 33116,0x140537100,0x14052de70,2,void ModManager::DeleteLibraryModConfirmCallback::Run(std::uint8_t a_button)
 33117,0x140537110,0x14052de80,2,void ModManager::DeleteMod_ConfirmCallback::Run(std::uint8_t a_button)
 33118,0x140537120,0x14052de90,2,void ModManager::ModsChanged_ConfirmResetCallback::Run(std::uint8_t a_button)
@@ -5223,7 +5229,7 @@
 33516,0x140547f10,0x14054bfe0,2,void DisguiseEffect::StartDetectionCheck()
 33519,0x1405481f0,0x14054c2c0,3,DisguiseEffect::DetectionChecker* DisguiseEffect::DetectionChecker::DetectionChecker(DisguiseEffect* a_effect)
 33520,0x140548280,0x14054c350,2,void DisguiseEffect::DetectionChecker::OnComplete()
-33521,0x140548370,0x14054c440,2,"bool DisguiseEffect::RefreshActorKnowledgeOfPlayer(DetectionListener** a_listener, std::uint32_t* a_handle)"
+33521,0x140548370,0x14054c440,2,"static bool DisguiseEffect::RefreshActorKnowledgeOfPlayer(DetectionListener** a_listener, std::uint32_t* a_handle)"
 33522,0x140548410,0x14054c4e0,2,void DisguiseEffect::Start()
 33523,0x140548480,0x14054c550,2,void DisguiseEffect::Finish()
 33524,0x1405484c0,0x14054c590,2,void ProcessLists::RefreshHighActorsKnowledgeOfPlayer(DetectionListener** a_listener)
@@ -5542,7 +5548,7 @@
 34736,0x140581030,0x140588540,3,"undefined8 LoadGlobalData (uint a_datatype, BGSLoadFormBuffer * a_buffer, float * param_3, undefined8 param_4)"
 34738,0x140581430,0x140588940,3,"void InitGlobalData(std::uint32_t a_firstType, std::uint32_t a_lastType)"
 34740,0x1405816a0,0x140588bb0,3,"void FinishLoadGlobalData(std::uint32_t a_firstType, std::uint32_t a_lastType)"
-34799,0x140585000,0x14058c530,2,std::int32_t Character::GetInitialDataType()
+34799,0x140585000,0x14058c530,2,std::int32_t Character::GetInitialDataType(std::uint32_t a_changeFlags)
 34808,0x140585a70,0x14058cfa0,4,"void BGSSaveLoadInitialData::LoadInitialData(BGSLoadGameBuffer* a_buffer, TESForm* a_form, void* a_unk3, std::int32_t a_type)"
 34811,0x1405864c0,0x14058d9f0,3,BGSSaveLoadManager::StartSaveLoadThread
 34818,0x140586de0,0x14058e310,3,RE::BGSSaveLoadManager::Save
@@ -5570,16 +5576,25 @@
 35096,0x1405975d0,0x14059ec90,3,TESObjectREFR* BGSLoadFormData::GetReference()
 35098,0x140597680,0x14059ed40,2,std::uint8_t BGSLoadFormBuffer::GetVersion()
 35100,0x140597870,0x14059ef30,4,BGSLoadGameBuffer::BGSLoadGameBuffer
+35102,0x1405978f0,0x14059efb0,2,void BGSLoadGameBuffer::Load(Win32FileType* a_file)
+35105,0x140597a00,0x14059f0c0,2,void BGSLoadGameBuffer::SetBufferSize(std::uint32_t a_size)
 35106,0x140597a80,0x14059f140,2,std::uint8_t BGSLoadGameBuffer::GetVersion()
 35107,0x140597aa0,0x14059f160,4,BGSLoadGameBuffer::ReadFormID
+35110,0x140597c90,0x14059f350,2,void BGSLoadGameBuffer::LoadStringA(BSFixedString& a_string)
 35111,0x140597cf0,0x14059f3b0,4,std::uint32_t BGSLoadFormBuffer::ReadVSVal()
 35112,0x140597d50,0x14059f410,4,"void BGSLoadGameBuffer::LoadDataEndian(void* a_data, std::uint32_t a_offset, std::uint32_t a_size)"
+35114,0x140597dd0,0x14059f490,2,"void BGSLoadGameBuffer::LoadDataHalf(float* a_data, std::uint32_t a_size)"
+35115,0x140597e30,0x14059f4f0,2,void BGSLoadGameBuffer::LoadDataHalf(NiMatrix3* a_data)
+35124,0x140598410,0x14059fad0,2,void BGSLoadGameSubBuffer::LoadGame(BGSLoadFormBuffer* a_buffer)
 35138,0x140598ef0,0x1405a05b0,4,"void BGSSaveGameBuffer::AllocateBuffer(void** a_outBuffer, std::uint32_t a_size)"
 35145,0x140599440,0x1405a0b00,4,BGSSaveFormBuffer::BGSSaveFormBuffer
 35148,0x1405996e0,0x1405a0da0,2,TESObjectREFR* BGSSaveFormBuffer::GetReference()
 35152,0x1405997a0,0x1405a0e60,2,TESForm* BGSSaveFormBuffer::GetForm()
+35155,0x140599840,0x1405a0f00,2,void BGSSaveGameBuffer::Save(Win32FileType* a_file)
 35157,0x140599930,0x1405a0ff0,4,BGSSaveGameBuffer::SaveFormID
 35158,0x1405999b0,0x1405a1070,4,BGSSaveGameBuffer::WriteFormID
+35160,0x140599b20,0x1405a11e0,2,std::uint32_t BGSSaveGameBuffer::StartVariableSizedValue()
+35161,0x140599b80,0x1405a1240,2,void BGSSaveGameBuffer::SaveVariableSizedValue(std::uint32_t a_value)
 35162,0x140599c90,0x1405a1350,4,"void BGSSaveGameBuffer::SaveVSVal(std::uint32_t a_value, std::uint32_t a_position)"
 35163,0x140599db0,0x1405a1470,4,"void BGSSaveGameBuffer::SaveDataEndian(const void* a_data, std::uint32_t a_size)"
 35166,0x140599f20,0x1405a15e0,4,void BGSSaveGameBuffer::EnsureCapacity(std::uint32_t a_requiredSize)
@@ -5822,14 +5837,14 @@
 36439,0x1405e0170,0x1405e87c0,2,"void Character::MoveFollowersToPosition(NiPoint3* a_pos, float a_rotZ, float a_rotX, TESObjectCELL* a_cell, TESWorldSpace* a_worldSpace, bool a_atDoor, bool a_ignoreSleep)"
 36440,0x1405e0900,0x1405e8f50,2,bool Character::CollectFollowers(void* a_out)
 36441,0x1405e0af0,0x1405e9140,3,float Character::GetFollowersSpacing()
-36442,0x1405e0bd0,0x1405e9220,2,float Character::GetFollowersTotalSpacing(void* a_followers)
+36442,0x1405e0bd0,0x1405e9220,2,"float Character::GetFollowersTotalSpacing(void* a_followers, float a_spacing)"
 36444,0x1405e11c0,0x1405e9810,4,float Actor::GetBoundRadius() float Actor::GetBoundRadius()
 36452,0x1405e1510,0x1405e9b60,3,"float TESObjectREFR::GetSubmergeLevel_1405E1510 (TESObjectREFR * a_this, float a_zPos, TESObjectCELL * a_parentCell)"
 36456,0x1405e1860,0x1405e9ee0,3,RE::Actor::GetTotalCarryWeight_1405E1860
 36457,0x1405e18b0,0x1405e9f30,3,bool Actor::IsOverEncumbered()
 36468,0x1405e1f10,0x1405ea5b0,2,void Actor::SetObjectReference(TESBoundObject* a_object)
-36472,0x1405e20c0,0x1405ea760,4,void Character::MoveToPackageLocation()
-36473,0x1405e20d0,0x1405ea770,2,"void Character::MoveToPackageLocationEx(bool a_useSavedPackage, PathingRequestClosePoint** a_outRequest, void* a_packageContext)"
+36472,0x1405e20c0,0x1405ea760,4,void Character::MoveToPackageLocation(bool a_useSavedPackage)
+36473,0x1405e20d0,0x1405ea770,2,"void Character::MoveToPackageLocationEx(bool a_useSavedPackage, PathingRequestClosePoint** a_outRequest)"
 36474,0x1405e2730,0x1405eadd0,2,"void Character::TeleportToPackageLocation(NiPoint3* a_pos, TESObjectCELL* a_cell, TESWorldSpace* a_worldSpace)"
 36475,0x1405e27f0,0x1405eae90,4,void Actor::EndInterruptPackage(bool a_skipDialogue)
 36482,0x1405e3080,0x1405eb720,2,bool Character::CanMoveOrRotate()
@@ -5933,11 +5948,11 @@
 36785,0x1405ffa90,0x1406082a0,2,void Character::AppendSpeakerAvoidNodeToRequest(void* a_request)
 36786,0x1405ffb90,0x1406083a0,2,"void Character::PathToLocation(NiPoint3* a_point, TESObjectCELL* a_cell, TESWorldSpace* a_worldSpace, float a_distance, void* a_avoid)"
 36788,0x1405ffd10,0x140608520,2,"bool Actor::PathToPosition(const NiPoint3& a_position, TESObjectCELL* a_cell, TESWorldSpace* a_worldSpace, float a_rotationZ, float a_speed, std::uint32_t a_flags, void* a_param)"
-36789,0x1405ffdf0,0x140608600,2,"bool Actor::PathToPositionOfReference(TESObjectREFR* a_ref, float a_speed, std::uint32_t a_flags, void* a_param)"
+36789,0x1405ffdf0,0x140608600,2,"bool Actor::PathToPositionOfReference(TESObjectREFR* a_ref, float a_speed, float a_arg3, void* a_param)"
 36794,0x1405fff70,0x140608780,2,bool Actor::GetPathRequest(void** a_out)
 36795,0x1405fffa0,0x1406087b0,2,"bool Character::TurnToFace(NiPoint3* a_target, float a_tolerance)"
 36796,0x140600070,0x140608880,2,"bool Actor::RequestTurnToAngle(float a_angle, float a_tolerance)"
-36797,0x140600110,0x140608920,2,bool Character::PathToFollowPoint(NiPoint3* a_point)
+36797,0x140600110,0x140608920,2,"bool Character::PathToFollowPoint(NiPoint3* a_point, float a_arg2, void* a_arg3)"
 36801,0x140600400,0x140608c10,3,void Actor::StopMoving(float a_delta)
 36802,0x140600590,0x140608da0,4,RE::Actor::StopMovement
 36803,0x1406005f0,0x140608e00,2,"void Actor::SubmitPathRequest(void* a_request, void* a_location, float a_unkFloat, void* a_unk)"
@@ -5956,7 +5971,7 @@
 36841,0x140601b50,0x14060a360,2,float Character::CalculateRadius()
 36850,0x140602040,0x14060a850,2,void Character::RefreshCachedValues()
 36852,0x1406021d0,0x14060a9e0,2,void DestroyMovementMessagePool()
-36853,0x140602200,0x14060aa10,2,"void Actor::WarpToRecord(void* a_record, void* a_loc)"
+36853,0x140602200,0x14060aa10,2,void Actor::WarpToRecord(void* a_record)
 36854,0x140602410,0x14060ac20,2,void Character::ActivatePathingDoor(void* a_doorInfo)
 36868,0x140603640,0x14060be50,2,bool Character::DispatchMovementMessage(MovementMessage* a_message)
 36869,0x140603660,0x14060be70,2,"std::int32_t Actor::StartPathToReference(TESObjectREFR* a_target, float a_walkRunPercent)"
@@ -6090,8 +6105,10 @@
 37513,0x140620900,0x1406296b0,3,RE::Actor::RestoreActorValue_140620900
 37516,0x140620cc0,0x140629a70,3,RE::Character::Update_RegenDelay__140620CC0
 37517,0x140620d60,0x140629b10,2,float Actor::GetActorValue(ActorValue a_akValue)
+37518,0x140620e60,0x140629c10,2,float Actor::GetPermanentActorValue(ActorValue a_akValue)
 37519,0x140620f30,0x140629ce0,2,float Actor::GetBaseActorValue(ActorValue a_akValue)
 37520,0x140621070,0x140629e20,2,"void Actor::SetBaseActorValue(ActorValue a_akValue, float a_value)"
+37521,0x1406210b0,0x140629e60,2,"void Actor::ModBaseActorValue(ActorValue a_akValue, float a_value)"
 37522,0x1406210f0,0x140629ea0,4,ActorValueOwner::ModActorValue
 37523,0x140621120,0x140629ed0,4,"Actor::ApplyActorValueModifier_140621120(Actor *a1, int32 a_actorValueModifier, int32 a_actorValue, float a_avDelta, Actor *a_attacker)"
 37524,0x140621350,0x14062a100,4,"float Actor::GetActorValueModifier(ACTOR_VALUE_MODIFIER a_modifier, ActorValue a_value)"
@@ -6130,8 +6147,8 @@
 37618,0x140625cd0,0x14062eb40,3,bool Actor::IsCombatTarget(Actor* a_other)
 37619,0x140625d10,0x14062eb80,2,NiPoint3* Actor::GetWeaponNodePosition(bool a_leftHand)
 37620,0x140625dd0,0x14062ec40,4,"bool Actor::GetWeaponSwingDirection(bool a_leftHand, NiPoint3* a_out)"
-37621,0x140625eb0,0x14062ed20,4,TESBoundObject* Actor::GetWeapon()
-37622,0x140625ee0,0x14062ed50,2,EnchantmentItem* Actor::GetEquippedWeaponEnchantment()
+37621,0x140625eb0,0x14062ed20,4,TESBoundObject* Actor::GetWeapon(bool a_leftHand)
+37622,0x140625ee0,0x14062ed50,2,EnchantmentItem* Actor::GetEquippedWeaponEnchantment(bool a_leftHand)
 37623,0x140625f30,0x14062eda0,2,std::uint32_t Actor::GetEquippedWeaponTypeValue()
 37624,0x140625fa0,0x14062ee10,3,TESForm* Actor::GetEquippedShield()
 37625,0x140625fe0,0x14062ee50,3,BGSAttackDataPtr* Actor::GetCurrentAttackData()
@@ -6185,12 +6202,12 @@
 37674,0x140629090,0x140631f60,2,papyrus_extender::events::game::weaponhit::static::target_0x6C7
 37677,0x14062a530,0x140633400,2,"bool Character::UpdateBleedoutOrKill(TESObjectREFR* a_attacker, float a_health)"
 37685,0x14062b720,0x1406345f0,2,void ActorListenerSet::NotifySingleton(void* a_event)
-37689,0x14062b870,0x140634740,2,"void Character::HitTargetsInReach(void* a_targets, void* a_ctx)"
-37720,0x14062c3f0,0x1406352c0,2,"void ActorListenerSet::Notify(void* a_set, void* a_event)"
+37689,0x14062b870,0x140634740,2,"static void Character::HitTargetsInReach(void* a_targets, void* a_ctx)"
+37720,0x14062c3f0,0x1406352c0,2,"static void ActorListenerSet::Notify(void* a_set, void* a_event)"
 37724,0x14062ce70,0x140635d40,2,void* ActorListenerSet::GetSingleton()
 37726,0x14062d050,0x140635f20,3,BSTEventSource<CriticalHit::Event>* CriticalHit::GetEventSource()
-37727,0x14062d140,0x140636010,2,"void ActorListenerSet::Add(void* a_set, void* a_listener)"
-37736,0x14062d8d0,0x1406367a0,2,"void ActorListenerSet::Remove(void* a_set, void* a_listener)"
+37727,0x14062d140,0x140636010,2,"static void ActorListenerSet::Add(void* a_set, void* a_listener)"
+37736,0x14062d8d0,0x1406367a0,2,"static void ActorListenerSet::Remove(void* a_set, void* a_listener)"
 37752,0x14062e390,0x140637260,3,void Actor::StopInteractingQuick(bool a_unk02)
 37757,0x14062ebc0,0x140637a90,3,bool Actor::GetMount(NiPointer<Actor>& a_outMount)
 37758,0x14062ecd0,0x140637ba0,4,bool Actor::GetRider(NiPointer<Actor>& a_outRider)
@@ -6225,7 +6242,7 @@
 37808,0x140631c80,0x14063ab50,3,void Actor::InterruptCast(bool a_restoreMagicka)
 37809,0x140631ce0,0x14063abb0,2,"bool Actor::CheckCast(MagicItem* a_spell, bool a_dualCast, MagicSystem::CannotCastReason* a_reason)"
 37810,0x140631d70,0x14063ac40,4,bool Actor::IsCasting(MagicItem* a_spell)
-37813,0x140631f20,0x14063adf0,2,bool Actor::TryDualCast()
+37813,0x140631f20,0x14063adf0,2,bool Actor::TryDualCast(Actor* a_target)
 37814,0x140632000,0x14063aed0,4,"void Actor::SetWantDualCasting(RE::Actor* a_actor, bool a_enable)"
 37816,0x140632080,0x14063af50,2,bool Actor::CanDualCast()
 37819,0x140632270,0x14063b140,4,"void Actor::SetSelectedSpell(RE::MagicSystem::CastingSource castingSource, MagicItem* selectedSpell)"
@@ -6633,6 +6650,8 @@
 39029,0x14068c190,0x1406955f0,2,"void AIProcess::StartInterruptPackage(Actor* a_actor, TESPackage* a_package, TESObjectREFR* a_target)"
 39043,0x14068d5e0,0x140696a30,2,"void WeaponAnimationLoadedCallback::OnAnimationSetLoaded(void* a_unused, void* a_animations)"
 39044,0x14068d6f0,0x140696b40,3,std::uint64_t QueuedItem::PreloadModels(Character* a_actor)
+39105,0x140690720,0x140699d20,2,void AITimer::SaveGame(BGSSaveGameBuffer* a_buffer)
+39107,0x140690820,0x140699e20,2,void AITimeStamp::SaveGame(BGSSaveGameBuffer* a_buffer)
 39119,0x140690bc0,0x14069a1c0,2,"BSEventNotifyControl BGSPlayerMusicChanger::ProcessEvent(const BGSActorCellEvent* a_event, BSTEventSource<BGSActorCellEvent>* a_eventSource)"
 39120,0x140690cc0,0x14069a2c0,2,"BSEventNotifyControl BGSPlayerMusicChanger::ProcessEvent(const BGSActorDeathEvent* a_event, BSTEventSource<BGSActorDeathEvent>* a_eventSource)"
 39128,0x140691110,0x14069a710,2,NiObject* BSDoorHavokController::CreateClone(NiCloningProcess& a_cloning)
@@ -6796,7 +6815,7 @@
 40388,0x1406de1a0,0x140705050,4,bool ProcessLists::AreHostileActorsNear(BSScrapArray<ActorHandle>* a_arrayOut)
 40394,0x1406de9a0,0x140705850,4,"std::int16_t ProcessLists::RequestHighestDetectionLevelAgainstActor(Actor* a_actor, std::uint32_t& a_LOSCount)"
 40396,0x1406dec50,0x140705b00,3,void ProcessLists::ClearCachedFactionFightReactions()
-40398,0x1406dedb0,0x140705c60,2,"void BGSOpenCloseForm::NotifyActorsOfOpenedDoor(void* a_handleList, TESObjectREFR* a_door)"
+40398,0x1406dedb0,0x140705c60,2,"static void BGSOpenCloseForm::NotifyActorsOfOpenedDoor(void* a_handleList, TESObjectREFR* a_door)"
 40456,0x1406e3020,0x140709e50,4,"void PlayerCharacter::AddPlayerAddItemEvent(TESObject* a_object, TESForm* a_owner, TESObjectREFR* a_container, AQUIRE_TYPE a_type) src\RE\P/PlayerCharacter.cpp:32"
 40459,0x1406e33e0,0x14070a210,3,"void* BeginLowActorUpdate(void*, float, float, std::uint8_t, float, std::uint32_t)"
 40478,0x1406e3ee0,0x14070ad10,3,"std::uint64_t LockFreeRing2048Push(void*, void*)"
@@ -6817,16 +6836,16 @@
 40575,0x1406e7320,0x14070e210,4,RE::ProcessLists::HandlePlayerLevelUpdate(ProcessLists *param_1)
 40578,0x1406e7500,0x14070e3f0,2,bool ActorMover::SetGoal(void* a_request)
 40579,0x1406e75b0,0x14070e4a0,2,"bool ActorMover::PathToLocation(NiPoint3* a_pos, TESObjectCELL* a_cell, TESWorldSpace* a_worldSpace, float a_unkFloat, void* a_unk)"
-40580,0x1406e7860,0x14070e750,2,void ActorMover::PathToReference(TESObjectREFR* a_ref)
+40580,0x1406e7860,0x14070e750,2,"void ActorMover::PathToReference(TESObjectREFR* a_ref, float a_unkFloat, void* a_unk)"
 40581,0x1406e78d0,0x14070e7c0,2,"bool ActorMover::PathToPosition(const NiPoint3& a_position, TESObjectCELL* a_cell, TESWorldSpace* a_worldSpace, float a_rotationZ, float a_speed, std::uint32_t a_flags, void* a_param)"
-40582,0x1406e7a90,0x14070e980,2,"bool ActorMover::PathToPositionOfReference(TESObjectREFR* a_ref, float a_speed, std::uint32_t a_flags, void* a_param)"
+40582,0x1406e7a90,0x14070e980,2,"bool ActorMover::PathToPositionOfReference(TESObjectREFR* a_ref, float a_speed, float a_arg3, void* a_param)"
 40583,0x1406e7b20,0x14070ea10,2,"bool ActorMover::SubmitBSPathingRequest(BSPathingRequest** a_request, BSPathingLocation* a_location)"
-40584,0x1406e7c00,0x14070eaf0,3,void ActorMover::StopMoving()
+40584,0x1406e7c00,0x14070eaf0,3,void ActorMover::StopMoving(float a_arg)
 40585,0x1406e7f90,0x14070ee80,2,void ActorMover::ClearGoal()
 40589,0x1406e8320,0x14070f210,2,void ActorMover::ResetMovementState()
 40590,0x1406e8400,0x14070f2f0,2,"bool ActorMover::RequestTurnToAngle(float a_angle, float a_tolerance)"
 40591,0x1406e86d0,0x14070f5c0,2,"bool ActorMover::TurnToFace(NiPoint3* a_target, float a_tolerance)"
-40593,0x1406e8cb0,0x14070fba0,2,bool ActorMover::PathToFollowPoint(NiPoint3* a_point)
+40593,0x1406e8cb0,0x14070fba0,2,"bool ActorMover::PathToFollowPoint(NiPoint3* a_point, float a_goalRadius, void* a_arg3)"
 40594,0x1406e8f70,0x14070fe60,2,bool ActorMover::IsPathRequestIdle()
 40595,0x1406e9010,0x14070ff00,2,bool ActorMover::IsPathComplete()
 40596,0x1406e90b0,0x14070ffa0,2,"bool ActorMover::QueryPathRequestState(void* a_request, std::uint8_t* a_outNotStarted)"
@@ -7016,13 +7035,13 @@
 41010,0x1406fde10,0x140724d90,2,void MovementHandlerAgentStairsHelper::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
 41019,0x1406fe0d0,0x140725050,2,"void BSTDerivedCreator<MovementHandlerAgentStairsHelper,MovementAgent>::Destroy(const MovementAgent* a_val)"
 41022,0x1406fe160,0x1407250e0,3,std::int32_t MovementMessageActorCollision::GetStaticType()
-41027,0x1406fe380,0x140725300,2,"void* MovementMessageAutoRegister::RegisterActorCollision(void* a_registrar, std::int32_t a_typeId)"
+41027,0x1406fe380,0x140725300,2,"static void* MovementMessageAutoRegister::RegisterActorCollision(void* a_registrar, std::int32_t a_typeId)"
 41036,0x1406fe650,0x1407255d0,2,"void BSTDerivedCreator<MovementMessageActorCollision,MovementMessage>::Destroy(const MovementMessage* a_val)"
 41038,0x1406fe6d0,0x140725650,2,void MovementMessageAutoRegister::GrowHashMap()
 41044,0x1406fead0,0x140725a50,3,std::int32_t MovementMessageMovementTypeChange::GetStaticType()
 41045,0x1406feb50,0x140725ad0,3,void MovementMessageMovementTypeChange::SaveGame(PathingStreamSaveGame* a_stream)
 41046,0x1406feb90,0x140725b10,3,void MovementMessageMovementTypeChange::LoadGame(PathingStreamLoadGame* a_stream)
-41047,0x1406febc0,0x140725b40,2,"void* MovementMessageAutoRegister::RegisterMovementTypeChange(void* a_registrar, std::int32_t a_typeId)"
+41047,0x1406febc0,0x140725b40,2,"static void* MovementMessageAutoRegister::RegisterMovementTypeChange(void* a_registrar, std::int32_t a_typeId)"
 41055,0x1406feea0,0x140725e20,2,"void BSTDerivedCreator<MovementMessageMovementTypeChange,MovementMessage>::Destroy(const MovementMessage* a_val)"
 41057,0x1406fefa0,0x140725f20,2,void MovementPlannerAgentDirectControl::RegisterWithController(IMovementControllerRegisterInterface& a_controller)
 41058,0x1406fefb0,0x140725f30,2,void MovementPlannerAgentDirectControl::UnregisterWithController()
@@ -7089,6 +7108,7 @@
 41192,0x140702e50,0x140729de0,2,"void BSTDerivedCreator<MovementTweenerAgentNodeFollower,MovementAgent>::Destroy(const MovementAgent* a_val)"
 41193,0x140702e70,0x140729e00,3,void PathingStreamLoadGame::ctor(void* a_buffer)
 41195,0x140702eb0,0x140729e40,3,std::uint32_t PathingStreamLoadGame::GetType()
+41196,0x140702ef0,0x140729e80,2,static std::uint32_t PathingStreamLoadGame::GetClassType()
 41197,0x140702f30,0x140729ec0,2,std::uint16_t PathingStreamLoadGame::GetFormVersion()
 41198,0x140702f40,0x140729ed0,2,std::uint32_t PathingStreamLoadGame::GetDynamicDataVersionNumber()
 41199,0x140702f60,0x140729ef0,2,bool PathingStreamLoadGame::ReadBool(bool* a_out)
@@ -7106,6 +7126,7 @@
 41211,0x140703190,0x14072a120,2,bool PathingStreamLoadGame::ReadString(BSFixedString* a_out)
 41212,0x140703260,0x14072a1f0,3,void PathingStreamSaveGame::ctor(void* a_buffer)
 41214,0x1407032a0,0x14072a230,3,std::uint32_t PathingStreamSaveGame::GetType()
+41215,0x1407032e0,0x14072a270,2,static std::uint32_t PathingStreamSaveGame::GetClassType()
 41216,0x140703320,0x14072a2b0,2,bool PathingStreamSaveGame::WriteBool(bool a_value)
 41217,0x140703360,0x14072a2f0,2,bool PathingStreamSaveGame::WriteInt8(std::int8_t a_value)
 41218,0x1407033a0,0x14072a330,2,bool PathingStreamSaveGame::WriteUInt8(std::uint8_t a_value)
@@ -7122,8 +7143,8 @@
 41235,0x140703ad0,0x14072aa60,3,PathingStreamSaveGame* PathingStreamSaveGame::dtor_deleting(std::uint8_t a_flags)
 41241,0x140703c70,0x14072ac00,2,bool PathingStreamLoadGame::ReadBSPathingRequestPtr(BSTSmartPointer<BSPathingRequest>& a_ptr)
 41242,0x140703d80,0x14072ad10,2,bool PathingStreamLoadGame::ReadBSPathingSolutionPtr(BSTSmartPointer<BSPathingSolution>& a_ptr)
-41243,0x140703eb0,0x14072ae40,2,bool PathingStreamLoadGame::ReadBSPathingRequestPtrArray()
-41244,0x140704020,0x14072afb0,2,bool PathingStreamLoadGame::ReadBSPathingSolutionPtrArray()
+41243,0x140703eb0,0x14072ae40,2,"static bool PathingStreamLoadGame::ReadBSPathingRequestPtrArray(void* a_cache, PathingStreamLoadGame* a_stream, void* a_out)"
+41244,0x140704020,0x14072afb0,2,"static bool PathingStreamLoadGame::ReadBSPathingSolutionPtrArray(void* a_cache, PathingStreamLoadGame* a_stream, void* a_out)"
 41257,0x140704970,0x14072b900,3,RE::PlayerControls::Ctor
 41264,0x1407051f0,0x14072c040,2,bool PlayerControls::ShouldRun()
 41266,0x140705250,0x14072c0a0,3,RE::PlayerControls::SetActivateHandlerBlocked
@@ -7150,7 +7171,7 @@
 41471,0x14070e260,0x140738c00,2,void DialoguePackage::SaveGame(BGSSaveFormBuffer* a_buf)
 41472,0x14070e3e0,0x140738d80,2,void DialoguePackage::LoadGame(BGSLoadFormBuffer* a_buf)
 41474,0x14070e480,0x140738e20,2,bool DialoguePackage::IsPackageOwner(Actor* a_actor)
-41501,0x14070ff30,0x14073a8d0,2,"bool Pathing::CanActorPathThroughTeleportDoor(TESObjectREFR* a_door, Character* a_actor)"
+41501,0x14070ff30,0x14073a8d0,2,"static bool Pathing::CanActorPathThroughTeleportDoor(TESObjectREFR* a_door, Character* a_actor)"
 41506,0x140710800,0x14073b1a0,2,void FleePackage::LoadGame(BGSLoadFormBuffer* a_buf)
 41509,0x140710a70,0x14073b410,2,void GuardPackageData::SaveGame(BGSSaveFormBuffer* a_buf)
 41510,0x140710af0,0x14073b490,2,void GuardPackageData::LoadGame(BGSLoadFormBuffer* a_buf)
@@ -7165,8 +7186,8 @@
 41626,0x1407187d0,0x140743170,4,ActorKnowledge::SetDetectionState
 41631,0x140718b40,0x1407434e0,2,void ActorKnowledge::AddListenerNoNotify(DetectionListener* a_listener)
 41632,0x140718b50,0x1407434f0,2,void ActorKnowledge::UpdateListeners()
-41633,0x140718d30,0x1407436d0,2,void ActorKnowledge::QueueDetectionUpdate(float a_time)
-41636,0x140718fb0,0x140743950,2,"void ActorKnowledge::PushBackListener(void* a_listeners, DetectionListener* a_listener)"
+41633,0x140718d30,0x1407436d0,2,void ActorKnowledge::QueueDetectionUpdate(AITimeStamp a_time)
+41636,0x140718fb0,0x140743950,2,"static void ActorKnowledge::PushBackListener(void* a_listeners, DetectionListener* a_listener)"
 41650,0x1407195c0,0x140743f60,2,DetectionCollector* DetectionCollector::DetectionCollector(std::uint32_t a_flags)
 41652,0x140719690,0x140744030,2,void DetectionCollector::FinishQueueing()
 41653,0x140719710,0x1407440b0,2,std::int32_t DetectionCollector::UpdateKnowledge(ActorKnowledge* a_knowledge)
@@ -7615,6 +7636,7 @@
 43224,0x14075f700,0x14078aa50,2,"void BSTDerivedCreator<CombatTrackTargetAimController,CombatObject>::Destroy(const CombatObject* a_val)"
 43226,0x14075f790,0x14078aae0,2,std::uint32_t CombatDisableAimController::GetClassType()
 43227,0x14075f800,0x14078ab50,2,std::uint32_t CombatMeleeAimController::GetClassType()
+43228,0x14075f870,0x14078abc0,2,static std::uint32_t CombatProjectileAimController::GetClassType()
 43229,0x14075f8e0,0x14078ac30,2,std::uint32_t CombatTrackTargetAimController::GetClassType()
 43235,0x14075fd20,0x14078b070,4,"CombatAnimation* CombatAnimation::Ctor0(Actor* a_actor, ANIM a_anim)"
 43236,0x14075fdd0,0x14078b120,4,"CombatAnimation* CombatAnimation::Ctor1(Actor* a_actor, TESObjectREFR* a_target, ANIM a_anim)"
@@ -7644,6 +7666,7 @@
 43304,0x140761c90,0x14078cfe0,2,"void BSTDerivedCreator<CombatAreaReference,CombatObject>::Destroy(const CombatObject* a_val)"
 43305,0x140761cb0,0x14078d000,2,"void BSTDerivedCreator<CombatAreaStandard,CombatObject>::Destroy(const CombatObject* a_val)"
 43306,0x140761cd0,0x14078d020,2,std::uint32_t CombatAreaHoldPosition::GetClassType()
+43307,0x140761d40,0x14078d090,2,static std::uint32_t CombatAreaRadius::GetClassType()
 43308,0x140761db0,0x14078d100,2,std::uint32_t CombatAreaReference::GetClassType()
 43309,0x140761e20,0x14078d170,2,std::uint32_t CombatAreaStandard::GetClassType()
 43311,0x140761eb0,0x14078d200,3,CombatBlackboardFlag::CombatBlackboardFlag()
@@ -7667,6 +7690,7 @@
 43455,0x1407688c0,0x140793c10,2,"void BSTDerivedCreator<CombatCoverSearch,CombatObject>::Destroy(const CombatObject* a_val)"
 43456,0x1407688e0,0x140793c30,2,"void BSTDerivedCreator<CombatCoverSearchDebugData,CombatObject>::Destroy(const CombatObject* a_val)"
 43457,0x140768900,0x140793c50,2,"void BSTDerivedCreator<CombatCoverSearchResult,CombatObject>::Destroy(const CombatObject* a_val)"
+43458,0x140768920,0x140793c70,2,static std::uint32_t CombatCoverLocation::GetClassType()
 43459,0x140768990,0x140793ce0,2,std::uint32_t CombatCoverSearch::GetClassType()
 43460,0x140768a00,0x140793d50,2,std::uint32_t CombatCoverSearchDebugData::GetClassType()
 43461,0x140768a70,0x140793dc0,2,std::uint32_t CombatCoverSearchResult::GetClassType()
@@ -7798,7 +7822,7 @@
 43952,0x140781f00,0x1407ad250,4,RE::CombatMagicCaster::StaticCheckTargetValid
 43955,0x1407821f0,0x1407ad540,2,bool CombatMagicCaster::CanAffordCast(Actor* a_caster)
 43956,0x140782330,0x1407ad680,4,RE::CombatMagicCaster::CheckTargetValid
-43957,0x1407823e0,0x1407ad730,2,bool CombatMagicCaster::IsEffectActiveOnCaster()
+43957,0x1407823e0,0x1407ad730,2,bool CombatMagicCaster::IsEffectActiveOnCaster(void* a_arg)
 43958,0x1407824b0,0x1407ad800,2,CombatInventoryItem::CATEGORY CombatMagicCasterOffensive::GetCategory()
 43959,0x1407824c0,0x1407ad810,2,bool CombatMagicCasterOffensive::CheckStartCast(CombatController* a_combatController)
 43960,0x140782500,0x1407ad850,2,bool CombatMagicCasterOffensive::CheckStopCast(CombatController* a_combatController)
@@ -8318,6 +8342,11 @@
 45381,0x1407a39c0,0x1407ced10,2,"std::uint32_t CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterSummon>::GetClassType()"
 45382,0x1407a3a50,0x1407ceda0,2,"std::uint32_t CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterTargetEffect>::GetClassType()"
 45383,0x1407a3ae0,0x1407cee30,2,"std::uint32_t CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterWard>::GetClassType()"
+45384,0x1407a3b70,0x1407ceec0,2,static std::uint32_t CombatInventoryItemMagic::GetClassType()
+45385,0x1407a3be0,0x1407cef30,2,static std::uint32_t CombatInventoryItemPotion::GetClassType()
+45386,0x1407a3c50,0x1407cefa0,2,static std::uint32_t CombatInventoryItemScroll::GetClassType()
+45387,0x1407a3cc0,0x1407cf010,2,static std::uint32_t CombatInventoryItemShout::GetClassType()
+45388,0x1407a3d30,0x1407cf080,2,static std::uint32_t CombatInventoryItemStaff::GetClassType()
 45389,0x1407a3da0,0x1407cf0f0,2,std::uint32_t CombatMagicCasterArmor::GetClassType()
 45390,0x1407a3e10,0x1407cf160,2,std::uint32_t CombatMagicCasterBoundItem::GetClassType()
 45391,0x1407a3e80,0x1407cf1d0,2,std::uint32_t CombatMagicCasterCloak::GetClassType()
@@ -8447,8 +8476,14 @@
 45852,0x1407b3b30,0x1407dee80,2,"void BSTDerivedCreator<CombatTargetLocation,CombatObject>::Destroy(const CombatObject* a_val)"
 45853,0x1407b3b50,0x1407deea0,2,"void BSTDerivedCreator<CombatTargetLocationSearch,CombatObject>::Destroy(const CombatObject* a_val)"
 45854,0x1407b3b70,0x1407deec0,2,"void BSTDerivedCreator<CombatTargetLocationSearchResult,CombatObject>::Destroy(const CombatObject* a_val)"
+45856,0x1407b3bb0,0x1407def00,2,"static std::uint32_t CombatPathRequestGeneric<CombatPathingGoalPolicyFindTargetLocation,CombatPathingSearchPolicyStandard>::GetClassType()"
 45857,0x1407b3c40,0x1407def90,2,"std::uint32_t CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFindTargetLocation,CombatPathingSearchPolicyStandard>,CombatPathDestinationRef>::GetClassType()"
 45858,0x1407b3cd0,0x1407df020,2,"std::uint32_t CombatPathingRequestGeneric<CombatPathingGoalPolicyFindTargetLocation,CombatPathingSearchPolicyStandard>::GetClassType()"
+45859,0x1407b3d70,0x1407df0c0,2,static std::uint32_t CombatPathDestinationRef::GetClassType()
+45860,0x1407b3de0,0x1407df130,2,static std::uint32_t CombatPathingGoalPolicyFindTargetLocation::GetClassType()
+45861,0x1407b3e70,0x1407df1c0,2,static std::uint32_t CombatPathingSearchPolicyStandard::GetClassType()
+45862,0x1407b3f00,0x1407df250,2,static std::uint32_t CombatTargetLocation::GetClassType()
+45863,0x1407b3f70,0x1407df2c0,2,static std::uint32_t CombatTargetLocationSearch::GetClassType()
 45864,0x1407b3fe0,0x1407df330,2,std::uint32_t CombatTargetLocationSearchResult::GetClassType()
 45865,0x1407b4050,0x1407df3a0,2,"void* CombatNavmeshSearchT<CombatPathingGoalPolicyFindTargetLocation,CombatPathingSearchPolicyStandard>::GetGoalPolicyByTypeId(std::uint32_t a_typeId)"
 45867,0x1407b40f0,0x1407df440,2,"bool CombatNavmeshSearchT<CombatPathingGoalPolicyFindTargetLocation,CombatPathingSearchPolicyStandard>::ExpandNode(AStarNode* a_node, void* a_out)"
@@ -8478,8 +8513,9 @@
 45957,0x1407b7750,0x1407e2aa0,2,void CombatThreat::LoadGame(BGSLoadGameBuffer* a_buf)
 45994,0x1407b9a90,0x1407e4de0,2,"CombatObject* BSTDerivedCreator<CombatThreat,CombatObject>::CreateImpl(CombatObject* a_val) const"
 45995,0x1407b9b50,0x1407e4ea0,2,"void BSTDerivedCreator<CombatThreat,CombatObject>::Destroy(const CombatObject* a_val)"
+46000,0x1407b9c10,0x1407e4f60,2,static std::uint32_t CombatThreat::GetClassType()
 46002,0x1407b9ce0,0x1407e5030,2,std::uint32_t CombatThreat::GetObjectType()
-46011,0x1407ba290,0x1407e55e0,2,Actor* Actor::FindAttackTargetInReach()
+46011,0x1407ba290,0x1407e55e0,2,"Actor* Actor::FindAttackTargetInReach(float a_reach, BGSAttackData* a_attackData)"
 46012,0x1407ba630,0x1407e5980,2,"float TESObjectREFR::GetDistanceToEdge(TESObjectREFR* a_target, bool a_checkSlope, TESObjectREFR* a_origin)"
 46015,0x1407ba9c0,0x1407e5d10,2,float TESObjectREFR::GetCombinedBoundLength(TESObjectREFR* a_other)
 46022,0x1407baed0,0x1407e6220,4,"static NiPoint3 * GetAngleToProjectedTarget (NiPoint3 * a_origin, TESObjectREFR * a_target, float a_speed, float a_gravity, uint a_location)"
@@ -8621,6 +8657,8 @@
 46330,0x1407c9130,0x1407f4480,3,void CombatBehaviorTreeLinkNode::Enter(CombatBehaviorThread* a_thread)
 46331,0x1407c91a0,0x1407f44f0,3,bool CombatBehaviorTreeLinkNode::Validate(CombatBehaviorTreeNode* a_node)
 46332,0x1407c9200,0x1407fc1c0,3,const BSFixedString& CombatBehaviorTreeLinkNode::GetType()
+46335,0x1407c9300,0x1407f4650,2,static const BSFixedString& CombatBehaviorTreeLinkNode::GetClassType()
+46336,0x1407c9390,0x1407f46e0,2,static const BSFixedString& CombatBehaviorTreeRootNode::GetClassType()
 46338,0x1407c94d0,0x1407f4820,3,bool CombatAcquireItem::IsValid()
 46341,0x1407c9690,0x1407f49e0,3,void CombatBehaviorContextAcquireWeapon::Enter()
 46342,0x1407c9900,0x1407f4c50,3,void CombatBehaviorContextAcquireWeapon::Exit()
@@ -8887,8 +8925,12 @@
 46859,0x1407dd960,0x140808cb0,2,const BSFixedString& CombatBehaviorTreeNodeObjectBase<CombatBehaviorFallbackToRanged>::GetClassType()
 46860,0x1407dd9f0,0x140808d40,2,const BSFixedString& CombatBehaviorTreeNodeObjectBase<CombatBehaviorReposition>::GetClassType()
 46861,0x1407dda80,0x140808dd0,2,const BSFixedString& CombatBehaviorTreeNodeObjectBase<CombatBehaviorSurround>::GetClassType()
+46862,0x1407ddb10,0x140808e60,2,"static std::uint32_t CombatPathRequestGeneric<CombatPathingGoalPolicyRetreat,CombatPathingSearchPolicyStandard>::GetClassType()"
 46863,0x1407ddba0,0x140808ef0,2,"std::uint32_t CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyRetreat,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::GetClassType()"
 46864,0x1407ddc30,0x140808f80,2,"std::uint32_t CombatPathingRequestGeneric<CombatPathingGoalPolicyRetreat,CombatPathingSearchPolicyStandard>::GetClassType()"
+46865,0x1407ddcd0,0x140809020,2,static std::uint32_t CombatPathDestinationNone::GetClassType()
+46866,0x1407ddd40,0x140809090,2,static std::uint32_t CombatPathingGoalPolicyLocation::GetClassType()
+46867,0x1407dddd0,0x140809120,2,static std::uint32_t CombatPathingGoalPolicyRetreat::GetClassType()
 46869,0x1407ddeb0,0x140809200,2,"void* CombatNavmeshSearchT<CombatPathingGoalPolicyRetreat,CombatPathingSearchPolicyStandard>::GetGoalPolicyByTypeId(std::uint32_t a_typeId)"
 46870,0x1407ddef0,0x140809240,2,"void* CombatNavmeshSearchT<CombatPathingGoalPolicyStandard,CombatPathingSearchPolicyStandard>::GetGoalPolicyByTypeId(std::uint32_t a_typeId)"
 46871,0x1407ddf30,0x140809280,2,"bool CombatNavmeshSearchT<CombatPathingGoalPolicyRetreat,CombatPathingSearchPolicyStandard>::ExpandNode(AStarNode* a_node, void* a_out)"
@@ -8975,8 +9017,10 @@
 47059,0x1407e4df0,0x140810140,2,const BSFixedString& CombatBehaviorTreeNodeObjectBase<CombatBehaviorFindAttackLocation>::GetClassType()
 47060,0x1407e4e80,0x1408101d0,2,const BSFixedString& CombatBehaviorTreeNodeObjectBase<CombatBehaviorFindLateralAttackLocation>::GetClassType()
 47061,0x1407e4f10,0x140810260,2,const BSFixedString& CombatBehaviorTreeNodeObjectBase<CombatBehaviorSetBlackboardData>::GetClassType()
+47062,0x1407e4fa0,0x1408102f0,2,"static std::uint32_t CombatPathRequestGeneric<CombatPathingGoalPolicyFindAttackLocation,CombatPathingSearchPolicyStandard>::GetClassType()"
 47063,0x1407e5030,0x140810380,2,"std::uint32_t CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFindAttackLocation,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::GetClassType()"
 47064,0x1407e50c0,0x140810410,2,"std::uint32_t CombatPathingRequestGeneric<CombatPathingGoalPolicyFindAttackLocation,CombatPathingSearchPolicyStandard>::GetClassType()"
+47065,0x1407e5160,0x1408104b0,2,static std::uint32_t CombatPathingGoalPolicyFindAttackLocation::GetClassType()
 47066,0x1407e51f0,0x140810540,2,"void* CombatNavmeshSearchT<CombatPathingGoalPolicyFindAttackLocation,CombatPathingSearchPolicyStandard>::GetGoalPolicyByTypeId(std::uint32_t a_typeId)"
 47069,0x1407e59a0,0x140810cf0,2,"std::uint32_t CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFindAttackLocation,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::GetObjectType()"
 47071,0x1407e59c0,0x140810d10,2,"void* CombatNavmeshSearchT<CombatPathingGoalPolicyFindAttackLocation,CombatPathingSearchPolicyStandard>::GetSearchPolicyByTypeId(std::uint32_t a_typeId)"
@@ -9044,10 +9088,17 @@
 47305,0x1407ef3d0,0x14081a720,2,const BSFixedString& CombatBehaviorTreeNodeObjectBase<CombatBehaviorFlankDistant>::GetClassType()
 47306,0x1407ef460,0x14081a7b0,2,const BSFixedString& CombatBehaviorTreeNodeObjectBase<CombatBehaviorStalk>::GetClassType()
 47307,0x1407ef4f0,0x14081a840,2,const BSFixedString& CombatBehaviorTreeNodeObjectBase<CombatBehaviorWatchTarget>::GetClassType()
+47308,0x1407ef580,0x14081a8d0,2,"static std::uint32_t CombatPathRequestGeneric<CombatPathingGoalPolicyFlank,CombatPathingSearchPolicyFlank>::GetClassType()"
+47309,0x1407ef610,0x14081a960,2,"static std::uint32_t CombatPathRequestGeneric<CombatPathingGoalPolicyFlankDistant,CombatPathingSearchPolicyStandard>::GetClassType()"
 47310,0x1407ef6a0,0x14081a9f0,2,"std::uint32_t CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFlank,CombatPathingSearchPolicyFlank>,CombatPathDestinationRef>::GetClassType()"
 47311,0x1407ef730,0x14081aa80,2,"std::uint32_t CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFlankDistant,CombatPathingSearchPolicyStandard>,CombatPathDestinationLocation>::GetClassType()"
 47312,0x1407ef7c0,0x14081ab10,2,"std::uint32_t CombatPathingRequestGeneric<CombatPathingGoalPolicyFlank,CombatPathingSearchPolicyFlank>::GetClassType()"
 47313,0x1407ef860,0x14081abb0,2,"std::uint32_t CombatPathingRequestGeneric<CombatPathingGoalPolicyFlankDistant,CombatPathingSearchPolicyStandard>::GetClassType()"
+47314,0x1407ef900,0x14081ac50,2,static std::uint32_t CombatFlankingSearchData::GetClassType()
+47315,0x1407ef970,0x14081acc0,2,static std::uint32_t CombatPathDestinationLocation::GetClassType()
+47316,0x1407ef9e0,0x14081ad30,2,static std::uint32_t CombatPathingGoalPolicyFlank::GetClassType()
+47317,0x1407efa70,0x14081adc0,2,static std::uint32_t CombatPathingGoalPolicyFlankDistant::GetClassType()
+47318,0x1407efb00,0x14081ae50,2,static std::uint32_t CombatPathingSearchPolicyFlank::GetClassType()
 47320,0x1407efbe0,0x14081af30,2,"void* CombatNavmeshSearchT<CombatPathingGoalPolicyFlank,CombatPathingSearchPolicyFlank>::GetGoalPolicyByTypeId(std::uint32_t a_typeId)"
 47321,0x1407efc20,0x14081af70,2,"void* CombatNavmeshSearchT<CombatPathingGoalPolicyFlankDistant,CombatPathingSearchPolicyStandard>::GetGoalPolicyByTypeId(std::uint32_t a_typeId)"
 47323,0x1407efcb0,0x14081b000,2,"bool CombatNavmeshSearchT<CombatPathingGoalPolicyFlank,CombatPathingSearchPolicyFlank>::ExpandNode(AStarNode* a_node, void* a_out)"
@@ -9150,10 +9201,14 @@
 47605,0x1407fa080,0x1408253d0,2,const BSFixedString& CombatBehaviorTreeNodeObjectBase<CombatBehaviorForceSuccess>::GetClassType()
 47606,0x1407fa110,0x140825460,2,const BSFixedString& CombatBehaviorTreeNodeObjectBase<CombatBehaviorHide>::GetClassType()
 47607,0x1407fa1a0,0x1408254f0,2,const BSFixedString& CombatBehaviorTreeNodeObjectBase<CombatBehaviorTrackTarget>::GetClassType()
+47608,0x1407fa230,0x140825580,2,"static std::uint32_t CombatPathRequestGeneric<CombatPathingGoalPolicyFindHideCover,CombatPathingSearchPolicyStandard>::GetClassType()"
+47609,0x1407fa2c0,0x140825610,2,"static std::uint32_t CombatPathRequestGeneric<CombatPathingGoalPolicyFlee,CombatPathingSearchPolicyStandard>::GetClassType()"
 47610,0x1407fa350,0x1408256a0,2,"std::uint32_t CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFindHideCover,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::GetClassType()"
 47611,0x1407fa3e0,0x140825730,2,"std::uint32_t CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFlee,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::GetClassType()"
 47612,0x1407fa470,0x1408257c0,2,"std::uint32_t CombatPathingRequestGeneric<CombatPathingGoalPolicyFindHideCover,CombatPathingSearchPolicyStandard>::GetClassType()"
 47613,0x1407fa510,0x140825860,2,"std::uint32_t CombatPathingRequestGeneric<CombatPathingGoalPolicyFlee,CombatPathingSearchPolicyStandard>::GetClassType()"
+47614,0x1407fa5b0,0x140825900,2,static std::uint32_t CombatPathingGoalPolicyFindHideCover::GetClassType()
+47615,0x1407fa640,0x140825990,2,static std::uint32_t CombatPathingGoalPolicyFlee::GetClassType()
 47617,0x1407fa720,0x140825a70,2,"void* CombatNavmeshSearchT<CombatPathingGoalPolicyFindHideCover,CombatPathingSearchPolicyStandard>::GetGoalPolicyByTypeId(std::uint32_t a_typeId)"
 47618,0x1407fa760,0x140825ab0,2,"void* CombatNavmeshSearchT<CombatPathingGoalPolicyFlee,CombatPathingSearchPolicyStandard>::GetGoalPolicyByTypeId(std::uint32_t a_typeId)"
 47619,0x1407fa7a0,0x140825af0,2,"bool CombatNavmeshSearchT<CombatPathingGoalPolicyFindHideCover,CombatPathingSearchPolicyStandard>::ExpandNode(AStarNode* a_node, void* a_out)"
@@ -9268,6 +9323,7 @@
 47900,0x1408058a0,0x140830bf0,2,const BSFixedString& CombatBehaviorTreeNodeObjectBase<CombatBehaviorLandNearby>::GetClassType()
 47901,0x140805930,0x140830c80,2,const BSFixedString& CombatBehaviorTreeNodeObjectBase<CombatBehaviorOrbit>::GetClassType()
 47902,0x1408059c0,0x140830d10,2,const BSFixedString& CombatBehaviorTreeNodeObjectBase<CombatBehaviorOrbitDistant>::GetClassType()
+47905,0x140805b70,0x140830ec0,2,static std::uint32_t DiveBombSpeedController::GetClassType()
 47908,0x140805c10,0x140830f60,2,std::uint32_t DiveBombSpeedController::GetObjectType()
 47909,0x140805c20,0x140830f70,2,"const BSFixedString& CombatBehaviorTreeConditionalNode<CombatBehaviorExpression<CombatBehaviorBinaryExpression<CombatBehaviorMemberFunc<Actor,FLY_STATE_(__cdecl_ActorState::*)(void)const>,FLY_STATE,OpEquals>>>::GetType()"
 47910,0x140805c30,0x140830f80,2,"const BSFixedString& CombatBehaviorTreeConditionalNode<CombatBehaviorExpression<CombatBehaviorFunc1<bool_(__cdecl*)(Actor*_),CombatBehaviorTree::CombatBehaviorAttacker>>>::GetType()"
@@ -9346,10 +9402,10 @@
 48038,0x140808840,0x140833b90,2,void CombatBehaviorContextMagic::PrepareCastAnimation()
 48040,0x140808a60,0x140833db0,2,void CombatBehaviorContextMagic::InterruptCast()
 48041,0x140808ad0,0x140833e20,2,void* CombatBehaviorContextMagic::GetCastTarget(void* a_out)
-48043,0x140808b40,0x140833e90,2,bool CombatBehaviorContextMagic::CanCastNow(void* a_ctx)
-48044,0x140808ce0,0x140834030,2,bool CombatBehaviorContextMagic::IsWithinCastRange(void* a_ctx)
+48043,0x140808b40,0x140833e90,2,bool CombatBehaviorContextMagic::CanCastNow()
+48044,0x140808ce0,0x140834030,2,bool CombatBehaviorContextMagic::IsWithinCastRange()
 48045,0x140808d00,0x140834050,2,bool CombatBehaviorContextMagic::IsCastTargetUsable()
-48046,0x140808e00,0x140834150,2,bool CombatBehaviorContextMagic::IsAimReady()
+48046,0x140808e00,0x140834150,2,bool CombatBehaviorContextMagic::IsAimReady(float a_arg)
 48047,0x140808ef0,0x140834240,3,float CombatBehaviorContextMagic::CalcCastMagicChance()
 48048,0x140808f30,0x140834280,3,float CombatBehaviorContextMagic::CalcDualCastMagicChance()
 48049,0x140808ff0,0x140834340,2,bool CombatBehaviorContextMagic::IsMagicItemSelected()
@@ -9442,10 +9498,15 @@
 48356,0x140813d50,0x14083f0a0,2,const BSFixedString& CombatBehaviorTreeNodeObjectBase<CombatBehaviorCheckUnreachableTarget>::GetClassType()
 48357,0x140813de0,0x14083f130,2,const BSFixedString& CombatBehaviorTreeNodeObjectBase<CombatBehaviorExitWater>::GetClassType()
 48358,0x140813e70,0x14083f1c0,2,const BSFixedString& CombatBehaviorTreeNodeObjectBase<CombatBehaviorReturnToCombatArea>::GetClassType()
+48359,0x140813f00,0x14083f250,2,"static std::uint32_t CombatPathRequestGeneric<CombatPathingGoalPolicyExitWater,CombatPathingSearchPolicyStandard>::GetClassType()"
+48360,0x140813f90,0x14083f2e0,2,"static std::uint32_t CombatPathRequestGeneric<CombatPathingGoalPolicyReturnToCombatArea,CombatPathingSearchPolicyStandard>::GetClassType()"
 48361,0x140814020,0x14083f370,2,"std::uint32_t CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyExitWater,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::GetClassType()"
 48362,0x1408140b0,0x14083f400,2,"std::uint32_t CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyReturnToCombatArea,CombatPathingSearchPolicyStandard>,CombatPathDestinationLocation>::GetClassType()"
 48363,0x140814140,0x14083f490,2,"std::uint32_t CombatPathingRequestGeneric<CombatPathingGoalPolicyExitWater,CombatPathingSearchPolicyStandard>::GetClassType()"
 48364,0x1408141e0,0x14083f530,2,"std::uint32_t CombatPathingRequestGeneric<CombatPathingGoalPolicyReturnToCombatArea,CombatPathingSearchPolicyStandard>::GetClassType()"
+48365,0x140814280,0x14083f5d0,2,static std::uint32_t CombatDisableActionController::GetClassType()
+48366,0x1408142f0,0x14083f640,2,static std::uint32_t CombatPathingGoalPolicyExitWater::GetClassType()
+48367,0x140814380,0x14083f6d0,2,static std::uint32_t CombatPathingGoalPolicyReturnToCombatArea::GetClassType()
 48368,0x140814410,0x14083f760,2,"void* CombatNavmeshSearchT<CombatPathingGoalPolicyExitWater,CombatPathingSearchPolicyStandard>::GetGoalPolicyByTypeId(std::uint32_t a_typeId)"
 48369,0x140814450,0x14083f7a0,2,"void* CombatNavmeshSearchT<CombatPathingGoalPolicyReturnToCombatArea,CombatPathingSearchPolicyStandard>::GetGoalPolicyByTypeId(std::uint32_t a_typeId)"
 48370,0x140814490,0x14083f7e0,2,"bool CombatNavmeshSearchT<CombatPathingGoalPolicyExitWater,CombatPathingSearchPolicyStandard>::ExpandNode(AStarNode* a_node, void* a_out)"
@@ -9556,10 +9617,15 @@
 48707,0x140821e60,0x14084d1b0,2,const BSFixedString& CombatBehaviorTreeNodeObjectBase<CombatBehaviorSearchLocation>::GetClassType()
 48708,0x140821ef0,0x14084d240,2,const BSFixedString& CombatBehaviorTreeNodeObjectBase<CombatBehaviorSearchWander>::GetClassType()
 48709,0x140821f80,0x14084d2d0,2,"const BSFixedString& CombatBehaviorTreeNodeUpdateFunction<CombatBehaviorExpression<CombatBehaviorMemberFunc<CombatBehaviorContextSearch,bool_(__cdecl_CombatBehaviorContextSearch::*)(void)>>>::GetClassType()"
+48710,0x140822010,0x14084d360,2,"static std::uint32_t CombatPathRequestGeneric<CombatPathingGoalPolicySearch,CombatPathingSearchPolicyStandard>::GetClassType()"
+48711,0x1408220a0,0x14084d3f0,2,"static std::uint32_t CombatPathRequestGeneric<CombatPathingGoalPolicySearchWander,CombatPathingSearchPolicyStandard>::GetClassType()"
 48712,0x140822130,0x14084d480,2,"std::uint32_t CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicySearch,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::GetClassType()"
 48713,0x1408221c0,0x14084d510,2,"std::uint32_t CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicySearchWander,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::GetClassType()"
 48714,0x140822250,0x14084d5a0,2,"std::uint32_t CombatPathingRequestGeneric<CombatPathingGoalPolicySearch,CombatPathingSearchPolicyStandard>::GetClassType()"
 48715,0x1408222f0,0x14084d640,2,"std::uint32_t CombatPathingRequestGeneric<CombatPathingGoalPolicySearchWander,CombatPathingSearchPolicyStandard>::GetClassType()"
+48716,0x140822390,0x14084d6e0,2,static std::uint32_t CombatPathingGoalPolicySearch::GetClassType()
+48717,0x140822420,0x14084d770,2,static std::uint32_t CombatPathingGoalPolicySearchWander::GetClassType()
+48718,0x1408224b0,0x14084d800,2,static std::uint32_t CombatSearchLockData::GetClassType()
 48719,0x140822540,0x14084d890,2,"void* CombatNavmeshSearchT<CombatPathingGoalPolicySearch,CombatPathingSearchPolicyStandard>::GetGoalPolicyByTypeId(std::uint32_t a_typeId)"
 48720,0x140822580,0x14084d8d0,2,"void* CombatNavmeshSearchT<CombatPathingGoalPolicySearchWander,CombatPathingSearchPolicyStandard>::GetGoalPolicyByTypeId(std::uint32_t a_typeId)"
 48722,0x140822600,0x14084d950,2,"bool CombatNavmeshSearchT<CombatPathingGoalPolicySearch,CombatPathingSearchPolicyStandard>::ExpandNode(AStarNode* a_node, void* a_out)"
@@ -9608,7 +9674,7 @@
 48799,0x140824ae0,0x14084fe30,2,bool CombatBehaviorTreeNodeObjectBase<CombatBehaviorSearchLocation>::Validate(CombatBehaviorTreeNode* a_node)
 48800,0x140824af0,0x14084fe40,2,bool CombatBehaviorTreeNodeObjectBase<CombatBehaviorSearchWander>::Validate(CombatBehaviorTreeNode* a_node)
 48803,0x140824d00,0x140850050,2,bool CombatBehaviorContextShout::TryCastShout()
-48804,0x140824ec0,0x140850210,2,bool CombatBehaviorContextShout::CanShoutNow(void* a_ctx)
+48804,0x140824ec0,0x140850210,2,bool CombatBehaviorContextShout::CanShoutNow()
 48805,0x140824fd0,0x140850320,2,bool CombatBehaviorCastShout::IsVoiceStateNone()
 48806,0x1408250c0,0x140850410,3,float CombatBehaviorContextShout::CalcCastMagicChance()
 48809,0x140825290,0x1408505e0,2,void CombatBehaviorCastShout::Enter(void* a_node)
@@ -9649,8 +9715,10 @@
 48928,0x140829b90,0x140854ee0,2,"const BSFixedString& CombatBehaviorTreeNodeEvaluateFunction<CombatBehaviorExpression<CombatBehaviorMemberFunc<CombatBehaviorContextCover,bool_(__cdecl_CombatBehaviorContextCover::*)(void)const>>>::GetClassType()"
 48930,0x140829cb0,0x140855000,2,const BSFixedString& CombatBehaviorTreeNodeObjectBase<CombatBehaviorFindCover>::GetClassType()
 48931,0x140829d40,0x140855090,2,const BSFixedString& CombatBehaviorTreeNodeObjectBase<CombatBehaviorWaitBehindCover>::GetClassType()
+48932,0x140829dd0,0x140855120,2,"static std::uint32_t CombatPathRequestGeneric<CombatPathingGoalPolicyFindCover,CombatPathingSearchPolicyStandard>::GetClassType()"
 48933,0x140829e60,0x1408551b0,2,"std::uint32_t CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFindCover,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::GetClassType()"
 48934,0x140829ef0,0x140855240,2,"std::uint32_t CombatPathingRequestGeneric<CombatPathingGoalPolicyFindCover,CombatPathingSearchPolicyStandard>::GetClassType()"
+48935,0x140829f90,0x1408552e0,2,static std::uint32_t CombatPathingGoalPolicyFindCover::GetClassType()
 48937,0x14082a070,0x1408553c0,2,"void* CombatNavmeshSearchT<CombatPathingGoalPolicyFindCover,CombatPathingSearchPolicyStandard>::GetGoalPolicyByTypeId(std::uint32_t a_typeId)"
 48939,0x14082a130,0x140855480,2,"bool CombatNavmeshSearchT<CombatPathingGoalPolicyFindCover,CombatPathingSearchPolicyStandard>::ExpandNode(AStarNode* a_node, void* a_out)"
 48940,0x14082a880,0x140855bd0,2,"std::uint32_t CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFindCover,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::GetObjectType()"
@@ -9696,8 +9764,8 @@
 49074,0x14082f990,0x14085ace0,2,"bool CombatPath::SolveAndStoreRequest(void* a_key, void* a_request)"
 49120,0x1408321d0,0x14085d4d0,2,void CombatPathBuilder::Build()
 49123,0x1408327d0,0x14085dad0,2,"bool CombatPathBuilderStandard::TryDirectPath(const NiPoint3* a_start, const NiPoint3* a_end)"
-49124,0x1408329a0,0x14085dca0,2,"bool CombatPathBuilderStandard::IsDirectRayLandingNear(const void* a_start, const NiPoint3* a_end, void* a_arg)"
-49125,0x140832ab0,0x14085ddb0,2,bool CombatPathBuilder::SmoothPath()
+49124,0x1408329a0,0x14085dca0,2,"bool CombatPathBuilderStandard::IsDirectRayLandingNear(const void* a_start, const NiPoint3* a_end)"
+49125,0x140832ab0,0x14085ddb0,2,bool CombatPathBuilder::SmoothPath(void* a_pathData)
 49126,0x140832f00,0x14085e200,2,"bool CombatPathBuilderStandard::AppendNavmeshInfoPathToSolution(const void* a_infoPath, const BSPathingLocation* a_goal)"
 49128,0x1408332a0,0x14085e5a0,2,void CombatPathBuilderStandard::BuildStep()
 49129,0x1408332e0,0x14085e5e0,2,void CombatPathBuilderStandard::Stage0_ResolveEndpoints()
@@ -9735,7 +9803,10 @@
 49275,0x14083a340,0x140865640,2,"void BSTDerivedCreator<CombatPathingRequestAdapter,BSPathingRequest>::Destroy(const BSPathingRequest* a_val)"
 49276,0x14083a360,0x140865660,2,"void BSTDerivedCreator<CombatPathingRequestMultiGoal,BSPathingRequest>::Destroy(const BSPathingRequest* a_val)"
 49277,0x14083a380,0x140865680,2,"void BSTDerivedCreator<CombatPathingRequestStandard,BSPathingRequest>::Destroy(const BSPathingRequest* a_val)"
+49279,0x14083a3e0,0x1408656e0,2,static std::uint32_t CombatPathingDebugData::GetClassType()
 49280,0x14083a450,0x140865750,2,std::uint32_t CombatPathingRequestAdapter::GetClassType()
+49281,0x14083a4e0,0x1408657e0,2,static std::uint32_t CombatPathingRequestMultiGoal::GetClassType()
+49282,0x14083a570,0x140865870,2,static std::uint32_t CombatPathingRequestStandard::GetClassType()
 49283,0x14083a600,0x140865900,2,"void* CombatNavmeshSearchT<CombatPathingGoalPolicyLocation,CombatPathingSearchPolicyStandard>::GetGoalPolicyByTypeId(std::uint32_t a_typeId)"
 49284,0x14083a640,0x140865940,2,"bool CombatNavmeshSearchT<CombatPathingGoalPolicyLocation,CombatPathingSearchPolicyStandard>::ExpandNode(AStarNode* a_node, void* a_out)"
 49285,0x14083ad40,0x140866040,2,"void* CombatNavmeshSearchT<CombatPathingGoalPolicyLocation,CombatPathingSearchPolicyStandard>::GetSearchPolicyByTypeId(std::uint32_t a_typeId)"
@@ -9792,6 +9863,19 @@
 49524,0x1408421f0,0x14086d4f0,2,"std::uint32_t CombatPathT<CombatPathRequestStraightPath,CombatPathDestinationLocation>::GetClassType()"
 49525,0x140842280,0x14086d580,2,"std::uint32_t CombatPathT<CombatPathRequestWeightedMultiGoal,CombatPathDestinationLocations>::GetClassType()"
 49526,0x140842310,0x14086d610,2,"std::uint32_t CombatPathT<CombatPathRequestWeightedMultiGoal,CombatPathDestinationRefs>::GetClassType()"
+49527,0x1408423a0,0x14086d6a0,2,static std::uint32_t CombatApproachTargetSpeedController::GetClassType()
+49528,0x140842410,0x14086d710,2,static std::uint32_t CombatPathDestinationLocations::GetClassType()
+49529,0x140842480,0x14086d780,2,static std::uint32_t CombatPathDestinationRefs::GetClassType()
+49530,0x1408424f0,0x14086d7f0,2,static std::uint32_t CombatPathRequestFlight::GetClassType()
+49531,0x140842560,0x14086d860,2,static std::uint32_t CombatPathRequestFlyingAttack::GetClassType()
+49532,0x1408425d0,0x14086d8d0,2,static std::uint32_t CombatPathRequestHover::GetClassType()
+49533,0x140842640,0x14086d940,2,static std::uint32_t CombatPathRequestLanding::GetClassType()
+49534,0x1408426b0,0x14086d9b0,2,static std::uint32_t CombatPathRequestMultiGoal::GetClassType()
+49535,0x140842720,0x14086da20,2,static std::uint32_t CombatPathRequestOrbit::GetClassType()
+49536,0x140842790,0x14086da90,2,static std::uint32_t CombatPathRequestRotatePath::GetClassType()
+49537,0x140842800,0x14086db00,2,static std::uint32_t CombatPathRequestStandard::GetClassType()
+49538,0x140842870,0x14086db70,2,static std::uint32_t CombatPathRequestStraightPath::GetClassType()
+49539,0x1408428e0,0x14086dbe0,2,static std::uint32_t CombatPathRequestWeightedMultiGoal::GetClassType()
 49540,0x140842950,0x14086dc50,2,"std::uint32_t CombatPathT<CombatPathRequestFlight,CombatPathDestinationLocation>::GetObjectType()"
 49541,0x140842960,0x14086dc60,2,"std::uint32_t CombatPathT<CombatPathRequestFlight,CombatPathDestinationRef>::GetObjectType()"
 49542,0x140842970,0x14086dc70,2,"std::uint32_t CombatPathT<CombatPathRequestFlyingAttack,CombatPathDestinationNone>::GetObjectType()"
@@ -10137,7 +10221,7 @@
 51445,0x1408acb30,0x1408d9af0,2,MistMenu* MistMenu::ctor(MistMenu* a_this)
 51449,0x1408ad6f0,0x1408da710,2,void MistMenu::PostDisplay(MistMenu* a_this)
 51450,0x1408ad7c0,0x1408da760,2,bool MistMenu::CanProcess(InputEvent* a_event)
-51454,0x1408ad9f0,0x1408dad50,3,"void MistMenu::SetupLoadScreenModel3D(TESModelTextureSwap* a_model, std::uint8_t a_unk2, const NiPoint3& a_position, const NiPoint3& a_rotation, const char* a_unk5, std::uint32_t a_unk6, std::uint32_t a_unk7)"
+51454,0x1408ad9f0,0x1408dad50,3,"static void MistMenu::SetupLoadScreenModel3D(TESModelTextureSwap* a_model, float a_unk2, const NiPoint3& a_position, const NiPoint3& a_rotation, const char* a_unk5, float a_unk6, float a_unk7)"
 51455,0x1408adc70,0x1408db0d0,3,void ShowMistMenu(bool a_flag)
 51473,0x1408aee40,0x1408dc6d0,2,void BottomBar::UpdatePlayerInfo()
 51485,0x1408b0da0,0x1408de640,2,void RaceSexMenu::Accept(CallbackProcessor* a_processor)
@@ -10746,7 +10830,7 @@
 55341,0x140987f10,0x1409c2ff0,2,"bool BSScript::NativeFunction2<TESForm,bool,TESObjectREFR*_,BSFixedString_const_&>::HasStub()"
 55347,0x140988160,0x1409c32e0,2,"bool BSScript::NativeFunction1<TESForm,bool,BGSKeyword*>::MarshallAndDispatch(Variable& a_baseValue, Internal::VirtualMachine& a_vm, VMStackID a_stackID, Variable& a_resultValue, const StackFrame& a_frame)"
 55348,0x1409881e0,0x1409c3360,2,"bool BSScript::NativeFunction2<TESForm,void,Actor*_,TESObjectREFR*>::MarshallAndDispatch(Variable& a_baseValue, Internal::VirtualMachine& a_vm, VMStackID a_stackID, Variable& a_resultValue, const StackFrame& a_frame)"
-55352,0x140988450,0x1409c35d0,2,"void papyrus::GlobalVariable::SetValue(BSScript::IVirtualMachine* a_vm, std::uint32_t a_stackID, TESGlobal* a_self, float a_value)"
+55352,0x140988450,0x1409c35d0,2,"static void papyrus::GlobalVariable::SetValue(BSScript::IVirtualMachine* a_vm, std::uint32_t a_stackID, TESGlobal* a_self, float a_value)"
 55360,0x140988900,0x1409c3a80,2,"bool BSScript::NativeFunction0<TESGlobal,float>::HasStub()"
 55361,0x140988910,0x1409c3a90,2,"bool BSScript::NativeFunction1<TESGlobal,void,float>::HasStub()"
 55366,0x140988af0,0x1409c3c70,3,papyrus::ImageSpaceModifier::Apply
@@ -10919,6 +11003,8 @@
 56487,0x1409b8ad0,0x1409f3620,2,"BSEventNotifyControl SkyrimSpeechRecognition::ProcessEvent(const SpeechRecognitionEvents::Interference* a_event, BSTEventSource<SpeechRecognitionEvents::Interference>* a_eventSource)"
 56488,0x1409b8b80,0x1409f36d0,2,"BSEventNotifyControl SkyrimSpeechRecognition::ProcessEvent(const SpeechRecognitionEvents::Recognition* a_event, BSTEventSource<SpeechRecognitionEvents::Recognition>* a_eventSource)"
 56489,0x1409b8e30,0x1409f3980,2,"BSEventNotifyControl SkyrimSpeechRecognition::ProcessEvent(const MenuOpenCloseEvent* a_event, BSTEventSource<MenuOpenCloseEvent>* a_eventSource)"
+56514,0x1409b9e30,0x1409f4980,2,"static std::int32_t inflate(void* a_stream, std::int32_t a_flush)"
+56516,0x1409bb810,0x1409f6360,2,static std::int32_t inflateEnd(void* a_stream)
 56606,0x1409c6730,0x140a01280,3,RE::hkReferencedObject::AddReference
 56607,0x1409c67f0,0x140a01340,3,RE::hkReferencedObject::RemoveReference
 56625,0x1409c6eb0,0x140a01a00,4,"void hkLifoAllocator::Init(hkMemoryAllocator* a_slabAllocator, hkMemoryAllocator* a_largeAllocator, hkMemoryAllocator* a_internalAllocator)"
@@ -10931,7 +11017,7 @@
 56632,0x1409c7220,0x140a01d70,2,void* hkLifoAllocator::allocateFromNewSlab(std::int32_t a_numBytes)
 56634,0x1409c74b0,0x140a02000,2,"void hkLifoAllocator::slowBlockFree(void* a_mem, std::int32_t a_numBytes)"
 56641,0x1409c7770,0x140a022c0,2,"void hkArrayUtil::_reserve(hkMemoryAllocator& a_alloc, void* a_array, std::int32_t a_capacity, std::int32_t a_sizeElem)"
-56642,0x1409c7800,0x140a02350,2,"void hkArrayUtil::_reserveMore(hkMemoryAllocator& a_alloc, void* a_array, std::int32_t a_sizeElem)"
+56642,0x1409c7800,0x140a02350,2,"static void hkArrayUtil::_reserveMore(hkMemoryAllocator& a_alloc, void* a_array, std::int32_t a_sizeElem)"
 56653,0x1409c7b10,0x140a02660,2,void* hkContainerTempAllocator::Allocator::BlockAlloc(std::int32_t a_numBytes)
 56654,0x1409c7b40,0x140a02690,2,"void hkContainerTempAllocator::Allocator::BlockFree(void* a_ptr, std::int32_t a_numBytes)"
 56763,0x1409ca770,0x140a052c0,4,sub_1409CA770
@@ -11156,6 +11242,7 @@
 59695,0x140a5da90,0x140a98490,2,void hkpCapsuleShape::GetFirstVertexImpl(hkVector4& a_vertexOut)
 59696,0x140a5daa0,0x140a984a0,2,"void hkpCapsuleShape::CalcContentStatistics(hkStatisticsCollector* a_collector, const hkClass* a_class)"
 59703,0x140a5de20,0x140a98820,2,"hkBool hkpGroupFilter::IsCollisionEnabled(const hkpCollidable& a_collidableA, const hkpCollidable& a_collidableB)"
+59704,0x140a5de50,0x140a98850,2,"hkBool hkpGroupFilter::IsCollisionEnabled1(const hkpCollisionInput& a_input, const hkpCdBody& a_bodyA, const hkpCdBody& a_bodyB, const hkpShapeContainer& a_shapeB, hkpShapeKey a_key)"
 59707,0x140a5e080,0x140a98a80,2,"hkBool hkpGroupFilter::IsCollisionEnabled(const hkpWorldRayCastInput& a_input, const hkpCollidable& a_collidable)"
 59820,0x140a5fb10,0x140a9a510,2,"int hkpConvexTransformShape::CalcSizeForSpu(CalcSizeForSpuInput* a_input, int a_spuBufferSizeLeft)"
 59822,0x140a5fb90,0x140a9a590,2,const hkpShapeContainer* hkpMoppBvTreeShape::GetContainer()
@@ -11167,6 +11254,7 @@
 59887,0x140a60fa0,0x140a9b9a0,3,"std::int32_t hkpShapeCollectionFilter::NumShapeKeyHitsLimitBreached(const hkpCollisionInput& a_input, const hkpCdBody& a_bodyA, const hkpCdBody& a_bodyB, const hkpBvTreeShape* a_shapeB, hkAabb& a_AABB, hkpShapeKey* a_shapeKeysInOut, std::int32_t a_shapeKeysCapacity)"
 59888,0x140a60fb0,0x140a9b9b0,2,"ConvexListCollisionType hkpDefaultConvexListFilter::GetConvexListCollisionType(const hkpCdBody& a_convexListBody, const hkpCdBody& a_otherBody, const hkpCollisionInput& a_input)"
 59893,0x140a61360,0x140a9bd60,2,"hkBool hkpCollisionFilterList::IsCollisionEnabled(const hkpCollidable& a_collidableA, const hkpCollidable& a_collidableB)"
+59894,0x140a613e0,0x140a9bde0,2,"hkBool hkpCollisionFilterList::IsCollisionEnabled1(const hkpCollisionInput& a_input, const hkpCdBody& a_bodyA, const hkpCdBody& a_bodyB, const hkpShapeContainer& a_shapeB, hkpShapeKey a_key)"
 59897,0x140a61620,0x140a9c020,2,"hkBool hkpCollisionFilterList::IsCollisionEnabled(const hkpWorldRayCastInput& a_input, const hkpCollidable& a_collidable)"
 59907,0x140a61ab0,0x140a9c4b0,2,CFilter hkpListShape::GetCollisionFilterInfo(hkpShapeKey a_key)
 59909,0x140a61af0,0x140a9c4f0,2,"const hkpShape* hkpListShape::GetChildShape(hkpShapeKey a_key, hkpShapeBuffer& a_buffer)"
@@ -11430,6 +11518,7 @@
 60962,0x140a91a60,0x140acc460,2,hkpSolverResults* hkpConstraintData::GetSolverResults(hkpConstraintRuntime* a_runtime)
 60963,0x140a91a70,0x140acc470,2,"void hkpConstraintData::AddInstance(hkpConstraintInstance* a_constraint, hkpConstraintRuntime* a_runtime, std::int32_t a_sizeOfRuntime)"
 60984,0x140a926d0,0x140acd0d0,2,"hkBool hkpPairCollisionFilter::IsCollisionEnabled(const hkpCollidable& a_collidableA, const hkpCollidable& a_collidableB)"
+60985,0x140a92770,0x140acd170,2,"hkBool hkpPairCollisionFilter::IsCollisionEnabled1(const hkpCollisionInput& a_input, const hkpCdBody& a_bodyA, const hkpCdBody& a_bodyB, const hkpShapeContainer& a_shapeB, hkpShapeKey a_key)"
 60988,0x140a928d0,0x140acd2d0,2,"hkBool hkpPairCollisionFilter::IsCollisionEnabled(const hkpWorldRayCastInput& a_input, const hkpCollidable& a_collidable)"
 61021,0x140a940e0,0x140aceae0,2,bool hkpCogWheelConstraintData::IsValid()
 61022,0x140a94190,0x140aceb90,2,std::int32_t hkpCogWheelConstraintData::GetType()
@@ -11569,12 +11658,14 @@
 61792,0x140ac5cf0,0x140b006f0,2,void hkpTriggerVolume::EntityAddedCallback(hkpEntity* a_entity)
 61793,0x140ac5d10,0x140b00710,2,void hkpTriggerVolume::EntityRemovedCallback(hkpEntity* a_entity)
 61816,0x140ac7160,0x140b01b60,2,"hkBool hkpConstrainedSystemFilter::IsCollisionEnabled(const hkpCollidable& a_collidableA, const hkpCollidable& a_collidableB)"
+61817,0x140ac72a0,0x140b01ca0,2,"hkBool hkpConstrainedSystemFilter::IsCollisionEnabled1(const hkpCollisionInput& a_input, const hkpCdBody& a_bodyA, const hkpCdBody& a_bodyB, const hkpShapeContainer& a_shapeB, hkpShapeKey a_key)"
 61820,0x140ac7400,0x140b01e00,2,"hkBool hkpConstrainedSystemFilter::IsCollisionEnabled(const hkpWorldRayCastInput& a_input, const hkpCollidable& a_collidable)"
 61827,0x140ac78c0,0x140b022c0,2,void hkpDisableEntityCollisionFilter::EntityRemovedCallback(hkpEntity* a_entity)
 61828,0x140ac7920,0x140b02320,2,void hkpDisableEntityCollisionFilter::EntityDeletedCallback(hkpEntity* a_entity)
 61829,0x140ac7930,0x140b02330,2,"hkBool hkpDisableEntityCollisionFilter::IsCollisionEnabled(const hkpCollidable& a_collidableA, const hkpCollidable& a_collidableB)"
 61833,0x140ac79b0,0x140b023b0,2,"hkBool hkpDisableEntityCollisionFilter::IsCollisionEnabled(const hkpWorldRayCastInput& a_input, const hkpCollidable& a_collidable)"
 61836,0x140ac7d80,0x140b02780,2,"hkBool hkpGroupCollisionFilter::IsCollisionEnabled(const hkpCollidable& a_collidableA, const hkpCollidable& a_collidableB)"
+61837,0x140ac7db0,0x140b027b0,2,"hkBool hkpGroupCollisionFilter::IsCollisionEnabled1(const hkpCollisionInput& a_input, const hkpCdBody& a_bodyA, const hkpCdBody& a_bodyB, const hkpShapeContainer& a_shapeB, hkpShapeKey a_key)"
 61840,0x140ac7ef0,0x140b028f0,2,"hkBool hkpGroupCollisionFilter::IsCollisionEnabled(const hkpWorldRayCastInput& a_input, const hkpCollidable& a_collidable)"
 61874,0x140ac93f0,0x140b03df0,3,void hkpGravityGun::FindTargetBody()
 61995,0x140ad0f00,0x140b0b900,2,void BGSGamebryoSequenceGenerator::Generate(const hkbContext& a_context)
@@ -12152,6 +12243,25 @@
 68085,0x140c35a50,0x140c7ac20,2,std::uint32_t BSFile::size()
 68086,0x140c35a90,0x140c7ac60,2,"std::uint32_t BSFile::WriteBytes(const void* a_buffer, std::uint32_t a_bytes)"
 68087,0x140c35ab0,0x140c7ac80,2,void BSFile::set_endian_swap(bool a_doSwap)
+68099,0x140c36320,0x140c7b4f0,2,"BSSystemFile* BSSystemFile::BSSystemFile(const char* a_path, std::int32_t a_accessMode, std::int32_t a_openMode, bool a_async, std::uint64_t a_bufferSize)"
+68102,0x140c36470,0x140c7b640,2,void BSSystemFile::DoTruncate(std::uint64_t a_size)
+68108,0x140c36740,0x140c7b910,2,BSSystemFile* BSSystemFile::BSSystemFile()
+68109,0x140c36760,0x140c7b930,2,BSSystemFile* BSSystemFile::BSSystemFile(BSSystemFile* a_other)
+68115,0x140c36910,0x140c7bae0,2,"static std::int32_t BSSystemFile::SetTime(const char* a_path, const void* a_created, const void* a_accessed, const void* a_written)"
+68116,0x140c369b0,0x140c7bb80,2,"std::int32_t BSSystemFile::DoOpen(const char* a_path, std::int32_t a_accessMode, std::int32_t a_openMode, std::uint64_t a_bufferSize)"
+68117,0x140c36b40,0x140c7bd10,2,"std::int32_t BSSystemFile::DoRead(void* a_buffer, std::uint64_t a_size, std::uint64_t* a_read)"
+68118,0x140c36bb0,0x140c7bd80,2,"std::int32_t BSSystemFile::DoWrite(void* a_buffer, std::uint64_t a_size, std::uint64_t* a_written)"
+68123,0x140c36d40,0x140c7bf10,2,"std::int32_t BSSystemFile::DoReadAsync(void* a_buffer, std::uint64_t a_size, std::uint64_t a_offset, BSSystemFileAsyncFunctor* a_functor)"
+68124,0x140c36df0,0x140c7bfc0,2,"std::int32_t BSSystemFile::DoWriteAsync(void* a_buffer, std::uint64_t a_size, std::uint64_t a_offset, BSSystemFileAsyncFunctor* a_functor)"
+68125,0x140c36ea0,0x140c7c070,2,std::int32_t BSSystemFile::DoGetInfo(void* a_info)
+68130,0x140c37090,0x140c7c260,2,BSSystemDir* BSSystemDir::BSSystemDir(const char* a_path)
+68131,0x140c370d0,0x140c7c2a0,2,void BSSystemDir::~BSSystemDir()
+68132,0x140c370f0,0x140c7c2c0,2,"static bool BSSystemDir::MakePartialDirPath(const char* a_path, std::uint64_t a_start)"
+68133,0x140c371d0,0x140c7c3a0,2,static bool BSSystemDir::MakeEntireDirPath(const char* a_path)
+68135,0x140c37280,0x140c7c450,2,std::int32_t BSSystemDir::NextEntry(bool* a_end)
+68136,0x140c37330,0x140c7c500,2,static std::int32_t BSSystemDir::MakeDir(const char* a_path)
+68137,0x140c37360,0x140c7c530,2,std::int32_t BSSystemDir::DoOpen(const char* a_path)
+68138,0x140c373d0,0x140c7c5a0,2,std::int32_t BSSystemDir::DoClose()
 68141,0x140c375e0,0x140c7c7b0,2,"bool SplitFileNameExtension(const char* a_path, char* a_baseName, char* a_extension)"
 68149,0x140c37ae0,0x140c7ccb0,2,"BSStorageDefs::ErrorCode BSMemStorage::Seek(std::size_t a_offset, BSStorageDefs::SeekMode a_seekMode)"
 68150,0x140c37b50,0x140c7cd20,2,"BSStorageDefs::ErrorCode BSMemStorage::Read(std::size_t a_numBytes, std::byte* a_bytes)"
@@ -15254,7 +15364,7 @@
 87919,0x1410a2dc0,0x1410ff9f0,2,"bool BGSMoviePlayer::OpenMovie(const char* a_path, bool a_flag)"
 87936,0x1410a3790,0x1411003c0,2,void BSMusicManager::Update()
 87937,0x1410a3950,0x141100580,2,"BSEventNotifyControl BSMusicManager::ProcessEvent(const BSMusicEvent* a_event, BSTEventSource<BSMusicEvent>* a_eventSource)"
-87955,0x1410a4270,0x141100ea0,2,"void BSPathingSpline::EvaluateSegmentDerivative(const float* a_coeffs /*16 floats*/, float a_t, NiPoint3* a_out)"
+87955,0x1410a4270,0x141100ea0,2,"static void BSPathingSpline::EvaluateSegmentDerivative(const float* a_coeffs /*16 floats*/, float a_t, NiPoint3* a_out)"
 87963,0x1410a55e0,0x141102210,2,BSPathingLocation* BSPathingLocation::ctor_FromTriLocation(const BSFastNavmeshTriLocation* a_loc)
 87964,0x1410a5690,0x1411022c0,2,BSPathingLocation* BSPathingLocation::ctor_FromNavmeshPosition(const void* a_position)
 87965,0x1410a5740,0x141102370,3,"BSPathingLocation* BSPathingLocation::ctor(const NiPoint3& a_location, const BSTSmartPointer<BSPathingCell>& a_cell)"
@@ -15280,9 +15390,9 @@
 88003,0x1410a7cd0,0x141104900,2,"bool BSNavmesh::AccumulateClosedDoorCostsForTriangle(std::uint16_t a_triangle, BSPathingLockData** a_lockData, float* a_inOutCost)"
 88004,0x1410a7e10,0x141104a40,4,"bool FindTriangleForLocationFilterCheckDeltaZ::IsValidTri(NiPoint3* a_location, BSNavmesh* a_navMesh, std::uint16_t a_tri, NiPoint3* a_pointOnTri)"
 88009,0x1410a7f90,0x141104bc0,2,"bool Pathing::BuildWithRegisteredPathBuilder(BSTSmartPointer<BSPathingRequest>* a_request, BSTSmartPointer<BSPathingSolution>* a_solution)"
-88010,0x1410a80e0,0x141104d10,2,"std::uint32_t RunPathBuilderToCompletion(void* a_unused, void* a_request, void* a_arg3)"
+88010,0x1410a80e0,0x141104d10,2,"static std::uint32_t RunPathBuilderToCompletion(void* a_unused, void* a_request, void* a_arg3, std::uint32_t a_arg4, void* a_arg5)"
 88013,0x1410a8290,0x141104ec0,2,"bool BuildPathWithTemporaryPathBuilder(void* a_unused, void* a_request, void* a_arg3)"
-88014,0x1410a82d0,0x141104f00,2,std::uint8_t Pathing::ResolveOrSnapLocationToNavmesh(BSPathingLocation* a_location)
+88014,0x1410a82d0,0x141104f00,2,"std::uint8_t Pathing::ResolveOrSnapLocationToNavmesh(BSPathingLocation* a_location, std::uint32_t a_arg2, void* a_arg3)"
 88015,0x1410a8440,0x141105070,2,"bool Pathing::FindNearestBoundaryEdges(NiPoint3* a_point, std::uint32_t a_maxCount, void* a_navmeshes, float a_maxDistance, void* a_out)"
 88016,0x1410a8910,0x141105540,2,"bool Pathing::FindClosestOpenEdge(NiPoint3* a_position, float a_radius, BSNavmeshEdgeLocation* a_out)"
 88017,0x1410a8a20,0x141105650,2,"bool Pathing::FindClosestOpenEdgeInNavmesh(BSNavmesh** a_navmesh, NiPoint3* a_position, float a_radius, BSNavmeshEdgeLocation* a_out)"
@@ -15291,11 +15401,11 @@
 88020,0x1410a8eb0,0x141105ae0,2,"bool Pathing::CanCreatePathImpl(void* a_arg1, BSPathingLocation* a_start, BSPathingLocation* a_goal, void* a_arg4, void** a_out)"
 88023,0x1410a9a20,0x141106650,2,"bool Pathing::RayCast(BSPathingLocation* a_start, NiPoint3* a_end, BSPathingLocation* a_outHit, void* a_options)"
 88024,0x1410a9c80,0x1411068b0,2,"bool Pathing::RayCastEndsInTriangle(BSPathingLocation* a_start, NiPoint3* a_end, BSNavmesh* a_navmesh, std::uint16_t a_triangle, BSPathingLocation* a_outHit, void* a_options)"
-88025,0x1410a9dd0,0x141106a00,2,"bool Pathing::RayCastWithVerification(BSPathingLocation* a_start, const NiPoint3* a_target, void* a_arg4, BSPathingLocation* a_outHit, void* a_arg6, void* a_arg7)"
+88025,0x1410a9dd0,0x141106a00,2,"bool Pathing::RayCastWithVerification(BSPathingLocation* a_start, const NiPoint3* a_target, float a_arg3, BSPathingLocation* a_outHit, void* a_arg5, void* a_arg6)"
 88027,0x1410aa210,0x141106e40,2,"bool Pathing::UpdateLOSGridMap(BSPathingLOSGridMap** a_losMap, BSTArray<BSPathingLocation>* a_viewers, void* a_headings)"
 88028,0x1410aa450,0x141107080,2,"bool Pathing::MarkVisibleTrianglesInLOSMap(BSPathingLocation* a_viewer, BSPathingLOSMap* a_map, bool a_clearUnseen, float a_minDistance, float a_heading)"
-88029,0x1410aada0,0x1411079d0,2,"bool Pathing::GetTriangleNormalAtLocation(BSPathingLocation* a_location, NiPoint3* a_outNormal, void* a_arg3)"
-88031,0x1410aaeb0,0x141107ae0,2,"bool Pathing::IsLocationNearEdgeVerified(BSPathingLocation* a_location, float a_radius)"
+88029,0x1410aada0,0x1411079d0,2,"bool Pathing::GetTriangleNormalAtLocation(BSPathingLocation* a_location, NiPoint3* a_outNormal)"
+88031,0x1410aaeb0,0x141107ae0,2,"bool Pathing::IsLocationNearEdgeVerified(BSPathingLocation* a_location, float a_radius, const NiPoint3* a_offset)"
 88032,0x1410ab360,0x141107f90,2,"bool RayCastAcrossNavmeshesRef(void* a_ctx, BSNavmesh** a_navmesh, uint16_t a_triangle, std::int32_t a_edge, float* a_origin, float* a_dir, BSNavmeshEdgeLocation* a_outBlocked, BSNavmeshEdgeLocation* a_outEnd)"
 88033,0x1410ab410,0x141108040,2,"bool RayCastAcrossNavmeshes(void* a_ctx, BSNavmesh* a_navmesh, std::uint16_t a_triangle, std::int32_t a_edge, float* a_origin, float* a_dir, BSNavmeshEdgeLocation* a_outBlocked, BSNavmeshEdgeLocation* a_outEnd)"
 88035,0x1410abc50,0x141108880,2,"NiPoint3* Pathing::ComputeStartTangent(NiPoint3* a_out, float a_heading, BSPathingNode* a_node, BSPathingNode* a_nextNode, float a_radius)"
@@ -15304,8 +15414,8 @@
 88040,0x1410acf40,0x141109b70,2,"bool Pathing::CreateRequestFromSolution(const BSTSmartPointer<BSPathingSolution>& a_solution, BSTSmartPointer<BSPathingRequest>& a_out)"
 88041,0x1410ad0b0,0x141109ce0,2,"void Pathing::ApplyStartTangent(void* a_request, void* a_pathState)"
 88042,0x1410ad180,0x141109db0,2,"void Pathing::ApplyEndTangent(void* a_request, void* a_pathState)"
-88045,0x1410ad2f0,0x141109f20,2,"void Pathing::FitPathTangentsByHandle(BSPathingSolution* a_solution, std::uint32_t a_param)"
-88046,0x1410ad360,0x141109f90,2,void Pathing::FitPathTangents(BSPathingSolution* a_solution)
+88045,0x1410ad2f0,0x141109f20,2,"void Pathing::FitPathTangentsByHandle(BSPathingSolution* a_solution, float a_radius)"
+88046,0x1410ad360,0x141109f90,2,"void Pathing::FitPathTangents(BSPathingSolution* a_solution, float a_radius)"
 88047,0x1410ad480,0x14110a0b0,2,"bool Pathing::TryBuildStraightPath(BSPathingLocation* a_start, BSPathingLocation* a_end, PathingRequest* a_request, void* a_param5, BSPathingSolution* a_outSolution)"
 88048,0x1410ad8f0,0x14110a520,2,"bool Pathing::SmoothPathDefault(BSPathingRequest* a_request, BSPathingSolution* a_solution, const NiPoint3* a_start, const NiPoint3* a_goal, BSTArray<BSFastNavmeshTriLocation>* a_locations, BSTArray<BSFastNavmeshEdgeHandle>* a_edges)"
 88050,0x1410ada90,0x14110a6c0,2,"void Pathing::SmoothPathImpl(BSPathingSolution* a_solution, void* a_param2, void* a_param3, void* a_param4, void* a_param5, void* a_param6, void* a_param7, void* a_param8)"
@@ -15327,14 +15437,14 @@
 88104,0x1410b36d0,0x141110300,2,"bool CrossEdgeToNeighborNavmesh(void* a_visited, const BSNavmeshTriangleEdgeRef* a_edgeRef, void* a_outEdgeRef)"
 88105,0x1410b3800,0x141110430,2,"bool SortIntersectingEdgesFunctor::VisitEdge(BSNavmesh* a_navmesh, std::uint16_t a_triangle, std::uint32_t a_edge)"
 88124,0x1410b3f00,0x141110b30,2,"bool CastRay(void* a_this, void* a_context, void* a_arg, BSNavmesh** a_navmesh, std::uint32_t* a_outResult)"
-88125,0x1410b3f70,0x141110ba0,2,"void Pathing::ShrinkTangentsToFitNavmesh(PathFitContext* a_ctx, PathNodeNavInfo* a_from, NiPoint3* a_fromDir, float a_fromScale, PathNodeNavInfo* a_to, NiPoint3* a_toDir, float a_toScale, float* a_outFromLength, float* a_outToLength)"
-88126,0x1410b4310,0x141110f40,2,"void Pathing::ShrinkTangentsToFitNavmeshByHandle(PathFitContext* a_ctx, PathNodeNavInfo* a_from, NiPoint3* a_fromDir, float a_fromScale, PathNodeNavInfo* a_to, NiPoint3* a_toDir, float a_toScale, float* a_outFromLength, float* a_outToLength)"
-88127,0x1410b46b0,0x1411112e0,2,"void Pathing::FitNodePairTangents(PathFitContext* a_ctx, PathNodeNavInfo* a_from, PathNodeNavInfo* a_to)"
-88128,0x1410b4c40,0x141111870,2,"void Pathing::FitNodePairTangentsByHandle(PathFitContext* a_ctx, PathNodeNavInfo* a_from, PathNodeNavInfo* a_to)"
-88130,0x1410b5210,0x141111e40,2,"bool Pathing::ResolvePathNodeNavInfo(PathFitContext* a_ctx, PathNodeNavInfoArray* a_out)"
+88125,0x1410b3f70,0x141110ba0,2,"static void Pathing::ShrinkTangentsToFitNavmesh(PathFitContext* a_ctx, PathNodeNavInfo* a_from, NiPoint3* a_fromDir, float a_fromScale, PathNodeNavInfo* a_to, NiPoint3* a_toDir, float a_toScale, float* a_outFromLength, float* a_outToLength)"
+88126,0x1410b4310,0x141110f40,2,"static void Pathing::ShrinkTangentsToFitNavmeshByHandle(PathFitContext* a_ctx, PathNodeNavInfo* a_from, NiPoint3* a_fromDir, float a_fromScale, PathNodeNavInfo* a_to, NiPoint3* a_toDir, float a_toScale, float* a_outFromLength, float* a_outToLength)"
+88127,0x1410b46b0,0x1411112e0,2,"static void Pathing::FitNodePairTangents(PathFitContext* a_ctx, PathNodeNavInfo* a_from, PathNodeNavInfo* a_to)"
+88128,0x1410b4c40,0x141111870,2,"static void Pathing::FitNodePairTangentsByHandle(PathFitContext* a_ctx, PathNodeNavInfo* a_from, PathNodeNavInfo* a_to)"
+88130,0x1410b5210,0x141111e40,2,"static bool Pathing::ResolvePathNodeNavInfo(PathFitContext* a_ctx, PathNodeNavInfoArray* a_out)"
 88131,0x1410b54e0,0x141112110,2,"bool ResolvePathNodesAndZeroShortTangents(void* a_path, void* a_outTangents)"
 88139,0x1410b5a20,0x141112650,2,bool Pathing::FitPathTangentsImpl(PathFitContext* a_ctx)
-88140,0x1410b5d30,0x141112960,2,bool Pathing::FitPathTangentsByHandleImpl(PathFitContext* a_ctx)
+88140,0x1410b5d30,0x141112960,2,static bool Pathing::FitPathTangentsByHandleImpl(PathFitContext* a_ctx)
 88152,0x1410b6640,0x141113270,2,"void BSNavmeshInfoSearch::GetNeighbors(BSNavmeshInfoSearchNode* a_node, void* a_outNeighbors)"
 88153,0x1410b6d00,0x141113930,2,bool BSNavmeshInfoSearch::IsAtGoal(BSNavmeshInfoSearchNode* a_node)
 88154,0x1410b6d20,0x141113950,2,"bool BSPrecomputedNavmeshInfoSearch::Run(void* a_unk228, NiPoint3* a_start, void* a_startContext, NiPoint3* a_goal, void* a_goalDoor, void* a_outPath, std::uint32_t a_flags, std::uint8_t a_flag235)"
@@ -15344,7 +15454,7 @@
 88163,0x1410b7590,0x1411141c0,2,"bool BSPrecomputedNavmeshInfoSearch::RunAndReconstructPath(void* a_outA, void* a_outB, bool a_usePartialPath)"
 88175,0x1410b7c40,0x141114870,2,void AStarOpenList::InsertNode(AStarNode* a_node)
 88176,0x1410b7cc0,0x1411148f0,2,"BSNavmeshInfoSearchNode* BSPrecomputedNavmeshInfoSearch::AddStartNode(void* a_info, void* a_door, float a_g, float a_h)"
-88177,0x1410b7d50,0x141114980,2,void BSPrecomputedNavmeshInfoSearch::AddStartNodeIfNoBest()
+88177,0x1410b7d50,0x141114980,2,"void BSPrecomputedNavmeshInfoSearch::AddStartNodeIfNoBest(void* a_arg1, void* a_arg2, float a_arg3)"
 88181,0x1410b7e20,0x141114a50,2,BSNavmeshInfoSearchNode* BSPrecomputedNavmeshInfoSearch::RunToCompletion()
 88182,0x1410b7e90,0x141114ac0,2,void BSPrecomputedNavmeshInfoSearch::PopBestOpenNode()
 88183,0x1410b7f00,0x141114b30,2,bool BSPrecomputedNavmeshInfoSearch::Step()
@@ -15368,9 +15478,10 @@
 88219,0x1410b92d0,0x141115f00,2,"void BSTDerivedCreator<MovementAgentActorState,MovementAgent>::Destroy(const MovementAgent* a_val)"
 88220,0x1410b92f0,0x141115f20,2,void BSPathingGoal::SetFromDescriptor(const BSPathingGoalDescriptor& a_descriptor)
 88221,0x1410b9370,0x141115fa0,2,"float GetPathNodeFacingAngle(const float* a_node, const NiPoint3* a_prevPosition)"
-88222,0x1410b9440,0x141116070,2,"void MovementUtils::ComputeFacingAngles(float* a_point, float* a_origin, void* a_current, float a_heightOffset, float* a_outAngles)"
+88222,0x1410b9440,0x141116070,2,"static void MovementUtils::ComputeFacingAngles(float* a_point, float* a_origin, void* a_current, float a_heightOffset, float* a_outAngles)"
 88225,0x1410b9670,0x1411162a0,2,"void WritePathingRequestGoalBlock(const void* a_request, BSPathingStreamWrite* a_stream)"
 88231,0x1410b99e0,0x141116610,2,std::uint32_t BSPathingRequest::GetType()
+88232,0x1410b9a20,0x141116650,2,static std::uint32_t BSPathingRequest::GetClassType()
 88233,0x1410b9a60,0x141116690,2,void BSPathingRequest::CopyTo(BSPathingRequest* a_other)
 88234,0x1410b9bf0,0x141116820,2,void BSPathingRequest::Write(BSPathingStreamWrite* a_stream)
 88235,0x1410b9ca0,0x1411168d0,2,void BSPathingRequest::Read(BSPathingStreamRead* a_stream)
@@ -15421,14 +15532,14 @@
 88327,0x1410bd2b0,0x141119ee0,2,void MovementAgentPathFollowerStandard::SaveGame(BSPathingStreamWrite&)
 88328,0x1410bd520,0x14111a150,2,void MovementAgentPathFollowerStandard::LoadGame(BSPathingStreamRead&)
 88330,0x1410bd870,0x14111a4a0,2,void IMovementHandlerAgent::LimitSlowdownSpeed(MovementHandlerUpdateDataSmallDelta** a_updateData)
-88332,0x1410bd970,0x14111a5a0,2,void MovementAgentPathFollowerStandard::SetStatePlayIdle_6()
+88332,0x1410bd970,0x14111a5a0,2,void MovementAgentPathFollowerStandard::SetStatePlayIdle_6(PathFollowerStateUpdateData* a_updateData)
 88333,0x1410bda70,0x14111a6a0,2,void MovementAgentPathFollowerStandard::SetStateTurnToAngle_7()
 88334,0x1410bdb00,0x14111a730,2,void MovementAgentPathFollowerStandard::UpdateActionSpeed(PathFollowerStateUpdateData* a_updateData)
 88335,0x1410bdc30,0x14111a860,2,void MovementAgentPathFollowerStandard::SetStateFollowPathToParameter_13(PathFollowerStateUpdateData* a_updateData)
 88336,0x1410bdca0,0x14111a8d0,2,void MovementAgentPathFollowerStandard::SetStateFollowPathToGoal_13(PathFollowerStateUpdateData* a_updateData)
-88337,0x1410bdd10,0x14111a940,2,void MovementAgentPathFollowerStandard::SetStateKeepLastDirection_10()
+88337,0x1410bdd10,0x14111a940,2,void MovementAgentPathFollowerStandard::SetStateKeepLastDirection_10(PathFollowerStateUpdateData* a_updateData)
 88338,0x1410bdd90,0x14111a9c0,2,void MovementAgentPathFollowerStandard::SetStateKeepLastDirection_8(PathFollowerStateUpdateData* a_updateData)
-88339,0x1410bddf0,0x14111aa20,2,void MovementAgentPathFollowerStandard::SetStatePlayIdle_2()
+88339,0x1410bddf0,0x14111aa20,2,void MovementAgentPathFollowerStandard::SetStatePlayIdle_2(PathFollowerStateUpdateData* a_updateData)
 88340,0x1410bde90,0x14111aac0,2,void MovementAgentPathFollowerStandard::SetStateTurnToAngle_3(PathFollowerStateUpdateData* a_updateData)
 88341,0x1410bdf70,0x14111aba0,2,void MovementAgentPathFollowerStandard::SetStateKeepLastDirection_9(PathFollowerStateUpdateData* a_updateData)
 88342,0x1410bdfd0,0x14111ac00,2,void MovementAgentPathFollowerStandard::SetStateKeepLastDirection_11(PathFollowerStateUpdateData* a_updateData)
@@ -15489,9 +15600,9 @@
 88445,0x1410c1b10,0x14111e740,3,bool IMovementQueryPathingState::IsPathing()
 88446,0x1410c1b70,0x14111e7a0,3,bool IMovementQueryPathingState::IsValid()
 88447,0x1410c1bd0,0x14111e800,3,bool IMovementQueryPathingState::IsPending()
-88448,0x1410c1c30,0x14111e860,2,void MovementPathManagerArbiter::UpdatePathing()
+88448,0x1410c1c30,0x14111e860,2,void MovementPathManagerArbiter::UpdatePathing(void* a_updateData)
 88449,0x1410c1d00,0x14111e930,2,void MovementPathManagerArbiter::PollPendingSolution()
-88450,0x1410c1dc0,0x14111e9f0,2,void MovementPathManagerArbiter::ProcessFollowerEvents()
+88450,0x1410c1dc0,0x14111e9f0,2,void MovementPathManagerArbiter::ProcessFollowerEvents(MovementUpdateDataSmallDelta* a_updateData)
 88451,0x1410c1fd0,0x14111ec00,2,void MovementPathManagerArbiter::StartPathFollowing(void* a_solution)
 88452,0x1410c2180,0x14111edb0,2,"void MovementPathManagerArbiter::HandlePathFollowerEvent(std::int32_t a_event, char* a_outFlag)"
 88453,0x1410c2390,0x14111efc0,2,void MovementPathManagerArbiter::PostSetStaticPathMessage(bool a_staticPath)
@@ -15500,7 +15611,7 @@
 88483,0x1410c3170,0x14111fda0,2,"void BSTDerivedCreator<MovementPathManagerArbiter,MovementArbiter>::Destroy(const MovementArbiter* a_val)"
 88485,0x1410c31f0,0x14111fe20,2,std::uint32_t MovementMessageNewPath::GetType()
 88486,0x1410c3220,0x14111fe50,3,MovementPathManagerNullTracker* MovementPathManagerNullTracker::GetSingleton()
-88490,0x1410c35e0,0x141120230,2,NiPoint3 ActorState::GetForwardDirection()
+88490,0x1410c35e0,0x141120230,2,NiPoint3 ActorState::GetForwardDirection(bool a_arg)
 88492,0x1410c3910,0x141120560,2,float ActorState::GetCombinedHeading()
 88493,0x1410c39c0,0x141120610,2,void ActorState::GetRotationMatrix(NiMatrix3& a_out)
 88494,0x1410c3a00,0x141120650,2,void ActorState::GetTransform(NiTransform* a_out)
@@ -15536,7 +15647,7 @@
 88550,0x1410c5f10,0x141122c70,2,"void BSPathingSolution::ProjectPointOntoPathHorizontal(NiPoint3* a_position, float a_pathPosition, float* a_outPathPosition, NiPoint3* a_outPoint)"
 88551,0x1410c5f40,0x141122ca0,2,"bool BSPathingSolution::FindClosestPointOnVirtualPath(const BSPathingLocation* a_pos, BSPathingLocation* a_outLocation, float* a_outPathPosition) const"
 88552,0x1410c6360,0x1411230c0,2,"float FindPathSegmentAtFraction(const void* a_path, float a_fraction, float a_totalLength, std::uint32_t* a_outSegment)"
-88553,0x1410c6470,0x1411231d0,2,std::uint32_t GetVirtualPathSegmentIndices(BSPathingSolution* a_solution)
+88553,0x1410c6470,0x1411231d0,2,"static void GetVirtualPathSegmentIndices(BSPathingSolution* a_solution, float a_segment, std::uint32_t* a_outStart, std::uint32_t* a_outEnd)"
 88554,0x1410c6510,0x141123270,2,"void BSPathingSolution::GetPredictedPoint(float a_from, float a_distance, float* a_outPathPosition, NiPoint3* a_outPoint)"
 88555,0x1410c6810,0x141123570,2,"bool BSPathingSolution::GetVirtualLocationAtPathPosition(float a_pathPosition, BSPathingLocation* a_outLocation) const"
 88556,0x1410c6a20,0x141123780,2,"bool BSPathingSolution::FindVirtualPathPositionAtDistance(float a_pathPosition, float a_distance, bool a_forward, float* a_outPathPosition, BSPathingLocation* a_outLocation) const"
@@ -15658,8 +15769,8 @@
 88889,0x1410dd020,0x141139d50,2,"bool FindPreferredConnectedNavmeshInfosWithinRadiusVisitor::VisitInfo(void* a_arg1, BSNavmeshInfo* a_info, bool a_flag)"
 88892,0x1410dd1e0,0x141139f10,2,"void BuildDoorToDoorPathTable(DoorToDoorPathTable* a_table, const BSTArray<void*>* a_doors)"
 88896,0x1410dd7f0,0x14113a520,2,void NavMeshInfoMap::ReadAllPaths(PathingStreamMasterFileRead& a_stream)
-88897,0x1410dd8e0,0x14113a610,2,"bool Pathing::ReverseNavmeshInfoPath(const NavmeshInfoPath* a_src, NavmeshInfoPath* a_dst)"
-88898,0x1410ddb50,0x14113a880,2,"bool Pathing::JoinForwardAndBackwardNavmeshInfoPaths(const NavmeshInfoPath* a_forward, const NavmeshInfoPath* a_backward, NavmeshInfoPath* a_out)"
+88897,0x1410dd8e0,0x14113a610,2,"static bool Pathing::ReverseNavmeshInfoPath(const NavmeshInfoPath* a_src, NavmeshInfoPath* a_dst)"
+88898,0x1410ddb50,0x14113a880,2,"static bool Pathing::JoinForwardAndBackwardNavmeshInfoPaths(const NavmeshInfoPath* a_forward, const NavmeshInfoPath* a_backward, NavmeshInfoPath* a_out)"
 88899,0x1410ddea0,0x14113abd0,2,"bool Pathing::JoinForwardAndBackwardNavmeshInfoPathsViaMiddle(const NavmeshInfoPath* a_forward, const BSTArray<BSNavmeshInfo*>* a_middleInfos, const NavmeshInfoPath* a_backward, NavmeshInfoPath* a_out)"
 88914,0x1410deb00,0x14113b830,2,bool PathingStreamMasterFileRead::ReadBSNavmeshInfoArray(BSTArray<BSNavmeshInfo*>*& a_array)
 88915,0x1410dec50,0x14113b980,2,bool PathingStreamMasterFileRead::ReadBSNavmeshInfoPtrArray(BSTArray<BSNavmeshInfo*>& a_array)
@@ -15744,14 +15855,14 @@
 89144,0x1410ecb30,0x141149870,2,void BSPathingLOSGridMap::Load(PathingStreamLoadGame* a_stream)
 89145,0x1410ecb90,0x1411498d0,2,void BSPathingLOSGridMap::Save(PathingStreamSaveGame* a_stream)
 89146,0x1410ecc00,0x141149940,2,bool BSPathingLOSGridMap::EnsureGridsForNavmeshes(const void* a_navmeshes)
-89149,0x1410ed120,0x141149e60,2,"bool BSPathingLOSGrid::ApplyCellsToMap(BSPathingLOSMap** a_map, uint32_t a_arg)"
-89150,0x1410ed2a0,0x141149fe0,2,"bool BSPathingLOSGrid::CaptureCellsFromMap(BSPathingLOSMap** a_map, uint32_t a_arg)"
+89149,0x1410ed120,0x141149e60,2,bool BSPathingLOSGrid::ApplyCellsToMap(BSPathingLOSMap** a_map)
+89150,0x1410ed2a0,0x141149fe0,2,bool BSPathingLOSGrid::CaptureCellsFromMap(BSPathingLOSMap** a_map)
 89151,0x1410ed400,0x14114a140,2,bool BSPathingLOSGrid::IsLocationMarked(BSPathingLocation* a_location)
 89152,0x1410ed4a0,0x14114a1e0,2,"bool BSPathingLOSGrid::MarkLocation(BSPathingLocation* a_location, bool a_state, void* a_unused)"
 89153,0x1410ed5f0,0x14114a330,2,void BSPathingLOSGrid::Load(PathingStreamLoadGame* a_stream)
 89154,0x1410ed660,0x14114a3a0,2,void BSPathingLOSGrid::Save(BSPathingStreamWrite* a_stream)
-89155,0x1410ed720,0x14114a460,2,"int64_t BSPathingLOSGridCell::ApplyToMap(BSPathingLOSMap** a_map, uint32_t a_arg)"
-89156,0x1410ed860,0x14114a5a0,2,"int64_t BSPathingLOSGridCell::CaptureFromMap(BSPathingLOSMap** a_map, uint32_t a_arg)"
+89155,0x1410ed720,0x14114a460,2,int64_t BSPathingLOSGridCell::ApplyToMap(BSPathingLOSMap** a_map)
+89156,0x1410ed860,0x14114a5a0,2,int64_t BSPathingLOSGridCell::CaptureFromMap(BSPathingLOSMap** a_map)
 89157,0x1410ed990,0x14114a6d0,2,bool BSPathingLOSGridCell::IsLocationMarked(BSPathingLocation* a_location)
 89158,0x1410eda50,0x14114a790,2,"bool BSPathingLOSGridCell::MarkLocation(BSPathingLocation* a_location, bool a_state, void* a_unused)"
 89159,0x1410edba0,0x14114a8e0,2,void BSPathingLOSGridCell::Load(PathingStreamLoadGame* a_stream)
@@ -15793,32 +15904,32 @@
 89315,0x1410f9ba0,0x1411568e0,2,"bool TryStepAlongTrianglePath(const bool** a_walker, const BSNavmeshEdgeLocation* a_from, const void* a_toRef, const std::uint32_t* a_edgeType)"
 89319,0x1410f9d90,0x141156ad0,2,"bool TrianglePathCursorAdvance(void* a_cursor, const void* a_ref, const void* a_triangle)"
 89321,0x1410f9e90,0x141156bd0,2,void PathSmootherRayCastUseTrianglePath::GrowTriangleIndexMap()
-89323,0x1410fa1c0,0x141156f00,2,"float MovementUtils::ComputeAngularVelocityToTarget(float a_current, float a_target, float a_deltaTime)"
+89323,0x1410fa1c0,0x141156f00,2,"static float MovementUtils::ComputeAngularVelocityToTarget(float a_current, float a_target, float a_deltaTime)"
 89325,0x1410fa2f0,0x141157030,2,"void MovementUtils::ComputeDirectionFromEuler(const NiPoint3& a_euler, NiPoint3& a_out)"
-89326,0x1410fa340,0x141157080,2,"void MakeRotationMatrixFromEuler(NiMatrix3& a_out, const NiPoint3& a_euler)"
+89326,0x1410fa340,0x141157080,2,"static void MakeRotationMatrixFromEuler(float a_x, float a_y, float a_z, NiMatrix3* a_out)"
 89328,0x1410fa4d0,0x141157210,2,float MovementUtils::ComputePitchFromVector(const NiPoint3& a_vector)
 89329,0x1410fa500,0x141157240,2,"float MovementUtils::ComputeHeadingDelta(const NiPoint3& a_from, const NiPoint3& a_to)"
-89330,0x1410fa570,0x1411572b0,2,"float MovementUtils::ComputePitchDelta(const NiPoint3& a_from, const NiPoint3& a_to)"
+89330,0x1410fa570,0x1411572b0,2,"static float MovementUtils::ComputePitchDelta(const NiPoint3& a_from, const NiPoint3& a_to)"
 89331,0x1410fa630,0x141157370,2,"float MovementUtils::ComputeAngleBetweenVectors(const NiPoint3& a_a, const NiPoint3& a_b)"
-89334,0x1410fa840,0x141157580,2,"float MovementUtils::ComputeQuadrantWeightedLimit(const NiPoint3& a_direction, const float* a_limits)"
-89335,0x1410fa940,0x141157680,2,"float MovementUtils::ComputeQuadrantWeightedLimitScaled(const NiPoint3& a_direction, float a_scale, const float* a_limits)"
+89334,0x1410fa840,0x141157580,2,"static float MovementUtils::ComputeQuadrantWeightedLimit(const NiPoint3& a_direction, const float* a_limits)"
+89335,0x1410fa940,0x141157680,2,"static float MovementUtils::ComputeQuadrantWeightedLimitScaled(const NiPoint3& a_direction, float a_scale, const float* a_limits)"
 89336,0x1410faa20,0x141157760,2,bool MovementUtils::HasPositiveLimits(const float* a_limits)
-89339,0x1410fae00,0x141157b40,2,"void MovementUtils::GetStoppingDistanceAndTime(float a_speed, float a_maxSpeed, float a_accel, float a_decel, float* a_outDistance, float* a_outTime)"
-89341,0x1410faed0,0x141157c10,2,"bool MovementUtils::SolveTimeAndSpeedForDistance(float a_acceleration, float a_speed, float a_unused, float a_distance, float a_limit, float& a_timeOut, float& a_speedOut)"
+89339,0x1410fae00,0x141157b40,2,"static void MovementUtils::GetStoppingDistanceAndTime(float a_speed, float a_maxSpeed, float a_accel, float a_decel, float* a_outDistance, float* a_outTime)"
+89341,0x1410faed0,0x141157c10,2,"static bool MovementUtils::SolveTimeAndSpeedForDistance(float a_acceleration, float a_speed, float a_unused, float a_distance, float a_limit, float& a_timeOut, float& a_speedOut)"
 89342,0x1410faf60,0x141157ca0,2,"void MovementUtils::ComputeRotationBetweenDirections(const NiPoint3& a_from, const NiPoint3& a_to, NiMatrix3& a_out)"
-89343,0x1410fb2c0,0x141158000,2,"float MovementUtils::NormalizeForwardSpeed(float a_speed, Movement::MaxSpeeds* a_speeds)"
-89344,0x1410fb330,0x141158070,2,"float MovementUtils::DenormalizeForwardSpeed(float a_normalized, Movement::MaxSpeeds* a_speeds)"
-89345,0x1410fb380,0x1411580c0,3,"float MovementUtils::NormalizeRotationSpeed(float a_speed, Movement::MaxSpeeds* a_speeds)"
-89346,0x1410fb410,0x141158150,2,"float MovementUtils::DenormalizeRotationSpeed(float a_normalized, Movement::MaxSpeeds* a_speeds)"
-89347,0x1410fb490,0x1411581d0,3,"float MovementUtils::AccelerationToNormalized(float a_acceleration, Movement::MaxSpeeds* a_speeds)"
-89348,0x1410fb4a0,0x1411581e0,3,"float MovementUtils::NormalizedToAcceleration(float a_normalized, Movement::MaxSpeeds* a_speeds)"
-89349,0x1410fb4b0,0x1411581f0,2,"float MovementUtils::AngularAccelerationToNormalized(float a_angularAcceleration, Movement::MaxSpeeds* a_speeds)"
-89350,0x1410fb4d0,0x141158210,2,"float MovementUtils::NormalizedToAngularAcceleration(float a_normalized, Movement::MaxSpeeds* a_speeds)"
-89351,0x1410fb4f0,0x141158230,2,"float MovementUtils::AngleAccelerationToNormalized(float a_value, Movement::MaxSpeeds* a_speeds)"
-89352,0x1410fb500,0x141158240,2,"float MovementUtils::NormalizedToAngleAcceleration(float a_value, Movement::MaxSpeeds* a_speeds)"
-89355,0x1410fbca0,0x1411589e0,2,"void MovementUtils::GetStoppingTimeAndDistance(float a_speed, float a_deceleration, float* a_outTime, float* a_outDistance)"
-89356,0x1410fbcf0,0x141158a30,2,"float MovementUtils::ComputeCurvatureSpeedLimit(float a_speed, float a_p2, float a_p3, float a_p4, float a_acceleration, float a_distance, float a_radius)"
-89357,0x1410fbe40,0x141158b80,2,"float MovementUtils::ComputePathCurvatureSpeedLimit(float a_speed, float a_p2, float a_p3, float a_p4, float a_p5, float a_p6, const NiPoint3& a_tangent, const NiPoint3& a_nextTangent)"
+89343,0x1410fb2c0,0x141158000,2,"static float MovementUtils::NormalizeForwardSpeed(float a_speed, Movement::MaxSpeeds* a_speeds)"
+89344,0x1410fb330,0x141158070,2,"static float MovementUtils::DenormalizeForwardSpeed(float a_normalized, Movement::MaxSpeeds* a_speeds)"
+89345,0x1410fb380,0x1411580c0,3,"static float MovementUtils::NormalizeRotationSpeed(float a_speed, Movement::MaxSpeeds* a_speeds)"
+89346,0x1410fb410,0x141158150,2,"static float MovementUtils::DenormalizeRotationSpeed(float a_normalized, Movement::MaxSpeeds* a_speeds)"
+89347,0x1410fb490,0x1411581d0,3,"static float MovementUtils::AccelerationToNormalized(float a_acceleration, Movement::MaxSpeeds* a_speeds)"
+89348,0x1410fb4a0,0x1411581e0,3,"static float MovementUtils::NormalizedToAcceleration(float a_normalized, Movement::MaxSpeeds* a_speeds)"
+89349,0x1410fb4b0,0x1411581f0,2,"static float MovementUtils::AngularAccelerationToNormalized(float a_angularAcceleration, Movement::MaxSpeeds* a_speeds)"
+89350,0x1410fb4d0,0x141158210,2,"static float MovementUtils::NormalizedToAngularAcceleration(float a_normalized, Movement::MaxSpeeds* a_speeds)"
+89351,0x1410fb4f0,0x141158230,2,"static float MovementUtils::AngleAccelerationToNormalized(float a_value, Movement::MaxSpeeds* a_speeds)"
+89352,0x1410fb500,0x141158240,2,"static float MovementUtils::NormalizedToAngleAcceleration(float a_value, Movement::MaxSpeeds* a_speeds)"
+89355,0x1410fbca0,0x1411589e0,2,"static void MovementUtils::GetStoppingTimeAndDistance(float a_speed, float a_deceleration, float* a_outTime, float* a_outDistance)"
+89356,0x1410fbcf0,0x141158a30,2,"static float MovementUtils::ComputeCurvatureSpeedLimit(float a_speed, float a_p2, float a_p3, float a_p4, float a_acceleration, float a_distance, float a_radius)"
+89357,0x1410fbe40,0x141158b80,2,"static float MovementUtils::ComputePathCurvatureSpeedLimit(float a_speed, float a_p2, float a_p3, float a_p4, float a_p5, float a_p6, const NiPoint3& a_tangent, const NiPoint3& a_nextTangent)"
 89364,0x1410fc9e0,0x141159720,3,void ProcessAvoidBoxChecks()
 89365,0x1410fcbf0,0x141159930,3,std::uint64_t CheckAvoidBox()
 89391,0x1410fe270,0x14115afb0,3,void ObstacleBuildQueue::ctor()
@@ -15838,16 +15949,16 @@
 89413,0x1410ff250,0x14115c160,2,bool MovementControllerNPC::AddAgentsAndArbiters(void* a_set)
 89414,0x1410ffc70,0x14115cb80,3,bool MovementControllerNPC::ApplyAgentConfig(MovementAgentConfig* a_config)
 89416,0x141100b00,0x14115da20,2,"bool MovementControllerAI::FindArbiterByName(const BSFixedString& a_name, BSTSmartPointer<MovementArbiter>& a_out)"
-89417,0x141100be0,0x14115db00,2,MovementAgent* MovementControllerNPC::GetDirectControlAgent()
+89417,0x141100be0,0x14115db00,2,"MovementAgent* MovementControllerNPC::GetDirectControlAgent(void* a_arg1, void* a_arg2)"
 89418,0x141100cc0,0x14115dbe0,2,void MovementControllerAI::ShutdownArbiters()
 89419,0x141100ee0,0x14115bcb0,2,bool MovementControllerAI::Unk_09()
 89420,0x141100ef0,0x14115de10,3,"bool MovementControllerNPC::DiffAgentConfig(MovementAgentConfig* a_config, MovementScrapArray* a_extraArbiterIdxTagSet, MovementScrapArray* a_extraAgentIdxTagSet, MovementScrapArray* a_keptArbiterPairsTagSet, MovementScrapArray* a_keptAgentPairsTagSet, MovementScrapArray* a_extraArbiterIdxTagClear, MovementScrapArray* a_extraAgentIdxTagClear, MovementScrapArray* a_keptArbiterPairsTagClear, MovementScrapArray* a_keptAgentPairsTagClear)"
 89426,0x141101780,0x14115e6a0,2,bool MovementAgent::IsAgentType(const BSFixedString& a_type)
-89430,0x1411018a0,0x14115e7c0,2,std::uint32_t MovementControllerAI::PushAgent(MovementAgent** a_agent)
-89431,0x1411019b0,0x14115e8d0,2,std::uint32_t MovementControllerAI::PushArbiter(MovementArbiter** a_arbiter)
-89432,0x141101ac0,0x14115e9e0,2,"bool BSTScrapArray::AppendArray(BSTScrapArray* a_src, BSTScrapArray* a_dest)"
+89430,0x1411018a0,0x14115e7c0,2,"std::uint32_t MovementControllerAI::PushAgent(MovementAgent** a_agent, bool a_arg2)"
+89431,0x1411019b0,0x14115e8d0,2,"std::uint32_t MovementControllerAI::PushArbiter(MovementArbiter** a_arbiter, bool a_arg2)"
+89432,0x141101ac0,0x14115e9e0,2,"static bool BSTScrapArray::AppendArray(BSTScrapArray* a_src, BSTScrapArray* a_dest)"
 89452,0x1411025d0,0x14115f4f0,2,void ClearObstaclePolygonScrapArray(BSTScrapArray<VelocityObstacle::ObstaclePolygon>& a_array)
-89458,0x1411027d0,0x14115f6f0,2,"bool MovementControllerAI::AttachAgent(MovementAgent** a_agent, void* a_arbiterList)"
+89458,0x1411027d0,0x14115f6f0,2,"static bool MovementControllerAI::AttachAgent(void* a_context, MovementAgent** a_agent)"
 89471,0x141102bc0,0x14115fae0,2,void* MovementArbiterFactory::FindCreator(const char** a_name)
 89473,0x141102ca0,0x14115fbc0,3,NullMovementState* NullMovementState::GetSingleton()
 89476,0x141102e90,0x14115fdb0,2,"void MovementControllerAI::RemoveAgents(std::uint32_t a_index, std::uint32_t a_count)"
@@ -15860,7 +15971,7 @@
 89492,0x1411034c0,0x1411603e0,2,"bool IPathFollowerAction::ActivateDoor_UpdateSpeed(PathFollowerStateUpdateData* a_updateData, float a_pathIndex, float* a_speed)"
 89493,0x1411035a0,0x1411604c0,2,"bool IPathFollowerAction::ActivateDoor_Prepare(PathFollowerStateUpdateData* a_updateData, float* a_out)"
 89494,0x141103700,0x141160620,2,"bool IPathFollowerAction::ActivateDoor_GetTargetSpeed(PathFollowerStateUpdateData* a_updateData, float* a_out)"
-89495,0x141103710,0x141160630,2,"void* MovementMessageAutoRegister::RegisterActivateDoor(void* a_registrar, std::int32_t a_typeId)"
+89495,0x141103710,0x141160630,2,"static void* MovementMessageAutoRegister::RegisterActivateDoor(void* a_registrar, std::int32_t a_typeId)"
 89504,0x141103a40,0x141160960,2,"MovementMessage* BSTDerivedCreator<MovementMessageActivateDoor,MovementMessage>::CreateImpl(MovementMessage* a_val) const"
 89505,0x141103ab0,0x1411609d0,2,"void BSTDerivedCreator<MovementMessageActivateDoor,MovementMessage>::Destroy(const MovementMessage* a_val)"
 89507,0x141103b40,0x141160a60,2,"MovementMessageWarpToLocation* MovementMessageWarpToLocation::ctor(const BSPathingLocation& a_location, const NiPoint3& a_position)"
@@ -15868,19 +15979,19 @@
 89510,0x141103c10,0x141160b30,3,std::int32_t MovementMessageWarpToLocation::GetStaticType()
 89511,0x141103c50,0x141160b70,3,void MovementMessageWarpToLocation::SaveGame(PathingStreamSaveGame* a_stream)
 89512,0x141103cb0,0x141160bd0,3,void MovementMessageWarpToLocation::LoadGame(PathingStreamLoadGame* a_stream)
-89514,0x141103d20,0x141160c40,2,"void* MovementMessageAutoRegister::RegisterWarpToLocation(void* a_registrar, std::int32_t a_typeId)"
+89514,0x141103d20,0x141160c40,2,"static void* MovementMessageAutoRegister::RegisterWarpToLocation(void* a_registrar, std::int32_t a_typeId)"
 89521,0x141103f70,0x141160e90,2,"void BSTDerivedCreator<MovementMessageWarpToLocation,MovementMessage>::Destroy(const MovementMessage* a_val)"
 89524,0x141104020,0x141160f40,2,std::uint32_t MovementMessageWarpToMultiple::GetType()
 89525,0x141104060,0x141160f80,3,std::int32_t MovementMessageWarpToMultiple::GetStaticType()
 89526,0x1411040b0,0x141160fd0,3,void MovementMessageWarpToMultiple::SaveGame(PathingStreamSaveGame* a_stream)
 89527,0x141104120,0x141161040,3,void MovementMessageWarpToMultiple::LoadGame(PathingStreamLoadGame* a_stream)
-89530,0x141104200,0x141161120,2,"void* MovementMessageAutoRegister::RegisterWarpToMultiple(void* a_registrar, std::int32_t a_typeId)"
+89530,0x141104200,0x141161120,2,"static void* MovementMessageAutoRegister::RegisterWarpToMultiple(void* a_registrar, std::int32_t a_typeId)"
 89540,0x1411045b0,0x1411614d0,2,"void BSTDerivedCreator<MovementMessageWarpToMultiple,MovementMessage>::Destroy(const MovementMessage* a_val)"
 89545,0x1411047b0,0x1411616d0,2,std::uint32_t MovementMessageBlocked::GetType()
 89546,0x1411047f0,0x141161710,3,std::int32_t MovementMessageBlocked::GetStaticType()
 89547,0x141104830,0x141161750,2,void MovementMessageBlocked::SaveGame(PathingStreamSaveGame* a_stream)
 89548,0x141104840,0x141161760,2,void MovementMessageBlocked::LoadGame(PathingStreamLoadGame* a_stream)
-89550,0x141104860,0x141161780,2,"void* MovementMessageAutoRegister::RegisterBlocked(void* a_registrar, std::int32_t a_typeId)"
+89550,0x141104860,0x141161780,2,"static void* MovementMessageAutoRegister::RegisterBlocked(void* a_registrar, std::int32_t a_typeId)"
 89557,0x141104aa0,0x1411619c0,2,"void BSTDerivedCreator<MovementMessageBlocked,MovementMessage>::Destroy(const MovementMessage* a_val)"
 89558,0x141104ac0,0x1411619e0,3,void MovementPlayIdleData::ctor()
 89559,0x141104ae0,0x141161a00,3,void MovementPlayIdleData::dtor()
@@ -15900,24 +16011,24 @@
 89579,0x141106870,0x141163790,3,std::int32_t MovementMessagePlayIdle::GetStaticType()
 89580,0x1411068b0,0x1411637d0,3,void MovementMessagePlayIdle::SaveGame(PathingStreamSaveGame* a_stream)
 89581,0x141106920,0x141163840,3,void MovementMessagePlayIdle::LoadGame(PathingStreamLoadGame* a_stream)
-89583,0x1411069d0,0x1411638f0,2,"void* MovementMessageAutoRegister::RegisterPlayIdle(void* a_registrar, std::int32_t a_typeId)"
+89583,0x1411069d0,0x1411638f0,2,"static void* MovementMessageAutoRegister::RegisterPlayIdle(void* a_registrar, std::int32_t a_typeId)"
 89590,0x141106c10,0x141163b30,2,"void BSTDerivedCreator<MovementMessagePlayIdle,MovementMessage>::Destroy(const MovementMessage* a_val)"
 89593,0x141106ca0,0x141163bc0,2,std::uint32_t MovementMessageFreezeDirection::GetType()
 89594,0x141106ce0,0x141163c00,3,std::int32_t MovementMessageFreezeDirection::GetStaticType()
 89595,0x141106d20,0x141163c40,2,void MovementMessageFreezeDirection::SaveGame(PathingStreamSaveGame* a_stream)
 89596,0x141106d40,0x141163c60,2,void MovementMessageFreezeDirection::LoadGame(PathingStreamLoadGame* a_stream)
-89597,0x141106d70,0x141163c90,2,"void* MovementMessageAutoRegister::RegisterFreezeDirection(void* a_registrar, std::int32_t a_typeId)"
+89597,0x141106d70,0x141163c90,2,"static void* MovementMessageAutoRegister::RegisterFreezeDirection(void* a_registrar, std::int32_t a_typeId)"
 89604,0x141106fc0,0x141163ee0,2,"void BSTDerivedCreator<MovementMessageFreezeDirection,MovementMessage>::Destroy(const MovementMessage* a_val)"
 89606,0x141107040,0x141163f60,2,std::uint32_t MovementMessageSetStaticPath::GetType()
 89607,0x141107080,0x141163fa0,3,std::int32_t MovementMessageSetStaticPath::GetStaticType()
 89608,0x1411070c0,0x141163fe0,2,void MovementMessageSetStaticPath::SaveGame(PathingStreamSaveGame* a_stream)
 89609,0x1411070e0,0x141164000,2,void MovementMessageSetStaticPath::LoadGame(PathingStreamLoadGame* a_stream)
-89610,0x141107100,0x141164020,2,"void* MovementMessageAutoRegister::RegisterSetStaticPath(void* a_registrar, std::int32_t a_typeId)"
+89610,0x141107100,0x141164020,2,"static void* MovementMessageAutoRegister::RegisterSetStaticPath(void* a_registrar, std::int32_t a_typeId)"
 89617,0x141107340,0x141164260,2,"void BSTDerivedCreator<MovementMessageSetStaticPath,MovementMessage>::Destroy(const MovementMessage* a_val)"
 89621,0x141107410,0x141164330,3,std::int32_t MovementMessageJump::GetStaticType()
 89625,0x1411074f0,0x141164410,2,"bool MovementMessageJump::Prepare(PathFollowerStateUpdateData* a_updateData, float* a_out)"
 89626,0x141107540,0x141164460,2,"bool IPathFollowerAction::Jump_GetTargetSpeed(PathFollowerStateUpdateData* a_updateData, float* a_out)"
-89627,0x141107560,0x141164480,2,"void* MovementMessageAutoRegister::RegisterJump(void* a_registrar, std::int32_t a_typeId)"
+89627,0x141107560,0x141164480,2,"static void* MovementMessageAutoRegister::RegisterJump(void* a_registrar, std::int32_t a_typeId)"
 89634,0x141107770,0x141164690,2,"MovementMessage* BSTDerivedCreator<MovementMessageJump,MovementMessage>::CreateImpl(MovementMessage* a_val) const"
 89635,0x1411077e0,0x141164700,2,"void BSTDerivedCreator<MovementMessageJump,MovementMessage>::Destroy(const MovementMessage* a_val)"
 89638,0x1411078d0,0x1411647f0,2,const BSFixedString& MovementPostUpdateArbiter::GetPipelineStage()
@@ -15968,7 +16079,7 @@
 89720,0x141109fa0,0x141166ec0,2,bool IMovementQueryActorAvoidance::UpdateObstacles(MovementHandlerUpdateDataSmallDelta* a_updateData)
 89721,0x14110a120,0x141167040,2,void MovementAgentActorAvoider::SaveGame(BSPathingStreamWrite&)
 89722,0x14110a1b0,0x1411670d0,2,void MovementAgentActorAvoider::LoadGame(BSPathingStreamRead&)
-89723,0x14110a260,0x141167180,2,void MovementAgentActorAvoider::FindActorsToAvoid()
+89723,0x14110a260,0x141167180,2,void MovementAgentActorAvoider::FindActorsToAvoid(float a_delta)
 89724,0x14110a730,0x141167650,2,bool MovementAgentActorAvoider::IsActorNearPath(void* a_actorInfo)
 89748,0x14110b250,0x141168170,2,"void BSTDerivedCreator<MovementAgentActorAvoider,MovementAgent>::Destroy(const MovementAgent* a_val)"
 89760,0x14110b6c0,0x1411685e0,2,void* MovementAgent::GetDebugRenderingInterface()
@@ -16051,7 +16162,7 @@
 89926,0x14110fe10,0x14116cd60,3,void MovementPlannerArbiter::LoadGame(PathingStreamLoadGame* a_stream)
 89927,0x14110fe50,0x14116cda0,2,"bool MovementUtils::FindEarliestObstacleCollision(void* a_obstacles, float* a_position, float* a_velocity, bool a_skipSlowObstacles, float* a_outTime)"
 89928,0x14110fff0,0x14116cf40,2,"void MovementPlannerArbiter::ProcessPlannerOutput(MovementUpdateDataSmallDelta* a_updateData, MovementHandlerUpdateDataSmallDelta* a_handlerUpdateData)"
-89930,0x141110a80,0x14116d9d0,2,void MovementPlannerArbiter::LimitSpeedForPredictedCollisions(MovementHandlerUpdateDataSmallDelta* a_updateData)
+89930,0x141110a80,0x14116d9d0,2,"void MovementPlannerArbiter::LimitSpeedForPredictedCollisions(MovementHandlerUpdateDataSmallDelta* a_updateData, void* a_velocity)"
 89933,0x141111490,0x14116e3e0,2,IPipelineStageInterface* MovementPlannerAgent::GetPipelineStageInterface(const BSFixedString&)
 89934,0x1411114b0,0x14116e400,2,const BSFixedString& MovementPlannerAgent::GetAgentType()
 89961,0x141111cb0,0x14116ec00,2,"void ActorState::CalculateTranslationLimits(IMovementParameters* a_params, IMovementInterface* a_interface, NiPoint3* a_targetDirection, float* a_outAcceleration, float* a_outDeceleration, float* a_outLimit)"
@@ -16087,8 +16198,8 @@
 90020,0x141113520,0x141170470,2,void MovementAgentPathFollowerFlight::SaveGame(BSPathingStreamWrite&)
 90021,0x1411136d0,0x141170620,2,void MovementAgentPathFollowerFlight::LoadGame(BSPathingStreamRead&)
 90037,0x141114490,0x141171360,2,"void BSTDerivedCreator<MovementAgentPathFollowerFlight,MovementAgent>::Destroy(const MovementAgent* a_val)"
-90038,0x1411144b0,0x141171380,2,"bool PathingStreamLoadGame::ReadNiPoint3ArrayAndIndex(BSTArray<NiPoint3>& a_points, std::uint32_t& a_index)"
-90039,0x141114600,0x1411714d0,2,"bool PathingStreamSaveGame::WriteNiPoint3ArrayAndIndex(const BSTArray<NiPoint3>& a_points, std::uint32_t a_index)"
+90038,0x1411144b0,0x141171380,2,bool PathingStreamLoadGame::ReadNiPoint3ArrayAndIndex(void* a_data)
+90039,0x141114600,0x1411714d0,2,bool PathingStreamSaveGame::WriteNiPoint3ArrayAndIndex(const void* a_data)
 90042,0x141114870,0x141171740,2,IPipelineStageInterface* MovementAgentPathFollowerVirtual::GetPipelineStageInterface(const BSFixedString& a_arg1)
 90045,0x1411148d0,0x1411717a0,2,void MovementAgentPathFollowerVirtual::RegisterWithController(IMovementControllerRegisterInterface& a_controller)
 90046,0x141114920,0x1411717f0,2,void MovementAgentPathFollowerVirtual::UnregisterWithController()
@@ -16164,9 +16275,9 @@
 90204,0x141118060,0x141174f30,2,void MovementPlannerAgentNavmeshBounds::SaveGame(BSPathingStreamWrite&)
 90205,0x1411180d0,0x141174fa0,2,void MovementPlannerAgentNavmeshBounds::LoadGame(BSPathingStreamRead&)
 90206,0x141118160,0x141175030,2,"void MovementPlannerAgentNavmeshBounds::SubmitObstacleBuild(const BSPathingLocation& a_location, float a_stoppingDistance)"
-90207,0x141118280,0x141175150,2,bool MovementPlannerAgentNavmeshBounds::IsPathClear()
-90209,0x1411186f0,0x1411755c0,2,"void MovementPlannerAgentNavmeshBounds::CopyObstaclesToAvoidShapes(BSScrapArray<VelocityObstacle::ObstaclePolygon>& a_out, const BSTArray<VelocityObstacle::ObstaclePolygon>& a_in)"
-90213,0x1411189d0,0x1411758a0,2,"MovementPlannerAgentNavmeshBounds::PathSampleList* MovementPlannerAgentNavmeshBounds::SamplePathPointsAtInterval(PathSampleList* a_out, BSPathingSolution* a_solution, float a_start, float a_length, float a_interval)"
+90207,0x141118280,0x141175150,2,"bool MovementPlannerAgentNavmeshBounds::IsPathClear(const NiPoint3* a_position, const NiPoint3* a_direction, float a_arg3, float a_arg4, float a_arg5)"
+90209,0x1411186f0,0x1411755c0,2,"static void MovementPlannerAgentNavmeshBounds::CopyObstaclesToAvoidShapes(BSScrapArray<VelocityObstacle::ObstaclePolygon>& a_out, const BSTArray<VelocityObstacle::ObstaclePolygon>& a_in)"
+90213,0x1411189d0,0x1411758a0,2,"static MovementPlannerAgentNavmeshBounds::PathSampleList* MovementPlannerAgentNavmeshBounds::SamplePathPointsAtInterval(PathSampleList* a_out, BSPathingSolution* a_solution, float a_start, float a_length, float a_interval)"
 90214,0x141118b70,0x141175a40,2,ObstacleBuildRequest* ObstacleBuildRequest::ObstacleBuildRequest()
 90227,0x141118fb0,0x141175e80,2,"void ConstructObstaclePolygonRange(BSTSmallArray<VelocityObstacle::ObstaclePolygon, 1>& a_array, std::uint32_t a_first, std::uint32_t a_count)"
 90228,0x141119020,0x141175ef0,2,"MovementAgent* BSTDerivedCreator<MovementPlannerAgentNavmeshBounds,MovementAgent>::CreateImpl()"
@@ -16235,27 +16346,27 @@
 90394,0x14111e100,0x14117afd0,3,void IMovementPlayIdleResult::AddRef()
 90395,0x14111e110,0x14117afe0,2,std::int32_t IMovementPlayIdleResult::Release()
 90398,0x14111e180,0x14117b050,2,"bool MovementSelectIdleUtils::SelectIdleStationary(IMovementState* a_state, IMovementSelectIdle* a_selector, MovementPlayIdleData* a_data, float* a_out)"
-90399,0x14111e250,0x14117b120,2,"bool MovementSelectIdleUtils::SelectIdleMoving(IMovementState* a_state, IMovementSelectIdle* a_selector, const NiPoint3& a_velocity, float a_a, float a_b, float a_c, float a_d, const NiPoint3& a_dir, MovementPlayIdleData* a_data)"
-90400,0x14111e390,0x14117b260,2,"void MovementSelectIdleUtils::SelectIdleTurnCorrectionDefault(IMovementState* a_state, IMovementSelectIdle* a_selector)"
-90401,0x14111e3e0,0x14117b2b0,2,"bool MovementSelectIdleUtils::SelectIdleTransformCorrectionDefault(IMovementState* a_state, IMovementSelectIdle* a_selector)"
-90402,0x14111e420,0x14117b2f0,2,"bool MovementSelectIdleUtils::SelectIdleTurnCorrection(IMovementState* a_state, IMovementSelectIdle* a_selector, ISelectIdleFilter* a_filter)"
-90403,0x14111e530,0x14117b400,2,"bool MovementSelectIdleUtils::SelectIdleTransformCorrection(IMovementState* a_state, IMovementSelectIdle* a_selector, ISelectIdleFilter* a_filter)"
+90399,0x14111e250,0x14117b120,2,"static bool MovementSelectIdleUtils::SelectIdleMoving(IMovementState* a_state, IMovementSelectIdle* a_selector, const NiPoint3& a_velocity, float a_a, float a_b, float a_c, float a_d, const NiPoint3& a_dir, MovementPlayIdleData* a_data)"
+90400,0x14111e390,0x14117b260,2,"static void MovementSelectIdleUtils::SelectIdleTurnCorrectionDefault(IMovementState* a_state, IMovementSelectIdle* a_selector, void* a_arg3, void* a_arg4, void* a_arg5, void* a_arg6)"
+90401,0x14111e3e0,0x14117b2b0,2,"static bool MovementSelectIdleUtils::SelectIdleTransformCorrectionDefault(IMovementState* a_state, IMovementSelectIdle* a_selector, void* a_arg3, void* a_arg4, void* a_arg5, void* a_arg6)"
+90402,0x14111e420,0x14117b2f0,2,"static bool MovementSelectIdleUtils::SelectIdleTurnCorrection(IMovementState* a_state, IMovementSelectIdle* a_selector, ISelectIdleFilter* a_filter)"
+90403,0x14111e530,0x14117b400,2,"static bool MovementSelectIdleUtils::SelectIdleTransformCorrection(IMovementState* a_state, IMovementSelectIdle* a_selector, ISelectIdleFilter* a_filter)"
 90404,0x14111e630,0x14117b500,2,"bool MovementSelectIdleUtils::TrySelectIdleTurnCorrection(IMovementState* a_state, IMovementSelectIdle* a_selector, MovementPlayIdleData* a_data, MovementPlayIdleData* a_out)"
 90405,0x14111e6d0,0x14117b5a0,2,"bool MovementSelectIdleUtils::TrySelectIdleTransformCorrection(IMovementState* a_state, IMovementSelectIdle* a_selector, MovementPlayIdleData* a_data, MovementPlayIdleData* a_out)"
 90406,0x14111e760,0x14117b630,2,"bool MovementSelectIdleUtils::TrySelectIdleStationary(IMovementState* a_state, IMovementSelectIdle* a_selector, MovementPlayIdleData* a_data, MovementPlayIdleData* a_out)"
-90409,0x14111ec80,0x14117bb50,2,"bool MovementSelectIdleUtils::BuildPlayIdleDataTurnCorrection(IMovementState* a_state, MovementPlayIdleData* a_data, MovementPlayIdleData* a_out)"
-90410,0x14111eef0,0x14117bdc0,2,"bool MovementSelectIdleUtils::BuildPlayIdleDataMoving(IMovementState* a_state, const NiPoint3& a_velocity, MovementPlayIdleData* a_out)"
-90411,0x14111f0b0,0x14117bf80,2,"bool MovementSelectIdleUtils::BuildPlayIdleDataStationary(IMovementState* a_state, const NiPoint3& a_offset, MovementPlayIdleData* a_out)"
-90412,0x14111f270,0x14117c140,2,"bool MovementSelectIdleUtils::BuildQueryTurnCorrection(IMovementState* a_state, MovementSelectIdleQuery* a_out)"
-90413,0x14111f4e0,0x14117c3b0,2,"bool MovementSelectIdleUtils::BuildQueryTransformCorrection(IMovementState* a_state, MovementSelectIdleQuery* a_out)"
-90414,0x14111f7b0,0x14117c680,2,"bool MovementSelectIdleUtils::BuildQueryMoving(IMovementState* a_state, MovementSelectIdleQuery* a_out)"
-90415,0x14111f990,0x14117c860,2,"bool MovementSelectIdleUtils::BuildQueryStationary(IMovementState* a_state, MovementSelectIdleQuery* a_out)"
+90409,0x14111ec80,0x14117bb50,2,"static bool MovementSelectIdleUtils::BuildPlayIdleDataTurnCorrection(IMovementState* a_state, MovementPlayIdleData* a_data, MovementPlayIdleData* a_out)"
+90410,0x14111eef0,0x14117bdc0,2,"static bool MovementSelectIdleUtils::BuildPlayIdleDataMoving(IMovementState* a_state, const NiPoint3& a_velocity, MovementPlayIdleData* a_out)"
+90411,0x14111f0b0,0x14117bf80,2,"static bool MovementSelectIdleUtils::BuildPlayIdleDataStationary(IMovementState* a_state, const NiPoint3& a_offset, MovementPlayIdleData* a_out)"
+90412,0x14111f270,0x14117c140,2,"static bool MovementSelectIdleUtils::BuildQueryTurnCorrection(IMovementState* a_state, MovementSelectIdleQuery* a_out)"
+90413,0x14111f4e0,0x14117c3b0,2,"static bool MovementSelectIdleUtils::BuildQueryTransformCorrection(IMovementState* a_state, MovementSelectIdleQuery* a_out)"
+90414,0x14111f7b0,0x14117c680,2,"static bool MovementSelectIdleUtils::BuildQueryMoving(IMovementState* a_state, MovementSelectIdleQuery* a_out)"
+90415,0x14111f990,0x14117c860,2,"static bool MovementSelectIdleUtils::BuildQueryStationary(IMovementState* a_state, MovementSelectIdleQuery* a_out)"
 90420,0x14111fbc0,0x14117ca90,2,void MovementMessagePathEvent::SaveGame(PathingStreamSaveGame* a_stream)
 90421,0x14111fbe0,0x14117cab0,2,void MovementMessagePathEvent::LoadGame(PathingStreamLoadGame* a_stream)
-90424,0x14111fc90,0x14117cb60,2,"MovementMessagePathComplete* MovementMessagePathComplete::MovementMessagePathComplete(void* a_request, void* a_solution, void* a_unused)"
-90430,0x14111ff90,0x14117ce60,2,"void* MovementMessageAutoRegister::RegisterNewPath(void* a_registrar, std::int32_t a_typeId)"
-90431,0x141120060,0x14117cf30,2,"void* MovementMessageAutoRegister::RegisterPathComplete(void* a_registrar, std::int32_t a_typeId)"
-90432,0x141120130,0x14117d000,2,"void* MovementMessageAutoRegister::RegisterPathFailed(void* a_registrar, std::int32_t a_typeId)"
+90424,0x14111fc90,0x14117cb60,2,"MovementMessagePathComplete* MovementMessagePathComplete::MovementMessagePathComplete(void* a_request, void* a_solution)"
+90430,0x14111ff90,0x14117ce60,2,"static void* MovementMessageAutoRegister::RegisterNewPath(void* a_registrar, std::int32_t a_typeId)"
+90431,0x141120060,0x14117cf30,2,"static void* MovementMessageAutoRegister::RegisterPathComplete(void* a_registrar, std::int32_t a_typeId)"
+90432,0x141120130,0x14117d000,2,"static void* MovementMessageAutoRegister::RegisterPathFailed(void* a_registrar, std::int32_t a_typeId)"
 90449,0x1411205a0,0x14117d470,2,"MovementMessage* BSTDerivedCreator<MovementMessageNewPath,MovementMessage>::CreateImpl(MovementMessage* a_val) const"
 90452,0x1411206f0,0x14117d5c0,2,"void BSTDerivedCreator<MovementMessageNewPath,MovementMessage>::Destroy(const MovementMessage* a_val)"
 90453,0x141120710,0x14117d5e0,2,"void BSTDerivedCreator<MovementMessagePathComplete,MovementMessage>::Destroy(const MovementMessage* a_val)"
@@ -16289,11 +16400,11 @@
 90559,0x141128940,0x141185810,2,void BSPathingSearchRayCast::PrepareHavokWorldQuery()
 90561,0x141128ba0,0x141185a70,2,bool BSPathingSearchRayCast::CreateHavokRayQuery()
 90563,0x141128e30,0x141185d00,2,"bool BSPathingSearchRayCast::CastSegmentInSteps(const NiPoint3* a_start, const NiPoint3* a_end)"
-90564,0x141129020,0x141185ef0,2,"bool BSPathingSearchRayCast::CastSegmentStep(const NiPoint3* a_start, const NiPoint3* a_end)"
-90566,0x1411294f0,0x1411863c0,2,void BSPathingSearchRayCast::ResetResult()
+90564,0x141129020,0x141185ef0,2,"bool BSPathingSearchRayCast::CastSegmentStep(const NiPoint3* a_start, const NiPoint3* a_end, NiPoint3* a_outHitPos)"
+90566,0x1411294f0,0x1411863c0,2,void BSPathingSearchRayCast::ResetResult(const void* a_arg)
 90581,0x141129ba0,0x141186a70,2,"void PushBackEdgeLocationWithHeight(void* a_array, const BSNavmeshEdgeLocation* a_location)"
 90623,0x14112c840,0x141189710,2,"void PathFollowerTurnTarget::GetFacingAngles(NiPoint3* a_position, float* a_current, float a_zOffset, float* a_outFacing)"
-90628,0x14112cc60,0x141189b30,2,std::uint32_t PathingStreamLoadGame::ReadBSPathingLockInfo()
+90628,0x14112cc60,0x141189b30,2,"static void PathingStreamLoadGame::ReadBSPathingLockInfo(void* a_lockInfo, PathingStreamLoadGame* a_stream)"
 90636,0x14112cff0,0x141189ec0,2,"bool MovementActorAvoidanceParameters::ShouldAvoidActorById(std::uint32_t a_actorId, std::uint32_t a_otherId)"
 90637,0x14112d140,0x14118a010,2,"bool MovementActorAvoidanceParameters::ShouldAvoidActor(std::uint32_t a_actorId, const AvoidancePriority& a_priority, std::uint32_t a_otherId, const AvoidancePriority& a_otherPriority)"
 90646,0x14112d670,0x14118a540,2,bool PathingStreamSaveGame::WriteFormIDArray(const BSTArray<FormID>& a_ids)
@@ -16305,7 +16416,7 @@
 90714,0x14112fd00,0x14118cbd0,2,void VelocityObstacle::ObstaclePolygon::~ObstaclePolygon()
 90715,0x14112fd60,0x14118cc30,2,"bool VelocityObstacle::ObstaclePolygon::GetRayEntryExitDistances(const NiPoint3& a_origin, const NiPoint3& a_velocity, float& a_entry, float& a_exit)"
 90718,0x14112ffe0,0x14118ceb0,2,bool VelocityObstacle::ObstaclePolygon::Write(PathingStreamSaveGame& a_stream)
-90732,0x141131010,0x14118dee0,2,"void VelocityObstacle::BuildObstaclePolygons(const BSPathingLocation& a_location, float a_radius, BSTArray<VelocityObstacle::ObstaclePolygon>& a_out)"
+90732,0x141131010,0x14118dee0,2,"static void VelocityObstacle::BuildObstaclePolygons(const BSPathingLocation& a_location, float a_radius, float a_arg3, BSTArray<VelocityObstacle::ObstaclePolygon>& a_out)"
 90766,0x141133760,0x141190630,2,"std::uint64_t RestoreNavmeshFromObstacleUndoData(void* a_context, BSNavmesh* a_navmesh, void* a_undoData, void* a_arg4)"
 90938,0x14113df60,0x1411983b0,2,void EnsureMemoryHeap()
 97369,0x14122c060,0x141264510,2,"void ObjectBindPolicy::GetAttachedScripts(std::uint64_t a_handle, void* a_out)"
@@ -17448,7 +17559,7 @@
 101157,0x141317a90,0x1413606f0,2,void BSDynamicLines::LoadBinary(NiStream& a_stream)
 101160,0x141317bb0,0x141360810,2,void BSDynamicLines::SaveBinary(NiStream& a_stream)
 101162,0x141317c20,0x141360880,2,static BSDynamicLines* BSDynamicLines::Create()
-101163,0x141317cf0,0x141360950,2,BSDynamicLines* BSDynamicLines::Ctor()
+101163,0x141317cf0,0x141360950,2,"BSDynamicLines* BSDynamicLines::Ctor(std::uint64_t a_vertexDesc, std::uint16_t a_arg2, std::uint16_t a_arg3, std::uint32_t a_arg4)"
 101164,0x141317d90,0x1413609f0,2,BSDynamicLines* BSDynamicLines::Ctor()
 101165,0x141317de0,0x141360a40,2,void BSDynamicLines::Dtor()
 101166,0x141317e50,0x141360ab0,2,void* BSDynamicLines::LockDynamicData()
