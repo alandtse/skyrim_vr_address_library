@@ -2129,8 +2129,8 @@
 30732,0x1404a0e90,0x1404b0e30,2,static void BGSBtoDB::InitSingleton()
 30733,0x1404a0f30,0x1404b0ed0,2,static void BGSBtoDB::ShutdownSingleton()
 30734,0x1404a0ff0,0x1404b0f90,2,"static void BGSBtoDB::DumpCache(NiBinaryStream* a_stream, std::uint32_t a_minRefCount)"
-30735,0x1404a1040,0x1404b0fe0,2,"static std::int32_t BGSObjectBlock::QueueLoad(void*& a_handle, BGSTerrainNode* a_node, std::uint32_t a_level, std::int16_t a_x, std::int16_t a_y)"
-30736,0x1404a12c0,0x1404b1260,2,"static std::int32_t BGSObjectBlock::Load(void*& a_handle, BGSTerrainNode* a_node, std::uint32_t a_level, std::int16_t a_x, std::int16_t a_y)"
+30735,0x1404a1040,0x1404b0fe0,2,"static std::int32_t BGSDistantObjectBlock::QueueLoad(void*& a_handle, BGSTerrainNode* a_node, std::uint32_t a_level, std::int16_t a_x, std::int16_t a_y)"
+30736,0x1404a12c0,0x1404b1260,2,"static std::int32_t BGSDistantObjectBlock::Load(void*& a_handle, BGSTerrainNode* a_node, std::uint32_t a_level, std::int16_t a_x, std::int16_t a_y)"
 30737,0x1404a1430,0x1404b13d0,3,"BGSDistantObjectBlock* BGSDistantObjectBlock::Ctor(BGSTerrainNode* a_node, BSStream& a_stream)"
 30738,0x1404a1750,0x1404b16f0,2,void BGSDistantObjectBlock::Dtor()
 30739,0x1404a17c0,0x1404b1760,3,void BGSDistantObjectBlock::Detach()
@@ -2138,7 +2138,7 @@
 30742,0x1404a19a0,0x1404b1940,2,"static void BGSBtoDB::UpdateMultiBoundVisibility(NiCamera* a_camera, BSCullingProcess* a_cullingProcess)"
 30743,0x1404a1a90,0x1404b1a30,2,static void BGSBtoDB::ClearAllNonSegmented()
 30744,0x1404a1ad0,0x1404b1a70,2,static void BGSBtoDB::SetAllNonSegmented()
-30745,0x1404a1b10,0x1404b1ab0,2,static void BGSObjectBlock::SetAllMenuScreenFlag(bool a_set)
+30745,0x1404a1b10,0x1404b1ab0,2,static void BGSDistantObjectBlock::SetAllMenuScreenFlag(bool a_set)
 30746,0x1404a1b90,0x1404b1b30,3,void BGSDistantObjectBlock::Prepare()
 30820,0x1404a6c10,0x1404b6c20,2,static void BGSDistantTreeBlock::CreateFromStream()
 30823,0x1404a6db0,0x1404b6dc0,2,static void BGSBttDB::InitSingleton()
@@ -2161,8 +2161,8 @@
 30927,0x1404ad050,0x1404bd0b0,2,"static void BGSBtrDB::DumpCache(NiBinaryStream* a_stream, std::uint32_t a_minRefCount)"
 30928,0x1404ad0a0,0x1404bd100,2,static void BGSBtrDB::InitSingleton()
 30929,0x1404ad110,0x1404bd170,2,static void BGSBtrDB::ShutdownSingleton()
-30930,0x1404ad1a0,0x1404bd200,2,"static std::int32_t BGSTerrainBlock::QueueLoad(void*& a_handle, BGSTerrainNode* a_node, std::uint32_t a_level, std::int16_t a_x, std::int16_t a_y)"
-30931,0x1404ad390,0x1404bd3f0,2,"static std::int32_t BGSTerrainBlock::Load(void*& a_handle, BGSTerrainNode* a_node, std::uint32_t a_level, std::int16_t a_x, std::int16_t a_y)"
+30930,0x1404ad1a0,0x1404bd200,2,"static std::int32_t BGSTerrainChunk::QueueLoad(void*& a_handle, BGSTerrainNode* a_node, std::uint32_t a_level, std::int16_t a_x, std::int16_t a_y)"
+30931,0x1404ad390,0x1404bd3f0,2,"static std::int32_t BGSTerrainChunk::Load(void*& a_handle, BGSTerrainNode* a_node, std::uint32_t a_level, std::int16_t a_x, std::int16_t a_y)"
 30932,0x1404ad510,0x1404bd570,3,"BGSTerrainChunk* BGSTerrainChunk::Ctor(BGSTerrainNode* a_node, BSStream& a_stream, std::int32_t a_cellX, std::int32_t a_cellY)"
 30933,0x1404ad820,0x1404bd880,3,void BGSTerrainChunk::Dtor()
 30934,0x1404ad940,0x1404bd9a0,3,void BGSTerrainChunk::Attach()
@@ -2170,11 +2170,11 @@
 30936,0x1404adb60,0x1404bdbc0,3,void BGSTerrainChunk::Detach()
 30938,0x1404adcf0,0x1404bdd50,2,"static void BGSBtrDB::UpdateMultiBoundVisibility(NiCamera* a_camera, BSCullingProcess* a_cullingProcess)"
 30939,0x1404add70,0x1404bddd0,3,void BGSTerrainChunk::AttachWater(bool a_attach)
-30940,0x1404addf0,0x1404bde50,2,static void BGSTerrainBlock::SetAllMenuScreenFlag(bool a_set)
+30940,0x1404addf0,0x1404bde50,2,static void BGSTerrainChunk::SetAllMenuScreenFlag(bool a_set)
 30942,0x1404adec0,0x1404bdf20,2,void BGSTerrainChunk::Hide()
 30943,0x1404adef0,0x1404bdf50,2,void BGSTerrainChunk::Show()
-30944,0x1404adf20,0x1404bdf80,2,static void BGSTerrainBlock::LoadNoiseTexture()
-30945,0x1404adf70,0x1404bdfd0,2,static void BGSTerrainBlock::ReleaseNoiseTexture(bool a_release)
+30944,0x1404adf20,0x1404bdf80,2,static void BGSTerrainChunk::LoadNoiseTexture()
+30945,0x1404adf70,0x1404bdfd0,2,static void BGSTerrainChunk::ReleaseNoiseTexture(bool a_release)
 30946,0x1404adfb0,0x1404be010,2,static NiTexture* BGSTerrainChunk::GetNoiseTexture()
 30947,0x1404ae090,0x1404be0f0,3,void BGSTerrainChunk::Prepare()
 30978,0x1404af910,0x1404bf970,4,"uint32_t AddOrRemoveLODWater(bool* a_add, void* a_object, void** a_objectHolder) src\Features/UnifiedWater.cpp:357"
