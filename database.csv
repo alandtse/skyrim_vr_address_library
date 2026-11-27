@@ -559,7 +559,7 @@
 13164,0x140153920,0x140164370,2,"bool TES::IsLandFadingAtGrid(std::int32_t a_gridX, std::uint16_t a_gridY)"
 13167,0x140153a60,0x1401644b0,2,void TES::GetFadedInGridBounds(std::int32_t* a_bounds)
 13170,0x140153d00,0x140164750,3,void TES::SetWorldSpace(TES* a_tes)
-13171,0x140153f80,0x1401649d0,4,"RE::TES::SetCurrentCell(RE::TESObjectCELL* a_cell, const RE::NiPoint3& a_position, float a_unk4)"
+13171,0x140153f80,0x1401649d0,4,"void TES::SetCurrentCell(TESObjectCELL* a_cell, const NiPoint3& a_position)"
 13172,0x1401545f0,0x140165040,3,void TES::ResetCellGrid(TES* a_this)
 13174,0x140154db0,0x140165800,4,"TESObjectCELL* TES::GetLoadedCell(int a_x, int a_y)"
 13176,0x140154f00,0x140165950,2,"std::uint32_t TES::GetCellDetailLevel(TESObjectCELL* a_cell, const NiPoint3* a_pos)"
@@ -5765,6 +5765,7 @@
 36016,0x1405c6ee0,0x1405cf480,3,BSTaskPool_HandleTask_1405C6EE0
 36174,0x1405ccb20,0x1405d5120,4,"bool EnsureActionAnimEvent(void* a_manager, BGSActionData* a_action)"
 36190,0x1405cce70,0x1405d5470,3,Character::UpdateWarHorseMode
+36194,0x1405cda80,0x1405d6080,2,void Actor::FreeRequestedModels()
 36195,0x1405CDBF0,0x1405D61F0,2,"Actor* Actor::ctor(Actor *a1, uint8 a2)"
 36196,0x1405cdda0,0x1405d63a0,4,Actor::~Actor
 36197,0x1405cdf80,0x1405d6580,2,void Actor::Predestroy()
@@ -5821,7 +5822,7 @@
 36348,0x1405d6570,0x1405deba0,4,Character::GetStaminaPercentage
 36349,0x1405d6640,0x1405dec70,4,Character::GetHealthPercentage
 36355,0x1405d67f0,0x1405dee20,2,float Character::GetSpeedMultScale()
-36357,0x1405d6fb0,0x1405df5e0,3,FEC::UpdateAVs
+36357,0x1405d6fb0,0x1405df5e0,3,void Actor::Update(float a_delta)
 36358,0x1405d8160,0x1405e0790,2,void Actor::UpdateNoAI(float a_delta)
 36359,0x1405d8170,0x1405e07a0,3,void Actor::UpdateMovement(float a_delta)
 36368,0x1405d9690,0x1405e1d10,2,void Actor::PotentiallyFixRagdollState()
@@ -8520,7 +8521,9 @@
 45870,0x1407b4810,0x1407dfb60,2,"void* CombatNavmeshSearchT<CombatPathingGoalPolicyFindTargetLocation,CombatPathingSearchPolicyStandard>::GetSearchPolicyByTypeId(std::uint32_t a_typeId)"
 45871,0x1407b4850,0x1407dfba0,2,"std::uint32_t CombatPathingRequestGeneric<CombatPathingGoalPolicyFindTargetLocation,CombatPathingSearchPolicyStandard>::GetType()"
 45878,0x1407b4af0,0x1407dfe40,2,"bool CombatNavmeshSearchT<CombatPathingGoalPolicyFindTargetLocation,CombatPathingSearchPolicyStandard>::IsGoalNode(AStarNode* a_node)"
+45879,0x1407b4b90,0x1407dfee0,2,"void CombatPathRequest<CombatPathingRequestGeneric<CombatPathingGoalPolicyFindTargetLocation,CombatPathingSearchPolicyStandard>>::LoadGame(BGSLoadGameBuffer* a_buf)"
 45880,0x1407b4c80,0x1407dffd0,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFindTargetLocation,CombatPathingSearchPolicyStandard>,CombatPathDestinationRef>::LoadGame(BGSLoadGameBuffer* a_buf)"
+45889,0x1407b5110,0x1407e0460,2,"void CombatPathRequest<CombatPathingRequestGeneric<CombatPathingGoalPolicyFindTargetLocation,CombatPathingSearchPolicyStandard>>::SaveGame(BGSSaveGameBuffer* a_buf)"
 45890,0x1407b5190,0x1407e04e0,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFindTargetLocation,CombatPathingSearchPolicyStandard>,CombatPathDestinationRef>::SaveGame(BGSSaveGameBuffer* a_buf)"
 45892,0x1407b5230,0x1407e0580,2,"bool CombatNavmeshSearchT<CombatPathingGoalPolicyFindTargetLocation,CombatPathingSearchPolicyStandard>::RunToCompletion()"
 45914,0x1407b5c80,0x1407e0fd0,2,void CombatTargetSelector::SaveGame(BGSSaveGameBuffer* a_buf)
@@ -9069,6 +9072,7 @@
 46905,0x1407df370,0x14080a6c0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFallbackToRanged>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 46906,0x1407df3f0,0x14080a740,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorReposition>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 46907,0x1407df430,0x14080a780,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorSurround>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+46908,0x1407df4a0,0x14080a7f0,2,"void CombatPathRequest<CombatPathingRequestGeneric<CombatPathingGoalPolicyRetreat,CombatPathingSearchPolicyStandard>>::LoadGame(BGSLoadGameBuffer* a_buf)"
 46909,0x1407df590,0x14080a8e0,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyRetreat,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::LoadGame(BGSLoadGameBuffer* a_buf)"
 46912,0x1407df6b0,0x14080aa00,2,"void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextCloseMovement>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 46914,0x1407df700,0x14080aa50,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorChildSelector<RandomValueChildSelector>>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
@@ -9079,6 +9083,7 @@
 46920,0x1407df860,0x14080abb0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFallbackToRanged>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 46921,0x1407df8a0,0x14080abf0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorReposition>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 46922,0x1407df8f0,0x14080ac40,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorSurround>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+46923,0x1407df910,0x14080ac60,2,"void CombatPathRequest<CombatPathingRequestGeneric<CombatPathingGoalPolicyRetreat,CombatPathingSearchPolicyStandard>>::SaveGame(BGSSaveGameBuffer* a_buf)"
 46924,0x1407df990,0x14080ace0,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyRetreat,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::SaveGame(BGSSaveGameBuffer* a_buf)"
 46926,0x1407dfa20,0x14080ad70,2,"bool CombatNavmeshSearchT<CombatPathingGoalPolicyRetreat,CombatPathingSearchPolicyStandard>::RunToCompletion()"
 46927,0x1407dfb10,0x14080ae60,2,"bool CombatNavmeshSearchT<CombatPathingGoalPolicyStandard,CombatPathingSearchPolicyStandard>::RunToCompletion()"
@@ -9108,6 +9113,7 @@
 46968,0x1407e1e20,0x14080d170,2,void CombatBehaviorFindAllyAttackLocation::Enter()
 46969,0x1407e22e0,0x14080d630,2,void CombatBehaviorFindAllyAttackLocation::Update()
 46971,0x1407e2440,0x14080d790,2,void CombatBehaviorTreeFindAttackLocation::Initialize()
+46973,0x1407e2750,0x14080daa0,2,void CombatPathingGoalPolicyFindAttackLocation::LoadGame(BGSLoadGameBuffer* a_buf)
 47021,0x1407e3f10,0x14080f260,2,CombatBehaviorTreeNodeObject<CombatBehaviorFindAllyAttackLocation>* CombatBehaviorTreeNodeObject<CombatBehaviorFindAllyAttackLocation>::dtor_deleting(std::uint32_t a_flags)
 47022,0x1407e3f50,0x14080f2a0,2,CombatBehaviorTreeNodeObject<CombatBehaviorFindAttackLocation>* CombatBehaviorTreeNodeObject<CombatBehaviorFindAttackLocation>::dtor_deleting(std::uint32_t a_flags)
 47023,0x1407e3f90,0x14080f2e0,2,CombatBehaviorTreeNodeObject<CombatBehaviorFindLateralAttackLocation>* CombatBehaviorTreeNodeObject<CombatBehaviorFindLateralAttackLocation>::dtor_deleting(std::uint32_t a_flags)
@@ -9154,12 +9160,15 @@
 47082,0x1407e5d10,0x140811060,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFindAttackLocation>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 47083,0x1407e5d80,0x1408110d0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFindLateralAttackLocation>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 47084,0x1407e5df0,0x140811140,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorSetBlackboardData>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+47085,0x1407e5e10,0x140811160,2,"void CombatPathRequest<CombatPathingRequestGeneric<CombatPathingGoalPolicyFindAttackLocation,CombatPathingSearchPolicyStandard>>::LoadGame(BGSLoadGameBuffer* a_buf)"
 47086,0x1407e5f00,0x140811250,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFindAttackLocation,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::LoadGame(BGSLoadGameBuffer* a_buf)"
 47089,0x1407e5fb0,0x140811300,4,float AITimer::QTimer()
 47093,0x1407e6150,0x1408114a0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFindAllyAttackLocation>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 47094,0x1407e6170,0x1408114c0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFindAttackLocation>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 47095,0x1407e6190,0x1408114e0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFindLateralAttackLocation>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 47096,0x1407e61b0,0x140811500,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorSetBlackboardData>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+47097,0x1407e61c0,0x140811510,2,"void CombatPathRequest<CombatPathingRequestGeneric<CombatPathingGoalPolicyFindAttackLocation,CombatPathingSearchPolicyStandard>>::SaveGame(BGSSaveGameBuffer* a_buf)"
+47098,0x1407e6240,0x140811590,2,"void CombatPathRequestGeneric<CombatPathingGoalPolicyFindAttackLocation,CombatPathingSearchPolicyStandard>::SaveGame(BGSSaveGameBuffer* a_buf)"
 47099,0x1407e62c0,0x140811610,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFindAttackLocation,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::SaveGame(BGSSaveGameBuffer* a_buf)"
 47101,0x1407e6370,0x1408116c0,2,"bool CombatNavmeshSearchT<CombatPathingGoalPolicyFindAttackLocation,CombatPathingSearchPolicyStandard>::RunToCompletion()"
 47108,0x1407e68a0,0x140811bf0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFindAllyAttackLocation>::Update(CombatBehaviorThread* a_thread)
@@ -9185,6 +9194,8 @@
 47140,0x1407e94d0,0x140814820,2,void CombatFlankingSearchData::SaveGame(BGSSaveGameBuffer* a_buf)
 47141,0x1407e9610,0x140814960,2,void CombatFlankingSearchData::LoadGame(BGSLoadGameBuffer* a_buf)
 47145,0x1407ea9c0,0x140815d10,2,"float CombatPathingSearchPolicyFlank::GetEdgeCost(BSFastNavmeshTriLocation* a_from, BSFastNavmeshTriLocation* a_to)"
+47148,0x1407ead80,0x1408160d0,2,void CombatPathingSearchPolicyFlank::LoadGame(BGSLoadGameBuffer* a_buf)
+47150,0x1407eaf30,0x140816280,2,void CombatPathingGoalPolicyFlankDistant::SaveGame(BGSSaveGameBuffer* a_buf)
 47241,0x1407edbc0,0x140818f10,2,CombatBehaviorTreeNodeObject<CombatBehaviorChase>* CombatBehaviorTreeNodeObject<CombatBehaviorChase>::dtor_deleting(std::uint32_t a_flags)
 47244,0x1407edc80,0x140818fd0,2,CombatBehaviorTreeNodeObject<CombatBehaviorStalk>* CombatBehaviorTreeNodeObject<CombatBehaviorStalk>::dtor_deleting(std::uint32_t a_flags)
 47245,0x1407edcc0,0x140819010,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorChase>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorChase>::dtor_deleting(std::uint32_t a_flags)
@@ -9261,12 +9272,18 @@
 47347,0x1407f0fa0,0x14081c2f0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFlankDistant>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 47348,0x1407f0fe0,0x14081c330,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorStalk>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 47349,0x1407f1020,0x14081c370,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorWatchTarget>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+47350,0x1407f1060,0x14081c3b0,2,"void CombatPathRequest<CombatPathingRequestGeneric<CombatPathingGoalPolicyFlank,CombatPathingSearchPolicyFlank>>::LoadGame(BGSLoadGameBuffer* a_buf)"
+47351,0x1407f1150,0x14081c4a0,2,"void CombatPathRequest<CombatPathingRequestGeneric<CombatPathingGoalPolicyFlankDistant,CombatPathingSearchPolicyStandard>>::LoadGame(BGSLoadGameBuffer* a_buf)"
+47352,0x1407f1240,0x14081c590,2,"void CombatPathRequestGeneric<CombatPathingGoalPolicyFlank,CombatPathingSearchPolicyFlank>::LoadGame(BGSLoadGameBuffer* a_buf)"
+47353,0x1407f12c0,0x14081c610,2,"void CombatPathRequestGeneric<CombatPathingGoalPolicyFlankDistant,CombatPathingSearchPolicyStandard>::LoadGame(BGSLoadGameBuffer* a_buf)"
 47354,0x1407f1340,0x14081c690,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFlank,CombatPathingSearchPolicyFlank>,CombatPathDestinationRef>::LoadGame(BGSLoadGameBuffer* a_buf)"
 47355,0x1407f1390,0x14081c6e0,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFlankDistant,CombatPathingSearchPolicyStandard>,CombatPathDestinationLocation>::LoadGame(BGSLoadGameBuffer* a_buf)"
 47362,0x1407f16f0,0x14081ca40,2,"void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextFlankingMovement>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 47363,0x1407f1710,0x14081ca60,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorChase>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 47366,0x1407f17f0,0x14081cb40,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorStalk>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 47367,0x1407f1840,0x14081cb90,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorWatchTarget>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+47368,0x1407f1860,0x14081cbb0,2,"void CombatPathRequest<CombatPathingRequestGeneric<CombatPathingGoalPolicyFlank,CombatPathingSearchPolicyFlank>>::SaveGame(BGSSaveGameBuffer* a_buf)"
+47369,0x1407f18e0,0x14081cc30,2,"void CombatPathRequest<CombatPathingRequestGeneric<CombatPathingGoalPolicyFlankDistant,CombatPathingSearchPolicyStandard>>::SaveGame(BGSSaveGameBuffer* a_buf)"
 47370,0x1407f1960,0x14081ccb0,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFlank,CombatPathingSearchPolicyFlank>,CombatPathDestinationRef>::SaveGame(BGSSaveGameBuffer* a_buf)"
 47371,0x1407f19f0,0x14081cd40,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFlankDistant,CombatPathingSearchPolicyStandard>,CombatPathDestinationLocation>::SaveGame(BGSSaveGameBuffer* a_buf)"
 47374,0x1407f1b10,0x14081ce60,2,"bool CombatNavmeshSearchT<CombatPathingGoalPolicyFlank,CombatPathingSearchPolicyFlank>::RunToCompletion()"
@@ -9408,6 +9425,8 @@
 47655,0x1407fbc60,0x140826fb0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorForceSuccess>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 47656,0x1407fbc90,0x140826fe0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorHide>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 47657,0x1407fbd00,0x140827050,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorTrackTarget>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+47658,0x1407fbd40,0x140827090,2,"void CombatPathRequest<CombatPathingRequestGeneric<CombatPathingGoalPolicyFindHideCover,CombatPathingSearchPolicyStandard>>::LoadGame(BGSLoadGameBuffer* a_buf)"
+47659,0x1407fbe30,0x140827180,2,"void CombatPathRequest<CombatPathingRequestGeneric<CombatPathingGoalPolicyFlee,CombatPathingSearchPolicyStandard>>::LoadGame(BGSLoadGameBuffer* a_buf)"
 47660,0x1407fbf20,0x140827270,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFindHideCover,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::LoadGame(BGSLoadGameBuffer* a_buf)"
 47661,0x1407fbfb0,0x140827300,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFlee,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::LoadGame(BGSLoadGameBuffer* a_buf)"
 47664,0x1407fc0c0,0x140827410,2,"void CombatBlackboardKey<BSTTuple<TESObjectREFR* ,AITimeStamp>>::LoadObject(BGSLoadGameBuffer* a_arg, void* a_arg)"
@@ -9423,6 +9442,8 @@
 47676,0x1407fc360,0x1408276b0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorForceSuccess>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 47677,0x1407fc370,0x1408276c0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorHide>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 47678,0x1407fc3d0,0x140827720,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorTrackTarget>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+47679,0x1407fc3f0,0x140827740,2,"void CombatPathRequest<CombatPathingRequestGeneric<CombatPathingGoalPolicyFindHideCover,CombatPathingSearchPolicyStandard>>::SaveGame(BGSSaveGameBuffer* a_buf)"
+47680,0x1407fc470,0x1408277c0,2,"void CombatPathRequest<CombatPathingRequestGeneric<CombatPathingGoalPolicyFlee,CombatPathingSearchPolicyStandard>>::SaveGame(BGSSaveGameBuffer* a_buf)"
 47681,0x1407fc4f0,0x140827840,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFindHideCover,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::SaveGame(BGSSaveGameBuffer* a_buf)"
 47682,0x1407fc540,0x140827890,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFlee,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::SaveGame(BGSSaveGameBuffer* a_buf)"
 47686,0x1407fc650,0x1408279a0,2,"bool CombatNavmeshSearchT<CombatPathingGoalPolicyFindHideCover,CombatPathingSearchPolicyStandard>::RunToCompletion()"
@@ -9802,11 +9823,16 @@
 48385,0x140815460,0x1408407b0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorCheckUnreachableTarget>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 48386,0x1408154e0,0x140840830,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorExitWater>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 48387,0x140815550,0x1408408a0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorReturnToCombatArea>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+48388,0x140815590,0x1408408e0,2,"void CombatPathRequest<CombatPathingRequestGeneric<CombatPathingGoalPolicyExitWater,CombatPathingSearchPolicyStandard>>::LoadGame(BGSLoadGameBuffer* a_buf)"
+48389,0x140815680,0x1408409d0,2,"void CombatPathRequest<CombatPathingRequestGeneric<CombatPathingGoalPolicyReturnToCombatArea,CombatPathingSearchPolicyStandard>>::LoadGame(BGSLoadGameBuffer* a_buf)"
+48390,0x140815770,0x140840ac0,2,"void CombatPathRequestGeneric<CombatPathingGoalPolicyReturnToCombatArea,CombatPathingSearchPolicyStandard>::LoadGame(BGSLoadGameBuffer* a_buf)"
 48391,0x1408157f0,0x140840b40,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyExitWater,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::LoadGame(BGSLoadGameBuffer* a_buf)"
 48392,0x140815840,0x140840b90,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyReturnToCombatArea,CombatPathingSearchPolicyStandard>,CombatPathDestinationLocation>::LoadGame(BGSLoadGameBuffer* a_buf)"
 48397,0x140815a10,0x140840d60,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorCheckUnreachableTarget>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 48398,0x140815a50,0x140840da0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorExitWater>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 48399,0x140815a70,0x140840dc0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorReturnToCombatArea>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+48400,0x140815ab0,0x140840e00,2,"void CombatPathRequest<CombatPathingRequestGeneric<CombatPathingGoalPolicyExitWater,CombatPathingSearchPolicyStandard>>::SaveGame(BGSSaveGameBuffer* a_buf)"
+48401,0x140815b30,0x140840e80,2,"void CombatPathRequest<CombatPathingRequestGeneric<CombatPathingGoalPolicyReturnToCombatArea,CombatPathingSearchPolicyStandard>>::SaveGame(BGSSaveGameBuffer* a_buf)"
 48402,0x140815bb0,0x140840f00,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyExitWater,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::SaveGame(BGSSaveGameBuffer* a_buf)"
 48403,0x140815bf0,0x140840f40,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyReturnToCombatArea,CombatPathingSearchPolicyStandard>,CombatPathDestinationLocation>::SaveGame(BGSSaveGameBuffer* a_buf)"
 48406,0x140815d00,0x140841050,2,"bool CombatNavmeshSearchT<CombatPathingGoalPolicyExitWater,CombatPathingSearchPolicyStandard>::RunToCompletion()"
@@ -9871,7 +9897,10 @@
 48540,0x14081c310,0x140847660,2,void CombatBehaviorSearchInvestigateDoor::Update()
 48542,0x14081c750,0x140847aa0,2,void CombatBehaviorSearchInvestigateDoor::SaveGame(BGSSaveFormBuffer* a_buffer)
 48544,0x14081c860,0x140847bb0,2,void CombatBehaviorTreeSearch::Initialize()
+48546,0x14081d4f0,0x140848840,2,void CombatPathingGoalPolicySearch::SaveGame(BGSSaveGameBuffer* a_buf)
+48547,0x14081d5f0,0x140848940,2,void CombatPathingGoalPolicySearch::LoadGame(BGSLoadGameBuffer* a_buf)
 48549,0x14081d770,0x140848ac0,2,"bool CombatSearchLockData::TryPassDoor(BSPathingDoor** a_door, float* a_costOut)"
+48552,0x14081dbf0,0x140848f40,2,void CombatPathingGoalPolicySearchWander::SaveGame(BGSSaveGameBuffer* a_buf)
 48641,0x1408203e0,0x14084b730,2,CombatBehaviorTreeNodeObject<CombatBehaviorForceFail>* CombatBehaviorTreeNodeObject<CombatBehaviorForceFail>::dtor_deleting(std::uint32_t a_flags)
 48642,0x140820420,0x14084b770,2,CombatBehaviorTreeNodeObject<CombatBehaviorSearchInvestigateDoor>* CombatBehaviorTreeNodeObject<CombatBehaviorSearchInvestigateDoor>::dtor_deleting(std::uint32_t a_flags)
 48643,0x140820460,0x14084b7b0,2,CombatBehaviorTreeNodeObjectBase<CombatBehaviorForceFail>* CombatBehaviorTreeNodeObjectBase<CombatBehaviorForceFail>::dtor_deleting(std::uint32_t a_flags)
@@ -9956,6 +9985,8 @@
 48749,0x1408239a0,0x14084ecf0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorSearchInvestigateDoor>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 48750,0x140823a30,0x14084ed80,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorSearchLocation>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 48751,0x140823a70,0x14084edc0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorSearchWander>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+48752,0x140823ae0,0x14084ee30,2,"void CombatPathRequest<CombatPathingRequestGeneric<CombatPathingGoalPolicySearch,CombatPathingSearchPolicyStandard>>::LoadGame(BGSLoadGameBuffer* a_buf)"
+48753,0x140823bd0,0x14084ef20,2,"void CombatPathRequest<CombatPathingRequestGeneric<CombatPathingGoalPolicySearchWander,CombatPathingSearchPolicyStandard>>::LoadGame(BGSLoadGameBuffer* a_buf)"
 48754,0x140823cc0,0x14084f010,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicySearch,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::LoadGame(BGSLoadGameBuffer* a_buf)"
 48755,0x140823d20,0x14084f070,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicySearchWander,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::LoadGame(BGSLoadGameBuffer* a_buf)"
 48761,0x140823f10,0x14084f260,2,"void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextSearch>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
@@ -9965,6 +9996,8 @@
 48765,0x140823fd0,0x14084f320,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorSearchInvestigateDoor>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 48766,0x140823ff0,0x14084f340,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorSearchLocation>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 48767,0x140824010,0x14084f360,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorSearchWander>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+48768,0x140824030,0x14084f380,2,"void CombatPathRequest<CombatPathingRequestGeneric<CombatPathingGoalPolicySearch,CombatPathingSearchPolicyStandard>>::SaveGame(BGSSaveGameBuffer* a_buf)"
+48769,0x1408240b0,0x14084f400,2,"void CombatPathRequest<CombatPathingRequestGeneric<CombatPathingGoalPolicySearchWander,CombatPathingSearchPolicyStandard>>::SaveGame(BGSSaveGameBuffer* a_buf)"
 48770,0x140824130,0x14084f480,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicySearch,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::SaveGame(BGSSaveGameBuffer* a_buf)"
 48771,0x140824180,0x14084f4d0,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicySearchWander,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::SaveGame(BGSSaveGameBuffer* a_buf)"
 48774,0x140824250,0x14084f5a0,2,"bool CombatNavmeshSearchT<CombatPathingGoalPolicySearch,CombatPathingSearchPolicyStandard>::RunToCompletion()"
@@ -10054,10 +10087,12 @@
 48951,0x14082aa70,0x140855dc0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorAttackFromCover>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 48952,0x14082ab00,0x140855e50,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFindCover>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 48953,0x14082ab40,0x140855e90,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorWaitBehindCover>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
+48954,0x14082ab80,0x140855ed0,2,"void CombatPathRequest<CombatPathingRequestGeneric<CombatPathingGoalPolicyFindCover,CombatPathingSearchPolicyStandard>>::LoadGame(BGSLoadGameBuffer* a_buf)"
 48955,0x14082ac70,0x140855fc0,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFindCover,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::LoadGame(BGSLoadGameBuffer* a_buf)"
 48958,0x14082add0,0x140856120,2,"void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextCover>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 48959,0x14082adf0,0x140856140,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorAttackFromCover>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 48960,0x14082ae40,0x140856190,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorFindCover>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+48962,0x14082aee0,0x140856230,2,"void CombatPathRequest<CombatPathingRequestGeneric<CombatPathingGoalPolicyFindCover,CombatPathingSearchPolicyStandard>>::SaveGame(BGSSaveGameBuffer* a_buf)"
 48963,0x14082af60,0x1408562b0,2,"void CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFindCover,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::SaveGame(BGSSaveGameBuffer* a_buf)"
 48965,0x14082aff0,0x140856340,2,"bool CombatNavmeshSearchT<CombatPathingGoalPolicyFindCover,CombatPathingSearchPolicyStandard>::RunToCompletion()"
 48971,0x14082b3c0,0x140856710,2,"void CombatBehaviorTreeNodeEvaluateFunction<CombatBehaviorExpression<CombatBehaviorMemberFunc<CombatBehaviorContextCover,bool (__cdecl CombatBehaviorContextCover::*)(void)const>>>::Update(CombatBehaviorThread* a_thread)"
@@ -10106,10 +10141,10 @@
 49070,0x14082f720,0x14085aa70,2,void CombatPathDestinationRefs::SaveGame(BGSSaveGameBuffer* a_buf)
 49071,0x14082f830,0x14085ab80,2,void CombatPathDestinationRefs::LoadGame(BGSLoadGameBuffer* a_buf)
 49074,0x14082f990,0x14085ace0,2,"bool CombatPath::SolveAndStoreRequest(void* a_key, void* a_request)"
-49099,0x140830df0,0x14085c0f0,2,void CombatPathRequestFlight::LoadGame(BGSLoadGameBuffer* a_buf)
-49100,0x140830ee0,0x14085c1e0,2,void CombatPathRequestMultiGoal::LoadGame(BGSLoadGameBuffer* a_buf)
-49103,0x140831100,0x14085c400,2,void CombatPathRequestFlight::SaveGame(BGSSaveGameBuffer* a_buf)
-49104,0x140831180,0x14085c480,2,void CombatPathRequestMultiGoal::SaveGame(BGSSaveGameBuffer* a_buf)
+49099,0x140830df0,0x14085c0f0,2,void CombatPathRequest<CombatPathingRequestAdapter>::LoadGame(BGSLoadGameBuffer* a_buf)
+49100,0x140830ee0,0x14085c1e0,2,void CombatPathRequest<CombatPathingRequestMultiGoal>::LoadGame(BGSLoadGameBuffer* a_buf)
+49103,0x140831100,0x14085c400,2,void CombatPathRequest<CombatPathingRequestAdapter>::SaveGame(BGSSaveGameBuffer* a_buf)
+49104,0x140831180,0x14085c480,2,void CombatPathRequest<CombatPathingRequestMultiGoal>::SaveGame(BGSSaveGameBuffer* a_buf)
 49120,0x1408321d0,0x14085d4d0,2,void CombatPathBuilder::Build()
 49123,0x1408327d0,0x14085dad0,2,"bool CombatPathBuilderStandard::TryDirectPath(const NiPoint3* a_start, const NiPoint3* a_end)"
 49124,0x1408329a0,0x14085dca0,2,"bool CombatPathBuilderStandard::IsDirectRayLandingNear(const void* a_start, const NiPoint3* a_end)"
@@ -10131,6 +10166,8 @@
 49166,0x140836450,0x140861750,2,void BSNavmeshInfoSearch::ResetSearchState()
 49180,0x140836980,0x140861c80,2,"float CombatPathingSearchPolicyStandard::GetEdgeCost(BSFastNavmeshTriLocation* a_from, BSFastNavmeshTriLocation* a_to)"
 49182,0x140836eb0,0x1408621b0,2,"void InitRayCastRequestFlags(void* a_out, const void* a_request)"
+49183,0x140836ef0,0x1408621f0,2,void CombatPathingSearchPolicyStandard::SaveGame(BGSSaveGameBuffer* a_buf)
+49184,0x140836ff0,0x1408622f0,2,void CombatPathingSearchPolicyStandard::LoadGame(BGSLoadGameBuffer* a_buf)
 49192,0x140837220,0x140862520,2,void CombatPathingRequest::CopyTo(BSPathingRequest* a_dest)
 49195,0x140837330,0x140862630,2,void CombatPathingRequest::Write(BSPathingStreamWrite* a_stream)
 49196,0x1408373a0,0x1408626a0,2,void CombatPathingRequest::Read(BSPathingStreamRead* a_stream)
@@ -10238,7 +10275,7 @@
 49551,0x140842a00,0x14086dd00,2,"std::uint32_t CombatPathT<CombatPathRequestStraightPath,CombatPathDestinationLocation>::GetObjectType()"
 49552,0x140842a10,0x14086dd10,2,"std::uint32_t CombatPathT<CombatPathRequestWeightedMultiGoal,CombatPathDestinationLocations>::GetObjectType()"
 49553,0x140842a20,0x14086dd20,2,"std::uint32_t CombatPathT<CombatPathRequestWeightedMultiGoal,CombatPathDestinationRefs>::GetObjectType()"
-49568,0x140842b10,0x14086de10,2,void CombatPathRequestStandard::LoadGame(BGSLoadGameBuffer* a_buf)
+49568,0x140842b10,0x14086de10,2,void CombatPathRequest<CombatPathingRequestStandard>::LoadGame(BGSLoadGameBuffer* a_buf)
 49569,0x140842c00,0x14086df00,2,"void CombatPathT<CombatPathRequestFlight,CombatPathDestinationLocation>::LoadGame(BGSLoadGameBuffer* a_buf)"
 49570,0x140842c50,0x14086df50,2,"void CombatPathT<CombatPathRequestFlight,CombatPathDestinationRef>::LoadGame(BGSLoadGameBuffer* a_buf)"
 49571,0x140842ca0,0x14086dfa0,2,"void CombatPathT<CombatPathRequestFlyingAttack,CombatPathDestinationNone>::LoadGame(BGSLoadGameBuffer* a_buf)"
@@ -10253,7 +10290,7 @@
 49580,0x140842f50,0x14086e250,2,"void CombatPathT<CombatPathRequestStraightPath,CombatPathDestinationLocation>::LoadGame(BGSLoadGameBuffer* a_buf)"
 49581,0x140842fa0,0x14086e2a0,2,"void CombatPathT<CombatPathRequestWeightedMultiGoal,CombatPathDestinationLocations>::LoadGame(BGSLoadGameBuffer* a_buf)"
 49582,0x140842ff0,0x14086e2f0,2,"void CombatPathT<CombatPathRequestWeightedMultiGoal,CombatPathDestinationRefs>::LoadGame(BGSLoadGameBuffer* a_buf)"
-49602,0x140843670,0x14086e970,2,void CombatPathRequestStandard::SaveGame(BGSSaveGameBuffer* a_buf)
+49602,0x140843670,0x14086e970,2,void CombatPathRequest<CombatPathingRequestStandard>::SaveGame(BGSSaveGameBuffer* a_buf)
 49604,0x140843760,0x14086ea60,2,"void CombatPathT<CombatPathRequestFlight,CombatPathDestinationLocation>::SaveGame(BGSSaveGameBuffer* a_buf)"
 49605,0x1408437a0,0x14086eaa0,2,"void CombatPathT<CombatPathRequestFlight,CombatPathDestinationRef>::SaveGame(BGSSaveGameBuffer* a_buf)"
 49606,0x1408437e0,0x14086eae0,2,"void CombatPathT<CombatPathRequestFlyingAttack,CombatPathDestinationNone>::SaveGame(BGSSaveGameBuffer* a_buf)"
@@ -10616,7 +10653,7 @@
 51738,0x1408cc7b0,0x1408f9730,3,undefined FUN_1408CC7B0(void)
 51740,0x1408cc950,0x1408f98d0,2,std::uint32_t FxResponseArgs<8>::GetValues(GFxValue** a_params)
 51741,0x1408cc960,0x1408f98e0,2,std::uint32_t FxResponseArgs<13>::GetValues(GFxValue** a_params)
-51753,0x1408ccbb0,0x1408f9c60,4,"void SubtitleManager::ShowSubtitle(SubtitleManager *a_this,TESObjectREFR *a_speaker,BSString *a_subtitle,bool a_alwaysDisplay)"
+51753,0x1408ccbb0,0x1408f9c60,4,"void SubtitleManager::ShowSubtitle(TESObjectREFR* a_speaker, const char* a_subtitle, bool a_forceDisplay)"
 51754,0x1408ccdf0,0x1408f9ea0,3,SubtitleManager::HideSubtitle
 51755,0x1408ccff0,0x1408fa0a0,4,SubtitleManager::KillSubtitles
 51756,0x1408cd0e0,0x1408fa190,4,void SubtitleManager::ApplyDistanceCheck(SubtitleManager *a_this)
@@ -17224,6 +17261,8 @@
 98647,0x141282a30,0x1412c3a80,2,"bool BSScript::LinkerProcessor::ConvertFunction(void* a_unk1, void* a_unk2, void* a_unk3, void* a_unk4, void* a_unk5, void* a_unk6, void* a_unk7, void* a_unk8, void* a_unk9)"
 98651,0x141283fe0,0x1412c5030,3,"bool ParseFunctionInfo(BSScript::UnlinkedTypes::Function* a_function, BSScript::ReadableStringTable* a_stringTable, BSScript::IStore* a_store, std::uint8_t a_major, std::uint8_t a_minor, bool a_flag, bool a_loadDocStrings, const char* a_context, SkyrimScript::Logger* a_logger)"
 98654,0x141284ae0,0x1412c5b30,3,void BSScript::UnlinkedTypes::Object::Dtor()
+98656,0x141284f40,0x1412c5f90,2,"BSScript::UnlinkedTypes::InstructionStream::InstructionFunctor::ForEachResult BSScript::UnlinkedTypes::CountInstructionInfo::VisitInstruction(std::uint32_t a_opcode, std::uint32_t a_info)"
+98657,0x141284f80,0x1412c5fd0,2,BSScript::UnlinkedTypes::InstructionStream::InstructionFunctor::ForEachResult BSScript::UnlinkedTypes::CountInstructionInfo::VisitArgument(BSScript::ByteCode::Argument& a_arg)
 98668,0x1412855f0,0x1412c6600,3,"void ArgumentArray_ConstructRange(void* a_array, std::uint64_t a_index, std::uint32_t a_count, BSScript::ByteCode::Argument* a_source)"
 98672,0x141285970,0x1412c68a0,3,"BSScript::ByteCode::Argument* Argument_CopyConstruct(BSScript::ByteCode::Argument* a_dest, BSScript::ByteCode::Argument* a_source)"
 98673,0x141285a00,0x1412c6930,2,void BSScript::Internal::NativeFunctionStub::Ctor(void* a_params)
