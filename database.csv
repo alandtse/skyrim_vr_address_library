@@ -3588,6 +3588,7 @@
 69279,0x140c66f80,0x140cad0a0,3,void BSTriShape::LoadBinary(NiStream* a_stream)
 69284,0x140c67490,0x140cad6d0,3,BSTriShape* CreateBSTriShape()
 69287,0x140c675f0,0x140cad830,3,void BSTriShape::~BSTriShape()
+69311,0x140c67cd0,0x140cadf10,3,NiAlphaProperty* CreateNiAlphaProperty()
 69314,0x140c67ea0,0x140cae0e0,4,void InitSinCosLUT()
 69315,0x140c67f30,0x140cae170,3,"float NiFastATan2(float a_y, float a_x)"
 69335,0x140c68d20,0x140caef60,3,NiSourceTexture* CreateSourceTexture(const BSFixedString& a_name)
