@@ -433,6 +433,7 @@
 16204,0x1401fd410,0x14020ed60,3,bool TESRegion::UsesWeather(TESWeather* a_weather)
 16240,0x1401fe230,0x14020fb80,2,TESRegionDataLandscape* TESRegionDataLandscape::ctor_from_region_data(TESRegionData* a_src)
 16472,0x140208c40,0x14021a590,2,BGSAddonNodeSoundHandleExtra* BGSAddonNodeSoundHandleExtra::Ctor()
+16473,0x140208c80,0x14021a5d0,2,void BGSAddonNodeSoundHandleExtra::Dtor()
 16474,0x140208cc0,0x14021a610,2,static void BGSAddonNodeSoundHandleExtra::InitStaticName()
 16475,0x140208d40,0x14021a690,2,static void BGSAddonNodeSoundHandleExtra::ReleaseStaticName()
 17034,0x14021a4b0,0x14022bdb0,3,TESFurniture::Activate_*
@@ -878,7 +879,9 @@
 24275,0x140368b30,0x140378490,3,RE::TESNPC::GetBaseOverlays
 24276,0x140368bc0,0x140378520,3,RE::TESNPC::GetNumBaseOverlays
 24297,0x140369d10,0x140379670,2,void TESNPC::PreparePreprocessedHeadParts(void* a_context)
+24313,0x14036aa50,0x14037a3b0,2,std::uint32_t NiAVObject::SetFMDBoneNames(void* a_modelData)
 24330,0x14036b470,0x14037add0,4,"void NiAVObject::SetFMDBoneNames (NiAVObject * a_this, NiAVObject * a_target)"
+24423,0x14036d2a0,0x14037cc40,2,void BSFaceGenNiNode::SetAnimationData(BSFaceGenAnimationData* a_data)
 24462,0x14036fbd0,0x14037f570,3,BGSQuestObjective* TESQuest::GetObjective(std::uint32_t a_index)
 24468,0x14036ffe0,0x14037f980,3,void TESQuest::SetEnabled(bool a_enabled)
 24469,0x140370020,0x14037F9C0,4,DynamicStringDistributor::
@@ -3292,8 +3295,10 @@
 38347,0x14064ece0,0x140658030,2,void AIProcess::SetHeadTrackTargetTimer(float a_value)
 38348,0x14064ed00,0x140658050,2,float AIProcess::GetActivationHeight()
 38349,0x14064ed20,0x140658070,2,void AIProcess::SetActivationHeight(float a_value)
+38352,0x14064ef50,0x1406582a0,2,void AIProcess::SayDeathDialogue(Actor* a_actor)
 38353,0x14064efa0,0x1406582f0,2,void AIProcess::ClearDeathDialogue()
 38356,0x14064f2c0,0x140658610,2,void AIProcess::ClearQueueOfGreetings()
+38357,0x14064f360,0x1406586b0,2,bool AIProcess::HasQueuedGreetings()
 38359,0x14064f4b0,0x140658800,3,AIProcess::UpdatePackageObserveCombatHigh
 38364,0x14064f8b0,0x140658c00,2,bool AIProcess::IsTalkingToPC()
 38366,0x14064f8f0,0x140658c40,2,std::uint32_t AIProcess::GetEmotionType()
@@ -3325,6 +3330,7 @@
 38422,0x140651740,0x14065aa90,2,void AIProcess::SetDyingTimer(float a_value)
 38424,0x140651840,0x14065ab90,2,bool AIProcess::GetHighUnk45A()
 38427,0x1406518d0,0x14065ac20,2,void AIProcess::SetPCapVoiceFailsafeTimer(std::uint32_t a_value)
+38428,0x1406518f0,0x14065ac40,2,void AIProcess::SetPackDuration(float a_value)
 38439,0x140658210,0x140661550,2,float AIProcess::GetSceneHeadTrackTimer()
 38440,0x140658230,0x140661570,2,void AIProcess::SetSceneHeadTrackTimer(float a_value)
 38441,0x140658250,0x140661590,2,std::uint32_t AIProcess::GetNumberGuardsPursuing()
@@ -3333,6 +3339,16 @@
 38449,0x1406586d0,0x140661a10,2,void AIProcess::SetBumpedState(BUMP_TYPE a_state)
 38450,0x1406586f0,0x140661a30,2,BUMP_TYPE AIProcess::GetBumpedState()
 38460,0x140658e80,0x1406621c0,2,float AIProcess::GetFadeAlpha()
+38461,0x140658eb0,0x1406621f0,2,void AIProcess::FinishFadeIn(TESObjectREFR* a_ref)
+38463,0x140658f40,0x140662280,2,void AIProcess::SetDefaultHeadtrackTarget(TESObjectREFR* a_target)
+38464,0x140658f60,0x1406622a0,2,void AIProcess::SetActionHeadtrackTarget(TESObjectREFR* a_target)
+38465,0x140658f80,0x1406622c0,2,void AIProcess::SetScriptHeadtrackTarget(TESObjectREFR* a_target)
+38466,0x140658fa0,0x1406622e0,2,void AIProcess::SetCombatHeadtrackTarget(TESObjectREFR* a_target)
+38467,0x140658fc0,0x140662300,2,void AIProcess::SetDialogueHeadtrackTarget(TESObjectREFR* a_target)
+38468,0x140658fe0,0x140662320,2,void AIProcess::SetProcedureHeadtrackTarget(TESObjectREFR* a_target)
+38471,0x140659070,0x1406623b0,2,void AIProcess::ClearScriptHeadtrackTarget(bool a_keepAsDefault)
+38473,0x140659100,0x140662440,2,void AIProcess::ClearDialogueHeadtrackTarget(bool a_keepAsDefault)
+38474,0x140659160,0x1406624a0,2,void AIProcess::ClearProcedureHeadtrackTarget(bool a_keepAsDefault)
 38475,0x1406591c0,0x140662500,2,void AIProcess::SetHeadTrackTargetOffsetTimer(float a_value)
 38477,0x1406594e0,0x140662820,2,void AIProcess::UpdateDetectionModifierTimer()
 38483,0x1406598d0,0x140662c10,3,ObjectRefHandle AIProcess::GetHeadtrackTarget()
@@ -3349,11 +3365,16 @@
 38503,0x140659d80,0x1406630c0,2,void AIProcess::ClearPathLookAtTarget(const ObjectRefHandle& a_handle)
 38505,0x140659dd0,0x140663110,2,"ActorKnowledge* AIProcess::GetOrCreateActorKnowledge(Actor* a_owner, TESObjectREFR* a_target)"
 38509,0x14065a3b0,0x1406636f0,3,AIProcess::AimWeaponAtTarget
+38510,0x14065a600,0x140663940,2,int AIProcess::GetReplacedItemType(std::uint32_t a_hand)
+38511,0x14065a630,0x140663970,2,"void AIProcess::SetReplacedItemType(std::uint32_t a_hand, std::uint16_t a_type)"
+38512,0x14065a670,0x1406639b0,2,void AIProcess::ClearReplacedItemTypes()
 38520,0x14065a840,0x140663b80,2,float AIProcess::GetVoiceTimeElapsed()
 38521,0x14065a860,0x140663ba0,2,void AIProcess::SetVoiceTimeElapsed(float a_value)
 38526,0x14065a940,0x140663c80,2,"void AIProcess::SetRegenDelay(std::uint32_t a_actorValue, float a_delay)"
 38529,0x14065aa20,0x140663d60,3,"bool AIProcess::RequestFollowPathing(Character* a_follower, Character* a_leader, BSPathingLocation* a_goal, float a_followDistance, bool* a_outBeyondHysteresis, std::uint8_t* a_outGoalClientData, float* a_outFollowerPathLength, float* a_outLeaderPathLength)"
 38530,0x14065b310,0x140664650,3,NiPointer<BGSAttackData>* AIProcess::GetAttackData()
+38532,0x14065b3d0,0x140664710,2,void AIProcess::ClearAttackData()
+38536,0x14065b490,0x1406647d0,2,bool AIProcess::HasNoQueuedGreetings()
 38538,0x14065b510,0x140664850,2,PLAYER_ACTION AIProcess::GetPlayerActionReaction()
 38539,0x14065b530,0x140664870,2,void AIProcess::SetPlayerActionReaction(PLAYER_ACTION a_value)
 38541,0x14065b8c0,0x140664c00,2,void AIProcess::SetLastBumpDirection(float a_value)
@@ -3365,11 +3386,14 @@
 38551,0x14065bac0,0x140664e00,2,bool AIProcess::GetAllowRotation()
 38553,0x14065bb00,0x140664e40,2,float AIProcess::GetAbsorbTimer()
 38554,0x14065bb20,0x140664e60,2,void AIProcess::SetAbsorbTimer(float a_value)
+38556,0x14065bcf0,0x140665030,2,void AIProcess::ClearReanimationData()
 38558,0x14065bd90,0x1406650d0,2,MagicItem* AIProcess::GetReanimationSpell()
 38560,0x14065be00,0x140665140,3,AIProcess::UpdatePackageGuardHigh
 38563,0x14065c480,0x1406657d0,2,bool AIProcess::GetFarGeometry()
 38567,0x14065c850,0x140665ba0,2,float AIProcess::GetCachedActorHeight()
 38568,0x14065c880,0x140665bd0,3,RE::AIProcess::SetBaseScale
+38571,0x14065c910,0x140665c60,2,void AIProcess::SetAnimationAngleModZ(float a_value)
+38572,0x14065c950,0x140665ca0,2,void AIProcess::SetAnimationAngleModX(float a_value)
 38575,0x14065ca00,0x140665d50,2,void AIProcess::ResetBumpTimer()
 38577,0x14065ca60,0x140665db0,2,void AIProcess::SetVoiceTimer(float a_value)
 38578,0x14065ca80,0x140665dd0,2,float AIProcess::GetVoiceTimer()
@@ -3420,11 +3444,13 @@
 38769,0x140679b70,0x140682ff0,2,MagicItem* AIProcess::GetCurrentPackageSpell()
 38770,0x140679b90,0x140683010,2,void AIProcess::SetCurrentPackageSpell(MagicItem* a_spell)
 38771,0x140679bb0,0x140683030,2,void AIProcess::ClearFaceAnimationData()
+38772,0x140679bd0,0x140683050,2,bool AIProcess::GetIdleDoneOnce()
 38773,0x140679c10,0x140683090,3,void AIProcess::ClearFurniture()
 38775,0x14067a080,0x1406834f0,3,AIProcess::UpdatePackageRemoveWornItems
 38777,0x14067a1b0,0x140683620,2,void AIProcess::SetPickPocketed(bool a_value)
 38781,0x14067a3e0,0x140683850,4,InventoryEntryData* AIProcess::GetCurrentWeapon(bool a_leftHand)
 38782,0x14067a420,0x140683890,2,InventoryEntryData* AIProcess::GetBothHands()
+38783,0x14067a440,0x1406838b0,2,InventoryEntryData* AIProcess::GetEquippedLightEntry(bool a_leftHand)
 38784,0x14067a480,0x1406838f0,2,InventoryEntryData* AIProcess::GetLeftHand()
 38785,0x14067a4a0,0x140683910,2,InventoryEntryData* AIProcess::GetRightHand()
 38786,0x14067a4c0,0x140683930,3,"std::uint64_t ActorProcess::SetEquippedHandItem(ExtraContainerChanges::ItemEntry* a_item, bool a_left, NiAVObject* a_3d)"
@@ -3437,12 +3463,23 @@
 38812,0x14067b780,0x140684c00,2,BSAnimationGraphVariableCache* AIProcess::GetAnimationVariableCache()
 38818,0x14067bc50,0x1406850d0,2,TESPackage* AIProcess::GetRunOncePackage()
 38819,0x14067bc70,0x1406850f0,4,"void AIProcess::SetRunOncePackage(TESPackage* a_package, Actor* a_actor)"
+38821,0x14067bd50,0x1406851d0,2,void AIProcess::SetRunOnceProcedureIndex(int a_index)
+38822,0x14067bd70,0x1406851f0,2,int AIProcess::GetRunOnceProcedureIndex()
+38823,0x14067bd90,0x140685210,2,void AIProcess::ModRunOnceProcedureIndex(int a_delta)
+38824,0x14067bdb0,0x140685230,2,ActorPackageData* AIProcess::GetRunOncePackageData()
+38828,0x14067bea0,0x140685320,2,void AIProcess::SetPenetrationDetectUtil(void* a_util)
 38831,0x14067bfa0,0x140685420,3,AIProcess::ResumeOccupiedFurniture
 38832,0x14067c7a0,0x140685c20,3,AIProcess::UpdateOccupiedFurniture
 38835,0x14067ca00,0x140685e80,3,AIProcess::UpdatePackageGetUp
 38839,0x14067cee0,0x140686360,2,TESIdleForm* AIProcess::GetLastIdlePlayed()
 38840,0x14067cf40,0x1406863c0,2,float AIProcess::GetCurrentMovementSpeed()
 38841,0x14067cf60,0x1406863e0,2,void AIProcess::SetCurrentMovementSpeed(float a_value)
+38844,0x14067cfe0,0x140686460,2,float AIProcess::GetRotationZ()
+38845,0x14067d000,0x140686480,2,void AIProcess::SetRotationZ(float a_value)
+38846,0x14067d040,0x1406864c0,2,void AIProcess::SetRotationX(float a_value)
+38847,0x14067d080,0x140686500,2,void AIProcess::SetRotationY(float a_value)
+38848,0x14067d0c0,0x140686540,2,void AIProcess::SetRotationSpeedZ(float a_value)
+38849,0x14067d100,0x140686580,2,void AIProcess::SetRotationSpeedX(float a_value)
 38850,0x14067d120,0x1406865a0,3,"void AIProcess::SetHeadtrackTarget(Actor* a_owner, NiPoint3& a_targetPosition)"
 38855,0x14067d1f0,0x140686670,2,void AIProcess::SetIsFleeing(bool a_value)
 38856,0x14067d210,0x140686690,4,bool AIProcess::IsFleeing()
@@ -3462,14 +3499,22 @@
 38878,0x14067ef70,0x1406883f0,3,float AIProcess::GetFurnitureFacing()
 38879,0x14067ef90,0x140688410,3,void AIProcess::SetFurnitureFacing(float a_facing)
 38882,0x14067eff0,0x140688470,2,bool AIProcess::SelectFurnitureMarker(Actor* a_actor)
+38885,0x14067f710,0x140688b90,2,bool AIProcess::GetExitingInstant()
+38886,0x14067f730,0x140688bb0,2,void AIProcess::SetExitingInstant(bool a_value)
 38887,0x14067f750,0x140688bd0,2,bool AIProcess::GetMiddleHighFlag32D()
 38888,0x14067f770,0x140688bf0,2,void AIProcess::SetMiddleHighFlag32D(bool a_value)
 38889,0x14067f790,0x140688c10,2,bool AIProcess::GetWeaponDrawnFlag()
 38890,0x14067f7b0,0x140688c30,2,void AIProcess::SetWeaponDrawnFlag(bool a_drawn)
 38894,0x14067fa40,0x140688ec0,2,void AIProcess::SetTorchEvaluationTimer(float a_value)
+38899,0x14067fe10,0x140689290,2,void AIProcess::SetLightingProperty(BSLightingShaderProperty* a_property)
 38900,0x14067fe60,0x1406892e0,4,LLF::AIProcess_CalculateLightValue_GetLuminance
+38907,0x140680c40,0x14068a0c0,2,void AIProcess::SetBoundWeapon(TESObjectWEAP* a_weapon)
+38908,0x140680c60,0x14068a0e0,2,TESObjectWEAP* AIProcess::GetBoundWeapon()
+38909,0x140680c80,0x14068a100,2,"void AIProcess::SetOccupiedFurniture(Actor* a_actor, const ObjectRefHandle& a_handle)"
 38913,0x140680d40,0x14068a1c0,2,float AIProcess::GetAlphaMult()
 38915,0x140680d90,0x14068a210,2,float AIProcess::GetScriptRefractPower()
+38919,0x140680ea0,0x14068a310,2,BSBound* AIProcess::GetBound()
+38920,0x140680ec0,0x14068a330,2,void AIProcess::SetBound(BSBound* a_bound)
 38921,0x140680ee0,0x14068a350,2,void AIProcess::SetForceNextUpdate(bool a_value)
 38922,0x140680f00,0x14068a370,2,bool AIProcess::GetForceNextUpdate()
 38923,0x140680f20,0x14068a390,2,void AIProcess::SetSummonedCreature(bool a_value)
@@ -3489,6 +3534,8 @@
 38953,0x140681aa0,0x14068af10,2,void AIProcess::SetBleedoutParam2B8(float a_value)
 38954,0x140681ac0,0x14068af30,2,void AIProcess::SetBleedoutAttacker(std::uint32_t* a_handle)
 38955,0x140681ae0,0x14068af50,2,std::uint32_t* AIProcess::GetBleedoutAttacker(std::uint32_t* a_outHandle)
+38956,0x140681b10,0x14068af80,2,bool AIProcess::GetBleedingOut()
+38957,0x140681b30,0x14068afa0,2,void AIProcess::SetBleedingOut(bool a_value)
 38958,0x140681b50,0x14068afc0,2,bool AIProcess::GetKillQueued()
 38959,0x140681b70,0x14068afe0,2,void AIProcess::SetKillQueued(bool a_value)
 38960,0x140681b90,0x14068b000,2,void AIProcess::SetWardState(MagicSystem::WardState a_state)
@@ -5011,6 +5058,7 @@
 69279,0x140c66f80,0x140cad0a0,3,void BSTriShape::LoadBinary(NiStream* a_stream)
 69284,0x140c67490,0x140cad6d0,3,BSTriShape* CreateBSTriShape()
 69287,0x140c675f0,0x140cad830,3,void BSTriShape::~BSTriShape()
+69289,0x140c676b0,0x140cad8f0,2,BSSkinnedDecalTriShape* BSSkinnedDecalTriShape::Ctor()
 69314,0x140c67ea0,0x140cae0e0,4,void InitSinCosLUT()
 69315,0x140c67f30,0x140cae170,3,"float NiFastATan2(float a_y, float a_x)"
 69335,0x140c68d20,0x140caef60,3,NiSourceTexture* CreateSourceTexture(const BSFixedString& a_name)
@@ -15403,6 +15451,7 @@
 528538,0x1434963d0,0x1436f1ee0,3,RE::NiRTTI_BSSubIndexLandTriShape
 528600,0x143497408,0x1436f2f58,4,RE::TlsIndex
 528751,0x1401b69f0,0x1401c6a00,4,void BGSGrassManager::UpdateGrassRadius (GrassManager * param_1)
+529455,0x14067d0a0,0x140686520,2,float AIProcess::GetRotationSpeedZ()
 529578,0x1407031b0,0x14072a140,2,bool PathingStreamLoadGame::ReadRequest(BSPathingRequest** a_out)
 529579,0x1407031e0,0x14072a170,2,bool PathingStreamLoadGame::ReadSolution(BSPathingSolution** a_out)
 529580,0x140703220,0x14072a1b0,2,bool PathingStreamLoadGame::ReadPlayIdleResult(IMovementPlayIdleResult** a_out)
