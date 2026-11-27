@@ -2407,8 +2407,10 @@ sseid,aeid,confidence,name
 15967,16212,3,RE::BSPointerHandleManagerInterface::GetHandle
 16169,16401,1,
 16170,16402,1,
+16172,16404,1,
 16173,16405,2,
 16175,16407,3,RE::ScreenSplatter::Clear
+16176,16408,1,
 16185,16417,1,
 16188,16421,2,
 16204,16450,1,
@@ -3723,17 +3725,36 @@ sseid,aeid,confidence,name
 25729,26288,1,
 25822,26379,3,RE::AIForumulas::ComputePickpocketSuccess
 25932,26519,1,
+25961,26550,1,
+25962,26551,1,
+25963,26552,1,
+25964,26553,1,
 25970,26560,1,
 25971,26561,1,
 25977,26586,3,RE::BSFaceGenAnimationData::Reset
+25978,26591,1,
+25979,26593,1,
 25980,26594,3,RE::BSFaceGenAnimationData::SetExpressionOverride
+25983,26598,1,
+25984,26599,1,
+25985,26600,1,
+25986,26601,1,
+25988,26604,1,
 26059,26667,1,
 26259,26838,3,RE::BSFaceGenManager::PrepareHeadPartForShaders
+26298,26881,1,
 26304,26887,1,
 26305,26888,1,
+26348,26926,1,
+26363,26941,1,
 26364,26942,1,
 26365,26943,1,
 26407,26988,2,
+26408,26989,1,
+26409,26990,1,
+26410,26991,1,
+26412,26993,1,
+26414,26995,1,
 26497,27093,2,
 26563,27195,1,
 26620,27293,1,
@@ -8615,8 +8636,17 @@ sseid,aeid,confidence,name
 75028,76790,2,void BSSubIndexTriShape::ClearSegmentActiveFlag(std::uint32_t a_segment)
 75029,76791,2,void BSSubIndexTriShape::RecomputeSegmentData()
 75031,76793,2,BSSubIndexTriShape* BSSubIndexTriShape::ctor()
+75042,76809,1,
+75043,76805,1,
+75044,76806,1,
+75045,76808,1,
 75460,77245,3,void Renderer::Begin(std::uint32_t a_windowID)
 75507,77299,3,RE::RendererData::CreateRenderTexture
+75656,77462,1,
+75659,77465,1,
+75660,77466,1,
+75662,77468,1,
+75663,77469,1,
 76017,77850,3,"void ComputePhysicsStepTimes(float a_frameDelta, bool a_complex)"
 76071,77905,2,
 76072,77906,2,
@@ -10936,6 +10966,7 @@ sseid,aeid,confidence,name
 101149,108133,1,
 101150,108134,1,
 101152,108136,1,BSLines::dtor_*
+101163,108147,1,
 101170,108154,1,
 101172,108157,1,BSDynamicLines::GetRTTI_*
 101174,108158,1,BSStreamParserData::sub_*

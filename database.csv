@@ -421,9 +421,11 @@
 16169,0x1401f9eb0,0x14020b7f0,2,static void ScreenSplatter::InitStaticName()
 16170,0x1401f9f00,0x14020b840,2,static void ScreenSplatter::ReleaseStaticName()
 16171,0x1401f9f40,0x14020b880,2,ScreenSplatter* ScreenSplatter::ctor()
+16172,0x1401fa200,0x14020bb50,2,void ScreenSplatter::Dtor()
 16173,0x1401fa360,0x14020bcb0,2,void ScreenSplatter::Update()
 16174,0x1401fa540,0x14020be90,2,"void ScreenSplatter::Trigger(void* a_unk1, float a_unk2)"
 16175,0x1401fa6c0,0x14020c010,3,void NiCamera::ScreenSplatter::Clear()
+16176,0x1401fa6f0,0x14020c040,2,NiNode* ScreenSplatter::CreateSplatterNode(std::uint16_t a_count)
 16185,0x1401fb8d0,0x14020d220,2,"void BSTextureDB::ReleaseEntry(void* a_entryDB, void* a_entry)"
 16188,0x1401fbaf0,0x14020d440,2,void SleepFrameThrottle()
 16202,0x1401fd350,0x14020eca0,4,void TESRegion::SetCurrentWeather(TESWeather* a_weather)
@@ -975,10 +977,21 @@
 25931,0x1403c1700,0x1403d0f80,4,"float GetDualCastingEffectiveness(RE::ActorValueOwner* a_actorValueOwner, float a_cost)"
 25932,0x1403c1720,0x1403d0fa0,3,"float GetDualCastCost(void* a_unused, float a_cost)"
 25933,0x1403c1740,0x1403d0fc0,3,TrueHUD::GetSoulType
+25961,0x1403c26f0,0x1403d1f70,2,bool BSFaceGenAnimationData::UpdateDialoguePhonemes(float a_delta)
+25962,0x1403c27c0,0x1403d2040,2,bool BSFaceGenAnimationData::UpdateDialogueModifiers(float a_delta)
+25963,0x1403c2880,0x1403d2100,2,void BSFaceGenAnimationData::ReleaseFinishedDialogueData()
+25964,0x1403c2930,0x1403d21b0,2,void BSFaceGenAnimationData::UpdateEyeBlinking(float a_delta)
 25970,0x1403c3330,0x1403d2bb0,2,static void BSFaceGenAnimationData::InitStaticArray()
 25971,0x1403c3390,0x1403d2c10,2,static void BSFaceGenAnimationData::ReleaseStaticArray()
 25977,0x1403c38e0,0x1403d3160,3,"void BSFaceGenAnimationData::Reset(float a_timer, bool a_resetExpression, bool a_resetModifierAndPhoneme, bool a_resetCustom, bool a_closeEyes)"
+25978,0x1403c3b10,0x1403d3390,2,"void BSFaceGenAnimationData::SetEyesClosed(bool a_closed, bool a_immediate)"
+25979,0x1403c3df0,0x1403d3670,2,void BSFaceGenAnimationData::SetExpressionTransitionTarget(float* a_values)
 25980,0x1403c3f00,0x1403d3780,3,"void BSFaceGenAnimationData::SetExpressionOverride(std::int32_t a_idx, float a_value)"
+25983,0x1403c4030,0x1403d38b0,2,"bool BSFaceGenAnimationData::Update(float a_delta, bool a_updateBlinking)"
+25984,0x1403c4580,0x1403d3e00,2,"void BSFaceGenAnimationData::SetEyeLookModifiers(float a_heading, float a_pitch)"
+25985,0x1403c4770,0x1403d3ff0,2,"void BSFaceGenAnimationData::UpdateEyeOffsets(std::int32_t a_expression, float* a_heading, float* a_pitch, float a_delta)"
+25986,0x1403c4a70,0x1403d42f0,2,bool BSFaceGenAnimationData::UpdateEyeDirection(float a_delta)
+25988,0x1403c5030,0x1403d48b0,2,std::int32_t BSFaceGenAnimationData::GetDominantExpression() const
 26009,0x1403c66a0,0x1403d5f20,4,RE::random
 26059,0x1403c8520,0x1403d7da0,2,static void BSFaceGenDB::DumpCache(NiBinaryStream* a_stream)
 26252,0x1403d2220,0x1403e1b80,3,"void BSFaceGenManager::ApplyMorph(BSFaceGenNiNode* a_faceNode, TESNPC* a_npc, const BSFixedString& a_morphName, float a_relative)"
@@ -986,16 +999,24 @@
 26256,0x1403d24f0,0x1403e1e50,3,
 26258,0x1403D2970,0x1403E22E0,4,WhosWho::GetFaceRelatedData
 26259,0x1403d2a60,0x1403e23d0,3,"void BSFaceGenManager::PrepareHeadPartForShaders(BSFaceGenNiNode* a_node, BGSHeadPart* a_headPart, TESNPC* a_npc)"
+26298,0x1403d4410,0x1403e3d80,2,bool BSFaceGenModel::CloneFaceGeometry(NiPointer<NiAVObject>& a_out)
 26299,0x1403d45b0,0x1403e3f20,3,
 26300,0x1403d4630,0x1403e3fa0,3,"uint8_t BSFaceGenModel::ApplyRaceMorph(BSFixedString* a_morphName, TESModelTri* a_modelMorph, NiAVObject** a_headNode, float a_relative, uint8_t a_unk1)"
 26303,0x1403d4b70,0x1403e44e0,4,"void BSFaceGenModelExtraData::SetBoneName (BSFaceGenModelExtraData * a_this, uint32_t a_index, BSFixedString * a_name)"
 26304,0x1403d4b90,0x1403e4500,2,static void BSFaceGenModelExtraData::InitStaticName()
 26305,0x1403d4be0,0x1403e4550,2,static void BSFaceGenModelExtraData::ReleaseStaticName()
 26343,0x1403d68e0,0x1403e6250,4,"void BSFaceGenMorphDataHead::ApplyMorphWeight (BSFaceGenMorphDataHead * a_this, NiAVObject * a_node, float a_weight)"
+26348,0x1403d7740,0x1403e70b0,2,"void BSFaceGenMorphDataHead::ApplyMorph(std::uint32_t a_morphType, std::uint32_t a_index, NiAVObject* a_geometry, float a_value)"
+26363,0x1403d7fb0,0x1403e7920,2,void BSFaceGenBaseMorphExtraData::CopyVerticesTo(NiAVObject* a_geometry)
 26364,0x1403d8030,0x1403e79a0,2,static void BSFaceGenBaseMorphExtraData::InitStaticName()
 26365,0x1403d8080,0x1403e79f0,2,static void BSFaceGenBaseMorphExtraData::ReleaseStaticName()
 26406,0x1403d8840,0x1403e81b0,4,"void BSFaceGenNiNode::LoadAndProcessGeometryData(BSFaceGenNiNode * a_headNode, NiNode * a_skeleton, BSGeometry * a_geometry)"
 26407,0x1403d8980,0x1403e82f0,2,void BSFaceGenNiNode::UpdateMorphing(bool a_flag)
+26408,0x1403d8d50,0x1403e86c0,2,void BSFaceGenNiNode::ApplyExpressionMorphs(void* a_context)
+26409,0x1403d8e00,0x1403e8770,2,void BSFaceGenNiNode::ApplyModifierMorphs(void* a_context)
+26410,0x1403d8fd0,0x1403e8940,2,void BSFaceGenNiNode::ApplyPhonemeMorphs(void* a_context)
+26412,0x1403d90e0,0x1403e8a50,2,"void BSFaceGenNiNode::ApplyMorph(std::uint32_t a_morphType, std::uint32_t a_index, float a_value)"
+26414,0x1403d9280,0x1403e8bf0,2,void BSFaceGenNiNode::RestoreBaseMorphs()
 26428,0x1403d9ca0,0x1403e9620,4,char* BSFaceGenKeyframeMultiple::GetExpressionName(std::uint32_t a_expression)
 26429,0x1403d9cc0,0x1403e9640,4,char* BSFaceGenKeyframeMultiple::GetModifierName(std::uint32_t a_modifier)
 26430,0x1403d9ce0,0x1403e9660,4,char* BSFaceGenKeyframeMultiple::GetPhonemeName(std::uint32_t a_phoneme)
@@ -5011,6 +5032,10 @@
 75028,0x140d59410,0x140da2520,2,void BSSubIndexTriShape::ClearSegmentActiveFlag(std::uint32_t a_segment)
 75029,0x140d59430,0x140da2540,2,void BSSubIndexTriShape::RecomputeSegmentData()
 75031,0x140d595e0,0x140da26f0,2,BSSubIndexTriShape* BSSubIndexTriShape::ctor()
+75042,0x140d59710,0x140da2820,2,static BSDistantObjectLargeRefExtraData* BSDistantObjectLargeRefExtraData::Create()
+75043,0x140d597b0,0x140da28c0,2,BSDistantObjectLargeRefExtraData* BSDistantObjectLargeRefExtraData::Ctor()
+75044,0x140d59800,0x140da2910,2,BSDistantObjectLargeRefExtraData* BSDistantObjectLargeRefExtraData::Ctor(bool a_largeRef)
+75045,0x140d59880,0x140da2990,2,static BSDistantObjectLargeRefExtraData* BSDistantObjectLargeRefExtraData::GetExtraData(NiAVObject* a_object)
 75051,0x140d59b60,0x140da2c70,3,BSCompoundFrustum* BSCompoundFrustum::Ctor(BSCompoundFrustum* a_this)
 75052,0x140d59d00,0x140da2e10,3,void BSCompoundFrustum::Dtor(BSCompoundFrustum* a_this)
 75053,0x140d59db0,0x140da2ec0,3,BSCompoundFrustum* BSCompoundFrustum::AllocateFromPool()
@@ -5082,6 +5107,11 @@
 75647,0x140d74d10,0x140dc7b50,4,"void RenderTargetManager::SetCurrentDepthStencilTarget(RENDER_TARGET_DEPTHSTENCIL a_renderTarget, SetRenderTargetMode a_mode, std::uint32_t a_slice)"
 75648,0x140d74d60,0x140dc7ba0,4,"void RenderTargetManager::SetCurrentCubeMapRenderTarget(RENDER_TARGET_CUBEMAP a_renderTarget, SetRenderTargetMode a_mode, std::uint32_t a_faceIndex, bool a_updateViewport)"
 75654,0x140d74ec0,0x140dc7d10,3,"void Renderer::SetRenderTarget(std::uint32_t a_renderTargetSlot, RENDER_TARGET a_renderTarget, SetRenderTargetMode a_mode, bool a_updateViewport)"
+75656,0x140d751f0,0x140dc8080,2,"static std::uint64_t BSGraphics::PackVertexData(std::uint32_t a_vertexCount, NiPoint3* a_positions, NiPoint2* a_uvs, float* a_uvs2, NiPoint3* a_normals, NiPoint3* a_tangents, NiPoint3* a_bitangents, NiColorA* a_colors, float* a_boneWeights, std::uint8_t* a_boneIndices, float* a_landData1, float* a_landData2, float* a_eyeData, void* a_buffer, std::uint32_t* a_size, std::uint16_t* a_remap, std::uint32_t a_dynamicAttributes, void* a_dynamicBuffer, std::uint32_t a_dynamicStride)"
+75659,0x140d771b0,0x140dca810,2,"static BSTriShape* BSTriShape::Create(std::uint32_t a_triangleCount, std::uint16_t* a_indices, std::uint32_t a_vertexCount, NiPoint3* a_positions, NiPoint2* a_uvs, float* a_uvs2, NiPoint3* a_normals, NiPoint3* a_tangents, NiPoint3* a_bitangents, NiColorA* a_colors, float* a_boneWeights, std::uint8_t* a_boneIndices, float* a_landData1, float* a_landData2, float* a_eyeData)"
+75660,0x140d774e0,0x140dcab40,2,"static BSDynamicTriShape* BSDynamicTriShape::Create(std::uint32_t a_dynamicAttributes, std::uint32_t a_triangleCount, std::uint16_t* a_indices, std::uint32_t a_vertexCount, NiPoint3* a_positions, NiPoint2* a_uvs, float* a_uvs2, NiPoint3* a_normals, NiPoint3* a_tangents, NiPoint3* a_bitangents, NiColorA* a_colors, float* a_boneWeights, std::uint8_t* a_boneIndices, float* a_landData1, float* a_landData2, float* a_eyeData)"
+75662,0x140d77ad0,0x140dcb460,2,"static BSLines* BSLines::Create(std::uint32_t a_lineCount, std::uint16_t* a_indices, std::uint32_t a_vertexCount, NiPoint3* a_positions, NiPoint2* a_uvs, float* a_uvs2, NiPoint3* a_normals, NiPoint3* a_tangents, NiPoint3* a_bitangents, NiColorA* a_colors, float* a_boneWeights, std::uint8_t* a_boneIndices, float* a_landData1, float* a_landData2, float* a_eyeData)"
+75663,0x140d77da0,0x140dcb730,2,"static BSDynamicLines* BSDynamicLines::Create(std::uint32_t a_dynamicAttributes, std::uint32_t a_lineCount, std::uint16_t* a_indices, std::uint32_t a_vertexCount, NiPoint3* a_positions, NiPoint2* a_uvs, float* a_uvs2, NiPoint3* a_normals, NiPoint3* a_tangents, NiPoint3* a_bitangents, NiColorA* a_colors, float* a_boneWeights, std::uint8_t* a_boneIndices, float* a_landData1, float* a_landData2, float* a_eyeData)"
 75681,0x140d7a180,0x140dcdb30,3,std::uint64_t NiTriShape::CreateSkinPartitionBuffers(void* a_extra)
 75682,0x140d7a6d0,0x140dce080,3,void NiTriShape::CreateBSTriShapeFromData(bool a_dynamic)
 75684,0x140d7aec0,0x140dce930,3,"BSTriShape* NiTriShape::ConvertToBSTriShape(void* a_unused1, std::uint32_t a_unused2, void* a_listener, bool a_dynamic)"
@@ -6952,7 +6982,9 @@
 100997,0x141310e10,0x141354d20,3,"uint32_t CalculateActiveNonShadowCasterLights(BSShaderPropertyLightData* a_lightData, BSLight** a_lights, uint32_t a_maxCount, int* a_shadowCount, ShadowSceneNode* a_ssn, BSLightingShaderProperty* a_property, bool a_addShadow, bool* a_useShadowSun, bool a_firstPerson, uint32_t a_firstPersonMask, bool a_skipAccumulation)"
 101009,0x141311700,0x141355440,3,"void BSLight::RemoveGeometry(BSLight* this, BSTriShape* a_geometry)"
 101142,0x1413173d0,0x141360030,4,BSOrderedNode* FindBSOrderedNodeAncestor(NiAVObject* a_object)
+101149,0x141317730,0x141360390,2,"BSLines* BSLines::Ctor(BSGraphics::TriShape* a_rendererData, std::uint64_t a_vertexDesc, std::uint16_t a_vertexCount, std::uint16_t a_lineCount)"
 101151,0x1413177c0,0x141360420,3,void BSLines::~BSLines()
+101163,0x141317cf0,0x141360950,2,BSDynamicLines* BSDynamicLines::Ctor()
 101290,0x14131c350,0x1413621d0,3,void BSLight::~BSLight(BSLight* this)
 101291,0x14131c560,0x1413623e0,3,"void BSLight::UpdateLODFadeAndCull(BSLight* this, NiCullingProcess* a_cull)"
 101296,0x14131cde0,0x141362c60,4,"void BSLight::AttachGeometry(BSLight* this, BSGeometry* a_geometry)"
