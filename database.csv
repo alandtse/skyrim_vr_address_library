@@ -984,10 +984,13 @@
 25964,0x1403c2930,0x1403d21b0,2,void BSFaceGenAnimationData::UpdateEyeBlinking(float a_delta)
 25965,0x1403c2c20,0x1403d24a0,2,"void BSFaceGenAnimationData::ResetDialogueKeyframes(float a_timer, bool a_resetExpression, bool a_resetModifierAndPhoneme, bool a_resetCustom, bool a_closeEyes)"
 25966,0x1403c2e00,0x1403d2680,2,"void BSFaceGenAnimationData::ResetOverrideKeyframes(float a_timer, bool a_resetExpression, bool a_resetModifierAndPhoneme, bool a_resetCustom)"
+25967,0x1403c2ef0,0x1403d2770,2,BSFaceGenAnimationData* BSFaceGenAnimationData::Ctor()
 25969,0x1403c32a0,0x1403d2b20,2,static const BSFixedString& BSFaceGenAnimationData::GetExtraDataName()
 25970,0x1403c3330,0x1403d2bb0,2,static void BSFaceGenAnimationData::InitStaticArray()
 25971,0x1403c3390,0x1403d2c10,2,static void BSFaceGenAnimationData::ReleaseStaticArray()
 25972,0x1403c3420,0x1403d2ca0,2,void BSFaceGenAnimationData::SetOverrideEnabled(bool a_enabled)
+25973,0x1403c34c0,0x1403d2d40,2,static float BSFaceGenAnimationData::GetExpressionChangePerSec()
+25974,0x1403c34e0,0x1403d2d60,2,static float BSFaceGenAnimationData::GetExpressionStrengthAdd()
 25976,0x1403c37c0,0x1403d3040,2,bool BSFaceGenAnimationData::GetHeadRotation(NiMatrix3& a_out)
 25977,0x1403c38e0,0x1403d3160,3,"void BSFaceGenAnimationData::Reset(float a_timer, bool a_resetExpression, bool a_resetModifierAndPhoneme, bool a_resetCustom, bool a_closeEyes)"
 25978,0x1403c3b10,0x1403d3390,2,"void BSFaceGenAnimationData::SetEyesClosed(bool a_closed, bool a_immediate)"
@@ -1005,6 +1008,7 @@
 26009,0x1403c66a0,0x1403d5f20,4,RE::random
 26059,0x1403c8520,0x1403d7da0,2,static void BSFaceGenDB::DumpCache(NiBinaryStream* a_stream)
 26201,0x1403d0270,0x1403dfbd0,2,bool BSFaceGenKeyframe::SetTimer(float a_timer)
+26210,0x1403d0a60,0x1403e03c0,2,"BSFaceGenKeyframeMultiple* BSFaceGenKeyframeMultiple::Ctor(BSFaceGenKeyframe::Type a_type, std::uint32_t a_count, const float* a_values)"
 26214,0x1403d0f00,0x1403e0860,2,bool BSFaceGenKeyframeMultiple::Unk_01(BSTArray<BSFaceGenKeyframe*>& a_arr)
 26215,0x1403d1010,0x1403e0970,2,"bool BSFaceGenKeyframeMultiple::Interpolate(BSFaceGenKeyframe* a_keyframe, float a_k, bool a_ignoreSmall, bool a_copyBig)"
 26216,0x1403d1250,0x1403e0bb0,2,"bool BSFaceGenKeyframeMultiple::Interpolate(BSFaceGenKeyframe* a_keyframe1, BSFaceGenKeyframe* a_keyframe2, float a_k)"
@@ -1018,6 +1022,7 @@
 26224,0x1403d19c0,0x1403e1320,2,bool BSFaceGenKeyframeMultiple::NotZero()
 26226,0x1403d1a40,0x1403e13a0,2,"void BSFaceGenKeyframeMultiple::Allocate(std::uint32_t a_count, bool a_initToZero)"
 26244,0x1403d1e60,0x1403e17c0,2,BSFaceGenManager* BSFaceGenManager::Ctor()
+26246,0x1403d1f10,0x1403e1870,2,"void BSFaceGenManager::GetModel(const char* a_modelPath, const char* a_triPath, NiPointer<BSFaceGenModel>& a_out, bool a_loadIfMissing, bool a_unk)"
 26247,0x1403d2090,0x1403e19f0,2,void BSFaceGenManager::PurgeUnusedModels()
 26250,0x1403d2120,0x1403e1a80,2,void BSFaceGenManager::ResetToBaseMorph(NiAVObject* a_geometry)
 26251,0x1403d21b0,0x1403e1b10,2,"void BSFaceGenManager::ApplyHairMorph(NiAVObject* a_geometry, float a_weight)"
@@ -1028,21 +1033,29 @@
 26259,0x1403d2a60,0x1403e23d0,3,"void BSFaceGenManager::PrepareHeadPartForShaders(BSFaceGenNiNode* a_node, BGSHeadPart* a_headPart, TESNPC* a_npc)"
 26291,0x1403d4070,0x1403e39e0,2,BSFaceGenModel* BSFaceGenModel::Ctor()
 26296,0x1403d42f0,0x1403e3c60,2,NiPointer<BSFaceGenMorphData>& BSFaceGenModel::GetMorphData(NiPointer<BSFaceGenMorphData>& a_out)
+26297,0x1403d4400,0x1403e3d70,2,"bool BSFaceGenModel::LoadModel(const char* a_modelPath, const char* a_triPath, bool a_unk)"
 26298,0x1403d4410,0x1403e3d80,2,bool BSFaceGenModel::CloneFaceGeometry(NiPointer<NiAVObject>& a_out)
 26299,0x1403d45b0,0x1403e3f20,3,
 26300,0x1403d4630,0x1403e3fa0,3,"uint8_t BSFaceGenModel::ApplyRaceMorph(BSFixedString* a_morphName, TESModelTri* a_modelMorph, NiAVObject** a_headNode, float a_relative, uint8_t a_unk1)"
+26302,0x1403d47c0,0x1403e4130,2,"bool BSFaceGenModel::DoLoadModel(const char* a_modelPath, const char* a_triPath, bool a_unk)"
 26303,0x1403d4b70,0x1403e44e0,4,"void BSFaceGenModelExtraData::SetBoneName (BSFaceGenModelExtraData * a_this, uint32_t a_index, BSFixedString * a_name)"
 26304,0x1403d4b90,0x1403e4500,2,static void BSFaceGenModelExtraData::InitStaticName()
 26305,0x1403d4be0,0x1403e4550,2,static void BSFaceGenModelExtraData::ReleaseStaticName()
+26309,0x1403d4d00,0x1403e4670,2,BSFaceGenModelMap* BSFaceGenModelMap::Ctor()
+26311,0x1403d4d80,0x1403e46f0,2,"void BSFaceGenModelMap::Insert(const char* a_path, BSFaceGenModel* a_model)"
+26312,0x1403d4f90,0x1403e4900,2,"bool BSFaceGenModelMap::Find(const char* a_path, NiPointer<BSFaceGenModel>& a_out)"
 26314,0x1403d5280,0x1403e4bf0,2,void BSFaceGenModelMap::PurgeUnused()
 26343,0x1403d68e0,0x1403e6250,4,"void BSFaceGenMorphDataHead::ApplyMorphWeight (BSFaceGenMorphDataHead * a_this, NiAVObject * a_node, float a_weight)"
+26346,0x1403d72a0,0x1403e6c10,2,BSFaceGenMorphDataHead* BSFaceGenMorphDataHead::Ctor(void* a_triData)
 26348,0x1403d7740,0x1403e70b0,2,"void BSFaceGenMorphDataHead::ApplyMorph(std::uint32_t a_morphType, std::uint32_t a_index, NiAVObject* a_geometry, float a_value)"
 26349,0x1403d7860,0x1403e71d0,2,"bool BSFaceGenMorphDataHead::ApplyNamedMorph(const BSFixedString& a_name, NiAVObject* a_geometry, float a_weight, bool a_accumulate)"
 26350,0x1403d7910,0x1403e7280,2,bool BSFaceGenMorphDataHead::HasMorph(const BSFixedString& a_name)
 26355,0x1403d7af0,0x1403e7460,2,"void* BSFaceGenMorphDataHead::FindMorph(void* a_lock, const BSFixedString& a_name)"
+26356,0x1403d7bb0,0x1403e7520,2,BSFaceGenMorphDataHair* BSFaceGenMorphDataHair::ctor(void* a_triData)
 26357,0x1403d7c10,0x1403e7580,2,"void BSFaceGenMorphDataHair::ApplyMorph(NiAVObject* a_geometry, float a_weight)"
 26358,0x1403d7cd0,0x1403e7640,2,void BSFaceGenBaseMorphExtraData::AllocateVertexData()
 26359,0x1403d7d60,0x1403e76d0,2,void BSFaceGenBaseMorphExtraData::FreeVertexData()
+26360,0x1403d7dc0,0x1403e7730,2,"BSFaceGenBaseMorphExtraData* BSFaceGenBaseMorphExtraData::ctor(NiAVObject* a_geometry, void* a_triData)"
 26361,0x1403d7f20,0x1403e7890,2,void BSFaceGenBaseMorphExtraData::~BSFaceGenBaseMorphExtraData()
 26362,0x1403d7fa0,0x1403e7910,2,NiPoint3* BSFaceGenBaseMorphExtraData::GetVertexData()
 26363,0x1403d7fb0,0x1403e7920,2,void BSFaceGenBaseMorphExtraData::CopyVerticesFrom(NiAVObject* a_geometry)
@@ -2929,6 +2942,7 @@
 36828,0x140601280,0x140609a90,2,bool Actor::GetPathGoalPosition(NiPoint3* a_out)
 36829,0x1406012b0,0x140609ac0,2,bool Actor::GetPathGoalLocation(BSPathingLocation* a_out)
 36835,0x140601580,0x140609d90,2,"bool Actor::GetPathLookAheadPoint(float a_minDistance, float a_maxDistance, float a_lookAheadTime, NiPoint3* a_outPoint)"
+36839,0x140601980,0x14060a190,2,static std::uint32_t Actor::GetMoodFromEmotion(std::uint32_t a_emotion)
 36841,0x140601b50,0x14060a360,2,float Character::CalculateRadius()
 36850,0x140602040,0x14060a850,2,void Character::RefreshCachedValues()
 36852,0x1406021d0,0x14060a9e0,2,void DestroyMovementMessagePool()
@@ -2960,6 +2974,7 @@
 36953,0x140609b20,0x1406126e0,2,bool Actor::RefreshEquippedHandItems()
 36973,0x14060b620,0x140614210,3,RE::GameEventHandler::FallLongDistance::CalcDoDamage::process_movefinish_event
 36979,0x14060ca30,0x1406155f0,3,Actor::EquipConflictCheck
+36985,0x14060db50,0x140616710,2,void Actor::UpdateFacialExpression()
 36993,0x14060e800,0x1406173c0,2,float ActorState::GetYawRotationSpeed()
 36994,0x14060e820,0x1406173e0,3,TrueHUD::FlashHUDStaminaMountHook
 36995,0x14060ea70,0x140617680,3,std::uint32_t ActorState::GetFormID()
@@ -3260,6 +3275,7 @@
 38356,0x14064f2c0,0x140658610,2,void AIProcess::ClearQueueOfGreetings()
 38359,0x14064f4b0,0x140658800,3,AIProcess::UpdatePackageObserveCombatHigh
 38364,0x14064f8b0,0x140658c00,2,bool AIProcess::IsTalkingToPC()
+38366,0x14064f8f0,0x140658c40,2,std::uint32_t AIProcess::GetEmotionType()
 38376,0x14064fe60,0x1406591b0,2,"void AIProcess::StartFleeFrom(Actor* a_actor, TESObjectREFR* a_threat)"
 38378,0x1406500d0,0x140659420,2,"std::uint16_t AIProcess::GetDesiredMoveFlags(Actor* a_actor, float a_distance, float a_stopRunDistance, float a_startRunDistance, bool a_forceRun, bool a_unk)"
 38379,0x140650230,0x140659580,2,"void AIProcess::SetMoveMode(Actor* a_actor, std::int32_t a_moveFlags, bool a_usePackageFlags)"
@@ -4916,6 +4932,8 @@
 69568,0x140c72420,0x140cb87d0,2,void BSDynamicTriShape::UnlockDynamicData()
 69569,0x140c72480,0x140cb8830,3,void BSDynamicTriShape::ResizeDynamicData(std::uint32_t a_dataSize)
 69570,0x140c724d0,0x140cb8880,2,"void BSDynamicTriShape::UpdateDynamicPositions(NiPoint3* a_positions, bool a_updateBound)"
+69571,0x140c725f0,0x140cb89a0,2,"void BSDynamicTriShape::UpdateDynamicVertexData(NiPoint3* a_positions, NiPoint3* a_normals, NiPoint3* a_tangents, NiPoint3* a_bitangents, NiColorA* a_colors, bool a_updateBound)"
+69572,0x140c72a20,0x140cb8dd0,2,"void BSDynamicTriShape::UpdateDynamicLandData(const NiColorA* a_landBlend1, const NiColorA* a_landBlend2)"
 69573,0x140c72c60,0x140cb9010,3,BSDynamicTriShape* BSDynamicTriShape::scalar_deleting_destructor(std::uint32_t a_flags)
 69583,0x140c731f0,0x140cb95a0,4,NiPointLight* NiPointLight::Ctor
 69636,0x140c76060,0x140cbc490,3,RE::BSResourceNiBinaryStream::Ctor
@@ -7044,6 +7062,7 @@
 101150,0x141317780,0x1413603e0,2,BSLines* BSLines::Ctor()
 101151,0x1413177c0,0x141360420,3,void BSLines::~BSLines()
 101156,0x1413179b0,0x141360610,2,"void BSDynamicLines::CopyMembers(BSDynamicLines* a_target, NiCloningProcess& a_cloning)"
+101162,0x141317c20,0x141360880,2,static BSDynamicLines* BSDynamicLines::Create()
 101163,0x141317cf0,0x141360950,2,BSDynamicLines* BSDynamicLines::Ctor()
 101164,0x141317d90,0x1413609f0,2,BSDynamicLines* BSDynamicLines::Ctor()
 101165,0x141317de0,0x141360a40,2,void BSDynamicLines::Dtor()
