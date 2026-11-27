@@ -3470,7 +3470,6 @@
 38900,0x14067fe60,0x1406892e0,4,LLF::AIProcess_CalculateLightValue_GetLuminance
 38913,0x140680d40,0x14068a1c0,2,float AIProcess::GetAlphaMult()
 38915,0x140680d90,0x14068a210,2,float AIProcess::GetScriptRefractPower()
-38916,0x140680db0,0x14068a230,2,void AIProcess::SetScriptRefractPower(float a_value)
 38921,0x140680ee0,0x14068a350,2,void AIProcess::SetForceNextUpdate(bool a_value)
 38922,0x140680f00,0x14068a370,2,bool AIProcess::GetForceNextUpdate()
 38923,0x140680f20,0x14068a390,2,void AIProcess::SetSummonedCreature(bool a_value)
