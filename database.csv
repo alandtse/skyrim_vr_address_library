@@ -5925,7 +5925,7 @@
 36682,0x1405f87f0,0x140600f60,3,RE::Actor::CreateBlood
 36683,0x1405f9a20,0x140602190,3,WashThatBloodOff::Decal::Weapon::CreateBloodOnWeapon
 36685,0x1405f9dd0,0x140602540,2,void Actor::ForEachPerk(PerkEntryVisitor& a_visitor)
-36690,0x1405f9e30,0x1406025a0,3,RE::Actor::HasPerk
+36690,0x1405f9e30,0x1406025a0,3,std::uint8_t Actor::HasPerk(BGSPerk* a_perk)
 36692,0x1405f9eb0,0x140602620,2,bool Actor::HasPerkEntries(EntryPoint a_entryType)
 36693,0x1405f9ee0,0x140602650,2,"void Actor::ForEachPerkEntry(EntryPoint a_entryType, PerkEntryVisitor& a_visitor)"
 36694,0x1405f9f00,0x140602670,2,void Actor::ApplyPerksFromBase()
@@ -8583,6 +8583,8 @@
 46168,0x1407c41b0,0x1407ef500,3,void CombatBehaviorParallel::Enter()
 46169,0x1407c42f0,0x1407ef640,3,void CombatBehaviorParallel::Update()
 46170,0x1407c4470,0x1407ef7c0,3,void CombatBehaviorParallel::Abort()
+46171,0x1407c45a0,0x1407ef8f0,2,void CombatBehaviorParallel::SaveGame(BGSSaveFormBuffer* a_buffer)
+46172,0x1407c4630,0x1407ef980,2,void CombatBehaviorParallel::LoadGame(BGSLoadFormBuffer* a_buffer)
 46173,0x1407c4750,0x1407efaa0,3,void CombatBehaviorSpawnParallel::Enter()
 46174,0x1407c4880,0x1407efbd0,2,void CombatBehaviorSpawnParallel::SaveGame(BGSSaveFormBuffer* a_buffer)
 46175,0x1407c48d0,0x1407efc20,2,void CombatBehaviorSpawnParallel::LoadGame(BGSLoadFormBuffer* a_buffer)
@@ -8629,6 +8631,7 @@
 46239,0x1407c6c90,0x1407f1fe0,3,void CombatBehaviorThread::Unsuspend()
 46240,0x1407c6d30,0x1407f2080,4,void CombatBehaviorTreeControl::SetFailed(bool a_fail) src\RE/CombatBehaviorTreeControl.h:47
 46243,0x1407c6e10,0x1407f2160,3,void CombatBehaviorThread::SetAborted()
+46244,0x1407c6e70,0x1407f21c0,2,void CombatBehaviorThread::Save(BGSSaveGameBuffer* a_buffer)
 46251,0x1407c7500,0x1407f2850,3,void CombatBehaviorThread::AddChildThread(CombatBehaviorThread* a_thread)
 46255,0x1407c7690,0x1407f29e0,4,"NodeArray& pushback_parentof(NodeArray& array, NodeArray& cont_node)"
 46256,0x1407c7730,0x1407f2a80,4,CombatBehaviorTree::TreeBuilder& TreeBuilder::operator[](const TreeBuilder& a_other)
@@ -8686,6 +8689,8 @@
 46335,0x1407c9300,0x1407f4650,2,static const BSFixedString& CombatBehaviorTreeLinkNode::GetClassType()
 46336,0x1407c9390,0x1407f46e0,2,static const BSFixedString& CombatBehaviorTreeRootNode::GetClassType()
 46338,0x1407c94d0,0x1407f4820,3,bool CombatAcquireItem::IsValid()
+46339,0x1407c9540,0x1407f4890,2,void CombatAcquireItem::SaveGame(BGSSaveGameBuffer* a_buffer)
+46340,0x1407c9600,0x1407f4950,2,void CombatAcquireItem::LoadGame(BGSLoadGameBuffer* a_buffer)
 46341,0x1407c9690,0x1407f49e0,3,void CombatBehaviorContextAcquireWeapon::Enter()
 46342,0x1407c9900,0x1407f4c50,3,void CombatBehaviorContextAcquireWeapon::Exit()
 46347,0x1407ca670,0x1407f59c0,2,void CombatBehaviorFindWeapon::SaveGame(BGSSaveFormBuffer* a_buffer)
@@ -8924,6 +8929,7 @@
 46700,0x1407d6310,0x140801660,3,void CombatBehaviorContextCloseMovement::SetTargetLocation(const NiPointer<CombatTargetLocation>& loc)
 46703,0x1407d6430,0x140801780,3,void CombatBehaviorAdvance::Enter()
 46704,0x1407d6980,0x140801cd0,3,void CombatBehaviorAdvance::Update()
+46707,0x1407d6c30,0x140801f80,2,void CombatBehaviorAdvance::LoadGame(BGSLoadFormBuffer* a_buffer)
 46708,0x1407d6d30,0x140802080,3,void CombatBehaviorReposition::Enter()
 46709,0x1407d6f40,0x140802290,3,void CombatBehaviorSurround::Enter()
 46710,0x1407d72c0,0x140802610,3,void CombatBehaviorSurround::Update()
