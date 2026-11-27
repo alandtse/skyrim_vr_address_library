@@ -1593,6 +1593,8 @@
 18123,0x140249df0,0x14025b4d0,2,"const char* ConcreteObjectFormFactory<BGSShaderParticleGeometryData,56,88,7>::GetObjectName()"
 18124,0x140249e00,0x14025b4e0,2,"OBJECT_TYPE ConcreteObjectFormFactory<BGSShaderParticleGeometryData,56,88,7>::GetObjectType()"
 18133,0x14024a0e0,0x14025b7c0,4,sub_14024A0E0
+18135,0x14024a210,0x14025b8f0,2,void BGSWorldLocation::SaveGame(BGSSaveGameBuffer* a_buf)
+18136,0x14024a260,0x14025b940,2,void BGSWorldLocation::LoadGame(BGSLoadGameBuffer* a_buf)
 18137,0x14024a480,0x14025bb60,4,ulonglong sub_14024A480 (CellLoaderTask * a_this)
 18139,0x14024a500,0x14025bbe0,2,void CellLoaderTask::PostProcess()
 18140,0x14024a580,0x14025bc60,2,"void CellLoaderTask::Cancel(std::uint32_t a_previousState, void* a_unk)"
@@ -8710,6 +8712,7 @@
 46340,0x1407c9600,0x1407f4950,2,void CombatAcquireItem::LoadGame(BGSLoadGameBuffer* a_buffer)
 46341,0x1407c9690,0x1407f49e0,3,void CombatBehaviorContextAcquireWeapon::Enter()
 46342,0x1407c9900,0x1407f4c50,3,void CombatBehaviorContextAcquireWeapon::Exit()
+46345,0x1407c9a40,0x1407f4d90,2,void CombatBehaviorFindWeapon::Enter()
 46346,0x1407ca530,0x1407f5880,2,void CombatBehaviorFindWeapon::Update()
 46347,0x1407ca670,0x1407f59c0,2,void CombatBehaviorFindWeapon::SaveGame(BGSSaveFormBuffer* a_buffer)
 46348,0x1407ca720,0x1407f5a70,2,void CombatBehaviorFindWeapon::LoadGame(BGSLoadFormBuffer* a_buffer)
@@ -9102,6 +9105,8 @@
 46948,0x1407e0200,0x14080b550,2,bool CombatBehaviorTreeNodeObjectBase<CombatBehaviorSurround>::Validate(CombatBehaviorTreeNode* a_node)
 46951,0x1407e0370,0x14080b6c0,3,bool CombatBehaviorEquipContext::CheckEquipmentChanged()
 46952,0x1407e04a0,0x14080b7f0,3,bool CombatBehaviorEquipContext::EquipItem()
+46955,0x1407e0660,0x14080b9b0,2,void CombatBehaviorEquipObject::Enter()
+46956,0x1407e08c0,0x14080bc10,2,void CombatBehaviorEquipObject::Update()
 46957,0x1407e09d0,0x14080bd20,2,void CombatBehaviorEquipRangedWeapon::Enter()
 46958,0x1407e0bb0,0x14080bf00,2,void CombatBehaviorEquipSpell::Enter()
 46959,0x1407e0d40,0x14080c090,2,void CombatBehaviorEquipSpell::Update()
@@ -9193,6 +9198,8 @@
 47137,0x1407e8f60,0x1408142b0,2,void CombatBehaviorTreeFlankingMovement::Initialize()
 47140,0x1407e94d0,0x140814820,2,void CombatFlankingSearchData::SaveGame(BGSSaveGameBuffer* a_buf)
 47141,0x1407e9610,0x140814960,2,void CombatFlankingSearchData::LoadGame(BGSLoadGameBuffer* a_buf)
+47142,0x1407e9780,0x140814ad0,2,void CombatPathingGoalPolicyFlank::SaveGame(BGSSaveGameBuffer* a_buf)
+47143,0x1407e97c0,0x140814b10,2,void CombatPathingGoalPolicyFlank::LoadGame(BGSLoadGameBuffer* a_buf)
 47145,0x1407ea9c0,0x140815d10,2,"float CombatPathingSearchPolicyFlank::GetEdgeCost(BSFastNavmeshTriLocation* a_from, BSFastNavmeshTriLocation* a_to)"
 47148,0x1407ead80,0x1408160d0,2,void CombatPathingSearchPolicyFlank::LoadGame(BGSLoadGameBuffer* a_buf)
 47150,0x1407eaf30,0x140816280,2,void CombatPathingGoalPolicyFlankDistant::SaveGame(BGSSaveGameBuffer* a_buf)
@@ -9308,6 +9315,7 @@
 47414,0x1407f3b50,0x14081eea0,2,void CombatBehaviorFleeToCover::Enter()
 47415,0x1407f3e80,0x14081f1d0,2,void CombatBehaviorFleeToCover::Update()
 47417,0x1407f4080,0x14081f3d0,2,void CombatBehaviorFleeToCover::LoadGame(BGSLoadFormBuffer* a_buffer)
+47418,0x1407f4150,0x14081f4a0,2,void CombatBehaviorFlee::Enter()
 47419,0x1407f4410,0x14081f760,2,void CombatBehaviorFlee::Update()
 47422,0x1407f4560,0x14081f8b0,2,void CombatBehaviorHide::Enter()
 47423,0x1407f46b0,0x14081fa00,2,void CombatBehaviorHide::Update()
@@ -9474,7 +9482,10 @@
 47730,0x1407fe940,0x140829c90,2,void CombatBehaviorGroundAttack::Enter()
 47731,0x1407fee50,0x14082a1a0,2,void CombatBehaviorGroundAttack::Update()
 47733,0x1407ff280,0x14082a5d0,2,void CombatBehaviorGroundAttack::LoadGame(BGSLoadFormBuffer* a_buffer)
+47734,0x1407ff320,0x14082a670,2,void CombatBehaviorLand::Enter()
 47735,0x1407ff6a0,0x14082a9f0,2,void CombatBehaviorLand::Update()
+47737,0x1407ff890,0x14082abe0,2,void CombatBehaviorLand::LoadGame(BGSLoadGameBuffer* a_buf)
+47738,0x1407ff980,0x14082acd0,2,void CombatBehaviorLandNearby::Enter()
 47739,0x1407ffd80,0x14082b0d0,2,void CombatBehaviorPerchAttack::Enter()
 47740,0x1408001b0,0x14082b500,2,void CombatBehaviorPerchAttack::Update()
 47741,0x140800560,0x14082b8b0,2,void CombatBehaviorPerchAttack::Exit()
@@ -9887,14 +9898,19 @@
 48517,0x14081a3c0,0x140845710,2,bool CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorContextRangedMovement>::Validate(CombatBehaviorTreeNode* a_node)
 48518,0x14081a3d0,0x140845720,2,bool CombatBehaviorTreeNodeObjectBase<CombatBehaviorMaintainOptimalRange>::Validate(CombatBehaviorTreeNode* a_node)
 48519,0x14081a3e0,0x140845730,2,bool CombatBehaviorTreeNodeObjectBase<CombatBehaviorStrafe>::Validate(CombatBehaviorTreeNode* a_node)
+48524,0x14081a6a0,0x1408459f0,2,void CombatBehaviorSearch::Enter()
 48525,0x14081add0,0x140846120,2,void CombatBehaviorSearch::Update()
+48528,0x14081b150,0x1408464a0,2,void CombatBehaviorSearchWander::Enter()
 48529,0x14081b4e0,0x140846830,2,void CombatBehaviorSearchWander::Update()
+48531,0x14081b5e0,0x140846930,2,void CombatBehaviorSearchLocation::Enter()
 48532,0x14081b910,0x140846c60,2,void CombatBehaviorSearchLocation::Update()
 48533,0x14081bae0,0x140846e30,2,void CombatBehaviorSearchLocation::SaveGame(BGSSaveFormBuffer* a_buffer)
 48534,0x14081bb60,0x140846eb0,2,void CombatBehaviorSearchLocation::LoadGame(BGSLoadFormBuffer* a_buffer)
+48536,0x14081bca0,0x140846ff0,2,void CombatBehaviorSearchCenter::Enter()
 48537,0x14081bee0,0x140847230,2,void CombatBehaviorSearchCenter::Update()
 48539,0x14081bfe0,0x140847330,2,void CombatBehaviorSearchInvestigateDoor::Enter()
 48540,0x14081c310,0x140847660,2,void CombatBehaviorSearchInvestigateDoor::Update()
+48541,0x14081c5f0,0x140847940,2,void CombatBehaviorSearchInvestigateDoor::Exit()
 48542,0x14081c750,0x140847aa0,2,void CombatBehaviorSearchInvestigateDoor::SaveGame(BGSSaveFormBuffer* a_buffer)
 48544,0x14081c860,0x140847bb0,2,void CombatBehaviorTreeSearch::Initialize()
 48546,0x14081d4f0,0x140848840,2,void CombatPathingGoalPolicySearch::SaveGame(BGSSaveGameBuffer* a_buf)
@@ -10203,6 +10219,8 @@
 49314,0x14083ce80,0x140868180,2,std::uint32_t CombatApproachTargetSpeedController::GetObjectType()
 49315,0x14083ce90,0x140868190,2,bool CombatPathingSphere::IsOutside(BSFastNavmeshTriLocation* a_node)
 49316,0x14083cee0,0x1408681e0,2,float CombatPathingSphere::GetPenetrationDepth(BSFastNavmeshTriLocation* a_node)
+49317,0x14083cf40,0x140868240,2,void CombatPathingGoalPolicyRetreat::SaveGame(BGSSaveGameBuffer* a_buf)
+49318,0x14083cfa0,0x1408682a0,2,void CombatPathingGoalPolicyRetreat::LoadGame(BGSLoadGameBuffer* a_buf)
 49458,0x140840a10,0x14086bd10,2,"CombatObject* BSTDerivedCreator<CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyRetreat,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>,CombatObject>::CreateImpl(CombatObject* a_val) const"
 49459,0x140840ad0,0x14086bdd0,2,"CombatObject* BSTDerivedCreator<CombatPathT<CombatPathRequestFlight,CombatPathDestinationLocation>,CombatObject>::CreateImpl()"
 49460,0x140840b30,0x14086be30,2,"CombatObject* BSTDerivedCreator<CombatPathT<CombatPathRequestFlight,CombatPathDestinationRef>,CombatObject>::CreateImpl(CombatObject* a_val) const"
