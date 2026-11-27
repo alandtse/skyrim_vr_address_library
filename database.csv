@@ -91,16 +91,16 @@
 10958,0x1400f98e0,0x140109e90,2,"void NiTStringTemplateMap<NiTMap<char_const*_,Setting*>,Setting*>::clear_value(void* a_value)"
 10959,0x1400f98f0,0x140109ea0,2,bool SettingCollection<Setting>::CloseHandle()
 10963,0x1400f9a10,0x140109fc0,2,"bool BSTCaseInsensitiveStringMap<Setting*>::key_eq(const char* a_lhs, const char* a_rhs)"
-10964,0x1400f9a30,0x140109fe0,2,"bool NiTMapBase<DFALL<NiTMapItem<char_const*_,Setting*>>,char_const*_,Setting*>::key_eq(void a_lhs, void a_rhs)"
+10964,0x1400f9a30,0x140109fe0,2,"bool NiTMapBase<DFALL<NiTMapItem<char_const*_,Setting*>>,char_const*_,Setting*>::key_eq(const char* a_lhs, const char* a_rhs)"
 10965,0x1400f9a40,0x140109ff0,2,"bool NiTStringTemplateMap<NiTMap<char const* ,Setting*>,Setting*>::key_eq(const char* a_lhs, const char* a_rhs)"
 10966,0x1400f9a60,0x14010a010,2,std::uint32_t BSTCaseInsensitiveStringMap<Setting*>::hash_function(key_type a_key)
-10967,0x1400f9ac0,0x14010a070,2,"std::uint32_t NiTMapBase<DFALL<NiTMapItem<char_const*_,Setting*>>,char_const*_,Setting*>::hash_function(void a_key)"
-10968,0x1400f9ad0,0x14010a080,2,"std::uint32_t NiTStringTemplateMap<NiTMap<char_const*_,Setting*>,Setting*>::hash_function(void a_key)"
+10967,0x1400f9ac0,0x14010a070,2,"std::uint32_t NiTMapBase<DFALL<NiTMapItem<char_const*_,Setting*>>,char_const*_,Setting*>::hash_function(const char* a_key)"
+10968,0x1400f9ad0,0x14010a080,2,"std::uint32_t NiTStringTemplateMap<NiTMap<char_const*_,Setting*>,Setting*>::hash_function(const char* a_key)"
 10969,0x1400f9b00,0x14010a0b0,2,"void* NiTMap<char_const*_,Setting*>::malloc_value()"
 10970,0x1400f9b40,0x14010a0f0,2,bool SettingCollection<Setting>::OpenHandle(bool a_create)
 10974,0x1400f9ca0,0x14010a250,3,RE::INISettingCollection::Unk_07
 10979,0x1400f9e90,0x14010a440,3,RE::BSString::Set_CStr
-10981,0x1400fa140,0x14010a6f0,2,"void NiTMapBase<DFALL<NiTMapItem<char_const*_,Setting*>>,char_const*_,Setting*>::assign_value(void* a_value, void a_key, mapped_type a_mapped)"
+10981,0x1400fa140,0x14010a6f0,2,"void NiTMapBase<DFALL<NiTMapItem<char_const*_,Setting*>>,char_const*_,Setting*>::assign_value(void* a_item, const char* a_key, Setting* a_value)"
 10982,0x1400fa150,0x14010a700,2,"void NiTStringTemplateMap<NiTMap<char const* ,Setting*>,Setting*>::assign_value(void* a_item, const char* a_key, Setting* a_value)"
 10985,0x1400fa270,0x14010a820,2,bool GameSettingCollection::WriteAllSettings()
 10990,0x1400fa650,0x14010ac00,2,bool EffectSetting::Load(TESFile* a_mod)
@@ -541,7 +541,7 @@
 12953,0x14014a970,0x14015b3a0,2,bool QueuedCharacter::AttachHeadAndQueueAnimation()
 12954,0x14014aa80,0x14015b4b0,2,void QueuedCharacter::RunAttachHead()
 12958,0x14014aea0,0x14015b8d0,2,void QueuedPlayer::RunQueueBipedLoad()
-12959,0x14014af00,0x14015b930,2,void QueuedPlayer::RunAttachHeadAndQueueAnimation()
+12959,0x14014af00,0x14015b930,2,bool QueuedPlayer::RunAttachHeadAndQueueAnimation()
 13054,0x14014dc60,0x14015e690,3,RE::INISettingCollection::InsertSetting
 13113,0x14014f700,0x140160130,3,bool INISettingCollection::ReadAllSettings()
 13119,0x14014fb40,0x140160570,3,RE::INISettingCollection::RemoveSetting
@@ -653,8 +653,8 @@
 13923,0x14017e4b0,0x14018e210,3,RE::TESFile::Duplicate
 13934,0x14017eb30,0x14018e890,2,void TESFile::DecompressCurrentForm()
 13936,0x14017ef10,0x14018eca0,2,bool TESFile::ReadChunkHeader()
-13972,0x1401809f0,0x140190770,2,"bool NiTMapBase<NiTPointerAllocator<unsigned___int64>,unsigned_int,TESFile*>::key_eq(void a_lhs, void a_rhs)"
-13974,0x140180aa0,0x140190820,2,"std::uint32_t NiTMapBase<NiTPointerAllocator<unsigned___int64>,unsigned_int,TESFile*>::hash_function(void a_key)"
+13972,0x1401809f0,0x140190770,2,"bool NiTMapBase<NiTPointerAllocator<unsigned___int64>,unsigned_int,TESFile*>::key_eq(std::uint32_t a_lhs, std::uint32_t a_rhs)"
+13974,0x140180aa0,0x140190820,2,"std::uint32_t NiTMapBase<NiTPointerAllocator<unsigned___int64>,unsigned_int,TESFile*>::hash_function(std::uint32_t a_key)"
 13994,0x1401815b0,0x140191330,3,void BSModelDB::InitializeStatics()
 14004,0x1401819b0,0x140191730,2,void BGSAttackDataForm::ClearDataComponent()
 14005,0x1401819e0,0x140191760,2,void BGSAttackDataForm::CopyComponent(BaseFormComponent* a_rhs)
@@ -674,10 +674,10 @@
 14074,0x140185280,0x140194fb0,4,void BGSDestructibleObjectForm::PreloadReplacementModels()
 14082,0x140185990,0x1401956c0,4,void TESObjectREFR::ClearDestruction()
 14100,0x140186310,0x140196040,2,"void NiTMap<BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,unsigned_int>::free_value(void* a_value)"
-14103,0x140186380,0x1401960b0,2,"bool NiTMapBase<DFALL<NiTMapItem<BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,unsigned_int>>,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,unsigned_int>::key_eq(void a_lhs, void a_rhs)"
-14104,0x140186390,0x1401960c0,2,"std::uint32_t NiTMapBase<DFALL<NiTMapItem<BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,unsigned_int>>,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,unsigned_int>::hash_function(void a_key)"
+14103,0x140186380,0x1401960b0,2,"bool NiTMapBase<DFALL<NiTMapItem<BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,unsigned_int>>,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,unsigned_int>::key_eq(const BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>& a_lhs, const BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>& a_rhs)"
+14104,0x140186390,0x1401960c0,2,"std::uint32_t NiTMapBase<DFALL<NiTMapItem<BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,unsigned_int>>,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,unsigned_int>::hash_function(const BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>& a_key)"
 14108,0x140186790,0x1401964c0,3,ScriptEventSourceHolder* ScriptEventSourceHolder::GetSingleton()
-14115,0x140186bf0,0x140196920,2,"void NiTMapBase<DFALL<NiTMapItem<BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,unsigned_int>>,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,unsigned_int>::assign_value(void* a_value, void a_key, mapped_type a_mapped)"
+14115,0x140186bf0,0x140196920,2,"void NiTMapBase<DFALL<NiTMapItem<BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,unsigned_int>>,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,unsigned_int>::assign_value(void* a_item, const BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>& a_key, std::uint32_t a_value)"
 14121,0x140186c90,0x1401969c0,2,void BGSEquipType::InitComponent(TESForm* a_owner)
 14122,0x140186d00,0x140196a30,2,void BGSEquipType::CopyComponent(BaseFormComponent* a_rhs)
 14127,0x140187040,0x140196d70,3,BGSIdleCollection* BGSIdleCollection::Ctor()
@@ -722,7 +722,7 @@
 14278,0x14018cdb0,0x14019cae0,2,void TESActorBaseData::SaveGame(BGSSaveFormBuffer* a_buf)
 14279,0x14018ce80,0x14019cbb0,2,void TESActorBaseData::LoadGame(BGSLoadFormBuffer* a_buf)
 14308,0x14018d990,0x14019d6c0,2,"bool BSTArrayAllocatorFunctor<BSTSmallArrayHeapAllocator<1024>>::Reallocate(std::uint32_t a_minNewSizeInItems, std::uint32_t a_frontCopyCount, std::uint32_t a_shiftCount, std::uint32_t a_backCopyCount, std::uint32_t a_elemSize)"
-14311,0x14018db40,0x14019d870,2,"void NiTMapBase<DFALL<NiTMapItem<TESForm*_,bool>>,TESForm*_,bool>::assign_value(void* a_value, void a_key, mapped_type a_mapped)"
+14311,0x14018db40,0x14019d870,2,"void NiTMapBase<DFALL<NiTMapItem<TESForm*_,bool>>,TESForm*_,bool>::assign_value(void* a_item, TESForm* a_key, bool a_value)"
 14315,0x14018dc20,0x14019d950,2,void TESAIForm::ClearDataComponent()
 14316,0x14018dc30,0x14019d960,2,void TESAIForm::CopyComponent(BaseFormComponent* a_rhs)
 14317,0x14018dcd0,0x14019da00,2,void TESAIForm::InitItem(TESForm* a_owner)
@@ -868,14 +868,14 @@
 15413,0x1401c2050,0x1401d21c0,2,float BSMultiBoundSphere::GetLength()
 15431,0x1401c4070,0x1401d41e0,2,std::uint32_t BGSSceneInfo::TextureUse::Accept(NiSourceTexture* a_texture)
 15447,0x1401c44e0,0x1401d4650,2,"void NiTMap<NiTexture*_,bool>::free_value(void* a_value)"
-15452,0x1401c4660,0x1401d47d0,2,"bool NiTMapBase<DFALL<NiTMapItem<NiTexture*_,TEX_USER_DATA*>>,NiTexture*_,TEX_USER_DATA*>::key_eq(void a_lhs, void a_rhs)"
-15453,0x1401c4670,0x1401d47e0,2,"bool NiTMapBase<DFALL<NiTMapItem<NiTexture*_,bool>>,NiTexture*_,bool>::key_eq(void a_lhs, void a_rhs)"
-15454,0x1401c4680,0x1401d47f0,2,"std::uint32_t NiTMapBase<DFALL<NiTMapItem<NiTexture*_,TEX_USER_DATA*>>,NiTexture*_,TEX_USER_DATA*>::hash_function(void a_key)"
-15455,0x1401c4690,0x1401d4800,2,"std::uint32_t NiTMapBase<DFALL<NiTMapItem<NiTexture*_,bool>>,NiTexture*_,bool>::hash_function(void a_key)"
+15452,0x1401c4660,0x1401d47d0,2,"bool NiTMapBase<DFALL<NiTMapItem<NiTexture*_,TEX_USER_DATA*>>,NiTexture*_,TEX_USER_DATA*>::key_eq(NiTexture* a_lhs, NiTexture* a_rhs)"
+15453,0x1401c4670,0x1401d47e0,2,"bool NiTMapBase<DFALL<NiTMapItem<NiTexture*_,bool>>,NiTexture*_,bool>::key_eq(NiTexture* a_lhs, NiTexture* a_rhs)"
+15454,0x1401c4680,0x1401d47f0,2,"std::uint32_t NiTMapBase<DFALL<NiTMapItem<NiTexture*_,TEX_USER_DATA*>>,NiTexture*_,TEX_USER_DATA*>::hash_function(NiTexture* a_key)"
+15455,0x1401c4690,0x1401d4800,2,"std::uint32_t NiTMapBase<DFALL<NiTMapItem<NiTexture*_,bool>>,NiTexture*_,bool>::hash_function(NiTexture* a_key)"
 15456,0x1401c46a0,0x1401d4810,2,"void* NiTMap<NiTexture*_,TEX_USER_DATA*>::malloc_value()"
 15457,0x1401c46e0,0x1401d4850,2,"value_type* NiTMap<NiTexture*,bool>::malloc_value()"
-15464,0x1401c4b80,0x1401d4cf0,2,"void NiTMapBase<DFALL<NiTMapItem<NiTexture*_,TEX_USER_DATA*>>,NiTexture*_,TEX_USER_DATA*>::assign_value(void* a_value, void a_key, mapped_type a_mapped)"
-15465,0x1401c4b90,0x1401d4d00,2,"void NiTMapBase<DFALL<NiTMapItem<NiTexture*_,bool>>,NiTexture*_,bool>::assign_value(void* a_value, void a_key, mapped_type a_mapped)"
+15464,0x1401c4b80,0x1401d4cf0,2,"void NiTMapBase<DFALL<NiTMapItem<NiTexture*_,TEX_USER_DATA*>>,NiTexture*_,TEX_USER_DATA*>::assign_value(void* a_item, NiTexture* a_key, TEX_USER_DATA* a_value)"
+15465,0x1401c4b90,0x1401d4d00,2,"void NiTMapBase<DFALL<NiTMapItem<NiTexture*_,bool>>,NiTexture*_,bool>::assign_value(void* a_item, NiTexture* a_key, bool a_value)"
 15485,0x1401c5cc0,0x1401d5e30,4,char * GetGameVersion(void)
 15486,0x1401c5cd0,0x1401d5e40,4,void BIPOBJECT::Clear()
 15487,0x1401c5e60,0x1401d5fd0,4,void BIPOBJECT::Assign(BIPOBJECT* a_other)
@@ -1744,23 +1744,23 @@
 18914,0x14027a870,0x14028be70,2,"void NiTMap<BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,NiPointer<BSMultiBoundNode>>::free_value(value_type* a_value)"
 18924,0x14027aac0,0x14028c0c0,2,"FormType ConcreteFormFactory<TESObjectCELL,60>::GetFormType()"
 18925,0x14027aad0,0x14028c0d0,2,"const char* ConcreteFormFactory<TESObjectCELL,60>::GetFormName()"
-18930,0x14027aca0,0x14028c2a0,2,"bool NiTMapBase<DFALL<NiTMapItem<BSMultiBoundNode*_,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>>,BSMultiBoundNode*_,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>::key_eq(void a_lhs, void a_rhs)"
-18931,0x14027acb0,0x14028c2b0,2,"bool NiTMapBase<DFALL<NiTMapItem<TESForm*_,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>>,TESForm*_,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>::key_eq(void a_lhs, void a_rhs)"
-18932,0x14027acc0,0x14028c2c0,2,"bool NiTMapBase<DFALL<NiTMapItem<BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,NiNode*>>,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,NiNode*>::key_eq(void a_lhs, void a_rhs)"
-18933,0x14027acd0,0x14028c2d0,2,"bool NiTMapBase<DFALL<NiTMapItem<BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,NiPointer<BSMultiBoundNode>>>,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,NiPointer<BSMultiBoundNode>>::key_eq(void a_lhs, void a_rhs)"
-18935,0x14027acf0,0x14028c2f0,2,"std::uint32_t NiTMapBase<DFALL<NiTMapItem<BSMultiBoundNode*_,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>>,BSMultiBoundNode*_,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>::hash_function(void a_key)"
-18936,0x14027ad00,0x14028c300,2,"std::uint32_t NiTMapBase<DFALL<NiTMapItem<TESForm*_,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>>,TESForm*_,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>::hash_function(void a_key)"
-18937,0x14027ad10,0x14028c310,2,"std::uint32_t NiTMapBase<DFALL<NiTMapItem<BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,NiNode*>>,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,NiNode*>::hash_function(void a_key)"
-18938,0x14027ad20,0x14028c320,2,"std::uint32_t NiTMapBase<DFALL<NiTMapItem<BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,NiPointer<BSMultiBoundNode>>>,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,NiPointer<BSMultiBoundNode>>::hash_function(void a_key)"
+18930,0x14027aca0,0x14028c2a0,2,"bool NiTMapBase<DFALL<NiTMapItem<BSMultiBoundNode*_,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>>,BSMultiBoundNode*_,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>::key_eq(BSMultiBoundNode* a_lhs, BSMultiBoundNode* a_rhs)"
+18931,0x14027acb0,0x14028c2b0,2,"bool NiTMapBase<DFALL<NiTMapItem<TESForm*_,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>>,TESForm*_,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>::key_eq(TESForm* a_lhs, TESForm* a_rhs)"
+18932,0x14027acc0,0x14028c2c0,2,"bool NiTMapBase<DFALL<NiTMapItem<BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,NiNode*>>,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,NiNode*>::key_eq(const BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>& a_lhs, const BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>& a_rhs)"
+18933,0x14027acd0,0x14028c2d0,2,"bool NiTMapBase<DFALL<NiTMapItem<BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,NiPointer<BSMultiBoundNode>>>,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,NiPointer<BSMultiBoundNode>>::key_eq(const BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>& a_lhs, const BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>& a_rhs)"
+18935,0x14027acf0,0x14028c2f0,2,"std::uint32_t NiTMapBase<DFALL<NiTMapItem<BSMultiBoundNode*_,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>>,BSMultiBoundNode*_,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>::hash_function(BSMultiBoundNode* a_key)"
+18936,0x14027ad00,0x14028c300,2,"std::uint32_t NiTMapBase<DFALL<NiTMapItem<TESForm*_,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>>,TESForm*_,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>::hash_function(TESForm* a_key)"
+18937,0x14027ad10,0x14028c310,2,"std::uint32_t NiTMapBase<DFALL<NiTMapItem<BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,NiNode*>>,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,NiNode*>::hash_function(const BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>& a_key)"
+18938,0x14027ad20,0x14028c320,2,"std::uint32_t NiTMapBase<DFALL<NiTMapItem<BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,NiPointer<BSMultiBoundNode>>>,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,NiPointer<BSMultiBoundNode>>::hash_function(const BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>& a_key)"
 18940,0x14027ad50,0x14028c350,2,"value_type* NiTMap<BSMultiBoundNode*,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>::malloc_value()"
 18941,0x14027adb0,0x14028c3b0,2,"value_type* NiTMap<TESForm*,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>::malloc_value()"
 18942,0x14027ae10,0x14028c410,2,"value_type* NiTMap<BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,NiNode*>::malloc_value()"
 18943,0x14027ae70,0x14028c470,2,"value_type* NiTMap<BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,NiPointer<BSMultiBoundNode>>::malloc_value()"
 18947,0x14027b190,0x14028c790,3,void BSTEventSource<TESCellAttachDetachEvent>::SendEvent(const TESCellAttachDetachEvent* a_event)
 18949,0x14027b6d0,0x14028ccd0,4,BSTEventSource::SendEvent
-18968,0x14027ca10,0x14028dfe0,2,"void NiTMapBase<DFALL<NiTMapItem<BSMultiBoundNode*_,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>>,BSMultiBoundNode*_,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>::assign_value(void* a_value, void a_key, mapped_type a_mapped)"
-18969,0x14027ca20,0x14028dff0,2,"void NiTMapBase<DFALL<NiTMapItem<TESForm*_,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>>,TESForm*_,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>::assign_value(void* a_value, void a_key, mapped_type a_mapped)"
-18970,0x14027ca30,0x14028e000,2,"void NiTMapBase<DFALL<NiTMapItem<BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,NiNode*>>,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,NiNode*>::assign_value(void* a_value, void a_key, mapped_type a_mapped)"
+18968,0x14027ca10,0x14028dfe0,2,"void NiTMapBase<DFALL<NiTMapItem<BSMultiBoundNode*_,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>>,BSMultiBoundNode*_,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>::assign_value(void* a_item, BSMultiBoundNode* a_key, const BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>& a_value)"
+18969,0x14027ca20,0x14028dff0,2,"void NiTMapBase<DFALL<NiTMapItem<TESForm*_,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>>,TESForm*_,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>::assign_value(void* a_item, TESForm* a_key, const BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>& a_value)"
+18970,0x14027ca30,0x14028e000,2,"void NiTMapBase<DFALL<NiTMapItem<BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,NiNode*>>,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,NiNode*>::assign_value(void* a_item, const BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>& a_key, NiNode* a_value)"
 18971,0x14027ca40,0x14028e010,2,"NiTMapBase<DFALL<NiTMapItem<BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,NiPointer<BSMultiBoundNode>>>,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,NiPointer<BSMultiBoundNode>>::assign_value"
 18993,0x14027d150,0x14028e720,2,void hkpEntityListener::EntityShapeSetCallback(hkpEntity* a_entity)
 19002,0x14027ddc0,0x14028f390,3,void TESObjectCELL::AttachReference3D(TESObjectREFR* a_ref)
@@ -1883,7 +1883,7 @@
 19372,0x1402977d0,0x1402a8ed0,3,"void TESObjectREFR::MoveRefToNewSpace(TESObjectCELL* a_interior, TESWorldSpace* a_world)"
 19373,0x140298190,0x1402a9890,4,void TESObjectREFR::Enable(bool a_resetInventory)
 19374,0x1402986b0,0x1402a9db0,2,void TESObjectREFR::Disable()
-19375,0x140298c80,0x1402aa380,3,void TESObjectREFR::ResetInventory_140298C80(TESObjectREFR * param_1)
+19375,0x140298c80,0x1402aa380,3,void TESObjectREFR::ResetInventory(bool a_leveledOnly)
 19381,0x140299360,0x1402aaa60,2,bool TESObjectREFR::OnAddCellPerformQueueReference(TESObjectCELL& a_cell)
 19385,0x1402994f0,0x1402aabf0,3,BGSLocation* TESObjectREFR::GetCurrentLocation()
 19386,0x140299570,0x1402aac70,2,BGSLocation* TESObjectREFR::GetEditorLocation1()
@@ -1949,11 +1949,11 @@
 19624,0x1402a01c0,0x1402b1930,2,bhkNiCollisionObject* bhkNiCollisionObject::AsBhkNiCollisionObject()
 19625,0x1402a01d0,0x1402b1940,2,bhkRigidBody* bhkRigidBodyT::AsBhkRigidBody()
 19627,0x1402a0200,0x1402b1970,2,Explosion* TESObjectREFR::AsExplosion()
-19628,0x1402a0210,0x1402b1980,2,"bool NiTMapBase<DFALL<NiTMapItem<BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>>,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>::key_eq(void a_lhs, void a_rhs)"
+19628,0x1402a0210,0x1402b1980,2,"bool NiTMapBase<DFALL<NiTMapItem<BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>>,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>::key_eq(const BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>& a_lhs, const BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>& a_rhs)"
 19629,0x1402a0220,0x1402b1990,2,Projectile* TESObjectREFR::AsProjectile()
 19630,0x1402a0230,0x1402b19a0,2,const TESObjectREFR* TESObjectREFR::AsReference2()
 19631,0x1402a0240,0x1402b19b0,2,TESObjectREFR* TESObjectREFR::AsReference1()
-19633,0x1402a02b0,0x1402b1a20,2,"std::uint32_t NiTMapBase<DFALL<NiTMapItem<BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>>,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>::hash_function(void a_key)"
+19633,0x1402a02b0,0x1402b1a20,2,"std::uint32_t NiTMapBase<DFALL<NiTMapItem<BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>>,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>::hash_function(const BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>& a_key)"
 19636,0x1402a0390,0x1402b1b00,2,"value_type* NiTMap<BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>::malloc_value()"
 19646,0x1402a19e0,0x1402b3150,2,bool TESObjectREFR::QCanUpdateSync()
 19666,0x1402a2070,0x1402b37e0,3,RE::ScriptEventSourceHolder::SendActivateEvent
@@ -1961,12 +1961,12 @@
 19672,0x1402a22d0,0x1402b3a40,2,void TESObjectREFR::SetFireNode(NiNode* a_fireNode)
 19673,0x1402a22e0,0x1402b3a50,2,void TESObjectREFR::SetMovementComplete(bool a_set)
 19677,0x1402a2420,0x1402b3b90,2,void TESObjectREFR::SetTemplateActorBase(TESActorBase* a_template)
-19679,0x1402a2500,0x1402b3c70,2,"void NiTMapBase<DFALL<NiTMapItem<BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>>,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>::assign_value(void* a_value, void a_key, mapped_type a_mapped)"
+19679,0x1402a2500,0x1402b3c70,2,"void NiTMapBase<DFALL<NiTMapItem<BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>>,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>::assign_value(void* a_item, const BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>& a_key, const BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>& a_value)"
 19680,0x1402a2510,0x1402b3c80,2,bool TESObjectREFR::TryChangeSkyCellActorsProcessLevel()
 19681,0x1402a2520,0x1402b3c90,2,void TESObjectREFR::TryMoveToMiddleLow()
 19682,0x1402a2530,0x1402b3ca0,2,void TESObjectREFR::TryUpdateActorLastSeenTime()
 19702,0x1402a29a0,0x1402b4110,2,const hkpShapeContainer* hkpShape::GetContainer()
-19706,0x1402a2fa0,0x1402b4710,2,"void TESObjectREFR::PopulateGraphProjectsToLoad(void* a_arg1, void* a_arg2)"
+19706,0x1402a2fa0,0x1402b4710,2,"bool TESObjectREFR::PopulateGraphProjectsToLoad(void* a_arg1, void* a_arg2)"
 19708,0x1402a30d0,0x1402b4840,2,"BSEventNotifyControl TESObjectREFR::ProcessEvent(const BSAnimationGraphEvent* a_event, BSTEventSource<BSAnimationGraphEvent>* a_eventSource)"
 19711,0x1402a38d0,0x1402b5040,2,bool TESObjectREFR::RefreshEquippedHandItems(NiAVObject* a_root)
 19713,0x1402a39d0,0x1402b5140,2,bool TESObjectREFR::PopulateGraphNodesToTarget(BSScrapArray<NiAVObject*>& a_nodes)
@@ -4172,6 +4172,7 @@
 28725,0x140434550,0x1404440a0,2,"void BGSVisitProceduresCheckGuardWarnTarget::Visit(BGSProcedureBase* a_procedure, IProcedureTreeItem::ExecStateContext* a_execState)"
 28726,0x140434590,0x1404440e0,3,BGSProcessContext::MarkComplete
 28727,0x1404345b0,0x140444100,3,BGSProcessContext::SetComplete
+28729,0x140434600,0x140444150,2,BGSVisitProceduresCheckGuardWarnTarget* BGSVisitProceduresCheckGuardWarnTarget::dtor_deleting(std::uint32_t a_flags)
 28732,0x1404348c0,0x140444410,4,TESPackage* TESPackage::CreatePackage(PACKAGE_PROCEDURE_TYPE a_type)
 28739,0x140434f60,0x140444ab0,2,bool TESPackage::IsOncePerDay()
 28751,0x1404353f0,0x140444f40,4,void TESPackage::SetPackType(PACKAGE_PROCEDURE_TYPE a_type)
@@ -4914,9 +4915,9 @@
 31409,0x1404c8810,0x1404d89d0,4,RE::TESWaterSystem::UpdateUnderWaterVariables
 31410,0x1404c8880,0x1404d8a40,3,"void TESWaterSystem::AddRipple(const NiPoint3& a_pos, float a_scale)"
 31451,0x1404ca620,0x1404da7c0,4,void TESWaterReflections::Dtor()
-31470,0x1404caf90,0x1404db130,2,"bool NiTMapBase<NiTPointerAllocator<unsigned___int64>,BSPointerHandle<Actor,BSUntypedPointerHandle<20,6>>,WadingWaterData*>::key_eq(void a_lhs, void a_rhs)"
-31471,0x1404cafa0,0x1404db140,2,"std::uint32_t NiTMapBase<NiTPointerAllocator<unsigned___int64>,BSPointerHandle<Actor,BSUntypedPointerHandle<20,6>>,WadingWaterData*>::hash_function(void a_key)"
-31481,0x1404cb620,0x1404db7c0,2,"void NiTMapBase<NiTPointerAllocator<unsigned___int64>,BSPointerHandle<Actor,BSUntypedPointerHandle<20,6>>,WadingWaterData*>::assign_value(void* a_value, void a_key, mapped_type a_mapped)"
+31470,0x1404caf90,0x1404db130,2,"bool NiTMapBase<NiTPointerAllocator<unsigned___int64>,BSPointerHandle<Actor,BSUntypedPointerHandle<20,6>>,WadingWaterData*>::key_eq(const BSPointerHandle<Actor,BSUntypedPointerHandle<20,6>>& a_lhs, const BSPointerHandle<Actor,BSUntypedPointerHandle<20,6>>& a_rhs)"
+31471,0x1404cafa0,0x1404db140,2,"std::uint32_t NiTMapBase<NiTPointerAllocator<unsigned___int64>,BSPointerHandle<Actor,BSUntypedPointerHandle<20,6>>,WadingWaterData*>::hash_function(const BSPointerHandle<Actor,BSUntypedPointerHandle<20,6>>& a_key)"
+31481,0x1404cb620,0x1404db7c0,2,"void NiTMapBase<NiTPointerAllocator<unsigned___int64>,BSPointerHandle<Actor,BSUntypedPointerHandle<20,6>>,WadingWaterData*>::assign_value(void* a_item, const BSPointerHandle<Actor,BSUntypedPointerHandle<20,6>>& a_key, WadingWaterData* a_value)"
 31487,0x1404cb7f0,0x1404db990,3,BuildAssaultActorStoryEventParams
 31488,0x1404cba00,0x1404dbba0,3,BuildKillActorStoryEventParams
 31518,0x1404cc890,0x1404dca30,3,BuildPlayerAddItemStoryEventParams
@@ -5432,6 +5433,9 @@
 34125,0x140560560,0x1405667d0,2,bool ShaderReferenceEffect::GetStackableMatch(BSTempEffect* a_effect)
 34126,0x140560680,0x1405668f0,2,void ShaderReferenceEffect::DetachImpl()
 34132,0x140560e40,0x1405670b0,3,ENBLightForEffectShaders::ShaderReferenceEffect::Add:AddAddonModel::thunk_0x8C2
+34147,0x1405621b0,0x140568420,2,void BSParticleShaderCollisionEmitter::dtor()
+34148,0x140562250,0x1405684c0,2,void BSParticleShaderGeometryEmitter::dtor()
+34150,0x140562320,0x140568590,2,void BSParticleShaderRayEmitter::dtor()
 34166,0x140562a50,0x140568cc0,2,const NiRTTI* ShaderReferenceEffect::GetRTTI()
 34167,0x140562a60,0x140568cd0,2,TEMP_EFFECT_TYPE ShaderReferenceEffect::GetType()
 34168,0x140562a70,0x140568ce0,2,bool ShaderReferenceEffect::IsInterfaceEffect()
@@ -5569,7 +5573,7 @@
 35026,0x140592eb0,0x14059a570,4,FormID BGSNumericIDIndex::GetNumericID()
 35027,0x140592f10,0x14059a5d0,4,void BGSNumericIDIndex::SetNumericID(FormID a_formID)
 35041,0x1405942b0,0x14059b970,3,BGSSaveLoadManager::BuildSaveGameHistoryReport
-35079,0x140596b50,0x14059e210,2,"bool NiTMapBase<DFALL<NiTMapItem<ENUM_FORM_ID,BSSimpleList<SavedFormData*>*>>,ENUM_FORM_ID,BSSimpleList<SavedFormData*>*>::key_eq(void a_lhs, void a_rhs)"
+35079,0x140596b50,0x14059e210,2,"bool NiTMapBase<DFALL<NiTMapItem<ENUM_FORM_ID,BSSimpleList<SavedFormData*>*>>,ENUM_FORM_ID,BSSimpleList<SavedFormData*>*>::key_eq(ENUM_FORM_ID a_lhs, ENUM_FORM_ID a_rhs)"
 35080,0x140596b60,0x14059e220,2,"NiTMapBase<DFALL<NiTMapItem<ENUM_FORM_ID,BSSimpleList<SavedFormData*>*>>,ENUM_FORM_ID,BSSimpleList<SavedFormData*>*>::hash_function"
 35093,0x1405974a0,0x14059eb60,4,void BGSLoadFormData::ReadChangeFormHeader(Win32FileType* a_file)
 35095,0x140597590,0x14059ec50,3,TESForm* BGSLoadFormData::GetForm()
@@ -5815,7 +5819,7 @@
 36372,0x1405d9990,0x1405e2010,3,Character::sub_1405D9990
 36382,0x1405da080,0x1405e2700,2,void Actor::OnItemEquipped(bool a_playAnim)
 36385,0x1405da5d0,0x1405e2c50,2,"void Actor::SetCrimeGoldValue(TESFaction* a_faction, bool a_violent, std::uint32_t a_amount)"
-36386,0x1405da5f0,0x1405e2c70,2,"void Actor::ModCrimeGoldValue(TESFaction* a_faction, bool a_violent, std::int32_t a_amount)"
+36386,0x1405da5f0,0x1405e2c70,2,"std::int32_t Actor::ModCrimeGoldValue(TESFaction* a_faction, bool a_violent, std::int32_t a_amount)"
 36387,0x1405da620,0x1405e2ca0,2,"void Actor::RemoveCrimeGoldValue(TESFaction* a_faction, bool a_violent, std::int32_t a_amount)"
 36388,0x1405da640,0x1405e2cc0,2,std::uint32_t Actor::GetCrimeGoldValue(const TESFaction* a_faction)
 36392,0x1405da840,0x1405e2ec0,3,void Actor::CalculateCurrentVendorFaction()
@@ -5869,7 +5873,7 @@
 36541,0x1405e8700,0x1405f0e20,3,"float Actor::SpeakSoundFunction(char* a_voicePath, BSSoundHandle* a_soundHandle, std::uint32_t a_emotionType, std::uint32_t a_emotionValue, std::uint32_t a_arg5, void* a_arg6, void* a_arg7, void* a_arg8, bool a_arg9, BGSSoundOutput* a_outputModel, bool a_arg11, bool a_arg12, bool a_arg13)"
 36542,0x1405e8f80,0x1405f1690,2,"void Actor::Say(void* a_result, TESTopic* a_topic, TESObjectREFR* a_speakAs, void* a_outputModel, bool a_skipSubtitle, bool a_unused, bool a_signalCallback)"
 36543,0x1405e9270,0x1405f1980,4,void Actor::UpdateSoundCallBack(bool a_endSceneAction)
-36547,0x1405e9e60,0x1405f2570,2,"void Actor::InitiateDialogue(Actor* a_target, PackageLocation* a_loc1, PackageLocation* a_loc2)"
+36547,0x1405e9e60,0x1405f2570,2,"bool Actor::InitiateDialogue(Actor* a_target, PackageLocation* a_loc1, PackageLocation* a_loc2)"
 36548,0x1405ea350,0x1405f2a60,2,void Actor::SetSize(float a_size)
 36550,0x1405ea440,0x1405f2b50,2,void Actor::MoveHavok(bool a_forceRec)
 36551,0x1405ea900,0x1405f3010,2,void Actor::EndDialogue()
@@ -6143,7 +6147,7 @@
 37614,0x140625c30,0x14062eaa0,2,"void Actor::RefreshCombatOnProcessChange(std::uint32_t a_arg1, std::int32_t a_arg2)"
 37615,0x140625c70,0x14062eae0,2,float Actor::GetDamageResist()
 37616,0x140625c90,0x14062eb00,2,float Actor::CalcArmorRatingFromActorValueOwner(ActorValueOwner* a_avo)
-37617,0x140625cc0,0x14062eb30,2,float Actor::CalcUnarmedDamage()
+37617,0x140625cc0,0x14062eb30,2,std::int32_t Actor::CalcUnarmedDamage()
 37618,0x140625cd0,0x14062eb40,3,bool Actor::IsCombatTarget(Actor* a_other)
 37619,0x140625d10,0x14062eb80,2,NiPoint3* Actor::GetWeaponNodePosition(bool a_leftHand)
 37620,0x140625dd0,0x14062ec40,4,"bool Actor::GetWeaponSwingDirection(bool a_leftHand, NiPoint3* a_out)"
@@ -6781,10 +6785,10 @@
 39935,0x1406c27a0,0x1406e8cc0,2,"void NiTMap<unsigned_int,unsigned_char>::free_value(void* a_value)"
 39991,0x1406c2f50,0x1406e9450,2,std::int32_t Actor::Unk_C6()
 40003,0x1406c3520,0x1406e9c90,2,const NiRTTI* bhkMouseSpringAction::GetRTTI()
-40006,0x1406c35f0,0x1406e9de0,2,bool Actor::InitiateDialogue()
+40006,0x1406c35f0,0x1406e9de0,2,"bool Actor::InitiateDialogue(Actor* a_target, PackageLocation* a_loc1, PackageLocation* a_loc2)"
 40012,0x1406c37b0,0x1406e9fa0,2,bool PlayerCharacter::Is3rdPersonVisible()
-40014,0x1406c37d0,0x1406e9fc0,2,"bool NiTMapBase<DFALL<NiTMapItem<unsigned_int,unsigned_char>>,unsigned_int,unsigned_char>::key_eq(void a_lhs, void a_rhs)"
-40016,0x1406c37f0,0x1406ea060,2,"std::uint32_t NiTMapBase<DFALL<NiTMapItem<unsigned_int,unsigned_char>>,unsigned_int,unsigned_char>::hash_function(void a_key)"
+40014,0x1406c37d0,0x1406e9fc0,2,"bool NiTMapBase<DFALL<NiTMapItem<unsigned_int,unsigned_char>>,unsigned_int,unsigned_char>::key_eq(std::uint32_t a_lhs, std::uint32_t a_rhs)"
+40016,0x1406c37f0,0x1406ea060,2,"std::uint32_t NiTMapBase<DFALL<NiTMapItem<unsigned_int,unsigned_char>>,unsigned_int,unsigned_char>::hash_function(std::uint32_t a_key)"
 40048,0x1406c77a0,0x1406eddc0,2,bool PlayerCharacter::QCanUpdateSync()
 40056,0x1406c7d60,0x1406ee380,3,BSTEventSource<LocationDiscovery::Event>* LocationDiscovery::GetEventSource()
 40060,0x1406c8120,0x1406ee740,3,BSTEventSource<ShoutAttack::Event>* ShoutAttack::GetEventSource()
@@ -7550,7 +7554,7 @@
 42841,0x1407433e0,0x14076dfe0,3,void HitData::Copy(HitData* a_other)
 42842,0x140743510,0x14076e110,3,void HitData::ApplyDamageReduction(bool a_disableBlocking)
 42851,0x140744c10,0x14076fb50,2,void MissileProjectile::Process3D()
-42852,0x140744dd0,0x14076fd10,4,void MissileProjectile::UpdateImpl_140744DD0 (MissileProjectile * a_this)
+42852,0x140744dd0,0x14076fd10,4,void MissileProjectile::UpdateImpl(float a_delta)
 42853,0x1407454f0,0x140770430,2,bool MissileProjectile::ProcessImpacts()
 42856,0x140746d60,0x140771ca0,3,EnhancedInvisibility::MissileProjectile::sub_140746D60
 42860,0x140747600,0x140772730,2,void MissileProjectile::SaveGame(BGSSaveFormBuffer* a_buf)
@@ -7579,7 +7583,7 @@
 42970,0x14074dfd0,0x1407792f0,2,"bool Projectile::TurnOff(Actor* a_owner, bool a_noDeactivateSound)"
 42974,0x14074e2d0,0x1407795f0,2,float Projectile::GetGravity()
 42981,0x14074ec70,0x140779f90,2,void Projectile::CleanUpPointersOnDisable()
-42982,0x14074ed10,0x14077a030,2,void Projectile::RunTargetPick()
+42982,0x14074ed10,0x14077a030,2,bool Projectile::RunTargetPick()
 42983,0x14074F650,0x14077A970,3,ProcessProjectileCollisions
 42987,0x14074fdf0,0x14077b110,2,bool Projectile::HasKeywordHelper(const BGSKeyword* a_keyword)
 42999,0x140750310,0x14077b630,2,NiNode* Projectile::GetFireNode()
@@ -9357,6 +9361,7 @@
 47962,0x1408068b0,0x140831c00,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorHover>::Update(CombatBehaviorThread* a_thread)
 47963,0x1408068c0,0x140831c10,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorLand>::Update(CombatBehaviorThread* a_thread)
 47964,0x1408068d0,0x140831c20,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorLandNearby>::Update(CombatBehaviorThread* a_thread)
+47965,0x1408068e0,0x140831c30,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorOrbit>::Update(CombatBehaviorThread* a_thread)
 47966,0x1408068f0,0x140831c40,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorOrbitDistant>::Update(CombatBehaviorThread* a_thread)
 47967,0x140806940,0x140831c90,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorPerchAttack>::Update(CombatBehaviorThread* a_thread)
 47968,0x140806950,0x140831ca0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorTakeoff>::Update(CombatBehaviorThread* a_thread)
@@ -11021,6 +11026,7 @@
 56653,0x1409c7b10,0x140a02660,2,void* hkContainerTempAllocator::Allocator::BlockAlloc(std::int32_t a_numBytes)
 56654,0x1409c7b40,0x140a02690,2,"void hkContainerTempAllocator::Allocator::BlockFree(void* a_ptr, std::int32_t a_numBytes)"
 56763,0x1409ca770,0x140a052c0,4,sub_1409CA770
+56800,0x1409cb840,0x140a06390,2,void hkStringPtr::dtor()
 56801,0x1409cb860,0x140a063b0,4,"hkStringPtr * ctor_1409cb860 (undefined8 a_this, char * a_data)"
 56806,0x1409cba10,0x140a06560,4,"hkStringPtr::hkStringPtr(std::string_view a_data, const std::uint32_t a_mask, const bool a_mark)"
 56913,0x1409ce4f0,0x140a09040,2,hkLocalFrameGroup* hkSimpleLocalFrame::GetGroup()
@@ -11043,6 +11049,7 @@
 57093,0x1409d3810,0x140a0e360,2,const hkClass* hkArrayStreamWriter::GetClassType()
 57271,0x1409d9250,0x140a13da0,2,void hkLocalFrame::GetOrigin(hkVector4& a_origin)
 57272,0x1409d9280,0x140a13dd0,2,"void hkLocalFrame::GetDescendants(hkArray<const hkLocalFrame*>& a_descendants, hkMemoryAllocator& a_allocator)"
+57273,0x1409d9340,0x140a13e90,2,void hkSimpleLocalFrame::dtor()
 57274,0x1409d9400,0x140a13f50,2,void hkSimpleLocalFrame::GetTransform(hkTransform& a_transform)
 57275,0x1409d9430,0x140a13f80,2,void hkSimpleLocalFrame::SetTransform(const hkTransform& a_transform)
 57276,0x1409d9460,0x140a13fb0,2,void hkSimpleLocalFrame::GetOrigin(hkVector4& a_origin)
@@ -11197,6 +11204,7 @@
 59346,0x140a43300,0x140a7dcb0,4,"void hkbVariableBindingSetUtils::updateBindingInt16 (void * a_evalContext, void * a_binding, unsigned int * a_variableValue, int a_variableIndex, void * a_memberPtr, bool a_isPrimaryBinding, bool a_hasRange, bool a_activate)"
 59347,0x140a43460,0x140a7de10,4,"void hkbVariableBindingSetUtils::updateBindingInt32 (void * a_evalContext, void * a_binding, void * a_variableValue, int a_variableIndex, void * a_memberPtr, bool a_isPrimaryBinding, bool a_hasRange, bool a_activate)"
 59348,0x140a435a0,0x140a7df50,4,"void hkbVariableBindingSetUtils::updateBindingReal (void * a_evalContext, void * a_binding, void * a_variableValue, int a_variableIndex, void * a_memberPtr, bool a_isPrimaryBinding, bool a_hasRange, bool a_activate)"
+59390,0x140a4bc10,0x140a865c0,2,hkLocalFrameCollector* hkLocalFrameCollector::dtor_deleting(std::uint32_t a_flags)
 59405,0x140a4dfa0,0x140a88950,4,hkbBehaviorGraph::doUpdateActiveNodes
 59449,0x140a52230,0x140a8d580,2,"void hkDynamicClassNameRegistry::registerClass(const hkClass* a_class, const char* a_name)"
 59450,0x140a52270,0x140a8d5c0,2,void hkDynamicClassNameRegistry::registerList(const hkClass* const* a_classes)
@@ -12395,15 +12403,15 @@
 69028,0x140c5c7a0,0x140ca1d50,2,bool NiStream::LoadObjectSizeTable()
 69102,0x140c5ef70,0x140ca4520,2,"void NiTStringTemplateMap<NiTPointerMap<char_const*_,NiObject*__(__cdecl*)(void)>,NiObject*__(__cdecl*)(void)>::clear_value(void* a_value)"
 69105,0x140c5efc0,0x140ca4570,2,"void NiTPointerMap<NiObject_const*_,unsigned_int>::free_value(void* a_value)"
-69107,0x140c5eff0,0x140ca45a0,2,"bool NiTMapBase<NiTPointerAllocator<unsigned___int64>,char_const*_,NiObject*__(__cdecl*)(void)>::key_eq(void a_lhs, void a_rhs)"
-69108,0x140c5f000,0x140ca45b0,2,"bool NiTMapBase<NiTPointerAllocator<unsigned___int64>,NiObject_const*_,unsigned_int>::key_eq(void a_lhs, void a_rhs)"
+69107,0x140c5eff0,0x140ca45a0,2,"bool NiTMapBase<NiTPointerAllocator<unsigned___int64>,char_const*_,NiObject*__(__cdecl*)(void)>::key_eq(const char* a_lhs, const char* a_rhs)"
+69108,0x140c5f000,0x140ca45b0,2,"bool NiTMapBase<NiTPointerAllocator<unsigned___int64>,NiObject_const*_,unsigned_int>::key_eq(const NiObject* a_lhs, const NiObject* a_rhs)"
 69110,0x140c5f030,0x140ca45e0,2,"bool NiTStringTemplateMap<NiTPointerMap<char const* ,NiObject*  (__cdecl*)(void)>,NiObject*  (__cdecl*)(void)>::key_eq(const char* a_lhs, const char* a_rhs)"
-69112,0x140c5f060,0x140ca4610,2,"std::uint32_t NiTMapBase<NiTPointerAllocator<unsigned___int64>,char_const*_,NiObject*__(__cdecl*)(void)>::hash_function(void a_key)"
-69113,0x140c5f070,0x140ca4620,2,"std::uint32_t NiTMapBase<NiTPointerAllocator<unsigned___int64>,NiObject_const*_,unsigned_int>::hash_function(void a_key)"
-69115,0x140c5f0b0,0x140ca4660,2,"std::uint32_t NiTStringTemplateMap<NiTPointerMap<char_const*_,NiObject*__(__cdecl*)(void)>,NiObject*__(__cdecl*)(void)>::hash_function(void a_key)"
-69134,0x140c5fe80,0x140ca5430,2,"void NiTMapBase<NiTPointerAllocator<unsigned___int64>,char_const*_,unsigned_short>::assign_value(void* a_value, void a_key, mapped_type a_mapped)"
-69135,0x140c5fe90,0x140ca5440,2,"void NiTMapBase<NiTPointerAllocator<unsigned___int64>,char_const*_,NiObject*__(__cdecl*)(void)>::assign_value(void* a_value, void a_key, mapped_type a_mapped)"
-69136,0x140c5fea0,0x140ca5450,2,"void NiTMapBase<NiTPointerAllocator<unsigned___int64>,NiObject_const*_,unsigned_int>::assign_value(void* a_value, void a_key, mapped_type a_mapped)"
+69112,0x140c5f060,0x140ca4610,2,"std::uint32_t NiTMapBase<NiTPointerAllocator<unsigned___int64>,char_const*_,NiObject*__(__cdecl*)(void)>::hash_function(const char* a_key)"
+69113,0x140c5f070,0x140ca4620,2,"std::uint32_t NiTMapBase<NiTPointerAllocator<unsigned___int64>,NiObject_const*_,unsigned_int>::hash_function(const NiObject* a_key)"
+69115,0x140c5f0b0,0x140ca4660,2,"std::uint32_t NiTStringTemplateMap<NiTPointerMap<char_const*_,NiObject*__(__cdecl*)(void)>,NiObject*__(__cdecl*)(void)>::hash_function(const char* a_key)"
+69134,0x140c5fe80,0x140ca5430,2,"void NiTMapBase<NiTPointerAllocator<unsigned___int64>,char_const*_,unsigned_short>::assign_value(void* a_item, const char* a_key, std::uint16_t a_value)"
+69135,0x140c5fe90,0x140ca5440,2,"void NiTMapBase<NiTPointerAllocator<unsigned___int64>,char_const*_,NiObject*__(__cdecl*)(void)>::assign_value(void* a_item, const char* a_key, void* a_value)"
+69136,0x140c5fea0,0x140ca5450,2,"void NiTMapBase<NiTPointerAllocator<unsigned___int64>,NiObject_const*_,unsigned_int>::assign_value(void* a_item, const NiObject* a_key, std::uint32_t a_value)"
 69138,0x140c5ff40,0x140ca54f0,2,"void NiTStringTemplateMap<NiTPointerMap<char const* ,NiObject*  (__cdecl*)(void)>,NiObject*  (__cdecl*)(void)>::assign_value(void* a_item, const char* a_key, void* a_value)"
 69139,0x140c5ffd0,0x140ca5580,2,"void NiObjectNET::CopyMembers(NiObjectNET* a_target, NiCloningProcess* a_cloning)"
 69140,0x140c602a0,0x140ca5850,2,void NiObjectNET::LoadBinary(NiStream& a_stream)
@@ -13284,10 +13292,10 @@
 72012,0x140cea650,0x140d311a0,2,"void NiTStringTemplateMap<NiTPointerMap<char_const*_,NiPointer<NiSequence>>,NiPointer<NiSequence>>::clear_value(void* a_value)"
 72013,0x140cea660,0x140d311b0,2,"void NiTPointerMap<char_const*_,NiPointer<NiSequence>>::free_value(void* a_value)"
 72014,0x140cea6a0,0x140d311f0,2,const NiRTTI* NiKeyframeManager::GetRTTI()
-72015,0x140cea6b0,0x140d31200,2,"bool NiTMapBase<NiTPointerAllocator<unsigned___int64>,char_const*_,NiPointer<NiSequence>>::key_eq(void a_lhs, void a_rhs)"
+72015,0x140cea6b0,0x140d31200,2,"bool NiTMapBase<NiTPointerAllocator<unsigned___int64>,char_const*_,NiPointer<NiSequence>>::key_eq(const char* a_lhs, const char* a_rhs)"
 72016,0x140cea6c0,0x140d31210,2,"bool NiTStringTemplateMap<NiTPointerMap<char const* ,NiPointer<NiSequence>>,NiPointer<NiSequence>>::key_eq(const char* a_lhs, const char* a_rhs)"
-72017,0x140cea6e0,0x140d31230,2,"std::uint32_t NiTMapBase<NiTPointerAllocator<unsigned___int64>,char_const*_,NiPointer<NiSequence>>::hash_function(void a_key)"
-72018,0x140cea6f0,0x140d31240,2,"std::uint32_t NiTStringTemplateMap<NiTPointerMap<char_const*_,NiPointer<NiSequence>>,NiPointer<NiSequence>>::hash_function(void a_key)"
+72017,0x140cea6e0,0x140d31230,2,"std::uint32_t NiTMapBase<NiTPointerAllocator<unsigned___int64>,char_const*_,NiPointer<NiSequence>>::hash_function(const char* a_key)"
+72018,0x140cea6f0,0x140d31240,2,"std::uint32_t NiTStringTemplateMap<NiTPointerMap<char_const*_,NiPointer<NiSequence>>,NiPointer<NiSequence>>::hash_function(const char* a_key)"
 72019,0x140cea720,0x140d31270,2,"void* NiTPointerMap<char_const*_,NiPointer<NiSequence>>::malloc_value()"
 72024,0x140ceaa90,0x140d315e0,2,"void NiTStringTemplateMap<NiTPointerMap<char const* ,NiPointer<NiSequence>>,NiPointer<NiSequence>>::assign_value(void* a_item, const char* a_key, NiPointer<NiSequence> a_value)"
 72026,0x140ceab70,0x140d316c0,2,NiObject* NiLightColorController::CreateClone(NiCloningProcess& a_cloning)
@@ -14263,7 +14271,7 @@
 74666,0x140d48d60,0x140d91c90,2,bool BSMultiBoundSphere::CompletelyWithinFrustum(NiFrustumPlanes* a_arg1)
 74667,0x140d48e00,0x140d91d30,2,void BSMultiBoundSphere::GetNiBound(NiBound* a_arg1)
 74668,0x140d48e30,0x140d91d60,2,bool BSMultiBoundSphere::GetWithinPoint(const NiPoint3& a_pos)
-74671,0x140d48f80,0x140d91eb0,3,NiObject* BSOcclusionBox::CreateClone()
+74671,0x140d48f80,0x140d91eb0,3,NiObject* BSOcclusionBox::CreateClone(NiCloningProcess& a_cloning)
 74673,0x140d49070,0x140d91fa0,3,BSOcclusionBox* BSOcclusionBox::CtorDefault(BSOcclusionBox* a_this)
 74674,0x140d491a0,0x140d920d0,3,"BSOcclusionBox* BSOcclusionBox::Ctor(BSOcclusionBox* a_this, NiPoint3* a_center, NiPoint3* a_size, NiMatrix3* a_rotation)"
 74675,0x140d492d0,0x140d92200,3,void BSOcclusionBox::UpdateCorners()
@@ -14276,7 +14284,7 @@
 74682,0x140d4b6a0,0x140d94580,3,bool BSOcclusionBox::IsOcclusionPlane()
 74683,0x140d4b6b0,0x140d94590,3,bool BSOcclusionBox::IsOcclusionBox()
 74687,0x140d4b810,0x140d946f0,2,const NiRTTI* BSOcclusionBox::GetRTTI()
-74688,0x140d4b820,0x140d94700,3,NiObject* BSOcclusionPlane::CreateClone()
+74688,0x140d4b820,0x140d94700,3,NiObject* BSOcclusionPlane::CreateClone(NiCloningProcess& a_cloning)
 74690,0x140d4b900,0x140d947e0,3,BSOcclusionPlane* BSOcclusionPlane::CtorDefault(BSOcclusionPlane* a_this)
 74691,0x140d4ba10,0x140d948f0,3,"BSOcclusionPlane* BSOcclusionPlane::Ctor(BSOcclusionPlane* a_this, NiPoint3* a_center, NiPoint2* a_size, NiMatrix3* a_rotation)"
 74692,0x140d4bb10,0x140d949f0,3,void BSOcclusionPlane::UpdateCorners()
@@ -14317,7 +14325,7 @@
 74763,0x140d4fca0,0x140d98b80,2,void NiBSBoneLODController::ProcessClone(NiCloningProcess& a_cloning)
 74764,0x140d4fff0,0x140d98ed0,2,void NiBSBoneLODController::PostLinkObject(NiStream& a_stream)
 74785,0x140d504f0,0x140d993d0,2,const NiRTTI* NiBSBoneLODController::GetRTTI()
-74786,0x140d50500,0x140d993e0,2,"bool NiTMapBase<NiTPointerAllocator<unsigned___int64>,unsigned_int,bool>::key_eq(void a_lhs, void a_rhs)"
+74786,0x140d50500,0x140d993e0,2,"bool NiTMapBase<NiTPointerAllocator<unsigned___int64>,unsigned_int,bool>::key_eq(std::uint32_t a_lhs, std::uint32_t a_rhs)"
 74802,0x140d50ae0,0x140d999c0,3,BSCullingProcess* BSCullingProcess::ctor(NiVisibleArray* a_visibleSet)
 74805,0x140d50f80,0x140d99e90,2,"void BSCullingProcess::Process2(const NiCamera* a_camera, NiAVObject* a_scene, NiVisibleArray* a_visibleSet)"
 74806,0x140d51050,0x140d99f60,3,"void BSCullingProcess::AppendNonAccum(NiAVObject* a_object, int a_alphaGroupIndex)"
@@ -17703,7 +17711,7 @@
 101562,0x141329cf0,0x14136c520,3,void ImageSpaceEffectFullScreenBlur::~ImageSpaceEffectFullScreenBlur()
 101563,0x141329dd0,0x14136c600,2,bool ImageSpaceEffectFullScreenBlur::IsActive()
 101564,0x141329df0,0x14136c620,3,void ImageSpaceEffectFullScreenBlur::Setup(ImageSpaceEffectFullScreenBlur* a_this)
-101565,0x14132a370,0x14136cba0,3,void ImageSpaceEffectFullScreenBlur::Render(ImageSpaceEffectFullScreenBlur* a_this)
+101565,0x14132a370,0x14136cba0,3,"void ImageSpaceEffectFullScreenBlur::Render(BSTriShape* a_shape, ImageSpaceEffectParam* a_param)"
 101566,0x14132a560,0x14136cd90,3,ulonglong ImageSpaceEffectFullScreenBlur::UpdateParams(ImageSpaceEffectFullScreenBlur* a_this)
 101567,0x14132a710,0x14136cf40,2,void ImageSpaceEffectFullScreenBlur::BorrowTextures(ImageSpaceEffectParam* a_param)
 101568,0x14132a800,0x14136d030,2,void ImageSpaceEffectFullScreenBlur::ReturnTextures()
