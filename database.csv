@@ -171,7 +171,7 @@
 11216,0x140101cc0,0x140112270,3,RE::MagicItem::GetCostliestEffectItem
 11217,0x140101d70,0x140112320,2,bool MagicItem::HasKeyword(const BGSKeyword* a_keyword)
 11218,0x140101e30,0x1401123e0,3,uint32_t MagicItem::GetLongestDuration_140101e30 (MagicItem * param_1)
-11219,0x140101ed0,0x140112480,3,int32_t MagicItem::GetLargestArea_140101ED0 (MagicItem * param_1)
+11219,0x140101ed0,0x140112480,3,std::int32_t MagicItem::GetLargestArea()
 11221,0x140102020,0x1401125d0,2,bool MagicItem::IsTwoHanded()
 11222,0x140102030,0x1401125e0,4,"void MagicItem::Traverse (MagicItem * a_this, MagicItemTraversalFunctor * a_visitor)"
 11233,0x140102570,0x140112b20,3,void FreeMemory(void* a_ptr)
@@ -949,6 +949,7 @@
 15806,0x1401d9040,0x1401e9be0,3,std::uint32_t InventoryChanges::GetWornMask()
 15807,0x1401d9080,0x1401e9c20,3,RE::TESObjectREFR::GetStealValue
 15808,0x1401d9170,0x1401e9d10,4,undefined ExtraContainerChanges__Data::WornHasKeyword_1401D9170 (ExtraContainerChanges__Data * a_this)
+15809,0x1401d91b0,0x1401E9D50,2,void InventoryUtils::ItemFilter::dtor()
 15811,0x1401d91e0,0x1401e9d80,3,EssentialFavorites::Crafting::IsQuestObject
 15812,0x1401d9200,0x1401e9da0,3,InventoryChanges* InventoryChanges::Ctor(TESObjectREFR* a_ref)
 15813,0x1401d92f0,0x1401e9e90,3,void InventoryChanges::Dtor()
@@ -1966,7 +1967,7 @@
 19681,0x1402a2520,0x1402b3c90,2,void TESObjectREFR::TryMoveToMiddleLow()
 19682,0x1402a2530,0x1402b3ca0,2,void TESObjectREFR::TryUpdateActorLastSeenTime()
 19702,0x1402a29a0,0x1402b4110,2,const hkpShapeContainer* hkpShape::GetContainer()
-19706,0x1402a2fa0,0x1402b4710,2,"bool TESObjectREFR::PopulateGraphProjectsToLoad(void* a_arg1, void* a_arg2)"
+19706,0x1402a2fa0,0x1402b4710,2,"bool TESObjectREFR::PopulateGraphProjectsToLoad(NiNode* a_root, BSScrapArray<BSStaticStringT<260>>& a_projects)"
 19708,0x1402a30d0,0x1402b4840,2,"BSEventNotifyControl TESObjectREFR::ProcessEvent(const BSAnimationGraphEvent* a_event, BSTEventSource<BSAnimationGraphEvent>* a_eventSource)"
 19711,0x1402a38d0,0x1402b5040,2,bool TESObjectREFR::RefreshEquippedHandItems(NiAVObject* a_root)
 19713,0x1402a39d0,0x1402b5140,2,bool TESObjectREFR::PopulateGraphNodesToTarget(BSScrapArray<NiAVObject*>& a_nodes)
@@ -1981,6 +1982,7 @@
 19723,0x1402a3d50,0x1402b54c0,2,bool TESObjectREFR::ShouldPerformRevert()
 19725,0x1402a3e10,0x1402b5580,4,"void TESObjectREFR::UpdateAnimation(TESObjectREFR* a_this, float a_delta)"
 19729,0x1402a40d0,0x1402b5840,4,"void TESObjectREFR::sub_1402A40D0(TESObjectREFR* a_this, float a_delta)"
+19739,0x1402a4560,0x1402B5CD0,2,std::uint32_t BSScrapArray<BSStaticStringT<260>>::push_back(const BSStaticStringT<260>& a_value)
 19750,0x1402a4b50,0x1402b62c0,2,bool REFREventCallbacks::IEventCallback::Save(BSStorage* a_storage)
 19751,0x1402a4c60,0x1402b63d0,2,"bool LoadEventCallback(BSStorage* a_storage, BSTSmartPointer<REFREventCallbacks::IEventCallback>& a_out)"
 19752,0x1402a4e30,0x1402b65a0,2,bool REFREventCallbacks::IEventCallback::Load(BSStorage* a_storage)
@@ -6048,7 +6050,7 @@
 37021,0x14060f250,0x140617e60,2,std::uint32_t Actor::GetGraphVariableCacheSize()
 37026,0x14060f3a0,0x140617fb0,2,void Actor::ModifyAnimationUpdateData(BSAnimationUpdateData& a_data)
 37029,0x14060f690,0x1406182a0,2,bool Actor::ShouldPerformRevert()
-37030,0x14060f6d0,0x1406182e0,2,"bool Actor::PopulateGraphProjectsToLoad(void* a_arg1, void* a_arg2)"
+37030,0x14060f6d0,0x1406182e0,2,"bool Actor::PopulateGraphProjectsToLoad(NiNode* a_root, BSScrapArray<BSStaticStringT<260>>& a_projects)"
 37034,0x14060fae0,0x1406186f0,2,void Actor::ResetFollowPathGoal()
 37086,0x140612250,0x14061ae60,3,"void FindAvailableHorseFromHandles(void* a_handleSource, void* a_result)"
 37089,0x140612520,0x14061b130,2,bool MovementMessagePool::SetActivateDoorHandler(void* a_handler)
@@ -6738,7 +6740,7 @@
 39441,0x1406a4540,0x1406c4d30,4,"void PlayerCharacter::BuildPlayerMarkerPath(TESObjectREFR* a_target, void* a_outPath, std::uint64_t a_arg3)"
 39444,0x1406a4a00,0x1406c51f0,3,PlayerCharacter::HasLOS_impl
 39445,0x1406a4d90,0x1406c55c0,3,"void PlayerCharacter::UpdateAnimation(PlayerCharacter* a_this, float a_delta)"
-39447,0x1406a4fa0,0x1406c6ab0,2,"bool PlayerCharacter::PopulateGraphProjectsToLoad(void* a_arg1, void* a_arg2)"
+39447,0x1406a4fa0,0x1406c6ab0,2,"bool PlayerCharacter::PopulateGraphProjectsToLoad(NiNode* a_root, BSScrapArray<BSStaticStringT<260>>& a_projects)"
 39451,0x1406a5220,0x1406c6d30,2,float Actor::GetHeading(bool a_ignoreRaceSettings)
 39456,0x1406a5300,0x1406c6e00,3,PlayerCharacter::PickUpObject
 39458,0x1406a59d0,0x1406c74d0,3,"void PlayerCharacter::SetWaypoint(PlayerCharacter* a_this, NiPoint3* a_position, TESForm* a_worldSpaceOrCell)"
@@ -8775,6 +8777,7 @@
 46566,0x1407d1150,0x1407fc4a0,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorSpawnParallel>::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 46567,0x1407d11a0,0x1407fc4f0,2,"void CombatBehaviorTreeCreateContextNodeBase<CombatBehaviorEquipContext>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 46569,0x1407d11d0,0x1407fc520,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorDynamicConditionalNode>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+46572,0x1407d1210,0x1407FC560,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorEquipShout>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 46575,0x1407d1240,0x1407fc590,2,"void CombatBehaviorTreeNodeObjectBase<CombatBehaviorSpawnParallel>::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
 46576,0x1407d1260,0x1407fc5b0,2,"void CombatBehaviorTreeNodeEvaluateFunction<CombatBehaviorExpression<CombatBehaviorMemberFunc<CombatBehaviorEquipContext,bool (__cdecl CombatBehaviorEquipContext::*)(void)>>>::Update(CombatBehaviorThread* a_thread)"
 46578,0x1407d1410,0x1407fc760,2,"bool CombatBehaviorTreeConditionalNode<CombatBehaviorExpression<CombatBehaviorMemberFunc<CombatBehaviorEquipContext,bool_(__cdecl_CombatBehaviorEquipContext::*)(void)const>>>::Validate(CombatBehaviorTreeNode* a_node)"
@@ -11026,6 +11029,7 @@
 56653,0x1409c7b10,0x140a02660,2,void* hkContainerTempAllocator::Allocator::BlockAlloc(std::int32_t a_numBytes)
 56654,0x1409c7b40,0x140a02690,2,"void hkContainerTempAllocator::Allocator::BlockFree(void* a_ptr, std::int32_t a_numBytes)"
 56763,0x1409ca770,0x140a052c0,4,sub_1409CA770
+56784,0x1409cb270,0x140A05DC0,2,"void hkVector4::setTransformedInversePos(const hkTransform& a_transform, const hkVector4& a_pos)"
 56800,0x1409cb840,0x140a06390,2,void hkStringPtr::dtor()
 56801,0x1409cb860,0x140a063b0,4,"hkStringPtr * ctor_1409cb860 (undefined8 a_this, char * a_data)"
 56806,0x1409cba10,0x140a06560,4,"hkStringPtr::hkStringPtr(std::string_view a_data, const std::uint32_t a_mask, const bool a_mark)"
@@ -11427,6 +11431,8 @@
 60552,0x140a7b120,0x140ab5b20,4,"void hkpWorld::castRay(const hkpWorldRayCastInput& a_input, hkpRayHitCollector& a_collector)"
 60554,0x140a7b4c0,0x140ab5ec0,4,"inline void hkpWorld::LinearCast(const hkpCollidable* a_colA, const hkpLinearCastInput& a_input, hkpCdPointCollector& a_castCollector, hkpCdPointCollector* a_startCollector = nullptr)"
 60558,0x140a7c0a0,0x140ab6aa0,4,"void hkpWorld::getPenetrations(const hkpCollidable* a_collidable, const hkpCollisionInput& a_input, void* a_collector)"
+60585,0x140a7db20,0x140AB8520,2,void hkpWorld::internal_executePendingOperations()
+60586,0x140a7db40,0x140AB8540,2,void hkpWorld::internal_executePendingBodyOperations()
 60611,0x140a7e8e0,0x140ab92e0,2,"void hkpContactMgrFactory::CalcContentStatistics(hkStatisticsCollector* a_collector, const hkClass* a_class)"
 60628,0x140a7f0e0,0x140ab9ae0,4,"void hkpWorldObject::SetProperty(std::uint32_t a_key, hkpPropertyValue a_value)"
 60631,0x140a7f3b0,0x140ab9db0,2,"void hkpWorldObject::CalcContentStatistics(hkStatisticsCollector* a_collector, const hkClass* a_class)"
@@ -11631,6 +11637,8 @@
 61294,0x140aa0400,0x140adae00,2,"void hkpReportContactMgr::RemoveToiImpl(hkpConstraintOwner& a_constraintOwner, hkpContactPointProperties& a_properties)"
 61295,0x140aa0490,0x140adae90,2,"void hkpReportContactMgr::ConfirmToi(hkpToiEvent& a_event, hkReal a_rotateNormal, hkArray<hkpEntity*>& a_outToBeActivated)"
 61300,0x140aa0710,0x140adb110,2,void hkpReportContactMgr::Cleanup()
+61313,0x140aa13d0,0x140ADBDD0,2,void hkpWorldOperationQueue::executeAllPending()
+61315,0x140aa1d30,0x140ADC730,2,void hkpWorldOperationQueue::executeAllPendingBodyOperations()
 61336,0x140aa2c90,0x140add690,2,void hkpEndOfStepCallbackUtil::PostSimulationCallback(hkpWorld* a_world)
 61388,0x140aa8740,0x140ae3140,3,"void hkpResponseModifier::SetInvMassScalingForContact(hkpDynamicsContactMgr* a_mgr, hkpRigidBody* a_body, hkpConstraintOwner& a_constraintOwner, const hkVector4& a_factor)"
 61469,0x140aae8e0,0x140ae92e0,2,void hkpSimpleContactConstraintData::GetConstraintInfo(hkpConstraintData::ConstraintInfo& a_infoOut)
@@ -12154,6 +12162,7 @@
 67299,0x140c14b70,0x140c514e0,4,RE::ButtonEvent::IsDown
 67315,0x140c150b0,0x140c519e0,3,void BSInputDeviceManager::PollInputDevices(float a_secsSinceLastFrame)
 67316,0x140c15180,0x140c51ac0,4,"bool BSInputDeviceManager::GetButtonNameFromID(INPUT_DEVICE a_device, std::int32_t a_id, BSFixedString& a_buttonName) const"
+67325,0x140c15300,0x140C51C40,2,void BSInputDeviceManager::ResetInputDevices()
 67373,0x140c165e0,0x140c533a0,4,DirectInput8::IDirectInputDevice8A* BSDirectInputManager::CreateDeviceWithGUID(WinAPI::GUID* a_guid)
 67374,0x140c16620,0x140c533e0,4,void BSDirectInputManager::ReleaseDevice(DirectInput8::IDirectInputDevice8A* a_device)
 67375,0x140c16650,0x140c53410,4,"void BSDirectInputManager::GetDeviceState(DirectInput8::IDirectInputDevice8A* a_device, std::uint32_t a_size, void* a_outData)"
@@ -12191,7 +12200,7 @@
 67483,0x140c1a6b0,0x140c5eee0,2,void BSWin32VirtualKeyboardDevice::Start(const kbInfo* a_info)
 67490,0x140c1a810,0x140c5f050,2,void BSWin32MouseDevice::Initialize()
 67492,0x140c1aa00,0x140c5f250,2,void BSWin32MouseDevice::Shutdown()
-67494,0x140c1aa60,0x140c5f2c0,2,void BSWin32MouseDevice::Reinitialize(bool a_arg)
+67494,0x140c1aa60,0x140c5f2c0,2,void BSWin32MouseDevice::Reinitialize(bool a_backgroundMouse)
 67496,0x140c1ab00,0x140c5fde0,2,void BSWin32GamepadDevice::Initialize()
 67497,0x140c1ab40,0x140c5fe20,2,void BSWin32GamepadDevice::Poll(float a_timeDelta)
 67499,0x140c1ae00,0x140c600e0,2,void BSWin32GamepadDevice::ClearInputState()
@@ -13590,6 +13599,7 @@
 72864,0x140d06200,0x140d4cda0,2,"bool NiPSysGravityModifier::Update(float a_time, NiPSysData* a_particleData, NiPoint3* a_position, NiPoint3* a_radii, NiColorA* a_rotation)"
 72865,0x140d06f10,0x140d4dab0,2,void NiPSysGravityModifier::ProcessClone(NiCloningProcess& a_cloning)
 72873,0x140d071c0,0x140d4dd60,2,const NiRTTI* NiPSysGravityModifier::GetRTTI()
+72874,0x140d071d0,0x140D4DD70,2,float NiSymmetricRandom()
 72875,0x140d07200,0x140d4dda0,2,void NiPSysModifier::SetActive(bool a_active)
 72876,0x140d07210,0x140d4ddb0,2,NiObject* BSPSysHavokUpdateModifier::CreateClone(NiCloningProcess& a_cloning)
 72878,0x140d07380,0x140d4df20,2,void BSPSysHavokUpdateModifier::LoadBinary(NiStream& a_stream)
@@ -25969,6 +25979,7 @@
 529941,0x1407d1320,0x1407fc670,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorDynamicConditionalNode>::Update(CombatBehaviorThread* a_thread)
 529942,0x1407d1330,0x1407fc680,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorEquipObject>::Update(CombatBehaviorThread* a_thread)
 529943,0x1407d1340,0x1407fc690,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorEquipRangedWeapon>::Update(CombatBehaviorThread* a_thread)
+529944,0x1407d1350,0x1407FC6A0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorEquipShout>::Update(CombatBehaviorThread* a_thread)
 529945,0x1407d1380,0x1407fc6d0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorEquipSpell>::Update(CombatBehaviorThread* a_thread)
 529946,0x1407d1390,0x1407fc6e0,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorPause>::Update(CombatBehaviorThread* a_thread)
 529947,0x1407d13c0,0x1407fc710,2,void CombatBehaviorTreeNodeObjectBase<CombatBehaviorSpawnParallel>::Update(CombatBehaviorThread* a_thread)

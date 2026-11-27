@@ -1612,6 +1612,7 @@ sseid,aeid,confidence,name
 11209,11317,1,SpellItem::sub_*
 11211,11319,1,
 11217,11336,1,
+11219,11338,1,
 11221,11340,1,MagicItem::IsTwoHanded_140102020
 11222,11341,1,SpellItem::sub_140102030
 11223,11342,1,
@@ -2750,13 +2751,14 @@ sseid,aeid,confidence,name
 15782,16020,3,RE::InventoryEntryData::IsOwnedBy
 15802,16040,3,RE::TESObjectREFR::MakeInventoryChanges
 15806,16044,3,RE::InventoryChanges::GetWornMask
+15809,16047,1,
 15812,16050,3,RE::InventoryChanges::Ctor
 15813,16051,3,RE::InventoryChanges::Dtor
 15829,16068,3,RE::InventoryChanges::InitScripts
 15854,16094,1,
 15858,16098,3,papyrus_extender::fave_util::item::favorite
 15859,16099,3,papyrus_extender::fave_util::item::unfavorite
-15868,16047,3,RE::InventoryChanges::GetItemCount
+15868,16108,3,RE::InventoryChanges::GetItemCount
 15873,16113,1,InventoryChanges::GetEquippedArmorInSlot_*
 15889,16129,3,RE::InventoryChanges::InitLeveledItems
 15890,16130,3,RE::InventoryChanges::InitFromContainerExtra
@@ -3950,6 +3952,7 @@ sseid,aeid,confidence,name
 19681,20072,1,
 19682,20073,1,
 19702,20096,1,
+19706,20100,1,
 19708,20102,1,
 19711,20105,1,
 19713,20107,1,
@@ -7618,6 +7621,7 @@ sseid,aeid,confidence,name
 37019,38047,1,
 37021,38049,1,
 37026,38054,1,
+37030,38058,1,
 37034,38062,1,
 37038,38066,1,TESBoundObject::SendActorItemEquippedEvent_*
 37039,38067,1,
@@ -8455,6 +8459,7 @@ sseid,aeid,confidence,name
 39411,40486,1,
 39425,40501,3,papyrus_extender::papyrus::detail::get_god_mode_impl
 39428,40504,3,bool PlayerCharacter::IsInvulnerable()
+39447,40523,1,
 39451,40528,1,
 39491,40570,1,
 39507,40586,3,RE::PlayerCharacter::SetAIDriven
@@ -10633,9 +10638,11 @@ sseid,aeid,confidence,name
 46528,47743,1,
 46529,47744,1,
 46530,47745,1,
+46531,47746,1,
 46555,47759,1,
 46567,47772,1,
 46569,47774,1,
+46572,47777,1,
 46575,47780,1,
 46576,47781,1,
 46578,47791,1,
@@ -12825,6 +12832,7 @@ sseid,aeid,confidence,name
 56642,57049,1,
 56653,57060,1,
 56654,57061,1,
+56784,57214,1,
 56800,57230,1,
 56913,57350,1,
 56914,57351,1,
@@ -13171,6 +13179,8 @@ sseid,aeid,confidence,name
 60504,61316,3,RE::hkpWorld::RemovePhantom
 60517,61330,1,
 60551,61399,3,RE::hkpWorld::CastRay
+60585,61434,1,
+60586,61435,1,
 60611,61462,1,
 60631,61488,1,
 60675,61535,1,
@@ -13355,6 +13365,8 @@ sseid,aeid,confidence,name
 61294,62184,1,
 61295,62185,1,
 61300,62190,1,
+61313,62204,1,
+61315,62206,1,
 61336,62230,1,
 61469,62364,1,
 61470,62365,1,
@@ -13753,6 +13765,7 @@ sseid,aeid,confidence,name
 67195,68494,1,
 67234,68534,3,QuickLoot::
 67240,68540,3,QuickLoot::
+67325,68628,1,
 67405,68710,1,
 67416,68721,1,
 67435,68742,1,
@@ -13771,6 +13784,7 @@ sseid,aeid,confidence,name
 67474,68784,1,
 67490,68801,1,
 67492,68803,1,
+67494,68805,1,
 67719,69045,1,
 67720,69046,1,
 67721,69047,1,
@@ -29636,6 +29650,7 @@ sseid,aeid,confidence,name
 515446,401585,3,RE::CrosshairPickData::GetSingleton
 516573,402775,3,RE::BSScaleformManager::Singleton
 516940,403447,3,RE::Main::QFrameAnimTime
+517013,403520,1,
 517051,403559,3,RE::Inventory3DManager::GetSingleton?
 517052,403560,3,RE::UIRenderManager::singleton
 517160,403693,3,PlayerRegionState g_PlayerRegionState
@@ -29643,7 +29658,7 @@ sseid,aeid,confidence,name
 517372,403902,3,RE::ResponseDictionary::GetSingleton?
 518086,404607,3,RE::HandlerDictionary::GetSingleton?
 518706,405246,3,RE::CombatManager::Singleton
-519283,403520,3,RE::BarterMenu::GetTargetRefHandle?
+519283,405823,3,RE::BarterMenu::GetTargetRefHandle?
 519295,405835,3,RE::BookMenu::GetTargetForm?
 519300,405840,3,RE::BookMenu::GetTargetReference?
 519396,405937,3,ContainerMenu.cpp::ContainerMenu::GetContainerMode
@@ -30771,6 +30786,7 @@ sseid,aeid,confidence,name
 529941,47783,1,
 529942,47784,1,
 529943,47785,1,
+529944,47786,1,
 529945,47787,1,
 529946,47788,1,
 529947,47789,1,
