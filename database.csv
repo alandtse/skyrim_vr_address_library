@@ -7706,6 +7706,8 @@
 43400,0x140766710,0x140791a60,2,void CombatCoverSearchResult::SaveGame(BGSSaveGameBuffer* a_buf)
 43401,0x140766750,0x140791aa0,2,void CombatCoverSearchResult::LoadGame(BGSLoadGameBuffer* a_buf)
 43402,0x1407667f0,0x140791b40,2,std::uint32_t CombatCoverSearchResult::GetObjectType()
+43403,0x140766800,0x140791b50,2,"CombatCoverLocation* CombatCoverLocation::ctor(CombatCoverLocation::CoverData* a_data, CombatCoverSearch::Params* a_params, float a_width)"
+43404,0x140766940,0x140791c90,2,void CombatCoverLocation::dtor()
 43405,0x140766a00,0x140791d50,2,void CombatCoverLocation::SaveGame(BGSSaveGameBuffer* a_buf)
 43406,0x140766b40,0x140791e90,2,void CombatCoverLocation::LoadGame(BGSLoadGameBuffer* a_buf)
 43407,0x140766c20,0x140791f70,2,std::uint32_t CombatCoverLocation::GetObjectType()
