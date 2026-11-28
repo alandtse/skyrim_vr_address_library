@@ -288,7 +288,7 @@
 11921,0x140126cd0,0x1401372b0,4,"void ExtraDataList::SetEnchantment(EnchantmentItem* a_enchantment, std::uint16_t a_chargeAmount, bool a_removeOnUnequip)"
 11931,0x1401273b0,0x140137990,4,void ExtraDataList::ClearGrassHandles()
 11932,0x140127480,0x140137a60,4,void ExtraDataList::SetAddCellGrassTask(AddCellGrassTask* a_task)
-11933,0x1401275e0,0x140137bc0,4,"void BSExtraDataList::GetCellGrassData (BSExtraDataList * a_this, BSExtraData * * a_out)"
+11933,0x1401275e0,0x140137bc0,4,void BSExtraDataList::GetCellGrassData(NiPointer<AddCellGrassTask>& a_out)
 11938,0x140127a70,0x140138050,3,void ExtraDataList::SetPlaceableWater(BGSWaterCollisionManager::bhkPlaceableWater* a_water)
 11942,0x140127e60,0x140138440,2,void ExtraDataList::SetAutoWater(BGSWaterCollisionManager::bhkAutoWater* a_water)
 11991,0x14012e070,0x14013e630,2,bool TempLoadGameBuffer::ReadRefHandleFromBuffer(RefHandle* a_handle)
@@ -601,9 +601,12 @@
 13278,0x14015bf70,0x14016ca30,3,void TES::LoadGridCells(TES* a_this)
 13282,0x14015c4d0,0x14016cf90,3,"uint TES::PurgeInteriorBuffer(TES* a_this, bool a_keepCurrent)"
 13286,0x14015c7e0,0x14016d2a0,3,void TES::UpdateLandLODBlendFlags(TES* a_this)
+13365,0x14015f720,0x14016ff60,2,AddCellGrassTask* AddCellGrassTask::Ctor(TESObjectCELL* a_cell)
 13530,0x1401652d0,0x140175a10,3,"void UIMessageQueue::AddMessage (UIMessageQueue * a_this, BSFixedString * a_menuName, UIMessageTypes a_type, IUIMessageData * a_data)"
 13541,0x140165660,0x140175da0,3,
+13548,0x140165760,0x140175ea0,2,void AddCellGrassTask::Finish()
 13549,0x140165770,0x140175eb0,4,longlong TESWorldSpace::GetCellByCoordinateMask_140165770 (TESWorldSpace * a_this)
+13574,0x140165f40,0x140176680,2,void AddCellGrassTask::PostProcess()
 13576,0x140165f60,0x1401766a0,2,RandomNumberGenerator* GetRandomNumberGenerator()
 13594,0x140167220,0x140177940,3,FDGE::Skyrim::LoadWorldData
 13597,0x140167400,0x140177b20,4,bool TESDataHandler::AddFormToDataHandler(TESForm* a_form)
@@ -5050,6 +5053,15 @@
 32149,0x1404f0960,0x140500bd0,4,undefined8 IAnimationGraphManagerHolder::sub_1404F0960(IAnimationGraphManagerHolder *a_this)
 32155,0x1404f1140,0x1405013b0,4,bool IAnimationGraphManagerHolder::UpdateAnimationGraphManager(const BSAnimationUpdateData& a_updateData)
 32157,0x1404f12c0,0x140501530,2,bool IAnimationGraphManagerHolder::NotifyAnimationGraph(const BSFixedString& a_eventName)
+32159,0x1404f13d0,0x140501640,2,bool IAnimationGraphManagerHolder::PopulateGraphNodesToTarget(BSScrapArray<NiAVObject*>& a_nodes)
+32161,0x1404f13f0,0x140501660,2,bool IAnimationGraphManagerHolder::SetupAnimEventSinks(const BSTSmartPointer<BShkbAnimationGraph>& a_animGraph)
+32163,0x1404f1410,0x140501680,2,bool IAnimationGraphManagerHolder::CreateAnimationChannels(BSScrapArray<BSTSmartPointer<BSAnimationGraphChannel>>& a_animGraphChannels)
+32164,0x1404f1440,0x1405016b0,2,void IAnimationGraphManagerHolder::PostCreateAnimationGraphManager(BSTSmartPointer<BSAnimationGraphManager>& a_animGraphMgr)
+32166,0x1404f1460,0x1405016d0,2,"void IAnimationGraphManagerHolder::PostChangeAnimationManager(const BSTSmartPointer<BShkbAnimationGraph>& a_arg1, const BSTSmartPointer<BShkbAnimationGraph>& a_arg2)"
+32168,0x1404f1480,0x1405016f0,2,std::uint32_t IAnimationGraphManagerHolder::GetGraphVariableCacheSize() const
+32169,0x1404f1490,0x140501700,2,"bool IAnimationGraphManagerHolder::GetGraphVariableImpl3(const BSFixedString& a_variableName, bool& a_out) const"
+32170,0x1404f14a0,0x140501710,2,"bool IAnimationGraphManagerHolder::GetGraphVariableImpl2(const BSFixedString& a_variableName, std::int32_t& a_out) const"
+32171,0x1404f14b0,0x140501720,2,"bool IAnimationGraphManagerHolder::GetGraphVariableImpl1(const BSFixedString& a_variableName, float& a_out) const"
 32173,0x1404f1520,0x140501790,2,bool IAnimationGraphManagerLoadingTask::Process()
 32184,0x1404f1e60,0x1405020d0,4,RE::BSAnimationGraphManager::sub_1404F1E60
 32192,0x1404f2620,0x140502890,3,"bool IAnimationGraphManagerHolder::GetGraphVariableNiPoint3(const BSFixedString& a_variableName, NiPoint3& a_out)"
@@ -6069,6 +6081,9 @@
 37019,0x14060f170,0x140617d80,2,bool Actor::SetAnimationGraphManagerImpl(BSTSmartPointer<BSAnimationGraphManager>& a_in)
 37020,0x14060f240,0x140617e50,2,SendAnimation
 37021,0x14060f250,0x140617e60,2,std::uint32_t Actor::GetGraphVariableCacheSize()
+37022,0x14060f260,0x140617e70,2,"bool Actor::GetGraphVariableImpl3(const BSFixedString& a_variableName, bool& a_out) const"
+37023,0x14060f2c0,0x140617ed0,2,"bool Actor::GetGraphVariableImpl2(const BSFixedString& a_variableName, std::int32_t& a_out) const"
+37024,0x14060f320,0x140617f30,2,"bool Actor::GetGraphVariableImpl1(const BSFixedString& a_variableName, float& a_out) const"
 37026,0x14060f3a0,0x140617fb0,2,void Actor::ModifyAnimationUpdateData(BSAnimationUpdateData& a_data)
 37029,0x14060f690,0x1406182a0,2,bool Actor::ShouldPerformRevert()
 37030,0x14060f6d0,0x1406182e0,2,"bool Actor::PopulateGraphProjectsToLoad(NiNode* a_root, BSScrapArray<BSStaticStringT<260>>& a_projects)"
@@ -6790,7 +6805,7 @@
 39577,0x1406b34e0,0x1406d6850,4,RE::PlayerCharacter::WeaponSwingCallBack_1406B34E0
 39578,0x1406b35c0,0x1406d6930,2,NiPoint3 PlayerCharacter::GetLookingAtLocation()
 39584,0x1406b3a50,0x1406d6dc0,3,RE::PlayerCharacter::IsAllowedToTakeItemWithValue
-39597,0x1406b4290,0x1406d75e0,2,void PlayerCharacter::ApplyTemporaryPerk(BGSPerk* a_perk)
+39597,0x1406b4290,0x1406d7600,2,void PlayerCharacter::ApplyTemporaryPerk(BGSPerk* a_perk)
 39598,0x1406b4370,0x1406d76e0,2,void PlayerCharacter::RemoveTemporaryPerk(BGSPerk* a_perk)
 39604,0x1406b4820,0x1406d7b00,2,"bool PlayerCharacter::DrinkPotion(AlchemyItem* a_potion, ExtraDataList* a_extralist)"
 39612,0x1406b52a0,0x1406d8580,3,"TintMask* PlayerCharacter::GetTintMask(std::int32_t a_type, std::int32_t a_index)"
@@ -6802,7 +6817,9 @@
 39657,0x1406b6eb0,0x1406da3d0,3,"void PlayerCharacter::MoveToPositionInCell(float* a_position, float* a_rotation, TESObjectCELL* a_cell, int a_arg4)"
 39658,0x1406b7670,0x1406dac20,4,"void PlayerCharacter::MoveToPositionInWorldSpace(float* a_position, float* a_rotation, TESWorldSpace* a_world, bool a_arg4)"
 39663,0x1406b8340,0x1406db930,4,PlayerCharacter::DiscoveryCheck
+39666,0x1406b89c0,0x1406dc030,2,bool PlayerCharacter::ConstructAnimationGraph(BSTSmartPointer<BShkbAnimationGraph>& a_out)
 39667,0x1406b8a80,0x1406dc0f0,2,void PlayerCharacter::PostCreateAnimationGraphManager(void* a_animGraphMgr)
+39668,0x1406b8b80,0x1406dc1f0,2,bool PlayerCharacter::PopulateGraphNodesToTarget(BSScrapArray<NiAVObject*>& a_nodes)
 39671,0x1406b8ed0,0x1406dc540,2,void PlayerCharacter::ModifyAnimationUpdateData(BSAnimationUpdateData& a_data)
 39675,0x1406b9120,0x1406dc8c0,2,void PlayerCharacter::EffectAdded(ActiveEffect* a_effect)
 39709,0x1406ba7f0,0x1406de150,3,ShowDragonLandStatusMessage
@@ -7618,7 +7635,7 @@
 43022,0x1407531c0,0x14077e4e0,2,papyrus_extender::events::game::weaponhit::projectile::target_0x38d
 43030,0x140754820,0x14077fbd0,3,bool Projectile::InitializeProjectile()
 43035,0x140754dc0,0x140780150,3,void Projectile::QueueModelLoads()
-43087,0x1407570f0,0x1407822f0,3,void VATS::SetMode(std::uint32_t a_mode)
+43087,0x1407570f0,0x140782480,3,void VATS::SetMode(std::uint32_t a_mode)
 43090,0x140757960,0x140782cf0,4,void VATS::QueueCommand()
 43094,0x140757dd0,0x140783160,4,"void VATS::AdvanceCommand(bool a_arg1, bool a_last, bool a_arg3)"
 43096,0x140757ff0,0x140783380,2,VATSCommand* VATS::GetFrontCommand()
@@ -10759,7 +10776,7 @@
 51835,0x1408d0de0,0x1408fdf80,2,void TweenMenu::Accept(CallbackProcessor* a_processor)
 51839,0x1408d0fe0,0x1408fe180,4,static void CloseTweenMenu()
 51843,0x1408d11f0,0x1408fe370,3,TweenMenu::
-51859,0x1408d33b0,0x1406f4b40,3,"void UI3DSceneManager::AttachChild (pointer a_this, NiAVObject * a_obj, INTERFACE_LIGHT_SCHEME a_scheme)"
+51859,0x1408d33b0,0x140900d20,3,"void UI3DSceneManager::AttachChild (pointer a_this, NiAVObject * a_obj, INTERFACE_LIGHT_SCHEME a_scheme)"
 51861,0x1408d3480,0x140900dd0,3,void UI3DSceneManager::DetachChild(NiAVObject* a_obj)
 51867,0x1408d38e0,0x140901370,4,"void UI3DSceneManager::SetCameraPosition_1408d38e0 (longlong a_this, NiPoint3 * a_pos)"
 51869,0x1408d3990,0x140901420,4,"void UI3DSceneManager::SetCameraRotate_1408d3990 (longlong a_this, NiMatrix33 * a_rotate)"
@@ -11362,7 +11379,7 @@
 55712,0x140998620,0x1409d3140,3,papyrus::ObjectReference::StopTranslation
 55716,0x14099c090,0x1409d6bb0,3,void DestroyAnimationCallbacks()
 55945,0x1409a4050,0x1409deb70,3,SPID:Distribute::DeathItemManager::Detail::Add_item
-56038,0x1409a95e0,0x1409E4103,3,TESObjectREFR::Enable
+56038,0x1409a95e0,0x1409e4100,3,TESObjectREFR::Enable
 56081,0x1409a9e80,0x1409e49a0,2,"bool BSScript::NativeFunction0<TESObjectREFR,int>::HasStub()"
 56082,0x1409a9e90,0x1409e49b0,2,"bool BSScript::NativeFunction0<TESObjectREFR,unsigned_int>::HasStub()"
 56083,0x1409a9ea0,0x1409e49c0,2,"bool BSScript::NativeFunction0<TESObjectREFR,float>::HasStub()"
@@ -12336,7 +12353,7 @@
 63706,0x140b33750,0x140b6e530,2,"void hkp3AxisSweep::Set32BitOffsetAndScale(const hkVector4& a_offsetLow, const hkVector4& a_offsetHigh, const hkVector4& a_scale)"
 63733,0x140b35a90,0x140b70870,2,const hkpBroadPhase* hkpBroadPhase::GetCapabilityDelegate(Capabilities a_cap)
 63734,0x140b35aa0,0x140b70880,2,"void hkp3AxisSweep::GetOffsetLowHigh32bit(hkVector4& a_offsetLow32bit, hkVector4& a_offsetHigh32bit)"
-63764,0x140b425c0,0x140b846e0,3,hkpContinuousSimulation::sub_140B425C0
+63764,0x140b425c0,0x140b7d3a0,3,hkpContinuousSimulation::sub_140B425C0
 63916,0x140b518b0,0x140b8c700,2,void hkpBinaryAction::GetEntities(hkArray<hkpEntity*>& a_entitiesOut)
 63917,0x140b51940,0x140b8c790,2,void hkpBinaryAction::EntityRemovedCallback(hkpEntity* a_entity)
 63987,0x140b551b0,0x140b90000,2,"std::uint16_t hkpMapPointsToSubShapeContactMgr::AddContactPointImpl(const hkpCdBody& a_bodyA, const hkpCdBody& a_bodyB, const hkpProcessCollisionInput& a_input, hkpProcessCollisionOutput& a_output, const hkpGskCache* a_contactCache, hkContactPoint& a_cp)"
