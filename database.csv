@@ -915,6 +915,7 @@
 15457,0x1401c46e0,0x1401d4850,2,"value_type* NiTMap<NiTexture*,bool>::malloc_value()"
 15464,0x1401c4b80,0x1401d4cf0,2,"void NiTMapBase<DFALL<NiTMapItem<NiTexture*_,TEX_USER_DATA*>>,NiTexture*_,TEX_USER_DATA*>::assign_value(void* a_item, NiTexture* a_key, TEX_USER_DATA* a_value)"
 15465,0x1401c4b90,0x1401d4d00,2,"void NiTMapBase<DFALL<NiTMapItem<NiTexture*_,bool>>,NiTexture*_,bool>::assign_value(void* a_item, NiTexture* a_key, bool a_value)"
+15476,0x1401c59b0,0x1401d5b20,2,std::uint32_t BGSTextureUseMap::TextureUse::Accept(NiSourceTexture* a_texture)
 15485,0x1401c5cc0,0x1401d5e30,4,char * GetGameVersion(void)
 15486,0x1401c5cd0,0x1401d5e40,4,void BIPOBJECT::Clear()
 15487,0x1401c5e60,0x1401d5fd0,4,void BIPOBJECT::Assign(BIPOBJECT* a_other)
@@ -2533,7 +2534,7 @@
 22779,0x140324a60,0x140334240,2,"void BSTSmartPointer<BSScript::Object, BSTSmartPointerIntrusiveRefCount>::Dtor()"
 22790,0x140324e90,0x1402af140,4,BGSStoryEventManager* BGSStoryEvent::BGSStoryEventManager::GetSingleton() include\RE\B/BGSStoryEventManager.h:20
 22825,0x140325f00,0x140335740,4,void * SKSE::CreateUIMessageData_140325f00 (BSFixedString * param_1)
-22842,0x1403263f0,0x140335c30,2,void .?AVMobDialogueFlagResetter@?1??ResetDialogueFlags@Script@@SA_NPEBUSCRIPT_PARAMETER@@PEBDPEAVTESObjectREFR@@2PEAV2@PEAVScriptLocals@@AEANAEAI@Z@::Operate(Actor* a_actor)
+22842,0x1403263f0,0x140335c30,2,void MobDialogueFlagResetter::Operate(Actor* a_actor)
 22843,0x140326460,0x140335ca0,3,RE::MessageDataFactoryManager::GetSingleton
 22845,0x140326510,0x140335d50,3,RE::INISettingCollection::ReadFromFile
 22847,0x1403266e0,0x140335f20,2,void BSScript::Internal::Object::Release()
@@ -4595,7 +4596,7 @@
 29870,0x140477180,0x140487140,2,TESObjectCELL* Pathing::GetCellForPathingCell(const BSTSmartPointer<PathingCell>& a_cell)
 29871,0x1404771a0,0x140487160,2,TESWorldSpace* Pathing::GetWorldSpaceForPathingCell(const BSTSmartPointer<PathingCell>& a_cell)
 29872,0x1404771c0,0x140487180,2,BSPathingDoor* Pathing::CreatePathingDoorFromRef(TESObjectREFR* a_ref)
-29875,0x1404772b0,0x140487270,2,"bool Pathing::GetPathingDoorForCollidable(hkpCollidable* a_collidable, BSTSmartPointer<BSPathingDoor>& a_out)"
+29875,0x1404772b0,0x140487270,2,"bool Pathing::GetPathingDoorFromCollision(hkpCollidable* a_collidable, BSTSmartPointer<BSPathingDoor>& a_out)"
 29878,0x1404774e0,0x1404874a0,2,"BSEventNotifyControl Pathing::ProcessEvent(CellAttachDetachEvent* a_event, BSTEventSource<CellAttachDetachEvent>* a_eventSource)"
 29880,0x140477800,0x140487790,2,"std::uint32_t PushBackRecentPathingCell(BSTArray<BSTTuple<std::uint64_t, BSTSmartPointer<PathingCell>>>& a_array, std::uint32_t a_time, BSTSmartPointer<PathingCell>& a_cell)"
 29887,0x140477e30,0x140487dc0,2,"static bool BSPathingCellManager::FindPotentialNavmeshesForLocationImpl_Scrap(BSPathingLocation* a_location, float a_radius, BSScrapArray<BSTSmartPointer<BSNavmesh>>& a_navMeshesOut, bool a_flag)"
@@ -5797,6 +5798,7 @@
 34864,0x14058a3c0,0x140591a30,2,"BSEventNotifyControl BGSSaveLoadManager::ProcessEvent(const RaceSexMenuEvent::NameChangedEvent* a_event, BSTEventSource<RaceSexMenuEvent::NameChangedEvent>* a_eventSource)"
 34871,0x14058ac60,0x1405922d0,3,Win32FileType::ShowOutdatedSaveMessage
 34879,0x14058c270,0x140593860,2,std::uint32_t BGSSaveLoadManager::Thread::ThreadProc()
+34944,0x14058ee40,0x140596500,2,"bool BSTCommonMessageQueue<BSTSmartPointer<bgs::saveload::Request,BSTSmartPointerIntrusiveRefCount>>::PopInternal(void* a_obj)"
 34950,0x14058efc0,0x140596680,2,void AppendModdedSuffix(BSFixedString* a_saveName)
 34963,0x14058fce0,0x1405973a0,2,void BSTEventSource<TESLoadGameEvent>::SendEvent(const TESLoadGameEvent* a_event)
 34964,0x14058ff80,0x140597640,2,"bool BSTCommonMessageQueue<BSTSmartPointer<bgs::saveload::Request,BSTSmartPointerIntrusiveRefCount>>::Pop(BSTSmartPointer<bgs::saveload::Request,BSTSmartPointerIntrusiveRefCount>* a_obj)"
@@ -5961,6 +5963,7 @@
 35698,0x1405badb0,0x1405c3020,2,void MovementAgentNameSet::StaticDtor_PathFollowerFlightSet()
 35754,0x1405bc350,0x1405c4770,3,void BSFadeNode::RegisterFocusShadowActor()
 35771,0x1405bc830,0x1405c4c10,3,void ClearFocusShadowActors()
+35776,0x1405bca60,0x1405c4ec0,2,bool BSTCommonMessageQueue<BSPackedTask>::PopInternal(void* a_obj)
 35779,0x1405bcaf0,0x1405c4f50,2,bool BSTCommonScrapHeapMessageQueue<BSPackedTask>::PushInternal(BSPackedTask* a_obj)
 35790,0x1405bd0f0,0x1405c5550,2,bool BSTCommonMessageQueue<BSPackedTask>::Pop(BSPackedTask* a_obj)
 35791,0x1405bd1b0,0x1405c5610,2,"BSEventNotifyControl DoorObstacleAdapter::ProcessEvent(TESOpenCloseEvent* a_event, BSTEventSource<TESOpenCloseEvent>* a_eventSource)"
@@ -6282,14 +6285,14 @@
 36981,0x14060cfd0,0x140615b90,2,void Actor::WornArmorChanged(TESBoundObject* a_item)
 36984,0x14060d300,0x140615ec0,2,"void Actor::ProcessTracking(float a_delta, NiAVObject* a_obj3D)"
 36985,0x14060db50,0x140616710,2,void Actor::UpdateFacialExpression()
-36993,0x14060e800,0x1406173c0,2,float ActorState::GetYawRotationSpeed()
+36993,0x14060e800,0x1406173c0,2,float Actor::DoGetRotationSpeed()
 36994,0x14060e820,0x1406173e0,3,void Actor::UpdateSprinting()
 36995,0x14060ea70,0x140617680,3,std::uint32_t ActorState::GetFormID()
 36996,0x14060ea80,0x140617690,3,void ActorState::GetPathingLocation(BSPathingLocation* a_out)
 36997,0x14060ead0,0x1406176e0,3,void ActorState::GetPosition(NiPoint3* a_out)
 36998,0x14060eaf0,0x140617700,3,void ActorState::GetAngle(NiPoint3* a_out)
 36999,0x14060eb20,0x140617730,2,void ActorState::GetProcessRotation(NiPoint3* a_out)
-37000,0x14060eb60,0x140617770,3,float ActorState::GetCurrentMovementSpeed()
+37000,0x14060eb60,0x140617770,3,float Actor::DoGetMovementSpeed()
 37001,0x14060eb80,0x140617790,3,bool ActorState::GetMaxSpeeds(MaxSpeeds* a_out)
 37002,0x14060ebd0,0x1406177e0,2,float ActorState::GetScaledBoundSize()
 37003,0x14060ebf0,0x140617800,2,float ActorState::GetReducedScaledBoundSize()
@@ -6465,7 +6468,7 @@
 37625,0x140625fe0,0x14062ee50,3,BGSAttackDataPtr* Actor::GetCurrentAttackData()
 37626,0x140626000,0x14062ee70,2,std::uint32_t Actor::GetEquippedItemTypes()
 37627,0x140626060,0x14062eed0,2,void* Actor::GetAttackAnimationArray(std::uint32_t a_equippedTypes)
-37628,0x1406260f0,0x14062ef60,4,void Actor::WeaponSwingCallback()
+37628,0x1406260f0,0x14062ef60,4,void Actor::WeaponSwingCallBack()
 37629,0x1406261f0,0x14062f060,2,bool Actor::HasBeenAttacked()
 37630,0x140626210,0x14062f080,2,void Actor::SetBeenAttacked(bool a_set)
 37631,0x140626230,0x14062f0a0,2,void Actor::UpdateControllerNoMoveFlag()
@@ -7412,6 +7415,7 @@
 40959,0x1406fcbe0,0x140723b60,2,"void BSTDerivedCreator<MovementHandlerAgentPlayerControls,MovementAgent>::Destroy(const MovementAgent* a_val)"
 40962,0x1406fce00,0x140723d80,2,const BSFixedString& MovementHandlerAgentPlayerControlsActionTrigger::GetAgentType()
 40963,0x1406fce10,0x140723d90,2,BSFixedString& MovementHandlerAgentPlayerControlsActionTrigger::GetStaticAgentType()
+40964,0x1406fcea0,0x140723e20,2,uint8_t MovementHandlerAgentPlayerControlsActionTrigger::GetAgentSaveType()
 40965,0x1406fcec0,0x140723e40,2,bool MovementHandlerAgentPlayerControlsActionTrigger::Activate()
 40966,0x1406fcf20,0x140723ea0,2,void MovementHandlerAgentPlayerControlsActionTrigger::Deactivate()
 40967,0x1406fcf60,0x140723ee0,2,void MovementHandlerAgentPlayerControlsActionTrigger::UpdateHandler(MovementHandlerUpdateDataSmallDelta** a_updateData)
@@ -11149,6 +11153,7 @@
 50486,0x14086ee70,0x14089a400,2,bool CraftingSubMenus::CraftingSubMenu::ProcessUserEvent(BSFixedString* a_control)
 50487,0x14086ee80,0x14089a410,3,YesImSure::enchantmentLearned
 50488,0x14086f100,0x14089a690,2,bool CraftingSubMenus::SmithingMenu::ProcessUserEvent(BSFixedString* a_control)
+50490,0x14086f290,0x14089a820,2,void CraftingSubMenus::EnchantConstructMenu::CategoryListEntry::SetData(GFxValue* a_dataContainer)
 50491,0x14086f2a0,0x14089a830,2,void CraftingSubMenus::EnchantConstructMenu::EnchantmentEntry::SetData(GFxValue* dataContainer)
 50492,0x14086f320,0x14089a8b0,2,void CraftingSubMenus::EnchantConstructMenu::ItemChangeEntry::SetData(GFxValue* dataContainer)
 50493,0x14086f420,0x14089a9b0,2,void CraftingSubMenus::CraftingSubMenu::UpdateSmithingList()
@@ -11169,7 +11174,9 @@
 50543,0x140872a90,0x14089df80,2,void CraftingSubMenus::EnchantConstructMenu::EnchantmentEntry::ShowItem3D(bool a_show)
 50544,0x140872ae0,0x14089dfd0,2,void CraftingSubMenus::EnchantConstructMenu::ItemChangeEntry::ShowItem3D(bool a_show)
 50552,0x140872eb0,0x14089e3a0,2,void BSTEventSource<ItemCrafted::Event>::RemoveEventSink(BSTEventSink<ItemCrafted::Event>* a_sink)
+50559,0x140873a70,0x14089f140,2,void CraftingSubMenus::EnchantConstructMenu::CategoryListEntry::ShowInItemCard(EnchantConstructMenu* a_menu)
 50560,0x140873a80,0x14089f150,2,void CraftingSubMenus::EnchantConstructMenu::EnchantmentEntry::ShowInItemCard(EnchantConstructMenu* a_menu)
+50561,0x140873a90,0x14089f160,2,void CraftingSubMenus::EnchantConstructMenu::ItemChangeEntry::ShowInItemCard(EnchantConstructMenu* a_menu)
 50567,0x140874540,0x14089fc10,4,void EnchantConstructMenu::UpdateInterface_140874540 (undefined8 param_1)
 50569,0x140874a40,0x1408a0190,4,"bool EnchantConstructMenu::CanSelectEnchantmentEntry (EnchantConstructMenu * a_this, uint32_t a_index, bool a_showNotification)"
 50593,0x1408751d0,0x1408a0920,2,UI_MESSAGE_RESULTS CreditsMenu::ProcessMessage(UIMessage& a_message)
@@ -11741,6 +11748,7 @@
 53355,0x140936ee0,0x1409715c0,3,void SkyrimScript::ObjectBindPolicy::~ObjectBindPolicy()
 53512,0x140939e20,0x1409743d0,3,SkyrimScript::HandlePolicy* SkyrimScript::HandlePolicy::dtor_deleting(std::uint32_t a_flags)
 53567,0x14093aae0,0x140975110,2,"BSScript::Variable* MakeStringVariable(BSScript::Variable* a_out, const char* a_string)"
+53569,0x14093ac30,0x1409752d0,2,"bool BSTCommonMessageQueue<BSTSmartPointer<SkyrimScript::DelayFunctor,BSTSmartPointerIntrusiveRefCount>>::PopInternal(void* a_obj)"
 53581,0x14093aef0,0x140975590,2,"bool EventCallbackAdapter::Load(std::int32_t a_flags, BSStorage* a_storage, BSScript::IVMSaveLoadInterface* a_loader, BSScript::IVirtualMachine* a_vm, bool* a_ok)"
 53591,0x14093b7a0,0x140975e40,2,"bool BSTCommonMessageQueue<BSTSmartPointer<SkyrimScript::DelayFunctor,BSTSmartPointerIntrusiveRefCount>>::Pop(BSTSmartPointer<SkyrimScript::DelayFunctor,BSTSmartPointerIntrusiveRefCount>* a_obj)"
 53594,0x14093b900,0x140975fa0,2,"bool BSTCommonMessageQueue<BSTSmartPointer<SkyrimScript::DelayFunctor,BSTSmartPointerIntrusiveRefCount>>::Push(BSTSmartPointer<SkyrimScript::DelayFunctor,BSTSmartPointerIntrusiveRefCount>* a_obj)"
@@ -12307,7 +12315,7 @@
 57514,0x1409e2a30,0x140a1d580,2,const hkMemoryTracker::TypeDefinition* hkDefaultMemoryTracker::findTypeDefinition(const char* a_name)
 57554,0x1409e3b40,0x140a1e690,2,void hkMemorySystem::GarbageCollectThread(hkMemoryRouter& a_router)
 57555,0x1409e3b50,0x140a1e6a0,2,void hkMemorySystem::GarbageCollectShared()
-57556,0x1409e3b60,0x140a1e6b0,2,void hkMemorySystem::garbageCollect()
+57556,0x1409e3b60,0x140a1e6b0,2,void hkMemorySystem::GarbageCollect()
 57560,0x1409e3c10,0x140a1e760,2,void hkMemorySystem::AdvanceFrame()
 57562,0x1409e3c30,0x140a1e780,2,void hkMemorySystem::DebugLockBaseAddress(const void* a_baseAddress)
 57563,0x1409e3c40,0x140a1e790,2,"void hkMemorySystem::DebugTagAddress(const void* a_baseAddress, const void* a_tag)"
@@ -13073,6 +13081,7 @@
 62430,0x140ae2db0,0x140b1d8b0,4,BSAnimationGraphManager::sub_140AE2DB0
 62431,0x140ae2e80,0x140b1d980,3,"bool QueryAnimations(float a_fromTime, BSFixedString& a_projectName, BSScrapArray<ClipData>& a_clips, std::int32_t a_activeGraphIndex)"
 62432,0x140ae2f80,0x140b1da80,3,"bool QueryAnimations(const BSScrapArray<BSFixedString>& a_events, std::int32_t a_activeGraphIndex, BSFixedString& a_projectName, BSScrapArray<ClipData>& a_clips)"
+62476,0x140ae58a0,0x140b203a0,2,"bool BSTCommonMessageQueue<BSTSmartPointer<BSAnimationGraphManager,BSTSmartPointerIntrusiveRefCount>>::PopInternal(void* a_obj)"
 62477,0x140ae58b0,0x140b203b0,2,"bool BSTCommonStaticMessageQueue<BSTSmartPointer<BSAnimationGraphManager,BSTSmartPointerIntrusiveRefCount>,128>::PopInternal(BSTSmartPointer<BSAnimationGraphManager,BSTSmartPointerIntrusiveRefCount>* a_obj)"
 62484,0x140ae5a70,0x140b20570,2,"bool BSTCommonMessageQueue<BSTSmartPointer<BSAnimationGraphManager,BSTSmartPointerIntrusiveRefCount>>::Pop(BSTSmartPointer<BSAnimationGraphManager,BSTSmartPointerIntrusiveRefCount>* a_obj)"
 62485,0x140ae5ac0,0x140b205c0,2,"bool BSTCommonMessageQueue<BSTSmartPointer<BSAnimationGraphManager,BSTSmartPointerIntrusiveRefCount>>::Push(BSTSmartPointer<BSAnimationGraphManager,BSTSmartPointerIntrusiveRefCount>* a_obj)"
@@ -16545,6 +16554,7 @@
 80010,0x140ec1a60,0x140f1e580,2,"IUIMessageData* BSTDerivedCreator<BSUIScaleformData,IUIMessageData>::CreateImpl(IUIMessageData* a_val) const"
 80011,0x140ec1ad0,0x140f1e5f0,2,"void BSTDerivedCreator<BSUIMessageData,IUIMessageData>::Destroy(const IUIMessageData* a_val)"
 80012,0x140ec1af0,0x140f1e610,2,"void BSTDerivedCreator<BSUIScaleformData,IUIMessageData>::Destroy(const IUIMessageData* a_val)"
+80013,0x140ec1b10,0x140f1e630,2,bool BSTCommonMessageQueue<UIMessage*>::PopInternal(void* a_obj)
 80014,0x140ec1b20,0x140f1e640,2,"bool BSTCommonStaticMessageQueue<UIMessage*_,100>::PopInternal(void* a_obj)"
 80035,0x140ec26f0,0x140f1f210,2,bool BSTCommonMessageQueue<UIMessage*>::Pop(UIMessage** a_obj)
 80036,0x140ec2740,0x140f1f260,2,bool BSTCommonMessageQueue<UIMessage*>::Push(UIMessage** a_obj)
@@ -16912,7 +16922,7 @@
 88103,0x1410b35d0,0x141110200,2,"bool FindClosestOpenEdgeFunctor::VisitEdge(BSNavmesh* a_navmesh, std::uint16_t a_triangle, std::uint32_t a_edge)"
 88104,0x1410b36d0,0x141110300,2,"bool CrossEdgeToNeighborNavmesh(void* a_visited, const BSNavmeshTriangleEdgeRef* a_edgeRef, void* a_outEdgeRef)"
 88105,0x1410b3800,0x141110430,2,"bool SortIntersectingEdgesFunctor::VisitEdge(BSNavmesh* a_navmesh, std::uint16_t a_triangle, std::uint32_t a_edge)"
-88124,0x1410b3f00,0x141110b30,2,"bool CastRay(void* a_object, void* a_context, void* a_arg, BSNavmesh** a_navmesh, std::uint32_t* a_outResult)"
+88124,0x1410b3f00,0x141110b30,2,"bool PathSmootherRayCastBuildNodesForLargeZDelta::CastRay(void* a_context, void* a_arg, BSNavmesh** a_navmesh, std::uint32_t* a_outResult)"
 88125,0x1410b3f70,0x141110ba0,2,"static void Pathing::ShrinkTangentsToFitNavmesh(PathFitContext* a_ctx, PathNodeNavInfo* a_from, NiPoint3* a_fromDir, float a_fromScale, PathNodeNavInfo* a_to, NiPoint3* a_toDir, float a_toScale, float* a_outFromLength, float* a_outToLength)"
 88126,0x1410b4310,0x141110f40,2,"static void Pathing::ShrinkTangentsToFitNavmeshByHandle(PathFitContext* a_ctx, PathNodeNavInfo* a_from, NiPoint3* a_fromDir, float a_fromScale, PathNodeNavInfo* a_to, NiPoint3* a_toDir, float a_toScale, float* a_outFromLength, float* a_outToLength)"
 88127,0x1410b46b0,0x1411112e0,2,"static void Pathing::FitNodePairTangents(PathFitContext* a_ctx, PathNodeNavInfo* a_from, PathNodeNavInfo* a_to)"
@@ -17046,7 +17056,7 @@
 88404,0x1410c06c0,0x14111d2f0,2,"MovementAgent* BSTDerivedCreator<MovementAgentPathFollowerStandard,MovementAgent>::CreateImpl()"
 88405,0x1410c0720,0x14111d350,2,"void BSTDerivedCreator<MovementAgentPathFollowerStandard,MovementAgent>::Destroy(const MovementAgent* a_val)"
 88408,0x1410c0790,0x14111d3c0,2,ISelectIdleFilter* MovementSelectIdleUtils::GetDefaultSelectIdleFilter()
-88414,0x1410c08c0,0x14111d4f0,2,void* MovementPathManagerAgent::GetInterface(const std::uint64_t* a_interfaceId)
+88414,0x1410c08c0,0x14111d4f0,2,IPipelineStageInterface* MovementPathManagerAgent::GetPipelineStageInterface(const BSFixedString& a_interfaceId)
 88417,0x1410c0b30,0x14111d760,2,const BSFixedString& MovementPathManagerArbiter::GetPipelineStage()
 88418,0x1410c0b40,0x14111d770,2,const BSFixedString& MovementPathManagerArbiter::GetArbiterType()
 88419,0x1410c0b50,0x14111d780,2,BSFixedString& MovementPathManagerArbiter::GetStaticArbiterType()
@@ -17269,6 +17279,7 @@
 88992,0x1410e35f0,0x141140330,2,"bool CollectPendingPathingTasks(const void* a_taskMap, void* a_outTasks)"
 89007,0x1410e3ec0,0x141140c00,2,std::uint32_t PathingSolutionEntryArray::PushBack(PathingSolutionEntry* a_entry)
 89018,0x1410e42e0,0x141141020,2,"void PathingSolutionEntryArray::ReleaseRange(std::uint32_t a_index, std::uint32_t a_count)"
+89020,0x1410e43a0,0x1411410e0,2,bool BSTCommonMessageQueue<NiPointer<NiAVObject>>::PopInternal(void* a_obj)
 89030,0x1410e4750,0x141141490,2,"void PathingSolutionEntryArray::RemoveElements(std::uint32_t a_index, std::uint32_t a_count)"
 89037,0x1410e4c50,0x141141990,2,"float DistancePointToLine3D(NiPoint3* a_point, NiPoint3* a_a, NiPoint3* a_b)"
 89038,0x1410e4d80,0x141141ac0,2,"float DistancePointToSegment3D(NiPoint3* a_point, NiPoint3* a_a, NiPoint3* a_b, bool* a_outOnInterior, NiPoint3* a_outClosest)"
@@ -17513,13 +17524,13 @@
 89639,0x1411078e0,0x141164800,2,const BSFixedString& MovementPostUpdateArbiter::GetArbiterType()
 89640,0x1411078f0,0x141164810,2,BSFixedString& MovementPostUpdateArbiter::GetStaticArbiterType()
 89641,0x141107980,0x1411648a0,2,std::uint8_t MovementPostUpdateArbiter::GetArbiterSaveType()
-89642,0x1411079a0,0x1411648c0,2,void MovementPostUpdateArbiter::RegisterInterface(IMovementControllerRegisterInterface* a_interface)
+89642,0x1411079a0,0x1411648c0,2,void MovementPostUpdateArbiter::RegisterWithController(IMovementControllerRegisterInterface& a_interface)
 89643,0x1411079d0,0x1411648f0,2,void MovementPostUpdateArbiter::UnregisterWithController()
 89644,0x141107a10,0x141164930,2,void MovementPostUpdateArbiter::Init(BSPathingStreamRead&)
 89645,0x141107a50,0x141164970,2,void MovementPostUpdateArbiter::UpdateSmallDelta(MovementUpdateDataSmallDelta&)
 89646,0x141107ae0,0x141164a00,2,void MovementPostUpdateArbiter::UpdateLargeDelta(MovementUpdateDataLargeDelta&)
-89647,0x141107b80,0x141164aa0,3,void MovementPostUpdateArbiter::Save(BSPathingStreamWrite* a_stream)
-89648,0x141107c70,0x141164b90,3,void MovementPostUpdateArbiter::Load(BSPathingStreamRead* a_stream)
+89647,0x141107b80,0x141164aa0,3,void MovementPostUpdateArbiter::SaveGame(BSPathingStreamWrite& a_stream)
+89648,0x141107c70,0x141164b90,3,void MovementPostUpdateArbiter::LoadGame(BSPathingStreamRead& a_stream)
 89662,0x1411081e0,0x141165100,2,"void BSTDerivedCreator<MovementPostUpdateArbiter,MovementArbiter>::Destroy(const MovementArbiter* a_val)"
 89665,0x141108410,0x141165330,2,const BSFixedString& MovementPathManagerAgentStaticAvoider::GetAgentType()
 89666,0x141108420,0x141165340,2,BSFixedString& MovementPathManagerAgentStaticAvoider::GetStaticAgentType()
@@ -17679,6 +17690,7 @@
 90038,0x1411144b0,0x141171380,2,bool PathingStreamLoadGame::ReadNiPoint3ArrayAndIndex(void* a_data)
 90039,0x141114600,0x1411714d0,2,bool PathingStreamSaveGame::WriteNiPoint3ArrayAndIndex(const void* a_data)
 90042,0x141114870,0x141171740,2,IPipelineStageInterface* MovementAgentPathFollowerVirtual::GetPipelineStageInterface(const BSFixedString& a_arg1)
+90044,0x1411148c0,0x141171790,2,void MovementAgentPathFollowerVirtual::Init(BSPathingStreamRead& a_arg1)
 90045,0x1411148d0,0x1411717a0,2,void MovementAgentPathFollowerVirtual::RegisterWithController(IMovementControllerRegisterInterface& a_controller)
 90046,0x141114920,0x1411717f0,2,void MovementAgentPathFollowerVirtual::UnregisterWithController()
 90047,0x141114970,0x141171840,2,const BSFixedString& MovementAgentPathFollowerVirtual::GetAgentType()
@@ -17695,6 +17707,7 @@
 90066,0x141114fc0,0x141171e90,2,void MovementAgentPathFollowerVirtual::SaveGame(BSPathingStreamWrite&)
 90067,0x141115010,0x141171ee0,2,void MovementAgentPathFollowerVirtual::LoadGame(BSPathingStreamRead&)
 90079,0x1411157f0,0x1411726c0,2,"void BSTDerivedCreator<MovementAgentPathFollowerVirtual,MovementAgent>::Destroy(const MovementAgent* a_val)"
+90081,0x141115850,0x141172720,2,void MovementHandlerAgentAngleController::Init(BSPathingStreamRead& a_arg1)
 90082,0x141115860,0x141172730,2,const BSFixedString& MovementHandlerAgentAngleController::GetAgentType()
 90083,0x141115870,0x141172740,2,BSFixedString& MovementHandlerAgentAngleController::GetStaticAgentType()
 90084,0x141115900,0x1411727d0,2,std::uint8_t MovementHandlerAgentAngleController::GetAgentSaveType()
@@ -17803,22 +17816,26 @@
 90318,0x14111c810,0x1411796e0,2,"void BSTDerivedCreator<MovementTweenerArbiter,MovementArbiter>::Destroy(const MovementArbiter* a_val)"
 90323,0x14111c980,0x141179850,2,const BSFixedString& MovementStateTweener::GetAgentType()
 90324,0x14111c990,0x141179860,2,BSFixedString& MovementStateTweener::GetStaticAgentType()
+90325,0x14111ca20,0x1411798f0,2,uint8_t MovementStateTweener::GetAgentSaveType()
+90326,0x14111ca40,0x141179910,2,IPipelineStageInterface* MovementStateTweener::GetPipelineStageInterface(const BSFixedString& a_arg1)
 90327,0x14111ca50,0x141179920,2,void MovementStateTweener::RegisterWithController(IMovementControllerRegisterInterface& a_arg1)
 90328,0x14111caa0,0x141179970,2,void MovementStateTweener::UnregisterWithController()
 90331,0x14111cb60,0x141179a30,2,void MovementStateTweener::GetPosition(NiPoint3* a_out)
 90332,0x14111cd10,0x141179be0,2,void MovementStateTweener::GetAngle(NiPoint3* a_out)
-90333,0x14111ce40,0x141179d10,2,float MovementStateTweener::GetCurrentMovementSpeed()
-90334,0x14111d030,0x141179f00,2,float MovementStateTweener::GetYawRotationSpeed()
+90333,0x14111ce40,0x141179d10,2,float MovementStateTweener::DoGetMovementSpeed()
+90334,0x14111d030,0x141179f00,2,float MovementStateTweener::DoGetRotationSpeed()
 90335,0x14111d0d0,0x141179fa0,2,void MovementStateTweener::GetProcessRotation(NiPoint3* a_out)
 90356,0x14111d510,0x14117a3e0,2,"void BSTDerivedCreator<MovementStateTweener,MovementAgent>::Destroy(const MovementAgent* a_val)"
 90359,0x14111d600,0x14117a4d0,2,const BSFixedString& MovementStateFollowPath::GetAgentType()
 90360,0x14111d610,0x14117a4e0,2,BSFixedString& MovementStateFollowPath::GetStaticAgentType()
+90361,0x14111d6a0,0x14117a570,2,uint8_t MovementStateFollowPath::GetAgentSaveType()
+90362,0x14111d6c0,0x14117a590,2,IPipelineStageInterface* MovementStateFollowPath::GetPipelineStageInterface(const BSFixedString& a_arg1)
 90363,0x14111d6d0,0x14117a5a0,2,void MovementStateFollowPath::RegisterWithController(IMovementControllerRegisterInterface& a_arg1)
 90364,0x14111d720,0x14117a5f0,2,void MovementStateFollowPath::UnregisterWithController()
 90367,0x14111d7e0,0x14117a6b0,2,void MovementStateFollowPath::GetPosition(NiPoint3* a_out)
 90368,0x14111d880,0x14117a750,2,void MovementStateFollowPath::GetAngle(NiPoint3* a_out)
-90369,0x14111d9f0,0x14117a8c0,2,float MovementStateFollowPath::GetCurrentMovementSpeed()
-90370,0x14111dbe0,0x14117aab0,2,float MovementStateFollowPath::GetYawRotationSpeed()
+90369,0x14111d9f0,0x14117a8c0,2,float MovementStateFollowPath::DoGetMovementSpeed()
+90370,0x14111dbe0,0x14117aab0,2,float MovementStateFollowPath::DoGetRotationSpeed()
 90371,0x14111dc80,0x14117ab50,2,void MovementStateFollowPath::GetProcessRotation(NiPoint3* a_out)
 90392,0x14111e0c0,0x14117af90,2,"void BSTDerivedCreator<MovementStateFollowPath,MovementAgent>::Destroy(const MovementAgent* a_val)"
 90394,0x14111e100,0x14117afd0,3,void IMovementPlayIdleResult::AddRef()
@@ -18229,6 +18246,8 @@
 98375,0x141272c50,0x141292f00,2,"void BSTHashMap<VMHandle, BSTSmallSharedArray<AttachedScript>>::Entry::Emplace(void* a_next, std::uint64_t* a_key, BSTSmallSharedArray<AttachedScript>* a_value)"
 98377,0x141272d00,0x141292fb0,2,void BSTFreeList<BSScript::Internal::FunctionMessage>::Free(BSTFreeListElem<BSScript::Internal::FunctionMessage>*& a_node)
 98381,0x141272f90,0x141293240,3,"void ScrapArrayBSFixedString_ReleaseRange(void* a_array, std::uint32_t a_start, std::uint32_t a_count)"
+98383,0x141273030,0x1412932e0,2,bool BSTCommonMessageQueue<BSScript::Internal::FunctionMessage>::PopInternal(void* a_obj)
+98384,0x141273040,0x1412932f0,2,bool BSTCommonMessageQueue<BSScript::Internal::SuspendedStack>::PopInternal(void* a_obj)
 98385,0x141273050,0x141293300,2,"bool BSTCommonStaticMessageQueue<BSScript::Internal::SuspendedStack,128>::PopInternal(BSScript::Internal::SuspendedStack* a_obj)"
 98404,0x141273520,0x1412937d0,2,"bool BSScript::Internal::RawFuncCallQuery::GetFunctionCallInfo(CallType& a_callType, BSTSmartPointer<ObjectTypeInfo>& a_objType, BSFixedString& a_name, Variable& a_obj, BSScrapArray<Variable>& a_args)"
 98411,0x141273800,0x141293ab0,2,"BSTHashMap<VMHandle, BSTSmallSharedArray<AttachedScript>>::Entry* BSTHashMap<VMHandle, BSTSmallSharedArray<AttachedScript>>::GetFreeEntry(void* a_entries)"
@@ -19295,6 +19314,7 @@
 101789,0x14133b4f0,0x1413788d0,2,std::uint32_t BSSystemMonitor::SocketThread::ThreadProc()
 101790,0x14133b520,0x141378900,2,std::uint32_t BSSystemMonitor::MemOpsThread::ThreadProc()
 101821,0x14133e250,0x14137b630,3,BSWin32SystemUtility* BSWin32SystemUtility::GetSingleton()
+101822,0x14133e2e0,0x14137b6c0,2,"std::int32_t CCallResult<BSWin32SystemUtility,EncryptedAppTicketResponse_t>::GetCallbackSizeBytes()"
 101824,0x14133e300,0x14137b6e0,2,"void CCallResult<BSWin32SystemUtility,EncryptedAppTicketResponse_t>::Run(void* a_pvParam)"
 101825,0x14133e320,0x14137b700,2,"void CCallResult<BSWin32SystemUtility,EncryptedAppTicketResponse_t>::Run(void* a_pvParam, bool a_bIOFailure, std::uint64_t a_hSteamAPICall)"
 101862,0x14133ea10,0x14137be00,2,BSWin32GameDataSystemUtility* BSWin32GameDataSystemUtility::GetSingleton()
