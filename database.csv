@@ -1782,10 +1782,12 @@
 18948,0x14027b430,0x14028ca30,2,void BSTEventSource<TESCellReadyToApplyDecalsEvent>::SendEvent(const TESCellReadyToApplyDecalsEvent* a_event)
 18949,0x14027b6d0,0x14028ccd0,4,void BSTEventSource<TESObjectREFRTranslationEvent>::SendEvent(const TESObjectREFRTranslationEvent* a_event)
 18950,0x14027b970,0x14028cf70,2,void BSTEventSource<TESResetEvent>::SendEvent(const TESResetEvent* a_event)
+18953,0x14027be00,0x14028d3d0,2,void BSTEventSource<TESCellReadyToApplyDecalsEvent>::AddEventSink(BSTEventSink<TESCellReadyToApplyDecalsEvent>* a_sink)
 18968,0x14027ca10,0x14028dfe0,2,"void NiTMapBase<DFALL<NiTMapItem<BSMultiBoundNode*_,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>>,BSMultiBoundNode*_,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>::assign_value(void* a_item, BSMultiBoundNode* a_key, const BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>& a_value)"
 18969,0x14027ca20,0x14028dff0,2,"void NiTMapBase<DFALL<NiTMapItem<TESForm*_,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>>,TESForm*_,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>::assign_value(void* a_item, TESForm* a_key, const BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>& a_value)"
 18970,0x14027ca30,0x14028e000,2,"void NiTMapBase<DFALL<NiTMapItem<BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,NiNode*>>,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,NiNode*>::assign_value(void* a_item, const BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>& a_key, NiNode* a_value)"
 18971,0x14027ca40,0x14028e010,2,"NiTMapBase<DFALL<NiTMapItem<BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,NiPointer<BSMultiBoundNode>>>,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,NiPointer<BSMultiBoundNode>>::assign_value"
+18974,0x14027cc60,0x14028e230,2,void BSTEventSource<TESCellReadyToApplyDecalsEvent>::RemoveEventSink(BSTEventSink<TESCellReadyToApplyDecalsEvent>* a_sink)
 18993,0x14027d150,0x14028e720,2,void hkpEntityListener::EntityShapeSetCallback(hkpEntity* a_entity)
 19002,0x14027ddc0,0x14028f390,3,void TESObjectCELL::AttachReference3D(TESObjectREFR* a_ref)
 19024,0x140280160,0x140291770,3,"BSMultiBoundNode* TESObjectCELL::sub_140280160(const ObjectRefHandle& a_handle, bool a_flag)"
@@ -2947,10 +2949,13 @@
 24709,0x140380600,0x14038fe60,2,"OBJECT_CATEGORY_TYPE ConcreteObjectFormFactory<TESQuest,77,46,5>::GetObjectCategory()"
 24710,0x140380610,0x14038fe70,2,"const char* ConcreteObjectFormFactory<TESQuest,77,46,5>::GetObjectName()"
 24711,0x140380620,0x14038fe80,2,"OBJECT_TYPE ConcreteObjectFormFactory<TESQuest,77,46,5>::GetObjectType()"
+24715,0x140380680,0x14038fee0,2,void BSTEventSource<QuestStatus::Event>::SendEvent(const QuestStatus::Event* a_event)
 24716,0x140380920,0x140390180,2,void BSTEventSource<TESQuestStartStopEvent>::SendEvent(const TESQuestStartStopEvent* a_event)
 24717,0x140380bc0,0x140390420,2,void QueuedPromoteQuestTask::PostProcess()
 24719,0x140380be0,0x140390450,3,BSTEventSource<QuestStatus::Event>* QuestStatus::GetEventSource()
+24722,0x140380d60,0x1403905d0,2,void BSTEventSource<QuestStatus::Event>::AddEventSink(BSTEventSink<QuestStatus::Event>* a_sink)
 24736,0x140381540,0x140390db0,2,void QueuedPromoteQuestTask::Run()
+24740,0x140381a80,0x1403912f0,2,void BSTEventSource<QuestStatus::Event>::RemoveEventSink(BSTEventSink<QuestStatus::Event>* a_sink)
 24766,0x140382050,0x1403918c0,3,TESQuestStageItem* TESQuestStage::GetStageItem(std::uint8_t a_index)
 24778,0x140382720,0x140391F90,4,"void JournalMenuQuestDescriptionStrings (int64 a1, TESQuest *a2)"
 24800,0x1403832c0,0x140392b30,2,void BSTEventSource<TESQuestStageEvent>::SendEvent(const TESQuestStageEvent* a_event)
@@ -4017,6 +4022,8 @@
 28362,0x140423970,0x1404334c0,3,void* BGSProcedureShout::GetParamCheckTypeName(std::uint32_t a_index)
 28363,0x140423990,0x1404334e0,3,BSFixedString* BGSProcedureShout::GetProcedureName()
 28364,0x1404239a0,0x1404334f0,3,BGSProcedureShoutExecState::GetPoolKey
+28365,0x1404239b0,0x140433500,2,void BSTEventSource<TESSpellCastEvent>::AddEventSink(BSTEventSink<TESSpellCastEvent>* a_sink)
+28367,0x140423b70,0x1404336c0,2,void BSTEventSource<TESSpellCastEvent>::RemoveEventSink(BSTEventSink<TESSpellCastEvent>* a_sink)
 28368,0x140423ce0,0x140433830,3,BGSProcedureSit::GetParamCount
 28370,0x140423d00,0x140433850,3,BGSProcedureSit::CreateExecState
 28372,0x140423dc0,0x140433910,3,BGSProcedureSit::InitActorAnimPose
@@ -5041,6 +5048,8 @@
 31718,0x1404d80a0,0x1404e8240,3,RE::BGSStoryTeller::BeginShutDownQuest
 31719,0x1404d8230,0x1404e83d0,2,void BGSStoryTeller::ProcessQuestQueues(void* a_unk)
 31752,0x1404da790,0x1404ea900,3,void MenuTopicManager::AddBlockingBranch(BGSDialogueBranch* a_branch)
+31771,0x1404db1a0,0x1404eb310,2,void BSTEventSource<TESQuestStageItemDoneEvent>::AddEventSink(BSTEventSink<TESQuestStageItemDoneEvent>* a_sink)
+31779,0x1404db840,0x1404eb9b0,2,void BSTEventSource<TESQuestStageItemDoneEvent>::RemoveEventSink(BSTEventSink<TESQuestStageItemDoneEvent>* a_sink)
 31797,0x1404dc410,0x1404ec580,4,AnimationClipDataSingleton* AnimationClipDataSingleton::LoadAnimationData()
 31799,0x1404dd020,0x1404ed190,3,"bool AnimationClipDataSingleton::GetClipInformation(const BSFixedString& project_name, const BSFixedString& clip_name, AnimationClipData& ClipInformation)"
 31803,0x1404dd550,0x1404ed6c0,3,"bool AnimationClipDataSingleton::ClipData::GetEventTime(const BSFixedString& event_name, float& time)"
@@ -5802,6 +5811,11 @@
 35801,0x1405bd5d0,0x1405c5a30,2,"BSEventNotifyControl PlayerSleepWaitMovementControllerAdapter::ProcessEvent(TESWaitStartEvent* a_event, BSTEventSource<TESWaitStartEvent>* a_eventSource)"
 35802,0x1405bd620,0x1405c5a80,2,"BSEventNotifyControl PlayerSleepWaitMovementControllerAdapter::ProcessEvent(TESWaitStopEvent* a_event, BSTEventSource<TESWaitStopEvent>* a_eventSource)"
 35805,0x1405bd7b0,0x1405c5c20,2,bool BSTCommonMessageQueue<BSPackedTask>::Push(BSPackedTask* a_obj)
+35812,0x1405bdfd0,0x1405c6440,2,void BSTEventSource<TESOpenCloseEvent>::AddEventSink(BSTEventSink<TESOpenCloseEvent>* a_sink)
+35813,0x1405be130,0x1405c65a0,2,void BSTEventSource<TESSleepStartEvent>::AddEventSink(BSTEventSink<TESSleepStartEvent>* a_sink)
+35814,0x1405be290,0x1405c6700,2,void BSTEventSource<TESSleepStopEvent>::AddEventSink(BSTEventSink<TESSleepStopEvent>* a_sink)
+35815,0x1405be3f0,0x1405c6860,2,void BSTEventSource<TESWaitStartEvent>::AddEventSink(BSTEventSink<TESWaitStartEvent>* a_sink)
+35816,0x1405be550,0x1405c69c0,2,void BSTEventSource<TESWaitStopEvent>::AddEventSink(BSTEventSink<TESWaitStopEvent>* a_sink)
 35825,0x1405beb00,0x1405c6f70,3,void StartVMInitThread()
 35828,0x1405beca0,0x1405c7110,2,bool BSTCommonMessageQueue<BSPackedTask>::TryPop(BSPackedTask* a_obj)
 35829,0x1405bed00,0x1405c7170,2,bool BSTCommonMessageQueue<BSPackedTask>::TryPush(BSPackedTask* a_obj)
@@ -6611,6 +6625,7 @@
 38726,0x1406777c0,0x140680c40,4,"void HighProcessData::ClearHeadtrackTarget(HEAD_TRACK_TYPE a_headtrackType, bool a_defaultHold)"
 38734,0x140677b10,0x140680f90,2,"void RunActionAnimationLoadedCallback::OnAnimationSetLoaded(void* a_unused, void* a_animations)"
 38744,0x1406784f0,0x140681970,2,void BSTEventSource<TESPackageEvent>::SendEvent(const TESPackageEvent* a_event)
+38749,0x140678d50,0x1406821d0,2,void BSTEventSource<BGSEventProcessedEvent>::AddEventSink(BSTEventSink<BGSEventProcessedEvent>* a_sink)
 38752,0x140679000,0x140682480,3,BSTArray_EraseRange_RefCountedPairs
 38760,0x1406797d0,0x140682c50,3,"void HighProcessData::SetHeadtrackTarget(HEAD_TRACK_TYPE a_headtrackType, TESObjectREFR* a_target)"
 38769,0x140679b70,0x140682ff0,2,MagicItem* AIProcess::GetCurrentPackageSpell()
@@ -6887,7 +6902,9 @@
 40048,0x1406c77a0,0x1406eddc0,2,bool PlayerCharacter::QCanUpdateSync()
 40056,0x1406c7d60,0x1406ee380,3,BSTEventSource<LocationDiscovery::Event>* LocationDiscovery::GetEventSource()
 40060,0x1406c8120,0x1406ee740,3,BSTEventSource<ShoutAttack::Event>* ShoutAttack::GetEventSource()
+40083,0x1406c9c00,0x1406f0390,2,void BSTEventSource<TESTrackedStatsEvent>::AddEventSink(BSTEventSink<TESTrackedStatsEvent>* a_sink)
 40143,0x1406cc370,0x1406f33d0,2,bool Actor::Unk_B3()
+40161,0x1406cd9b0,0x1406f49d0,2,void BSTEventSource<TESTrackedStatsEvent>::RemoveEventSink(BSTEventSink<TESTrackedStatsEvent>* a_sink)
 40230,0x1406ce720,0x1406f5bf0,3,"void Actor::ProcessVATSAttack(MagicCaster* a_caster, bool a_hasTargetAnim, TESObjectREFR* a_target, bool a_leftHand)"
 40232,0x1406cf690,0x1406f6020,2,DrawSheatheWeaponPC
 40239,0x1406cfb70,0x1406f6560,2,bool Actor::Unk_D1()
@@ -7267,6 +7284,7 @@
 41358,0x140709580,0x140731e00,2,"void SprintHandler::ProcessButton(ButtonEvent* a_event, PlayerControlsData* a_data)"
 41360,0x140709690,0x1407321a0,2,"void ToggleRunHandler::ProcessButton(ButtonEvent* a_event, PlayerControlsData* a_data)"
 41361,0x1407096b0,0x140732b00,3,StaminaNPC::apply_PlayerControls__sub_140705530
+41373,0x14070a270,0x140733850,2,void BSTEventSource<TESFurnitureEvent>::AddEventSink(BSTEventSink<TESFurnitureEvent>* a_sink)
 41381,0x14070a5e0,0x140733ca0,2,bool AttackBlockHandler::CanProcess(InputEvent* a_event)
 41382,0x14070a640,0x140733d00,2,bool AutoMoveHandler::CanProcess(InputEvent* a_event)
 41383,0x14070a670,0x140733e10,2,bool JumpHandler::CanProcess(InputEvent* a_event)
@@ -7276,6 +7294,7 @@
 41388,0x14070a7e0,0x140734360,2,bool ShoutHandler::CanProcess(InputEvent* a_event)
 41389,0x14070a860,0x1407343e0,2,bool SneakHandler::CanProcess(InputEvent* a_event)
 41392,0x14070a8f0,0x140734830,2,bool ToggleRunHandler::CanProcess(InputEvent* a_event)
+41394,0x14070aa90,0x140734f70,2,void BSTEventSource<TESFurnitureEvent>::RemoveEventSink(BSTEventSink<TESFurnitureEvent>* a_sink)
 41406,0x14070ae30,0x1407357d0,2,"BSEventNotifyControl StaticAvoidNodeManager::ProcessEvent(CellAttachDetachEvent* a_event, BSTEventSource<CellAttachDetachEvent>* a_eventSource)"
 41452,0x14070d830,0x1407381d0,2,void AlarmPackage::SaveGame(BGSSaveFormBuffer* a_buf)
 41453,0x14070d910,0x1407382b0,2,void AlarmPackage::LoadGame(BGSLoadFormBuffer* a_buf)
@@ -11005,6 +11024,9 @@
 52884,0x140911b20,0x14094c2a0,3,bool SkyrimScript::QuestCallbackMgr::Load(void* a_storage)
 52885,0x140912290,0x14094ca10,3,void SkyrimScript::QuestCallbackMgr::Revert()
 52933,0x140915790,0x14094ff10,3,YesImSure::
+52958,0x140916360,0x140950ae0,2,void BSTEventSource<TESQuestStartStopEvent>::AddEventSink(BSTEventSink<TESQuestStartStopEvent>* a_sink)
+52974,0x140917790,0x140951f10,2,void BSTEventSource<BGSEventProcessedEvent>::RemoveEventSink(BSTEventSink<BGSEventProcessedEvent>* a_sink)
+52975,0x140917900,0x140952080,2,void BSTEventSource<TESQuestStartStopEvent>::RemoveEventSink(BSTEventSink<TESQuestStartStopEvent>* a_sink)
 52979,0x140917ae0,0x140952260,2,"void SkyrimScript::SavePatcher::PatchStackFrame(StackFrame* a_stackFrame, IVirtualMachine* a_vm)"
 52986,0x1409184d0,0x140952c50,3,bool SkyrimScript::SoundCallbackMgr::Save(SaveStorageWrapper* a_storage)
 52987,0x1409185e0,0x140952d60,3,bool SkyrimScript::SoundCallbackMgr::Load(void* a_storage)
@@ -11139,10 +11161,91 @@
 53591,0x14093b7a0,0x140975e40,2,"bool BSTCommonMessageQueue<BSTSmartPointer<SkyrimScript::DelayFunctor,BSTSmartPointerIntrusiveRefCount>>::Pop(BSTSmartPointer<SkyrimScript::DelayFunctor,BSTSmartPointerIntrusiveRefCount>* a_obj)"
 53594,0x14093b900,0x140975fa0,2,"bool BSTCommonMessageQueue<BSTSmartPointer<SkyrimScript::DelayFunctor,BSTSmartPointerIntrusiveRefCount>>::Push(BSTSmartPointer<SkyrimScript::DelayFunctor,BSTSmartPointerIntrusiveRefCount>* a_obj)"
 53604,0x14093bff0,0x140976690,4,BSTEventSource::AddEventSink
+53605,0x14093c150,0x1409767f0,2,void BSTEventSource<TESActiveEffectApplyRemoveEvent>::AddEventSink(BSTEventSink<TESActiveEffectApplyRemoveEvent>* a_sink)
+53606,0x14093c2b0,0x140976950,2,void BSTEventSource<TESActorLocationChangeEvent>::AddEventSink(BSTEventSink<TESActorLocationChangeEvent>* a_sink)
+53607,0x14093c410,0x140976ab0,2,void BSTEventSource<TESBookReadEvent>::AddEventSink(BSTEventSink<TESBookReadEvent>* a_sink)
+53608,0x14093c570,0x140976c10,2,void BSTEventSource<TESCellAttachDetachEvent>::AddEventSink(BSTEventSink<TESCellAttachDetachEvent>* a_sink)
+53609,0x14093c6d0,0x140976d70,2,void BSTEventSource<TESCellFullyLoadedEvent>::AddEventSink(BSTEventSink<TESCellFullyLoadedEvent>* a_sink)
+53610,0x14093c830,0x140976ed0,2,void BSTEventSource<TESCombatEvent>::AddEventSink(BSTEventSink<TESCombatEvent>* a_sink)
+53611,0x14093c990,0x140977030,2,void BSTEventSource<TESContainerChangedEvent>::AddEventSink(BSTEventSink<TESContainerChangedEvent>* a_sink)
+53612,0x14093caf0,0x140977190,2,void BSTEventSource<TESDeathEvent>::AddEventSink(BSTEventSink<TESDeathEvent>* a_sink)
+53613,0x14093cc50,0x1409772f0,2,void BSTEventSource<TESDestructionStageChangedEvent>::AddEventSink(BSTEventSink<TESDestructionStageChangedEvent>* a_sink)
+53614,0x14093cdb0,0x140977450,2,void BSTEventSource<TESEnterBleedoutEvent>::AddEventSink(BSTEventSink<TESEnterBleedoutEvent>* a_sink)
+53615,0x14093cf10,0x1409775b0,2,void BSTEventSource<TESEquipEvent>::AddEventSink(BSTEventSink<TESEquipEvent>* a_sink)
+53617,0x14093d1d0,0x140977710,2,void BSTEventSource<TESFormDeleteEvent>::AddEventSink(BSTEventSink<TESFormDeleteEvent>* a_sink)
+53618,0x14093d330,0x140977870,2,void BSTEventSource<TESGrabReleaseEvent>::AddEventSink(BSTEventSink<TESGrabReleaseEvent>* a_sink)
+53619,0x14093d490,0x1409779d0,2,void BSTEventSource<TESHitEvent>::AddEventSink(BSTEventSink<TESHitEvent>* a_sink)
+53620,0x14093d5f0,0x140977b30,2,void BSTEventSource<TESInitScriptEvent>::AddEventSink(BSTEventSink<TESInitScriptEvent>* a_sink)
+53621,0x14093d750,0x140977c90,2,void BSTEventSource<TESLoadGameEvent>::AddEventSink(BSTEventSink<TESLoadGameEvent>* a_sink)
+53622,0x14093d8b0,0x140977df0,2,void BSTEventSource<TESLockChangedEvent>::AddEventSink(BSTEventSink<TESLockChangedEvent>* a_sink)
+53623,0x14093da10,0x140977f50,2,void BSTEventSource<TESMagicEffectApplyEvent>::AddEventSink(BSTEventSink<TESMagicEffectApplyEvent>* a_sink)
+53624,0x14093db70,0x1409780b0,2,void BSTEventSource<TESMagicWardHitEvent>::AddEventSink(BSTEventSink<TESMagicWardHitEvent>* a_sink)
+53625,0x14093dcd0,0x140978210,2,void BSTEventSource<TESMoveAttachDetachEvent>::AddEventSink(BSTEventSink<TESMoveAttachDetachEvent>* a_sink)
+53626,0x14093de30,0x140978370,2,void BSTEventSource<TESObjectLoadedEvent>::AddEventSink(BSTEventSink<TESObjectLoadedEvent>* a_sink)
+53627,0x14093df90,0x1409784d0,2,void BSTEventSource<TESObjectREFRTranslationEvent>::AddEventSink(BSTEventSink<TESObjectREFRTranslationEvent>* a_sink)
+53628,0x14093e0f0,0x140978630,2,void BSTEventSource<TESPackageEvent>::AddEventSink(BSTEventSink<TESPackageEvent>* a_sink)
+53629,0x14093e250,0x140978790,2,void BSTEventSource<TESPerkEntryRunEvent>::AddEventSink(BSTEventSink<TESPerkEntryRunEvent>* a_sink)
+53631,0x14093e510,0x140978a50,2,void BSTEventSource<TESQuestInitEvent>::AddEventSink(BSTEventSink<TESQuestInitEvent>* a_sink)
+53632,0x14093e670,0x140978bb0,2,void BSTEventSource<TESQuestStageEvent>::AddEventSink(BSTEventSink<TESQuestStageEvent>* a_sink)
+53633,0x14093e7d0,0x140978d10,2,void BSTEventSource<TESResetEvent>::AddEventSink(BSTEventSink<TESResetEvent>* a_sink)
+53634,0x14093e930,0x140978e70,2,void BSTEventSource<TESResolveNPCTemplatesEvent>::AddEventSink(BSTEventSink<TESResolveNPCTemplatesEvent>* a_sink)
+53635,0x14093ea90,0x140978fd0,2,void BSTEventSource<TESSceneActionEvent>::AddEventSink(BSTEventSink<TESSceneActionEvent>* a_sink)
+53636,0x14093ebf0,0x140979130,2,void BSTEventSource<TESSceneEvent>::AddEventSink(BSTEventSink<TESSceneEvent>* a_sink)
+53637,0x14093ed50,0x140979290,2,void BSTEventSource<TESScenePhaseEvent>::AddEventSink(BSTEventSink<TESScenePhaseEvent>* a_sink)
+53638,0x14093eeb0,0x1409793f0,2,void BSTEventSource<TESSellEvent>::AddEventSink(BSTEventSink<TESSellEvent>* a_sink)
+53639,0x14093f010,0x140979550,2,void BSTEventSource<TESSwitchRaceCompleteEvent>::AddEventSink(BSTEventSink<TESSwitchRaceCompleteEvent>* a_sink)
+53640,0x14093f170,0x1409796b0,2,void BSTEventSource<TESTopicInfoEvent>::AddEventSink(BSTEventSink<TESTopicInfoEvent>* a_sink)
+53641,0x14093f2d0,0x140979810,2,void BSTEventSource<TESTrapHitEvent>::AddEventSink(BSTEventSink<TESTrapHitEvent>* a_sink)
+53642,0x14093f430,0x140979970,2,void BSTEventSource<TESTriggerEnterEvent>::AddEventSink(BSTEventSink<TESTriggerEnterEvent>* a_sink)
+53643,0x14093f590,0x140979ad0,2,void BSTEventSource<TESTriggerEvent>::AddEventSink(BSTEventSink<TESTriggerEvent>* a_sink)
+53644,0x14093f6f0,0x140979c30,2,void BSTEventSource<TESTriggerLeaveEvent>::AddEventSink(BSTEventSink<TESTriggerLeaveEvent>* a_sink)
+53645,0x14093f850,0x140979d90,2,void BSTEventSource<TESUniqueIDChangeEvent>::AddEventSink(BSTEventSink<TESUniqueIDChangeEvent>* a_sink)
 53698,0x140941050,0x14097b5f0,2,"bool EventCallbackAdapter::Save(SaveStorageWrapper* a_storage, BSScript::IVMSaveLoadInterface* a_saveLoad)"
 53703,0x1409416a0,0x14097bc40,2,"bool BSTCommonMessageQueue<BSTSmartPointer<SkyrimScript::DelayFunctor,BSTSmartPointerIntrusiveRefCount>>::TryPop(BSTSmartPointer<SkyrimScript::DelayFunctor,BSTSmartPointerIntrusiveRefCount>* a_obj)"
 53704,0x140941700,0x14097bca0,2,"bool BSTCommonMessageQueue<BSTSmartPointer<SkyrimScript::DelayFunctor,BSTSmartPointerIntrusiveRefCount>>::TryPush(BSTSmartPointer<SkyrimScript::DelayFunctor,BSTSmartPointerIntrusiveRefCount>* a_obj)"
 53705,0x140941760,0x14097bd00,4,BSTEventSource::RemoveEventSink
+53706,0x1409418d0,0x14097be70,2,void BSTEventSource<TESActiveEffectApplyRemoveEvent>::RemoveEventSink(BSTEventSink<TESActiveEffectApplyRemoveEvent>* a_sink)
+53707,0x140941a40,0x14097bfe0,2,void BSTEventSource<TESActorLocationChangeEvent>::RemoveEventSink(BSTEventSink<TESActorLocationChangeEvent>* a_sink)
+53708,0x140941bb0,0x14097c150,2,void BSTEventSource<TESBookReadEvent>::RemoveEventSink(BSTEventSink<TESBookReadEvent>* a_sink)
+53709,0x140941d20,0x14097c2c0,2,void BSTEventSource<TESCellAttachDetachEvent>::RemoveEventSink(BSTEventSink<TESCellAttachDetachEvent>* a_sink)
+53710,0x140941e90,0x14097c430,2,void BSTEventSource<TESCellFullyLoadedEvent>::RemoveEventSink(BSTEventSink<TESCellFullyLoadedEvent>* a_sink)
+53711,0x140942000,0x14097c5a0,2,void BSTEventSource<TESCombatEvent>::RemoveEventSink(BSTEventSink<TESCombatEvent>* a_sink)
+53712,0x140942170,0x14097c710,2,void BSTEventSource<TESContainerChangedEvent>::RemoveEventSink(BSTEventSink<TESContainerChangedEvent>* a_sink)
+53713,0x1409422e0,0x14097c880,2,void BSTEventSource<TESDeathEvent>::RemoveEventSink(BSTEventSink<TESDeathEvent>* a_sink)
+53714,0x140942450,0x14097c9f0,2,void BSTEventSource<TESDestructionStageChangedEvent>::RemoveEventSink(BSTEventSink<TESDestructionStageChangedEvent>* a_sink)
+53715,0x1409425c0,0x14097cb60,2,void BSTEventSource<TESEnterBleedoutEvent>::RemoveEventSink(BSTEventSink<TESEnterBleedoutEvent>* a_sink)
+53716,0x140942730,0x14097ccd0,2,void BSTEventSource<TESEquipEvent>::RemoveEventSink(BSTEventSink<TESEquipEvent>* a_sink)
+53718,0x140942a10,0x14097ce40,2,void BSTEventSource<TESFormDeleteEvent>::RemoveEventSink(BSTEventSink<TESFormDeleteEvent>* a_sink)
+53719,0x140942b80,0x14097cfb0,2,void BSTEventSource<TESGrabReleaseEvent>::RemoveEventSink(BSTEventSink<TESGrabReleaseEvent>* a_sink)
+53720,0x140942cf0,0x14097d120,2,void BSTEventSource<TESHitEvent>::RemoveEventSink(BSTEventSink<TESHitEvent>* a_sink)
+53721,0x140942e60,0x14097d290,2,void BSTEventSource<TESInitScriptEvent>::RemoveEventSink(BSTEventSink<TESInitScriptEvent>* a_sink)
+53722,0x140942fd0,0x14097d400,2,void BSTEventSource<TESLoadGameEvent>::RemoveEventSink(BSTEventSink<TESLoadGameEvent>* a_sink)
+53723,0x140943140,0x14097d570,2,void BSTEventSource<TESLockChangedEvent>::RemoveEventSink(BSTEventSink<TESLockChangedEvent>* a_sink)
+53724,0x1409432b0,0x14097d6e0,2,void BSTEventSource<TESMagicEffectApplyEvent>::RemoveEventSink(BSTEventSink<TESMagicEffectApplyEvent>* a_sink)
+53725,0x140943420,0x14097d850,2,void BSTEventSource<TESMagicWardHitEvent>::RemoveEventSink(BSTEventSink<TESMagicWardHitEvent>* a_sink)
+53726,0x140943590,0x14097d9c0,2,void BSTEventSource<TESMoveAttachDetachEvent>::RemoveEventSink(BSTEventSink<TESMoveAttachDetachEvent>* a_sink)
+53727,0x140943700,0x14097db30,2,void BSTEventSource<TESObjectLoadedEvent>::RemoveEventSink(BSTEventSink<TESObjectLoadedEvent>* a_sink)
+53728,0x140943870,0x14097dca0,2,void BSTEventSource<TESObjectREFRTranslationEvent>::RemoveEventSink(BSTEventSink<TESObjectREFRTranslationEvent>* a_sink)
+53729,0x1409439e0,0x14097de10,2,void BSTEventSource<TESOpenCloseEvent>::RemoveEventSink(BSTEventSink<TESOpenCloseEvent>* a_sink)
+53730,0x140943b50,0x14097df80,2,void BSTEventSource<TESPackageEvent>::RemoveEventSink(BSTEventSink<TESPackageEvent>* a_sink)
+53731,0x140943cc0,0x14097e0f0,2,void BSTEventSource<TESPerkEntryRunEvent>::RemoveEventSink(BSTEventSink<TESPerkEntryRunEvent>* a_sink)
+53733,0x140943fa0,0x14097e3d0,2,void BSTEventSource<TESQuestInitEvent>::RemoveEventSink(BSTEventSink<TESQuestInitEvent>* a_sink)
+53734,0x140944110,0x14097e540,2,void BSTEventSource<TESQuestStageEvent>::RemoveEventSink(BSTEventSink<TESQuestStageEvent>* a_sink)
+53735,0x140944280,0x14097e6b0,2,void BSTEventSource<TESResetEvent>::RemoveEventSink(BSTEventSink<TESResetEvent>* a_sink)
+53736,0x1409443f0,0x14097e820,2,void BSTEventSource<TESResolveNPCTemplatesEvent>::RemoveEventSink(BSTEventSink<TESResolveNPCTemplatesEvent>* a_sink)
+53737,0x140944560,0x14097e990,2,void BSTEventSource<TESSceneActionEvent>::RemoveEventSink(BSTEventSink<TESSceneActionEvent>* a_sink)
+53738,0x1409446d0,0x14097eb00,2,void BSTEventSource<TESSceneEvent>::RemoveEventSink(BSTEventSink<TESSceneEvent>* a_sink)
+53739,0x140944840,0x14097ec70,2,void BSTEventSource<TESScenePhaseEvent>::RemoveEventSink(BSTEventSink<TESScenePhaseEvent>* a_sink)
+53740,0x1409449b0,0x14097ede0,2,void BSTEventSource<TESSellEvent>::RemoveEventSink(BSTEventSink<TESSellEvent>* a_sink)
+53741,0x140944b20,0x14097ef50,2,void BSTEventSource<TESSleepStartEvent>::RemoveEventSink(BSTEventSink<TESSleepStartEvent>* a_sink)
+53742,0x140944c90,0x14097f0c0,2,void BSTEventSource<TESSleepStopEvent>::RemoveEventSink(BSTEventSink<TESSleepStopEvent>* a_sink)
+53743,0x140944e00,0x14097f230,2,void BSTEventSource<TESSwitchRaceCompleteEvent>::RemoveEventSink(BSTEventSink<TESSwitchRaceCompleteEvent>* a_sink)
+53744,0x140944f70,0x14097f3a0,2,void BSTEventSource<TESTopicInfoEvent>::RemoveEventSink(BSTEventSink<TESTopicInfoEvent>* a_sink)
+53745,0x1409450e0,0x14097f510,2,void BSTEventSource<TESTrapHitEvent>::RemoveEventSink(BSTEventSink<TESTrapHitEvent>* a_sink)
+53746,0x140945250,0x14097f680,2,void BSTEventSource<TESTriggerEnterEvent>::RemoveEventSink(BSTEventSink<TESTriggerEnterEvent>* a_sink)
+53747,0x1409453c0,0x14097f7f0,2,void BSTEventSource<TESTriggerEvent>::RemoveEventSink(BSTEventSink<TESTriggerEvent>* a_sink)
+53748,0x140945530,0x14097f960,2,void BSTEventSource<TESTriggerLeaveEvent>::RemoveEventSink(BSTEventSink<TESTriggerLeaveEvent>* a_sink)
+53749,0x1409456a0,0x14097fad0,2,void BSTEventSource<TESUniqueIDChangeEvent>::RemoveEventSink(BSTEventSink<TESUniqueIDChangeEvent>* a_sink)
 53814,0x140948880,0x140982c70,2,"bool BSScript::NativeFunction0<ActiveEffect,Actor*>::HasStub()"
 53815,0x140948890,0x140982c80,2,"bool BSScript::NativeFunction0<ActiveEffect,EffectSetting*>::HasStub()"
 53816,0x1409488a0,0x140982c90,2,"bool BSScript::NativeFunction0<ActiveEffect,void>::HasStub()"
