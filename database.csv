@@ -1997,6 +1997,7 @@
 19571,0x14029fbf0,0x1402b1360,2,void TESObjectREFR::DoMoveToHigh()
 19582,0x14029fd20,0x1402b1490,2,NiAVObject* TESObjectREFR::Get3D1(bool a_firstPerson)
 19584,0x14029fd40,0x1402b14b0,2,NiAVObject* TESObjectREFR::GetCurrent3D()
+19585,0x14029fd50,0x1402b14c0,2,TESAmmo* TESObjectREFR::GetCurrentAmmo()
 19586,0x14029fd60,0x1402b14d0,2,std::uint32_t TESObjectREFR::GetEquippedWeaponTypeValue()
 19588,0x14029fd80,0x1402b14f0,2,BSFaceGenAnimationData* TESObjectREFR::GetFaceGenAnimationData()
 19589,0x14029fd90,0x1402b1500,2,BSFaceGenNiNode* TESObjectREFR::GetFaceNode()
@@ -6048,8 +6049,11 @@
 36286,0x1405d2520,0x1405daae0,3,RE::Actor::GetGhost
 36287,0x1405d25e0,0x1405daba0,4,RE::Actor::SetGhost
 36289,0x1405d27a0,0x1405dad60,2,DrawSheatheWeaponActor
+36293,0x1405d2a80,0x1405db040,2,void Actor::TryMoveToMiddleLow()
+36295,0x1405d2b80,0x1405db140,2,bool Actor::TryChangeSkyCellActorsProcessLevel()
 36297,0x1405d2eb0,0x1405db470,2,void Character::ClearFarGeometry()
 36298,0x1405d2f90,0x1405db550,2,void Actor::DoMoveToHigh()
+36301,0x1405d3070,0x1405db630,2,void Actor::TryUpdateActorLastSeenTime()
 36312,0x1405d36b0,0x1405dbc70,2,"bool Actor::GetEditorLocation2(NiPoint3& a_outPos, NiPoint3& a_outRot, TESForm*& a_outWorldOrCell, TESObjectCELL* a_fallback)"
 36314,0x1405d3980,0x1405dbf40,2,void Actor::SetParentCell(TESObjectCELL* a_cell)
 36315,0x1405d3b50,0x1405dc110,2,bool Actor::DetachCharController()
@@ -6058,6 +6062,7 @@
 36318,0x1405d3d20,0x1405dc2e0,2,void Actor::InitHavok()
 36319,0x1405d3dc0,0x1405dc380,2,"void Actor::SetPosition(const NiPoint3& a_pos, bool a_updateCharController)"
 36320,0x1405d3eb0,0x1405dc470,2,void Actor::GetLinearVelocity(NiPoint3& a_velocity)
+36322,0x1405d4050,0x1405dc610,2,bool Actor::OnAddCellPerformQueueReference(TESObjectCELL& a_cell)
 36323,0x1405d4090,0x1405dc650,2,"std::uint64_t TESObjectREFR::MoveToPosition(NiPoint3* a_pos, float a_rotZ, float a_rotX, TESObjectCELL* a_cell, TESWorldSpace* a_worldSpace, bool a_unk)"
 36325,0x1405d4660,0x1405dcc20,2,void Actor::Update3DPosition(bool a_warp)
 36327,0x1405d47b0,0x1405dcd70,2,void Actor::KillDying()
@@ -6163,7 +6168,7 @@
 36614,0x1405efd70,0x1405f8480,2,bool Actor::MovetoLow()
 36615,0x1405f04e0,0x1405f8bf0,2,bool Actor::MovetoMiddleLow()
 36616,0x1405f0a90,0x1405f91a0,2,bool Actor::MoveToMiddleHigh()
-36621,0x1405f1530,0x1405f9c40,4,RE::Actor::Func156_*
+36621,0x1405f1530,0x1405f9c40,4,"bool Actor::ProcessInWater(hkpCollidable* a_collidable, float a_waterHeight, float a_deltaTime)"
 36622,0x1405f1690,0x1405f9da0,2,"bool Actor::ApplyCurrent(float a_velocityTime, const hkVector4& a_velocity)"
 36631,0x1405f2530,0x1405fac70,3,bool Actor::Decapitate()
 36641,0x1405f39a0,0x1405fc0d0,2,void Actor::SaveGame(BGSSaveFormBuffer* a_buf)
@@ -6266,7 +6271,7 @@
 36928,0x140608b30,0x1406116c0,3,bool Actor::IsMoving()
 36935,0x140608d40,0x140611900,4,double Actor::GetMoveDirectionRelativeToFacing()
 36943,0x140609000,0x140611bc0,4,void Actor::UpdateAwakeSound(NiAVObject* a_obj3D)
-36950,0x140609860,0x140612420,4,Actor::UnequipItem
+36950,0x140609860,0x140612420,4,"void Actor::UnequipItem(std::uint64_t a_arg1, TESBoundObject* a_object, std::uint32_t a_count, ExtraDataList* a_extraList)"
 36953,0x140609b20,0x1406126e0,2,bool Actor::RefreshEquippedHandItems(NiAVObject* a_root)
 36954,0x140609bc0,0x140612780,2,bool Actor::ConstructAnimationGraph(BSTSmartPointer<BShkbAnimationGraph>& a_out)
 36955,0x140609ca0,0x140612860,2,void Actor::PostCreateAnimationGraphManager(BSTSmartPointer<BSAnimationGraphManager>& a_manager)
@@ -7938,6 +7943,7 @@
 42672,0x140739080,0x140763c20,4,undefined Explosion::sub_140739080(Explosion* this)
 42675,0x1407391c0,0x140763d60,2,void Explosion::FindTargets()
 42692,0x14073bf00,0x140766aa0,2,void Explosion::Release3DRelatedData()
+42694,0x14073c390,0x140766f30,2,bool Explosion::OnAddCellPerformQueueReference(TESObjectCELL& a_cell)
 42696,0x14073c410,0x140766fb0,3,bool Explosion::CheckInit3D(Explosion *a_this)
 42713,0x14073d1a0,0x140767d40,2,"Explosion* ConcreteExplosionFactory<Explosion,0>::Create(SpawnExplosionData& a_data)"
 42726,0x14073d870,0x140768410,2,void FlameProjectile::Process3D()
@@ -7959,6 +7965,7 @@
 42761,0x14073fa50,0x14076a630,2,void GrenadeProjectile::FinishLoadGame(BGSLoadFormBuffer* a_buf)
 42762,0x14073faa0,0x14076a680,2,void GrenadeProjectile::Revert(BGSLoadFormBuffer* a_buf)
 42763,0x14073fad0,0x14076a6b0,2,std::uint32_t GrenadeProjectile::GetCollisionGroup()
+42765,0x14073fb10,0x14076a6f0,2,BGSDecalGroup* GrenadeProjectile::GetDecalGroup()
 42768,0x14073fc10,0x14076a7f0,2,"ImpactData* GrenadeProjectile::AddImpact(TESObjectREFR* a_ref, const NiPoint3& a_targetLoc, const NiPoint3& a_velocity, hkpCollidable* a_collidable, std::int32_t a_arg6, std::uint32_t a_arg7)"
 42769,0x14073fd30,0x14076a910,2,void GrenadeProjectile::Handle3DLoaded()
 42789,0x140740bc0,0x14076b870,2,void Hazard::Release3DRelatedData()
@@ -7969,6 +7976,7 @@
 42795,0x1407410c0,0x14076bd70,2,void Hazard::FinishLoadGame(BGSLoadFormBuffer* a_buf)
 42796,0x140741110,0x14076bdc0,2,void Hazard::Revert(BGSLoadFormBuffer* a_buf)
 42797,0x140741190,0x14076be40,2,"BSEventNotifyControl Hazard::ProcessEvent(const BSAnimationGraphEvent* a_event, BSTEventSource<BSAnimationGraphEvent>* a_eventSource)"
+42805,0x140741440,0x14076c0f0,2,bool Hazard::OnAddCellPerformQueueReference(TESObjectCELL& a_cell)
 42810,0x1407416f0,0x14076c3a0,3,bool Hazard::CheckInit3D(Hazard *a_this)
 42826,0x140742450,0x14076d000,3,HitData* HitData::Ctor()
 42827,0x140742500,0x14076d0b0,3,HitData* HitData::CopyCtor(HitData* a_other)
@@ -7998,6 +8006,8 @@
 42940,0x14074c310,0x140777630,2,void Projectile::PostLoad3D(NiAVObject* a_root)
 42943,0x14074c710,0x140777a30,4,ProjectileUpdate
 42946,0x14074cd50,0x140778070,2,void Projectile::Update3D()
+42947,0x14074cdb0,0x1407780d0,2,Projectile* Projectile::AsProjectile()
+42948,0x14074cdc0,0x1407780e0,2,bool Projectile::OnAddCellPerformQueueReference(TESObjectCELL& a_cell)
 42952,0x14074ce00,0x140778120,2,void Projectile::SaveGame(BGSSaveFormBuffer* a_buf)
 42953,0x14074d240,0x140778560,2,void Projectile::LoadGame(BGSLoadFormBuffer* a_buf)
 42954,0x14074d870,0x140778b90,2,void Projectile::InitLoadGame(BGSLoadFormBuffer* a_buf)
