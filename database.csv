@@ -17522,6 +17522,7 @@
 97796,0x141248400,0x1412a3820,2,"void BSScript::ByteCode::Argument::WriteToBitStream(BSScript::BSBitWriter* a_writer, const BSScript::ByteCode::Argument* a_arg, std::uint32_t a_localVarBitCount, std::uint32_t a_memberVarBitCount)"
 97797,0x141248560,0x1412a3980,2,"void BSScript::ByteCode::Argument::ReleaseFromBitStream(BSScript::BSBitReader* a_reader, std::uint32_t a_localVarBitCount, std::uint32_t a_memberVarBitCount)"
 97798,0x1412486f0,0x1412a3b10,2,"void BSScript::SkipArgument(BSScript::BSBitReader*, std::uint32_t, std::uint32_t)"
+97799,0x141248820,0x1412a3c40,2,"std::uint32_t BSScript::ByteCode::Argument::GetBitCount(std::uint32_t a_localVarBitCount, std::uint32_t a_memberVarBitCount) const"
 97800,0x141248990,0x1412a3db0,2,BSScript::ByteCode::Argument::Save
 97801,0x141248b70,0x1412a3f90,2,BSScript::ByteCode::Argument::Load
 97802,0x141248e20,0x1412a4240,2,BSScript::ByteCode::PackedInstructionStream* BSScript::ByteCode::PackedInstructionStream::Ctor()
