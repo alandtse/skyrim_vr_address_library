@@ -2581,6 +2581,7 @@ sseid,aeid,confidence,name
 14179,14287,3,RE::BGSOpenCloseForm::SetOpenState
 14180,14288,3,RE::BGSOpenCloseForm::SetCloseState
 14182,14291,1,
+14188,14296,1,
 14189,14297,1,
 14190,14299,3,RE::ScriptEventSourceHolder::SendOpenCloseEvent
 14197,14307,1,
@@ -2853,12 +2854,14 @@ sseid,aeid,confidence,name
 15960,16210,1,
 15967,16212,3,RE::BSPointerHandleManagerInterface::GetHandle
 15977,16222,1,
+15978,16223,1,
 15979,16224,1,
 15980,16225,1,
 15991,16233,1,
 16021,16263,1,
 16084,16325,1,
 16089,16330,1,
+16139,16374,1,
 16169,16401,1,
 16170,16402,1,
 16172,16404,1,
@@ -3865,6 +3868,7 @@ sseid,aeid,confidence,name
 18947,19362,3,void BSTEventSource<TESCellAttachDetachEvent>::SendEvent(const TESCellAttachDetachEvent* a_event)
 18948,19363,1,
 18949,19364,1,
+18950,19365,1,
 18968,19380,1,
 18969,19381,1,
 18970,19382,1,
@@ -4074,10 +4078,12 @@ sseid,aeid,confidence,name
 19629,20029,1,
 19630,20030,1,
 19631,20031,1,
+19639,20038,1,
 19640,20039,1,
 19641,20040,1,
 19642,20041,1,
 19643,20042,1,
+19644,20043,1,
 19646,20045,1,
 19669,20063,1,
 19672,20065,1,
@@ -4746,6 +4752,7 @@ sseid,aeid,confidence,name
 23133,23583,1,
 23134,23584,1,
 23135,23585,1,
+23137,23587,1,
 23143,23600,1,BGSEquipSlot::sub_140331060
 23144,23601,1,
 23145,23602,1,
@@ -5244,6 +5251,7 @@ sseid,aeid,confidence,name
 25116,25579,1,
 25124,25651,1,TopicResultCallBack::Func3_*
 25130,25656,1,
+25132,25658,1,
 25138,25667,1,
 25144,25585,1,REFREventCallbacks::ConcreteEventCallbackFactory_anonymous_namespace__TopicResultCallBack_::Func4_*
 25160,25682,1,BGSAcousticSpaceListener::sub_*
@@ -5293,6 +5301,10 @@ sseid,aeid,confidence,name
 25522,26066,1,
 25523,26067,1,
 25524,26068,1,
+25566,26104,1,
+25567,26105,1,
+25568,26106,1,
+25569,26107,1,
 25584,26121,1,
 25609,26148,1,
 25625,26168,1,
@@ -6980,6 +6992,7 @@ sseid,aeid,confidence,name
 32529,33286,1,
 32530,33287,1,
 32549,33304,1,
+32550,33305,1,
 32551,33306,1,
 32562,33316,1,
 32563,33317,1,
@@ -7084,6 +7097,7 @@ sseid,aeid,confidence,name
 33333,34116,1,StopHitEffectsVisitor::Func1_*
 33337,34122,1,FindAppropriateDisplaceEffect::dtor_*
 33340,34125,1,
+33345,34128,1,
 33348,34130,1,
 33355,34136,1,
 33357,34138,1,
@@ -8071,6 +8085,7 @@ sseid,aeid,confidence,name
 37351,38300,1,Actor::Func215_*
 37352,38301,1,Actor::InitiateVampireFeedPackage_*
 37353,38302,1,
+37371,38319,1,
 37372,38320,1,
 37373,38321,1,
 37377,38325,1,
@@ -8284,6 +8299,7 @@ sseid,aeid,confidence,name
 37872,38827,1,
 37877,38843,1,
 37897,38864,1,
+37914,38871,1,
 37916,38873,3,RE::SoulsTrapped::GetEventSource
 37917,38874,3,RE::SpellsLearned::GetEventSource
 37921,38878,1,
@@ -8763,6 +8779,7 @@ sseid,aeid,confidence,name
 39025,40092,2,
 39026,40093,2,
 39029,40096,1,
+39092,40155,1,
 39094,40157,1,
 39095,40158,1,
 39098,40160,1,UpdateArmorWornVisitor::Visit_*
