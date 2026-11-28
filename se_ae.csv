@@ -2404,6 +2404,8 @@ sseid,aeid,confidence,name
 13563,13654,1,NiObject::AsNiTriBasedGeom_*
 13564,13655,1,NiObject::AsNiTriShape_*
 13565,13656,1,NiNode::AsNode_*
+13572,13664,1,
+13573,13665,1,
 13574,13666,1,
 13576,14774,1,
 13578,13671,1,
@@ -2850,6 +2852,8 @@ sseid,aeid,confidence,name
 15916,41558,3,RE::TESActionData::Ctor
 15960,16210,1,
 15967,16212,3,RE::BSPointerHandleManagerInterface::GetHandle
+15977,16222,1,
+15979,16224,1,
 15980,16225,1,
 15991,16233,1,
 16021,16263,1,
@@ -3859,6 +3863,8 @@ sseid,aeid,confidence,name
 18942,19357,1,
 18943,19358,1,
 18947,19362,3,void BSTEventSource<TESCellAttachDetachEvent>::SendEvent(const TESCellAttachDetachEvent* a_event)
+18948,19363,1,
+18949,19364,1,
 18968,19380,1,
 18969,19381,1,
 18970,19382,1,
@@ -4068,6 +4074,10 @@ sseid,aeid,confidence,name
 19629,20029,1,
 19630,20030,1,
 19631,20031,1,
+19640,20039,1,
+19641,20040,1,
+19642,20041,1,
+19643,20042,1,
 19646,20045,1,
 19669,20063,1,
 19672,20065,1,
@@ -4911,6 +4921,7 @@ sseid,aeid,confidence,name
 23689,24154,1,BGSScene::sub_*
 23734,24095,1,
 23735,24094,1,
+23741,24194,1,
 23754,24206,1,
 23755,24207,1,
 23757,24209,1,
@@ -4938,6 +4949,7 @@ sseid,aeid,confidence,name
 23812,24274,1,
 23813,24275,1,
 23814,24276,1,
+23859,24315,1,
 23879,24341,1,
 23884,24331,1,ConcreteFormFactory_BGSVoiceType_98_::CreateImpl_*
 23886,24333,1,
@@ -5166,6 +5178,8 @@ sseid,aeid,confidence,name
 24776,25257,1,
 24778,25259,1,
 24799,25237,1,StageItemFinishedCallback::Func4_*
+24800,25271,1,
+24801,25272,1,
 24802,25235,1,StageItemFinishedCallback::Func2_*
 24815,25284,1,
 24816,25285,1,
@@ -6924,6 +6938,7 @@ sseid,aeid,confidence,name
 32275,33012,1,
 32290,33026,1,
 32363,33112,1,
+32380,33130,1,
 32381,33131,1,
 32382,33132,1,
 32393,33144,1,
@@ -8056,6 +8071,8 @@ sseid,aeid,confidence,name
 37351,38300,1,Actor::Func215_*
 37352,38301,1,Actor::InitiateVampireFeedPackage_*
 37353,38302,1,
+37372,38320,1,
+37373,38321,1,
 37377,38325,1,
 37378,38326,1,
 37379,38327,1,
@@ -8188,6 +8205,7 @@ sseid,aeid,confidence,name
 37674,38628,3,papyrus_extender::events::game::weaponhit::static::target_0x6C7
 37677,38631,1,
 37685,38640,1,
+37723,38668,1,
 37726,38671,3,RE::CriticalHit::GetEventSource
 37727,38672,1,
 37736,38681,1,
@@ -8598,6 +8616,7 @@ sseid,aeid,confidence,name
 38726,39756,1,
 38734,39762,1,
 38741,39767,1,
+38744,39769,1,
 38752,39776,1,
 38753,39777,1,
 38754,39778,1,PlayerCharacter::sub_*
@@ -8882,7 +8901,11 @@ sseid,aeid,confidence,name
 39935,41004,1,
 40014,41025,1,
 40016,41027,1,
+40041,41052,1,
+40042,41053,1,
+40043,41054,1,
 40044,41055,1,
+40045,41056,1,
 40046,41057,1,
 40056,41067,3,RE::LocationDiscovery::GetEventSource
 40060,41071,3,RE::ShoutAttack::GetEventSource
@@ -9237,17 +9260,26 @@ sseid,aeid,confidence,name
 41328,42412,1,
 41338,42417,1,AttackBlockHandler::sub_*
 41348,42422,1,AutoMoveHandler::ProcessButton_*
+41350,42424,1,
 41351,42425,1,
 41352,42426,1,MovementHandler::ProcessButton_*
 41353,42427,1,MovementHandler::ProcessThumbstick_*
 41354,42428,1,ReadyWeaponHandler::ProcessButton_*
 41355,42429,1,RunHandler::sub_*
+41356,42430,1,
+41357,42431,1,
 41358,42432,1,SprintHandler::sub_*
 41359,42433,1,TogglePOVHandler::sub_*
 41360,42434,1,ToggleRunHandler::ProcessButton_*
 41362,42436,1,
 41381,42454,1,
+41382,42455,1,
+41383,42456,1,
+41384,42457,1,
+41385,42458,1,
+41386,42459,1,
 41388,42461,1,
+41389,42462,1,
 41392,42465,1,
 41452,42521,1,
 41453,42522,1,
