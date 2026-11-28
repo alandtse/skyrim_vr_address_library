@@ -10844,12 +10844,14 @@
 50593,0x1408751d0,0x1408a0920,2,UI_MESSAGE_RESULTS CreditsMenu::ProcessMessage(UIMessage& a_message)
 50602,0x1408758d0,0x1408a1020,2,UI_MESSAGE_RESULTS CursorMenu::ProcessMessage(UIMessage& a_message)
 50603,0x140875a10,0x1408a1160,2,bool CursorMenu::CanProcess(InputEvent* a_event)
-50610,0x140875bc0,0x1408a1310,3,IMenu * FUN_140875bc0 (IMenu * param_1)
+50610,0x140875bc0,0x1408a1310,3,DialogueMenu* DialogueMenu::Ctor()
+50611,0x140875ca0,0x1408a13e0,2,void DialogueMenu::Dtor()
 50612,0x140875d30,0x1408a14a0,3,"undefined4 sub_140875D30 (DialogueMenu * a_this, undefined8 param_2)"
 50613,0x140876010,0x1408a1870,2,void DialogueMenu::Accept(CallbackProcessor* a_processor)
 50614,0x1408761b0,0x1408a1a10,3,void DialogueMenu::SkipTextCallback()
 50615,0x1408761f0,0x1408a1a50,3,void FUN_1408761f0 (longlong param_1)
 50617,0x1408762f0,0x1408a1b70,3,void FUN_1408762f0 (longlong param_1)
+50626,0x140877390,0x1408a2d00,2,IMenu* DialogueMenu::CreateMenu()
 50641,0x140877f80,0x1408a3ca0,2,void FavoritesMenu::Accept(CallbackProcessor* a_processor)
 50643,0x140878140,0x1408a3e60,4,CombatPathingRevolution::src/Advance_Hook.h:55
 50644,0x1408781c0,0x1408a3ee0,4,MenuEventHandler::CanProcess_1408781C0
@@ -11021,9 +11023,16 @@
 51631,0x1408be610,0x1408eb550,2,void BSTEventSource<HoursPassed::Event>::AddEventSink(BSTEventSink<HoursPassed::Event>* a_sink)
 51633,0x1408be7d0,0x1408eb710,2,void BSTEventSource<HoursPassed::Event>::RemoveEventSink(BSTEventSink<HoursPassed::Event>* a_sink)
 51636,0x1408be990,0x1408eb8d0,3,IMenu* StatsMenu::ctor_1408BE990(IMenu* param_1)
+51637,0x1408beeb0,0x1408ebe70,2,void StatsMenu::Dtor()
 51638,0x1408bf360,0x1408ec3e0,2,StatsMenu::ProcessMessage
+51639,0x1408c07f0,0x1408ed670,2,void StatsMenu::PostDisplay()
+51640,0x1408c0840,0x1408ed690,2,void StatsMenu::Accept(CallbackProcessor* a_processor)
+51645,0x1408c0b80,0x1408ed870,2,bool StatsMenu::CanProcess(InputEvent* a_event)
+51646,0x1408c0d60,0x1408edab0,2,bool StatsMenu::ProcessThumbstick(ThumbstickEvent* a_event)
+51647,0x1408c0d90,0x1408edc00,2,bool StatsMenu::ProcessButton(ButtonEvent* a_event)
 51652,0x1408c20c0,0x1408eedb0,2,StatsMenu::UpdateSkillList
 51654,0x1408c2ba0,0x1408efad0,3,undefined StatsMenu::sub_1408C2BA0(StatsMenu* this)
+51656,0x1408c4520,0x1408f1450,2,void StatsMenu::Unk_03()
 51658,0x1408c4ca0,0x1408f1620,3,undefined StatsMenu::sub_1408C4CA0(StatsMenu* this)
 51666,0x1408c7110,0x1408f5bf0,3,undefined StatsMenu::sub_1408C7110(StatsMenu* this)
 51684,0x1408c90b0,0x1408f6b10,2,"BSEventNotifyControl StatsNode::ProcessEvent(const BSAnimationGraphEvent* a_event, BSTEventSource<BSAnimationGraphEvent>* a_eventSource)"
