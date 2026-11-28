@@ -7061,6 +7061,7 @@ sseid,aeid,confidence,name
 32962,33747,1,
 32969,33753,1,
 32970,33754,1,ModManagerMenu::sub_140523220
+32972,33756,1,
 32975,33759,1,MenuEventHandler::CanProcess_*
 32976,33760,1,MenuEventHandler::ProcessThumbstick_*
 32978,33762,1,
@@ -7092,7 +7093,10 @@ sseid,aeid,confidence,name
 33135,33914,1,ModManagerMenu::dtor_140537730
 33136,33915,1,ModManager::ModsChanged_ConfirmResetCallback::dtor_*
 33138,33917,1,ModManager::ReportMod_ConfirmCallback::dtor_*
+33211,33982,1,
 33212,33983,1,
+33220,33991,1,
+33221,33992,1,
 33222,33993,1,
 33223,33994,1,
 33224,33995,1,
@@ -13345,6 +13349,7 @@ sseid,aeid,confidence,name
 49994,50937,1,VATSCameraState::GetCurrentPosition_*
 49995,50939,1,VATSCameraState::sub_*
 49996,50940,1,VATSCameraState::dtor_*
+50001,50945,1,
 50002,50946,1,BarterMenu::sub_*
 50003,50947,1,BarterMenu::sub_*
 50004,50948,1,
@@ -13370,6 +13375,7 @@ sseid,aeid,confidence,name
 50114,51045,1,
 50115,51046,1,
 50117,51048,1,BookMenu::sub_*
+50118,51049,1,
 50119,51050,1,
 50120,51051,1,BookMenu::sub_*
 50121,51052,1,BookMenu::sub_*
@@ -13382,12 +13388,17 @@ sseid,aeid,confidence,name
 50130,51061,1,SimpleAnimationGraphManagerHolder::Func12_*
 50131,51062,1,SimpleAnimationGraphManagerHolder::Func19_*
 50138,51070,1,
+50155,442669,1,
+50156,51083,1,
 50157,51084,1,
 50162,51089,1,
 50164,51093,1,
 50165,51094,1,
 50180,51110,1,
+50183,51112,1,
+50197,51126,1,
 50198,51127,1,
+50199,51128,1,
 50211,51140,1,
 50212,51141,1,
 50223,51152,1,
@@ -13407,6 +13418,7 @@ sseid,aeid,confidence,name
 50262,51187,1,
 50264,51189,1,
 50265,51190,1,
+50274,51200,1,
 50275,51201,1,CraftingMenu::sub_*
 50276,51202,1,CraftingMenu::sub_*
 50277,51203,1,
@@ -13503,8 +13515,11 @@ sseid,aeid,confidence,name
 50600,51494,1,
 50602,51496,1,
 50603,51497,1,
+50604,51498,1,
+50605,51499,1,
 50610,51504,1,
 50611,51519,1,
+50612,51506,1,
 50613,51507,1,DialogueMenu::sub_*
 50616,51510,1,
 50620,51514,1,
@@ -13512,12 +13527,16 @@ sseid,aeid,confidence,name
 50622,51516,1,DialogueMenu::sub_*
 50626,51520,1,
 50630,51523,1,FaderMenu::sub_*
+50631,51524,1,
 50632,51525,1,FaderMenu::sub_*
 50634,51527,1,FaderMenu::sub_*
+50640,51534,1,
 50641,51535,1,
 50642,51536,1,
 50643,51537,1,
+50644,51538,1,
 50645,51539,1,MenuEventHandler::ProcessButton_*
+50646,51540,1,
 50647,51541,1,
 50648,51542,1,
 50649,51543,1,
@@ -13525,10 +13544,14 @@ sseid,aeid,confidence,name
 50653,51547,1,
 50655,51549,1,
 50657,51554,1,
+50670,51565,1,
 50671,51566,1,
+50672,51567,1,
 50680,51576,1,
 50718,51612,4,RE::HUDMenu::ProcessMessage
+50719,51613,1,
 50720,51614,1,
+50721,51615,1,
 50738,51633,1,
 50741,51636,1,
 50747,51642,1,
@@ -13590,7 +13613,9 @@ sseid,aeid,confidence,name
 50910,51788,1,NewInventoryMenuItemLoadTask::sub_*
 50911,51789,1,
 50917,51793,1,NewInventoryMenuItemLoadTask::sub_*
+50969,51848,1,
 50970,51849,1,
+50971,51850,1,
 50986,51865,1,
 50987,51866,1,
 50998,51878,1,
@@ -13603,6 +13628,7 @@ sseid,aeid,confidence,name
 51014,51891,1,
 51019,51897,1,
 51020,51898,1,
+51032,51909,1,
 51044,51923,1,LoadingMenu::sub_*
 51045,51924,1,LoadingMenu::sub_*
 51046,51925,1,
@@ -13637,12 +13663,16 @@ sseid,aeid,confidence,name
 51118,52000,1,
 51121,52004,3,papyrus_extender::fave_util::magic::favorite
 51122,52005,3,papyrus_extender::fave_util::magic::unfavorite
+51148,52028,1,
 51149,52029,1,
+51150,52030,1,
 51223,52098,1,
 51224,52099,1,
+51238,52110,1,
 51241,52113,1,
 51246,36604,1,Start-on-Save::DoBeforeNewOrLoad
 51253,52125,3,RE::LoadNewDLCContent
+51259,52137,1,
 51357,52201,1,
 51358,52202,1,
 51359,52203,1,
@@ -13657,9 +13687,21 @@ sseid,aeid,confidence,name
 51412,52261,1,
 51420,52269,1,
 51422,52271,3,RE::MessageBoxData::QueueMessage
+51423,52278,1,
+51425,52280,1,
 51426,52284,1,
+51447,52306,1,
+51448,52307,1,
+51449,52308,1,
 51450,52309,1,
+51451,52310,1,
+51452,52311,1,
+51453,52312,1,
 51473,52335,1,
+51482,52344,1,
+51483,52345,1,
+51484,52346,1,
+51485,52347,1,
 51491,52353,3,void RaceSexMenu::CommitWeightSliderChange(const FxDelegateArgs& a_params)
 51492,52354,3,void RaceSexMenu::CommitFaceDetailsSliderChange(const FxDelegateArgs& a_params)
 51493,52355,3,void RaceSexMenu::CommitMorphSliderChange(const FxDelegateArgs& a_params)
@@ -13670,6 +13712,10 @@ sseid,aeid,confidence,name
 51499,52361,3,void RaceSexMenu::CommitTintingMaskSliderChange(const FxDelegateArgs& a_params)
 51500,52362,3,void RaceSexMenu::CommitMaskSliderChange(const FxDelegateArgs& a_params)
 51501,52363,3,void RaceSexMenu::CommitMaskColorSliderChange(const FxDelegateArgs& a_params)
+51512,52384,1,
+51513,52385,1,
+51514,52386,1,
+51515,52387,1,
 51521,52396,3,void RaceSexMenu::RefreshFaceTintTextures()
 51522,52397,3,void RaceSexMenu::ApplyFaceTextureSet(BGSTextureSet* a_textureSet)
 51524,52399,3,"void RaceSexMenu::ApplyTintingMaskSliderValue(std::uint32_t a_value, std::uint32_t a_sliderIndex)"
@@ -13682,6 +13728,8 @@ sseid,aeid,confidence,name
 51531,52406,3,"void RaceSexMenu::ApplyFaceDetailsSliderValue(float a_value, std::uint32_t a_sliderIndex)"
 51540,52415,1,
 51596,52467,1,
+51614,52486,1,
+51615,52487,1,
 51618,52490,1,
 51629,52500,1,
 51630,52501,1,
@@ -13704,12 +13752,17 @@ sseid,aeid,confidence,name
 51755,52628,1,
 51777,52651,1,
 51787,52661,1,
+51788,52662,1,
 51789,52663,1,
 51806,52679,1,
 51807,52680,1,
 51808,52681,1,
 51810,52683,1,
+51815,52689,1,
+51816,52690,1,
+51833,52705,1,
 51834,52706,1,
+51835,52707,1,
 51839,52711,1,
 51859,52731,1,
 51861,52733,1,
@@ -13752,7 +13805,11 @@ sseid,aeid,confidence,name
 52184,53076,3,AddCurrentLocationMarker
 52186,53078,3,BindCustomDestinationMarker
 52193,53085,3,CompareRouteRootWorldSpaces
+52214,53101,1,
+52215,53102,1,
+52216,53103,1,
 52217,53104,1,
+52218,53105,1,
 52225,53112,3,MapMenu::SetFreezeFrameBackground
 52226,53113,3,RE::MapMenu::PlaceMarker
 52228,53115,3,MapMenu::UpdateCamera
@@ -13774,7 +13831,12 @@ sseid,aeid,confidence,name
 52385,53281,1,
 52400,53299,3,QuickLoot::
 52405,53291,1,
+52418,53315,1,
 52419,53316,1,
+52420,53317,1,
+52421,53318,1,
+52426,53325,1,
+52427,53326,1,
 52432,53331,1,
 52454,53356,1,
 52467,53369,2,

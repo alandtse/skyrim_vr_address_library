@@ -5218,7 +5218,9 @@
 32570,0x140502ed0,0x140513370,2,"bool IntersectSegmentSphere(const float* a_segment, const void* a_sphere, float* a_outTEnter, float* a_outTExit)"
 32867,0x14051e7f0,0x14052ede0,2,void IMenu::PostDisplay(IMenu* a_this)
 32969,0x1405231c0,0x14051e060,2,UI_MESSAGE_RESULTS ModManagerMenu::ProcessMessage(UIMessage& a_message)
+32972,0x1405245f0,0x14051f410,2,"void ModManagerMenu::AdvanceMovie(float a_interval, std::uint32_t a_currentTime)"
 32975,0x140524760,0x14051f4a0,2,bool ModManagerMenu::CanProcess(InputEvent* a_event)
+32976,0x140524780,0x14051f4c0,2,bool ModManagerMenu::ProcessThumbstick(ThumbstickEvent* a_event)
 32979,0x1405249d0,0x14051f690,2,"void GetContentManifestPath(GFxValue* a_content, BSFixedString* a_out)"
 32991,0x140527860,0x1405212d0,2,void ModManager::InitContentDirectories()
 33016,0x14052b590,0x1405246d0,2,"static void ModManager::DeleteContentFromMenu(GFxValue* a_data, bool a_arg)"
@@ -5232,6 +5234,7 @@
 33120,0x140537170,0x14052dee0,2,void ModManager::ReportMod_ConfirmCallback::Run(std::uint8_t a_button)
 33211,0x14053ba80,0x140532e90,2,UI_MESSAGE_RESULTS KinectMenu::ProcessMessage(UIMessage& a_message)
 33212,0x14053bb80,0x140532f90,2,"BSEventNotifyControl KinectMenu::ProcessEvent(const MenuOpenCloseEvent* a_event, BSTEventSource<MenuOpenCloseEvent>* a_eventSource)"
+33220,0x14053c290,0x1405336a0,2,void LoadWaitSpinner::Accept(CallbackProcessor* a_processor)
 33221,0x14053c2a0,0x1405336b0,2,UI_MESSAGE_RESULTS LoadWaitSpinner::ProcessMessage(UIMessage& a_message)
 33222,0x14053c470,0x140533880,2,"BSEventNotifyControl LoadWaitSpinner::ProcessEvent(const BSSystemEvent* a_event, BSTEventSource<BSSystemEvent>* a_eventSource)"
 33223,0x14053c4e0,0x1405338f0,2,"BSEventNotifyControl LoadWaitSpinner::ProcessEvent(const BSGamerProfileEvent* a_event, BSTEventSource<BSGamerProfileEvent>* a_eventSource)"
@@ -10733,6 +10736,7 @@
 49986,0x140850fa0,0x14087b360,2,void TweenMenuCameraState::GetRotation(NiQuaternion& a_rotation)
 49992,0x140851360,0x14087b720,2,void VATSCameraState::Update(BSTSmartPointer<TESCameraState>& a_nextState)
 49993,0x140851470,0x14087b830,2,void VATSCameraState::GetRotation(NiQuaternion& a_rotation)
+50001,0x140851c30,0x14087c000,2,UI_MESSAGE_RESULTS BarterMenu::ProcessMessage(UIMessage& a_message)
 50002,0x140852410,0x14087c7e0,2,void BarterMenu::PostDisplay()
 50003,0x140852450,0x14087c820,2,void BarterMenu::Accept(CallbackProcessor* a_processor)
 50005,0x1408527b0,0x14087CB80,3,DescriptionFramework::
@@ -10755,6 +10759,7 @@
 50108,0x140856ed0,0x140881290,2,void BSTEventSource<TimesBartered::Event>::RemoveEventSink(BSTEventSink<TimesBartered::Event>* a_sink)
 50118,0x1408575f0,0x1408819c0,3,BookMenu::ProcessMessage
 50119,0x1408580f0,0x1408823c0,2,"void BookMenu::AdvanceMovie(float a_interval, std::uint32_t a_currentTime)"
+50120,0x140858140,0x140882410,2,void BookMenu::PostDisplay()
 50121,0x140858190,0x140882430,2,void BookMenu::PreDisplay()
 50122,0x1408582e0,0x140882580,3,"void BookMenu::OpenBookMenu(const BSString& a_description, const ExtraDataList* a_extraList, TESObjectREFR* a_ref, TESObjectBOOK* a_book, const NiPoint3& a_pos, const NiMatrix3& a_rot, float a_scale, bool a_useDefaultPos)"
 50126,0x140858c70,0x140882f80,3,void BookMenu::InitializeBook()
@@ -10768,6 +10773,8 @@
 50164,0x14085bb30,0x1408864d0,3,RE::Console::SetSelectedRef
 50165,0x14085bc90,0x140886630,2,void Console::FlushLogToHistory()
 50180,0x14085c2c0,0x140886df0,4,RE::ConsoleLog::VPrint
+50183,0x14085c550,0x140887080,2,UI_MESSAGE_RESULTS ConsoleNativeUIMenu::ProcessMessage(UIMessage& a_message)
+50197,0x14085ce50,0x1408879c0,2,UI_MESSAGE_RESULTS ContainerMenu::ProcessMessage(UIMessage& a_message)
 50198,0x14085d8f0,0x1408888c0,2,void ContainerMenu::PostDisplay()
 50199,0x14085d930,0x140888900,2,void ContainerMenu::Accept(CallbackProcessor* a_processor)
 50201,0x14085ddb0,0x140888D80,3,DescriptionFramework::
@@ -10844,6 +10851,8 @@
 50593,0x1408751d0,0x1408a0920,2,UI_MESSAGE_RESULTS CreditsMenu::ProcessMessage(UIMessage& a_message)
 50602,0x1408758d0,0x1408a1020,2,UI_MESSAGE_RESULTS CursorMenu::ProcessMessage(UIMessage& a_message)
 50603,0x140875a10,0x1408a1160,2,bool CursorMenu::CanProcess(InputEvent* a_event)
+50604,0x140875a40,0x1408a1190,2,bool CursorMenu::ProcessMouseMove(MouseMoveEvent* a_event)
+50605,0x140875a60,0x1408a11b0,2,bool CursorMenu::ProcessThumbstick(ThumbstickEvent* a_event)
 50610,0x140875bc0,0x1408a1310,3,DialogueMenu* DialogueMenu::Ctor()
 50611,0x140875ca0,0x1408a13e0,2,void DialogueMenu::Dtor()
 50612,0x140875d30,0x1408a14a0,3,"undefined4 sub_140875D30 (DialogueMenu * a_this, undefined8 param_2)"
@@ -10852,15 +10861,23 @@
 50615,0x1408761f0,0x1408a1a50,3,void FUN_1408761f0 (longlong param_1)
 50617,0x1408762f0,0x1408a1b70,3,void FUN_1408762f0 (longlong param_1)
 50626,0x140877390,0x1408a2d00,2,IMenu* DialogueMenu::CreateMenu()
+50630,0x140877550,0x1408a2f50,2,UI_MESSAGE_RESULTS FaderMenu::ProcessMessage(UIMessage& a_message)
+50631,0x1408775f0,0x1408a3010,2,"void FaderMenu::AdvanceMovie(float a_interval, std::uint32_t a_currentTime)"
+50632,0x140877680,0x1408a3140,2,void FaderMenu::Accept(CallbackProcessor* a_processor)
+50640,0x140877db0,0x1408a3a80,2,UI_MESSAGE_RESULTS FavoritesMenu::ProcessMessage(UIMessage& a_message)
 50641,0x140877f80,0x1408a3ca0,2,void FavoritesMenu::Accept(CallbackProcessor* a_processor)
 50643,0x140878140,0x1408a3e60,4,CombatPathingRevolution::src/Advance_Hook.h:55
 50644,0x1408781c0,0x1408a3ee0,4,MenuEventHandler::CanProcess_1408781C0
+50645,0x140878210,0x1408a3f30,2,bool FavoritesMenu::ProcessButton(ButtonEvent* a_event)
+50646,0x1408782b0,0x1408a3fd0,2,bool FavoritesMenu::ProcessKinect(KinectEvent* a_event)
+50670,0x14087a180,0x1408a5ee0,2,UI_MESSAGE_RESULTS GiftMenu::ProcessMessage(UIMessage& a_message)
 50671,0x14087a800,0x1408a6570,2,void GiftMenu::PostDisplay()
 50672,0x14087a840,0x1408a65b0,2,void GiftMenu::Accept(CallbackProcessor* a_processor)
 50674,0x14087aba0,0x1408A6910,3,DescriptionFramework::
 50680,0x14087b1e0,0x1408a6f50,4,"void GiftMenu::OpenMenu_Impl(Actor* a_gifter, Actor* a_receiver, BSTSmartPointer<IGiftMenuScriptCallback>* a_callbackFn, BGSListForm* a_filterList, bool a_showStolenItems, bool a_useFavorPoints)"
 50688,0x14087ba70,0x1408a77e0,3,EssentialFavorites::Gifting::IsQuestObject
 50718,0x14087d580,0x1408aa8b0,3,UI_MESSAGE_RESULTS HUDMenu::ProcessMessage(RE::UIMessage& a_message)
+50719,0x14087ec70,0x1408ac1d0,2,"void HUDMenu::AdvanceMovie(float a_interval, std::uint32_t a_currentTime)"
 50720,0x14087ed80,0x1408ac2d0,2,void HUDMenu::RefreshPlatform()
 50721,0x14087eda0,0x1408ac5b0,2,void HUDMenu::Accept(CallbackProcessor* a_processor)
 50725,0x14087f070,0x1408ac880,4,void SendHUDMessage::PushHUDMode(const char* a_hudMode)
@@ -10913,7 +10930,9 @@
 50899,0x140888730,0x1408b60a0,3,"void Inventory3DManager::sub_140888730(TESForm* a_form, ExtraDataList* a_extraList)"
 50900,0x1408887e0,0x1408b6220,3,
 50948,0x14088b9b0,0x1408b9210,3,InventoryEntryData::GetExtraListForRemoval
+50969,0x14088d1f0,0x1408ba6b0,2,UI_MESSAGE_RESULTS InventoryMenu::ProcessMessage(UIMessage& a_message)
 50970,0x14088dae0,0x1408bb260,2,void InventoryMenu::PostDisplay()
+50971,0x14088db20,0x1408bb2a0,2,void InventoryMenu::Accept(CallbackProcessor* a_processor)
 50973,0x14088e050,0x1408BB820,3,DescriptionFramework::
 50978,0x14088e280,0x1408bba50,3,EssentialFavorites::Dropped::IsQuestObject
 50980,0x14088e890,0x1408bc060,3,InventoryMenu::GetItemChargedEventSource
@@ -10927,11 +10946,17 @@
 51032,0x140893d50,0x1408c17c0,2,void LevelUpMenu::Accept(CallbackProcessor* a_cbReg)
 51037,0x140893f80,0x1408c19f0,3,ConfirmLevelUpAttributeCallback::Run
 51044,0x140894670,0x1408c20f0,2,void LoadingMenu::Accept(CallbackProcessor* a_processor)
+51045,0x140894730,0x1408c21b0,2,UI_MESSAGE_RESULTS LoadingMenu::ProcessMessage(UIMessage& a_message)
 51046,0x140894950,0x1408c23e0,3,LoadingScreen::RequestLoadingText
 51048,0x140894f90,0x1408c2a30,3,Photomode::GetLoadScreenModel::src/Hooks.cpp:106
 51065,0x140895ce0,0x1408c3790,2,std::uint32_t FxResponseArgs<3>::GetValues(GFxValue** a_params)
+51071,0x140896300,0x1408c3e10,2,UI_MESSAGE_RESULTS LockpickingMenu::ProcessMessage(UIMessage& a_message)
+51072,0x140896530,0x1408c4140,2,void LockpickingMenu::PostDisplay()
 51073,0x140896580,0x1408c4160,2,"BSEventNotifyControl LockpickingMenu::ProcessEvent(const MenuOpenCloseEvent* a_event, BSTEventSource<MenuOpenCloseEvent>* a_eventSource)"
 51074,0x1408965e0,0x1408c41c0,2,bool LockpickingMenu::CanProcess(InputEvent* a_event)
+51075,0x140896650,0x1408c4270,2,bool LockpickingMenu::ProcessThumbstick(ThumbstickEvent* a_event)
+51076,0x140896700,0x1408c4320,2,bool LockpickingMenu::ProcessMouseMove(MouseMoveEvent* a_event)
+51077,0x140896770,0x1408c4330,2,bool LockpickingMenu::ProcessButton(ButtonEvent* a_event)
 51080,0x140896930,0x1408c45e0,4,void LockpickingMenu::OpenMenu(RE::TESObjectREFR* a_target)
 51081,0x140896ac0,0x1408c4770,3,LockVariations::Model::RequestModel
 51084,0x1408971a0,0x1408c4e40,3,handtohand::LockpickingMenu::LockPickMenuSkillLevel
@@ -10948,12 +10973,16 @@
 51121,0x140899c40,0x1408c7cd0,4,void MagicFavorites::SetFavorite(TESForm* a_form)
 51122,0x140899ca0,0x1408c7d30,4,void MagicFavorites::RemoveFavorite(TESForm* a_form)
 51143,0x14089a7f0,0x1408c8880,4,undefined MagicItemData::Func4_14089A7F0(MagicItemData* a_this)
+51148,0x14089ab30,0x1408c8af0,2,UI_MESSAGE_RESULTS MagicMenu::ProcessMessage(UIMessage& a_message)
 51149,0x14089b5b0,0x1408c93c0,2,void MagicMenu::PostDisplay()
+51150,0x14089b5f0,0x1408c9400,2,void MagicMenu::Accept(CallbackProcessor* a_processor)
 51152,0x14089b950,0x1408c97a0,3,MagicMenu::RequestItemCardInfoDelegate()
 51223,0x1408a0230,0x1408ce4e0,4,void MagicItemList::Update_Impl(TESObjectREFR* a_owner)
 51224,0x1408a0290,0x1408ce540,2,"bool BSTArrayAllocatorFunctor<BSTSmallArrayHeapAllocator<36>>::Reallocate(std::uint32_t a_minNewSizeInItems, std::uint32_t a_frontCopyCount, std::uint32_t a_shiftCount, std::uint32_t a_backCopyCount, std::uint32_t a_elemSize)"
+51238,0x1408a15f0,0x1408cf890,2,"void MainMenu::AdvanceMovie(float a_interval, std::uint32_t a_currentTime)"
 51241,0x1408a1900,0x1408cfc00,2,void MainMenu::Accept(CallbackProcessor* a_processor)
 51253,0x1408a26b0,0x1408d0bf0,3,void LoadNewDLCContent()
+51259,0x1408a2b40,0x1408d17d0,2,UI_MESSAGE_RESULTS MainMenu::ProcessMessage(UIMessage& a_message)
 51357,0x1408a7f00,0x1408d3f10,2,"BSEventNotifyControl MenuControls::ProcessEvent(const MenuModeChangeEvent* a_event, BSTEventSource<MenuModeChangeEvent>* a_eventSource)"
 51358,0x1408A7F20,0x1408d3f30,3,RE::MenuControls::RegisterHandler
 51359,0x1408A7FF0,0x1408d4000,3,RE::MenuControls::UnregisterHandler
@@ -10981,11 +11010,19 @@
 51433,0x1408ac6d0,0x1408d9680,2,"MessageBoxData* MessageBoxData::ctor(MessageBoxData* a_this, BSString& a_message, const BSTArray<BSString>& a_buttons, const BSTSmartPointer<IMessageBoxCallback>& a_callback, std::uint8_t a_buttonPressOffset, std::int32_t a_warningType, std::int32_t a_menuDepth)"
 51435,0x1408ac7f0,0x1408d97a0,3,"void* MessageBoxMenu::deleting_dtor(MessageBoxMenu* a_this, std::uint8_t a_flags)"
 51445,0x1408acb30,0x1408d9af0,2,MistMenu* MistMenu::ctor(MistMenu* a_this)
+51447,0x1408ad2e0,0x1408da290,2,UI_MESSAGE_RESULTS MistMenu::ProcessMessage(UIMessage& a_message)
+51448,0x1408ad310,0x1408da2c0,2,"void MistMenu::AdvanceMovie(float a_interval, std::uint32_t a_currentTime)"
 51449,0x1408ad6f0,0x1408da710,2,void MistMenu::PostDisplay(MistMenu* a_this)
 51450,0x1408ad7c0,0x1408da760,2,bool MistMenu::CanProcess(InputEvent* a_event)
+51451,0x1408ad7f0,0x1408da790,2,bool MistMenu::ProcessThumbstick(ThumbstickEvent* a_event)
+51452,0x1408ad8b0,0x1408da850,2,bool MistMenu::ProcessMouseMove(MouseMoveEvent* a_event)
+51453,0x1408ad960,0x1408da900,2,bool MistMenu::ProcessButton(ButtonEvent* a_event)
 51454,0x1408ad9f0,0x1408dad50,3,"static void MistMenu::SetupLoadScreenModel3D(TESModelTextureSwap* a_model, float a_unk2, const NiPoint3& a_position, const NiPoint3& a_rotation, const char* a_unk5, float a_unk6, float a_unk7)"
 51455,0x1408adc70,0x1408db0d0,3,void ShowMistMenu(bool a_flag)
 51473,0x1408aee40,0x1408dc6d0,2,void BottomBar::UpdatePlayerInfo()
+51482,0x1408aff40,0x1408dd500,2,void RaceSexMenu::PostCreate()
+51483,0x1408b0200,0x1408dd6e0,2,UI_MESSAGE_RESULTS RaceSexMenu::ProcessMessage(UIMessage& a_message)
+51484,0x1408b0a60,0x1408de400,2,"void RaceSexMenu::AdvanceMovie(float a_interval, std::uint32_t a_currentTime)"
 51485,0x1408b0da0,0x1408de640,2,void RaceSexMenu::Accept(CallbackProcessor* a_processor)
 51491,0x1408b1800,0x1408df120,3,void RaceSexMenu::CommitWeightSliderChange(const FxDelegateArgs& a_params)
 51492,0x1408b1aa0,0x1408df3c0,3,void RaceSexMenu::CommitFaceDetailsSliderChange(const FxDelegateArgs& a_params)
@@ -10999,6 +11036,10 @@
 51501,0x1408b2400,0x1408dfc70,3,void RaceSexMenu::CommitMaskColorSliderChange(const FxDelegateArgs& a_params)
 51507,0x1408b2be0,0x1408e0450,3,void PrecacheCharGen_1409796E0_0_1408B2BE0 (undefined8 * a_this)
 51509,0x1408b2d60,0x1408e0730,4,void PrecacheCharGenClear_1409796F0_0_1408B2D60 (undefined8 * a_this)
+51512,0x1408b30f0,0x1408e0ac0,2,bool RaceSexMenu::CanProcess(InputEvent* a_event)
+51513,0x1408b3160,0x1408e0ba0,2,bool RaceSexMenu::ProcessThumbstick(ThumbstickEvent* a_event)
+51514,0x1408b3500,0x1408e0f80,2,bool RaceSexMenu::ProcessButton(ButtonEvent* a_event)
+51515,0x1408b3560,0x1408e11b0,2,bool RaceSexMenu::ProcessMouseMove(MouseMoveEvent* a_event)
 51521,0x1408b40c0,0x1408e1c40,3,void RaceSexMenu::RefreshFaceTintTextures()
 51522,0x1408b4270,0x1408e1df0,3,void RaceSexMenu::ApplyFaceTextureSet(BGSTextureSet* a_textureSet)
 51524,0x1408b4580,0x1408e2110,3,"void RaceSexMenu::ApplyTintingMaskSliderValue(std::uint32_t a_value, std::uint32_t a_sliderIndex)"
@@ -11061,6 +11102,7 @@
 51815,0x1408cfa40,0x1408fcb00,2,UI_MESSAGE_RESULTS TutorialMenu::ProcessMessage(UIMessage& a_message)
 51816,0x1408cfdb0,0x1408fce70,2,void TutorialMenu::Accept(CallbackProcessor* a_processor)
 51818,0x1408cfea0,0x1408fcf60,4,void TutorialMenu::OpenTutorialMenu(DEFAULT_OBJECT a_tutorial)
+51833,0x1408d06e0,0x1408fd790,2,UI_MESSAGE_RESULTS TweenMenu::ProcessMessage(UIMessage& a_message)
 51834,0x1408d0da0,0x1408fdf40,2,void TweenMenu::PostDisplay()
 51835,0x1408d0de0,0x1408fdf80,2,void TweenMenu::Accept(CallbackProcessor* a_processor)
 51839,0x1408d0fe0,0x1408fe180,4,static void CloseTweenMenu()
@@ -11122,7 +11164,11 @@
 52195,0x1408e2c60,0x1409143b0,3,"std::uint32_t AddMarkerEntry_1408E2C60(BSTArray<MapMenuMarker>* a_markers, std::uint32_t* a_ref, TESFullName* a_name, std::uint32_t a_param4)"
 52208,0x1408e3d70,0x140915f50,2,RE::MapMenu::MarkerClick
 52213,0x1408e4360,0x140916830,3,"void MapMenu::SetInputHandlersEnabled(bool a_enabled, std::uint32_t a_mask)"
+52214,0x1408e44a0,0x140916980,2,"void MapMenu::AdvanceMovie(float a_interval, std::uint32_t a_currentTime)"
+52215,0x1408e48f0,0x140916d10,2,UI_MESSAGE_RESULTS MapMenu::ProcessMessage(UIMessage& a_message)
+52216,0x1408e5480,0x140917f90,2,void MapMenu::PreDisplay()
 52217,0x1408e5490,0x140917fb0,2,void MapMenu::RefreshPlatform()
+52218,0x1408e54e0,0x140918000,2,void MapMenu::Accept(CallbackProcessor* a_processor)
 52225,0x1408e6cf0,0x140919330,3,void MapMenu::SetFreezeFrameBackground(bool a_enable)
 52226,0x1408e6ea0,0x140919520,3,void MapMenu::PlaceMarker()
 52228,0x1408e7380,0x140919910,2,bool MapMenu::UpdateCamera()
@@ -11151,7 +11197,12 @@
 52385,0x1408efc80,0x140924d20,2,"BSEventNotifyControl Journal_SystemTab::ProcessEvent(const BSRemoteGamepadEvent* a_event, BSTEventSource<BSRemoteGamepadEvent>* a_eventSource)"
 52400,0x1408f03c0,0x1409254b0,4,QuickLoot::
 52405,0x1408f07c0,0x1409258b0,2,"BSEventNotifyControl JournalInputMapping::RemapHandler::ProcessEvent(InputEvent** a_event, BSTEventSource<InputEvent*>* a_eventSource)"
+52418,0x1408f3ad0,0x14092d350,2,UI_MESSAGE_RESULTS JournalMenu::ProcessMessage(UIMessage& a_message)
 52419,0x1408f40c0,0x14092db10,2,"void JournalMenu::AdvanceMovie(float a_interval, std::uint32_t a_currentTime)"
+52420,0x1408f4100,0x14092db50,2,void JournalMenu::PostDisplay()
+52421,0x1408f4150,0x14092db70,2,void JournalMenu::Accept(CallbackProcessor* a_processor)
+52426,0x1408f4830,0x14092e2f0,2,bool JournalMenu::CanProcess(InputEvent* a_event)
+52427,0x1408f4870,0x14092e420,2,bool JournalMenu::ProcessThumbstick(ThumbstickEvent* a_event)
 52432,0x1408f4c30,0x14092f270,2,"BSEventNotifyControl JournalMenu::ProcessEvent(const BSSystemEvent* a_event, BSTEventSource<BSSystemEvent>* a_eventSource)"
 52454,0x1408f5e80,0x140930600,2,"BSEventNotifyControl SkyrimScript::Internal::AnimationCallbacks::ProcessEvent(const BSAnimationGraphEvent* a_event, BSTEventSource<BSAnimationGraphEvent>* a_eventSource)"
 52457,0x1408f6310,0x140930a90,3,"void SkyrimScript::Internal::AnimationCallbacks::RemoveHandleFromEvent(void* a_event, VMHandle a_handle)"
