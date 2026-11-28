@@ -5049,7 +5049,7 @@
 32144,0x1404f0740,0x1405009b0,3,"bool IAnimationGraphManagerHolder::SetGraphVariableNiPoint3(const BSFixedString& a_variableName, NiPoint3& a_in)"
 32149,0x1404f0960,0x140500bd0,4,undefined8 IAnimationGraphManagerHolder::sub_1404F0960(IAnimationGraphManagerHolder *a_this)
 32155,0x1404f1140,0x1405013b0,4,bool IAnimationGraphManagerHolder::UpdateAnimationGraphManager(const BSAnimationUpdateData& a_updateData)
-32157,0x1404f12c0,0x140501530,2,virtual bool IAnimationGraphManagerHolder::NotifyAnimationGraph(const BSFixedString& a_eventName)
+32157,0x1404f12c0,0x140501530,2,bool IAnimationGraphManagerHolder::NotifyAnimationGraph(const BSFixedString& a_eventName)
 32173,0x1404f1520,0x140501790,2,bool IAnimationGraphManagerLoadingTask::Process()
 32184,0x1404f1e60,0x1405020d0,4,RE::BSAnimationGraphManager::sub_1404F1E60
 32192,0x1404f2620,0x140502890,3,"bool IAnimationGraphManagerHolder::GetGraphVariableNiPoint3(const BSFixedString& a_variableName, NiPoint3& a_out)"
