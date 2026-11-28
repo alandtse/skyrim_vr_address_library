@@ -6923,6 +6923,9 @@ sseid,aeid,confidence,name
 32271,33008,1,
 32275,33012,1,
 32290,33026,1,
+32363,33112,1,
+32381,33131,1,
+32382,33132,1,
 32393,33144,1,
 32394,33145,1,
 32398,33149,1,
@@ -8839,6 +8842,7 @@ sseid,aeid,confidence,name
 39340,40411,1,PlayerCharacter::ctor_140699040
 39343,40414,1,
 39344,40415,1,
+39346,40417,1,
 39362,40434,1,
 39365,40437,3,RE::PlayerCharacter::CenterOnCell_Impl
 39371,40443,1,
@@ -8878,6 +8882,8 @@ sseid,aeid,confidence,name
 39935,41004,1,
 40014,41025,1,
 40016,41027,1,
+40044,41055,1,
+40046,41057,1,
 40056,41067,3,RE::LocationDiscovery::GetEventSource
 40060,41071,3,RE::ShoutAttack::GetEventSource
 40143,41145,1,
@@ -13067,6 +13073,7 @@ sseid,aeid,confidence,name
 49791,50720,1,BleedoutCameraState::sub_*
 49794,50723,1,FirstPersonState::OnExitState_*
 49795,50724,1,FirstPersonState::Update_*
+49799,50729,1,
 49802,50732,1,
 49803,50733,1,
 49804,50734,1,FirstPersonState::Reset_*
@@ -13085,6 +13092,7 @@ sseid,aeid,confidence,name
 49828,50759,1,
 49829,50760,1,HorseCameraState::OnEnterState_*
 49830,50761,1,HorseCameraState::OnExitState_*
+49832,50763,1,
 49833,50764,1,HorseCameraState::WriteToStream_*
 49834,50765,1,HorseCameraState::ReadFromStream_*
 49835,50766,1,HorseCameraState::Reset_*
@@ -13102,6 +13110,8 @@ sseid,aeid,confidence,name
 49955,50891,1,
 49958,50894,1,
 49966,50902,1,
+49969,50905,1,
+49970,50906,1,
 49972,50908,1,
 49973,50909,1,ThirdPersonState::ReadFromStream_*
 49974,50910,1,ThirdPersonState::Reset_*

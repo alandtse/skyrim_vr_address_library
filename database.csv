@@ -5079,11 +5079,14 @@
 32289,0x1404f5b60,0x140505dd0,2,void TESCamera::Update()
 32290,0x1404f5c80,0x140505f60,3,RE::TESCamera::SetState
 32359,0x1404f9240,0x1405093d0,2,void DragonCameraState::Begin()
+32363,0x1404f92f0,0x140509480,2,"void DragonCameraState::ProcessButton(ButtonEvent* a_event, PlayerControlsData* a_data)"
 32364,0x1404f9390,0x140509520,2,void DragonCameraState::SaveGame(BGSSaveFormBuffer* a_buf)
 32365,0x1404f9470,0x140509600,2,void DragonCameraState::LoadGame(BGSLoadFormBuffer* a_buf)
 32366,0x1404f9550,0x1405096e0,2,void DragonCameraState::Revert(BGSLoadFormBuffer* a_buf)
 32370,0x1404f96c0,0x140509850,4,void DragonCameraState::HandleLookInput_1404F96C0 (DragonCameraState * a_this)
 32371,0x1404f9800,0x140509990,2,void DragonCameraState::UpdateRotation()
+32381,0x1404f9fe0,0x14050a170,2,"void PlayerInputHandler::ProcessMouseMove(MouseMoveEvent* a_event, PlayerControlsData* a_data)"
+32382,0x1404f9ff0,0x14050a180,2,"void PlayerInputHandler::ProcessThumbstick(ThumbstickEvent* a_event, PlayerControlsData* a_data)"
 32393,0x1404fa950,0x14050adf0,2,void CombatBehaviorRangedAttack::Enter()
 32394,0x1404fab50,0x14050aff0,2,void CombatBehaviorRangedAttack::Update()
 32398,0x1404faf10,0x14050b3b0,2,void CombatBehaviorTreeRanged::Initialize()
@@ -6831,6 +6834,8 @@
 40012,0x1406c37b0,0x1406e9fa0,2,bool PlayerCharacter::Is3rdPersonVisible()
 40014,0x1406c37d0,0x1406e9fc0,2,"bool NiTMapBase<DFALL<NiTMapItem<unsigned_int,unsigned_char>>,unsigned_int,unsigned_char>::key_eq(std::uint32_t a_lhs, std::uint32_t a_rhs)"
 40016,0x1406c37f0,0x1406ea060,2,"std::uint32_t NiTMapBase<DFALL<NiTMapItem<unsigned_int,unsigned_char>>,unsigned_int,unsigned_char>::hash_function(std::uint32_t a_key)"
+40044,0x1406c6fb0,0x1406ed580,2,void BSTEventSource<TESSleepStopEvent>::SendEvent(const TESSleepStopEvent* a_event)
+40046,0x1406c74f0,0x1406edac0,2,void BSTEventSource<TESWaitStopEvent>::SendEvent(const TESWaitStopEvent* a_event)
 40048,0x1406c77a0,0x1406eddc0,2,bool PlayerCharacter::QCanUpdateSync()
 40056,0x1406c7d60,0x1406ee380,3,BSTEventSource<LocationDiscovery::Event>* LocationDiscovery::GetEventSource()
 40060,0x1406c8120,0x1406ee740,3,BSTEventSource<ShoutAttack::Event>* ShoutAttack::GetEventSource()
@@ -10473,6 +10478,7 @@
 49959,0x14084f3f0,0x1408797a0,2,void ThirdPersonState::End()
 49960,0x14084f490,0x140879840,2,"void ThirdPersonState::Update_14084F490 (longlong *param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4)"
 49966,0x14084f830,0x140879be0,3,void ThirdPersonState::ResetFreeRotation()
+49969,0x14084fb60,0x140879f20,2,bool ThirdPersonState::CanProcess(InputEvent* a_event)
 49970,0x14084fbe0,0x140879fa0,3,"void ThirdPersonState::ProcessButton(ButtonEvent* a_event, PlayerControlsData* a_data)"
 49972,0x14084ff70,0x14087a330,2,void ThirdPersonState::SaveGame(BGSSaveFormBuffer* a_buf)
 49973,0x140850040,0x14087a400,2,void ThirdPersonState::LoadGame(BGSLoadFormBuffer* a_buf)
