@@ -2176,6 +2176,7 @@
 20331,0x1402c0860,0x1402d1fd0,2,bool BGSDefaultObjectManager::Load(TESFile* a_mod)
 20333,0x1402c0a60,0x1402d21f0,2,void BGSDefaultObjectManager::InitItemImpl()
 20342,0x1402c0de0,0x1402d2550,2,void BSTEventSource<DefaultObjectsReadyEvent::Event>::SendEvent(const DefaultObjectsReadyEvent::Event* a_event)
+20343,0x1402c1080,0x1402d27f0,2,BSTEventSource<DefaultObjectsReadyEvent::Event>* DefaultObjectsReadyEvent::GetEventSource()
 20344,0x1402c1170,0x1402d28e0,2,void BSTEventSource<DefaultObjectsReadyEvent::Event>::AddEventSink(BSTEventSink<DefaultObjectsReadyEvent::Event>* a_sink)
 20346,0x1402c1330,0x1402d2aa0,2,void BSTEventSource<DefaultObjectsReadyEvent::Event>::RemoveEventSink(BSTEventSink<DefaultObjectsReadyEvent::Event>* a_sink)
 20350,0x1402c1530,0x1402d2ca0,2,void BGSFootstep::InitializeData()
@@ -5763,6 +5764,7 @@
 35408,0x1405a64f0,0x1405adbb0,4,RE::Calendar::GetGameDaysPassed
 35413,0x1405a6640,0x1405add00,3,"void Calendar::GetTimeDateString(char* a_dest, std::uint32_t a_max, bool a_showYear)"
 35428,0x1405a7290,0x1405ae950,2,void BSTEventSource<DaysPassed::Event>::SendEvent(const DaysPassed::Event* a_event)
+35429,0x1405a7530,0x1405aebf0,2,BSTEventSource<DaysPassed::Event>* DaysPassed::GetEventSource()
 35430,0x1405a7620,0x1405aece0,2,void BSTEventSource<DaysPassed::Event>::AddEventSink(BSTEventSink<DaysPassed::Event>* a_sink)
 35432,0x1405a77e0,0x1405aeea0,2,void BSTEventSource<DaysPassed::Event>::RemoveEventSink(BSTEventSink<DaysPassed::Event>* a_sink)
 35439,0x1405a7d30,0x1405af3f0,2,void ChainExplosion::Update(float a_delta)
@@ -6249,8 +6251,12 @@
 37386,0x14061c650,0x140625240,2,"void BSTAnimationGraphDataChannel<Actor,float,ActorWeaponSpeedChannel>::PollChannelUpdateImpl(bool a_arg1)"
 37387,0x14061c6a0,0x140625290,2,"void BSTAnimationGraphDataChannel<Actor,bool,ActorLookAtChannel>::PollChannelUpdateImpl(bool a_arg1)"
 37388,0x14061c6e0,0x1406252d0,2,"bool MovementMessagePool::Dispatch(Character* a_character, MovementMessage* a_message)"
+37389,0x14061c790,0x140625380,2,BSTEventSource<ActorItemEquipped::Event>* ActorItemEquipped::GetEventSource()
 37390,0x14061c880,0x140625470,3,BSTEventSource<ActorKill::Event>* ActorKill::GetEventSource()
+37391,0x14061c970,0x140625560,2,BSTEventSource<AssaultCrime::Event>* AssaultCrime::GetEventSource()
 37392,0x14061ca60,0x140625650,3,BSTEventSource<DisarmedEvent::Event>* DisarmedEvent::GetEventSource()
+37394,0x14061cc40,0x140625830,2,BSTEventSource<GrandTheftHorse::Event>* GrandTheftHorse::GetEventSource()
+37395,0x14061cd30,0x140625920,2,BSTEventSource<MurderCrime::Event>* MurderCrime::GetEventSource()
 37399,0x14061ce70,0x140625a60,2,void BSTEventSource<ActorItemEquipped::Event>::AddEventSink(BSTEventSink<ActorItemEquipped::Event>* a_sink)
 37400,0x14061cfd0,0x140625bc0,2,void BSTEventSource<ActorKill::Event>::AddEventSink(BSTEventSink<ActorKill::Event>* a_sink)
 37401,0x14061d130,0x140625d20,2,void BSTEventSource<AssaultCrime::Event>::AddEventSink(BSTEventSink<AssaultCrime::Event>* a_sink)
@@ -6383,6 +6389,7 @@
 37722,0x14062c930,0x140635800,2,void BSTEventSource<CriticalHit::Event>::SendEvent(const CriticalHit::Event* a_event)
 37723,0x14062cbd0,0x140635aa0,2,void BSTEventSource<TESHitEvent>::SendEvent(const TESHitEvent* a_event)
 37724,0x14062ce70,0x140635d40,2,void* ActorListenerSet::GetSingleton()
+37725,0x14062cf60,0x140635e30,2,BSTEventSource<ContractedDisease::Event>* ContractedDisease::GetEventSource()
 37726,0x14062d050,0x140635f20,3,BSTEventSource<CriticalHit::Event>* CriticalHit::GetEventSource()
 37727,0x14062d140,0x140636010,2,"static void ActorListenerSet::Add(void* a_set, void* a_listener)"
 37728,0x14062d2a0,0x140636170,2,void BSTEventSource<ContractedDisease::Event>::AddEventSink(BSTEventSink<ContractedDisease::Event>* a_sink)
@@ -7004,8 +7011,20 @@
 40045,0x1406c7250,0x1406ed820,2,void BSTEventSource<TESWaitStartEvent>::SendEvent(const TESWaitStartEvent* a_event)
 40046,0x1406c74f0,0x1406edac0,2,void BSTEventSource<TESWaitStopEvent>::SendEvent(const TESWaitStopEvent* a_event)
 40048,0x1406c77a0,0x1406eddc0,2,bool PlayerCharacter::QCanUpdateSync()
+40050,0x1406c77c0,0x1406edde0,2,BSTEventSource<Bounty::Event>* Bounty::GetEventSource()
+40051,0x1406c78b0,0x1406eded0,2,BSTEventSource<DaysJailed::Event>* DaysJailed::GetEventSource()
+40052,0x1406c79a0,0x1406edfc0,2,BSTEventSource<FinePaid::Event>* FinePaid::GetEventSource()
+40053,0x1406c7a90,0x1406ee0b0,2,BSTEventSource<ItemSteal::Event>* ItemSteal::GetEventSource()
+40054,0x1406c7b80,0x1406ee1a0,2,BSTEventSource<JailEscape::Event>* JailEscape::GetEventSource()
+40055,0x1406c7c70,0x1406ee290,2,BSTEventSource<Jailing::Event>* Jailing::GetEventSource()
 40056,0x1406c7d60,0x1406ee380,3,BSTEventSource<LocationDiscovery::Event>* LocationDiscovery::GetEventSource()
+40057,0x1406c7e50,0x1406ee470,2,BSTEventSource<Pickpocket::Event>* Pickpocket::GetEventSource()
+40058,0x1406c7f40,0x1406ee560,2,BSTEventSource<PoisonedWeapon::Event>* PoisonedWeapon::GetEventSource()
 40060,0x1406c8120,0x1406ee740,3,BSTEventSource<ShoutAttack::Event>* ShoutAttack::GetEventSource()
+40061,0x1406c8210,0x1406ee830,2,BSTEventSource<ShoutMastered::Event>* ShoutMastered::GetEventSource()
+40062,0x1406c8300,0x1406ee920,2,BSTEventSource<WeaponAttack::Event>* WeaponAttack::GetEventSource()
+40063,0x1406c83f0,0x1406eea10,2,BSTEventSource<WordLearned::Event>* WordLearned::GetEventSource()
+40064,0x1406c84e0,0x1406eeb00,2,BSTEventSource<WordUnlocked::Event>* WordUnlocked::GetEventSource()
 40068,0x1406c8760,0x1406eeef0,2,void BSTEventSource<Bounty::Event>::AddEventSink(BSTEventSink<Bounty::Event>* a_sink)
 40069,0x1406c88c0,0x1406ef050,2,void BSTEventSource<DaysJailed::Event>::AddEventSink(BSTEventSink<DaysJailed::Event>* a_sink)
 40070,0x1406c8a20,0x1406ef1b0,2,void BSTEventSource<FinePaid::Event>::AddEventSink(BSTEventSink<FinePaid::Event>* a_sink)
@@ -7419,6 +7438,7 @@
 41360,0x140709690,0x1407321a0,2,"void ToggleRunHandler::ProcessButton(ButtonEvent* a_event, PlayerControlsData* a_data)"
 41361,0x1407096b0,0x140732b00,3,StaminaNPC::apply_PlayerControls__sub_140705530
 41367,0x140709cc0,0x140733240,2,void BSTEventSource<SpellAttack::Event>::SendEvent(const SpellAttack::Event* a_event)
+41369,0x14070a000,0x1407335e0,2,BSTEventSource<SpellAttack::Event>* SpellAttack::GetEventSource()
 41372,0x14070a110,0x1407336f0,2,void BSTEventSource<SpellAttack::Event>::AddEventSink(BSTEventSink<SpellAttack::Event>* a_sink)
 41373,0x14070a270,0x140733850,2,void BSTEventSource<TESFurnitureEvent>::AddEventSink(BSTEventSink<TESFurnitureEvent>* a_sink)
 41381,0x14070a5e0,0x140733ca0,2,bool AttackBlockHandler::CanProcess(InputEvent* a_event)
@@ -7449,6 +7469,7 @@
 41604,0x140717920,0x1407422c0,2,void TrespassPackage::LoadGame(BGSLoadFormBuffer* a_buf)
 41612,0x140717c10,0x1407425b0,2,bool TrespassPackage::IsPackageOwner(Actor* a_actor)
 41613,0x140717c20,0x1407425c0,2,void BSTEventSource<Trespass::Event>::SendEvent(const Trespass::Event* a_event)
+41614,0x140717ec0,0x140742860,2,BSTEventSource<Trespass::Event>* Trespass::GetEventSource()
 41615,0x140717fb0,0x140742950,2,void BSTEventSource<Trespass::Event>::AddEventSink(BSTEventSink<Trespass::Event>* a_sink)
 41617,0x140718170,0x140742b10,2,void BSTEventSource<Trespass::Event>::RemoveEventSink(BSTEventSink<Trespass::Event>* a_sink)
 41622,0x1407184c0,0x140742e60,2,"void ActorKnowledge::AddListener(DetectionListener* a_listener, std::int32_t a_level)"
@@ -10727,6 +10748,7 @@
 50092,0x140856540,0x140880900,2,std::uint32_t FxResponseArgs<0>::GetValues(GFxValue** a_params)
 50093,0x140856550,0x140880910,2,std::uint32_t FxResponseArgsList::GetValues(GFxValue** a_params)
 50096,0x140856630,0x1408809f0,2,void BSTEventSource<TimesBartered::Event>::SendEvent(const TimesBartered::Event* a_event)
+50098,0x140856960,0x140880d20,2,BSTEventSource<TimesBartered::Event>* TimesBartered::GetEventSource()
 50099,0x140856a50,0x140880e10,3,RE::ItemList::Update
 50100,0x140856ab0,0x140880e70,2,void BSTEventSource<TimesBartered::Event>::AddEventSink(BSTEventSink<TimesBartered::Event>* a_sink)
 50105,0x140856e10,0x1408811d0,3,"void ResizeGFxValueArray_140856E10(void* a_array, void* a_alloc, std::uint64_t a_newSize)"
@@ -10895,6 +10917,7 @@
 50980,0x14088e890,0x1408bc060,3,InventoryMenu::GetItemChargedEventSource
 50991,0x14088fa00,0x1408BD650,3,Recipes::
 51010,0x140890570,0x1408be2d0,2,void BSTEventSource<SoulGemsUsed::Event>::SendEvent(const SoulGemsUsed::Event* a_event)
+51011,0x140890810,0x1408be570,2,BSTEventSource<SoulGemsUsed::Event>* SoulGemsUsed::GetEventSource()
 51012,0x140890900,0x1408be660,2,void BSTEventSource<SoulGemsUsed::Event>::AddEventSink(BSTEventSink<SoulGemsUsed::Event>* a_sink)
 51014,0x140890ac0,0x1408be820,2,void BSTEventSource<SoulGemsUsed::Event>::RemoveEventSink(BSTEventSink<SoulGemsUsed::Event>* a_sink)
 51019,0x140890e70,0x1408BEBD0,2,ItemCard::ShowItemData
@@ -10917,6 +10940,7 @@
 51098,0x140898ff0,0x1408c6dd0,3,LockVariations::Sound::rotate_lock
 51113,0x140899520,0x1408c75b0,2,std::uint32_t FxResponseArgs<6>::GetValues(GFxValue** a_params)
 51114,0x140899530,0x1408c75c0,2,void BSTEventSource<LocksPicked::Event>::SendEvent(const LocksPicked::Event* a_event)
+51115,0x1408997d0,0x1408c7860,2,BSTEventSource<LocksPicked::Event>* LocksPicked::GetEventSource()
 51116,0x1408998c0,0x1408c7950,2,void BSTEventSource<LocksPicked::Event>::AddEventSink(BSTEventSink<LocksPicked::Event>* a_sink)
 51118,0x140899a80,0x1408c7b10,2,void BSTEventSource<LocksPicked::Event>::RemoveEventSink(BSTEventSink<LocksPicked::Event>* a_sink)
 51121,0x140899c40,0x1408c7cd0,4,void MagicFavorites::SetFavorite(TESForm* a_form)
@@ -10993,6 +11017,7 @@
 51615,0x1408bdc50,0x1408eab90,2,void SleepWaitMenu::Accept(CallbackProcessor* a_processor)
 51618,0x1408bde30,0x1408ead70,4,void SleepWaitMenu::ToggleOpenSleepWaitMenu(bool a_sleeping)
 51629,0x1408be280,0x1408eb1c0,2,void BSTEventSource<HoursPassed::Event>::SendEvent(const HoursPassed::Event* a_event)
+51630,0x1408be520,0x1408eb460,2,BSTEventSource<HoursPassed::Event>* HoursPassed::GetEventSource()
 51631,0x1408be610,0x1408eb550,2,void BSTEventSource<HoursPassed::Event>::AddEventSink(BSTEventSink<HoursPassed::Event>* a_sink)
 51633,0x1408be7d0,0x1408eb710,2,void BSTEventSource<HoursPassed::Event>::RemoveEventSink(BSTEventSink<HoursPassed::Event>* a_sink)
 51636,0x1408be990,0x1408eb8d0,3,IMenu* StatsMenu::ctor_1408BE990(IMenu* param_1)
@@ -11021,6 +11046,7 @@
 51794,0x1408cea30,0x1408fbb10,3,TrainingMenu::UpdateText
 51795,0x1408cedf0,0x1408fbed0,3,TrainingMenu::SetSkillXpPercent
 51806,0x1408cf200,0x1408fc2e0,2,void BSTEventSource<TimesTrained::Event>::SendEvent(const TimesTrained::Event* a_event)
+51807,0x1408cf4a0,0x1408fc580,2,BSTEventSource<TimesTrained::Event>* TimesTrained::GetEventSource()
 51808,0x1408cf590,0x1408fc670,2,void BSTEventSource<TimesTrained::Event>::AddEventSink(BSTEventSink<TimesTrained::Event>* a_sink)
 51810,0x1408cf750,0x1408fc830,2,void BSTEventSource<TimesTrained::Event>::RemoveEventSink(BSTEventSink<TimesTrained::Event>* a_sink)
 51815,0x1408cfa40,0x1408fcb00,2,UI_MESSAGE_RESULTS TutorialMenu::ProcessMessage(UIMessage& a_message)
