@@ -6291,7 +6291,7 @@
 36996,0x14060ea80,0x140617690,3,void ActorState::GetPathingLocation(BSPathingLocation* a_out)
 36997,0x14060ead0,0x1406176e0,3,void ActorState::GetPosition(NiPoint3* a_out)
 36998,0x14060eaf0,0x140617700,3,void ActorState::GetAngle(NiPoint3* a_out)
-36999,0x14060eb20,0x140617730,2,void ActorState::GetProcessRotation(NiPoint3* a_out)
+36999,0x14060eb20,0x140617730,2,void Actor::DoGetMovementRotation(NiPoint3& a_rotation)
 37000,0x14060eb60,0x140617770,3,float Actor::DoGetMovementSpeed()
 37001,0x14060eb80,0x140617790,3,bool ActorState::GetMaxSpeeds(MaxSpeeds* a_out)
 37002,0x14060ebd0,0x1406177e0,2,float ActorState::GetScaledBoundSize()
@@ -6631,6 +6631,7 @@
 38024,0x14063c220,0x140645290,2,std::uint16_t ActorState::GetMoveFlagsForMode(std::uint8_t a_mode)
 38026,0x14063c2a0,0x140645310,2,"bool ActorState::DoSetMoveMode(std::uint32_t a_moveFlags, std::uint16_t a_unk)"
 38029,0x14063c300,0x140645370,2,std::uint32_t ActorState::GetMoveFlags()
+38039,0x14063c980,0x1406459f0,2,void ActorState::DoGetMovementRotation(NiPoint3& a_rotation)
 38040,0x14063c990,0x140645a00,2,float ActorState::DoGetMovementSpeed()
 38043,0x14063c9c0,0x140645a30,2,float ActorState::DoGetRotationSpeed()
 38044,0x14063c9d0,0x140645a40,3,void Actor::SetSitSleepState(SIT_SLEEP_STATE a_state)
