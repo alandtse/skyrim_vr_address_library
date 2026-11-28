@@ -10207,7 +10207,7 @@
 49066,0x14082f1e0,0x14085a530,2,void CombatPathDestinationRef::LoadGame(BGSLoadGameBuffer* a_buf)
 49070,0x14082f720,0x14085aa70,2,void CombatPathDestinationRefs::SaveGame(BGSSaveGameBuffer* a_buf)
 49071,0x14082f830,0x14085ab80,2,void CombatPathDestinationRefs::LoadGame(BGSLoadGameBuffer* a_buf)
-49074,0x14082f990,0x14085ace0,2,"bool CombatPath::SolveAndStoreRequest(void* a_key, void* a_request)"
+49074,0x14082f990,0x14085ace0,2,"bool CombatPath::SolveAndStoreRequest(void* a_solutionCache, CombatPath* a_path, BSTSmartPointer<PathingRequest>* a_request)"
 49099,0x140830df0,0x14085c0f0,2,void CombatPathRequest<CombatPathingRequestAdapter>::LoadGame(BGSLoadGameBuffer* a_buf)
 49100,0x140830ee0,0x14085c1e0,2,void CombatPathRequest<CombatPathingRequestMultiGoal>::LoadGame(BGSLoadGameBuffer* a_buf)
 49103,0x140831100,0x14085c400,2,void CombatPathRequest<CombatPathingRequestAdapter>::SaveGame(BGSSaveGameBuffer* a_buf)
