@@ -88,6 +88,7 @@
 10924,0x1400f8550,0x140108b00,4,void Effect::SetDuration(std::int32_t a_duration)
 10929,0x1400f8630,0x140108be0,4,"ulonglong FUN_1400f8630(longlong param_1, longlong param_2)"
 10956,0x1400f9860,0x140109e10,4,"int memmove_s(void* a_dest, std::size_t a_destSize, const void* a_src, std::size_t a_count)"
+10957,0x1400f98d0,0x140109e80,2,"void NiTMapBase<DFALL<NiTMapItem<char_const*_,Setting*>>,char_const*_,Setting*>::clear_value(void* a_value)"
 10958,0x1400f98e0,0x140109e90,2,"void NiTStringTemplateMap<NiTMap<char_const*_,Setting*>,Setting*>::clear_value(void* a_value)"
 10959,0x1400f98f0,0x140109ea0,2,bool SettingCollection<Setting>::CloseHandle()
 10963,0x1400f9a10,0x140109fc0,2,"bool BSTCaseInsensitiveStringMap<Setting*>::key_eq(const char* a_lhs, const char* a_rhs)"
@@ -129,6 +130,7 @@
 11104,0x1400fecc0,0x14010f270,2,"const char* ConcreteObjectFormFactory<EnchantmentItem,21,16,2>::GetObjectName()"
 11105,0x1400fecd0,0x14010f280,2,"OBJECT_TYPE ConcreteObjectFormFactory<EnchantmentItem,21,16,2>::GetObjectType()"
 11107,0x1400fecf0,0x14010f2a0,2,bool MagicItem::IsMedicine()
+11110,0x1400fed60,0x14010f310,2,"void MagicItem::LoadMagicItemChunk(TESFile* a_mod, std::uint32_t a_chunkID)"
 11114,0x1400ff050,0x14010f600,2,void IngredientItem::ClearData()
 11115,0x1400ff080,0x14010f630,2,void IngredientItem::InitItemImpl()
 11116,0x1400ff0f0,0x14010f6a0,2,BGSKeyword* IngredientItem::GetDefaultKeyword()
@@ -169,12 +171,14 @@
 11200,0x1401013f0,0x1401119a0,2,bool MagicItem::GetSkillUsageData(SkillUsageData& a_data)
 11207,0x140101790,0x140111d40,4,bool MagicItem::HasEffect(EffectArchetype a_archetype)
 11213,0x140101a30,0x140111fe0,3,RE::MagicItem::CalculateCost
+11214,0x140101b40,0x1401120f0,2,"void MagicItem::AdjustCost(float& a_cost, Actor* a_actor)"
 11216,0x140101cc0,0x140112270,3,RE::MagicItem::GetCostliestEffectItem
 11217,0x140101d70,0x140112320,2,bool MagicItem::HasKeyword(const BGSKeyword* a_keyword)
 11218,0x140101e30,0x1401123e0,3,uint32_t MagicItem::GetLongestDuration_140101e30 (MagicItem * param_1)
 11219,0x140101ed0,0x140112480,3,std::int32_t MagicItem::GetLargestArea()
 11221,0x140102020,0x1401125d0,2,bool MagicItem::IsTwoHanded()
 11222,0x140102030,0x1401125e0,4,"void MagicItem::Traverse (MagicItem * a_this, MagicItemTraversalFunctor * a_visitor)"
+11224,0x1401020e0,0x140112690,2,void MagicItem::LoadChunkDataPostProcess(TESFile* a_mod)
 11233,0x140102570,0x140112b20,3,void FreeMemory(void* a_ptr)
 11238,0x140102740,0x140112cf0,2,BSContainer::ForEachResult MagicItemFindFunctor::operator()(Effect* a_effect)
 11264,0x140102d00,0x1401132b0,3,"void* BSResource::EntryDB::FreeArgs(void* a_pool, void* a_args)"
@@ -534,13 +538,16 @@
 12863,0x140145300,0x140155d00,2,void AttachDistant3DTask::PostProcess()
 12865,0x1401453d0,0x140155dd0,2,void QueuedModel::GenerateKey()
 12871,0x140145730,0x140156130,2,void QueuedReference::CloneModelNode()
+12873,0x140145a70,0x140156480,2,bool QueuedReference::Process()
 12876,0x140145b80,0x140156590,2,bool QueuedReference::TryQueueAnimationGraph()
 12877,0x140145cb0,0x1401566c0,2,void QueuedReference::PreloadReference()
 12890,0x140146d60,0x140157770,2,"bool QueuedAnimationObject::GetDescription(char* a_dest, std::uint32_t a_maxCount)"
+12896,0x140146f10,0x140157920,2,"void QueuedTempEffect::Cancel(std::uint32_t a_previousState, void* a_unk)"
 12910,0x140147bb0,0x1401585e0,3,SeasonsofSkyrim::FormSwap::model_loader_queue_ref
 12937,0x140149e50,0x14015a880,2,void QueuedHead::Run()
 12938,0x140149f10,0x14015a940,2,"bool QueuedHead::GetDescription(char* a_dest, std::uint32_t a_maxCount)"
 12940,0x14014a0b0,0x14015aae0,2,void QueuedHead::DoOnQueueMe()
+12941,0x14014a1b0,0x14015abe0,2,void QueuedHead::DoOnChildrenFinished()
 12943,0x14014a230,0x14015ac60,2,void QueuedTree::PreloadModels()
 12944,0x14014a370,0x14015ada0,2,bool QueuedTree::TryQueueAnimationGraphAndRegister()
 12953,0x14014a970,0x14015b3a0,2,bool QueuedCharacter::AttachHeadAndQueueAnimation()
@@ -548,9 +555,13 @@
 12958,0x14014aea0,0x14015b8d0,2,void QueuedPlayer::RunQueueBipedLoad()
 12959,0x14014af00,0x14015b930,2,bool QueuedPlayer::RunAttachHeadAndQueueAnimation()
 13054,0x14014dc60,0x14015e690,3,RE::INISettingCollection::InsertSetting
+13086,0x14014e900,0x14015f330,2,void AttachDistant3DTask::Finish()
+13087,0x14014e910,0x14015f340,2,void QueuedTempEffect::Finish()
 13113,0x14014f700,0x140160130,3,bool INISettingCollection::ReadAllSettings()
 13119,0x14014fb40,0x140160570,3,RE::INISettingCollection::RemoveSetting
 13126,0x1401501a0,0x140160bd0,2,"void BSQueuedResourceCollection<BSResource::EntryDB<BSModelDB::DBTraits>,42>::Run()"
+13127,0x140150210,0x140160c40,2,void AttachDistant3DTask::Run()
+13128,0x140150220,0x140160c50,2,void QueuedTempEffect::Run()
 13129,0x140150230,0x140160c60,2,void NiStream::SaveLinkID(const NiObject* a_object)
 13135,0x140150a00,0x140161430,3,bool INISettingCollection::WriteAllSettings()
 13137,0x140150b20,0x140161550,4,void TESObjectCELL::QueueAddCellGrassTask()
@@ -796,6 +807,7 @@
 14537,0x1401967e0,0x1401a6510,4,"ulonglong FUN_1401967e0 (longlong a_formmap, longlong param_2, uint param_3, undefined4 * param_4)"
 14546,0x140196D80,0x1401A6AB0,4,"void TESFullName__ReadFULLFromFileStream(RE::TESFullName* a_fullname, RE::TESFile* a_file)"
 14550,0x140196e90,0x1401a6bc0,2,void TESHealthForm::InitializeDataComponent()
+14551,0x140196ea0,0x1401a6bd0,2,void TESHealthForm::ClearDataComponent()
 14552,0x140196eb0,0x1401a6be0,2,void TESHealthForm::CopyComponent(BaseFormComponent* a_rhs)
 14563,0x140197020,0x1401a6d50,2,void TESImageSpaceModifiableForm::InitComponent(TESForm* a_owner)
 14564,0x1401970b0,0x1401a6de0,2,void TESImageSpaceModifiableForm::CopyComponent(BaseFormComponent* a_rhs)
@@ -807,6 +819,7 @@
 14603,0x140199180,0x1401a8eb0,2,void TESModel::ClearDataComponent()
 14605,0x1401992c0,0x1401a8ff0,2,void TESModel::SetModel(const char* a_model)
 14635,0x14019a900,0x1401aa630,3,BSFixedString* GetCachedEmptyBSFixedString()
+14638,0x14019aa60,0x1401aa790,2,void TESModelLODList::InitializeDataComponent()
 14639,0x14019aa70,0x1401aa7a0,2,void TESModelLODList::ClearDataComponent()
 14642,0x14019ace0,0x1401aaa10,2,void TESModelLODList::CopyComponent(BaseFormComponent* a_rhs)
 14651,0x14019b110,0x1401aae40,2,void TESModelTextureSwap::ClearDataComponent()
@@ -891,6 +904,8 @@
 15412,0x1401c2020,0x1401d2190,2,float BSMultiBoundAABB::GetLength()
 15413,0x1401c2050,0x1401d21c0,2,float BSMultiBoundSphere::GetLength()
 15431,0x1401c4070,0x1401d41e0,2,std::uint32_t BGSSceneInfo::TextureUse::Accept(NiSourceTexture* a_texture)
+15444,0x1401c44a0,0x1401d4610,2,"void NiTMapBase<DFALL<NiTMapItem<NiTexture*_,TEX_USER_DATA*>>,NiTexture*_,TEX_USER_DATA*>::clear_value(void* a_value)"
+15445,0x1401c44b0,0x1401d4620,2,"void NiTMapBase<DFALL<NiTMapItem<NiTexture*_,bool>>,NiTexture*_,bool>::clear_value(void* a_value)"
 15447,0x1401c44e0,0x1401d4650,2,"void NiTMap<NiTexture*_,bool>::free_value(void* a_value)"
 15452,0x1401c4660,0x1401d47d0,2,"bool NiTMapBase<DFALL<NiTMapItem<NiTexture*_,TEX_USER_DATA*>>,NiTexture*_,TEX_USER_DATA*>::key_eq(NiTexture* a_lhs, NiTexture* a_rhs)"
 15453,0x1401c4670,0x1401d47e0,2,"bool NiTMapBase<DFALL<NiTMapItem<NiTexture*_,bool>>,NiTexture*_,bool>::key_eq(NiTexture* a_lhs, NiTexture* a_rhs)"
@@ -938,6 +953,7 @@
 15561,0x1401CCD50,0x1401DD7E0,2,bool BipedAnim::ApplySlotTextureSetToGeometry(NiAVObject* a_geometry)
 15569,0x1401cd350,0x1401ddde0,3,RE::NiNode::AttachWeapon
 15572,0x1401cdbd0,0x1401de6b0,2,"void BSTAnimationGraphDataChannel<Actor,float,ActorCopyGraphVariableChannel>::PollChannelUpdateImpl(bool a_arg1)"
+15575,0x1401cdd30,0x1401de810,2,"void BSTAnimationGraphDataChannel<Actor,float,ActorCopyGraphVariableChannel>::ResetImpl()"
 15576,0x1401cdd40,0x1401de820,2,"void BSDismemberSkinInstance::UpdateDismemberPartion(std::uint16_t a_slot, bool a_enable)"
 15580,0x1401cded0,0x1401de990,2,NiObject* BSAnimGroupSequence::CreateClone(NiCloningProcess& a_cloning)
 15590,0x1401cead0,0x1401df590,2,"bool BSAnimGroupSequence::Deactivate(float a_easeOutTime, bool a_transition)"
@@ -1046,6 +1062,7 @@
 16214,0x1401fd7a0,0x14020f0f0,2,"TESForm* ConcreteFormFactory<TESRegion,58>::CreateImpl()"
 16215,0x1401fd800,0x14020f150,2,"FormType ConcreteFormFactory<TESRegion,58>::GetFormType()"
 16216,0x1401fd810,0x14020f160,2,"const char* ConcreteFormFactory<TESRegion,58>::GetFormName()"
+16225,0x1401fd9b0,0x14020f300,2,void TESRegionData::LoadData(TESForm* a_form)
 16231,0x1401fdd30,0x14020f680,2,void TESRegionDataGrass::ConstructSelf()
 16233,0x1401fde10,0x14020f760,2,"void TESRegionDataGrass::CopyFrom(TESRegionData* a_src, bool a_copy)"
 16234,0x1401fdfe0,0x14020f930,2,bool TESRegionDataGrass::IsLoaded()
@@ -1105,6 +1122,9 @@
 16512,0x140209950,0x14021b2a0,2,"OBJECT_CATEGORY_TYPE ConcreteObjectFormFactory<BGSApparatus,33,90,9>::GetObjectCategory()"
 16513,0x140209960,0x14021b2b0,2,"const char* ConcreteObjectFormFactory<BGSApparatus,33,90,9>::GetObjectName()"
 16514,0x140209970,0x14021b2c0,2,"OBJECT_TYPE ConcreteObjectFormFactory<BGSApparatus,33,90,9>::GetObjectType()"
+16515,0x140209980,0x14021b2d0,2,void TESObjectMISC::InitImpl()
+16516,0x140209990,0x14021b2e0,2,"void TESObjectMISC::LoadImpl(TESFile* a_mod, std::uint32_t a_chunkID)"
+16517,0x1402099a0,0x14021b2f0,2,void TESObjectMISC::SaveImpl()
 16520,0x140209a70,0x14021b3c0,2,bool BGSArtObject::Load(TESFile* a_mod)
 16521,0x140209ca0,0x14021b5f0,2,void BGSArtObject::InitItemImpl()
 16528,0x14020a030,0x14021b9a0,2,bool BGSArtObjectCloneTask::Process()
@@ -1330,6 +1350,7 @@
 17130,0x14021c1d0,0x14022dac0,2,"OBJECT_TYPE ConcreteObjectFormFactory<TESKey,45,19,1>::GetObjectType()"
 17133,0x14021c2d0,0x14022dbc0,2,bool TESLevCharacter::Load(TESFile* a_mod)
 17134,0x14021c6c0,0x14022dfb0,2,void TESLevCharacter::InitItemImpl()
+17136,0x14021c720,0x14022e010,2,void TESLevCharacter::UnClone3D(TESObjectREFR* a_ref)
 17137,0x14021c730,0x14022e020,2,std::int32_t TESLevCharacter::GetLevDifferenceMax()
 17138,0x14021c740,0x14022e030,2,bool TESLevCharacter::GetCanContainFormsOfType(FormType a_type)
 17139,0x14021c760,0x14022e050,2,void TESLevCharacter::SaveGame(BGSSaveFormBuffer* a_buf)
@@ -1780,6 +1801,10 @@
 18711,0x140271be0,0x140283200,3,TESObjectCELL::sub_140271BE0
 18755,0x140273ED0,0x1402854C0,4,"void CallsMapMarkerData (int64 a1, int64 **a2)"
 18843,0x140278920,0x140289f20,4,TESObjectREFR::HandleReferenceReset
+18902,0x14027a640,0x14028bc40,2,"void NiTMapBase<DFALL<NiTMapItem<BSMultiBoundNode*_,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>>,BSMultiBoundNode*_,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>::clear_value(void* a_value)"
+18903,0x14027a650,0x14028bc50,2,"void NiTMapBase<DFALL<NiTMapItem<TESForm*_,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>>,TESForm*_,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>::clear_value(void* a_value)"
+18904,0x14027a660,0x14028bc60,2,"void NiTMapBase<DFALL<NiTMapItem<BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,NiNode*>>,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,NiNode*>::clear_value(void* a_value)"
+18905,0x14027a670,0x14028bc70,2,"void NiTMapBase<DFALL<NiTMapItem<BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,NiPointer<BSMultiBoundNode>>>,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>,NiPointer<BSMultiBoundNode>>::clear_value(void* a_value)"
 18906,0x14027a680,0x14028bc80,2,"TESForm* ConcreteFormFactory<TESObjectCELL,60>::CreateImpl()"
 18911,0x14027a810,0x14028be10,2,"void NiTMap<BSMultiBoundNode*_,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>::free_value(void* a_value)"
 18912,0x14027a830,0x14028be30,2,"void NiTMap<TESForm*_,BSPointerHandle<TESObjectREFR,BSUntypedPointerHandle<20,6>>>::free_value(void* a_value)"
@@ -2117,6 +2142,7 @@
 20108,0x1402b7970,0x1402c90e0,2,bool TESWorldSpace::IsFormTypeChild(FormType a_type)
 20109,0x1402b79b0,0x1402c9120,3,bool TESWorldSpace::IsPositionWithinBorders(const NiPoint3* a_position)
 20110,0x1402b7aa0,0x1402c9210,3,OFFSET_DATA* TESWorldSpace::GetOffsetData(TESFile* a_file)
+20153,0x1402b97c0,0x1402caf30,2,"void NiTMapBase<NiTPointerAllocator<unsigned___int64>,unsigned_int,BSSimpleList<TESObjectREFR*>*>::clear_value(void* a_value)"
 20155,0x1402b9810,0x1402caf80,2,"TESForm* ConcreteFormFactory<TESWorldSpace,71>::CreateImpl()"
 20161,0x1402b9940,0x1402cb0b0,2,"FormType ConcreteFormFactory<TESWorldSpace,71>::GetFormType()"
 20162,0x1402b9950,0x1402cb0c0,2,"const char* ConcreteFormFactory<TESWorldSpace,71>::GetFormName()"
@@ -2570,6 +2596,8 @@
 23071,0x14032ecc0,0x14033e580,2,"FormType ConcreteFormFactory<BGSDialogueBranch,115>::GetFormType()"
 23072,0x14032ecd0,0x14033e590,2,"const char* ConcreteFormFactory<BGSDialogueBranch,115>::GetFormName()"
 23073,0x14032ece0,0x14033e5a0,3,RE::ApplyPerkEntries
+23092,0x14032fbf0,0x14033f4b0,2,"void BGSEntryPointFunctionData::ApplyOnAdd(TESForm* a_form, BGSPerkEntry* a_perkEntry)"
+23093,0x14032fc00,0x14033f4c0,2,std::uint16_t BGSEntryPointFunctionData::GetID()
 23097,0x14032fdd0,0x14033f690,2,bool BGSEntryPointFunctionDataOneValue::LoadImpl(TESFile* a_mod)
 23098,0x14032fe30,0x14033f6f0,2,bool BGSEntryPointFunctionDataTwoValue::LoadImpl(TESFile* a_mod)
 23099,0x14032feb0,0x14033f770,2,bool BGSEntryPointFunctionDataLeveledList::LoadImpl(TESFile* a_mod)
@@ -2927,6 +2955,7 @@
 24414,0x14036cc60,0x14037c600,2,void BSTEventSource<MenuOpenCloseEvent>::AddEventSink(BSTEventSink<MenuOpenCloseEvent>* a_sink)
 24422,0x14036d290,0x14037cc30,2,"void TESActorBase::SetActorValue(ActorValue a_akValue, float a_value)"
 24423,0x14036d2a0,0x14037cc40,2,void BSFaceGenNiNode::SetAnimationData(BSFaceGenAnimationData* a_data)
+24428,0x14036d920,0x14037d2c0,2,void TESActorBase::SetCombatStyle(TESCombatStyle* a_combatStyle)
 24432,0x14036da60,0x14037d400,2,void BSTEventSource<MenuOpenCloseEvent>::RemoveEventSink(BSTEventSink<MenuOpenCloseEvent>* a_sink)
 24451,0x14036e4a0,0x14037de40,2,void TESQuest::InitializeData()
 24452,0x14036e4e0,0x14037de80,2,void TESQuest::ClearData()
@@ -3023,6 +3052,7 @@
 25063,0x140392780,0x1403a2000,2,void TESTopicInfo::SetAltered(bool a_set)
 25064,0x1403927e0,0x1403a2060,2,"bool TESTopicInfo::BelongsInGroup(FORM* a_form, bool a_allowParentGroups, bool a_currentOnly)"
 25065,0x140392880,0x1403a2100,2,"void TESTopicInfo::CreateGroupData(FORM* a_form, FORM_GROUP* a_group)"
+25066,0x1403928d0,0x1403a2150,2,"void TESTopicInfo::GetFormDetailedString(char* a_buf, std::uint32_t a_bufLen)"
 25080,0x140393520,0x1403a2da0,2,void TESTopicInfo::LoadGame(BGSLoadFormBuffer* a_buf)
 25081,0x140393560,0x1403a2de0,2,void TESTopicInfo::Revert(BGSLoadFormBuffer* a_buf)
 25083,0x140393780,0x1403a3000,4,TESTopicInfo::TESResponseList* TESTopicInfo::GetResponseList(TESResponseList* a_list)
@@ -3107,6 +3137,7 @@
 25762,0x1403b9340,0x1403c9160,3,BGSLightingTemplate* Sky::GetCurrentRoomLightingTemplate()
 25764,0x1403b9450,0x1403c9270,3,TESImageSpace* Sky::GetPreviousRoomImageSpace()
 25765,0x1403b94c0,0x1403c92e0,3,BGSLightingTemplate* Sky::GetPreviousRoomLightingTemplate()
+25768,0x1403b95d0,0x1403c93f0,2,std::uint8_t TempLoadGameBuffer::GetVersion()
 25781,0x1403b9a30,0x1403c9850,2,NiNode* SkyObject::GetRoot()
 25782,0x1403b9a40,0x1403c9860,2,void SkyObject::Init(NiNode* a_root)
 25788,0x1403b9cb0,0x1403c9b00,2,"void Stars::Update(Sky* a_sky, float a_arg2)"
@@ -3167,6 +3198,7 @@
 26205,0x1403d0790,0x1403e00f0,2,BSFaceGenKeyframe* BSFaceGenKeyframeExclusive::Clone()
 26206,0x1403d0890,0x1403e01f0,2,void BSFaceGenKeyframeExclusive::Copy(BSFaceGenKeyframe* a_keyframe)
 26207,0x1403d0920,0x1403e0280,2,bool BSFaceGenKeyframeExclusive::NotEqual(BSFaceGenKeyframe* a_keyframe)
+26208,0x1403d09c0,0x1403e0320,2,"bool BSFaceGenKeyframeExclusive::TransitionUpdate(float a_timeDelta, BSFaceGenKeyframe* a_keyframe)"
 26210,0x1403d0a60,0x1403e03c0,2,"BSFaceGenKeyframeMultiple* BSFaceGenKeyframeMultiple::Ctor(BSFaceGenKeyframe::Type a_type, std::uint32_t a_count, const float* a_values)"
 26214,0x1403d0f00,0x1403e0860,2,bool BSFaceGenKeyframeMultiple::Unk_01(BSTArray<BSFaceGenKeyframe*>& a_arr)
 26215,0x1403d1010,0x1403e0970,2,"bool BSFaceGenKeyframeMultiple::Interpolate(BSFaceGenKeyframe* a_keyframe, float a_k, bool a_ignoreSmall, bool a_copyBig)"
@@ -3183,7 +3215,9 @@
 26226,0x1403d1a40,0x1403e13a0,2,"void BSFaceGenKeyframeMultiple::Allocate(std::uint32_t a_count, bool a_initToZero)"
 26233,0x1403d1da0,0x1403e1700,2,float BSFaceGenKeyframeExclusive::GetMaxValue()
 26235,0x1403d1dc0,0x1403e1720,2,bool BSFaceGenKeyframeExclusive::IsZero()
+26236,0x1403d1dd0,0x1403e1730,2,bool BSFaceGenKeyframe::IsKeyframeExclusive()
 26238,0x1403d1df0,0x1403e1750,2,bool BSFaceGenKeyframe::IsKeyframeMultiple()
+26240,0x1403d1e10,0x1403e1770,2,bool BSFaceGenKeyframeExclusive::NotZero()
 26244,0x1403d1e60,0x1403e17c0,2,BSFaceGenManager* BSFaceGenManager::Ctor()
 26246,0x1403d1f10,0x1403e1870,2,"void BSFaceGenManager::GetModel(const char* a_modelPath, const char* a_triPath, NiPointer<BSFaceGenModel>& a_out, bool a_loadIfMissing, bool a_unk)"
 26247,0x1403d2090,0x1403e19f0,2,void BSFaceGenManager::PurgeUnusedModels()
@@ -3301,15 +3335,18 @@
 26677,0x1403e6ff0,0x1403f6b40,2,void BGSAIWorldLocationPointRadius::LoadGame(BGSLoadGameBuffer* a_buf)
 26681,0x1403e7200,0x1403f6d50,2,float BGSAIWorldLocationInteriorCell::GetDistanceSquared(TESObjectREFR* a_ref)
 26682,0x1403e7220,0x1403f6d70,2,bool BGSAIWorldLocationInteriorCell::IsActorAtLocation(TESObjectREFR* a_ref)
+26685,0x1403e7290,0x1403f6de0,2,bool BGSAIWorldLocationInteriorCell::IsMinimumRadius()
 26686,0x1403e72a0,0x1403f6df0,2,void BGSAIWorldLocationInteriorCell::SaveGame(BGSSaveGameBuffer* a_buf)
 26687,0x1403e72f0,0x1403f6e40,2,void BGSAIWorldLocationInteriorCell::LoadGame(BGSLoadGameBuffer* a_buf)
 26700,0x1403e7650,0x1403f71a0,2,NiPoint3* BGSAIWorldLocationInteriorCell::GetPosition()
 26701,0x1403e7660,0x1403f71b0,2,float BGSAIWorldLocationInteriorCell::GetFacing()
 26702,0x1403e7670,0x1403f71c0,2,TESObjectCELL* BGSAIWorldLocationInteriorCell::GetCell()
 26703,0x1403e7680,0x1403f71d0,2,float BGSAIWorldLocationInteriorCell::GetAngleTolerance()
+26704,0x1403e7690,0x1403f71e0,2,bool BGSAIWorldLocationInteriorCell::HasFacing()
 26705,0x1403e76a0,0x1403f71f0,2,float BGSAIWorldLocationInteriorCell::GetRadius()
 26706,0x1403e76b0,0x1403f7200,2,float BGSAIWorldLocationPointRadius::GetRadius()
 26707,0x1403e76c0,0x1403f7210,2,float BGSAIWorldLocationRefRadius::GetRadius()
+26708,0x1403e76d0,0x1403f7220,2,TESWorldSpace* BGSAIWorldLocationInteriorCell::GetWorldSpace()
 26711,0x1403e7700,0x1403f7250,3,GetPackageDataLocationMap
 26712,0x1403e77a0,0x1403f72f0,2,"const BSFixedString* BGSTypedItem<BGSAIWorldLocationInteriorCell,BGSAIWorldLocation>::GetTypeName()"
 26713,0x1403e77b0,0x1403f7300,2,"const BSFixedString* BGSTypedItem<BGSAIWorldLocationPointRadius,BGSAIWorldLocation>::GetTypeName()"
@@ -3341,7 +3378,10 @@
 26842,0x1403ebe90,0x1403fb9e0,2,void BGSPackageDataLocationWrapper::LoadBuffer(BGSLoadFormBuffer* a_buf)
 26844,0x1403ebed0,0x1403fba20,2,bool BGSPackageDataLocationWrapper::GetDataAsString(BSString* a_dst)
 26845,0x1403ebf10,0x1403fba60,2,const BSFixedString& BGSPackageDataLocationWrapper::GetTypeName()
+26846,0x1403ebf20,0x1403fba70,2,const IAIWorldLocation* BGSPackageDataLocationWrapper::AllocateLocation(AIWorldLocationContext* a_context)
+26847,0x1403ebf40,0x1403fba90,2,PackageLocation* BGSPackageDataLocationWrapper::GetAsPackageLocation()
 26849,0x1403ebf80,0x1403fbad0,2,bool BGSPackageDataTargetSelector::GetDataAsString(BSString* a_dst)
+26851,0x1403ebfb0,0x1403fbb00,2,void BGSPackageDataTargetSelector::LoadBuffer(BGSLoadFormBuffer* a_buf)
 26920,0x1403ed660,0x1403fd1b0,2,bool BGSNamedPackageData<IAITarget>::IsNotEqual(IPackageData* a_other)
 26921,0x1403ed6c0,0x1403fd210,2,bool BGSNamedPackageData<IPackageData>::IsNotEqual(IPackageData* a_other)
 26922,0x1403ed720,0x1403fd270,2,bool BGSNamedPackageData<IPackageDataAIWorldLocationHandle>::IsNotEqual(IPackageData* a_other)
@@ -3548,9 +3588,13 @@
 27393,0x1403f8fa0,0x140408af0,3,BSTDerivedCreator_BGSProcedureWaitExecState::Destroy
 27394,0x1403f8fc0,0x140408b10,3,BSTDerivedCreator_BGSProcedureWanderExecState::Destroy
 27402,0x1403f9100,0x140408c50,4,"void* FindExecStatePool(void* a_map, BSFixedString* a_key)"
+27412,0x1403f93a0,0x140408ef0,2,bool IProcedureTreeItem::GetSuccessCompletesPackage()
+27413,0x1403f93b0,0x140408f00,2,void IProcedureTreeExecState::InitLoadGame(BGSLoadFormBuffer* a_buffer)
+27414,0x1403f93c0,0x140408f10,2,"void IProcedureTreeExecState::LoadGame(BGSLoadGameBuffer* a_buffer, void* a_forwarded)"
 27417,0x1403f93f0,0x140408f40,3,GetExecStatePoolMap
 27418,0x1403f9490,0x140408fe0,3,GetTreeItemPoolMap
 27422,0x1403f9560,0x1404090b0,3,BGSProcedureDialogueExecState::GetPoolKey
+27423,0x1403f9570,0x1404090c0,2,"BSFixedString* BGSTypedItem<BGSProcedureDoneExecState,IProcedureTreeExecState>::GetPoolKey()"
 27424,0x1403f9580,0x1404090d0,3,BGSProcedureEatExecState::GetPoolKey
 27425,0x1403f9590,0x1404090e0,3,BGSProcedureFindExecState::GetPoolKey
 27426,0x1403f95a0,0x1404090f0,3,BGSProcedureGuardExecState::GetPoolKey
@@ -3566,11 +3610,13 @@
 27436,0x1403f9640,0x140409190,4,BSFixedString* BGSProcedureTreeStacked::GetPoolKey()
 27437,0x1403f9650,0x1404091a0,3,BGSProcedureTreeStackedExecState::GetPoolKey
 27438,0x1403f9660,0x1404091b0,3,BGSProcedureWaitExecState::GetPoolKey
+27439,0x1403f9670,0x1404091c0,2,void BGSProcedureDoneExecState::RecycleChildren()
 27440,0x1403f9680,0x1404091d0,3,BGSProcedureTreeOneChildExecState::RecycleChildren
 27441,0x1403f9700,0x140409250,3,BGSProcedureTreeSimultaneousExecState::RecycleChildren
 27442,0x1403f97d0,0x140409320,3,PackageDataLocationMap_Grow
 27443,0x1403f9880,0x1404093d0,3,ExecStatePoolMap_Grow
 27444,0x1403f9930,0x140409480,3,TreeItemPoolMap_Grow
+27445,0x1403f99e0,0x140409530,2,"void IProcedureTreeExecState::SaveGame(BGSSaveGameBuffer* a_buffer, void* a_forwarded)"
 27449,0x1403fa020,0x140409b70,3,ExecStatePoolMap_InsertGrowing
 27456,0x1403fa150,0x140409ca0,3,void PackageFlagsOverride::LoadPFO2(TESFile* a_file)
 27457,0x1403fa230,0x140409d80,3,void PackageFlagsOverride::LoadPFOR(TESFile* a_file)
@@ -3631,6 +3677,7 @@
 27589,0x1403fdab0,0x14040d600,3,BGSProcedureActivateExecState::Process
 27592,0x1403fdb90,0x14040d6e0,3,BGSProcedureActivateExecState::SaveGame
 27593,0x1403fdd40,0x14040d890,3,BGSProcedureActivateExecState::LoadGame
+27594,0x1403fdfa0,0x14040daf0,2,void BGSProcedureActivateExecState::InitLoadGame(BGSLoadFormBuffer* a_buffer)
 27599,0x1403ffc40,0x14040f790,3,ProcedureNameEntryCleanup_Activate
 27609,0x1403fff20,0x14040fa70,3,BGSProcedureActivateExecState::dtor_deleting
 27610,0x1403fffa0,0x14040faf0,3,BSTDerivedCreator_BGSProcedureActivate::Create
@@ -3644,8 +3691,10 @@
 27619,0x140400120,0x14040fc70,3,BGSProcedureDialogue::GetParamCount
 27620,0x140400130,0x14040fc80,3,BGSProcedureDialogue::Process
 27621,0x140400190,0x14040fce0,3,RegisterProcedureName_Dialogue
+27623,0x140400340,0x14040fe90,2,void BGSProcedureDialogueExecState::RecycleChildren()
 27625,0x1404003b0,0x14040ff00,3,BGSProcedureDialogueExecState::SaveGame
 27626,0x1404004e0,0x140410030,3,BGSProcedureDialogueExecState::LoadGame
+27627,0x140400550,0x1404100a0,2,void BGSProcedureDialogueExecState::InitLoadGame(BGSLoadFormBuffer* a_buffer)
 27630,0x1404008c0,0x140410410,3,ProcedureNameEntryCleanup_Dialogue
 27638,0x140400b20,0x140410670,3,BSTDerivedCreator_BGSProcedureDialogue::Create
 27639,0x140400b90,0x1404106e0,3,BSTDerivedCreator_BGSProcedureDialogue::Destroy
@@ -3662,6 +3711,7 @@
 27657,0x140401480,0x140410fd0,2,void BGSProcedureDialogueActivateExecState::RecycleChildren()
 27660,0x140401650,0x1404111a0,2,"void BGSProcedureDialogueActivateExecState::SaveGame(BGSSaveGameBuffer* a_buffer, void* a_forwarded)"
 27661,0x140401850,0x1404113a0,2,"void BGSProcedureDialogueActivateExecState::LoadGame(BGSLoadGameBuffer* a_buffer, void* a_forwarded)"
+27662,0x140401b70,0x1404116c0,2,void BGSProcedureDialogueActivateExecState::InitLoadGame(BGSLoadFormBuffer* a_buffer)
 27665,0x1404025b0,0x140412100,3,ProcedureNameEntryCleanup_DialogueActivate
 27675,0x140402900,0x140412450,3,BSTDerivedCreator_BGSProcedureDialogueActivate::Create
 27676,0x140402970,0x1404124c0,3,BSTDerivedCreator_BGSProcedureDialogueActivate::Destroy
@@ -3676,6 +3726,7 @@
 27692,0x140402f60,0x140412ab0,2,void BGSProcedureEatExecState::Cleanup(IProcedureTreeItem::ProcedureExecContext* a_context)
 27697,0x140403130,0x140412c80,3,BGSProcedureEatExecState::SaveGame
 27698,0x1404031c0,0x140412d10,3,BGSProcedureEatExecState::LoadGame
+27699,0x140403270,0x140412dc0,2,void BGSProcedureEatExecState::InitLoadGame(BGSLoadFormBuffer* a_buffer)
 27701,0x140403550,0x1404130a0,3,ProcedureNameEntryCleanup_Eat
 27709,0x1404037c0,0x140413310,3,BSTDerivedCreator_BGSProcedureEat::Create
 27710,0x140403830,0x140413380,3,BSTDerivedCreator_BGSProcedureEat::Destroy
@@ -3718,6 +3769,7 @@
 27780,0x1404075e0,0x140417130,3,BGSProcedureFindExecState::RecycleChildren
 27781,0x140407660,0x1404171b0,3,BGSProcedureFindExecState::SaveGame
 27782,0x140407700,0x140417250,3,BGSProcedureFindExecState::LoadGame
+27783,0x140407800,0x140417350,2,void BGSProcedureFindExecState::InitLoadGame(BGSLoadFormBuffer* a_buffer)
 27784,0x140407810,0x140417360,3,ProcedureNameEntryCleanup_Find
 27792,0x140407a90,0x1404175e0,3,BSTDerivedCreator_BGSProcedureFind::Create
 27793,0x140407b00,0x140417650,3,BSTDerivedCreator_BGSProcedureFind::Destroy
@@ -3736,6 +3788,7 @@
 27813,0x140408de0,0x140418930,2,void BGSProcedureFleeExecState::Cleanup(IProcedureTreeItem::ProcedureExecContext* a_context)
 27814,0x140408e20,0x140418970,3,BGSProcedureFleeExecState::SaveGame
 27815,0x140409190,0x140418ce0,3,BGSProcedureFleeExecState::LoadGame
+27816,0x1404094a0,0x140418ff0,2,void BGSProcedureFleeExecState::InitLoadGame(BGSLoadFormBuffer* a_buffer)
 27832,0x14040b1b0,0x14041ad00,3,ProcedureNameEntryCleanup_Flee
 27841,0x14040b4b0,0x14041b000,3,BGSProcedureFleeExecState::dtor_deleting
 27843,0x14040b530,0x14041b080,3,BSTDerivedCreator_BGSProcedureFlee::Create
@@ -3753,9 +3806,11 @@
 27857,0x14040b980,0x14041b4d0,3,RegisterProcedureName_FlightGrab
 27861,0x14040c4d0,0x14041c020,3,BGSProcedureFlightGrabExecState::BGSProcedureFlightGrabExecState
 27862,0x14040c500,0x14041c050,3,BGSProcedureFlightGrabExecState::~BGSProcedureFlightGrabExecState
+27863,0x14040c550,0x14041c0a0,2,void BGSProcedureFlightGrabExecState::RecycleChildren()
 27864,0x14040c560,0x14041c0b0,2,void BGSProcedureFlightGrabExecState::Cleanup(IProcedureTreeItem::ProcedureExecContext* a_context)
 27865,0x14040c5e0,0x14041c130,3,BGSProcedureFlightGrabExecState::SaveGame
 27866,0x14040c700,0x14041c250,3,BGSProcedureFlightGrabExecState::LoadGame
+27867,0x14040c800,0x14041c350,2,void BGSProcedureFlightGrabExecState::InitLoadGame(BGSLoadFormBuffer* a_buffer)
 27876,0x14040ca40,0x14041c590,3,BGSProcedureFlightGrabExecState::dtor_deleting
 27877,0x14040cab0,0x14041c600,3,BSTDerivedCreator_BGSProcedureFlightGrab::Create
 27878,0x14040cb20,0x14041c670,3,BSTDerivedCreator_BGSProcedureFlightGrab::Destroy
@@ -3857,6 +3912,7 @@
 28015,0x140412420,0x140421f70,3,BGSProcedureHoldPositionExecState::RecycleChildren
 28016,0x1404124a0,0x140421ff0,3,BGSProcedureHoldPositionExecState::SaveGame
 28017,0x140412520,0x140422070,3,BGSProcedureHoldPositionExecState::LoadGame
+28018,0x140412620,0x140422170,2,void BGSProcedureHoldPositionExecState::InitLoadGame(BGSLoadFormBuffer* a_buffer)
 28019,0x140412630,0x140422180,3,ProcedureNameEntryCleanup_HoldPosition
 28026,0x140412860,0x1404223b0,3,BSTDerivedCreator_BGSProcedureHoldPosition::Create
 28027,0x1404128d0,0x140422420,3,BSTDerivedCreator_BGSProcedureHoldPosition::Destroy
@@ -3895,6 +3951,7 @@
 28073,0x1404144f0,0x140424040,3,BGSProcedureKeepAnEyeOnExecState::RecycleChildren
 28074,0x1404145a0,0x1404240f0,3,BGSProcedureKeepAnEyeOnExecState::SaveGame
 28075,0x140414680,0x1404241d0,3,BGSProcedureKeepAnEyeOnExecState::LoadGame
+28076,0x140414890,0x1404243e0,2,void BGSProcedureKeepAnEyeOnExecState::InitLoadGame(BGSLoadFormBuffer* a_buffer)
 28077,0x1404148a0,0x1404243f0,3,ProcedureNameEntryCleanup_KeepAnEyeOn
 28084,0x140414ad0,0x140424620,3,BSTDerivedCreator_BGSProcedureKeepAnEyeOn::Create
 28085,0x140414b40,0x140424690,3,BSTDerivedCreator_BGSProcedureKeepAnEyeOn::Destroy
@@ -3919,6 +3976,7 @@
 28105,0x1404152d0,0x140424e20,3,BGSProcedureLockUnlockExecState::RecycleChildren
 28107,0x140415560,0x1404250b0,3,BGSProcedureLockUnlockExecState::SaveGame
 28108,0x140415620,0x140425170,3,BGSProcedureLockUnlockExecState::LoadGame
+28109,0x140415740,0x140425290,2,void BGSProcedureLockUnlockExecState::InitLoadGame(BGSLoadFormBuffer* a_buffer)
 28110,0x140415750,0x1404252a0,3,ProcedureNameEntryCleanup_LockDoors
 28126,0x140415d70,0x1404258c0,3,BGSProcedureLockUnlockExecState::dtor_deleting
 28128,0x140415e10,0x140425960,3,BSTDerivedCreator_BGSProcedureLock::Create
@@ -4021,8 +4079,10 @@
 28305,0x140421370,0x140430ec0,3,BGSProcedureSay::GetParamCount
 28306,0x140421380,0x140430ed0,3,BGSProcedureSay::Process
 28307,0x140421740,0x140431290,3,RegisterProcedureName_Say
+28309,0x1404218d0,0x140431420,2,void BGSProcedureSayExecState::RecycleChildren()
 28310,0x1404218e0,0x140431430,3,BGSProcedureSayExecState::SaveGame
 28311,0x140421910,0x140431460,3,BGSProcedureSayExecState::LoadGame
+28312,0x140421930,0x140431480,2,void BGSProcedureSayExecState::InitLoadGame(BGSLoadFormBuffer* a_buffer)
 28313,0x140421940,0x140431490,3,ProcedureNameEntryCleanup_Say
 28320,0x140421b70,0x1404316c0,3,BSTDerivedCreator_BGSProcedureSay::Create
 28321,0x140421be0,0x140431730,3,BSTDerivedCreator_BGSProcedureSay::Destroy
@@ -4043,6 +4103,7 @@
 28340,0x140422fb0,0x140432b00,3,BGSProcedureShoutExecState::RecycleChildren
 28341,0x140423060,0x140432bb0,3,BGSProcedureShoutExecState::SaveGame
 28342,0x140423260,0x140432db0,3,BGSProcedureShoutExecState::LoadGame
+28343,0x1404234c0,0x140433010,2,void BGSProcedureShoutExecState::InitLoadGame(BGSLoadFormBuffer* a_buffer)
 28344,0x1404234d0,0x140433020,3,ProcedureNameEntryCleanup_Shout
 28357,0x140423880,0x1404333d0,3,BSTDerivedCreator_BGSProcedureShout::Create
 28358,0x1404238f0,0x140433440,3,BSTDerivedCreator_BGSProcedureShout::Destroy
@@ -4103,6 +4164,7 @@
 28442,0x140426880,0x1404363d0,3,BGSProcedureTravelExecState::Process
 28443,0x140426920,0x140436470,3,BGSProcedureTravelExecState::SaveGame
 28444,0x140426ab0,0x140436600,3,BGSProcedureTravelExecState::LoadGame
+28445,0x140426cd0,0x140436820,2,void BGSProcedureTravelExecState::InitLoadGame(BGSLoadFormBuffer* a_buffer)
 28450,0x140428150,0x140437ca0,3,ProcedureNameEntryCleanup_Travel
 28458,0x1404283b0,0x140437f00,3,BGSProcedureTravelExecState::dtor_deleting
 28459,0x140428430,0x140437f80,3,BSTDerivedCreator_BGSProcedureTravel::Create
@@ -4164,8 +4226,10 @@
 28552,0x14042b7a0,0x14043b2f0,3,BGSProcedureUseIdleMarker::InitActorLocation
 28553,0x14042b7f0,0x14043b340,3,BGSProcedureUseIdleMarker::Process
 28554,0x14042b930,0x14043b480,3,RegisterProcedureName_UseIdleMarker
+28560,0x14042bc20,0x14043b770,2,void BGSProcedureUseIdleMarkerExecState::RecycleChildren()
 28561,0x14042bc30,0x14043b780,2,"void BGSProcedureUseIdleMarkerExecState::SaveGame(BGSSaveGameBuffer* a_buffer, void* a_forwarded)"
 28562,0x14042bd90,0x14043b8e0,2,"void BGSProcedureUseIdleMarkerExecState::LoadGame(BGSLoadGameBuffer* a_buffer, void* a_forwarded)"
+28563,0x14042bee0,0x14043ba30,2,void BGSProcedureUseIdleMarkerExecState::InitLoadGame(BGSLoadFormBuffer* a_buffer)
 28569,0x14042caf0,0x14043c640,3,ProcedureNameEntryCleanup_UseIdleMarker
 28580,0x14042ce60,0x14043c9b0,3,BSTDerivedCreator_BGSProcedureUseIdleMarker::Create
 28581,0x14042ced0,0x14043ca20,3,BSTDerivedCreator_BGSProcedureUseIdleMarker::Destroy
@@ -4187,6 +4251,7 @@
 28599,0x14042e7e0,0x14043e330,3,BGSProcedureUseMagicExecState::RecycleChildren
 28600,0x14042e8d0,0x14043e420,3,BGSProcedureUseMagicExecState::SaveGame
 28601,0x14042eb70,0x14043e6c0,3,BGSProcedureUseMagicExecState::LoadGame
+28602,0x14042eed0,0x14043ea20,2,void BGSProcedureUseMagicExecState::InitLoadGame(BGSLoadFormBuffer* a_buffer)
 28603,0x14042eee0,0x14043ea30,3,ProcedureNameEntryCleanup_UseMagic
 28614,0x14042f200,0x14043ed50,3,BSTDerivedCreator_BGSProcedureUseMagic::Create
 28615,0x14042f270,0x14043edc0,3,BSTDerivedCreator_BGSProcedureUseMagic::Destroy
@@ -4207,6 +4272,7 @@
 28634,0x140431670,0x1404411c0,3,BGSProcedureUseWeaponExecState::RecycleChildren
 28635,0x140431760,0x1404412b0,3,BGSProcedureUseWeaponExecState::SaveGame
 28636,0x140431960,0x1404414b0,3,BGSProcedureUseWeaponExecState::LoadGame
+28637,0x140431c60,0x1404417b0,2,void BGSProcedureUseWeaponExecState::InitLoadGame(BGSLoadFormBuffer* a_buffer)
 28638,0x140431c70,0x1404417c0,3,ProcedureNameEntryCleanup_UseWeapon
 28648,0x140432040,0x140441b90,3,BGSProcedureUseWeaponExecState::dtor_deleting
 28650,0x1404320e0,0x140441c30,3,BSTDerivedCreator_BGSProcedureUseWeapon::Create
@@ -4220,8 +4286,10 @@
 28660,0x140432300,0x140441e50,3,BGSProcedureWait::GetParamCount
 28661,0x140432310,0x140441e60,3,BGSProcedureWait::Process
 28662,0x140432430,0x140441f80,3,RegisterProcedureName_Wait
+28664,0x1404325c0,0x140442110,2,void BGSProcedureWaitExecState::RecycleChildren()
 28665,0x1404325d0,0x140442120,3,BGSProcedureWaitExecState::SaveGame
 28666,0x140432600,0x140442150,3,BGSProcedureWaitExecState::LoadGame
+28667,0x140432620,0x140442170,2,void BGSProcedureWaitExecState::InitLoadGame(BGSLoadFormBuffer* a_buffer)
 28668,0x140432630,0x140442180,3,ProcedureNameEntryCleanup_Wait
 28675,0x140432860,0x1404423b0,3,BSTDerivedCreator_BGSProcedureWait::Create
 28676,0x1404328d0,0x140442420,3,BSTDerivedCreator_BGSProcedureWait::Destroy
@@ -4240,6 +4308,7 @@
 28693,0x140432ee0,0x140442a30,3,BGSProcedureWanderExecState::RecycleChildren
 28694,0x140432f80,0x140442ad0,3,BGSProcedureWanderExecState::SaveGame
 28695,0x1404330c0,0x140442c10,3,BGSProcedureWanderExecState::LoadGame
+28696,0x140433290,0x140442de0,2,void BGSProcedureWanderExecState::InitLoadGame(BGSLoadFormBuffer* a_buffer)
 28699,0x140433e70,0x1404439c0,3,ProcedureNameEntryCleanup_Wander
 28707,0x140434100,0x140443c50,3,BGSProcedureWanderExecState::dtor_deleting
 28708,0x140434180,0x140443cd0,3,BSTDerivedCreator_BGSProcedureWander::Create
@@ -4296,11 +4365,18 @@
 28839,0x14043be70,0x14044b9c0,2,std::uint32_t TESPackage::GetRefCount()
 28840,0x14043be80,0x14044b9d0,2,bool TESPackage::IsPackageOwner(Actor* a_actor)
 28843,0x14043bef0,0x14044ba40,2,"void TESAmbushPackageData::Copy(TESPackageData* a_package, TESForm* a_form)"
+28845,0x14043c040,0x14044bb90,2,void TESAmbushPackageData::InitItem(TESForm* a_form)
 28846,0x14043c050,0x14044bba0,2,void TESAmbushPackageData::SaveGame(BGSSaveFormBuffer* a_buf)
 28847,0x14043c0b0,0x14044bc00,2,void TESAmbushPackageData::LoadGame(BGSLoadFormBuffer* a_buf)
 28850,0x14043c1f0,0x14044bd40,2,bool TESPackageData::Compare(TESPackageData* a_package)
+28851,0x14043c200,0x14044bd50,2,"void TESPackageData::Copy(TESPackageData* a_package, TESForm* a_form)"
+28852,0x14043c210,0x14044bd60,2,void TESPackageData::InitItem(TESForm* a_form)
+28853,0x14043c220,0x14044bd70,2,void TESPackageData::LoadGame(BGSLoadFormBuffer* a_buf)
+28854,0x14043c230,0x14044bd80,2,void TESPackageData::SaveGame(BGSSaveFormBuffer* a_buf)
 28859,0x14043c4d0,0x14044c020,2,"void TESCustomPackageData::Copy(TESPackageData* a_package, TESForm* a_form)"
 28860,0x14043c6b0,0x14044c200,2,void TESCustomPackageData::InitItem(TESForm* a_form)
+28864,0x14043c8d0,0x14044c420,2,void TESCustomPackageData::SaveGame(BGSSaveFormBuffer* a_buf)
+28865,0x14043c8e0,0x14044c430,2,void TESCustomPackageData::LoadGame(BGSLoadFormBuffer* a_buf)
 28866,0x14043c8f0,0x14044c440,3,CreatePursueProcedureTree_FourParams
 28868,0x14043cc70,0x14044c7c0,3,CreatePursueProcedureTree_ThreeParams
 28870,0x14043cf80,0x14044cad0,3,CreateWaitTravelProcedureTree
@@ -4316,21 +4392,26 @@
 28893,0x14043e130,0x14044dc80,2,void TESDialoguePackageData::SaveGame(BGSSaveFormBuffer* a_buf)
 28894,0x14043e260,0x14044ddb0,2,void TESDialoguePackageData::LoadGame(BGSLoadFormBuffer* a_buf)
 28898,0x14043e4a0,0x14044dff0,2,"void TESEatPackageData::Copy(TESPackageData* a_package, TESForm* a_form)"
+28900,0x14043e5f0,0x14044e140,2,void TESEatPackageData::InitItem(TESForm* a_form)
 28901,0x14043e600,0x14044e150,2,void TESEatPackageData::SaveGame(BGSSaveFormBuffer* a_buf)
 28902,0x14043e660,0x14044e1b0,2,void TESEatPackageData::LoadGame(BGSLoadFormBuffer* a_buf)
 28908,0x14043e810,0x14044e360,2,"void TESEscortPackageData::Copy(TESPackageData* a_package, TESForm* a_form)"
 28909,0x14043e8f0,0x14044e440,2,bool TESEscortPackageData::Compare(TESPackageData* a_package)
+28910,0x14043e980,0x14044e4d0,2,void TESEscortPackageData::InitItem(TESForm* a_form)
 28911,0x14043e990,0x14044e4e0,2,void TESEscortPackageData::SaveGame(BGSSaveFormBuffer* a_buf)
 28912,0x14043ea10,0x14044e560,2,void TESEscortPackageData::LoadGame(BGSLoadFormBuffer* a_buf)
 28918,0x14043ebb0,0x14044e700,2,"void TESFollowPackageData::Copy(TESPackageData* a_package, TESForm* a_form)"
 28919,0x14043ec90,0x14044e7e0,2,bool TESFollowPackageData::Compare(TESPackageData* a_package)
+28920,0x14043ed10,0x14044e860,2,void TESFollowPackageData::InitItem(TESForm* a_form)
 28921,0x14043ed20,0x14044e870,2,void TESFollowPackageData::SaveGame(BGSSaveFormBuffer* a_buf)
 28922,0x14043eda0,0x14044e8f0,2,void TESFollowPackageData::LoadGame(BGSLoadFormBuffer* a_buf)
 28927,0x14043ef20,0x14044ea70,2,"void TESPatrolPackageData::Copy(TESPackageData* a_package, TESForm* a_form)"
 28928,0x14043ef70,0x14044eac0,2,bool TESPatrolPackageData::Compare(TESPackageData* a_package)
+28929,0x14043efd0,0x14044eb20,2,void TESPatrolPackageData::InitItem(TESForm* a_form)
 28930,0x14043efe0,0x14044eb30,2,void TESPatrolPackageData::SaveGame(BGSSaveFormBuffer* a_buf)
 28931,0x14043f040,0x14044eb90,2,void TESPatrolPackageData::LoadGame(BGSLoadFormBuffer* a_buf)
 28941,0x14043f230,0x14044ed80,2,"void TESUseItemPackageData::Copy(TESPackageData* a_package, TESForm* a_form)"
+28943,0x14043f380,0x14044eed0,2,void TESUseItemPackageData::InitItem(TESForm* a_form)
 28944,0x14043f390,0x14044eee0,2,void TESUseItemPackageData::SaveGame(BGSSaveFormBuffer* a_buf)
 28945,0x14043f3f0,0x14044ef40,2,void TESUseItemPackageData::LoadGame(BGSLoadFormBuffer* a_buf)
 28951,0x14043f730,0x14044f280,2,"void TESUseWeaponPackageData::Copy(TESPackageData* a_package, TESForm* a_form)"
@@ -4411,9 +4492,11 @@
 29219,0x14044bbf0,0x14045b740,4,RE::TESObjectCELL::PlaceParticleEffect
 29226,0x14044c700,0x14045c250,2,void BSTempEffectParticle::Detach()
 29227,0x14044c760,0x14045c2b0,2,bool BSTempEffectParticle::Update(float a_arg1)
+29239,0x14044cff0,0x14045cb40,2,void BGSParticleObjectCloneTask::Finish()
 29240,0x14044d000,0x14045cb50,2,const NiRTTI* BSTempEffectParticle::GetRTTI()
 29241,0x14044d010,0x14045cb60,2,TEMP_EFFECT_TYPE BSTempEffectParticle::GetType()
 29242,0x14044d020,0x14045cb70,2,bool BGSParticleObjectCloneTask::Process()
+29243,0x14044d1b0,0x14045cd00,2,void BGSParticleObjectCloneTask::Run()
 29248,0x14044da80,0x14045d640,3,void InitGlobalPreloadParent()
 29249,0x14044db60,0x14045d720,3,void ReleaseGlobalPreloadParent()
 29250,0x14044dba0,0x14045d760,2,void BSTempEffectSimpleDecal::Initialize()
@@ -4451,6 +4534,7 @@
 29450,0x14045c940,0x14046c8f0,2,"FormType ConcreteFormFactory<NavMesh,73>::GetFormType()"
 29451,0x14045c950,0x14046c900,2,"const char* ConcreteFormFactory<NavMesh,73>::GetFormName()"
 29479,0x14045d500,0x14046d4b0,2,bool NavMesh::Load(TESFile* a_mod)
+29480,0x14045d720,0x14046d6d0,2,void NavMesh::Save()
 29481,0x14045d730,0x14046d6e0,2,void NavMesh::SetDelete(bool a_set)
 29482,0x14045d7e0,0x14046d790,2,void NavMesh::SetAltered(bool a_set)
 29485,0x14045d860,0x14046d810,2,"bool NavMesh::BelongsInGroup(FORM* a_form, bool a_allowParentGroups, bool a_currentOnly)"
@@ -4989,6 +5073,8 @@
 31353,0x1404c3520,0x1404d3680,4,void BGSWaterCollisionManager::bhkAutoWater::`scalar_deleting_destructor' (BGSWaterCollisionManager::bhkAutoWater * a_this)
 31354,0x1404c3560,0x1404d36c0,4,BGSWaterCollisionManager::bshkAutoWater * BGSWaterCollisionManager::bshkAutoWater::dtor (BGSWaterCollisionManager::bshkAutoWater * a_this)
 31361,0x1404c3840,0x1404d39a0,2,const NiRTTI* BGSWaterCollisionManager::bhkAutoWater::GetRTTI()
+31367,0x1404c3a20,0x1404d3b80,2,hkMotionState* hkpAabbPhantom::GetMotionState()
+31368,0x1404c3a30,0x1404d3b90,2,void hkpPhantom::UpdateShapeCollectionFilter()
 31371,0x1404c3b60,0x1404d3cc0,3,"TESWaterReflections* TESWaterReflections::TESWaterReflections(NiPlane* a_plane, BSWaterShaderMaterial* a_mat, std::uint16_t a_flags, const char* a_texture)"
 31373,0x1404c3e20,0x1404d3f80,3,char TESWaterReflections::UpdateActor (TESWaterReflections * a_this)
 31383,0x1404c5660,0x1404d5820,3,TESWaterSystem::Update
@@ -5001,6 +5087,7 @@
 31409,0x1404c8810,0x1404d89d0,4,RE::TESWaterSystem::UpdateUnderWaterVariables
 31410,0x1404c8880,0x1404d8a40,3,"void TESWaterSystem::AddRipple(const NiPoint3& a_pos, float a_scale)"
 31451,0x1404ca620,0x1404da7c0,4,void TESWaterReflections::Dtor()
+31464,0x1404cab50,0x1404dacf0,2,"void NiTMapBase<NiTPointerAllocator<unsigned___int64>,BSPointerHandle<Actor,BSUntypedPointerHandle<20,6>>,WadingWaterData*>::clear_value(void* a_value)"
 31470,0x1404caf90,0x1404db130,2,"bool NiTMapBase<NiTPointerAllocator<unsigned___int64>,BSPointerHandle<Actor,BSUntypedPointerHandle<20,6>>,WadingWaterData*>::key_eq(const BSPointerHandle<Actor,BSUntypedPointerHandle<20,6>>& a_lhs, const BSPointerHandle<Actor,BSUntypedPointerHandle<20,6>>& a_rhs)"
 31471,0x1404cafa0,0x1404db140,2,"std::uint32_t NiTMapBase<NiTPointerAllocator<unsigned___int64>,BSPointerHandle<Actor,BSUntypedPointerHandle<20,6>>,WadingWaterData*>::hash_function(const BSPointerHandle<Actor,BSUntypedPointerHandle<20,6>>& a_key)"
 31481,0x1404cb620,0x1404db7c0,2,"void NiTMapBase<NiTPointerAllocator<unsigned___int64>,BSPointerHandle<Actor,BSUntypedPointerHandle<20,6>>,WadingWaterData*>::assign_value(void* a_item, const BSPointerHandle<Actor,BSUntypedPointerHandle<20,6>>& a_key, WadingWaterData* a_value)"
@@ -5252,7 +5339,12 @@
 33246,0x14053d060,0x14053fde0,2,void AbsorbEffect::ModifyOnStart()
 33247,0x14053d100,0x14053fe80,2,void AbsorbEffect::ModifyOnUpdate(float a_delta)
 33248,0x14053d1b0,0x14053ff30,2,"void AbsorbEffect::ModifyOnFinish(Actor* a_caster, Actor* a_target, float a_value)"
+33250,0x14053d250,0x14053ffd0,2,void ActiveEffect::HandleEvent(const BSFixedString& a_eventName)
+33251,0x14053d260,0x14053ffe0,2,void ActiveEffect::HandleQueuedStart()
+33252,0x14053d270,0x14053fff0,2,void ActiveEffect::OnRemove()
 33253,0x14053d280,0x140540000,2,void ValueModifierEffect::SetActorValue(ActorValue a_actorValue)
+33254,0x14053d290,0x140540010,2,void ActiveEffect::SetLocation(const NiPoint3& a_location)
+33255,0x14053d2a0,0x140540020,2,"void ActiveEffect::SwitchAttachedRoot(NiNode* a_root, NiNode* a_attachRoot)"
 33257,0x14053d370,0x1405400f0,4,AccumulatingValueModifierEffect::Allocate(AccumulatingValueModifierEffect* accumulatingValueModifierEffect
 33258,0x14053d430,0x1405401b0,2,void AccumulatingValueModifierEffect::SaveGame(BGSSaveFormBuffer* a_buf)
 33259,0x14053d4c0,0x140540240,2,void AccumulatingValueModifierEffect::LoadGame(BGSLoadFormBuffer* a_buf)
@@ -5284,7 +5376,12 @@
 33320,0x140540360,0x140542EA0,3,"ActiveEffect::SetEffectiveness(Skyrim::ActiveEffect* activeEffect, float effectiveness)"
 33321,0x140540410,0x140542F50,3,"ValueModifierEffect::sub_140540410(ValueModifierEffect *a1, float a2)"
 33322,0x140540570,0x1405430B0,3,"bool ScriptEffect::ReadFromStream(ScriptEffect *a1@, BGSLoadGameBuffer* a2, std::uint32_t a3)"
+33323,0x140540660,0x1405431a0,2,bool ActiveEffect::CheckCustomSkillUseConditions()
+33324,0x140540670,0x1405431b0,2,float ActiveEffect::GetCustomSkillUseMagnitudeMultiplier(float a_mult)
+33344,0x1405412f0,0x140544090,2,void ActiveEffect::Finish()
 33345,0x140541300,0x140544410,2,void BSTEventSource<TESActiveEffectApplyRemoveEvent>::SendEvent(const TESActiveEffectApplyRemoveEvent* a_event)
+33348,0x140541690,0x140544cd0,2,void ActiveEffect::Start()
+33349,0x1405416a0,0x140544ce0,2,void ActiveEffect::Update(float a_delta)
 33355,0x140541a70,0x140545320,2,void ActorMagicCaster::RequestCastImpl()
 33357,0x140541bf0,0x1405454a0,2,void ActorMagicCaster::StartReadyImpl()
 33358,0x140541cb0,0x140545560,2,void ActorMagicCaster::StartCastImpl()
@@ -5315,6 +5412,7 @@
 33426,0x140544ff0,0x1405490c0,4,float MagicCaster::GetCurrentSpellCost()
 33428,0x140545040,0x140549110,2,void BSTEventSource<TESSpellCastEvent>::SendEvent(const TESSpellCastEvent* a_event)
 33429,0x1405452e0,0x1405493b0,2,"void BSTAnimationGraphDataChannel<Actor,float,ActorWardHealthChannel>::PollChannelUpdateImpl(bool a_arg1)"
+33432,0x140545420,0x1405494f0,2,"void BSTAnimationGraphDataChannel<Actor,float,ActorWardHealthChannel>::ResetImpl()"
 33439,0x140545650,0x140549720,2,void bhkTelekinesisListener::ContactPointCallback(const hkpContactPointEvent&)
 33443,0x140545900,0x1405499d0,2,"BSEventNotifyControl BoundItemEffect::ProcessEvent(const ActorInventoryEvent* a_event, BSTEventSource<ActorInventoryEvent>* a_eventSource)"
 33444,0x140545970,0x140549a40,2,void BoundItemEffect::SaveGame(BGSSaveFormBuffer* a_buf)
@@ -5327,6 +5425,7 @@
 33451,0x140545d10,0x140549de0,2,void BoundItemEffect::Update(float a_delta)
 33452,0x140545eb0,0x140549f80,2,void BoundItemEffect::ClearTargetImpl()
 33455,0x140545f80,0x14054a050,2,void BoundItemEffect::EquipBoundWeapon(Actor* a_actor)
+33462,0x140546380,0x14054a450,2,void CloakEffect::Start()
 33463,0x140546390,0x14054a460,2,void CloakEffect::Update(float a_delta)
 33474,0x1405469a0,0x14054aa70,2,void CommandEffect::ClearTargetImpl()
 33475,0x140546aa0,0x14054ab70,2,void CommandEffect::OnAdd(MagicTarget* a_target)
@@ -5342,6 +5441,7 @@
 33499,0x140547880,0x14054b950,2,void DarknessEffect::Start()
 33500,0x140547940,0x14054ba10,2,void DarknessEffect::Finish()
 33503,0x140547a70,0x14054bb40,2,bool DetectLifeEffect::CheckCustomSkillUseConditions()
+33506,0x140547ba0,0x14054bc70,2,void DetectLifeEffect::Update(float a_delta)
 33510,0x140547d40,0x14054be10,2,void DisarmEffect::Start()
 33511,0x140547d90,0x14054be60,2,void DisarmEffect::Update(float a_delta)
 33512,0x140547e00,0x14054bed0,2,"void DisguiseEffect::EvaluateConditions(float a_delta, bool a_forceUpdate)"
@@ -5361,6 +5461,7 @@
 33539,0x140548ac0,0x14054cb90,2,void DualValueModifierEffect::LoadGame(BGSLoadFormBuffer* a_buf)
 33543,0x140548cd0,0x14054cda0,2,float DualValueModifierEffect::GetSecondaryAVWeight()
 33544,0x140548ce0,0x14054cdb0,2,bool DualValueModifierEffect::IsCausingHealthDamage()
+33549,0x140548f60,0x14054d030,2,void EtherealizationEffect::Update(float a_delta)
 33550,0x140548f70,0x14054d040,2,void EtherealizationEffect::Start()
 33551,0x140548fa0,0x14054d070,2,void EtherealizationEffect::Finish()
 33559,0x140549540,0x14054D680,3,GrabActorEffect::Func21(GrabActorEffect *a1)
@@ -5372,6 +5473,7 @@
 33570,0x140549e20,0x14054e030,2,void VampireLordEffect::Start()
 33583,0x14054aae0,0x14054ecf0,2,void GuideEffect::Finish()
 33586,0x14054adc0,0x14054efd0,2,void GuideEffect::Start()
+33587,0x14054af90,0x14054f1a0,2,void GuideEffect::Update(float a_delta)
 33590,0x14054b0b0,0x14054f2c0,2,void InvisibilityEffect::FinishLoadGame(BGSLoadFormBuffer* a_buf)
 33591,0x14054b1a0,0x14054f3b0,2,void InvisibilityEffect::Revert(BGSLoadFormBuffer* a_buf)
 33592,0x14054b200,0x14054f410,2,void InvisibilityEffect::Update(float a_delta)
@@ -5380,6 +5482,7 @@
 33598,0x14054b5b0,0x14054f7c0,2,"void LightEffect::SwitchAttachedRoot(NiNode* a_root, NiNode* a_attachRoot)"
 33599,0x14054b670,0x14054f880,2,BSContainer::ForEachResult LightEffect::AttachBestLightVisitor::Accept(ActiveEffect* a_effect)
 33600,0x14054b730,0x14054f940,2,void LightEffect::Update(float a_delta)
+33601,0x14054b7f0,0x14054fa00,2,void LightEffect::Start()
 33602,0x14054b800,0x14054fa10,2,void LightEffect::Finish()
 33606,0x14054bac0,0x14054fcd0,2,void LightEffect::FinishLoadGame(BGSLoadFormBuffer* a_buf)
 33607,0x14054baf0,0x14054fd00,2,void LightEffect::Revert(BGSLoadFormBuffer* a_buf)
@@ -5592,7 +5695,10 @@
 34234,0x140565be0,0x14056be50,2,void CalmEffect::Start()
 34235,0x140565c90,0x14056bf00,2,void FrenzyEffect::Start()
 34236,0x140565ce0,0x14056bf50,2,void FrenzyEffect::Finish()
+34246,0x140566020,0x14056c290,2,float CalmEffect::GetTargetValue()
 34247,0x140566030,0x14056c2a0,2,float DemoralizeEffect::GetTargetValue()
+34248,0x140566040,0x14056c2b0,2,float FrenzyEffect::GetTargetValue()
+34249,0x140566050,0x14056c2c0,2,float RallyEffect::GetTargetValue()
 34250,0x140566060,0x14056C2D0,3,"FUN_140566060 (void* a1, TelekinesisEffect* a2)"
 34252,0x1405663c0,0x14056C720,3,"TelekinesisEffect::Func19(TelekinesisEffect *a1, longlong a2, longlong a3, longlong a4)"
 34255,0x140566550,0x14056c8e0,3,void TelekinesisEffect::GrabObjects()
@@ -5701,6 +5807,7 @@
 35026,0x140592eb0,0x14059a570,4,FormID BGSNumericIDIndex::GetNumericID()
 35027,0x140592f10,0x14059a5d0,4,void BGSNumericIDIndex::SetNumericID(FormID a_formID)
 35041,0x1405942b0,0x14059b970,3,BGSSaveLoadManager::BuildSaveGameHistoryReport
+35070,0x1405969c0,0x14059e080,2,"void NiTMapBase<DFALL<NiTMapItem<ENUM_FORM_ID,BSSimpleList<SavedFormData*>*>>,ENUM_FORM_ID,BSSimpleList<SavedFormData*>*>::clear_value(void* a_value)"
 35079,0x140596b50,0x14059e210,2,"bool NiTMapBase<DFALL<NiTMapItem<ENUM_FORM_ID,BSSimpleList<SavedFormData*>*>>,ENUM_FORM_ID,BSSimpleList<SavedFormData*>*>::key_eq(ENUM_FORM_ID a_lhs, ENUM_FORM_ID a_rhs)"
 35080,0x140596b60,0x14059e220,2,"NiTMapBase<DFALL<NiTMapItem<ENUM_FORM_ID,BSSimpleList<SavedFormData*>*>>,ENUM_FORM_ID,BSSimpleList<SavedFormData*>*>::hash_function"
 35093,0x1405974a0,0x14059eb60,4,void BGSLoadFormData::ReadChangeFormHeader(Win32FileType* a_file)
@@ -5768,6 +5875,8 @@
 35370,0x1405a4e60,0x1405ac520,2,std::uint64_t BGSMoviePlayer::GetMainThreadID()
 35372,0x1405a4ef0,0x1405ac5b0,2,"BSEventNotifyControl BGSMoviePlayer::ProcessEvent(const InputEvent** a_event, BSTEventSource<InputEvent*>* a_eventSource)"
 35383,0x1405a5510,0x1405acbd0,2,void BSTEventSource<InputEvent*>::AddEventSink(BSTEventSink<InputEvent*>* a_sink)
+35385,0x1405a56d0,0x1405acd90,2,void BGSMoviePlayer::ResumeAudioThread()
+35386,0x1405a56e0,0x1405acda0,2,void BGSMoviePlayer::SuspendAudioThread()
 35387,0x1405a56f0,0x1405acdb0,2,void BSTEventSource<InputEvent*>::RemoveEventSink(BSTEventSink<InputEvent*>* a_sink)
 35402,0x1405a6230,0x1405ad8f0,4,"void Calendar::Update_1405a6230 (Calendar * a_this, float GameDaysPassed)"
 35408,0x1405a64f0,0x1405adbb0,4,RE::Calendar::GetGameDaysPassed
@@ -5786,6 +5895,7 @@
 35479,0x1405a9950,0x1405b1010,2,void EnhanceWeaponEffect::Finish()
 35480,0x1405a99a0,0x1405b1060,2,void EnhanceWeaponEffect::FinishLoadGame(BGSLoadFormBuffer* a_buf)
 35481,0x1405a99f0,0x1405b10b0,2,ActorValue EnhanceWeaponEffect::GetAdditionalActorValue()
+35483,0x1405a9a10,0x1405b10d0,2,float EnhanceWeaponEffect::GetSecondaryAVWeight()
 35486,0x1405a9b20,0x1405b11e0,2,"BSEventNotifyControl EnhanceWeaponEffect::ProcessEvent(const ActorInventoryEvent* a_event, BSTEventSource<ActorInventoryEvent>* a_eventSource)"
 35487,0x1405a9c40,0x1405b1300,2,void EnhanceWeaponEffect::Revert(BGSLoadFormBuffer* a_buf)
 35489,0x1405a9e70,0x1405b1530,2,void EnhanceWeaponEffect::Start()
@@ -5883,6 +5993,7 @@
 35874,0x1405c0110,0x1405c8630,2,float SceneGraph::GetFarDistance()
 35882,0x1405c0610,0x1405c8b30,3,po3tweaks::ScreenshotToConsole::DebugNotification
 35906,0x1405c16f0,0x1405c9c10,2,void SpawnHazardEffect::Finish()
+35907,0x1405c1770,0x1405c9c90,2,void SpawnHazardEffect::HandleQueuedStart()
 35910,0x1405c19e0,0x1405c9f00,2,void SpawnHazardEffect::Start()
 35912,0x1405c1a90,0x1405c9fb0,2,void BSTaskPool::ReleaseSemaphore()
 35914,0x1405c1af0,0x1405ca010,2,void BSTaskPool::WaitSemaphore()
@@ -6276,6 +6387,15 @@
 37406,0x14061d810,0x140626400,2,void BSTEventSource<BSTransformDeltaEvent>::AddEventSink(BSTEventSink<BSTransformDeltaEvent>* a_sink)
 37407,0x14061d970,0x140626560,2,void BSTEventSource<bhkCharacterMoveFinishEvent>::AddEventSink(BSTEventSink<bhkCharacterMoveFinishEvent>* a_sink)
 37408,0x14061dad0,0x1406266c0,2,void MovementMessagePool::GrowHashMap()
+37424,0x14061e200,0x140626df0,2,"void BSTAnimationGraphDataChannel<Actor,int,ActorWantBlockChannel>::ResetImpl()"
+37426,0x14061e220,0x140626e10,2,"void BSTAnimationGraphDataChannel<Actor,float,ActorLeftWeaponSpeedChannel>::ResetImpl()"
+37427,0x14061e230,0x140626e20,2,"void BSTAnimationGraphDataChannel<Actor,float,ActorPitchChannel>::ResetImpl()"
+37428,0x14061e240,0x140626e30,2,"void BSTAnimationGraphDataChannel<Actor,float,ActorPitchDeltaChannel>::ResetImpl()"
+37429,0x14061e250,0x140626e40,2,"void BSTAnimationGraphDataChannel<Actor,float,ActorRollChannel>::ResetImpl()"
+37431,0x14061e270,0x140626e60,2,"void BSTAnimationGraphDataChannel<Actor,float,ActorTargetSpeedChannel>::ResetImpl()"
+37432,0x14061e280,0x140626e70,2,"void BSTAnimationGraphDataChannel<Actor,float,ActorTimeDeltaChannel>::ResetImpl()"
+37434,0x14061e2a0,0x140626e90,2,"void BSTAnimationGraphDataChannel<Actor,float,ActorWeaponSpeedChannel>::ResetImpl()"
+37435,0x14061e2b0,0x140626ea0,2,"void BSTAnimationGraphDataChannel<Actor,bool,ActorLookAtChannel>::ResetImpl()"
 37448,0x14061ea00,0x1406277b0,2,bool ActorState::DoSetSitSleepState(SIT_SLEEP_STATE a_state)
 37450,0x14061ea40,0x1406277f0,2,void Actor::SetEmotionType(EmotionType a_emotionType)
 37451,0x14061ea50,0x140627800,2,void Actor::SetEmotionValue(std::uint32_t a_emotionValue)
@@ -6909,6 +7029,7 @@
 39266,0x140695fd0,0x14069f600,4,"MountInteraction* MountInteraction::MountInteraction(TESObjectREFR* a_refr1, TESObjectREFR* a_refr2)"
 39291,0x1406974f0,0x1406a0b50,2,"RefrInteraction* BSTDerivedCreator<MountInteraction,RefrInteraction>::CreateImpl()"
 39292,0x140697550,0x1406a0bb0,2,"void BSTDerivedCreator<MountInteraction,RefrInteraction>::Destroy(const RefrInteraction* a_val)"
+39298,0x140697770,0x1406a0dd0,2,"void BSTAnimationGraphDataChannel<Actor,int,ActorCopyGraphVariableChannel>::ResetImpl()"
 39340,0x140699040,0x1406a26a0,2,PlayerCharacter::Ctor
 39343,0x14069a9d0,0x1406bae40,3,void Actor::StartSleeping(int32_t a_hours)
 39344,0x14069ab10,0x1406baf80,3,void PlayerCharacter::StartWaiting(int32_t a_hours)
@@ -6994,6 +7115,7 @@
 39671,0x1406b8ed0,0x1406dc540,2,void PlayerCharacter::ModifyAnimationUpdateData(BSAnimationUpdateData& a_data)
 39675,0x1406b9120,0x1406dc8c0,2,void PlayerCharacter::EffectAdded(ActiveEffect* a_effect)
 39709,0x1406ba7f0,0x1406de150,3,ShowDragonLandStatusMessage
+39928,0x1406c21c0,0x1406e86e0,2,"void NiTMapBase<DFALL<NiTMapItem<unsigned_int,unsigned_char>>,unsigned_int,unsigned_char>::clear_value(void* a_value)"
 39935,0x1406c27a0,0x1406e8cc0,2,"void NiTMap<unsigned_int,unsigned_char>::free_value(void* a_value)"
 39991,0x1406c2f50,0x1406e9450,2,std::int32_t Actor::Unk_C6()
 40003,0x1406c3520,0x1406e9c90,2,const NiRTTI* bhkMouseSpringAction::GetRTTI()
@@ -8040,6 +8162,8 @@
 43776,0x14077dc80,0x1407a8fd0,2,bool CombatInventoryItem::CheckBusy(CombatController* a_controller)
 43777,0x14077dc90,0x1407a8fe0,2,bool CombatInventoryItem::CheckShouldEquip(CombatController* a_controller)
 43778,0x14077dcb0,0x1407a9000,2,bool CombatInventoryItem::GetResource(CombatInventoryItemResource& a_resource)
+43779,0x14077dcc0,0x1407a9010,2,void CombatInventoryItem::Equip(CombatController* a_controller)
+43780,0x14077dcd0,0x1407a9020,2,void CombatInventoryItem::Unequip(CombatController* a_controller)
 43781,0x14077dce0,0x1407a9030,2,bool CombatInventoryItem::IsValid()
 43782,0x14077dcf0,0x1407a9040,2,void CombatInventoryItem::SaveGame(BGSSaveGameBuffer* a_buf)
 43783,0x14077dd70,0x1407a90c0,2,void CombatInventoryItem::LoadGame(BGSLoadGameBuffer* a_buf)
@@ -8052,6 +8176,7 @@
 43792,0x14077e000,0x1407a9350,2,float CombatInventoryItemMelee::GetEquipRange()
 43793,0x14077e020,0x1407a9370,2,CombatInventoryItem::TYPE CombatInventoryItemMelee::GetType()
 43794,0x14077e030,0x1407a9380,2,TYPE CombatInventoryItemMelee::GetEquipType(BGSEquipSlot* a_slot)
+43795,0x14077e090,0x1407a93e0,2,CombatInventoryItem::CATEGORY CombatInventoryItemMelee::GetCategory()
 43796,0x14077e0a0,0x1407a93f0,2,float CombatInventoryItemMelee::CalculateScore(CombatController* a_controller)
 43798,0x14077e200,0x1407a9550,2,CombatInventoryItem* CombatInventoryItemMelee::Clone()
 43799,0x14077e290,0x1407a95e0,2,bool CombatInventoryItemMelee::CheckBusy(CombatController* a_controller)
@@ -8063,6 +8188,7 @@
 43807,0x14077e4d0,0x1407a9820,2,float CombatInventoryItemRanged::GetOptimalRange()
 43809,0x14077e500,0x1407a9850,2,CombatInventoryItem::TYPE CombatInventoryItemRanged::GetType()
 43810,0x14077e510,0x1407a9860,2,TYPE CombatInventoryItemRanged::GetEquipType(BGSEquipSlot* a_slot)
+43811,0x14077e540,0x1407a9890,2,CombatInventoryItem::CATEGORY CombatInventoryItemRanged::GetCategory()
 43812,0x14077e550,0x1407a98a0,2,float CombatInventoryItemRanged::CalculateScore(CombatController* a_controller)
 43813,0x14077e570,0x1407a98c0,4,"float CombatController::GetRangedWeaponScore(TESForm* a_weapon, TESAmmo* a_ammo)"
 43815,0x14077e7b0,0x1407a9b00,2,CombatInventoryItem* CombatInventoryItemRanged::Clone()
@@ -8074,12 +8200,15 @@
 43822,0x14077ea60,0x1407a9db0,2,float CombatInventoryItemShield::GetOptimalRange()
 43823,0x14077ea80,0x1407a9dd0,2,float CombatInventoryItemShield::GetEquipRange()
 43824,0x14077eaa0,0x1407a9df0,2,CombatInventoryItem::TYPE CombatInventoryItemShield::GetType()
+43825,0x14077eab0,0x1407a9e00,2,CombatInventoryItem::CATEGORY CombatInventoryItemShield::GetCategory()
 43826,0x14077eac0,0x1407a9e10,2,float CombatInventoryItemShield::CalculateScore(CombatController* a_controller)
 43828,0x14077ebf0,0x1407a9f40,2,CombatInventoryItem* CombatInventoryItemShield::Clone()
 43829,0x14077ec80,0x1407a9fd0,2,bool CombatInventoryItemShield::CheckBusy(CombatController* a_controller)
 43830,0x14077ed60,0x1407aa0b0,2,void CombatInventoryItemShield::SaveGame(BGSSaveGameBuffer* a_buf)
 43831,0x14077edb0,0x1407aa100,2,void CombatInventoryItemShield::LoadGame(BGSLoadGameBuffer* a_buf)
 43832,0x14077ee50,0x1407aa1a0,2,std::uint32_t CombatInventoryItemShield::GetObjectType()
+43834,0x14077eea0,0x1407aa1f0,2,CombatInventoryItem::CATEGORY CombatInventoryItemOneHandedBlock::GetCategory()
+43835,0x14077eeb0,0x1407aa200,2,float CombatInventoryItemOneHandedBlock::CalculateScore(CombatController* a_controller)
 43836,0x14077eec0,0x1407aa210,2,CombatInventoryItem* CombatInventoryItemOneHandedBlock::Clone()
 43837,0x14077ef60,0x1407aa2b0,2,bool CombatInventoryItemOneHandedBlock::CheckShouldEquip(CombatController* a_controller)
 43838,0x14077f010,0x1407aa360,2,std::uint32_t CombatInventoryItemOneHandedBlock::GetObjectType()
@@ -8087,6 +8216,8 @@
 43841,0x14077f070,0x1407aa3c0,2,float CombatInventoryItemTorch::GetOptimalRange()
 43842,0x14077f090,0x1407aa3e0,2,float CombatInventoryItemTorch::GetEquipRange()
 43843,0x14077f0b0,0x1407aa400,2,CombatInventoryItem::TYPE CombatInventoryItemTorch::GetType()
+43844,0x14077f0c0,0x1407aa410,2,CombatInventoryItem::TYPE CombatInventoryItemTorch::GetEquipType(BGSEquipSlot* a_slot)
+43845,0x14077f0d0,0x1407aa420,2,CombatInventoryItem::CATEGORY CombatInventoryItemTorch::GetCategory()
 43846,0x14077f0e0,0x1407aa430,2,float CombatInventoryItemTorch::CalculateScore(CombatController* a_controller)
 43848,0x14077f1e0,0x1407aa530,2,CombatInventoryItem* CombatInventoryItemTorch::Clone()
 43849,0x14077f270,0x1407aa5c0,2,bool CombatInventoryItemTorch::CheckBusy(CombatController* a_controller)
@@ -8134,6 +8265,8 @@
 43927,0x140780e60,0x1407ac1b0,2,std::uint32_t CombatInventoryItemShield::GetClassType()
 43928,0x140780ed0,0x1407ac220,2,std::uint32_t CombatInventoryItemTorch::GetClassType()
 43942,0x140781c80,0x1407acfd0,2,bool CombatMagicCaster::CheckStopCast(CombatController* a_combatController)
+43947,0x140781cf0,0x1407ad040,2,void CombatMagicCaster::NotifyStopCast(CombatController* a_combatController)
+43948,0x140781d00,0x1407ad050,2,void CombatMagicCaster::SetupAimController(CombatProjectileAimController* a_aimController)
 43949,0x140781d10,0x1407ad060,2,void CombatMagicCaster::SaveGame(BGSSaveGameBuffer* a_buf)
 43950,0x140781d50,0x1407ad0a0,2,void CombatMagicCaster::LoadGame(BGSLoadGameBuffer* a_buf)
 43952,0x140781f00,0x1407ad250,4,RE::CombatMagicCaster::StaticCheckTargetValid
@@ -8156,6 +8289,7 @@
 43972,0x140782f30,0x1407ae280,2,void CombatMagicCasterWard::SaveGame(BGSSaveGameBuffer* a_buf)
 43973,0x140782f70,0x1407ae2c0,2,void CombatMagicCasterWard::LoadGame(BGSLoadGameBuffer* a_buf)
 43974,0x140782ff0,0x1407ae340,2,std::uint32_t CombatMagicCasterWard::GetObjectType()
+43978,0x140783580,0x1407ae8d0,2,CombatInventoryItem::CATEGORY CombatMagicCasterRestore::GetCategory()
 43980,0x1407836d0,0x1407aea20,2,bool CombatMagicCasterRestore::CheckStartCast(CombatController* a_combatController)
 43981,0x1407837e0,0x1407aeb30,2,bool CombatMagicCasterRestore::CheckStopCast(CombatController* a_combatController)
 43982,0x1407838f0,0x1407aec40,2,void CombatMagicCasterRestore::NotifyStartCast(CombatController* a_combatController)
@@ -8171,6 +8305,7 @@
 43996,0x140784270,0x1407af5c0,2,bool CombatMagicCasterStagger::CheckStartCast(CombatController* a_combatController)
 43997,0x140784460,0x1407af7b0,2,bool CombatMagicCasterStagger::CheckStopCast(CombatController* a_combatController)
 43998,0x140784500,0x1407af850,2,std::uint32_t CombatMagicCasterStagger::GetObjectType()
+43999,0x140784510,0x1407af860,2,CombatInventoryItem::CATEGORY CombatMagicCasterDisarm::GetCategory()
 44001,0x140784730,0x1407afa80,2,bool CombatMagicCasterDisarm::CheckStartCast(CombatController* a_combatController)
 44002,0x140784970,0x1407afcc0,2,void CombatMagicCasterDisarm::NotifyStopCast(CombatController* a_combatController)
 44003,0x1407849b0,0x1407afd00,2,std::uint32_t CombatMagicCasterDisarm::GetObjectType()
@@ -8178,6 +8313,7 @@
 44006,0x140784c30,0x1407aff80,2,bool CombatMagicCasterCloak::CheckStartCast(CombatController* a_combatController)
 44007,0x140784e30,0x1407b0180,2,bool CombatMagicCasterCloak::CheckStopCast(CombatController* a_combatController)
 44008,0x140784ea0,0x1407b01f0,2,std::uint32_t CombatMagicCasterCloak::GetObjectType()
+44009,0x140784eb0,0x1407b0200,2,CombatInventoryItem::CATEGORY CombatMagicCasterLight::GetCategory()
 44011,0x140785000,0x1407b0350,2,bool CombatMagicCasterLight::CheckStartCast(CombatController* a_combatController)
 44012,0x140785070,0x1407b03c0,2,bool CombatMagicCasterLight::CheckStopCast(CombatController* a_combatController)
 44013,0x140785090,0x1407b03e0,2,std::uint32_t CombatMagicCasterLight::GetObjectType()
@@ -8533,12 +8669,92 @@
 45066,0x14079f850,0x1407caba0,2,"void* CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterWard>::CreateCaster()"
 45067,0x14079f8c0,0x1407cac10,2,void CombatBlackboardKey<AITimer>::CreateObject(void* a_arg)
 45078,0x14079fa10,0x1407cad60,2,"void BSTDerivedCreator<CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterScript>,CombatObject>::Destroy(const CombatObject* a_val)"
+45158,0x1407a0410,0x1407cb760,2,void CombatBlackboardKey<AITimer>::DestroyObject(void* a_arg1)
+45159,0x1407a0420,0x1407cb770,2,"void CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterArmor>::Equip(CombatController* a_controller)"
+45160,0x1407a0430,0x1407cb780,2,"void CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterBoundItem>::Equip(CombatController* a_controller)"
+45161,0x1407a0440,0x1407cb790,2,"void CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterCloak>::Equip(CombatController* a_controller)"
+45162,0x1407a0450,0x1407cb7a0,2,"void CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterDisarm>::Equip(CombatController* a_controller)"
+45163,0x1407a0460,0x1407cb7b0,2,"void CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterInvisibility>::Equip(CombatController* a_controller)"
+45164,0x1407a0470,0x1407cb7c0,2,"void CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterLight>::Equip(CombatController* a_controller)"
+45165,0x1407a0480,0x1407cb7d0,2,"void CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterOffensive>::Equip(CombatController* a_controller)"
+45166,0x1407a0490,0x1407cb7e0,2,"void CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterParalyze>::Equip(CombatController* a_controller)"
+45167,0x1407a04a0,0x1407cb7f0,2,"void CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterReanimate>::Equip(CombatController* a_controller)"
+45168,0x1407a04b0,0x1407cb800,2,"void CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterRestore>::Equip(CombatController* a_controller)"
+45169,0x1407a04c0,0x1407cb810,2,"void CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterScript>::Equip(CombatController* a_controller)"
+45170,0x1407a04d0,0x1407cb820,2,"void CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterStagger>::Equip(CombatController* a_controller)"
+45171,0x1407a04e0,0x1407cb830,2,"void CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterSummon>::Equip(CombatController* a_controller)"
+45172,0x1407a04f0,0x1407cb840,2,"void CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterTargetEffect>::Equip(CombatController* a_controller)"
+45173,0x1407a0500,0x1407cb850,2,"void CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterWard>::Equip(CombatController* a_controller)"
+45174,0x1407a0510,0x1407cb860,2,"void CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterArmor>::Equip(CombatController* a_controller)"
+45175,0x1407a0520,0x1407cb870,2,"void CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterBoundItem>::Equip(CombatController* a_controller)"
+45176,0x1407a0530,0x1407cb880,2,"void CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterCloak>::Equip(CombatController* a_controller)"
+45177,0x1407a0540,0x1407cb890,2,"void CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterDisarm>::Equip(CombatController* a_controller)"
+45178,0x1407a0550,0x1407cb8a0,2,"void CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterInvisibility>::Equip(CombatController* a_controller)"
+45179,0x1407a0560,0x1407cb8b0,2,"void CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterLight>::Equip(CombatController* a_controller)"
+45180,0x1407a0570,0x1407cb8c0,2,"void CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterOffensive>::Equip(CombatController* a_controller)"
+45181,0x1407a0580,0x1407cb8d0,2,"void CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterParalyze>::Equip(CombatController* a_controller)"
+45182,0x1407a0590,0x1407cb8e0,2,"void CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterReanimate>::Equip(CombatController* a_controller)"
+45183,0x1407a05a0,0x1407cb8f0,2,"void CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterRestore>::Equip(CombatController* a_controller)"
+45184,0x1407a05b0,0x1407cb900,2,"void CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterScript>::Equip(CombatController* a_controller)"
+45185,0x1407a05c0,0x1407cb910,2,"void CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterStagger>::Equip(CombatController* a_controller)"
+45186,0x1407a05d0,0x1407cb920,2,"void CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterSummon>::Equip(CombatController* a_controller)"
+45187,0x1407a05e0,0x1407cb930,2,"void CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterTargetEffect>::Equip(CombatController* a_controller)"
+45188,0x1407a05f0,0x1407cb940,2,"void CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterWard>::Equip(CombatController* a_controller)"
+45189,0x1407a0600,0x1407cb950,2,"void CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterArmor>::Equip(CombatController* a_controller)"
+45190,0x1407a0610,0x1407cb960,2,"void CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterBoundItem>::Equip(CombatController* a_controller)"
+45191,0x1407a0620,0x1407cb970,2,"void CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterCloak>::Equip(CombatController* a_controller)"
+45192,0x1407a0630,0x1407cb980,2,"void CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterDisarm>::Equip(CombatController* a_controller)"
+45193,0x1407a0640,0x1407cb990,2,"void CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterInvisibility>::Equip(CombatController* a_controller)"
+45194,0x1407a0650,0x1407cb9a0,2,"void CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterLight>::Equip(CombatController* a_controller)"
+45195,0x1407a0660,0x1407cb9b0,2,"void CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterOffensive>::Equip(CombatController* a_controller)"
+45196,0x1407a0670,0x1407cb9c0,2,"void CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterParalyze>::Equip(CombatController* a_controller)"
+45197,0x1407a0680,0x1407cb9d0,2,"void CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterReanimate>::Equip(CombatController* a_controller)"
+45198,0x1407a0690,0x1407cb9e0,2,"void CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterRestore>::Equip(CombatController* a_controller)"
+45199,0x1407a06a0,0x1407cb9f0,2,"void CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterScript>::Equip(CombatController* a_controller)"
+45200,0x1407a06b0,0x1407cba00,2,"void CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterStagger>::Equip(CombatController* a_controller)"
+45201,0x1407a06c0,0x1407cba10,2,"void CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterSummon>::Equip(CombatController* a_controller)"
+45202,0x1407a06d0,0x1407cba20,2,"void CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterTargetEffect>::Equip(CombatController* a_controller)"
+45203,0x1407a06e0,0x1407cba30,2,"void CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterWard>::Equip(CombatController* a_controller)"
+45204,0x1407a06f0,0x1407cba40,2,"void CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterArmor>::Equip(CombatController* a_controller)"
+45205,0x1407a0700,0x1407cba50,2,"void CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterBoundItem>::Equip(CombatController* a_controller)"
+45206,0x1407a0710,0x1407cba60,2,"void CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterCloak>::Equip(CombatController* a_controller)"
+45207,0x1407a0720,0x1407cba70,2,"void CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterDisarm>::Equip(CombatController* a_controller)"
+45208,0x1407a0730,0x1407cba80,2,"void CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterInvisibility>::Equip(CombatController* a_controller)"
+45209,0x1407a0740,0x1407cba90,2,"void CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterLight>::Equip(CombatController* a_controller)"
+45210,0x1407a0750,0x1407cbaa0,2,"void CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterOffensive>::Equip(CombatController* a_controller)"
+45211,0x1407a0760,0x1407cbab0,2,"void CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterParalyze>::Equip(CombatController* a_controller)"
+45212,0x1407a0770,0x1407cbac0,2,"void CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterReanimate>::Equip(CombatController* a_controller)"
+45213,0x1407a0780,0x1407cbad0,2,"void CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterRestore>::Equip(CombatController* a_controller)"
+45214,0x1407a0790,0x1407cbae0,2,"void CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterScript>::Equip(CombatController* a_controller)"
+45215,0x1407a07a0,0x1407cbaf0,2,"void CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterStagger>::Equip(CombatController* a_controller)"
+45216,0x1407a07b0,0x1407cbb00,2,"void CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterSummon>::Equip(CombatController* a_controller)"
+45217,0x1407a07c0,0x1407cbb10,2,"void CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterTargetEffect>::Equip(CombatController* a_controller)"
+45218,0x1407a07d0,0x1407cbb20,2,"void CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterWard>::Equip(CombatController* a_controller)"
+45219,0x1407a07e0,0x1407cbb30,2,"void CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterArmor>::Equip(CombatController* a_controller)"
+45220,0x1407a07f0,0x1407cbb40,2,"void CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterBoundItem>::Equip(CombatController* a_controller)"
+45221,0x1407a0800,0x1407cbb50,2,"void CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterCloak>::Equip(CombatController* a_controller)"
+45222,0x1407a0810,0x1407cbb60,2,"void CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterDisarm>::Equip(CombatController* a_controller)"
+45223,0x1407a0820,0x1407cbb70,2,"void CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterInvisibility>::Equip(CombatController* a_controller)"
+45224,0x1407a0830,0x1407cbb80,2,"void CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterLight>::Equip(CombatController* a_controller)"
+45225,0x1407a0840,0x1407cbb90,2,"void CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterOffensive>::Equip(CombatController* a_controller)"
+45226,0x1407a0850,0x1407cbba0,2,"void CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterParalyze>::Equip(CombatController* a_controller)"
+45227,0x1407a0860,0x1407cbbb0,2,"void CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterReanimate>::Equip(CombatController* a_controller)"
+45228,0x1407a0870,0x1407cbbc0,2,"void CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterRestore>::Equip(CombatController* a_controller)"
+45229,0x1407a0880,0x1407cbbd0,2,"void CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterScript>::Equip(CombatController* a_controller)"
+45230,0x1407a0890,0x1407cbbe0,2,"void CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterStagger>::Equip(CombatController* a_controller)"
+45231,0x1407a08a0,0x1407cbbf0,2,"void CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterSummon>::Equip(CombatController* a_controller)"
+45232,0x1407a08b0,0x1407cbc00,2,"void CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterTargetEffect>::Equip(CombatController* a_controller)"
+45233,0x1407a08c0,0x1407cbc10,2,"void CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterWard>::Equip(CombatController* a_controller)"
 45234,0x1407a08d0,0x1407cbc20,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterArmor>::GetCategory()"
 45235,0x1407a08f0,0x1407cbc40,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterBoundItem>::GetCategory()"
 45236,0x1407a0910,0x1407cbc60,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterCloak>::GetCategory()"
+45237,0x1407a0930,0x1407cbc80,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterDisarm>::GetCategory()"
 45238,0x1407a0940,0x1407cbc90,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterInvisibility>::GetCategory()"
+45239,0x1407a0960,0x1407cbcb0,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterLight>::GetCategory()"
+45240,0x1407a0970,0x1407cbcc0,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterOffensive>::GetCategory()"
 45241,0x1407a0980,0x1407cbcd0,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterParalyze>::GetCategory()"
 45242,0x1407a09a0,0x1407cbcf0,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterReanimate>::GetCategory()"
+45243,0x1407a09c0,0x1407cbd10,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterRestore>::GetCategory()"
 45244,0x1407a09d0,0x1407cbd20,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterScript>::GetCategory()"
 45245,0x1407a09f0,0x1407cbd40,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterStagger>::GetCategory()"
 45246,0x1407a0a10,0x1407cbd60,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterSummon>::GetCategory()"
@@ -8547,9 +8763,13 @@
 45249,0x1407a0a80,0x1407cbdd0,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterArmor>::GetCategory()"
 45250,0x1407a0aa0,0x1407cbdf0,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterBoundItem>::GetCategory()"
 45251,0x1407a0ac0,0x1407cbe10,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterCloak>::GetCategory()"
+45252,0x1407a0ae0,0x1407cbe30,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterDisarm>::GetCategory()"
 45253,0x1407a0af0,0x1407cbe40,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterInvisibility>::GetCategory()"
+45254,0x1407a0b10,0x1407cbe60,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterLight>::GetCategory()"
+45255,0x1407a0b20,0x1407cbe70,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterOffensive>::GetCategory()"
 45256,0x1407a0b30,0x1407cbe80,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterParalyze>::GetCategory()"
 45257,0x1407a0b50,0x1407cbea0,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterReanimate>::GetCategory()"
+45258,0x1407a0b70,0x1407cbec0,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterRestore>::GetCategory()"
 45259,0x1407a0b80,0x1407cbed0,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterScript>::GetCategory()"
 45260,0x1407a0ba0,0x1407cbef0,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterStagger>::GetCategory()"
 45261,0x1407a0bc0,0x1407cbf10,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterSummon>::GetCategory()"
@@ -8558,9 +8778,13 @@
 45264,0x1407a0c30,0x1407cbf80,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterArmor>::GetCategory()"
 45265,0x1407a0c50,0x1407cbfa0,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterBoundItem>::GetCategory()"
 45266,0x1407a0c70,0x1407cbfc0,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterCloak>::GetCategory()"
+45267,0x1407a0c90,0x1407cbfe0,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterDisarm>::GetCategory()"
 45268,0x1407a0ca0,0x1407cbff0,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterInvisibility>::GetCategory()"
+45269,0x1407a0cc0,0x1407cc010,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterLight>::GetCategory()"
+45270,0x1407a0cd0,0x1407cc020,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterOffensive>::GetCategory()"
 45271,0x1407a0ce0,0x1407cc030,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterParalyze>::GetCategory()"
 45272,0x1407a0d00,0x1407cc050,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterReanimate>::GetCategory()"
+45273,0x1407a0d20,0x1407cc070,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterRestore>::GetCategory()"
 45274,0x1407a0d30,0x1407cc080,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterScript>::GetCategory()"
 45275,0x1407a0d50,0x1407cc0a0,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterStagger>::GetCategory()"
 45276,0x1407a0d70,0x1407cc0c0,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterSummon>::GetCategory()"
@@ -8569,9 +8793,13 @@
 45279,0x1407a0de0,0x1407cc130,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterArmor>::GetCategory()"
 45280,0x1407a0e00,0x1407cc150,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterBoundItem>::GetCategory()"
 45281,0x1407a0e20,0x1407cc170,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterCloak>::GetCategory()"
+45282,0x1407a0e40,0x1407cc190,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterDisarm>::GetCategory()"
 45283,0x1407a0e50,0x1407cc1a0,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterInvisibility>::GetCategory()"
+45284,0x1407a0e70,0x1407cc1c0,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterLight>::GetCategory()"
+45285,0x1407a0e80,0x1407cc1d0,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterOffensive>::GetCategory()"
 45286,0x1407a0e90,0x1407cc1e0,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterParalyze>::GetCategory()"
 45287,0x1407a0eb0,0x1407cc200,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterReanimate>::GetCategory()"
+45288,0x1407a0ed0,0x1407cc220,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterRestore>::GetCategory()"
 45289,0x1407a0ee0,0x1407cc230,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterScript>::GetCategory()"
 45290,0x1407a0f00,0x1407cc250,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterStagger>::GetCategory()"
 45291,0x1407a0f20,0x1407cc270,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterSummon>::GetCategory()"
@@ -8580,9 +8808,13 @@
 45294,0x1407a0f90,0x1407cc2e0,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterArmor>::GetCategory()"
 45295,0x1407a0fb0,0x1407cc300,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterBoundItem>::GetCategory()"
 45296,0x1407a0fd0,0x1407cc320,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterCloak>::GetCategory()"
+45297,0x1407a0ff0,0x1407cc340,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterDisarm>::GetCategory()"
 45298,0x1407a1000,0x1407cc350,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterInvisibility>::GetCategory()"
+45299,0x1407a1020,0x1407cc370,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterLight>::GetCategory()"
+45300,0x1407a1030,0x1407cc380,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterOffensive>::GetCategory()"
 45301,0x1407a1040,0x1407cc390,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterParalyze>::GetCategory()"
 45302,0x1407a1060,0x1407cc3b0,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterReanimate>::GetCategory()"
+45303,0x1407a1080,0x1407cc3d0,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterRestore>::GetCategory()"
 45304,0x1407a1090,0x1407cc3e0,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterScript>::GetCategory()"
 45305,0x1407a10b0,0x1407cc400,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterStagger>::GetCategory()"
 45306,0x1407a10d0,0x1407cc420,2,"CombatInventoryItem::CATEGORY CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterSummon>::GetCategory()"
@@ -8683,6 +8915,7 @@
 45401,0x1407a42e0,0x1407cf630,2,std::uint32_t CombatMagicCasterSummon::GetClassType()
 45402,0x1407a4350,0x1407cf6a0,2,std::uint32_t CombatMagicCasterTargetEffect::GetClassType()
 45403,0x1407a43c0,0x1407cf710,2,std::uint32_t CombatMagicCasterWard::GetClassType()
+45405,0x1407a4490,0x1407cf7e0,2,uint32_t CombatBlackboardKey<AITimer>::GetObjectSize()
 45406,0x1407a44a0,0x1407cf7f0,2,"std::uint32_t CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterArmor>::GetObjectType()"
 45407,0x1407a44b0,0x1407cf800,2,"std::uint32_t CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterBoundItem>::GetObjectType()"
 45408,0x1407a44c0,0x1407cf810,2,"std::uint32_t CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterCloak>::GetObjectType()"
@@ -8761,17 +8994,89 @@
 45481,0x1407a4950,0x1407cfca0,2,"void CombatBlackboardKey<AITimer>::LoadObject(BGSLoadGameBuffer* a_arg1, void* a_arg2)"
 45483,0x1407a4970,0x1407cfcc0,2,const BSFixedString& CombatBlackboardKey<AITimer>::GetName()
 45485,0x1407a4aa0,0x1407cfdf0,2,"void CombatBlackboardKey<AITimer>::SaveObject(BGSSaveGameBuffer* a_arg1, void* a_arg2)"
+45487,0x1407a4cc0,0x1407d0010,2,"void CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterArmor>::Unequip(CombatController* a_controller)"
+45488,0x1407a4cd0,0x1407d0020,2,"void CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterBoundItem>::Unequip(CombatController* a_controller)"
+45489,0x1407a4ce0,0x1407d0030,2,"void CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterCloak>::Unequip(CombatController* a_controller)"
+45490,0x1407a4cf0,0x1407d0040,2,"void CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterDisarm>::Unequip(CombatController* a_controller)"
+45491,0x1407a4d00,0x1407d0050,2,"void CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterInvisibility>::Unequip(CombatController* a_controller)"
+45492,0x1407a4d10,0x1407d0060,2,"void CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterLight>::Unequip(CombatController* a_controller)"
+45493,0x1407a4d20,0x1407d0070,2,"void CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterOffensive>::Unequip(CombatController* a_controller)"
+45494,0x1407a4d30,0x1407d0080,2,"void CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterParalyze>::Unequip(CombatController* a_controller)"
+45495,0x1407a4d40,0x1407d0090,2,"void CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterReanimate>::Unequip(CombatController* a_controller)"
 45496,0x1407a4d50,0x1407d00a0,2,"void CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterRestore>::Unequip(CombatController* a_controller)"
+45497,0x1407a4da0,0x1407d00f0,2,"void CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterScript>::Unequip(CombatController* a_controller)"
+45498,0x1407a4db0,0x1407d0100,2,"void CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterStagger>::Unequip(CombatController* a_controller)"
+45499,0x1407a4dc0,0x1407d0110,2,"void CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterSummon>::Unequip(CombatController* a_controller)"
+45500,0x1407a4dd0,0x1407d0120,2,"void CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterTargetEffect>::Unequip(CombatController* a_controller)"
+45501,0x1407a4de0,0x1407d0130,2,"void CombatInventoryItemMagicT<CombatInventoryItemMagic,CombatMagicCasterWard>::Unequip(CombatController* a_controller)"
+45502,0x1407a4df0,0x1407d0140,2,"void CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterArmor>::Unequip(CombatController* a_controller)"
+45503,0x1407a4e00,0x1407d0150,2,"void CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterBoundItem>::Unequip(CombatController* a_controller)"
+45504,0x1407a4e10,0x1407d0160,2,"void CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterCloak>::Unequip(CombatController* a_controller)"
+45505,0x1407a4e20,0x1407d0170,2,"void CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterDisarm>::Unequip(CombatController* a_controller)"
+45506,0x1407a4e30,0x1407d0180,2,"void CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterInvisibility>::Unequip(CombatController* a_controller)"
+45507,0x1407a4e40,0x1407d0190,2,"void CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterLight>::Unequip(CombatController* a_controller)"
+45508,0x1407a4e50,0x1407d01a0,2,"void CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterOffensive>::Unequip(CombatController* a_controller)"
+45509,0x1407a4e60,0x1407d01b0,2,"void CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterParalyze>::Unequip(CombatController* a_controller)"
+45510,0x1407a4e70,0x1407d01c0,2,"void CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterReanimate>::Unequip(CombatController* a_controller)"
 45511,0x1407a4e80,0x1407d01d0,2,"void CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterRestore>::Unequip(CombatController* a_controller)"
+45512,0x1407a4ed0,0x1407d0220,2,"void CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterScript>::Unequip(CombatController* a_controller)"
+45513,0x1407a4ee0,0x1407d0230,2,"void CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterStagger>::Unequip(CombatController* a_controller)"
+45514,0x1407a4ef0,0x1407d0240,2,"void CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterSummon>::Unequip(CombatController* a_controller)"
+45515,0x1407a4f00,0x1407d0250,2,"void CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterTargetEffect>::Unequip(CombatController* a_controller)"
+45516,0x1407a4f10,0x1407d0260,2,"void CombatInventoryItemMagicT<CombatInventoryItemPotion,CombatMagicCasterWard>::Unequip(CombatController* a_controller)"
+45517,0x1407a4f20,0x1407d0270,2,"void CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterArmor>::Unequip(CombatController* a_controller)"
+45518,0x1407a4f30,0x1407d0280,2,"void CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterBoundItem>::Unequip(CombatController* a_controller)"
+45519,0x1407a4f40,0x1407d0290,2,"void CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterCloak>::Unequip(CombatController* a_controller)"
+45520,0x1407a4f50,0x1407d02a0,2,"void CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterDisarm>::Unequip(CombatController* a_controller)"
+45521,0x1407a4f60,0x1407d02b0,2,"void CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterInvisibility>::Unequip(CombatController* a_controller)"
+45522,0x1407a4f70,0x1407d02c0,2,"void CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterLight>::Unequip(CombatController* a_controller)"
+45523,0x1407a4f80,0x1407d02d0,2,"void CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterOffensive>::Unequip(CombatController* a_controller)"
+45524,0x1407a4f90,0x1407d02e0,2,"void CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterParalyze>::Unequip(CombatController* a_controller)"
+45525,0x1407a4fa0,0x1407d02f0,2,"void CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterReanimate>::Unequip(CombatController* a_controller)"
 45526,0x1407a4fb0,0x1407d0300,2,"void CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterRestore>::Unequip(CombatController* a_controller)"
+45527,0x1407a5000,0x1407d0350,2,"void CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterScript>::Unequip(CombatController* a_controller)"
+45528,0x1407a5010,0x1407d0360,2,"void CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterStagger>::Unequip(CombatController* a_controller)"
+45529,0x1407a5020,0x1407d0370,2,"void CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterSummon>::Unequip(CombatController* a_controller)"
+45530,0x1407a5030,0x1407d0380,2,"void CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterTargetEffect>::Unequip(CombatController* a_controller)"
+45531,0x1407a5040,0x1407d0390,2,"void CombatInventoryItemMagicT<CombatInventoryItemScroll,CombatMagicCasterWard>::Unequip(CombatController* a_controller)"
+45532,0x1407a5050,0x1407d03a0,2,"void CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterArmor>::Unequip(CombatController* a_controller)"
+45533,0x1407a5060,0x1407d03b0,2,"void CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterBoundItem>::Unequip(CombatController* a_controller)"
+45534,0x1407a5070,0x1407d03c0,2,"void CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterCloak>::Unequip(CombatController* a_controller)"
+45535,0x1407a5080,0x1407d03d0,2,"void CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterDisarm>::Unequip(CombatController* a_controller)"
+45536,0x1407a5090,0x1407d03e0,2,"void CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterInvisibility>::Unequip(CombatController* a_controller)"
+45537,0x1407a50a0,0x1407d03f0,2,"void CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterLight>::Unequip(CombatController* a_controller)"
+45538,0x1407a50b0,0x1407d0400,2,"void CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterOffensive>::Unequip(CombatController* a_controller)"
+45539,0x1407a50c0,0x1407d0410,2,"void CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterParalyze>::Unequip(CombatController* a_controller)"
+45540,0x1407a50d0,0x1407d0420,2,"void CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterReanimate>::Unequip(CombatController* a_controller)"
 45541,0x1407a50e0,0x1407d0430,2,"void CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterRestore>::Unequip(CombatController* a_controller)"
+45542,0x1407a5130,0x1407d0480,2,"void CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterScript>::Unequip(CombatController* a_controller)"
+45543,0x1407a5140,0x1407d0490,2,"void CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterStagger>::Unequip(CombatController* a_controller)"
+45544,0x1407a5150,0x1407d04a0,2,"void CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterSummon>::Unequip(CombatController* a_controller)"
+45545,0x1407a5160,0x1407d04b0,2,"void CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterTargetEffect>::Unequip(CombatController* a_controller)"
+45546,0x1407a5170,0x1407d04c0,2,"void CombatInventoryItemMagicT<CombatInventoryItemShout,CombatMagicCasterWard>::Unequip(CombatController* a_controller)"
+45547,0x1407a5180,0x1407d04d0,2,"void CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterArmor>::Unequip(CombatController* a_controller)"
+45548,0x1407a5190,0x1407d04e0,2,"void CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterBoundItem>::Unequip(CombatController* a_controller)"
+45549,0x1407a51a0,0x1407d04f0,2,"void CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterCloak>::Unequip(CombatController* a_controller)"
+45550,0x1407a51b0,0x1407d0500,2,"void CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterDisarm>::Unequip(CombatController* a_controller)"
+45551,0x1407a51c0,0x1407d0510,2,"void CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterInvisibility>::Unequip(CombatController* a_controller)"
+45552,0x1407a51d0,0x1407d0520,2,"void CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterLight>::Unequip(CombatController* a_controller)"
+45553,0x1407a51e0,0x1407d0530,2,"void CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterOffensive>::Unequip(CombatController* a_controller)"
+45554,0x1407a51f0,0x1407d0540,2,"void CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterParalyze>::Unequip(CombatController* a_controller)"
+45555,0x1407a5200,0x1407d0550,2,"void CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterReanimate>::Unequip(CombatController* a_controller)"
 45556,0x1407a5210,0x1407d0560,2,"void CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterRestore>::Unequip(CombatController* a_controller)"
+45557,0x1407a5260,0x1407d05b0,2,"void CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterScript>::Unequip(CombatController* a_controller)"
+45558,0x1407a5270,0x1407d05c0,2,"void CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterStagger>::Unequip(CombatController* a_controller)"
+45559,0x1407a5280,0x1407d05d0,2,"void CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterSummon>::Unequip(CombatController* a_controller)"
+45560,0x1407a5290,0x1407d05e0,2,"void CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterTargetEffect>::Unequip(CombatController* a_controller)"
+45561,0x1407a52a0,0x1407d05f0,2,"void CombatInventoryItemMagicT<CombatInventoryItemStaff,CombatMagicCasterWard>::Unequip(CombatController* a_controller)"
 45570,0x1407a5a50,0x1407d0da0,2,void NiTPrimitiveArray<CombatGroup*>::RemoveEmptyCombatGroups()
 45629,0x1407a92e0,0x1407d4630,2,void CombatObject::SaveGame(BGSSaveGameBuffer* a_buf)
 45630,0x1407a92f0,0x1407d4640,2,void CombatObject::LoadGame(BGSLoadGameBuffer* a_buf)
 45660,0x1407aad70,0x1407d60c0,3,bool CombatState::CheckShouldFlee()
 45661,0x1407aae90,0x1407d61e0,3,bool CombatState::CheckShouldHide()
 45682,0x1407ac270,0x1407d75c0,2,void CombatBlackboardKey<AITimeStamp>::CreateObject(void* a_arg)
+45683,0x1407ac280,0x1407d75d0,2,void CombatBlackboardKey<AITimeStamp>::DestroyObject(void* a_arg1)
+45685,0x1407ac2f0,0x1407d7640,2,uint32_t CombatBlackboardKey<AITimeStamp>::GetObjectSize()
 45686,0x1407ac300,0x1407d7650,2,"void CombatBlackboardKey<AITimeStamp>::LoadObject(BGSLoadGameBuffer* a_arg1, void* a_arg2)"
 45687,0x1407ac310,0x1407d7660,2,const BSFixedString& CombatBlackboardKey<AITimeStamp>::GetName()
 45688,0x1407ac320,0x1407d7670,2,"void CombatBlackboardKey<AITimeStamp>::SaveObject(BGSSaveGameBuffer* a_arg1, void* a_arg2)"
@@ -8985,8 +9290,11 @@
 46305,0x1407c8d40,0x1407f4090,4,void CombatBehaviorTreeNode::init_childrens_parents(NodeArray& cont_node) src\RE/CombatBehaviorTreeNode.h:35
 46306,0x1407c8e10,0x1407f4160,4,CombatBehaviorTreeNode* CombatBehaviorTreeNode::FindChild(const BSFixedString& ch_name)
 46307,0x1407c8e50,0x1407f41a0,4,int32_t CombatBehaviorTreeNode::FindChildIndex(const BSFixedString& ch_name)
+46308,0x1407c8e80,0x1407f41d0,2,void CombatBehaviorTreeNode::Enter(CombatBehaviorThread* a_thread)
+46309,0x1407c8e90,0x1407f41e0,2,void CombatBehaviorTreeNode::Exit(CombatBehaviorThread* a_thread)
 46310,0x1407c8ea0,0x1407f41f0,2,void CombatBehaviorTreeNode::Update(CombatBehaviorThread* a_thread)
 46311,0x1407c8eb0,0x1407f4200,2,void CombatBehaviorTreeNode::Abort(CombatBehaviorThread* a_thread)
+46314,0x1407c8ee0,0x1407f4230,2,bool CombatBehaviorTreeNode::Validate(CombatBehaviorTreeNode* a_node)
 46315,0x1407c8f00,0x1407f4250,2,const BSFixedString& CombatBehaviorTreeWrapperNode::GetName()
 46316,0x1407c8f20,0x1407f4270,2,void CombatBehaviorTreeWrapperNode::Enter(CombatBehaviorThread* a_thread)
 46317,0x1407c8f40,0x1407f4290,2,void CombatBehaviorTreeWrapperNode::Exit(CombatBehaviorThread* a_thread)
@@ -9664,6 +9972,7 @@
 47563,0x1407f91e0,0x140824530,2,"CombatNavmeshSearchT<CombatPathingGoalPolicyFlee,CombatPathingSearchPolicyStandard>* CombatPathBuilderT<CombatPathBuilderOpen,CombatPathingGoalPolicyFlee,CombatPathingSearchPolicyStandard>::CreateSearch(void* a_request)"
 47566,0x1407f9290,0x1408245e0,2,"void BSTDerivedCreator<CombatPathingRequestGeneric<CombatPathingGoalPolicyFindHideCover,CombatPathingSearchPolicyStandard>,BSPathingRequest>::Destroy(const BSPathingRequest* a_val)"
 47567,0x1407f92b0,0x140824600,2,"void BSTDerivedCreator<CombatPathingRequestGeneric<CombatPathingGoalPolicyFlee,CombatPathingSearchPolicyStandard>,BSPathingRequest>::Destroy(const BSPathingRequest* a_val)"
+47568,0x1407f92d0,0x140824620,2,"void CombatBlackboardKey<BSTTuple<TESObjectREFR*_,AITimeStamp>>::DestroyObject(void* a_arg1)"
 47569,0x1407f92e0,0x140824630,2,"void CombatBehaviorTreeConditionalNode<CombatBehaviorExpression<CombatBehaviorMemberFunc<CombatBehaviorContextFlee,bool (__cdecl CombatBehaviorContextFlee::*)(void)const>>>::Enter(CombatBehaviorThread* a_thread)"
 47570,0x1407f9370,0x1408246c0,2,void CombatBehaviorTreeCreateContextNode<CombatBehaviorContextFlee>::Enter(CombatBehaviorThread* a_thread)
 47571,0x1407f9440,0x140824790,2,void CombatBehaviorTreeCreateContextNode<CombatBehaviorContextHide>::Enter(CombatBehaviorThread* a_thread)
@@ -9715,6 +10024,7 @@
 47618,0x1407fa760,0x140825ab0,2,"void* CombatNavmeshSearchT<CombatPathingGoalPolicyFlee,CombatPathingSearchPolicyStandard>::GetGoalPolicyByTypeId(std::uint32_t a_typeId)"
 47619,0x1407fa7a0,0x140825af0,2,"bool CombatNavmeshSearchT<CombatPathingGoalPolicyFindHideCover,CombatPathingSearchPolicyStandard>::ExpandNode(AStarNode* a_node, void* a_out)"
 47620,0x1407faec0,0x140826210,2,"bool CombatNavmeshSearchT<CombatPathingGoalPolicyFlee,CombatPathingSearchPolicyStandard>::ExpandNode(AStarNode* a_node, void* a_out)"
+47621,0x1407fb590,0x1408268e0,2,"uint32_t CombatBlackboardKey<BSTTuple<TESObjectREFR*_,AITimeStamp>>::GetObjectSize()"
 47622,0x1407fb5a0,0x1408268f0,2,"std::uint32_t CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFindHideCover,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::GetObjectType()"
 47623,0x1407fb5b0,0x140826900,2,"std::uint32_t CombatPathT<CombatPathRequestGeneric<CombatPathingGoalPolicyFlee,CombatPathingSearchPolicyStandard>,CombatPathDestinationNone>::GetObjectType()"
 47626,0x1407fb5e0,0x140826930,2,"void* CombatNavmeshSearchT<CombatPathingGoalPolicyFindHideCover,CombatPathingSearchPolicyStandard>::GetSearchPolicyByTypeId(std::uint32_t a_typeId)"
@@ -10678,6 +10988,7 @@
 49755,0x140845e20,0x1408710d0,3,StaminaNPC::apply_get_CombatBashChance
 49756,0x140845e80,0x140871130,3,StaminaNPC::apply_get_OffensiveBashChance
 49766,0x1408464f0,0x1408717a0,2,void CombatBlackboardKey<float>::CreateObject(void* a_arg1)
+49767,0x140846500,0x1408717b0,2,void CombatBlackboardKey<float>::DestroyObject(void* a_arg1)
 49768,0x140846510,0x1408717c0,2,uint32_t CombatBlackboardKey<float>::GetObjectSize()
 49769,0x140846520,0x1408717d0,2,"void CombatBlackboardKey<float>::LoadObject(BGSLoadGameBuffer* a_arg1, void* a_arg2)"
 49770,0x140846540,0x1408717f0,2,const BSFixedString& CombatBlackboardKey<float>::GetName()
@@ -10832,16 +11143,22 @@
 50477,0x14086e490,0x140899a20,4,YesImSure::smithingMenu
 50479,0x14086ea30,0x140899fc0,2,char* CraftingSubMenus::EnchantConstructMenu::EnchantmentEntry::GetName()
 50480,0x14086ea50,0x140899fe0,2,char* CraftingSubMenus::EnchantConstructMenu::ItemChangeEntry::GetName()
+50483,0x14086eb80,0x14089a110,2,bool CraftingSubMenus::CraftingSubMenu::HasItemPreview()
 50484,0x14086eb90,0x14089a120,2,bool CraftingSubMenus::EnchantConstructMenu::HasItemPreview()
 50485,0x14086ebb0,0x14089a140,3,YesImSure::alchemyMenu
+50486,0x14086ee70,0x14089a400,2,bool CraftingSubMenus::CraftingSubMenu::ProcessUserEvent(BSFixedString* a_control)
 50487,0x14086ee80,0x14089a410,3,YesImSure::enchantmentLearned
 50488,0x14086f100,0x14089a690,2,bool CraftingSubMenus::SmithingMenu::ProcessUserEvent(BSFixedString* a_control)
 50491,0x14086f2a0,0x14089a830,2,void CraftingSubMenus::EnchantConstructMenu::EnchantmentEntry::SetData(GFxValue* dataContainer)
 50492,0x14086f320,0x14089a8b0,2,void CraftingSubMenus::EnchantConstructMenu::ItemChangeEntry::SetData(GFxValue* dataContainer)
+50493,0x14086f420,0x14089a9b0,2,void CraftingSubMenus::CraftingSubMenu::UpdateSmithingList()
 50494,0x14086f430,0x14089a9c0,2,void CraftingSubMenus::SmithingMenu::UpdateSmithingList()
 50502,0x14086fa90,0x14089b020,2,void CraftingSubMenus::ConstructibleObjectMenu::SetItemCardInfo(ItemCard* a_itemCard)
+50503,0x14086fb60,0x14089b0f0,2,void CraftingSubMenus::CraftingSubMenu::SetItemCardInfo(ItemCard* a_itemCard)
 50504,0x14086fb70,0x14089b100,2,void CraftingSubMenus::EnchantConstructMenu::SetItemCardInfo(ItemCard* a_itemCard)
 50506,0x14086fdd0,0x14089b360,2,void BSTEventSource<ItemCrafted::Event>::SendEvent(const ItemCrafted::Event* a_event)
+50507,0x140870070,0x14089b600,2,void CraftingSubMenus::ConstructibleObjectMenu::UpdateConstructibleList()
+50508,0x140870080,0x14089b610,2,void CraftingSubMenus::CraftingSubMenu::UpdateConstructibleList()
 50514,0x140870860,0x14089bdf0,2,"BSEventNotifyControl CraftingSubMenus::CraftingSubMenu::ProcessEvent(const TESFurnitureEvent* a_event, BSTEventSource<TESFurnitureEvent>* a_eventSource)"
 50515,0x1408708a0,0x14089be30,3,RE::ItemCrafted::GetEventSource
 50516,0x140870990,0x14089bf20,2,"bool BSTArrayAllocatorFunctor<BSTSmallArrayHeapAllocator<12>>::Reallocate(std::uint32_t a_minNewSizeInItems, std::uint32_t a_frontCopyCount, std::uint32_t a_shiftCount, std::uint32_t a_backCopyCount, std::uint32_t a_elemSize)"
@@ -10899,6 +11216,7 @@
 50756,0x140880620,0x1408adf30,2,void HUDNotifications::CleanUp()
 50757,0x1408808d0,0x1408ae1e0,3,HUDNotifications::Update
 50758,0x140880fd0,0x1408ae8e0,3,undefined8 ProcessMessage_140880FD0 (HUDNotifications * a_this)
+50762,0x140881850,0x1408af160,2,float HUDMeter::GetFillPct()
 50763,0x140881860,0x1408af170,2,bool HUDMeter::ProcessMessage(UIMessage* a_message)
 50765,0x1408818b0,0x1408af1c0,2,float ActorValueMeter::GetFillPct()
 50766,0x140881960,0x1408af260,2,bool ActorValueMeter::ProcessMessage(UIMessage* a_message)
@@ -10921,6 +11239,7 @@
 50851,0x140885fe0,0x1408b3430,3,"undefined8 HUDMarkerManager::AddMarker (HUDMarkerManager * a_this, longlong param_2, longlong param_3, undefined8 param_4, uint32_t param_5)"
 50858,0x140886570,0x14053e650,2,bool HUDObject::ProcessMessage(UIMessage* a_message)
 50859,0x140886580,0x1408b3a70,2,void BSTEventSource<BSRemoteGamepadEvent>::AddEventSink(BSTEventSink<BSRemoteGamepadEvent>* a_sink)
+50860,0x1408866e0,0x14053e660,2,void HUDObject::CleanUp()
 50868,0x140886ae0,0x1408b3f20,2,void BSTEventSource<BSRemoteGamepadEvent>::RemoveEventSink(BSTEventSink<BSRemoteGamepadEvent>* a_sink)
 50869,0x140886c50,0x1408b4090,2,void HUDMeter::Update()
 50870,0x140886c60,0x1408b4170,3,void HUDMarkerManager::UpdateLocations (HUDMarkerManager * a_this)
@@ -11252,6 +11571,7 @@
 52702,0x140904e50,0x14093f5d0,3,bool SkyrimScript::HandlePolicy::TryDemoteHandle(std::uint64_t a_handle)
 52703,0x140904f20,0x14093f6a0,2,"void* ScatterTable::EraseAtIterator(void* a_result, void* a_iter)"
 52707,0x1409054b0,0x14093fc30,2,"void SkyrimScript::Logger::PostErrorImpl(const char* a_message, Severity a_severity)"
+52710,0x140905640,0x14093fdc0,2,void BSScript::ErrorLogger::ResetImpl()
 52711,0x140905650,0x14093fdd0,3,void SkyrimScript::ObjectBindPolicy::CollectAndBindMergedScripts(VMHandle a_handle)
 52712,0x140905740,0x14093fec0,3,"void SkyrimScript::ObjectBindPolicy::CollectAndBindMergedScriptsFrom(VMHandle a_targetHandle, VMHandle a_sourceHandle)"
 52713,0x140905820,0x14093ffa0,3,void SkyrimScript::ObjectBindPolicy::BindPendingHandles()
@@ -11943,6 +12263,7 @@
 56631,0x1409c7140,0x140a01c90,4,"void* hkLifoAllocator::BufRealloc(void* a_old, std::int32_t a_oldNumBytes, std::int32_t& a_reqNumBytesInOut)"
 56632,0x1409c7220,0x140a01d70,2,void* hkLifoAllocator::allocateFromNewSlab(std::int32_t a_numBytes)
 56634,0x1409c74b0,0x140a02000,2,"void hkLifoAllocator::slowBlockFree(void* a_mem, std::int32_t a_numBytes)"
+56639,0x1409c7750,0x140a022a0,2,void hkLifoAllocator::GetMemoryStatistics(MemoryStatistics& a_usage)
 56641,0x1409c7770,0x140a022c0,2,"static void hkArrayUtil::_reserve(hkMemoryAllocator& a_alloc, void* a_array, std::int32_t a_capacity, std::int32_t a_sizeElem)"
 56642,0x1409c7800,0x140a02350,2,"static void hkArrayUtil::_reserveMore(hkMemoryAllocator& a_alloc, void* a_array, std::int32_t a_sizeElem)"
 56653,0x1409c7b10,0x140a02660,2,void* hkContainerTempAllocator::Allocator::BlockAlloc(std::int32_t a_numBytes)
@@ -11984,7 +12305,13 @@
 57321,0x1409da9c0,0x140a15510,2,"void hkArrayStreamWriter::CalcContentStatistics(hkStatisticsCollector* a_collector, const hkClass* a_class)"
 57513,0x1409e29c0,0x140a1d510,2,void hkDefaultMemoryTracker::addTypeDefinition(const hkMemoryTracker::TypeDefinition& a_typeDef)
 57514,0x1409e2a30,0x140a1d580,2,const hkMemoryTracker::TypeDefinition* hkDefaultMemoryTracker::findTypeDefinition(const char* a_name)
+57554,0x1409e3b40,0x140a1e690,2,void hkMemorySystem::GarbageCollectThread(hkMemoryRouter& a_router)
+57555,0x1409e3b50,0x140a1e6a0,2,void hkMemorySystem::GarbageCollectShared()
 57556,0x1409e3b60,0x140a1e6b0,2,void hkMemorySystem::garbageCollect()
+57560,0x1409e3c10,0x140a1e760,2,void hkMemorySystem::AdvanceFrame()
+57562,0x1409e3c30,0x140a1e780,2,void hkMemorySystem::DebugLockBaseAddress(const void* a_baseAddress)
+57563,0x1409e3c40,0x140a1e790,2,"void hkMemorySystem::DebugTagAddress(const void* a_baseAddress, const void* a_tag)"
+57564,0x1409e3c50,0x140a1e7a0,2,void hkMemorySystem::DebugUnlockBaseAddress(const void* a_baseAddress)
 57754,0x1409ef430,0x140a29f80,2,hkbBehaviorGraph::Ctor
 57756,0x1409efba0,0x140a2a6f0,2,const hkClass* hkbBehaviorGraph::GetClassType()
 57757,0x1409efbb0,0x140a2a700,2,void hkbBehaviorGraph::Activate(const hkbContext& a_context)
@@ -11994,6 +12321,9 @@
 57766,0x1409f0640,0x140a2b190,2,"void hkbBehaviorGraph::CalcContentStatistics(hkStatisticsCollector* a_collector, const hkClass* a_class)"
 57804,0x1409f3cd0,0x140a2e820,4,hkbBehaviorGraph::handleEventForActiveNodes
 57805,0x1409f3ef0,0x140a2ea40,4,hkbBehaviorGraph::sub_1409F3EF0
+57830,0x1409f6130,0x140a30c80,2,void hkbNode::Activate(const hkbContext& a_context)
+57831,0x1409f6140,0x140a30c90,2,void hkbNode::Deactivate(const hkbContext& a_context)
+57838,0x1409f61b0,0x140a30d00,2,"void hkbNode::handleEvent(const hkbContext& a_context, const hkbEvent a_e)"
 57847,0x1409f6240,0x140a30d90,2,"void hkbNode::Update(const hkbContext& a_context, float a_timestep)"
 57879,0x1409fb970,0x140a364c0,2,"void hkbCharacter::GetNearbyCharacters(float maxDistance, hkArray<hkbCharacter*>& characters)"
 57886,0x1409fbda0,0x140a368f0,4,hkbAnimationBindingSet hkbCharacter::GetAnimationBindingSet_1409FBDA0 (hkbCharacter * a_this)
@@ -12133,6 +12463,7 @@
 59450,0x140a52270,0x140a8d5c0,2,void hkDynamicClassNameRegistry::registerList(const hkClass* const* a_classes)
 59582,0x140a58490,0x140a92e90,2,float hkpShape::GetMaximumProjection(const hkVector4& a_direction)
 59585,0x140a586f0,0x140a930f0,2,"void hkpPhantomCallbackShape::GetAabbImpl(hkTransform* a_localToWorld, float a_tolerance, hkAabb* a_out)"
+59587,0x140a58720,0x140a93120,2,"void hkpPhantomCallbackShape::CastRayWithCollectorImpl(const hkpShapeRayCastInput& a_input, const hkpCdBody& a_cdBody, hkpRayHitCollector& a_collector)"
 59588,0x140a58730,0x140a93130,2,"void hkpPhantomCallbackShape::CalcContentStatistics(hkStatisticsCollector* a_collector, const hkClass* a_class)"
 59591,0x140a58800,0x140a93200,2,"void hkpBvShape::GetAabbImpl(hkTransform* a_localToWorld, float a_tolerance, hkAabb* a_out)"
 59592,0x140a58820,0x140a93220,2,"hkBool hkpBvShape::CastRayImpl(hkpShapeRayCastInput* a_input, hkpShapeRayCastOutput* a_output)"
@@ -12275,6 +12606,7 @@
 60022,0x140a67450,0x140aa1e50,2,"hkBool hkpMultiSphereShape::CastRayImpl(hkpShapeRayCastInput* a_input, hkpShapeRayCastOutput* a_output)"
 60023,0x140a674f0,0x140aa1ef0,2,"void hkpMultiSphereShape::CastRayWithCollectorImpl(hkpShapeRayCastInput* a_input, hkpCdBody* a_cdBody, hkpRayHitCollector* a_collector)"
 60027,0x140a67b90,0x140aa2590,2,"void hkpMultiRayShape::GetAabbImpl(hkTransform* a_localToWorld, float a_tolerance, hkAabb* a_out)"
+60029,0x140a67d20,0x140aa2720,2,"void hkpMultiRayShape::CastRayWithCollectorImpl(const hkpShapeRayCastInput& a_input, const hkpCdBody& a_cdBody, hkpRayHitCollector& a_collector)"
 60030,0x140a67d30,0x140aa2730,2,"void hkpMultiRayShape::CalcContentStatistics(hkStatisticsCollector* a_collector, const hkClass* a_class)"
 60033,0x140a67e60,0x140aa2860,2,"void hkpTransformShape::GetAabbImpl(hkTransform* a_localToWorld, float a_tolerance, hkAabb* a_out)"
 60034,0x140a67ec0,0x140aa28c0,2,"hkBool hkpTransformShape::CastRayImpl(hkpShapeRayCastInput* a_input, hkpShapeRayCastOutput* a_output)"
@@ -12290,6 +12622,7 @@
 60059,0x140a6a960,0x140aa5360,2,"std::int32_t hkpStorageSampledHeightFieldShape::CalcSizeForSpu(const CalcSizeForSpuInput& a_input, std::int32_t a_spuBufferSizeLeft)"
 60061,0x140a6a9b0,0x140aa53b0,2,"void hkpShapeCollection::GetAabbImpl(const hkTransform& a_localToWorld, float a_tolerance, hkAabb& a_out)"
 60065,0x140a6b000,0x140aa5a00,2,"void hkpShapeCollection::CalcContentStatistics(hkStatisticsCollector* a_collector, const hkClass* a_class)"
+60067,0x140a6b040,0x140aa5a40,2,void hkpShapeCollection::InitWeldingInfo(hkpWeldingUtility::WeldingType a_weldingType)
 60071,0x140a6b140,0x140aa5b40,2,"void hkpTriSampledHeightFieldBvTreeShape::QueryAabb(const hkAabb& a_aabb, hkArray<hkpShapeKey>& a_hits)"
 60072,0x140a6b540,0x140aa5f40,2,"std::uint32_t hkpTriSampledHeightFieldBvTreeShape::QueryAabbImpl(const hkAabb& a_aabb, hkpShapeKey* a_hits, std::int32_t a_maxNumKeys)"
 60073,0x140a6b860,0x140aa6260,2,"void hkpTriSampledHeightFieldBvTreeShape::GetAabbImpl(hkTransform* a_localToWorld, float a_tolerance, hkAabb* a_out)"
@@ -12309,6 +12642,7 @@
 60100,0x140a6c980,0x140aa7380,3,void hkpEntity::IsActive(bool* a_out)
 60106,0x140a6cc10,0x140aa7610,2,"void hkpEntity::CalcContentStatistics(hkStatisticsCollector* a_collector, const hkClass* a_class)"
 60111,0x140a6d200,0x140aa7c00,2,void hkpEntity::DeallocateInternalArrays()
+60131,0x140a6dfb0,0x140aa89b0,2,hkMotionState* hkpEntity::GetMotionState()
 60157,0x140a6ecd0,0x140aa96d0,2,hkWorldOperation::Result hkpRigidBody::SetShape(const hkpShape* a_shape)
 60158,0x140a6ee50,0x140aa9850,2,hkWorldOperation::Result hkpRigidBody::UpdateShape(hkpShapeModifier* a_shapeModifier)
 60159,0x140a6ef50,0x140aa9950,2,hkpRigidBody* hkpRigidBody::Clone()
@@ -12342,6 +12676,15 @@
 60212,0x140a71600,0x140aac000,2,std::int32_t hkpPrismaticConstraintData::GetType()
 60213,0x140a71610,0x140aac010,2,void hkpPrismaticConstraintData::GetConstraintInfo(hkpConstraintData::ConstraintInfo& a_infoOut)
 60214,0x140a71630,0x140aac030,2,"void hkpPrismaticConstraintData::GetRuntimeInfo(bool a_wantRuntime, hkpConstraintData::RuntimeInfo& a_infoOut)"
+60217,0x140a71760,0x140aac160,2,"void hkpConstraintData::BuildJacobian(const hkpConstraintQueryIn& a_in, hkpConstraintQueryOut& a_out)"
+60218,0x140a71770,0x140aac170,2,void hkpConstraintData::BuildJacobianCallback(const hkpConstraintQueryIn& a_in)
+60219,0x140a71780,0x140aac180,2,hkResult hkpConstraintData::GetInertiaStabilizationFactor(hkReal& a_inertiaStabilizationFactorOut)
+60220,0x140a71790,0x140aac190,2,hkReal hkpConstraintData::GetMaxLinearImpulse()
+60221,0x140a717a0,0x140aac1a0,2,std::uint8_t hkpConstraintData::GetNotifiedBodyIndex()
+60223,0x140a717c0,0x140aac1c0,2,void hkpConstraintData::SetBodyToNotify(std::int32_t a_bodyIdx)
+60224,0x140a717d0,0x140aac1d0,2,hkResult hkpConstraintData::SetInertiaStabilizationFactor(const hkReal a_inertiaStabilizationFactorIn)
+60225,0x140a717e0,0x140aac1e0,2,void hkpConstraintData::SetMaxLinearImpulse(float a_maxImpulse)
+60226,0x140a717f0,0x140aac1f0,2,void hkpConstraintData::SetSolvingMethod(hkpConstraintData::SolvingMethod a_method)
 60493,0x140a76450,0x140ab0e50,4,void hkpWorld::RemoveEntity(hkpEntity* a_entity)
 60502,0x140a77780,0x140ab2180,3,hkpPhantom* hkpWorld::AddPhantom(hkpPhantom* a_phantom)
 60504,0x140a77d80,0x140ab2780,3,void hkpWorld::RemovePhantom(hkpPhantom* a_phantom)
@@ -12352,10 +12695,21 @@
 60558,0x140a7c0a0,0x140ab6aa0,4,"void hkpWorld::getPenetrations(const hkpCollidable* a_collidable, const hkpCollisionInput& a_input, void* a_collector)"
 60585,0x140a7db20,0x140AB8520,2,void hkpWorld::internal_executePendingOperations()
 60586,0x140a7db40,0x140AB8540,2,void hkpWorld::internal_executePendingBodyOperations()
+60609,0x140a7e8c0,0x140ab92c0,2,"std::uint16_t hkpNullContactMgr::AddContactPointImpl(const hkpCdBody& a_bodyA, const hkpCdBody& a_bodyB, const hkpProcessCollisionInput& a_input, hkpProcessCollisionOutput& a_output, const hkpGskCache* a_contactCache, hkContactPoint& a_cp)"
+60610,0x140a7e8d0,0x140ab92d0,2,"ToiAccept hkpNullContactMgr::AddToiImpl(const hkpCdBody& a_bodyA, const hkpCdBody& a_bodyB, const hkpProcessCollisionInput& a_input, hkpProcessCollisionOutput& a_output, hkTime a_toi, hkContactPoint& a_cp, const hkpGskCache* a_gskCache, hkReal& a_projectedVelocity, hkpContactPointProperties& a_propertiesOut)"
 60611,0x140a7e8e0,0x140ab92e0,2,"void hkpContactMgrFactory::CalcContentStatistics(hkStatisticsCollector* a_collector, const hkClass* a_class)"
+60612,0x140a7e910,0x140ab9310,2,void hkpContactMgr::Cleanup()
+60613,0x140a7e920,0x140ab9320,2,void hkpNullContactMgr::Cleanup()
+60624,0x140a7f0a0,0x140ab9aa0,2,"void hkpNullContactMgr::ProcessContactImpl(const hkpCollidable& a_bodyA, const hkpCollidable& a_bodyB, const hkpProcessCollisionInput& a_input, hkpProcessCollisionData& a_collisionData)"
+60625,0x140a7f0b0,0x140ab9ab0,2,"void hkpNullContactMgr::RemoveContactPointImpl(std::uint16_t a_cpId, hkpConstraintOwner& a_constraintOwner)"
+60626,0x140a7f0c0,0x140ab9ac0,2,"void hkpNullContactMgr::RemoveToiImpl(hkpConstraintOwner& a_constraintOwner, hkpContactPointProperties& a_properties)"
+60627,0x140a7f0d0,0x140ab9ad0,2,hkResult hkpNullContactMgr::ReserveContactPointsImpl(std::int32_t a_numPoints)
 60628,0x140a7f0e0,0x140ab9ae0,4,"void hkpWorldObject::SetProperty(std::uint32_t a_key, hkpPropertyValue a_value)"
 60631,0x140a7f3b0,0x140ab9db0,2,"void hkpWorldObject::CalcContentStatistics(hkStatisticsCollector* a_collector, const hkClass* a_class)"
+60632,0x140a7f4e0,0x140ab9ee0,2,hkWorldOperation::Result hkpWorldObject::SetShape(const hkpShape* a_shape)
+60633,0x140a7f4f0,0x140ab9ef0,2,hkWorldOperation::Result hkpWorldObject::UpdateShape(hkpShapeModifier* a_shapeModifier)
 60675,0x140a83c70,0x140ABE670,4,"RE::hkpShapePhantom* createSimpleShapePhantom(RE::hkpShapePhantom*, RE::hkpShape*, const RE::hkTransform&, uint32_t)"
+60677,0x140a83d50,0x140abe750,2,hkpPhantomType hkpSimpleShapePhantom::GetType()
 60678,0x140a83d60,0x140abe760,2,"void hkpSimpleShapePhantom::SetPositionAndLinearCast(const hkVector4& a_position, const hkpLinearCastInput& a_input, hkpCdPointCollector& a_castCollector, hkpCdPointCollector* a_startCollector)"
 60679,0x140a83f70,0x140abe970,2,"void hkpSimpleShapePhantom::SetTransformAndLinearCast(const hkTransform& a_transform, const hkpLinearCastInput& a_input, hkpCdPointCollector& a_castCollector, hkpCdPointCollector* a_startCollector)"
 60680,0x140a83fa0,0x140abe9a0,2,"void hkpSimpleShapePhantom::GetClosestPoints(hkpCdPointCollector& a_collector, const hkpCollisionInput* a_input)"
@@ -12368,6 +12722,7 @@
 60687,0x140a84510,0x140abef10,2,"void hkpSimpleShapePhantom::CalcContentStatistics(hkStatisticsCollector* a_collector, const hkClass* a_class)"
 60688,0x140a845a0,0x140abefa0,2,void hkpSimpleShapePhantom::DeallocateInternalArrays()
 60693,0x140a84e50,0x140abf850,2,void hkpHingeConstraintData::SetMaxLinearImpulse(float a_maxImpulse)
+60694,0x140a84e60,0x140abf860,2,hkReal hkpHingeConstraintData::GetMaxLinearImpulse()
 60695,0x140a84e70,0x140abf870,2,void hkpHingeConstraintData::SetBodyToNotify(std::int32_t a_bodyIdx)
 60696,0x140a84e90,0x140abf890,2,std::uint8_t hkpHingeConstraintData::GetNotifiedBodyIndex()
 60697,0x140a84ea0,0x140abf8a0,2,hkBool hkpHingeConstraintData::IsValid()
@@ -12378,6 +12733,7 @@
 60702,0x140a84fd0,0x140abf9d0,2,void hkpHingeConstraintData::GetConstraintInfo(hkpConstraintData::ConstraintInfo& a_infoOut)
 60703,0x140a84ff0,0x140abf9f0,2,"void hkpHingeConstraintData::GetRuntimeInfo(bool a_wantRuntime, hkpConstraintData::RuntimeInfo& a_infoOut)"
 60731,0x140a86570,0x140ac0f70,2,void hkpLimitedHingeConstraintData::SetMaxLinearImpulse(float a_maxImpulse)
+60732,0x140a86580,0x140ac0f80,2,hkReal hkpLimitedHingeConstraintData::GetMaxLinearImpulse()
 60733,0x140a86590,0x140ac0f90,2,void hkpLimitedHingeConstraintData::SetBodyToNotify(std::int32_t a_bodyIdx)
 60734,0x140a865b0,0x140ac0fb0,2,std::uint8_t hkpLimitedHingeConstraintData::GetNotifiedBodyIndex()
 60735,0x140a865c0,0x140ac0fc0,2,hkBool hkpLimitedHingeConstraintData::IsValid()
@@ -12387,6 +12743,7 @@
 60742,0x140a86790,0x140ac1190,2,void hkpLimitedHingeConstraintData::GetConstraintInfo(hkpConstraintData::ConstraintInfo& a_infoOut)
 60743,0x140a867b0,0x140ac11b0,2,"void hkpLimitedHingeConstraintData::GetRuntimeInfo(bool a_wantRuntime, hkpConstraintData::RuntimeInfo& a_infoOut)"
 60752,0x140a870c0,0x140ac1ac0,2,void hkpRagdollConstraintData::SetMaxLinearImpulse(float a_maxImpulse)
+60753,0x140a870d0,0x140ac1ad0,2,hkReal hkpRagdollConstraintData::GetMaxLinearImpulse()
 60754,0x140a870e0,0x140ac1ae0,2,void hkpRagdollConstraintData::SetBodyToNotify(std::int32_t a_bodyIdx)
 60755,0x140a87100,0x140ac1b00,2,std::uint8_t hkpRagdollConstraintData::GetNotifiedBodyIndex()
 60756,0x140a87110,0x140ac1b10,2,void hkpRagdollConstraintData::SetSolvingMethod(hkpConstraintData::SolvingMethod a_method)
@@ -12396,6 +12753,7 @@
 60771,0x140a873d0,0x140ac1dd0,2,void hkpRagdollConstraintData::GetConstraintInfo(hkpConstraintData::ConstraintInfo& a_infoOut)
 60772,0x140a873f0,0x140ac1df0,2,"void hkpRagdollConstraintData::GetRuntimeInfo(bool a_wantRuntime, hkpConstraintData::RuntimeInfo& a_infoOut)"
 60778,0x140a87660,0x140ac2060,2,void hkpBallAndSocketConstraintData::SetMaxLinearImpulse(float a_maxImpulse)
+60779,0x140a87670,0x140ac2070,2,hkReal hkpBallAndSocketConstraintData::GetMaxLinearImpulse()
 60780,0x140a87680,0x140ac2080,2,void hkpBallAndSocketConstraintData::SetBodyToNotify(std::int32_t a_bodyIdx)
 60781,0x140a876a0,0x140ac20a0,2,std::uint8_t hkpBallAndSocketConstraintData::GetNotifiedBodyIndex()
 60783,0x140a876d0,0x140ac20d0,2,std::int32_t hkpBallAndSocketConstraintData::GetType()
@@ -12410,6 +12768,7 @@
 60793,0x140a87a30,0x140ac2430,2,void hkpShapePhantom::CalcAabb(hkAabb& a_aabb)
 60794,0x140a87a70,0x140ac2470,2,hkMotionState* hkpShapePhantom::GetMotionState()
 60795,0x140a87a80,0x140ac2480,2,void hkpShapePhantom::DeallocateInternalArrays()
+60798,0x140a87bd0,0x140ac25d0,2,hkpPhantomType hkpCachingShapePhantom::GetType()
 60799,0x140a87be0,0x140ac25e0,2,"void hkpCachingShapePhantom::SetPositionAndLinearCast(const hkVector4& a_position, const hkpLinearCastInput& a_input, hkpCdPointCollector& a_castCollector, hkpCdPointCollector* a_startCollector)"
 60800,0x140a87dd0,0x140ac27d0,2,"void hkpCachingShapePhantom::SetTransformAndLinearCast(const hkTransform& a_transform, const hkpLinearCastInput& a_input, hkpCdPointCollector& a_castCollector, hkpCdPointCollector* a_startCollector)"
 60801,0x140a87e00,0x140ac2800,2,hkpPhantom* hkpCachingShapePhantom::Clone()
@@ -12422,13 +12781,30 @@
 60808,0x140a885e0,0x140ac2fe0,2,hkBool hkpCachingShapePhantom::IsOverlappingCollidableAdded(const hkpCollidable* a_collidable)
 60809,0x140a88630,0x140ac3030,2,void hkpCachingShapePhantom::UpdateShapeCollectionFilter()
 60810,0x140a88710,0x140ac3110,2,void hkpCachingShapePhantom::DeallocateInternalArrays()
+60813,0x140a88950,0x140ac3350,2,"void hkpConstraintOwner::AddCallbackRequest(hkpConstraintInstance* a_constraint, std::int32_t a_request)"
+60814,0x140a88960,0x140ac3360,2,void hkpConstraintOwner::AddConstraintToCriticalLockedIsland(hkpConstraintInstance* a_constraint)
+60815,0x140a88970,0x140ac3370,2,void hkpConstraintOwner::CheckAccessRW()
+60816,0x140a88980,0x140ac3380,2,void hkpConstraintOwner::RemoveConstraintFromCriticalLockedIsland(hkpConstraintInstance* a_constraint)
+60819,0x140a88a20,0x140ac3420,2,void hkpKeyframedRigidMotion::SetMass(float a_mass)
+60820,0x140a88a30,0x140ac3430,2,void hkpKeyframedRigidMotion::SetMassInv(float a_massInv)
 60821,0x140a88a40,0x140ac3440,2,void hkpKeyframedRigidMotion::GetInertiaLocal(hkMatrix3& a_inertiaOut)
+60822,0x140a88a60,0x140ac3460,2,void hkpKeyframedRigidMotion::SetInertiaLocal(const hkMatrix3& a_inertia)
 60823,0x140a88a70,0x140ac3470,2,void hkpKeyframedRigidMotion::GetInertiaWorld(hkMatrix3& a_inertiaOut)
+60824,0x140a88a90,0x140ac3490,2,void hkpKeyframedRigidMotion::SetInertiaInvLocal(const hkMatrix3& a_inertiaInv)
 60825,0x140a88aa0,0x140ac34a0,2,void hkpKeyframedRigidMotion::GetInertiaInvLocal(hkMatrix3& a_inertiaInvOut)
 60826,0x140a88ac0,0x140ac34c0,2,void hkpKeyframedRigidMotion::GetInertiaInvWorld(hkMatrix3& a_inertiaInvOut)
 60827,0x140a88ae0,0x140ac34e0,2,"void hkpKeyframedRigidMotion::GetProjectedPointVelocity(const hkVector4& a_point, const hkVector4& a_normal, float& a_velOut, float& a_invVirtMassOut)"
+60828,0x140a88b70,0x140ac3570,2,void hkpKeyframedRigidMotion::ApplyLinearImpulse(const hkVector4& a_impulse)
+60829,0x140a88b80,0x140ac3580,2,"void hkpKeyframedRigidMotion::ApplyPointImpulse(const hkVector4& a_impulse, const hkVector4& a_point)"
+60830,0x140a88b90,0x140ac3590,2,void hkpKeyframedRigidMotion::ApplyAngularImpulse(const hkVector4& a_impulse)
+60831,0x140a88ba0,0x140ac35a0,2,"void hkpKeyframedRigidMotion::ApplyForce(const float a_deltaTime, const hkVector4& a_force, const hkVector4& a_point)"
+60833,0x140a88bc0,0x140ac35c0,2,"void hkpKeyframedRigidMotion::ApplyTorque(const float a_deltaTime, const hkVector4& a_torque)"
+60834,0x140a88bd0,0x140ac35d0,2,"void hkpKeyframedRigidMotion::SetStepPosition(float a_position, float a_timestep)"
 60835,0x140a88be0,0x140ac35e0,2,void hkpKeyframedRigidMotion::SetStoredMotion(hkpMaxSizeMotion* a_savedMotion)
 60851,0x140a8a970,0x140ac5370,2,void hkpFixedRigidMotion::GetPositionAndVelocities(hkpMotion* a_motionOut)
+60852,0x140a8a9b0,0x140ac53b0,2,"void hkpFixedRigidMotion::SetStepPosition(float a_position, float a_timestep)"
+60853,0x140a8a9c0,0x140ac53c0,2,void hkpFixedRigidMotion::SetLinearVelocity(const hkVector4& a_newVel)
+60854,0x140a8a9d0,0x140ac53d0,2,void hkpFixedRigidMotion::SetAngularVelocity(const hkVector4& a_newVel)
 60855,0x140a8a9e0,0x140ac53e0,2,void hkpSphereMotion::GetInertiaLocal(hkMatrix3& a_inertiaOut)
 60856,0x140a8aa20,0x140ac5420,2,void hkpSphereMotion::GetInertiaWorld(hkMatrix3& a_inertiaOut)
 60857,0x140a8aa60,0x140ac5460,2,void hkpSphereMotion::SetInertiaLocal(const hkMatrix3& a_inertia)
@@ -12510,6 +12886,8 @@
 61127,0x140a99800,0x140ad4200,2,"void hkpStiffSpringChainData::BuildJacobian(hkpConstraintQueryIn* a_in, hkpConstraintQueryOut* a_out)"
 61128,0x140a99c60,0x140ad4660,2,void hkpStiffSpringChainData::GetConstraintInfo(hkpConstraintData::ConstraintInfo& a_infoOut)
 61129,0x140a99ca0,0x140ad46a0,2,"void hkpStiffSpringChainData::GetRuntimeInfo(bool a_wantRuntime, hkpConstraintData::RuntimeInfo& a_infoOut)"
+61138,0x140a9a040,0x140ad4a40,2,void hkpConstraintChainInstanceAction::ApplyAction(const hkStepInfo& a_stepInfo)
+61139,0x140a9a050,0x140ad4a50,2,"hkpAction* hkpConstraintChainInstanceAction::Clone(const hkArray<hkpEntity*>& a_newEntities, const hkArray<hkpPhantom*>& a_newPhantoms)"
 61140,0x140a9a060,0x140ad4a60,2,void hkpConstraintChainInstanceAction::EntityRemovedCallback(hkpEntity* a_entity)
 61141,0x140a9a080,0x140ad4a80,2,void hkpConstraintChainInstanceAction::GetEntities(hkArray<hkpEntity*>& a_entitiesOut)
 61151,0x140a9b020,0x140ad5a20,2,"void hkpGenericConstraintData::BuildJacobian(hkpConstraintQueryIn* a_in, hkpConstraintQueryOut* a_out)"
@@ -12549,7 +12927,15 @@
 61265,0x140a9f790,0x140ada190,2,"void hkpSimpleConstraintContactMgr::ToiCollisionResponseEndCallback(const hkContactPoint& a_cp, hkReal a_impulseApplied, hkpSimpleConstraintInfoInitInput& a_inA, hkpBodyVelocity& a_velA, hkpSimpleConstraintInfoInitInput& a_inB, hkpBodyVelocity& a_velB)"
 61266,0x140a9f7b0,0x140ada1b0,2,"void hkpSimpleConstraintContactMgr::CalcContentStatistics(hkStatisticsCollector* a_collector, const hkClass* a_class)"
 61274,0x140a9fba0,0x140ada5a0,2,void hkpSimpleConstraintContactMgr::Cleanup()
+61275,0x140a9fbc0,0x140ada5c0,2,"void hkpDynamicsContactMgr::ConfirmToi(hkpToiEvent& a_event, hkReal a_rotateNormal, hkArray<hkpEntity*>& a_outToBeActivated)"
+61277,0x140a9fbe0,0x140ada5e0,2,void hkpDynamicsContactMgr::GetAllContactPointIds(hkArray<std::uint16_t>& a_contactPointIds)
 61279,0x140a9fc70,0x140ada670,2,const hkClass* hkpSimpleConstraintContactMgr::GetClassType()
+61280,0x140a9fc80,0x140ada680,2,hkpConstraintInstance* hkpDynamicsContactMgr::GetConstraintInstance()
+61281,0x140a9fc90,0x140ada690,2,hkContactPoint* hkpDynamicsContactMgr::GetContactPoint(std::uint16_t a_id)
+61282,0x140a9fca0,0x140ada6a0,2,hkpContactPointProperties* hkpDynamicsContactMgr::GetContactPointProperties(std::uint16_t a_id)
+61283,0x140a9fcb0,0x140ada6b0,2,Type hkpSimpleConstraintContactMgr::GetType()
+61286,0x140a9ff00,0x140ada900,2,"void hkpDynamicsContactMgr::ToiCollisionResponseBeginCallback(const hkContactPoint& a_cp, hkpSimpleConstraintInfoInitInput& a_inA, hkpBodyVelocity& a_velA, hkpSimpleConstraintInfoInitInput& a_inB, hkpBodyVelocity& a_velB)"
+61287,0x140a9ff10,0x140ada910,2,"void hkpDynamicsContactMgr::ToiCollisionResponseEndCallback(const hkContactPoint& a_cp, hkReal a_impulseApplied, hkpSimpleConstraintInfoInitInput& a_inA, hkpBodyVelocity& a_velA, hkpSimpleConstraintInfoInitInput& a_inB, hkpBodyVelocity& a_velB)"
 61290,0x140a9ff90,0x140ada990,2,"std::uint16_t hkpReportContactMgr::AddContactPointImpl(const hkpCdBody& a_bodyA, const hkpCdBody& a_bodyB, const hkpProcessCollisionInput& a_input, hkpProcessCollisionOutput& a_output, const hkpGskCache* a_contactCache, hkContactPoint& a_cp)"
 61291,0x140aa0140,0x140adab40,2,"void hkpReportContactMgr::RemoveContactPointImpl(std::uint16_t a_cpId, hkpConstraintOwner& a_constraintOwner)"
 61292,0x140aa01c0,0x140adabc0,2,"void hkpReportContactMgr::ProcessContactImpl(const hkpCollidable& a_bodyA, const hkpCollidable& a_bodyB, const hkpProcessCollisionInput& a_input, hkpProcessCollisionData& a_collisionData)"
@@ -12557,12 +12943,15 @@
 61294,0x140aa0400,0x140adae00,2,"void hkpReportContactMgr::RemoveToiImpl(hkpConstraintOwner& a_constraintOwner, hkpContactPointProperties& a_properties)"
 61295,0x140aa0490,0x140adae90,2,"void hkpReportContactMgr::ConfirmToi(hkpToiEvent& a_event, hkReal a_rotateNormal, hkArray<hkpEntity*>& a_outToBeActivated)"
 61300,0x140aa0710,0x140adb110,2,void hkpReportContactMgr::Cleanup()
+61301,0x140aa0730,0x140adb130,2,Type hkpReportContactMgr::GetType()
+61302,0x140aa0740,0x140adb140,2,hkResult hkpReportContactMgr::ReserveContactPointsImpl(std::int32_t a_numPoints)
 61313,0x140aa13d0,0x140ADBDD0,2,void hkpWorldOperationQueue::executeAllPending()
 61315,0x140aa1d30,0x140ADC730,2,void hkpWorldOperationQueue::executeAllPendingBodyOperations()
 61336,0x140aa2c90,0x140add690,2,void hkpEndOfStepCallbackUtil::PostSimulationCallback(hkpWorld* a_world)
 61388,0x140aa8740,0x140ae3140,3,"void hkpResponseModifier::SetInvMassScalingForContact(hkpDynamicsContactMgr* a_mgr, hkpRigidBody* a_body, hkpConstraintOwner& a_constraintOwner, const hkVector4& a_factor)"
 61469,0x140aae8e0,0x140ae92e0,2,void hkpSimpleContactConstraintData::GetConstraintInfo(hkpConstraintData::ConstraintInfo& a_infoOut)
 61470,0x140aae900,0x140ae9300,2,"void hkpSimpleContactConstraintData::GetRuntimeInfo(bool a_wantRuntime, hkpConstraintData::RuntimeInfo& a_infoOut)"
+61471,0x140aae910,0x140ae9310,2,hkpSolverResults* hkpSimpleContactConstraintData::GetSolverResults(hkpConstraintRuntime* a_runtime)
 61472,0x140aae920,0x140ae9320,2,std::int32_t hkpSimpleContactConstraintData::GetType()
 61473,0x140aae930,0x140ae9330,2,"void hkpSimpleContactConstraintData::CollisionResponseBeginCallback(const hkContactPoint& a_cp, hkpSimpleConstraintInfoInitInput& a_inA, hkpBodyVelocity& a_velA, hkpSimpleConstraintInfoInitInput& a_inB, hkpBodyVelocity& a_velB)"
 61474,0x140aaea40,0x140ae9440,2,"void hkpSimpleContactConstraintData::CollisionResponseEndCallback(const hkContactPoint& a_cp, hkReal a_impulseApplied, hkpSimpleConstraintInfoInitInput& a_inA, hkpBodyVelocity& a_velA, hkpSimpleConstraintInfoInitInput& a_inB, hkpBodyVelocity& a_velB)"
@@ -12657,6 +13046,7 @@
 62304,0x140ad9d20,0x140b14150,2,void BSInterpValueModifier::Activate(const hkbContext& a_context)
 62305,0x140ad9d30,0x140b14160,2,"void BSInterpValueModifier::Update(hkbContext* a_context, float a_timestep)"
 62310,0x140ad9f60,0x140b14390,2,void BSIsActiveModifier::Activate(const hkbContext& a_context)
+62311,0x140ad9fa0,0x140b143d0,2,"void BSIsActiveModifier::Update(const hkbContext& a_context, float a_timestep)"
 62312,0x140ad9fb0,0x140b143e0,2,void BSIsActiveModifier::Deactivate(const hkbContext& a_context)
 62319,0x140ada260,0x140b14690,2,const hkClass* BSLimbIKModifier::GetClassType()
 62320,0x140ada270,0x140b146a0,2,void BSLimbIKModifier::Activate(const hkbContext& a_context)
@@ -12741,6 +13131,7 @@
 63371,0x140b1cca0,0x140b57a80,2,"void hkaAnimation::GetDataChunks(std::uint32_t a_frame, float a_delta, DataChunk* a_dataChunks, std::int32_t a_numDataChunks)"
 63372,0x140b1cd20,0x140b57b00,2,"void hkaAnimation::GetExtractedMotionDeltaReferenceFrame(float a_time, float a_nextTime, std::int32_t a_loops, hkQsTransform& a_deltaMotionOut, float a_cropStartAmount, float a_cropEndAmount)"
 63373,0x140b1cd30,0x140b57b10,2,"void hkaAnimation::GetExtractedMotionReferenceFrame(float a_time, hkQsTransform& a_motionOut)"
+63374,0x140b1cd40,0x140b57b20,2,std::int32_t hkaAnimation::GetMaxSizeOfCombinedDataChunks()
 63375,0x140b1cd50,0x140b57b30,2,"std::int32_t hkaAnimation::GetNumDataChunks(std::uint32_t a_frame, float a_delta)"
 63389,0x140b1cee0,0x140b57cc0,2,"void hkaAnimation::SamplePartialTracks(float a_time, std::uint32_t a_maxNumTransformTracks, hkQsTransform* a_transformTracksOut, std::uint32_t a_maxNumFloatTracks, float* a_floatTracksOut, hkaChunkCache* a_cache)"
 63421,0x140b1e730,0x140b59510,2,"void hkaAnimationControl::SampleTracks(hkQsTransform* a_transformTracksOut, float* a_floatTracksOut, hkaChunkCache* a_cache)"
@@ -12786,8 +13177,10 @@
 63704,0x140b328f0,0x140b6d6d0,2,"void hkp3AxisSweep::ShiftAllObjects(const hkVector4& a_shiftDistance, hkVector4& a_effectiveShiftDistanceOut, hkArray<hkpBroadPhaseHandlePair>& a_newCollisionPairs)"
 63705,0x140b33670,0x140b6e450,2,"void hkp3AxisSweep::ShiftBroadPhase(const hkVector4& a_shiftDistance, hkVector4& a_effectiveShiftDistanceOut, hkArray<hkpBroadPhaseHandlePair>& a_newCollisionPairs)"
 63706,0x140b33750,0x140b6e530,2,"void hkp3AxisSweep::Set32BitOffsetAndScale(const hkVector4& a_offsetLow, const hkVector4& a_offsetHigh, const hkVector4& a_scale)"
+63725,0x140b35500,0x140b702e0,2,void hkp3AxisSweep::CheckDeterminism()
 63733,0x140b35a90,0x140b70870,2,const hkpBroadPhase* hkpBroadPhase::GetCapabilityDelegate(Capabilities a_cap)
 63734,0x140b35aa0,0x140b70880,2,"void hkp3AxisSweep::GetOffsetLowHigh32bit(hkVector4& a_offsetLow32bit, hkVector4& a_offsetHigh32bit)"
+63763,0x140b425b0,0x140b7d390,2,void hkpBroadPhase::CheckDeterminism()
 63764,0x140b425c0,0x140b7d3a0,3,hkpContinuousSimulation::sub_140B425C0
 63916,0x140b518b0,0x140b8c700,2,void hkpBinaryAction::GetEntities(hkArray<hkpEntity*>& a_entitiesOut)
 63917,0x140b51940,0x140b8c790,2,void hkpBinaryAction::EntityRemovedCallback(hkpEntity* a_entity)
@@ -12816,9 +13209,11 @@
 64152,0x140b64700,0x140b9f570,2,void hkpEaseConstraintsAction::ApplyAction(const hkStepInfo& a_stepInfo)
 64153,0x140b647f0,0x140b9f660,2,"hkpAction* hkpEaseConstraintsAction::Clone(const hkArray<hkpEntity*>& a_newEntities, const hkArray<hkpPhantom*>& a_newPhantoms)"
 64172,0x140b65b20,0x140ba0990,2,void hkpEasePenetrationAction::ApplyAction(const hkStepInfo& a_stepInfo)
+64173,0x140b65d20,0x140ba0b90,2,"hkpAction* hkpEasePenetrationAction::Clone(const hkArray<hkpEntity*>& a_newEntities, const hkArray<hkpPhantom*>& a_newPhantoms)"
 64198,0x140b66930,0x140ba17a0,4,"bool BShkbUtils::VisitActiveClips(void* a_args, hkbCharacter* a_character, void* a_functor)"
 64204,0x140b66de0,0x140ba1c50,4,"bool BShkbUtils::VisitGeneratorRecursive(void* a_args, void* a_functor, hkbGenerator* a_generator)"
 64210,0x140b68630,0x140ba34a0,2,const hkClass* BSiStateTaggingUtils::BSiStateTaggingStateListener::GetClassType()
+64413,0x140b6d320,0x140ba8190,2,void hkaAnimation::ClearAllCacheKeys(hkaChunkCache* a_cache)
 64414,0x140b6d330,0x140ba81a0,2,"std::uint32_t hkaAnimation::GetNumAnnotations(float a_startTime, float a_deltaTime)"
 64415,0x140b6d450,0x140ba82c0,2,"std::uint32_t hkaAnimation::GetAnnotations(float a_startTime, float a_deltaTime, TrackAnnotation* a_annotationsOut, std::uint32_t a_maxAnnotations)"
 64419,0x140b6dad0,0x140ba8940,2,"void hkaInterleavedUncompressedAnimation::SampleTracks(float a_time, hkQsTransform* a_transformTracksOut, float* a_floatTracksOut, hkaChunkCache* a_cache)"
@@ -12831,12 +13226,15 @@
 64427,0x140b6e530,0x140ba93a0,2,std::int32_t hkaInterleavedUncompressedAnimation::GetMaxSizeOfCombinedDataChunks()
 64431,0x140b6eae0,0x140ba9950,2,"void hkaQuantizedAnimation::SampleTracks(float a_time, hkQsTransform* a_transformTracksOut, float* a_floatTracksOut, hkaChunkCache* a_cache)"
 64432,0x140b6ef50,0x140ba9dc0,2,"void hkaQuantizedAnimation::SamplePartialTracks(float a_time, std::uint32_t a_maxNumTransformTracks, hkQsTransform* a_transformTracksOut, std::uint32_t a_maxNumFloatTracks, float* a_floatTracksOut, hkaChunkCache* a_cache)"
+64433,0x140b6f430,0x140baa2a0,2,"void hkaQuantizedAnimation::SampleIndividualTransformTracks(float a_time, const std::uint16_t* a_tracks, std::uint32_t a_numTracks, hkQsTransform* a_transformOut)"
+64434,0x140b6f440,0x140baa2b0,2,"void hkaQuantizedAnimation::SampleIndividualFloatTracks(float a_time, const std::uint16_t* a_tracks, std::uint32_t a_numTracks, float* a_out)"
 64435,0x140b6f450,0x140baa2c0,2,std::int32_t hkaQuantizedAnimation::GetNumOriginalFrames()
 64448,0x140b70360,0x140bab1d0,2,"void hkaSplineCompressedAnimation::SampleTracks(float a_time, hkQsTransform* a_transformTracksOut, float* a_floatTracksOut, hkaChunkCache* a_cache)"
 64449,0x140b703a0,0x140bab210,2,"void hkaSplineCompressedAnimation::SamplePartialTracks(float a_time, std::uint32_t a_maxNumTransformTracks, hkQsTransform* a_transformTracksOut, std::uint32_t a_maxNumFloatTracks, float* a_floatTracksOut, hkaChunkCache* a_cache)"
 64450,0x140b706b0,0x140bab520,2,"void hkaSplineCompressedAnimation::SampleIndividualTransformTracks(float a_time, const std::uint16_t* a_tracks, std::uint32_t a_numTracks, hkQsTransform* a_transformOut)"
 64451,0x140b70940,0x140bab7b0,2,"void hkaSplineCompressedAnimation::SampleIndividualFloatTracks(float a_time, const std::uint16_t* a_tracks, std::uint32_t a_numTracks, float* a_out)"
 64452,0x140b70b40,0x140bab9b0,2,std::int32_t hkaSplineCompressedAnimation::GetNumOriginalFrames()
+64453,0x140b70b50,0x140bab9c0,2,"std::int32_t hkaSplineCompressedAnimation::GetNumDataChunks(std::uint32_t a_frame, float a_delta)"
 64454,0x140b70b60,0x140bab9d0,2,"void hkaSplineCompressedAnimation::GetDataChunks(std::uint32_t a_frame, float a_delta, DataChunk* a_dataChunks, std::int32_t a_numDataChunks)"
 64455,0x140b70bf0,0x140baba60,2,std::int32_t hkaSplineCompressedAnimation::GetMaxSizeOfCombinedDataChunks()
 64512,0x140b74c40,0x140bafab0,2,"void hkaDefaultAnimatedReferenceFrame::GetReferenceFrame(float a_time, hkQsTransform& a_motionOut)"
@@ -12923,12 +13321,17 @@
 66606,0x140bf9060,0x140c33f00,2,void BSSoundCategoryHandle::SetFrequency(float a_frequency)
 66607,0x140bf90c0,0x140c33f60,2,bool BSAudio::Init(REX::W32::HWND* a_wnd)
 66608,0x140bf90d0,0x140c33f70,2,void BSAudio::Shutdown()
+66609,0x140bf9100,0x140c33fa0,2,"void BSAudio::ApplyReverbType(const BSIReverbType* a_reverbType, std::uint32_t a_tickLength)"
 66612,0x140bf9170,0x140c34010,2,std::uint32_t BSAudio::CreateMonitor()
 66613,0x140bf9180,0x140c34020,2,BSAudioMonitor::Receiver BSAudio::GetReceiver(std::uint32_t a_monitor)
+66614,0x140bf9190,0x140c34030,2,void BSAudio::PostGameSoundUpdates()
+66615,0x140bf91a0,0x140c34040,2,void BSAudio::ReleaseMonitor(std::uint32_t a_monitor)
 66632,0x140bf98e0,0x140c34780,2,bool BSGameSound::IsSoundFinished()
 66636,0x140bf99d0,0x140c34870,2,"void BSGameSound::Copy(BSGameSound* a_other, bool a_updateImpl)"
 66641,0x140bf9bb0,0x140c34a50,2,bool BSGameSound::Update()
 66646,0x140bf9e40,0x140c34ce0,4,void BSGameSound::SetOutputModel(BSISoundOutputModel* a_outputModel)
+66648,0x140bfa0a0,0x140c34f40,2,void BSGameSound::DoApplyFrequency()
+66649,0x140bfa0b0,0x140c34f50,2,bool BSGameSound::Prepare()
 66650,0x140bfa0c0,0x140c34f60,2,bool BSGameSound::PriorityTest(const BSGameSound* a_other)
 66651,0x140bfa0d0,0x140c34f70,2,void BSGameSound::SetSoundFinished(bool a_set)
 66652,0x140bfa0e0,0x140c34f80,2,bool BSNullImplAudio::Init(REX::W32::HWND* a_wnd)
@@ -12938,12 +13341,22 @@
 66656,0x140bfa2b0,0x140c35150,2,const BSFixedString& BSNullImplAudio::GetSystemName()
 66665,0x140bfa5b0,0x140c35450,2,"BSAudio* BSTDerivedCreator<BSNullImplAudio,BSAudio>::CreateImpl(BSAudio* a_val) const"
 66666,0x140bfa620,0x140c354c0,2,"void BSTDerivedCreator<BSNullImplAudio,BSAudio>::Destroy(const BSAudio* a_val)"
+66683,0x140bfabd0,0x140c35a70,2,bool BSNullImplGameSound::SyncOpen()
+66684,0x140bfabe0,0x140c35a80,2,bool BSNullImplGameSound::StartAsyncOpen()
+66685,0x140bfabf0,0x140c35a90,2,bool BSNullImplGameSound::TestAsyncOpenReady()
+66686,0x140bfac00,0x140c35aa0,2,bool BSNullImplGameSound::FinishAsyncOpen()
+66687,0x140bfac10,0x140c35ab0,2,bool BSNullImplGameSound::HandleExternalOpen()
+66688,0x140bfac20,0x140c35ac0,2,void BSNullImplGameSound::UpdateEmitterPosition()
 66689,0x140bfac30,0x140c35ad0,2,bool BSNullImplGameSound::Update()
 66690,0x140bfac60,0x140c35b00,2,void BSNullImplGameSound::SetEmitterPositionImpl(const NiPoint3& a_position)
 66691,0x140bfac90,0x140c35b30,2,void BSNullImplGameSound::GetEmitterPositionImpl(NiPoint3& a_position)
+66693,0x140bface0,0x140c35b80,2,"void BSNullImplGameSound::SetAttenuationCurve(std::uint16_t a_val1, std::uint16_t a_val2, std::uint16_t a_val3, std::uint16_t a_val4, std::uint16_t a_val5)"
+66694,0x140bfacf0,0x140c35b90,2,void BSNullImplGameSound::Seek(std::uint32_t a_milliseconds)
+66695,0x140bfad00,0x140c35ba0,2,std::uint32_t BSNullImplGameSound::GetCurrentPlaybackPosition()
 66696,0x140bfad10,0x140c35bb0,2,void BSNullImplGameSound::PlayImpl()
 66697,0x140bfad30,0x140c35bd0,2,void BSNullImplGameSound::PauseImpl()
 66698,0x140bfad50,0x140c35bf0,2,void BSNullImplGameSound::StopImpl()
+66699,0x140bfad60,0x140c35c00,2,void BSNullImplGameSound::SetVolumeImpl()
 66701,0x140bfadb0,0x140c35c50,2,BSGameSound* BSXAudio2Audio::GetGameSound(const BSResource::ID& a_resourceID)
 66702,0x140bfae60,0x140c35d00,2,void BSXAudio2Audio::ReleaseGameSound(BSGameSound* a_gameSound)
 66703,0x140bfaec0,0x140c35d60,2,const BSFixedString& BSXAudio2Audio::GetSystemName()
@@ -12990,6 +13403,7 @@
 66883,0x140c03460,0x140c3e2e0,4,void Dtor (ScrapHeap * a_this)
 66884,0x140c034a0,0x140c3e320,4,"void* ScrapHeap::Allocate(std::size_t a_size, std::size_t a_alignment)"
 66885,0x140c03ac0,0x140c3e940,3,void ScrapHeap::Deallocate(void* a_mem)
+66886,0x140c03c10,0x140c3ea90,2,void ScrapHeap::GetMemoryStats(MemoryStats* a_stats)
 66887,0x140c03c20,0x140c3eaa0,2,std::size_t ScrapHeap::Size(const void* a_mem)
 66889,0x140c03c60,0x140c3eae0,4,void SetKeepPages (ScrapHeap * a_this)
 66890,0x140c03c70,0x140c3eaf0,4,void ClearKeepPages (ScrapHeap * a_this)
@@ -13031,6 +13445,7 @@
 67094,0x140c0ba70,0x140c468a0,2,bool AbstractHeap::PointerInHeap(const void* a_pointer)
 67097,0x140c0bb80,0x140c469b0,2,const char* ZeroOverheadHeap::GetName()
 67098,0x140c0bb90,0x140c469c0,2,"void* ZeroOverheadHeap::Allocate(std::size_t a_size, std::uint32_t a_alignment)"
+67099,0x140c0bbb0,0x140c469e0,2,"void ZeroOverheadHeap::Deallocate(void* a_mem, std::uint32_t a_arg2)"
 67100,0x140c0bbc0,0x140c469f0,2,bool ZeroOverheadHeap::PointerInHeap(const void* a_pointer)
 67101,0x140c0bbf0,0x140c46a20,2,std::size_t ZeroOverheadHeap::Size(const void* a_mem)
 67102,0x140c0bc00,0x140c46a30,2,std::size_t ZeroOverheadHeap::TotalSize(const void* a_pointer)
@@ -13114,12 +13529,24 @@
 67454,0x140c19960,0x140c5e210,2,"bool BSPCGamepadDeviceHandler::GetKeyCodeFromID(std::int32_t a_id, std::uint32_t& a_keyCode)"
 67455,0x140c19980,0x140c5e230,2,void BSPCGamepadDeviceHandler::ClearInputState()
 67457,0x140c199f0,0x140c5e2a0,4,void BSPCGamepadDeviceHandler::InitializeDelegate()
+67462,0x140c19de0,0x140c5e690,2,void BSPCGamepadDeviceDelegate::ClearInputState()
+67463,0x140c19df0,0x140c5e6a0,2,void BSPCGamepadDeviceDelegate::Initialize()
 67464,0x140c19e00,0x140c5e6b0,2,bool BSPCGamepadDeviceHandler::IsEnabled()
+67465,0x140c19e10,0x140c5e6c0,2,void BSPCGamepadDeviceDelegate::Poll(float a_timeDelta)
+67466,0x140c19e20,0x140c5e6d0,2,"void BSPCGamepadDeviceDelegate::SetVibration(float a_largeMotor, float a_smallMotor)"
+67467,0x140c19e30,0x140c5e6e0,2,void BSPCGamepadDeviceDelegate::Shutdown()
 67471,0x140c1a060,0x140c5e910,2,void BSWin32KeyboardDevice::Initialize()
 67472,0x140c1a130,0x140c5e9c0,3,void BSWin32KeyboardDevice::Poll()
 67473,0x140c1a3e0,0x140c5ec10,2,void BSWin32KeyboardDevice::Shutdown()
 67474,0x140c1a410,0x140c5ec40,2,void BSWin32KeyboardDevice::ClearInputState()
+67479,0x140c1a670,0x140c5eea0,2,void BSWin32VirtualKeyboardDevice::Initialize()
+67480,0x140c1a680,0x140c5eeb0,2,void BSWin32VirtualKeyboardDevice::Shutdown()
+67481,0x140c1a690,0x140c5eec0,2,void BSWin32VirtualKeyboardDevice::ClearInputState()
+67482,0x140c1a6a0,0x140c5eed0,2,void BSWin32VirtualKeyboardDevice::Poll(float a_timeDelta)
 67483,0x140c1a6b0,0x140c5eee0,2,void BSWin32VirtualKeyboardDevice::Start(const kbInfo* a_info)
+67484,0x140c1a6c0,0x140c5eef0,2,void BSWin32VirtualKeyboardDevice::Stop()
+67485,0x140c1a6d0,0x140c5ef00,2,void BSWin32VirtualKeyboardDevice::UserCancelled()
+67489,0x140c1a800,0x140c5f040,2,void BSMouseDevice::Reinitialize()
 67490,0x140c1a810,0x140c5f050,2,void BSWin32MouseDevice::Initialize()
 67492,0x140c1aa00,0x140c5f250,2,void BSWin32MouseDevice::Shutdown()
 67494,0x140c1aa60,0x140c5f2c0,2,void BSWin32MouseDevice::Reinitialize(bool a_backgroundMouse)
@@ -13136,6 +13563,8 @@
 67721,0x140c25bb0,0x140c6aae0,2,"void* BSNiAllocator::Reallocate(void* a_memory, size_t& a_sizeInBytes, std::size_t& a_alignment, NiMemEventType a_eventType, bool a_provideAccurateSizeOnDeallocate, std::size_t a_sizeCurrent, const char* a_file, std::int32_t a_line, const char* a_function)"
 67722,0x140c25c50,0x140c6ab80,2,"bool BSNiAllocator::TrackAllocate(const void* const a_memory, std::size_t a_sizeInBytes, NiMemEventType a_eventType, const char* a_file, std::int32_t a_line, const char* a_function)"
 67723,0x140c25ce0,0x140c6ac10,2,"bool BSNiAllocator::TrackDeallocate(const void* const a_memory, NiMemEventType a_eventType)"
+67725,0x140c25df0,0x140c6ad20,2,void BSNiAllocator::Initialize()
+67726,0x140c25e00,0x140c6ad30,2,void BSNiAllocator::Shutdown()
 67727,0x140c25e10,0x140c6ad40,2,bool BSNiAllocator::VerifyAddress(const void* a_memory)
 67740,0x140c26240,0x140c6b170,4,SetThreadName
 67764,0x140c26af0,0x140c6ba20,2,void NiFile::set_endian_swap(bool a_doSwap)
@@ -13157,14 +13586,21 @@
 67855,0x140c2a4d0,0x140c6f400,3,BSStringPool::BucketTable* BSStringPool::BucketTable::GetSingleton()
 67856,0x140c2a590,0x140c6f4c0,4,"void BSStringPool::GetEntry(BSStringPool::Entry** a_out, const char* a_string, uint32_t a_hash, uint32_t a_length)"
 67935,0x140c306f0,0x140c755d0,2,"bool ArchiveFile::Open(std::uint64_t a_unused, bool a_textMode)"
+67938,0x140c307e0,0x140c756c0,2,std::uint32_t ArchiveFile::UpdateFileSize()
+67939,0x140c307f0,0x140c756d0,2,"std::uint32_t ArchiveFile::WriteBytes(const void* a_buffer, std::uint32_t a_bytes)"
 67940,0x140c30800,0x140c756e0,2,bool ArchiveFile::FileExists()
 67945,0x140c30c40,0x140c75b20,2,"std::uint32_t ArchiveFile::ReadBytes(void* a_buffer, std::uint32_t a_bytes)"
 67946,0x140c30c90,0x140c75b70,2,"std::uint32_t ArchiveFile::ReadWString(void* a_out, std::uint32_t a_maxLen)"
 67947,0x140c30d40,0x140c75c20,2,"std::uint32_t ArchiveFile::ReadString(BSString* a_out, std::uint32_t a_maxLen)"
 67949,0x140c30eb0,0x140c75d90,2,"bool CompressedArchiveFile::Open(std::uint64_t a_unused, bool a_textMode)"
+67952,0x140c30f30,0x140c75e10,2,std::uint32_t CompressedArchiveFile::UpdateFileSize()
 67953,0x140c30f40,0x140c75e20,2,std::uint32_t CompressedArchiveFile::size()
+67954,0x140c30f50,0x140c75e30,2,"std::uint32_t CompressedArchiveFile::WriteBytes(const void* a_buffer, std::uint32_t a_bytes)"
 67955,0x140c30f60,0x140c75e40,2,bool CompressedArchiveFile::FileExists()
 67957,0x140c30f90,0x140c75e70,2,void CompressedArchiveFile::set_endian_swap(bool a_doSwap)
+67959,0x140c310f0,0x140c75fd0,2,"std::uint32_t CompressedArchiveFile::ReadBytes(void* a_buffer, std::uint32_t a_bytes)"
+67961,0x140c312f0,0x140c761d0,2,"std::uint32_t CompressedArchiveFile::ReadWString(void* a_out, std::uint32_t a_maxLen)"
+67962,0x140c31300,0x140c761e0,2,"std::uint32_t CompressedArchiveFile::ReadString(BSString& a_out, std::uint32_t a_maxLen)"
 67988,0x140c31d40,0x140c76c20,3,void JobList::QueueJob()
 67991,0x140c31e80,0x140c76d60,3,void JobList::Submit()
 67992,0x140c31ea0,0x140c76d80,3,void JobList::Finish()
@@ -13219,6 +13655,7 @@
 68201,0x140c39850,0x140c7e900,2,"BSStorageDefs::ErrorCode BSSystemFileStorage::Write(std::size_t a_numBytes, const std::byte* a_bytes)"
 68203,0x140c39950,0x140c7ea00,4,BSWin32TaskletManager* BSWin32TaskletManager::GetSingleton()
 68207,0x140c39ac0,0x140c7eb70,4,bool BSTaskletManager::CreateTaskGroup(BSTaskletGroup& a_taskGroup)
+68224,0x140c39e00,0x140c7eeb0,2,void BSTaskletData::Process()
 68230,0x140c39f30,0x140c7efe0,2,"bool BSSearchPath::GetNextSearchPath(char* a_dest, std::uint32_t a_size)"
 68257,0x140c3b370,0x140c80420,2,bool BSWin32TaskletManager::IsWorkerThread(std::uint32_t a_threadID)
 68258,0x140c3b3a0,0x140c80450,2,bool BSWin32TaskletManager::CreateTaskGroupData(BSTaskletGroupData** a_taskGroupData)
@@ -13240,6 +13677,7 @@
 68311,0x140c3dad0,0x140c82b80,2,"ErrorCode BSResource::CompressedArchiveStream::DoRead(void* a_buffer, std::uint64_t a_toRead, std::uint64_t& a_read)"
 68312,0x140c3db00,0x140c82bb0,2,"ErrorCode BSResource::CompressedArchiveStream::DoSeek(std::uint64_t a_toSeek, SeekMode a_mode, std::uint64_t& a_sought)"
 68313,0x140c3db80,0x140c82c30,2,void BSResource::CompressedArchiveStream::DoClose()
+68314,0x140c3dc40,0x140c82cf0,2,ErrorCode BSResource::CompressedArchiveStream::DoCreateAsync(BSTSmartPointer<AsyncStream>& a_streamOut)
 68411,0x140c41f20,0x140c86fd0,2,"ErrorCode BSResource::ArchiveStream::DoWrite(const void* a_buffer, std::uint64_t a_toWrite, std::uint64_t& a_written)"
 68427,0x140c42a10,0x140c87ac0,2,std::uint32_t BSResource::ArchiveStream::DoGetSize()
 68430,0x140c42c20,0x140c87cd0,2,void BSTEventSource<BSResource::ArchiveStreamOpenedEvent>::AddEventSink(BSTEventSink<BSResource::ArchiveStreamOpenedEvent>* a_sink)
@@ -13263,6 +13701,7 @@
 68646,0x140c4b2d0,0x140c90380,2,"ErrorCode BSResource::LooseFileLocation::DoGetInfo1(const char* a_path, Info& a_info, Location*& a_location)"
 68647,0x140c4b300,0x140c903b0,2,ErrorCode BSResource::LooseFileLocation::DoDelete(const char* a_path)
 68648,0x140c4b3d0,0x140c90480,2,const char* BSResource::LooseFileLocation::DoGetName()
+68649,0x140c4b3e0,0x140c90490,2,std::uint32_t BSResource::LooseFileLocation::DoGetMinimumAsyncPacketSize()
 68663,0x140c4b990,0x140c90a40,3,RE::LooseFileStream::Ctor
 68688,0x140c4c360,0x140c91410,4,"std::uint32_t BSResource::LooseFileStream::DoRead(void* a_dst, std::uint64_t a_bytes, std::uint64_t* a_read)"
 68756,0x140c4fc40,0x140c94cf0,2,"ErrorCode BSResource::CacheDrive::DoCreateStream(char* a_path, void* a_stream, Location** a_location, bool a_readOnly)"
@@ -13271,6 +13710,7 @@
 68759,0x140c4fdd0,0x140c94e80,2,"ErrorCode BSResource::CacheDrive::DoGetInfo2(char* a_path, Info* a_info, LocationTraverser* a_traverser)"
 68760,0x140c4fe40,0x140c94ef0,2,"ErrorCode BSResource::CacheDrive::DoGetInfo1(char* a_path, Info* a_info, Location** a_location)"
 68761,0x140c4fec0,0x140c94f70,2,ErrorCode BSResource::CacheDrive::DoDelete(const char* a_path)
+68762,0x140c4ff20,0x140c94fd0,2,std::uint32_t BSResource::CacheDrive::DoGetMinimumAsyncPacketSize()
 68794,0x140c51720,0x140c967d0,2,std::uint32_t BSResource::CacheDrive::Impl::ThreadProc()
 68820,0x140c51f70,0x140c97030,4,float NiPoint3::GetPolarAngle (NiPoint3 * a_this)
 68832,0x140c526b0,0x140c97770,2,bool NiObject::RegisterStreamables(NiStream& a_stream)
@@ -13342,6 +13782,7 @@
 69026,0x140c5c680,0x140ca1c30,2,std::uint64_t NiStream::PreSaveObjectSizeTable()
 69027,0x140c5c700,0x140ca1cb0,2,bool NiStream::SaveObjectSizeTable(std::uint64_t a_size)
 69028,0x140c5c7a0,0x140ca1d50,2,bool NiStream::LoadObjectSizeTable()
+69100,0x140c5ef50,0x140ca4500,2,"void NiTMapBase<NiTPointerAllocator<unsigned___int64>,NiObject_const*_,unsigned_int>::clear_value(void* a_value)"
 69102,0x140c5ef70,0x140ca4520,2,"void NiTStringTemplateMap<NiTPointerMap<char_const*_,NiObject*__(__cdecl*)(void)>,NiObject*__(__cdecl*)(void)>::clear_value(void* a_value)"
 69105,0x140c5efc0,0x140ca4570,2,"void NiTPointerMap<NiObject_const*_,unsigned_int>::free_value(void* a_value)"
 69107,0x140c5eff0,0x140ca45a0,2,"bool NiTMapBase<NiTPointerAllocator<unsigned___int64>,char_const*_,NiObject*__(__cdecl*)(void)>::key_eq(const char* a_lhs, const char* a_rhs)"
@@ -13526,6 +13967,7 @@
 69624,0x140c758b0,0x140cbbce0,2,const NiRTTI* NiAVObjectPalette::GetRTTI()
 69625,0x140c758c0,0x140cbbcf0,2,const NiRTTI* NiDefaultAVObjectPalette::GetRTTI()
 69626,0x140c758d0,0x140cbbd00,2,NiAVObject* NiDefaultAVObjectPalette::GetScene()
+69631,0x140c75b40,0x140cbbf70,2,void NiAVObjectPalette::ResetAndFillFromScenegraph()
 69632,0x140c75b50,0x140cbbf80,2,"void NiDefaultAVObjectPalette::SetAVObject(BSFixedString& a_name, NiAVObject* a_object)"
 69636,0x140c76060,0x140cbc490,3,RE::BSResourceNiBinaryStream::Ctor
 69637,0x140c76170,0x140cbc5a0,4,"BSResourceNiBinaryStream * ctor_140C76170 (BSResourceNiBinaryStream * a_this, BSResource__Stream * a_stream, bool a_fullReadHint, bool a_useOwnBuffer)"
@@ -13535,6 +13977,7 @@
 69641,0x140c764e0,0x140cbc910,2,std::uint32_t BSResourceNiBinaryStream::tell()
 69642,0x140c764f0,0x140cbc920,2,void BSResourceNiBinaryStream::get_info(BufferInfo& a_buf)
 69643,0x140c76580,0x140cbc9b0,3,RE::BSResourceNiBinaryStream::SetEndianSwap
+69663,0x140c777e0,0x140cbdc10,2,"void NiTMapBase<DFALL<NiTMapItem<unsigned_long,BSNiUpdateTracker*>>,unsigned_long,BSNiUpdateTracker*>::clear_value(void* a_value)"
 69681,0x140c77ed0,0x140cbe300,3,RE::NiBillboardNode::RotateToCamera
 69683,0x140c78d90,0x140cbf5e0,3,"void NiBillboardNode::OnVisible(NiCullingProcess& a_process, std::int32_t a_alphaGroupIndex)"
 69684,0x140c78df0,0x140cbf640,2,NiObject* NiDirectionalLight::CreateClone(NiCloningProcess& a_cloning)
@@ -13558,7 +14001,9 @@
 69759,0x140c7cb60,0x140cc33b0,3,"bool NiSkinPartition::HasPartitionForLOD(std::uint32_t a_singleLevel, std::uint32_t a_lodIndex)"
 69772,0x140c7d5c0,0x140cc3e10,2,const NiRTTI* NiSkinPartition::GetRTTI()
 69775,0x140c7d780,0x140cc3fd0,2,NiObject* NiVertWeightsExtraData::CreateClone(NiCloningProcess& a_cloning)
+69776,0x140c7d860,0x140cc40b0,2,void NiVertWeightsExtraData::LoadBinary(NiStream& a_stream)
 69778,0x140c7d880,0x140cc40d0,2,bool NiVertWeightsExtraData::RegisterStreamables(NiStream& a_stream)
+69779,0x140c7d890,0x140cc40e0,2,void NiVertWeightsExtraData::SaveBinary(NiStream& a_stream)
 69780,0x140c7d8a0,0x140cc40f0,2,bool NiVertWeightsExtraData::IsEqual(NiObject* a_object)
 69783,0x140c7d9c0,0x140cc4210,2,const NiRTTI* NiVertWeightsExtraData::GetRTTI()
 69786,0x140c7db20,0x140cc4370,2,void NiSkinInstance::LoadBinary(NiStream& a_stream)
@@ -13603,8 +14048,10 @@
 69891,0x140c83520,0x140cc9e00,2,NiProperty::Type NiShadeProperty::GetType()
 69896,0x140c83680,0x140cc9f60,2,bool NiAlphaAccumulator::RegisterStreamables(NiStream& a_stream)
 69898,0x140c836a0,0x140cc9f80,2,bool NiAlphaAccumulator::IsEqual(NiObject* a_object)
+69902,0x140c837e0,0x140cca0c0,2,void NiAlphaAccumulator::RegisterObjectArray(NiVisibleArray& a_visibleArray)
 69904,0x140c83840,0x140cca120,2,const NiRTTI* NiAlphaAccumulator::GetRTTI()
 69905,0x140c83850,0x140cca130,2,BSBatchRenderer::GeometryGroup* NiAccumulator::StartGroupingAlphas(NiBound* a_bound)
+69906,0x140c83860,0x140cca140,2,void NiAccumulator::StopGroupingAlphas(BSBatchRenderer::GeometryGroup* a_group)
 69907,0x140c83870,0x140cca150,2,NiObject* NiAmbientLight::CreateClone(NiCloningProcess& a_cloning)
 69917,0x140c83af0,0x140cca3d0,2,NiObject* NiBinaryExtraData::CreateClone(NiCloningProcess& a_cloning)
 69919,0x140c83c80,0x140cca560,2,void NiBinaryExtraData::LoadBinary(NiStream& a_stream)
@@ -13728,6 +14175,7 @@
 70319,0x140c90860,0x140cd7370,2,NiObject* NiBackToFrontAccumulator::CreateClone(NiCloningProcess& a_cloning)
 70325,0x140c909a0,0x140cd74b0,2,bool NiBackToFrontAccumulator::IsEqual(NiObject* a_object)
 70329,0x140c90bc0,0x140cd76d0,2,void NiBackToFrontAccumulator::RegisterObjectArray(NiVisibleArray& a_visibleArray)
+70330,0x140c90cb0,0x140cd77c0,2,void NiBackToFrontAccumulator::FinishAccumulating()
 70333,0x140c90eb0,0x140cd79c0,2,const NiRTTI* NiBackToFrontAccumulator::GetRTTI()
 70334,0x140c90ec0,0x140cd79d0,2,void NiTriBasedGeomData::LoadBinary(NiStream& a_stream)
 70337,0x140c90f40,0x140cd7a50,2,void NiTriBasedGeomData::SaveBinary(NiStream& a_stream)
@@ -13791,8 +14239,10 @@
 71021,0x140cce920,0x140d15470,2,std::uint16_t BSMultiTargetTreadTransfController::GetInterpolatorIndex(const char* a_id)
 71022,0x140cce9c0,0x140d15510,2,std::uint16_t BSMultiTargetTreadTransfController::GetInterpolatorIndexFx(const BSFixedString& a_id)
 71023,0x140ccea10,0x140d15560,2,NiInterpolator* BSMultiTargetTreadTransfController::GetInterpolator(std::uint16_t a_index)
+71024,0x140ccea30,0x140d15580,2,"void BSMultiTargetTreadTransfController::SetInterpolator(NiInterpolator* a_interpolator, std::uint16_t a_index)"
 71025,0x140ccea40,0x140d15590,2,"void BSMultiTargetTreadTransfController::GuaranteeTimeRange(float a_startTime, float a_endTime)"
 71026,0x140cceac0,0x140d15610,2,"NiBlendInterpolator* BSMultiTargetTreadTransfController::CreateBlendInterpolator(std::uint16_t a_index, bool a_managerControlled, bool a_accumulateAnimations, float a_weightThreshold, std::uint8_t a_arraySize)"
+71027,0x140cceae0,0x140d15630,2,"void BSMultiTargetTreadTransfController::SynchronizePoseInterpolator(NiInterpolator* a_interp, std::uint16_t a_index)"
 71028,0x140cceaf0,0x140d15640,2,NiInterpolator* BSMultiTargetTreadTransfController::CreatePoseInterpolator(std::uint16_t a_index)
 71031,0x140cced60,0x140d158b0,2,bool BSMultiTargetTreadTransfController::TargetIsRequiredType()
 71032,0x140ccedb0,0x140d15900,2,"bool BSMultiTargetTreadTransfController::InterpolatorIsCorrectType(NiInterpolator* a_interpolator, std::uint16_t a_index)"
@@ -14254,6 +14704,7 @@
 71995,0x140cea110,0x140d30c60,2,void NiKeyframeManager::SaveBinary(NiStream& a_stream)
 71996,0x140cea120,0x140d30c70,2,bool NiKeyframeManager::IsEqual(NiObject* a_object)
 71999,0x140cea260,0x140d30db0,2,bool NiKeyframeManager::TargetIsRequiredType()
+72011,0x140cea640,0x140d31190,2,"void NiTMapBase<NiTPointerAllocator<unsigned___int64>,char_const*_,NiPointer<NiSequence>>::clear_value(void* a_value)"
 72012,0x140cea650,0x140d311a0,2,"void NiTStringTemplateMap<NiTPointerMap<char_const*_,NiPointer<NiSequence>>,NiPointer<NiSequence>>::clear_value(void* a_value)"
 72013,0x140cea660,0x140d311b0,2,"void NiTPointerMap<char_const*_,NiPointer<NiSequence>>::free_value(void* a_value)"
 72014,0x140cea6a0,0x140d311f0,2,const NiRTTI* NiKeyframeManager::GetRTTI()
@@ -14263,6 +14714,7 @@
 72018,0x140cea6f0,0x140d31240,2,"std::uint32_t NiTStringTemplateMap<NiTPointerMap<char_const*_,NiPointer<NiSequence>>,NiPointer<NiSequence>>::hash_function(const char* a_key)"
 72019,0x140cea720,0x140d31270,2,"void* NiTPointerMap<char_const*_,NiPointer<NiSequence>>::malloc_value()"
 72024,0x140ceaa90,0x140d315e0,2,"void NiTStringTemplateMap<NiTPointerMap<char const* ,NiPointer<NiSequence>>,NiPointer<NiSequence>>::assign_value(void* a_item, const char* a_key, NiPointer<NiSequence> a_value)"
+72025,0x140ceab60,0x140d316b0,2,void NiKeyframeManager::Update(NiUpdateData& a_data)
 72026,0x140ceab70,0x140d316c0,2,NiObject* NiLightColorController::CreateClone(NiCloningProcess& a_cloning)
 72028,0x140ceac80,0x140d317d0,2,void NiLightColorController::LoadBinary(NiStream& a_stream)
 72029,0x140ceace0,0x140d31830,2,void NiLightColorController::LinkObject(NiStream& a_stream)
@@ -14499,7 +14951,9 @@
 72716,0x140d01500,0x140d48050,2,bool NiBSplineInterpolator::IsEqual(NiObject* a_object)
 72718,0x140d01640,0x140d48190,2,std::uint32_t NiBSplineInterpolator::GetControlPointCount(std::uint16_t a_channel)
 72720,0x140d016c0,0x140d48210,2,std::uint32_t NiBSplineInterpolator::GetAllocatedSize(std::uint16_t a_channel)
+72721,0x140d01760,0x140d482b0,2,void NiBSplineInterpolator::Collapse()
 72723,0x140d01840,0x140d48390,2,"void NiBSplineInterpolator::GetActiveTimeRange(float& a_beginKeyTime, float& a_endKeyTime)"
+72724,0x140d01880,0x140d483d0,2,"void NiBSplineInterpolator::GuaranteeTimeRange(float a_startTime, float a_endTime)"
 72725,0x140d01890,0x140d483e0,2,"NiInterpolator* NiBSplineInterpolator::GetSequenceInterpolator(float a_startTime, float a_endTime)"
 72728,0x140d01950,0x140d484a0,2,const NiRTTI* NiBSplineInterpolator::GetRTTI()
 72735,0x140d019c0,0x140d48510,2,NiInterpolator* NiPoint3InterpController::CreatePoseInterpolator(std::uint16_t a_index)
@@ -14541,6 +14995,7 @@
 72834,0x140d04f90,0x140d4bb30,2,std::uint16_t NiPSysEmitterCtlr::GetInterpolatorIndex(const char* a_id)
 72835,0x140d04ff0,0x140d4bb90,2,NiInterpolator* NiPSysEmitterCtlr::GetInterpolator(std::uint16_t a_index)
 72837,0x140d05070,0x140d4bc10,2,NiInterpolator* NiPSysEmitterCtlr::CreatePoseInterpolator(std::uint16_t a_index)
+72838,0x140d05130,0x140d4bcd0,2,"void NiPSysEmitterCtlr::SynchronizePoseInterpolator(NiInterpolator* a_interp, std::uint16_t a_index)"
 72839,0x140d05140,0x140d4bce0,2,"NiBlendInterpolator* NiPSysEmitterCtlr::CreateBlendInterpolator(std::uint16_t a_index, bool a_managerControlled, bool a_accumulateAnimations, float a_weightThreshold, std::uint8_t a_arraySize)"
 72840,0x140d05220,0x140d4bdc0,2,void NiPSysEmitterCtlr::ProcessClone(NiCloningProcess& a_cloning)
 72842,0x140d052c0,0x140d4be60,2,"bool NiPSysEmitterCtlr::InterpolatorIsCorrectType(NiInterpolator* a_interpolator, std::uint16_t a_index)"
@@ -14602,6 +15057,8 @@
 72979,0x140d0a770,0x140d51340,2,bool NiPSysModifier::RegisterStreamables(NiStream& a_stream)
 72980,0x140d0a7c0,0x140d51390,2,void NiPSysModifier::SaveBinary(NiStream& a_stream)
 72981,0x140d0a870,0x140d51440,2,bool NiPSysModifier::IsEqual(NiObject* a_object)
+72982,0x140d0a8d0,0x140d514a0,2,"void NiPSysModifier::Initialize(NiPSysData* a_particleData, std::uint16_t a_arg2, NiPoint3* a_arg3)"
+72983,0x140d0a8e0,0x140d514b0,2,void NiPSysModifier::HandleReset()
 72984,0x140d0a8f0,0x140d514c0,2,void NiPSysModifier::SetSystemPointer(NiParticleSystem* a_target)
 72985,0x140d0a900,0x140d514d0,2,void NiPSysModifier::ProcessClone(NiCloningProcess& a_cloning)
 72990,0x140d0ab30,0x140d51700,2,const NiRTTI* NiPSysModifier::GetRTTI()
@@ -14941,6 +15398,7 @@
 73678,0x140d20790,0x140d67c40,2,bool NiPSysSpawnModifier::RegisterStreamables(NiStream& a_stream)
 73679,0x140d207a0,0x140d67c50,2,void NiPSysSpawnModifier::SaveBinary(NiStream& a_stream)
 73680,0x140d20950,0x140d67e00,2,bool NiPSysSpawnModifier::IsEqual(NiObject* a_object)
+73683,0x140d20b80,0x140d68030,2,"bool NiPSysSpawnModifier::Update(float a_time, NiPSysData* a_particleData, NiPoint3* a_position, NiPoint3* a_radii, NiColorA* a_rotation)"
 73688,0x140d20ca0,0x140d68150,2,const NiRTTI* NiPSysSpawnModifier::GetRTTI()
 73689,0x140d20cb0,0x140d68160,2,NiObject* NiPSysSphereEmitter::CreateClone(NiCloningProcess& a_cloning)
 73691,0x140d20dc0,0x140d68270,2,void NiPSysSphereEmitter::LoadBinary(NiStream& a_stream)
@@ -15066,6 +15524,7 @@
 73996,0x140d2dd00,0x140d760e0,2,std::uint32_t QueuedFile::GetTotalChildrenCount()
 73999,0x140d2dd50,0x140d76130,2,void QueuedFile::BeginProcessing()
 74000,0x140d2dda0,0x140d76180,2,void QueuedFile::ProcessStateMachine()
+74001,0x140d2dee0,0x140d762c0,2,void QueuedFile::Run()
 74003,0x140d2df00,0x140d762e0,2,void QueuedFile::NotifyChildrenAndFinalize(std::uint32_t a_flag)
 74004,0x140d2df90,0x140d76370,2,"void QueuedFile::Cancel([[maybe_unused]] std::uint32_t a_previousState, [[maybe_unused]] void* a_unk)"
 74005,0x140d2e090,0x140d76470,2,void QueuedFile::AddChild(QueuedFile* a_child)
@@ -15225,6 +15684,7 @@
 74640,0x140d484c0,0x140d913f0,2,bool BSMultiBoundShape::RegisterStreamables(NiStream& a_stream)
 74643,0x140d48500,0x140d91430,2,NiObject* BSMultiBoundShape::CreateClone(NiCloningProcess& a_cloning)
 74646,0x140d48570,0x140d914a0,2,bool BSMultiBoundShape::GetWithinPoint(const NiPoint3& a_pos)
+74647,0x140d48580,0x140d914b0,2,void BSMultiBoundShape::SetCenter(const NiPoint3& a_center)
 74649,0x140d485a0,0x140d914d0,3,"bool BSMultiBoundAABB::TestOcclusionShape(std::uint64_t a_unused, BSCullingProcess* a_process, BSOcclusionShape* a_shape)"
 74651,0x140d48720,0x140d91650,2,const NiRTTI* BSMultiBoundShape::GetRTTI()
 74652,0x140d48730,0x140d91660,2,NiObject* BSMultiBoundSphere::CreateClone(NiCloningProcess& a_cloning)
@@ -15232,6 +15692,7 @@
 74656,0x140d488b0,0x140d917e0,2,bool BSMultiBoundSphere::RegisterStreamables(NiStream& a_stream)
 74657,0x140d488d0,0x140d91800,2,void BSMultiBoundSphere::SaveBinary(NiStream& a_stream)
 74658,0x140d48940,0x140d91870,2,bool BSMultiBoundSphere::IsEqual(NiObject* a_object)
+74661,0x140d48a70,0x140d919a0,2,std::uint32_t BSMultiBoundSphere::GetType()
 74664,0x140d48b20,0x140d91a50,2,bool BSMultiBoundSphere::CheckBound(BSMultiBound* a_arg1)
 74665,0x140d48cc0,0x140d91bf0,2,bool BSMultiBoundSphere::WithinFrustum(NiFrustumPlanes const&)
 74666,0x140d48d60,0x140d91c90,2,bool BSMultiBoundSphere::CompletelyWithinFrustum(NiFrustumPlanes* a_arg1)
@@ -15292,6 +15753,7 @@
 74764,0x140d4fff0,0x140d98ed0,2,void NiBSBoneLODController::PostLinkObject(NiStream& a_stream)
 74785,0x140d504f0,0x140d993d0,2,const NiRTTI* NiBSBoneLODController::GetRTTI()
 74786,0x140d50500,0x140d993e0,2,"bool NiTMapBase<NiTPointerAllocator<unsigned___int64>,unsigned_int,bool>::key_eq(std::uint32_t a_lhs, std::uint32_t a_rhs)"
+74801,0x140d50ad0,0x140d999b0,2,void NiBSBoneLODController::Update(NiUpdateData& a_data)
 74802,0x140d50ae0,0x140d999c0,3,BSCullingProcess* BSCullingProcess::ctor(NiVisibleArray* a_visibleSet)
 74805,0x140d50f80,0x140d99e90,2,"void BSCullingProcess::Process2(const NiCamera* a_camera, NiAVObject* a_scene, NiVisibleArray* a_visibleSet)"
 74806,0x140d51050,0x140d99f60,3,"void BSCullingProcess::AppendNonAccum(NiAVObject* a_object, int a_alphaGroupIndex)"
@@ -15452,6 +15914,7 @@
 75224,0x140d617a0,0x140dab8c0,2,bool BSBoneLODExtraData::IsEqual(NiObject* a_object)
 75238,0x140d61cf0,0x140dabe10,2,const NiRTTI* BSBoneLODExtraData::GetRTTI()
 75242,0x140d61ee0,0x140dac000,2,void BSReference::LoadBinary(NiStream& a_stream)
+75243,0x140d61f30,0x140dac050,2,void BSReference::LinkObject(NiStream& a_stream)
 75244,0x140d61f40,0x140dac060,2,bool BSReference::RegisterStreamables(NiStream& a_stream)
 75245,0x140d61f50,0x140dac070,2,void BSReference::SaveBinary(NiStream& a_stream)
 75246,0x140d61f90,0x140dac0b0,2,bool BSReference::IsEqual(NiObject* a_object)
@@ -15486,7 +15949,11 @@
 75312,0x140d63e30,0x140dadf50,2,bool BSMultiBoundCapsule::RegisterStreamables(NiStream& a_stream)
 75313,0x140d63e50,0x140dadf70,2,void BSMultiBoundCapsule::SaveBinary(NiStream& a_stream)
 75314,0x140d63ec0,0x140dadfe0,2,bool BSMultiBoundCapsule::IsEqual(NiObject* a_object)
+75317,0x140d64000,0x140dae120,2,std::uint32_t BSMultiBoundCapsule::GetType()
 75319,0x140d64020,0x140dae140,2,bool BSMultiBoundCapsule::CheckBound(BSMultiBound const&)
+75320,0x140d64040,0x140dae160,2,bool BSMultiBoundCapsule::WithinFrustum(NiFrustumPlanes const& a_arg1)
+75321,0x140d64050,0x140dae170,2,bool BSMultiBoundCapsule::CompletelyWithinFrustum(NiFrustumPlanes const& a_arg1)
+75322,0x140d64060,0x140dae180,2,void BSMultiBoundCapsule::GetNiBound(NiBound* a_arg1)
 75325,0x140d640c0,0x140dae1e0,2,const NiRTTI* BSMultiBoundCapsule::GetRTTI()
 75326,0x140d640d0,0x140dae1f0,2,float BSMultiBoundCapsule::GetLength()
 75327,0x140d640e0,0x140dae200,2,NiObject* BSPSysStripUpdateModifier::CreateClone(NiCloningProcess& a_cloning)
@@ -15634,6 +16101,8 @@
 76512,0x140dc4cd0,0x140e19c60,2,const NiRTTI* bhkCollisionBox::GetRTTI()
 76513,0x140dc4ce0,0x140e19c70,2,const NiRTTI* bhkListShape::GetRTTI()
 76514,0x140dc4cf0,0x140e19c80,2,const NiRTTI* bhkShapeCollection::GetRTTI()
+76522,0x140dc55c0,0x140e1a550,2,"void bhkCharacterState::Change(hkpCharacterContext& a_context, const hkpCharacterInput& a_input, hkpCharacterOutput& a_output)"
+76523,0x140dc55d0,0x140e1a560,2,"void bhkCharacterState::Update(hkpCharacterContext& a_context, const hkpCharacterInput& a_input, hkpCharacterOutput& a_output)"
 76525,0x140dc57c0,0x140e1a750,2,void bhkNiCollisionObject::LoadBinary(NiStream& a_stream)
 76526,0x140dc5830,0x140e1a7c0,2,void bhkNiCollisionObject::LinkObject(NiStream& a_stream)
 76527,0x140dc5890,0x140e1a820,2,bool bhkNiCollisionObject::RegisterStreamables(NiStream& a_stream)
@@ -15670,6 +16139,8 @@
 76738,0x140ddb730,0x140e3a860,2,void bhkRigidBodyT::GetTransform(hkTransform& a_outTransform)
 76743,0x140ddb8e0,0x140e3aa10,2,const NiRTTI* bhkRigidBodyT::GetRTTI()
 76746,0x140ddb930,0x140e2fdf0,2,void bhkEntityListener::EntityAddedCallback(hkpEntity* a_entity)
+76747,0x140ddb9b0,0x140e2fe70,2,bool bhkEntityListener::ContactPointAddedCallback(hkpRootCdPoint& a_point)
+76748,0x140ddb9c0,0x140e2fe80,2,bool bhkEntityListener::ContactPointRemovedCallback(hkpRootCdPoint& a_point)
 76751,0x140ddbad0,0x140e2ff90,2,bhkWorldObject* bhkEntityListener::GetMatchingWorldObject(hkpEntity* a_entity)
 76762,0x140ddc0e0,0x140e305a0,2,const NiRTTI* bhkWorldM::GetRTTI()
 76773,0x140ddc2a0,0x140e30760,2,void bhkRefObject::SetReferencedObject(hkReferencedObject* a_object)
@@ -15700,6 +16171,7 @@
 76836,0x140dde0c0,0x140e32580,2,CFilter hkNiTriStripsShape::GetCollisionFilterInfo(hkpShapeKey a_key)
 76852,0x140ddea70,0x140e32f30,2,const hkClass* hkNormalTriangleShape::GetClassType()
 76853,0x140ddea80,0x140e32f40,2,NiObject* bhkPCollisionObject::CreateClone(NiCloningProcess& a_cloning)
+76868,0x140ddf320,0x140e337e0,2,void hkPackedNiTriStripsData::LinkObject(NiStream& a_stream)
 76869,0x140ddf330,0x140e337f0,2,bool hkPackedNiTriStripsData::RegisterStreamables(NiStream& a_stream)
 76870,0x140ddf340,0x140e33800,2,void hkPackedNiTriStripsData::SaveBinary(NiStream& a_stream)
 76871,0x140ddf4e0,0x140e339a0,2,bool hkPackedNiTriStripsData::IsEqual(NiObject* a_object)
@@ -15759,6 +16231,7 @@
 77119,0x140de9c20,0x140e3ebf0,2,void bhkConstraint::SaveBinary(NiStream& a_stream)
 77120,0x140de9c70,0x140e3ec40,2,bool bhkConstraint::IsEqual(NiObject* a_object)
 77122,0x140de9d40,0x140e3ed10,2,hkpWorld* bhkConstraint::GetWorld1()
+77123,0x140de9d80,0x140e3ed50,2,ahkpWorld* bhkConstraint::GetWorld2()
 77124,0x140de9d90,0x140e3ed60,2,void bhkConstraint::SetReferencedObject(hkReferencedObject* a_object)
 77132,0x140dea1f0,0x140e3f1c0,2,void bhkConstraint::MoveToWorld(bhkWorld* a_world)
 77133,0x140dea2a0,0x140e3f270,2,void bhkConstraint::RemoveFromCurrentWorld()
@@ -15790,6 +16263,11 @@
 77261,0x140df02c0,0x140e452c0,2,void bhkCharProxyController::GetCollisionFilterInfo(CFilter* a_collisionFilterInfo)
 77265,0x140df0520,0x140e45520,2,void bhkCharProxyController::CheckSupportImpl()
 77284,0x140df0e30,0x140e45e30,2,const NiRTTI* bhkCharacterProxy::GetRTTI()
+77291,0x140df1290,0x140e46290,2,"void hkpCharacterProxyListener::CharacterInteractionCallback(hkpCharacterProxy* a_proxy, hkpCharacterProxy* a_otherProxy, const hkContactPoint& a_contact)"
+77292,0x140df12a0,0x140e462a0,2,"void hkpCharacterProxyListener::ContactPointAddedCallback(const hkpCharacterProxy* a_proxy, const hkpRootCdPoint& a_point)"
+77293,0x140df12b0,0x140e462b0,2,"void hkpCharacterProxyListener::ContactPointRemovedCallback(const hkpCharacterProxy* a_proxy, const hkpRootCdPoint& a_point)"
+77294,0x140df12c0,0x140e462c0,2,"void hkpCharacterProxyListener::ObjectInteractionCallback(hkpCharacterProxy* a_proxy, const hkpCharacterObjectInteractionEvent& a_input, hkpCharacterObjectInteractionResult& a_output)"
+77295,0x140df12d0,0x140e462d0,2,"void hkpCharacterProxyListener::ProcessConstraintsCallback(const hkpCharacterProxy* a_proxy, const hkArray<hkpRootCdPoint>& a_manifold, hkpSimplexSolverInput& a_input)"
 77305,0x140df15b0,0x140e465b0,2,"void bhkCharRigidBodyController::CharacterCallback(hkpWorld* a_world, hkpCharacterRigidBody* a_characterRB)"
 77306,0x140df16a0,0x140e466a0,2,"void bhkCharRigidBodyController::ProcessActualPoints(const hkpWorld* a_world, hkpCharacterRigidBody* a_characterRB, const hkpLinkedCollidable::CollisionEntry& a_entry, hkpSimpleConstraintContactMgr* a_mgr, hkArray<std::uint16_t>& a_contactPointIds)"
 77307,0x140df1be0,0x140e46be0,2,"void bhkCharRigidBodyController::ConsiderCollisionEntryForSlope(const hkpWorld* world, hkpCharacterRigidBody* characterRB, const hkpLinkedCollidable::CollisionEntry& entry, hkpSimpleConstraintContactMgr* mgr, hkArray<std::uint16_t>& contactPointIds)"
@@ -15827,6 +16305,8 @@
 77470,0x140df9140,0x140e4e140,4,"bhkMemorySystem * ctor_140df9140 (bhkMemorySystem * param_1, undefined8 param_2, undefined8 param_3, undefined8 param_4)"
 77474,0x140df93b0,0x140e4e3b0,2,"void bhkMemorySystem::ThreadInit(hkMemoryRouter& a_router, const char* a_name, Flags a_flags)"
 77475,0x140df9450,0x140e4e450,2,"void bhkMemorySystem::ThreadQuit(hkMemoryRouter& a_router, Flags a_flags)"
+77477,0x140df94d0,0x140e4e4d0,2,void bhkMemorySystem::PrintStatistics(hkOstream& a_ostream)
+77478,0x140df94e0,0x140e4e4e0,2,void bhkMemorySystem::GetHeapStatistics(hkMemoryAllocator::MemoryStatistics& a_stats)
 77542,0x140dfdcc0,0x140e52cc0,2,void bhkCompressedMeshShapeData::LoadBinary(NiStream& a_stream)
 77544,0x140dfeaf0,0x140e53af0,2,bool bhkCompressedMeshShapeData::RegisterStreamables(NiStream& a_stream)
 77545,0x140dfeb00,0x140e53b00,2,void bhkCompressedMeshShapeData::SaveBinary(NiStream& a_stream)
@@ -15842,6 +16322,7 @@
 77616,0x140e03a50,0x140e58a50,2,void bhkConvexSweepShape::LoadBinary(NiStream& a_stream)
 77617,0x140e03aa0,0x140e58aa0,2,void bhkConvexSweepShape::LinkObject(NiStream& a_stream)
 77618,0x140e03ab0,0x140e58ab0,2,bool bhkConvexSweepShape::RegisterStreamables(NiStream& a_stream)
+77619,0x140e03ac0,0x140e58ac0,2,void bhkConvexSweepShape::SaveBinary(NiStream& a_stream)
 77620,0x140e03ad0,0x140e58ad0,2,bool bhkConvexSweepShape::IsEqual(NiObject* a_object)
 77628,0x140e03e30,0x140e58e30,2,const NiRTTI* bhkConvexSweepShape::GetRTTI()
 77630,0x140e03e50,0x140e58e50,2,void bhkConvexTransformShape::LoadBinary(NiStream& a_stream)
@@ -15953,6 +16434,7 @@
 78106,0x140e173f0,0x140e6c3f0,2,void bhkBlendController::SaveBinary(NiStream& a_stream)
 78107,0x140e17450,0x140e6c450,2,bool bhkBlendController::IsEqual(NiObject* a_object)
 78109,0x140e17510,0x140e6c510,2,void bhkBlendController::PostLinkObject(NiStream& a_stream)
+78110,0x140e17530,0x140e6c530,2,void bhkBlendController::Update(NiUpdateData& a_data)
 78111,0x140e17540,0x140e6c540,2,bool bhkBlendController::TargetIsRequiredType()
 78115,0x140e17610,0x140e6c610,2,const NiRTTI* bhkBlendController::GetRTTI()
 78118,0x140e17830,0x140e6c830,2,void bhkExtraData::LoadBinary(NiStream& a_stream)
@@ -15964,7 +16446,14 @@
 78143,0x140e18610,0x140e6d610,2,void bhkPoseArray::SaveBinary(NiStream& a_stream)
 78155,0x140e18e30,0x140e6de30,2,const NiRTTI* bhkPoseArray::GetRTTI()
 78163,0x140e19170,0x140e6e170,2,NiObject* bhkGenericConstraint::CreateClone(NiCloningProcess& a_cloning)
+78192,0x140e1d4f0,0x140e724f0,2,"void hkpCharacterState::EnterState(hkpCharacterContext& a_context, hkpCharacterStateType a_prevState, const hkpCharacterInput& a_input, hkpCharacterOutput& a_output)"
+78193,0x140e1d500,0x140e72500,2,"void hkpCharacterState::LeaveState(hkpCharacterContext& a_context, hkpCharacterStateType a_nextState, const hkpCharacterInput& a_input, hkpCharacterOutput& a_output)"
+78194,0x140e1d510,0x140e72510,2,hkpCharacterStateType bhkCharacterStateClimbing::GetType()
+78196,0x140e1d560,0x140e72560,2,hkpCharacterStateType bhkCharacterStateFlying::GetType()
+78199,0x140e1d5b0,0x140e725b0,2,hkpCharacterStateType bhkCharacterStateInAir::GetType()
+78203,0x140e1d950,0x140e72950,2,hkpCharacterStateType bhkCharacterStateJumping::GetType()
 78207,0x140e1dc20,0x140e72c20,2,hkpCharacterStateType bhkCharacterStateOnGround::GetType()
+78211,0x140e1e260,0x140e73260,2,hkpCharacterStateType bhkCharacterStateSwimming::GetType()
 78220,0x140e1ebd0,0x140e73bd0,2,const NiRTTI* bhkCharControllerShape::GetRTTI()
 78226,0x140e1f360,0x140e74360,2,void bhkCollisionBox::MoveToWorld(bhkWorld* a_world)
 78466,0x140e28f60,0x140e7df60,2,"void hkHeightFieldRayForwardingCollector::AddRayHit(const hkpCdBody& a_body, const hkpShapeRayCastCollectorOutput& a_hitInfo)"
@@ -16118,6 +16607,8 @@
 80302,0x140ece790,0x140f2b480,3,"bool BSScaleformManager::LoadMovie(IMenu* a_menu, GPtr<GFxMovieView>& a_viewOut, const char* a_fileName, ScaleModeType a_mode, float a_backGroundAlpha)"
 80307,0x140ecee30,0x140f2bb20,4,bool BSScaleformManager::IsValidName(const char* a_name)
 80353,0x140ed02b0,0x140f2cfa0,2,TranslateCap GFxTranslator::GetCaps()
+80357,0x140ed0330,0x140f2d020,2,std::size_t GSysAllocPaged::GetFootprint()
+80363,0x140ed05d0,0x140f2d2c0,2,std::size_t GSysAllocPaged::GetUsedSpace()
 80372,0x140ed06b0,0x140f2d3a0,2,void GFxTranslator::Translate(TranslateInfo* a_translateInfo)
 80386,0x140ed0aa0,0x140f314a0,2,InterfaceStrings* InterfaceStrings::Ctor()
 80446,0x140ed3a50,0x140f2da40,3,GString* GString::ctor(const char* a_str)
@@ -16613,6 +17104,8 @@
 88506,0x1410c4050,0x141120db0,2,float ActorState::NormalizedToAngularAcceleration(float a_normalized)
 88507,0x1410c40c0,0x141120e20,2,float ActorState::AngleAccelerationToNormalized(float a_value)
 88508,0x1410c4130,0x141120e90,2,float ActorState::NormalizedToAngleAcceleration(float a_normalized)
+88513,0x1410c4220,0x141120f80,2,float NullMovementState::DoGetMovementSpeed()
+88514,0x1410c4230,0x141120f90,2,float NullMovementState::DoGetRotationSpeed()
 88530,0x1410c4470,0x1411211d0,2,bool BSPathingSolution::Read(PathingStreamLoadGame& a_stream)
 88531,0x1410c45e0,0x141121340,2,bool BSPathingSolution::Write(PathingStreamSaveGame& a_stream)
 88532,0x1410c4740,0x1411214a0,2,std::uint32_t BSPathingSolution::GetStaticType()
@@ -17606,6 +18099,7 @@
 97977,0x141253530,0x1412adf90,2,FunctionType BSScript::Internal::NativeFunctionStub::GetFunctionType()
 97978,0x141253540,0x1412adfa0,2,std::uint32_t BSScript::Internal::NativeFunctionStub::GetUserFlags()
 97979,0x141253550,0x1412adfb0,2,const BSFixedString& BSScript::Internal::NativeFunctionStub::GetDocString()
+97980,0x141253560,0x1412adfc0,2,void BSScript::Internal::NativeFunctionStub::InsertLocals(StackFrame* a_frame)
 97983,0x1412536c0,0x1412ae120,2,"bool BSScript::Internal::NativeFunctionStub::TranslateIPToLineNumber(std::uint32_t a_indexPtr, std::uint32_t& a_lineNumberOut)"
 97985,0x141253730,0x1412ae190,2,bool BSScript::Internal::NativeFunctionStub::CanBeCalledFromTasklets()
 97986,0x141253740,0x1412ae1a0,2,void BSScript::Internal::NativeFunctionStub::SetCallableFromTasklets(bool a_callable)
@@ -17811,11 +18305,13 @@
 98589,0x14127fc30,0x1412b8ea0,2,bool BSScript::Internal::AutoPropGetFunction::GetIsEmpty()
 98590,0x14127fc40,0x1412b8eb0,2,FunctionType BSScript::Internal::AutoPropGetFunction::GetFunctionType()
 98591,0x14127fc50,0x1412b8ec0,2,std::uint32_t BSScript::Internal::AutoPropGetFunction::GetUserFlags()
+98593,0x14127fc70,0x1412b8ee0,2,void BSScript::Internal::AutoPropGetFunction::InsertLocals(StackFrame* a_frame)
 98594,0x14127fc80,0x1412b8ef0,2,"CallResult BSScript::Internal::AutoPropGetFunction::Call(const BSTSmartPointer<Stack>& a_stack, ErrorLogger* a_logger, Internal::VirtualMachine* a_vm, bool a_callingFromTasklets)"
 98595,0x14127fe40,0x1412b90b0,2,const BSFixedString& BSScript::Internal::AutoPropGetFunction::GetSourceFilename()
 98596,0x14127fe50,0x1412b90c0,2,"bool BSScript::Internal::AutoPropGetFunction::TranslateIPToLineNumber(std::uint32_t a_indexPtr, std::uint32_t& a_lineNumberOut)"
 98597,0x14127fe60,0x1412b90d0,2,"bool BSScript::Internal::AutoPropGetFunction::GetVarNameForStackIndex(std::uint32_t a_idx, BSFixedString& a_nameOut)"
 98598,0x14127fe90,0x1412b9100,2,bool BSScript::Internal::AutoPropGetFunction::CanBeCalledFromTasklets()
+98599,0x14127fea0,0x1412b9110,2,void BSScript::Internal::AutoPropGetFunction::SetCallableFromTasklets(bool a_callable)
 98600,0x14127feb0,0x1412b9120,2,const BSFixedString& BSScript::Internal::AutoPropSetFunction::GetName()
 98601,0x14127fec0,0x1412b9130,2,const BSFixedString& BSScript::Internal::AutoPropSetFunction::GetObjectTypeName()
 98602,0x14127fed0,0x1412b9140,2,const BSFixedString& BSScript::Internal::AutoPropSetFunction::GetStateName()
@@ -17828,10 +18324,12 @@
 98609,0x14127ffc0,0x1412b9230,2,bool BSScript::Internal::AutoPropSetFunction::GetIsEmpty()
 98610,0x14127ffd0,0x1412b9240,2,FunctionType BSScript::Internal::AutoPropSetFunction::GetFunctionType()
 98611,0x14127ffe0,0x1412b9250,2,std::uint32_t BSScript::Internal::AutoPropSetFunction::GetUserFlags()
+98613,0x141280000,0x1412b9270,2,void BSScript::Internal::AutoPropSetFunction::InsertLocals(StackFrame* a_frame)
 98614,0x141280010,0x1412b9280,2,"CallResult BSScript::Internal::AutoPropSetFunction::Call(const BSTSmartPointer<Stack>& a_stack, ErrorLogger* a_logger, Internal::VirtualMachine* a_vm, bool a_callingFromTasklets)"
 98615,0x1412801f0,0x1412b9460,2,const BSFixedString& BSScript::Internal::AutoPropSetFunction::GetSourceFilename()
 98616,0x141280200,0x1412b9470,2,"bool BSScript::Internal::AutoPropSetFunction::TranslateIPToLineNumber(std::uint32_t a_indexPtr, std::uint32_t& a_lineNumberOut)"
 98618,0x141280270,0x1412b94e0,2,bool BSScript::Internal::AutoPropSetFunction::CanBeCalledFromTasklets()
+98619,0x141280280,0x1412b94f0,2,void BSScript::Internal::AutoPropSetFunction::SetCallableFromTasklets(bool a_callable)
 98622,0x141280330,0x1412c1380,3,BSScript::UnlinkedTypes::InstructionStream* BSScript::UnlinkedTypes::InstructionStream::InstructionStream(std::uint32_t a_capacity)
 98624,0x141280500,0x1412c1550,3,void BSScript::UnlinkedTypes::InstructionStream::~InstructionStream()
 98626,0x141280670,0x1412c16c0,3,void BSScript::UnlinkedTypes::InstructionStream::Reset()
@@ -17913,6 +18411,7 @@
 98830,0x14128f590,0x1412c7ec0,2,const BSFixedString& BSScript::Internal::ScriptFunction::GetSourceFilename()
 98831,0x14128f5a0,0x1412c7ed0,2,"bool BSScript::Internal::ScriptFunction::TranslateIPToLineNumber(std::uint32_t a_indexPtr, std::uint32_t& a_lineNumberOut)"
 98833,0x14128f670,0x1412c7fa0,2,bool BSScript::Internal::ScriptFunction::CanBeCalledFromTasklets()
+98834,0x14128f680,0x1412c7fb0,2,void BSScript::Internal::ScriptFunction::SetCallableFromTasklets(bool a_callable)
 98835,0x14128f690,0x1412c7fc0,2,void BSScript::Internal::ScriptFunction::dtor_deleting()
 98836,0x14128f6d0,0x1412c8000,2,NiObject* BSFadeNode::CreateClone(NiCloningProcess& a_cloning)
 98840,0x14128f840,0x1412c8170,2,bool BSFadeNode::RegisterStreamables(NiStream& a_stream)
@@ -18200,7 +18699,9 @@
 99974,0x1412cd6d0,0x14130c360,3,"std::uint32_t AccumulateNodeChildren(AccumulateSceneGraphContext* a_context, NiNode* a_node)"
 99993,0x1412ce060,0x14130ce90,2,bool BSGrassShader::SetupTechnique(std::uint32_t a_technique)
 99994,0x1412ce200,0x14130d030,2,void BSGrassShader::SetupMaterial(BSShaderMaterial* a_material)
+99995,0x1412ce250,0x14130d080,2,void BSGrassShader::RestoreMaterial(const BSShaderMaterial* a_material)
 99996,0x1412ce260,0x14130d090,3,"void BSGrassShader::SetupGeometry(BSGrassShader* a_this, BSRenderPass* a_pass, uint a_flags)"
+99997,0x1412ce7d0,0x14130d610,2,"void BSGrassShader::RestoreGeometry(BSRenderPass* a_currentPass, std::uint32_t a_renderFlags)"
 100000,0x1412ceb10,0x14130da10,4,"void fogMethod (undefined8 param_1, int param_2)"
 100004,0x1412ced50,0x14130dc60,3,BSLightingShaderMaterial* BSLightingShaderMaterial::Ctor()
 100006,0x1412cef40,0x14130de50,3,void BSLightingShaderMaterial::CopyFrom(BSLightingShaderMaterial* a_other)
@@ -18370,6 +18871,7 @@
 100261,0x1412d8ab0,0x141317ef0,2,const NiRTTI* BSBloodSplatterShaderProperty::GetRTTI()
 100263,0x1412d8b60,0x141317fa0,2,void BSBloodSplatterShader::RestoreTechnique(std::uint32_t a_technique)
 100265,0x1412d8bf0,0x141318030,2,bool BSBloodSplatterShader::SetupTechnique(std::uint32_t a_technique)
+100267,0x1412d90d0,0x141318510,2,"void BSBloodSplatterShader::RestoreGeometry(BSRenderPass* a_currentPass, std::uint32_t a_renderFlags)"
 100292,0x1412db700,0x14131a8f0,2,void BSImagespaceShaderLensFlareVisibility::GetShaderMacros(ShaderMacro* a_macros)
 100297,0x1412dbad0,0x14131acc0,3,VolumetricLightingDescriptor& VolumetricLightingDescriptor::GetDescriptor()
 100299,0x1412dbb80,0x14131ad70,3,"void VolumetricLightingDescriptor::SetQuality(VolumetricLightingDescriptor& this, uint32_t quality)"
@@ -18381,6 +18883,7 @@
 100337,0x1412ddfc0,0x14131d440,2,void BSParticleShaderProperty::~BSParticleShaderProperty()
 100339,0x1412de040,0x14131d4c0,2,NiSourceTexture* BSParticleShaderProperty::GetBaseTexture()
 100340,0x1412de050,0x14131d4d0,2,const NiRTTI* BSParticleShaderProperty::GetRTTI()
+100350,0x1412de620,0x14131daa0,2,void BSMaterialObject::EnsureLoaded()
 100366,0x1412dfa60,0x14131f000,2,NiAVObject* BSParticleShaderEmitter::GetBoundsObject()
 100367,0x1412dfa70,0x14131f010,2,NiAVObject* BSParticleShaderObjectEmitter::GetBoundsObject()
 100368,0x1412dfa80,0x14131f020,2,"void BSParticleShaderGeometryEmitter::CollectObjects(NiAVObject* a_targetRoot, std::uint16_t a_depthLimit, std::uint16_t a_depth, bool (*a_nodeFilterFunc)(const BSFixedString&))"
@@ -18431,6 +18934,7 @@
 100537,0x1412ee8d0,0x141330780,3,"RENDER_TARGET BSImagespaceShader::RenderSnowSSS(RENDER_TARGET a_inputRenderTarget, RENDER_TARGET a_outputRenderTarget)"
 100540,0x1412eeb90,0x141330a40,3,"RENDER_TARGET FUN_1412eeb90 (BSImagespaceShader * * param_1, RENDER_TARGET param_2, RENDER_TARGET param_3)"
 100563,0x1412f2020,0x141338400,3,"void BSLightingShader::Func4_1412F2020 (BSLightingShader * a_this, undefined8 param_2, undefined8 param_3)"
+100564,0x1412f2ba0,0x141338f50,2,void BSLightingShader::RestoreMaterial(const BSShaderMaterial* a_material)
 100565,0x1412f2bb0,0x141338f60,3,"void BSLightingShader::Func6_1412F2BB0 (BSLightingShader * a_this, undefined8 param_2, undefined8 param_3, undefined8 param_4)"
 100566,0x1412f3870,0x141339cb0,2,"void BSLightingShader::RestoreGeometry(BSRenderPass* a_currentPass, std::uint32_t a_renderFlags)"
 100583,0x1412f4e20,0x14133b930,3,"void SetLODBlendOffsetConstant(void* a_constants, float* a_origin, float a_value0, float a_value1)"
@@ -18439,6 +18943,7 @@
 100599,0x1412f5df0,0x141332dc0,2,void BSWaterShader::RestoreTechnique(std::uint32_t a_technique)
 100601,0x1412f6000,0x141333000,2,bool BSWaterShader::SetupTechnique(std::uint32_t a_technique)
 100602,0x1412f63d0,0x141333470,3,"void BSWaterShader::Func4_1412F63D0 (BSWaterShader * a_this, undefined8 param_2)"
+100603,0x1412f6a60,0x141333b00,2,void BSWaterShader::RestoreMaterial(const BSShaderMaterial* a_material)
 100605,0x1412f8030,0x141335260,2,"void BSWaterShader::RestoreGeometry(BSRenderPass* a_currentPass, std::uint32_t a_renderFlags)"
 100615,0x1412f86b0,0x1413505a0,2,"void ImageSpaceEffectVolumetricLighting::Setup(ImageSpaceManager* a_manager, ImageSpaceEffectParam* a_param)"
 100622,0x1412f90d0,0x141335c00,2,"void ImageSpaceEffectDepthOfField::Render(BSTriShape* a_shape, ImageSpaceEffectParam* a_param)"
@@ -18485,6 +18990,7 @@
 100741,0x1412feba0,0x141341080,2,void BSEffectShader::RestoreTechnique(std::uint32_t a_technique)
 100743,0x1412fecb0,0x141341190,2,bool BSEffectShader::SetupTechnique(std::uint32_t a_technique)
 100744,0x1412ff0b0,0x141341660,2,void BSEffectShader::SetupMaterial(BSShaderMaterial* a_material)
+100745,0x1412ff4f0,0x141341ac0,2,void BSEffectShader::RestoreMaterial(const BSShaderMaterial* a_material)
 100754,0x141300e90,0x141343720,2,NiObject* BSDistantTreeShaderProperty::CreateClone(NiCloningProcess& a_cloning)
 100758,0x141301180,0x141343a00,2,std::int32_t BSDistantTreeShaderProperty::QShader()
 100759,0x141301190,0x141343a10,2,bool BSDistantTreeShaderProperty::SetupGeometry(BSGeometry* a_geometry)
@@ -18496,6 +19002,7 @@
 100765,0x1413013a0,0x141343c20,2,NiSourceTexture* BSDistantTreeShaderProperty::GetBaseTexture()
 100766,0x1413013b0,0x141343c30,2,const NiRTTI* BSDistantTreeShaderProperty::GetRTTI()
 100771,0x1413014c0,0x141343d40,3,"bool BSDistantTreeShader::Func2_1413014C0 (BSDistantTreeShader * a_this, undefined8 param_2)"
+100773,0x141301b30,0x141344430,2,"void BSDistantTreeShader::RestoreGeometry(BSRenderPass* a_currentPass, std::uint32_t a_renderFlags)"
 100776,0x141301c50,0x141344550,3,BSCubeMapCamera* BSCubeMapCamera::Ctor()
 100779,0x141301fa0,0x1413448a0,4,void BSCubeMapCamera::SetFace(Face a_face)
 100781,0x141302780,0x1413450a0,3,BSCubeMapCamera* BSCubeMapCamera::Dtor(std::uint32_t a_flags)
@@ -18521,6 +19028,7 @@
 100829,0x141305ea0,0x14134d100,3,bool BSShadowLight::GetIsOmniLight()
 100830,0x141305eb0,0x14134d110,3,bool BSShadowLight::GetIsFrustumLight()
 100831,0x141305ec0,0x14134d120,3,bool BSShadowLight::GetIsParabolicLight()
+100832,0x141305ed0,0x14134d130,2,bool BSShadowLight::IsShadowLight()
 100833,0x141305ee0,0x14134d140,3,bool BSShadowLight::GetNeedsClipPlanes()
 100834,0x141305ef0,0x14134d150,3,std::uint32_t BSShadowLight::GetPassExtraParam(std::uint32_t a_accumFlag)
 100836,0x141306020,0x14134d310,3,"void BSShadowLight::TransformClipSpacePlanes(REX::W32::D3DXMatrix* a_matrix1, REX::W32::D3DXMatrix* a_matrix2)"
@@ -18565,6 +19073,7 @@
 100974,0x14130dd80,0x141351840,2,void BSUtilityShader::RestoreTechnique(std::uint32_t a_technique)
 100976,0x14130df90,0x141351a50,2,bool BSUtilityShader::SetupTechnique(std::uint32_t a_technique)
 100977,0x14130e890,0x1413523f0,2,void BSUtilityShader::SetupMaterial(const BSShaderMaterial* a_material)
+100978,0x14130ec60,0x1413527c0,2,void BSUtilityShader::RestoreMaterial(const BSShaderMaterial* a_material)
 100979,0x14130ec70,0x1413527d0,3,"void BSUtilityShader::SetupGeometry(BSUtilityShader * a_this, BSRenderPass * a_pass, uint32_t a_flags)"
 100982,0x141310300,0x141354220,2,"void BSUtilityShader::RestoreGeometry(BSRenderPass* pass, uint32_t flags)"
 100988,0x1413108c0,0x1413547e0,3,"void BSShaderPropertyLightData::RemoveGeometryFromLights(BSShaderPropertyLightData* this, BSGeometry* a_geometry)"
@@ -18615,6 +19124,8 @@
 101170,0x141318060,0x141360cc0,2,void BSDynamicLines::UpdateDynamicColors(NiColorA* a_colors)
 101173,0x141318250,0x141360eb0,2,"errno_t memcpy_s(void* a_dest, std::size_t a_destSize, const void* a_src, std::size_t a_count)"
 101181,0x1413187f0,0x141361450,2,bool UnitTest_BSStreamParserStream::good()
+101187,0x1413188d0,0x141361530,2,void UnitTest_BSStreamParserStream::seek(std::int32_t a_numBytes)
+101188,0x1413188e0,0x141361540,2,void UnitTest_BSStreamParserStream::set_endian_swap(bool a_doSwap)
 101265,0x14131b7f0,0x141361670,2,NiObject* BSMultiIndexTriShape::CreateClone(NiCloningProcess& a_cloning)
 101280,0x14131bf10,0x141361d90,2,BSShaderMaterial* BSShaderMaterial::Create()
 101281,0x14131bff0,0x141361e70,2,void BSShaderMaterial::CopyMembers(BSShaderMaterial* that)
@@ -18654,6 +19165,7 @@
 101383,0x141321800,0x141367a10,2,bool BSLightingShaderPropertyUShortController::RegisterStreamables(NiStream& a_stream)
 101384,0x141321810,0x141367a20,2,void BSLightingShaderPropertyUShortController::SaveBinary(NiStream& a_stream)
 101385,0x141321870,0x141367a80,2,bool BSLightingShaderPropertyUShortController::IsEqual(NiObject* a_object)
+101388,0x141321960,0x141367b70,2,void BSLightingShaderPropertyUShortController::Update(NiUpdateData& a_data)
 101390,0x141321990,0x141367ba0,2,bool BSLightingShaderPropertyUShortController::InterpTargetIsCorrectType(NiObjectNET* a_target)
 101391,0x1413219e0,0x141367bf0,2,void BSLightingShaderPropertyUShortController::GetTargetFloatValue(float& a_value)
 101394,0x141321a90,0x141367ca0,2,const char* BSLightingShaderPropertyUShortController::GetCtlrID()
