@@ -13815,6 +13815,8 @@ sseid,aeid,confidence,name
 52226,53113,3,RE::MapMenu::PlaceMarker
 52228,53115,3,MapMenu::UpdateCamera
 52231,53118,3,MapMenu::Close
+52232,53119,1,
+52233,53120,1,
 52252,53142,3,LoadWorldMapOverlayTextures
 52253,53143,1,
 52254,53144,1,

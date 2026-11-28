@@ -11174,6 +11174,8 @@
 52226,0x1408e6ea0,0x140919520,3,void MapMenu::PlaceMarker()
 52228,0x1408e7380,0x140919910,2,bool MapMenu::UpdateCamera()
 52231,0x1408e7530,0x140919a20,2,void MapMenu::Close()
+52232,0x1408e7700,0x140919e40,2,void MapMenu::IMapCameraCallbacks_Unk_00()
+52233,0x1408e7870,0x140919fb0,2,void MapMenu::IMapCameraCallbacks_Unk_01()
 52235,0x1408E78F0,0x14091A060,3,"bool AppendOrdinaryMarkerHandles(BSTArray<ObjectRefHandle>* a_handles, BSTArray<MapMenuMarker>** a_markers)"
 52236,0x1408e7c80,0x14091a4e0,3,anonymous_namespace__FastTravelConfirmCallback::Run_1408E7C80
 52252,0x1408e8270,0x14091af50,3,void LoadWorldMapOverlayTextures_1408E8270()
