@@ -1544,6 +1544,7 @@ sseid,aeid,confidence,name
 10968,10980,1,
 10969,10977,1,
 10970,10964,1,
+10973,10990,1,
 10981,10974,1,
 10982,10982,1,
 10985,10989,1,
@@ -1685,6 +1686,7 @@ sseid,aeid,confidence,name
 11353,11489,1,
 11354,11490,1,SpellItem::SetDelivery_*
 11355,11491,1,SpellItem::GetAssociatedSkill_*
+11356,11494,1,
 11357,11495,1,SpellItem::GetSkillUsageData_*
 11358,11496,1,SpellItem::GetChargeTime_*
 11359,11497,1,
@@ -1743,6 +1745,7 @@ sseid,aeid,confidence,name
 11448,11594,1,
 11449,11595,1,
 11452,11598,1,
+11455,11601,1,
 11471,11617,1,
 11477,11623,3,void ExtraDataList::SetSoundHandle(const BSSoundHandle* a_handle)
 11483,11600,1,
@@ -1773,6 +1776,7 @@ sseid,aeid,confidence,name
 11547,11693,1,
 11549,11695,1,ExtraDataList::GetRank_*
 11552,11698,1,ExtraDataList::IsGhost_*
+11553,11699,1,
 11554,11700,1,
 11555,11701,1,
 11557,11703,1,ExtraDataList::GetTemper_*
@@ -1885,6 +1889,7 @@ sseid,aeid,confidence,name
 11934,12073,1,
 11936,12075,1,ExtraDataList::GetMountInteraction_*
 11938,12077,3,FUN_140127a70
+11942,12081,1,
 11944,12083,1,
 11948,12087,1,
 11950,12089,1,
@@ -3376,6 +3381,7 @@ sseid,aeid,confidence,name
 17388,17788,1,
 17389,17789,1,TESObjectARMO::sub_*
 17390,17790,1,TESObjectARMO::sub_*
+17392,17792,1,
 17398,17798,1,
 17399,17799,1,
 17418,17776,1,ConcreteFormFactory_TESObjectARMO_26_::CreateImpl_*
@@ -5293,6 +5299,7 @@ sseid,aeid,confidence,name
 25822,26379,3,RE::AIForumulas::ComputePickpocketSuccess
 25834,26394,1,
 25858,26424,1,
+25922,26505,1,
 25932,26519,1,
 25951,26537,1,
 25952,26538,1,
@@ -6922,6 +6929,7 @@ sseid,aeid,confidence,name
 32464,33203,1,
 32465,33204,1,
 32468,33215,3,CombatController::Dtor
+32513,33262,1,
 32519,33271,1,
 32521,33273,1,
 32522,33274,1,
@@ -8554,6 +8562,7 @@ sseid,aeid,confidence,name
 38723,39754,1,Character::sub_*
 38724,39710,1,
 38726,39756,1,
+38734,39762,1,
 38741,39767,1,
 38752,39776,1,
 38753,39777,1,
@@ -12330,6 +12339,7 @@ sseid,aeid,confidence,name
 48132,49164,1,
 48133,49165,1,
 48139,49170,1,
+48140,49171,1,
 48147,49178,1,
 48149,49180,1,
 48151,49182,1,
@@ -13921,6 +13931,7 @@ sseid,aeid,confidence,name
 54401,55106,1,
 54404,55108,1,
 54437,55121,1,
+54444,55127,1,
 54455,55138,1,papyrus::Alias::StopObjectProfiling_*
 54456,55139,1,papyrus::Alias::UnregisterForAnimationEvent_*
 54458,55141,1,papyrus::Alias::UnregisterForSleep_*
@@ -13993,6 +14004,7 @@ sseid,aeid,confidence,name
 54705,55347,1,
 54720,55360,1,
 54721,55361,1,
+54741,55380,1,
 54773,55409,1,
 54774,55410,1,
 54775,55411,1,
@@ -14246,6 +14258,7 @@ sseid,aeid,confidence,name
 55604,56133,1,SkyrimScript::ApplyHavokImpulseFunctor::Func6_*
 55605,56134,1,SkyrimScript::ResetFunctor::Func1_*
 55606,56135,1,SkyrimScript::ResetFunctor::Func4_*
+55615,56144,1,
 55616,56145,1,papyrus::ObjectReference::AddItem_*
 55617,56146,1,papyrus::ObjectReference::AddToMap_*
 55618,56147,1,papyrus::ObjectReference::ApplyHavokImpulse_*
@@ -14930,6 +14943,7 @@ sseid,aeid,confidence,name
 61179,62063,1,
 61180,62064,1,
 61181,62065,1,
+61208,62097,1,
 61210,62099,1,
 61216,62105,1,
 61217,62106,1,
@@ -16578,6 +16592,7 @@ sseid,aeid,confidence,name
 72779,74479,1,
 72782,74482,1,
 72784,74484,1,
+72789,74489,1,
 72791,74491,1,
 72793,74493,1,
 72794,74494,1,
@@ -17827,6 +17842,7 @@ sseid,aeid,confidence,name
 79088,81114,1,
 79089,81115,1,
 79090,81116,1,
+79279,81336,1,
 79290,81348,1,
 79339,81399,1,
 79357,81419,1,
@@ -17918,6 +17934,7 @@ sseid,aeid,confidence,name
 81202,83265,3,GASEnvironment::FindTarget
 81228,83293,3,GASEnvironment::GetLog
 81231,83296,3,GASEnvironment::GetMovieRoot
+81326,83388,1,
 81353,83412,3,GFxCharacterHandle::dtor
 81368,83428,3,Scaleform::GFx::DisplayObjectBase::AddToPrePassList
 81385,83439,3,Scaleform::GFx::DisplayObjectBase::GetCharacterHandle
@@ -19327,6 +19344,7 @@ sseid,aeid,confidence,name
 90454,92944,1,
 90455,92972,1,MovementMessagePathCleared::Func1_*
 90456,92973,1,MovementMessagePathComplete::Func1_*
+90457,92974,1,
 90459,92976,1,
 90460,92977,1,
 90461,92978,1,
