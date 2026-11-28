@@ -1706,6 +1706,7 @@
 18471,0x1402621e0,0x140273780,2,bool TESObjectCELL::SetFormEditorID(const char* a_str)
 18474,0x140262290,0x140273830,3,BGSLocation* TESObjectCELL::GetLocation()
 18481,0x140262900,0x140273ea0,2,"void TESObjectCELL::GetFormDetailedString(char* a_buf, std::uint32_t a_bufLen)"
+18505,0x1402634b0,0x140274a50,2,"void TESObjectCELL::GetDataXandY(std::int32_t& a_x, std::int32_t& a_y)"
 18513,0x140263920,0x140274ec0,4,TESObjectLAND* TESObjectCELL::GetLand()
 18518,0x140263be0,0x140275180,3,void TESObjectCELL::Attach(NiNode* a_parent)
 18519,0x140263e90,0x140275430,3,void TESObjectCELL::RegisterWithPortalGraph()
@@ -6741,7 +6742,7 @@
 39340,0x140699040,0x1406a26a0,2,PlayerCharacter::Ctor
 39343,0x14069a9d0,0x1406bae40,3,void Actor::StartSleeping(int32_t a_hours)
 39344,0x14069ab10,0x1406baf80,3,void PlayerCharacter::StartWaiting(int32_t a_hours)
-39346,0x14069abf0,0x1406bb060,2,PlayerCharacter::
+39346,0x14069abf0,0x1406bb060,2,void PlayerCharacter::EndSleepWait(bool a_checkLevelUp)
 39361,0x14069bd60,0x1406bc180,2,"bool PlayerCharacter::ProcessInWater(hkpCollidable* a_collidable, float a_waterHeight, float a_deltaTime)"
 39362,0x14069be10,0x1406bc230,3,"void Actor::GetCarryWeightInfo(float* a_outInventoryWeight, float* a_outCarryWeight)"
 39365,0x14069c2a0,0x1406bc6c0,3,"bool PlayerCharacter::CenterOnCell_Impl(const char* a_cellName, RE::TESObjectCELL* a_cell)"
@@ -10472,7 +10473,7 @@
 49959,0x14084f3f0,0x1408797a0,2,void ThirdPersonState::End()
 49960,0x14084f490,0x140879840,2,"void ThirdPersonState::Update_14084F490 (longlong *param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4)"
 49966,0x14084f830,0x140879be0,3,void ThirdPersonState::ResetFreeRotation()
-49970,0x14084fbe0,0x140879fa0,3,"void ProcessButton_14084FBE0 (PlayerInputHandler * a_this, undefined8 param_2)"
+49970,0x14084fbe0,0x140879fa0,3,"void ThirdPersonState::ProcessButton(ButtonEvent* a_event, PlayerControlsData* a_data)"
 49972,0x14084ff70,0x14087a330,2,void ThirdPersonState::SaveGame(BGSSaveFormBuffer* a_buf)
 49973,0x140850040,0x14087a400,2,void ThirdPersonState::LoadGame(BGSLoadFormBuffer* a_buf)
 49974,0x140850110,0x14087a4d0,2,void ThirdPersonState::Revert(BGSLoadFormBuffer* a_buf)
