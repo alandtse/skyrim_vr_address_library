@@ -3957,7 +3957,7 @@ sseid,aeid,confidence,name
 19305,19732,1,
 19306,19733,1,TESObjectREFR::ShouldBackgroundClone_*
 19308,19735,1,
-19309,19736,3,TESObjectREFR::sub_1402917F0
+19309,19736,3,TESObjectREFR::InitWaterCollision
 19312,19739,1,TESObjectREFR::sub_*
 19313,19740,1,TESObjectREFR::sub_*
 19314,19741,1,
@@ -5066,7 +5066,7 @@ sseid,aeid,confidence,name
 24225,24729,1,
 24228,24732,1,VampiresCastNoShadow::attach_head
 24229,24733,1,
-24232,24736,1,TESNPC::sub_*
+24232,24736,1,TESNPC::InitWornObject
 24233,24737,1,TESNPC::sub_*
 24236,24740,3,FEC::processArmorAttach::PerformNPCDismember
 24237,24741,1,TESNPC::sub_*

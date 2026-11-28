@@ -98,6 +98,7 @@
 10968,0x1400f9ad0,0x14010a080,2,"std::uint32_t NiTStringTemplateMap<NiTMap<char_const*_,Setting*>,Setting*>::hash_function(const char* a_key)"
 10969,0x1400f9b00,0x14010a0b0,2,"void* NiTMap<char_const*_,Setting*>::malloc_value()"
 10970,0x1400f9b40,0x14010a0f0,2,bool SettingCollection<Setting>::OpenHandle(bool a_create)
+10973,0x1400f9b90,0x14010a140,2,bool GameSettingCollection::ReadAllSettings()
 10974,0x1400f9ca0,0x14010a250,3,RE::INISettingCollection::Unk_07
 10979,0x1400f9e90,0x14010a440,3,RE::BSString::Set_CStr
 10981,0x1400fa140,0x14010a6f0,2,"void NiTMapBase<DFALL<NiTMapItem<char_const*_,Setting*>>,char_const*_,Setting*>::assign_value(void* a_item, const char* a_key, Setting* a_value)"
@@ -1856,7 +1857,7 @@
 19304,0x1402915F0,0x1402A2D00,3,TESObjectREFR::SendObjectLoadedEvent
 19306,0x140291780,0x1402a2e90,2,bool TESObjectREFR::ShouldBackgroundClone()
 19308,0x1402917b0,0x1402a2ec0,2,NiAVObject* TESObjectREFR::Get3D2()
-19309,0x1402917f0,0x1402a2f00,4,void TESObjectREFR::sub_1402917F0()
+19309,0x1402917f0,0x1402a2f00,4,void TESObjectREFR::InitWaterCollision()
 19314,0x140293fe0,0x1402a56f0,2,bool TESForm::GetRandomAnim()
 19315,0x140294000,0x1402a5710,2,void TESObjectREFR::QueueLoad3D()
 19316,0x1402943b0,0x1402a5ac0,4,bool Actor::Update3D()
@@ -2823,7 +2824,7 @@
 24227,0x140363de0,0x140373740,4,"void TESNPC::LoadFaceGenHead(NiPointer<BSFaceGenNiNode>* a_outFaceNode, void* a_outHandle)"
 24228,0x140363f20,0x140373880,3,"void TESNPC::UpdateHead(Actor* a_actor, NiPointer<BSFaceGenNiNode>* a_faceNode)"
 24231,0x140364280,0x140373be0,4,"void TESNPC::AttachWornItems(TESObjectREFR* a_ref, BSTSmartPointer<BipedAnim>* a_biped)"
-24232,0x140364350,0x140373cb0,4,"void TESObjectARMO::InitWornArmor(TESNPC* a_npc, Actor* a_actor, BSTSmartPointer<BipedAnim>* a_biped, InventoryEntryData* a_entry)"
+24232,0x140364350,0x140373cb0,4,"bool TESNPC::InitWornObject(TESObjectREFR* a_ref, BSTSmartPointer<BipedAnim>& a_biped, InventoryEntryData* a_entry)"
 24233,0x140364680,0x140373FE0,4,"bool TESNPC::AttachWornItem(void* a_unused, BSTSmartPointer<BipedAnim>* a_biped, TESBoundObject* a_item)"
 24234,0x140364710,0x140374070,3,"void EquipAndProcessChanges (TESNPC * a_this, PlayerCharacter * param_2, undefined8 param_3, undefined8 param_4, undefined8 param_5, undefined8 param_6)"
 24235,0x140364f00,0x140374860,4,"void TESNPC::AttachWornItemsOfType(TESObjectREFR* a_ref, BSTSmartPointer<BipedAnim>* a_biped, FormType a_formType)"
@@ -6538,6 +6539,7 @@
 38695,0x140676730,0x14067fc00,2,"PathingSolutionQueue** AssignPathingSolutionQueuePtr(PathingSolutionQueue** a_ptr, PathingSolutionQueue* a_new)"
 38724,0x1406776a0,0x140680b20,2,void BSPathingSolutionArray::Destruct(char a_free)
 38726,0x1406777c0,0x140680c40,4,"void HighProcessData::ClearHeadtrackTarget(HEAD_TRACK_TYPE a_headtrackType, bool a_defaultHold)"
+38734,0x140677b10,0x140680f90,2,"void RunActionAnimationLoadedCallback::OnAnimationSetLoaded(void* a_unused, void* a_animations)"
 38752,0x140679000,0x140682480,3,BSTArray_EraseRange_RefCountedPairs
 38760,0x1406797d0,0x140682c50,3,"void HighProcessData::SetHeadtrackTarget(HEAD_TRACK_TYPE a_headtrackType, TESObjectREFR* a_target)"
 38769,0x140679b70,0x140682ff0,2,MagicItem* AIProcess::GetCurrentPackageSpell()
@@ -6877,7 +6879,7 @@
 40604,0x1406e9810,0x140710700,2,bool ActorMover::GetPathRequest(void** a_out)
 40605,0x1406e9930,0x140710820,2,"bool ActorMover::GetClosestPathPoint(NiPoint3* a_pos, void* a_out)"
 40606,0x1406e9a30,0x140710920,2,"bool ActorMover::GetPathingDoor(std::uint32_t* a_outDoorHandle, BSPathingLocation* a_outLocation)"
-40612,0x1406e9fc0,0x140710eb0,2,"void Character::SubmitPathRequest(void* a_request, void* a_location, float a_unkFloat, void* a_unk)"
+40612,0x1406e9fc0,0x140710eb0,2,"void Character::SubmitPathRequestImpl(void* a_request, void* a_location, float a_unkFloat, void* a_unk)"
 40627,0x1406eaa80,0x140711970,3,MovementParametersFixed* MovementParametersFixed::dtor_deleting(std::uint32_t a_flags)
 40628,0x1406eaab0,0x1407119a0,2,"IMovementParameters* BSTDerivedCreator<MovementParameters,IMovementParameters>::CreateImpl(IMovementParameters* a_val) const"
 40630,0x1406eabc0,0x140711ab0,2,"void BSTDerivedCreator<MovementParameters,IMovementParameters>::Destroy(const IMovementParameters* a_val)"
@@ -8573,7 +8575,7 @@
 46039,0x1407bcb40,0x1407e7e90,4,Character::sub_1407BCB40
 46043,0x1407bccd0,0x1407e8020,4,CombatUtilities::CanActorExistInSpace
 46045,0x1407bcd80,0x1407e80d0,2,"void Character::GetAnticipatedLocation(float a_time, NiPoint3* a_outLocation)"
-46050,0x1407bd150,0x1407e84a0,4,"bool Actor::UpdateNavPos(const NiPoint3& a_pos, const NiPoint3& a_new_pos, float a_speed, float a_distance)"
+46050,0x1407bd150,0x1407e84a0,4,"bool CombatUtilities::CheckStraightPath(TESObjectREFR* a_ref, const NiPoint3& a_start, NiPoint3& a_end, float a_arg4, float a_arg5)"
 46054,0x1407be440,0x1407e9790,2,"bool ArePointsWithinRadiusAndHeight(const NiPoint3* a_a, const NiPoint3* a_b, float a_heightLimit, float a_radius)"
 46062,0x1407be7e0,0x1407e9b30,2,bool Character::IsMovingAwayFromPoint(const NiPoint3& a_point)
 46063,0x1407be890,0x1407e9be0,2,bool Character::IsMovingTowardPoint(const NiPoint3& a_point)
@@ -16850,6 +16852,7 @@
 90453,0x141120710,0x14117d5e0,2,"void BSTDerivedCreator<MovementMessagePathComplete,MovementMessage>::Destroy(const MovementMessage* a_val)"
 90454,0x141120730,0x14117d600,2,"void BSTDerivedCreator<MovementMessagePathFailed,MovementMessage>::Destroy(const MovementMessage* a_val)"
 90455,0x141120750,0x14117d620,2,std::uint32_t MovementMessagePathCleared::GetType()
+90456,0x141120780,0x14117d650,2,std::int32_t MovementMessagePathComplete::GetType()
 90474,0x141120d80,0x14117dc50,2,"BSPathSmootherPOVSearch* BSPathSmootherPOVSearch::ctor(void* a_arg2, void* a_arg3, void* a_arg4, void* a_arg5, void* a_arg6, void* a_arg7, void* a_arg8)"
 90476,0x1411210d0,0x14117dfa0,2,"bool BSPathSmootherPOVSearch::Run(const void* a_start, const void* a_goal)"
 90477,0x1411214f0,0x14117e3c0,2,"void BSPathSmootherPOVSearch::ExpandNode(void* a_node, void* a_out)"
