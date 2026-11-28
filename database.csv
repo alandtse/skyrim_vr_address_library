@@ -1007,7 +1007,7 @@
 16192,0x1401fc9a0,0x14020e2f0,2,bool GameSettingCollection::OpenHandle(bool a_create)
 16193,0x1401fc9c0,0x14020e310,2,bool GameSettingCollection::CloseHandle()
 16198,0x1401fccb0,0x14020e600,2,bool TESRegion::Load(TESFile* a_mod)
-16199,0x1401fd120,0x14020ea70,2,void TESRegion::ClearData(void)
+16199,0x1401fd120,0x14020ea70,2,void TESRegion::ClearData()
 16200,0x1401fd1e0,0x14020eb30,2,void TESRegion::InitItemImpl()
 16202,0x1401fd350,0x14020eca0,4,void TESRegion::SetCurrentWeather(TESWeather* a_weather)
 16203,0x1401fd3d0,0x14020ed20,4,TESWeather* TESRegion::SelectWeather()
@@ -2228,7 +2228,7 @@
 20612,0x1402c9f90,0x1402db700,2,MUSIC_STATUS BSIMusicTrack::GetMusicStatus()
 20614,0x1402ca000,0x1402db770,2,TrackType BGSMusicPaletteTrack::GetType()
 20625,0x1402ca5d0,0x1402dbd40,2,void BGSMusicSilenceTrack::Load(TESFile* a_mod)
-20626,0x1402ca670,0x1402dbde0,2,void BGSMusicSilenceTrack::DoUpdate(void)
+20626,0x1402ca670,0x1402dbde0,2,void BGSMusicSilenceTrack::DoUpdate()
 20627,0x1402ca6d0,0x1402dbe40,2,void BGSMusicSilenceTrack::DoPlay()
 20628,0x1402ca730,0x1402dbea0,2,void BGSMusicSilenceTrack::DoPause()
 20629,0x1402ca760,0x1402dbed0,2,"void BGSMusicSilenceTrack::DoFinish(bool a_immediate, float a_fadeTime)"
@@ -5894,7 +5894,7 @@
 36554,0x1405eb5d0,0x1405f3ce0,2,"void Actor::InitiateFlee(TESObjectREFR* a_fleeRef, bool a_runOnce, bool a_knows, bool a_combatMode, TESObjectCELL* a_cell, TESObjectREFR* a_ref, float a_fleeFromDist, float a_fleeToDist)"
 36559,0x1405ebd90,0x1405f44a0,4,uint32_t Actor::GetCollisionFilterInfo(uint32_t& a_outCollisionFilterInfo)
 36563,0x1405ec020,0x1405f4730,2,void Actor::SetDelete(bool a_set)
-36564,0x1405ec060,0x1405f4770,2,BGSAnimationSequencer* Actor::GetSequencer(void)
+36564,0x1405ec060,0x1405f4770,2,BGSAnimationSequencer* Actor::GetSequencer()
 36566,0x1405ec230,0x1405f4940,2,bool Actor::ShouldUseTorch()
 36568,0x1405ec540,0x1405f4c50,3,Actor::InitiateGetUpPackage
 36569,0x1405ec760,0x1405f4e70,2,"void Actor::PutCreatedPackage(TESPackage* a_package, bool a_tempPackage, bool a_createdPackage, bool a_allowFromFurniture)"
@@ -5942,7 +5942,7 @@
 36715,0x1405fa910,0x140603100,3,bool MagicTarget::IsInvulnerable()
 36720,0x1405fb450,0x140603c40,3,std::uint32_t Actor::GetOccupiedFurnitureAnimType()
 36723,0x1405fb640,0x140603e30,3,void Actor::KillImmediate()
-36728,0x1405fba90,0x140604280,2,void Actor::StopCurrentDialogue(void)
+36728,0x1405fba90,0x140604280,2,void Actor::StopCurrentDialogue()
 36730,0x1405fc040,0x140604830,4,"void Actor::PlayASound(BSSoundHandle& a_result, FormID a_formID, bool a_arg3, std::uint32_t a_flags)"
 36738,0x1405fc490,0x140604c80,2,void Actor::UpdateVoiceTimer(bool a_forceEnd)
 36739,0x1405fc5c0,0x140604db0,2,void Character::UpdatePackageStartLocationIfCurrentLoc()
@@ -6686,7 +6686,7 @@
 39159,0x140692390,0x14069B990,2,"void ResetCachedBaseValue(CachedValues*, ActorValue)"
 39171,0x1406928c0,0x14069bec0,4,Character * Character::ctor (Character * a_this)
 39172,0x1406929c0,0x14069bfc0,4,BSTask::sub_1406929C0
-39173,0x140692ab0,0x14069c0b0,2,void Character::Predestroy(void)
+39173,0x140692ab0,0x14069c0b0,2,void Character::Predestroy()
 39174,0x140692b30,0x14069c130,2,float Character::CalcArmorRating()
 39175,0x140692cd0,0x14069c2d0,3,RE::PlayerCharacter::GetArmorValue
 39176,0x140692e10,0x14069c410,2,float Character::GetArmorBaseFactorSum()
@@ -15914,7 +15914,7 @@
 88103,0x1410b35d0,0x141110200,2,"bool FindClosestOpenEdgeFunctor::VisitEdge(BSNavmesh* a_navmesh, std::uint16_t a_triangle, std::uint32_t a_edge)"
 88104,0x1410b36d0,0x141110300,2,"bool CrossEdgeToNeighborNavmesh(void* a_visited, const BSNavmeshTriangleEdgeRef* a_edgeRef, void* a_outEdgeRef)"
 88105,0x1410b3800,0x141110430,2,"bool SortIntersectingEdgesFunctor::VisitEdge(BSNavmesh* a_navmesh, std::uint16_t a_triangle, std::uint32_t a_edge)"
-88124,0x1410b3f00,0x141110b30,2,"bool CastRay(void* a_this, void* a_context, void* a_arg, BSNavmesh** a_navmesh, std::uint32_t* a_outResult)"
+88124,0x1410b3f00,0x141110b30,2,"bool CastRay(void* a_object, void* a_context, void* a_arg, BSNavmesh** a_navmesh, std::uint32_t* a_outResult)"
 88125,0x1410b3f70,0x141110ba0,2,"static void Pathing::ShrinkTangentsToFitNavmesh(PathFitContext* a_ctx, PathNodeNavInfo* a_from, NiPoint3* a_fromDir, float a_fromScale, PathNodeNavInfo* a_to, NiPoint3* a_toDir, float a_toScale, float* a_outFromLength, float* a_outToLength)"
 88126,0x1410b4310,0x141110f40,2,"static void Pathing::ShrinkTangentsToFitNavmeshByHandle(PathFitContext* a_ctx, PathNodeNavInfo* a_from, NiPoint3* a_fromDir, float a_fromScale, PathNodeNavInfo* a_to, NiPoint3* a_toDir, float a_toScale, float* a_outFromLength, float* a_outToLength)"
 88127,0x1410b46b0,0x1411112e0,2,"static void Pathing::FitNodePairTangents(PathFitContext* a_ctx, PathNodeNavInfo* a_from, PathNodeNavInfo* a_to)"
