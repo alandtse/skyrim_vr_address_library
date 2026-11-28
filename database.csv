@@ -873,6 +873,7 @@
 15220,0x1401b81d0,0x1401c82e0,4,"ulonglong GrassManager::GrassTypeMapInsert(void* a_table, void* a_buckets, std::uint32_t a_hash, void* a_key, void* a_value)"
 15225,0x1401b8770,0x1401c8880,2,NiAlphaProperty* NiAlphaProperty::Ctor()
 15247,0x1401b9190,0x1401c92a0,2,void NiAlphaProperty::~NiAlphaProperty()
+15248,0x1401b91d0,0x1401c92e0,2,void NiProperty::~NiProperty()
 15259,0x1401b9ae0,0x1401c9bf0,3,"BSResource::ErrorCode BSModelDB::LoadEntry(void* a_entryDB, const char* a_name, void* a_entry, void* a_entryOut, const DBTraits::ArgsType& a_args)"
 15260,0x1401b9de0,0x1401c9f50,3,"bool BSResource::EntryDB::AllocArgs(void* a_pool, void** a_argsOut)"
 15271,0x1401b9fd0,0x1401ca140,2,const NiRTTI* NiAlphaProperty::GetRTTI()
@@ -13405,6 +13406,11 @@
 69284,0x140c67490,0x140cad6d0,3,BSTriShape* CreateBSTriShape()
 69287,0x140c675f0,0x140cad830,3,void BSTriShape::~BSTriShape()
 69289,0x140c676b0,0x140cad8f0,2,BSSkinnedDecalTriShape* BSSkinnedDecalTriShape::Ctor()
+69298,0x140c67910,0x140cadb50,2,void NiProperty::LoadBinary(NiStream& a_stream)
+69299,0x140c67920,0x140cadb60,2,void NiProperty::LinkObject(NiStream& a_stream)
+69300,0x140c67930,0x140cadb70,2,bool NiProperty::RegisterStreamables(NiStream& a_stream)
+69301,0x140c67940,0x140cadb80,2,void NiProperty::SaveBinary(NiStream& a_stream)
+69302,0x140c67950,0x140cadb90,2,bool NiProperty::IsEqual(NiObject* a_object)
 69303,0x140c67960,0x140cadba0,2,void NiProperty::Update(NiUpdateData& a_data)
 69304,0x140c679b0,0x140cadbf0,2,NiObject* NiAlphaProperty::CreateClone(NiCloningProcess& a_cloning)
 69306,0x140c67ae0,0x140cadd20,2,void NiAlphaProperty::LoadBinary(NiStream& a_stream)
@@ -13583,7 +13589,13 @@
 69864,0x140c824c0,0x140cc8e40,2,bool NiSkinData::IsEqual(NiObject* a_object)
 69875,0x140c831b0,0x140cc9a90,2,const NiRTTI* NiSkinData::GetRTTI()
 69876,0x140c831c0,0x140cc9aa0,2,NiObject* NiShadeProperty::CreateClone(NiCloningProcess& a_cloning)
+69878,0x140c832a0,0x140cc9b80,2,void NiShadeProperty::LoadBinary(NiStream& a_stream)
+69879,0x140c832b0,0x140cc9b90,2,void NiShadeProperty::LinkObject(NiStream& a_stream)
+69880,0x140c832c0,0x140cc9ba0,2,bool NiShadeProperty::RegisterStreamables(NiStream& a_stream)
+69881,0x140c832d0,0x140cc9bb0,2,void NiShadeProperty::SaveBinary(NiStream& a_stream)
 69882,0x140c832e0,0x140cc9bc0,2,bool NiShadeProperty::IsEqual(NiObject* a_object)
+69883,0x140c832f0,0x140cc9bd0,2,NiShadeProperty* NiShadeProperty::Create()
+69888,0x140c834c0,0x140cc9da0,2,void NiShadeProperty::~NiShadeProperty()
 69889,0x140c83500,0x140cc9de0,2,const NiRTTI* NiShadeProperty::GetRTTI()
 69896,0x140c83680,0x140cc9f60,2,bool NiAlphaAccumulator::RegisterStreamables(NiStream& a_stream)
 69898,0x140c836a0,0x140cc9f80,2,bool NiAlphaAccumulator::IsEqual(NiObject* a_object)
@@ -13630,6 +13642,8 @@
 69992,0x140c858c0,0x140ccc1a0,2,bool NiFogProperty::RegisterStreamables(NiStream& a_stream)
 69993,0x140c858d0,0x140ccc1b0,2,void NiFogProperty::SaveBinary([[maybe_unused]] NiStream& a_stream)
 69994,0x140c85970,0x140ccc250,2,bool NiFogProperty::IsEqual(NiObject* a_object)
+69995,0x140c85a10,0x140ccc2f0,2,NiFogProperty* NiFogProperty::Create()
+69999,0x140c85c10,0x140ccc4f0,2,void NiFogProperty::~NiFogProperty()
 70000,0x140c85c50,0x140ccc530,2,const NiRTTI* NiFogProperty::GetRTTI()
 70002,0x140c85c70,0x140ccc550,2,NiObject* NiIntegerExtraData::CreateClone(NiCloningProcess& a_cloning)
 70004,0x140c85d80,0x140ccc660,2,void NiIntegerExtraData::LoadBinary(NiStream& a_stream)
@@ -17901,17 +17915,28 @@
 98848,0x14128fe30,0x1412c8740,2,"void BSFadeNode::OnVisible(NiCullingProcess& a_process, std::int32_t a_alphaGroupIndex)"
 98852,0x1412906a0,0x1412c8fb0,2,"void BSFadeNode::UpdateSelectedDownwardPass(NiUpdateData& a_data, std::uint32_t a_arg2)"
 98868,0x1412910e0,0x1412c99f0,2,NiObject* BSShaderProperty::CreateClone(NiCloningProcess& a_cloning)
+98870,0x1412911b0,0x1412c9ac0,2,void BSShaderProperty::LoadBinary(NiStream& a_stream)
+98871,0x1412911c0,0x1412c9ad0,2,void BSShaderProperty::LinkObject(NiStream& a_stream)
+98872,0x1412911d0,0x1412c9ae0,2,bool BSShaderProperty::RegisterStreamables(NiStream& a_stream)
+98873,0x1412911e0,0x1412c9af0,2,void BSShaderProperty::SaveBinary(NiStream& a_stream)
+98874,0x141291260,0x1412c9b70,2,bool BSShaderProperty::IsEqual(NiObject* a_object)
+98876,0x141291310,0x1412c9c20,2,void BSShaderProperty::PostLinkObject(NiStream& a_stream)
 98880,0x1412914f0,0x1412c9e00,2,void BSShaderProperty::SetLightState(std::int32_t lightIndex)
 98887,0x141291840,0x1412ca150,2,"RenderPassArray* BSShaderProperty::GetRenderPasses_ShadowMapOrMask(BSGeometry* a_geometry, std::uint32_t a_renderMode, BSShaderAccumulator* a_accumulator)"
 98888,0x141291850,0x1412ca160,2,"RenderPassArray* BSShaderProperty::GetRenderPasses_LocalMap(BSGeometry* a_geometry, std::uint32_t a_renderMode, BSShaderAccumulator* a_accumulator)"
 98889,0x141291860,0x1412ca170,2,"RenderPassArray* BSShaderProperty::GetRenderPasses_Occlusion(BSGeometry* a_geometry, std::uint32_t a_renderMode, BSShaderAccumulator* a_accumulator)"
+98892,0x141291c00,0x1412ca510,2,bool BSShaderProperty::CanMerge(const BSShaderProperty* a_other)
 98893,0x141291c30,0x1412ca540,3,"void BSShaderProperty::SetFlags(EShaderPropertyFlag8 a_flag, bool a_set)"
+98896,0x141291cf0,0x1412ca600,2,void BSShaderProperty::DoClearRenderPasses()
 98897,0x141291d40,0x1412ca650,3,"void BSShaderProperty::SetMaterial(BSShaderMaterial* a_material, bool a_unk1)"
 98902,0x141292040,0x1412ca950,4,"bool IsValidLight_141292040 (BSLightingShaderProperty * a_this, BSLight * a_light)"
+98909,0x1412922d0,0x1412cabe0,2,void BSShaderProperty::~BSShaderProperty()
 98910,0x141292310,0x1412cac20,2,bool BSShaderProperty::AcceptsEffectData()
+98911,0x141292320,0x1412cac30,2,"void BSShaderProperty::ClarifyShader(BSGeometry* a_geometry, bool a_arg2, bool a_arg3)"
 98912,0x141292330,0x1412cac40,2,std::uint32_t BSShaderProperty::DetermineUtilityShaderDecl()
 98914,0x141292350,0x1412cac60,2,NiSourceTexture* BSShaderProperty::GetBaseTexture()
 98915,0x141292360,0x1412cac70,2,BSShaderMaterial::Type BSShaderProperty::GetMaterialType()
+98916,0x141292370,0x1412cac80,2,std::int32_t BSShaderProperty::GetNumberofPasses(BSGeometry* a_geometry)
 98917,0x141292380,0x1412cac90,2,const NiRTTI* BSShaderProperty::GetRTTI()
 98918,0x141292390,0x1412caca0,2,BSRenderPass* BSShaderProperty::GetRenderDepthPass(BSGeometry* a_geometry)
 98919,0x1412923a0,0x1412cacb0,2,RenderPassArray* BSShaderProperty::GetWaterFogPassList(BSGeometry* a_geometry)
@@ -18091,6 +18116,7 @@
 99791,0x1412c1690,0x1412ff0e0,3,"void Renderer::FinishAccumulatingPostResolveDepth(NiCamera* a_unusedCamera, BSShaderAccumulator* a_accumulator, std::uint32_t a_renderFlags)"
 99803,0x1412c2b30,0x141300d00,3,"void BuildTransformedBoxPlanes(NiPlane* a_out, NiPoint3* a_min, NiPoint3* a_max, NiTransform* a_transform)"
 99845,0x1412c4980,0x141302d30,2,NiObject* BSLightingShaderProperty::CreateClone(NiCloningProcess& a_cloning)
+99847,0x1412c4b10,0x141302ed0,2,BSLightingShaderProperty* BSLightingShaderProperty::Create()
 99848,0x1412c4bb0,0x141302f70,2,void BSLightingShaderProperty::LoadBinary(NiStream& a_stream)
 99849,0x1412c4cc0,0x141303080,2,void BSLightingShaderProperty::LinkObject(NiStream& a_stream)
 99850,0x1412c4ea0,0x141303260,2,bool BSLightingShaderProperty::RegisterStreamables(NiStream& a_stream)
@@ -18100,15 +18126,22 @@
 99854,0x1412c50f0,0x1413034b0,3,BSLightingShaderProperty * BSLightingShaderProperty::Ctor (BSLightingShaderProperty * a_this)
 99855,0x1412c52e0,0x1413036d0,4,void Dtor (BSLightingShaderProperty * a_this)
 99858,0x1412c5450,0x141303840,2,bool BSLightingShaderProperty::SetupGeometry(BSGeometry* a_geometry)
+99859,0x1412c5470,0x141303860,2,bool BSLightingShaderProperty::FinishSetupGeometry(BSGeometry* a_geometry)
 99862,0x1412c56d0,0x141303ac0,3,uint32_t BSLightingShaderProperty::InitializeShader(BSGeometry* a_geometry)
+99863,0x1412c5860,0x141303c50,2,bool BSLightingShaderProperty::CanMerge(const BSShaderProperty* a_other)
 99865,0x1412c5ab0,0x141303ea0,4,"void BSLightingShaderProperty::OnLoadTextureSet(BSLightingShaderProperty* a_this, undefined* a_2)"
 99868,0x1412c5ca0,0x141304090,3,RE::NiAVObject::SetRefraction
 99870,0x1412c6170,0x141304560,2,std::uint32_t BSLightingShaderProperty::DetermineUtilityShaderDecl()
+99871,0x1412c6200,0x1413045f0,2,"BSShaderProperty::RenderPassArray* BSLightingShaderProperty::GetRenderPasses(BSGeometry* a_geometry, std::uint32_t a_renderMode, BSShaderAccumulator* a_accumulator)"
 99872,0x1412c7220,0x141305610,3,BSLightingShaderProperty::GetRenderPasses_ShadowMapOrMask
+99873,0x1412c7cd0,0x1413060c0,2,"BSShaderProperty::RenderPassArray* BSLightingShaderProperty::GetRenderPasses_LocalMap(BSGeometry* a_geometry, std::uint32_t a_renderMode, BSShaderAccumulator* a_accumulator)"
+99874,0x1412c7f00,0x1413062f0,2,"BSShaderProperty::RenderPassArray* BSLightingShaderProperty::GetRenderPasses_Occlusion(BSGeometry* a_geometry, std::uint32_t a_renderMode, BSShaderAccumulator* a_accumulator)"
 99875,0x1412c80e0,0x1413064d0,2,BSRenderPass* BSLightingShaderProperty::GetRenderDepthPass(BSGeometry* a_geometry)
 99879,0x1412c8b30,0x141306f20,2,bool BSLightingShaderProperty::AcceptsEffectData()
+99880,0x1412c8b50,0x141306f40,2,std::int32_t BSLightingShaderProperty::ForEachTexture(BSShaderProperty::ForEachVisitor& a_visitor)
 99881,0x1412c8bf0,0x141306fe0,4,void ClearRenderPassArrays (BSLightingShaderProperty * a_this)
 99886,0x1412c9320,0x141307710,3,BSShaderTextureSet* BSShaderTextureSet::Ctor()
+99889,0x1412c93d0,0x1413077c0,2,void BSLightingShaderProperty::~BSLightingShaderProperty()
 99892,0x1412c9460,0x141307850,2,NiSourceTexture* BSLightingShaderProperty::GetBaseTexture()
 99894,0x1412c9480,0x141307870,2,const NiRTTI* BSLightingShaderProperty::GetRTTI()
 99895,0x1412c9490,0x141307880,2,float BSLightingShaderProperty::QMaterialAlpha()
@@ -18118,9 +18151,12 @@
 99901,0x1412c9620,0x141307a10,2,void BSGrassShaderProperty::LinkObject(NiStream& a_stream)
 99902,0x1412c9630,0x141307a20,2,bool BSGrassShaderProperty::RegisterStreamables(NiStream& a_stream)
 99903,0x1412c9640,0x141307a30,2,void BSGrassShaderProperty::SaveBinary(NiStream& a_stream)
+99905,0x1412c9660,0x141307a50,2,BSGrassShaderProperty* BSGrassShaderProperty::Create()
 99906,0x1412c9700,0x141307af0,2,void BSGrassShaderProperty::PostLinkObject(NiStream& a_stream)
+99910,0x1412c9930,0x141307d20,2,"BSShaderProperty::RenderPassArray* BSGrassShaderProperty::GetRenderPasses(BSGeometry* a_geometry, std::uint32_t a_renderMode, BSShaderAccumulator* a_accumulator)"
 99911,0x1412c9b10,0x141307f00,2,"RenderPassArray* BSGrassShaderProperty::GetRenderPasses_ShadowMapOrMask(BSGeometry* a_geometry, std::uint32_t a_renderMode, BSShaderAccumulator* a_accumulator)"
 99912,0x1412c9b20,0x141307f10,2,BSRenderPass* BSGrassShaderProperty::GetRenderDepthPass(BSGeometry* a_geometry)
+99915,0x1412c9c10,0x141308000,2,void BSGrassShaderProperty::~BSGrassShaderProperty()
 99916,0x1412c9c50,0x141308040,2,const NiRTTI* BSGrassShaderProperty::GetRTTI()
 99920,0x1412c9c90,0x141308080,3,BSShaderAccumulator* BSShaderAccumulator::ctor(int a_priority)
 99923,0x1412ca110,0x141308570,3,"bool BSShaderAccumulator::AccumulateObject(BSGeometry* a_geometry, std::uint64_t a_alphaGroupToken)"
@@ -18277,10 +18313,13 @@
 100160,0x1412d4e10,0x141313d20,2,bool BSEffectShaderProperty::RegisterStreamables(NiStream& a_stream)
 100161,0x1412d4e20,0x141313d30,2,void BSEffectShaderProperty::SaveBinary(NiStream& a_stream)
 100162,0x1412d4f80,0x141313e90,2,bool BSEffectShaderProperty::IsEqual(NiObject* a_object)
+100163,0x1412d4f90,0x141313ea0,2,BSEffectShaderProperty* BSEffectShaderProperty::Create()
 100164,0x1412d5030,0x141313f40,2,void BSEffectShaderProperty::PostLinkObject(NiStream& a_stream)
 100168,0x1412d51d0,0x1413140e0,2,bool BSEffectShaderProperty::SetupGeometry(BSGeometry* a_geometry)
+100169,0x1412d5380,0x141314290,2,"BSShaderProperty::RenderPassArray* BSEffectShaderProperty::GetRenderPasses(BSGeometry* a_geometry, std::uint32_t a_renderMode, BSShaderAccumulator* a_accumulator)"
 100170,0x1412d5770,0x1413146d0,2,"RenderPassArray* BSEffectShaderProperty::GetRenderPasses_ShadowMapOrMask(BSGeometry* a_geometry, std::uint32_t a_renderMode, BSShaderAccumulator* a_accumulator)"
 100171,0x1412d58c0,0x141314820,2,std::int32_t BSEffectShaderProperty::ForEachTexture(ForEachVisitor& a_visitor)
+100186,0x1412d6380,0x1413152f0,2,void BSEffectShaderProperty::~BSEffectShaderProperty()
 100187,0x1412d63c0,0x141315330,2,NiSourceTexture* BSEffectShaderProperty::GetBaseTexture()
 100189,0x1412d63e0,0x141315350,2,const NiRTTI* BSEffectShaderProperty::GetRTTI()
 100191,0x1412d6400,0x141315370,2,float BSEffectShaderProperty::QMaterialAlpha()
@@ -18296,14 +18335,19 @@
 100231,0x1412d7790,0x141316bf0,2,void BSWaterShaderProperty::SaveBinary(NiStream& a_stream)
 100232,0x1412d77f0,0x141316c50,2,bool BSWaterShaderProperty::IsEqual(NiObject* a_object)
 100234,0x1412d78a0,0x141316d00,2,void BSWaterShaderProperty::PostLinkObject(NiStream& a_stream)
+100238,0x1412d7a70,0x141316ed0,2,"BSShaderProperty::RenderPassArray* BSWaterShaderProperty::GetRenderPasses(BSGeometry* a_geometry, std::uint32_t a_renderMode, BSShaderAccumulator* a_accumulator)"
 100239,0x1412d7ea0,0x141317320,2,"RenderPassArray* BSWaterShaderProperty::GetRenderPasses_LocalMap(BSGeometry* a_geometry, std::uint32_t a_renderMode, BSShaderAccumulator* a_accumulator)"
 100241,0x1412d7ff0,0x141317470,2,std::int32_t BSWaterShaderProperty::ForEachTexture(ForEachVisitor& a_visitor)
 100245,0x1412d8320,0x141317760,2,void BSWaterShaderProperty::DoClearRenderPasses()
+100247,0x1412d8560,0x1413179a0,2,BSWaterShaderProperty* BSWaterShaderProperty::Create()
+100248,0x1412d8570,0x1413179b0,2,void BSWaterShaderProperty::~BSWaterShaderProperty()
 100250,0x1412d85c0,0x141317a00,2,const NiRTTI* BSWaterShaderProperty::GetRTTI()
 100251,0x1412d85d0,0x141317a10,2,NiObject* BSBloodSplatterShaderProperty::CreateClone(NiCloningProcess& a_cloning)
 100256,0x1412d8850,0x141317c90,2,"RenderPassArray* BSBloodSplatterShaderProperty::GetRenderPasses(BSGeometry* a_geometry, std::uint32_t a_arg2, BSShaderAccumulator* a_accumulator)"
 100257,0x1412d8900,0x141317d40,2,std::int32_t BSBloodSplatterShaderProperty::ForEachTexture(ForEachVisitor& a_visitor)
+100259,0x1412d8a60,0x141317ea0,2,void BSBloodSplatterShaderProperty::~BSBloodSplatterShaderProperty()
 100260,0x1412d8aa0,0x141317ee0,2,NiSourceTexture* BSBloodSplatterShaderProperty::GetBaseTexture()
+100261,0x1412d8ab0,0x141317ef0,2,const NiRTTI* BSBloodSplatterShaderProperty::GetRTTI()
 100263,0x1412d8b60,0x141317fa0,2,void BSBloodSplatterShader::RestoreTechnique(std::uint32_t a_technique)
 100265,0x1412d8bf0,0x141318030,2,bool BSBloodSplatterShader::SetupTechnique(std::uint32_t a_technique)
 100292,0x1412db700,0x14131a8f0,2,void BSImagespaceShaderLensFlareVisibility::GetShaderMacros(ShaderMacro* a_macros)
@@ -18313,6 +18357,7 @@
 100309,0x1412dc3a0,0x14131b590,4,void VolumetricLightingDescriptor::Raymarch (VolumetricLightingDescriptor* this)
 100326,0x1412dd610,0x14131ca40,2,bool BSParticleShaderProperty::SetupGeometry(BSGeometry* a_geometry)
 100327,0x1412dd620,0x14131ca50,2,"RenderPassArray* BSParticleShaderProperty::GetRenderPasses(BSGeometry* a_geometry, std::uint32_t a_arg2, BSShaderAccumulator* a_accumulator)"
+100337,0x1412ddfc0,0x14131d440,2,void BSParticleShaderProperty::~BSParticleShaderProperty()
 100339,0x1412de040,0x14131d4c0,2,NiSourceTexture* BSParticleShaderProperty::GetBaseTexture()
 100340,0x1412de050,0x14131d4d0,2,const NiRTTI* BSParticleShaderProperty::GetRTTI()
 100366,0x1412dfa60,0x14131f000,2,NiAVObject* BSParticleShaderEmitter::GetBoundsObject()
@@ -18391,6 +18436,8 @@
 100653,0x1412fb8b0,0x14133ddd0,2,void BSSkyShaderProperty::PostLinkObject(NiStream& a_stream)
 100657,0x1412fbb00,0x14133e020,2,"RenderPassArray* BSSkyShaderProperty::GetRenderPasses(BSGeometry* a_geometry, std::uint32_t a_arg2, BSShaderAccumulator* a_accumulator)"
 100658,0x1412fbcf0,0x14133e210,2,std::int32_t BSSkyShaderProperty::ForEachTexture(ForEachVisitor& a_visitor)
+100659,0x1412fbd50,0x14133e270,2,BSSkyShaderProperty* BSSkyShaderProperty::Create()
+100660,0x1412fbd60,0x14133e280,2,void BSSkyShaderProperty::~BSSkyShaderProperty()
 100661,0x1412fbda0,0x14133e2c0,2,NiSourceTexture* BSSkyShaderProperty::GetBaseTexture()
 100662,0x1412fbdb0,0x14133e2d0,2,const NiRTTI* BSSkyShaderProperty::GetRTTI()
 100665,0x1412fc000,0x14133e520,2,"void ImageSpaceEffect::Render(BSTriShape* a_shape, ImageSpaceEffectParam* a_param)"
@@ -18421,6 +18468,7 @@
 100761,0x1413012a0,0x141343b20,2,"RenderPassArray* BSDistantTreeShaderProperty::GetRenderPasses_ShadowMapOrMask(BSGeometry* a_geometry, std::uint32_t a_renderMode, BSShaderAccumulator* a_accumulator)"
 100762,0x1413012b0,0x141343b30,2,BSRenderPass* BSDistantTreeShaderProperty::GetRenderDepthPass(BSGeometry* a_geometry)
 100763,0x141301310,0x141343b90,2,std::int32_t BSDistantTreeShaderProperty::ForEachTexture(ForEachVisitor& a_visitor)
+100764,0x141301360,0x141343be0,2,void BSDistantTreeShaderProperty::~BSDistantTreeShaderProperty()
 100765,0x1413013a0,0x141343c20,2,NiSourceTexture* BSDistantTreeShaderProperty::GetBaseTexture()
 100766,0x1413013b0,0x141343c30,2,const NiRTTI* BSDistantTreeShaderProperty::GetRTTI()
 100771,0x1413014c0,0x141343d40,3,"bool BSDistantTreeShader::Func2_1413014C0 (BSDistantTreeShader * a_this, undefined8 param_2)"
@@ -18436,6 +18484,7 @@
 100798,0x1413035c0,0x141345ee0,2,"void ImageSpaceEffectWaterDisplacement::Setup(ImageSpaceManager* a_manager, ImageSpaceEffectParam* a_param)"
 100799,0x141303da0,0x1413466c0,2,"void ImageSpaceEffectWaterDisplacement::Render(BSTriShape* a_shape, ImageSpaceEffectParam* a_param)"
 100804,0x1413045e0,0x141346f00,2,NiObject* BSFogProperty::CreateClone([[maybe_unused]] NiCloningProcess& a_cloning)
+100808,0x1413047a0,0x1413470c0,2,void BSFogProperty::~BSFogProperty()
 100809,0x1413047e0,0x141347100,2,const NiRTTI* BSFogProperty::GetRTTI()
 100810,0x1413047f0,0x14134b330,3,BSShadowLight::ctor
 100816,0x141304d30,0x14134b8f0,2,void BSShadowLight::ReturnShadowmaps()
