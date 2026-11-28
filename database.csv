@@ -287,7 +287,7 @@
 11918,0x140126A00,0x140136Fe0,3,BSExtraDataList::PackageStart
 11921,0x140126cd0,0x1401372b0,4,"void ExtraDataList::SetEnchantment(EnchantmentItem* a_enchantment, std::uint16_t a_chargeAmount, bool a_removeOnUnequip)"
 11931,0x1401273b0,0x140137990,4,void ExtraDataList::ClearGrassHandles()
-11932,0x140127480,0x140137a60,4,"void ExtraDataList::FUN_140127480 (BSExtraDataList * param_1, BSExtraData * param_2)"
+11932,0x140127480,0x140137a60,4,void ExtraDataList::SetAddCellGrassTask(AddCellGrassTask* a_task)
 11933,0x1401275e0,0x140137bc0,4,"void BSExtraDataList::GetCellGrassData (BSExtraDataList * a_this, BSExtraData * * a_out)"
 11938,0x140127a70,0x140138050,3,void ExtraDataList::SetPlaceableWater(BGSWaterCollisionManager::bhkPlaceableWater* a_water)
 11942,0x140127e60,0x140138440,2,void ExtraDataList::SetAutoWater(BGSWaterCollisionManager::bhkAutoWater* a_water)
@@ -5049,9 +5049,11 @@
 32144,0x1404f0740,0x1405009b0,3,"bool IAnimationGraphManagerHolder::SetGraphVariableNiPoint3(const BSFixedString& a_variableName, NiPoint3& a_in)"
 32149,0x1404f0960,0x140500bd0,4,undefined8 IAnimationGraphManagerHolder::sub_1404F0960(IAnimationGraphManagerHolder *a_this)
 32155,0x1404f1140,0x1405013b0,4,bool IAnimationGraphManagerHolder::UpdateAnimationGraphManager(const BSAnimationUpdateData& a_updateData)
+32157,0x1404f12c0,0x140501530,2,virtual bool IAnimationGraphManagerHolder::NotifyAnimationGraph(const BSFixedString& a_eventName)
 32173,0x1404f1520,0x140501790,2,bool IAnimationGraphManagerLoadingTask::Process()
 32184,0x1404f1e60,0x1405020d0,4,RE::BSAnimationGraphManager::sub_1404F1E60
 32192,0x1404f2620,0x140502890,3,"bool IAnimationGraphManagerHolder::GetGraphVariableNiPoint3(const BSFixedString& a_variableName, NiPoint3& a_out)"
+32196,0x1404f2890,0x140502b00,2,"bool IAnimationGraphManagerHolder::SetGraphVariableNiPoint3(const BSFixedString& a_variableName, const NiPoint3& a_in)"
 32237,0x1404f38e0,0x140503b50,2,bool SimpleAnimationGraphManagerHolder::GetAnimationGraphManagerImpl(BSTSmartPointer<BSAnimationGraphManager>& a_out)
 32238,0x1404f3940,0x140503bb0,2,bool SimpleAnimationGraphManagerHolder::SetAnimationGraphManagerImpl(BSTSmartPointer<BSAnimationGraphManager>& a_in)
 32239,0x1404f3990,0x140503c00,2,bool SimpleAnimationGraphManagerHolder::ConstructAnimationGraph(BSTSmartPointer<BShkbAnimationGraph>& a_out)
@@ -6724,7 +6726,7 @@
 39340,0x140699040,0x1406a26a0,2,PlayerCharacter::Ctor
 39343,0x14069a9d0,0x1406bae40,3,void Actor::StartSleeping(int32_t a_hours)
 39344,0x14069ab10,0x1406baf80,3,void PlayerCharacter::StartWaiting(int32_t a_hours)
-39346,0x14069abf0,0x1408ed870,2,PlayerCharacter::
+39346,0x14069abf0,0x1406bb060,2,PlayerCharacter::
 39361,0x14069bd60,0x1406bc180,2,"bool PlayerCharacter::ProcessInWater(hkpCollidable* a_collidable, float a_waterHeight, float a_deltaTime)"
 39362,0x14069be10,0x1406bc230,3,"void Actor::GetCarryWeightInfo(float* a_outInventoryWeight, float* a_outCarryWeight)"
 39365,0x14069c2a0,0x1406bc6c0,3,"bool PlayerCharacter::CenterOnCell_Impl(const char* a_cellName, RE::TESObjectCELL* a_cell)"
@@ -10453,7 +10455,7 @@
 49959,0x14084f3f0,0x1408797a0,2,void ThirdPersonState::End()
 49960,0x14084f490,0x140879840,2,"void ThirdPersonState::Update_14084F490 (longlong *param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4)"
 49966,0x14084f830,0x140879be0,3,void ThirdPersonState::ResetFreeRotation()
-49970,0x14084fbe0,0x140730470,3,"void ProcessButton_14084FBE0 (PlayerInputHandler * a_this, undefined8 param_2)"
+49970,0x14084fbe0,0x140879fa0,3,"void ProcessButton_14084FBE0 (PlayerInputHandler * a_this, undefined8 param_2)"
 49972,0x14084ff70,0x14087a330,2,void ThirdPersonState::SaveGame(BGSSaveFormBuffer* a_buf)
 49973,0x140850040,0x14087a400,2,void ThirdPersonState::LoadGame(BGSLoadFormBuffer* a_buf)
 49974,0x140850110,0x14087a4d0,2,void ThirdPersonState::Revert(BGSLoadFormBuffer* a_buf)
@@ -12713,7 +12715,7 @@
 67992,0x140c31ea0,0x140c76d80,3,void JobList::Finish()
 67994,0x140c31f40,0x140c76e40,3,void JobList::CallClear()
 67997,0x140c32030,0x140c76f40,3,void BSJobs::SubmitJobDesc()
-68009,0x140c32890,0x140c76da0,3,void JobList::Finish_impl()
+68009,0x140c32890,0x140c777c0,3,void JobList::Finish_impl()
 68022,0x140c335c0,0x140c78710,3,void JobList::ctor()
 68054,0x140c34650,0x140c797e0,3,void JobList::Clear()
 68058,0x140c34930,0x140c79af0,3,std::uint32_t BSJobs::JobThread::ThreadProc()

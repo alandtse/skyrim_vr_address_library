@@ -3770,6 +3770,7 @@ sseid,aeid,confidence,name
 18566,19030,1,
 18567,19031,1,TESObjectCELL::sub_140266580
 18569,19033,1,TESObjectCELL::sub_*
+18572,19039,1,
 18577,19046,1,
 18580,19049,1,
 18582,19051,1,TESObjectCELL::sub_*
@@ -6836,6 +6837,7 @@ sseid,aeid,confidence,name
 31323,32107,3,BGSWaterCollisionManager::bhkWaterfall::IsActive
 31324,32108,1,
 31325,32109,1,
+31330,32115,1,
 31339,32124,3,BGSWaterCollisionManager::bshkAutoWater::AddOverlappingCollidable
 31340,32125,3,BGSWaterCollisionManager::bshkAutoWater::RemoveOverlappingCollidable
 31341,32126,3,BGSWaterCollisionManager::bshkAutoWater::GetTransform
@@ -6896,8 +6898,10 @@ sseid,aeid,confidence,name
 32143,32887,3,RE::IAnimationGraphManagerHolder::SetGraphVariableFloat_1404F0720
 32144,32888,3,RE::IAnimationGraphManagerHolder::SetGraphVariableNiPoint3_1404F0740
 32155,32899,1,
+32157,32901,1,
 32173,32918,1,
 32192,32884,3,RE::IAnimationGraphManagerHolder::GetGraphVariableNiPoint3
+32196,32934,1,
 32270,33007,1,
 32271,33008,1,
 32275,33012,1,
