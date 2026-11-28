@@ -3761,7 +3761,7 @@
 27761,0x140406410,0x140415f60,3,void* BGSProcedureEscort::GetParamTypeCheck(std::uint32_t a_index)
 27762,0x140406430,0x140415f80,3,void* BGSProcedureEscort::GetParamCheckTypeName(std::uint32_t a_index)
 27765,0x140406530,0x140416080,3,BSFixedString* BGSProcedureEscort::GetProcedureName()
-27766,0x140406540,0x14052f650,3,void* BGSProcedureEscortExecState::GetPoolKey()
+27766,0x140406540,0x140416090,3,void* BGSProcedureEscortExecState::GetPoolKey()
 27770,0x140406740,0x140416290,3,BGSProcedureFind::GetParamCount
 27771,0x140406750,0x1404162a0,3,BGSProcedureFind::InitExecState
 27772,0x140406770,0x1404162c0,3,BGSProcedureFind::InitActorLocation
@@ -7063,7 +7063,7 @@
 39397,0x1406a1760,0x1406c20a0,2,const BSTSmartPointer<BipedAnim>& PlayerCharacter::GetBiped2()
 39399,0x1406a17e0,0x1406c2120,2,const BSTSmartPointer<BipedAnim>& PlayerCharacter::GetBiped1(bool a_firstPerson)
 39401,0x1406a1820,0x1406c2160,3,splashes_of_skyrim::RainManager::ToggleWaterRipples
-39402,0x1406a1b10,0x1406b0380,2,void PlayerCharacter::RemoveWeapon(BIPED_OBJECT a_equipIndex)
+39402,0x1406a1b10,0x1406c2490,2,void PlayerCharacter::RemoveWeapon(BIPED_OBJECT a_equipIndex)
 39404,0x1406a1bf0,0x1406c2660,2,"void Actor::Unk_B4(void* a_arg1, bool a_arg2, bool a_arg3)"
 39406,0x1406a1cc0,0x1406c2730,3,po3tweaks::NoPoisonPrompt::PoisonPrompt
 39407,0x1406a1e30,0x1406c28a0,3,YesImSure::NoPoisonPrompt::PoisonPromptLeftHand
@@ -7132,6 +7132,7 @@
 40012,0x1406c37b0,0x1406e9fa0,2,bool PlayerCharacter::Is3rdPersonVisible()
 40014,0x1406c37d0,0x1406e9fc0,2,"bool NiTMapBase<DFALL<NiTMapItem<unsigned_int,unsigned_char>>,unsigned_int,unsigned_char>::key_eq(std::uint32_t a_lhs, std::uint32_t a_rhs)"
 40016,0x1406c37f0,0x1406ea060,2,"std::uint32_t NiTMapBase<DFALL<NiTMapItem<unsigned_int,unsigned_char>>,unsigned_int,unsigned_char>::hash_function(std::uint32_t a_key)"
+40023,0x1406c3890,0x1406ea100,2,void BSTEventSource<BGSActorCellEvent>::SendEvent(const BGSActorCellEvent* a_event)
 40025,0x1406c3dd0,0x1406ea640,2,void BSTEventSource<Bounty::Event>::SendEvent(const Bounty::Event* a_event)
 40026,0x1406c4070,0x1406ea8e0,2,void BSTEventSource<DaysJailed::Event>::SendEvent(const DaysJailed::Event* a_event)
 40027,0x1406c4310,0x1406eab80,2,void BSTEventSource<FinePaid::Event>::SendEvent(const FinePaid::Event* a_event)
@@ -7567,7 +7568,7 @@
 41289,0x140706c10,0x14072dc70,3,void PlayerControls::DispatchInputEvent(InputEvent* a_event)
 41346,0x140708bf0,0x14072FF80,3,"void ActivateHandler::ProcessButton(ButtonEvent* a_event, PlayerControlsData* a_data)"
 41348,0x140709080,0x140730e60,2,"void AutoMoveHandler::ProcessButton(ButtonEvent* a_event, PlayerControlsData* a_data)"
-41349,0x1407090a0,0x1407310b0,3,RE::JumpHandler::ProcessButton_1407090A0
+41349,0x1407090a0,0x140730f60,3,RE::JumpHandler::ProcessButton_1407090A0
 41350,0x1407091c0,0x140731350,2,"void LookHandler::ProcessMouseMove(MouseMoveEvent* a_event, PlayerControlsData* a_data)"
 41351,0x1407091f0,0x140731360,2,"void LookHandler::ProcessThumbstick(ThumbstickEvent* a_event, PlayerControlsData* a_data)"
 41352,0x140709200,0x140731580,2,"void MovementHandler::ProcessButton(ButtonEvent* a_event, PlayerControlsData* a_data)"
@@ -9309,6 +9310,8 @@
 46309,0x1407c8e90,0x1407f41e0,2,void CombatBehaviorTreeNode::Exit(CombatBehaviorThread* a_thread)
 46310,0x1407c8ea0,0x1407f41f0,2,void CombatBehaviorTreeNode::Update(CombatBehaviorThread* a_thread)
 46311,0x1407c8eb0,0x1407f4200,2,void CombatBehaviorTreeNode::Abort(CombatBehaviorThread* a_thread)
+46312,0x1407c8ec0,0x1407f4210,2,"void CombatBehaviorTreeNode::SaveGame(CombatBehaviorThread* a_thread, BGSSaveFormBuffer* a_saveGameBuffer)"
+46313,0x1407c8ed0,0x1407f4220,2,"void CombatBehaviorTreeNode::LoadGame(CombatBehaviorThread* a_thread, BGSLoadFormBuffer* a_loadGameBuffer)"
 46314,0x1407c8ee0,0x1407f4230,2,bool CombatBehaviorTreeNode::Validate(CombatBehaviorTreeNode* a_node)
 46315,0x1407c8f00,0x1407f4250,2,const BSFixedString& CombatBehaviorTreeWrapperNode::GetName()
 46316,0x1407c8f20,0x1407f4270,2,void CombatBehaviorTreeWrapperNode::Enter(CombatBehaviorThread* a_thread)
@@ -9320,14 +9323,14 @@
 46322,0x1407c8fe0,0x1407f4330,2,bool CombatBehaviorTreeWrapperNode::Validate(CombatBehaviorTreeNode* a_node)
 46323,0x1407c9000,0x1407f4350,3,void CombatBehaviorTreeRootNode::Enter(CombatBehaviorThread* thread)
 46324,0x1407c9060,0x1407f43b0,3,void CombatBehaviorTreeRootNode::Update(CombatBehaviorThread* thread)
-46325,0x1407c9090,0x140b02fe0,3,void CombatBehaviorTreeRootNode::Abort(CombatBehaviorThread* thread)
+46325,0x1407c9090,0x1407f43e0,3,void CombatBehaviorTreeRootNode::Abort(CombatBehaviorThread* thread)
 46326,0x1407c90a0,0x1407f43f0,3,bool CombatBehaviorTreeRootNode::Validate(CombatBehaviorTreeNode* node)
-46327,0x1407c90c0,0x1407f4220,3,"void CombatBehaviorTreeRootNode::SaveGame(CombatBehaviorThread* thread, BGSSaveFormBuffer* buf)"
+46327,0x1407c90c0,0x1407f4410,3,"void CombatBehaviorTreeRootNode::SaveGame(CombatBehaviorThread* thread, BGSSaveFormBuffer* buf)"
 46328,0x1407c90d0,0x1407f4420,3,"void CombatBehaviorTreeRootNode::LoadGame(CombatBehaviorThread* thread, BGSLoadFormBuffer* buf)"
-46329,0x1407c9120,0x1407fc1b0,3,const BSFixedString& CombatBehaviorTreeRootNode::GetType()
+46329,0x1407c9120,0x1407f4470,3,const BSFixedString& CombatBehaviorTreeRootNode::GetType()
 46330,0x1407c9130,0x1407f4480,3,void CombatBehaviorTreeLinkNode::Enter(CombatBehaviorThread* a_thread)
 46331,0x1407c91a0,0x1407f44f0,3,bool CombatBehaviorTreeLinkNode::Validate(CombatBehaviorTreeNode* a_node)
-46332,0x1407c9200,0x1407fc1c0,3,const BSFixedString& CombatBehaviorTreeLinkNode::GetType()
+46332,0x1407c9200,0x1407f4550,3,const BSFixedString& CombatBehaviorTreeLinkNode::GetType()
 46335,0x1407c9300,0x1407f4650,2,static const BSFixedString& CombatBehaviorTreeLinkNode::GetClassType()
 46336,0x1407c9390,0x1407f46e0,2,static const BSFixedString& CombatBehaviorTreeRootNode::GetClassType()
 46338,0x1407c94d0,0x1407f4820,3,bool CombatAcquireItem::IsValid()
@@ -17451,7 +17454,7 @@
 89416,0x141100b00,0x14115da20,2,"bool MovementControllerAI::FindArbiterByName(const BSFixedString& a_name, BSTSmartPointer<MovementArbiter>& a_out)"
 89417,0x141100be0,0x14115db00,2,"MovementAgent* MovementControllerNPC::GetDirectControlAgent(void* a_arg1, void* a_arg2)"
 89418,0x141100cc0,0x14115dbe0,2,void MovementControllerAI::ShutdownArbiters()
-89419,0x141100ee0,0x14115bcb0,2,bool MovementControllerAI::Unk_09()
+89419,0x141100ee0,0x14115de00,2,bool MovementControllerAI::Unk_09()
 89420,0x141100ef0,0x14115de10,3,"bool MovementControllerNPC::DiffAgentConfig(MovementAgentConfig* a_config, MovementScrapArray* a_extraArbiterIdxTagSet, MovementScrapArray* a_extraAgentIdxTagSet, MovementScrapArray* a_keptArbiterPairsTagSet, MovementScrapArray* a_keptAgentPairsTagSet, MovementScrapArray* a_extraArbiterIdxTagClear, MovementScrapArray* a_extraAgentIdxTagClear, MovementScrapArray* a_keptArbiterPairsTagClear, MovementScrapArray* a_keptAgentPairsTagClear)"
 89426,0x141101780,0x14115e6a0,2,bool MovementAgent::IsAgentType(const BSFixedString& a_type)
 89430,0x1411018a0,0x14115e7c0,2,"std::uint32_t MovementControllerAI::PushAgent(MovementAgent** a_agent, bool a_arg2)"
