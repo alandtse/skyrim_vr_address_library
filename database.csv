@@ -5840,6 +5840,7 @@
 35658,0x1405b9bb0,0x1405c1de0,3,MovementControllerActiveSets* MovementControllerActiveSets::ctor()
 35664,0x1405b9ee0,0x1405c2110,2,"void ClearBSFixedString_SmallArray32(BSTSmallArray<BSFixedString, 32>& a_array)"
 35665,0x1405b9f70,0x1405c21a0,2,"void ClearBSFixedString_SmallArray8(BSTSmallArray<BSFixedString, 8>& a_array)"
+35694,0x1405ba9a0,0x1405c2bd0,2,void InterfaceStrings::Dtor()
 35696,0x1405bad50,0x1405c2fc0,2,void MovementAgentNameSet::StaticDtor_AllAgentsNoKeepOffset()
 35697,0x1405bad80,0x1405c2ff0,2,void MovementAgentNameSet::StaticDtor_PathFollowerVirtualSet()
 35698,0x1405badb0,0x1405c3020,2,void MovementAgentNameSet::StaticDtor_PathFollowerFlightSet()

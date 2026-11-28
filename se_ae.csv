@@ -7784,6 +7784,7 @@ sseid,aeid,confidence,name
 35514,36481,3,
 35515,36482,3,
 35516,36483,3,
+35548,36547,1,
 35551,36544,3,RE::Main::MainLoop
 35560,36559,3,RE::Main::Draw
 35566,36565,2,
@@ -7803,6 +7804,7 @@ sseid,aeid,confidence,name
 35622,36632,2,
 35631,36644,1,
 35658,36663,3,RE::MovementControllerActiveSets::ctor
+35694,36712,1,
 35719,36732,1,
 35754,36755,3,
 35779,36772,1,
@@ -13811,6 +13813,7 @@ sseid,aeid,confidence,name
 52216,53103,1,
 52217,53104,1,
 52218,53105,1,
+52221,53108,1,
 52225,53112,3,MapMenu::SetFreezeFrameBackground
 52226,53113,3,RE::MapMenu::PlaceMarker
 52228,53115,3,MapMenu::UpdateCamera
