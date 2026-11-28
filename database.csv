@@ -16089,6 +16089,7 @@
 80307,0x140ecee30,0x140f2bb20,4,bool BSScaleformManager::IsValidName(const char* a_name)
 80353,0x140ed02b0,0x140f2cfa0,2,TranslateCap GFxTranslator::GetCaps()
 80372,0x140ed06b0,0x140f2d3a0,2,void GFxTranslator::Translate(TranslateInfo* a_translateInfo)
+80386,0x140ed0aa0,0x140f314a0,2,InterfaceStrings* InterfaceStrings::Ctor()
 80446,0x140ed3a50,0x140f2da40,3,GString* GString::ctor(const char* a_str)
 80520,0x140ed6ac0,0x140f342e0,3,
 80521,0x140ed6bd0,0x140f343f0,2,"void FxDelegate::Callback(GFxMovieView* a_movieView, const char* a_methodName, const GFxValue* a_args, std::uint32_t a_argCount)"
