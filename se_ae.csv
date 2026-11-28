@@ -4032,7 +4032,7 @@ sseid,aeid,confidence,name
 19434,19862,1,
 19437,19865,2,
 19446,19872,3,RE::TESObjectREFR::InstantiateHitShader
-19457,19457,3,FUN_14029d510
+19457,19880,3,bhkRigidBody::Ctor
 19503,19930,3,BGSWaterCollisionManager::BGSWaterUpdateI::`scalar_deleting_destructor'
 19520,19946,3,BGSWaterCollisionManager::bhkPlaceableWater::dtor
 19528,19954,3,BGSWaterCollisionManager::bhkWaterfall::dtor
@@ -6835,6 +6835,7 @@ sseid,aeid,confidence,name
 31322,32106,1,
 31323,32107,3,BGSWaterCollisionManager::bhkWaterfall::IsActive
 31324,32108,1,
+31325,32109,1,
 31339,32124,3,BGSWaterCollisionManager::bshkAutoWater::AddOverlappingCollidable
 31340,32125,3,BGSWaterCollisionManager::bshkAutoWater::RemoveOverlappingCollidable
 31341,32126,3,BGSWaterCollisionManager::bshkAutoWater::GetTransform
@@ -7739,6 +7740,7 @@ sseid,aeid,confidence,name
 36219,37199,1,
 36224,37205,1,
 36225,37206,1,
+36234,37216,1,
 36248,37230,3,RE::Actor::SetRotationZ
 36252,37234,1,
 36259,37243,3,RE::Actor::IsInMidair
@@ -7778,6 +7780,10 @@ sseid,aeid,confidence,name
 36452,37448,1,
 36456,37452,1,
 36457,37453,3,RE::Actor::IsOverEncumbered
+36459,37457,1,
+36460,37458,1,
+36461,37459,1,
+36462,37460,1,
 36468,37466,1,
 36472,37471,1,
 36473,37472,1,
@@ -11479,6 +11485,7 @@ sseid,aeid,confidence,name
 46015,47276,1,
 46045,47309,1,
 46050,47314,1,
+46051,47315,1,
 46054,47318,1,
 46068,47332,3,
 46089,47353,1,

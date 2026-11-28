@@ -289,7 +289,7 @@
 11931,0x1401273b0,0x140137990,4,void ExtraDataList::ClearGrassHandles()
 11932,0x140127480,0x140137a60,4,"void ExtraDataList::FUN_140127480 (BSExtraDataList * param_1, BSExtraData * param_2)"
 11933,0x1401275e0,0x140137bc0,4,"void BSExtraDataList::GetCellGrassData (BSExtraDataList * a_this, BSExtraData * * a_out)"
-11938,0x140127a70,0x1401191b0,3,void ExtraDataList::SetPlaceableWater(BGSWaterCollisionManager::bhkPlaceableWater* a_water)
+11938,0x140127a70,0x140138050,3,void ExtraDataList::SetPlaceableWater(BGSWaterCollisionManager::bhkPlaceableWater* a_water)
 11942,0x140127e60,0x140138440,2,void ExtraDataList::SetAutoWater(BGSWaterCollisionManager::bhkAutoWater* a_water)
 11991,0x14012e070,0x14013e630,2,bool TempLoadGameBuffer::ReadRefHandleFromBuffer(RefHandle* a_handle)
 12006,0x14012e7e0,0x14013eee0,4,ExtraFactionChanges* ExtraFactionChanges::ExtraFactionChanges()
@@ -1923,7 +1923,7 @@
 19446,0x14029cb80,0x1402ae290,3,"ShaderReferenceEffect* TESObjectREFR::InstantiateHitShader(TESEffectShader* a_shader, float a_dur, TESObjectREFR* a_facingRef, bool a_faceTarget, bool a_attachToCamera, NiAVObject* a_attachNode, bool a_interfaceEffect)"
 19453,0x14029d2e0,0x1402ae9f0,4,BGSWaterCollisionManager::BGSWaterUpdateI * BGSWaterCollisionManager::BGSWaterUpdateI::ctor (BGSWaterCollisionManager::BGSWaterUpdateI * a_this)
 19456,0x14029d490,0x1402aec00,4,BGSWaterCollisionManager::bhkPlaceableWater * BGSWaterCollisionManager::bhkPlaceableWater::ctor (BGSWaterCollisionManager::bhkPlaceableWater * a_this)
-19457,0x14029d510,0x1402aec80,4,"bhkRigidBody * FUN_14029d510 (char * a_mem, void * a_params)"
+19457,0x14029d510,0x1402aec80,4,bhkRigidBody* bhkRigidBody::Ctor(void* a_cinfo)
 19458,0x14029d5a0,0x1402aed10,4,BGSWaterCollisionManager::bhkWaterfall * BGSWaterCollisionManager::bhkWaterfall::ctor (BGSWaterCollisionManager::bhkWaterfall * a_this)
 19503,0x14029e8a0,0x1402b0010,4,void BGSWaterCollisionManager::BGSWaterUpdateI::`scalar_deleting_destructor' (BGSWaterCollisionManager::BGSWaterUpdateI * a_this)
 19520,0x14029ed90,0x1402b0500,4,BGSWaterCollisionManager::bhkPlaceableWater * BGSWaterCollisionManager::bhkPlaceableWater::dtor (BGSWaterCollisionManager::bhkPlaceableWater * a_this)
@@ -2910,7 +2910,7 @@
 24538,0x1403787e0,0x140388190,3,void* TESQuest::FindAliasData(std::uint32_t a_aliasID)
 24549,0x140378ea0,0x140388850,4,"void TESQuest::GetJournalTextForInstance(BSString& out, std::uint32_t instanceID)"
 24564,0x14037ade0,0x14038a800,3,"BSTArray<TESTopic*>* TESQuest::GetTopicsOfSubtype(std::int32_t a_type, const void* a_key)"
-24647,0x14037f050,0x14038d9f0,3,Experience::
+24647,0x14037f050,0x14038e8b0,3,Experience::
 24686,0x14037ffd0,0x14038f830,2,"TESForm* ConcreteFormFactory<TESQuest,77>::CreateImpl()"
 24687,0x140380030,0x14038f890,4,void BSPointerHandleManager::ReleaseHandle(std::uint32_t& a_handle)
 24700,0x140380360,0x14038fbc0,2,void QueuedPromoteQuestTask::Finish()
@@ -4903,6 +4903,7 @@
 31322,0x1404c1f10,0x1404d2070,4,"void BGSWaterCollisionManager::bhkWaterfall::RemoveOverlappingCollidable (BGSWaterCollisionManager::bhkWaterfall * a_this, hkpCollidable * a_collidable)"
 31323,0x1404c1f30,0x1404d2090,4,bool BGSWaterCollisionManager::bhkWaterfall::IsActive (BGSWaterCollisionManager::bhkWaterfall * a_this)
 31324,0x1404c1f60,0x1404d20c0,4,void BGSWaterCollisionManager::bhkWaterfall::Update (BGSWaterCollisionManager::BGSWaterUpdateI * a_this)
+31325,0x1404c2070,0x1404d21d0,2,BGSWaterCollisionManager::bhkAutoWater* BGSWaterCollisionManager::bhkAutoWater::Ctor(void* a_cinfo)
 31326,0x1404c20f0,0x1404d2250,4,void BGSWaterCollisionManager::bhkAutoWater::CreateAutoWaterPhantom (BGSWaterCollisionManager::bhkAutoWater * a_this)
 31327,0x1404c2200,0x1404d2360,4,"void BGSWaterCollisionManager::bhkAutoWater::SetDisabled (BGSWaterCollisionManager::bhkAutoWater * a_this, bool a_disabled)"
 31338,0x1404c2e20,0x1404d2f80,4,BGSWaterCollisionManager::bshkAutoWater * BGSWaterCollisionManager::bshkAutoWater::ctor (BGSWaterCollisionManager::bshkAutoWater * a_this)
@@ -5045,7 +5046,7 @@
 32141,0x1404f06e0,0x140500950,3,"bool IAnimationGraphManagerHolder::SetGraphVariableBool(const BSFixedString& a_variableName, bool a_in)"
 32142,0x1404f0700,0x140500970,3,"bool IAnimationGraphManagerHolder::SetGraphVariableInt(const BSFixedString& a_variableName, std::int32_t a_in)"
 32143,0x1404f0720,0x140500990,3,"bool IAnimationGraphManagerHolder::SetGraphVariableFloat(const BSFixedString& a_variableName, float a_in)"
-32144,0x1404f0740,0x140502b00,3,"bool IAnimationGraphManagerHolder::SetGraphVariableNiPoint3(const BSFixedString& a_variableName, NiPoint3& a_in)"
+32144,0x1404f0740,0x1405009b0,3,"bool IAnimationGraphManagerHolder::SetGraphVariableNiPoint3(const BSFixedString& a_variableName, NiPoint3& a_in)"
 32149,0x1404f0960,0x140500bd0,4,undefined8 IAnimationGraphManagerHolder::sub_1404F0960(IAnimationGraphManagerHolder *a_this)
 32155,0x1404f1140,0x1405013b0,4,bool IAnimationGraphManagerHolder::UpdateAnimationGraphManager(const BSAnimationUpdateData& a_updateData)
 32173,0x1404f1520,0x140501790,2,bool IAnimationGraphManagerLoadingTask::Process()
@@ -6064,7 +6065,7 @@
 37016,0x14060f0c0,0x140617cd0,4,float Actor::CalcEquippedWeight_14060F0C0 (Actor * a_this)
 37018,0x14060f150,0x140617d60,2,bool Actor::GetAnimationGraphManagerImpl(BSTSmartPointer<BSAnimationGraphManager>& a_out)
 37019,0x14060f170,0x140617d80,2,bool Actor::SetAnimationGraphManagerImpl(BSTSmartPointer<BSAnimationGraphManager>& a_in)
-37020,0x14060f240,0x140501530,2,SendAnimation
+37020,0x14060f240,0x140617e50,2,SendAnimation
 37021,0x14060f250,0x140617e60,2,std::uint32_t Actor::GetGraphVariableCacheSize()
 37026,0x14060f3a0,0x140617fb0,2,void Actor::ModifyAnimationUpdateData(BSAnimationUpdateData& a_data)
 37029,0x14060f690,0x1406182a0,2,bool Actor::ShouldPerformRevert()
@@ -9762,7 +9763,7 @@
 48132,0x14080baa0,0x140836df0,2,bool CombatBehaviorTreeNodeObjectBase<CombatBehaviorCastImmediateSpell>::Validate(CombatBehaviorTreeNode* a_node)
 48133,0x14080bab0,0x140836e00,2,bool CombatBehaviorTreeNodeObjectBase<CombatBehaviorPrepareDualCast>::Validate(CombatBehaviorTreeNode* a_node)
 48139,0x14080c020,0x140837370,4,SCAR::AttackDistanceBase src/Hook_AttackStart.h:99
-48140,0x14080c6f0,0x140837a40,4,CombatBehaviorContextMelee::CheckAttack
+48140,0x14080c6f0,0x140837a40,4,bool CombatBehaviorContextMelee::CheckAttack(CombatAttackData* a_attack)
 48141,0x14080cd10,0x140838060,3,bool CombatBehaviorContextMelee::CheckAttackRange()
 48142,0x14080cee0,0x140838230,3,void CombatBehaviorContextMelee::FinishedAttack()
 48145,0x14080d1d0,0x140838520,3,void CombatBehaviorContextMelee::GatherAttackData()
@@ -14637,7 +14638,7 @@
 74232,0x140d37dd0,0x140d80260,2,const NiRTTI* BSNodeReferences::GetRTTI()
 74233,0x140d37de0,0x140d80270,2,const NiRTTI* BSReference::GetRTTI()
 74236,0x140d38120,0x140d805b0,3,RE::INISettingCollection::WriteSetting
-74237,0x140d38310,0x14053c550,3,RE::INISettingCollection::ReadSetting
+74237,0x140d38310,0x140d807a0,3,RE::INISettingCollection::ReadSetting
 74239,0x140d38710,0x140d80bb0,3,RE::INISettingCollection::OpenHandle
 74240,0x140d38720,0x140d80bc0,3,RE::INISettingCollection::CloseHandle
 74243,0x140d38820,0x140d80cc0,2,NiObject* BSXFlags::CreateClone(NiCloningProcess& a_cloning)
