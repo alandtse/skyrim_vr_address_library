@@ -813,7 +813,10 @@
 14684,0x14019c7c0,0x1401ac4f0,2,void TESModelTri::SetModel(const char* a_model)
 14690,0x14019c8e0,0x1401ac610,2,void TESProduceForm::CopyComponent(BaseFormComponent* rhs)
 14691,0x14019c940,0x1401ac670,2,void TESProduceForm::InitComponent(TESForm* a_owner)
+14703,0x14019d270,0x1401acfb0,2,void BSTEventSource<TESHarvestedEvent::ItemHarvested>::SendEvent(const TESHarvestedEvent::ItemHarvested* a_event)
 14704,0x14019d510,0x1401ad250,3,BSTEventSource<TESHarvestedEvent::ItemHarvested>* TESHarvestedEvent::GetEventSource()
+14705,0x14019d600,0x1401ad340,2,void BSTEventSource<TESHarvestedEvent::ItemHarvested>::AddEventSink(BSTEventSink<TESHarvestedEvent::ItemHarvested>* a_sink)
+14707,0x14019d7c0,0x1401ad500,2,void BSTEventSource<TESHarvestedEvent::ItemHarvested>::RemoveEventSink(BSTEventSink<TESHarvestedEvent::ItemHarvested>* a_sink)
 14714,0x14019d9e0,0x1401ad720,2,void TESQualityForm::CopyComponent(BaseFormComponent* a_rhs)
 14719,0x14019dac0,0x1401ad800,2,void TESRaceForm::CopyComponent(BaseFormComponent* a_rhs)
 14720,0x14019db10,0x1401ad850,2,void TESRaceForm::InitComponent(TESForm* a_owner)
@@ -990,10 +993,13 @@
 15960,0x1401ee500,0x1401fefe0,2,BGSActionData* BGSActionData::Clone()
 15967,0x1401ee670,0x1401ff150,3,RE::BSPointerHandleManagerInterface::GetHandle
 15974,0x1401ee880,0x1401ff360,2,bool FindByEffectSettingFunctor::MatchCondition(Effect* a_effect)
+15976,0x1401ee8b0,0x1401ff390,2,void BSTEventSource<Inventory::Event>::SendEvent(const Inventory::Event* a_event)
 15977,0x1401eeb50,0x1401ff630,2,void BSTEventSource<TESContainerChangedEvent>::SendEvent(const TESContainerChangedEvent* a_event)
 15978,0x1401eedf0,0x1401ff8d0,2,void BSTEventSource<TESSellEvent>::SendEvent(const TESSellEvent* a_event)
 15979,0x1401ef090,0x1401ffb70,2,void BSTEventSource<TESUniqueIDChangeEvent>::SendEvent(const TESUniqueIDChangeEvent* a_event)
 15980,0x1401ef330,0x1401ffe10,3,RE::Inventory::GetEventSource
+15981,0x1401ef420,0x1401fff00,2,void BSTEventSource<Inventory::Event>::AddEventSink(BSTEventSink<Inventory::Event>* a_sink)
+15989,0x1401efb60,0x140200640,2,void BSTEventSource<Inventory::Event>::RemoveEventSink(BSTEventSink<Inventory::Event>* a_sink)
 15991,0x1401efec0,0x1402009a0,4,bool GetWornMaskVisitor::Visit(InventoryEntryData* a_entryData)
 16021,0x1401f0de0,0x1402018c0,4,void* RE::BSIStream::DecompressLipData()
 16023,0x1401f12a0,0x140201d80,4,"undefined8 FUN_1401f12a0 (uint * param_1, float param_2, undefined8 * param_3)"
@@ -1445,7 +1451,10 @@
 17466,0x14022a5f0,0x14023b940,2,"OBJECT_CATEGORY_TYPE ConcreteObjectFormFactory<TESObjectBOOK,27,2,1>::GetObjectCategory()"
 17467,0x14022a600,0x14023b950,2,"const char* ConcreteObjectFormFactory<TESObjectBOOK,27,2,1>::GetObjectName()"
 17468,0x14022a610,0x14023b960,2,"OBJECT_TYPE ConcreteObjectFormFactory<TESObjectBOOK,27,2,1>::GetObjectType()"
+17469,0x14022a620,0x14023b970,2,void BSTEventSource<BooksRead::Event>::SendEvent(const BooksRead::Event* a_event)
 17470,0x14022a8c0,0x14023bc10,3,BSTEventSource<BooksRead::Event>* BooksRead::GetEventSource()
+17471,0x14022a9b0,0x14023bd00,2,void BSTEventSource<BooksRead::Event>::AddEventSink(BSTEventSink<BooksRead::Event>* a_sink)
+17475,0x14022ac20,0x14023bf70,2,void BSTEventSource<BooksRead::Event>::RemoveEventSink(BSTEventSink<BooksRead::Event>* a_sink)
 17481,0x14022b060,0x14023c3b0,2,void TESObjectCONT::InitializeData()
 17482,0x14022b080,0x14023c3d0,2,bool TESObjectCONT::Load(TESFile* a_mod)
 17483,0x14022b4e0,0x14023c830,2,void TESObjectCONT::InitItemImpl()
@@ -1581,8 +1590,11 @@
 18038,0x140246090,0x140257760,2,"OBJECT_CATEGORY_TYPE ConcreteObjectFormFactory<BGSLocation,104,71,7>::GetObjectCategory()"
 18039,0x1402460a0,0x140257770,2,"const char* ConcreteObjectFormFactory<BGSLocation,104,71,7>::GetObjectName()"
 18040,0x1402460b0,0x140257780,2,"OBJECT_TYPE ConcreteObjectFormFactory<BGSLocation,104,71,7>::GetObjectType()"
+18045,0x140246100,0x1402577d0,2,void BSTEventSource<LocationCleared::Event>::SendEvent(const LocationCleared::Event* a_event)
 18046,0x1402463a0,0x140257a70,3,BSTEventSource<LocationCleared::Event>* LocationCleared::GetEventSource()
+18047,0x140246490,0x140257b60,2,void BSTEventSource<LocationCleared::Event>::AddEventSink(BSTEventSink<LocationCleared::Event>* a_sink)
 18055,0x140246b90,0x140258260,2,void QueuedPromoteLocationReferencesTask::Run()
+18063,0x1402475f0,0x140258cc0,2,void BSTEventSource<LocationCleared::Event>::RemoveEventSink(BSTEventSink<LocationCleared::Event>* a_sink)
 18077,0x140247a20,0x1402590f0,2,"TESForm* ConcreteFormFactory<BGSLocationRefType,5>::CreateImpl()"
 18079,0x140247ab0,0x140259180,2,"FormType ConcreteFormFactory<BGSLocationRefType,5>::GetFormType()"
 18080,0x140247ac0,0x140259190,2,"const char* ConcreteFormFactory<BGSLocationRefType,5>::GetFormName()"
@@ -2666,7 +2678,10 @@
 23425,0x14033a680,0x140349f40,3,bool BGSQuestInstanceText::UpdateGlobalValue(TESGlobal* a_global)
 23429,0x14033a820,0x14034a0e0,2,BGSQuestObjective::FillQuestInstanceData
 23467,0x14033C010,0x14034B8D0,4,"void DecideObjectiveHUDDataType(int64 a_objectives, int32 a_QuestObjectiveState)"
+23485,0x14033cb20,0x14034c3e0,2,void BSTEventSource<ObjectiveState::Event>::SendEvent(const ObjectiveState::Event* a_event)
 23486,0x14033cdc0,0x14034c680,2,BSTEventSource<ObjectiveState::Event>* ObjectiveState::GetEventSource()
+23487,0x14033ceb0,0x14034c770,2,void BSTEventSource<ObjectiveState::Event>::AddEventSink(BSTEventSink<ObjectiveState::Event>* a_sink)
+23489,0x14033d070,0x14034c930,2,void BSTEventSource<ObjectiveState::Event>::RemoveEventSink(BSTEventSink<ObjectiveState::Event>* a_sink)
 23506,0x14033e160,0x14034da20,2,void BGSRagdoll::InitializeData()
 23507,0x14033e420,0x14034dce0,2,void BGSRagdoll::ClearData()
 23508,0x14033e630,0x14034def0,2,bool BGSRagdoll::Load(TESFile* a_mod)
@@ -2896,8 +2911,10 @@
 24399,0x14036c530,0x14037be90,2,float TESActorBase::GetPermanentActorValue(ActorValue a_akValue)
 24400,0x14036c540,0x14037bea0,2,const NiRTTI* BSFaceGenModelExtraData::GetRTTI()
 24413,0x14036c9c0,0x14037c360,2,void BSTEventSource<TESResolveNPCTemplatesEvent>::SendEvent(const TESResolveNPCTemplatesEvent* a_event)
+24414,0x14036cc60,0x14037c600,2,void BSTEventSource<MenuOpenCloseEvent>::AddEventSink(BSTEventSink<MenuOpenCloseEvent>* a_sink)
 24422,0x14036d290,0x14037cc30,2,"void TESActorBase::SetActorValue(ActorValue a_akValue, float a_value)"
 24423,0x14036d2a0,0x14037cc40,2,void BSFaceGenNiNode::SetAnimationData(BSFaceGenAnimationData* a_data)
+24432,0x14036da60,0x14037d400,2,void BSTEventSource<MenuOpenCloseEvent>::RemoveEventSink(BSTEventSink<MenuOpenCloseEvent>* a_sink)
 24451,0x14036e4a0,0x14037de40,2,void TESQuest::InitializeData()
 24452,0x14036e4e0,0x14037de80,2,void TESQuest::ClearData()
 24455,0x14036e780,0x14037e120,2,bool TESQuest::Load(TESFile* a_mod)
@@ -4414,6 +4431,8 @@
 29335,0x1404541a0,0x140464150,2,"BSEventNotifyControl BSTerrainEffect::ProcessEvent(const PositionPlayerEvent* a_event, BSTEventSource<PositionPlayerEvent>* a_eventSource)"
 29336,0x1404541b0,0x140464160,4,void BSTerrainEffect::UpdateInstanceTransforms(void* a_instances)
 29360,0x1404550c0,0x140465070,2,TEMP_EFFECT_TYPE BSTerrainEffect::GetType()
+29361,0x1404550d0,0x140465080,2,void BSTEventSource<PositionPlayerEvent>::AddEventSink(BSTEventSink<PositionPlayerEvent>* a_sink)
+29366,0x140455340,0x1404652f0,2,void BSTEventSource<PositionPlayerEvent>::RemoveEventSink(BSTEventSink<PositionPlayerEvent>* a_sink)
 29372,0x140455610,0x1404655c0,2,TESObjectCELL* NavMesh::GetSaveParentCell()
 29374,0x1404556c0,0x140465670,2,std::uint32_t NavMesh::QNavmeshID()
 29450,0x14045c940,0x14046c8f0,2,"FormType ConcreteFormFactory<NavMesh,73>::GetFormType()"
@@ -5209,6 +5228,8 @@
 33222,0x14053c470,0x140533880,2,"BSEventNotifyControl LoadWaitSpinner::ProcessEvent(const BSSystemEvent* a_event, BSTEventSource<BSSystemEvent>* a_eventSource)"
 33223,0x14053c4e0,0x1405338f0,2,"BSEventNotifyControl LoadWaitSpinner::ProcessEvent(const BSGamerProfileEvent* a_event, BSTEventSource<BSGamerProfileEvent>* a_eventSource)"
 33224,0x14053c550,0x140533960,2,"BSEventNotifyControl LoadWaitSpinner::ProcessEvent(const BGSSaveLoadManagerEvent* a_event, BSTEventSource<BGSSaveLoadManagerEvent>* a_eventSource)"
+33238,0x14053c8f0,0x140533d00,2,void BSTEventSource<BGSSaveLoadManagerEvent>::AddEventSink(BSTEventSink<BGSSaveLoadManagerEvent>* a_sink)
+33242,0x14053cc70,0x140534080,2,void BSTEventSource<BGSSaveLoadManagerEvent>::RemoveEventSink(BSTEventSink<BGSSaveLoadManagerEvent>* a_sink)
 33246,0x14053d060,0x14053fde0,2,void AbsorbEffect::ModifyOnStart()
 33247,0x14053d100,0x14053fe80,2,void AbsorbEffect::ModifyOnUpdate(float a_delta)
 33248,0x14053d1b0,0x14053ff30,2,"void AbsorbEffect::ModifyOnFinish(Actor* a_caster, Actor* a_target, float a_value)"
@@ -5583,6 +5604,9 @@
 34299,0x1405683d0,0x14056e9c0,2,void WerewolfFeedEffect::Start()
 34308,0x1405692b0,0x14056f8a0,3,void BGSAcousticSpace::Activate()
 34309,0x1405693b0,0x14056f9a0,2,void BGSAcousticSpace::Deactivate()
+34380,0x14056b4a0,0x140571aa0,2,void BSTEventSource<BGSActorCellEvent>::AddEventSink(BSTEventSink<BGSActorCellEvent>* a_sink)
+34381,0x14056b600,0x140571c00,2,void BSTEventSource<MenuModeChangeEvent>::AddEventSink(BSTEventSink<MenuModeChangeEvent>* a_sink)
+34397,0x14056c020,0x140572620,2,void BSTEventSource<MenuModeChangeEvent>::RemoveEventSink(BSTEventSink<MenuModeChangeEvent>* a_sink)
 34413,0x14056c9d0,0x140572fd0,3,"DialogueItem* DialogueItem::Ctor(TESQuest* a_quest, TESTopic* a_topic, TESTopicInfo* a_topicInfo, Actor* a_speaker)"
 34417,0x14056cce0,0x1405732e0,2,DialogueResponse* DialogueItem::GetCurrentResponse()
 34429,0x14056D570,0x140573B70,4,"void DialogueSubtitleStrings (char **a1, TESTopic *a2, TESTopicInfo *a3, Character *a4, void *a5)"
@@ -5721,6 +5745,8 @@
 35368,0x1405a4e40,0x1405ac500,2,float BGSMoviePlayer::GetScreenHeight()
 35370,0x1405a4e60,0x1405ac520,2,std::uint64_t BGSMoviePlayer::GetMainThreadID()
 35372,0x1405a4ef0,0x1405ac5b0,2,"BSEventNotifyControl BGSMoviePlayer::ProcessEvent(const InputEvent** a_event, BSTEventSource<InputEvent*>* a_eventSource)"
+35383,0x1405a5510,0x1405acbd0,2,void BSTEventSource<InputEvent*>::AddEventSink(BSTEventSink<InputEvent*>* a_sink)
+35387,0x1405a56f0,0x1405acdb0,2,void BSTEventSource<InputEvent*>::RemoveEventSink(BSTEventSink<InputEvent*>* a_sink)
 35402,0x1405a6230,0x1405ad8f0,4,"void Calendar::Update_1405a6230 (Calendar * a_this, float GameDaysPassed)"
 35408,0x1405a64f0,0x1405adbb0,4,RE::Calendar::GetGameDaysPassed
 35413,0x1405a6640,0x1405add00,3,"void Calendar::GetTimeDateString(char* a_dest, std::uint32_t a_max, bool a_showYear)"
@@ -5811,6 +5837,7 @@
 35801,0x1405bd5d0,0x1405c5a30,2,"BSEventNotifyControl PlayerSleepWaitMovementControllerAdapter::ProcessEvent(TESWaitStartEvent* a_event, BSTEventSource<TESWaitStartEvent>* a_eventSource)"
 35802,0x1405bd620,0x1405c5a80,2,"BSEventNotifyControl PlayerSleepWaitMovementControllerAdapter::ProcessEvent(TESWaitStopEvent* a_event, BSTEventSource<TESWaitStopEvent>* a_eventSource)"
 35805,0x1405bd7b0,0x1405c5c20,2,bool BSTCommonMessageQueue<BSPackedTask>::Push(BSPackedTask* a_obj)
+35807,0x1405bd8f0,0x1405c5d60,2,void BSTEventSource<BGSFootstepEvent>::AddEventSink(BSTEventSink<BGSFootstepEvent>* a_sink)
 35812,0x1405bdfd0,0x1405c6440,2,void BSTEventSource<TESOpenCloseEvent>::AddEventSink(BSTEventSink<TESOpenCloseEvent>* a_sink)
 35813,0x1405be130,0x1405c65a0,2,void BSTEventSource<TESSleepStartEvent>::AddEventSink(BSTEventSink<TESSleepStartEvent>* a_sink)
 35814,0x1405be290,0x1405c6700,2,void BSTEventSource<TESSleepStopEvent>::AddEventSink(BSTEventSink<TESSleepStopEvent>* a_sink)
@@ -5819,6 +5846,7 @@
 35825,0x1405beb00,0x1405c6f70,3,void StartVMInitThread()
 35828,0x1405beca0,0x1405c7110,2,bool BSTCommonMessageQueue<BSPackedTask>::TryPop(BSPackedTask* a_obj)
 35829,0x1405bed00,0x1405c7170,2,bool BSTCommonMessageQueue<BSPackedTask>::TryPush(BSPackedTask* a_obj)
+35830,0x1405bed60,0x1405c71d0,2,void BSTEventSource<BGSFootstepEvent>::RemoveEventSink(BSTEventSink<BGSFootstepEvent>* a_sink)
 35869,0x1405c0090,0x1405c85b0,3,void SceneGraph::SetNearDistance(float* a_distance)
 35871,0x1405c00c0,0x1405c85e0,3,void SceneGraph::SetFarDistance(float a_distance)
 35874,0x1405c0110,0x1405c8630,2,float SceneGraph::GetFarDistance()
@@ -6180,6 +6208,9 @@
 37341,0x140619820,0x140622410,2,std::uint32_t Actor::GetEmotionValue()
 37351,0x140619970,0x140622560,2,bool Actor::InitiateTresPassPackage(TESPackage* a_package)
 37356,0x140619ab0,0x1406226a0,3,sub_140619AB0
+37363,0x14061a3b0,0x140622fa0,2,void BSTEventSource<BGSFootstepEvent>::SendEvent(const BGSFootstepEvent* a_event)
+37365,0x14061a8f0,0x1406234e0,2,void BSTEventSource<ActorKill::Event>::SendEvent(const ActorKill::Event* a_event)
+37367,0x14061ae30,0x140623a20,2,void BSTEventSource<DisarmedEvent::Event>::SendEvent(const DisarmedEvent::Event* a_event)
 37371,0x14061b8b0,0x1406244a0,2,void BSTEventSource<TESDeathEvent>::SendEvent(const TESDeathEvent* a_event)
 37372,0x14061bb50,0x140624740,2,void BSTEventSource<TESEnterBleedoutEvent>::SendEvent(const TESEnterBleedoutEvent* a_event)
 37373,0x14061bdf0,0x1406249e0,2,void BSTEventSource<TESEquipEvent>::SendEvent(const TESEquipEvent* a_event)
@@ -6197,10 +6228,14 @@
 37388,0x14061c6e0,0x1406252d0,2,"bool MovementMessagePool::Dispatch(Character* a_character, MovementMessage* a_message)"
 37390,0x14061c880,0x140625470,3,BSTEventSource<ActorKill::Event>* ActorKill::GetEventSource()
 37392,0x14061ca60,0x140625650,3,BSTEventSource<DisarmedEvent::Event>* DisarmedEvent::GetEventSource()
+37400,0x14061cfd0,0x140625bc0,2,void BSTEventSource<ActorKill::Event>::AddEventSink(BSTEventSink<ActorKill::Event>* a_sink)
+37402,0x14061d290,0x140625e80,2,void BSTEventSource<DisarmedEvent::Event>::AddEventSink(BSTEventSink<DisarmedEvent::Event>* a_sink)
 37408,0x14061dad0,0x1406266c0,2,void MovementMessagePool::GrowHashMap()
 37448,0x14061ea00,0x1406277b0,2,bool ActorState::DoSetSitSleepState(SIT_SLEEP_STATE a_state)
 37450,0x14061ea40,0x1406277f0,2,void Actor::SetEmotionType(EmotionType a_emotionType)
 37451,0x14061ea50,0x140627800,2,void Actor::SetEmotionValue(std::uint32_t a_emotionValue)
+37457,0x14061ee10,0x140627bc0,2,void BSTEventSource<ActorKill::Event>::RemoveEventSink(BSTEventSink<ActorKill::Event>* a_sink)
+37459,0x14061f0f0,0x140627ea0,2,void BSTEventSource<DisarmedEvent::Event>::RemoveEventSink(BSTEventSink<DisarmedEvent::Event>* a_sink)
 37509,0x140620610,0x1406293c0,4,undefined Actor::sub_140620610(Actor* a_this)
 37510,0x140620690,0x140629440,3,RE::Actor::sub_140620690
 37513,0x140620900,0x1406296b0,3,RE::Actor::RestoreActorValue_140620900
@@ -6217,7 +6252,10 @@
 37527,0x140621590,0x14062a340,4,void Actor::RemoveActorValueModifiers(ActorValue actorValue)
 37537,0x1406222f0,0x14062b0a0,2,"float Actor::CheckClampDamageModifier(ActorValue a_av, float a_delta)"
 37563,0x140623200,0x14062bfb0,2,BSContainer::ForEachResult HoldWardSpellsActiveEffectVisitor::Accept(ActiveEffect* a_effect)
+37570,0x140623370,0x14062c120,2,void BSTEventSource<DragonSoulsGained::Event>::SendEvent(const DragonSoulsGained::Event* a_event)
 37571,0x140623610,0x14062c3c0,3,BSTEventSource<DragonSoulsGained::Event>* DragonSoulsGained::GetEventSource()
+37572,0x140623700,0x14062c4b0,2,void BSTEventSource<DragonSoulsGained::Event>::AddEventSink(BSTEventSink<DragonSoulsGained::Event>* a_sink)
+37574,0x1406238c0,0x14062c670,2,void BSTEventSource<DragonSoulsGained::Event>::RemoveEventSink(BSTEventSink<DragonSoulsGained::Event>* a_sink)
 37577,0x140623a80,0x14062c830,2,void ActorListenerSet::AddToSingleton(void* a_listener)
 37578,0x140623ab0,0x14062c860,2,void ActorListenerSet::RemoveFromSingleton(void* a_listener)
 37583,0x140623ba0,0x14062c950,3,Actor::SetNoBleedoutRecovery
@@ -6305,11 +6343,14 @@
 37685,0x14062b720,0x1406345f0,2,void ActorListenerSet::NotifySingleton(void* a_event)
 37689,0x14062b870,0x140634740,2,"static void Character::HitTargetsInReach(void* a_targets, void* a_ctx)"
 37720,0x14062c3f0,0x1406352c0,2,"static void ActorListenerSet::Notify(void* a_set, void* a_event)"
+37722,0x14062c930,0x140635800,2,void BSTEventSource<CriticalHit::Event>::SendEvent(const CriticalHit::Event* a_event)
 37723,0x14062cbd0,0x140635aa0,2,void BSTEventSource<TESHitEvent>::SendEvent(const TESHitEvent* a_event)
 37724,0x14062ce70,0x140635d40,2,void* ActorListenerSet::GetSingleton()
 37726,0x14062d050,0x140635f20,3,BSTEventSource<CriticalHit::Event>* CriticalHit::GetEventSource()
 37727,0x14062d140,0x140636010,2,"static void ActorListenerSet::Add(void* a_set, void* a_listener)"
+37729,0x14062d400,0x1406362d0,2,void BSTEventSource<CriticalHit::Event>::AddEventSink(BSTEventSink<CriticalHit::Event>* a_sink)
 37736,0x14062d8d0,0x1406367a0,2,"static void ActorListenerSet::Remove(void* a_set, void* a_listener)"
+37738,0x14062dbb0,0x140636a80,2,void BSTEventSource<CriticalHit::Event>::RemoveEventSink(BSTEventSink<CriticalHit::Event>* a_sink)
 37752,0x14062e390,0x140637260,3,void Actor::StopInteractingQuick(bool a_unk02)
 37757,0x14062ebc0,0x140637a90,3,bool Actor::GetMount(NiPointer<Actor>& a_outMount)
 37758,0x14062ecd0,0x140637ba0,4,bool Actor::GetRider(NiPointer<Actor>& a_outRider)
@@ -6375,11 +6416,14 @@
 37866,0x140634d20,0x14063dbf0,2,void ActorState::DoSetWeaponDrawn(bool a_drawn)
 37873,0x1406355c0,0x14063e5d0,3,void SpellsLearned::SendEvent()
 37883,0x140635ca0,0x14063ecb0,2,BSContainer::ForEachResult HasSpellVisitor::Visit(SpellItem* a_spell)
+37912,0x1406363e0,0x14063f3f0,2,void BSTEventSource<SoulsTrapped::Event>::SendEvent(const SoulsTrapped::Event* a_event)
 37913,0x140636680,0x14063f690,3,void BSTEventSource<SpellsLearned::Event>::SendEvent(const SpellsLearned::Event* a_event)
 37914,0x140636920,0x14063f930,2,void BSTEventSource<TESMagicWardHitEvent>::SendEvent(const TESMagicWardHitEvent* a_event)
 37916,0x140636c40,0x14063fc50,3,BSTEventSource<SoulsTrapped::Event>* SoulsTrapped::GetEventSource()
 37917,0x140636d30,0x14063fd40,3,BSTEventSource<SpellsLearned::Event>* SpellsLearned::GetEventSource()
+37918,0x140636e20,0x14063fe30,2,void BSTEventSource<SoulsTrapped::Event>::AddEventSink(BSTEventSink<SoulsTrapped::Event>* a_sink)
 37919,0x140636f80,0x14063ff90,3,void BSTEventSource<SpellsLearned::Event>::AddEventSink(BSTEventSink<SpellsLearned::Event>* a_eventSink)
+37925,0x140637330,0x140640340,2,void BSTEventSource<SoulsTrapped::Event>::RemoveEventSink(BSTEventSink<SoulsTrapped::Event>* a_sink)
 37926,0x1406374a0,0x1406404b0,3,void BSTEventSource<SpellsLearned::Event>::RemoveEventSink(BSTEventSink<SpellsLearned::Event>* a_eventSink)
 37938,0x140637a80,0x140640a90,4,RE::ActorEquipManager::EquipObject
 37939,0x140637bc0,0x140640bd0,2,"void ActorEquipManager::EquipSpell(Actor* a_actor, SpellItem* a_spell, const BGSEquipSlot* a_slot)"
@@ -6796,8 +6840,14 @@
 39221,0x1406944a0,0x14069daa0,3,RE::ArmorRatingVisitor::HaveNotVisitedArmor
 39223,0x140694500,0x14069db00,3,RE::BSContainer::ForEachResult ArmorRatingVisitorBase::Visit(InventoryEntryData* a_entryData)
 39231,0x140694710,0x14069dd10,3,PlayerSkills::Ctor
+39245,0x140694ae0,0x14069e0e0,2,void BSTEventSource<LevelIncrease::Event>::SendEvent(const LevelIncrease::Event* a_event)
+39246,0x140694d80,0x14069e380,2,void BSTEventSource<SkillIncrease::Event>::SendEvent(const SkillIncrease::Event* a_event)
 39247,0x140695020,0x14069e620,3,BSTEventSource<LevelIncrease::Event>* LevelIncrease::GetEventSource()
 39248,0x140695110,0x14069e710,3,BSTEventSource<SkillIncrease::Event>* SkillIncrease::GetEventSource()
+39249,0x140695200,0x14069e800,2,void BSTEventSource<LevelIncrease::Event>::AddEventSink(BSTEventSink<LevelIncrease::Event>* a_sink)
+39250,0x140695360,0x14069e960,2,void BSTEventSource<SkillIncrease::Event>::AddEventSink(BSTEventSink<SkillIncrease::Event>* a_sink)
+39253,0x140695580,0x14069eb80,2,void BSTEventSource<LevelIncrease::Event>::RemoveEventSink(BSTEventSink<LevelIncrease::Event>* a_sink)
+39254,0x1406956f0,0x14069ecf0,2,void BSTEventSource<SkillIncrease::Event>::RemoveEventSink(BSTEventSink<SkillIncrease::Event>* a_sink)
 39262,0x140695d50,0x14069f350,2,void HighActorCuller::Operate(Actor* a_actor)
 39266,0x140695fd0,0x14069f600,4,"MountInteraction* MountInteraction::MountInteraction(TESObjectREFR* a_refr1, TESObjectREFR* a_refr2)"
 39291,0x1406974f0,0x1406a0b50,2,"RefrInteraction* BSTDerivedCreator<MountInteraction,RefrInteraction>::CreateImpl()"
@@ -6894,6 +6944,8 @@
 40012,0x1406c37b0,0x1406e9fa0,2,bool PlayerCharacter::Is3rdPersonVisible()
 40014,0x1406c37d0,0x1406e9fc0,2,"bool NiTMapBase<DFALL<NiTMapItem<unsigned_int,unsigned_char>>,unsigned_int,unsigned_char>::key_eq(std::uint32_t a_lhs, std::uint32_t a_rhs)"
 40016,0x1406c37f0,0x1406ea060,2,"std::uint32_t NiTMapBase<DFALL<NiTMapItem<unsigned_int,unsigned_char>>,unsigned_int,unsigned_char>::hash_function(std::uint32_t a_key)"
+40031,0x1406c4d90,0x1406eb600,2,void BSTEventSource<LocationDiscovery::Event>::SendEvent(const LocationDiscovery::Event* a_event)
+40035,0x1406c5810,0x1406ec080,2,void BSTEventSource<ShoutAttack::Event>::SendEvent(const ShoutAttack::Event* a_event)
 40042,0x1406c6a70,0x1406ed040,2,void BSTEventSource<TESGrabReleaseEvent>::SendEvent(const TESGrabReleaseEvent* a_event)
 40043,0x1406c6d10,0x1406ed2e0,2,void BSTEventSource<TESSleepStartEvent>::SendEvent(const TESSleepStartEvent* a_event)
 40044,0x1406c6fb0,0x1406ed580,2,void BSTEventSource<TESSleepStopEvent>::SendEvent(const TESSleepStopEvent* a_event)
@@ -6902,9 +6954,15 @@
 40048,0x1406c77a0,0x1406eddc0,2,bool PlayerCharacter::QCanUpdateSync()
 40056,0x1406c7d60,0x1406ee380,3,BSTEventSource<LocationDiscovery::Event>* LocationDiscovery::GetEventSource()
 40060,0x1406c8120,0x1406ee740,3,BSTEventSource<ShoutAttack::Event>* ShoutAttack::GetEventSource()
+40074,0x1406c8fa0,0x1406ef730,2,void BSTEventSource<LocationDiscovery::Event>::AddEventSink(BSTEventSink<LocationDiscovery::Event>* a_sink)
+40078,0x1406c9520,0x1406efcb0,2,void BSTEventSource<ShoutAttack::Event>::AddEventSink(BSTEventSink<ShoutAttack::Event>* a_sink)
 40083,0x1406c9c00,0x1406f0390,2,void BSTEventSource<TESTrackedStatsEvent>::AddEventSink(BSTEventSink<TESTrackedStatsEvent>* a_sink)
+40084,0x1406c9d60,0x1406f07b0,2,void BSTEventSource<UserEventEnabledEvent>::AddEventSink(BSTEventSink<UserEventEnabledEvent>* a_sink)
 40143,0x1406cc370,0x1406f33d0,2,bool Actor::Unk_B3()
+40152,0x1406cccc0,0x1406f3ce0,2,void BSTEventSource<LocationDiscovery::Event>::RemoveEventSink(BSTEventSink<LocationDiscovery::Event>* a_sink)
+40156,0x1406cd280,0x1406f42a0,2,void BSTEventSource<ShoutAttack::Event>::RemoveEventSink(BSTEventSink<ShoutAttack::Event>* a_sink)
 40161,0x1406cd9b0,0x1406f49d0,2,void BSTEventSource<TESTrackedStatsEvent>::RemoveEventSink(BSTEventSink<TESTrackedStatsEvent>* a_sink)
+40162,0x1406cdb20,0x1406f4e20,2,void BSTEventSource<UserEventEnabledEvent>::RemoveEventSink(BSTEventSink<UserEventEnabledEvent>* a_sink)
 40230,0x1406ce720,0x1406f5bf0,3,"void Actor::ProcessVATSAttack(MagicCaster* a_caster, bool a_hasTargetAnim, TESObjectREFR* a_target, bool a_leftHand)"
 40232,0x1406cf690,0x1406f6020,2,DrawSheatheWeaponPC
 40239,0x1406cfb70,0x1406f6560,2,bool Actor::Unk_D1()
@@ -10613,8 +10671,14 @@
 50217,0x14085f970,0x14088abb0,3,ContainerMenu_UpdateItems2_Wrapper
 50227,0x140860610,0x14088b9a0,4,ItemList_FilterInventoryItems
 50228,0x140860750,0x14088bae0,4,ItemList_FilterInventoryItems2
+50255,0x140861c20,0x14088cfa0,2,void BSTEventSource<ChestsLooted::Event>::SendEvent(const ChestsLooted::Event* a_event)
+50256,0x140861ec0,0x14088d240,2,void BSTEventSource<ItemsPickpocketed::Event>::SendEvent(const ItemsPickpocketed::Event* a_event)
 50257,0x140862160,0x14088d4e0,3,BSTEventSource<ChestsLooted::Event>* ChestsLooted::GetEventSource()
 50258,0x140862250,0x14088d5d0,3,RE::ItemsPickpocketed::GetEventSource
+50259,0x140862340,0x14088d6c0,2,void BSTEventSource<ChestsLooted::Event>::AddEventSink(BSTEventSink<ChestsLooted::Event>* a_sink)
+50260,0x1408624a0,0x14088d820,2,void BSTEventSource<ItemsPickpocketed::Event>::AddEventSink(BSTEventSink<ItemsPickpocketed::Event>* a_sink)
+50264,0x140862720,0x14088daa0,2,void BSTEventSource<ChestsLooted::Event>::RemoveEventSink(BSTEventSink<ChestsLooted::Event>* a_sink)
+50265,0x140862890,0x14088dc10,2,void BSTEventSource<ItemsPickpocketed::Event>::RemoveEventSink(BSTEventSink<ItemsPickpocketed::Event>* a_sink)
 50273,0x140862c00,0x14088dfe0,3,void CraftingMenu::~CraftingMenu()
 50274,0x140862c80,0x14088e0c0,2,UI_MESSAGE_RESULTS CraftingMenu::ProcessMessage(UIMessage& a_message)
 50275,0x140863240,0x14088e680,2,"void CraftingMenu::AdvanceMovie(float a_interval, std::uint32_t a_currentTime)"
@@ -10656,14 +10720,17 @@
 50494,0x14086f430,0x14089a9c0,2,void CraftingSubMenus::SmithingMenu::UpdateSmithingList()
 50502,0x14086fa90,0x14089b020,2,void CraftingSubMenus::ConstructibleObjectMenu::SetItemCardInfo(ItemCard* a_itemCard)
 50504,0x14086fb70,0x14089b100,2,void CraftingSubMenus::EnchantConstructMenu::SetItemCardInfo(ItemCard* a_itemCard)
+50506,0x14086fdd0,0x14089b360,2,void BSTEventSource<ItemCrafted::Event>::SendEvent(const ItemCrafted::Event* a_event)
 50514,0x140870860,0x14089bdf0,2,"BSEventNotifyControl CraftingSubMenus::CraftingSubMenu::ProcessEvent(const TESFurnitureEvent* a_event, BSTEventSource<TESFurnitureEvent>* a_eventSource)"
 50515,0x1408708a0,0x14089be30,3,RE::ItemCrafted::GetEventSource
 50516,0x140870990,0x14089bf20,2,"bool BSTArrayAllocatorFunctor<BSTSmallArrayHeapAllocator<12>>::Reallocate(std::uint32_t a_minNewSizeInItems, std::uint32_t a_frontCopyCount, std::uint32_t a_shiftCount, std::uint32_t a_backCopyCount, std::uint32_t a_elemSize)"
+50517,0x1408709c0,0x14089bf50,2,void BSTEventSource<ItemCrafted::Event>::AddEventSink(BSTEventSink<ItemCrafted::Event>* a_sink)
 50530,0x1408720d0,0x14089d5c0,4,"void EnchantConstructMenu::RenameItem_Impl(InventoryEntryData* a_entryData, ExtraDataList* a_extraList, const char* a_name)"
 50531,0x140872230,0x14089D720,4,FUN_140872230
 50542,0x140872a80,0x14089df70,2,void CraftingSubMenus::EnchantConstructMenu::CategoryListEntry::ShowItem3D(bool a_show)
 50543,0x140872a90,0x14089df80,2,void CraftingSubMenus::EnchantConstructMenu::EnchantmentEntry::ShowItem3D(bool a_show)
 50544,0x140872ae0,0x14089dfd0,2,void CraftingSubMenus::EnchantConstructMenu::ItemChangeEntry::ShowItem3D(bool a_show)
+50552,0x140872eb0,0x14089e3a0,2,void BSTEventSource<ItemCrafted::Event>::RemoveEventSink(BSTEventSink<ItemCrafted::Event>* a_sink)
 50560,0x140873a80,0x14089f150,2,void CraftingSubMenus::EnchantConstructMenu::EnchantmentEntry::ShowInItemCard(EnchantConstructMenu* a_menu)
 50567,0x140874540,0x14089fc10,4,void EnchantConstructMenu::UpdateInterface_140874540 (undefined8 param_1)
 50569,0x140874a40,0x1408a0190,4,"bool EnchantConstructMenu::CanSelectEnchantmentEntry (EnchantConstructMenu * a_this, uint32_t a_index, bool a_showNotification)"
